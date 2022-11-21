@@ -1,0 +1,1503 @@
+namespace = uma_shop_center
+
+###模板来自于modder群
+
+country_event = {
+	id = uma_shop_center.1
+	hide_window = yes
+	is_triggered_only = yes	#在开局事件的*触发器*触发，即on_game_start
+
+	trigger = { NOT = { has_global_flag = uma_have_initialized_shop } }
+
+	immediate = {
+		set_global_flag = uma_have_initialized_shop
+		##################################################
+		#在创建国家前需要先创建种族
+		##################################################
+		create_species = {
+			name = "uma_species_name_shop_center"			#种族名字
+			plural = "uma_species_name_shop_center"		#种族复数
+			class = "umamusume"		#种族小类：即爬行，鸟类，软体...
+			portrait = "umamusume"		#肖像
+			name_list = "UMAname"
+			traits = {
+				#特质
+				ideal_planet_class = pc_habitat
+			}
+		}
+		##################################################
+		#创建国家
+		##################################################
+		create_country = {
+			name = "uma_shop_center"			#国家名称，很重要
+			type = uma_shop_center_enclave			#指定country_type，不会的就不要动了
+			authority = "auth_trainingcenter"			#政体
+			civics = {
+				#民政
+			}
+			origin = "origin_default"			#默认起源，这个不用管，玩家根本看不到飞地起源是啥
+			species = last_created_species			#设定种族，上面已经写好了，这一行不要动。
+			flag = {
+				#设定飞地旗帜，下边的自己搞吧
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags01.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "double_hemispheres.dds"
+				}
+				colors = {
+					"green"
+					"green"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				#思潮
+				ethic = "ethic_xenophile"
+				ethic = "ethic_materialist"
+				ethic = "ethic_egalitarian"
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				############################################################################
+				#重要！！！！这个flag⭐国家标签⭐决定了你这个国家到底是谁，一定要改！
+				set_country_flag = uma_is_shop_center
+				############################################################################
+				set_graphical_culture = npf_01					#默认的graphical_culture，不太需要动
+			}
+		}
+		##################################################
+		#生成所有的空间站
+		##################################################
+		while = {
+			count = 1	#总生成的个数
+			event_target:uma_where_shop_center_is = {
+				set_star_flag = uma_speical_enclave_generated
+				random_system_planet = {
+					#星系内随机星球
+					set_planet_flag = uma_shop_center_planet				#一个标记，暂时没有实际作用，但别删
+					##################################################
+					#生成空间站
+					##################################################
+					last_created_country = {
+						#以下为生成空间站
+						create_fleet = {
+							name = "NAME_uma_shop_center_fleet"						#空间站舰队名称
+							settings = {
+								spawn_debris = no							#舰船是否生成残骸可供逆向
+							}
+							effect = {
+								set_owner = prev
+								create_ship = {
+									name = "NAME_uma_shop_center_station"
+									############################################################################
+									design = NAME_UMA_enclave_station #空间站舰船设计，这里为默认，如果你想添加新的，自己参考着写。
+									############################################################################
+									graphical_culture = npf_01
+								}
+								set_location = {
+									#设定空间站位置，不要改
+									target = prevprev
+									distance = 90
+								}
+								save_event_target_as = uma_shop_center_station
+								prev = {
+									set_custom_capital_location = event_target:uma_shop_center_station
+								}
+								set_fleet_flag = uma_enclave_station							#通用标记，不要改
+								############################################################################
+								set_fleet_flag = uma_shoping_center_enclave_station							#标记出这是你的策展人空间站，你可以更改标记来方便调用
+								############################################################################
+							}
+						}
+					}
+				}
+			}
+		}
+		##################################################
+		#创建领袖，ruler
+		##################################################
+		last_created_country = {
+			add_modifier = {
+				modifier = uma_shopping_center_protection 
+				days = -1
+			}
+			create_leader = {
+				#生成领袖
+				class = ruler
+				species = this				#领袖种族
+				name = "骏川手纲"				#领袖名字（当前为随机）
+				skill = 10
+			}
+			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
+			last_created_leader = {
+			add_ruler_trait = leader_trait_ruler_chosen #确保不朽
+			change_leader_portrait = "C01"
+			}
+			
+		}
+	}
+}
+
+####################################################################################
+#飞地和我们建立通讯————在飞地进入我方探测器范围内时
+####################################################################################
+country_event = {
+	id = uma_shop_center.2
+	title = uma_shop_center.2.title	#事件标题
+	desc = uma_shop_center.2.desc		#事件文本
+	diplomatic = yes
+	picture_event_data = {
+		portrait = "C01"
+		room = uma_shoping_center_room
+	}
+
+
+	is_triggered_only = yes	#在舰队被探测到的*触发器*触发，即on_fleet_detected，from即探测到的舰队
+	trigger = {
+		from = {
+			owner = {
+				has_country_flag = uma_is_shop_center	#判断探测到的舰队所属国家，通过之前设立的country_flag
+				NOT = {
+					has_communications = root	#尚未和我方建立联系
+				}
+			}
+		}
+	}
+	immediate = {
+		establish_communications_no_message = from.owner	#与探测到的舰队所有者建交
+	}
+	option = {
+		name = uma_shop_center.2.a	#选项
+		custom_tooltip = uma_shop_open_hint
+	}
+}
+
+####################################################################################
+#在通讯界面打开飞地菜单
+####################################################################################
+#引入事件：在点击国家图标时触发
+country_event = {
+	id = uma_shop_center.3
+	is_triggered_only = yes		#在点击国家图标的*触发器*触发，即on_custom_diplomacy，from即图标对应国家
+	hide_window = yes
+	
+
+	trigger = {
+		from = {
+			has_country_flag = uma_is_shop_center	#判断对应国家，通过之前设立的country_flag⭐国家标签⭐
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = uma_contacting_country_shoping_center	#将from存为event_target
+		}
+		country_event = {
+			id = uma_shop_center.10	#触发正式的菜单事件
+		}
+	}
+}
+
+####################################################################################
+#飞地空间站被消灭
+#这个事件并没有做什么敌对减少信任的事件，所以，嗯，你们自学罢
+#这个事件在飞地空间站被消灭时触发
+####################################################################################
+country_event = {
+	id = uma_shop_center.4
+	title = uma_shop_center.4.title	#事件标题
+	desc = uma_shop_center.4.desc		#事件文本
+	picture = GFX_evt_small_space_battle	#事件插图
+
+	is_triggered_only = yes		#通过舰队被摧毁的*触发器*触发，即on_fleet_destroyed_perp，from即被摧毁舰队的所有者，fromfromfrom即被摧毁舰队
+	trigger = {
+		from = {	#遇害舰队的所有者
+			has_country_flag = uma_is_shop_center	#拥有你的⭐国家标签⭐
+		}
+		fromfromfrom = {	#遇害舰队
+			has_fleet_flag = uma_shoping_center_enclave_station 	#拥有你的飞地空间站标签
+		}
+	}
+
+	immediate = {
+		from = { save_event_target_as = uma_is_the_destroyed_shop }
+		this = { set_country_flag = uma_has_attacked_the_shop }
+	}
+
+	option = {
+		trigger = {
+			NOT = { has_country_flag = uma_has_attacked_the_shop }
+		}
+		name = uma_shop_center.4.a	#事件选项（未亲自摧毁商城）
+	}
+	option = {
+		trigger = {
+			has_country_flag = uma_has_attacked_the_shop
+		}
+		name = uma_shop_center.4.b	#事件选项（未亲自摧毁商城）
+		add_resource = {
+			uma_crystal_carrot = 2000
+			energy = 5000
+		}
+		# event_target:uma_is_the_destroyed_shop = {
+		# 	add_trust = {
+		# 		amount = -100
+		# 		who = this
+		# 	}
+		# }
+	}
+
+}
+
+
+##################################################
+#飞地菜单
+#算是核心事件，通过该事件开始，实现你想要实现的各种乱七八糟的功能
+##################################################
+country_event = {
+	id = uma_shop_center.10
+	title = uma_shop_center.10.title	#事件标题
+	#多个desc可以是该事件文本随机挑一个显示，更生动（可选）
+	desc = uma_shop_center.10.desc	#事件文本
+	desc = uma_shop_center.10.desc2	#事件文本2
+	desc = uma_shop_center.10.desc3	#事件文本3
+	is_triggered_only = yes		#通过引入事件触发
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "C01"
+		room = uma_shoping_center_room
+	}
+	
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = uma_shop_center.10.a	#退出商城
+	}
+
+	option = {
+		name = uma_shop_center.10.b	#进入绿帽商店页面
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.1
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.10.c	#商店页面介绍
+		hidden_effect = {
+			country_event = {
+				id = uma_shop_center.20
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_shop_center.10.d	#进入道具使用界面
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.4
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.10.e	#抽卡页面
+		hidden_effect = {
+			country_event = {
+				id = uma_shop_center.11
+			}
+		}
+	}
+}
+
+#####抽卡界面
+country_event = {
+	id = uma_shop_center.11
+	title = uma_shop_center.11.title	#事件标题
+	desc = uma_shop_center.11.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "C01"
+		room = uma_shoping_center_room
+	}
+	
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = uma_shop_center.11.a	#玩法介绍
+		response_text = uma_shop_center.11.a.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_shop_center.11.b	#单抽！
+		allow = { 
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		add_trust = {
+			amount = 5
+			who = root
+		}
+		custom_tooltip = uma_gacha_hint
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_shop_gecha_times_allowed
+				value = 1
+			}
+			random_list = {
+				15 = {
+					country_event = {
+						id = uma_shop_center.100
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.101
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.102
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.103
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.104
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.105
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.106
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.107
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.108
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				5 = {
+					country_event = {
+						id = uma_shop_center.109
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.110
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.111
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.112
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.113
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				15 = {
+					country_event = {
+						id = uma_shop_center.114
+					}
+					change_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 1
+					}
+				}
+				10 = {
+					country_event = {
+						id = uma_shop_center.115	
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_modifier = uma_high_power_energy_block
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				10 = {
+					country_event = {
+						id = uma_shop_center.116
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}			
+					modifier = {
+						factor = 0
+						has_modifier = uma_miracle_industry_machine
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				10 = {
+					country_event = {
+						id = uma_shop_center.117
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_modifier = uma_ancient_carrot_seed
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				10 = {
+					country_event = {
+						id = uma_shop_center.118
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_modifier = uma_different_dimention_observer
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				10 = {
+					country_event = {
+						id = uma_shop_center.119
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_modifier = uma_umamusume_diary
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				10 = {
+					country_event = {
+						id = uma_shop_center.120
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_country_flag = uma_king_halo_has_come
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				8 = {
+					country_event = {
+						id = uma_shop_center.121
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_country_flag = uma_al_condor_pasa_has_come
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+				5 = {
+					country_event = {
+						id = uma_shop_center.122
+					}
+					set_variable = {
+						which = uma_shop_gecha_unlucky_times
+						value = 0
+					}
+					modifier = {
+						factor = 0
+						has_country_flag = uma_kitasan_black_has_come
+					}
+					modifier = {
+						factor = 5
+						check_variable = {
+							which = uma_shop_gecha_unlucky_times
+							value >= 20
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.11.c	#返回上一个页面
+		hidden_effect = {
+			country_event = {
+				id = uma_shop_center.10
+			}
+		}
+	}
+}
+
+####商城机制介绍####
+country_event = {
+	id = uma_shop_center.20
+	title = uma_shop_center.20.title	#事件标题
+	desc = uma_shop_center.20.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "C01"
+		room = uma_shoping_center_room
+	}
+	
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = uma_shop_center.20.a	#返回主界面
+		hidden_effect = {
+			country_event = {
+				id = uma_shop_center.10
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.20.b	#商城是干什么用的？
+		response_text = uma_shop_center.20.b.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_shop_center.20.c	#如何使用道具？
+		response_text = uma_shop_center.20.c.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_shop_center.20.d	#商店币如何获得？
+		response_text = uma_shop_center.20.d.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_shop_center.20.e	#这座商城是怎么来的？
+		response_text = uma_shop_center.20.e.response
+		is_dialog_only = yes
+	}
+
+}
+
+
+
+# event_target:uma_contacting_country_shoping_centery = {	#刚刚存的target
+# add_trust = {	#提高信任（在此处则代表好感）
+# 	amount = 22	#提高数值
+# 	who = root	#目标：root即查看菜单中的国家，即玩家。
+# }
+# }
+
+###抽奖事件
+
+#100商店币
+country_event = {
+	id = uma_shop_center.100
+	title = uma_shop_center.100.title	#事件标题
+	desc = uma_shop_center.100.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.100.a
+		custom_tooltip = uma_add_shop_coin_100
+		hidden_effect = {
+			change_variable = {
+				which = uma_num_of_coin
+				value = 100
+			}
+		}
+	}
+}
+
+#50商店币
+country_event = {
+	id = uma_shop_center.101
+	title = uma_shop_center.101.title	#事件标题
+	desc = uma_shop_center.101.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.101.a
+		custom_tooltip = uma_add_shop_coin_50
+		hidden_effect = {
+			change_variable = {
+				which = uma_num_of_coin
+				value = 50
+			}
+		}
+	}
+}
+
+#3000能量币（小型能量块）
+country_event = {
+	id = uma_shop_center.102
+	title = uma_shop_center.102.title	#事件标题
+	desc = uma_shop_center.102.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.102.a
+		add_resource = {
+			energy = 3000
+		}
+	}
+}
+
+#3000食物（超大号胡萝卜汉堡肉）
+country_event = {
+	id = uma_shop_center.103
+	title = uma_shop_center.103.title	#事件标题
+	desc = uma_shop_center.103.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.103.a
+		add_resource = {
+			food = 3000
+		}
+	}
+}
+
+#3000矿物（一块富金属矿石）
+country_event = {
+	id = uma_shop_center.104
+	title = uma_shop_center.104.title	#事件标题
+	desc = uma_shop_center.104.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.104.a
+		add_resource = {
+			minerals = 3000
+		}
+	}
+}
+
+#1000合金（一块合金）
+country_event = {
+	id = uma_shop_center.105
+	title = uma_shop_center.105.title	#事件标题
+	desc = uma_shop_center.105.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.105.a
+		add_resource = {
+			alloys = 1000
+		}
+	}
+}
+
+#1000消费品（马娘日用品组合）
+country_event = {
+	id = uma_shop_center.106
+	title = uma_shop_center.106.title	#事件标题
+	desc = uma_shop_center.106.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.106.a
+		add_resource = {
+			consumer_goods = 1000
+		}
+	}
+}
+
+#500水晶萝卜（更多的水晶萝卜？）
+country_event = {
+	id = uma_shop_center.107
+	title = uma_shop_center.107.title	#事件标题
+	desc = uma_shop_center.107.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.107.a #如果CY的抽卡也能这样就好了...
+		add_resource = {
+			uma_crystal_carrot = 500
+		}
+	}
+}
+
+#500三女神知识（三女神古籍）
+country_event = {
+	id = uma_shop_center.108
+	title = uma_shop_center.108.title	#事件标题
+	desc = uma_shop_center.108.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.108.a #如果CY的抽卡也能这样就好了...
+		add_resource = {
+			uma_threegodness_knowledge = 500
+		}
+	}
+}
+
+#资源大礼包！
+country_event = {
+	id = uma_shop_center.109
+	title = uma_shop_center.109.title	#事件标题
+	desc = uma_shop_center.109.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.109.a #哇哦...
+		add_resource = {
+			energy = 6000
+			food = 6000
+			minerals = 6000
+			alloys = 2000
+			consumer_goods = 2000
+			uma_crystal_carrot = 1000
+			uma_threegodness_knowledge = 1000
+		}
+	}
+}
+
+#一件小小的开运道具
+country_event = {
+	id = uma_shop_center.110
+	title = uma_shop_center.110.title	#事件标题
+	desc = uma_shop_center.110.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.110.a #希望能为国家带来好运
+		add_modifier = {
+			modifier = uma_lucky_items
+			days = 7300
+		}
+	}
+}
+
+#赛事运营指南
+country_event = {
+	id = uma_shop_center.111
+	title = uma_shop_center.111.title	#事件标题
+	desc = uma_shop_center.111.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.111.a #哦？
+		add_modifier = {
+			modifier = uma_racing_holding_tips
+			days = 7300
+		}
+	}
+}
+
+#古老的百科全书
+country_event = {
+	id = uma_shop_center.112
+	title = uma_shop_center.112.title	#事件标题
+	desc = uma_shop_center.112.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.112.a #研究一个
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 6
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 6
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 6
+		}
+	}
+}
+
+#一堆古代文物
+country_event = {
+	id = uma_shop_center.113
+	title = uma_shop_center.113.title	#事件标题
+	desc = uma_shop_center.113.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.113.a #我们要发财了！
+		add_resource = { minor_artifacts = 20 }
+	}
+}
+
+#一本舰队战术手册
+country_event = {
+	id = uma_shop_center.114
+	title = uma_shop_center.114.title	#事件标题
+	desc = uma_shop_center.114.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.114.a #给我们的飞船用...？
+		add_modifier = {
+			modifier = uma_fleet_battle_tips
+			days = 7300
+		}
+	}
+}
+
+####唯一事件
+#高能能量块
+country_event = {
+	id = uma_shop_center.115
+	title = uma_shop_center.115.title	#事件标题
+	desc = uma_shop_center.115.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.115.a #能源，无尽的能源...
+		add_modifier = {
+			modifier = uma_high_power_energy_block
+			days = -1
+		}
+	}
+}
+
+###奇迹工业设备
+country_event = {
+	id = uma_shop_center.116
+	title = uma_shop_center.116.title	#事件标题
+	desc = uma_shop_center.116.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.116.a #让我们开足马力生产！
+		add_modifier = {
+			modifier = uma_miracle_industry_machine
+			days = -1
+		}
+	}
+}
+
+###优良胡萝卜种
+country_event = {
+	id = uma_shop_center.117
+	title = uma_shop_center.117.title	#事件标题
+	desc = uma_shop_center.117.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.117.a #我已经迫不及待想要品尝新品种的胡萝卜了
+		add_modifier = {
+			modifier = uma_ancient_carrot_seed
+			days = -1
+		}
+	}
+}
+
+###诡异的观测设备（万花镜\异次元观测设备\动画维度观测设备）
+country_event = {
+	id = uma_shop_center.118
+	title = uma_shop_center.118.title	#事件标题
+	desc = uma_shop_center.118.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.118.a #万花筒内，繁花似锦...
+		add_modifier = {
+			modifier = uma_different_dimention_observer
+			days = -1
+		}
+	}
+}
+
+###马娘观察日记
+country_event = {
+	id = uma_shop_center.119
+	title = uma_shop_center.119.title	#事件标题
+	desc = uma_shop_center.119.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+
+	option = {
+		name = uma_shop_center.119.a #这或许能在很多地方帮到我们...
+		add_modifier = {
+			modifier = uma_umamusume_diary
+			days = -1
+		}
+	}
+}
+
+#三大抽奖马娘
+###圣王光环
+country_event = {
+	id = uma_shop_center.120
+	title = uma_shop_center.120.title	#事件标题
+	desc = uma_shop_center.120.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+	immediate = { set_country_flag = uma_king_halo_has_come }
+
+	option = {
+		name = uma_shop_center.120.a #总督
+		custom_tooltip = uma_special_leader_king_halo_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "圣王光环"
+				species = root
+				gender = female
+				class = governor
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_king_halo
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_king_halo
+					save_global_event_target_as = uma_is_leader_king_halo
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "47c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.120.b #海军上将
+		custom_tooltip = uma_special_leader_king_halo_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "圣王光环"
+				species = root
+				gender = female
+				class = admiral
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_admiral_trait_sp_king_halo
+					trait = leader_trait_cautious
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_king_halo
+					save_global_event_target_as = uma_is_leader_king_halo
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "47c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.120.c #科学家
+		custom_tooltip = uma_special_leader_king_halo_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "圣王光环"
+				species = root
+				gender = female
+				class = scientist
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_scientist_trait_sp_king_halo
+					trait = leader_trait_spark_of_genius
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_king_halo
+					save_global_event_target_as = uma_is_leader_king_halo
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "47c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.120.d #将军
+		custom_tooltip = uma_special_leader_king_halo_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "圣王光环"
+				species = root
+				gender = female
+				class = general
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_general_trait_sp_king_halo
+					trait = leader_trait_charismatic
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_king_halo
+					save_global_event_target_as = uma_is_leader_king_halo
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "47c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+			}
+		}
+	}
+
+}
+
+###神鹰
+country_event = {
+	id = uma_shop_center.121
+	title = uma_shop_center.121.title	#事件标题
+	desc = uma_shop_center.121.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+	immediate = { set_country_flag = uma_al_condor_pasa_has_come }
+
+	option = {
+		name = uma_shop_center.121.a #总督
+		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "神鹰"
+				species = root
+				gender = female
+				class = governor
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_al_condor_pasa
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_al_condor_pasa
+					save_global_event_target_as = uma_is_leader_al_condor_pasa
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "14c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.121.b #海军上将
+		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "神鹰"
+				species = root
+				gender = female
+				class = admiral
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_admiral_trait_sp_al_condor_pasa
+					trait = leader_trait_aggressive
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_al_condor_pasa
+					save_global_event_target_as = uma_is_leader_al_condor_pasa
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "14c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.121.c #科学家
+		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "神鹰"
+				species = root
+				gender = female
+				class = scientist
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_scientist_trait_sp_al_condor_pasa
+					trait = leader_trait_carefree
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_al_condor_pasa
+					save_global_event_target_as = uma_is_leader_al_condor_pasa
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "14c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.121.d #将军
+		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "神鹰"
+				species = root
+				gender = female
+				class = general
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_general_trait_sp_al_condor_pasa
+					trait = leader_trait_glory_seeker
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_al_condor_pasa
+					save_global_event_target_as = uma_is_leader_al_condor_pasa
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "14c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+			}
+		}
+	}
+
+}
+
+###北部玄驹
+country_event = {
+	id = uma_shop_center.122
+	title = uma_shop_center.122.title	#事件标题
+	desc = uma_shop_center.122.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	picture = GFX_evt_uma_normal_school
+	
+	immediate = { set_country_flag = uma_kitasan_black_has_come }
+
+	option = {
+		name = uma_shop_center.122.a #总督
+		custom_tooltip = uma_special_leader_kitasan_black_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "北部玄驹"
+				species = root
+				gender = female
+				class = governor
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_kitasan_black
+					trait = leader_trait_righteous
+					trait = leader_trait_agrarian_upbringing
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_kitasan_black
+					save_global_event_target_as = uma_is_leader_kitasan_black
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "67c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.122.b #海军上将
+		custom_tooltip = uma_special_leader_kitasan_black_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "北部玄驹"
+				species = root
+				gender = female
+				class = admiral
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_admiral_trait_sp_kitasan_black
+					trait = leader_trait_gale_speed
+					trait = leader_trait_scout
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_kitasan_black
+					save_global_event_target_as = uma_is_leader_kitasan_black
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "67c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.122.c #科学家
+		custom_tooltip = uma_special_leader_kitasan_black_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "北部玄驹"
+				species = root
+				gender = female
+				class = scientist
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_scientist_trait_sp_kitasan_black
+					trait = leader_trait_spark_of_genius
+					trait = leader_trait_maniacal
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_kitasan_black
+					save_global_event_target_as = uma_is_leader_kitasan_black
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "67c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+			}
+		}
+	}
+
+	option = {
+		name = uma_shop_center.122.d #将军
+		custom_tooltip = uma_special_leader_kitasan_black_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "北部玄驹"
+				species = root
+				gender = female
+				class = general
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_general_trait_sp_kitasan_black
+					trait = leader_trait_charismatic
+					trait = leader_trait_glory_seeker
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_kitasan_black
+					save_global_event_target_as = uma_is_leader_kitasan_black
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "67c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+			}
+		}
+	}
+
+}

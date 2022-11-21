@@ -1,0 +1,1747 @@
+##############################
+#########绿帽商店GUI##########
+##############################
+
+guiTypes = {
+
+    ###这是总的大窗口
+	containerWindowType = {
+		name = "uma_shoping_center_window"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1320 height = 800 } #窗口大小（等于背景图片大小1320*800）
+
+		background = { name = "background" quadTextureSprite = "GFX_uma_bg" }
+
+		#iconType = { name = "hex_bg" spriteType = "GFX_hex_bg" position = { x = -10 y = -14 } alwaysTransparent = yes }
+		#iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = 6 y = 22 } alwaysTransparent = yes }
+
+		###############大窗口组件#############
+		#关闭
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_uma_shop_exit"
+			position = { x = 1171 y = 53 }
+			orientation = "UPPER_LEFT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		#招牌
+		effectButtonType = {
+			name = "uma_shop_brand"
+			quadTextureSprite = "GFX_uma_shop_brand"
+			position = { x = 75 y = 55 }
+			orientation = "UPPER_LEFT"
+		}
+		#显示拥有的货币
+		effectButtonType = {
+			name = "uma_shop_show_the_coin"
+			spriteType = "GFX_uma_shop_coin_we_have"
+			position = { x = 535 y = 53 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_show_coin_common_effect"
+			text = uma_show_coin_common_effect
+			format = center
+			font = "malgun_goth_24"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}	
+		#绿帽
+		effectButtonType = {
+			name = "uma_shop_people"
+			quadTextureSprite = "GFX_uma_shop_people"
+			position = { x = 100 y = 150 }
+			orientation = "UPPER_LEFT"
+		}
+		###############大窗口组件#############
+
+		#窗口名（左上角的那个）
+		#instantTextBoxType = {
+		#	name = "irm_some_header"
+		#	font = "malgun_goth_24"
+		#	text = "Shop" 	# header text
+		#	position = { x = 20 y = 5 }
+		#	maxWidth = 543
+		#	maxHeight = 22
+		#	fixedSize = yes
+		#	alwaysTransparent = yes
+		#}
+
+        #######slot1，枚举所有可能的货物#######
+		@uma_goods_slot_1_x = 500
+		@uma_goods_slot_1_y = 160
+		@uma_price_icon_slot_1_x = 515
+		@uma_price_icon_slot_1_y = 287
+		@uma_buy_icon_slot_1_x = 505
+		@uma_buy_icon_slot_1_y = 326
+
+		#很奇怪的事情，商品的tooltip，必须要在至少250 250的右下方才会显示。可能是蠢驴的UI抽风
+        effectButtonType = {
+			name = "uma_slot_1_goods_1_active"
+			spriteType = "GFX_uma_goods_1_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_1_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_1_passive"
+			spriteType = "GFX_uma_goods_1_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_1_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_2_active"
+			spriteType = "GFX_uma_goods_2_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_2_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_2_passive"
+			spriteType = "GFX_uma_goods_2_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_2_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_3_active"
+			spriteType = "GFX_uma_goods_3_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_3_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_3_passive"
+			spriteType = "GFX_uma_goods_3_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_3_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_4_active"
+			spriteType = "GFX_uma_goods_4_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_4_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_4_passive"
+			spriteType = "GFX_uma_goods_4_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_4_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_5_active"
+			spriteType = "GFX_uma_goods_5_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_5_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_5_passive"
+			spriteType = "GFX_uma_goods_5_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_5_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_6_active"
+			spriteType = "GFX_uma_goods_6_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_6_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_6_passive"
+			spriteType = "GFX_uma_goods_6_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_6_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_7_active"
+			spriteType = "GFX_uma_goods_7_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_7_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_7_passive"
+			spriteType = "GFX_uma_goods_7_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_7_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_8_active"
+			spriteType = "GFX_uma_goods_8_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_8_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_8_passive"
+			spriteType = "GFX_uma_goods_8_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_8_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_9_active"
+			spriteType = "GFX_uma_goods_9_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_9_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_9_passive"
+			spriteType = "GFX_uma_goods_9_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_9_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_10_active"
+			spriteType = "GFX_uma_goods_10_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_10_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_10_passive"
+			spriteType = "GFX_uma_goods_10_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_10_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_11_active"
+			spriteType = "GFX_uma_goods_11_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_11_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_11_passive"
+			spriteType = "GFX_uma_goods_11_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_11_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_12_active"
+			spriteType = "GFX_uma_goods_12_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_12_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_12_passive"
+			spriteType = "GFX_uma_goods_12_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_12_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_13_active"
+			spriteType = "GFX_uma_goods_13_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_13_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_13_passive"
+			spriteType = "GFX_uma_goods_13_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_13_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_14_active"
+			spriteType = "GFX_uma_goods_14_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_14_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_14_passive"
+			spriteType = "GFX_uma_goods_14_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_14_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_15_active"
+			spriteType = "GFX_uma_goods_15_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_15_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_15_passive"
+			spriteType = "GFX_uma_goods_15_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_15_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_1_goods_16_active"
+			spriteType = "GFX_uma_goods_16_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_16_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_16_passive"
+			spriteType = "GFX_uma_goods_16_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_16_passive_effect"
+		}
+
+		#slot1的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
+		effectButtonType = {
+			name = "uma_price_slot_1_icon"
+			spriteType = "GFX_uma_price_slot"
+			position = { x = @uma_price_icon_slot_1_x y = @uma_price_icon_slot_1_y }
+			orientation = "UPPER_LEFT"
+			effect = "uma_price_slot_common_effect"
+			text = uma_price_number_of_slot_1
+			format = center
+			font = "hoi_16mbs"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}
+
+		#购买按钮
+        effectButtonType = {
+			name = "uma_buy_icon_slot_1"
+			spriteType = "GFX_uma_buy"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_buy_icon_slot_1_x y = @uma_buy_icon_slot_1_y }
+			effect = "uma_buy_effect_slot_1"
+		}
+		#####################################
+		######################################
+		#######slot2，枚举所有可能的货物#######
+		@uma_goods_slot_2_x = 700
+		@uma_goods_slot_2_y = 160
+		@uma_price_icon_slot_2_x = 715
+		@uma_price_icon_slot_2_y = 287
+		@uma_buy_icon_slot_2_x = 705
+		@uma_buy_icon_slot_2_y = 326
+
+        effectButtonType = {
+			name = "uma_slot_2_goods_1_active"
+			spriteType = "GFX_uma_goods_1_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_1_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_1_passive"
+			spriteType = "GFX_uma_goods_1_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_1_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_2_active"
+			spriteType = "GFX_uma_goods_2_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_2_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_2_passive"
+			spriteType = "GFX_uma_goods_2_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_2_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_3_active"
+			spriteType = "GFX_uma_goods_3_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_3_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_3_passive"
+			spriteType = "GFX_uma_goods_3_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_3_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_4_active"
+			spriteType = "GFX_uma_goods_4_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_4_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_4_passive"
+			spriteType = "GFX_uma_goods_4_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_4_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_5_active"
+			spriteType = "GFX_uma_goods_5_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_5_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_5_passive"
+			spriteType = "GFX_uma_goods_5_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_5_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_6_active"
+			spriteType = "GFX_uma_goods_6_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_6_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_6_passive"
+			spriteType = "GFX_uma_goods_6_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_6_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_7_active"
+			spriteType = "GFX_uma_goods_7_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_7_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_7_passive"
+			spriteType = "GFX_uma_goods_7_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_7_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_8_active"
+			spriteType = "GFX_uma_goods_8_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_8_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_8_passive"
+			spriteType = "GFX_uma_goods_8_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_8_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_9_active"
+			spriteType = "GFX_uma_goods_9_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_9_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_9_passive"
+			spriteType = "GFX_uma_goods_9_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_9_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_10_active"
+			spriteType = "GFX_uma_goods_10_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_10_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_10_passive"
+			spriteType = "GFX_uma_goods_10_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_10_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_11_active"
+			spriteType = "GFX_uma_goods_11_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_11_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_11_passive"
+			spriteType = "GFX_uma_goods_11_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_11_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_12_active"
+			spriteType = "GFX_uma_goods_12_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_12_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_12_passive"
+			spriteType = "GFX_uma_goods_12_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_12_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_13_active"
+			spriteType = "GFX_uma_goods_13_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_13_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_13_passive"
+			spriteType = "GFX_uma_goods_13_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_13_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_14_active"
+			spriteType = "GFX_uma_goods_14_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_14_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_14_passive"
+			spriteType = "GFX_uma_goods_14_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_14_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_15_active"
+			spriteType = "GFX_uma_goods_15_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_15_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_15_passive"
+			spriteType = "GFX_uma_goods_15_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_15_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_16_active"
+			spriteType = "GFX_uma_goods_16_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_16_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_16_passive"
+			spriteType = "GFX_uma_goods_16_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_16_passive_effect"
+		}
+
+		#slot2的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
+		effectButtonType = {
+			name = "uma_price_slot_2_icon"
+			spriteType = "GFX_uma_price_slot"
+			position = { x = @uma_price_icon_slot_2_x y = @uma_price_icon_slot_2_y }
+			orientation = "UPPER_LEFT"
+			effect = "uma_price_slot_common_effect"
+			text = uma_price_number_of_slot_2
+			format = center
+			font = "hoi_16mbs"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}
+
+		#购买按钮
+        effectButtonType = {
+			name = "uma_buy_icon_slot_2"
+			spriteType = "GFX_uma_buy"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_buy_icon_slot_2_x y = @uma_buy_icon_slot_2_y }
+			effect = "uma_buy_effect_slot_2"
+		}
+
+		#####################################
+		######################################
+		#######slot3，枚举所有可能的货物#######
+		@uma_goods_slot_3_x = 900 ##横行，x递增200
+		@uma_goods_slot_3_y = 160
+		@uma_price_icon_slot_3_x = 915
+		@uma_price_icon_slot_3_y = 287
+		@uma_buy_icon_slot_3_x = 905
+		@uma_buy_icon_slot_3_y = 326
+
+        effectButtonType = {
+			name = "uma_slot_3_goods_1_active"
+			spriteType = "GFX_uma_goods_1_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_1_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_1_passive"
+			spriteType = "GFX_uma_goods_1_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_1_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_2_active"
+			spriteType = "GFX_uma_goods_2_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_2_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_2_passive"
+			spriteType = "GFX_uma_goods_2_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_2_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_3_active"
+			spriteType = "GFX_uma_goods_3_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_3_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_3_passive"
+			spriteType = "GFX_uma_goods_3_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_3_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_4_active"
+			spriteType = "GFX_uma_goods_4_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_4_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_4_passive"
+			spriteType = "GFX_uma_goods_4_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_4_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_5_active"
+			spriteType = "GFX_uma_goods_5_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_5_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_5_passive"
+			spriteType = "GFX_uma_goods_5_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_5_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_6_active"
+			spriteType = "GFX_uma_goods_6_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_6_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_6_passive"
+			spriteType = "GFX_uma_goods_6_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_6_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_7_active"
+			spriteType = "GFX_uma_goods_7_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_7_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_7_passive"
+			spriteType = "GFX_uma_goods_7_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_7_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_8_active"
+			spriteType = "GFX_uma_goods_8_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_8_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_8_passive"
+			spriteType = "GFX_uma_goods_8_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_8_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_9_active"
+			spriteType = "GFX_uma_goods_9_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_9_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_9_passive"
+			spriteType = "GFX_uma_goods_9_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_9_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_10_active"
+			spriteType = "GFX_uma_goods_10_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_10_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_10_passive"
+			spriteType = "GFX_uma_goods_10_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_10_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_11_active"
+			spriteType = "GFX_uma_goods_11_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_11_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_11_passive"
+			spriteType = "GFX_uma_goods_11_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_11_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_12_active"
+			spriteType = "GFX_uma_goods_12_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_12_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_12_passive"
+			spriteType = "GFX_uma_goods_12_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_12_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_13_active"
+			spriteType = "GFX_uma_goods_13_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_13_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_13_passive"
+			spriteType = "GFX_uma_goods_13_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_13_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_14_active"
+			spriteType = "GFX_uma_goods_14_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_14_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_14_passive"
+			spriteType = "GFX_uma_goods_14_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_14_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_15_active"
+			spriteType = "GFX_uma_goods_15_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_15_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_15_passive"
+			spriteType = "GFX_uma_goods_15_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_15_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_3_goods_16_active"
+			spriteType = "GFX_uma_goods_16_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_16_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_16_passive"
+			spriteType = "GFX_uma_goods_16_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_16_passive_effect"
+		}
+
+		#slot3的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
+		effectButtonType = {
+			name = "uma_price_slot_3_icon"
+			spriteType = "GFX_uma_price_slot"
+			position = { x = @uma_price_icon_slot_3_x y = @uma_price_icon_slot_3_y }
+			orientation = "UPPER_LEFT"
+			effect = "uma_price_slot_common_effect"
+			text = uma_price_number_of_slot_3
+			format = center
+			font = "hoi_16mbs"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}
+
+		#购买按钮
+        effectButtonType = {
+			name = "uma_buy_icon_slot_3"
+			spriteType = "GFX_uma_buy"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_buy_icon_slot_3_x y = @uma_buy_icon_slot_3_y }
+			effect = "uma_buy_effect_slot_3"
+		}
+
+		#####################################
+		######################################
+		#######slot4，枚举所有可能的货物#######
+		@uma_goods_slot_4_x = 500 ##横行，x递增200
+		@uma_goods_slot_4_y = 410 ##纵行，y递增250
+		@uma_price_icon_slot_4_x = 515
+		@uma_price_icon_slot_4_y = 537
+		@uma_buy_icon_slot_4_x = 505
+		@uma_buy_icon_slot_4_y = 576
+
+        effectButtonType = {
+			name = "uma_slot_4_goods_1_active"
+			spriteType = "GFX_uma_goods_1_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_1_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_1_passive"
+			spriteType = "GFX_uma_goods_1_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_1_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_2_active"
+			spriteType = "GFX_uma_goods_2_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_2_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_2_passive"
+			spriteType = "GFX_uma_goods_2_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_2_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_3_active"
+			spriteType = "GFX_uma_goods_3_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_3_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_3_passive"
+			spriteType = "GFX_uma_goods_3_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_3_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_4_active"
+			spriteType = "GFX_uma_goods_4_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_4_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_4_passive"
+			spriteType = "GFX_uma_goods_4_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_4_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_5_active"
+			spriteType = "GFX_uma_goods_5_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_5_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_5_passive"
+			spriteType = "GFX_uma_goods_5_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_5_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_6_active"
+			spriteType = "GFX_uma_goods_6_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_6_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_6_passive"
+			spriteType = "GFX_uma_goods_6_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_6_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_7_active"
+			spriteType = "GFX_uma_goods_7_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_7_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_7_passive"
+			spriteType = "GFX_uma_goods_7_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_7_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_8_active"
+			spriteType = "GFX_uma_goods_8_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_8_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_8_passive"
+			spriteType = "GFX_uma_goods_8_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_8_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_9_active"
+			spriteType = "GFX_uma_goods_9_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_9_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_9_passive"
+			spriteType = "GFX_uma_goods_9_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_9_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_10_active"
+			spriteType = "GFX_uma_goods_10_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_10_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_10_passive"
+			spriteType = "GFX_uma_goods_10_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_10_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_11_active"
+			spriteType = "GFX_uma_goods_11_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_11_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_11_passive"
+			spriteType = "GFX_uma_goods_11_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_11_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_12_active"
+			spriteType = "GFX_uma_goods_12_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_12_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_12_passive"
+			spriteType = "GFX_uma_goods_12_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_12_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_13_active"
+			spriteType = "GFX_uma_goods_13_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_13_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_13_passive"
+			spriteType = "GFX_uma_goods_13_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_13_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_14_active"
+			spriteType = "GFX_uma_goods_14_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_14_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_14_passive"
+			spriteType = "GFX_uma_goods_14_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_14_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_15_active"
+			spriteType = "GFX_uma_goods_15_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_15_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_15_passive"
+			spriteType = "GFX_uma_goods_15_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_15_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_4_goods_16_active"
+			spriteType = "GFX_uma_goods_16_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_16_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_16_passive"
+			spriteType = "GFX_uma_goods_16_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_16_passive_effect"
+		}
+
+		#slot4的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
+		effectButtonType = {
+			name = "uma_price_slot_4_icon"
+			spriteType = "GFX_uma_price_slot"
+			position = { x = @uma_price_icon_slot_4_x y = @uma_price_icon_slot_4_y }
+			orientation = "UPPER_LEFT"
+			effect = "uma_price_slot_common_effect"
+			text = uma_price_number_of_slot_4
+			format = center
+			font = "hoi_16mbs"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}
+
+		#购买按钮
+        effectButtonType = {
+			name = "uma_buy_icon_slot_4"
+			spriteType = "GFX_uma_buy"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_buy_icon_slot_4_x y = @uma_buy_icon_slot_4_y }
+			effect = "uma_buy_effect_slot_4"
+		}
+
+		#####################################
+		######################################
+		#######slot5，枚举所有可能的货物#######
+		@uma_goods_slot_5_x = 700 ##横行，x递增200
+		@uma_goods_slot_5_y = 410 ##纵行，y递增250
+		@uma_price_icon_slot_5_x = 715
+		@uma_price_icon_slot_5_y = 537
+		@uma_buy_icon_slot_5_x = 705
+		@uma_buy_icon_slot_5_y = 576
+
+        effectButtonType = {
+			name = "uma_slot_5_goods_1_active"
+			spriteType = "GFX_uma_goods_1_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_1_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_1_passive"
+			spriteType = "GFX_uma_goods_1_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_1_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_2_active"
+			spriteType = "GFX_uma_goods_2_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_2_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_2_passive"
+			spriteType = "GFX_uma_goods_2_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_2_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_3_active"
+			spriteType = "GFX_uma_goods_3_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_3_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_3_passive"
+			spriteType = "GFX_uma_goods_3_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_3_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_4_active"
+			spriteType = "GFX_uma_goods_4_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_4_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_4_passive"
+			spriteType = "GFX_uma_goods_4_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_4_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_5_active"
+			spriteType = "GFX_uma_goods_5_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_5_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_5_passive"
+			spriteType = "GFX_uma_goods_5_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_5_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_6_active"
+			spriteType = "GFX_uma_goods_6_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_6_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_6_passive"
+			spriteType = "GFX_uma_goods_6_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_6_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_7_active"
+			spriteType = "GFX_uma_goods_7_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_7_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_7_passive"
+			spriteType = "GFX_uma_goods_7_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_7_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_8_active"
+			spriteType = "GFX_uma_goods_8_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_8_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_8_passive"
+			spriteType = "GFX_uma_goods_8_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_8_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_9_active"
+			spriteType = "GFX_uma_goods_9_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_9_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_9_passive"
+			spriteType = "GFX_uma_goods_9_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_9_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_10_active"
+			spriteType = "GFX_uma_goods_10_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_10_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_10_passive"
+			spriteType = "GFX_uma_goods_10_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_10_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_11_active"
+			spriteType = "GFX_uma_goods_11_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_11_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_11_passive"
+			spriteType = "GFX_uma_goods_11_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_11_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_12_active"
+			spriteType = "GFX_uma_goods_12_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_12_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_12_passive"
+			spriteType = "GFX_uma_goods_12_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_12_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_13_active"
+			spriteType = "GFX_uma_goods_13_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_13_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_13_passive"
+			spriteType = "GFX_uma_goods_13_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_13_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_14_active"
+			spriteType = "GFX_uma_goods_14_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_14_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_14_passive"
+			spriteType = "GFX_uma_goods_14_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_14_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_15_active"
+			spriteType = "GFX_uma_goods_15_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_15_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_15_passive"
+			spriteType = "GFX_uma_goods_15_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_15_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_5_goods_16_active"
+			spriteType = "GFX_uma_goods_16_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_16_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_16_passive"
+			spriteType = "GFX_uma_goods_16_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_16_passive_effect"
+		}
+
+		#slot5的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
+		effectButtonType = {
+			name = "uma_price_slot_5_icon"
+			spriteType = "GFX_uma_price_slot"
+			position = { x = @uma_price_icon_slot_5_x y = @uma_price_icon_slot_5_y }
+			orientation = "UPPER_LEFT"
+			effect = "uma_price_slot_common_effect"
+			text = uma_price_number_of_slot_5
+			format = center
+			font = "hoi_16mbs"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}
+
+		#购买按钮
+        effectButtonType = {
+			name = "uma_buy_icon_slot_5"
+			spriteType = "GFX_uma_buy"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_buy_icon_slot_5_x y = @uma_buy_icon_slot_5_y }
+			effect = "uma_buy_effect_slot_5"
+		}
+
+		#####################################
+		######################################
+		#######slot6，枚举所有可能的货物#######
+		@uma_goods_slot_6_x = 900 ##横行，x递增200
+		@uma_goods_slot_6_y = 410 ##纵行，y递增250
+		@uma_price_icon_slot_6_x = 915
+		@uma_price_icon_slot_6_y = 537
+		@uma_buy_icon_slot_6_x = 905
+		@uma_buy_icon_slot_6_y = 576
+
+        effectButtonType = {
+			name = "uma_slot_6_goods_1_active"
+			spriteType = "GFX_uma_goods_1_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_1_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_1_passive"
+			spriteType = "GFX_uma_goods_1_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_1_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_2_active"
+			spriteType = "GFX_uma_goods_2_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_2_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_2_passive"
+			spriteType = "GFX_uma_goods_2_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_2_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_3_active"
+			spriteType = "GFX_uma_goods_3_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_3_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_3_passive"
+			spriteType = "GFX_uma_goods_3_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_3_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_4_active"
+			spriteType = "GFX_uma_goods_4_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_4_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_4_passive"
+			spriteType = "GFX_uma_goods_4_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_4_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_5_active"
+			spriteType = "GFX_uma_goods_5_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_5_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_5_passive"
+			spriteType = "GFX_uma_goods_5_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_5_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_6_active"
+			spriteType = "GFX_uma_goods_6_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_6_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_6_passive"
+			spriteType = "GFX_uma_goods_6_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_6_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_7_active"
+			spriteType = "GFX_uma_goods_7_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_7_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_7_passive"
+			spriteType = "GFX_uma_goods_7_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_7_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_8_active"
+			spriteType = "GFX_uma_goods_8_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_8_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_8_passive"
+			spriteType = "GFX_uma_goods_8_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_8_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_9_active"
+			spriteType = "GFX_uma_goods_9_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_9_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_9_passive"
+			spriteType = "GFX_uma_goods_9_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_9_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_10_active"
+			spriteType = "GFX_uma_goods_10_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_10_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_10_passive"
+			spriteType = "GFX_uma_goods_10_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_10_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_11_active"
+			spriteType = "GFX_uma_goods_11_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_11_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_11_passive"
+			spriteType = "GFX_uma_goods_11_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_11_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_12_active"
+			spriteType = "GFX_uma_goods_12_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_12_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_12_passive"
+			spriteType = "GFX_uma_goods_12_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_12_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_13_active"
+			spriteType = "GFX_uma_goods_13_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_13_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_13_passive"
+			spriteType = "GFX_uma_goods_13_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_13_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_14_active"
+			spriteType = "GFX_uma_goods_14_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_14_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_14_passive"
+			spriteType = "GFX_uma_goods_14_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_14_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_15_active"
+			spriteType = "GFX_uma_goods_15_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_15_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_15_passive"
+			spriteType = "GFX_uma_goods_15_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_15_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_6_goods_16_active"
+			spriteType = "GFX_uma_goods_16_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_16_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_16_passive"
+			spriteType = "GFX_uma_goods_16_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_16_passive_effect"
+		}
+
+		#slot6的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
+		effectButtonType = {
+			name = "uma_price_slot_6_icon"
+			spriteType = "GFX_uma_price_slot"
+			position = { x = @uma_price_icon_slot_6_x y = @uma_price_icon_slot_6_y }
+			orientation = "UPPER_LEFT"
+			effect = "uma_price_slot_common_effect"
+			text = uma_price_number_of_slot_6
+			format = center
+			font = "hoi_16mbs"
+			#fixedSize = yes
+			#size = { width = 300 height = 300 } #字体大小
+		}
+
+		#购买按钮
+        effectButtonType = {
+			name = "uma_buy_icon_slot_6"
+			spriteType = "GFX_uma_buy"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_buy_icon_slot_6_x y = @uma_buy_icon_slot_6_y }
+			effect = "uma_buy_effect_slot_6"
+		}
+
+		#instantTextBoxType = {
+		#	name = "alien_message"
+		#	font = "malgun_goth_24"
+		#	format = "LEFT"
+		#	orientation = "UPPER_LEFT"
+		#	position = { x = 550 y = 550 }
+		#	maxWidth = 180
+		#	maxHeight = 471
+		#	alwaysTransparent = yes
+		#	scrollbartype = "standardtext_slider"
+		#}
+
+		#iconType = {
+		#	name = "uma_price_slot_incon"
+		#	spriteType = "GFX_uma_price_slot"
+		#	#font = "hoi_16mbs"
+		#	#pdx_tooltip = uma_price_number_of_slot_1 #无法引用变量
+		#	position = { x = 220 y = 340 }
+		#	orientation = "UPPER_LEFT"
+		#}		
+
+		#按钮上的价格
+		#instantTextBoxType = {
+		#	name = "uma_price_number_slot_1"
+		#	font = "hoi_16mbs"
+		#	text = uma_price_number_of_slot_1 #instantTextBoxType无法引用变量，给我老老实实的用effectButtonType来附加文字！
+		#	position = { x = 510 y = 540 }
+		#	maxWidth = 1000
+		#	maxHeight = 5
+		#	alwaysTransparent = yes
+		#}
+
+
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		#窗口名（左上角的那个）
+		instantTextBoxType = {
+			name = "irm_some_header"
+			font = "malgun_goth_24"
+			text = "Shop" 	# header text
+			position = { x = 20000 y = 5 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } 	# hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1125 y = -1175 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1127 y = -11110 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+	
+		### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 2 y = 50 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "malgun_goth_24"
+			 position = { x = 20 y = 0 }
+			 maxWidth = 200
+			 alwaysTransparent = yes
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x = 490 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
+		}
+		# Description Section
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 100 }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+	}
+
+
+}

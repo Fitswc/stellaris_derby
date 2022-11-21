@@ -1,0 +1,1601 @@
+namespace = tachyon_coffee
+###给领袖加特质的事件
+
+ship_event = {
+	id = tachyon_coffee.1
+	title = tachyon_coffee.1.title
+	desc = tachyon_coffee.1.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { has_star_flag = uma_tachyon_coffee_system }
+	}
+
+	option = {
+		name = "tachyon_coffee.101"
+		hidden_effect = { save_event_target_as = tachyon_coffee_events }
+
+		event_target:uma_tachyon_coffee_planet = {
+			create_ambient_object = {
+				type = "tachyon_coffee_ship_object"
+				entity_offset_height = { min = 0 max = 7 }
+				location = this
+				effect = {
+					save_event_target_as = tachyon_coffee_ship
+				}
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 5
+					angle = random
+				}
+			}
+			enable_special_project = {
+				name = "TACHYON_COFFEE"
+				location = event_target:tachyon_coffee_ship
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2
+	title = tachyon_coffee.2.title
+	desc = tachyon_coffee.2.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.201"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2011
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.202"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2021
+				}
+			}
+		}
+	}
+}
+
+###介绍背景
+country_event = {
+	id = tachyon_coffee.2021
+	title = tachyon_coffee.2021.title
+	desc = tachyon_coffee.2021.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2000"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2022
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2022
+	title = tachyon_coffee.2022.title
+	desc = tachyon_coffee.2022.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2000"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2023
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2023
+	title = tachyon_coffee.2023.title
+	desc = tachyon_coffee.2023.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2000"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2024
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2024
+	title = tachyon_coffee.2024.title
+	desc = tachyon_coffee.2024.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2001"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2
+				}
+			}
+		}
+	}
+}
+
+###第一次接触选项
+country_event = {
+	id = tachyon_coffee.2011
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.2011.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2011"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20111
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2012"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20121
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2013"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20131
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2014"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20141
+				}
+			}
+		}
+	}
+	option = {
+		name = "tachyon_coffee.2015"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2030
+				}
+			}
+		}
+	}
+}
+
+###第N次接触选项
+country_event = {
+	id = tachyon_coffee.20101
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20101.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2011"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20111
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2012"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20121
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2013"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20131
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2014"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20141
+				}
+			}
+		}
+	}
+	option = {
+		name = "tachyon_coffee.2015"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20151
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20111
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20111.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20111"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20112
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20112
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20112.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20112"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20113
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20113
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20113.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20100"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20101
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20121
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20121.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20121"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20122
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20122
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20122.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20100"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20101
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20131
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20131.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20131"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20132
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20132
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20132.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20100"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20101
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20141
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20141.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20141"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20142
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20142
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20142.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20100"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20101
+				}
+			}
+		}
+	}
+}
+
+###分支
+country_event = {
+	id = tachyon_coffee.2030
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.2030.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20301"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2031
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.20302"
+		hidden_effect = {
+			owner = {
+				random_list = {
+					80 = {
+						country_event = {
+							id = tachyon_coffee.2032
+						}
+					}
+					20 = {
+						country_event = {
+							id = tachyon_coffee.2033
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2031
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.2031.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20311"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20312
+				}
+			}
+		}
+	}
+}
+
+###生成遗迹
+country_event = {
+	id = tachyon_coffee.20312
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.20312.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20312"
+		hidden_effect = {
+			event_target:uma_tachyon_coffee_starbase = {
+				create_archaeological_site = tachyon_coffee_relic
+				save_event_target_as = tachyon_coffee_relic_starbase
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2032
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.2032.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2032"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20321
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2033
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.2033.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20312"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20322
+				}
+			}
+		}
+	}
+}
+
+##速茶飞船逃跑
+country_event = {
+	id = tachyon_coffee.20321
+	title = tachyon_coffee.20321.title
+	desc = tachyon_coffee.20321.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.20321"
+		hidden_effect = {
+			event_target:tachyon_coffee_ship = {
+				destroy_ambient_object = this
+			}
+		}
+	}
+}
+
+###生成遗迹
+country_event = {
+	id = tachyon_coffee.20322
+	title = tachyon_coffee.20322.title
+	desc = tachyon_coffee.20322.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.20312"
+		hidden_effect = {
+			event_target:uma_tachyon_coffee_starbase = {
+				create_archaeological_site = tachyon_coffee_relic
+				save_event_target_as = tachyon_coffee_relic_starbase
+			}
+		}
+	}
+}
+
+###速茶遗迹1
+fleet_event = {
+	id = tachyon_coffee.2041
+	title = tachyon_coffee.2041.name
+	desc = tachyon_coffee.2041.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2041.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2042
+	title = tachyon_coffee.2042.name
+	desc = tachyon_coffee.2042.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2042.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2043
+	title = tachyon_coffee.2043.name
+	desc = tachyon_coffee.2043.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2043.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2044
+	title = tachyon_coffee.2044.name
+	desc = tachyon_coffee.2044.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2044.a" #占位符
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2050
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2050
+	title = tachyon_coffee.2050.title
+	desc = tachyon_coffee.2050.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.2050"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2060
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2060
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2060.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2061"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2061
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2062"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2062
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2063"
+		hidden_effect = {
+			event_target:uma_tachyon_coffee_planet = {
+				enable_special_project = {
+					name = "TACHYON_COFFEE_PRE_CIVILS"
+					location = this
+					owner = root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2061
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2061.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2062"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2062
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2063"
+		hidden_effect = {
+			event_target:uma_tachyon_coffee_planet = {
+				enable_special_project = {
+					name = "TACHYON_COFFEE_PRE_CIVILS"
+					location = this
+					owner = root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2062
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2062.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20621"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20621
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20621
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.20621.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20622"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20622
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20622
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.20622.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2061"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2062
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2063"
+		hidden_effect = {
+			event_target:uma_tachyon_coffee_planet = {
+				enable_special_project = {
+					name = "TACHYON_COFFEE_PRE_CIVILS"
+					location = this
+					owner = root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2070
+	title = tachyon_coffee.2070.title
+	desc = tachyon_coffee.2070.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.2070"
+		hidden_effect = {
+			random_owned_planet = {
+				limit = {
+					NOT = { has_planet_flag = uma_is_special_planet }
+				}
+				create_archaeological_site = tachyon_coffee_pre_civils_relic
+				save_event_target_as = tachyon_coffee_pre_civils_relic
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2071
+	title = tachyon_coffee.2071.name
+	desc = tachyon_coffee.2071.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2071.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2072
+	title = tachyon_coffee.2072.name
+	desc = tachyon_coffee.2072.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2072.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2073
+	title = tachyon_coffee.2073.name
+	desc = tachyon_coffee.2073.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2073.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2074
+	title = tachyon_coffee.2074.name
+	desc = tachyon_coffee.2074.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2074.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = tachyon_coffee.2075
+	title = tachyon_coffee.2075.name
+	desc = tachyon_coffee.2075.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "tachyon_coffee.2075.a" #占位符
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2080
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2080
+	title = tachyon_coffee.2080.title
+	desc = tachyon_coffee.2080.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.2081"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2081
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2082"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2082
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2083"
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = tachyon_coffee.20831
+					}
+				}
+				50 = {
+					country_event = {
+						id = tachyon_coffee.20832
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2081
+	title = tachyon_coffee.2081.title
+	desc = tachyon_coffee.2081.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.20811"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20811
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20811
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.20811.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20812"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20812
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20812
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.20812.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20813"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.20813
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20813
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.20813.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.20814"
+		###添加遗珍
+		owner = {
+			add_relic = uma_tachyon_supervisor_relics
+		}
+		hidden_effect = {
+			owner = {
+				country_event = {
+					days = 60
+					id = tachyon_coffee.2100
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2082
+	title = tachyon_coffee.2082.title
+	desc = tachyon_coffee.2082.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.20821"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					days = 60
+					id = tachyon_coffee.2100
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20831
+	title = tachyon_coffee.20831.title
+	desc = tachyon_coffee.20831.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.20831"
+		owner = {
+			add_relic = uma_tachyon_supervisor_relics
+		}
+		hidden_effect = {
+			owner = {
+				country_event = {
+					days = 15
+					id = tachyon_coffee.2091
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.20832
+	title = tachyon_coffee.20832.title
+	desc = tachyon_coffee.20832.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.20832"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					days = 15
+					id = tachyon_coffee.2092
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2091
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2091.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2090"
+		owner = {
+			set_country_flag = uma_has_conspiracy		###通过country_flag来在开始交战时生成舰队
+			add_modifier = {
+				modifier = tachyon_coffee_conspiracy
+			}
+		}
+		###添加国家DEBUFF
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2092
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.2092.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2090"
+		owner = {
+			set_country_flag = uma_has_conspiracy		###通过country_flag来在开始交战时生成舰队
+			add_modifier = {
+				modifier = tachyon_coffee_conspiracy
+			}
+		}
+		###添加国家DEBUFF
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2100
+	title = tachyon_coffee.2100.title
+	desc = tachyon_coffee.2100.desc ###给爱丽速子发送通讯
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	option = {
+		name = "tachyon_coffee.201"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2101
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2101
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2101.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2102"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2102
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2103"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2103
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2102
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2102.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.21021"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.21021
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.21021a"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.21010
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21010
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.21010.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.2102"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2102
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.2103"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.2103
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = tachyon_coffee.21021
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.21021.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.21022"
+		hidden_effect = {
+			country_event = {
+				id = tachyon_coffee.21022
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21022
+	title = tachyon_coffee.21022.title
+	desc = tachyon_coffee.21022.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	immediate = {
+		create_species = {
+			class = umamusume
+			portrait = 20a
+			effect = {
+				save_event_target_as = uma_leader_tachyon
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.21022"
+
+		###生成爱丽速子科学家
+
+		hidden_effect = {
+			create_leader = {
+				name = "爱丽速子"
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = scientist
+				skill = 8
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_seiun_sky
+					trait = leader_trait_intellectual
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					save_global_event_target_as = uma_is_leader_seiun_sky
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "30c"
+				add_ruler_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+			country_event = {
+				id = tachyon_coffee.21101
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.2103
+	title = tachyon_coffee.2060.title
+	desc = tachyon_coffee.2103.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.21031"
+
+		###两人离开
+
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21101
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.21101.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.21102"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.21102
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21102
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.21102.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.21103"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.21103
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21102
+	title = tachyon_coffee.2011.title
+	desc = tachyon_coffee.21102.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = "tachyon_coffee.21103"
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = tachyon_coffee.21103
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21103
+	title = tachyon_coffee.21103.title
+	desc = tachyon_coffee.21103.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	immediate = {
+		create_species = {
+			class = umamusume
+			portrait = 20a
+			effect = {
+				save_event_target_as = uma_leader_coffee
+			}
+		}
+	}
+
+	option = {
+		name = "tachyon_coffee.21104"
+		hidden_effect = {
+			create_leader = {
+				name = "曼城茶座"
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = scientist
+				skill = 8
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_coffee
+					trait = leader_trait_intellectual
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					save_global_event_target_as = uma_is_leader_seiun_sky
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "25c"
+				add_ruler_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+		###生成曼城茶座科学家
+		}
+	}
+}

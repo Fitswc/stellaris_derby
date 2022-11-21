@@ -1,0 +1,383 @@
+###赛马娘专属 凝聚力 建筑###
+
+#赛场系列建筑（赛马娘文明专属，其余文明直接废弃）
+
+#基础赛场
+building_uma_basic_racing_course = {
+	base_buildtime = 100
+	category = unity
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_racing_umamusume_add = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = uma_job_uma_racing_umamusume_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_race_tradition"
+	}
+
+	upgrades = {
+		building_uma_modern_racing_course
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+
+#现代化赛场
+building_uma_modern_racing_course = {
+	base_buildtime = 300
+	category = unity
+	can_build = no #升级得来
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 450
+			energy = 250
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_racing_umamusume_add = 5
+		}
+	}
+
+	#如果研究了“建立训练员制度”，额外提供1 训练员 岗位
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}			
+				has_technology = tech_uma_estabilish_trainer_system
+			}
+
+		}
+		modifier = {
+			job_uma_trainer_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = uma_job_uma_racing_umamusume_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_race_course_expand"
+	}
+
+	upgrades = {
+		building_uma_top_racing_course
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+
+#尖端赛场
+building_uma_top_racing_course = {
+	base_buildtime = 600
+	category = unity
+	can_build = no #升级得来
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 950
+			energy = 750
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 6
+			uma_crystal_carrot = 1
+		}
+	}
+
+	#如果研究了“建立训练员制度”，额外提供2 训练员 岗位
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}			
+				has_technology = tech_uma_estabilish_trainer_system
+			}
+
+		}
+		modifier = {
+			job_uma_trainer_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_racing_umamusume_add = 8
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = uma_job_uma_racing_umamusume_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_high_level_race_course"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+
+building_uma_tree_holes = { #中庭的树洞
+	base_buildtime = 300
+	category = unity
+	base_cap_amount = 1
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			planet_stability_add = 5
+			planet_crime_add = -20
+			planet_amenities_mult = 0.1
+			planet_jobs_unity_produces_mult = 0.1
+		}
+	}
+
+	prerequisites = {
+		"tech_uma_tree_holes"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}

@@ -1,0 +1,197 @@
+spriteTypes = {
+	#bg	    
+	spriteType = {
+		name = "GFX_uma_bg"
+		texturefile = "gfx/interface/uma_test_gui/uma_bg.dds"
+	}	
+	#购买按钮
+	spriteType = {
+		name = "GFX_uma_buy"
+		texturefile = "gfx/interface/uma_test_gui/uma_buy.dds"
+	}
+	#显示玩家拥有的商店币
+	spriteType = {
+		name = "GFX_uma_shop_coin_we_have"
+		texturefile = "gfx/interface/uma_test_gui/uma_shop_coin_we_have.dds"
+	}
+	#价格显示按钮
+	spriteType = {
+		name = "GFX_uma_price_slot"
+		texturefile = "gfx/interface/uma_test_gui/uma_price_slot.dds"
+	}
+	#退出按钮
+	spriteType = {
+		name = "GFX_uma_shop_exit"
+		texturefile = "gfx/interface/uma_test_gui/uma_shop_exit.dds"
+	}
+	#左上角的招牌
+	spriteType = {
+		name = "GFX_uma_shop_brand"
+		texturefile = "gfx/interface/uma_test_gui/uma_shop_brand.dds"
+	}
+	#绿帽
+	spriteType = {
+		name = "GFX_uma_shop_people"
+		texturefile = "gfx/interface/uma_test_gui/uma_shop_people.dds"
+	}
+    #商品按钮1-亮
+    spriteType = {
+		name = "GFX_uma_goods_1_active"
+		texturefile = "gfx/interface/uma_test_gui/uma_goods_1_active.dds"
+	}
+    #商品按钮1-暗
+    spriteType = {
+		name = "GFX_uma_goods_1_passive"
+		texturefile = "gfx/interface/uma_test_gui/uma_goods_1_passive.dds"
+	}
+	#商品按钮2-亮
+	spriteType = {
+		name = "GFX_uma_goods_2_active"
+		texturefile = "gfx/interface/uma_test_gui/uma_goods_2_active.dds"
+	}
+	#商品按钮2-暗
+	spriteType = {
+		name = "GFX_uma_goods_2_passive"
+		texturefile = "gfx/interface/uma_test_gui/uma_goods_2_passive.dds"
+	}
+	#商品按钮3-亮
+    spriteType = {
+        name = "GFX_uma_goods_3_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_3_active.dds"
+    }
+    #商品按钮3-暗
+    spriteType = {
+        name = "GFX_uma_goods_3_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_3_passive.dds"
+    }
+	#商品按钮4-亮
+	spriteType = {
+		name = "GFX_uma_goods_4_active"
+		texturefile = "gfx/interface/uma_test_gui/uma_goods_4_active.dds"
+	}
+	#商品按钮4-暗
+	spriteType = {
+		name = "GFX_uma_goods_4_passive"
+		texturefile = "gfx/interface/uma_test_gui/uma_goods_4_passive.dds"
+	}
+	#商品按钮5-亮
+    spriteType = {
+        name = "GFX_uma_goods_5_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_5_active.dds"
+    }
+    #商品按钮5-暗
+    spriteType = {
+        name = "GFX_uma_goods_5_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_5_passive.dds"
+	}
+	#商品按钮6-亮
+    spriteType = {
+        name = "GFX_uma_goods_6_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_6_active.dds"
+    }
+    #商品按钮6-暗
+    spriteType = {
+        name = "GFX_uma_goods_6_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_6_passive.dds"
+    }
+	#商品按钮7-亮
+    spriteType = {
+        name = "GFX_uma_goods_7_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_7_active.dds"
+    }
+    #商品按钮7-暗
+    spriteType = {
+        name = "GFX_uma_goods_7_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_7_passive.dds"
+    }
+	#商品按钮8-亮
+    spriteType = {
+        name = "GFX_uma_goods_8_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_8_active.dds"
+    }
+    #商品按钮8-暗
+    spriteType = {
+        name = "GFX_uma_goods_8_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_8_passive.dds"
+    }
+	#商品按钮9-亮
+    spriteType = {
+        name = "GFX_uma_goods_9_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_9_active.dds"
+    }
+    #商品按钮9-暗
+    spriteType = {
+        name = "GFX_uma_goods_9_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_9_passive.dds"
+    }
+	#商品按钮10-亮
+    spriteType = {
+        name = "GFX_uma_goods_10_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_10_active.dds"
+    }
+    #商品按钮10-暗
+    spriteType = {
+        name = "GFX_uma_goods_10_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_10_passive.dds"
+    }
+	#商品按钮11-亮
+    spriteType = {
+        name = "GFX_uma_goods_11_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_11_active.dds"
+    }
+    #商品按钮11-暗
+    spriteType = {
+        name = "GFX_uma_goods_11_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_11_passive.dds"
+    }
+	#商品按钮12-亮
+    spriteType = {
+        name = "GFX_uma_goods_12_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_12_active.dds"
+    }
+    #商品按钮12-暗
+    spriteType = {
+        name = "GFX_uma_goods_12_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_12_passive.dds"
+    }
+	#商品按钮13-亮
+    spriteType = {
+        name = "GFX_uma_goods_13_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_13_active.dds"
+    }
+    #商品按钮13-暗
+    spriteType = {
+        name = "GFX_uma_goods_13_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_13_passive.dds"
+    }
+	#商品按钮14-亮
+    spriteType = {
+        name = "GFX_uma_goods_14_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_14_active.dds"
+    }
+    #商品按钮14-暗
+    spriteType = {
+        name = "GFX_uma_goods_14_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_14_passive.dds"
+    }
+	#商品按钮15-亮
+    spriteType = {
+        name = "GFX_uma_goods_15_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_15_active.dds"
+    }
+    #商品按钮15-暗
+    spriteType = {
+        name = "GFX_uma_goods_15_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_15_passive.dds"
+    }
+	#商品按钮16-亮
+    spriteType = {
+        name = "GFX_uma_goods_16_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_16_active.dds"
+    }
+    #商品按钮16-暗
+    spriteType = {
+        name = "GFX_uma_goods_16_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_16_passive.dds"
+    }
+}

@@ -1,0 +1,41 @@
+spriteTypes = {
+
+	#事件图
+
+	#冠军诞生用
+	spriteType = {
+		name = "GFX_evt_uma_on_the_top"
+		texturefile = "gfx/event_pictures/uma_on_the_top.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	#比赛举办用
+	spriteType = {
+		name = "GFX_evt_uma_racing"
+		texturefile = "gfx/event_pictures/uma_racing.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	#一般事件图
+	spriteType = {
+		name = "GFX_evt_uma_normal_school"
+		texturefile = "gfx/event_pictures/uma_normal_school.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+
+
+
+	####异常点配图（虽说事件拿去用完全没关系）
+	spriteType = {
+		name = "GFX_evt_uma_small_stream"
+		texturefile = "gfx/event_pictures/uma_small_stream.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}	
+
+
+}

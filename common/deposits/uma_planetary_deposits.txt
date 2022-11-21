@@ -1,0 +1,266 @@
+###可殖民行星的特殊地形###
+
+#三女神遗迹(启用”三女神光辉之下“起源时，在首都星球添加)
+d_uma_threegodness_relic = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_uma_threegodness_relic_pic #之后要改。The default icon path is . gfx/interface/icons/deposits/<deposit key>.dds
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_threegodness_knowledge_scholar_add = 1
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}
+
+#三女神博物馆（一段遗迹挖掘后，将三女神遗迹替换成这个）
+d_uma_threegodness_museum = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_uma_threegodness_relic_pic #之后要改。The default icon path is . gfx/interface/icons/deposits/<deposit key>.dds
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_threegodness_knowledge_scholar_add = 2
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}
+
+#水晶萝卜矿脉（马娘星球首都）
+d_uma_crystal_carrot_mine_planet = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_uma_crystal_carrot_mine_planet_pic #之后要改。The default icon path is . gfx/interface/icons/deposits/<deposit key>.dds
+
+	planet_modifier = {
+		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+			owner = { has_technology = tech_uma_crysal_carrot_mining }
+		}
+		modifier = {
+			job_uma_crystal_carrot_miner_add = 2
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+
+###钓鱼佬的小屋
+d_uma_seiun_sky_house = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_uma_seiun_sky_house_pic
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.2
+			planet_stability_add = 20
+			planet_amenities_mult = 0.25
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}
+
+
+###菲尼学院遗址
+d_phoenix_school_relic = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	#category = deposit_cat_rare_blocker
+
+	icon = d_phoenix_school_relic_pic
+	#time = 1825
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.1
+			planet_jobs_engineering_research_produces_mult = 0.1
+			planet_jobs_society_research_produces_mult = 0.1
+			job_uma_threegodness_knowledge_scholar_add = 1
+		}
+	}
+
+	#on_cleared = {
+	#	add_deposit = d_phoenix_school
+	#}
+
+	# resources = {
+	# 	category = deposit_blockers
+	# 	cost = {
+	# 		energy = 20000
+	# 		minerals = 20000
+	# 		alloys = 5000
+	# 		uma_crystal_carrot = 2000
+	# 	}
+	# }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+###菲尼学院
+d_phoenix_school = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_phoenix_school_pic
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.2
+			planet_jobs_engineering_research_produces_mult = 0.2
+			planet_jobs_society_research_produces_mult = 0.2
+			planet_amenities_mult = 0.25
+			planet_housing_add = 100
+			planet_max_buildings_add = 8
+			job_uma_threegodness_knowledge_scholar_add = 2
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+###菲尼学院赛场遗址
+d_phoenix_racing_course_relic = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	#category = deposit_cat_rare_blocker
+
+	icon = d_phoenix_racing_course_relic_pic
+	#time = 1825
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+		}
+		modifier = {
+			job_uma_racing_umamusume_add = 3
+			planet_uma_racing_umamusume_produces_mult = 0.1
+			job_uma_trainer_add = 1
+			job_uma_threegodness_knowledge_scholar_add = 1
+		}
+	}
+
+	# on_cleared = {
+	# 	add_deposit = d_phoenix_racing_course
+	# }
+
+	# resources = {
+	# 	category = deposit_blockers
+	# 	cost = {
+	# 		energy = 20000
+	# 		minerals = 20000
+	# 		alloys = 5000
+	# 		uma_crystal_carrot = 2000
+	# 	}
+	# }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+###菲尼学院赛场
+d_phoenix_racing_course = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_phoenix_school_pic
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+		}
+		modifier = {
+			job_uma_racing_umamusume_add = 15
+			planet_uma_racing_umamusume_produces_mult = 0.4
+			job_uma_trainer_add = 5
+			job_uma_threegodness_knowledge_scholar_add = 2
+			planet_amenities_mult = 0.25
+			planet_housing_add = 50
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

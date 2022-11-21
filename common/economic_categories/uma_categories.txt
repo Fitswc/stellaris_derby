@@ -1,0 +1,271 @@
+planet_uma_umaidol = { #马娘偶像的buff单独拿出来，不受演艺人员buff影响
+	icon = "job_uma_umaidol"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}
+}
+
+planet_racing_related = { #包括训练员 解说员 赛马娘两类职业
+	icon = "job_uma_racing_umamusume"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}
+}
+
+planet_uma_racing_umamusume = { #作为赛事相关职业中的小类别，只针对赛马娘职业本身的修正
+	icon = "job_uma_racing_umamusume"
+	parent = planet_racing_related
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		#upkeep
+	}
+}
+
+planet_uma_trainer = { #作为赛事相关职业中的小类别，只针对训练员职业本身的修正
+	icon = "job_uma_trainer"
+	parent = planet_racing_related
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		#upkeep
+	}
+}
+
+planet_uma_threegodness_knowledge_scholar = { #三女神知识研究者不受到研究人员产出的影响，而是单独拿出来接受一类特别的buff
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}
+}
+
+planet_uma_crystal_carrot_engineer = { #水晶萝卜工程师单独成类
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+planet_uma_research_related = { #马娘科学家和科学主管都属于马娘研究者大类
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		#produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+planet_uma_researcher = { #马娘科学家
+	parent = planet_uma_research_related
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		#upkeep
+	}	
+}
+
+planet_uma_head_researcher = { #马娘科学主管
+	parent = planet_uma_research_related
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		#upkeep
+	}	
+}
+
+################
+
+#胡萝卜农夫
+planet_uma_carrot_farmer = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#养蜂人
+planet_uma_bee_farmer = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		#produces
+		#upkeep
+	}
+	generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	}	
+}
+
+#甜点师
+planet_uma_sweet_master = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#甜点店铺经理
+planet_uma_sweet_manager = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		#produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}
+}
+
+#蹄铁工匠
+planet_uma_horseshoe_crafter = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#决胜服设计师
+planet_uma_live_clothes_crafter = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#水晶合金工匠
+planet_uma_crystal_alloy_crafter = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#日用品工匠
+planet_uma_crystal_consumer_goods_crafter = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#马娘场发电技工
+planet_uma_field_powering_technician = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#############################
+#地心钻探工
+planet_uma_core_miner = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		#upkeep
+	}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+##############################
+#宿舍长
+planet_uma_dormitory_administrator = {
+	parent = planet_jobs_productive
+	#generate_mult_modifiers = {
+	#	produces
+		#upkeep
+	#}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}
+
+#学院研究员
+planet_uma_school_reseacher = {
+	parent = planet_jobs_productive
+	#generate_mult_modifiers = {
+	#	produces
+		#upkeep
+	#}
+	#generate_add_modifiers = {
+	#	produces
+	#	upkeep
+	#}	
+}

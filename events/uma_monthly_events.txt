@@ -1,0 +1,89 @@
+namespace = uma_monthly
+
+###检测sky的星系
+country_event = {
+    id = uma_monthly.1
+    title = "uma_monthly.1.name"
+    desc = "uma_monthly.1.desc"
+
+    picture = GFX_evt_uma_small_stream
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_authority = auth_trainingcenter
+        NOT = { has_country_flag = uma_has_refresh_seiun_sky_system }
+        any_system = {
+            has_star_flag = uma_seiun_sky_system
+            exists = owner ###非常重要！否则在切换到owner的时候会出错！
+            #is_owned_by = root
+        }
+    }
+
+    immediate = {
+        set_country_flag = uma_has_refresh_seiun_sky_system
+    }
+
+    option = {
+        name = "uma_monthly.1.a"
+        #enable_special_project = {
+		#	name = "UMA_COMMUNICATE_WITH_THE_HERMIT"
+		#	location = event_target:uma_seiun_sky_planet
+		#	owner = root
+		#}
+        hidden_effect = {
+            country_event = {
+                id = uma_special_leader.1
+                days = 60
+            }
+        }
+    }
+
+
+    option = {
+        name = "uma_monthly.1.b"
+        set_country_flag = uma_has_refresh_seiun_sky_system
+        add_resource = {
+			influence = 150
+		}      
+    }
+
+}
+
+
+###检测小草的星系
+country_event = {
+    id = uma_monthly.2
+    title = "uma_monthly.2.name"
+    desc = "uma_monthly.2.desc"
+
+    picture = GFX_evt_alien_ruins
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_authority = auth_trainingcenter
+        NOT = { has_country_flag = uma_has_refresh_grass_wonder_system }
+        any_system = {
+            has_star_flag = uma_grass_wonder_system
+            exists = owner
+            #is_owned_by = root
+        }
+    }
+
+    immediate = {
+        set_country_flag = uma_has_refresh_grass_wonder_system
+    }
+
+    option = {
+        name = "uma_monthly.2.a"
+        enable_special_project = {
+			name = "UMA_EXPLORE_PHONIEX_SCHOOL"
+			location = event_target:uma_grass_wonder_planet
+			owner = root
+		}
+    }
+
+}

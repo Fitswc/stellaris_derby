@@ -1,0 +1,74 @@
+uma_country = {
+	name = "uma_toresen_republic" #特雷森共同体
+	key = "uma_toresen_republic" #和EMPIRE_DESIGN联合使用，本地化国家名称
+	adjective = "PRESCRIPTED_adjective_uma_toresen_republic"
+	spawn_enabled = no # yes / no / always
+
+	#ship_prefix = "PRESCRIPTED_ship_prefix_uma_toresen_republic" #这个本地化后，就是在所有船只前面加的前缀.
+
+	species = {
+		class = "umamusume" #种族名
+		portrait = "umamusume" #使用肖像组（必须是肖像组哈，单个肖像会报错）
+		name = "PRESCRIPTED_species_name_uma_toresen_republic" #这些prescripted开头的，都需要进一步地本地化（见uiu_prescripted_c_l_simp_chinese）
+		plural = "PRESCRIPTED_species_plural_uma_toresen_republic"
+		adjective = "PRESCRIPTED_species_adjective_uma_toresen_republic"
+		name_list = "UMAname" #领袖和舰船、星球等的名字来源于哪个名单（这里如果没法加载namelist会导致帝国出不来）
+		trait = "uma_trait_musume" #这里是特质
+		trait = "uma_trait_communal"
+        trait = "uma_trait_spd1"
+        #trait = "trait_slow_breeders"
+	}
+
+	room = "personality_federation_builders_room" #背景房间
+
+	authority = "auth_trainingcenter" #政府制度
+	civics = { "civic_umaairgroove" "civic_umamayanotopgun" } #国家理念
+	government = gov_uma_country #政府
+	origin = "origin_uma_below_threegodness" #起源
+
+	ethic = "ethic_xenophile" #思潮
+	ethic = "ethic_egalitarian"
+	ethic = "ethic_pacifist"
+
+	planet_name = "PRESCRIPTED_planet_name_uma_toresen_republic"
+	planet_class = "pc_continental"
+	system_name = "PRESCRIPTED_system_name_uma_toresen_republic"
+    initializer = "sol_system_initializer" #使用固定星系模板开局
+
+	graphical_culture = "humanoid_01"
+	city_graphical_culture = "humanoid_01"
+
+	spawn_as_fallen = no
+	ignore_portrait_duplication = no
+
+	empire_flag = {
+		icon= { #背景
+			category = "uiu_flags"
+			file = "uiu_flags01.dds"
+		}
+		background= { #次背景
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors={ #背景颜色，次背景颜色；剩下两个未知，建议填null
+			"blue"
+			"blue"
+			"null"
+			"null"
+		}
+	}
+
+    flags = { umamusume_1 custom_start_screen is_uma_country_flag} #自定义开局的介绍文本,可以认为umamusume_1是一个开局就有的flag，用于触发特色开局介绍（大概还可以拿来做特殊事件的trigger）
+
+	ruler = { #统治者特性
+		name = "PRESCRIPTED_ruler_name_uma_toresen_republic"
+		gender = female
+		age = 16
+		portrait = "17a"
+		texture = 0
+		clothes = 0
+		leader_class = ruler
+		ruler_title = PRESCRIPTED_ruler_title_uma_toresen_republic
+		ruler_title_female = PRESCRIPTED_ruler_title_uma_toresen_republic
+	}
+}

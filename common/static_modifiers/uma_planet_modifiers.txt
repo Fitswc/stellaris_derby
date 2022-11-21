@@ -1,0 +1,117 @@
+###赛马娘mod专属的星球修正
+###########比赛修正##########
+#已举办星球德比（标记buff，无效果）
+uma_has_held_the_planet_race = {
+	#以后整自己的图标
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+	icon_frame = 2
+}
+
+#星球德比
+uma_planet_derby_held = {
+	#以后整自己的图标
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+	icon_frame = 1
+
+	planet_stability_add = 20
+	planet_amenities_mult = 0.1
+	trade_value_mult = 0.25
+	planet_jobs_produces_mult = 0.1
+	planet_uma_racing_umamusume_produces_mult = 0.4
+}
+
+
+
+#(星球修正)闪光系列赛举办地
+uma_nation_derby_held_here = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+	icon_frame = 1	
+
+	planet_stability_add = 10
+	planet_amenities_mult = 0.1
+	planet_jobs_produces_mult = 0.05
+	trade_value_mult = 0.3
+	planet_immigration_pull_mult = 0.5
+
+}
+
+#强大的赛马娘
+uma_planet_hero_racing_umamusume = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+	icon_frame = 1
+
+	planet_uma_racing_umamusume_produces_mult = 0.2
+	planet_jobs_produces_mult = 0.05
+
+}
+
+
+###特殊领袖事件链
+###因子污染！
+uma_kenshi_contamination = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 3
+
+	pop_happiness = -0.1
+	planet_jobs_produces_mult = -0.1
+	pop_growth_speed = -0.1
+	planet_stability_add = -5
+}
+
+
+###小事件修正
+#不受控制的名次竞猜
+uma_nation_suppoted_gambling = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 3
+
+	planet_crime_add = 50
+	planet_jobs_unity_produces_mult = -0.1
+	planet_jobs_energy_produces_mult = 0.3
+	planet_amenities_mult = -0.1
+}
+
+#被禁止的名次竞猜
+uma_nation_ban_gambling = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 2
+
+	planet_crime_add = 10
+}
+
+#国立竞猜中心
+uma_national_guessing_game = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+
+	planet_jobs_unity_produces_mult = 0.05
+	planet_jobs_energy_produces_mult = 0.05
+	planet_jobs_society_research_produces_mult = 0.05
+	planet_stability_add = 5
+	planet_amenities_mult = 0.1
+
+}
+
+
+#############科技修正##############
+#繁荣发展的殖民地（1）
+uma_prosperity_colony_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+
+	planet_jobs_produces_mult = 0.05
+	pop_growth_speed = 0.05
+	planet_clear_blocker_time_mult = -0.25
+
+}
+
+#繁荣发展的殖民地（2）
+uma_prosperity_colony_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+
+	planet_jobs_produces_mult = 0.1
+	pop_growth_speed = 0.1
+	planet_clear_blocker_time_mult = -0.5
+
+}

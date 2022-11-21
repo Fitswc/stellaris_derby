@@ -1,0 +1,2628 @@
+###########################绿帽商店GUI#########################
+################显示按钮################
+#########如果不是instanttextbox无法显示引用的变量，人家才不会用这种effectbotton+text的方式来显示呢，哼！
+###价格按钮
+uma_price_slot_common_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_how_much_you_have #这里也可以引用变量
+    }
+}
+
+###显示商店币拥有量
+uma_show_coin_common_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_shop_coin_we_have_hint
+    }
+}
+
+#################功能按钮###############
+#########slot1##########
+#slot1-激活商品1按钮
+uma_slot_1_goods_1_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_1_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+    }
+}
+
+#slot1-暗的商品1按钮
+uma_slot_1_goods_1_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_1_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品2按钮
+uma_slot_1_goods_2_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_2_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+    }
+}
+
+#slot1-暗的商品2按钮
+uma_slot_1_goods_2_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_2_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品3按钮
+uma_slot_1_goods_3_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_3_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+    }
+}
+
+#slot1-暗的商品3按钮
+uma_slot_1_goods_3_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_3_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品4按钮
+uma_slot_1_goods_4_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_4_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+    }
+}
+#slot1-暗的商品4按钮
+uma_slot_1_goods_4_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_4_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品5按钮
+uma_slot_1_goods_5_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_5_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+    }
+}
+#slot1-暗的商品1按钮
+uma_slot_1_goods_5_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_5_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品6按钮
+uma_slot_1_goods_6_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_6_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+    }
+}
+#slot1-暗的商品6按钮
+uma_slot_1_goods_6_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_6_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品7按钮
+uma_slot_1_goods_7_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_7_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+    }
+}
+#slot1-暗的商品7按钮
+uma_slot_1_goods_7_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_7_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品8按钮
+uma_slot_1_goods_8_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_8_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+    }
+}
+#slot1-暗的商品8按钮
+uma_slot_1_goods_8_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_8_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品9按钮
+uma_slot_1_goods_9_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_9_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+    }
+}
+#slot1-暗的商品9按钮
+uma_slot_1_goods_9_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_9_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品10按钮
+uma_slot_1_goods_10_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_10_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+    }
+}
+#slot1-暗的商品10按钮
+uma_slot_1_goods_10_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_10_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品11按钮
+uma_slot_1_goods_11_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_11_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+    }
+}
+#slot1-暗的商品11按钮
+uma_slot_1_goods_11_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_11_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品12按钮
+uma_slot_1_goods_12_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_12_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+    }
+}
+#slot1-暗的商品12按钮
+uma_slot_1_goods_12_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_12_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品13按钮
+uma_slot_1_goods_13_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_13_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+    }
+}
+#slot1-暗的商品13按钮
+uma_slot_1_goods_13_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_13_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品14按钮
+uma_slot_1_goods_14_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_14_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+    }
+}
+#slot1-暗的商品14按钮
+uma_slot_1_goods_14_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_14_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品15按钮
+uma_slot_1_goods_15_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_15_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+    }
+}
+#slot1-暗的商品15按钮
+uma_slot_1_goods_15_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_15_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot1-激活商品16按钮
+uma_slot_1_goods_16_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_16_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+    }
+}
+#slot1-暗的商品16按钮
+uma_slot_1_goods_16_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_16_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+####
+#购买slot1的商品
+uma_buy_effect_slot_1 = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = uma_you_have_bought_this_slot
+            NOT = { has_country_flag = uma_slot_1_bought }
+            check_variable = {
+                which = uma_num_of_coin
+                value >= uma_price_of_goods_1_multiply  #记住，一定是>=，只用=的话，只会在==的时候判定为真。
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+        uma_buy_slot_1_goods_effect = yes #封装效果，买下槽位1的东西
+            subtract_variable = {
+                which = uma_num_of_coin
+                value = uma_price_of_goods_1_multiply #不要直接引用变量（energy = 变量），而是要用base=1，乘以这个变量
+            }
+            set_country_flag = uma_slot_1_bought
+        }
+    }
+}
+###################################
+###################################
+#########slot2##########
+#slot2-激活商品1按钮
+uma_slot_2_goods_1_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_1_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+    }
+}
+
+#slot2-暗的商品1按钮
+uma_slot_2_goods_1_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_1_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品2按钮
+uma_slot_2_goods_2_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_2_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+    }
+}
+
+#slot2-暗的商品2按钮
+uma_slot_2_goods_2_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_2_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品3按钮
+uma_slot_2_goods_3_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_3_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+    }
+}
+
+#slot2-暗的商品3按钮
+uma_slot_2_goods_3_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_3_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品4按钮
+uma_slot_2_goods_4_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_4_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+    }
+}
+#slot2-暗的商品4按钮
+uma_slot_2_goods_4_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_4_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品5按钮
+uma_slot_2_goods_5_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_5_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+    }
+}
+#slot2-暗的商品1按钮
+uma_slot_2_goods_5_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_5_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品6按钮
+uma_slot_2_goods_6_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_6_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+    }
+}
+#slot2-暗的商品6按钮
+uma_slot_2_goods_6_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_6_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品7按钮
+uma_slot_2_goods_7_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_7_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+    }
+}
+#slot2-暗的商品7按钮
+uma_slot_2_goods_7_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_7_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品8按钮
+uma_slot_2_goods_8_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_8_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+    }
+}
+#slot2-暗的商品8按钮
+uma_slot_2_goods_8_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_8_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品9按钮
+uma_slot_2_goods_9_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_9_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+    }
+}
+#slot2-暗的商品9按钮
+uma_slot_2_goods_9_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_9_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品10按钮
+uma_slot_2_goods_10_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_10_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+    }
+}
+#slot2-暗的商品10按钮
+uma_slot_2_goods_10_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_10_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品11按钮
+uma_slot_2_goods_11_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_11_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+    }
+}
+#slot2-暗的商品11按钮
+uma_slot_2_goods_11_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_11_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品12按钮
+uma_slot_2_goods_12_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_12_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+    }
+}
+#slot2-暗的商品12按钮
+uma_slot_2_goods_12_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_12_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品13按钮
+uma_slot_2_goods_13_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_13_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+    }
+}
+#slot2-暗的商品13按钮
+uma_slot_2_goods_13_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_13_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品14按钮
+uma_slot_2_goods_14_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_14_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+    }
+}
+#slot2-暗的商品14按钮
+uma_slot_2_goods_14_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_14_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品15按钮
+uma_slot_2_goods_15_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_15_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+    }
+}
+#slot2-暗的商品15按钮
+uma_slot_2_goods_15_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_15_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot2-激活商品16按钮
+uma_slot_2_goods_16_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_16_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+    }
+}
+#slot2-暗的商品16按钮
+uma_slot_2_goods_16_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_2_goods_16_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+####
+#购买slot2的商品
+uma_buy_effect_slot_2 = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = uma_you_have_bought_this_slot
+            NOT = { has_country_flag = uma_slot_2_bought }
+            check_variable = {
+                which = uma_num_of_coin
+                value >= uma_price_of_goods_2_multiply  #记住，一定是>=，只用=的话，只会在==的时候判定为真。
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+        uma_buy_slot_2_goods_effect = yes #封装效果，买下槽位1的东西
+            subtract_variable = {
+                which = uma_num_of_coin
+                value = uma_price_of_goods_2_multiply #不要直接引用变量（energy = 变量），而是要用base=1，乘以这个变量
+            }
+            set_country_flag = uma_slot_2_bought
+        }
+    }
+}
+###################################
+###################################
+#########slot3##########
+#slot3-激活商品1按钮
+uma_slot_3_goods_1_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_1_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+    }
+}
+
+#slot3-暗的商品1按钮
+uma_slot_3_goods_1_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_1_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品2按钮
+uma_slot_3_goods_2_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_2_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+    }
+}
+
+#slot3-暗的商品2按钮
+uma_slot_3_goods_2_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_2_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品3按钮
+uma_slot_3_goods_3_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_3_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+    }
+}
+
+#slot3-暗的商品3按钮
+uma_slot_3_goods_3_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_3_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品4按钮
+uma_slot_3_goods_4_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_4_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+    }
+}
+#slot3-暗的商品4按钮
+uma_slot_3_goods_4_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_4_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品5按钮
+uma_slot_3_goods_5_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_5_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+    }
+}
+#slot3-暗的商品1按钮
+uma_slot_3_goods_5_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_5_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品6按钮
+uma_slot_3_goods_6_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_6_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+    }
+}
+#slot3-暗的商品6按钮
+uma_slot_3_goods_6_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_6_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品7按钮
+uma_slot_3_goods_7_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_7_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+    }
+}
+#slot3-暗的商品7按钮
+uma_slot_3_goods_7_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_7_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品8按钮
+uma_slot_3_goods_8_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_8_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+    }
+}
+#slot3-暗的商品8按钮
+uma_slot_3_goods_8_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_8_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品9按钮
+uma_slot_3_goods_9_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_9_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+    }
+}
+#slot3-暗的商品9按钮
+uma_slot_3_goods_9_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_9_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品10按钮
+uma_slot_3_goods_10_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_10_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+    }
+}
+#slot3-暗的商品10按钮
+uma_slot_3_goods_10_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_10_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品11按钮
+uma_slot_3_goods_11_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_11_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+    }
+}
+#slot3-暗的商品11按钮
+uma_slot_3_goods_11_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_11_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品12按钮
+uma_slot_3_goods_12_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_12_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+    }
+}
+#slot3-暗的商品12按钮
+uma_slot_3_goods_12_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_12_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品13按钮
+uma_slot_3_goods_13_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_13_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+    }
+}
+#slot3-暗的商品13按钮
+uma_slot_3_goods_13_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_13_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品14按钮
+uma_slot_3_goods_14_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_14_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+    }
+}
+#slot3-暗的商品14按钮
+uma_slot_3_goods_14_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_14_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品15按钮
+uma_slot_3_goods_15_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_15_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+    }
+}
+#slot3-暗的商品15按钮
+uma_slot_3_goods_15_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_15_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot3-激活商品16按钮
+uma_slot_3_goods_16_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_16_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+    }
+}
+#slot3-暗的商品16按钮
+uma_slot_3_goods_16_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_3_goods_16_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+####
+#购买slot3的商品
+uma_buy_effect_slot_3 = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = uma_you_have_bought_this_slot
+            NOT = { has_country_flag = uma_slot_3_bought }
+            check_variable = {
+                which = uma_num_of_coin
+                value >= uma_price_of_goods_3_multiply  #记住，一定是>=，只用=的话，只会在==的时候判定为真。
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+        uma_buy_slot_3_goods_effect = yes #封装效果，买下槽位1的东西
+            subtract_variable = {
+                which = uma_num_of_coin
+                value = uma_price_of_goods_3_multiply #不要直接引用变量（energy = 变量），而是要用base=1，乘以这个变量
+            }
+            set_country_flag = uma_slot_3_bought
+        }
+    }
+}
+###################################
+###################################
+#########slot4##########
+#slot4-激活商品1按钮
+uma_slot_4_goods_1_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_1_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+    }
+}
+
+#slot4-暗的商品1按钮
+uma_slot_4_goods_1_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_1_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品2按钮
+uma_slot_4_goods_2_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_2_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+    }
+}
+
+#slot4-暗的商品2按钮
+uma_slot_4_goods_2_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_2_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品3按钮
+uma_slot_4_goods_3_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_3_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+    }
+}
+
+#slot4-暗的商品3按钮
+uma_slot_4_goods_3_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_3_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品4按钮
+uma_slot_4_goods_4_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_4_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+    }
+}
+#slot4-暗的商品4按钮
+uma_slot_4_goods_4_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_4_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品5按钮
+uma_slot_4_goods_5_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_5_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+    }
+}
+#slot4-暗的商品1按钮
+uma_slot_4_goods_5_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_5_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品6按钮
+uma_slot_4_goods_6_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_6_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+    }
+}
+#slot4-暗的商品6按钮
+uma_slot_4_goods_6_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_6_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品7按钮
+uma_slot_4_goods_7_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_7_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+    }
+}
+#slot4-暗的商品7按钮
+uma_slot_4_goods_7_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_7_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品8按钮
+uma_slot_4_goods_8_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_8_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+    }
+}
+#slot4-暗的商品8按钮
+uma_slot_4_goods_8_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_8_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品9按钮
+uma_slot_4_goods_9_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_9_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+    }
+}
+#slot4-暗的商品9按钮
+uma_slot_4_goods_9_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_9_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品10按钮
+uma_slot_4_goods_10_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_10_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+    }
+}
+#slot4-暗的商品10按钮
+uma_slot_4_goods_10_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_10_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品11按钮
+uma_slot_4_goods_11_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_11_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+    }
+}
+#slot4-暗的商品11按钮
+uma_slot_4_goods_11_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_11_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品12按钮
+uma_slot_4_goods_12_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_12_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+    }
+}
+#slot4-暗的商品12按钮
+uma_slot_4_goods_12_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_12_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品13按钮
+uma_slot_4_goods_13_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_13_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+    }
+}
+#slot4-暗的商品13按钮
+uma_slot_4_goods_13_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_13_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品14按钮
+uma_slot_4_goods_14_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_14_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+    }
+}
+#slot4-暗的商品14按钮
+uma_slot_4_goods_14_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_14_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品15按钮
+uma_slot_4_goods_15_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_15_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+    }
+}
+#slot4-暗的商品15按钮
+uma_slot_4_goods_15_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_15_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot4-激活商品16按钮
+uma_slot_4_goods_16_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_16_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+    }
+}
+#slot4-暗的商品16按钮
+uma_slot_4_goods_16_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_4_goods_16_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+####
+#购买slot4的商品
+uma_buy_effect_slot_4 = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = uma_you_have_bought_this_slot
+            NOT = { has_country_flag = uma_slot_4_bought }
+            check_variable = {
+                which = uma_num_of_coin
+                value >= uma_price_of_goods_4_multiply  #记住，一定是>=，只用=的话，只会在==的时候判定为真。
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+        uma_buy_slot_4_goods_effect = yes #封装效果，买下槽位1的东西
+            subtract_variable = {
+                which = uma_num_of_coin
+                value = uma_price_of_goods_4_multiply #不要直接引用变量（energy = 变量），而是要用base=1，乘以这个变量
+            }
+            set_country_flag = uma_slot_4_bought
+        }
+    }
+}
+
+###################################
+###################################
+#########slot5##########
+#slot5-激活商品1按钮
+uma_slot_5_goods_1_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_1_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+    }
+}
+
+#slot5-暗的商品1按钮
+uma_slot_5_goods_1_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_1_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品2按钮
+uma_slot_5_goods_2_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_2_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+    }
+}
+
+#slot5-暗的商品2按钮
+uma_slot_5_goods_2_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_2_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品3按钮
+uma_slot_5_goods_3_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_3_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+    }
+}
+
+#slot5-暗的商品3按钮
+uma_slot_5_goods_3_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_3_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品4按钮
+uma_slot_5_goods_4_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_4_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+    }
+}
+#slot5-暗的商品4按钮
+uma_slot_5_goods_4_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_4_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品5按钮
+uma_slot_5_goods_5_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_5_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+    }
+}
+#slot5-暗的商品1按钮
+uma_slot_5_goods_5_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_5_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品6按钮
+uma_slot_5_goods_6_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_6_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+    }
+}
+#slot5-暗的商品6按钮
+uma_slot_5_goods_6_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_6_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品7按钮
+uma_slot_5_goods_7_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_7_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+    }
+}
+#slot5-暗的商品7按钮
+uma_slot_5_goods_7_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_7_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品8按钮
+uma_slot_5_goods_8_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_8_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+    }
+}
+#slot5-暗的商品8按钮
+uma_slot_5_goods_8_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_8_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品9按钮
+uma_slot_5_goods_9_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_9_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+    }
+}
+#slot5-暗的商品9按钮
+uma_slot_5_goods_9_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_9_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品10按钮
+uma_slot_5_goods_10_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_10_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+    }
+}
+#slot5-暗的商品10按钮
+uma_slot_5_goods_10_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_10_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品11按钮
+uma_slot_5_goods_11_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_11_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+    }
+}
+#slot5-暗的商品11按钮
+uma_slot_5_goods_11_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_11_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品12按钮
+uma_slot_5_goods_12_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_12_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+    }
+}
+#slot5-暗的商品12按钮
+uma_slot_5_goods_12_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_12_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品13按钮
+uma_slot_5_goods_13_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_13_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+    }
+}
+#slot5-暗的商品13按钮
+uma_slot_5_goods_13_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_13_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品14按钮
+uma_slot_5_goods_14_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_14_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+    }
+}
+#slot5-暗的商品14按钮
+uma_slot_5_goods_14_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_14_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品15按钮
+uma_slot_5_goods_15_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_15_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+    }
+}
+#slot5-暗的商品15按钮
+uma_slot_5_goods_15_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_15_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot5-激活商品16按钮
+uma_slot_5_goods_16_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_16_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+    }
+}
+#slot5-暗的商品16按钮
+uma_slot_5_goods_16_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_5_goods_16_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+####
+#购买slot5的商品
+uma_buy_effect_slot_5 = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = uma_you_have_bought_this_slot
+            NOT = { has_country_flag = uma_slot_5_bought }
+            check_variable = {
+                which = uma_num_of_coin
+                value >= uma_price_of_goods_5_multiply  #记住，一定是>=，只用=的话，只会在==的时候判定为真。
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+        uma_buy_slot_5_goods_effect = yes #封装效果，买下槽位1的东西
+            subtract_variable = {
+                which = uma_num_of_coin
+                value = uma_price_of_goods_5_multiply #不要直接引用变量（energy = 变量），而是要用base=1，乘以这个变量
+            }
+            set_country_flag = uma_slot_5_bought
+        }
+    }
+}
+
+###################################
+###################################
+#########slot6##########
+#slot6-激活商品1按钮
+uma_slot_6_goods_1_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_1_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+    }
+}
+
+#slot6-暗的商品1按钮
+uma_slot_6_goods_1_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_1_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_1_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品2按钮
+uma_slot_6_goods_2_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_2_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+    }
+}
+
+#slot6-暗的商品2按钮
+uma_slot_6_goods_2_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_2_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_2_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品3按钮
+uma_slot_6_goods_3_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_3_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+    }
+}
+
+#slot6-暗的商品3按钮
+uma_slot_6_goods_3_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_3_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_3_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品4按钮
+uma_slot_6_goods_4_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_4_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+    }
+}
+#slot6-暗的商品4按钮
+uma_slot_6_goods_4_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_4_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_4_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品5按钮
+uma_slot_6_goods_5_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_5_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+    }
+}
+#slot6-暗的商品1按钮
+uma_slot_6_goods_5_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_5_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_5_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品6按钮
+uma_slot_6_goods_6_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_6_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+    }
+}
+#slot6-暗的商品6按钮
+uma_slot_6_goods_6_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_6_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_6_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品7按钮
+uma_slot_6_goods_7_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_7_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+    }
+}
+#slot6-暗的商品7按钮
+uma_slot_6_goods_7_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_7_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_7_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品8按钮
+uma_slot_6_goods_8_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_8_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+    }
+}
+#slot6-暗的商品8按钮
+uma_slot_6_goods_8_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_8_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_8_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品9按钮
+uma_slot_6_goods_9_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_9_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+    }
+}
+#slot6-暗的商品9按钮
+uma_slot_6_goods_9_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_9_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_9_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品10按钮
+uma_slot_6_goods_10_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_10_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+    }
+}
+#slot6-暗的商品10按钮
+uma_slot_6_goods_10_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_10_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_10_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品11按钮
+uma_slot_6_goods_11_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_11_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+    }
+}
+#slot6-暗的商品11按钮
+uma_slot_6_goods_11_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_11_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_11_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品12按钮
+uma_slot_6_goods_12_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_12_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+    }
+}
+#slot6-暗的商品12按钮
+uma_slot_6_goods_12_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_12_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_12_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品13按钮
+uma_slot_6_goods_13_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_13_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+    }
+}
+#slot6-暗的商品13按钮
+uma_slot_6_goods_13_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_13_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_13_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品14按钮
+uma_slot_6_goods_14_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_14_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+    }
+}
+#slot6-暗的商品14按钮
+uma_slot_6_goods_14_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_14_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_14_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品15按钮
+uma_slot_6_goods_15_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_15_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+    }
+}
+#slot6-暗的商品15按钮
+uma_slot_6_goods_15_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_15_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_15_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+#slot6-激活商品16按钮
+uma_slot_6_goods_16_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_16_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+    }
+}
+#slot6-暗的商品16按钮
+uma_slot_6_goods_16_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_6_goods_16_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_16_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+####
+#购买slot6的商品
+uma_buy_effect_slot_6 = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = uma_you_have_bought_this_slot
+            NOT = { has_country_flag = uma_slot_6_bought }
+            check_variable = {
+                which = uma_num_of_coin
+                value >= uma_price_of_goods_6_multiply  #记住，一定是>=，只用=的话，只会在==的时候判定为真。
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+        uma_buy_slot_6_goods_effect = yes #封装效果，买下槽位1的东西
+            subtract_variable = {
+                which = uma_num_of_coin
+                value = uma_price_of_goods_6_multiply #不要直接引用变量（energy = 变量），而是要用base=1，乘以这个变量
+            }
+            set_country_flag = uma_slot_6_bought
+        }
+    }
+}

@@ -1,0 +1,118 @@
+#赛马娘专属特殊法案
+
+#举办国家德比
+uma_held_national_derby = {
+	length = 0
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 400
+		}
+	}
+
+	potential = {
+		has_technology = tech_uma_country_race_holding
+	}
+
+	allow = {
+		any_owned_planet = {
+			has_building = building_uma_top_racing_course
+		}
+		NOT = { has_modifier = uma_has_held_national_derby }
+	}
+
+	effect = {
+		custom_tooltip = uma_we_are_going_to_held_national_derby
+
+		add_modifier = {
+			modifier = uma_has_held_national_derby
+			days = 14600
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = uma_national_racing.1
+				days = 60
+				random = 20
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+
+#使用道具
+uma_use_goods_in_shop = {
+	length = 0
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_enter_goods_use_event
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.4
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+
+####功能法案
+#重置特殊领袖肖像
+uma_refresh_speical_leader_potrait = {
+	length = 0
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_refresh_speical_leader_potrait_effect
+		hidden_effect = {
+			country_event = {
+				id = uma_events_effect.4
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}

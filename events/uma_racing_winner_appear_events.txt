@@ -1,0 +1,490 @@
+#举办比赛后刷出强大马娘领袖的事件
+namespace = uma_racing_winner_appears
+
+#星球德比制霸者诞生！
+country_event = {
+	id = uma_racing_winner_appears.1
+    title = "uma_racing_winner_appears.1.name"
+    desc = "uma_racing_winner_appears.1.desc"
+    picture = GFX_evt_uma_on_the_top #之后要换图！
+
+    is_triggered_only = yes
+
+	#招收进入特雷森
+	option = {
+		name = "uma_racing_winner_appears.1.a"
+		random_list = {
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_admiral #一位强大的马娘提督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = admiral
+						skill = 5
+						set_age = 17
+						traits = {
+							#trait = uma_planet_derby_winner_admiral 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_governor #一位强大的马娘总督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = governor
+						skill = 5
+						set_age = 17
+						traits = {
+							#trait = uma_planet_derby_winner_governor 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_scientist #一位强大的马娘科学家将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = scientist
+						skill = 5
+						set_age = 17
+						traits = {
+							#trait = uma_planet_derby_winner_scientist 
+						}
+					}
+				}
+			}
+
+			20 ={
+				custom_tooltip = uma_a_legendary_umamusume_will_join_general #一位强大的马娘将军将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = general
+						skill = 5
+						set_age = 17
+						traits = {
+							#trait = uma_planet_derby_winner_generals
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	#去国家系列比赛吧
+	option = {
+		name = "uma_racing_winner_appears.1.b"
+		add_modifier = {
+			modifier = uma_planet_hero_in_country
+			days = 3650
+		}
+
+	}
+
+	#留在自己的星球吧
+	option = {
+		name = "uma_racing_winner_appears.1.c"
+
+		FROM = {
+			add_modifier = {
+				modifier = uma_planet_hero_racing_umamusume
+				days = 3650
+			}
+		}
+
+	}	
+
+}
+
+#二冠马娘诞生！
+country_event = {
+	id = uma_racing_winner_appears.2
+    title = "uma_racing_winner_appears.2.name"
+    desc = "uma_racing_winner_appears.2.desc"
+    picture = GFX_evt_uma_on_the_top #之后要换图！
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_racing_winner_appears.2.a"
+		random_list = {
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_admiral #一位强大的马娘提督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = admiral
+						skill = 7
+						set_age = 17
+						traits = {
+							#trait = uma_national_double_crown_winner_admiral 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_governor #一位强大的马娘总督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = governor
+						skill = 7
+						set_age = 17
+						traits = {
+							#trait = uma_national_double_crown_winner_governor 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_scientist #一位强大的马娘科学家将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = scientist
+						skill = 7
+						set_age = 17
+						traits = {
+							#trait = uma_national_double_crown_winner_scientist 
+						}
+					}
+				}
+			}
+
+			20 ={
+				custom_tooltip = uma_a_legendary_umamusume_will_join_general #一位强大的马娘将军将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = general
+						skill = 7
+						set_age = 17
+						traits = {
+							#trait = uma_national_double_crown_winner_generals
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	#继续奔跑吧
+	option = {
+		name = "uma_racing_winner_appears.2.b"
+		add_modifier = {
+			modifier = uma_double_crown_racing_umamusume
+			days = 3650
+		}
+	}
+
+
+}
+
+#三冠马娘诞生！
+country_event = {
+	id = uma_racing_winner_appears.3
+    title = "uma_racing_winner_appears.3.name"
+    desc = "uma_racing_winner_appears.3.desc"
+    picture = GFX_evt_uma_on_the_top #之后要换图！
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_racing_winner_appears.3.a"
+		random_list = {
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_admiral #一位强大的马娘提督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = admiral
+						skill = 9
+						set_age = 17
+						traits = {
+							#trait = uma_national_triple_crown_winner_admiral 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_governor #一位强大的马娘总督将会加入
+				hidden_effect = {
+						create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = governor
+						skill = 9
+						set_age = 17
+						traits = {
+							#trait = uma_national_triple_crown_winner_governor 
+						}
+				}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_scientist #一位强大的马娘科学家将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = scientist
+						skill = 9
+						set_age = 17
+						traits = {
+							#trait = uma_national_triple_crown_winner_scientist 
+						}
+					}
+				}
+			}
+
+			20 ={
+				custom_tooltip = uma_a_legendary_umamusume_will_join_general #一位强大的马娘将军将会加入
+				hidden_effect = {
+					create_leader = { 
+						name = random
+						species = umamusume
+						gender = female
+						class = general
+						skill = 9
+						set_age = 17
+						traits = {
+							#trait = uma_national_triple_crown_winner_generals
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	#继续奔跑吧
+	option = {
+		name = "uma_racing_winner_appears.3.b"
+		add_modifier = {
+			modifier = uma_triple_crown_racing_umamusume
+			days = 3650
+		}
+	}
+
+}
+
+#无败三冠马娘诞生！
+country_event = {
+	id = uma_racing_winner_appears.4
+    title = "uma_racing_winner_appears.4.name"
+    desc = "uma_racing_winner_appears.4.desc"
+    picture = GFX_evt_uma_on_the_top #之后要换图！
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_racing_winner_appears.4.a"
+		random_list = {
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_admiral #一位强大的马娘提督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = admiral
+						skill = 10
+						set_age = 17
+						traits = {
+							#trait = uma_national_no_fail_triple_crown_winner_admiral 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_governor #一位强大的马娘总督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = governor
+						skill = 10
+						set_age = 17
+						traits = {
+							#trait = uma_national_no_fail_triple_crown_winner_governor 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_scientist #一位强大的马娘科学家将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = scientist
+						skill = 10
+						set_age = 17
+						traits = {
+							#trait = uma_national_no_fail_triple_crown_winner_scientist 
+						}
+					}
+				}
+			}
+
+			20 ={
+				custom_tooltip = uma_a_legendary_umamusume_will_join_general #一位强大的马娘将军将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = general
+						skill = 10
+						set_age = 17
+						traits = {
+							#trait = uma_national_no_fail_triple_crown_winner_generals
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	#继续奔跑吧
+	option = {
+		name = "uma_racing_winner_appears.4.b"
+		add_modifier = {
+			modifier = uma_no_fail_triple_crown_racing_umamusume
+			days = 3650
+		}
+	}
+
+}
+
+
+
+#古马王道完全制霸马娘诞生！
+country_event = {
+	id = uma_racing_winner_appears.5
+    title = "uma_racing_winner_appears.5.name"
+    desc = "uma_racing_winner_appears.5.desc"
+    picture = GFX_evt_uma_on_the_top #之后要换图！
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_racing_winner_appears.5.a"
+		random_list = {
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_admiral #一位强大的马娘提督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = admiral
+						skill = 12
+						set_age = 17
+						traits = {
+							#trait = uma_national_six_crown_winner_admiral 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_governor #一位强大的马娘总督将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = governor
+						skill = 12
+						set_age = 17
+						traits = {
+							#trait = uma_national_six_crown_winner_governor 
+						}
+					}
+				}
+			}
+
+			20 = {
+				custom_tooltip = uma_a_legendary_umamusume_will_join_scientist #一位强大的马娘科学家将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = scientist
+						skill = 12
+						set_age = 17
+						traits = {
+							#trait = uma_national_six_crown_winner_scientist 
+						}
+					}
+				}
+			}
+
+			20 ={
+				custom_tooltip = uma_a_legendary_umamusume_will_join_general #一位强大的马娘将军将会加入
+				hidden_effect = {
+					create_leader = {
+						name = random
+						species = umamusume
+						gender = female
+						class = general
+						skill = 12
+						set_age = 17
+						traits = {
+							#trait = uma_national_six_crown_winner_generals
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	#继续奔跑吧
+	option = {
+		name = "uma_racing_winner_appears.5.b"
+		add_modifier = {
+			modifier = uma_six_crown_racing_umamusume
+			days = 3650
+		}
+	}
+
+}

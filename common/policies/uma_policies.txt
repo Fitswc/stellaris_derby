@@ -1,0 +1,70 @@
+###马娘专属政策
+
+#赛事运营方针
+uma_racing_umamusume_policy = {
+	potential = {
+		has_authority = auth_trainingcenter
+		has_technology = tech_uma_toresen_race_dept
+	}
+
+	allow = {
+		is_at_war = no
+	}
+
+	#保持传统
+	option = {
+		name = "uma_racing_umamusume_policy_tradition"
+
+		policy_flags = {
+			uma_racing_umamusume_policy_tradition
+		}
+
+		modifier = {
+
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+
+	#商业化运营
+	option = {
+		name = "uma_racing_umamusume_policy_business"
+	
+
+		policy_flags = {
+			uma_racing_umamusume_policy_business
+		}
+
+		modifier = {
+			planet_uma_racing_umamusume_unity_produces_mult = -0.1
+			planet_uma_racing_umamusume_energy_produces_add = 3
+		}
+
+		ai_weight = {
+			weight = 0
+		}
+	}
+
+	#荣耀之战
+	option = {
+		name = "uma_racing_umamusume_policy_glory"
+	
+
+		policy_flags = {
+			uma_racing_umamusume_policy_glory
+		}
+
+		modifier = {
+			planet_uma_racing_umamusume_unity_produces_mult = 0.1
+			planet_uma_racing_umamusume_upkeep_mult = 0.1
+		}
+
+		ai_weight = {
+			weight = 0
+		}
+	}
+
+
+}

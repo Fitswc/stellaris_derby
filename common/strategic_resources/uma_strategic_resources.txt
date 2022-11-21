@@ -1,0 +1,51 @@
+####新增资源####
+
+###三女神知识###
+uma_threegodness_knowledge = {
+	tradable = no
+	max = 20000
+	##AI_category = strategic_resource
+
+	# prerequisites = { 拥有科技”建立三女神知识研究所“ }
+
+	visibility_prerequisite = {
+		OR = {
+			has_authority = auth_trainingcenter #只有马娘文明可见
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 5
+	}
+
+}
+
+###水晶萝卜###
+uma_crystal_carrot = {
+	tradable = no
+	max = 50000
+	##AI_category = strategic_resource
+
+	prerequisites = { "tech_uma_crysal_carrot_mining" }
+
+	visibility_prerequisite = {
+		OR = {
+			has_authority = auth_trainingcenter #只有马娘文明可见
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 5
+	}
+
+}

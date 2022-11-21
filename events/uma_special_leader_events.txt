@@ -1,0 +1,2163 @@
+namespace = uma_special_leader
+
+###星云天空事件链
+###和隐居者建立联系?
+country_event = {
+	id = uma_special_leader.1
+    title = "uma_special_leader.1.name"
+    desc = "uma_special_leader.1.desc"
+    picture = GFX_evt_uma_small_stream #换图了换图了！
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_special_leader.1.a"
+			#fromfrom = { ##fromfrom为那颗你想要设置异常的星球
+			#	enable_special_project = {
+			#		name = "UMA_COMMUNICATE_WITH_THE_HERMIT"
+			#		location = this
+			#		owner = root.owner #owner就是这个船的拥有者，这里是国家
+			#	}
+			#}
+			enable_special_project = {
+				name = "UMA_COMMUNICATE_WITH_THE_HERMIT"
+				location = event_target:uma_seiun_sky_planet
+				owner = root
+			}
+	}
+    
+	###算了，别去管他
+	option = {
+		name = "uma_special_leader.1.b"
+		#owner = {
+		add_resource = {
+			influence = 150
+		}
+		#}
+	}
+}
+
+
+###成功建立联系！
+country_event = {
+	id = uma_special_leader.2
+    title = "uma_special_leader.2.name"
+    desc = "uma_special_leader.2.desc"
+    picture = GFX_evt_uma_small_stream
+
+    is_triggered_only = yes
+
+	###接通通讯！
+	option = {
+		name = "uma_special_leader.2.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.3
+			}
+		}
+	}
+
+}
+
+###通讯
+country_event = {
+	id = uma_special_leader.3
+	title = uma_special_leader.3.title
+	desc = uma_special_leader.3.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 20a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.3.a
+		response_text = uma_special_leader.3.a.response
+		is_dialog_only = yes		
+	}
+
+	option = {
+		name = uma_special_leader.3.b
+		response_text = uma_special_leader.3.b.response
+		is_dialog_only = yes		
+	}
+
+	option = {
+		name = uma_special_leader.3.c
+		response_text = uma_special_leader.3.c.response
+		is_dialog_only = yes		
+	}
+
+	###你的打算？
+	option = {
+		name = uma_special_leader.3.d
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.4
+			}
+		}		
+	}
+
+}
+
+
+country_event = {
+	id = uma_special_leader.4
+	title = uma_special_leader.4.title
+	desc = uma_special_leader.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 20a
+		room = uma_traincenter_01_room
+	}
+
+	#能不能来帮我们管理学院的星球呢？
+	option = {
+		name = uma_special_leader.4.a
+		set_country_flag = uma_appoint_seiun_sky_as_governer
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.5
+			}
+		}
+	}
+
+	#能来率领舰队吗？
+	option = {
+		name = uma_special_leader.4.b
+		set_country_flag = uma_appoint_seiun_sky_as_admiral
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.5
+			}
+		}
+	}
+
+	#那我们就不打扰星酱你了，后会有期~
+	option = {
+		name = uma_special_leader.4.c
+		hidden_effect = {
+			event_target:uma_where_seiun_sky_is = {
+				add_deposit = d_uma_seiun_sky_house
+			}
+		}
+	}
+
+}
+
+
+###sky的要求
+country_event = {
+	id = uma_special_leader.5
+	title = uma_special_leader.5.title
+	desc = uma_special_leader.5.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 20a
+		room = uma_traincenter_01_room
+	}
+
+	#我很感兴趣，但是~
+	option = {
+		name = uma_special_leader.5.a #但是？
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.6
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_special_leader.6
+	title = uma_special_leader.6.title
+	desc = uma_special_leader.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 20a
+		room = uma_traincenter_01_room
+	}
+
+	#我想要花和花种
+	option = {
+		name = uma_special_leader.6.a #我了解了
+		enable_special_project = {
+			name = "UMA_FIND_FLOWER_SEEDS_FOR_SKY"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+##总督sky
+country_event = {
+	id = uma_special_leader.7
+	title = uma_special_leader.7.title
+	desc = uma_special_leader.7.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	###注意，需要使用这种方法来指定肖像！
+	immediate = {
+		create_species = {
+			class = umamusume
+			portrait = 20a
+			effect = {
+				save_event_target_as = uma_leader_seiun_sky
+			}
+		}
+	}
+
+	#欢迎加入
+	option = {
+		name = uma_special_leader.7.a #我了解了
+		custom_tooltip = uma_special_leader_seiun_sky_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "星云天空"
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = governor
+				skill = 8
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_seiun_sky
+					trait = leader_trait_intellectual
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					save_global_event_target_as = uma_is_leader_seiun_sky
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "20c"
+				add_ruler_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+		}
+	}
+
+}
+
+######################################
+# set_leader_flag = uma_is_special_leader
+# set_leader_flag = uma_is_seiun_sky
+# save_global_event_target_as = uma_is_leader_seiun_sky
+#######################################
+####！！！TIPS：set_leader_flag和save_global_event_target_as这两个语句  无法在last_created_leader里生效。最好的解决方法是在create_leader里用effect={}模块插旗子和设定事件目标
+#######################################
+
+##海军上将sky
+country_event = {
+	id = uma_special_leader.8
+	title = uma_special_leader.8.title
+	desc = uma_special_leader.8.desc
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+
+	immediate = {
+		create_species = {
+			class = umamusume
+			portrait = 20a
+			effect = {
+				save_event_target_as = uma_leader_seiun_sky
+			}
+		}
+	}
+
+	#欢迎加入
+	option = {
+		name = uma_special_leader.8.a #我了解了
+		custom_tooltip = uma_special_leader_seiun_sky_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "星云天空"
+				#species = event_target:uma_leader_seiun_sky
+				species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+				gender = female
+				class = admiral
+				skill = 8
+				set_age = 18
+				traits = {
+					trait = uma_admiral_trait_sp_seiun_sky_1
+					trait = leader_trait_trickster
+					trait = leader_trait_gale_speed
+				}
+				effect = {
+					save_global_event_target_as = uma_seiun_sky_admiral
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					save_global_event_target_as = uma_is_leader_seiun_sky
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "20c"
+				add_ruler_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}
+	}
+
+}
+
+
+####草上飞（绿茵祈愿）事件链
+#序号10~40
+
+##人去楼空
+ship_event = {
+	id = uma_special_leader.10
+    title = "uma_special_leader.10.name"
+    desc = "uma_special_leader.10.desc"
+    picture = GFX_evt_alien_ruins
+
+    is_triggered_only = yes
+
+	#毫无结果
+	option = {
+		name = "uma_special_leader.10.a"
+		owner = { 
+				set_country_flag = uma_grass_wonder_has_come_to_our_country
+				set_country_flag = uma_has_finished_phoenix_exploration
+		}
+		custom_tooltip = uma_unlock_phoneix_school_rebuilding
+		hidden_effect = {
+			owner = {
+				if = {
+					limit = { has_technology = tech_uma_country_race_holding }
+					country_event = {
+						id = uma_special_leader.11
+						days = 100
+					}
+				}
+			}
+		}
+	}
+}
+
+
+##这个事件是检测科技提升的，以触发事件
+country_event = {
+	id = uma_special_leader.12
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_uma_country_race_holding
+		is_ai = no
+	}
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = uma_grass_wonder_has_come_to_our_country }
+			country_event = {
+				id = uma_special_leader.11
+				days = 100
+			}
+		}
+	}
+
+}
+
+
+
+###异军突起
+country_event = {
+	id = uma_special_leader.11
+    title = "uma_special_leader.11.name"
+    desc = "uma_special_leader.11.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	trigger = {
+		has_technology = tech_uma_country_race_holding
+	}
+
+	#持续观察
+	option = {
+		name = "uma_special_leader.11.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.13
+				days = 60
+			}
+		}
+	}
+}
+
+
+###亚空舞步
+country_event = {
+	id = uma_special_leader.13
+    title = "uma_special_leader.13.name"
+    desc = "uma_special_leader.13.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#什么来头？
+	option = {
+		name = "uma_special_leader.13.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.14
+				days = 60
+			}
+		}
+	}
+
+}
+
+
+###违规！
+country_event = {
+	id = uma_special_leader.14
+    title = "uma_special_leader.14.name"
+    desc = "uma_special_leader.14.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#允许谈话
+	option = {
+		name = "uma_special_leader.14.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.15
+			}
+		}
+	}
+
+	#她的假身份哪里来的？
+	option = {
+		name = "uma_special_leader.14.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.16
+				days = 60
+			}
+		}
+	}
+
+}
+
+
+###接入和小草的通讯
+country_event = {
+	id = uma_special_leader.15
+	title = uma_special_leader.15.title
+	desc = uma_special_leader.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.15.a
+		response_text = uma_special_leader.15.a.response
+		is_dialog_only = yes		
+	}
+
+	option = {
+		name = uma_special_leader.15.b
+		response_text = uma_special_leader.15.b.response
+		is_dialog_only = yes		
+	}
+
+	option = {
+		name = uma_special_leader.15.c
+		response_text = uma_special_leader.15.c.response
+		is_dialog_only = yes		
+	}
+
+	option = {
+		name = uma_special_leader.15.d
+		response_text = uma_special_leader.15.d.response
+		is_dialog_only = yes		
+	}
+
+	###你的打算？
+	option = {
+		name = uma_special_leader.15.e
+		response_text = uma_special_leader.15.e.response
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.20
+				days = 20
+			}
+		}		
+	}
+
+}
+
+
+###一无所获
+country_event = {
+	id = uma_special_leader.16
+    title = "uma_special_leader.16.name"
+    desc = "uma_special_leader.16.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#允许谈话
+	option = {
+		name = "uma_special_leader.16.a"
+		add_resource = {
+			energy = 300
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.15
+				days = 60
+			}
+		}
+	}
+
+	#调查因子，整合入因子库
+	option = {
+		name = "uma_special_leader.16.b"
+		custom_tooltip = uma_grass_wonder_kenshi_warning
+		trigger = { has_country_flag = uma_has_compelted_reaching_star_project }
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.17
+				days = 10
+			}
+		}
+	}
+
+}
+
+##17 消失  18 因子泄露  19 得到控制
+###失踪
+country_event = {
+	id = uma_special_leader.17
+    title = "uma_special_leader.17.name"
+    desc = "uma_special_leader.17.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#啊？！
+	option = {
+		name = "uma_special_leader.17.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.18
+				days = 730
+			}
+		}
+	}
+
+}
+
+
+
+###因子侵蚀
+country_event = {
+	id = uma_special_leader.18
+    title = "uma_special_leader.18.name"
+    desc = "uma_special_leader.18.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#隔离，隔离！
+	option = {
+		name = "uma_special_leader.18.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.19
+				days = 730
+			}
+		}
+	}
+
+}
+
+
+
+###悲伤的结果
+country_event = {
+	id = uma_special_leader.19
+    title = "uma_special_leader.19.name"
+    desc = "uma_special_leader.19.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#该死的...
+	option = {
+		name = "uma_special_leader.19.a"
+		capital_scope = {
+			while = {
+				count = 3
+				random_owned_pop = {
+					kill_pop = yes
+				}
+			}
+			add_modifier = {
+				modifier = uma_kenshi_contamination
+				days = 7300
+			}
+		}
+	}
+
+}
+
+
+###
+###满嘴谜语的马娘
+country_event = {
+	id = uma_special_leader.20
+    title = "uma_special_leader.20.name"
+    desc = "uma_special_leader.20.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###值得尝试
+	option = {
+		name = "uma_special_leader.20.a"
+		enable_special_project = {
+			name = "UMA_COMMUNICATE_WITH_GRASS_WONDER"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+	###别去管她了吧
+	option = {
+		name = "uma_special_leader.20.b"
+		add_resource = { influence = 200 }
+	}
+
+}
+
+
+###只言片语
+country_event = {
+	id = uma_special_leader.21
+    title = "uma_special_leader.21.name"
+    desc = "uma_special_leader.21.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###值得尝试
+	option = {
+		name = "uma_special_leader.21.a"
+		set_country_flag = uma_have_communicated_with_grass_wonder ###一段因子后可以出对话，之后开启下列剧情
+
+		###如果已经同时完成了因子和领域的一段飞升，触发事件“灾厄之路”，激活后续事件
+		hidden_effect = {
+			if = {
+				limit = { 
+					has_country_flag = uma_has_compelted_reaching_star_project
+					has_country_flag = uma_has_compelted_zenshizenren_project
+				}
+				country_event = {
+					id = uma_special_leader.24
+					days = 180
+				}
+			}
+		}
+		###因子飞升对话
+		if = {
+			limit = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			hidden_effect = {
+				country_event = {
+					id = uma_special_leader.22
+					days = 60
+				}
+			}
+		}
+
+		###领域飞升对话
+		if = {
+			limit = { has_ascension_perk = ap_uma_zenshizenren }
+			hidden_effect = {
+				country_event = {
+					id = uma_special_leader.23
+					days = 120
+				}
+			}
+		}
+	}
+
+}
+
+
+
+###小草的警告——因子
+country_event = {
+	id = uma_special_leader.22
+	title = uma_special_leader.22.title
+	desc = uma_special_leader.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.22.a
+	}
+
+}
+
+
+###小草的警告——领域
+country_event = {
+	id = uma_special_leader.23
+	title = uma_special_leader.23.title
+	desc = uma_special_leader.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.23.a
+	}
+
+}
+
+
+###灾厄之路？
+country_event = {
+	id = uma_special_leader.24
+    title = "uma_special_leader.24.name"
+    desc = "uma_special_leader.24.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###固有因子解析
+	option = {
+		name = "uma_special_leader.24.a"
+		enable_special_project = {
+			name = "UMA_GRASS_WONDER_KENSHI_ANALYSIS"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+	###别去管她了吧
+	option = {
+		name = "uma_special_leader.24.b"
+		add_resource = { influence = 200 }
+	}
+
+}
+
+
+###去除累赘的因子
+country_event = {
+	id = uma_special_leader.25
+    title = "uma_special_leader.25.name"
+    desc = "uma_special_leader.25.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###去除小草身上的额外因子
+	option = {
+		name = "uma_special_leader.25.a"
+		enable_special_project = {
+			name = "UMA_GRASS_WONDER_EXTRA_KENSHI_CLEAN"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+	###成本太高了
+	option = {
+		name = "uma_special_leader.25.b"
+		add_resource = { influence = 400 }
+	}
+
+}
+
+
+
+###因子摘除成功！
+country_event = {
+	id = uma_special_leader.26
+    title = "uma_special_leader.26.name"
+    desc = "uma_special_leader.26.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###固有因子解析
+	option = {
+		name = "uma_special_leader.26.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.27
+			}
+		}
+	}
+
+}
+
+
+
+###真相揭晓1
+country_event = {
+	id = uma_special_leader.27
+	title = uma_special_leader.27.title #绿茵祈愿？
+	desc = uma_special_leader.27.desc #好久不见
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.27.a #感觉如何
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.28
+			}
+		}
+	}
+
+}
+
+
+###真相揭晓2
+country_event = {
+	id = uma_special_leader.28
+	title = uma_special_leader.28.title
+	desc = uma_special_leader.28.desc #很抱歉
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.28.a #这不是你的问题
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.29
+			}
+		}
+	}
+
+}
+
+
+###真相揭晓3
+country_event = {
+	id = uma_special_leader.29
+	title = uma_special_leader.29.title
+	desc = uma_special_leader.29.desc #为何会影响我？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.29.a #两者一体
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.30
+			}
+		}
+	}
+
+}
+
+###真相揭晓4
+country_event = {
+	id = uma_special_leader.30
+	title = uma_special_leader.30.title
+	desc = uma_special_leader.30.desc #人格？灵魂？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.30.a #闲聊结束
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.31
+			}
+		}
+	}
+
+}
+
+
+###你的名字
+country_event = {
+	id = uma_special_leader.31
+	title = uma_special_leader.31.title 
+	desc = uma_special_leader.31.desc #我全部告诉你
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.31.a #你的名字是？
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.32
+			}
+		}
+	}
+
+}
+
+
+###过去
+country_event = {
+	id = uma_special_leader.32
+	title = uma_special_leader.32.title #草上飞
+	desc = uma_special_leader.32.desc #在数千年前，我的名字并非“绿茵祈愿”。或许，你可以叫我“草上飞”
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.32.a #菲尼学院发生了什么？
+		response_text = uma_special_leader.32.a.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_special_leader.32.b #你的职位？
+		response_text = uma_special_leader.32.b.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_special_leader.32.c #你们的计划？
+		response_text = uma_special_leader.32.c.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_special_leader.32.d #你为何活到了现在？
+		response_text = uma_special_leader.32.d.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_special_leader.32.e #你愿意加入特雷森，参与我们对因子的研究吗？
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.33
+			}
+		}
+	}
+
+}
+
+
+###
+country_event = {
+	id = uma_special_leader.33
+	title = uma_special_leader.33.title 
+	desc = uma_special_leader.33.desc #不是个好主意哦
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.33.a #这是讨论后决定的
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.34
+			}
+		}
+	}
+
+}
+
+###
+country_event = {
+	id = uma_special_leader.34
+	title = uma_special_leader.34.title 
+	desc = uma_special_leader.34.desc #感激，但不接受邀请
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.34.a #为什么？
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.35
+			}
+		}
+	}
+
+}
+
+###
+country_event = {
+	id = uma_special_leader.35
+	title = uma_special_leader.35.title 
+	desc = uma_special_leader.35.desc #我没能用因子拯救自己的文明
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.35.a #不，你有这个能力
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.36
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_special_leader.36
+	title = uma_special_leader.36.title 
+	desc = uma_special_leader.36.desc #你执意如此，我同意协助研究
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.36.a #你需要什么帮助？
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.37
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_special_leader.37
+	title = uma_special_leader.37.title 
+	desc = uma_special_leader.37.desc #请允许我参加比赛吧
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.37.a #这不公平
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.38
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_special_leader.38
+	title = uma_special_leader.38.title 
+	desc = uma_special_leader.38.desc #确实是我有失考虑了
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.38.a #名次顺延
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.39
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_special_leader.39
+	title = uma_special_leader.39.title 
+	desc = uma_special_leader.39.desc #旅行
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 11c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.39.a #好吧...我会来帮你的
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.40
+			}
+		}
+	}
+
+}
+
+
+###新的旅行
+country_event = {
+	id = uma_special_leader.40
+    title = "uma_special_leader.40.name"
+    desc = "uma_special_leader.40.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###一路顺风
+	option = {
+		name = "uma_special_leader.40.a"
+		add_modifier = {
+			modifier = uma_grass_wonder_kenshi_library
+			days = -1
+		}
+	}
+
+}
+
+
+####爱丽数码事件链
+#序号50~70
+
+##研究“建立训练员制度”触发这个事件链
+country_event = {
+	id = uma_special_leader.50
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_uma_estabilish_trainer_system
+		is_ai = no
+	}
+
+	immediate = {
+		#if = {
+		#	limit = { has_country_flag = uma_grass_wonder_has_come_to_our_country }
+			country_event = {
+				id = uma_special_leader.51
+				days = 3650
+			}
+		#}
+	}
+
+}
+
+
+###galgame？
+country_event = {
+	id = uma_special_leader.51
+    title = "uma_special_leader.51.name"
+    desc = "uma_special_leader.51.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###有没有神秘代码？
+	option = {
+		name = "uma_special_leader.51.a"
+		add_modifier = {
+			modifier = uma_raze_in_mystery_galgame
+			days = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.52
+				days = 730
+			}
+		}
+	}
+
+}
+
+
+###选拔
+country_event = {
+	id = uma_special_leader.52
+    title = "uma_special_leader.52.name"
+    desc = "uma_special_leader.52.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###这可不是什么简单的事情...
+	option = {
+		name = "uma_special_leader.52.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.53
+				days = 730
+			}
+		}
+	}
+
+	###就不浪费时间了吧
+	option = {
+		name = "uma_special_leader.52.b"
+		add_resource = {
+			influence = 100
+		}
+	}
+}
+
+
+###原因
+country_event = {
+	id = uma_special_leader.53
+    title = "uma_special_leader.53.name"
+    desc = "uma_special_leader.53.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###保持关注
+	option = {
+		name = "uma_special_leader.53.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.54
+				days = 730
+			}
+		}
+	}
+}
+
+
+###续作
+country_event = {
+	id = uma_special_leader.54
+    title = "uma_special_leader.54.name"
+    desc = "uma_special_leader.54.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###保持关注
+	option = {
+		name = "uma_special_leader.54.a"
+		add_modifier = {
+			modifier = uma_koi_derby_ii
+			days = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.55
+				days = 1460
+			}
+		}
+	}
+}
+
+
+###备受瞩目的新一届选拔赛
+country_event = {
+	id = uma_special_leader.55
+    title = "uma_special_leader.55.name"
+    desc = "uma_special_leader.55.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###保持关注
+	option = {
+		name = "uma_special_leader.55.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.56
+				days = 1460
+			}
+		}
+	}
+}
+
+
+###草丛
+country_event = {
+	id = uma_special_leader.56
+    title = "uma_special_leader.56.name"
+    desc = "uma_special_leader.56.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###你说她叫什么？
+	option = {
+		name = "uma_special_leader.56.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.57
+			}
+		}
+	}
+}
+
+
+
+###与数码的通讯1
+country_event = {
+	id = uma_special_leader.57
+	title = uma_special_leader.57.title
+	desc = uma_special_leader.57.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.57.a ##老毛病又犯了？
+		hidden_effect = {
+			id = uma_special_leader.58
+		}
+	}
+
+}
+
+
+###与数码的通讯2
+country_event = {
+	id = uma_special_leader.58
+	title = uma_special_leader.58.title
+	desc = uma_special_leader.58.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.58.a ##KD是你做的吗？
+		hidden_effect = {
+			id = uma_special_leader.59
+		}
+	}
+
+}
+
+
+###与数码的通讯3
+country_event = {
+	id = uma_special_leader.59
+	title = uma_special_leader.59.title
+	desc = uma_special_leader.59.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.59.a ##大概只有你才高的出这种东西
+		hidden_effect = {
+			id = uma_special_leader.60
+		}
+	}
+
+}
+
+
+###与数码的通讯4
+country_event = {
+	id = uma_special_leader.60
+	title = uma_special_leader.60.title
+	desc = uma_special_leader.60.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.60.a ##什么？
+		hidden_effect = {
+			id = uma_special_leader.61
+		}
+	}
+
+}
+
+
+###与数码的通讯5
+country_event = {
+	id = uma_special_leader.61
+	title = uma_special_leader.61.title
+	desc = uma_special_leader.61.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.61.a ##额...切断通讯好了
+		hidden_effect = {
+			id = uma_special_leader.62
+		}
+	}
+
+}
+
+
+
+###爱丽数码的命运
+country_event = {
+	id = uma_special_leader.62
+    title = "uma_special_leader.62.name"
+    desc = "uma_special_leader.62.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###允许取材
+	option = {
+		name = "uma_special_leader.62.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.63
+				days = 100
+			}
+		}
+	}
+
+	###让她好好管管自己
+	option = {
+		name = "uma_special_leader.62.b"
+		add_resource = {
+			influence = 200
+		}
+	}
+
+}
+
+
+###选拔赛结束
+country_event = {
+	id = uma_special_leader.63
+    title = "uma_special_leader.63.name"
+    desc = "uma_special_leader.63.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###很好，对了，关于数码那个家伙...
+	option = {
+		name = "uma_special_leader.63.a"
+		add_modifier = {
+			modifier = uma_selecting_race_successfully_hold
+			days = 7300
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.64
+				days = 100
+			}
+		}
+	}
+
+}
+
+
+###爱丽数码的通讯6
+country_event = {
+	id = uma_special_leader.64
+	title = uma_special_leader.64.title
+	desc = uma_special_leader.64.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.64.a #有关KD的事情
+		hidden_effect = {
+			id = uma_special_leader.65
+		}
+	}
+
+}
+
+###爱丽数码的通讯7
+country_event = {
+	id = uma_special_leader.65
+	title = uma_special_leader.65.title
+	desc = uma_special_leader.65.desc #怎么了吗？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	
+	option = {
+		name = uma_special_leader.65.a #审核和监管
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.66
+			}
+		}
+	}
+
+	###
+	option = {
+		name = uma_special_leader.65.b #中央特雷森招生办主任，你觉得如何？
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.67
+			}
+		}
+	}
+
+}
+
+
+
+###监管！
+country_event = {
+	id = uma_special_leader.66
+    title = "uma_special_leader.66.name"
+    desc = "uma_special_leader.66.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#必要的牺牲
+	option = {
+		name = "uma_special_leader.66.a"
+		add_modifier = {
+			modifier = uma_controlled_kd
+			days = 14600
+		}
+	}
+
+}
+
+
+###爱丽数码的通讯8
+country_event = {
+	id = uma_special_leader.67
+	title = uma_special_leader.67.title
+	desc = uma_special_leader.67.desc #欸？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.67.a #我会给你资源，你愿意吗？
+		hidden_effect = {
+			id = uma_special_leader.68
+		}
+	}
+
+}
+
+
+###爱丽数码的通讯9
+country_event = {
+	id = uma_special_leader.68
+	title = uma_special_leader.68.title
+	desc = uma_special_leader.68.desc #当然，乐意效劳！
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 19c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.68.a #我很期待你的表现（笑）
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.69
+				days = 100
+			}
+		}
+	}
+
+}
+
+
+###爱众生
+country_event = {
+	id = uma_special_leader.69
+    title = "uma_special_leader.69.name"
+    desc = "uma_special_leader.69.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	#必要的牺牲
+	option = {
+		name = "uma_special_leader.69.a" #KD3什么时候出啊？
+		add_modifier = {
+			modifier = uma_agnes_digital_in_toresen_school
+			days = -1
+		}
+		custom_tooltip = uma_special_leader_agnes_digital_will_join
+		hidden_effect = {
+			create_leader = {
+				name = "爱丽数码"
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = governor
+				skill = 7
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_agnes_digital
+					trait = leader_trait_righteous
+					trait = leader_trait_intellectual
+				}
+				effect = {
+					save_global_event_target_as = uma_agnes_digital_governor
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_agnes_digital
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "19c"
+				add_ruler_trait = uma_ruler_trait_sp_agnes_digital #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}		
+	}
+
+}
+
+
+####优秀素质事件链
+#序号80~100
+
+##举办三次国家级比赛，研究“基础因子图谱归纳”触发这个事件链
+
+###事不过“三”
+country_event = {
+	id = uma_special_leader.80
+    title = "uma_special_leader.80.name"
+    desc = "uma_special_leader.80.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###见见这位“三着女士”
+	option = {
+		name = "uma_special_leader.80.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.81
+			}
+		}
+	}
+
+	###好好宣传一下就行
+	option = {
+		name = "uma_special_leader.80.b"
+		add_resource = {
+			influence = 200
+		}
+	}
+}
+
+
+
+###优秀素质的通讯1
+country_event = {
+	id = uma_special_leader.81
+	title = uma_special_leader.81.title
+	desc = uma_special_leader.81.desc #嗨嗨，Nice Nature desu，嗯……找我有什么事情吗？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.81.a #你好，三着女士
+		hidden_effect = {
+			id = uma_special_leader.82
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯2
+country_event = {
+	id = uma_special_leader.82
+	title = uma_special_leader.82.title
+	desc = uma_special_leader.82.desc #人家才不是什么三着女士呢，我也是很想拿第一的啊！
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.82.a #能讲讲你自己吗
+		hidden_effect = {
+			id = uma_special_leader.83
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3
+country_event = {
+	id = uma_special_leader.83
+	title = uma_special_leader.83.title
+	desc = uma_special_leader.83.desc #嘛嘛，我的名字叫优秀素质，是一位普通得不能再普通的马娘。
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.83.a #能连续三次闯入总决赛的马娘可不普通哦
+		hidden_effect = {
+			id = uma_special_leader.84
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯4
+country_event = {
+	id = uma_special_leader.84
+	title = uma_special_leader.84.title
+	desc = uma_special_leader.84.desc #那都是运气好啦，你看进了决赛不也是只能拿第三名吗，所以我注定是配角的命运啦。不过我确实很想赢就是啦。
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.84.a #要我们帮你做个检查吗？
+		hidden_effect = {
+			id = uma_special_leader.85
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯5
+country_event = {
+	id = uma_special_leader.85
+	title = uma_special_leader.85.title
+	desc = uma_special_leader.85.desc #诶？真的可以吗？不会要收费吧？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.85.a #完全免费哦
+		hidden_effect = {
+			id = uma_special_leader.86
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯6
+country_event = {
+	id = uma_special_leader.86
+	title = uma_special_leader.86.title
+	desc = uma_special_leader.86.desc #那好吧
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.86.a #那我就先去准备一下...
+		enable_special_project = {
+			name = "UMA_NICE_NATURE_PHYSICAL_TEST"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+
+###奇怪的体检结果
+country_event = {
+	id = uma_special_leader.87
+    title = "uma_special_leader.87.name"
+    desc = "uma_special_leader.87.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###怎么回事！？
+	option = {
+		name = "uma_special_leader.87.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.88
+			}
+		}
+	}
+}
+
+
+
+###优秀素质的通讯2-1
+country_event = {
+	id = uma_special_leader.88
+	title = uma_special_leader.88.title
+	desc = uma_special_leader.88.desc #啊，果然还是发现了吗
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.88.a #为何不出全力？
+		hidden_effect = {
+			id = uma_special_leader.89
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯2-2
+country_event = {
+	id = uma_special_leader.89
+	title = uma_special_leader.89.title
+	desc = uma_special_leader.89.desc #我也不知道啊，我并没有不尊重我的对手，真的努力拼尽全力了，但是每当进入到比赛的终盘，就感觉有什么东西在压制着我，让我无法使出全力。
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.89.a #真的吗？
+		hidden_effect = {
+			id = uma_special_leader.90
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯2-3
+country_event = {
+	id = uma_special_leader.90
+	title = uma_special_leader.90.title
+	desc = uma_special_leader.90.desc #你这是什么表情！我好歹也是马娘吧，让人羡慕的金光闪闪的第一名，我也想得到啊。
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46a
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.90.a #那就麻烦你在这儿多呆会儿了
+		enable_special_project = {
+			name = "UMA_NICE_NATURE_MULTY_EGO"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+
+###谜团揭晓
+country_event = {
+	id = uma_special_leader.91
+    title = "uma_special_leader.91.name"
+    desc = "uma_special_leader.91.desc"
+    picture = GFX_evt_uma_racing
+
+    is_triggered_only = yes
+
+	###很好
+	option = {
+		name = "uma_special_leader.91.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_special_leader.92
+			}
+		}
+	}
+}
+
+
+
+###优秀素质的通讯3-1
+country_event = {
+	id = uma_special_leader.92
+	title = uma_special_leader.92.title
+	desc = uma_special_leader.92.desc #你好
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.92.a #优秀素质小姐？
+		hidden_effect = {
+			id = uma_special_leader.93
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3-2
+country_event = {
+	id = uma_special_leader.93
+	title = uma_special_leader.93.title
+	desc = uma_special_leader.93.desc #我们是优秀素质。
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.93.a #你们？
+		hidden_effect = {
+			id = uma_special_leader.94
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3-3
+country_event = {
+	id = uma_special_leader.94
+	title = uma_special_leader.94.title
+	desc = uma_special_leader.94.desc #让我们从头开始说吧...
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.94.a #？？
+		hidden_effect = {
+			id = uma_special_leader.95
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3-4
+country_event = {
+	id = uma_special_leader.95
+	title = uma_special_leader.95.title
+	desc = uma_special_leader.95.desc #她带着三女神的祝福...
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.95.a #为什么这么认为？
+		hidden_effect = {
+			id = uma_special_leader.96
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3-5
+country_event = {
+	id = uma_special_leader.96
+	title = uma_special_leader.96.title
+	desc = uma_special_leader.96.desc #我们能感觉到，这里有训练员灵魂的痕迹
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.96.a #那之前的优秀素质怎么了？
+		hidden_effect = {
+			id = uma_special_leader.97
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3-6
+country_event = {
+	id = uma_special_leader.97
+	title = uma_special_leader.97.title
+	desc = uma_special_leader.97.desc #放心，我们虽然说融合成为了一个集体...
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.97.a #我明白了
+		hidden_effect = {
+			id = uma_special_leader.98
+		}
+	}
+
+}
+
+
+
+###优秀素质的通讯3-7
+country_event = {
+	id = uma_special_leader.98
+	title = uma_special_leader.98.title
+	desc = uma_special_leader.98.desc #那么，请允许我再次自我介绍，我叫优秀素质，你愿意让我留在这里吗？
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 46c
+		room = uma_traincenter_01_room
+	}
+
+	option = {
+		name = uma_special_leader.98.a #非常欢迎
+		add_modifier = {
+			modifier = uma_nice_natures_knowledge
+			days = -1
+		}
+		add_tech_progress = {
+			tech = tech_uma_nice_nature_no_restaurant
+			progress = 1
+		}
+		custom_tooltip = uma_recruit_nice_nature_hint
+		hidden_effect = { establish_communications_no_message = event_target:uma_is_nice_nature_enclave_i }
+	}
+	
+	option = {
+		name = uma_special_leader.98.b #我愿意
+		add_modifier = {
+			modifier = uma_nice_natures_knowledge
+			days = -1
+		}
+		add_tech_progress = {
+			tech = tech_uma_nice_nature_no_restaurant
+			progress = 1
+		}
+		custom_tooltip = uma_recruit_nice_nature_hint
+		hidden_effect = { establish_communications_no_message = event_target:uma_is_nice_nature_enclave_i }
+	}
+
+}

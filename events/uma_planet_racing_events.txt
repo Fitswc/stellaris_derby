@@ -1,0 +1,82 @@
+namespace = uma_planet_racing
+###举办星球级比赛的事件
+
+
+#星球德比事件——比赛开始！
+planet_event = {
+    id = uma_planet_racing.1
+    title = "uma_planet_racing.1.name"
+    desc = "uma_planet_racing.1.desc"
+    picture = GFX_evt_uma_racing #之后要换图！
+
+    is_triggered_only = yes
+
+    immediate = {
+		hidden_effect = {
+			play_sound = uma_racing_fanfare_1
+		}
+	}
+
+
+    option = {
+        name = "uma_planet_racing.1.a"
+
+        add_modifier = {
+			modifier = uma_planet_derby_held
+			days = 3650
+		}
+
+		owner = {
+			#一次性获得等同于帝国半年凝聚力收入的凝聚力
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 6
+			}
+		}
+
+		#获得商店币75
+		owner = {
+			change_variable = {
+				which = uma_num_of_coin
+				value = 75
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				96 = {
+					#无事发生
+				}
+
+				2 = {
+					if = {
+						limit = { owner = { has_authority = auth_trainingcenter }  }
+						owner = {
+							country_event = {
+								id = uma_racing_winner_appears.1
+								days = 365
+								random = 100
+							}
+						}
+					}
+					#2%概率触发事件：星球德比制霸者诞生！
+				}
+
+				#2 = {
+				#	仅仅触发一次的获得特殊领袖的事件...使用flag就可以保证其只出现一次	
+				#}	
+
+			}
+		}
+
+		custom_tooltip = uma_planet_derby_will_legendary_appear #马娘们会书写新的传奇吗?
+
+    }
+
+	after = {
+		hidden_effect = {
+			play_sound = uma_gating_and_yelling
+		}
+	}
+
+}

@@ -1,0 +1,361 @@
+###赛马娘专属 食物 建筑###
+
+#胡萝卜农场系列建筑（赛马娘文明专属，其余文明直接废弃）
+
+#胡萝卜农场
+building_uma_simple_carrot_farm = {
+	base_buildtime = 100
+	category = resource
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_carrot_farmer_add = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_carrot_farmer_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		modifier = {
+			job_uma_bee_farmer_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		text = job_uma_bee_farmer_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_arguculture"
+	}
+
+	upgrades = {
+		building_uma_modern_carrot_farm
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+#现代化胡萝卜农场
+building_uma_modern_carrot_farm = {
+	base_buildtime = 300
+	category = resource
+	can_build = no #升级得来
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_carrot_farmer_add = 4
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_carrot_farmer_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+
+		}
+		modifier = {
+			job_uma_bee_farmer_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		text = job_uma_bee_farmer_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_modern_carrot_farm"
+	}
+
+	upgrades = {
+		building_uma_advance_carrot_farm
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+#尖端胡萝卜农场
+building_uma_advance_carrot_farm = {
+	base_buildtime = 600
+	category = resource
+	can_build = no #升级得来
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 900
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_carrot_farmer_add = 7
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_carrot_farmer_effect_desc
+	}
+
+	###提供养蜂人岗位
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		modifier = {
+			job_uma_bee_farmer_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		text = job_uma_bee_farmer_effect_desc
+	}
+
+	###提供额外舒适度
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			has_technology = tech_uma_eco_friendly_farming
+			}
+		}
+		modifier = {
+			planet_amenities_add = 5
+		}
+	}
+
+	prerequisites = {
+		"tech_uma_future_carrot_farm"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}

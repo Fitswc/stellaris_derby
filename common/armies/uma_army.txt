@@ -1,0 +1,65 @@
+#####这里是马娘的特殊单位！#####
+
+#黑色军团
+#我们是盖叶的黑色军团（bushi）
+uma_black_army = {
+	damage = 3.00
+	health = 3.00
+	morale = 3.00
+	morale_damage = 3.00
+	collateral_damage = 2.00
+	war_exhaustion = 0.25
+	time = 200
+	icon = GFX_uma_black_army
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			minerals = 300
+            alloys = 100
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+
+    #判定马娘国家
+    potential_country = {
+		has_authority = auth_trainingcenter
+	}
+
+    #判定国策
+	potential = {
+		from = {
+            has_civic = civic_umaeishinflash
+		}
+	}
+
+    #需要赛马娘人口
+    allow = {
+        any_owned_pop = {
+			has_trait = uma_trait_musume
+		}
+    }
+
+	ai_weight = {
+		base = 100
+		modifier = {
+			set = 0
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_telepathy
+				has_technology = tech_gene_seed_purification
+				AND = {
+					OR = {
+						has_ethic = ethic_militarist
+						has_ethic = ethic_fanatic_militarist
+					}
+					has_technology = tech_gene_banks
+				}
+			}
+		}
+	}
+} 

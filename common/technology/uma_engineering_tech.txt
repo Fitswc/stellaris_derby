@@ -1,0 +1,997 @@
+###甜点产业线（消费品）
+tech_uma_sweet_industry = { #马娘甜点产业
+    cost = 1000
+    area = engineering
+    tier = 1
+    category = { industry }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁 甜点小店建筑
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_new_sweet_fomula = { #甜点配方开发
+    cost = 2000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { "tech_uma_sweet_industry" }
+    weight = 125
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_sweet_master_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_sweet_chain_industry = { #甜点产业连锁化
+    cost = 4000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { "tech_uma_sweet_industry" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 甜点小店 升级为 甜点连锁店
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_sweet_chain_industry_brand_plan = { #甜点产业连锁化
+    cost = 6000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { "tech_uma_sweet_chain_industry" }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_more_trade_for_sweet_master_title"
+            #desc = "uma_more_trade_for_carrot_farmers_desc"
+        }
+    } 
+
+    modifier = {
+        #甜点师 岗位 额外产出 2 贸易额 
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+###
+
+###马娘运动产品（合金和其它）
+tech_uma_sport_related_production = { #马娘运动品制造
+    cost = 1000
+    area = engineering
+    tier = 1
+    category = { industry }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁 运动品专卖店 建筑
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_sporting_goods_for_umamusume = { #赛马娘专用运动品制造
+    cost = 2000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { "tech_uma_sport_related_production" }
+    weight = 125
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_these_crafters_will_boost_umamusume_output_title"
+            #desc = "uma_more_trade_for_carrot_farmers_desc"
+        }
+    } 
+
+    modifier = {
+        #每位蹄铁工匠 和 决胜服设计师 将为 赛马娘岗位 提供 2.5%产出修正
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_high_quality_sporting_goods = { #运动品质量监督
+    cost = 3000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { "tech_uma_sport_related_production" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_horseshoe_crafter_produces_mult = 0.2
+        planet_uma_live_clothes_crafter_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_upgrade_sport_goods_industry = { #运动产业链升级
+    cost = 6000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { "tech_uma_high_quality_sporting_goods" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 运动品专卖店 升级为 大型运动品商城
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+###
+
+
+###水晶合金产业链（合金）
+tech_uma_crystal_alloy_production = { #水晶合金制造
+    cost = 4000
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_uma_crysal_carrot_mining" }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许建造 水晶合金工坊
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_crystal_alloy_massive_production = { #水晶合金量产化
+    cost = 8000
+    area = engineering
+    tier = 3
+    category = { materials }
+    prerequisites = { "tech_uma_crystal_alloy_production" }
+    weight = 125
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 水晶合金工坊 升级为 水晶合金工厂
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_crystal_alloy_auto_production = { #水晶合金全自动生产
+    cost = 12000
+    area = engineering
+    tier = 4
+    category = { materials }
+    prerequisites = { "tech_uma_crystal_alloy_massive_production" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 水晶合金工厂 升级为 水晶合金复合体
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+###
+
+
+###水晶萝卜消费品生产（消费品）
+tech_uma_crystal_consumer_goods_production = { #水晶消费品生产
+    cost = 4000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { "tech_uma_crysal_carrot_mining" }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许建造 马娘用品作坊
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_upgraded_crystal_consumer_goods_production = { #精细化消费品生产工艺
+    cost = 8000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { "tech_uma_crystal_consumer_goods_production" }
+    weight = 125
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 马娘用品作坊 升级为 马娘用品工厂
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_advanced_crystal_consumer_goods_production = { #先进马娘日用品工艺
+    cost = 12000
+    area = engineering
+    tier = 4
+    category = { industry }
+    prerequisites = { "tech_uma_upgraded_crystal_consumer_goods_production" }
+    weight = 175
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 马娘用品工厂 升级为 马娘用品复合体
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+###
+
+
+#######
+
+###水晶萝卜科技
+tech_uma_crysal_carrot_mining = { #水晶萝卜开采技术
+    cost = 3000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_unlock_many_carrot_related_tech_title"
+            desc = "uma_unlock_many_carrot_related_tech_desc"
+        }
+    } 
+
+    modifier= {
+        #custom_tooltip = uma_unlock_many_carrot_related_tech
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_crysal_carrot_producing = { #水晶萝卜合成初探（三女神知识研究所专属）
+    cost = 5000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { tech_uma_crysal_carrot_mining }
+    weight = 0
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #解锁建筑 水晶萝卜合成实验室
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_crysal_carrot_producing_improved = { #改进水晶萝卜合成技术
+    cost = 8000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { tech_uma_crysal_carrot_producing }
+    weight = 150
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #解锁建筑 水晶萝卜合成中心
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_massive_crysal_carrot_producing = { #大规模水晶萝卜合成
+    cost = 12000
+    area = engineering
+    tier = 4
+    category = { industry }
+    prerequisites = { tech_uma_crysal_carrot_producing_improved }
+    weight = 200
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #解锁建筑 水晶萝卜合成园区
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+###
+
+
+###矿物生产线
+#地心钻探技术实用化
+tech_uma_core_mining = {
+    cost = 4000
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { tech_mining_2 }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #解锁建筑 小型地心钻探设施
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+#大型地心钻探工程
+tech_uma_massive_core_mining = {
+    cost = 8000
+    area = engineering
+    tier = 3
+    category = { materials }
+    prerequisites = { tech_uma_core_mining }
+    weight = 150
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #允许将 小型地心钻探设施 升级为 大型地心钻探设施
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+#水晶覆膜
+tech_uma_crystal_core_mining = {
+    cost = 12000
+    area = engineering
+    tier = 4
+    category = { materials }
+    prerequisites = { tech_uma_massive_core_mining tech_uma_crysal_carrot_mining }
+    weight =200
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #允许将 大型地心钻探设施 升级为 深层地心钻探设施
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+######tom酱 2022 9 5######
+tech_uma_industry = { #特雷森工业部
+    cost = 1000
+    area = engineering
+    tier = 1
+    category = { industry }
+    prerequisites = {  }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        planet_researchers_engineering_research_produces_mult = 0.20
+        country_engineering_research_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_exoskeleton = { #马娘外骨骼套装
+    cost = 2000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_industry }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        planet_jobs_minerals_produces_mult = 0.10
+        planet_stability_add = 2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_gasbag = { #马娘随行气囊
+    cost = 2000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_industry }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        pop_happiness = 0.05
+        planet_stability_add = 2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_traffic = { #星球交通体系
+    cost = 4000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_gasbag  }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        species_empire_size_mult = -0.1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_motion_model = { #运动模型解释
+    cost = 4000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_gasbag  }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        planet_uma_racing_umamusume_produces_mult = 0.20
+        ship_weapon_damage = 0.20
+        ship_tracking_add = 5
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_fight_alone = { #单兵作战系统
+    cost = 6000
+    area = engineering
+    tier = 3
+    category = { industry }
+    prerequisites = { tech_uma_traffic tech_uma_motion_model }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        army_damage_mult = 0.20
+        army_health = 0.20
+        army_morale = 0.20
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_taste_simulation = { #味觉模拟器
+    cost = 2500
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_industry }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        planet_pops_upkeep_mult = -0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_true_pasture = { #家具型全真草场
+    cost = 3000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_industry }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        pop_happiness = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_mass_accelerator = { #色线圈加农炮
+    cost = 15000
+    area = engineering
+    tier = 5
+    category = { propulsion }
+    prerequisites = { tech_mass_accelerator_2 }
+    weight = 100
+
+    potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #解锁武器 ：色线圈加农炮（动能武器 X槽）
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_energy_printing_technology = { #水晶能量打印技术
+    cost = 5000
+    area = engineering
+    tier = 2
+    category = { industry }
+    prerequisites = { tech_uma_large_carrot_energy_battery }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.35
+        megastructure_build_speed_mult = 0.35
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_energy_printing_technology_2 = { #流线式能量打印技术
+    cost = 10000
+    area = engineering
+    tier = 5
+    category = { industry }
+    prerequisites = { tech_high_energy_battery }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.25
+        megastructure_build_speed_mult = 0.25
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}

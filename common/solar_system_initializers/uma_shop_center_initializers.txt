@@ -1,0 +1,66 @@
+@base_moon_distance = 10
+
+uma_shop_center_system_initializer = {
+	name = "时之实" #绿帽的星系，对应的自然是绿帽的真名——时之实（丰收时刻/傲视一切）
+	class = "sc_a"
+
+	flags = { uma_shop_center_system }
+
+	planet = {
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 0
+        orbit_angle = 1
+
+		flags = { uma_is_special_planet }
+    }
+
+	planet = {
+		name = "Theft" #父 theft
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 48 #1948
+		size = 15
+		has_ring = no
+
+		flags = { uma_is_special_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = "Tyrants Queen" #母 3TH Tyrants Queen
+		class = "pc_frozen"
+		orbit_distance = 85
+		orbit_angle = 152 #5.2
+		size = 25
+		has_ring = no
+
+		flags = { uma_is_special_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = "吉他" #毕竟是“贸易中心”
+		class = "pc_gas_giant"
+		orbit_distance = 120
+		orbit_angle = 275
+		size = 40
+		has_ring = no
+
+		flags = { uma_is_special_planet }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+}

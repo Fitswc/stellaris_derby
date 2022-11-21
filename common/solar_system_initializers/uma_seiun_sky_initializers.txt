@@ -1,0 +1,61 @@
+@base_moon_distance = 10
+
+uma_seiun_sky_system_initializer = {
+	name = "Bellis perennis" #意为“雏菊”，是现实中星云天空和西野花的后代。
+	class = "sc_g"
+
+	flags = { uma_seiun_sky_system }
+
+	planet = {
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+	planet = {
+		class = pc_gaia
+		orbit_distance = 70
+		orbit_angle = { min = 90 max = 350 }
+		name = "青云"
+		size = 20 #20格盖亚星球
+		modifiers = none
+
+		flags = { uma_planet_seiun_sky_star uma_is_special_planet }
+		#anomaly = uma_seiun_sky_anomoly #必定刷出“隐居者”
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			save_global_event_target_as = uma_seiun_sky_planet
+			add_deposit = d_hot_springs
+			add_deposit = d_rushing_waterfalls
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_rugged_woods
+			add_deposit = d_fertile_lands
+			add_deposit = d_great_river
+		}
+
+        change_orbit = @base_moon_distance
+
+        moon = {
+            class = pc_gaia
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+			size = 10 #小花对应的盖亚星球只有10格
+			name = "花"
+			modifiers = none
+
+			flags = { uma_is_special_planet }
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				add_deposit = d_fertile_lands
+				add_deposit = d_great_river
+				add_deposit = d_rugged_woods
+			}
+
+        }
+	}
+}

@@ -1,0 +1,11 @@
+namespace = uma_marking
+
+
+event = {
+	id = uma_marking.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = uma_tip_you_have_activated_stellar_derby_mod
+	}
+}

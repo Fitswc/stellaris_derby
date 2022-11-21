@@ -1,0 +1,476 @@
+namespace = uma_threegodness_rd
+
+###模板来自于modder群
+
+###三女神知识研究所有关事件
+
+#开局的飞地生成（虽然不需要在地图上，但还是要创造国家）
+event = {
+	id = uma_threegodness_rd.1
+	hide_window = yes
+	is_triggered_only = yes	#在开局事件的*触发器*触发，即on_game_start
+	immediate = {
+		##################################################
+		#在创建国家前需要先创建种族
+		##################################################
+		create_species = {
+			name = "uma_species_name_threegodness_rd"	#种族名字
+			plural = "uma_species_name_threegodness_rd"	#种族复数
+			class = "umamusume"		#种族小类：即爬行，鸟类，软体...
+			portrait = "umamusume"			#肖像
+            name_list = "UMAname"
+			traits = {
+				#特质
+				ideal_planet_class = pc_habitat
+			}
+		}
+		##################################################
+		#创建国家
+		##################################################
+		create_country = {
+			name = "uma_threegodness_rd_country"			###国家名称，很重要！！！
+			type = uma_threegodness_knowledge_research_dept_enclave			#指定country_type，不会的就不要动了
+			#authority = "auth_trainingcenter"			#政体
+			#civics = {
+			#	#民政
+			#}
+			#origin = "origin_default"			#默认起源，这个不用管，玩家根本看不到飞地起源是啥
+			species = last_created_species			#设定种族，上面已经写好了，这一行不要动。
+			flag = {
+                icon= { #背景
+                    category = "uiu_flags"
+                    file = "uiu_flags01.dds"
+                }
+                background= { #次背景
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors={ #背景颜色，次背景颜色；剩下两个未知，建议填null
+                    "blue"
+                    "blue"
+                    "null"
+                    "null"
+                }
+			}
+			ethos = {
+				#思潮
+				ethic = "ethic_xenophile"
+				ethic = "ethic_materialist"
+				ethic = "ethic_egalitarian"
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				############################################################################
+				#重要！！！！这个flag⭐国家标签⭐决定了你这个国家到底是谁，一定要改！
+				set_country_flag = uma_is_threegodness_research_dept
+				############################################################################
+				set_graphical_culture = npf_01					#默认的graphical_culture，不太需要动
+			}
+		}
+		##################################################
+		#创建领袖，ruler
+		##################################################
+        #大概，研究所类似于虚境，估计不需要领袖吧
+		last_created_country = {
+			create_leader = {
+				#生成领袖x1
+				class = ruler
+				species = this				#领袖种族
+                #portrait = "SW"
+				name = "特别周"			#领袖名字（当前为随机）
+				skill = 5
+			}
+			last_created_leader = {
+			change_leader_portrait = "SW"
+			}
+			create_leader = {
+				#生成领袖x2
+				class = ruler
+				species = this				#领袖种族
+                #portrait = "SS"
+				name = "无声铃鹿"			#领袖名字（当前为随机）
+				skill = 5
+			}
+			last_created_leader = {
+			change_leader_portrait = "SS"
+			}
+			create_leader = {
+				#生成领袖x3
+				class = ruler
+				species = this				#领袖种族
+                #portrait = "TT"
+				name = "东海帝王"			#领袖名字（当前为随机）
+				skill = 5
+			}
+			last_created_leader = {
+			change_leader_portrait = "TT"
+			}
+			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
+		}
+	}
+}
+
+
+#根据这个飞地到底是什么，然后进入核心的菜单
+country_event = {
+	id = uma_threegodness_rd.2
+	is_triggered_only = yes		#在点击国家图标的*触发器*触发，即on_custom_diplomacy，from即图标对应国家
+	hide_window = yes
+	
+
+	trigger = {
+		from = {
+			has_country_flag = uma_is_threegodness_research_dept	#判断对应国家，通过之前设立的country_flag⭐国家标签⭐
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = uma_contacting_country_threegodness_rd	#将from存为event_target
+		}
+		country_event = {
+			id = uma_threegodness_rd.100	#触发正式的菜单事件
+		}
+	}
+}
+
+#三女神知识研究所成立！
+country_event = {
+    id = uma_threegodness_rd.99
+    title = "uma_threegodness_rd.99.title"
+    desc = "uma_threegodness_rd.99.desc"
+    picture = GFX_evt_physics_research
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_country = {
+            limit = { is_country_type = uma_threegodness_knowledge_research_dept_enclave }
+            save_event_target_as = is_the_uma_the_threegodness_knowledge_research_dept
+        }
+    }
+
+
+    option = {
+        name = "uma_threegodness_rd.99.a"
+        establish_communications_no_message = event_target:is_the_uma_the_threegodness_knowledge_research_dept
+        custom_tooltip = uma_now_you_can_find_rd_in_your_communication_menu
+    }
+}
+
+#三女神知识研究所主菜单
+country_event = {
+	id = uma_threegodness_rd.100
+	title = uma_threegodness_rd.100.title	#事件标题
+	#多个desc可以是该事件文本随机挑一个显示，更生动（可选）
+	desc = uma_threegodness_rd.100.desc	#事件文本
+	desc = uma_threegodness_rd.100.desc2	#事件文本2
+	desc = uma_threegodness_rd.100.desc3	#事件文本3
+	is_triggered_only = yes		#通过引入事件触发
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "SW"
+		room = enclave_curator_room #研究所的背景，但我觉得以后要整我们自己的背景
+	}
+	
+
+	#immediate = {
+	#	
+	#}
+
+	option = {
+		name = uma_threegodness_rd.100.a	#物理学界面
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.101
+			}
+		}
+	}
+	option = {
+		name = uma_threegodness_rd.100.b	#工程学界面
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.102
+			}
+		}
+	}
+	option = {
+		name = uma_threegodness_rd.100.c	#社会学界面
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.103
+			}
+		}
+	}
+	option = {
+		name = uma_threegodness_rd.100.d	#告诉我更多关于你的事情吧！
+		response_text = uma_threegodness_rd.100.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_threegodness_rd.100.e	#这个研究所是干啥的呢？
+		response_text = uma_threegodness_rd.100.e.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_threegodness_rd.100.exit	#离开
+	}
+}
+
+#三女神知识研究所物理学界面
+country_event = {
+	id = uma_threegodness_rd.101
+	title = uma_threegodness_rd.101.title	#事件标题
+	desc = uma_threegodness_rd.101.desc	#事件文本
+	desc = {
+		text = uma_threegodness_rd.101.desc2 #如果之前已经选择了科技，那就使用特殊对话
+		exclusive_trigger = {
+			has_country_flag = uma_has_buy_tech
+		}
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "SW"
+		room = enclave_curator_room #研究所的背景，但我觉得以后要整我们自己的背景
+	}
+	
+
+	#immediate = {
+	#	
+	#}
+
+	option = {
+		name = uma_threegodness_rd.101.a	#水晶萝卜原理解析
+		trigger = {
+			NOT = { has_country_flag = uma_has_get_tech_called_tech_uma_crystal_carrot_analyzing }
+			years_passed > 10
+			#完成了一段遗迹挖掘
+		}
+
+		allow = {
+			has_resource = {
+				type = uma_threegodness_knowledge #决定需要的三女神知识的价格
+				value >= 300
+			}
+		}
+
+		set_country_flag = uma_has_get_tech_called_tech_uma_crystal_carrot_analyzing #兑换科技后该选项立刻消除
+		add_resource = {
+			uma_threegodness_knowledge = -300
+		}
+		add_tech_progress = {
+			tech = tech_uma_crystal_carrot_analyzing
+			progress = 0.2
+		}
+		custom_tooltip = uma_allow_us_use_crystal_carrot
+
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.101 #兑换后，留在原视窗
+			}
+			set_country_flag = uma_has_buy_tech
+		}
+
+	}
+
+	#option = {
+	#	name = uma_threegodness_rd.101.b	#
+	#}
+
+	#option = {
+	#	name = uma_threegodness_rd.101.c	#
+	#}
+
+	option = {
+		name = uma_threegodness_rd.101.back	#返回主界面
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.100
+			}			
+		}
+		remove_country_flag = uma_has_buy_tech #移除已经研究科技旗帜
+	}
+
+}
+
+
+#三女神知识研究所工程学界面
+country_event = {
+	id = uma_threegodness_rd.102
+	title = uma_threegodness_rd.102.title	#事件标题
+	desc = uma_threegodness_rd.102.desc	#事件文本
+	desc = {
+		text = uma_threegodness_rd.102.desc2 #如果之前已经选择了科技，那就使用特殊对话
+		exclusive_trigger = {
+			has_country_flag = uma_has_buy_tech
+		}
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "SW"
+		room = enclave_curator_room #研究所的背景，但我觉得以后要整我们自己的背景
+	}
+	
+
+	#immediate = {
+	#	
+	#}
+
+	option = {
+		name = uma_threegodness_rd.102.a	#水晶萝卜合成初探
+		trigger = {
+			NOT = { has_country_flag = uma_has_get_tech_called_tech_uma_crysal_carrot_producing }
+		}
+
+		allow = {
+			has_resource = {
+				type = uma_threegodness_knowledge #决定需要的三女神知识的价格
+				value >= 300
+			}
+		}
+
+		set_country_flag = uma_has_get_tech_called_tech_uma_crysal_carrot_producing #兑换科技后该选项立刻消除
+		add_resource = {
+			uma_threegodness_knowledge = -100
+		}
+		add_tech_progress = {
+			tech = tech_uma_crysal_carrot_producing
+			progress = 0.1
+		}
+		custom_tooltip = uma_allow_us_produce_crystal_carrot_by_ourself
+
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.102 #兑换后，留在原视窗
+			}
+			set_country_flag = uma_has_buy_tech
+		}
+
+	}
+
+	#option = {
+	#	name = uma_threegodness_rd.101.b	#
+	#}
+
+	#option = {
+	#	name = uma_threegodness_rd.101.c	#
+	#}
+
+	option = {
+		name = uma_threegodness_rd.102.back	#返回主界面
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.100
+			}			
+		}
+		remove_country_flag = uma_has_buy_tech #移除已经研究科技旗帜
+	}
+
+}
+
+
+#三女神知识研究所社会学界面
+country_event = {
+	id = uma_threegodness_rd.103
+	title = uma_threegodness_rd.103.title	#事件标题
+	desc = uma_threegodness_rd.103.desc	#事件文本
+	desc = {
+		text = uma_threegodness_rd.103.desc2 #如果之前已经选择了科技，那就使用特殊对话
+		exclusive_trigger = {
+			has_country_flag = uma_has_buy_tech
+		}
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "SW"
+		room = enclave_curator_room #研究所的背景，但我觉得以后要整我们自己的背景
+	}
+	
+	#option = {
+	#	name = uma_threegodness_rd.103.a	#因子相性学说
+	#	trigger = {
+	#		NOT = { has_country_flag = uma_has_get_tech_called_tech_uma_keisun_compatibility_theory }
+	#		years_passed > 30
+			#完成了一段遗迹挖掘
+	#	}
+
+	#	allow = {
+	#		has_resource = {
+	#			type = uma_threegodness_knowledge #决定需要的三女神知识的价格
+	#			value >= 1000
+	#		}
+	#	}
+
+	#	set_country_flag = uma_has_get_tech_called_tech_uma_keisun_compatibility_theory #兑换科技后该选项立刻消除
+	#	add_resource = {
+	#		uma_threegodness_knowledge = -1000
+	#	}
+	#	add_tech_progress = {
+	#		tech = tech_uma_keisun_compatibility_theory
+	#		progress = 0.2
+	#	}
+
+	#	custom_tooltip = uma_allow_us_choose_keisun_road
+
+	#	hidden_effect = {
+	#		country_event = {
+	#			id = uma_threegodness_rd.103 #兑换后，留在原视窗
+	#		}
+	#		set_country_flag = uma_has_buy_tech
+	#	}
+
+	#}
+
+	#option = {
+	#	name = uma_threegodness_rd.103.b	#领域理论
+	#	trigger = {
+	#		NOT = { has_country_flag = uma_has_get_tech_called_tech_uma_territory_theory }
+	#		years_passed > 30
+			#完成了一段遗迹挖掘
+	#	}
+
+	#	allow = {
+	#		has_resource = {
+	#			type = uma_threegodness_knowledge #决定需要的三女神知识的价格
+	#			value >= 1000
+	#		}
+	#	}
+
+	#	set_country_flag = uma_has_get_tech_called_tech_uma_territory_theory #兑换科技后该选项立刻消除
+	#	add_resource = {
+	#		uma_threegodness_knowledge = -1000
+	#	}
+	#	add_tech_progress = {
+	#		tech = tech_uma_territory_theory
+	#		progress = 0.2
+	#	}
+
+	#	custom_tooltip = uma_allow_us_choose_soul_road
+
+	#	hidden_effect = {
+	#		country_event = {
+	#			id = uma_threegodness_rd.103 #兑换后，留在原视窗
+	#		}
+	#		set_country_flag = uma_has_buy_tech
+	#	}
+
+	#}
+
+	option = {
+		name = uma_threegodness_rd.103.back	#返回主界面
+		hidden_effect = {
+			country_event = {
+				id = uma_threegodness_rd.100
+			}			
+		}
+		remove_country_flag = uma_has_buy_tech #移除已经研究科技旗帜
+	}
+
+}

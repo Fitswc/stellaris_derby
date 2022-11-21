@@ -1,0 +1,1578 @@
+tech_uma_umapersonality_project = { #“UmaPersonality” 计划
+    cost = 5000
+    area = physics
+    tier = 3
+    category = { computing }
+    prerequisites = { tech_administrative_ai }
+    weight = 125
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        all_technology_research_speed = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_personality_update_project = { #人格完善计划
+    cost = 10000
+    area = physics
+    tier = 4
+    category = { computing }
+    prerequisites = { tech_uma_umapersonality_project }
+    weight = 150
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        all_technology_research_speed = 0.05
+        species_leader_exp_gain = 0.15
+        #解锁科学家特性 人工智能马娘助手
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_crystal_carrot_analyzing = { #水晶萝卜原理解析（三女神知识研究所专属）
+    cost = 5000
+    area = physics
+    tier = 1
+    category = { computing }
+    prerequisites = { }
+    weight = 0
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_unlock_the_crystal_carrot_title"
+            desc = "uma_unlock_the_crystal_carrot_desc"
+        }
+    } 
+
+    modifier= {
+        #custom_tooltip = uma_unlock_the_crystal_carrot
+        all_technology_research_speed = 0.05
+        #country_engineering_tech_research_speed = 0.05 必须要出现在modifier里！
+        #country_physics_tech_research_speed = 0.10
+        #country_society_tech_research_speed = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_threegodness_knowledge_first_known = { #三女神知识初探（挖掘考古遗迹获得）
+    cost = 5000
+    area = physics
+    tier = 1
+    category = { computing }
+    prerequisites = { }
+    weight = 0
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        country_society_research_produces_mult = 0.05
+        country_physics_research_produces_mult = 0.05
+        country_engineering_research_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+
+
+
+
+tech_uma_torensen_lab_building = { #特雷森实验室建设
+    cost = 5000
+    area = physics
+    tier = 2
+    category = { computing }
+    prerequisites = { tech_basic_science_lab_2 tech_administrative_ai }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #允许建造 特雷森实验室
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_torensen_lab_building_2 = { #水晶萝卜实验运用
+    cost = 8000
+    area = physics
+    tier = 3
+    category = { computing }
+    prerequisites = { tech_uma_torensen_lab_building tech_uma_crysal_carrot_mining }
+    weight = 125
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #允许建造 特雷森实验中心
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_torensen_lab_building_3 = { #尖端研究设施建设
+    cost = 12000
+    area = physics
+    tier = 4
+    category = { computing }
+    prerequisites = { tech_uma_torensen_lab_building_2 }
+    weight = 175
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier= {
+        #允许建造 尖端研究所
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+###第二版
+###电力科技线
+tech_uma_tama_force_powering = { #"玉藻"场发电技术
+    cost = 4000
+    area = physics
+    tier = 2
+    category = { field_manipulation }
+    prerequisites = { }
+    #prerequisites = { "tech_uma_crysal_carrot_mining" }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_technician_energy_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+tech_uma_tama_force_powering_use = { #"玉藻"场发电技术运用
+    cost = 8000
+    area = physics
+    tier = 3
+    category = { field_manipulation }
+    prerequisites = { "tech_uma_crysal_carrot_mining" }
+    weight = 125
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁建筑 “玉藻”马娘场发电站
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+tech_uma_tama_force_powering_advance_use = { #"玉藻"场发电技术改进
+    cost = 12000
+    area = physics
+    tier = 4
+    category = { field_manipulation }
+    prerequisites = { "tech_uma_tama_force_powering_use" }
+    weight = 175
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #将 “玉藻”马娘场发电站 升级为 “玉藻”马娘场发电复合体
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+###
+
+############################################################
+#######################tom酱 2022 9 5#######################
+##########################新科技############################
+tech_uma_training_aiding_algorithm = { #辅助训练计划算法
+    cost = 4000
+    area = physics
+    tier = 3
+    category = { computing }
+    prerequisites = { tech_uma_estabilish_trainer_system tech_self_aware_logic }
+    weight = 100
+
+    potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_more_output_for_trainers_title"
+            #desc = "uma_more_output_for_trainers_desc"
+        }
+    } 
+
+    modifier = {
+		#训练员 岗位额外产出 3 工程学研究 和 2 凝聚力
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_personality_training_assistant = { #马娘人格训练助手
+    cost = 6000
+    area = physics
+    tier = 4
+    category = { computing }
+    prerequisites = { tech_uma_umapersonality_project tech_uma_training_aiding_algorithm }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_more_output_for_trainers_and_umamusume_title"
+            #desc = "uma_more_output_for_trainers_and_umamusume_desc"
+        }
+    } 
+
+    modifier = {
+        #训练员 岗位 额外提供 +2% 赛马娘岗位产出
+        #训练员 岗位 额外产出4 凝聚力
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_type_of_controlled_carrot_energy = { #可控型水晶萝卜储能
+    cost = 3000
+    area = physics
+    tier = 2
+    category = { field_manipulation }
+    prerequisites = { tech_uma_torensen_lab_building_2 tech_uma_crystal_carrot_analyzing }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_technician_energy_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+# tech_uma_carrots_armed_idea = { #水晶萝卜武装理念
+#     cost = 233
+#     area = physics
+#     tier = 2
+#     category = { field_manipulation }
+#     prerequisites = { tech_uma_type_of_controlled_carrot_energy }
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         army_damage_mult = 0.10
+#         army_health = 0.05
+#         ship_weapon_damage = 0.05
+#         ship_fire_rate_mult = 0.05
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+tech_uma_large_carrot_energy_battery = { #大型水晶电池
+    cost = 5000
+    area = physics
+    tier = 3
+    category = { field_manipulation }
+    prerequisites = { tech_uma_type_of_controlled_carrot_energy }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "uma_tech_unlock_crystal_reactor_title"
+            desc = "uma_tech_unlock_crystal_reactor_desc"
+        }
+    }
+
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+# tech_uma_carrot_energy_printing_technology = { #水晶能量打印技术
+#     cost = 233
+#     area = physics
+#     tier = 2
+#     category = { field_manipulation }
+#     prerequisites = { tech_uma_large_carrot_energy_battery }
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         planet_building_build_speed_mult = 0.35
+#         megastructure_build_speed_mult = 0.35
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+# tech_uma_nanotechnology = { #晶能纳米技术
+#     cost = 233
+#     area = physics
+#     tier = 4
+#     category = { field_manipulation }
+#     prerequisites = { tech_uma_type_of_controlled_carrot_energy }
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         #解锁建筑：马娘纳米机器工厂
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+tech_uma_carrot_energy_laser = { #晶能激光器
+    cost = 7500
+    area = physics
+    tier = 3
+    category = { field_manipulation }
+    prerequisites = { tech_uma_large_carrot_energy_battery }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.25
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_electromagnetism_weak_forces_inclusion = { #电磁-弱力总论
+    cost = 2500
+    area = physics
+    tier = 2
+    category = { computing }
+    prerequisites = { tech_physics_1 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_researchers_physics_research_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_neutrino_communication = { #中微子通讯
+    cost = 2500
+    area = physics
+    tier = 2
+    category = { computing }
+    prerequisites = { tech_physics_1 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        empire_size_pops_mult = -0.05   
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_big_eater = { #“大胃王”护盾能量分配系统
+    cost = 5000
+    area = physics
+    tier = 3
+    category = { field_manipulation }
+    prerequisites = { tech_shields_4 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁部件：“大胃王”护盾能量分配系统
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_shige_halo = { #“重场”光环
+    cost = 8000
+    area = physics
+    tier = 4
+    category = { field_manipulation }
+    prerequisites = { tech_titans }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁光环：“重场” “不良场”
+
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_ats_01 = { #ATS-01“针灸”协同光环
+    cost = 8000
+    area = physics
+    tier = 4
+    category = { field_manipulation }
+    prerequisites = { tech_titans }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁光环：“针灸”
+
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_MJR = { #MJR“光明”随机光子频率激光器
+    cost = 15000
+    area = physics
+    tier = 5
+    category = { field_manipulation }
+    prerequisites = { tech_lasers_5 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁部件：MJR“光明”随机光子频率激光器
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_twin_turbo = { #“双涡轮”反应堆增压器
+    cost = 15000
+    area = physics
+    tier = 5
+    category = { field_manipulation }
+    prerequisites = { tech_reactor_boosters_3 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁部件：“双涡轮”反应堆增压器
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+################################################一阶段后#####################################################
+tech_uma_crystal_carrot_analyzing_2 = { #水晶萝卜进阶原理
+    cost = 10000
+    area = physics
+    tier = 4
+    category = { computing }
+    prerequisites = { tech_uma_crystal_carrot_analyzing }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_worker_uma_crystal_carrot_produces_mult = 0.20
+        planet_researchers_physics_research_produces_mult = 0.10
+        planet_researchers_engineering_research_produces_mult = 0.10
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_energy_compression = { #水晶能量压缩技术
+    cost = 15000
+    area = physics
+    tier = 4
+    category = { field_manipulation }
+    prerequisites = { tech_uma_crystal_carrot_analyzing_2 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_worker_energy_produces_mult = 0.10
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_high_energy_battery = { #高能水晶电池
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { field_manipulation }
+    prerequisites = { tech_uma_carrot_energy_compression }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "uma_tech_unlock_crystal_reactor_mk2_title"
+            desc = "uma_tech_unlock_crystal_reactor_mk2_desc"
+        }
+    }
+
+    modifier = {
+        #解锁部件：晶体能源-MK2
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+# tech_uma_carrot_energy_printing_technology_2 = { #流线式能量打印技术
+#     cost = 233
+#     area = physics
+#     tier = 5
+#     category = { field_manipulation }
+#     prerequisites = { tech_high_energy_battery }
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         planet_building_build_speed_mult = 0.25
+#         megastructure_build_speed_mult = 0.25
+#     }
+
+#     weight_modifier = {
+#         modifier = {
+# 			factor = 0
+# 			OR = {
+# 				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                 NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+# 			}
+# 		}
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+# tech_uma_nanotechnology_2 = { #皮米级纳米技术
+#     cost = 233
+#     area = physics
+#     tier = 5
+#     category = { field_manipulation }
+#     prerequisites = { tech_uma_carrot_energy_compression }
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         #纳米装配工岗位产出 + 50%
+#     }
+
+#     weight_modifier = {
+#         modifier = {
+# 			factor = 0
+# 			OR = {
+# 				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                 NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+# 			}
+# 		}
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+tech_strong_interaction = { #强相互作用总论
+    cost = 8000
+    area = physics
+    tier = 4
+    category = { computing }
+    prerequisites = { tech_electromagnetism_weak_forces_inclusion tech_ship_armor_5 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        country_physics_research_produces_mult = 0.15
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_ship_shield = { #高能轻子偏射盾
+    cost = 15000
+    area = physics
+    tier = 4
+    category = { particles }
+    prerequisites = { tech_strong_interaction }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁部件：高能轻子偏射盾
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_ship_armor = { #稳态费米子混合装甲
+    cost = 15000
+    area = physics
+    tier = 4
+    category = { particles }
+    prerequisites = { tech_strong_interaction }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁部件：稳态费米子混合装甲
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_string_theory = { #弦理论基础
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_strong_interaction }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        country_physics_tech_research_speed = 0.15
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_strong_plasma = { #强等离子发射器
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_strong_interaction tech_plasma_3 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁武器： 强等离子发射器（等离子加农炮的升级版）
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_hadron_disruptors = { #高能强子裂解炮
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_strong_interaction tech_disruptors_3 tech_uma_carrot_energy_compression }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁武器： 高能强子裂解炮
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_aurora_emitter = { #“极光”水晶聚焦电弧束
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_arc_emitter_2 tech_uma_carrot_energy_compression }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁武器： “极光”水晶聚焦电弧束
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_string_energy_lance = { #弦光矛
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_string_theory tech_uma_carrot_energy_compression tech_energy_lance_2 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁武器： 强等离子发射器（等离子加农炮的升级版）
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_souls_matrix = { #马娘灵魂摹写矩阵
+    is_dangerous = yes
+    cost = 50000
+    area = physics
+    tier = 5
+    category = { computing }
+    prerequisites = { "tech_uma_basic_territory_theory" "tech_uma_umapersonality_project" }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        all_technology_research_speed = 0.10
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_building = { #水晶介质构筑
+    cost = 20000
+    area = physics
+    tier = 5
+    category = { field_manipulation }
+    prerequisites = { tech_uma_torensen_lab_building_2 tech_uma_crystal_carrot_analyzing_2 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_building_time_inversion = { #水晶介质特性：时间反演阻碍
+    cost = 30000
+    area = physics
+    tier = 5
+    category = { field_manipulation }
+    prerequisites = { tech_uma_carrot_building }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_researcher_produces_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_building_particle_tunneling = { #水晶介质特性：粒子奇异隧穿
+    cost = 30000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_uma_carrot_building }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "uma_tech_unlock_tunneling_engine_title"
+            desc = "uma_tech_unlock_tunneling_engine_desc"
+        }
+    }
+
+    modifier = {
+        planet_uma_researcher_produces_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_carrot_building_anomalous_wave_function = { #水晶介质特性：反常波函数
+    cost = 30000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_uma_carrot_building }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_researcher_produces_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_inverse_entropy = { #逆熵实验
+    is_dangerous = yes
+    cost = 50000
+    area = physics
+    tier = 5
+    category = { field_manipulation }
+    prerequisites = { tech_uma_carrot_building_time_inversion }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_stably_tunneling = { #奇异隧穿稳定化
+    is_dangerous = yes
+    cost = 50000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_uma_carrot_building_particle_tunneling }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_macro_stably_tunneling = { #三女神秘密——宏尺度奇异隧穿
+    is_dangerous = yes
+    cost = 100000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_stably_tunneling }
+    weight = 0
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁舰船部件 奇异隧穿引擎
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_local_wave_function = { #局域波函数干涉
+    is_dangerous = yes
+    cost = 50000
+    area = physics
+    tier = 5
+    category = { particles }
+    prerequisites = { tech_uma_carrot_building_anomalous_wave_function }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁舰船部件 波函数干涉射线（因为找不到对应的位置而暂时消失）
+        planet_jobs_physics_research_produces_mult = 0.20
+    }
+
+    weight_modifier = {
+        modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+			}
+		}
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+###

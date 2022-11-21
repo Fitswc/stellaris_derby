@@ -1,0 +1,60 @@
+namespace = uma_test
+#一些用于测试的事件
+
+#直接和三女神研究所建立联系
+country_event = {
+    id = uma_test.1
+    title = "uma_test.1.name"
+    desc = "uma_test.1.desc"
+    picture = GFX_evt_psionics #之后要换图！
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_country = {
+            limit = { is_country_type = uma_threegodness_knowledge_research_dept_enclave }
+            save_event_target_as = is_the_uma_the_threegodness_knowledge_research_dept
+        }
+    }
+
+
+    option = {
+        name = "uma_test.1.a"
+        establish_communications_no_message = event_target:is_the_uma_the_threegodness_knowledge_research_dept
+        #我不知道为什么，但这里的target似乎一定要用event_target，直接用国家名是没用的
+    }
+}
+
+
+#################变量添加可以加乘数##############
+# clear_variable = wonder_1_5_counting_variable
+# clear_variable = wonder_1_5_counting_variable_1
+# export_trigger_value_to_variable = {
+#     trigger = num_districts
+#     parameters = {
+#         type = district_farming
+#     }
+#     variable = wonder_1_5_counting_variable
+# }
+# export_trigger_value_to_variable = {
+#     trigger = num_districts
+#     parameters = {
+#         type = district_farming_uncapped
+#     }
+#     variable = wonder_1_5_counting_variable_1
+# }
+# change_variable = {
+#     which = wonder_1_5_counting_variable
+#     value = wonder_1_5_counting_variable_1
+# }
+# sector = {
+#     every_owned_planet = {
+#         remove_modifier = wonder_1_5_modifier
+#         add_modifier = {
+#             modifier = wonder_1_5_modifier
+#             days = -1
+#             multiplier = prevprev.wonder_1_5_counting_variable
+#             clear_on_owner_change = yes
+#         }
+#     }
+# }

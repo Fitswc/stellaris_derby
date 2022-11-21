@@ -1,0 +1,77 @@
+###赛马娘专属 特殊 建筑###
+
+#注：特殊建筑往往是依靠事件链获得的，独一无二的建筑。所以特别拿出来单开一个文件。
+
+
+#内恰的居酒屋
+building_uma_nice_nature_no_restaurant = {
+	base_buildtime = 300
+	category = unity
+	base_cap_amount = 1
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			pop_happiness = 0.2
+			country_consumer_goods_produces_mult = 0.33
+			trade_value_mult = 0.33
+		}
+	}
+
+	prerequisites = {
+		"tech_uma_nice_nature_no_restaurant"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}

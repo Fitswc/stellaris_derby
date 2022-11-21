@@ -1,0 +1,1670 @@
+tech_uma_toresen_planet_transform = {#特雷森星球建设
+   cost = 30000
+   is_rare = yes
+   area = society
+   tier = 4
+   category = { new_worlds }
+   prerequisites = { }
+   weight = 200
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+           #is_uma_fallen_empire = yes
+		}
+	}
+   
+    prereqfor_desc = {
+        ship = {
+            title = "uma_allow_us_change_pc_uma_school_planet_title"
+            desc = "uma_allow_us_change_pc_uma_school_planet_desc"
+        }
+    } 
+
+   modifier = {
+   }
+
+   weight_modifier = {
+       factor = 1
+		modifier = {
+			factor = 0
+			years_passed < 75
+		}
+   }
+
+   ai_weight ={
+       factor = 0
+   }
+}
+
+
+
+#tech_uma_spring_planet_transform = {#温泉星球建设
+#    cost = 30000
+#    is_rare = yes
+#    area = society
+#    tier = 4
+#    category = { new_worlds }
+#    prerequisites = { "tech_uma_planet_transform_exp"}
+#    weight = 100
+
+#	potential = {
+#		OR = {
+#			has_authority = auth_trainingcenter
+#           #is_uma_fallen_empire = yes
+#		}
+#	}
+    
+#   modifier = {
+#        custom_tooltip = uma_allow_spring_planet_transform #允许将在星球决议中将星球改造成温泉星球
+#    }
+
+#    weight_modifier = {
+#        factor = 1
+#		modifier = {
+#			factor = 0
+#			years_passed < 75
+#		}
+#    }
+
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+
+
+###第二版
+###食物体系科技
+tech_uma_arguculture = { #马娘特色农业
+    cost = 1000
+    area = society
+    tier = 1
+    category = { biology }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁 胡萝卜农场
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+#tech_uma_space_arguculture = { #太空萝卜栽培
+#    cost = 2000
+#    area = society
+#    tier = 1
+#    category = { biology }
+#    prerequisites = { "tech_uma_arguculture" }
+#    weight = 100
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+
+#    modifier = {
+#        #解锁 空间站模块 太空胡萝卜农场
+#    }
+
+#    weight_modifier = {
+#        factor = 1
+#    }
+
+#    ai_weight ={
+#        factor = 0
+#    }
+#
+#}
+
+
+
+tech_uma_new_fertilizer = { #特种化肥开发
+    cost = 3000
+    area = society
+    tier = 2
+    category = { biology }
+    prerequisites = { "tech_uma_arguculture" }
+    weight = 125
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_carrot_farmer_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_modern_carrot_farm = { #胡萝卜农场现代化
+    cost = 4000
+    area = society
+    tier = 2
+    category = { biology }
+    prerequisites = { "tech_uma_new_fertilizer" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 胡萝卜农场 升级为 现代化胡萝卜农场
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_code_hachimi = { #代号“八千三”
+    cost = 6000
+    area = society
+    tier = 3
+    category = { biology }
+    prerequisites = { "tech_uma_modern_carrot_farm" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_add_bee_farmer_job_for_buildings_title"
+            desc = "uma_add_bee_farmer_job_for_buildings_desc"
+        }
+    } 
+
+    modifier = {
+        #每个农场建筑提供 1 养蜂马娘 岗位
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_tran_gene_carrot = { #转基因胡萝卜实验
+    cost = 8000
+    area = society
+    tier = 3
+    category = { biology }
+    prerequisites = { "tech_uma_modern_carrot_farm" }
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_carrot_farmer_produces_mult = 0.2
+        #每个胡萝卜种植马娘 额外产出3 社会学研究
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_future_carrot_farm = { #未来农业
+    cost = 10000
+    area = society
+    tier = 4
+    category = { biology }
+    prerequisites = { "tech_uma_modern_carrot_farm" }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #允许将 现代化胡萝卜农场 升级为 未来胡萝卜农园
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_high_tech_farming_tech = { #尖端农业设备
+    cost = 15000
+    area = society
+    tier = 4
+    category = { biology }
+    prerequisites = { "tech_uma_future_carrot_farm" }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_carrot_farmer_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_eco_friendly_farming = { #生态农业思维
+    cost = 15000
+    area = society
+    tier = 4
+    category = { biology }
+    prerequisites = { "tech_uma_future_carrot_farm" }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_more_amen_for_farms_title"
+            #desc = "uma_more_amen_for_farms_desc"
+        }
+    } 
+
+    modifier = {
+        planet_uma_carrot_farmer_produces_mult = 0.1
+        #每一个未来胡萝卜农园 产生5舒适度
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+
+
+
+tech_uma_eco_friendly_tourism = { #特色胡萝卜旅游业
+    cost = 20000
+    area = society
+    tier = 4
+    category = { biology }
+    prerequisites = { "tech_uma_eco_friendly_farming" }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_more_trade_for_carrot_farmers_title"
+            #desc = "uma_more_trade_for_carrot_farmers_desc"
+        }
+    } 
+
+    modifier = {
+        #胡萝卜种植马娘 产出4贸易值
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
+###
+
+
+
+###比赛体系科技
+tech_uma_race_tradition = { #比赛传统
+	cost = 0
+	area = society
+    tier = 0
+	start_tech = yes
+	category = { statecraft }
+
+    #解锁 基础赛场
+}
+
+
+
+tech_uma_toresen_race_dept = { #特雷森赛事部
+    cost = 1500
+    area = society
+    tier = 1
+    category = { statecraft }
+    prerequisites = { "tech_uma_race_tradition" }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_unlock_racing_policy_title"
+            desc = "uma_unlock_racing_policy_desc"
+        }
+    } 
+
+    modifier = {
+        #custom_tooltip = uma_unlock_racing_policy
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_race_course_expand = { #赛马场地扩张
+    cost = 3000
+    area = society
+    tier = 2
+    category = { statecraft }
+    prerequisites = { "tech_uma_toresen_race_dept" }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier = {
+        #允许建造 现代化赛场
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_planet_rece_holding = { #星球级别赛事举办
+    is_rare = yes
+    cost = 10000
+    area = society
+    tier = 3
+    category = { statecraft }
+    prerequisites = { "tech_uma_race_course_expand" }
+    weight = 150
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_unlock_planet_derby_decision_title"
+            desc = "uma_unlock_planet_derby_decision_desc"
+        }
+    } 
+
+    modifier = {
+        #解锁星球决议 举办星球德比
+        #custom_tooltip = uma_unlock_planet_derby_decision
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_estabilish_trainer_system = { #建立训练员制度
+    cost = 5000
+    area = society
+    tier = 3
+    category = { statecraft }
+    prerequisites = { "tech_uma_race_course_expand" }
+    weight = 125
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_add_trainer_job_for_these_two_buildings_title"
+            desc = "uma_add_trainer_job_for_these_two_buildings_desc"
+        }
+    } 
+
+    modifier = {
+        #每座现代化赛场建筑 额外提供1训练员岗位
+        #每座尖端赛场建筑 额外提供2训练员岗位
+        #custom_tooltip = uma_add_trainer_job_for_these_two_buildings
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_racing_ranking_system = { #赛事分级制度
+    cost = 5000
+    area = society
+    tier = 3
+    category = { statecraft }
+    prerequisites = { "tech_uma_race_course_expand" }
+    weight = 125
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier = {
+        planet_uma_racing_umamusume_produces_mult = 0.1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_high_level_race_course = { #尖端赛马场地建设
+    cost = 8000
+    area = society
+    tier = 3
+    category = { statecraft }
+    prerequisites = { "tech_uma_racing_ranking_system" "tech_uma_estabilish_trainer_system" }
+    weight = 150
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+	}
+
+    modifier = {
+        #允许建造 尖端赛马场
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_country_race_system = { #国家赛事规范
+    cost = 10000
+    area = society
+    tier = 4
+    category = { statecraft }
+    prerequisites = { "tech_uma_high_level_race_course" }
+    weight = 175
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+        #empire_size > 150 ###!!!注意，如果加了这个设置，即使用technology 1 1 ，也无法研发出来，除非你的帝国规模大于150
+	}
+
+    modifier = {
+        planet_uma_racing_umamusume_produces_mult = 0.1
+        #赛马娘 岗位 额外产出5凝聚力 3贸易额 2舒适度
+        #此外，我们将能够着手筹办国家级别的宏大赛事...
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+tech_uma_country_race_holding = { #国家赛事举办
+    cost = 10000
+    area = society
+    tier = 4
+    category = { statecraft }
+    prerequisites = { "tech_uma_country_race_system" }
+    weight = 200
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+        #empire_size > 150
+	}
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_unlock_decision_to_hold_country_derby_title"
+            desc = "uma_unlock_decision_to_hold_country_derby_desc"
+        }
+    } 
+
+    modifier = {
+        #解锁国家决议 举办国家级赛事
+        #custom_tooltip = uma_unlock_decision_to_hold_country_derby
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+###
+
+
+
+###因子飞升相关科技
+tech_uma_biology = { #马娘生理学
+	cost = 0
+	area = society
+	tier = 0
+	category = { biology }
+	start_tech = yes
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_allow_us_explore_the_secret_of_umamusume_body_title"
+            desc = "uma_allow_us_explore_the_secret_of_umamusume_body_desc"
+        }
+    } 
+
+	# 允许我们进一步地探究马娘机体的秘密
+    #custom_tooltip = uma_allow_us_explore_the_secret_of_umamusume_body
+}
+
+
+
+tech_uma_genetics = { #马娘遗传学
+	cost = 2500
+	area = society
+	tier = 2
+	category = { biology }
+    prerequisites = { "tech_uma_biology" }
+    weight = 100
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        pop_growth_speed = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+# tech_uma_keisun_theory = { #因子理论
+# 	cost = 5500
+# 	area = society
+# 	tier = 3
+# 	category = { biology }
+#     prerequisites = { "tech_uma_genetics" }
+#     weight = 100
+
+# 	potential = {
+# 		OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         pop_growth_speed = 0.05
+#         UMA_species_trait_points_add = 1
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+
+# tech_uma_keisun_map = { #因子图谱
+# 	cost = 8000
+# 	area = society
+# 	tier = 3
+# 	category = { biology }
+#     prerequisites = { "tech_uma_keisun_theory" }
+#     weight = 100
+
+# 	potential = {
+# 		OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         pop_growth_speed = 0.05
+#         leader_age = 10
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+
+# tech_uma_keisun_directed_activing = { #因子定向激活
+#     is_rare = yes
+# 	cost = 20000
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+#     prerequisites = { "tech_uma_keisun_map" }
+#     weight = 100
+
+# 	potential = {
+# 		OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         pop_growth_speed = 0.05
+#         UMA_species_trait_points_add = 1
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+
+
+
+# tech_uma_keisun_compatibility_theory = { #因子相性学说（需要三女神知识兑换，不可直接获得。因子飞升前置科技）
+#     is_rare = yes
+# 	cost = 15000
+# 	area = society
+# 	tier = 4
+# 	category = { biology }
+#     prerequisites = { "tech_uma_keisun_map" }
+#     weight = 0 #永远不可能正常刷出
+
+# 	potential = {
+# 		OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         UMA_species_trait_points_add = 1
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight ={
+#         factor = 0
+#     }
+# }
+###
+
+
+###新因子科技
+#基础因子图谱归纳
+tech_uma_basic_keisun_map = {
+	cost = 10000
+	area = society
+	tier = 3
+    is_rare = yes
+	category = { biology }
+    prerequisites = { "tech_uma_genetics" }
+    weight = 150
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        pop_growth_speed = 0.1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+###分子因子学
+tech_uma_molecule_keisun_theory = {
+	cost = 15000
+	area = society
+	tier = 4
+    is_rare = yes
+	category = { biology }
+    prerequisites = { "tech_uma_basic_keisun_map" }
+    weight = 175
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        UMA_species_trait_points_add = 1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+###因子遗传学
+tech_uma_keisun_genetic = {
+	cost = 15000
+	area = society
+	tier = 4
+    is_rare = yes
+	category = { biology }
+    prerequisites = { "tech_uma_molecule_keisun_theory" }
+    weight = 175
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        UMA_species_trait_points_add = 1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+###综合遗传实验
+tech_uma_complex_keisun_test = {
+	cost = 25000
+	area = society
+	tier = 4
+    is_rare = yes
+    is_dangerous = yes
+	category = { biology }
+    prerequisites = { "tech_uma_keisun_genetic" }
+    weight = 200
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_researchers_society_research_produces_mult = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+###领域飞升相关科技
+# tech_uma_first_see_in_soul = { #马娘灵魂初探
+#     is_rare = yes
+#     cost = 10000
+#     area = society
+#     tier = 3
+#     category = { psionics }
+
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         planet_jobs_unity_produces_mult = 0.1
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight = {
+#         factor = 0
+#     }
+
+# }
+
+
+
+# tech_uma_soul_factor_research = { #灵魂性质研究
+#     is_rare = yes
+#     cost = 15000
+#     area = society
+#     tier = 3
+#     category = { psionics }
+#     prerequisites = { "tech_uma_first_see_in_soul" }
+#     weight = 100
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         planet_jobs_society_research_produces_mult = 0.1
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight = {
+#         factor = 0
+#     }
+
+# }
+
+
+
+# tech_uma_territory_theory = { #领域理论
+#     is_rare = yes
+#     cost = 25000
+#     area = society
+#     tier = 4
+#     category = { psionics }
+#     prerequisites = { "tech_uma_soul_factor_research" }
+#     weight = 0 #三女神知识研究所专属
+
+#     potential = {
+#         OR = {
+# 			has_authority = auth_trainingcenter
+#             #is_uma_fallen_empire = yes
+# 		}
+#     }
+
+#     modifier = {
+#         planet_jobs_produces_mult = 0.05
+#     }
+
+#     weight_modifier = {
+#         factor = 1
+#     }
+
+#     ai_weight = {
+#         factor = 0
+#     }
+
+# }
+# ###
+
+
+###新领域科技
+#基础领域理论
+tech_uma_basic_territory_theory = {
+    is_rare = yes
+    cost = 10000
+    area = society
+    tier = 3
+    category = { psionics }
+
+    weight = 150
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+
+}
+
+
+##巅峰赛根性测试
+tech_uma_top_race_testing = {
+    is_rare = yes
+    cost = 15000
+    area = society
+    tier = 3
+    category = { statecraft }
+    prerequisites = { "tech_uma_basic_territory_theory" }
+    weight = 175
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_uma_racing_umamusume_produces_mult = 0.1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+
+}
+
+
+##心理领域学基础
+tech_uma_basic_phycoterritory_theory = {
+    is_rare = yes
+    cost = 15000
+    area = society
+    tier = 3
+    category = { biology }
+    prerequisites = { "tech_uma_top_race_testing" }
+    weight = 175
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_stability_add = 5
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+
+}
+
+
+##领域启发与应用
+tech_uma_terriroty_in_use = {
+    is_rare = yes
+    cost = 25000
+    area = society
+    tier = 4
+    category = { biology }
+    prerequisites = { "tech_uma_basic_phycoterritory_theory" }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+
+}
+
+
+############################################
+############tom酱新科技  2022 9 5###########
+############################################
+
+
+#######殖民科技#######
+tech_uma_explore_1 = { #特雷森外域探险部
+    cost = 1000
+    area = society
+    tier = 1
+    category = { new_worlds }
+    prerequisites = { tech_uma_basic_phycoterritory_theory }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        ship_colonizer_cost_mult = -0.15
+        planet_colony_development_speed_mult = 0.5
+
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_explore_2 = { #马娘探险者培训
+    cost = 2000
+    area = society
+    tier = 2
+    category = { new_worlds }
+    prerequisites = { tech_uma_explore_1 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        ship_colonizer_cost_mult = -0.15
+        planet_colony_development_speed_mult = 0.5
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_explore_3 = { #简易特雷森设施建设
+    cost = 3000
+    area = society
+    tier = 2
+    category = { new_worlds }
+    prerequisites = { tech_uma_explore_2 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_colony_development_speed_mult = 0.50
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_explore_4 = { #殖民地拓荒计划
+    cost = 5000
+    area = society
+    tier = 3
+    category = { new_worlds }
+    prerequisites = { tech_uma_explore_3 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_get_exploration_buff_title"
+            #desc = "uma_more_trade_for_carrot_farmers_desc"
+        }
+    } 
+
+    modifier = {
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_explore_5 = { #殖民地马娘综合管理学
+    cost = 10000
+    area = society
+    tier = 4
+    category = { new_worlds }
+    prerequisites = { tech_uma_explore_4 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        ship = {
+            title = "uma_enhance_exploration_buff_title"
+            #desc = "uma_more_trade_for_carrot_farmers_desc"
+        }
+    } 
+
+    modifier = {
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_psychology_1 = { #马娘心理学
+    cost = 1000
+    area = society
+    tier = 1
+    category = { statecraft }
+    prerequisites = { }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        country_society_research_produces_mult = 0.1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_psychology_2 = { #胜负欲拓展
+    cost = 2000
+    area = society
+    tier = 2
+    category = { statecraft }
+    prerequisites = { tech_uma_psychology_1 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_psychology_3 = { #理性认知教育
+    cost = 2000
+    area = society
+    tier = 2
+    category = { statecraft }
+    prerequisites = { tech_uma_psychology_1 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        leader_skill_levels = 1
+        species_leader_exp_gain = 0.15
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_military_training_1 = { #军事专精训练
+    cost = 2000
+    area = society
+    tier = 2
+    category = { military_theory }
+    prerequisites = { tech_combat_training }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        army_damage_mult = 0.2
+        army_health = 0.2
+        army_morale = 0.2
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_military_training_2 = { #决胜服战袍
+    cost = 8000
+    area = society
+    tier = 4
+    category = { military_theory }
+    prerequisites = { tech_uma_military_training_1 }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        army_morale = 0.33
+        army_collateral_damage_mult = 0.50
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+
+tech_uma_tree_holes = { #综合“树洞”
+    cost = 3000
+    area = society
+    tier = 2
+    category = { statecraft }
+    prerequisites = {  }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        #解锁建筑：中庭的树洞
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+tech_uma_carrots_armed_idea = { #水晶萝卜武装理念
+    cost = 4000
+    area = society
+    tier = 2
+    category = { military_theory }
+    prerequisites = { tech_uma_type_of_controlled_carrot_energy }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    modifier = {
+        army_damage_mult = 0.25
+        ship_weapon_damage = 0.1
+        ship_fire_rate_mult = 0.1
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+tech_uma_ashi_shitsu = { #脚质太空战斗运用
+    cost = 8000
+    area = society
+    tier = 3
+    category = { military_theory }
+    prerequisites = { tech_shields_4 tech_uma_motion_model }
+    weight = 100
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "uma_tech_unlock_running_ai_title"
+            desc = "uma_tech_unlock_running_ai_desc"
+        }
+    }
+
+    modifier = {
+        #解锁作战AI：先手必胜 短兵相接 接替突进 迫近之影
+
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}
+
+
+
+#########特殊科技#########
+#这里都是一些特殊的科技，无法获得，除了事件链或者其他什么
+
+#内恰的居酒屋
+tech_uma_nice_nature_no_restaurant = {
+    cost = 10000
+    area = society
+    tier = 4
+    category = { statecraft }
+    prerequisites = {}
+    weight = 0
+    is_rare = yes
+
+	potential = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+    modifier = {
+    }
+
+    weight_modifier = {
+        factor = 1
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+}

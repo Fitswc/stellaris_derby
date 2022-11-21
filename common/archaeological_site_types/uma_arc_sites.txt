@@ -1,0 +1,44 @@
+# 开局三女神遗址
+threegodnessrelic_digsite = {
+	desc = threegodnessrelic_digsite_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = umaarc.1001
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = umaarc.1002
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = umaarc.1003
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = umaarc.1004
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = umaarc.1005
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

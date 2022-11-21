@@ -1,0 +1,327 @@
+uma_general_trait_symbolihonor = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/symbolihonor.png"
+	modifier = {
+		army_damage_mult = 0.15
+		army_morale = 0.15
+	}
+	leader_potential_add = {
+		is_species = umamusume
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	opposites = { "uma_general_trait_mejirohonor" }
+	initial = no
+    randomized = no
+
+}
+
+uma_general_trait_mejirohonor = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/mejirohonor.png"
+	modifier = {
+		army_health = 0.15
+		army_morale = 0.15
+	}
+	leader_potential_add = {
+		is_species = umamusume
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	opposites = { "uma_general_trait_symbolihonor" }
+	initial = no
+    randomized = no
+
+}
+
+uma_general_trait_charmleader = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/charmleader.png"
+	modifier = {
+		army_morale = 0.20
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_leadercharm
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+    randomized = no
+}
+
+uma_general_trait_kishouhageshii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouhageshii.png"
+	modifier = {
+		army_damage_mult = 0.25
+        army_collateral_damage_mult = 0.25
+		army_disengage_chance_mult = -0.20
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_kishouhageshii
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+    randomized = no
+}
+
+##############
+###道具特质###
+##############
+#护符
+uma_general_trait_amulet = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_amulet.dds"
+	modifier = {
+		army_damage_mult = 0.5
+        army_collateral_damage_mult = 1
+		army_health = 0.5
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+#大喇叭（精力充沛）
+uma_general_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	modifier = {
+		army_damage_mult = 0.5
+        army_collateral_damage_mult = 1
+		army_health = 0.5
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+#望远镜（醒目株）
+uma_general_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	modifier = {
+		army_damage_mult = 0.25
+		army_morale = 0.25
+		species_leader_exp_gain = 0.25
+		
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+#训练手册（切者）
+uma_general_trait_training_book = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
+	modifier = {
+		leader_skill_levels =  5
+		species_leader_exp_gain = 1.5
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+#皇家青汁（青汁的力量）
+uma_general_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	modifier = {
+		army_damage_mult = 1
+		army_morale = 1
+		army_disengage_chance_mult = 0.5
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+#体力65
+uma_general_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	modifier = {
+		army_damage_mult = 0.5
+		army_morale = 0.5
+		army_disengage_chance_mult = 0.25
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+##############
+###干劲特质###
+##############
+#绝好调
+uma_general_trait_yaruki_5 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"
+	modifier = {
+		army_damage_mult = 0.20
+        army_collateral_damage_mult = 0.20
+		army_morale = 0.20
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+#好调
+uma_general_trait_yaruki_4 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"
+	modifier = {
+		army_damage_mult = 0.1
+        army_collateral_damage_mult = 0.1
+		army_morale = 0.1
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+#普通
+uma_general_trait_yaruki_3 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
+	modifier = {
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+#不调
+uma_general_trait_yaruki_2 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_2.png"
+	modifier = {
+		army_damage_mult = -0.05
+        army_collateral_damage_mult = -0.05
+		army_morale = -0.05
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+#绝不调
+uma_general_trait_yaruki_1 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"
+	modifier = {
+		army_damage_mult = -0.1
+        army_collateral_damage_mult = -0.1
+		army_morale = -0.1
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+###领域飞升特质
+###领域特质（一段领域飞升）
+uma_general_trait_terriroty_awake = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"
+	modifier = {
+		army_health = 0.25
+		army_morale = 0.25
+		army_damage_mult = 0.25
+        army_collateral_damage_mult = 0.25
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no	
+}
+
+####特殊领袖特质###
+#一流的赛马娘
+uma_general_trait_sp_king_halo = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_king_halo.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		army_morale = 0.75
+		army_damage_mult = 0.5
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+    randomized = no		
+}
+
+#角斗士
+uma_general_trait_sp_al_condor_pasa = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_al_condor_pasa.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		army_morale = 0.5
+		army_attack_damage_mult = 1
+		army_collateral_damage_mult = 1
+		army_disengage_chance_mult = -1
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+    randomized = no		
+}
+
+#新生的太阳
+uma_general_trait_sp_kitasan_black = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_kitasan_black.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		army_health = 0.5
+		army_morale = 0.5
+		army_damage_mult = 0.5
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+    randomized = no		
+}
+
+#八方睥睨
+uma_general_trait_sp_nice_nature = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_nice_nature.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		army_damage_mult = 0.33
+        army_collateral_damage_mult = 0.33
+		army_disengage_chance_mult = 0.33
+	}
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+    randomized = no		
+}

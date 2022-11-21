@@ -1,0 +1,240 @@
+namespace = umaarc
+# 开局三女神遗址考古事件
+# 前置事件
+country_event = {
+	id = umaarc.1008
+	title = umaarc.1008.name
+	desc = umaarc.1008.desc
+	picture = GFX_evt_alien_ruins
+	location = root
+	show_sound = event_administrative_work #占位符
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_ai = no }
+		any_owned_planet = {
+			has_deposit = d_uma_threegodness_relic
+		}
+		
+
+		
+	}
+
+	option = {
+		name = umaarc.1008.a
+
+	}
+
+	after = {
+		hidden_effect = {
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_uma_threegodness_relic
+				}
+				planet_event = {id = umaarc.1000 days = 1800 random = 720}
+			}
+		}
+	}
+		
+		
+		
+	
+}
+
+#发现事件
+planet_event = {
+	id = umaarc.1000
+	title = umaarc.1000.name
+	desc = umaarc.1000.desc
+	picture = GFX_evt_archaeology_camp #占位符
+	show_sound = event_drilling #占位符
+	location = this
+
+	is_triggered_only = yes
+
+	option = {
+		name = umaarc.1000.a
+		create_archaeological_site = threegodnessrelic_digsite
+		save_event_target_as = threegodnessrelic_planet
+	}
+	
+}
+
+# 考古营地
+# 阶段1
+fleet_event = {
+	id = umaarc.1001
+	title = umaarc.1001.name
+	desc = umaarc.1001.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+# Stage 2
+fleet_event = {
+	id = umaarc.1002
+	title = umaarc.1002.name
+	desc = umaarc.1002.desc
+	picture = GFX_evt_underground_city #占位符
+	show_sound = event_whispering #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+# Stage 3
+fleet_event = {
+	id = umaarc.1003
+	title = umaarc.1003.name
+	desc = umaarc.1003.desc
+	picture = GFX_evt_ancient_records
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+# Stage 4
+fleet_event = {
+	id = umaarc.1004
+	title = umaarc.1004.name
+	desc = umaarc.1004.desc
+	picture = GFX_evt_excavation_team
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+# Stage 5
+fleet_event = {
+	id = umaarc.1005
+	title = umaarc.1005.name
+	desc = umaarc.1005.desc
+	picture = GFX_evt_excavation_team
+	show_sound = event_whispering
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+		from.planet = {
+			planet_event = {id = umaarc.1006 days = 360  random = 100  }
+		 }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = REMARKABLE #占位符
+		custom_tooltip = umaarc.1004.tooltip
+		owner = {
+			add_resource = {
+				
+			}  #可考虑的资源奖励
+			large_artifact_reward = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						has_technology = tech_uma_threegodness_knowledge_first_known
+					}
+				}
+			}
+			owner = {
+				add_tech_progress = {tech = tech_uma_threegodness_knowledge_first_known  progress = 0.2} # 解锁建立三女神知识研究所科技
+			}
+		}
+		
+	}
+}
+
+# 后续
+planet_event = {
+	id = umaarc.1006
+	title = umaarc.1006.name
+	desc = umaarc.1006.desc
+	picture = GFX_evt_generator_powerup
+	show_sound = event_administrative_work
+	location = root
+
+	is_triggered_only = yes
+
+
+    option = {
+		name = umaarc.1006.a
+			remove_deposit = d_uma_threegodness_relic
+            add_deposit = d_uma_threegodness_museum
+
+	}
+}

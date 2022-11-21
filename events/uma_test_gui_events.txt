@@ -1,0 +1,3521 @@
+namespace = uma_gui_test
+
+#########################################
+##商城有关的事件！也是作者的第一个GUI！##
+#########################################
+#商店GUI
+country_event = {
+    id = uma_gui_test.1
+    is_triggered_only = yes
+    diplomatic = yes
+ 	custom_gui = uma_shoping_center_window
+}
+
+#商店初始化
+planet_event = {
+    id = uma_gui_test.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		owner = {
+			uma_refresh_slot_1_goods_effect = yes
+			uma_refresh_slot_2_goods_effect = yes
+			uma_refresh_slot_3_goods_effect = yes
+			uma_refresh_slot_4_goods_effect = yes
+			uma_refresh_slot_5_goods_effect = yes
+			uma_refresh_slot_6_goods_effect = yes
+			###初始化资源
+			set_variable = {
+				which = uma_num_of_coin
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_1
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_2
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_3
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_4
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_5
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_6
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_7
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_8
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_9
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_10
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_11
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_12
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_13
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_14
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_15
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_16
+				value = 0
+			}
+			set_variable = {
+				which = uma_intelligence_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_kenshi_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_power_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_endurance_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_speed_goods_used
+				value = 0
+			}
+			###允许抽奖的次数（每年刷新）
+			set_variable = {
+				which = uma_shop_gecha_times_allowed
+				value = 3
+			}
+			###抽奖没有获得特殊领袖或者道具的计数（到了20次提升概率）
+			set_variable = {
+				which = uma_shop_gecha_unlucky_times
+				value = 0
+			}
+		}
+	}
+}
+
+#刷新槽位
+country_event = {
+    id = uma_gui_test.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		#每年刷新一次六个商品槽
+        uma_refresh_slot_1_goods_effect = yes
+		uma_refresh_slot_2_goods_effect = yes
+		uma_refresh_slot_3_goods_effect = yes
+		uma_refresh_slot_4_goods_effect = yes
+		uma_refresh_slot_5_goods_effect = yes
+		uma_refresh_slot_6_goods_effect = yes
+	}
+}
+
+
+############################
+###接下来是使用道具的事件###
+############################
+#第一页8道具
+country_event = {
+	id = uma_gui_test.4
+	title = "uma_gui_test.4.name"
+    desc = "uma_gui_test.4.desc"
+	picture = GFX_evt_uma_normal_school #换图了换图了！
+
+	is_triggered_only = yes
+
+	#退出选项
+	option = {
+		name = "uma_gui_test.4.exit"
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_1
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.10
+			}
+		}
+	}
+	
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_2
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.11
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_3
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.c"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.12
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_4
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.d"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.13
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_5
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.e"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.14
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_6
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.f"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.15
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_7
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.g"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.16
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_8
+				value > 0
+			}
+		}
+		name = "uma_gui_test.4.h"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.17
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.4.next"
+		hidden_effect = {
+				country_event = {
+				id = uma_gui_test.5
+			}
+		}
+	}
+
+}
+
+#第二页8道具
+country_event = {
+	id = uma_gui_test.5
+	title = "uma_gui_test.5.name"
+    desc = "uma_gui_test.5.desc"
+	picture = GFX_evt_uma_normal_school #换图了换图了！
+
+	is_triggered_only = yes
+
+	#退出选项
+	option = {
+		name = "uma_gui_test.5.exit"
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_9
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.18
+			}
+		}
+	}
+	
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_10
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.19
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_11
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.c"
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.20
+			}
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_12
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.d"
+		custom_tooltip = uma_use_intelligence_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_12
+				value = 1
+			}
+			uma_upgrade_intelligence_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_13
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.e"
+		custom_tooltip = uma_use_kenshi_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_13
+				value = 1
+			}
+			uma_upgrade_kenshi_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_14
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.f"
+		custom_tooltip = uma_use_power_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_14
+				value = 1
+			}
+			uma_upgrade_power_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_15
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.g"
+		custom_tooltip = uma_use_endurance_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_15
+				value = 1
+			}
+			uma_upgrade_endurance_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_16
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.h"
+		custom_tooltip = uma_use_speed_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_16
+				value = 1
+			}
+			uma_upgrade_speed_goods_effect = yes
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.5.sooner"
+		hidden_effect = {
+				country_event = {
+				id = uma_gui_test.4
+			}
+		}
+	}
+
+}
+
+
+#######################
+#######巴菲甜点########
+#######################
+country_event = {
+	id = uma_gui_test.10
+	title = "uma_gui_test.10.name"
+    desc = "uma_gui_test.10.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖（额外限制：必须是马娘，因为只有马娘才会有心情）
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.10.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_1 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_1
+                value = 1
+            }
+			event_target:uma_select_leader_1 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_2 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_2 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_3 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_3 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_4 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_4 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_5 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_5 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_6 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_6 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_7 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_7 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.10.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		custom_tooltip = uma_upgrade_one_level_kanshi
+		event_target:uma_select_leader_8 = { uma_upgrade_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_1
+				value = 1
+			}
+			event_target:uma_select_leader_8 = { uma_upgrade_kanshi_one_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.10.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.10
+			}
+		}
+	}
+
+}
+
+
+#######################
+#######蹄铁·级#########
+#######################
+country_event = {
+	id = uma_gui_test.11
+	title = "uma_gui_test.11.name"
+    desc = "uma_gui_test.11.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_titie_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.11.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_2
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.11.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_titie_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_2
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.11.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.11
+			}
+		}
+	}
+
+}
+
+###护符###
+#######################
+#######蹄铁·级#########
+#######################
+country_event = {
+	id = uma_gui_test.12
+	title = "uma_gui_test.12.name"
+    desc = "uma_gui_test.12.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_amulet_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.12.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_3
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.12.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_amulet_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_3
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.12.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.12
+			}
+		}
+	}
+
+}
+
+###大喇叭
+#######################
+########大喇叭#########
+#######################
+country_event = {
+	id = uma_gui_test.13
+	title = "uma_gui_test.13.name"
+    desc = "uma_gui_test.13.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_horn_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.13.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_4
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.13.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_horn_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_4
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.13.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.13
+			}
+		}
+	}
+
+}
+
+
+#######################
+########学者帽#########
+#######################
+country_event = {
+	id = uma_gui_test.14
+	title = "uma_gui_test.14.name"
+    desc = "uma_gui_test.14.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_school_hat_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.14.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_5
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.14.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_school_hat_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_5
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.14.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.14
+			}
+		}
+	}
+
+}
+
+###
+#######################
+#######训练手册########
+#######################
+country_event = {
+	id = uma_gui_test.15
+	title = "uma_gui_test.15.name"
+    desc = "uma_gui_test.15.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_training_book_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.15.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_6
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.15.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_training_book_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_6
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.15.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.15
+			}
+		}
+	}
+
+}
+
+#######################
+########望远镜#########
+#######################
+country_event = {
+	id = uma_gui_test.16
+	title = "uma_gui_test.16.name"
+    desc = "uma_gui_test.16.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_tomorrow_star_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.16.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_7
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.16.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_tomorrow_star_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_7
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.16.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.16
+			}
+		}
+	}
+
+}
+
+#######################
+########小镜子#########
+#######################
+country_event = {
+	id = uma_gui_test.17
+	title = "uma_gui_test.17.name"
+    desc = "uma_gui_test.17.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_lovely_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.17.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_8
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.17.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_lovely_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_8
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.17.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.17
+			}
+		}
+	}
+
+}
+
+
+#######################
+#####超大纸杯蛋糕######
+#######################
+country_event = {
+	id = uma_gui_test.18
+	title = "uma_gui_test.18.name"
+    desc = "uma_gui_test.18.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖（必须是马娘）
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_highest_kanshi_trigger = yes
+				species = { has_trait = uma_trait_musume }
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.18.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+		event_target:uma_select_leader_1 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_9
+                value = 1
+            }
+			event_target:uma_select_leader_1 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_2 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_3 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_4 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_5 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_6 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_7 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.18.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_upgrade_kanshi_two_level_hint = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_9
+				value = 1
+			}
+			event_target:uma_select_leader_8 = { uma_upgrade_kanshi_two_level = yes }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.18.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.18
+			}
+		}
+	}
+}
+
+#######################
+#######皇家青汁########
+#######################
+country_event = {
+	id = uma_gui_test.19
+	title = "uma_gui_test.19.name"
+    desc = "uma_gui_test.19.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_vegetable_drink_trait = yes
+				uma_is_not_lowest_kanshi = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.19.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_1 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_1 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+                which = uma_num_of_good_10
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_2 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_2 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_3 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_3 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_4 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_4 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_5 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_5 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_6 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_6 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_7 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_7 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.19.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_vegetable_drink_trait = yes }
+		event_target:uma_select_leader_8 = { uma_down_kanshi_one_level_hint = yes }
+		hidden_effect = {
+			event_target:uma_select_leader_8 = { uma_down_kanshi_one_level = yes }
+			subtract_variable = {
+				which = uma_num_of_good_10
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.19.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.19
+			}
+		}
+	}
+
+}
+
+#######################
+########体力65#########
+#######################
+country_event = {
+	id = uma_gui_test.20
+	title = "uma_gui_test.20.name"
+    desc = "uma_gui_test.20.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#随机选取8领袖
+	immediate = {
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_1
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_2
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_3
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_4
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_5
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_6
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_7
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+		random_owned_leader = {
+			limit = { 
+				NOT = { has_leader_flag = uma_selected_leader_goods }
+				uma_not_has_power_sf_trait = yes
+			}
+			if = {
+				limit = { exists = this }
+				save_event_target_as = uma_select_leader_8
+				set_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	#退出选项（默认选项）
+	option = {
+		name = "uma_gui_test.20.exit"
+		every_owned_leader = {
+			limit = { has_leader_flag = uma_selected_leader_goods }
+			remove_leader_flag = uma_selected_leader_goods
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.a"
+		trigger = {
+			exists = event_target:uma_select_leader_1
+		}
+        event_target:uma_select_leader_1 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+                which = uma_num_of_good_11
+                value = 1
+            }
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.b"
+		trigger = {
+			exists = event_target:uma_select_leader_2
+		}
+		event_target:uma_select_leader_2 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.c"
+		trigger = {
+			exists = event_target:uma_select_leader_3
+		}
+		event_target:uma_select_leader_3 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.d"
+		trigger = {
+			exists = event_target:uma_select_leader_4
+		}
+		event_target:uma_select_leader_4 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.e"
+		trigger = {
+			exists = event_target:uma_select_leader_5
+		}
+		event_target:uma_select_leader_5 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.f"
+		trigger = {
+			exists = event_target:uma_select_leader_6
+		}
+		event_target:uma_select_leader_6 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.g"
+		trigger = {
+			exists = event_target:uma_select_leader_7
+		}
+		event_target:uma_select_leader_7 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+	
+	option = {
+		name = "uma_gui_test.20.h"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		event_target:uma_select_leader_8 = { uma_add_power_sf_trait = yes }
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_11
+				value = 1
+			}
+			every_owned_leader = {
+				limit = { has_leader_flag = uma_selected_leader_goods }
+				remove_leader_flag = uma_selected_leader_goods
+			}
+		}
+	}
+
+	option = {
+		name = "uma_gui_test.20.next"
+		trigger = {
+			exists = event_target:uma_select_leader_8
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.20
+			}
+		}
+	}
+
+}

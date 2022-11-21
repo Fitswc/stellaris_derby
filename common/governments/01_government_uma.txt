@@ -1,0 +1,170 @@
+####玩家所拥有的政府类别####
+gov_uma_country = {
+	possible = {
+		
+			has_authority = auth_trainingcenter			
+		
+	}
+	
+	weight = {
+		base = 800
+	}
+}
+
+
+gov_uma_country_spiritualist = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_spiritualist			
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+
+gov_uma_country_militarist = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_militarist			
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+gov_uma_country_authoritarian = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_authoritarian		
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+gov_uma_country_xenophob = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_xenophobe	
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+gov_uma_country_egalitarian = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+gov_uma_country_xenophile = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+gov_uma_country_pacifist = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+gov_uma_country_materialist = {
+	possible = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+	
+	weight = {
+		base = 1000
+	}
+}
+
+
+
+
+####堕落专属政府
+gov_uma_fallen_empire = {
+
+	ruler_title = PRESCRIPTED_ruler_title_uma_fallen_empire_leader
+	ruler_title_female = PRESCRIPTED_ruler_title_uma_fallen_empire_leader_female
+
+	possible = {
+		has_authority = auth_uma_fallen_empire
+	}
+
+	weight = {
+		base = 1000000
+	}
+}
+
+
+
+
+###飞地专属类别
+
+#三女神知识研究所政府（暂时不会用）
+#gov_uma_threegodness_knowledge_research_dept = {
+#	ruler_title = RT_uma_leader_name_of_threegodness_knowledge_research_dept
+#
+#	should_force_rename = yes
+#
+#	possible = {
+#		is_country_type = uma_threegodness_knowledge_research_dept_enclave
+#	}
+#
+#	weight = {
+#		base = 10000
+#	}
+#} 
+
+#绿帽商城专属政府
+gov_uma_shoping_center = {
+	ruler_title = RT_UMA_SHOPING_CENTER
+
+	should_force_rename = yes
+
+	possible = {
+		is_country_type = uma_shop_center_enclave
+	}
+
+	weight = {
+		base = 100000
+	}
+}

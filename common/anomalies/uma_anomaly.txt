@@ -1,0 +1,26 @@
+#星云天空专属特异点——“隐居者”
+#uma_seiun_sky_anomoly = {
+#    desc = "UMA_SEIUN_SKY_ANOMOLY_DESC"
+#    picture = "GFX_evt_uma_small_stream" #之后要换
+#    level = 7
+
+#    should_ai_use = no
+
+#    spawn_chance = { base = 0 }
+#    on_success = uma_special_leader.1
+#}
+
+
+#草上飞（绿茵祈愿）专属特异点——“人去楼空”
+#uma_grass_wonder_anomoly = {
+#    desc = "UMA_GRASS_WONDER_ANOMOLY_DESC"
+#    picture = "GFX_evt_alien_ruins" #之后要换
+#    level = 7
+
+#    should_ai_use = no
+#
+#    spawn_chance = { base = 0 }
+#    on_success = uma_special_leader.10
+#}
+
+####由于出现了AI坐球导致特异点无法刷出的问题，我们废弃了上面的两个特异点，改用月检测事件来调出事件链

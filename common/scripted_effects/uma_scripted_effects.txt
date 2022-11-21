@@ -1,0 +1,4412 @@
+###三个用于升级因子强化等级的枚举
+uma_upgrade_kenshi_strength_level = {
+	if = {
+		limit = {
+			NOR = {
+				has_country_flag = uma_kenshi_strength_level_1
+				has_country_flag = uma_kenshi_strength_level_2
+				has_country_flag = uma_kenshi_strength_level_3
+				has_country_flag = uma_kenshi_strength_level_4
+				has_country_flag = uma_kenshi_strength_level_5
+			}
+		}
+		set_country_flag = uma_kenshi_strength_level_1
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_strength_level_1 }
+		remove_country_flag = uma_kenshi_strength_level_1
+		set_country_flag = uma_kenshi_strength_level_2
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_strength_level_2 }
+		remove_country_flag = uma_kenshi_strength_level_2
+		set_country_flag = uma_kenshi_strength_level_3
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_strength_level_3 }
+		remove_country_flag = uma_kenshi_strength_level_3
+		set_country_flag = uma_kenshi_strength_level_4
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_strength_level_4 }
+		remove_country_flag = uma_kenshi_strength_level_4
+		set_country_flag = uma_kenshi_strength_level_5
+	}
+}
+
+uma_upgrade_kenshi_intelligence_level = {
+	if = {
+		limit = {
+			NOR = {
+				has_country_flag = uma_kenshi_intelligence_level_1
+				has_country_flag = uma_kenshi_intelligence_level_2
+				has_country_flag = uma_kenshi_intelligence_level_3
+				has_country_flag = uma_kenshi_intelligence_level_4
+				has_country_flag = uma_kenshi_intelligence_level_5
+			}
+		}
+		set_country_flag = uma_kenshi_intelligence_level_1
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_intelligence_level_1 }
+		remove_country_flag = uma_kenshi_intelligence_level_1
+		set_country_flag = uma_kenshi_intelligence_level_2
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_intelligence_level_2 }
+		remove_country_flag = uma_kenshi_intelligence_level_2
+		set_country_flag = uma_kenshi_intelligence_level_3
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_intelligence_level_3 }
+		remove_country_flag = uma_kenshi_intelligence_level_3
+		set_country_flag = uma_kenshi_intelligence_level_4
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_intelligence_level_4 }
+		remove_country_flag = uma_kenshi_intelligence_level_4
+		set_country_flag = uma_kenshi_intelligence_level_5
+	}
+}
+
+uma_upgrade_kenshi_will_level = {
+	if = {
+		limit = {
+			NOR = {
+				has_country_flag = uma_kenshi_will_level_1
+				has_country_flag = uma_kenshi_will_level_2
+				has_country_flag = uma_kenshi_will_level_3
+				has_country_flag = uma_kenshi_will_level_4
+				has_country_flag = uma_kenshi_will_level_5
+			}
+		}
+		set_country_flag = uma_kenshi_will_level_1
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_will_level_1 }
+		remove_country_flag = uma_kenshi_will_level_1
+		set_country_flag = uma_kenshi_will_level_2
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_will_level_2 }
+		remove_country_flag = uma_kenshi_will_level_2
+		set_country_flag = uma_kenshi_will_level_3
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_will_level_3 }
+		remove_country_flag = uma_kenshi_will_level_3
+		set_country_flag = uma_kenshi_will_level_4
+	}
+	if = {
+		limit = { has_country_flag = uma_kenshi_will_level_4 }
+		remove_country_flag = uma_kenshi_will_level_4
+		set_country_flag = uma_kenshi_will_level_5
+	}
+}
+
+###用于导出城市区划参数来改建学院星球的（来自R）——区划折半导出
+uma_school_planet_get_variable_effect = {
+	export_trigger_value_to_variable = {
+		trigger = num_districts
+		parameters = {
+			type = $DISTRICT$
+		}
+		variable = $VARIABLE$
+	}
+	divide_variable = { which = $VARIABLE$ value = 2 }
+	floor_variable = $VARIABLE$
+}
+
+######################################
+##########商城五大卷轴叠buff##########
+######################################
+uma_upgrade_intelligence_goods_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = uma_intelligence_goods_used
+			value = 1
+		}
+		if = {
+			limit = { has_modifier = uma_intelligence_goods_basic_modifier }
+			remove_modifier = uma_intelligence_goods_basic_modifier
+		}
+		if = {
+			limit = { has_modifier = uma_intelligence_goods_special_modifier }
+			remove_modifier = uma_intelligence_goods_special_modifier
+		}
+		add_modifier = {
+			modifier = uma_intelligence_goods_basic_modifier
+			multiplier = uma_intelligence_goods_used
+			days = -1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = uma_intelligence_goods_basic_modifier
+					value >= 10
+				}
+			}
+			###ps:临时变量
+			set_variable = {
+				which = uma_intelligence_tenth_num
+				value = uma_intelligence_goods_used
+			}
+			divide_variable = {
+				which = uma_intelligence_tenth_num
+				value = 10
+			}
+			floor_variable = uma_intelligence_tenth_num
+			add_modifier = {
+				modifier = uma_intelligence_goods_special_modifier
+				multiplier = uma_intelligence_tenth_num
+				days = -1
+			}
+			clear_variable = uma_intelligence_tenth_num
+		}
+	}
+}
+
+
+uma_upgrade_kenshi_goods_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = uma_kenshi_goods_used
+			value = 1
+		}
+		if = {
+			limit = { has_modifier = uma_kenshi_goods_basic_modifier }
+			remove_modifier = uma_kenshi_goods_basic_modifier
+		}
+		if = {
+			limit = { has_modifier = uma_kenshi_goods_special_modifier }
+			remove_modifier = uma_kenshi_goods_special_modifier
+		}
+		add_modifier = {
+			modifier = uma_kenshi_goods_basic_modifier
+			multiplier = uma_kenshi_goods_used
+			days = -1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = uma_kenshi_goods_basic_modifier
+					value >= 10
+				}
+			}
+			###ps:临时变量
+			set_variable = {
+				which = uma_kenshi_tenth_num
+				value = uma_kenshi_goods_used
+			}
+			divide_variable = {
+				which = uma_kenshi_tenth_num
+				value = 10
+			}
+			floor_variable = uma_kenshi_tenth_num
+			add_modifier = {
+				modifier = uma_kenshi_goods_special_modifier
+				multiplier = uma_kenshi_tenth_num
+				days = -1
+			}
+			clear_variable = uma_kenshi_tenth_num
+		}
+	}
+}
+
+
+uma_upgrade_power_goods_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = uma_power_goods_used
+			value = 1
+		}
+		if = {
+			limit = { has_modifier = uma_power_goods_basic_modifier }
+			remove_modifier = uma_power_goods_basic_modifier
+		}
+		if = {
+			limit = { has_modifier = uma_power_goods_special_modifier }
+			remove_modifier = uma_power_goods_special_modifier
+		}
+		add_modifier = {
+			modifier = uma_power_goods_basic_modifier
+			multiplier = uma_power_goods_used
+			days = -1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = uma_power_goods_basic_modifier
+					value >= 10
+				}
+			}
+			###ps:临时变量
+			set_variable = {
+				which = uma_power_tenth_num
+				value = uma_power_goods_used
+			}
+			divide_variable = {
+				which = uma_power_tenth_num
+				value = 10
+			}
+			floor_variable = uma_power_tenth_num
+			add_modifier = {
+				modifier = uma_power_goods_special_modifier
+				multiplier = uma_power_tenth_num
+				days = -1
+			}
+			clear_variable = uma_power_tenth_num
+		}
+	}
+}
+
+
+uma_upgrade_endurance_goods_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = uma_endurance_goods_used
+			value = 1
+		}
+		if = {
+			limit = { has_modifier = uma_endurance_goods_basic_modifier }
+			remove_modifier = uma_endurance_goods_basic_modifier
+		}
+		if = {
+			limit = { has_modifier = uma_endurance_goods_special_modifier }
+			remove_modifier = uma_endurance_goods_special_modifier
+		}
+		add_modifier = {
+			modifier = uma_endurance_goods_basic_modifier
+			multiplier = uma_endurance_goods_used
+			days = -1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = uma_endurance_goods_basic_modifier
+					value >= 10
+				}
+			}
+			###ps:临时变量
+			set_variable = {
+				which = uma_endurance_tenth_num
+				value = uma_endurance_goods_used
+			}
+			divide_variable = {
+				which = uma_endurance_tenth_num
+				value = 10
+			}
+			floor_variable = uma_endurance_tenth_num
+			add_modifier = {
+				modifier = uma_endurance_goods_special_modifier
+				multiplier = uma_endurance_tenth_num
+				days = -1
+			}
+			clear_variable = uma_endurance_tenth_num
+		}
+	}
+}
+
+
+uma_upgrade_speed_goods_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = uma_speed_goods_used
+			value = 1
+		}
+		if = {
+			limit = { has_modifier = uma_speed_goods_basic_modifier }
+			remove_modifier = uma_speed_goods_basic_modifier
+		}
+		if = {
+			limit = { has_modifier = uma_speed_goods_special_modifier }
+			remove_modifier = uma_speed_goods_special_modifier
+		}
+		add_modifier = {
+			modifier = uma_speed_goods_basic_modifier
+			multiplier = uma_speed_goods_used
+			days = -1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = uma_speed_goods_basic_modifier
+					value >= 10
+				}
+			}
+			###ps:临时变量
+			set_variable = {
+				which = uma_speed_tenth_num
+				value = uma_speed_goods_used
+			}
+			divide_variable = {
+				which = uma_speed_tenth_num
+				value = 10
+			}
+			floor_variable = uma_speed_tenth_num
+			add_modifier = {
+				modifier = uma_speed_goods_special_modifier
+				multiplier = uma_speed_tenth_num
+				days = -1
+			}
+			clear_variable = uma_speed_tenth_num
+		}
+	}
+}
+
+######################################
+#################结束#################
+######################################
+
+
+######################################
+##########各种道具效果的封装##########
+######################################
+
+###巴菲：升1心情
+uma_upgrade_kanshi_one_level = {
+	if = {
+		limit = { leader_class = admiral }
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_4 }
+			remove_trait = uma_admiral_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_admiral_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_3 }
+			remove_trait = uma_admiral_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_admiral_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_2 }
+			remove_trait = uma_admiral_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_admiral_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_1 }
+			remove_trait = uma_admiral_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_admiral_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+	}
+
+	if = {
+		limit = { leader_class = general }
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_4 }
+			remove_trait = uma_general_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_general_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_3 }
+			remove_trait = uma_general_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_general_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_2 }
+			remove_trait = uma_general_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_general_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_1 }
+			remove_trait = uma_general_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_general_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+	}
+
+	if = {
+		limit = { leader_class = scientist }
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_4 }
+			remove_trait = uma_scientist_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_scientist_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_3 }
+			remove_trait = uma_scientist_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_scientist_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_2 }
+			remove_trait = uma_scientist_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_scientist_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_1 }
+			remove_trait = uma_scientist_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_scientist_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+	}
+
+	if = {
+		limit = { leader_class = governor }
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_4 }
+			remove_trait = uma_governor_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_governor_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_3 }
+			remove_trait = uma_governor_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_governor_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_2 }
+			remove_trait = uma_governor_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_governor_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_1 }
+			remove_trait = uma_governor_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_governor_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+	}
+
+	if = {
+		limit = { leader_class = ruler }
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_4 }
+			remove_trait = uma_ruler_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_ruler_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_3 }
+			remove_trait = uma_ruler_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_ruler_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_2 }
+			remove_trait = uma_ruler_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_ruler_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_1 }
+			remove_trait = uma_ruler_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_ruler_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+	}
+
+}
+
+##巴菲：心情提示
+uma_upgrade_kanshi_one_level_hint = {
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_4
+				has_trait = uma_scientist_trait_yaruki_4
+				has_trait = uma_governor_trait_yaruki_4
+				has_trait = uma_general_trait_yaruki_4
+				has_trait = uma_admiral_trait_yaruki_4
+			}
+		}
+		custom_tooltip = uma_kanshi_up_1_level_4
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_3
+				has_trait = uma_scientist_trait_yaruki_3
+				has_trait = uma_governor_trait_yaruki_3
+				has_trait = uma_general_trait_yaruki_3
+				has_trait = uma_admiral_trait_yaruki_3
+			}
+		}
+		custom_tooltip = uma_kanshi_up_1_level_3
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_2
+				has_trait = uma_scientist_trait_yaruki_2
+				has_trait = uma_governor_trait_yaruki_2
+				has_trait = uma_general_trait_yaruki_2
+				has_trait = uma_admiral_trait_yaruki_2
+			}
+		}
+		custom_tooltip = uma_kanshi_up_1_level_2
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_1
+				has_trait = uma_scientist_trait_yaruki_1
+				has_trait = uma_governor_trait_yaruki_1
+				has_trait = uma_general_trait_yaruki_1
+				has_trait = uma_admiral_trait_yaruki_1
+			}
+		}
+		custom_tooltip = uma_kanshi_up_1_level_1
+	}
+
+}
+
+#超大纸杯蛋糕：心情提示
+uma_upgrade_kanshi_two_level_hint = {
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_4
+				has_trait = uma_scientist_trait_yaruki_4
+				has_trait = uma_governor_trait_yaruki_4
+				has_trait = uma_general_trait_yaruki_4
+				has_trait = uma_admiral_trait_yaruki_4
+			}
+		}
+		custom_tooltip = uma_kanshi_up_2_level_4
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_3
+				has_trait = uma_scientist_trait_yaruki_3
+				has_trait = uma_governor_trait_yaruki_3
+				has_trait = uma_general_trait_yaruki_3
+				has_trait = uma_admiral_trait_yaruki_3
+			}
+		}
+		custom_tooltip = uma_kanshi_up_2_level_3
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_2
+				has_trait = uma_scientist_trait_yaruki_2
+				has_trait = uma_governor_trait_yaruki_2
+				has_trait = uma_general_trait_yaruki_2
+				has_trait = uma_admiral_trait_yaruki_2
+			}
+		}
+		custom_tooltip = uma_kanshi_up_2_level_2
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_1
+				has_trait = uma_scientist_trait_yaruki_1
+				has_trait = uma_governor_trait_yaruki_1
+				has_trait = uma_general_trait_yaruki_1
+				has_trait = uma_admiral_trait_yaruki_1
+			}
+		}
+		custom_tooltip = uma_kanshi_up_2_level_1
+	}
+}
+
+###青汁：降1心情
+uma_down_kanshi_one_level = {
+	if = {
+		limit = { leader_class = admiral }
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_5 }
+			remove_trait = uma_admiral_trait_yaruki_5
+			remove_ruler_trait = uma_ruler_trait_yaruki_5
+			add_trait = uma_admiral_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_4 }
+			remove_trait = uma_admiral_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_admiral_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_3 }
+			remove_trait = uma_admiral_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_admiral_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_2 }
+			remove_trait = uma_admiral_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_admiral_trait_yaruki_1
+			add_ruler_trait = uma_ruler_trait_yaruki_1
+		}
+	}
+
+	if = {
+		limit = { leader_class = general }
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_5 }
+			remove_trait = uma_general_trait_yaruki_5
+			remove_ruler_trait = uma_ruler_trait_yaruki_5
+			add_trait = uma_general_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_4 }
+			remove_trait = uma_general_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_general_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_3 }
+			remove_trait = uma_general_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_general_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_2 }
+			remove_trait = uma_general_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_general_trait_yaruki_1
+			add_ruler_trait = uma_ruler_trait_yaruki_1
+		}
+	}
+
+	if = {
+		limit = { leader_class = scientist }
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_5 }
+			remove_trait = uma_scientist_trait_yaruki_5
+			remove_ruler_trait = uma_ruler_trait_yaruki_5
+			add_trait = uma_scientist_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_4 }
+			remove_trait = uma_scientist_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_scientist_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_3 }
+			remove_trait = uma_scientist_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_scientist_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_2 }
+			remove_trait = uma_scientist_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_scientist_trait_yaruki_1
+			add_ruler_trait = uma_ruler_trait_yaruki_1
+		}
+	}
+
+	if = {
+		limit = { leader_class = governor }
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_5 }
+			remove_trait = uma_governor_trait_yaruki_5
+			remove_ruler_trait = uma_ruler_trait_yaruki_5
+			add_trait = uma_governor_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_4 }
+			remove_trait = uma_governor_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_governor_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_3 }
+			remove_trait = uma_governor_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_governor_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_2 }
+			remove_trait = uma_governor_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_governor_trait_yaruki_1
+			add_ruler_trait = uma_ruler_trait_yaruki_1
+		}
+	}
+
+	if = {
+		limit = { leader_class = ruler }
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_5 }
+			remove_trait = uma_ruler_trait_yaruki_5
+			remove_ruler_trait = uma_ruler_trait_yaruki_5
+			add_trait = uma_ruler_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_4 }
+			remove_trait = uma_ruler_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_ruler_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_3 }
+			remove_trait = uma_ruler_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_ruler_trait_yaruki_2
+			add_ruler_trait = uma_ruler_trait_yaruki_2
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_2 }
+			remove_trait = uma_ruler_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_ruler_trait_yaruki_1
+			add_ruler_trait = uma_ruler_trait_yaruki_1
+		}
+	}
+
+}
+
+##青汁：心情提示
+uma_down_kanshi_one_level_hint = {
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_5
+				has_trait = uma_scientist_trait_yaruki_5
+				has_trait = uma_governor_trait_yaruki_5
+				has_trait = uma_general_trait_yaruki_5
+				has_trait = uma_admiral_trait_yaruki_5
+			}
+		}
+		custom_tooltip = uma_kanshi_down_1_level_5
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_4
+				has_trait = uma_scientist_trait_yaruki_4
+				has_trait = uma_governor_trait_yaruki_4
+				has_trait = uma_general_trait_yaruki_4
+				has_trait = uma_admiral_trait_yaruki_4
+			}
+		}
+		custom_tooltip = uma_kanshi_down_1_level_4
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_3
+				has_trait = uma_scientist_trait_yaruki_3
+				has_trait = uma_governor_trait_yaruki_3
+				has_trait = uma_general_trait_yaruki_3
+				has_trait = uma_admiral_trait_yaruki_3
+			}
+		}
+		custom_tooltip = uma_kanshi_down_1_level_3
+	}
+	if = {
+		limit = {
+				OR = {
+				has_trait = uma_ruler_trait_yaruki_2
+				has_trait = uma_scientist_trait_yaruki_2
+				has_trait = uma_governor_trait_yaruki_2
+				has_trait = uma_general_trait_yaruki_2
+				has_trait = uma_admiral_trait_yaruki_2
+			}
+		}
+		custom_tooltip = uma_kanshi_down_1_level_2
+	}
+
+}
+
+###超大纸杯蛋糕：升2心情
+uma_upgrade_kanshi_two_level = {
+	if = {
+		limit = { leader_class = admiral }
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_4 }
+			remove_trait = uma_admiral_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_admiral_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_3 }
+			remove_trait = uma_admiral_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_admiral_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_2 }
+			remove_trait = uma_admiral_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_admiral_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_1 }
+			remove_trait = uma_admiral_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_admiral_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+	}
+
+	if = {
+		limit = { leader_class = general }
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_4 }
+			remove_trait = uma_general_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_general_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_3 }
+			remove_trait = uma_general_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_general_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_2 }
+			remove_trait = uma_general_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_general_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_1 }
+			remove_trait = uma_general_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_general_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+	}
+
+	if = {
+		limit = { leader_class = scientist }
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_4 }
+			remove_trait = uma_scientist_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_scientist_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_3 }
+			remove_trait = uma_scientist_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_scientist_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_2 }
+			remove_trait = uma_scientist_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_scientist_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_1 }
+			remove_trait = uma_scientist_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_scientist_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+	}
+
+	if = {
+		limit = { leader_class = governor }
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_4 }
+			remove_trait = uma_governor_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_governor_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_3 }
+			remove_trait = uma_governor_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_governor_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_2 }
+			remove_trait = uma_governor_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_governor_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_1 }
+			remove_trait = uma_governor_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_governor_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+	}
+
+	if = {
+		limit = { leader_class = ruler }
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_4 }
+			remove_trait = uma_ruler_trait_yaruki_4
+			remove_ruler_trait = uma_ruler_trait_yaruki_4
+			add_trait = uma_ruler_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_3 }
+			remove_trait = uma_ruler_trait_yaruki_3
+			remove_ruler_trait = uma_ruler_trait_yaruki_3
+			add_trait = uma_ruler_trait_yaruki_5
+			add_ruler_trait = uma_ruler_trait_yaruki_5
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_2 }
+			remove_trait = uma_ruler_trait_yaruki_2
+			remove_ruler_trait = uma_ruler_trait_yaruki_2
+			add_trait = uma_ruler_trait_yaruki_4
+			add_ruler_trait = uma_ruler_trait_yaruki_4
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_1 }
+			remove_trait = uma_ruler_trait_yaruki_1
+			remove_ruler_trait = uma_ruler_trait_yaruki_1
+			add_trait = uma_ruler_trait_yaruki_3
+			add_ruler_trait = uma_ruler_trait_yaruki_3
+		}
+	}
+
+}
+
+#蹄铁：添加特质
+uma_add_titie_trait = {
+	if = {
+		limit = { leader_class = ruler }
+		add_timed_trait = {
+			trait = uma_ruler_trait_horse_shoes_ultra
+			days = 3650
+		}
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_timed_trait = {
+			trait = uma_governor_trait_horse_shoes_ultra
+			days = 3650
+		}
+	}
+}
+
+#护符：添加特质
+uma_add_amulet_trait = {
+	if = {
+		limit = { leader_class = admiral }
+		add_timed_trait = {
+			trait = uma_admiral_trait_amulet
+			days = 3650
+		}
+	}
+	if = {
+		limit = { leader_class = general }
+		add_timed_trait = {
+			trait = uma_general_trait_amulet
+			days = 3650
+		}
+	}
+}
+
+#大喇叭：添加特质
+uma_add_horn_trait = {
+	if = {
+		limit = { leader_class = admiral }
+		add_timed_trait = {
+			trait = uma_admiral_trait_horn
+			days = 1825
+		}
+	}
+	if = {
+		limit = { leader_class = general }
+		add_timed_trait = {
+			trait = uma_general_trait_horn
+			days = 1825
+		}
+	}
+	if = {
+		limit = { leader_class = ruler }
+		add_timed_trait = {
+			trait = uma_ruler_trait_horn
+			days = 1825
+		}
+	}
+	if = {
+		limit = { leader_class = scientist }
+		add_timed_trait = {
+			trait = uma_scientist_trait_horn
+			days = 1825
+		}
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_timed_trait = {
+			trait = uma_governor_trait_horn
+			days = 1825
+		}
+	}
+}
+
+#学者帽：添加特质
+uma_add_school_hat_trait = {
+	if = {
+		limit = { leader_class = ruler }
+		add_trait = uma_ruler_trait_special_scholar
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_trait = uma_governor_trait_special_scholar
+	}
+	if = {
+		limit = { leader_class = scientist }
+		add_trait = uma_scientist_trait_special_scholar
+	}
+}
+
+#训练手册：添加特质
+uma_add_training_book_trait = {
+	if = {
+		limit = { leader_class = ruler }
+		add_trait = uma_ruler_trait_training_book
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_trait = uma_governor_trait_training_book
+	}
+	if = {
+		limit = { leader_class = scientist }
+		add_trait = uma_scientist_trait_training_book
+	}
+	if = {
+		limit = { leader_class = admiral }
+		add_trait = uma_admiral_trait_training_book
+	}
+	if = {
+		limit = { leader_class = general }
+		add_trait = uma_general_trait_training_book
+	}
+}
+
+#望远镜：增加特质
+uma_add_tomorrow_star_trait = {
+	if = {
+		limit = { leader_class = ruler }
+		add_trait = uma_ruler_trait_tomorrow_star
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_trait = uma_governor_trait_tomorrow_star
+	}
+	if = {
+		limit = { leader_class = scientist }
+		add_trait = uma_scientist_trait_tomorrow_star
+	}
+	if = {
+		limit = { leader_class = admiral }
+		add_trait = uma_admiral_trait_tomorrow_star
+	}
+	if = {
+		limit = { leader_class = general }
+		add_trait = uma_general_trait_tomorrow_star
+	}	
+}
+
+#镜子：添加特质
+uma_add_lovely_trait = {
+	if = {
+		limit = { leader_class = ruler }
+		add_trait = uma_ruler_trait_lovely
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_trait = uma_governor_trait_lovely
+	}
+}
+
+#青汁：增加特质
+uma_add_vegetable_drink_trait = {
+	if = {
+		limit = { leader_class = ruler }
+		add_timed_trait = {
+			trait = uma_ruler_trait_vegetable_drink
+			days = 9125
+		}
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_timed_trait = {
+			trait = uma_governor_trait_vegetable_drink
+			days = 9125
+		}
+	}
+	if = {
+		limit = { leader_class = scientist }
+		add_timed_trait = {
+			trait = uma_scientist_trait_vegetable_drink
+			days = 9125
+		}
+	}
+	if = {
+		limit = { leader_class = admiral }
+		add_timed_trait = {
+			trait = uma_admiral_trait_vegetable_drink
+			days = 9125
+		}
+	}
+	if = {
+		limit = { leader_class = general }
+		add_timed_trait = {
+			trait = uma_general_trait_vegetable_drink
+			days = 9125
+		}
+	}	
+}
+
+#体力65：增加特质
+uma_add_power_sf_trait  = {
+	if = {
+		limit = { leader_class = ruler }
+		add_timed_trait = {
+			trait = uma_ruler_trait_power_sf
+			days = 7300
+		}
+	}
+	if = {
+		limit = { leader_class = governor }
+		add_timed_trait = {
+			trait = uma_governor_trait_power_sf
+			days = 7300
+		}
+	}
+	if = {
+		limit = { leader_class = scientist }
+		add_timed_trait = {
+			trait = uma_scientist_trait_power_sf
+			days = 7300
+		}
+	}
+	if = {
+		limit = { leader_class = admiral }
+		add_timed_trait = {
+			trait = uma_admiral_trait_power_sf
+			days = 7300
+		}
+	}
+	if = {
+		limit = { leader_class = general }
+		add_timed_trait = {
+			trait = uma_general_trait_power_sf
+			days = 7300
+		}
+	}	
+}
+
+######################################
+#################结束#################
+######################################
+
+
+
+###每年随机浮动领袖的心情
+uma_random_change_leader_yaruki_effect = {
+	###海军上将
+	if = {
+		limit = { leader_class = admiral }
+		if = {
+			limit = { NOT = { uma_admiral_have_yaruki_trait = yes } }
+			uma_initialize_leader_yaruki_effect = yes
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_5 }
+			random_list = {
+				7 = {
+
+				}
+				3 = {
+					remove_trait = uma_admiral_trait_yaruki_5
+					add_trait = uma_admiral_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_5
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_4 }
+			random_list = {
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_4
+					add_trait = uma_admiral_trait_yaruki_5
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_5
+				}
+				16 = {
+
+				}
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_4
+					add_trait = uma_admiral_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_3 }
+			random_list = {
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_3
+					add_trait = uma_admiral_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+				16 = {
+
+				}
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_3
+					add_trait = uma_admiral_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_2
+					add_trait = uma_admiral_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+
+				}
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_2
+					add_trait = uma_admiral_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_2
+					add_trait = uma_admiral_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+
+				}
+				8 = {
+					remove_trait = uma_admiral_trait_yaruki_2
+					add_trait = uma_admiral_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_admiral_trait_yaruki_1 }
+			random_list = {
+				5 = {
+
+				}
+				5 = {
+					remove_trait = uma_admiral_trait_yaruki_1
+					add_trait = uma_admiral_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_1
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+	}
+	###将军
+	if = {
+		limit = { leader_class = general }
+		if = {
+			limit = { NOT = { uma_general_have_yaruki_trait = yes } }
+			uma_initialize_leader_yaruki_effect = yes
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_5 }
+			random_list = {
+				7 = {
+	
+				}
+				3 = {
+					remove_trait = uma_general_trait_yaruki_5
+					add_trait = uma_general_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_5
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_4 }
+			random_list = {
+				8 = {
+					remove_trait = uma_general_trait_yaruki_4
+					add_trait = uma_general_trait_yaruki_5
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_5
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_general_trait_yaruki_4
+					add_trait = uma_general_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_3 }
+			random_list = {
+				8 = {
+					remove_trait = uma_general_trait_yaruki_3
+					add_trait = uma_general_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_general_trait_yaruki_3
+					add_trait = uma_general_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_general_trait_yaruki_2
+					add_trait = uma_general_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_general_trait_yaruki_2
+					add_trait = uma_general_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_general_trait_yaruki_2
+					add_trait = uma_general_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_general_trait_yaruki_2
+					add_trait = uma_general_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_general_trait_yaruki_1 }
+			random_list = {
+				5 = {
+	
+				}
+				5 = {
+					remove_trait = uma_general_trait_yaruki_1
+					add_trait = uma_general_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_1
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+	}
+	###总督
+	if = {
+		limit = { leader_class = governor }
+		if = {
+			limit = { NOT = { uma_governor_have_yaruki_trait = yes } }
+			uma_initialize_leader_yaruki_effect = yes
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_5 }
+			random_list = {
+				7 = {
+	
+				}
+				3 = {
+					remove_trait = uma_governor_trait_yaruki_5
+					add_trait = uma_governor_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_5
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_4 }
+			random_list = {
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_4
+					add_trait = uma_governor_trait_yaruki_5
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_5
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_4
+					add_trait = uma_governor_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_3 }
+			random_list = {
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_3
+					add_trait = uma_governor_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_3
+					add_trait = uma_governor_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_2
+					add_trait = uma_governor_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_2
+					add_trait = uma_governor_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_2
+					add_trait = uma_governor_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_governor_trait_yaruki_2
+					add_trait = uma_governor_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_governor_trait_yaruki_1 }
+			random_list = {
+				5 = {
+	
+				}
+				5 = {
+					remove_trait = uma_governor_trait_yaruki_1
+					add_trait = uma_governor_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_1
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+	}
+	###科学家
+	if = {
+		limit = { leader_class = scientist }
+		if = {
+			limit = { NOT = { uma_scientist_have_yaruki_trait = yes } }
+			uma_initialize_leader_yaruki_effect = yes
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_5 }
+			random_list = {
+				7 = {
+	
+				}
+				3 = {
+					remove_trait = uma_scientist_trait_yaruki_5
+					add_trait = uma_scientist_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_5
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_4 }
+			random_list = {
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_4
+					add_trait = uma_scientist_trait_yaruki_5
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_5
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_4
+					add_trait = uma_scientist_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_3 }
+			random_list = {
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_3
+					add_trait = uma_scientist_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_3
+					add_trait = uma_scientist_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_2
+					add_trait = uma_scientist_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_2
+					add_trait = uma_scientist_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_2
+					add_trait = uma_scientist_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_scientist_trait_yaruki_2
+					add_trait = uma_scientist_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_scientist_trait_yaruki_1 }
+			random_list = {
+				5 = {
+	
+				}
+				5 = {
+					remove_trait = uma_scientist_trait_yaruki_1
+					add_trait = uma_scientist_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_1
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+	}
+	###统治者
+	if = {
+		limit = { leader_class = ruler }
+		if = {
+			limit = { NOT = { uma_ruler_have_yaruki_trait = yes } }
+			uma_initialize_leader_yaruki_effect = yes
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_5 }
+			random_list = {
+				7 = {
+	
+				}
+				3 = {
+					remove_trait = uma_ruler_trait_yaruki_5
+					add_trait = uma_ruler_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_5
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_4 }
+			random_list = {
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_4
+					add_trait = uma_ruler_trait_yaruki_5
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_5
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_4
+					add_trait = uma_ruler_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_4
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_3 }
+			random_list = {
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_3
+					add_trait = uma_ruler_trait_yaruki_4
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_4
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_3
+					add_trait = uma_ruler_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_3
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_2
+					add_trait = uma_ruler_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_2
+					add_trait = uma_ruler_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_2 }
+			random_list = {
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_2
+					add_trait = uma_ruler_trait_yaruki_3
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_3
+				}
+				16 = {
+	
+				}
+				8 = {
+					remove_trait = uma_ruler_trait_yaruki_2
+					add_trait = uma_ruler_trait_yaruki_1
+					remove_ruler_trait = uma_ruler_trait_yaruki_2
+					add_ruler_trait = uma_ruler_trait_yaruki_1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = uma_ruler_trait_yaruki_1 }
+			random_list = {
+				5 = {
+	
+				}
+				5 = {
+					remove_trait = uma_ruler_trait_yaruki_1
+					add_trait = uma_ruler_trait_yaruki_2
+					remove_ruler_trait = uma_ruler_trait_yaruki_1
+					add_ruler_trait = uma_ruler_trait_yaruki_2
+				}
+			}
+		}
+	}
+
+}
+###刷新领袖干劲用的封装（顺便防止重复刷新）
+uma_initialize_leader_yaruki_effect = {
+	if = {
+		limit = {
+			leader_class = admiral
+			NOT = { has_trait = uma_admiral_trait_yaruki_5 }
+			NOT = { has_trait = uma_admiral_trait_yaruki_4 }
+			NOT = { has_trait = uma_admiral_trait_yaruki_3 }
+			NOT = { has_trait = uma_admiral_trait_yaruki_2 }
+			NOT = { has_trait = uma_admiral_trait_yaruki_1 }
+		}
+		random_list = {
+			6 = {
+				add_trait = uma_admiral_trait_yaruki_5
+				add_ruler_trait = uma_ruler_trait_yaruki_5
+			}
+			10 = {
+				add_trait = uma_admiral_trait_yaruki_4
+				add_ruler_trait = uma_ruler_trait_yaruki_4
+			}
+			12 = {
+				add_trait = uma_admiral_trait_yaruki_3
+				add_ruler_trait = uma_ruler_trait_yaruki_3
+			}
+			4 = {
+				add_trait = uma_admiral_trait_yaruki_2
+				add_ruler_trait = uma_ruler_trait_yaruki_2
+			}
+			3 = {
+				add_trait = uma_admiral_trait_yaruki_1
+				add_ruler_trait = uma_ruler_trait_yaruki_1
+			}
+		}
+		break = yes
+	}
+
+	if = {
+		limit = {
+			leader_class = general
+			NOT = { has_trait = uma_general_trait_yaruki_5 }
+			NOT = { has_trait = uma_general_trait_yaruki_4 }
+			NOT = { has_trait = uma_general_trait_yaruki_3 }
+			NOT = { has_trait = uma_general_trait_yaruki_2 }
+			NOT = { has_trait = uma_general_trait_yaruki_1 }
+		}
+		random_list = {
+			6 = {
+				add_trait = uma_general_trait_yaruki_5
+				add_ruler_trait = uma_ruler_trait_yaruki_5
+			}
+			10 = {
+				add_trait = uma_general_trait_yaruki_4
+				add_ruler_trait = uma_ruler_trait_yaruki_4
+			}
+			12 = {
+				add_trait = uma_general_trait_yaruki_3
+				add_ruler_trait = uma_ruler_trait_yaruki_3
+			}
+			4 = {
+				add_trait = uma_general_trait_yaruki_2
+				add_ruler_trait = uma_ruler_trait_yaruki_2
+			}
+			3 = {
+				add_trait = uma_general_trait_yaruki_1
+				add_ruler_trait = uma_ruler_trait_yaruki_1
+			}
+		}
+		break = yes
+	}
+	
+	if = {
+		limit = {
+			leader_class = governor
+			NOT = { has_trait = uma_governor_trait_yaruki_5 }
+			NOT = { has_trait = uma_governor_trait_yaruki_4 }
+			NOT = { has_trait = uma_governor_trait_yaruki_3 }
+			NOT = { has_trait = uma_governor_trait_yaruki_2 }
+			NOT = { has_trait = uma_governor_trait_yaruki_1 }
+		}
+		random_list = {
+			6 = {
+				add_trait = uma_governor_trait_yaruki_5
+				add_ruler_trait = uma_ruler_trait_yaruki_5
+			}
+			10 = {
+				add_trait = uma_governor_trait_yaruki_4
+				add_ruler_trait = uma_ruler_trait_yaruki_4
+			}
+			12 = {
+				add_trait = uma_governor_trait_yaruki_3
+				add_ruler_trait = uma_ruler_trait_yaruki_3
+			}
+			4 = {
+				add_trait = uma_governor_trait_yaruki_2
+				add_ruler_trait = uma_ruler_trait_yaruki_2
+			}
+			3 = {
+				add_trait = uma_governor_trait_yaruki_1
+				add_ruler_trait = uma_ruler_trait_yaruki_1
+			}
+		}
+		break = yes
+	}
+
+	if = {
+		limit = {
+			leader_class = scientist
+			NOT = { has_trait = uma_scientist_trait_yaruki_5 }
+			NOT = { has_trait = uma_scientist_trait_yaruki_4 }
+			NOT = { has_trait = uma_scientist_trait_yaruki_3 }
+			NOT = { has_trait = uma_scientist_trait_yaruki_2 }
+			NOT = { has_trait = uma_scientist_trait_yaruki_1 }
+		}
+		random_list = {
+			6 = {
+				add_trait = uma_scientist_trait_yaruki_5
+				add_ruler_trait = uma_ruler_trait_yaruki_5
+			}
+			10 = {
+				add_trait = uma_scientist_trait_yaruki_4
+				add_ruler_trait = uma_ruler_trait_yaruki_4
+			}
+			12 = {
+				add_trait = uma_scientist_trait_yaruki_3
+				add_ruler_trait = uma_ruler_trait_yaruki_3
+			}
+			4 = {
+				add_trait = uma_scientist_trait_yaruki_2
+				add_ruler_trait = uma_ruler_trait_yaruki_2
+			}
+			3 = {
+				add_trait = uma_scientist_trait_yaruki_1
+				add_ruler_trait = uma_ruler_trait_yaruki_1
+			}
+		}
+		break = yes
+	}
+
+	##领袖锁死满心情
+	##才，才不是为了降低初始的游戏难度呢，哼~
+	if = {
+		limit = { leader_class = ruler }
+		add_trait = uma_ruler_trait_yaruki_5
+		add_ruler_trait = uma_ruler_trait_yaruki_5
+		# random_list = {
+		# 	6 = {
+		# 		add_trait = uma_ruler_trait_yaruki_5
+		# 		add_ruler_trait = uma_ruler_trait_yaruki_5
+		# 	}
+		# 	10 = {
+		# 		add_trait = uma_ruler_trait_yaruki_4
+		# 		add_ruler_trait = uma_ruler_trait_yaruki_4
+		# 	}
+		# 	12 = {
+		# 		add_trait = uma_ruler_trait_yaruki_3
+		# 		add_ruler_trait = uma_ruler_trait_yaruki_3
+		# 	}
+		# 	4 = {
+		# 		add_trait = uma_ruler_trait_yaruki_2
+		# 		add_ruler_trait = uma_ruler_trait_yaruki_2
+		# 	}
+		# 	3 = {
+		# 		add_trait = uma_ruler_trait_yaruki_1
+		# 		add_ruler_trait = uma_ruler_trait_yaruki_1
+		# 	}
+		# }
+		break = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########TEST GUI#########
+####绿帽商店有关封装effect
+###PS：其实可以用函数的，但我在枚举后才知道函数（粉毛捶地哭.jpg）
+
+###刷新槽位1货物的枚举
+uma_refresh_slot_1_goods_effect = {
+	remove_country_flag = uma_slot_1_bought
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_1_bought }
+		remove_country_flag = uma_slot_1_goods_1_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_1_refreshed }
+		remove_country_flag = uma_slot_1_goods_1_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_2_bought }
+		remove_country_flag = uma_slot_1_goods_2_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_2_refreshed }
+		remove_country_flag = uma_slot_1_goods_2_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_3_bought }
+		remove_country_flag = uma_slot_1_goods_3_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_3_refreshed }
+		remove_country_flag = uma_slot_1_goods_3_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_4_bought }
+		remove_country_flag = uma_slot_1_goods_4_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_4_refreshed }
+		remove_country_flag = uma_slot_1_goods_4_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_5_bought }
+		remove_country_flag = uma_slot_1_goods_5_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_5_refreshed }
+		remove_country_flag = uma_slot_1_goods_5_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_6_bought }
+		remove_country_flag = uma_slot_1_goods_6_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_6_refreshed }
+		remove_country_flag = uma_slot_1_goods_6_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_7_bought }
+		remove_country_flag = uma_slot_1_goods_7_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_7_refreshed }
+		remove_country_flag = uma_slot_1_goods_7_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_8_bought }
+		remove_country_flag = uma_slot_1_goods_8_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_8_refreshed }
+		remove_country_flag = uma_slot_1_goods_8_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_9_bought }
+		remove_country_flag = uma_slot_1_goods_9_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_9_refreshed }
+		remove_country_flag = uma_slot_1_goods_9_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_10_bought }
+		remove_country_flag = uma_slot_1_goods_10_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_10_refreshed }
+		remove_country_flag = uma_slot_1_goods_10_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_11_bought }
+		remove_country_flag = uma_slot_1_goods_11_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_11_refreshed }
+		remove_country_flag = uma_slot_1_goods_11_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_12_bought }
+		remove_country_flag = uma_slot_1_goods_12_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_12_refreshed }
+		remove_country_flag = uma_slot_1_goods_12_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_13_bought }
+		remove_country_flag = uma_slot_1_goods_13_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_13_refreshed }
+		remove_country_flag = uma_slot_1_goods_13_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_14_bought }
+		remove_country_flag = uma_slot_1_goods_14_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_14_refreshed }
+		remove_country_flag = uma_slot_1_goods_14_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_15_bought }
+		remove_country_flag = uma_slot_1_goods_15_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_15_refreshed }
+		remove_country_flag = uma_slot_1_goods_15_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_16_bought }
+		remove_country_flag = uma_slot_1_goods_16_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_16_refreshed }
+		remove_country_flag = uma_slot_1_goods_16_refreshed
+	}
+	random_list = {
+		1 = {
+			set_country_flag = uma_slot_1_goods_1_refreshed #这种货物刷出来了
+			set_variable = {
+				which = uma_price_of_goods_1_multiply #价格
+				value = 30
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_2_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_3_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_4_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 75
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_5_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 350
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_6_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 120
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_7_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 200
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_8_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_9_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_10_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_11_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 80
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_12_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_13_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_14_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_15_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_1_goods_16_refreshed
+			set_variable = {
+				which = uma_price_of_goods_1_multiply
+				value = 50
+			}
+		}
+	}
+}
+###购买槽位1货物的枚举
+uma_buy_slot_1_goods_effect = {
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_1_refreshed }
+		remove_country_flag = uma_slot_1_goods_1_refreshed
+		set_country_flag = uma_slot_1_goods_1_bought
+		change_variable = {
+			which = uma_num_of_good_1
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_2_refreshed }
+		remove_country_flag = uma_slot_1_goods_2_refreshed
+		set_country_flag = uma_slot_1_goods_2_bought
+		change_variable = {
+			which = uma_num_of_good_2
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_3_refreshed }
+		remove_country_flag = uma_slot_1_goods_3_refreshed
+		set_country_flag = uma_slot_1_goods_3_bought
+		change_variable = {
+			which = uma_num_of_good_3
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_4_refreshed }
+		remove_country_flag = uma_slot_1_goods_4_refreshed
+		set_country_flag = uma_slot_1_goods_4_bought
+		change_variable = {
+			which = uma_num_of_good_4
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_5_refreshed }
+		remove_country_flag = uma_slot_1_goods_5_refreshed
+		set_country_flag = uma_slot_1_goods_5_bought
+		change_variable = {
+			which = uma_num_of_good_5
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_6_refreshed }
+		remove_country_flag = uma_slot_1_goods_6_refreshed
+		set_country_flag = uma_slot_1_goods_6_bought
+		change_variable = {
+			which = uma_num_of_good_6
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_7_refreshed }
+		remove_country_flag = uma_slot_1_goods_7_refreshed
+		set_country_flag = uma_slot_1_goods_7_bought
+		change_variable = {
+			which = uma_num_of_good_7
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_8_refreshed }
+		remove_country_flag = uma_slot_1_goods_8_refreshed
+		set_country_flag = uma_slot_1_goods_8_bought
+		change_variable = {
+			which = uma_num_of_good_8
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_9_refreshed }
+		remove_country_flag = uma_slot_1_goods_9_refreshed
+		set_country_flag = uma_slot_1_goods_9_bought
+		change_variable = {
+			which = uma_num_of_good_9
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_10_refreshed }
+		remove_country_flag = uma_slot_1_goods_10_refreshed
+		set_country_flag = uma_slot_1_goods_10_bought
+		change_variable = {
+			which = uma_num_of_good_10
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_11_refreshed }
+		remove_country_flag = uma_slot_1_goods_11_refreshed
+		set_country_flag = uma_slot_1_goods_11_bought
+		change_variable = {
+			which = uma_num_of_good_11
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_12_refreshed }
+		remove_country_flag = uma_slot_1_goods_12_refreshed
+		set_country_flag = uma_slot_1_goods_12_bought
+		change_variable = {
+			which = uma_num_of_good_12
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_13_refreshed }
+		remove_country_flag = uma_slot_1_goods_13_refreshed
+		set_country_flag = uma_slot_1_goods_13_bought
+		change_variable = {
+			which = uma_num_of_good_13
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_14_refreshed }
+		remove_country_flag = uma_slot_1_goods_14_refreshed
+		set_country_flag = uma_slot_1_goods_14_bought
+		change_variable = {
+			which = uma_num_of_good_14
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_15_refreshed }
+		remove_country_flag = uma_slot_1_goods_15_refreshed
+		set_country_flag = uma_slot_1_goods_15_bought
+		change_variable = {
+			which = uma_num_of_good_15
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_1_goods_16_refreshed }
+		remove_country_flag = uma_slot_1_goods_16_refreshed
+		set_country_flag = uma_slot_1_goods_16_bought
+		change_variable = {
+			which = uma_num_of_good_16
+			value = 1
+		}
+	}
+}
+
+###刷新槽位2货物的枚举
+uma_refresh_slot_2_goods_effect = {
+	remove_country_flag = uma_slot_2_bought
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_1_bought }
+		remove_country_flag = uma_slot_2_goods_1_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_1_refreshed }
+		remove_country_flag = uma_slot_2_goods_1_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_2_bought }
+		remove_country_flag = uma_slot_2_goods_2_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_2_refreshed }
+		remove_country_flag = uma_slot_2_goods_2_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_3_bought }
+		remove_country_flag = uma_slot_2_goods_3_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_3_refreshed }
+		remove_country_flag = uma_slot_2_goods_3_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_4_bought }
+		remove_country_flag = uma_slot_2_goods_4_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_4_refreshed }
+		remove_country_flag = uma_slot_2_goods_4_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_5_bought }
+		remove_country_flag = uma_slot_2_goods_5_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_5_refreshed }
+		remove_country_flag = uma_slot_2_goods_5_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_6_bought }
+		remove_country_flag = uma_slot_2_goods_6_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_6_refreshed }
+		remove_country_flag = uma_slot_2_goods_6_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_7_bought }
+		remove_country_flag = uma_slot_2_goods_7_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_7_refreshed }
+		remove_country_flag = uma_slot_2_goods_7_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_8_bought }
+		remove_country_flag = uma_slot_2_goods_8_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_8_refreshed }
+		remove_country_flag = uma_slot_2_goods_8_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_9_bought }
+		remove_country_flag = uma_slot_2_goods_9_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_9_refreshed }
+		remove_country_flag = uma_slot_2_goods_9_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_10_bought }
+		remove_country_flag = uma_slot_2_goods_10_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_10_refreshed }
+		remove_country_flag = uma_slot_2_goods_10_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_11_bought }
+		remove_country_flag = uma_slot_2_goods_11_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_11_refreshed }
+		remove_country_flag = uma_slot_2_goods_11_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_12_bought }
+		remove_country_flag = uma_slot_2_goods_12_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_12_refreshed }
+		remove_country_flag = uma_slot_2_goods_12_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_13_bought }
+		remove_country_flag = uma_slot_2_goods_13_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_13_refreshed }
+		remove_country_flag = uma_slot_2_goods_13_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_14_bought }
+		remove_country_flag = uma_slot_2_goods_14_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_14_refreshed }
+		remove_country_flag = uma_slot_2_goods_14_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_15_bought }
+		remove_country_flag = uma_slot_2_goods_15_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_15_refreshed }
+		remove_country_flag = uma_slot_2_goods_15_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_16_bought }
+		remove_country_flag = uma_slot_2_goods_16_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_16_refreshed }
+		remove_country_flag = uma_slot_2_goods_16_refreshed
+	}
+	random_list = {
+		1 = {
+			set_country_flag = uma_slot_2_goods_1_refreshed #这种货物刷出来了
+			set_variable = {
+				which = uma_price_of_goods_2_multiply #价格
+				value = 30
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_2_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_3_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_4_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 75
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_5_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 350
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_6_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 120
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_7_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 200
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_8_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_9_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_10_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_11_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 80
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_12_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_13_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_14_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_15_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_16_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 50
+			}
+		}
+	}
+}
+###购买槽位2货物的枚举
+uma_buy_slot_2_goods_effect = {
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_1_refreshed }
+		remove_country_flag = uma_slot_2_goods_1_refreshed
+		set_country_flag = uma_slot_2_goods_1_bought
+		change_variable = {
+			which = uma_num_of_good_1
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_2_refreshed }
+		remove_country_flag = uma_slot_2_goods_2_refreshed
+		set_country_flag = uma_slot_2_goods_2_bought
+		change_variable = {
+			which = uma_num_of_good_2
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_3_refreshed }
+		remove_country_flag = uma_slot_2_goods_3_refreshed
+		set_country_flag = uma_slot_2_goods_3_bought
+		change_variable = {
+			which = uma_num_of_good_3
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_4_refreshed }
+		remove_country_flag = uma_slot_2_goods_4_refreshed
+		set_country_flag = uma_slot_2_goods_4_bought
+		change_variable = {
+			which = uma_num_of_good_4
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_5_refreshed }
+		remove_country_flag = uma_slot_2_goods_5_refreshed
+		set_country_flag = uma_slot_2_goods_5_bought
+		change_variable = {
+			which = uma_num_of_good_5
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_6_refreshed }
+		remove_country_flag = uma_slot_2_goods_6_refreshed
+		set_country_flag = uma_slot_2_goods_6_bought
+		change_variable = {
+			which = uma_num_of_good_6
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_7_refreshed }
+		remove_country_flag = uma_slot_2_goods_7_refreshed
+		set_country_flag = uma_slot_2_goods_7_bought
+		change_variable = {
+			which = uma_num_of_good_7
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_8_refreshed }
+		remove_country_flag = uma_slot_2_goods_8_refreshed
+		set_country_flag = uma_slot_2_goods_8_bought
+		change_variable = {
+			which = uma_num_of_good_8
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_9_refreshed }
+		remove_country_flag = uma_slot_2_goods_9_refreshed
+		set_country_flag = uma_slot_2_goods_9_bought
+		change_variable = {
+			which = uma_num_of_good_9
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_10_refreshed }
+		remove_country_flag = uma_slot_2_goods_10_refreshed
+		set_country_flag = uma_slot_2_goods_10_bought
+		change_variable = {
+			which = uma_num_of_good_10
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_11_refreshed }
+		remove_country_flag = uma_slot_2_goods_11_refreshed
+		set_country_flag = uma_slot_2_goods_11_bought
+		change_variable = {
+			which = uma_num_of_good_11
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_12_refreshed }
+		remove_country_flag = uma_slot_2_goods_12_refreshed
+		set_country_flag = uma_slot_2_goods_12_bought
+		change_variable = {
+			which = uma_num_of_good_12
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_13_refreshed }
+		remove_country_flag = uma_slot_2_goods_13_refreshed
+		set_country_flag = uma_slot_2_goods_13_bought
+		change_variable = {
+			which = uma_num_of_good_13
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_14_refreshed }
+		remove_country_flag = uma_slot_2_goods_14_refreshed
+		set_country_flag = uma_slot_2_goods_14_bought
+		change_variable = {
+			which = uma_num_of_good_14
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_15_refreshed }
+		remove_country_flag = uma_slot_2_goods_15_refreshed
+		set_country_flag = uma_slot_2_goods_15_bought
+		change_variable = {
+			which = uma_num_of_good_15
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_16_refreshed }
+		remove_country_flag = uma_slot_2_goods_16_refreshed
+		set_country_flag = uma_slot_2_goods_16_bought
+		change_variable = {
+			which = uma_num_of_good_16
+			value = 1
+		}
+	}
+}
+
+###刷新槽位3货物的枚举
+uma_refresh_slot_3_goods_effect = {
+	remove_country_flag = uma_slot_3_bought
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_1_bought }
+		remove_country_flag = uma_slot_3_goods_1_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_1_refreshed }
+		remove_country_flag = uma_slot_3_goods_1_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_2_bought }
+		remove_country_flag = uma_slot_3_goods_2_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_2_refreshed }
+		remove_country_flag = uma_slot_3_goods_2_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_3_bought }
+		remove_country_flag = uma_slot_3_goods_3_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_3_refreshed }
+		remove_country_flag = uma_slot_3_goods_3_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_4_bought }
+		remove_country_flag = uma_slot_3_goods_4_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_4_refreshed }
+		remove_country_flag = uma_slot_3_goods_4_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_5_bought }
+		remove_country_flag = uma_slot_3_goods_5_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_5_refreshed }
+		remove_country_flag = uma_slot_3_goods_5_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_6_bought }
+		remove_country_flag = uma_slot_3_goods_6_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_6_refreshed }
+		remove_country_flag = uma_slot_3_goods_6_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_7_bought }
+		remove_country_flag = uma_slot_3_goods_7_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_7_refreshed }
+		remove_country_flag = uma_slot_3_goods_7_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_8_bought }
+		remove_country_flag = uma_slot_3_goods_8_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_8_refreshed }
+		remove_country_flag = uma_slot_3_goods_8_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_9_bought }
+		remove_country_flag = uma_slot_3_goods_9_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_9_refreshed }
+		remove_country_flag = uma_slot_3_goods_9_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_10_bought }
+		remove_country_flag = uma_slot_3_goods_10_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_10_refreshed }
+		remove_country_flag = uma_slot_3_goods_10_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_11_bought }
+		remove_country_flag = uma_slot_3_goods_11_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_11_refreshed }
+		remove_country_flag = uma_slot_3_goods_11_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_12_bought }
+		remove_country_flag = uma_slot_3_goods_12_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_12_refreshed }
+		remove_country_flag = uma_slot_3_goods_12_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_13_bought }
+		remove_country_flag = uma_slot_3_goods_13_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_13_refreshed }
+		remove_country_flag = uma_slot_3_goods_13_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_14_bought }
+		remove_country_flag = uma_slot_3_goods_14_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_14_refreshed }
+		remove_country_flag = uma_slot_3_goods_14_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_15_bought }
+		remove_country_flag = uma_slot_3_goods_15_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_15_refreshed }
+		remove_country_flag = uma_slot_3_goods_15_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_16_bought }
+		remove_country_flag = uma_slot_3_goods_16_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_16_refreshed }
+		remove_country_flag = uma_slot_3_goods_16_refreshed
+	}
+	random_list = {
+		1 = {
+			set_country_flag = uma_slot_3_goods_1_refreshed #这种货物刷出来了
+			set_variable = {
+				which = uma_price_of_goods_3_multiply #价格
+				value = 30
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_2_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_3_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_4_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 75
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_5_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 350
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_6_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 120
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_7_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 200
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_8_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_9_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_10_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_11_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 80
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_12_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_13_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_14_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_15_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_16_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 50
+			}
+		}
+	}
+}
+###购买槽位3货物的枚举
+uma_buy_slot_3_goods_effect = {
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_1_refreshed }
+		remove_country_flag = uma_slot_3_goods_1_refreshed
+		set_country_flag = uma_slot_3_goods_1_bought
+		change_variable = {
+			which = uma_num_of_good_1
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_2_refreshed }
+		remove_country_flag = uma_slot_3_goods_2_refreshed
+		set_country_flag = uma_slot_3_goods_2_bought
+		change_variable = {
+			which = uma_num_of_good_2
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_3_refreshed }
+		remove_country_flag = uma_slot_3_goods_3_refreshed
+		set_country_flag = uma_slot_3_goods_3_bought
+		change_variable = {
+			which = uma_num_of_good_3
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_4_refreshed }
+		remove_country_flag = uma_slot_3_goods_4_refreshed
+		set_country_flag = uma_slot_3_goods_4_bought
+		change_variable = {
+			which = uma_num_of_good_4
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_5_refreshed }
+		remove_country_flag = uma_slot_3_goods_5_refreshed
+		set_country_flag = uma_slot_3_goods_5_bought
+		change_variable = {
+			which = uma_num_of_good_5
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_6_refreshed }
+		remove_country_flag = uma_slot_3_goods_6_refreshed
+		set_country_flag = uma_slot_3_goods_6_bought
+		change_variable = {
+			which = uma_num_of_good_6
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_7_refreshed }
+		remove_country_flag = uma_slot_3_goods_7_refreshed
+		set_country_flag = uma_slot_3_goods_7_bought
+		change_variable = {
+			which = uma_num_of_good_7
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_8_refreshed }
+		remove_country_flag = uma_slot_3_goods_8_refreshed
+		set_country_flag = uma_slot_3_goods_8_bought
+		change_variable = {
+			which = uma_num_of_good_8
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_9_refreshed }
+		remove_country_flag = uma_slot_3_goods_9_refreshed
+		set_country_flag = uma_slot_3_goods_9_bought
+		change_variable = {
+			which = uma_num_of_good_9
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_10_refreshed }
+		remove_country_flag = uma_slot_3_goods_10_refreshed
+		set_country_flag = uma_slot_3_goods_10_bought
+		change_variable = {
+			which = uma_num_of_good_10
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_11_refreshed }
+		remove_country_flag = uma_slot_3_goods_11_refreshed
+		set_country_flag = uma_slot_3_goods_11_bought
+		change_variable = {
+			which = uma_num_of_good_11
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_12_refreshed }
+		remove_country_flag = uma_slot_3_goods_12_refreshed
+		set_country_flag = uma_slot_3_goods_12_bought
+		change_variable = {
+			which = uma_num_of_good_12
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_13_refreshed }
+		remove_country_flag = uma_slot_3_goods_13_refreshed
+		set_country_flag = uma_slot_3_goods_13_bought
+		change_variable = {
+			which = uma_num_of_good_13
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_14_refreshed }
+		remove_country_flag = uma_slot_3_goods_14_refreshed
+		set_country_flag = uma_slot_3_goods_14_bought
+		change_variable = {
+			which = uma_num_of_good_14
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_15_refreshed }
+		remove_country_flag = uma_slot_3_goods_15_refreshed
+		set_country_flag = uma_slot_3_goods_15_bought
+		change_variable = {
+			which = uma_num_of_good_15
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_16_refreshed }
+		remove_country_flag = uma_slot_3_goods_16_refreshed
+		set_country_flag = uma_slot_3_goods_16_bought
+		change_variable = {
+			which = uma_num_of_good_16
+			value = 1
+		}
+	}
+}
+
+###刷新槽位4货物的枚举
+uma_refresh_slot_4_goods_effect = {
+	remove_country_flag = uma_slot_4_bought
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_1_bought }
+		remove_country_flag = uma_slot_4_goods_1_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_1_refreshed }
+		remove_country_flag = uma_slot_4_goods_1_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_2_bought }
+		remove_country_flag = uma_slot_4_goods_2_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_2_refreshed }
+		remove_country_flag = uma_slot_4_goods_2_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_3_bought }
+		remove_country_flag = uma_slot_4_goods_3_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_3_refreshed }
+		remove_country_flag = uma_slot_4_goods_3_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_4_bought }
+		remove_country_flag = uma_slot_4_goods_4_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_4_refreshed }
+		remove_country_flag = uma_slot_4_goods_4_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_5_bought }
+		remove_country_flag = uma_slot_4_goods_5_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_5_refreshed }
+		remove_country_flag = uma_slot_4_goods_5_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_6_bought }
+		remove_country_flag = uma_slot_4_goods_6_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_6_refreshed }
+		remove_country_flag = uma_slot_4_goods_6_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_7_bought }
+		remove_country_flag = uma_slot_4_goods_7_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_7_refreshed }
+		remove_country_flag = uma_slot_4_goods_7_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_8_bought }
+		remove_country_flag = uma_slot_4_goods_8_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_8_refreshed }
+		remove_country_flag = uma_slot_4_goods_8_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_9_bought }
+		remove_country_flag = uma_slot_4_goods_9_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_9_refreshed }
+		remove_country_flag = uma_slot_4_goods_9_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_10_bought }
+		remove_country_flag = uma_slot_4_goods_10_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_10_refreshed }
+		remove_country_flag = uma_slot_4_goods_10_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_11_bought }
+		remove_country_flag = uma_slot_4_goods_11_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_11_refreshed }
+		remove_country_flag = uma_slot_4_goods_11_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_12_bought }
+		remove_country_flag = uma_slot_4_goods_12_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_12_refreshed }
+		remove_country_flag = uma_slot_4_goods_12_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_13_bought }
+		remove_country_flag = uma_slot_4_goods_13_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_13_refreshed }
+		remove_country_flag = uma_slot_4_goods_13_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_14_bought }
+		remove_country_flag = uma_slot_4_goods_14_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_14_refreshed }
+		remove_country_flag = uma_slot_4_goods_14_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_15_bought }
+		remove_country_flag = uma_slot_4_goods_15_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_15_refreshed }
+		remove_country_flag = uma_slot_4_goods_15_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_16_bought }
+		remove_country_flag = uma_slot_4_goods_16_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_16_refreshed }
+		remove_country_flag = uma_slot_4_goods_16_refreshed
+	}
+	random_list = {
+		1 = {
+			set_country_flag = uma_slot_4_goods_1_refreshed #这种货物刷出来了
+			set_variable = {
+				which = uma_price_of_goods_4_multiply #价格
+				value = 30
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_2_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_3_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_4_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 75
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_5_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 350
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_6_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 120
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_7_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 200
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_8_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_9_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_10_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_11_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 80
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_12_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_13_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_14_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_15_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_16_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 50
+			}
+		}
+	}
+}
+###购买槽位4货物的枚举
+uma_buy_slot_4_goods_effect = {
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_1_refreshed }
+		remove_country_flag = uma_slot_4_goods_1_refreshed
+		set_country_flag = uma_slot_4_goods_1_bought
+		change_variable = {
+			which = uma_num_of_good_1
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_2_refreshed }
+		remove_country_flag = uma_slot_4_goods_2_refreshed
+		set_country_flag = uma_slot_4_goods_2_bought
+		change_variable = {
+			which = uma_num_of_good_2
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_3_refreshed }
+		remove_country_flag = uma_slot_4_goods_3_refreshed
+		set_country_flag = uma_slot_4_goods_3_bought
+		change_variable = {
+			which = uma_num_of_good_3
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_4_refreshed }
+		remove_country_flag = uma_slot_4_goods_4_refreshed
+		set_country_flag = uma_slot_4_goods_4_bought
+		change_variable = {
+			which = uma_num_of_good_4
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_5_refreshed }
+		remove_country_flag = uma_slot_4_goods_5_refreshed
+		set_country_flag = uma_slot_4_goods_5_bought
+		change_variable = {
+			which = uma_num_of_good_5
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_6_refreshed }
+		remove_country_flag = uma_slot_4_goods_6_refreshed
+		set_country_flag = uma_slot_4_goods_6_bought
+		change_variable = {
+			which = uma_num_of_good_6
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_7_refreshed }
+		remove_country_flag = uma_slot_4_goods_7_refreshed
+		set_country_flag = uma_slot_4_goods_7_bought
+		change_variable = {
+			which = uma_num_of_good_7
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_8_refreshed }
+		remove_country_flag = uma_slot_4_goods_8_refreshed
+		set_country_flag = uma_slot_4_goods_8_bought
+		change_variable = {
+			which = uma_num_of_good_8
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_9_refreshed }
+		remove_country_flag = uma_slot_4_goods_9_refreshed
+		set_country_flag = uma_slot_4_goods_9_bought
+		change_variable = {
+			which = uma_num_of_good_9
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_10_refreshed }
+		remove_country_flag = uma_slot_4_goods_10_refreshed
+		set_country_flag = uma_slot_4_goods_10_bought
+		change_variable = {
+			which = uma_num_of_good_10
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_11_refreshed }
+		remove_country_flag = uma_slot_4_goods_11_refreshed
+		set_country_flag = uma_slot_4_goods_11_bought
+		change_variable = {
+			which = uma_num_of_good_11
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_12_refreshed }
+		remove_country_flag = uma_slot_4_goods_12_refreshed
+		set_country_flag = uma_slot_4_goods_12_bought
+		change_variable = {
+			which = uma_num_of_good_12
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_13_refreshed }
+		remove_country_flag = uma_slot_4_goods_13_refreshed
+		set_country_flag = uma_slot_4_goods_13_bought
+		change_variable = {
+			which = uma_num_of_good_13
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_14_refreshed }
+		remove_country_flag = uma_slot_4_goods_14_refreshed
+		set_country_flag = uma_slot_4_goods_14_bought
+		change_variable = {
+			which = uma_num_of_good_14
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_15_refreshed }
+		remove_country_flag = uma_slot_4_goods_15_refreshed
+		set_country_flag = uma_slot_4_goods_15_bought
+		change_variable = {
+			which = uma_num_of_good_15
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_16_refreshed }
+		remove_country_flag = uma_slot_4_goods_16_refreshed
+		set_country_flag = uma_slot_4_goods_16_bought
+		change_variable = {
+			which = uma_num_of_good_16
+			value = 1
+		}
+	}
+}
+
+###刷新槽位5货物的枚举
+uma_refresh_slot_5_goods_effect = {
+	remove_country_flag = uma_slot_5_bought
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_1_bought }
+		remove_country_flag = uma_slot_5_goods_1_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_1_refreshed }
+		remove_country_flag = uma_slot_5_goods_1_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_2_bought }
+		remove_country_flag = uma_slot_5_goods_2_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_2_refreshed }
+		remove_country_flag = uma_slot_5_goods_2_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_3_bought }
+		remove_country_flag = uma_slot_5_goods_3_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_3_refreshed }
+		remove_country_flag = uma_slot_5_goods_3_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_4_bought }
+		remove_country_flag = uma_slot_5_goods_4_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_4_refreshed }
+		remove_country_flag = uma_slot_5_goods_4_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_5_bought }
+		remove_country_flag = uma_slot_5_goods_5_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_5_refreshed }
+		remove_country_flag = uma_slot_5_goods_5_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_6_bought }
+		remove_country_flag = uma_slot_5_goods_6_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_6_refreshed }
+		remove_country_flag = uma_slot_5_goods_6_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_7_bought }
+		remove_country_flag = uma_slot_5_goods_7_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_7_refreshed }
+		remove_country_flag = uma_slot_5_goods_7_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_8_bought }
+		remove_country_flag = uma_slot_5_goods_8_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_8_refreshed }
+		remove_country_flag = uma_slot_5_goods_8_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_9_bought }
+		remove_country_flag = uma_slot_5_goods_9_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_9_refreshed }
+		remove_country_flag = uma_slot_5_goods_9_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_10_bought }
+		remove_country_flag = uma_slot_5_goods_10_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_10_refreshed }
+		remove_country_flag = uma_slot_5_goods_10_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_11_bought }
+		remove_country_flag = uma_slot_5_goods_11_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_11_refreshed }
+		remove_country_flag = uma_slot_5_goods_11_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_12_bought }
+		remove_country_flag = uma_slot_5_goods_12_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_12_refreshed }
+		remove_country_flag = uma_slot_5_goods_12_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_13_bought }
+		remove_country_flag = uma_slot_5_goods_13_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_13_refreshed }
+		remove_country_flag = uma_slot_5_goods_13_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_14_bought }
+		remove_country_flag = uma_slot_5_goods_14_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_14_refreshed }
+		remove_country_flag = uma_slot_5_goods_14_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_15_bought }
+		remove_country_flag = uma_slot_5_goods_15_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_15_refreshed }
+		remove_country_flag = uma_slot_5_goods_15_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_16_bought }
+		remove_country_flag = uma_slot_5_goods_16_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_16_refreshed }
+		remove_country_flag = uma_slot_5_goods_16_refreshed
+	}
+	random_list = {
+		1 = {
+			set_country_flag = uma_slot_5_goods_1_refreshed #这种货物刷出来了
+			set_variable = {
+				which = uma_price_of_goods_5_multiply #价格
+				value = 30
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_2_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_3_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_4_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 75
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_5_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 350
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_6_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 120
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_7_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 200
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_8_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_9_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_10_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_11_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 80
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_12_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_13_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_14_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_15_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_16_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 50
+			}
+		}
+	}
+}
+###购买槽位5货物的枚举
+uma_buy_slot_5_goods_effect = {
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_1_refreshed }
+		remove_country_flag = uma_slot_5_goods_1_refreshed
+		set_country_flag = uma_slot_5_goods_1_bought
+		change_variable = {
+			which = uma_num_of_good_1
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_2_refreshed }
+		remove_country_flag = uma_slot_5_goods_2_refreshed
+		set_country_flag = uma_slot_5_goods_2_bought
+		change_variable = {
+			which = uma_num_of_good_2
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_3_refreshed }
+		remove_country_flag = uma_slot_5_goods_3_refreshed
+		set_country_flag = uma_slot_5_goods_3_bought
+		change_variable = {
+			which = uma_num_of_good_3
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_4_refreshed }
+		remove_country_flag = uma_slot_5_goods_4_refreshed
+		set_country_flag = uma_slot_5_goods_4_bought
+		change_variable = {
+			which = uma_num_of_good_4
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_5_refreshed }
+		remove_country_flag = uma_slot_5_goods_5_refreshed
+		set_country_flag = uma_slot_5_goods_5_bought
+		change_variable = {
+			which = uma_num_of_good_5
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_6_refreshed }
+		remove_country_flag = uma_slot_5_goods_6_refreshed
+		set_country_flag = uma_slot_5_goods_6_bought
+		change_variable = {
+			which = uma_num_of_good_6
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_7_refreshed }
+		remove_country_flag = uma_slot_5_goods_7_refreshed
+		set_country_flag = uma_slot_5_goods_7_bought
+		change_variable = {
+			which = uma_num_of_good_7
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_8_refreshed }
+		remove_country_flag = uma_slot_5_goods_8_refreshed
+		set_country_flag = uma_slot_5_goods_8_bought
+		change_variable = {
+			which = uma_num_of_good_8
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_9_refreshed }
+		remove_country_flag = uma_slot_5_goods_9_refreshed
+		set_country_flag = uma_slot_5_goods_9_bought
+		change_variable = {
+			which = uma_num_of_good_9
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_10_refreshed }
+		remove_country_flag = uma_slot_5_goods_10_refreshed
+		set_country_flag = uma_slot_5_goods_10_bought
+		change_variable = {
+			which = uma_num_of_good_10
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_11_refreshed }
+		remove_country_flag = uma_slot_5_goods_11_refreshed
+		set_country_flag = uma_slot_5_goods_11_bought
+		change_variable = {
+			which = uma_num_of_good_11
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_12_refreshed }
+		remove_country_flag = uma_slot_5_goods_12_refreshed
+		set_country_flag = uma_slot_5_goods_12_bought
+		change_variable = {
+			which = uma_num_of_good_12
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_13_refreshed }
+		remove_country_flag = uma_slot_5_goods_13_refreshed
+		set_country_flag = uma_slot_5_goods_13_bought
+		change_variable = {
+			which = uma_num_of_good_13
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_14_refreshed }
+		remove_country_flag = uma_slot_5_goods_14_refreshed
+		set_country_flag = uma_slot_5_goods_14_bought
+		change_variable = {
+			which = uma_num_of_good_14
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_15_refreshed }
+		remove_country_flag = uma_slot_5_goods_15_refreshed
+		set_country_flag = uma_slot_5_goods_15_bought
+		change_variable = {
+			which = uma_num_of_good_15
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_16_refreshed }
+		remove_country_flag = uma_slot_5_goods_16_refreshed
+		set_country_flag = uma_slot_5_goods_16_bought
+		change_variable = {
+			which = uma_num_of_good_16
+			value = 1
+		}
+	}
+}
+
+###刷新槽位6货物的枚举
+uma_refresh_slot_6_goods_effect = {
+	remove_country_flag = uma_slot_6_bought
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_1_bought }
+		remove_country_flag = uma_slot_6_goods_1_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_1_refreshed }
+		remove_country_flag = uma_slot_6_goods_1_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_2_bought }
+		remove_country_flag = uma_slot_6_goods_2_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_2_refreshed }
+		remove_country_flag = uma_slot_6_goods_2_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_3_bought }
+		remove_country_flag = uma_slot_6_goods_3_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_3_refreshed }
+		remove_country_flag = uma_slot_6_goods_3_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_4_bought }
+		remove_country_flag = uma_slot_6_goods_4_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_4_refreshed }
+		remove_country_flag = uma_slot_6_goods_4_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_5_bought }
+		remove_country_flag = uma_slot_6_goods_5_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_5_refreshed }
+		remove_country_flag = uma_slot_6_goods_5_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_6_bought }
+		remove_country_flag = uma_slot_6_goods_6_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_6_refreshed }
+		remove_country_flag = uma_slot_6_goods_6_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_7_bought }
+		remove_country_flag = uma_slot_6_goods_7_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_7_refreshed }
+		remove_country_flag = uma_slot_6_goods_7_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_8_bought }
+		remove_country_flag = uma_slot_6_goods_8_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_8_refreshed }
+		remove_country_flag = uma_slot_6_goods_8_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_9_bought }
+		remove_country_flag = uma_slot_6_goods_9_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_9_refreshed }
+		remove_country_flag = uma_slot_6_goods_9_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_10_bought }
+		remove_country_flag = uma_slot_6_goods_10_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_10_refreshed }
+		remove_country_flag = uma_slot_6_goods_10_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_11_bought }
+		remove_country_flag = uma_slot_6_goods_11_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_11_refreshed }
+		remove_country_flag = uma_slot_6_goods_11_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_12_bought }
+		remove_country_flag = uma_slot_6_goods_12_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_12_refreshed }
+		remove_country_flag = uma_slot_6_goods_12_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_13_bought }
+		remove_country_flag = uma_slot_6_goods_13_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_13_refreshed }
+		remove_country_flag = uma_slot_6_goods_13_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_14_bought }
+		remove_country_flag = uma_slot_6_goods_14_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_14_refreshed }
+		remove_country_flag = uma_slot_6_goods_14_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_15_bought }
+		remove_country_flag = uma_slot_6_goods_15_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_15_refreshed }
+		remove_country_flag = uma_slot_6_goods_15_refreshed
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_16_bought }
+		remove_country_flag = uma_slot_6_goods_16_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_16_refreshed }
+		remove_country_flag = uma_slot_6_goods_16_refreshed
+	}
+	random_list = {
+		1 = {
+			set_country_flag = uma_slot_6_goods_1_refreshed #这种货物刷出来了
+			set_variable = {
+				which = uma_price_of_goods_6_multiply #价格
+				value = 30
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_2_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_3_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_4_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 75
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_5_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 350
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_6_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 120
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_7_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 200
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_8_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_9_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 55
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_10_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 100
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_11_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 80
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_12_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_13_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_14_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_15_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_16_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 50
+			}
+		}
+	}
+}
+###购买槽位6货物的枚举
+uma_buy_slot_6_goods_effect = {
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_1_refreshed }
+		remove_country_flag = uma_slot_6_goods_1_refreshed
+		set_country_flag = uma_slot_6_goods_1_bought
+		change_variable = {
+			which = uma_num_of_good_1
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_2_refreshed }
+		remove_country_flag = uma_slot_6_goods_2_refreshed
+		set_country_flag = uma_slot_6_goods_2_bought
+		change_variable = {
+			which = uma_num_of_good_2
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_3_refreshed }
+		remove_country_flag = uma_slot_6_goods_3_refreshed
+		set_country_flag = uma_slot_6_goods_3_bought
+		change_variable = {
+			which = uma_num_of_good_3
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_4_refreshed }
+		remove_country_flag = uma_slot_6_goods_4_refreshed
+		set_country_flag = uma_slot_6_goods_4_bought
+		change_variable = {
+			which = uma_num_of_good_4
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_5_refreshed }
+		remove_country_flag = uma_slot_6_goods_5_refreshed
+		set_country_flag = uma_slot_6_goods_5_bought
+		change_variable = {
+			which = uma_num_of_good_5
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_6_refreshed }
+		remove_country_flag = uma_slot_6_goods_6_refreshed
+		set_country_flag = uma_slot_6_goods_6_bought
+		change_variable = {
+			which = uma_num_of_good_6
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_7_refreshed }
+		remove_country_flag = uma_slot_6_goods_7_refreshed
+		set_country_flag = uma_slot_6_goods_7_bought
+		change_variable = {
+			which = uma_num_of_good_7
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_8_refreshed }
+		remove_country_flag = uma_slot_6_goods_8_refreshed
+		set_country_flag = uma_slot_6_goods_8_bought
+		change_variable = {
+			which = uma_num_of_good_8
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_9_refreshed }
+		remove_country_flag = uma_slot_6_goods_9_refreshed
+		set_country_flag = uma_slot_6_goods_9_bought
+		change_variable = {
+			which = uma_num_of_good_9
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_10_refreshed }
+		remove_country_flag = uma_slot_6_goods_10_refreshed
+		set_country_flag = uma_slot_6_goods_10_bought
+		change_variable = {
+			which = uma_num_of_good_10
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_11_refreshed }
+		remove_country_flag = uma_slot_6_goods_11_refreshed
+		set_country_flag = uma_slot_6_goods_11_bought
+		change_variable = {
+			which = uma_num_of_good_11
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_12_refreshed }
+		remove_country_flag = uma_slot_6_goods_12_refreshed
+		set_country_flag = uma_slot_6_goods_12_bought
+		change_variable = {
+			which = uma_num_of_good_12
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_13_refreshed }
+		remove_country_flag = uma_slot_6_goods_13_refreshed
+		set_country_flag = uma_slot_6_goods_13_bought
+		change_variable = {
+			which = uma_num_of_good_13
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_14_refreshed }
+		remove_country_flag = uma_slot_6_goods_14_refreshed
+		set_country_flag = uma_slot_6_goods_14_bought
+		change_variable = {
+			which = uma_num_of_good_14
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_15_refreshed }
+		remove_country_flag = uma_slot_6_goods_15_refreshed
+		set_country_flag = uma_slot_6_goods_15_bought
+		change_variable = {
+			which = uma_num_of_good_15
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_16_refreshed }
+		remove_country_flag = uma_slot_6_goods_16_refreshed
+		set_country_flag = uma_slot_6_goods_16_bought
+		change_variable = {
+			which = uma_num_of_good_16
+			value = 1
+		}
+	}
+}

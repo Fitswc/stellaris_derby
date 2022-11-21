@@ -1,0 +1,155 @@
+#游戏开始时
+on_game_start = {
+	events = {
+		uma_threegodness_rd.1 #三女神知识研究所（飞地）初始化
+		uma_origin.1 #三女神的光辉下起源
+		uma_nice_nature.1 #内恰通讯页面初始化
+		#uma_shop_center.1
+		uma_fallen_empire.3 #创建堕落帝国（前导事件）
+	}
+}
+
+#游戏开始时玩家国家触发
+# on_game_start_country = {
+# 	events = {
+# 		uma_system_ini.1 #特殊领袖所在的星系
+# 	}
+# }
+
+######!!!!!!!!
+######请注意，不要试图使用on_game_start_country来创建自建星系
+######因为蠢驴的引擎有的时候，会在形成星系之“前”引用这里，从而使得创建星系失败！
+######最好的方式是用下面的empire_init_capital_planet，这时候创建星系的成功率就是100%
+
+##################################
+#舰队被探测到时
+#用于飞地和国家建立联络
+##################################
+# This = Country
+# From = Fleet
+on_fleet_detected = {
+	events = {
+		uma_shop_center.2 #绿帽商店检测
+	}
+}
+
+
+#scope:planet
+#初始化帝国的母星（包括玩家的）
+empire_init_capital_planet = {
+	events = {
+		uma_system_ini.1 #建立所有自建星系
+		uma_origin.3 #添加赛马场建筑（外加一个工业区划平衡消费品）
+		# starting buildings, districts & pops
+		# at this point the species might have changed (because we added traits), so FROMFROM might not be the secondary species anymore
+		uma_gui_test.2 #初始化商店系统的变量
+		#uma_leader.8 #初始化所有领袖心情（没事，leader6事件已经搞定了）
+	}
+}
+
+#自行设计的外交界面
+on_custom_diplomacy = {
+	events = {
+		uma_threegodness_rd.2 #进入主菜单的前置页面
+		uma_shop_center.3 #进入商城的前置页面
+		uma_nice_nature.2 #进入优秀素质的前置界面
+	}
+}
+
+
+#月检测事件，比如说特殊领袖的special_project
+on_monthly_pulse_country = {
+	events = {
+		uma_monthly.1 #sky 事件链刷出
+		uma_monthly.2 #绿茵祈愿/小草 事件链刷出
+	}
+}
+
+#年检测事件
+on_yearly_pulse_country = {
+	events = {
+		uma_gui_test.3 #刷新商城商品
+		uma_leader.7 #每年随机调整一次心情
+		uma_events_effect.7 #每年更新商城的抽奖次数
+	}
+}
+
+#马娘随机领袖特质
+on_leader_spawned = {
+	events = {
+		uma_leader.1
+		uma_leader.2
+		uma_leader.3
+		uma_leader.4
+		uma_leader.5
+		uma_leader.6 #特殊：干劲特质添加
+	}
+}
+
+on_tech_increased = {
+	events = {
+		umaproject.101
+		uma_special_leader.12
+		uma_special_leader.50 #触发数码事件链
+	}
+}
+
+
+##设置flag，确认mod打开，以方便适配
+on_press_begin = {
+	events = {
+		uma_marking.1 #立flag的事件
+	}
+}
+
+##舰队接战
+on_entering_battle = {
+	events = {
+		uma_events_effect.1 #sky事件，更换buff
+	}
+}
+
+##舰队战斗胜利
+on_space_battle_won = {
+	events = {
+		uma_events_effect.3
+	}
+}
+
+##舰队战斗失败
+on_space_battle_lost = {
+	events = {
+		uma_events_effect.3
+	}
+}
+
+##################################
+#在飞地被摧毁时触发事件
+##################################
+# This = owner of fleet 1 (combatant)	#攻击舰队的所有者
+# From = owner of fleet 2 (destroyed)	#遇害舰队的所有者
+# FromFrom = fleet 1	#攻击舰队
+# FromFromFrom = fleet 2	#遇害舰队
+on_fleet_destroyed_perp = {
+	events = {
+		uma_shop_center.4 #商城被毁
+	}
+}
+
+
+#######星球殖民后触发事件######
+#Scope = Planet
+on_colonized = {
+	###这两个事件是特殊科技，给殖民星球上buff的
+	events = {
+		uma_events_effect.5
+		uma_events_effect.6
+	}
+
+}
+
+on_entering_system_first_time = {
+	events = {
+		tachyon_coffee.1
+	}
+}

@@ -1,0 +1,1018 @@
+namespace = uma_ap
+
+# Mind over Matter
+# country_event = {
+# 	id = utopia.2600
+# 	title = "utopia.2600.name"
+# 	desc = "utopia.2600.desc"
+# 	picture = GFX_evt_psionics
+# 	show_sound = event_mind_over_matter
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		every_owned_pop = {
+# 			limit = {
+# 				is_same_species = root
+# 				NOT = { species = { has_trait = trait_latent_psionic } }
+# 			}
+# 			modify_species = {
+# 				species = this
+# 				add_trait = trait_latent_psionic
+# 			}
+# 			species = { save_event_target_as = psionic_species }
+# 		}
+# 		change_dominant_species = { species = event_target:uma_terriroty_awake_species change_all = yes }
+# 		observer_event = { id = observer.5 }
+# 		every_country = {
+# 			limit = {
+# 				is_ai = no
+# 				has_communications = root
+# 				NOT = { is_same_value = root }
+# 			}
+# 			country_event = { id = utopia.2602 }
+# 		}
+# 		remove_country_flag = shroudwalker_enclave_diplomacy_engaged #Resets to fellow psionic greetings
+# 	}
+
+# 	option = {
+# 		name = "utopia.2600.a"
+# 		tooltip = {
+# 			modify_species = {
+# 				species = this
+# 				add_trait = trait_latent_psionic
+# 			}
+# 		}
+# 		custom_tooltip = ALLOW_PSI_CORPS
+# 		custom_tooltip = ALLOW_PSI_ARMIES
+# 	}
+# }
+
+
+
+# Transcendence
+# country_event = {
+# 	id = utopia.2650
+# 	title = "utopia.2650.name"
+# 	desc = "utopia.2650.desc"
+# 	picture = GFX_evt_psionics
+# 	show_sound = event_the_great_awakening
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		every_owned_pop = {
+# 			limit = {
+# 				is_same_species = root
+# 				has_trait = trait_latent_psionic
+# 			}
+# 			modify_species = {
+# 				species = this
+# 				remove_trait = trait_latent_psionic
+# 				add_trait = trait_uma_terriroty_awake
+# 				effect = {
+# 					save_event_target_as = psionic_species
+# 				}
+# 			}
+# 		}
+# 		change_dominant_species = { species = event_target:uma_terriroty_awake_species change_all = yes }
+# 	}
+# 	option = {
+# 		name = "utopia.2650.a"
+# 		hidden_effect = {
+# 			every_country = {
+# 				limit = {
+# 					OR = {
+# 						is_country_type = default
+# 						is_country_type = fallen_empire
+# 						is_country_type = awakened_fallen_empire
+# 					}
+# 				}
+# 				every_owned_leader = {
+# 					limit = {
+# 						species = {
+# 							has_trait = trait_uma_terriroty_awake
+# 							is_same_value = event_target:uma_terriroty_awake_species
+# 						}
+# 						NOR = {
+# 							has_trait =	uma_admiral_trait_terriroty_awake
+# 							has_trait =	uma_general_trait_terriroty_awake
+# 							has_trait =	uma_governor_trait_terriroty_awake
+# 							has_trait =	uma_scientist_trait_terriroty_awake
+# 							has_trait =	uma_ruler_trait_terriroty_awake
+# 						}
+# 					}
+# 					if = {
+# 						limit = { leader_class = admiral }
+# 						add_trait = uma_admiral_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = general }
+# 						add_trait = uma_general_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = governor }
+# 						add_trait = uma_governor_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = scientist }
+# 						add_trait = uma_scientist_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = ruler }
+# 						add_trait = uma_ruler_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 				}
+# 				every_pool_leader = {
+# 					limit = {
+# 						species = {
+# 							has_trait = trait_uma_terriroty_awake
+# 							is_same_value = event_target:uma_terriroty_awake_species
+# 						}
+# 						NOR = {
+# 							has_trait = uma_admiral_trait_terriroty_awake
+# 							has_trait = uma_general_trait_terriroty_awake
+# 							has_trait = uma_governor_trait_terriroty_awake
+# 							has_trait = uma_scientist_trait_terriroty_awake
+# 							has_trait = uma_ruler_trait_terriroty_awake
+# 						}
+# 					}
+# 					if = {
+# 						limit = { leader_class = admiral }
+# 						add_trait = uma_admiral_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = general }
+# 						add_trait = uma_general_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = governor }
+# 						add_trait = uma_governor_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = scientist }
+# 						add_trait = uma_scientist_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 					if = {
+# 						limit = { leader_class = ruler }
+# 						add_trait = uma_ruler_trait_terriroty_awake
+# 						add_ruler_trait = uma_ruler_trait_terriroty_awake
+# 					}
+# 				}
+# 			}
+# 			observer_event = { id = observer.6 }
+# 			every_country = {
+# 				limit = {
+# 					is_ai = no
+# 					has_communications = root
+# 					NOT = { is_same_value = root }
+# 				}
+# 				country_event = { id = utopia.2652 }
+# 			}
+# 			country_event = { id = utopia.2655 days = 30 random = 20 }
+# 		}
+# 	}
+# }
+
+
+###领域飞升有关事件
+
+###领域的力量
+country_event = {
+	id = uma_ap.1
+	title = "uma_ap.1.name"
+	desc = "uma_ap.1.desc"
+	picture = GFX_evt_uma_on_the_top
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_same_species = root
+				NOT = { species = { has_trait = trait_uma_terriroty_awake } }
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_uma_terriroty_awake
+			}
+			species = { save_event_target_as = uma_terriroty_awake_species }
+		}
+		change_dominant_species = { species = event_target:uma_terriroty_awake_species change_all = yes }
+	}
+
+	option = {
+		name = "uma_ap.1.a"
+		tooltip = {
+			modify_species = {
+				species = this
+				add_trait = trait_uma_terriroty_awake
+			}
+		}
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					species = {
+						has_trait = trait_uma_terriroty_awake
+						is_same_value = event_target:uma_terriroty_awake_species
+					}
+					NOR = {
+						has_trait = uma_admiral_trait_terriroty_awake
+						has_trait = uma_general_trait_terriroty_awake
+						has_trait = uma_governor_trait_terriroty_awake
+						has_trait = uma_scientist_trait_terriroty_awake
+						has_trait = uma_ruler_trait_terriroty_awake
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = uma_admiral_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = uma_general_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = uma_governor_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = uma_scientist_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = uma_ruler_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+			}
+			every_pool_leader = {
+				limit = {
+					species = {
+						has_trait = trait_uma_terriroty_awake
+						is_same_value = event_target:uma_terriroty_awake_species
+					}
+					NOR = {
+						has_trait = uma_admiral_trait_terriroty_awake
+						has_trait = uma_general_trait_terriroty_awake
+						has_trait = uma_governor_trait_terriroty_awake
+						has_trait = uma_scientist_trait_terriroty_awake
+						has_trait = uma_ruler_trait_terriroty_awake
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = uma_admiral_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = uma_general_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = uma_governor_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = uma_scientist_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = uma_ruler_trait_terriroty_awake
+					add_ruler_trait = uma_ruler_trait_terriroty_awake
+				}
+			}
+		}
+	}
+}
+
+
+
+###全身全灵计划
+country_event = {
+	id = uma_ap.2
+	title = "uma_ap.2.name"
+	desc = "uma_ap.2.desc"
+	picture = GFX_evt_uma_on_the_top
+
+	is_triggered_only = yes
+
+	option = {
+		name = "uma_ap.2.a"
+		enable_special_project = {
+			name = "UMA_ZENSHIZENREN_PROJECT"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+###领域飞升小事件
+###领域的异常触发
+country_event = {
+	id = uma_ap.3
+	title = "uma_ap.3.name"
+	desc = "uma_ap.3.desc"
+	picture = GFX_evt_uma_normal_school
+
+	#防止多次触发
+	trigger = {
+		NOT = { has_country_flag = uma_territory_ap_event_1_actived } 
+	}
+
+	is_triggered_only = yes
+
+	#不可坐视不理
+	option = {
+		name = "uma_ap.3.a"
+		set_country_flag = uma_territory_ap_event_1_actived
+		enable_special_project = {
+			name = "UMA_ABNORMAL_TERRIROTY_ACTIVE_RESEARCH"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+	#不去管
+	option = {
+		name = "uma_ap.3.b"
+		set_country_flag = uma_territory_ap_event_1_actived
+	}
+
+}
+
+
+###得到结果
+country_event = {
+	id = uma_ap.4
+	title = "uma_ap.4.name"
+	desc = "uma_ap.4.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#异常执着的兴趣
+	option = {
+		name = "uma_ap.4.a"
+		add_modifier = {
+			modifier = uma_terrirory_knowledge_hobby
+			days = -1
+		}
+	}
+
+}
+
+
+###唯心交流会
+country_event = {
+	id = uma_ap.5
+	title = "uma_ap.5.name"
+	desc = "uma_ap.5.desc"
+	picture = GFX_evt_diplomatic_visit
+
+	#防止多次触发
+	trigger = {
+		NOT = { has_country_flag = uma_territory_ap_event_2_actived } 
+		any_country = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			opinion_level = { who = root level >= neutral }
+			has_established_contact = root
+			NOT = { is_country_type = ruined_marauders }
+			NOT = { is_country_type = awakened_marauders }
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = uma_territory_ap_event_2_actived
+		random_country = {
+			limit = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			opinion_level = { who = root level >= neutral }
+			has_established_contact = root
+			}
+			save_event_target_as = uma_spiritualist_council_host
+		}
+	}
+
+	#不去！
+	option = {
+		name = "uma_ap.5.a"
+		event_target:uma_spiritualist_council_host = {
+			add_opinion_modifier = { modifier = opinion_uma_refuse_to_attend_spiritualist_council who = root }
+		}
+	}
+
+	#这是个收集情报的好机会
+	option = {
+		name = "uma_ap.5.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.6
+			}
+		}
+	}
+
+	#他们以为领域是什么？拒绝他们，记得要用“轻蔑的侮辱”
+	option = {
+		name = "uma_ap.5.c"
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+		}
+
+		event_target:uma_spiritualist_council_host = {
+			add_opinion_modifier = { modifier = opinion_uma_humiliate_spiritualist_council who = root }
+		}
+
+		add_resource = {
+			influence = 100
+		}
+	}
+
+}
+
+
+
+###会议结束！
+country_event = {
+	id = uma_ap.6
+	title = "uma_ap.6.name"
+	desc = "uma_ap.6.desc"
+	picture = GFX_evt_diplomatic_visit
+
+	#防止多次触发
+	trigger = {
+		NOT = { has_country_flag = uma_territory_ap_event_2_actived } 
+		any_country = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			opinion_level = { who = root level >= neutral }
+			has_established_contact = root
+		}
+	}
+
+	is_triggered_only = yes
+
+	#至少我们也有收获
+	option = {
+		name = "uma_ap.6.a"
+		event_target:uma_spiritualist_council_host = {
+			add_opinion_modifier = { modifier = opinion_uma_agree_to_attend_spiritualist_council who = root }
+		}
+		add_intel = {
+			amount = 20
+			who = event_target:uma_spiritualist_council_host
+		}
+	}
+
+}
+
+
+
+###梦境
+country_event = {
+	id = uma_ap.7
+	title = "uma_ap.7.name"
+	desc = "uma_ap.7.desc"
+	picture = GFX_evt_uma_normal_school
+
+	#防止多次触发
+	trigger = {
+		NOT = { has_country_flag = uma_territory_ap_event_3_actived } 
+	}
+
+	immediate = {
+		set_country_flag = uma_territory_ap_event_3_actived
+	}
+
+	is_triggered_only = yes
+
+	#先解决他们的梦境，再查明境况
+	option = {
+		name = "uma_ap.7.a"
+		enable_special_project = {
+			name = "UMA_ABNORMAL_TERRIROTY_DREAM_RESEARCH"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+	#药物治疗
+	option = {
+		name = "uma_ap.7.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.9
+				days = 100
+			}
+		}
+	}
+
+	#哦，我小时候也做噩梦
+	option = {
+		name = "uma_ap.7.c"
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.10
+				days = 100
+			}
+		}
+	}
+
+}
+
+
+
+###梦境的结果
+country_event = {
+	id = uma_ap.8
+	title = "uma_ap.8.name"
+	desc = "uma_ap.8.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#身心同步？
+	option = {
+		name = "uma_ap.8.a"
+		add_modifier = {
+			modifier = uma_terrirory_knowledge_dream
+			days = 1800
+		}
+	}
+
+}
+
+
+
+###梦境遏止
+country_event = {
+	id = uma_ap.9
+	title = "uma_ap.9.name"
+	desc = "uma_ap.9.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#异常执着的兴趣
+	option = {
+		name = "uma_ap.9.a"
+		add_modifier = {
+			modifier = uma_terrirory_dream_stopped
+			days = 1800
+		}
+	}
+
+}
+
+
+
+###肆无忌惮的梦
+country_event = {
+	id = uma_ap.10
+	title = "uma_ap.10.name"
+	desc = "uma_ap.10.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#异常执着的兴趣
+	option = {
+		name = "uma_ap.10.a"
+		add_modifier = {
+			modifier = uma_terrirory_dream_unstopped
+			days = 1800
+		}
+	}
+
+}
+
+
+
+###普通因子强化
+country_event = {
+	id = uma_ap.21
+	title = "uma_ap.21.name"
+	desc = "uma_ap.21.desc"
+	picture = GFX_evt_uma_on_the_top
+
+	is_triggered_only = yes
+
+	option = {
+		name = "uma_ap.21.a"
+		trigger = {
+			NOT = { has_country_flag = uma_kenshi_strength_level_5 }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = uma_kenshi_strength_level_5
+						has_country_flag = uma_kenshi_intelligence_level_5
+						has_country_flag = uma_kenshi_will_level_5
+					}
+				}
+				country_event = {
+					id = uma_ap.21
+					days = 3650
+				}
+			}
+		}
+		uma_upgrade_kenshi_strength_level = yes
+		custom_tooltip = uma_we_will_upgrade_kenshi_strength_level
+	}
+
+	option = {
+		name = "uma_ap.21.b"
+		trigger = {
+			NOT = { has_country_flag = uma_kenshi_intelligence_level_5 }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = uma_kenshi_strength_level_5
+						has_country_flag = uma_kenshi_intelligence_level_5
+						has_country_flag = uma_kenshi_will_level_5
+					}
+				}
+				country_event = {
+					id = uma_ap.21
+					days = 3650
+				}
+			}
+		}
+		uma_upgrade_kenshi_intelligence_level = yes
+		custom_tooltip = uma_we_will_upgrade_kenshi_intelligence_level
+	}
+
+	option = {
+		name = "uma_ap.21.c"
+		trigger = {
+			NOT = { has_country_flag = uma_kenshi_will_level_5 }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = uma_kenshi_strength_level_5
+						has_country_flag = uma_kenshi_intelligence_level_5
+						has_country_flag = uma_kenshi_will_level_5
+					}
+				}
+				country_event = {
+					id = uma_ap.21
+					days = 3650
+				}
+			}
+		}
+		uma_upgrade_kenshi_will_level = yes
+		custom_tooltip = uma_we_will_upgrade_kenshi_will_level
+	}
+
+}
+
+
+###摘星计划
+country_event = {
+	id = uma_ap.22
+	title = "uma_ap.22.name"
+	desc = "uma_ap.22.desc"
+	picture = GFX_evt_uma_on_the_top
+
+	is_triggered_only = yes
+
+	option = {
+		name = "uma_ap.22.a"
+		enable_special_project = {
+			name = "UMA_REACHING_STAR_PROJECT"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+###摘星计划成功提示
+country_event = {
+	id = uma_ap.23
+	title = "uma_ap.23.name"
+	desc = "uma_ap.23.desc"
+	picture = GFX_evt_uma_on_the_top
+
+	is_triggered_only = yes
+
+	option = {
+		name = "uma_ap.23.a"
+		custom_tooltip = uma_ten_years_one_kenshi_upgrade
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.21
+			}
+		}
+	}
+
+}
+
+
+###流言
+country_event = {
+	id = uma_ap.24
+	title = "uma_ap.24.name"
+	desc = "uma_ap.24.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		NOT = { has_country_flag = uma_kenshi_ap_event_1_actived } 
+	}
+
+	immediate = {
+		set_country_flag = uma_kenshi_ap_event_1_actived
+	}
+
+	is_triggered_only = yes
+
+	#新的检测方法
+	option = {
+		name = "uma_ap.24.a" 
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.25
+				days = 60
+			}
+		}
+	}
+
+	#菜就多练
+	option = {
+		name = "uma_ap.24.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.26
+				days = 60
+			}
+		}
+	}
+
+}
+
+
+###因子检测
+country_event = {
+	id = uma_ap.25
+	title = "uma_ap.25.name"
+	desc = "uma_ap.25.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#检测进行中
+	option = {
+		name = "uma_ap.25.a"
+		add_modifier = {
+			modifier = uma_kenshi_racing_umamusume_test
+			days = 1800
+		}
+	}
+
+}
+
+
+###被质疑的冠军
+country_event = {
+	id = uma_ap.26
+	title = "uma_ap.26.name"
+	desc = "uma_ap.26.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#就这样吧
+	option = {
+		name = "uma_ap.26.a"
+		add_modifier = {
+			modifier = uma_kenshi_champion_doubted
+			days = 1800
+		}
+	}
+
+}
+
+
+
+###力大无穷
+country_event = {
+	id = uma_ap.27
+	title = "uma_ap.27.name"
+	desc = "uma_ap.27.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		NOT = { has_country_flag = uma_kenshi_ap_event_2_actived } 
+	}
+
+	immediate = {
+		set_country_flag = uma_kenshi_ap_event_2_actived
+	}
+
+	is_triggered_only = yes
+
+	#很好，就这么办
+	option = {
+		name = "uma_ap.27.a" 
+		add_modifier = {
+			modifier = uma_kenshi_power_adaption_training
+			days = 1800
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.28
+				days = 360
+			}
+		}
+	}
+
+	#开销太大
+	option = {
+		name = "uma_ap.27.b"
+		add_modifier = {
+			modifier = uma_kenshi_uncontrolled_power
+			days = 3650
+		}
+	}
+
+}
+
+
+###力量控制训练
+country_event = {
+	id = uma_ap.28
+	title = "uma_ap.28.name"
+	desc = "uma_ap.28.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#好
+	option = {
+		name = "uma_ap.28.a"
+		add_modifier = {
+			modifier = uma_kenshi_power_adaption_training_good
+			days = 3650
+		}
+		add_resource = {
+			food = -1
+		}
+	}
+
+}
+
+
+
+###忒修斯的船
+country_event = {
+	id = uma_ap.29
+	title = "uma_ap.29.name"
+	desc = "uma_ap.29.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		NOT = { has_country_flag = uma_kenshi_ap_event_3_actived } 
+	}
+
+	immediate = {
+		set_country_flag = uma_kenshi_ap_event_3_actived
+	}
+
+	is_triggered_only = yes
+
+	#召集哲学家
+	option = {
+		name = "uma_ap.29.a" 
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.30
+				days = 360
+			}
+		}
+		add_resource = {
+			energy = -2000
+		}
+	}
+
+	#封禁账号！
+	option = {
+		name = "uma_ap.29.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.31
+				days = 360
+			}
+		}
+		add_resource = {
+			energy = -1000
+		}
+	}
+
+	#确实得好好思考一下这个问题...
+	option = {
+		name = "uma_ap.29.c"
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.32
+				days = 360
+			}
+		}
+	}
+
+}
+
+
+###成功解决
+country_event = {
+	id = uma_ap.30
+	title = "uma_ap.30.name"
+	desc = "uma_ap.30.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#问题解决
+	option = {
+		name = "uma_ap.30.a"
+	}
+
+}
+
+
+###封禁账号
+country_event = {
+	id = uma_ap.31
+	title = "uma_ap.31.name"
+	desc = "uma_ap.31.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#问题解决？
+	option = {
+		name = "uma_ap.31.a"	
+		add_modifier = {
+			modifier = uma_kenshi_ban_the_media
+			days = 3650
+		}
+	}
+
+}
+
+
+###确实会出现一些问题...
+country_event = {
+	id = uma_ap.32
+	title = "uma_ap.32.name"
+	desc = "uma_ap.32.desc"
+	picture = GFX_evt_uma_normal_school
+
+	is_triggered_only = yes
+
+	#我还是我自己吗？
+	option = {
+		name = "uma_ap.32.a"
+		add_modifier = {
+			modifier = uma_kenshi_fear_of_this
+			days = 3650
+		}
+	}
+}

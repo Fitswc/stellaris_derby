@@ -1,0 +1,384 @@
+uma_governor_trait_charmleader = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/charmleader.png"
+	modifier = {
+		
+        planet_crime_mult = -0.05
+		planet_stability_add = 10
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_leadercharm
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no
+}
+
+uma_governor_trait_kishouyasashii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouyasashii.png"
+	modifier = {
+        planet_stability_add = 5
+		planet_crime_mult = -0.15
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_kishouhageshii
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no
+}
+
+##############
+###道具特质###
+##############
+#蹄铁·极
+uma_governor_trait_horse_shoes_ultra = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horse_shoes_ultra.dds"
+	modifier = {
+		planet_uma_racing_umamusume_produces_mult = 0.20
+		planet_uma_trainer_produces_mult = 0.35
+		planet_uma_racing_umamusume_physics_research_produces_add = 2
+		planet_uma_racing_umamusume_engineering_research_produces_add = 2
+		planet_uma_racing_umamusume_society_research_produces_add = 2
+		planet_uma_trainer_physics_research_produces_add = 2
+		planet_uma_trainer_engineering_research_produces_add = 2
+		planet_uma_trainer_society_research_produces_add = 2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#大喇叭（精力充沛）
+uma_governor_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	modifier = {
+		planet_jobs_produces_mult = 0.35
+		planet_stability_add = 10
+		planet_crime_add = -20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#学者帽（马娘学者）
+uma_governor_trait_special_scholar = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_uma_researcher_physics_research_produces_add = 2
+		planet_uma_researcher_engineering_research_produces_add = 2
+		planet_uma_researcher_society_research_produces_add = 1
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#训练手册（切者）
+uma_governor_trait_training_book = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
+	modifier = {
+		leader_skill_levels =  5
+		species_leader_exp_gain = 1.5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#望远镜（醒目株）
+uma_governor_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.1
+		planet_immigration_pull_mult = 1
+		species_leader_exp_gain = 0.25
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#小镜子（爱娇）
+uma_governor_trait_lovely = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_lovely.dds"
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+		pop_happiness = 0.1
+		planet_immigration_pull_mult = 1
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#皇家青汁（青汁的力量）
+uma_governor_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	modifier = {
+		planet_jobs_produces_mult = 0.4
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+#体力65
+uma_governor_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	modifier = {
+		planet_jobs_produces_mult = 0.2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+##############
+###干劲特质###
+##############
+#绝好调
+uma_governor_trait_yaruki_5 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		planet_stability_add = 5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+#好调
+uma_governor_trait_yaruki_4 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_stability_add = 2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+#普通
+uma_governor_trait_yaruki_3 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
+	modifier = {
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+#不调
+uma_governor_trait_yaruki_2 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_2.png"
+	modifier = {
+		planet_jobs_produces_mult = -0.025
+		planet_stability_add = -2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+#绝不调
+uma_governor_trait_yaruki_1 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"
+	modifier = {
+		planet_jobs_produces_mult = -0.05
+		planet_stability_add = -5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+###领域特质（一段领域飞升）
+uma_governor_trait_terriroty_awake = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"
+	modifier = {
+		planet_crime_add = -20
+		planet_stability_add = 10
+		planet_jobs_produces_mult = 0.1
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no	
+}
+
+
+###特殊领袖
+
+#芦毛灰姑娘
+uma_governor_trait_sp_oguri_cap = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_oguri_cap.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.3
+		planet_jobs_minerals_produces_mult = 0.3
+		planet_stability_add = 10
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no	
+}
+
+#诡计之星\青空浮云般的总督
+uma_governor_trait_sp_seiun_sky = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_seiun_sky.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_buildings_cost_mult = -0.2
+		planet_amenities_mult = 0.2
+		planet_crime_add = -40
+		planet_stability_add = 20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no	
+}
+
+#DD头子
+uma_governor_trait_sp_agnes_digital = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_agnes_digital.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		planet_uma_racing_umamusume_produces_mult = 0.5
+		pop_growth_speed = 0.2
+		planet_stability_add = 10
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no		
+}
+
+#一流的赛马娘
+uma_governor_trait_sp_king_halo = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_king_halo.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		planet_crime_add = -20
+		planet_stability_add = 5
+		planet_buildings_cost_mult = -0.2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no		
+}
+
+#翱翔宇宙之鹰
+uma_governor_trait_sp_al_condor_pasa = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_al_condor_pasa.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		starbase_shipyard_build_speed_mult = 0.5
+		starbase_shipyard_build_cost_mult = -0.2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no		
+}
+
+#新生的太阳
+uma_governor_trait_sp_kitasan_black = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_kitasan_black.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_produces_mult = 0.2
+		planet_pops_upkeep_mult = -0.15
+		pop_growth_speed = 0.2
+		planet_stability_add = 20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no		
+}
+
+#八方睥睨
+uma_governor_trait_sp_nice_nature = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_nice_nature.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_crime_mult = -0.33
+		planet_stability_add = 33
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+    randomized = no		
+}

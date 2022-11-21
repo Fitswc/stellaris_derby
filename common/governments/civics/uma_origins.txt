@@ -1,0 +1,22 @@
+origin_uma_below_threegodness = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_syncretic_evolution.dds" #到时候得自己做新的图
+	picture = "GFX_origin_below_threegodness"
+	max_once_global = yes #唯一的起源！
+
+	potential = {
+		authority = { value = auth_trainingcenter }
+		#is_ai = no
+	}
+
+	possible = {
+		always = yes
+	}
+
+	random_weight = {
+		base = 0
+	}
+
+	description = "origin_tooltip_uma_below_threegodness"
+
+}

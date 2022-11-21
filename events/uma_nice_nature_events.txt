@@ -1,0 +1,368 @@
+namespace = uma_nice_nature
+
+###模板来自于modder群
+
+###优秀素质飞地
+
+#开局的飞地生成（虽然不需要在地图上，但还是要创造国家）
+event = {
+	id = uma_nice_nature.1
+	hide_window = yes
+	is_triggered_only = yes	#在开局事件的*触发器*触发，即on_game_start
+	immediate = {
+		##################################################
+		#在创建国家前需要先创建种族
+		##################################################
+		# create_species = {
+		# 	name = "uma_species_name_nice_nature"	#种族名字
+		# 	plural = "uma_species_name_nice_nature"	#种族复数
+		# 	class = "umamusume"		#种族小类：即爬行，鸟类，软体...
+		# 	portrait = "umamusume"			#肖像
+        #     name_list = "UMAname"
+		# 	traits = {
+		# 		特质
+		# 		ideal_planet_class = pc_habitat
+		# 	}
+		# }
+		##################################################
+		#创建国家
+		##################################################
+		create_country = {
+			name = "uma_nice_nature_country"			###国家名称，很重要！！！
+			type = uma_nice_nature_enclave		#指定country_type，不会的就不要动了
+			#authority = "auth_trainingcenter"			#政体
+			#civics = {
+			#	#民政
+			#}
+			#origin = "origin_default"			#默认起源，这个不用管，玩家根本看不到飞地起源是啥
+			#species = last_created_species			#设定种族，上面已经写好了，这一行不要动。
+			flag = {
+                icon= { #背景
+                    category = "uiu_flags"
+                    file = "uiu_flags01.dds"
+                }
+                background= { #次背景
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors={ #背景颜色，次背景颜色；剩下两个未知，建议填null
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+			}
+			ethos = {
+				#思潮
+				ethic = "ethic_xenophile"
+				ethic = "ethic_materialist"
+				ethic = "ethic_egalitarian"
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				############################################################################
+				#重要！！！！这个flag⭐国家标签⭐决定了你这个国家到底是谁，一定要改！
+				set_country_flag = uma_is_nice_nature_enclave
+				save_global_event_target_as = uma_is_nice_nature_enclave_i #加的这句是方便直接用语句建立联络
+				############################################################################
+				set_graphical_culture = npf_01					#默认的graphical_culture，不太需要动
+			}
+		}
+		##################################################
+		#创建领袖，ruler
+		##################################################
+        #大概不需要领袖吧
+		last_created_country = {
+			create_leader = {
+				class = ruler
+				species = this				#领袖种族
+				name = "优秀素质"			#领袖名字（当前为随机）
+				skill = 10
+			}
+			effect = {
+				change_leader_portrait = "19c"
+			}
+		}
+
+	}
+}
+
+
+#引入事件：在点击国家图标时触发
+country_event = {
+	id = uma_nice_nature.2
+	is_triggered_only = yes		#在点击国家图标的*触发器*触发，即on_custom_diplomacy，from即图标对应国家
+	hide_window = yes
+	
+
+	trigger = {
+		from = {
+			has_country_flag = uma_is_nice_nature_enclave	#判断对应国家，通过之前设立的country_flag⭐国家标签⭐
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = uma_contacting_country_nice_nature	#将from存为event_target
+		}
+		country_event = {
+			id = uma_nice_nature.3	#触发正式的菜单事件
+		}
+	}
+}
+
+
+##################################################
+#飞地菜单
+#算是核心事件，通过该事件开始，实现你想要实现的各种乱七八糟的功能
+#在这里是内恰的聊天框
+##################################################
+country_event = {
+	id = uma_nice_nature.3
+	title = uma_nice_nature.3.title	#事件标题
+	#多个desc可以是该事件文本随机挑一个显示，更生动（可选）
+	desc = uma_nice_nature.3.desc	#事件文本
+	desc = uma_nice_nature.3.desc2	#事件文本2
+	desc = uma_nice_nature.3.desc3	#事件文本3
+	is_triggered_only = yes		#通过引入事件触发
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "19c"
+		room = uma_traincenter_01_room
+	}
+	
+
+	immediate = {
+		
+	}
+
+	#和我聊聊你自己吧？
+	option = {
+		name = uma_nice_nature.3.a
+		response_text = uma_nice_nature.3.a.response
+		is_dialog_only = yes
+	}
+
+	#和我聊聊你的训练员吧？
+	option = {
+		name = uma_nice_nature.3.b
+		response_text = uma_nice_nature.3.b.response
+		is_dialog_only = yes
+	}
+
+	#能成为我的一位领袖吗？
+	option = {
+		name = uma_nice_nature.3.c
+		allow = {
+			has_technology = tech_cloning
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_nice_nature.4
+			}
+		}
+	}
+
+	#拜拜啦~
+	option = {
+		name = uma_nice_nature.3.d
+		response_text = uma_nice_nature.3.d.response
+	}
+}
+
+
+##克隆领袖
+country_event = {
+	id = uma_nice_nature.4
+	title = uma_nice_nature.4.title	#事件标题
+	desc = uma_nice_nature.4.desc	#事件文本
+	is_triggered_only = yes		#通过引入事件触发
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "19c"
+		room = uma_traincenter_01_room
+	}
+	
+
+	immediate = {
+		
+	}
+
+	#成为一位总督
+	option = {
+		name = uma_nice_nature.4.a
+		allow = {
+			custom_tooltip = {
+				fail_text = "uma_not_has_governor_nature"
+				NOT = { exists = event_target:uma_is_leader_governor_nature }
+				NOT = { uma_num_of_nature_equal_or_better_than_three = yes }  #一个封装好的trigger，判断领袖内恰少于三位
+			}
+		}
+		hidden_effect = {
+			create_leader = {
+				name = "优秀素质"
+				species = root
+				gender = female
+				class = governor
+				skill = 5
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_nice_nature
+					trait = leader_trait_architectural_interest
+					trait = leader_trait_agrarian_upbringing
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_nice_nature #内恰由于可以同时存在多个，所以用两个flag标注
+					set_leader_flag = uma_is_governor_nice_nature
+					save_global_event_target_as = uma_is_leader_governor_nature
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "19c"
+				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+
+			country_event = {
+				id = uma_nice_nature.4
+			}
+		}
+	}
+
+	#成为一位科学家
+	option = {
+		name = uma_nice_nature.4.b
+		allow = {
+			custom_tooltip = {
+				fail_text = "uma_not_has_scientist_nature"
+				NOT = { exists = event_target:uma_is_leader_scientist_nature }
+				NOT = { uma_num_of_nature_equal_or_better_than_three = yes }  #一个封装好的trigger，判断领袖内恰少于三位
+			}
+		}
+		hidden_effect = {
+			create_leader = {
+				name = "优秀素质"
+				species = root
+				gender = female
+				class = scientist
+				skill = 5
+				set_age = 18
+				traits = {
+					trait = uma_scientist_trait_sp_nice_nature
+					trait = leader_trait_meticulous
+					trait = leader_trait_roamer
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_nice_nature #内恰由于可以同时存在多个，所以用两个flag标注
+					set_leader_flag = uma_is_scientist_nice_nature
+					save_global_event_target_as = uma_is_leader_scientist_nature
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "19c"
+				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+		
+			country_event = {
+				id = uma_nice_nature.4
+			}
+		}
+	}
+
+	#成为一位海军上将
+	option = {
+		name = uma_nice_nature.4.c
+		allow = {
+			custom_tooltip = {
+				fail_text = "uma_not_has_admiral_nature"
+				NOT = { exists = event_target:uma_is_leader_admiral_nature }
+				NOT = { uma_num_of_nature_equal_or_better_than_three = yes }  #一个封装好的trigger，判断领袖内恰少于三位
+			}
+		}
+		hidden_effect = {
+			create_leader = {
+				name = "优秀素质"
+				species = root
+				gender = female
+				class = admiral
+				skill = 5
+				set_age = 18
+				traits = {
+					trait = uma_admiral_trait_sp_nice_nature
+					trait = leader_trait_fleet_logistician
+					trait = leader_trait_engineer
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_nice_nature #内恰由于可以同时存在多个，所以用两个flag标注
+					set_leader_flag = uma_is_admiral_nice_nature
+					save_global_event_target_as = uma_is_leader_admiral_nature
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "19c"
+				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+			country_event = {
+				id = uma_nice_nature.4
+			}
+		}
+	}
+
+	#成为一位总督
+	option = {
+		name = uma_nice_nature.4.d
+		allow = {
+			custom_tooltip = {
+				fail_text = "uma_not_has_general_nature"
+				NOT = { exists = event_target:uma_is_leader_general_nature }
+				NOT = { uma_num_of_nature_equal_or_better_than_three = yes }  #一个封装好的trigger，判断领袖内恰少于三位
+			}
+		}
+		hidden_effect = {
+			create_leader = {
+				name = "优秀素质"
+				species = root
+				gender = female
+				class = general
+				skill = 5
+				set_age = 18
+				traits = {
+					trait = uma_general_trait_sp_nice_nature
+					trait = leader_trait_army_logistician 
+					trait = leader_trait_general_erudite
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_nice_nature #内恰由于可以同时存在多个，所以用两个flag标注
+					set_leader_flag = uma_is_general_nice_nature
+					save_global_event_target_as = uma_is_leader_general_nature
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "19c"
+				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+			country_event = {
+				id = uma_nice_nature.4
+			}
+		}
+	}
+
+	#没事了
+	option = {
+		name = uma_nice_nature.4.e
+		hidden_effect = {
+			country_event = {
+				id = uma_nice_nature.3
+			}
+		}
+	}
+}

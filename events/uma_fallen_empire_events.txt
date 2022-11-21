@@ -1,0 +1,275 @@
+namespace = uma_fallen_empire
+
+
+###前导（先跳转到空白国家）
+event = {
+	id = uma_fallen_empire.3
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	immediate = {
+		random_country = {
+			limit = { is_country_type = global_event }
+			country_event = { id = uma_fallen_empire.1 }
+		}
+	}
+}
+
+
+
+###创建马娘堕落帝国
+country_event = {
+    id = uma_fallen_empire.1
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = {
+        is_country_type = global_event
+        any_country = {
+            is_ai = no
+            has_authority = auth_trainingcenter
+        }
+        any_country = {
+            NOT = { has_country_flag = uma_is_uma_fallen_empire }
+        }
+        NOT = { has_global_flag = uma_has_created_uma_fallen_empire } 
+    }
+
+    immediate = {
+        set_global_flag = uma_has_created_uma_fallen_empire
+        create_species = {
+            name = "NAME_uma_fallen_empire_species_name"
+			plural = "NAME_uma_fallen_empire_species_plural"
+			class = "umamusume"
+			portrait = "umamusume"
+            name_list = "UMAname"
+			traits = {
+				trait = uma_trait_musume
+				trait = uma_trait_int2
+				trait = uma_trait_urbancitizens
+				trait = uma_trait_fallen
+				trait = trait_uma_terriroty_awake
+				
+			}
+            immortal = yes
+            effect = {
+                save_global_event_target_as = uma_fallen_empire_species
+				change_species_characteristics = {
+					gender = female
+				}
+            }
+        }
+
+        create_country = {
+            name = "NAME_uma_fallen_empire_name"
+            type = fallen_empire
+			ignore_initial_colony_error = yes
+			authority = auth_uma_fallen_empire
+			civics = {
+				civic = civic_uma_virtual_real
+				civic = civic_uma_auto
+			}			
+			species = event_target:uma_fallen_empire_species
+			###PS：为了让AI帝国显现出“性格”，需要在personality里单独设置。否则就会出现“墙头草”
+			ethos = {
+				####一个很神奇的问题：如果使用了极端唯心+平等。领袖立绘就刷不出来
+				# ethic = ethic_fanatic_spiritualist
+				# ethic = ethic_egalitarian
+				#ethic = ethic_spiritualist
+
+				###经过测试，如果你的堕落帝国的思潮带有唯物/唯心；亲外/排外【原版堕落的四个思潮】。那么你的堕落领袖的立绘替换就无法完成。注意！
+				ethic = ethic_fanatic_egalitarian
+				ethic = ethic_pacifist
+			}			
+			flag = {
+                icon= {
+                    category = "uiu_flags"
+                    file = "uiu_fe_flags.dds"
+                }
+                background= {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors={
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+			}
+			name_list = "UMAname"
+			origin = "origin_fallen_empire" #要改
+			effect = {
+				save_global_event_target_as = uma_fallen_empire
+				#set_graphical_culture = fallen_empire_03
+				set_country_flag = uma_is_uma_fallen_empire
+				#add_modifier = { modifier = uma_fallen_empire_enhancement_modifier days = -1 }
+				add_resource = {
+					minerals = 50000
+					energy = 50000	
+					food = 50000
+					alloys = 50000
+					consumer_goods = 50000
+					uma_crystal_carrot = 50000
+					influence = 500
+				}
+								
+						###因为未知原因，1里面无法更改领袖立绘。放到2里试试
+						create_leader = {
+							class = ruler
+							species = event_target:uma_fallen_empire_species
+							gender = female
+							name = "秋川弥生"
+							skill = 10
+							set_age = 225
+							immortal = yes
+							# effect = {
+							# 	change_leader_portrait = "C02"
+							# 	uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+							# }
+						}
+						last_created_leader = {
+							change_leader_portrait = C02
+							uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+						}
+						set_leader = last_created_leader
+
+						create_leader = {
+							class = governor
+							species = event_target:uma_fallen_empire_species
+							gender = female
+							name = "日蚀"
+							skill = 18
+							set_age = 185
+							immortal = yes
+						}
+
+						add_global_ship_design = "NAME_Enforcer"
+						add_global_ship_design = "NAME_Savant"
+						add_global_ship_design = "NAME_Scholar"
+						add_global_ship_design = "NAME_Sage"
+						add_global_ship_design = "NAME_Cloaker"
+						add_global_ship_design = "NAME_Librarian"
+						add_global_ship_design = "NAME_Seeker"
+						add_global_ship_design = "NAME_FE_Starbase"
+				
+			}
+			
+        }
+
+		###这里才是最重要的！
+		last_created_country = {
+			save_global_event_target_as = uma_fallen_empire
+			set_graphical_culture = fallen_empire_03
+			country_event = { id = uma_fallen_empire.2 }  ##用刚产生的堕落触发事件，只有用堕落scope触发事件，产生星系，这个星系才能在设置主人的时候自动划给堕落
+		}
+
+    }
+
+}
+
+
+country_event = {
+	id = uma_fallen_empire.2
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	#按照R的代码，这个代码只能适配800星。不同的星数得枚举，唯一的差别就在第一个星球距离银心的长度
+	immediate = {
+		set_spawn_system_batch = begin
+
+		no_scope = {
+			spawn_system = {
+				min_distance >= 445
+				max_distance <= 446
+				min_orientation_angle = 100
+				max_orientation_angle = 101
+				initializer = "uma_fallen_empire_system_initializer_1"
+			}
+			event_target:uma_fallen_empire_school_star_1 = {
+				random_neighbor_system_euclidean = {
+					limit = { 
+						NOT = { has_hyperlane_to = PREV }
+						any_neighbor_system_euclidean = { has_hyperlane_to = PREV }
+					}
+					add_hyperlane = { from = this to = PREV }
+				}
+				spawn_system = { 
+					min_distance >= 10
+					max_distance <= 11
+					min_orientation_angle = 100
+					max_orientation_angle = 110
+					initializer = "uma_fallen_empire_system_initializer"
+				}
+			}
+
+			event_target:uma_fallen_empire_home_system = {
+				spawn_system = { 
+					min_distance >= 10
+					max_distance <= 11
+					min_orientation_angle = 130
+					max_orientation_angle = 140
+					initializer = "uma_fallen_empire_system_initializer_2"
+				}
+				spawn_system = { 
+					min_distance >= 10
+					max_distance <= 11
+					min_orientation_angle = 328
+					max_orientation_angle = 330
+					initializer = "uma_fallen_empire_system_initializer_3"
+				}
+			
+				random_system = {
+					limit = { has_star_flag = uma_fallen_empire_system_initializer_1 }
+					if = {
+						limit = { NOT = { has_hyperlane_to = PREV }}
+						add_hyperlane = { from = this to = PREV }
+					}
+				}
+				random_system = {
+					limit = { has_star_flag = uma_fallen_empire_system_initializer_2 }
+					if = {
+						limit = { NOT = { has_hyperlane_to = PREV }}
+						add_hyperlane = { from = this to = PREV }
+					}
+				}
+				random_system = {
+					limit = { has_star_flag = uma_fallen_empire_system_initializer_3 }
+					if = {
+						limit = { NOT = { has_hyperlane_to = PREV }}
+						add_hyperlane = { from = this to = PREV }
+					}
+					# random_neighbor_system_euclidean = {
+					# 	limit = {
+					# 		NOR = { 
+					# 			has_star_flag = uma_fallen_empire_system_initializer_1
+					# 			has_star_flag = uma_fallen_empire_system_initializer_2
+					# 			has_star_flag = uma_fallen_empire_system_initializer
+					# 		}
+					# 		NOT = { has_hyperlane_to = PREV }
+					# 		any_neighbor_system_euclidean = { has_hyperlane_to = PREV }
+					# 	}
+					# 	add_hyperlane = { from = this to = PREV }
+					# }
+				}
+			}
+
+			# event_target:uma_fallen_empire_the_forgotten_system = {
+			# 	random_system = {
+			# 		limit = { has_star_flag = uma_fallen_empire_system_initializer_2 }
+			# 		if = {
+			# 			limit = { NOT = { has_hyperlane_to = PREV }}
+			# 			add_hyperlane = { from = this to = PREV }
+			# 		}
+			# 	}
+			# }
+
+		}
+
+		set_spawn_system_batch = end 
+	}
+
+}

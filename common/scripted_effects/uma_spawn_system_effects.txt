@@ -1,0 +1,32 @@
+uma_spawn_system_around_solar_system = {
+	random_system = {
+		limit = {
+			distance = { 
+				source = root.solar_system
+				min_jumps = $MIN_JUMPS$ #之后修改
+				max_jumps = $MAX_JUMPS$ #之后修改
+				type = hyperlane
+			}
+		}
+		set_star_flag = has_created_system
+		spawn_system = { 
+			initializer = $UMA_INITIALIZER$
+			effect = {
+				save_event_target_as = $SAVE_GLOBAL_TARGET$
+			}
+		}
+		set_star_flag = $FLAG$
+	}
+	event_target:$SAVE_GLOBAL_TARGET$ = {
+		every_neighbor_system_euclidean = {
+			limit = {
+				NOT = { has_hyperlane_to = prev}
+				any_neighbor_system_euclidean = { has_hyperlane_to = prev }
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+}

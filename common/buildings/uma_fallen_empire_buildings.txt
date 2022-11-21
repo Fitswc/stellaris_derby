@@ -1,0 +1,177 @@
+###堕落帝国建筑
+building_virtual_real_node = { #拟真世界节点
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+	icon = building_fortress
+
+	potential = {
+		exists = owner
+		owner = { is_uma_fallen_empire = yes }
+	}
+
+	planet_modifier = {
+		job_uma_player_add = 20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			uma_crystal_carrot = 5
+			energy = 5
+		}
+	}
+}
+
+building_capital_central = { #首都管理中枢
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+	base_cap_amount = 1
+	icon = building_fortress
+
+	potential = {
+		exists = owner
+		owner = { is_uma_fallen_empire = yes }
+	}
+
+	planet_modifier = {
+		job_uma_chairman_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			uma_crystal_carrot = 10
+			energy = 10
+		}
+	}
+}
+
+building_virtual_real_central = { #拟真世界中枢
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+	base_cap_amount = 1
+	icon = building_fortress
+
+	potential = {
+		exists = owner
+		owner = { is_uma_fallen_empire = yes }
+	}
+
+	country_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		produces = {
+			unity = 200
+		}
+		upkeep = {
+			uma_crystal_carrot = 10
+			energy = 20
+		}
+	}
+}
+
+building_automatic_central = { #自动化设备中枢
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+	base_cap_amount = 1
+	icon = building_fortress
+
+	potential = {
+		exists = owner
+		owner = { is_uma_fallen_empire = yes }
+	}
+
+	planet_modifier = {
+		job_uma_automation_adm_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			food = 5
+			consumer_goods = 5
+		}
+	}
+}
+
+building_automatic_node = { #自动化设备节点
+	base_buildtime = @b2_time
+	can_build = no
+	category = resources
+	icon = building_fortress
+
+	potential = {
+		exists = owner
+		owner = { is_uma_fallen_empire = yes }
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		produces = {
+			energy = 50
+			minerals = 50
+			food = 50
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_uma_fallen_empire = yes }
+			}
+			sr_zro = 5
+			sr_dark_matter = 5
+			sr_living_metal = 5
+			uma_crystal_carrot = 5
+		}	# Fixed Fallen Empire being unable to build new ships.
+	}
+}
+
+building_automatic_feeding_system = { #自动食堂系统
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+	icon = building_fortress
+
+	potential = {
+		exists = owner
+		owner = { is_uma_fallen_empire = yes }
+	}
+
+	planet_modifier = {
+		job_uma_dining_add = 20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 3
+			food = 100
+		}
+	}
+}

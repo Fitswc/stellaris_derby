@@ -1,0 +1,272 @@
+#这里是玩家文明特有的决议
+
+
+#举办星球级别比赛
+decision_uma_hold_planet_racing = { 
+	owned_planets_only = yes
+	enactment_time = 0 
+	sound = event_administrative_work #当然，之后我们要用自己的声音
+	icon = decision_politics
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+		}
+	}
+
+	potential = {
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	allow = {
+		NOT = { has_modifier = uma_has_held_the_planet_race }
+		OR = {
+			has_building = building_uma_modern_racing_course
+			has_building = building_uma_top_racing_course
+		}
+	}
+
+	effect = {
+		custom_tooltip = uma_planet_race_will_be_held_by_us #星球德比将很快举行...
+		add_modifier = {
+			modifier = uma_has_held_the_planet_race
+				days = 7300
+		}
+		hidden_effect = {
+			planet_event = {
+				id = uma_planet_racing.1 #触发“比赛开始！”事件
+				days = 30
+				random = 10
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+
+}
+
+#将星球改建为学院星球
+decision_uma_school_planet_transform = {
+	owned_planets_only = yes
+	enactment_time = 1825
+	sound = event_administrative_work #当然，之后我们要用自己的声音
+	icon = decision_politics
+
+	resources = {
+		category = decisions
+		cost = {		
+			influence = 200
+			minerals = 10000
+			energy = 5000
+			uma_crystal_carrot = 2000
+		}
+	}
+
+	potential = {
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_habitable			
+			is_planet_class = pc_relic
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
+		habitable_structure = no
+		exists = owner
+		owner = { has_technology = tech_uma_toresen_planet_transform }
+	}
+
+	allow = {
+		if = {
+			limit = { owner = { is_ai = no }}
+			custom_tooltip = {
+				fail_text = uma_school_planet_requirement
+				free_district_slots < 1
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+			}
+		}
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		custom_tooltip = decision_uma_school_planet_changed
+		hidden_effect = {		
+			owner = { 
+					if = {
+					limit = { is_ai = yes }
+					change_variable = { which = wg_modified_planet value = 1 }
+				}
+			}
+			###城市区划的一半变为宿舍区划，农业区划一半变为后勤区划
+			uma_school_planet_get_variable_effect = {
+				DISTRICT = district_city 
+				VARIABLE = num_housing_districts
+			}
+			uma_school_planet_get_variable_effect = {
+				DISTRICT = district_farming
+				VARIABLE = num_farming_districts
+			}
+			change_pc = pc_uma_school
+			remove_all_districts = yes
+			clear_deposits = yes
+			while = {
+				count = num_housing_districts
+				add_district = district_uma_dormitory
+			}
+			while = {
+				count = num_farming_districts
+				add_district = district_uma_logistics_area
+			}
+			clear_variable = num_farming_districts
+			clear_variable = num_industrial_districts
+			set_planet_entity = {
+				entity = "city_planet"
+			}
+			########特判：如果有菲尼学院有关遗址，保留之#######
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+				add_deposit = d_phoenix_school_relic
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+				add_deposit = d_phoenix_school
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+				add_deposit = d_phoenix_racing_course_relic
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+				add_deposit = d_phoenix_racing_course
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.1
+			planet_size < 15
+		}
+		modifier = {
+			factor = 0.5
+			planet_size < 18
+		}
+		modifier = {
+			factor = 2
+			planet_size >= 20
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_capital = yes
+				num_pops >= 70
+			}
+		}
+	}
+
+}
+
+
+
+
+
+#####特殊领袖事件相关
+#修复菲尼学院
+decision_uma_reconstrcut_phoenix_school = { 
+	owned_planets_only = yes
+	enactment_time = 3650
+	sound = event_administrative_work #当然，之后我们要用自己的声音
+	icon = decision_politics
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 500
+			energy = 10000
+	 		minerals = 10000
+	 		alloys = 3000
+	 		uma_crystal_carrot = 2000
+		}
+	}
+
+	potential = {
+		has_deposit = d_phoenix_school_relic
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "uma_must_have_finished_phoenix_exploration"
+			owner = { has_country_flag = uma_has_finished_phoenix_exploration }
+		}
+	}
+
+	effect = {
+		remove_deposit = d_phoenix_school_relic
+		add_deposit = d_phoenix_school
+		remove_planet_flag = uma_planet_flag_phoenix_school_relic
+		set_planet_flag = uma_planet_flag_phoenix_school
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+
+
+}
+
+
+#修复菲尼学院大赛场
+decision_uma_reconstrcut_phoenix_racing_course = { 
+	owned_planets_only = yes
+	enactment_time = 3650
+	sound = event_administrative_work #当然，之后我们要用自己的声音
+	icon = decision_politics
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 500
+			energy = 10000
+	 		minerals = 10000
+	 		alloys = 3000
+	 		uma_crystal_carrot = 2000
+		}
+	}
+
+	potential = {
+		has_deposit = d_phoenix_racing_course_relic
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "uma_must_have_finished_phoenix_exploration"
+			owner = { has_country_flag = uma_has_finished_phoenix_exploration }
+		}
+	}
+
+	effect = {
+		remove_deposit = d_phoenix_racing_course_relic
+		add_deposit = d_phoenix_racing_course
+		remove_planet_flag = uma_planet_flag_phoenix_racing_course_relic
+		set_planet_flag = uma_planet_flag_phoenix_racing_course
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+
+
+}

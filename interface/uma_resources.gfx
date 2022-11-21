@@ -1,0 +1,51 @@
+spriteTypes = {
+
+	#25x25大图标
+	spriteType = {
+		name = "GFX_uma_crystal_carrot"
+		textureFile = "gfx/interface/icons/resources/uma_crystal_carrot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_crystal_carrot_grey"
+		textureFile = "gfx/interface/icons/resources/uma_crystal_carrot_grey.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_crystal_carrot_large"
+		textureFile = "gfx/interface/icons/resources/uma_crystal_carrot_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_threegodness_knowledge"
+		textureFile = "gfx/interface/icons/resources/uma_threegodness_knowledge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_uma_threegodness_knowledge_grey"
+		textureFile = "gfx/interface/icons/resources/uma_threegodness_knowledge_grey.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_uma_threegodness_knowledge_large"
+		textureFile = "gfx/interface/icons/resources/uma_threegodness_knowledge_large.dds"
+	}
+
+	#16x16小图标
+	spriteType = {
+		name = "GFX_text_uma_crystal_carrot"
+		textureFile = "gfx/interface/icons/text_icons/uma_text_crystal_carrot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_uma_uma_threegodness_knowledge"
+		textureFile = "gfx/interface/icons/text_icons/uma_text_threegodness_knowledge.dds"
+	}
+
+	#特殊：绿帽商店的商店币
+	spriteType = {
+		name = "GFX_text_uma_shop_coin"
+		textureFile = "gfx/interface/icons/text_icons/uma_shop_coin.dds"
+	}
+
+}

@@ -1,0 +1,40 @@
+####马娘特殊观点修正
+
+###飞升事件里的
+#三个灵能讨论会
+
+##拒绝参会
+opinion_uma_refuse_to_attend_spiritualist_council = {
+	opinion = {
+		base = -40
+	}
+	unique = yes
+	monthly = yes
+	decay = {
+		base = 2
+	}
+}
+
+##同意参会
+opinion_uma_agree_to_attend_spiritualist_council = {
+	opinion = {
+		base = 50
+	}
+	unique = yes
+	monthly = yes
+	decay = {
+		base = 2
+	}
+}
+
+##侮辱唯心主义者
+opinion_uma_humiliate_spiritualist_council = {
+	opinion = {
+		base = -200
+	}
+	unique = yes
+	monthly = yes
+	decay = {
+		base = 5
+	}
+}

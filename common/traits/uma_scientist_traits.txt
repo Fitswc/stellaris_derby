@@ -1,0 +1,274 @@
+uma_scientist_trait_kishouyasashii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouyasashii.png"
+	modifier = {
+		all_technology_research_speed = 0.15
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_kishouhageshii
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+    randomized = no
+	
+}
+
+##############
+###道具特质###
+##############
+#大喇叭（精力充沛）
+uma_scientist_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	modifier = {
+		all_technology_research_speed = 0.25
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_clues_add = 3
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+#学者帽（马娘学者）
+uma_scientist_trait_special_scholar = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"
+	modifier = {
+		all_technology_research_speed = 0.1
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_clues_add = 2
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+#望远镜（醒目株）
+uma_scientist_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	modifier = {
+		all_technology_research_speed = 0.05
+		science_ship_survey_speed = 0.2
+		ship_anomaly_generation_chance_mult = 0.5
+		species_leader_exp_gain = 0.25
+		ship_archaeological_site_clues_add = 1
+		
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+#训练手册（切者）
+uma_scientist_trait_training_book = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
+	modifier = {
+		leader_skill_levels =  5
+		species_leader_exp_gain = 1.5
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+#皇家青汁（青汁的力量）
+uma_scientist_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	modifier = {
+		all_technology_research_speed = 0.3
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_clues_add = 3
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+#体力65
+uma_scientist_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	modifier = {
+		all_technology_research_speed = 0.15
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_clues_add = 2
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+
+##############
+###干劲特质###
+##############
+#绝好调
+uma_scientist_trait_yaruki_5 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"
+	modifier = {
+		all_technology_research_speed = 0.1
+		science_ship_survey_speed = 0.2
+		ship_archaeological_site_clues_add = 2
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+#好调
+uma_scientist_trait_yaruki_4 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"
+	modifier = {
+		all_technology_research_speed = 0.05
+		science_ship_survey_speed = 0.1
+		ship_archaeological_site_clues_add = 1
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+#普通
+uma_scientist_trait_yaruki_3 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
+	modifier = {
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+#不调
+uma_scientist_trait_yaruki_2 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_2.png"
+	modifier = {
+		all_technology_research_speed = -0.025
+		science_ship_survey_speed = -0.05
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+#绝不调
+uma_scientist_trait_yaruki_1 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"
+	modifier = {
+		all_technology_research_speed = -0.05
+		science_ship_survey_speed = -0.1
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+###领域飞升特质
+###领域特质（一段领域飞升）
+uma_scientist_trait_terriroty_awake = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"
+	modifier = {
+		all_technology_research_speed = 0.1
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_clues_add = 1
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no	
+}
+
+######领袖特质######
+#一流的赛马娘
+uma_scientist_trait_sp_king_halo = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_king_halo.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		all_technology_research_speed = 0.1
+		science_ship_survey_speed = 0.25
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+    randomized = no		
+}
+
+#翱翔宇宙之鹰
+uma_scientist_trait_sp_al_condor_pasa = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_al_condor_pasa.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		science_ship_survey_speed = 0.5
+		ship_anomaly_generation_chance_mult = 0.33
+		ship_archaeological_site_clues_add = 1
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+    randomized = no		
+}
+
+#新生的太阳
+uma_scientist_trait_sp_kitasan_black = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_kitasan_black.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		all_technology_research_speed = 0.2
+		science_ship_survey_speed = 0.5
+		ship_anomaly_generation_chance_mult = 0.33		
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+    randomized = no		
+}
+
+#RUN ＆WIN
+uma_scientist_trait_sp_nice_nature = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_nice_nature.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	modifier = {
+		all_technology_research_speed = 0.033
+		science_ship_survey_speed = 0.333
+		ship_anomaly_generation_chance_mult = 0.333		
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+    randomized = no		
+}
+

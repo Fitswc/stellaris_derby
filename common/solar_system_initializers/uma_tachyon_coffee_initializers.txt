@@ -1,0 +1,58 @@
+@base_moon_distance = 10
+
+uma_tachyon_coffee_system_initializer = {
+	name = "艾格尼丝" #即“凤凰”，暗示了小草的外号——“不死鸟”
+	class = "sc_pulsar"
+
+	flags = { uma_tachyon_coffee_system }
+
+	planet = {
+        class = star
+        size = { min = 270 max = 300 }
+        orbit_distance = 0
+        orbit_angle = 1
+		flags = { tachyon_coffee_star uma_is_special_planet }
+		
+		init_effect = {
+			save_global_event_target_as = uma_tachyon_coffee_star
+		}
+    }
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 95
+	}
+
+	planet = {
+		class = pc_continental
+		orbit_distance = 60
+		orbit_angle = 80
+		name = "莱卡"
+		size = 17 #26格的超大遗落星球（后面或许可以改成“学院星球”？）
+		modifiers = none
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { tachyon_coffee_planet uma_is_special_planet } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			save_global_event_target_as = uma_tachyon_coffee_planet
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+		moon = {
+			class = pc_starbase
+			name = "未知空间站"
+			orbit_distance = 10
+			orbit_angle = 80
+			size = 17
+			modifiers = none
+
+			flags = { tachyon_coffee_starbase }
+
+			init_effect = {
+				save_global_event_target_as = uma_tachyon_coffee_starbase
+			}
+		}
+	}
+}
