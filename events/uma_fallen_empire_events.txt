@@ -64,7 +64,7 @@ country_event = {
 
         create_country = {
             name = "NAME_uma_fallen_empire_name"
-            type = fallen_empire
+            type = uma_fallen_empire
 			ignore_initial_colony_error = yes
 			authority = auth_uma_fallen_empire
 			civics = {
@@ -105,7 +105,7 @@ country_event = {
 				save_global_event_target_as = uma_fallen_empire
 				#set_graphical_culture = fallen_empire_03
 				set_country_flag = uma_is_uma_fallen_empire
-				#add_modifier = { modifier = uma_fallen_empire_enhancement_modifier days = -1 }
+				add_modifier = { modifier = uma_fallen_empire_enhancement_modifier days = -1 }
 				add_resource = {
 					minerals = 50000
 					energy = 50000	
@@ -272,4 +272,423 @@ country_event = {
 		set_spawn_system_batch = end 
 	}
 
+}
+
+####堕落和马娘帝国建立联系（1）无人物
+country_event = {
+    id = uma_fallen_empire.10
+	title = uma_fallen_empire.10.title #？？
+	desc = uma_fallen_empire.10.desc #初次见面...
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	# picture_event_data = {
+	# 	portrait = event_target:uma_fallen_empire
+	# 	planet_background = event_target:uma_fallen_empire
+	# 	graphical_culture = event_target:uma_fallen_empire
+	# 	city_level = event_target:uma_fallen_empire
+	# 	room = event_target:uma_fallen_empire.ruler		
+	# }
+
+	option = {
+		trigger = { has_authority = auth_trainingcenter }
+		name = uma_fallen_empire.10.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.11  #你是谁？
+			}
+		}
+	}
+
+}
+
+
+####堕落和马娘帝国建立联系（2）无人物
+country_event = {
+    id = uma_fallen_empire.11
+	title = uma_fallen_empire.11.title #？？
+	desc = uma_fallen_empire.11.desc #一个古老的马娘文明而已
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	# picture_event_data = {
+	# 	portrait = event_target:uma_fallen_empire
+	# 	planet_background = event_target:uma_fallen_empire
+	# 	graphical_culture = event_target:uma_fallen_empire
+	# 	city_level = event_target:uma_fallen_empire
+	# 	room = event_target:uma_fallen_empire.ruler		
+	# }
+
+	option = {
+		trigger = { has_authority = auth_trainingcenter }
+		name = uma_fallen_empire.11.a #你刚刚说...
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.12
+			}
+		}
+	}
+
+}
+
+
+
+
+####堕落和马娘帝国建立联系（3）无人物
+country_event = {
+    id = uma_fallen_empire.12
+	title = uma_fallen_empire.12.title #？？
+	desc = uma_fallen_empire.12.desc #不要误会
+	picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	# picture_event_data = {
+	# 	portrait = event_target:uma_fallen_empire
+	# 	planet_background = event_target:uma_fallen_empire
+	# 	graphical_culture = event_target:uma_fallen_empire
+	# 	city_level = event_target:uma_fallen_empire
+	# 	room = event_target:uma_fallen_empire.ruler		
+	# }
+
+	option = {
+		trigger = { has_authority = auth_trainingcenter }
+		name = uma_fallen_empire.12.a #什么？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.13
+			}
+		}
+	}
+
+}
+
+
+
+####堕落和马娘帝国建立联系（4）理事长登场
+country_event = {
+    id = uma_fallen_empire.13
+	title = uma_fallen_empire.13.title #？？
+	desc = uma_fallen_empire.13.desc #欢！迎！
+	#picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		trigger = { has_authority = auth_trainingcenter }
+		name = uma_fallen_empire.13.a #理事长？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.14
+			}
+		}
+	}
+
+}
+
+
+
+####堕落和马娘帝国建立联系（5）
+country_event = {
+    id = uma_fallen_empire.14
+	title = uma_fallen_empire.14.title #秋川弥生
+	desc = uma_fallen_empire.14.desc #可爱的后辈...
+	#picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		trigger = { has_authority = auth_trainingcenter }
+		name = uma_fallen_empire.14.a #诶诶？
+		add_resource = {
+			food = 2000
+		}
+		random_list = {
+
+			#别问我为啥用拼音，我不会日文！
+			###好转一息
+			80 = {
+				custom_tooltip = uma_get_skill_haozhuanyixi_tooltip
+				hidden_effect = {
+					add_modifier = {
+						modifier = uma_skill_haozhuanyixi
+						days = -1
+					}
+				}
+			}
+
+			###一文字
+			20 = {
+				custom_tooltip = uma_get_skill_yiwenzi_tooltip
+				hidden_effect = {
+					add_modifier = {
+						modifier = uma_skill_yiwenzi
+						days = -1
+					}
+				}
+			}
+		}
+		# hidden_effect = {
+		# 	country_event = {
+		# 		id = uma_fallen_empire.15
+		# 	}
+		# }
+	}
+
+}
+
+
+# ###堕落自动建立通讯事件###（用于补充原版的通讯的，马娘帝国专属） [我猜，这个是直接得到视野后联系的] [对应原版 fallen_empire.10]
+# country_event = {
+# 	id = uma_fallen_empire.20
+# 	title = OK
+# 	desc = OK
+
+# 	hide_window = yes
+
+# 	mean_time_to_happen = {
+# 		months = 3
+# 	}
+
+# 	trigger = {
+# 		is_uma_fallen_empire = yes
+# 		is_at_war = no
+# 		any_country = {
+# 			OR = {
+# 				is_country_type = default
+# 				is_country_type = fallen_empire
+# 			}
+# 			NOT = { has_communications = root }
+# 			OR = {
+# 				any_system_within_border = {
+# 					any_neighbor_system = {
+# 						has_hyperlane_to = prev
+# 						is_owned_by = root
+# 					}
+# 				}
+# 				is_country_type = fallen_empire
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				OR = {
+# 					is_country_type = default
+# 					is_country_type = fallen_empire
+# 				}
+# 				NOT = { has_communications = root }
+# 				OR = {
+# 					any_system_within_border = {
+# 						any_neighbor_system = {
+# 							has_hyperlane_to = prev
+# 							is_owned_by = root
+# 						}
+# 					}
+# 					is_country_type = fallen_empire
+# 				}
+# 			}
+
+# 			establish_communications_no_message = root
+# 			root = { save_event_target_as = uma_contact_empire }
+
+# 			if = {
+# 				limit = {
+# 					has_authority = auth_trainingcenter
+# 				}
+# 				country_event = { id = uma_fallen_empire.10 }
+# 			}
+# 			else = {
+# 				country_event = { id = uma_fallen_empire.30 }
+# 			}
+# 		}
+# 	}
+
+
+# }
+
+
+###进入堕落疆域的事件###（补充的，马娘帝国专属） 【我猜，这个大概是舰队到边上的】 【对应原版On_action.40】
+fleet_event = {
+	id = uma_fallen_empire.21
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_country_type = default }
+		from = {
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						is_uma_fallen_empire = yes
+						NOT = { has_communications = root.owner }
+					}
+				}
+				any_neighbor_system = {
+					exists = space_owner
+					space_owner = {
+						is_uma_fallen_empire = yes
+						NOT = { has_communications = root.owner }
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					exists = space_owner
+					space_owner = {
+						is_uma_fallen_empire = yes
+						NOT = { has_communications = root.owner }
+					}
+				}
+				space_owner = { save_event_target_as = uma_contact_empire }
+			}
+			else = {
+				random_neighbor_system = {
+					limit = {
+						exists = space_owner
+						space_owner = {
+							is_uma_fallen_empire = yes
+							NOT = { has_communications = root.owner }
+						}
+					}
+					space_owner = { save_event_target_as = uma_contact_empire }
+				}
+			}
+		}
+
+		owner = {
+			# establish_communications = {
+			# 	who = event_target:uma_contact_empire
+			# 	location = event_target:uma_contact_empire.capital_scope
+			# }
+			establish_communications_no_message = event_target:uma_contact_empire
+			if = {
+				limit = {
+					has_authority = auth_trainingcenter
+					is_ai = no
+				}
+				country_event = { id = uma_fallen_empire.10 }
+			}
+			else = {
+				country_event = { id = uma_fallen_empire.30 }
+			}
+		}
+	}
+
+}
+
+
+
+
+
+####堕落和一般帝国建立联系
+country_event = {
+    id = uma_fallen_empire.30
+	title = uma_fallen_empire.30.title #秋川弥生
+	desc = uma_fallen_empire.30.desc #欢！迎！
+	#picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.30.a #很高兴认识你
+	}
+}
+
+
+
+###如果一段時間沒有找到墮落，堕落就会来找你###（之后要改成游戏开始触发的事件）
+country_event = {
+	id = uma_fallen_empire.40
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	mean_time_to_happen = {
+		days = 29400
+	}
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		NOT = { has_communications = event_target:uma_fallen_empire }
+	}
+
+	immediate = {
+		country_event = { id = uma_fallen_empire.10 }
+		establish_communications_no_message = event_target:uma_fallen_empire
+	}
+	 
 }

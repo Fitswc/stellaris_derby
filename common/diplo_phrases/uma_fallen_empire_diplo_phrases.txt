@@ -1,0 +1,262 @@
+###数码注：这里的发言，是指建立联系后，和堕落对话时，堕落给你说的话
+
+
+greetings = {
+	###马娘堕落帝国在中立态度时的发言（玩家为马娘文明）
+	01_UMA_FALLEN_NEUTRAL = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}			
+		}
+	}
+
+	02_UMA_FALLEN_NEUTRAL = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}			
+		}
+	}
+
+	03_UMA_FALLEN_NEUTRAL = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}			
+		}
+	}
+
+	04_UMA_FALLEN_NEUTRAL = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}			
+		}
+	}
+
+	05_UMA_FALLEN_NEUTRAL = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}			
+		}
+	}
+
+	###马娘堕落帝国在宠幸态度时的发言（玩家为马娘文明）
+	01_UMA_FALLEN_PATRONIZING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_patronizing_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	02_UMA_FALLEN_PATRONIZING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_patronizing_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	03_UMA_FALLEN_PATRONIZING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_patronizing_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	04_UMA_FALLEN_PATRONIZING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_patronizing_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	05_UMA_FALLEN_PATRONIZING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_patronizing_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	###马娘堕落帝国在傲慢态度时的发言（玩家为马娘文明）
+	01_UMA_FALLEN_DISMISSIVE = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_dismissive_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+	
+	02_UMA_FALLEN_DISMISSIVE = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_dismissive_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	###马娘堕落帝国在愤怒态度时的发言（玩家为马娘文明）
+	01_UMA_FALLEN_ANGRY = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_angry_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	02_UMA_FALLEN_ANGRY = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_angry_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	03_UMA_FALLEN_ANGRY = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_angry_to = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	###马娘堕落帝国在双方交战态度时的发言（玩家为马娘文明）
+	01_UMA_FALLEN_WAR_GREEING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_at_war_with = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	02_UMA_FALLEN_WAR_GREEING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_at_war_with = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	03_UMA_FALLEN_WAR_GREEING = {
+		weight = {
+			weight = 10000
+		}
+		trigger = {
+			has_authority = auth_uma_fallen_empire
+			NOT = { is_at_war_with = FROM }
+			is_at_war_with = FROM
+			from = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+}

@@ -60,7 +60,17 @@ uma_six_crown_racing_umamusume = {
 	planet_jobs_produces_mult = 0.15
 }
 
+#好转一息
+uma_skill_haozhuanyixi = {
+	ship_armor_mult = 0.1
+	ship_shield_mult = 0.1
+}
 
+#一文字
+uma_skill_yiwenzi = {
+	ship_interstellar_speed_mult = 0.20
+	ship_fire_rate_mult = 0.20
+}
 
 ####小型事件修正
 #加大甜品供应
@@ -378,4 +388,24 @@ uma_umamusume_diary = {
 
 tachyon_coffee_conspiracy = {
 	###预留
+}
+
+#堕落帝国的作弊buff（数值还需要商榷）
+uma_fallen_empire_enhancement_modifier = {
+	country_base_influence_produces_add = 3
+	all_technology_research_speed = 2
+	pop_growth_speed = -0.5
+	planet_pops_upkeep_mult = -0.5
+	ship_weapon_range_mult = 0.5
+	ship_fire_rate_mult = 1
+	ship_hull_mult = 20
+	ship_armor_mult = 20
+	ship_shield_mult = 20
+	ship_weapon_damage = 20
+	ships_upkeep_mult = -0.95
+	leaders_upkeep_mult = -0.95
+	starbases_upkeep_mult = -0.95
+	planet_pops_upkeep_mult = -0.95
+	planet_jobs_upkeep_mult = -0.95
+	country_resource_max_add = 300000
 }
