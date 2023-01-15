@@ -1,0 +1,59 @@
+﻿l_english:
+#临时性本地化/兔兔
+#English Localisation: F
+#civic
+civic_uma_candleoff:0 "§RCandle Burned,Light Death§!"
+civic_uma_candleoff_desc:0"Maybe it's because of the war, or maybe it's because they were born that way. This Umamusume civilization abhors all other creatures. Their notoriety is not known in the universe; Perhaps only death can bring them peace of mind... No matter which side."
+civic_uma_candleoff_effects:0"-The other country's appraise to us will:§R-1000§!\n-Total war justification can be used against other countries"$war_goal_wg_uma_candleoff$"\n-Allow us to use "$bombardment_uma_lightoff$"Orbital Bombardment Attitude\n-Allow us to use “§BBody to fire§!”Purification method\n-§RWar will be declared immediately when contact is established with other civilizations§!"
+
+#战争相关
+cb_uma_candleoff:0"Burn Candle"
+war_goal_wg_uma_candleoff:0"§RBurn Candle§!"
+war_goal_wg_wg_uma_candleoff_desc:0 "This war is to cleanse the galaxy of alien aliens that are polluting it"
+bombardment_uma_lightoff:0"§HDeath Light§!"
+bombardment_uma_lightoff_desc:0"The light of a star is not as bright as the fire of our ships, and the only purpose of orbital bombardment is to destroy enemy's colonies-To §RArmys§! Cause §RLethal§! Damage\n-To §RPlanet §! Cause §RLethal§! Damage\n-To §RPopulation§! Cause §RLethal§! Damage\n-§RIt will destroy the colony§!\n-Will bombard undefended planets\n-Not valid for special planets such as $pc_ai$"
+
+#净化方式
+purge_types_uma_Cremation_1:0"Body to fire"
+purge_types_uma_Cremation_1_tooltip:0"The affected population will be the fuel for Thoresen to move forward, and they should be honored to do it"
+purge_types_uma_Cremation_1_tooltip_delayed:0"Produces a small amount of £unity£ §YUnity§! And£society£ §YSociological Research§!"
+purge_types_uma_Cremation_2:0"Body to fire"
+purge_types_uma_Cremation_2_tooltip:0"The affected population will be the fuel for Thoresen to move forward, and they should be honored to do it"
+purge_types_uma_Cremation_2_tooltip_delayed:0"Produces a Middle amount of £unity£ §YUnity§! And £society£ §YSociological Research§!"
+purge_types_uma_Cremation_3:0"Body to fire"
+purge_types_uma_Cremation_3_tooltip:0"The affected population will be the fuel for Thoresen to move forward, and they should be honored to do it"
+purge_types_uma_Cremation_3_tooltip_delayed:0"Produces a Large amount of £unity£ §YUnity§! And £society£ §YSociological Research§!"
+
+#政策
+policy_uma_fuel_convertion_mode:0"Choice the method of Body to fire"
+policy_uma_fuel_convertion_small:0"§PSlow fire§!"
+policy_uma_fuel_convertion_small_name:0"§PSlow fire§!"
+policy_uma_fuel_convertion_small_desc:0"Gentle purification that provides a trace output bonus to the planet"
+policy_uma_fuel_convertion_medium:0"§HStrong fire§!"
+policy_uma_fuel_convertion_medium_name:0"§HStrong fire§!"
+policy_uma_fuel_convertion_medium_desc:0"A fast purification method that provides a medium output bonus to the planet"
+policy_uma_fuel_convertion_big:0"§BPlasma§!"
+policy_uma_fuel_convertion_big_name:0"§BPlasma§!"
+policy_uma_fuel_convertion_big_desc:0"Purification at the fastest rate, providing huge output bonuses to the planets"
+policy_uma_fuel_convertion_stop:0"Disable"
+policy_uma_fuel_convertion_stop_name:0"Disable"
+policy_uma_fuel_convertion_stop_desc:0"Stop using Candle Burned,Light Death exclusive purification method"
+
+#净化岗位
+job_uma_fuel_purge_small:0"Slow fire Fuel"
+job_uma_fuel_purge_small_plural:0"Slow fire Fuel"
+job_uma_fuel_purge_small_desc:0"Slow burning releases energy, providing a trace resource yield bonus to the planet"
+job_uma_fuel_purge_medium:0"Strong fire Fuel"
+job_uma_fuel_purge_medium_plural:0"Strong fire Fuel"
+job_uma_fuel_purge_medium_desc:0"Fast burning releases energy and provides medium resource yield bonuses to planets"
+job_uma_fuel_purge_big:0"Plasma Fuel"
+job_uma_fuel_purge_big_plural:0"Plasma Fuel"
+job_uma_fuel_purge_big_desc:0"A violent nuclear reaction occurs releasing massive amounts of energy, providing the planet with a huge resource yield boost"
+
+
+
+
+
+
+
+

@@ -257,9 +257,9 @@ uma_fallen_empire_system_initializer_1 = {
                 add_district = district_uma_dormitory
             }
             while = {
-                count = 100
+                count = 120
                 create_pop = {
-                    species = owner_main_species
+                    species = event_target:uma_fallen_empire_species
                 }
             }
             # while = {

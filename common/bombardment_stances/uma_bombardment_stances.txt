@@ -1,0 +1,22 @@
+#轨道轰炸
+#“光殇”轨道轰炸
+uma_light_off = {
+	trigger = {
+		owner = {
+			has_civic = civic_uma_candleoff
+		}
+	}
+	default = no
+	stop_when_armies_dead = no
+	abduct_pops = no
+	planet_damage = 0.2
+	army_damage = 50
+	kill_pop_chance = {
+		base = 0
+	}
+	min_pops_to_kill_pop = 0
+	ai_weight = {
+		weight = 0
+	}
+
+} 

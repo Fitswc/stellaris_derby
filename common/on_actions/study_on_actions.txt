@@ -1,0 +1,12 @@
+
+
+
+# Executed right after country has established communications with another country
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+		uma_civics_event.1
+		uma_civics_event.2
+	}
+}

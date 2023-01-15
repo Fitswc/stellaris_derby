@@ -1,0 +1,47 @@
+﻿l_english:
+######政策######
+policy_uma_racing_umamusume_policy:0 "Tournament Operation Policy"
+policy_uma_racing_umamusume_policy_desc:0 "As we standardize the tournaments we run in the country, we need to develop a proper set of operational guidelines for these tournaments."
+uma_racing_umamusume_policy_tradition:0 "Maintaining Tradition"
+uma_racing_umamusume_policy_tradition_name:0 "Maintaining Tradition"
+uma_racing_umamusume_policy_tradition_desc:0 "Horse racing is a tradition that has been handed down from our ancestors by the Umamusume, and we should hold the race in this traditional way."
+uma_racing_umamusume_policy_business:0 "Commercial operation"
+uma_racing_umamusume_policy_business_name:0 "Commercial operation"
+uma_racing_umamusume_policy_business_desc:0 "By allowing corporate sponsorship of the race and creating various race prizes, we can get the Umamusume more motivated to participate in the race and show their strengths."
+uma_racing_umamusume_policy_glory:0 "Battle of Glory"
+uma_racing_umamusume_policy_glory_name:0 "Battle of Glory"
+uma_racing_umamusume_policy_glory_desc:0 "The race has always been used to determine the most powerful Umamusume, and the champions should not receive material rewards, but rather endless glory."
+
+
+policy_uma_trade_policy:0 "Thoresen Academy-Trade Policy"
+policy_uma_trade_policy_desc:0 "$uma$Trade tendency in the future\n§HWill take priority over the conventional trade policy§!"
+
+trade_policy_uma_basic_resources_trading:0 "§GRaw materials Import§!"
+trade_policy_uma_basic_resources_trading_name:0 "$trade_policy_uma_basic_resources_trading$"
+trade_policy_uma_basic_resources_trading_desc:0 "Import the raw material, and process them, then sell them\n\n§EEach £trade_value£ §YTrade Value§! We get will contribute £energy£ §Y0.5§!、£minerals£ §Y0.5§! and £food£ §Y0.5§!§! to us."
+
+trade_policy_uma_industry_trading:0 "§SProcessed products Import§!"
+trade_policy_uma_industry_trading_name:0 "$trade_policy_uma_industry_trading$"
+trade_policy_uma_industry_trading_desc:0 "Import the processed product, Naturally It is more expensive than raw materials\n\n§EEach £trade_value£ §YTrade Value§!We get Will contribute£consumer_goods£ §Y0.25§! and £alloys£ §Y0.125§!§! to us."
+
+trade_policy_uma_strategic_resources_trading:0 "§HStrategic Resources Import§!"
+trade_policy_uma_strategic_resources_trading_name:0 "$trade_policy_uma_strategic_resources_trading$"
+trade_policy_uma_strategic_resources_trading_desc:0 "Spend higher cost to import the indispensable strategic resources\n\n§EEach £trade_value£ §YTrade Value§! Will contribute £volatile_motes£ §Y0.05§!、£rare_crystals£ §Y0.05§!和£exotic_gases£ §Y0.05§!§! to us."
+requires_KZ_VOY_resources_mining_capacity:0 "$TRIGGER_FAIL$§RNeed to have the ability to extract or smelt the relevant resources§!"
+
+trade_policy_uma_cultural_output:0 "§ECulture Output§!"
+trade_policy_uma_cultural_output_name:0 "$trade_policy_uma_cultural_output$"
+trade_policy_uma_cultural_output_desc:0 "Spreading our philosophy and image to every planet where we trade\n\n§EEach £trade_value£ §YTrade Value§! Will contribute £unity£ §Y0.25§!,and £influence£ §Y0.001§!§! to us."
+
+trade_policy_uma_research_support:0 "§BResearch Grants§!"
+trade_policy_uma_research_support_name:0 "$trade_policy_uma_research_support$"
+trade_policy_uma_research_support_desc:0 "Sponsorship the research of every scientific organization, Whatever it is official and private\n\n§EEach £trade_value£ §YTrade Value§! Will contribute £physics£ §Y0.125§!,£society£ §Y0.125§! and £engineering£ §Y0.125§!§! to us"
+
+trade_policy_uma_crystal_carrot_import:0"§MCrystal Carrot Develop§!"
+trade_policy_uma_crystal_carrot_import_name:0"§MCrystal Carrot Develop§!"
+trade_policy_uma_crystal_carrot_import_desc:0"Invest in crystal carrot mining around the world as a way to obtain crystal carrot resources\n\n§EEach £trade_value£ §YTrade Value§! Will contribute £uma_crystal_carrot£ §Y0.5§!§! to us"
+
+trade_policy_uma_vanilla:0"§RDisable"
+trade_policy_uma_vanilla_name:0 "§RDisable"
+trade_policy_uma_vanilla_desc:0 "Disable Thoresen Academy's Trade Policy"
+

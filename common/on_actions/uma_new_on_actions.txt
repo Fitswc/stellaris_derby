@@ -1,0 +1,17 @@
+#####飞船进入一个星系后的事件#####
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		uma_fallen_empire.21 #飞船开进堕落疆域旁
+	}
+}
+
+
+####只有一次
+on_entering_system_first_time = {
+	events = {
+		#wg_boss.10000
+	}
+}

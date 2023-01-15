@@ -6,6 +6,7 @@ on_game_start = {
 		uma_nice_nature.1 #内恰通讯页面初始化
 		#uma_shop_center.1
 		uma_fallen_empire.3 #创建堕落帝国（前导事件）
+		uma_fallen_empire.1000
 	}
 }
 
@@ -53,6 +54,7 @@ on_custom_diplomacy = {
 		uma_threegodness_rd.2 #进入主菜单的前置页面
 		uma_shop_center.3 #进入商城的前置页面
 		uma_nice_nature.2 #进入优秀素质的前置界面
+		uma_fallen_empire.1001
 	}
 }
 
@@ -152,5 +154,35 @@ on_entering_system_first_time = {
 	events = {
 		uma_fallen_empire.21
 		tachyon_coffee.1
+	}
+}
+
+on_tech_increased = {
+	events = {
+		uma_fallen_empire.1111
+	}
+}
+
+on_building_complete = {
+	events = {
+		uma_fallen_empire.1121
+	}
+}
+
+on_ship_built = {
+	events = {
+		uma_fallen_empire.1131
+	}
+}
+
+on_colonized = {
+	events = {
+		uma_fallen_empire.1141
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		uma_fallen_empire.1151
 	}
 }

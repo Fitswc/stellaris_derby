@@ -1,0 +1,61 @@
+spriteTypes = {
+	####堕落帝国GUI所用的一切素材（前缀fgui）####
+
+	###界面背景
+	spriteType = {
+		name = "GFX_uma_fgui_background"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_background.dds"
+	}
+
+	###五个交互按钮+退出按钮
+	spriteType = {
+		name = "GFX_uma_fgui_button_canguan"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_canguan.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_diaochazhinan"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_diaochazhinan.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_jiaoliu"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_jiaoliu.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_renwu"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_renwu.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_ziyuanjiaohuan"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_ziyuanjiaohuan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_fgui_button_exit"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_exit.dds"
+	}
+
+	###访问页面
+	spriteType = {
+		name = "GFX_uma_fgui_city_center"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_city_center.dds"
+	}
+
+	#四位的头像
+	spriteType = {
+		name = "GFX_uma_fgui_button_seiunsky"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_seiunsky.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_agnesdigital"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_agnesdigital.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_oguricap"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_oguricap.dds"
+	}
+	spriteType = {
+		name = "GFX_uma_fgui_button_administrator"
+		texturefile = "gfx/interface/uma_fallen_empire_gui/uma_fgui_button_administrator.dds"
+	}
+
+}

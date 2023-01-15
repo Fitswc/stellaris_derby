@@ -1,0 +1,189 @@
+###########################堕落帝国GUI#########################
+
+#参观指南
+uma_fgui_diaochazhinan_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+		NOT = { has_country_flag = uma_fallen_empire_have_opened_visit_hint }  ###限制玩家打开多个事件
+    }
+    effect = {
+        set_country_flag = uma_fallen_empire_have_opened_visit_hint
+        country_event = {
+			id = uma_fallen_empire.300
+		}
+    }
+}
+
+#参观
+uma_fgui_diaochazhinan_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+		#NOT = { has_country_flag = XXX }  ###限制玩家打开多个事件
+    }
+    effect = {
+        country_event = {
+			id = uma_fallen_empire.400
+		}
+    }
+}
+
+#任务
+uma_fgui_renwu_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+		#NOT = { has_country_flag = XXX }  ###限制玩家打开多个事件
+    }
+    effect = {
+        country_event = {
+			id = uma_fallen_empire_gui.3  ####这里留给tom
+		}
+    }
+}
+
+#资源交换
+uma_fgui_ziyuanjiaohuan_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+		NOT = { has_country_flag = uma_fallen_empire_resourses_trading_cooldown }
+    }
+    effect = {
+        country_event = {
+			id = uma_fallen_empire.102
+		}
+    }
+}
+
+#交流
+uma_fgui_jiaoliu_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+		NOT = { has_country_flag = uma_fallen_empire_have_opened_communication }  ###限制玩家打开多个事件
+    }
+    effect = {
+        set_country_flag = uma_fallen_empire_have_opened_communication
+        country_event = {
+			id = uma_fallen_empire.100
+		}
+    }
+}
+
+####参观按钮####
+
+#理事长
+uma_visit_lishizhang_effect = {
+    potential = {
+        always = yes
+        ###这只是第一阶段的参观
+    }
+    allow = {
+        custom_tooltip = {
+			fail_text = "uma_must_be_wait_for_cooldown"
+			NOT = { has_modifier = uma_fallen_empire_visit_cooldown }
+		}
+    }
+    effect = {
+        hidden_effect = {
+            if = {
+                limit = { NOT = { has_country_flag = uma_complete_fallen_empire_visit_1 } }
+                country_event = {
+                    id = uma_fallen_empire.200
+                }
+            }
+            else = {
+                country_event = {
+                    id = uma_fallen_empire.206
+                }
+            }
+        }
+    }
+}
+
+#sky
+uma_visit_sky_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+			fail_text = "uma_only_one_special_visit"
+			NOT = { has_country_flag = uma_sky_visit_start }
+		}
+        custom_tooltip = {
+			fail_text = "uma_has_special_leader"
+			exists = event_target:uma_is_leader_seiun_sky
+		}
+    }
+    effect = {
+        set_country_flag = uma_sky_visit_finish
+        hidden_effect = {
+            country_event = {
+                id = uma_fallen_empire.240
+            }
+        }
+    }
+}
+
+#oguri
+uma_visit_sky_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+			fail_text = "uma_only_one_special_visit"
+			NOT = { has_country_flag = uma_oguri_visit_finish }
+		}
+        custom_tooltip = {
+			fail_text = "uma_has_special_leader"
+			exists = event_target:uma_is_leader_oguri_cap
+		}
+    }
+    effect = {
+        set_country_flag = uma_oguri_visit_finish
+        hidden_effect = {
+            country_event = {
+                id = uma_fallen_empire.243
+            }
+        }
+    }
+}
+
+#数码
+uma_visit_sky_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        custom_tooltip = {
+			fail_text = "uma_only_one_special_visit"
+			NOT = { has_country_flag = uma_digital_visit_finish }
+		}
+        custom_tooltip = {
+			fail_text = "uma_has_special_leader"
+			exists = event_target:uma_is_leader_agnes_digital
+		}
+    }
+    effect = {
+        set_country_flag = uma_digital_visit_finish
+        hidden_effect = {
+            country_event = {
+                id = uma_fallen_empire.246
+            }
+        }
+    }
+}

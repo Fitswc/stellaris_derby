@@ -1,0 +1,85 @@
+#贸易政策（第一个为默认）
+
+uma_basic_resources_trading = {
+	potential = {
+		has_policy_flag = trade_policy_uma_basic_resources_trading
+	}
+	weight = {
+		weight = 100 #默认值为10，权重高者优先应用
+	}
+	conversion_rate = {
+		energy = 0.5
+		minerals = 0.5
+		food = 0.5
+	}
+	economic_category = trade_routes
+}
+uma_industry_trading = {
+	potential = {
+		has_policy_flag = trade_policy_uma_industry_trading
+	}
+	weight = {
+		weight = 100
+	}
+	conversion_rate = {
+		consumer_goods = 0.25
+		alloys = 0.125
+	}
+	economic_category = trade_routes
+}
+uma_strategic_resources_trading = {
+	potential = {
+		has_policy_flag = trade_policy_uma_strategic_resources_trading
+	}
+	weight = {
+		weight = 100
+
+	conversion_rate = {
+		volatile_motes = 0.05
+		rare_crystals = 0.05
+		exotic_gases = 0.05
+	}
+	economic_category = trade_routes
+}
+
+uma_cultural_output = {
+	potential = {
+		has_policy_flag = trade_policy_uma_cultural_output
+	}
+	weight = {
+		weight = 100
+	}
+	conversion_rate = {
+		unity = 0.25
+		influence = 0.001
+	}
+	economic_category = trade_routes
+}
+
+uma_research_support = {
+	potential = {
+		has_policy_flag = trade_policy_uma_research_support
+	}
+	weight = {
+		weight = 100
+	}
+	conversion_rate = {
+		physics_research = 0.125
+		society_research = 0.125
+		engineering_research = 0.125
+	}
+	economic_category = trade_routes
+}
+uma_crystal_carrot_import = {
+	potential = {
+		has_policy_flag = trade_policy_uma_crystal_carrot_import
+	}
+	weight = {
+		weight = 100
+	}
+	conversion_rate = {
+		uma_crystal_carrot = 0.5
+	}
+    economic_category = trade_routes
+}
+

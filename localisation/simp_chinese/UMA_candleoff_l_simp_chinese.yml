@@ -1,0 +1,57 @@
+﻿l_simp_chinese:
+#临时性本地化/兔兔
+#civic
+civic_uma_candleoff:0 "§R烛尽光殇§!"
+civic_uma_candleoff_desc:0"或许是因为战争，也或许是因为他们生来如此。这个马娘文明无比厌恶所有其他生物。她们的恶名在宇宙中无人不知；或许只有死亡才能够给她们带来内心的宁静……不管是哪方死亡"
+civic_uma_candleoff_effects:0"其他国家对我方的评价:§R-1000§!\n§R与其他文明建立联系时将会立刻宣战§!\n对其他国家可使用全面战争理由"$war_goal_wg_uma_candleoff$"\n允许使用"$bombardment_uma_lightoff$"轨道轰炸姿态"
+
+
+#war
+cb_uma_candleoff:0"灭烛"
+war_goal_wg_uma_candleoff:0"§R灭烛§!"
+war_goal_wg_wg_uma_candleoff_desc:0 "这场战争是为了净化污染银河系的外星异种"
+bombardment_uma_lightoff:0"§R光殇§!"
+bombardment_uma_lightoff_desc:0"恒星的光亮也不及我们舰船的火光，进行轨道轰炸的唯一目的就是摧毁敌人的殖民地-对§R陆军§!造成§R致命§!伤害\n-对§R星球§!造成§R致命§!伤害\n-对§R人口§!造成§R致命§!伤害\n-§R将会摧毁殖民地§!\n-将会轰炸不设防的星球\n-对$pc_ai$等特殊星球无效""
+
+#净化方式
+purge_types_uma_Cremation_1:0"残躯化火"
+purge_types_uma_Cremation_1_tooltip:0"受影响的人口将会成为特雷森前进的燃料，他们应为此感到荣幸"
+purge_types_uma_Cremation_1_tooltip_delayed:0"产出少量的£unity£ §Y凝聚力§!和£society£ §Y社会学研究§!"
+purge_types_uma_Cremation_2:0"残躯化火"
+purge_types_uma_Cremation_2_tooltip:0"受影响的人口将会成为特雷森前进的燃料，他们应为此感到荣幸"
+purge_types_uma_Cremation_2_tooltip_delayed:0"产出中等的£unity£ §Y凝聚力§!和£society£ §Y社会学研究§!"
+purge_types_uma_Cremation_3:0"残躯化火"
+purge_types_uma_Cremation_3_tooltip:0"受影响的人口将会成为特雷森前进的燃料，他们应为此感到荣幸"
+purge_types_uma_Cremation_3_tooltip_delayed:0"产出大量的£unity£ §Y凝聚力§!和£society£ §Y社会学研究§!"
+
+#政策
+policy_uma_fuel_convertion_mode:0"残躯化火方式选择"
+policy_uma_fuel_convertion_small:0"§P文火§!"
+policy_uma_fuel_convertion_small_name:0"§P文火§!"
+policy_uma_fuel_convertion_small_desc:0"温和的净化方式，为行星提供微量的产出加成"
+policy_uma_fuel_convertion_medium:0"§H武火§!"
+policy_uma_fuel_convertion_medium_name:0"§H武火§!"
+policy_uma_fuel_convertion_medium_desc:0"快速的净化方式，为行星提供中等的产出加成"
+policy_uma_fuel_convertion_big:0"§B等离子态§!"
+policy_uma_fuel_convertion_big_name:0"§B等离子态§!"
+policy_uma_fuel_convertion_big_desc:0"以最快的速率进行净化，为行星提供巨等的产出加成"
+policy_uma_fuel_convertion_stop:0"停用"
+policy_uma_fuel_convertion_stop_name:0"停用"
+policy_uma_fuel_convertion_stop_desc:0"停止使用烛尽光殇专属净化方式"
+
+#净化岗位
+job_uma_fuel_purge_small:0"文火燃料"
+job_uma_fuel_purge_small_plural:0"文火燃料"
+job_uma_fuel_purge_small_desc:0"缓慢的燃烧释放能量，为行星提供微量资源产出加成"
+job_uma_fuel_purge_medium:0"武火燃料"
+job_uma_fuel_purge_medium_plural:0"武火燃料"
+job_uma_fuel_purge_medium_desc:0"快速的燃烧释放能量，为行星提供中等资源产出加成"
+job_uma_fuel_purge_big:0"等离子态燃料"
+job_uma_fuel_purge_big_plural:0"等离子态燃料"
+job_uma_fuel_purge_big_desc:0"发生猛烈的核反应释放出大量能量，为行星提供巨量资源产出加成"
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+
+civic_uma_candleoff = { #烛尽光殇
+    modification = no
+	potential = {
+		authority = {
+			value = auth_trainingcenter
+		}
+	}
+	random_weight = {
+		weight = 5
+	}
+	modifier = {
+		country_starbase_influence_cost_mult = -0.75
+		ship_hull_mult = 1.0
+		ship_fire_rate_mult = 1.0
+		ship_weapon_damage = 1.0
+		ship_hull_regen_add_perc = 1
+		ship_armor_regen_add_perc = 1
+		starbase_shipyard_build_speed_mult = 0.50
+		starbase_shipyard_build_cost_mult = -0.50
+		army_damage_mult = 0.75
+		country_war_exhaustion_mult = -0.50
+		country_naval_cap_mult = 1.0
+		
+	}
+	
+}

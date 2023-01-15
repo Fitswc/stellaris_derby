@@ -1,0 +1,406 @@
+namespace = uma_leader
+###给领袖加特质的事件
+
+country_event = {
+	id = uma_leader.1
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = uma_trait_honorseeker }
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				random_list = {
+					1 = {
+						add_trait = uma_admiral_trait_symbolihonor
+					}
+					1 = {
+						add_trait = uma_admiral_trait_mejirohonor
+					}
+					8 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				random_list = {
+					1 = {
+						add_trait = uma_general_trait_symbolihonor
+					}
+					1 = {
+						add_trait = uma_general_trait_mejirohonor
+					}
+					8 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_leader.2
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = uma_trait_leadercharm }
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				random_list = {
+					1 = {
+						add_trait = uma_admiral_trait_charmleader
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				random_list = {
+					1 = {
+						add_trait = uma_governor_trait_charmleader
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				random_list = {
+					1 = {
+						add_trait = uma_ruler_trait_charmleader
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				random_list = {
+					1 = {
+						add_trait = uma_general_trait_charmleader
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_leader.3
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = uma_trait_kishouyasashii }
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				random_list = {
+					1 = {
+						add_trait = uma_governor_trait_kishouyasashii
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				random_list = {
+					1 = {
+						add_trait = uma_scientist_trait_kishouyasashii
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_leader.4
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = uma_trait_kishouhageshii }
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				random_list = {
+					1 = {
+						add_trait = uma_admiral_trait_kishouhageshii
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				random_list = {
+					1 = {
+						add_trait = uma_general_trait_kishouhageshii
+					}
+					9 = {
+	
+					}
+	
+				}
+				break = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_leader.5
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = trait_uma_terriroty_awake }
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = uma_admiral_trait_terriroty_awake
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = uma_general_trait_terriroty_awake
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = uma_governor_trait_terriroty_awake
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = uma_scientist_trait_terriroty_awake
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = uma_ruler_trait_terriroty_awake
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+		}
+	}
+}
+
+########
+###特殊：马娘种族专有的干劲特质添加（生成时）
+country_event = {
+	id = uma_leader.6
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		from = {
+			species = { has_trait = uma_trait_musume }
+		}
+	}
+
+	immediate = {
+		from = {
+			uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+		}
+	}
+}
+
+###浮动干劲
+country_event = {
+	id = uma_leader.7
+	is_triggered_only = yes
+    hide_window = yes
+
+	trigger = {
+		# from = {
+		# 	species = {
+		# 		OR = { 
+		# 			has_trait = uma_trait_musume
+		# 			has_trait = uma_trait_musume1
+		# 			has_trait = uma_trait_musume2
+		# 		}
+		# 	}
+		# }
+		has_authority = auth_trainingcenter
+	}
+
+	immediate = {
+		every_owned_leader = {
+			uma_random_change_leader_yaruki_effect = yes #检测是否有漏掉没加的干劲，随机浮动心情特质
+		}
+		every_pool_leader = {
+			uma_random_change_leader_yaruki_effect = yes #随机浮动心情特质
+		}
+	}
+}
+
+
+# ###初始化领袖干劲（leader6事件已经代劳了）
+# planet_event = {
+# 	id = uma_leader.8
+# 	is_triggered_only = yes
+#     hide_window = yes
+
+# 	trigger = {
+# 		owner = {
+# 		has_authority = auth_trainingcenter
+# 		}
+# 	}
+
+# 	immediate = {
+# 		###为了避免吃到debuff导致初期发展受阻，我只会给中性或者buff
+# 		owner = {
+# 			every_owned_leader = {
+# 				if = {
+# 					limit = { leader_class = admiral }
+# 					random_list = {
+# 						6 = {
+# 							add_trait = uma_admiral_trait_yaruki_5
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_admiral_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_admiral_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+# 						}
+# 					}
+# 				}
+# 				if = {
+# 					limit = { leader_class = general }
+# 					random_list = {
+# 						6 = {
+# 							add_trait = uma_general_trait_yaruki_5
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_general_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_general_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+# 						}
+# 					}
+# 				}
+# 				if = {
+# 					limit = { leader_class = governor }
+# 					random_list = {
+# 						6 = {
+# 							add_trait = uma_governor_trait_yaruki_5
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_governor_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_governor_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+# 						}
+# 					}
+# 				}
+# 				if = {
+# 					limit = { leader_class = scientist }
+# 					random_list = {
+# 						6 = {
+# 							add_trait = uma_scientist_trait_yaruki_5
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_scientist_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_scientist_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+# 						}
+# 					}
+# 				}
+# 				###注：统治者锁定绝好调
+# 				if = {
+# 					limit = { leader_class = ruler }
+# 					add_trait = uma_ruler_trait_yaruki_5
+# 					add_ruler_trait = uma_ruler_trait_yaruki_5
+# 				}
+# 			}
+# 			every_pool_leader = {
+# 				uma_initialize_leader_yaruki_effect = yes
+# 			}
+# 		}
+# 	}
+# }

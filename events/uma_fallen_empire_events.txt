@@ -480,11 +480,12 @@ country_event = {
 				}
 			}
 		}
-		# hidden_effect = {
-		# 	country_event = {
-		# 		id = uma_fallen_empire.15
-		# 	}
-		# }
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.15
+			   days = 60
+			}
+	    }
 	}
 
 }
@@ -690,5 +691,3359 @@ country_event = {
 		country_event = { id = uma_fallen_empire.10 }
 		establish_communications_no_message = event_target:uma_fallen_empire
 	}
+}
+
+
+
+####开启堕落主界面
+country_event = {
+    id = uma_fallen_empire.15
+	title = uma_fallen_empire.15.title
+	desc = uma_fallen_empire.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	immediate = {
+        random_country = {
+            limit = { is_country_type = uma_fallen_empire_communication_enclave	 }
+            save_event_target_as = uma_is_fe_office
+        }
+    }
+
+	option = {
+		name = uma_fallen_empire.15.a #知道了
+		establish_communications_no_message = event_target:uma_is_fe_office
+		custom_tooltip = uma_fallen_empire_connection_office_hint
+	}
+
+}
+
+# ###堕落自动建立通讯事件###（用于补充原版的通讯的，马娘帝国专属） [我猜，这个是直接得到视野后联系的] [对应原版 fallen_empire.10]
+# country_event = {
+# 	id = uma_fallen_empire.20
+# 	title = OK
+# 	desc = OK
+
+# 	hide_window = yes
+
+# 	mean_time_to_happen = {
+# 		months = 3
+# 	}
+
+# 	trigger = {
+# 		is_uma_fallen_empire = yes
+# 		is_at_war = no
+# 		any_country = {
+# 			OR = {
+# 				is_country_type = default
+# 				is_country_type = fallen_empire
+# 			}
+# 			NOT = { has_communications = root }
+# 			OR = {
+# 				any_system_within_border = {
+# 					any_neighbor_system = {
+# 						has_hyperlane_to = prev
+# 						is_owned_by = root
+# 					}
+# 				}
+# 				is_country_type = fallen_empire
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				OR = {
+# 					is_country_type = default
+# 					is_country_type = fallen_empire
+# 				}
+# 				NOT = { has_communications = root }
+# 				OR = {
+# 					any_system_within_border = {
+# 						any_neighbor_system = {
+# 							has_hyperlane_to = prev
+# 							is_owned_by = root
+# 						}
+# 					}
+# 					is_country_type = fallen_empire
+# 				}
+# 			}
+
+# 			establish_communications_no_message = root
+# 			root = { save_event_target_as = uma_contact_empire }
+
+# 			if = {
+# 				limit = {
+# 					has_authority = auth_trainingcenter
+# 				}
+# 				country_event = { id = uma_fallen_empire.10 }
+# 			}
+# 			else = {
+# 				country_event = { id = uma_fallen_empire.30 }
+# 			}
+# 		}
+# 	}
+
+
+# }
+
+
+###进入堕落疆域的事件###（补充的，马娘帝国专属） 【我猜，这个大概是舰队到边上的】 【对应原版On_action.40】
+fleet_event = {
+	id = uma_fallen_empire.21
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_country_type = default }
+		from = {
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						is_uma_fallen_empire = yes
+						NOT = { has_communications = root.owner }
+					}
+				}
+				any_neighbor_system = {
+					exists = space_owner
+					space_owner = {
+						is_uma_fallen_empire = yes
+						NOT = { has_communications = root.owner }
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					exists = space_owner
+					space_owner = {
+						is_uma_fallen_empire = yes
+						NOT = { has_communications = root.owner }
+					}
+				}
+				space_owner = { save_event_target_as = uma_contact_empire }
+			}
+			else = {
+				random_neighbor_system = {
+					limit = {
+						exists = space_owner
+						space_owner = {
+							is_uma_fallen_empire = yes
+							NOT = { has_communications = root.owner }
+						}
+					}
+					space_owner = { save_event_target_as = uma_contact_empire }
+				}
+			}
+		}
+
+		owner = {
+			# establish_communications = {
+			# 	who = event_target:uma_contact_empire
+			# 	location = event_target:uma_contact_empire.capital_scope
+			# }
+			establish_communications_no_message = event_target:uma_contact_empire
+			if = {
+				limit = {
+					has_authority = auth_trainingcenter
+					is_ai = no
+				}
+				country_event = { id = uma_fallen_empire.10 }
+			}
+			else = {
+				country_event = { id = uma_fallen_empire.30 }
+			}
+		}
+	}
+
+}
+
+
+
+
+
+####堕落和一般帝国建立联系
+country_event = {
+    id = uma_fallen_empire.30
+	title = uma_fallen_empire.30.title #秋川弥生
+	desc = uma_fallen_empire.30.desc #欢！迎！
+	#picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.30.a #很高兴认识你
+	}
+}
+
+
+
+###如果一段時間沒有找到墮落，堕落就会来找你###（之后要改成游戏开始触发的事件）
+country_event = {
+	id = uma_fallen_empire.40
+	title = OK
+	desc = OK
+
+	hide_window = yes
+
+	mean_time_to_happen = {
+		days = 29400
+	}
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		NOT = { has_communications = event_target:uma_fallen_empire }
+	}
+
+	immediate = {
+		country_event = { id = uma_fallen_empire.10 }
+		establish_communications_no_message = event_target:uma_fallen_empire
+	}
 	 
+}
+
+
+
+###接下来就是堕落的机制事件了！
+
+###交流界面1
+country_event = {
+    id = uma_fallen_empire.100
+	title = uma_fallen_empire.100.title #秋川弥生
+	desc = uma_fallen_empire.100.desc
+	desc = uma_fallen_empire.100.desc2
+	desc = uma_fallen_empire.100.desc3
+	desc = uma_fallen_empire.100.desc4
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###为什么叫“遗落特雷森”呢
+	option = {
+		name = uma_fallen_empire.100.a #
+		response_text = uma_fallen_empire.100.a.response
+		is_dialog_only = yes
+	}
+
+	###初次见面时的声音...
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_1 #首次参观
+		}
+		name = uma_fallen_empire.100.b
+		response_text = uma_fallen_empire.100.b.response
+		is_dialog_only = yes
+	}
+
+	###关于马娘们的体质...
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_1 #首次参观
+		}
+		name = uma_fallen_empire.100.c
+		response_text = uma_fallen_empire.100.c.response
+		is_dialog_only = yes
+	}
+
+	###关于科研
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_2
+		}
+		name = uma_fallen_empire.100.d
+		response_text = uma_fallen_empire.100.d.response
+		is_dialog_only = yes
+	}
+
+	#下一页
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_3
+		}
+		name = uma_fallen_empire.100.nextpage
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.101 }
+		}
+	}
+
+	#退出
+	option = {
+		remove_country_flag = uma_fallen_empire_have_opened_communication
+		name = uma_fallen_empire.100.exit
+	}
+
+
+}
+
+
+###交流界面2
+country_event = {
+    id = uma_fallen_empire.101
+	title = uma_fallen_empire.101.title #秋川弥生
+	desc = uma_fallen_empire.101.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###你平常都在做些什么呢
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_3
+		}
+		name = uma_fallen_empire.101.a
+		response_text = uma_fallen_empire.101.a.response
+		is_dialog_only = yes
+	}
+
+	###关于夜色誓约...
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_3
+		}
+		name = uma_fallen_empire.101.b
+		response_text = uma_fallen_empire.101.b.response
+		is_dialog_only = yes
+	}
+
+	
+	###关于重启留学...
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_4
+		}
+		name = uma_fallen_empire.101.c
+		response_text = uma_fallen_empire.101.c.response
+		is_dialog_only = yes
+	}
+
+
+	###有关虚拟现实世界...
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_agnes_digital
+		}
+		name = uma_fallen_empire.101.d
+		response_text = uma_fallen_empire.101.d.response
+		is_dialog_only = yes
+	}
+
+	#上一页
+	option = {
+		trigger = {
+			has_country_flag = uma_complete_fallen_empire_visit_3
+		}
+		name = uma_fallen_empire.101.frontpage
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.100 }
+		}
+	}
+
+	#退出
+	option = {
+		remove_country_flag = uma_fallen_empire_have_opened_communication
+		name = uma_fallen_empire.101.exit
+	}
+
+
+}
+
+
+###资源置换界面
+###资源置换主界面
+country_event = {
+    id = uma_fallen_empire.102
+	title = uma_fallen_empire.102.title #秋川弥生
+	desc = uma_fallen_empire.102.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###食物
+	option = {
+		name = uma_fallen_empire.102.a
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.103 }
+		}
+	}
+
+	###矿物
+	option = {
+		name = uma_fallen_empire.102.b
+		country_event = { id = uma_fallen_empire.105 }
+	}
+
+	###电力
+	option = {
+		name = uma_fallen_empire.102.c
+		country_event = { id = uma_fallen_empire.107 }
+	}
+
+	#算了
+	option = {
+		name = uma_fallen_empire.102.exit
+	}
+
+}
+
+
+
+###资源置换-食物电力
+country_event = {
+    id = uma_fallen_empire.103
+	title = uma_fallen_empire.103.title #秋川弥生
+	desc = uma_fallen_empire.103.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###交换电力
+	###食物-1000
+	option = {
+		name = uma_fallen_empire.103.a
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 1000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown  #资源交换冷却，一年一次
+				days = 365
+			}
+			add_resource = { food = -1000 }
+			add_resource = { energy = 1000 }
+		}
+	}
+
+	###食物-2000
+	option = {
+		name = uma_fallen_empire.103.b
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 2000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -2000 }
+			add_resource = { energy = 2000 }
+		}
+	}
+
+	###食物-5000
+	option = {
+		name = uma_fallen_empire.103.c
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 5000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -5000 }
+			add_resource = { energy = 5000 }
+		}
+	}
+
+	#食物-10000
+	option = {
+		name = uma_fallen_empire.103.d
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 10000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -10000 }
+			add_resource = { energy = 10000 }
+		}
+	}
+
+	#食物-20000
+	option = {
+		name = uma_fallen_empire.103.e
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 20000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -20000 }
+			add_resource = { energy = 20000 }
+		}
+	}
+
+	#食物-50000
+	option = {
+		name = uma_fallen_empire.103.f
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 50000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -50000 }
+			add_resource = { energy = 50000 }
+		}
+	}
+
+	#交换矿物
+	option = {
+		name = uma_fallen_empire.103.g
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.104 }
+		}
+	}
+
+	#不用了
+	option = {
+		name = uma_fallen_empire.103.exit
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.104
+	title = uma_fallen_empire.104.title #秋川弥生
+	desc = uma_fallen_empire.104.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###交换矿物
+	###食物-1000
+	option = {
+		name = uma_fallen_empire.104.a
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 1000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -1000 }
+			add_resource = { minerals = 1000 }
+		}
+	}
+
+	###食物-2000
+	option = {
+		name = uma_fallen_empire.104.b
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 2000
+			}
+		}
+		hidden_effect = {
+			add_resource = { food = -2000 }
+			add_resource = { minerals = 2000 }
+		}
+	}
+
+	###食物-5000
+	option = {
+		name = uma_fallen_empire.104.c
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 5000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -5000 }
+			add_resource = { minerals = 5000 }
+		}
+	}
+
+	#食物-10000
+	option = {
+		name = uma_fallen_empire.104.d
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 10000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -10000 }
+			add_resource = { minerals = 10000 }
+		}
+	}
+
+	#食物-20000
+	option = {
+		name = uma_fallen_empire.104.e
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 20000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -20000 }
+			add_resource = { minerals = 20000 }
+		}
+	}
+
+	#食物-50000
+	option = {
+		name = uma_fallen_empire.104.f
+		allow = {
+			resource_stockpile_compare = {
+				resource = food
+				value >= 50000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { food = -50000 }
+			add_resource = { minerals = 50000 }
+		}
+	}
+
+	#交换电力
+	option = {
+		name = uma_fallen_empire.104.g
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.103 }
+		}
+	}
+
+	#不用了
+	option = {
+		name = uma_fallen_empire.104.exit
+	}
+
+}
+
+
+
+###资源置换-矿物电力
+country_event = {
+    id = uma_fallen_empire.105
+	title = uma_fallen_empire.105.title #秋川弥生
+	desc = uma_fallen_empire.105.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###交换电力
+	###矿物-1000
+	option = {
+		name = uma_fallen_empire.105.a
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 1000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown  #资源交换冷却，一年一次
+				days = 365
+			}
+			add_resource = { minerals = -1000 }
+			add_resource = { energy = 1000 }
+		}
+	}
+
+	###矿物-2000
+	option = {
+		name = uma_fallen_empire.105.b
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 2000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -2000 }
+			add_resource = { energy = 2000 }
+		}
+	}
+
+	###矿物-5000
+	option = {
+		name = uma_fallen_empire.105.c
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 5000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -5000 }
+			add_resource = { energy = 5000 }
+		}
+	}
+
+	#矿物-10000
+	option = {
+		name = uma_fallen_empire.105.d
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 10000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -10000 }
+			add_resource = { energy = 10000 }
+		}
+	}
+
+	#矿物-20000
+	option = {
+		name = uma_fallen_empire.105.e
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 20000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -20000 }
+			add_resource = { energy = 20000 }
+		}
+	}
+
+	#矿物-50000
+	option = {
+		name = uma_fallen_empire.105.f
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 50000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -50000 }
+			add_resource = { energy = 50000 }
+		}
+	}
+
+	#交换食物
+	option = {
+		name = uma_fallen_empire.105.g
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.106 }
+		}
+	}
+
+	#不用了
+	option = {
+		name = uma_fallen_empire.105.exit
+	}
+
+}
+
+
+
+###资源置换-矿物食物
+country_event = {
+    id = uma_fallen_empire.106
+	title = uma_fallen_empire.106.title #秋川弥生
+	desc = uma_fallen_empire.106.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###交换食物
+	###矿物-1000
+	option = {
+		name = uma_fallen_empire.106.a
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 1000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown  #资源交换冷却，一年一次
+				days = 365
+			}
+			add_resource = { minerals = -1000 }
+			add_resource = { food = 1000 }
+		}
+	}
+
+	###矿物-2000
+	option = {
+		name = uma_fallen_empire.106.b
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 2000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -2000 }
+			add_resource = { food = 2000 }
+		}
+	}
+
+	###矿物-5000
+	option = {
+		name = uma_fallen_empire.106.c
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 5000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -5000 }
+			add_resource = { food = 5000 }
+		}
+	}
+
+	#矿物-10000
+	option = {
+		name = uma_fallen_empire.106.d
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 10000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -10000 }
+			add_resource = { food = 10000 }
+		}
+	}
+
+	#矿物-20000
+	option = {
+		name = uma_fallen_empire.106.e
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 20000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -20000 }
+			add_resource = { food = 20000 }
+		}
+	}
+
+	#矿物-50000
+	option = {
+		name = uma_fallen_empire.106.f
+		allow = {
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 50000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { minerals = -50000 }
+			add_resource = { food = 50000 }
+		}
+	}
+
+	#交换食物
+	option = {
+		name = uma_fallen_empire.106.g
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.105 }
+		}
+	}
+
+	#不用了
+	option = {
+		name = uma_fallen_empire.106.exit
+	}
+
+}
+
+
+###资源置换-能量食物
+country_event = {
+    id = uma_fallen_empire.107
+	title = uma_fallen_empire.107.title #秋川弥生
+	desc = uma_fallen_empire.107.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###交换食物
+	###能量-1000
+	option = {
+		name = uma_fallen_empire.107.a
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 1000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown  #资源交换冷却，一年一次
+				days = 365
+			}
+			add_resource = { energy = -1000 }
+			add_resource = { food = 1000 }
+		}
+	}
+
+	###能量-2000
+	option = {
+		name = uma_fallen_empire.107.b
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 2000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -2000 }
+			add_resource = { food = 2000 }
+		}
+	}
+
+	###能量-5000
+	option = {
+		name = uma_fallen_empire.107.c
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 5000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -5000 }
+			add_resource = { food = 5000 }
+		}
+	}
+
+	#能量-10000
+	option = {
+		name = uma_fallen_empire.107.d
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 10000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -10000 }
+			add_resource = { food = 10000 }
+		}
+	}
+
+	#能量-20000
+	option = {
+		name = uma_fallen_empire.107.e
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 20000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -20000 }
+			add_resource = { food = 20000 }
+		}
+	}
+
+	#能量-50000
+	option = {
+		name = uma_fallen_empire.107.f
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 50000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -50000 }
+			add_resource = { food = 50000 }
+		}
+	}
+
+	#交换食物
+	option = {
+		name = uma_fallen_empire.107.g
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.108 }
+		}
+	}
+
+	#不用了
+	option = {
+		name = uma_fallen_empire.107.exit
+	}
+
+}
+
+
+
+###资源置换-能量矿物
+country_event = {
+    id = uma_fallen_empire.108
+	title = uma_fallen_empire.108.title #秋川弥生
+	desc = uma_fallen_empire.108.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	trigger = {
+		NOR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	###交换矿物
+	###能量-1000
+	option = {
+		name = uma_fallen_empire.108.a
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 1000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown  #资源交换冷却，一年一次
+				days = 365
+			}
+			add_resource = { energy = -1000 }
+			add_resource = { minerals = 1000 }
+		}
+	}
+
+	###能量-2000
+	option = {
+		name = uma_fallen_empire.108.b
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 2000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -2000 }
+			add_resource = { minerals = 2000 }
+		}
+	}
+
+	###能量-5000
+	option = {
+		name = uma_fallen_empire.108.c
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 5000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -5000 }
+			add_resource = { minerals = 5000 }
+		}
+	}
+
+	#能量-10000
+	option = {
+		name = uma_fallen_empire.108.d
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 10000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -10000 }
+			add_resource = { minerals = 10000 }
+		}
+	}
+
+	#能量-20000
+	option = {
+		name = uma_fallen_empire.108.e
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 20000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -20000 }
+			add_resource = { minerals = 20000 }
+		}
+	}
+
+	#能量-50000
+	option = {
+		name = uma_fallen_empire.108.f
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 50000
+			}
+		}
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = uma_fallen_empire_resourses_trading_cooldown
+				days = 365
+			}
+			add_resource = { energy = -50000 }
+			add_resource = { minerals = 50000 }
+		}
+	}
+
+	#交换矿物
+	option = {
+		name = uma_fallen_empire.108.g
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.107 }
+		}
+	}
+
+	#不用了
+	option = {
+		name = uma_fallen_empire.108.exit
+	}
+
+}
+
+
+
+###########堕落参观事件###########
+###编号从200开始###
+
+###第一次参观###
+###同意请求
+country_event = {
+    id = uma_fallen_empire.200
+	title = uma_fallen_empire.200.title #理事长
+	desc = uma_fallen_empire.200.desc #欢！迎！
+	#picture = GFX_evt_uma_small_stream
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = C02
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.200.a #非常感谢
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.201
+			}
+		}
+	}
+
+}
+
+
+###代表访问团（首次）
+country_event = {
+	id = uma_fallen_empire.201
+    title = "uma_fallen_empire.201.title"
+    desc = "uma_fallen_empire.201.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###一路顺风
+	option = {
+		name = "uma_fallen_empire.201.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.202
+			}
+		}
+	}
+
+}
+
+
+###抵达（首次）
+country_event = {
+	id = uma_fallen_empire.202
+    title = "uma_fallen_empire.202.title"
+    desc = "uma_fallen_empire.202.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###一路顺风
+	option = {
+		name = "uma_fallen_empire.202.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.203
+				days = 30
+			}
+		}
+	}
+
+}
+
+
+###自由赛场（首次）
+country_event = {
+	id = uma_fallen_empire.203
+    title = "uma_fallen_empire.203.title"
+    desc = "uma_fallen_empire.203.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###一路顺风
+	option = {
+		name = "uma_fallen_empire.203.a"
+		add_modifier = {
+			modifier = uma_fallen_empire_civil_racing
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.204
+				days = 30
+			}
+		}
+	}
+
+}
+
+
+###管理中枢（首次）
+country_event = {
+	id = uma_fallen_empire.204
+    title = "uma_fallen_empire.204.title"
+    desc = "uma_fallen_empire.204.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###一路顺风
+	option = {
+		name = "uma_fallen_empire.204.a"
+		add_modifier = {
+			modifier = uma_fallen_empire_administeration_experience
+			days = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.205
+				days = 30
+			}
+		}
+	}
+
+}
+
+
+###离去（首次）
+country_event = {
+	id = uma_fallen_empire.205
+    title = "uma_fallen_empire.205.title"
+    desc = "uma_fallen_empire.205.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###一路顺风
+	option = {
+		name = "uma_fallen_empire.205.a"
+		custom_tooltip = uma_fallen_empire_gifts
+		custom_tooltip = uma_know_fallen_empire_more
+		set_country_flag = uma_complete_fallen_empire_visit_1 #第一次访问结束
+		add_modifier = {
+			modifier = uma_fallen_empire_visit_cooldown 
+			years = 5
+		}
+		hidden_effect = {
+			uma_fallen_empire_gift_effect = yes #堕落送礼物的封装
+			set_variable = {
+				which = uma_num_of_fallen_empire_visit
+				value = 1
+			}
+		}
+	}
+
+}
+
+
+###代表访问团（第二次及以后）
+country_event = {
+	id = uma_fallen_empire.206
+    title = "uma_fallen_empire.206.title"
+    desc = "uma_fallen_empire.206.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###那么，这次我们将会去什么地方呢？
+	option = {
+		name = "uma_fallen_empire.206.a"
+		hidden_effect = {
+			#如果访问次数为1，触发第二次访问事件...以此类推
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_num_of_fallen_empire_visit
+						value = 1
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.207
+					days = 30
+				}
+			}
+			
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_num_of_fallen_empire_visit
+						value = 2
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.209
+					days = 30
+				}
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_num_of_fallen_empire_visit
+						value = 3
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.222
+					days = 30
+				}
+			}
+
+		}
+	}
+
+}
+
+
+###开发部（第二次）
+country_event = {
+	id = uma_fallen_empire.207
+    title = "uma_fallen_empire.207.title"
+    desc = "uma_fallen_empire.207.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###这说明了什么？
+	option = {
+		name = "uma_fallen_empire.207.a"
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.208 }
+		}
+	}
+
+}
+
+
+###送别（第二次）
+country_event = {
+	id = uma_fallen_empire.208
+    title = "uma_fallen_empire.208.title"
+    desc = "uma_fallen_empire.208.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###这说明了什么？
+	option = {
+		name = "uma_fallen_empire.208.a"
+		custom_tooltip = uma_fallen_empire_gifts
+		custom_tooltip = uma_know_fallen_empire_more
+		set_country_flag = uma_complete_fallen_empire_visit_2 #第二次访问结束
+		add_modifier = {
+			modifier = uma_fallen_empire_visit_cooldown 
+			years = 5
+		}
+		hidden_effect = {
+			uma_fallen_empire_gift_effect = yes #堕落送礼物的封装
+			change_variable = {
+				which = uma_num_of_fallen_empire_visit
+				value = 1
+			}
+		}
+	}
+
+}
+
+
+###大数据库（第三次）
+country_event = {
+	id = uma_fallen_empire.209
+    title = "uma_fallen_empire.209.title"
+    desc = "uma_fallen_empire.209.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###秋川平时在干啥？
+	option = {
+		name = "uma_fallen_empire.209.a"
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.210 }
+		}
+	}
+
+}
+
+
+###离去前夜（第三次）
+country_event = {
+	id = uma_fallen_empire.210
+    title = "uma_fallen_empire.210.title"
+    desc = "uma_fallen_empire.210.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###接入通讯
+	option = {
+		name = "uma_fallen_empire.210.a"
+		hidden_effect = {
+			country_event = { id = uma_fallen_empire.211 }
+		}
+	}
+
+}
+
+####通讯接入
+country_event = {
+    id = uma_fallen_empire.211
+	title = uma_fallen_empire.211.title #夜色誓约
+	desc = uma_fallen_empire.211.desc #你好，我是夜色誓约
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact #之后记得改成deep的立绘！
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.211.a #你好
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.212
+			}
+		}
+	}
+
+}
+
+country_event = {
+    id = uma_fallen_empire.212
+	title = uma_fallen_empire.212.title #夜色誓约
+	desc = uma_fallen_empire.212.desc #不多寒暄
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.212.a #灾难？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.213
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.213
+	title = uma_fallen_empire.213.title #夜色誓约
+	desc = uma_fallen_empire.213.desc #灾难后...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.213.a #你得告诉我们...
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.214
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.214
+	title = uma_fallen_empire.214.title #夜色誓约
+	desc = uma_fallen_empire.214.desc #禁止透露..
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.214.a #提前知道内容才能避免...
+		custom_tooltip = uma_warning_know_something_maybe_wrong
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.215
+			}
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.214.b #还是算了，我们怎么样能帮助你？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.218 ###直接跳转
+			}
+		}
+	}
+
+}
+
+
+
+country_event = {
+    id = uma_fallen_empire.215
+	title = uma_fallen_empire.215.title #夜色誓约
+	desc = uma_fallen_empire.215.desc #你确定？
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.215.a #确定
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.216
+			}
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.215.b #算了
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.218
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.216
+	title = uma_fallen_empire.216.title #夜色誓约
+	desc = uma_fallen_empire.216.desc #领域就是灾难
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.216.a #什么意思
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.217
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.217
+	title = uma_fallen_empire.217.title #夜色誓约
+	desc = uma_fallen_empire.217.desc #言尽于此
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.217.a #好吧...
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.218
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.218
+	title = uma_fallen_empire.218.title #夜色誓约
+	desc = uma_fallen_empire.218.desc #参观学习...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.218.a #非常乐意
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.219
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.219
+	title = uma_fallen_empire.219.title #夜色誓约
+	desc = uma_fallen_empire.219.desc #但我想要协助管理
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.219.a #好
+		enable_special_project = {
+			name = "UMA_HELP_DEEP_IMPACT"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+##隐藏的，激活221
+ship_event = {
+	id = uma_fallen_empire.220
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+
+	#毫无结果
+	option = {
+		name = "uma_fallen_empire.220.a"
+		owner = { 
+			country_event = {
+				id = uma_fallen_empire.221
+				days = 100
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+    id = uma_fallen_empire.221
+	title = uma_fallen_empire.221.title #夜色誓约
+	desc = uma_fallen_empire.221.desc #已经完成了基本学习...对了，还有一些礼物...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.221.a #了解
+		custom_tooltip = uma_know_fallen_empire_more
+		set_country_flag = uma_complete_fallen_empire_visit_3 #第二次访问结束
+		add_modifier = {
+			modifier = uma_fallen_empire_visit_cooldown 
+			years = 5
+		}
+		add_modifier = {
+			modifier = uma_deep_impact_gift
+			years = 20
+		}
+		hidden_effect = {
+			change_variable = {
+				which = uma_num_of_fallen_empire_visit
+				value = 1
+			}
+		}
+	}
+
+}
+
+
+
+###重启（第四次访问）
+country_event = {
+	id = uma_fallen_empire.222
+    title = "uma_fallen_empire.222.title" #重启？
+    desc = "uma_fallen_empire.222.desc" #透露了一件事...
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###挑选一些我们最好的选手
+	option = {
+		name = "uma_fallen_empire.222.a"
+		enable_special_project = {
+			name = "UMA_SELECT_OUR_BEST_ATHLETES"
+			location = capital_scope
+			owner = root
+		}
+	}
+
+}
+
+
+###纪念杯（第四次访问）
+country_event = {
+	id = uma_fallen_empire.223
+    title = "uma_fallen_empire.223.title" #重准备开始
+    desc = "uma_fallen_empire.223.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###有些紧张
+	option = {
+		name = "uma_fallen_empire.223.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.224
+			}
+		}
+	}
+
+}
+
+
+###完美落幕（第四次访问）
+country_event = {
+	id = uma_fallen_empire.224
+    title = "uma_fallen_empire.224.title" #圆满落幕
+	desc = "uma_fallen_empire.224.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###接通和她的通讯
+	option = {
+		name = "uma_fallen_empire.224.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.225
+			}
+		}
+	}
+
+}
+
+
+#夜色誓约
+country_event = {
+    id = uma_fallen_empire.225
+	title = uma_fallen_empire.225.title #夜色誓约
+	desc = uma_fallen_empire.225.desc #恭喜
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.225.a #侥幸而已...
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.226
+			}
+		}
+	}
+
+}
+
+
+###嗯，接下来就是deep酱闹别扭了！
+country_event = {
+    id = uma_fallen_empire.226
+	title = uma_fallen_empire.226.title #夜色誓约
+	desc = uma_fallen_empire.226.desc #不是王牌吧
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.226.a #为啥
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.227
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.227
+	title = uma_fallen_empire.227.title #夜色誓约
+	desc = uma_fallen_empire.227.desc #还有上升空间...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.227.a #你的技巧...
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.228
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.228
+	title = uma_fallen_empire.228.title #夜色誓约
+	desc = uma_fallen_empire.228.desc #输掉的感觉...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.228.a #欸？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.229
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.229
+	title = uma_fallen_empire.229.title #夜色誓约
+	desc = uma_fallen_empire.229.desc #明明没有漏闸...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.229.a #诶诶？？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.230
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.230
+	title = uma_fallen_empire.230.title #夜色誓约
+	desc = uma_fallen_empire.230.desc #我能怎么办嘛...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.230.a #诶诶诶！！？？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.231
+			}
+		}
+	}
+
+}
+
+
+###后续
+country_event = {
+	id = uma_fallen_empire.231
+    title = "uma_fallen_empire.231.title" #来人了！大包小包
+	desc = "uma_fallen_empire.231.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###接通和她的通讯
+	option = {
+		name = "uma_fallen_empire.231.a" #接通通讯
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.232
+			}
+		}
+	}
+
+}
+
+
+
+country_event = {
+    id = uma_fallen_empire.232
+	title = uma_fallen_empire.232.title #夜色誓约
+	desc = uma_fallen_empire.232.desc #早...
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.232.a #早
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.233
+			}
+		}
+	}
+
+}
+
+
+
+country_event = {
+    id = uma_fallen_empire.233
+	title = uma_fallen_empire.233.title #夜色誓约
+	desc = uma_fallen_empire.233.desc #昨晚失礼了
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.233.a #不为人知的一面
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.234
+			}
+		}
+	}
+
+}
+
+
+
+country_event = {
+    id = uma_fallen_empire.234
+	title = uma_fallen_empire.234.title #夜色誓约
+	desc = uma_fallen_empire.234.desc #一起的马娘们
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.234.a #已经完成了吗？
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.235
+			}
+		}
+	}
+
+}
+
+
+
+country_event = {
+    id = uma_fallen_empire.235
+	title = uma_fallen_empire.235.title #夜色誓约
+	desc = uma_fallen_empire.235.desc #是的，没事了
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.235.a #当然
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.236
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+    id = uma_fallen_empire.236
+	title = uma_fallen_empire.236.title #夜色誓约
+	desc = uma_fallen_empire.236.desc #准备出发吧
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	trigger = {
+		OR = {
+			has_authority = auth_trainingcenter
+		}
+		is_ai = no
+	}
+
+	picture_event_data = {
+		portrait = deepimpact
+		room = GFX_evt_uma_small_stream
+	}
+
+	option = {
+		name = uma_fallen_empire.236.a #那就出发！
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.237
+			}
+		}
+	}
+
+}
+
+
+#后续事件：出发！
+country_event = {
+	id = uma_fallen_empire.237
+    title = "uma_fallen_empire.237.title"
+	desc = "uma_fallen_empire.237.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	###接通和她的通讯
+	option = {
+		name = "uma_fallen_empire.237.a" #找新的旅途
+		#带着大包小包的行李，帝国未来的希望踏上了新的道路
+		custom_tooltip = uma_fallen_empire_visit_4_complete_end_hint
+		custom_tooltip = uma_know_fallen_empire_more
+		set_country_flag = uma_complete_fallen_empire_visit_4 #第二次访问结束
+		add_modifier = {
+			modifier = uma_fallen_empire_visit_cooldown 
+			years = 5
+		}
+		add_modifier = {
+			modifier = uma_new_umamusume_from_fallen_empire
+			years = 5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = uma_num_of_fallen_empire_visit
+				value = 1
+			}
+		}
+	}
+
+}
+
+
+###sky的参观事件（编号从240开始）
+country_event = {
+	id = uma_fallen_empire.240
+    title = "uma_fallen_empire.240.title"
+	desc = "uma_fallen_empire.240.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.240.a"	
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.241
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_fallen_empire.241
+    title = "uma_fallen_empire.241.title"
+	desc = "uma_fallen_empire.241.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.241.a"
+		add_modifier = {
+			modifier = uma_fallen_empire_knowledge_seiunsky #VR训练法
+			years = -1
+		}
+	}
+
+}
+
+###小栗的参观事件（从243开始）
+country_event = {
+	id = uma_fallen_empire.243
+    title = "uma_fallen_empire.243.title"
+	desc = "uma_fallen_empire.243.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.243.a"
+		add_modifier = {
+			modifier = uma_fallen_empire_knowledge_oguricap #小栗的移动餐厅
+			years = -1
+		}	
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.244
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_fallen_empire.244
+    title = "uma_fallen_empire.244.title"
+	desc = "uma_fallen_empire.244.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.244.a"
+	}
+
+}
+
+###数码的参观事件（从246开始）
+country_event = {
+	id = uma_fallen_empire.246
+    title = "uma_fallen_empire.246.title"
+	desc = "uma_fallen_empire.246.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.246.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.247
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_fallen_empire.247
+    title = "uma_fallen_empire.247.title"
+	desc = "uma_fallen_empire.247.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.247.a"
+		add_modifier = {
+			modifier = uma_fallen_empire_knowledge_agnesdigital #数码的考察结果
+			years = -1
+		}	
+	}
+
+}
+
+
+####遗落参观指南
+country_event = {
+	id = uma_fallen_empire.300
+    title = "uma_fallen_empire.300.title"
+	desc = "uma_fallen_empire.300.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.300.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.301
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.300.b"
+		remove_country_flag = uma_fallen_empire_have_opened_visit_hint
+	}
+
+}
+
+country_event = {
+	id = uma_fallen_empire.301
+    title = "uma_fallen_empire.301.title"
+	desc = "uma_fallen_empire.301.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.301.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.300
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.301.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.302
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.301.c"
+		remove_country_flag = uma_fallen_empire_have_opened_visit_hint
+	}
+
+}
+
+country_event = {
+	id = uma_fallen_empire.302
+    title = "uma_fallen_empire.302.title"
+	desc = "uma_fallen_empire.302.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.302.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.301
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.302.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.303
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.302.c"
+		remove_country_flag = uma_fallen_empire_have_opened_visit_hint
+	}
+
+}
+
+country_event = {
+	id = uma_fallen_empire.303
+    title = "uma_fallen_empire.303.title"
+	desc = "uma_fallen_empire.303.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.303.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.302
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.303.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.304
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.303.c"
+		remove_country_flag = uma_fallen_empire_have_opened_visit_hint
+	}
+
+}
+
+country_event = {
+	id = uma_fallen_empire.304
+    title = "uma_fallen_empire.304.title"
+	desc = "uma_fallen_empire.304.desc"
+    picture = GFX_evt_uma_normal_school
+
+    is_triggered_only = yes
+
+	option = {
+		name = "uma_fallen_empire.304.a"
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.303
+			}
+		}
+	}
+
+	option = {
+		name = "uma_fallen_empire.304.b"
+		remove_country_flag = uma_fallen_empire_have_opened_visit_hint
+	}
+
+}
+
+####参观GUI界面####
+country_event = {
+	id = uma_fallen_empire.400
+    is_triggered_only = yes
+    diplomatic = yes
+ 	custom_gui = uma_fallen_empire_visitin_window
+}
+
+
+########生成联络属飞地#######
+event = {
+	id = uma_fallen_empire.1000
+	hide_window = yes
+	is_triggered_only = yes	#在开局事件的*触发器*触发，即on_game_start
+	immediate = {
+		##################################################
+		#创建国家
+		##################################################
+		create_country = {
+			name = "uma_fallen_empire_communication_office"			###国家名称，很重要！！！
+			type = uma_fallen_empire_communication_enclave		#指定country_type，不会的就不要动了
+			#authority = "auth_trainingcenter"			#政体
+			#civics = {
+			#	#民政
+			#}
+			#origin = "origin_default"			#默认起源，这个不用管，玩家根本看不到飞地起源是啥
+			#species = last_created_species			#设定种族，上面已经写好了，这一行不要动。
+			flag = {
+                icon= {
+                    category = "uiu_flags"
+                    file = "uiu_fe_flags.dds"
+                }
+                background= {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors={
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				############################################################################
+				#重要！！！！这个flag⭐国家标签⭐决定了你这个国家到底是谁，一定要改！
+				set_country_flag = uma_is_fallen_empire_communication_office
+				############################################################################
+				set_graphical_culture = npf_01					#默认的graphical_culture，不太需要动
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fallen_empire.1001
+	is_triggered_only = yes		#在点击国家图标的*触发器*触发，即on_custom_diplomacy，from即图标对应国家
+	hide_window = yes
+	
+
+	trigger = {
+		from = {
+			has_country_flag = uma_is_fallen_empire_communication_office	#判断对应国家，通过之前设立的country_flag⭐国家标签⭐
+		}
+	}
+
+	immediate = {
+		from = {
+			save_event_target_as = uma_contacting_fallen_empire_communication_office	#将from存为event_target
+		}
+		country_event = {
+			id = uma_fallen_empire.1002	#触发正式的菜单事件
+		}
+	}
+}
+
+####堕落主GUI界面####
+country_event = {
+	id = uma_fallen_empire.1002
+    is_triggered_only = yes
+    diplomatic = yes
+ 	custom_gui = uma_fallen_empire_connection_window
+}
+
+###启动任务系统事件
+country_event = {
+	id = uma_fallen_empire.110
+	title = OK
+	desc = OK
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				25 = {
+					country_event = {
+						id = uma_fallen_empire.111
+					}
+				}
+				25 = {
+					country_event = {
+						id = uma_fallen_empire.112
+					}
+				}
+				25 = {
+					country_event = {
+						id = uma_fallen_empire.113
+					}
+				}
+				25 = {
+					country_event = {
+						id = uma_fallen_empire.114
+					}
+				}
+			}
+		}
+	}
+}
+
+###科研任务
+country_event = {
+	id = uma_fallen_empire.111
+	title = uma_fallen_empire.111.title
+	desc = uma_fallen_empire.111.desc
+	diplomatic = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+	
+	option = {
+		name = uma_fallen_empire.111.a
+		owner = {
+			begin_event_chain = {
+				event_chain = uma_research_chain
+				target = this
+			}
+		}
+	}
+}
+
+###完成一项科研
+country_event = {
+	id = uma_fallen_empire.1111
+	title = uma_fallen_empire.1111.title
+	desc = uma_fallen_empire.1111.desc
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			OR = {
+				has_event_chain = uma_research_chain_5
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_research_chain
+				counter = uma_researching
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = uma_research_chain
+						counter = uma_researching
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.1112
+				}
+			}
+		}
+	}
+}
+
+###完成科研任务
+country_event = {
+	id = uma_fallen_empire.1112
+	title = uma_fallen_empire.1112.title
+	desc = uma_fallen_empire.1112.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_research_chain
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.1112.a
+		###添加完成任务后的效果
+		add_monthly_resource_mult = {
+			resource = energy
+			value = @tier3materialreward
+			min = @tier3materialmin
+			max = @tier3materialmax
+		}
+		end_event_chain = uma_research_chain
+	}
+}
+
+###建造任务
+country_event = {
+	id = uma_fallen_empire.112
+	title = uma_fallen_empire.112.title
+	desc = uma_fallen_empire.112.desc
+	diplomatic = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = uma_fallen_empire.112.a
+		owner = {
+			begin_event_chain = {
+				event_chain = uma_building_chain
+				target = this
+			}
+		}
+	}
+}
+
+###完成一项建筑
+country_event = {
+	id = uma_fallen_empire.1121
+	title = uma_fallen_empire.1121.title
+	desc = uma_fallen_empire.1121.desc
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_building_chain
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_building_chain
+				counter = uma_building
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = uma_building_chain
+						counter = uma_building
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.1122
+				}
+			}
+		}
+	}
+}
+
+###完成建筑任务
+country_event = {
+	id = uma_fallen_empire.1122
+	title = uma_fallen_empire.1122.title
+	desc = uma_fallen_empire.1122.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_building_chain
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.1122.a
+		###添加完成任务后的效果
+		end_event_chain = uma_building_chain
+	}
+}
+
+###舰船建造任务
+country_event = {
+	id = uma_fallen_empire.113
+	title = uma_fallen_empire.113.title
+	desc = uma_fallen_empire.113.desc
+	diplomatic = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+		}
+	}
+	
+	option = {
+		name = uma_fallen_empire.113.a
+		owner = {
+			begin_event_chain = {
+				event_chain = uma_ship_chain
+				target = this
+			}
+		}
+	}
+}
+
+###建成一艘舰船
+country_event = {
+	id = uma_fallen_empire.1131
+	title = uma_fallen_empire.1131.title
+	desc = uma_fallen_empire.1131.desc
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_ship_chain
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_ship_chain
+				counter = uma_ship_build
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = uma_ship_chain
+						counter = uma_ship_build
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.1132
+				}
+			}
+		}
+	}
+}
+
+###完成建造舰船任务
+country_event = {
+	id = uma_fallen_empire.1132
+	title = uma_fallen_empire.1132.title
+	desc = uma_fallen_empire.1132.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_ship_chain
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.1132.a
+		###添加完成任务后的效果
+		end_event_chain = uma_ship_chain
+	}
+}
+
+###殖民任务
+country_event = {
+	id = uma_fallen_empire.114
+	title = uma_fallen_empire.114.title
+	desc = uma_fallen_empire.114.desc
+	diplomatic = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = uma_fallen_empire.114.a
+		owner = {
+			begin_event_chain = {
+				event_chain = uma_colonize_chain
+				target = this
+			}
+		}
+	}
+}
+
+###完成殖民
+country_event = {
+	id = uma_fallen_empire.1141
+	title = uma_fallen_empire.1141.title
+	desc = uma_fallen_empire.1141.desc
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_colonize_chain
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_colonize_chain
+				counter = uma_colonize
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = uma_colonize_chain
+						counter = uma_colonize
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.1142
+				}
+			}
+		}
+	}
+}
+
+###完成殖民任务
+country_event = {
+	id = uma_fallen_empire.1142
+	title = uma_fallen_empire.1142.title
+	desc = uma_fallen_empire.1142.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_colonize_chain
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.1142.a
+		###添加完成任务后的效果
+		end_event_chain = uma_colonize_chain
+	}
+}
+
+###战争任务
+country_event = {
+	id = uma_fallen_empire.115
+	title = uma_fallen_empire.115.title
+	desc = uma_fallen_empire.115.desc
+	diplomatic = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	
+	option = {
+		name = uma_fallen_empire.115.a
+		owner = {
+			begin_event_chain = {
+				event_chain = uma_destroy_ship_chain
+				target = this
+			}
+		}
+	}
+}
+
+###完成一个目标摧毁
+country_event = {
+	id = uma_fallen_empire.1151
+	title = uma_fallen_empire.1151.title
+	desc = uma_fallen_empire.1151.desc
+	
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_destroy_ship_chain
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_destroy_ship_chain
+				counter = uma_destroy
+				amount = 1
+			}
+			if = {
+				limit = {
+					has_completed_event_chain_counter = {
+						event_chain = uma_destroy_ship_chain
+						counter = uma_destroy
+					}
+				}
+				country_event = {
+					id = uma_fallen_empire.1152
+				}
+			}
+		}
+	}
+}
+
+###完成战争任务
+country_event = {
+	id = uma_fallen_empire.1152
+	title = uma_fallen_empire.1152.title
+	desc = uma_fallen_empire.1152.desc
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_country_flag = is_uma_country_flag
+			has_event_chain = uma_destroy_ship_chain
+		}
+	}
+
+	option = {
+		name = uma_fallen_empire.1152.a
+		###添加完成任务后的效果
+		end_event_chain = uma_destroy_ship_chain
+	}
 }

@@ -1,0 +1,81 @@
+##################
+###堕落帝国相关###
+##################
+#好转一息
+uma_skill_haozhuanyixi = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+	ship_armor_mult = 0.1
+	ship_shield_mult = 0.1
+}
+
+#一文字
+uma_skill_yiwenzi = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+	ship_interstellar_speed_mult = 0.20
+	ship_fire_rate_mult = 0.20
+}
+
+#堕落帝国的作弊buff（数值还需要商榷）
+uma_fallen_empire_enhancement_modifier = {
+	country_base_influence_produces_add = 3
+	all_technology_research_speed = 2
+	pop_growth_speed = -0.5
+	planet_pops_upkeep_mult = -0.5
+	ship_weapon_range_mult = 0.5
+	ship_fire_rate_mult = 1
+	ship_hull_mult = 20
+	ship_armor_mult = 20
+	ship_shield_mult = 20
+	ship_weapon_damage = 20
+	ships_upkeep_mult = -0.95
+	leaders_upkeep_mult = -0.95
+	starbases_upkeep_mult = -0.95
+	planet_pops_upkeep_mult = -0.95
+	planet_jobs_upkeep_mult = -0.95
+	country_resource_max_add = 300000
+}
+
+
+#遗落特雷森的竞走比赛
+uma_fallen_empire_civil_racing = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+	planet_uma_racing_umamusume_produces_mult = 0.1
+	pop_happiness = 0.05
+}
+
+#遗落特雷森的管理经验
+uma_fallen_empire_administeration_experience = {
+	leaders_upkeep_mult = -0.25
+	planet_jobs_upkeep_mult = -0.05
+}
+
+#希望的继承者
+uma_new_umamusume_from_fallen_empire = {
+	all_technology_research_speed = 0.5
+	planet_jobs_produces_mult = 0.2
+}
+
+
+###遗落特雷森参观冷却
+uma_fallen_empire_visit_cooldown = {
+	all_technology_research_speed = 0.05
+}
+
+
+#VR训练法
+uma_fallen_empire_knowledge_seiunsky = {
+	ship_weapon_damage = 0.1
+	ship_fire_rate_mult = 0.1
+}
+
+#小栗的移动餐厅
+uma_fallen_empire_knowledge_oguricap = {
+	pop_happiness = 0.05
+	pop_growth_speed = 0.05
+}
+
+#数码的社会考察
+uma_fallen_empire_knowledge_agnesdigital = {
+	planet_jobs_society_research_produces_mult = 0.1
+	planet_stability_add = 3
+}

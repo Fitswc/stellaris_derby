@@ -1,0 +1,16 @@
+#赛马娘关系修正
+triggered_opinion_civic_uma_candleoff = {
+	trigger = {
+		NOR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+		FROM = {
+			has_valid_civic = civic_uma_candleoff
+
+		}
+	}
+	opinion = {
+		base = -1000
+	}
+}

@@ -77,7 +77,7 @@ planet_uma_crystal_carrot_engineer = { #水晶萝卜工程师单独成类
 planet_uma_research_related = { #马娘科学家和科学主管都属于马娘研究者大类
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
-		#produces
+		produces
 		#upkeep
 	}
 	#generate_add_modifiers = {
@@ -129,11 +129,11 @@ planet_uma_carrot_farmer = {
 planet_uma_bee_farmer = {
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
-		#produces
+		produces
 		#upkeep
 	}
 	generate_add_modifiers = {
-	#	produces
+		produces
 	#	upkeep
 	}	
 }
@@ -155,7 +155,7 @@ planet_uma_sweet_master = {
 planet_uma_sweet_manager = {
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
-		#produces
+		produces
 		#upkeep
 	}
 	#generate_add_modifiers = {

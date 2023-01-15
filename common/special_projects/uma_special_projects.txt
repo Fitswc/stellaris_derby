@@ -520,3 +520,60 @@ special_project = {
 	on_fail = {
 	}
 }
+
+
+####堕落帝国####
+
+###协助管理人员培训###
+special_project = {
+	key = "UMA_HELP_DEEP_IMPACT"
+	#cost = 0
+	days_to_research = 180
+
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_society_research
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+
+	on_success = {
+		hidden_effect = {
+			ship_event = {
+				id = uma_fallen_empire.220
+			}
+		}
+		custom_tooltip = uma_we_will_connect_deep_impact
+	}
+
+}
+
+###挑选我们最好的选手
+special_project = {
+	key = "UMA_SELECT_OUR_BEST_ATHLETES"
+	days_to_research = 1080
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_society_research
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_fallen_empire.223
+			}
+		}
+	}
+
+	on_fail = {
+	}	
+}

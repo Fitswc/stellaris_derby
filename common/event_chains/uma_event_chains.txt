@@ -1,0 +1,51 @@
+@researching_counter = uma_research_counter
+
+uma_research_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_society_research
+	counter = {
+		uma_researching = {
+			max = 3
+		}
+	}
+}
+
+uma_building_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_society_research
+	counter = {
+		uma_building = {
+			max = 4
+		}
+	}
+}
+
+uma_ship_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_society_research
+	counter = {
+		uma_ship_build = {
+			max = 4
+		}
+	}
+}
+
+uma_colonize_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_society_research
+	counter = {
+		uma_colonize = {
+			max = 1
+		}
+	}
+}
+
+uma_destroy_ship_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_society_research
+	counter = {
+		uma_destroy = {
+			max = 3
+		}
+	}
+}
