@@ -1,0 +1,130 @@
+#赛马娘净化岗位
+uma_fuel_purge_small = {
+	#文火
+	category = purge
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		is_being_purged = yes
+	}
+	possible = {
+		owner = {
+			AND = {
+				#has_civic = civic_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_small
+			}
+		}
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.02
+	}
+	condition_string = uma_fuel_purge_tr
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 1
+			society_research = 2
+		}
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			energy = 3
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+			}
+			food = 1
+		}
+	}
+	weight = {
+		weight = 1000000
+	}
+}
+
+uma_fuel_purge_medium = {
+	#武火
+	category = purge
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		is_being_purged = yes
+	}
+	possible = {
+		owner = {
+			AND = {
+			    has_policy_flag = policy_uma_fuel_convertion_medium		
+		}
+	}
+}
+	condition_string = uma_fuel_purge_tr
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 5
+			society_research = 25
+		}
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			energy = 3
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+			}
+			food = 1
+		}
+	}
+	weight = {
+		weight = 1000001
+	}
+}
+
+uma_fuel_purge_big = {
+	#等离子态
+	category = purge
+	is_capped_by_modifier = no
+	possible_pre_triggers = {
+		is_being_purged = yes
+	}
+	possible = {
+		owner = {
+			AND = {
+				has_civic = civic_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_big
+			}
+		}
+	}
+	condition_string = uma_fuel_purge_tr
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.25
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 60
+			society_research = 300
+		}
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			energy = 3
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+			}
+			food = 1
+		}
+	}
+	weight = {
+		weight = 1000002
+	}
+}

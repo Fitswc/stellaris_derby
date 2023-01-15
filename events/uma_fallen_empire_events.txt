@@ -3653,8 +3653,8 @@ country_event = {
 ###完成一项科研
 country_event = {
 	id = uma_fallen_empire.1111
-	title = uma_fallen_empire.1111.title
-	desc = uma_fallen_empire.1111.desc
+	title = OK
+	desc = OK
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -3743,9 +3743,10 @@ country_event = {
 ###完成一项建筑
 country_event = {
 	id = uma_fallen_empire.1121
-	title = uma_fallen_empire.1121.title
-	desc = uma_fallen_empire.1121.desc
+	title = OK
+	desc = OK
 	
+	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
@@ -3828,9 +3829,10 @@ country_event = {
 ###建成一艘舰船
 country_event = {
 	id = uma_fallen_empire.1131
-	title = uma_fallen_empire.1131.title
-	desc = uma_fallen_empire.1131.desc
+	title = OK
+	desc = OK
 	
+	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
@@ -3910,9 +3912,10 @@ country_event = {
 ###完成殖民
 country_event = {
 	id = uma_fallen_empire.1141
-	title = uma_fallen_empire.1141.title
-	desc = uma_fallen_empire.1141.desc
-	
+	title = OK
+	desc = OK
+
+	hide_window = yes	
 	is_triggered_only = yes
 
 	trigger = {
@@ -3977,9 +3980,48 @@ country_event = {
 
 	trigger = {
 	}
-	
+
 	option = {
 		name = uma_fallen_empire.115.a
+		random_system = {
+			limit = {
+				distance = { 
+					source = root.solar_system
+					min_jumps = 1 #之后修改
+					max_jumps = 2 #之后修改
+					type = hyperlane
+				}
+				NOT = { has_star_flag = uma_grass_wonder_system }
+			}
+			save_event_target_as = uma_mission_fleet_spawn
+			set_star_flag = uma_mission_system
+			create_country = {
+				name = "NAME_uma_misson_country"
+				type = faction
+				effect = save_global_event_target_as = uma_mission_country
+			}
+		}
+		event_target:uma_mission_fleet_spawn = {
+			random_system_planet = {
+				last_created_country = {
+					create_fleet = {
+						name = "NAME_uma_mission_fleet"
+						spawn_debris = no
+						effect = {
+							set_owner = prev
+							create_ship = {
+								name = "NAME_uma_mission_ship_1"
+								design = NAME_uma_mission_ship_1
+								set_location = {
+									target = prevprev
+									distance = 10
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		owner = {
 			begin_event_chain = {
 				event_chain = uma_destroy_ship_chain
@@ -3992,8 +4034,9 @@ country_event = {
 ###完成一个目标摧毁
 country_event = {
 	id = uma_fallen_empire.1151
-	title = uma_fallen_empire.1151.title
-	desc = uma_fallen_empire.1151.desc
+	title = OK
+	desc = OK
+	hide_window = yes
 	
 	is_triggered_only = yes
 

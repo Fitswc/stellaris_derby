@@ -1,0 +1,41 @@
+#国策事件
+namespace = uma_civics_event
+
+country_event = {
+	#被建立联系宣战
+	id = uma_civics_event.1
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_civic = civic_uma_candleoff
+		}
+	}
+	immediate = {
+		declare_war = {
+			target = from
+			attacker_war_goal = wg_end_threat_swarm
+		}
+	}
+}
+
+country_event = {
+	#建立联系宣战
+	id = uma_civics_event.2
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_civic = civic_uma_candleoff
+			from = {
+				is_fallen_empire = no
+			}
+		}
+	}
+	immediate = {
+		declare_war = {
+			target = from
+			attacker_war_goal = wg_uma_candleoff
+		}
+	}
+}
+
+

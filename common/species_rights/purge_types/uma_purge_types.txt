@@ -1,0 +1,90 @@
+#赛马娘专属净化方式
+#残躯化火
+
+purge_types_uma_Cremation_1 = { #文火
+	token = purge_types_uma_Cremation 
+	pop_escape_chance = 0
+	pop_decline_rate = 10 #10月/人
+	pop_modifier = {
+		pop_happiness = 0.1
+	}
+	potential = {
+		exists = from
+		from = {
+			AND = {
+				has_civic = civic_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_small
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 0
+			from = {
+				has_valid_ai_personality = yes
+				NOT = {
+					has_ai_personality_behaviour = purger
+				}
+			}
+		}
+	}	
+}
+purge_types_uma_Cremation_2 = { #武火
+	token = purge_types_uma_Cremation 
+	pop_escape_chance = 0
+	pop_decline_rate = 100 #1月/人
+	pop_modifier = {
+		pop_happiness = 0.05
+	}
+	potential = {
+		exists = from
+		from = {
+			AND = {
+				has_civic = civic_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_medium
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 0
+			from = {
+				has_valid_ai_personality = yes
+				NOT = {
+					has_ai_personality_behaviour = purger
+				}
+			}
+		}
+	}	
+}
+purge_types_uma_Cremation_3 = { #等离子态
+	token = purge_types_uma_Cremation 
+	pop_escape_chance = 0
+	pop_decline_rate = 1000 #1月/10人
+	pop_modifier = {
+		pop_happiness = -0.1
+	}
+	potential = {
+		exists = from
+		from = {
+			AND = {
+				has_civic = civic_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_big
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 0
+			from = {
+				has_valid_ai_personality = yes
+				NOT = {
+					has_ai_personality_behaviour = purger
+				}
+			}
+		}
+	}	
+}

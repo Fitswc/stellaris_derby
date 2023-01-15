@@ -1,0 +1,15 @@
+#赛马娘战争借口
+cb_uma_candleoff = {
+	show_in_diplomacy = yes
+	show_notification = yes
+    potential = {
+		has_valid_civic = civic_uma_candleoff
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
