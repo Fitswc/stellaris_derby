@@ -998,16 +998,16 @@ country_event = {
 		#room = uma_traincenter_01_room
 	}
 
-	option = {
-		name = "tachyon_coffee.2061"
-		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2062
-				}
-			}
-		}
-	}
+#	option = {
+#		name = "tachyon_coffee.2061"
+#		hidden_effect = {
+#			owner = {
+#				country_event = {
+#					id = tachyon_coffee.2062
+#				}
+#			}
+#		}
+#	}
 
 	option = {
 		name = "tachyon_coffee.2063"

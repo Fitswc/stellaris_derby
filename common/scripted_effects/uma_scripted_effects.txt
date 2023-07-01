@@ -4581,3 +4581,15 @@ uma_fallen_empire_gift_effect = {
 		}
 	}
 }
+
+uma_fallen_empire_create_ship_designs = {
+	create_ship_design = { design = "NAME_Enforcer"}
+	create_ship_design = { design = "NAME_Savant" }
+	create_ship_design = { design = "NAME_Scholar" }
+	create_ship_design = { design = "NAME_Sage" }
+	create_ship_design = { design = "NAME_Cloaker" }
+	create_ship_design = { design = "NAME_Librarian" }
+	create_ship_design = { design = "NAME_Seeker" }
+	create_ship_design = { design = "NAME_FE_Starbase" }
+	create_ship_design = { design = "NAME_Cybrex_Transport" }
+}

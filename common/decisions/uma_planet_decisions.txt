@@ -42,6 +42,7 @@ decision_uma_hold_planet_racing = {
 	allow = {
 		NOT = { has_modifier = uma_has_held_the_planet_race }
 		OR = {
+                        has_building = building_uma_basic_racing_course
 			has_building = building_uma_modern_racing_course
 			has_building = building_uma_top_racing_course
 		}

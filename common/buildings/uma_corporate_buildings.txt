@@ -1,0 +1,39 @@
+building_uma_model_market = {
+	base_buildtime = 500
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			consumer_goods = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			pop_happiness = 0.15
+			planet_jobs_energy_produces_mult = -0.15
+		}
+	}
+}

@@ -68,6 +68,9 @@ country_event = {
 			country_event = { id = umaarc.1008 days = 10 random = 30 }
 			#之后还要触发创造考古遗迹的事件
 		}
+		##决定是否可以开地产
+		set_country_flag = community_mod_rules_trigger
+		set_country_flag = community_can_build_branch_offices_true
     }
 
 }

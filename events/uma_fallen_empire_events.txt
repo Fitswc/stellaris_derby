@@ -63,14 +63,14 @@ country_event = {
         }
 
         create_country = {
-            name = "NAME_uma_fallen_empire_name"
-            type = uma_fallen_empire
+			name = "NAME_uma_fallen_empire_name"
+			type = uma_fallen_empire
 			ignore_initial_colony_error = yes
 			authority = auth_uma_fallen_empire
 			civics = {
 				#civic = civic_empire_in_decline
 				#civic = civic_lethargic_leadership
-			}			
+			}
 			species = event_target:uma_fallen_empire_species
 			###PS：为了让AI帝国显现出“性格”，需要在personality里单独设置。否则就会出现“墙头草”
 			ethos = {
@@ -82,22 +82,22 @@ country_event = {
 				###经过测试，如果你的堕落帝国的思潮带有唯物/唯心；亲外/排外【原版堕落的四个思潮】。那么你的堕落领袖的立绘替换就无法完成。注意！
 				ethic = ethic_fanatic_egalitarian
 				ethic = ethic_pacifist
-			}			
+			}
 			flag = {
-                icon= {
-                    category = "uiu_flags"
-                    file = "uiu_fe_flags.dds"
-                }
-                background= {
-                    category = "backgrounds"
-                    file = "00_solid.dds"
-                }
-                colors={
-                    "red"
-                    "red"
-                    "null"
-                    "null"
-                }
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_fe_flags.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
 			}
 			name_list = "UMAname"
 			origin = "origin_fallen_empire" #要改
@@ -108,57 +108,58 @@ country_event = {
 				add_modifier = { modifier = uma_fallen_empire_enhancement_modifier days = -1 }
 				add_resource = {
 					minerals = 50000
-					energy = 50000	
+					energy = 50000
 					food = 50000
 					alloys = 50000
 					consumer_goods = 50000
 					uma_crystal_carrot = 50000
 					influence = 500
 				}
-								
-						###因为未知原因，1里面无法更改领袖立绘。放到2里试试
-						create_leader = {
-							class = ruler
-							species = event_target:uma_fallen_empire_species
-							gender = female
-							name = QC #"秋川弥生"
-							skill = 10
-							set_age = 225
-							immortal = yes
-							# effect = {
-							# 	change_leader_portrait = "C02"
-							# 	uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-							# }
-						}
-						last_created_leader = {
-							change_leader_portrait = C02
-							uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-						}
-						set_leader = last_created_leader
 
-						create_leader = {
-							class = governor
-							species = event_target:uma_fallen_empire_species
-							gender = female
-							name = ES #"日蚀"
-							skill = 18
-							set_age = 185
-							immortal = yes
-						}
+				###因为未知原因，1里面无法更改领袖立绘。放到2里试试
+				create_leader = {
+					class = ruler
+					species = event_target:uma_fallen_empire_species
+					gender = female
+					name = QC #"秋川弥生"
+					skill = 10
+					set_age = 225
+					immortal = yes
+					# effect = {
+					# 	change_leader_portrait = "C02"
+					# 	uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+					# }
+				}
+				last_created_leader = {
+					change_leader_portrait = C02
+					uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				}
+				set_leader = last_created_leader
 
-						add_global_ship_design = "NAME_Enforcer"
-						add_global_ship_design = "NAME_Savant"
-						add_global_ship_design = "NAME_Scholar"
-						add_global_ship_design = "NAME_Sage"
-						add_global_ship_design = "NAME_Cloaker"
-						add_global_ship_design = "NAME_Librarian"
-						add_global_ship_design = "NAME_Seeker"
-						add_global_ship_design = "NAME_FE_Starbase"
-						add_global_ship_design = "NAME_Cybrex_Transport"
+				create_leader = {
+					class = governor
+					species = event_target:uma_fallen_empire_species
+					gender = female
+					name = ES #"日蚀"
+					skill = 18
+					set_age = 185
+					immortal = yes
+				}
+
+				uma_fallen_empire_create_ship_designs = yes
+				add_global_ship_design = "NAME_Enforcer"
+				add_global_ship_design = "NAME_Savant"
+				add_global_ship_design = "NAME_Scholar"
+				add_global_ship_design = "NAME_Sage"
+				add_global_ship_design = "NAME_Cloaker"
+				add_global_ship_design = "NAME_Librarian"
+				add_global_ship_design = "NAME_Seeker"
+				add_global_ship_design = "NAME_FE_Starbase"
+				add_global_ship_design = "NAME_Cybrex_Transport"
 
 			}
-			
-        }
+
+		}
 
 		###这里才是最重要的！
 		last_created_country = {
