@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 version="0.3.7"
+=======
+version="0.3.20"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 tags={
 	"Species"
 	"Technologies"

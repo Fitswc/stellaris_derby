@@ -1668,6 +1668,7 @@ country_event = {
 			last_created_leader = {
 #				change_leader_portrait = DEEP_COMM
 				change_leader_portrait = "30c"
+<<<<<<< HEAD
 				uma_initialize_leader_yaruki_effect = yes
 			}
 			create_message = {
@@ -1684,12 +1685,17 @@ country_event = {
 					key = "border"
 					value = "GFX_border_legendary"
 				}
+=======
+#				add_trait = uma_ruler_trait_sp_tachyon #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 			}
 			country_event = {
 				id = tachyon_coffee.21101
 			}
 		}
 	}
+<<<<<<< HEAD
 
 	option = {
 		name = DISMISS
@@ -1697,6 +1703,22 @@ country_event = {
 		hidden_effect = {
 			event_target:uma_is_leader_deep = {
 				kill_leader = { show_notification = no }
+=======
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_tachyon
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_tachyon
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 			}
 		}
 	}

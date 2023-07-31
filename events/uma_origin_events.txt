@@ -73,6 +73,7 @@ country_event = {
 				add_deposit = d_uma_threegodness_relic
 				add_deposit = d_uma_crystal_carrot_mine_planet
 			}
+<<<<<<< HEAD
 			if = {
 				limit = {
 					has_origin = origin_uma_candleoff
@@ -81,6 +82,8 @@ country_event = {
 					modifier = uma_candle_off_debuff
 				}
 			}
+=======
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 			country_event = { id = umaarc.1008 days = 10 random = 30 }
 			#之后还要触发创造考古遗迹的事件
 		}

@@ -239,8 +239,52 @@ country_event = {
 		
 		custom_tooltip = uma_special_leader_oguri_cap_will_join
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_little_event.12
+=======
+
+			create_leader = {
+				name = OC #"小栗帽"
+				#species = event_target:uma_leader_oguri_cap
+				species = root
+				gender = female
+				class = governor
+				skill = 6
+				set_age = 18
+				custom_catch_phrase = uma_special_leader_oguri_cap_will_join
+				traits = {
+					trait = uma_governor_trait_sp_oguri_cap
+					trait = leader_trait_agrarian_upbringing
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_oguri_cap
+					save_global_event_target_as = uma_is_leader_oguri_cap
+				}
+			}
+		
+			last_created_leader = {
+				change_leader_portrait = "06c"
+#				add_trait = uma_ruler_trait_sp_oguri_cap
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_oguri_cap
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_oguri_cap
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
 			}
 		}
 	}
@@ -251,8 +295,50 @@ country_event = {
 		custom_tooltip = uma_special_leader_oguri_cap_will_join
 
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_little_event.12
+=======
+			create_leader = {
+				name = OC #"小栗帽"
+				#species = event_target:uma_leader_oguri_cap
+				species = root
+				gender = female
+				custom_catch_phrase = uma_special_leader_oguri_cap_will_join
+				class = governor
+				skill = 6
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_oguri_cap
+					trait = leader_trait_agrarian_upbringing
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_oguri_cap
+					save_global_event_target_as = uma_is_leader_oguri_cap
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "06c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				#				add_trait = uma_ruler_trait_sp_oguri_cap
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_oguri_cap
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_oguri_cap
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 			}
 		}
 		add_modifier = {

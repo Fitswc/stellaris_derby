@@ -513,7 +513,11 @@ uma_governor_trait_sp_deep = {
 
 uma_governor_trait_sp_deep_conlic = {
 	cost = 0
+<<<<<<< HEAD
 	icon = "gfx/interface/icons/traits/sp_deepl.png"
+=======
+	icon = "gfx/interface/icons/traits/sp_deepl.png" #欸我临时用一波，记得改
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 	leader_potential_add = {
 		always = no
 	}
@@ -530,6 +534,7 @@ uma_governor_trait_sp_deep_conlic = {
 	inline_script = {script = trait/icon CLASS = governor RARITY = paragon COUNCIL = yes TIER = 2 ICON = "gfx/interface/icons/traits/sp_deepl.png"}
 	initial = no
 	randomized = no
+<<<<<<< HEAD
 }
 
 #帝王
@@ -575,4 +580,6 @@ uma_governor_trait_sp_teio_hachimi = {
 	leader_class = { governor }
 	initial = no
 	randomized = no
+=======
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 }

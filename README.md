@@ -1,22 +1,35 @@
 # StellarisDerby-Branch-Fitswc
 
+<<<<<<< HEAD
 ![stellarderby_logo_2_mini.png](stellarderby_logo_2.png)
+=======
+![Logo](stellarderby_logo_2.png)
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 
 这个可能是Logo?
 
 ## Caution
 
+<<<<<<< HEAD
 Override Files
+=======
+现版本为：Ver0.3 P20
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 
 1. script_trigger/uma_script_triggers.txt -> `is_organic_species`
 2. inline_scripts/trait/icon.txt
 3. inline_scripts/trait/icon_negative.txt
 4. interface/core.gfx
 
+<<<<<<< HEAD
 ## Changelog
+=======
+master分支：最稳定的构建，并且与创意工坊的文件相同(可能会快于创意工坊)。
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 
 ### V0.3-V0.4
 
+<<<<<<< HEAD
 > 2023/7/29
 
 米波事件合并完成/翻译完成
@@ -26,6 +39,13 @@ Override Files
 > 2023/7/28
 
 完成帝宝事件链+合并帝宝事件
+=======
+Fitswc-Bourbon分支：F的新事件分支。
+
+fitswc-NewResearchUi F的新研究ui
+
+Fitswc-AscensionPeakⅡ F的飞升分支
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 
 > 2023/7/27
 

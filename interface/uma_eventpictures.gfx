@@ -62,6 +62,7 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+<<<<<<< HEAD
 
 	spriteType = {
 		name = "GFX_sproject_uma_FlyMeToTheStar"
@@ -209,58 +210,186 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+=======
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 
 	spriteType = {
+		name = "GFX_sproject_uma_FlyMeToTheStar"
+		textureFile = "gfx/event_pictures/uma_flymetothestar.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+<<<<<<< HEAD
 		name = GFx_evt_teio
 		textureFile = "gfx/event_pictures/bg_0019_0_room.dds"
+=======
+		name = "GFX_evt_uma_suzuka_fracture"
+		textureFile = "gfx/event_pictures/uma_suzuka_fracture.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_onplanet_scenery"
+		textureFile = "gfx/event_pictures/uma_suzuka_onplanet_scenery.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_onplanet_dead"
+		textureFile = "gfx/event_pictures/uma_suzuka_onplanet_dead.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_hospital_before_door"
+		textureFile = "gfx/event_pictures/uma_suzuka_hospital_before_door.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_discovered"
+		textureFile = "gfx/event_pictures/uma_suzuka_discovered.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_traincent"
+		textureFile = "gfx/event_pictures/uma_suzuka_traincent.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_traincent_second"
+		textureFile = "gfx/event_pictures/uma_suzuka_traincent_second.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_arc_star"
+		textureFile = "gfx/event_pictures/uma_suzuka_arc_star.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_arc_star_second"
+		textureFile = "gfx/event_pictures/uma_suzuka_arc_star_second.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_arc_star_report"
+		textureFile = "gfx/event_pictures/uma_suzuka_arc_star_report.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_suzuka_arc_star_analyse"
+		textureFile = "gfx/event_pictures/uma_suzuka_arc_star_analyse.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_palace"
+		textureFile = "gfx/event_pictures/uma_palace.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = GFX_situation_uma_satono_top_food
+		textureFile = "gfx/event_pictures/satono_topfood_situation.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = GFX_evt_teio_hachimi
 		textureFile = "gfx/event_pictures/uma_teio_hachimi_one.dds"
+=======
+		name = GFX_evt_uma_satono_one
+		textureFile = "gfx/event_pictures/uma_evt_satono_one.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = GFX_evt_teio_gooutside
 		textureFile = "gfx/event_pictures/uma_teio_gooutside.dds"
+=======
+		name = GFX_evt_uma_satono_two
+		textureFile = "gfx/event_pictures/uma_evt_satono_two.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = GFX_evt_teio_game
 		textureFile = "gfx/event_pictures/uma_teio_game.dds"
+=======
+		name = GFX_evt_uma_satono_three
+		textureFile = "gfx/event_pictures/uma_evt_satono_three.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = GFX_evt_uma_teio_cry
 		textureFile = "gfx/event_pictures/uma_teio_cry.dds"
+=======
+		name = GFX_evt_uma_satono_four
+		textureFile = "gfx/event_pictures/uma_evt_satono_four.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = GFX_uma_ano_bour_forest
 		textureFile = "gfx/event_pictures/uma_forest_anolomy.dds"
+=======
+		name = GFX_evt_uma_satono_five
+		textureFile = "gfx/event_pictures/uma_evt_satono_five.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = "GFX_evt_uma_trees_with_stone"
 		textureFile = "gfx/event_pictures/uma_tree_with_stone.dds"
+=======
+		name = GFX_evt_uma_satono_school
+		textureFile = "gfx/event_pictures/uma_evt_satono_school.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
 	spriteType = {
+<<<<<<< HEAD
 		name = "GFX_evt_uma_lab"
 		textureFile = "gfx/event_pictures/uma_lab.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
@@ -291,6 +420,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_uma_bour_ura"
 		textureFile = "gfx/event_pictures/uma_bour_ura.dds"
+=======
+		name = GFX_evt_topgun
+		textureFile = "gfx/event_pictures/uma_topgun_room.dds"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

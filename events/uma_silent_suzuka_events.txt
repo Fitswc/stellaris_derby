@@ -124,15 +124,21 @@ ship_event = {
 				50 = {
 					country_event = {
 						id = uma_suzuka.5
+<<<<<<< HEAD
 						days = 300
 						random = 30
+=======
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 					}
 				}
 				50 = {
 					country_event = {
 						id = uma_suzuka.20
+<<<<<<< HEAD
 						days = 300
 						random = 30
+=======
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 					}
 				}
 			}
@@ -227,12 +233,19 @@ country_event = {
 
 	option = {
 		name = uma_suzuka.6.a
+<<<<<<< HEAD
 		hidden_effect = {
 			country_event = {
 				id = uma_suzuka.8
 				days = 170
 				random = 1
 			}
+=======
+		country_event = {
+			id = uma_suzuka.8
+			days = 170
+			random = 1
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		}
 	}
 }
@@ -247,20 +260,32 @@ country_event = {
 
 	option = {
 		name = uma_suzuka.8.a
+<<<<<<< HEAD
 		hidden_effect = {
 			country_event = {
 				id = uma_suzuka.13
 			}
+=======
+		country_event = {
+			id = uma_suzuka.13
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		}
 	}
 	option = {
 		name = uma_suzuka.8.b #不打扰
+<<<<<<< HEAD
 		hidden_effect = {
 			country_event = {
 				id = uma_suzuka.12
 				days = 100
 				random = 3
 			}
+=======
+		country_event = {
+			id = uma_suzuka.12
+			days = 100
+			random = 3
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 		}
 	}
 }
@@ -286,6 +311,7 @@ country_event = {
 	}
 	option = {
 		name = uma_suzuka.9.b #放着不管
+<<<<<<< HEAD
 		hidden_effect = {
 			event_target:uma_suzuka_planet_here = {
 				planet_event = {
@@ -293,6 +319,13 @@ country_event = {
 					days = 1200
 					random = 5
 				}
+=======
+		event_target:uma_suzuka_planet_here = {
+			planet_event = {
+				id = uma_suzuka.11
+				days = 1200
+				random = 5
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 			}
 		}
 	}

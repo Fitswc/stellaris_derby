@@ -46,10 +46,17 @@ trade_policy_uma_vanilla_name:0 "§RDisable"
 trade_policy_uma_vanilla_desc:0 "Disable Traincent Academy's Trade Policy"
 
 policy_uma_auto_roll:0 "UMA-Shop Auto Lottery"
+<<<<<<< HEAD
 policy_uma_auto_roll_desc:0 "Setting of UMA-Shop Auto Lottery"
 autoroll_off:0 "Disable"
 autoroll_off_name:0 "$autoroll_off$"
 autoroll_off_desc:0 "Disable"
+=======
+policy_uma_auto_roll_desc:0 "UMA-Shop的自动抽卡设置"
+autoroll_off:0 "禁用"
+autoroll_off_name:0 "$autoroll_off$"
+autoroll_off_desc:0 "禁用自动抽卡"
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 autoroll_sil_on:0 "Silent mode-ON"
 autoroll_sil_on_name:0 "$autoroll_sil_on$"
 autoroll_sil_on_desc:0 "Auto Lottery silent mode, §RThis will not pop-up to show the results of normal rewards§!"

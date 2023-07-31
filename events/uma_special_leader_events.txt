@@ -220,11 +220,62 @@ country_event = {
 	option = {
 		name = uma_special_leader.7.a #我了解了
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.9001
 			}
 		}
 	}
+=======
+			create_leader = {
+				name = SKY
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = governor
+				custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+				skill = 8
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_seiun_sky
+					trait = leader_trait_intellectual
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					#########
+					set_leader_flag = uma_is_gov_seiun_sky
+					#########
+					save_global_event_target_as = uma_is_leader_seiun_sky
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "20c"
+	#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+			}
+		}
+	}
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_seiun_sky
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_seiun_sky
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+	}
+
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 }
 
 ######################################
@@ -257,6 +308,7 @@ country_event = {
 	option = {
 		name = uma_special_leader.8.a #我了解了
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.9000
 			}
@@ -296,6 +348,28 @@ country_event = {
 					"red"
 					"null"
 					"null"
+=======
+			create_leader = {
+				name = SKY
+				#species = event_target:uma_leader_seiun_sky
+				species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+				gender = female
+				class = admiral
+				skill = 8
+				set_age = 18
+				custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+				traits = {
+					trait = uma_admiral_trait_sp_seiun_sky_1
+					trait = leader_trait_trickster
+					trait = leader_trait_gale_speed
+				}
+				effect = {
+					save_global_event_target_as = uma_seiun_sky_admiral
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					set_leader_flag = uma_is_ar_seiun_sky
+					save_global_event_target_as = uma_is_leader_seiun_sky
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 				}
 			}
 			effect = {
@@ -360,6 +434,23 @@ country_event = {
 					key = "border"
 					value = "GFX_border_legendary"
 				}
+			}
+		}
+	}
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_seiun_sky
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_seiun_sky
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
 			}
 		}
 	}
@@ -1892,7 +1983,16 @@ country_event = {
 			country_event = {
 				id = uma_special_leader.72
 			}
+<<<<<<< HEAD
 		}
+=======
+			last_created_leader = {
+				change_leader_portrait = "19c"
+#				add_trait = uma_ruler_trait_sp_agnes_digital #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}		
+>>>>>>> f3c8b2a4653bca2509db340b4f66701718a4eb92
 	}
 
 	after = {
