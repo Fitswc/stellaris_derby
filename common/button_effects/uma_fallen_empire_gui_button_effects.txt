@@ -6,40 +6,25 @@ uma_fgui_diaochazhinan_effect = {
         always = yes
     }
     allow = {
-<<<<<<< HEAD
-=======
-        always = yes
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		NOT = { has_country_flag = uma_fallen_empire_have_opened_visit_hint }  ###限制玩家打开多个事件
     }
     effect = {
         set_country_flag = uma_fallen_empire_have_opened_visit_hint
-<<<<<<< HEAD
         hidden_effect = {
             country_event = {
                 id = uma_fallen_empire.300
             }
         }
-=======
-        country_event = {
-			id = uma_fallen_empire.300
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     }
 }
 
 #参观
-<<<<<<< HEAD
 uma_fgui_canguan_effect = {
-=======
-uma_fgui_diaochazhinan_effect = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     potential = {
         always = yes
     }
     allow = {
         always = yes
-<<<<<<< HEAD
         custom_tooltip = {
 			fail_text = uma_fe_no_more_mission
 			NOT = { has_country_flag = uma_has_opened_cangguan_window }#不能领取多个任务
@@ -51,14 +36,6 @@ uma_fgui_diaochazhinan_effect = {
                 id = uma_fallen_empire.400
             }
         }
-=======
-		#NOT = { has_country_flag = XXX }  ###限制玩家打开多个事件
-    }
-    effect = {
-        country_event = {
-			id = uma_fallen_empire.400
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     }
 }
 
@@ -68,7 +45,6 @@ uma_fgui_renwu_effect = {
         always = yes
     }
     allow = {
-<<<<<<< HEAD
         custom_tooltip = {
 			fail_text = uma_fe_no_more_mission
 			NOT = { has_country_flag = uma_has_mission }#不能领取多个任务
@@ -85,15 +61,6 @@ uma_fgui_renwu_effect = {
                 id = uma_fallen_empire.110
             }
         }
-=======
-        always = yes
-		#NOT = { has_country_flag = XXX }  ###限制玩家打开多个事件
-    }
-    effect = {
-        country_event = {
-			id = uma_fallen_empire.110  ####这里留给tom
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     }
 }
 
@@ -103,7 +70,6 @@ uma_fgui_ziyuanjiaohuan_effect = {
         always = yes
     }
     allow = {
-<<<<<<< HEAD
         custom_tooltip = {
 			fail_text = uma_fe_no_same_window
 			NOT = { has_country_flag = uma_has_opened_ziyuanjiaohuan_window }#不可以重复打开
@@ -120,15 +86,6 @@ uma_fgui_ziyuanjiaohuan_effect = {
                 id = uma_fallen_empire.102
             }
         }
-=======
-        always = yes
-		NOT = { has_country_flag = uma_fallen_empire_resourses_trading_cooldown }
-    }
-    effect = {
-        country_event = {
-			id = uma_fallen_empire.102
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     }
 }
 
@@ -138,25 +95,15 @@ uma_fgui_jiaoliu_effect = {
         always = yes
     }
     allow = {
-<<<<<<< HEAD
-=======
-        always = yes
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		NOT = { has_country_flag = uma_fallen_empire_have_opened_communication }  ###限制玩家打开多个事件
     }
     effect = {
         set_country_flag = uma_fallen_empire_have_opened_communication
-<<<<<<< HEAD
         hidden_effect = {
             country_event = {
                 id = uma_fallen_empire.100
             }
         }
-=======
-        country_event = {
-			id = uma_fallen_empire.100
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     }
 }
 
@@ -170,7 +117,6 @@ uma_visit_lishizhang_effect = {
     }
     allow = {
         custom_tooltip = {
-<<<<<<< HEAD
 			fail_text = uma_must_be_wait_for_cooldown
 			NOT = { has_modifier = uma_fallen_empire_visit_cooldown }
 		}
@@ -186,14 +132,6 @@ uma_visit_lishizhang_effect = {
                 modifier = uma_fallen_empire_visit_cooldown 
                 years = 5
             }
-=======
-			fail_text = "uma_must_be_wait_for_cooldown"
-			NOT = { has_modifier = uma_fallen_empire_visit_cooldown }
-		}
-    }
-    effect = {
-        hidden_effect = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
             if = {
                 limit = { NOT = { has_country_flag = uma_complete_fallen_empire_visit_1 } }
                 country_event = {
@@ -216,27 +154,16 @@ uma_visit_sky_effect = {
     }
     allow = {
         custom_tooltip = {
-<<<<<<< HEAD
 			fail_text = uma_only_one_special_visit
 			NOT = { has_country_flag = uma_sky_visit_finish }
 		}
         custom_tooltip = {
 			fail_text = uma_has_special_leader
-=======
-			fail_text = "uma_only_one_special_visit"
-			NOT = { has_country_flag = uma_sky_visit_start }
-		}
-        custom_tooltip = {
-			fail_text = "uma_has_special_leader"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			exists = event_target:uma_is_leader_seiun_sky
 		}
     }
     effect = {
-<<<<<<< HEAD
         custom_tooltip = uma_sp_leader_visit_hint
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
         set_country_flag = uma_sky_visit_finish
         hidden_effect = {
             country_event = {
@@ -247,37 +174,22 @@ uma_visit_sky_effect = {
 }
 
 #oguri
-<<<<<<< HEAD
 uma_visit_oguri_effect = {
-=======
-uma_visit_sky_effect = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     potential = {
         always = yes
     }
     allow = {
         custom_tooltip = {
-<<<<<<< HEAD
 			fail_text = uma_only_one_special_visit
 			NOT = { has_country_flag = uma_oguri_visit_finish }
 		}
         custom_tooltip = {
 			fail_text = uma_has_special_leader
-=======
-			fail_text = "uma_only_one_special_visit"
-			NOT = { has_country_flag = uma_oguri_visit_finish }
-		}
-        custom_tooltip = {
-			fail_text = "uma_has_special_leader"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			exists = event_target:uma_is_leader_oguri_cap
 		}
     }
     effect = {
-<<<<<<< HEAD
         custom_tooltip = uma_sp_leader_visit_hint
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
         set_country_flag = uma_oguri_visit_finish
         hidden_effect = {
             country_event = {
@@ -288,17 +200,12 @@ uma_visit_sky_effect = {
 }
 
 #数码
-<<<<<<< HEAD
 uma_visit_digital_effect = {
-=======
-uma_visit_sky_effect = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     potential = {
         always = yes
     }
     allow = {
         custom_tooltip = {
-<<<<<<< HEAD
 			fail_text = uma_only_one_special_visit
 			NOT = { has_country_flag = uma_digital_visit_finish }
 		}
@@ -309,17 +216,6 @@ uma_visit_sky_effect = {
     }
     effect = {
         custom_tooltip = uma_sp_leader_visit_hint
-=======
-			fail_text = "uma_only_one_special_visit"
-			NOT = { has_country_flag = uma_digital_visit_finish }
-		}
-        custom_tooltip = {
-			fail_text = "uma_has_special_leader"
-			exists = event_target:uma_is_leader_agnes_digital
-		}
-    }
-    effect = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
         set_country_flag = uma_digital_visit_finish
         hidden_effect = {
             country_event = {

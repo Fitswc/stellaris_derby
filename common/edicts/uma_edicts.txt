@@ -7,7 +7,6 @@ uma_held_national_derby = {
 	resources = {
 		category = edicts
 		cost = {
-<<<<<<< HEAD
 			trigger = {
 				NOT = {
 					has_country_flag = uma_race_upkeep_less
@@ -24,9 +23,6 @@ uma_held_national_derby = {
 			influence = 200
 			food = 1000
 			unity = 1000
-=======
-			influence = 400
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -46,11 +42,7 @@ uma_held_national_derby = {
 
 		add_modifier = {
 			modifier = uma_has_held_national_derby
-<<<<<<< HEAD
 			days = 3650
-=======
-			days = 14600
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 
 		hidden_effect = {

@@ -76,7 +76,6 @@ event = {
 			create_leader = {
 				class = ruler
 				species = this				#领袖种族
-<<<<<<< HEAD
 				name = NN			#领袖名字（当前为随机）
 				skill = 10
 			}
@@ -84,14 +83,6 @@ event = {
 #			effect = {
 #				change_leader_portrait = "46c"
 #			}
-=======
-				name = "优秀素质"			#领袖名字（当前为随机）
-				skill = 10
-			}
-			effect = {
-				change_leader_portrait = "19c"
-			}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 
 	}
@@ -138,11 +129,7 @@ country_event = {
 	diplomatic = yes
 
 	picture_event_data = {
-<<<<<<< HEAD
 		portrait = "46c"
-=======
-		portrait = "19c"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		room = uma_traincenter_01_room
 	}
 	
@@ -195,11 +182,7 @@ country_event = {
 	diplomatic = yes
 
 	picture_event_data = {
-<<<<<<< HEAD
 		portrait = "46c"
-=======
-		portrait = "19c"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		room = uma_traincenter_01_room
 	}
 	
@@ -220,11 +203,7 @@ country_event = {
 		}
 		hidden_effect = {
 			create_leader = {
-<<<<<<< HEAD
 				name = NN
-=======
-				name = "优秀素质"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = governor
@@ -243,7 +222,6 @@ country_event = {
 				}
 			}
 			last_created_leader = {
-<<<<<<< HEAD
 				change_leader_portrait = "46c"
 #				add_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
@@ -263,12 +241,6 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
-=======
-				change_leader_portrait = "19c"
-				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
-			}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 			country_event = {
 				id = uma_nice_nature.4
@@ -288,11 +260,7 @@ country_event = {
 		}
 		hidden_effect = {
 			create_leader = {
-<<<<<<< HEAD
 				name = NN
-=======
-				name = "优秀素质"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = scientist
@@ -311,7 +279,6 @@ country_event = {
 				}
 			}
 			last_created_leader = {
-<<<<<<< HEAD
 				change_leader_portrait = "46c"
 #				add_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
@@ -331,12 +298,6 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
-=======
-				change_leader_portrait = "19c"
-				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
-			}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		
 			country_event = {
 				id = uma_nice_nature.4
@@ -356,11 +317,7 @@ country_event = {
 		}
 		hidden_effect = {
 			create_leader = {
-<<<<<<< HEAD
 				name = NN #NN
-=======
-				name = "优秀素质"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = admiral
@@ -379,7 +336,6 @@ country_event = {
 				}
 			}
 			last_created_leader = {
-<<<<<<< HEAD
 				change_leader_portrait = "46c"
 #				add_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
@@ -399,12 +355,6 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
-=======
-				change_leader_portrait = "19c"
-				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
-			}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			country_event = {
 				id = uma_nice_nature.4
 			}
@@ -423,11 +373,7 @@ country_event = {
 		}
 		hidden_effect = {
 			create_leader = {
-<<<<<<< HEAD
 				name = NN
-=======
-				name = "优秀素质"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = general
@@ -446,7 +392,6 @@ country_event = {
 				}
 			}
 			last_created_leader = {
-<<<<<<< HEAD
 				change_leader_portrait = "46c"
 #				add_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
@@ -466,12 +411,6 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
-=======
-				change_leader_portrait = "19c"
-				add_ruler_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
-			}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			country_event = {
 				id = uma_nice_nature.4
 			}

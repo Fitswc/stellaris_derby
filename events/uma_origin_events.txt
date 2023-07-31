@@ -9,7 +9,6 @@ event = {
 
     immediate = {
 		every_playable_country = {
-<<<<<<< HEAD
 			if = {
 				limit = {
 					OR = {
@@ -26,12 +25,6 @@ event = {
 				country_event = {
 					id = uma_origin.4
 				}
-=======
-			limit = { has_origin = origin_uma_below_threegodness }
-			country_event = {
-				id = uma_origin.2
-				#days = 0
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		every_playable_country = {
@@ -53,7 +46,6 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-<<<<<<< HEAD
 		if = {
 			limit = {
 				is_multiplayer = yes
@@ -76,26 +68,13 @@ country_event = {
 			country_event = { id = umaarc.1008 days = 10 random = 30 }
 			#之后还要触发创造考古遗迹的事件
 		}
-=======
-        capital_scope = {
-			save_event_target_as = uma_is_the_first_capital
-			add_deposit = d_uma_threegodness_relic
-			add_deposit = d_uma_crystal_carrot_mine_planet
-		}
-		country_event = {id = umaarc.1008 days = 10 random = 30 }
-		#之后还要触发创造考古遗迹的事件
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     }
 
 }
 
 
 ###为玩家赛马娘国家添加一个基础跑道，和一个工业企划
-<<<<<<< HEAD
 planet_event = {
-=======
-event = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	id = uma_origin.3
     hide_window = yes
 
@@ -116,7 +95,6 @@ event = {
 		}
     }
 
-<<<<<<< HEAD
 }
 
 country_event = {
@@ -143,6 +121,4 @@ country_event = {
 		}
 	}
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }

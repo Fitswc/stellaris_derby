@@ -60,21 +60,7 @@ uma_six_crown_racing_umamusume = {
 	planet_jobs_produces_mult = 0.15
 }
 
-<<<<<<< HEAD
 
-=======
-#好转一息
-uma_skill_haozhuanyixi = {
-	ship_armor_mult = 0.1
-	ship_shield_mult = 0.1
-}
-
-#一文字
-uma_skill_yiwenzi = {
-	ship_interstellar_speed_mult = 0.20
-	ship_fire_rate_mult = 0.20
-}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 ####小型事件修正
 #加大甜品供应
@@ -316,7 +302,6 @@ uma_nice_natures_knowledge = {
 	ship_weapon_range_mult = 0.033
 }
 
-<<<<<<< HEAD
 uma_trainer_silent_suzuka = {
 	planet_uma_racing_umamusume_produces_mult = 0.1
 }
@@ -325,14 +310,11 @@ uma_trainer_silent_suzuka_dream_break = {
 	planet_uma_racing_umamusume_produces_mult = 0.01
 }
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 ########################
 ##########商城##########
 ########################
 ####绿帽商城专属加强buff
 uma_shopping_center_protection = {
-<<<<<<< HEAD
 	#ship_armor_mult = 20
 	#ship_shield_mult = 20
 	#ship_shield_regen_add_perc = 2
@@ -345,14 +327,6 @@ uma_shopping_center_protection = {
 	ship_hull_regen_add_perc = 0.01
 	ship_weapon_damage = 1
 	ship_fire_rate_mult = 0.02
-=======
-	ship_armor_mult = 20
-	ship_shield_mult = 20
-	ship_shield_regen_add_perc = 2
-	ship_hull_regen_add_perc = 2
-	ship_weapon_damage = 20
-	ship_fire_rate_mult = 0.5
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }
 
 ###抽卡冷却
@@ -416,7 +390,6 @@ uma_umamusume_diary = {
 	planet_crime_add = -5
 }
 
-<<<<<<< HEAD
 uma_possible_future_one = {
 	planet_jobs_produces_mult = 0.2
 }
@@ -451,28 +424,4 @@ uma_possible_future_six = {
 uma_possible_future_seven = {
 	planet_stability_add = -15
 	pop_ethic_authoritarian_attraction_mult = 0.5
-=======
-tachyon_coffee_conspiracy = {
-	###预留
-}
-
-#堕落帝国的作弊buff（数值还需要商榷）
-uma_fallen_empire_enhancement_modifier = {
-	country_base_influence_produces_add = 3
-	all_technology_research_speed = 2
-	pop_growth_speed = -0.5
-	planet_pops_upkeep_mult = -0.5
-	ship_weapon_range_mult = 0.5
-	ship_fire_rate_mult = 1
-	ship_hull_mult = 20
-	ship_armor_mult = 20
-	ship_shield_mult = 20
-	ship_weapon_damage = 20
-	ships_upkeep_mult = -0.95
-	leaders_upkeep_mult = -0.95
-	starbases_upkeep_mult = -0.95
-	planet_pops_upkeep_mult = -0.95
-	planet_jobs_upkeep_mult = -0.95
-	country_resource_max_add = 300000
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }

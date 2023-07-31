@@ -1,12 +1,7 @@
 umamusume = {
-<<<<<<< HEAD
 	randomized = no
 	#archetype = BIOLOGICAL
 	archetype = UMA
-=======
-	archetype = UMA
-	randomized = no
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	possible = { 
 		authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE }}
 		authority = { NOT = { value = auth_hive_mind text = UMA_SPECIES_CAN_NOT_BE_HIVE_MIND }}
@@ -17,7 +12,6 @@ umamusume = {
 			value = auth_trainingcenter
 		}
 	}
-<<<<<<< HEAD
 	resources = {
 		category = planet_pops
 		upkeep = {
@@ -25,8 +19,6 @@ umamusume = {
 			consumer_goods = 0.3
 		}
 	}
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	portraits = {
 		"umamusume"

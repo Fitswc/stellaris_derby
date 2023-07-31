@@ -4,11 +4,7 @@ pc_uma_school = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
 	picture = pc_uma_school #路径在gfx-interfacce-planetview中
-<<<<<<< HEAD
 	show_city = no
-=======
-	#show_city = no
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	climate = "dry"
 
@@ -49,10 +45,6 @@ pc_uma_school = {
 	carry_cap_per_free_district = @carry_cap_high
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 pc_starbase = {
 	habitat = no
 	entity = "orbital_habitat"

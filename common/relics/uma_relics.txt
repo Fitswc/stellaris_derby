@@ -1,22 +1,13 @@
 uma_tachyon_supervisor_relics = {
-<<<<<<< HEAD
 	activation_duration = 3600
 	portrait = "GFX_relic_mechano_calibrator"
-=======
-	activation_duration = @triumph_duration
-	portrait = "GFX_relic_dragon_trophy"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	sound = "relic_activation_ether_drake_trophy"
 
 	resources = {
 		category = relics
 		# Activation cost
 		cost = {
-<<<<<<< HEAD
 			unity = 3000
-=======
-			unity = @activation_cost
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -59,24 +50,15 @@ uma_tachyon_supervisor_relics = {
 }
 
 uma_intact_supervisor_relics = {
-<<<<<<< HEAD
 	activation_duration = 3600
 	portrait = "GFX_relic_mechano_calibrator"
-=======
-	activation_duration = @triumph_duration
-	portrait = "GFX_relic_dragon_trophy"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	sound = "relic_activation_ether_drake_trophy"
 
 	resources = {
 		category = relics
 		# Activation cost
 		cost = {
-<<<<<<< HEAD
 			unity = 3000
-=======
-			unity = @activation_cost
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -88,15 +70,9 @@ uma_intact_supervisor_relics = {
 		potential = {
 			always = yes
 		}
-<<<<<<< HEAD
 		planet_jobs_engineering_research_produces_mult = 0.06
 		planet_jobs_physics_research_produces_mult = 0.06
 		planet_jobs_society_research_produces_mult = 0.06
-=======
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 
 	score = 1000

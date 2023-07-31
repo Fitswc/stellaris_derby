@@ -3,27 +3,16 @@
 uma_lightoff = {
 	trigger = {
 		owner = {
-<<<<<<< HEAD
 			has_origin = origin_uma_candleoff
-=======
-			has_civic = civic_uma_candleoff
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 	default = no
 	stop_when_armies_dead = no
 	abduct_pops = no
-<<<<<<< HEAD
 	planet_damage = 10
 	army_damage = 50
 	kill_pop_chance = {
 		base = 1
-=======
-	planet_damage = 0.2
-	army_damage = 50
-	kill_pop_chance = {
-		base = 0
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 	min_pops_to_kill_pop = 0
 	ai_weight = {

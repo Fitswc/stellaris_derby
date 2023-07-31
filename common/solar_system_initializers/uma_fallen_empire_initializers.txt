@@ -2,11 +2,7 @@
 
 #堕落中央星系（往事）
 uma_fallen_empire_system_initializer = {
-<<<<<<< HEAD
 	name = FALL_WX # "往事"
-=======
-	name = "往事"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	class = "sc_black_hole"
 	usage = fallen_empire_init
 
@@ -18,11 +14,7 @@ uma_fallen_empire_system_initializer = {
 	}
 
 	planet = {
-<<<<<<< HEAD
         name = FALL_WX #"往事"
-=======
-        name = "往事"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
         class = star
         orbit_distance = 0
         orbit_angle = random
@@ -54,10 +46,7 @@ uma_fallen_empire_system_initializer = {
 			}
 			set_owner = event_target:uma_fallen_empire
 			set_controller = event_target:uma_fallen_empire
-<<<<<<< HEAD
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 
     }
@@ -87,11 +76,7 @@ uma_fallen_empire_system_initializer = {
 
 #堕落一号殖民星系——火种（一大堆要塞+1颗学院星球）
 uma_fallen_empire_system_initializer_1 = {
-<<<<<<< HEAD
 	name = FALL_HZ # "火种"
-=======
-	name = "火种"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	class = "sc_a"
 	usage = fallen_empire_init
 
@@ -100,11 +85,7 @@ uma_fallen_empire_system_initializer_1 = {
 
 	
 	planet = {
-<<<<<<< HEAD
 		name = FALL_HZ # "火种"
-=======
-		name = "火种"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		class = star
 		orbit_distance = 0
 		orbit_angle = 0
@@ -114,11 +95,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_I #"护卫者1号要塞"
-=======
-						name = "护卫者1号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -133,11 +110,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_II # "护卫者2号要塞"
-=======
-						name = "护卫者2号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -152,11 +125,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_III # "护卫者3号要塞"
-=======
-						name = "护卫者3号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -171,11 +140,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_VI #"护卫者4号要塞"
-=======
-						name = "护卫者4号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -190,11 +155,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_V #"护卫者5号要塞"
-=======
-						name = "护卫者5号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -209,11 +170,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_VI #"护卫者6号要塞"
-=======
-						name = "护卫者6号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -228,11 +185,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_VII #"护卫者7号要塞"
-=======
-						name = "护卫者7号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -247,11 +200,7 @@ uma_fallen_empire_system_initializer_1 = {
 				effect = {
 					set_owner = event_target:uma_fallen_empire
 					create_ship = {
-<<<<<<< HEAD
 						name = FALL_PRO_VIII #"护卫者8号要塞"
-=======
-						name = "护卫者8号要塞"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 						design = "NAME_uma_fallen_empire_secondary_guard_station"
 						graphical_culture = "pirate_01"
 					}
@@ -270,11 +219,7 @@ uma_fallen_empire_system_initializer_1 = {
 		class = pc_uma_school
 		orbit_distance = 75
 		orbit_angle = 95
-<<<<<<< HEAD
 		name = FALL_HX #"和谐"
-=======
-		name = "和谐"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		size = 25
 		modifiers = none
         deposit_blockers = none
@@ -302,11 +247,7 @@ uma_fallen_empire_system_initializer_1 = {
 			while = {
                 count = 20
 				create_army = {
-<<<<<<< HEAD
 					name = FALL_CIT_PRO #"城市守卫军团"
-=======
-					name = "城市守卫军团"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 					owner = event_target:uma_fallen_empire
 					species = event_target:uma_fallen_empire
 					type = "machine_assault_3"
@@ -365,11 +306,7 @@ uma_fallen_empire_system_initializer_1 = {
 
 
 uma_fallen_empire_system_initializer_2 = {
-<<<<<<< HEAD
 	name = FALL_NOR #"诺亚"
-=======
-	name = "诺亚"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	class = "sc_g"
 	usage = fallen_empire_init
 
@@ -377,11 +314,7 @@ uma_fallen_empire_system_initializer_2 = {
 
 	planet = {
         class = star
-<<<<<<< HEAD
 		name = FALL_NOR #"诺亚"
-=======
-		name = "诺亚"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
         size = { min = 25 max = 30 }
         orbit_distance = 0
         orbit_angle = 1
@@ -391,11 +324,7 @@ uma_fallen_empire_system_initializer_2 = {
 		class = pc_uma_school
 		orbit_distance = 86
 		orbit_angle = 117
-<<<<<<< HEAD
 		name = FALL_LIFE
-=======
-		name = "生机"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		size = 20
 		modifiers = none
         deposit_blockers = none
@@ -413,24 +342,14 @@ uma_fallen_empire_system_initializer_2 = {
 			add_building = building_affluence_center
 			add_building = building_nourishment_center
 			add_building = building_nourishment_center
-<<<<<<< HEAD
 			add_building = building_class_4_singularity
 			add_building = building_class_4_singularity
 			add_building = building_dimensional_fabricator
-=======
-			add_building = building_automatic_central
-			add_building = building_automatic_feeding_system 
-			add_building = building_virtual_real_node
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			add_building = building_nano_forge
 			while = {
                 count = 10
 				create_army = {
-<<<<<<< HEAD
 					name = FALL_PRO_IN #"遗落护卫军团"
-=======
-					name = "遗落护卫军团"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 					owner = event_target:uma_fallen_empire
 					species = event_target:uma_fallen_empire
 					type = "machine_assault_3"
@@ -466,11 +385,7 @@ uma_fallen_empire_system_initializer_2 = {
     }
 
 	planet = {
-<<<<<<< HEAD
 		name = FALL_YC #"遗存"
-=======
-		name = "遗存"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		class = "pc_broken"
 		orbit_distance = 35
 		orbit_angle = 15
@@ -483,11 +398,7 @@ uma_fallen_empire_system_initializer_2 = {
 	}
 
 	planet = {
-<<<<<<< HEAD
 		name = FALL_MSBEHM #"穆斯贝尔海姆"
-=======
-		name = "穆斯贝尔海姆"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		class = "pc_molten"
 		orbit_distance = 110
 		orbit_angle = 60
@@ -500,11 +411,7 @@ uma_fallen_empire_system_initializer_2 = {
 	}
 
 	planet = {
-<<<<<<< HEAD
 		name = FALL_NFEHM #"尼福尔海姆"
-=======
-		name = "尼福尔海姆"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		class = "pc_gas_giant"
 		orbit_distance = 86
 		orbit_angle = -160
@@ -545,11 +452,7 @@ uma_fallen_empire_system_initializer_2 = {
 
 
 uma_fallen_empire_system_initializer_3 = {
-<<<<<<< HEAD
 	name = FALL_YB #"隐秘"
-=======
-	name = "隐秘"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	class = "sc_g"
 	usage = fallen_empire_init
 
@@ -562,11 +465,7 @@ uma_fallen_empire_system_initializer_3 = {
 
 	planet = {
         class = star
-<<<<<<< HEAD
 		name = FALL_YB #"隐秘"
-=======
-		name = "隐秘"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
         size = { min = 25 max = 30 }
         orbit_distance = 0
         orbit_angle = 1
@@ -577,11 +476,7 @@ uma_fallen_empire_system_initializer_3 = {
 		class = pc_relic
 		orbit_distance = 75
 		orbit_angle = 145
-<<<<<<< HEAD
 		name = FALL_KING #"山中之王"
-=======
-		name = "山中之王"
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		size = 24 #24格的遗迹星球，我们的日蚀就沉睡在这里
 		modifiers = none
 

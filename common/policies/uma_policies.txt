@@ -1,15 +1,11 @@
 ###马娘专属政策
-<<<<<<< HEAD
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 #赛事运营方针
 uma_racing_umamusume_policy = {
 	potential = {
 		has_authority = auth_trainingcenter
 		has_technology = tech_uma_toresen_race_dept
 	}
-<<<<<<< HEAD
 
 	allow = {
 		is_at_war = no
@@ -27,24 +23,10 @@ uma_racing_umamusume_policy = {
 
 		}
 
-=======
-	allow = {
-		is_at_war = no
-	}
-	#保持传统
-	option = {
-		name = "uma_racing_umamusume_policy_tradition"
-		policy_flags = {
-			uma_racing_umamusume_policy_tradition
-		}
-		modifier = {
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		ai_weight = {
 			weight = 10
 		}
 	}
-<<<<<<< HEAD
 
 	#商业化运营
 	option = {
@@ -55,27 +37,15 @@ uma_racing_umamusume_policy = {
 			uma_racing_umamusume_policy_business
 		}
 
-=======
-	#商业化运营
-	option = {
-		name = "uma_racing_umamusume_policy_business"
-		policy_flags = {
-			uma_racing_umamusume_policy_business
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		modifier = {
 			planet_uma_racing_umamusume_unity_produces_mult = -0.1
 			planet_uma_racing_umamusume_energy_produces_add = 3
 		}
-<<<<<<< HEAD
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		ai_weight = {
 			weight = 0
 		}
 	}
-<<<<<<< HEAD
 
 	#荣耀之战
 	option = {
@@ -86,31 +56,17 @@ uma_racing_umamusume_policy = {
 			uma_racing_umamusume_policy_glory
 		}
 
-=======
-	#荣耀之战
-	option = {
-		name = "uma_racing_umamusume_policy_glory"
-		policy_flags = {
-			uma_racing_umamusume_policy_glory
-		}
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		modifier = {
 			planet_uma_racing_umamusume_unity_produces_mult = 0.1
 			planet_uma_racing_umamusume_upkeep_mult = 0.1
 		}
-<<<<<<< HEAD
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		ai_weight = {
 			weight = 0
 		}
 	}
-<<<<<<< HEAD
 
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }
 
 #赛马娘专属贸易政策
@@ -140,10 +96,7 @@ uma_trade_policy = {
 		name = trade_policy_uma_strategic_resources_trading
 		valid = {
 			custom_tooltip = {
-<<<<<<< HEAD
 				fail_text = requires_trade_policy_uma_strategic_resources_trading
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				OR = {
 					has_technology = tech_mine_volatile_motes
 					has_technology = tech_volatile_motes
@@ -156,10 +109,7 @@ uma_trade_policy = {
 					has_technology = tech_mine_rare_crystals
 					has_technology = tech_rare_crystals
 				}
-<<<<<<< HEAD
 			
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		policy_flags = {
@@ -210,11 +160,7 @@ uma_trade_policy = {
 #燃料选择
 uma_fuel_convertion_mode = {
 	potential = {
-<<<<<<< HEAD
 		has_origin = origin_uma_candleoff
-=======
-		has_civic = civic_uma_candleoff
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 	option = {
 		name = policy_uma_fuel_convertion_small
@@ -255,7 +201,6 @@ uma_fuel_convertion_mode = {
 	
 
 }
-<<<<<<< HEAD
 
 uma_auto_roll = {
 	potential = {
@@ -290,5 +235,3 @@ uma_auto_roll = {
 		}
 	}
 }
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618

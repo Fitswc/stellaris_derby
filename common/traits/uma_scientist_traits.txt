@@ -8,14 +8,9 @@ uma_scientist_trait_kishouyasashii = {
 		is_species = umamusume
 		has_trait = uma_trait_kishouhageshii
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
     randomized = no
 	
@@ -33,14 +28,9 @@ uma_scientist_trait_horn = {
 		science_ship_survey_speed = 0.5
 		ship_archaeological_site_clues_add = 3
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -54,14 +44,9 @@ uma_scientist_trait_special_scholar = {
 		science_ship_survey_speed = 0.25
 		ship_archaeological_site_clues_add = 2
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -78,14 +63,9 @@ uma_scientist_trait_tomorrow_star = {
 		ship_archaeological_site_clues_add = 1
 		
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -98,14 +78,9 @@ uma_scientist_trait_training_book = {
 		leader_skill_levels =  5
 		species_leader_exp_gain = 1.5
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -119,14 +94,9 @@ uma_scientist_trait_vegetable_drink = {
 		science_ship_survey_speed = 0.5
 		ship_archaeological_site_clues_add = 3
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -140,14 +110,9 @@ uma_scientist_trait_power_sf = {
 		science_ship_survey_speed = 0.25
 		ship_archaeological_site_clues_add = 2
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -157,11 +122,7 @@ uma_scientist_trait_power_sf = {
 ###干劲特质###
 ##############
 #绝好调
-<<<<<<< HEAD
 uma_scientist_trait_yaruki_five = {
-=======
-uma_scientist_trait_yaruki_5 = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"
 	modifier = {
@@ -169,23 +130,14 @@ uma_scientist_trait_yaruki_5 = {
 		science_ship_survey_speed = 0.2
 		ship_archaeological_site_clues_add = 2
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
 #好调
-<<<<<<< HEAD
 uma_scientist_trait_yaruki_four = {
-=======
-uma_scientist_trait_yaruki_4 = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"
 	modifier = {
@@ -193,81 +145,49 @@ uma_scientist_trait_yaruki_4 = {
 		science_ship_survey_speed = 0.1
 		ship_archaeological_site_clues_add = 1
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
 #普通
-<<<<<<< HEAD
 uma_scientist_trait_yaruki_three = {
-=======
-uma_scientist_trait_yaruki_3 = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
 	modifier = {
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
 #不调
-<<<<<<< HEAD
 uma_scientist_trait_yaruki_two = {
-=======
-uma_scientist_trait_yaruki_2 = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_2.png"
 	modifier = {
 		all_technology_research_speed = -0.025
 		science_ship_survey_speed = -0.05
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
 #绝不调
-<<<<<<< HEAD
 uma_scientist_trait_yaruki_one = {
-=======
-uma_scientist_trait_yaruki_1 = {
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"
 	modifier = {
 		all_technology_research_speed = -0.05
 		science_ship_survey_speed = -0.1
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -282,14 +202,9 @@ uma_scientist_trait_terriroty_awake = {
 		science_ship_survey_speed = 0.25
 		ship_archaeological_site_clues_add = 1
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 #	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
 	randomized = no	
 }
@@ -307,14 +222,9 @@ uma_scientist_trait_sp_king_halo = {
 		all_technology_research_speed = 0.1
 		science_ship_survey_speed = 0.25
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = yes TIER = none ICON = "gfx/interface/icons/traits/sp_king_halo.png"}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
     randomized = no		
 }
@@ -332,14 +242,9 @@ uma_scientist_trait_sp_al_condor_pasa = {
 		ship_anomaly_generation_chance_mult = 0.33
 		ship_archaeological_site_clues_add = 1
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/sp_al_condor_pasa.png"}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
     randomized = no		
 }
@@ -357,14 +262,9 @@ uma_scientist_trait_sp_kitasan_black = {
 		science_ship_survey_speed = 0.5
 		ship_anomaly_generation_chance_mult = 0.33		
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/sp_kitasan_black.png"}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
     randomized = no		
 }
@@ -377,7 +277,6 @@ uma_scientist_trait_sp_nice_nature = {
 		always = no
 	}
 	immortal_leaders = yes
-<<<<<<< HEAD
 	triggered_modifier = {
 		potential = {
 			has_leader_flag = sci_nn_improved
@@ -386,26 +285,18 @@ uma_scientist_trait_sp_nice_nature = {
 		science_ship_survey_speed = 0.355
 		ship_anomaly_generation_chance_mult = 0.35
 	}
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	modifier = {
 		all_technology_research_speed = 0.033
 		science_ship_survey_speed = 0.333
 		ship_anomaly_generation_chance_mult = 0.333		
 	}
-<<<<<<< HEAD
 
 	leader_class = { scientist }
 	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/sp_nice_nature.png"}
-=======
-	leader_trait = { scientist }
-	leader_class = { scientist }
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	initial = no
     randomized = no		
 }
 
-<<<<<<< HEAD
 #速子/临时补充
 uma_scientist_trait_sp_tachyon = {
 	cost = 0
@@ -507,5 +398,3 @@ uma_scientist_trait_sp_satono = {
     randomized = no
 }
 
-=======
->>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
