@@ -331,7 +331,7 @@ uma_shopping_center_protection = {
 
 ###抽卡冷却
 uma_gacha_cool_down = {
-
+	hide_from_country_list = yes
 }
 
 #####
@@ -425,3 +425,62 @@ uma_possible_future_seven = {
 	planet_stability_add = -15
 	pop_ethic_authoritarian_attraction_mult = 0.5
 }
+
+
+uma_candle_off_debuff = {
+	planet_jobs_consumer_goods_produces_mult = -0.3
+	planet_jobs_energy_produces_mult = -0.3
+	starbase_shipyard_build_speed_mult = 0.2
+	planet_stability_add = -0.1
+}
+
+uma_candle_off_debuff_a = {
+	ship_hull_mult = 0.9
+	ship_fire_rate_mult = 0.8
+	ship_weapon_damage = 0.8
+	ship_hull_regen_add_perc = 0.8
+	ship_armor_regen_add_perc = 0.8
+}
+
+uma_candle_off_debuff_b = {
+	starbase_shipyard_build_speed_mult = 0.4
+	starbase_shipyard_build_cost_mult = -0.3
+	army_damage_mult = 0.65
+	country_war_exhaustion_mult = -0.4
+	country_naval_cap_mult = 0.5
+}
+
+
+uma_big_bug = {
+	pop_happiness = 0.06
+}
+
+uma_fly_tech = {
+	starbase_shipyard_build_speed_mult = 0.3
+	planet_building_build_speed_mult = 0.3
+
+}
+
+uma_colony_helping_association = {
+	planet_colony_development_speed_mult = 0.25
+	custom_tooltip = uma_colony_helping_association_tooltip
+}
+
+uma_talen_engineer = {
+	country_engineering_tech_research_speed = 0.1
+	planet_building_build_speed_mult = 0.09
+	starbase_shipyard_build_speed_mult = 0.09
+	ship_hull_mult = 0.1
+	ship_shield_mult = 0.1
+}
+
+uma_stepute_choice_one = {
+	hide_from_country_list = yes
+	pop_ethic_materialist_attraction_mult = 1
+}
+
+uma_stepute_choice_second = {
+	hide_from_country_list = yes
+	pop_ethic_spiritualist_attraction_mult = 1
+}
+

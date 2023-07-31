@@ -31,3 +31,230 @@ uma_create_leader_deep = {
 		}
 	}
 }
+
+
+uma_create_leader_oc = {
+	optimize_memory
+	create_leader = {
+		name = OC #"小栗帽"
+		#species = event_target:uma_leader_oguri_cap
+		species = root
+		gender = female
+		background_job = uma_racing_umamusume
+		custom_catch_phrase = uma_special_leader_oguri_cap_will_join
+		class = governor
+		skill = 6
+		set_age = 18
+		traits = {
+			trait = uma_governor_trait_sp_oguri_cap
+			trait = leader_trait_agrarian_upbringing
+			trait = leader_trait_righteous
+		}
+		effect = {
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_oguri_cap
+			save_global_event_target_as = uma_is_leader_oguri_cap
+			change_leader_portrait = "06c"
+			set_leader_flag = legendary_leader
+		}
+	}
+}
+
+uma_create_leader_did = {
+	create_leader = {
+		name = DID
+		#species = event_target:uma_leader_seiun_sky
+		species = root
+		gender = female
+		class = governor
+		skill = 7
+		set_age = 18
+#		background_planet = This.home_planet
+		background_job = uma_trainer
+		custom_catch_phrase = uma_special_leader_agnes_digital_will_join
+		traits = {
+			trait = uma_governor_trait_sp_agnes_digital
+			trait = leader_trait_righteous
+			trait = leader_trait_intellectual
+		}
+		effect = {
+			save_global_event_target_as = uma_agnes_digital_governor
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_agnes_digital
+			change_leader_portrait = "19c"
+			set_leader_flag = legendary_leader
+		}
+	}
+}
+
+uma_create_leader_ty = {
+	create_leader = {
+		name = AGT #"爱丽速子"
+		#species = event_target:uma_leader_seiun_sky
+		species = root
+		gender = female
+		class = scientist
+		skill = 8
+		set_age = 18
+		traits = {
+			trait = uma_scientist_trait_sp_tachyon #没有找到速子的专属特质
+			trait = leader_trait_intellectual
+			trait = leader_trait_righteous
+		}
+		effect = {
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_tachyon
+			save_global_event_target_as = uma_is_leader_tachyon
+			change_leader_portrait = "30c"
+			set_leader_flag = legendary_leader
+		}
+	}
+}
+
+
+uma_create_leader_sky_admiral = {
+	create_leader = {
+		name = SKY
+		#species = event_target:uma_leader_seiun_sky
+		species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+		gender = female
+		class = admiral
+		skill = 8
+		set_age = 18
+		custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+		background_planet = event_target:uma_seiun_sky_planet
+		background_job = primitive_farmer
+		traits = {
+			trait = uma_admiral_trait_sp_seiun_sky_1
+			trait = leader_trait_trickster
+			trait = leader_trait_gale_speed
+		}
+		effect = {
+			change_leader_portrait = "20c"
+			save_global_event_target_as = uma_seiun_sky_admiral
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_seiun_sky
+			set_leader_flag = uma_is_ar_seiun_sky
+			save_global_event_target_as = uma_is_leader_seiun_sky
+			set_leader_flag = legendary_leader
+		}
+	}
+}
+
+
+uma_create_leader_sky_governor = {
+	create_leader = {
+		name = SKY
+		#species = event_target:uma_leader_seiun_sky
+		species = root
+		gender = female
+		class = governor
+		custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+		background_planet = event_target:uma_seiun_sky_planet
+		background_job = primitive_farmer
+		skill = 8
+		set_age = 18
+		traits = {
+			trait = uma_governor_trait_sp_seiun_sky
+			trait = leader_trait_intellectual
+			trait = leader_trait_righteous
+		}
+		effect = {
+			change_leader_portrait = "20c"
+			save_global_event_target_as = uma_seiun_sky_governor
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_seiun_sky
+			#########
+			set_leader_flag = uma_is_gov_seiun_sky
+			#########
+			save_global_event_target_as = uma_is_leader_seiun_sky
+		}
+	}
+}
+
+
+uma_create_leader_teio_governor = {
+	create_leader = {
+		name = TET
+		#species = event_target:uma_leader_seiun_sky
+		species = root
+		gender = female
+		class = governor
+#		background_planet = event_target:
+		background_job = uma_racing_umamusume
+		skill = 2
+		set_age = 17
+		traits = {
+			trait = uma_governor_trait_sp_teio_gov
+			trait = uma_governor_trait_sp_teio_hachimi
+			trait = leader_trait_intellectual
+		}
+		effect = {
+			save_global_event_target_as = uma_is_teio_governor
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_tokai_teio
+			#########
+			set_leader_flag = uma_is_gov_tokai_teio
+			#########
+			save_global_event_target_as = uma_is_leader_tokai_teio
+			change_leader_portrait = TEIO_COMM
+		}
+	}
+}
+
+
+uma_create_leader_teio_admiral = {
+	create_leader = {
+		name = TET
+		#species = event_target:uma_leader_seiun_sky
+		species = root
+		gender = female
+		class = admiral
+#		background_planet = event_target:
+		background_job = uma_racing_umamusume
+		skill = 2
+		set_age = 17
+		traits = {
+			trait = uma_governor_trait_sp_teio_adr
+			trait = uma_governor_trait_sp_teio_heart_adr
+		}
+		effect = {
+			save_global_event_target_as = uma_is_teio_admiral
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_tokai_teio
+			#########
+			set_leader_flag = uma_is_adr_teio
+			#########
+			save_global_event_target_as = uma_is_leader_tokai_teio
+			change_leader_portrait = TEIO_COMM
+		}
+	}
+}
+
+uma_create_leader_teio_scientist = {
+	create_leader = {
+		name = TET
+		#species = event_target:uma_leader_seiun_sky
+		species = root
+		gender = female
+		class = scientist
+#		background_planet = event_target:
+		background_job = uma_racing_umamusume
+		skill = 2
+		set_age = 17
+		traits = {
+			trait = uma_governor_trait_sp_teio_hint
+			trait = uma_governor_trait_sp_teio_sci
+		}
+		effect = {
+			save_global_event_target_as = uma_is_teio_scientist
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_tokai_teio
+			#########
+			set_leader_flag = uma_is_sci_teio
+			#########
+			save_global_event_target_as = uma_is_leader_tokai_teio
+			change_leader_portrait = TEIO_COMM
+		}
+	}
+}

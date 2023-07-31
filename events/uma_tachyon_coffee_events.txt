@@ -913,10 +913,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2062"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2062
-				}
+			country_event = {
+				id = tachyon_coffee.2062
 			}
 		}
 	}
@@ -951,10 +949,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20621"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.20621
-				}
+			country_event = {
+				id = tachyon_coffee.20621
 			}
 		}
 	}
@@ -976,10 +972,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20622"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.20622
-				}
+			country_event = {
+				id = tachyon_coffee.20622
 			}
 		}
 	}
@@ -998,16 +992,16 @@ country_event = {
 		#room = uma_traincenter_01_room
 	}
 
-	option = {
-		name = "tachyon_coffee.2061"
-		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2062
-				}
-			}
-		}
-	}
+#	option = {
+#		name = "tachyon_coffee.2061"
+#		hidden_effect = {
+#			owner = {
+#				country_event = {
+#					id = tachyon_coffee.2062
+#				}
+#			}
+#		}
+#	}
 
 	option = {
 		name = "tachyon_coffee.2063"
@@ -1194,10 +1188,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2081"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2081
-				}
+			country_event = {
+				id = tachyon_coffee.2081
 			}
 		}
 	}
@@ -1205,10 +1197,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2082"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2082
-				}
+			country_event = {
+				id = tachyon_coffee.2082
 			}
 		}
 	}
@@ -1242,10 +1232,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20811"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.20811
-				}
+			country_event = {
+				id = tachyon_coffee.20811
 			}
 		}
 	}
@@ -1267,10 +1255,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20812"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.20812
-				}
+			country_event = {
+				id = tachyon_coffee.20812
 			}
 		}
 	}
@@ -1292,10 +1278,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20813"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.20813
-				}
+			country_event = {
+				id = tachyon_coffee.20813
 			}
 		}
 	}
@@ -1321,11 +1305,9 @@ country_event = {
 			add_relic = uma_tachyon_supervisor_relics
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					days = 60
-					id = tachyon_coffee.2100
-				}
+			country_event = {
+				days = 60
+				id = tachyon_coffee.2100
 			}
 		}
 	}
@@ -1341,11 +1323,9 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20821"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					days = 60
-					id = tachyon_coffee.2100
-				}
+			country_event = {
+				days = 60
+				id = tachyon_coffee.2100
 			}
 		}
 	}
@@ -1364,11 +1344,9 @@ country_event = {
 			add_relic = uma_intact_supervisor_relics
 		}
 		hidden_effect = {
-			owner = {
-				country_event = {
-					days = 15
-					id = tachyon_coffee.2091
-				}
+			country_event = {
+				days = 15
+				id = tachyon_coffee.2091
 			}
 		}
 	}
@@ -1384,11 +1362,9 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.20832"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					days = 15
-					id = tachyon_coffee.2092
-				}
+			country_event = {
+				days = 15
+				id = tachyon_coffee.2092
 			}
 		}
 	}
@@ -1457,10 +1433,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.201"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2101
-				}
+			country_event = {
+				id = tachyon_coffee.2101
 			}
 		}
 	}
@@ -1482,10 +1456,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2102"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2102
-				}
+			country_event = {
+				id = tachyon_coffee.2102
 			}
 		}
 	}
@@ -1493,10 +1465,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2103"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2103
-				}
+			country_event = {
+				id = tachyon_coffee.2103
 			}
 		}
 	}
@@ -1518,10 +1488,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.21021"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.21021
-				}
+			country_event = {
+				id = tachyon_coffee.21021
 			}
 		}
 	}
@@ -1529,10 +1497,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.21021a"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.21010
-				}
+			country_event = {
+				id = tachyon_coffee.21010
 			}
 		}
 	}
@@ -1554,10 +1520,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2102"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2102
-				}
+			country_event = {
+				id = tachyon_coffee.2102
 			}
 		}
 	}
@@ -1565,10 +1529,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.2103"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.2103
-				}
+			country_event = {
+				id = tachyon_coffee.2103
 			}
 		}
 	}
@@ -1621,53 +1583,126 @@ country_event = {
 		###生成爱丽速子科学家
 
 		hidden_effect = {
-			create_leader = {
-				name = AGT #"爱丽速子"
-				#species = event_target:uma_leader_seiun_sky
-				species = root
-				gender = female
-				class = scientist
-				skill = 8
-				set_age = 18
-				traits = {
-					trait = uma_scientist_trait_sp_tachyon #没有找到速子的专属特质
-					trait = leader_trait_intellectual
-					trait = leader_trait_righteous
+			country_event = {
+				id= tachyon_coffee.21000
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tachyon_coffee.21000
+	title = AGT
+	desc = tachyon_coffee.21000.desc
+	is_triggered_only = yes
+
+	picture = GFX_uma_leader_ty
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_tachyon
+	}
+
+	immediate = {
+		create_country = {
+			name = "NAME_uma_empty"
+			type = global_event
+			auto_delete = yes
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
 				}
-				effect = {
-					set_leader_flag = uma_is_special_leader
-					set_leader_flag = uma_is_tachyon
-					save_global_event_target_as = uma_is_leader_tachyon
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
 				}
 			}
+			effect = {
+				save_event_target_as = uma_empty_country
+			}
+		}
+		event_target:uma_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_legendary_leader_species
+				}
+			}
+			uma_create_leader_ty = yes
+		}
+	}
+
+	option = {
+		name = tachyon_coffee.21000.a
+		response_text = tachyon_coffee.21000.a.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = tachyon_coffee.21000.b
+		response_text = tachyon_coffee.21000.b.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = tachyon_coffee.21000.c
+		response_text = tachyon_coffee.21000.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = tachyon_coffee.21000.hire_tooltip
+		hidden_effect = {
+			uma_create_leader_ty = yes
 			last_created_leader = {
+#				change_leader_portrait = DEEP_COMM
 				change_leader_portrait = "30c"
-#				add_trait = uma_ruler_trait_sp_tachyon #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
+				uma_initialize_leader_yaruki_effect = yes
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_tachyon
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_tachyon
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
 			}
 			country_event = {
 				id = tachyon_coffee.21101
 			}
 		}
 	}
-	after = {
-		create_message = {
-			type = MESSAGE_RECRUITED_LEADER
-			localization = MESSAGE_RECRUITED_LEADER_DESC
-			days = @toast_message_days
-			target = event_target:uma_is_leader_tachyon
-			variable = {
-				type = name
-				localization = LEADER
-				scope = event_target:uma_is_leader_tachyon
-			}
-			variable = {
-				key = "border"
-				value = "GFX_border_legendary"
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_deep = {
+				kill_leader = { show_notification = no }
 			}
 		}
 	}
 }
+
+
 
 country_event = {
 	id = tachyon_coffee.2103
@@ -1706,10 +1741,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.21102"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.21102
-				}
+			country_event = {
+				id = tachyon_coffee.21102
 			}
 		}
 	}
@@ -1731,10 +1764,8 @@ country_event = {
 	option = {
 		name = "tachyon_coffee.21103"
 		hidden_effect = {
-			owner = {
-				country_event = {
-					id = tachyon_coffee.21103
-				}
+			country_event = {
+				id = tachyon_coffee.21103
 			}
 		}
 	}

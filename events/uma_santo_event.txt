@@ -142,8 +142,8 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = uma_satono.2
-				days = 800
-				random = 50
+				days = 1900
+				random = 100
 			}
 		}
 	}
@@ -464,8 +464,8 @@ country_event = {
 		name = uma_satono.942.a #学业顺利！
 		country_event = {
 			id = uma_satono.949
-			days = 1490
-			random = 10
+			days = 2000
+			random = 50
 		}
 	}
 }
@@ -493,6 +493,8 @@ country_event = {
 #				custom_description = uma_satono_backstory 领袖背景描述
 #				background_ethic = 背景思潮
 #				skip_background_generation = yes/no 是否自动生成背景描述？
+				background_job = uma_racing_umamusume #背景职业
+#				background_planet =  背景星球
 				traits = {
 					trait = leader_trait_flexible_programming
 					trait = uma_scientist_trait_sp_satono

@@ -56,4 +56,44 @@ uma_seiun_sky_system_initializer = {
 
         }
 	}
+
+	planet = {
+		name = II_Mill #米尔斯，sky原型母
+		class = pc_gas_giant
+		has_ring = yes
+		orbit_distance = { min = 1100 max = 150 }
+		orbit_angle = 60
+		size = 45
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+
+		moon = {
+			class = pc_crystal_asteroid
+			orbit_distance = 10
+			orbit_angle = { min = 50 max = 270 }
+			size = 2
+			name = II_STH #雪弗斯，sky原型父名音译
+			modifiers = none
+
+			init_effect = {
+				prevent_anomaly = no
+				clear_deposits = yes
+			}
+		}
+	}
+
+	planet = {
+		name = II_FR #Soirée de Chaton(法文：小猫的舞会，对应sky服装Ⅱ)
+		class = pc_barren_cold
+		has_ring = no
+		orbit_distance = {min = 50 max = 70}
+		orbit_angle = {min = 20 max = 100}
+		size = 20
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+	}
 }

@@ -513,7 +513,7 @@ uma_governor_trait_sp_deep = {
 
 uma_governor_trait_sp_deep_conlic = {
 	cost = 0
-	icon = "gfx/interface/icons/traits/sp_deepl.png" #欸我临时用一波，记得改
+	icon = "gfx/interface/icons/traits/sp_deepl.png"
 	leader_potential_add = {
 		always = no
 	}
@@ -528,6 +528,51 @@ uma_governor_trait_sp_deep_conlic = {
 
 	leader_class = { governor }
 	inline_script = {script = trait/icon CLASS = governor RARITY = paragon COUNCIL = yes TIER = 2 ICON = "gfx/interface/icons/traits/sp_deepl.png"}
+	initial = no
+	randomized = no
+}
+
+#帝王
+uma_governor_trait_sp_teio_gov = {
+	inline_script = {
+		script = trait/icon
+		CLASS = governor
+		ICON = "GFX_uma_governor_trait_sp_teio_gov"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		pop_happiness = 0.05
+		planet_stability_add = 5
+	}
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_sp_teio_hachimi = {
+	inline_script = {
+		script = trait/icon_negative
+		CLASS = governor
+		ICON = "GFX_uma_governor_trait_sp_teio_hachimi"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		planet_jobs_consumer_goods_upkeep_mult = 0.05
+	}
+	leader_class = { governor }
 	initial = no
 	randomized = no
 }

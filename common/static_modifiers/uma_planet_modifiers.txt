@@ -115,3 +115,12 @@ uma_prosperity_colony_2 = {
 	planet_clear_blocker_time_mult = -0.5
 
 }
+
+uma_colony_helping_association_planet_less_than_ten = {
+	pop_happiness = 5
+	pop_growth_speed = 0.13
+}
+
+uma_colony_helping_association_planet_more_than_ten = {
+	planet_jobs_produces_mult = 0.05
+}

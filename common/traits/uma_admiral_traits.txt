@@ -380,3 +380,52 @@ uma_admiral_trait_sp_nice_nature = {
 	initial = no
     randomized = no		
 }
+
+
+uma_governor_trait_sp_teio_adr = {
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = "GFX_uma_governor_trait_sp_teio_adr"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		ship_weapon_damage = 0.1
+		ship_fire_rate_mult = 0.1
+		ship_speed_mult = 0.25
+		ship_jumpdrive_cooldown_mult = 0.1
+		species_leader_exp_gain = 0.15
+	}
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+#不屈
+uma_governor_trait_sp_teio_heart_adr = {
+	inline_script = {
+		script = trait/icon
+		CLASS = admiral
+		ICON = "GFX_uma_governor_trait_sp_teio_adr"  ##TODO:更新图标
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		ship_hull_mult = 0.15
+		ship_disengage_chance_mult = -0.33
+	}
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}

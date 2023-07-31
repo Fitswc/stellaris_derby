@@ -550,7 +550,7 @@ special_project = {
 				id = uma_fallen_empire.220
 			}
 		}
-		custom_tooltip = uma_we_will_connect_deep_impact
+#		custom_tooltip = uma_we_will_connect_deep_impact
 	}
 
 }
@@ -580,4 +580,152 @@ special_project = {
 
 	on_fail = {
 	}	
+}
+
+########米波炸球
+special_project = {
+	key = "UMA_BOU_BOOM_PLANET"
+	days_to_research = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_uma_ano_bour_forest
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_military = 15
+	}
+	on_start = {
+		this = {
+			save_event_target_as = uma_bou_fleet_will_destory
+		}
+	}
+	on_success = {
+		destroy_fleet = event_target:uma_bou_fleet_will_destory
+#		destroy_ship = event_target:uma_bou_fleet_will_destory
+		event_target:uma_bourbon_arc_anomaly_here = {
+			change_pc = pc_nuked
+		}
+		country_event = {
+			id = uma_bour_arc.5
+		}
+	}
+}
+
+##米波解码
+special_project = {
+	key = "UMA_BOU_DECODE"
+	days_to_research = 180
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_decryption
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+	on_success = {
+		event_target:uma_bourbon_arc_site = {
+			set_site_progress_locked = no
+		}
+	}
+}
+
+special_project = {
+	key = "UMA_BOU_DECODE_WHOLE_COUNTRY"
+	cost = {
+		base = 5000
+	}
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_decryption
+	tech_department = society_technology
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 2
+	}
+	on_success = {
+		event_target:uma_bourbon_arc_site = {
+			set_site_progress_locked = no
+		}
+	}
+}
+##米波炸球Part2
+special_project = {
+	key = "UMA_BOU_BOOM_PLANET_ARC"
+	days_to_research = 30
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_sentry_guns
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_military = 15
+	}
+	on_success = {
+		destroy_fleet = event_target:uma_bourbon_this_is_fleet
+#		destroy_ship = event_target:uma_bou_fleet_will_destory
+		event_target:uma_bourbon_arc_anomaly_here = {
+			change_pc = pc_nuked
+		}
+		destroy_archaeological_site = event_target:uma_bourbon_arc_anomaly_here ##????
+		country_event = {
+			id = uma_bour_arc.5
+		}
+	}
+}
+
+special_project = {
+	key = "UMA_BOU_ANALYSE"
+	days_to_research = 160
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_intelligence_report
+
+	event_scope = country_event
+
+	requirements = {
+	}
+	on_success = {
+		country_event = {
+			id = uma_bour_arc.12
+		}
+	}
+}
+
+special_project = {
+	key = "UMA_BUILD_NANO_MACHINE_FACTORY"
+	days_to_research = 3600
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_engineering_research
+
+	event_scope = country_event
+
+	requirements = {
+
+	}
+	on_success = {
+		country_event = {
+			id = uma_bour_arc.52
+		}
+	}
+}
+
+special_project = {
+	key = "UMA_BUILD_K_A_NEWBODY"
+	days_to_research = 3600
+
+		icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_engineering_research
+
+	event_scope = country_event
+
+	requirements = {
+
+	}
+	on_success = {
+		country_event = {
+			id = uma_bour_arc.52
+		}
+	}
 }

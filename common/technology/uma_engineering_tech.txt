@@ -995,3 +995,19 @@ tech_uma_carrot_energy_printing_technology_2 = { #流线式能量打印技术
         factor = 0
     }
 }
+
+tech_uma_nano_cell_body = {
+    cost = 20000
+    area = engineering
+    is_dangerous = yes
+    tier = 5
+    category = { field_manipulation }
+    weight = 0
+
+    potential = {
+        OR = {
+            has_authority = auth_trainingcenter
+        }
+    }
+
+}

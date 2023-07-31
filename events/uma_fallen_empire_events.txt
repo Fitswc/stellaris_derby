@@ -63,14 +63,14 @@ country_event = {
         }
 
         create_country = {
-            name = "NAME_uma_fallen_empire_name"
-            type = uma_fallen_empire
+			name = "NAME_uma_fallen_empire_name"
+			type = uma_fallen_empire
 			ignore_initial_colony_error = yes
 			authority = auth_uma_fallen_empire
 			civics = {
 				#civic = civic_empire_in_decline
 				#civic = civic_lethargic_leadership
-			}			
+			}
 			species = event_target:uma_fallen_empire_species
 			###PS：为了让AI帝国显现出“性格”，需要在personality里单独设置。否则就会出现“墙头草”
 			ethos = {
@@ -82,22 +82,22 @@ country_event = {
 				###经过测试，如果你的堕落帝国的思潮带有唯物/唯心；亲外/排外【原版堕落的四个思潮】。那么你的堕落领袖的立绘替换就无法完成。注意！
 				ethic = ethic_fanatic_egalitarian
 				ethic = ethic_pacifist
-			}			
+			}
 			flag = {
-                icon= {
-                    category = "uiu_flags"
-                    file = "uiu_fe_flags.dds"
-                }
-                background= {
-                    category = "backgrounds"
-                    file = "00_solid.dds"
-                }
-                colors={
-                    "red"
-                    "red"
-                    "null"
-                    "null"
-                }
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_fe_flags.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
 			}
 			name_list = "UMAname"
 			origin = "origin_fallen_empire" #要改
@@ -108,62 +108,63 @@ country_event = {
 				add_modifier = { modifier = uma_fallen_empire_enhancement_modifier days = -1 }
 				add_resource = {
 					minerals = 50000
-					energy = 50000	
+					energy = 50000
 					food = 50000
 					alloys = 50000
 					consumer_goods = 50000
 					uma_crystal_carrot = 50000
 					influence = 500
 				}
-								
-						###因为未知原因，1里面无法更改领袖立绘。放到2里试试
-						create_leader = {
-							class = ruler
-							species = event_target:uma_fallen_empire_species
-							gender = female
-							name = QC #"秋川弥生"
-							skill = 10
-							set_age = 225
-							immortal = yes
-							# effect = {
-							# 	change_leader_portrait = "C02"
-							# 	uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-							# }
-						}
-						last_created_leader = {
-							change_leader_portrait = C02
-							uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-						}
-						set_leader = last_created_leader
 
-						create_leader = {
-							class = governor
-							species = event_target:uma_fallen_empire_species
-							gender = female
-							name = ES #"日蚀"
-							skill = 18
-							set_age = 185
-							immortal = yes
-						}
+				###因为未知原因，1里面无法更改领袖立绘。放到2里试试
+				create_leader = {
+					class = ruler
+					species = event_target:uma_fallen_empire_species
+					gender = female
+					name = QC #"秋川弥生"
+					skill = 10
+					set_age = 225
+					immortal = yes
+					# effect = {
+					# 	change_leader_portrait = "C02"
+					# 	uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+					# }
+				}
+				last_created_leader = {
+					change_leader_portrait = C02
+					uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				}
+				set_leader = last_created_leader
 
-						add_global_ship_design = "NAME_Enforcer"
-						add_global_ship_design = "NAME_Savant"
-						add_global_ship_design = "NAME_Scholar"
-						add_global_ship_design = "NAME_Sage"
-						add_global_ship_design = "NAME_Cloaker"
-						add_global_ship_design = "NAME_Librarian"
-						add_global_ship_design = "NAME_Seeker"
-						add_global_ship_design = "NAME_FE_Starbase"
-						add_global_ship_design = "NAME_Cybrex_Transport"
+				create_leader = {
+					class = governor
+					species = event_target:uma_fallen_empire_species
+					gender = female
+					name = ES #"日蚀"
+					skill = 18
+					set_age = 185
+					immortal = yes
+				}
+
+				uma_fallen_empire_create_ship_designs = yes
+				add_global_ship_design = "NAME_Enforcer"
+				add_global_ship_design = "NAME_Savant"
+				add_global_ship_design = "NAME_Scholar"
+				add_global_ship_design = "NAME_Sage"
+				add_global_ship_design = "NAME_Cloaker"
+				add_global_ship_design = "NAME_Librarian"
+				add_global_ship_design = "NAME_Seeker"
+				add_global_ship_design = "NAME_FE_Starbase"
+				add_global_ship_design = "NAME_Cybrex_Transport"
 
 			}
-			
-        }
+
+		}
 
 		###这里才是最重要的！
 		last_created_country = {
 			save_global_event_target_as = uma_fallen_empire
-			set_graphical_culture = fallen_empire_03
+			set_graphical_culture = uma_fallen_empire
 			country_event = { id = uma_fallen_empire.2 }  ##用刚产生的堕落触发事件，只有用堕落scope触发事件，产生星系，这个星系才能在设置主人的时候自动划给堕落
 		}
 
@@ -813,7 +814,7 @@ country_event = {
 
 ####堕落和马娘帝国建立联系（5）
 country_event = {
-    id = uma_fallen_empire.14
+	id = uma_fallen_empire.14
 	title = uma_fallen_empire.14.title #秋川弥生
 	desc = uma_fallen_empire.14.desc #可爱的后辈...
 	#picture = traincenter_06_room
@@ -834,7 +835,14 @@ country_event = {
 	}
 
 	option = {
-		trigger = { has_authority = auth_trainingcenter }
+		trigger = {
+			AND = {
+				has_authority = auth_trainingcenter
+				NOT = {
+					has_origin = origin_uma_candleoff
+				}
+			}
+		}
 		name = uma_fallen_empire.14.a #诶诶？
 		add_resource = {
 			food = 2000
@@ -868,12 +876,29 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = uma_fallen_empire.15
-			   days = 60
+				days = 60
 			}
-	    }
-
+		}
 	}
 
+	option = {
+		trigger = {
+			AND = {
+				has_authority = auth_trainingcenter
+				has_origin = origin_uma_candleoff
+			}
+		}
+		name = uma_fallen_empire.14.a #诶诶？
+		add_resource = {
+			food = 2000
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.15
+				days = 60
+			}
+		}
+	}
 }
 
 
@@ -882,6 +907,12 @@ country_event = {
     id = uma_fallen_empire.15
 	title = uma_fallen_empire.15.title
 	desc = uma_fallen_empire.15.desc
+	desc = {
+		trigger = {
+			has_origin = origin_uma_candleoff
+		}
+		text = uma_fallen_empire.15.desc.b
+	}
 	is_triggered_only = yes
 	diplomatic = yes
 	force_open = yes
@@ -906,6 +937,23 @@ country_event = {
     }
 
 	option = {
+		trigger = {
+			has_origin = origin_uma_candleoff
+		}
+		name = uma_fallen_empire.15.a
+		add_resource = {
+			food = 4000
+			energy = 2000
+			consumer_goods = 3000
+		}
+	}
+
+	option = {
+		trigger = {
+			NOT = {
+				has_origin = origin_uma_candleoff
+			}
+		}
 		name = uma_fallen_empire.15.a #知道了
 		establish_communications_no_message = event_target:uma_is_fe_office
 		custom_tooltip = uma_fallen_empire_connection_office_hint
@@ -3484,38 +3532,9 @@ country_event = {
 				id = uma_fallen_empire.10086
 			}
 		}
-###########
-#		hidden_effect = {
-#			create_leader = {
-#				name = DEEP
-#				species = root
-#				gender = female
-#				class = governor
-#				set_age = 17
-#				skill = 5
-#				immortal = yes
-#				custom_catch_phrase = uma_deep_catch_phrase
-#				custom_description = uma_deep_backstory
-#				background_ethic = ethic_pacifist
-#				skip_background_generation = yes
-#				traits = {
-#					trait = uma_governor_trait_sp_deep
-#					trait = uma_governor_trait_sp_deep_conlic
-#					trait = leader_trait_reformer_2
-#					trait = trait_ruler_eye_for_talent
-#				}
-#				effect = {
-#					set_leader_flag = uma_is_special_leader
-#					set_leader_flag = uma_is_deep
-#					save_global_event_target_as = uma_is_leader_deep
-#				}
-#			}
-#			last_created_leader = {
-#				change_leader_portrait = "DEEP_COMM"
-#				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-#				}
-#			}
-#		}
+	}
+	option = {
+		name = uma_fallen_empire.238.b
 	}
 }
 
@@ -3525,11 +3544,9 @@ country_event = {
 	id = uma_fallen_empire.10086
 	title = DEEP
 	desc = uma_fallen_empire.10086.desc
-	desc = uma_fallen_empire.10086.desc_two
 	is_triggered_only = yes
 
-#	picture = GFX_uma_leader_deep ##哈？我透明呢？
-	picture = GFX_leader_recruitment_bg_renowned
+	picture = GFX_uma_leader_deep
 	event_window_type = leader_recruit
 
 	picture_event_data = {
@@ -3579,6 +3596,21 @@ country_event = {
 	option = {
 		name = uma_fallen_empire.10086.a
 		response_text = uma_fallen_empire.10086.a.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_fallen_empire.10086.b
+		response_text = uma_fallen_empire.10086.b.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_fallen_empire.10086.c
+		response_text = uma_fallen_empire.10086.c.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_fallen_empire.10086.d
+		response_text = uma_fallen_empire.10086.d.resp
 		is_dialog_only = yes
 	}
 

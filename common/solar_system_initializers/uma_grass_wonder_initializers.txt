@@ -99,4 +99,17 @@ uma_grass_wonder_system_initializer = {
 		}
 	}
 
+	planet = {
+		name = I_HY #皓月
+		class = pc_barren
+		orbit_distance = { min = 69 max = 80 }
+		orbit_angle = { min = 40 max = 120}
+		size = 35
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
 }

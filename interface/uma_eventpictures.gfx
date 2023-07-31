@@ -209,4 +209,89 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+
+	spriteType = {
+		name = GFx_evt_teio
+		textureFile = "gfx/event_pictures/bg_0019_0_room.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = GFX_evt_teio_hachimi
+		textureFile = "gfx/event_pictures/uma_teio_hachimi_one.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = GFX_evt_teio_gooutside
+		textureFile = "gfx/event_pictures/uma_teio_gooutside.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = GFX_evt_teio_game
+		textureFile = "gfx/event_pictures/uma_teio_game.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = GFX_evt_uma_teio_cry
+		textureFile = "gfx/event_pictures/uma_teio_cry.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = GFX_uma_ano_bour_forest
+		textureFile = "gfx/event_pictures/uma_forest_anolomy.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_trees_with_stone"
+		textureFile = "gfx/event_pictures/uma_tree_with_stone.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_lab"
+		textureFile = "gfx/event_pictures/uma_lab.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_rice"
+		textureFile = "gfx/event_pictures/uma_rice.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_bour_intro"
+		textureFile = "gfx/event_pictures/uma_bour_intro_second.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_bour_course"
+		textureFile = "gfx/event_pictures/uma_bour_course.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_bour_ura"
+		textureFile = "gfx/event_pictures/uma_bour_ura.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }

@@ -398,3 +398,113 @@ uma_scientist_trait_sp_satono = {
     randomized = no
 }
 
+
+uma_governor_trait_sp_teio_sci = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_uma_governor_trait_sp_teio_sci"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		science_ship_survey_speed = 0.35
+		ship_anomaly_generation_chance_mult = 0.25
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_sp_teio_hint = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_uma_governor_trait_sp_teio_sci"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	modifier = {
+		all_technology_research_speed = 0.15
+		species_leader_exp_gain = 0.15
+	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+#久远的回忆V
+uma_scientist_trait_glx = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_scientist_trait_glx.dds"
+	leader_potential_add = {
+		always = no
+	}
+#	councilor_trait = yes
+	modifier = {
+		assist_research_mult = 0.4
+	}
+	leader_class = { scientist }
+	inline_script = {script = trait/icon CLASS = scientist RARITY = paragon COUNCIL = no TIER = 5 ICON = "gfx/interface/icons/traits/uma_scientist_trait_glx.dds"}
+	initial = no
+    randomized = no
+}
+
+uma_scientist_trait_glx_acientman= {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_scientist_trait_glx_acientman.dds"
+	leader_potential_add = {
+		always = no
+	}
+#	councilor_trait = yes
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.6
+	}
+	leader_class = { scientist }
+	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = no TIER = 2 ICON = "gfx/interface/icons/traits/uma_scientist_trait_glx_acientman.dds"}
+	initial = no
+    randomized = no
+}
+
+uma_scientist_trait_glx_inthecloud = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_scientist_trait_glx_inthecloud.dds"
+	leader_potential_add = {
+		always = no
+	}
+	councilor_trait = yes
+	modifier = {
+		all_technology_research_speed = -0.5
+	}
+	leader_class = { scientist }
+	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = yes TIER = 2 ICON = "gfx/interface/icons/traits/uma_scientist_trait_sp_satono.dds"}
+	initial = no
+    randomized = no
+}
+
+
+uma_scientist_trait_bour_likemachine = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_scientist_trait_sp_satono.dds" ##临时征用 TODO: 波旁特质图标更换
+	leader_potential_add = {
+		always = no
+	}
+	councilor_trait = yes
+	modifier = {
+		all_technology_research_speed = -0.1
+	}
+	leader_class = { scientist }
+	inline_script = {script = trait/icon CLASS = scientist RARITY =paragon  COUNCIL = yes TIER = 1 ICON = "gfx/interface/icons/traits/uma_scientist_trait_sp_satono.dds"}
+	initial = no
+    randomized = no
+}

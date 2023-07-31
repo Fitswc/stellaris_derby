@@ -108,11 +108,12 @@ uma_palace_finish = {
 		has_authority = auth_trainingcenter
 	}
 	on_enabled = {
-		country_event = {
-			id = uma_tradition.2
-			days = 200
-			random = 30
-		}
+		#country_event = {
+		#	id = uma_tradition.2
+		#	days = 200
+		#	random = 30
+		#}
+		custom_tooltip = uma_palace_finish_tooltip
 	}
 	modifier = {
 		ascension_perks_add = 1

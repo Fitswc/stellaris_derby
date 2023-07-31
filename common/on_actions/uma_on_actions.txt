@@ -8,16 +8,18 @@ on_game_start = {
 		uma_fallen_empire.3 #创建堕落帝国（前导事件）
 		uma_fallen_empire.1000
 		uma_satono.90
-		uma_suzuka.1
+		uma_suzuka.1 #Suzuka
+		uma_tokaiteio_event.1 #帝宝
+		uma_satono.90
+		uma_bour_arc.900
 	}
 }
 
 #游戏开始时玩家国家触发
-on_game_start_country = {
-	events = {
-		uma_crisis.10000
-	}
-}
+#on_game_start_country = {
+#	events = {
+#	}
+#}
 
 ######!!!!!!!!
 ######请注意，不要试图使用on_game_start_country来创建自建星系
@@ -58,9 +60,6 @@ on_custom_diplomacy = {
 		uma_nice_nature.2 #进入优秀素质的前置界面
 		uma_fallen_empire.1001
 		uma_satono.30
-		uma_crisis.111
-		uma_crisis.112
-		uma_crisis.113
 	}
 }
 
@@ -72,11 +71,10 @@ on_monthly_pulse_country = {
 		uma_monthly.2 #绿茵祈愿/小草 事件链刷出
 		uma_tradition.1 #Traditions
 		uma_tradition.3 #Traditions
-		uma_crisis.1003
-		uma_crisis.2003
-		uma_crisis.3003
+		uma_bour.2077 #星球月检
 	}
 }
+
 
 #年检测事件
 on_yearly_pulse_country = {
@@ -157,8 +155,6 @@ on_space_battle_lost = {
 on_fleet_destroyed_perp = {
 	events = {
 		uma_shop_center.4 #商城被毁
-		uma_crisis.1020
-		uma_crisis.2020
 		#uma_fallen_empire.1151
 	}
 }
@@ -181,13 +177,6 @@ on_colonized = {
 on_entering_system_first_time = {
 	events = {
 		tachyon_coffee.1
-		uma_crisis.1019
-		uma_crisis.2019
-	}
-}
-
-on_entering_system = {
-	events = {
 	}
 }
 
@@ -230,7 +219,12 @@ on_leader_spawned = {
 on_ascension_perk_picked = {
 	events = {
 		uma_ss_arc.6
+		uma_bour_arc.14
 	}
 }
 
-
+on_entering_system_fleet = {
+	events = {
+		uma_bour_arc.17
+	}
+}

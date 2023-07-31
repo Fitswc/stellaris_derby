@@ -99,3 +99,44 @@ uma_intact_supervisor_relics = {
 		}
 	}
 }
+
+#uma_umamusume_datebase = {
+#	activation_duration = 3600
+#
+#	portrait = "GFX_relic_mechano_calibrator"
+#	sound = "relic_activation_ether_drake_trophy"
+#
+#	resources = {
+#		category = relics
+#		# Activation cost
+#		cost = {
+#			energy = 3000
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 0
+#	}
+#
+#	triggered_country_modifier = {
+#		potential = {
+#			always = yes
+#		}
+#		planet_jobs_engineering_research_produces_mult = 0.06
+#		planet_jobs_physics_research_produces_mult = 0.06
+#		planet_jobs_society_research_produces_mult = 0.06
+#	}
+#
+#	score = 1000
+#
+#	active_effect = {
+#	}
+#
+#	# Possible check for activation
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = "requires_relic_no_cooldown"
+#			NOT = { has_modifier = relic_activation_cooldown }
+#		}
+#	}
+#}

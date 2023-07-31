@@ -35,6 +35,14 @@ uma_fallen_empire_enhancement_modifier = {
 	country_resource_max_add = 300000
 }
 
+uma_fallen_empire_ship_modifier = {
+	ship_weapon_range_mult = 0.5
+	ship_fire_rate_mult = 1
+	ship_hull_mult = 20
+	ship_armor_mult = 20
+	ship_shield_mult = 20
+	ship_weapon_damage = 20
+}
 
 #遗落特雷森的竞走比赛
 uma_fallen_empire_civil_racing = {

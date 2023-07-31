@@ -1,100 +1,11 @@
-namespace = uma_mdt
+namespace = uma_mmu
 
-country_event = {
-	id = uma_mdt.1
-	title = "Stellar Derby Mod Debug Tool"
-	desc = "Check this out"
+##没做
 
-	is_triggered_only = yes
-
-	option = {
-		name = "继续更新前因bug中断的剧情"
-		hidden_effect = {
-			country_event = {
-				id = uma_ss_arc.18
-			}
-		}
-	}
-
-	option = {
-		name = "Check System Created"
-		country_event = {
-			id = uma_mdt.2
-		}
-	}
-
-	option = {
-		name = "Check the value of variables"
-		country_event = {
-			id = uma_mdt.3
-		}
-	}
-}
 
 
 
 country_event = {
-	id = uma_mdt.2
-	title = "Stellar Derby Mod Debug Tool - System"
-	desc = "Check this out"
-
+	id = uma_mmu.1
 	is_triggered_only = yes
-
-	option = {
-		name = "Grass Wonder System created"
-		allow = {
-			any_system = {
-				has_star_flag = uma_grass_wonder_system_created
-			}
-		}
-	}
-	option = {
-		name = "Sky System created"
-		allow = {
-			any_system = {
-				has_star_flag = uma_seiun_sky_system_created
-			}
-		}
-	}
-	option = {
-		name = "Tachyon-Coffee System created"
-		allow = {
-			any_system = {
-				has_star_flag = uma_tachyon_coffee_system_created
-			}
-		}
-	}
-	option = {
-		name = "UMA SHOP System created"
-		allow = {
-			any_system = {
-				has_star_flag = uma_shop_center_system_created
-			}
-		}
-	}
-	option = {
-		name = "UMA Fallen Empire created"
-		allow = {
-			exists = event_target:uma_fallen_empire
-		}
-	}
-	option = {
-		name = "In Multiplayer mode?"
-		allow = {
-			is_multiplayer = yes
-		}
-	}
-}
-
-
-country_event = {
-	id = uma_mdt.3
-	title = "Stellar Derby Mod Debug Tool - Variables"
-	desc = uma_mdt_var
-
-	is_triggered_only = yes
-
-	option = {
-		name = OK
-	}
 }

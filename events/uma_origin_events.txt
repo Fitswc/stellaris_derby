@@ -35,6 +35,14 @@ event = {
 			save_global_event_target_as = uma_player_umamusume_empire
 		}
     }
+	after = {
+		random_system = {
+			limit = {
+				is_owned_by = event_target:uma_player_umamusume_empire
+			}
+			save_global_event_target_as = uma_player_umamusume_empire_system
+		}
+	}
 
 }
 
@@ -65,9 +73,20 @@ country_event = {
 				add_deposit = d_uma_threegodness_relic
 				add_deposit = d_uma_crystal_carrot_mine_planet
 			}
+			if = {
+				limit = {
+					has_origin = origin_uma_candleoff
+				}
+				add_modifier = {
+					modifier = uma_candle_off_debuff
+				}
+			}
 			country_event = { id = umaarc.1008 days = 10 random = 30 }
 			#之后还要触发创造考古遗迹的事件
 		}
+		##决定是否可以开地产
+		set_country_flag = community_mod_rules_trigger
+		set_country_flag = community_can_build_branch_offices_true
     }
 
 }

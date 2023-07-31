@@ -49,3 +49,83 @@ uma_suzuka_anolomy = {
 		}
     }
 }
+
+
+
+
+
+
+#######米波
+uma_bourbon_anomaly = {
+    desc = "uma_bourbon_anomaly_desc"
+    should_ai_use = no
+    picture = GFX_evt_baol_ruins
+    level = 7
+    null_spawn_chance = 0
+    max_once_global = yes
+    spawn_chance = {
+        base = 0
+#       modifier = {
+#           add = 8
+#			is_planet_class = pc_tropical
+#       }
+#		modifier = {
+#			add = 8
+#			is_planet_class = pc_gaia
+#		}
+    }
+	on_spawn = {
+		planet_event = {
+			id = uma_bour_arc.1 #生成时调用
+		}
+		save_global_event_target_as = uma_bourbon_arc_anomaly_here
+	}
+
+    on_success = {
+        1 = {
+            max_once = yes
+            #save_global_event_target_as = uma_machan_anolomy_here
+            anomaly_event = uma_bour_arc.2
+        }
+    }
+
+}
+
+uma_bourbon_anomaly_second = {
+	desc = uma_bourbon_anomaly_second_desc
+	should_ai_use = no
+	picture = GFX_uma_ano_bour_forest
+    level = 4
+    null_spawn_chance = 0
+    max_once_global = yes
+    spawn_chance = {
+        base = 0
+    }
+	on_spawn = {
+
+	}
+
+    on_success = {
+		1 = {
+			max_once = yes
+			anomaly_event = uma_bour_arc.18
+		}
+    }
+}
+
+#帝宝特异点
+uma_tokaiteio_anomoly = {
+	desc = "uma_tokaiteio_anomoly_desc"
+    picture = "GFX_evt_gas_giant"
+	level = 5
+	should_ai_use = no
+	max_once_global = yes
+    spawn_chance = { base = 0 }
+	on_success = {
+		1 = {
+			max_once = yes
+			max_once_global = no
+			anomaly_event = uma_tokaiteio_event.2
+		}
+	}
+}

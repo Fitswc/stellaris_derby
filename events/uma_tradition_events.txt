@@ -46,94 +46,97 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = uma_tradition.2
-	title = uma_trad_pal_event.title
-	desc = uma_trad_pal_event.desc
-	picture = GFX_evt_uma_palace
-	is_triggered_only = yes
 
-	trigger = {
-		NOT = {
-			has_country_flag = uma_giveup_choice
-		}
-	}
-	#赛事
-	option = {
-		name = uma_trad_pal_event.a
-		hidden_effect = {
-			every_owned_planet = {
-				limit = {
-					is_under_colonization = yes
-				}
-				set_timed_planet_flag = {
-					flag = uma_race_upkeep_less
-					days = 1800
-				}
-			}
-			set_timed_country_flag = {
-				flag = uma_race_upkeep_less
-				days = 1800
-			}
-		}
+##改用agenda
 
-	}
-	#劳动
-	option = {
-		name = uma_trad_pal_event.b
-		add_modifier = {
-			modifier = uma_labor
-			days = 3650
-		}
-	}
-	#道德
-	option = {
-		name = uma_trad_pal_event.c
-		add_modifier = {
-			modifier = uma_moral
-			days = 3650
-		}
-	}
-	#Art
-	option = {
-		name = uma_trad_pal_event.d
-		add_modifier = {
-			modifier = uma_art
-			days = 3650
-		}
-	}
-	#Technology
-	option = {
-		name = uma_trad_pal_event.e
-		add_modifier = {
-			modifier = uma_tech
-			days = 3650
-		}
-	}
-	#Education
-	option = {
-		name = uma_trad_pal_event.f
-		add_modifier = {
-			modifier = uma_edu
-			days = 3650
-		}
-	}
-	#放弃
-	option = {
-		name = uma_trad_pal_event.g
-		hidden_effect = {
-			set_country_flag = uma_giveup_choice
-		}
-	}
-
-	after = {
-		country_event = {
-			id = uma_tradition.2
-			days = 3850
-			random = 40
-		}
-	}
-}
+#country_event = {
+#	id = uma_tradition.2
+#	title = uma_trad_pal_event.title
+#	desc = uma_trad_pal_event.desc
+#	picture = GFX_evt_uma_palace
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		NOT = {
+#			has_country_flag = uma_giveup_choice
+#		}
+#	}
+#	#赛事
+#	option = {
+#		name = uma_trad_pal_event.a
+#		hidden_effect = {
+#			every_owned_planet = {
+#				limit = {
+#					is_under_colonization = yes
+#				}
+#				set_timed_planet_flag = {
+#					flag = uma_race_upkeep_less
+#					days = 1800
+#				}
+#			}
+#			set_timed_country_flag = {
+#				flag = uma_race_upkeep_less
+#				days = 1800
+#			}
+#		}
+#
+#	}
+#	#劳动
+#	option = {
+#		name = uma_trad_pal_event.b
+#		add_modifier = {
+#			modifier = uma_labor
+#			days = 3650
+#		}
+#	}
+#	#道德
+#	option = {
+#		name = uma_trad_pal_event.c
+#		add_modifier = {
+#			modifier = uma_moral
+#			days = 3650
+#		}
+#	}
+#	#Art
+#	option = {
+#		name = uma_trad_pal_event.d
+#		add_modifier = {
+#			modifier = uma_art
+#			days = 3650
+#		}
+#	}
+#	#Technology
+#	option = {
+#		name = uma_trad_pal_event.e
+#		add_modifier = {
+#			modifier = uma_tech
+#			days = 3650
+#		}
+#	}
+#	#Education
+#	option = {
+#		name = uma_trad_pal_event.f
+#		add_modifier = {
+#			modifier = uma_edu
+#			days = 3650
+#		}
+#	}
+#	#放弃
+#	option = {
+#		name = uma_trad_pal_event.g
+#		hidden_effect = {
+#			set_country_flag = uma_giveup_choice
+#		}
+#	}
+#
+#	after = {
+#		country_event = {
+#			id = uma_tradition.2
+#			days = 3850
+#			random = 40
+#		}
+#	}
+#}
 
 #<20k
 country_event = {

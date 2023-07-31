@@ -244,13 +244,44 @@ uma_fallen_empire_system_initializer_1 = {
 			add_building = building_dimensional_fabricator
 			add_building = building_nano_forge
 			add_building = building_nano_forge
-			while = {
-                count = 20
-				create_army = {
-					name = FALL_CIT_PRO #"城市守卫军团"
-					owner = event_target:uma_fallen_empire
-					species = event_target:uma_fallen_empire
-					type = "machine_assault_3"
+#			while = {
+#                count = 20
+#				create_army = {
+#					name = FALL_CIT_PRO #"城市守卫军团"
+#					owner = event_target:uma_fallen_empire
+#					species = event_target:uma_fallen_empire
+#					type = "machine_assault_3"
+#				}
+#			}
+			create_fleet = {
+				name = FALL_CIT_PRO
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					set_location = this
+					while = {
+						count = 50
+						create_ship = {
+							name = uma_fall_ship
+							design = NAME_Scholar
+							effect = {
+								add_modifier = {
+									modifier = uma_fallen_empire_ship_modifier
+								}
+							}
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = uma_fall_ship
+							design = NAME_Savant
+							effect = {
+								add_modifier = {
+									modifier = uma_fallen_empire_ship_modifier
+								}
+							}
+						}
+					}
 				}
 			}
             while = {
@@ -346,15 +377,48 @@ uma_fallen_empire_system_initializer_2 = {
 			add_building = building_class_4_singularity
 			add_building = building_dimensional_fabricator
 			add_building = building_nano_forge
-			while = {
-                count = 10
-				create_army = {
-					name = FALL_PRO_IN #"遗落护卫军团"
-					owner = event_target:uma_fallen_empire
-					species = event_target:uma_fallen_empire
-					type = "machine_assault_3"
+#			while = {
+#                count = 10
+#				create_army = {
+#					name = FALL_PRO_IN #"遗落护卫军团"
+#					owner = event_target:uma_fallen_empire
+#					species = event_target:uma_fallen_empire
+#					type = "machine_assault_3"
+#				}
+#			}
+
+			create_fleet = {
+				name = FALL_CIT_PRO
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					set_location = this
+					while = {
+						count = 50
+						create_ship = {
+							name = uma_fall_ship
+							design = NAME_Scholar
+							effect = {
+								add_modifier = {
+									modifier = uma_fallen_empire_ship_modifier
+								}
+							}
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = uma_fall_ship
+							design = NAME_Savant
+							effect = {
+								add_modifier = {
+									modifier = uma_fallen_empire_ship_modifier
+								}
+							}
+						}
+					}
 				}
 			}
+
             while = {
                 count = 10
                 add_district = district_uma_dormitory

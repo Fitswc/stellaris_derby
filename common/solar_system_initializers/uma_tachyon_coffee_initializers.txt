@@ -51,8 +51,45 @@ uma_tachyon_coffee_system_initializer = {
 			flags = { tachyon_coffee_starbase }
 
 			init_effect = {
+				prevent_anomaly = yes
 				save_global_event_target_as = uma_tachyon_coffee_starbase
 			}
+		}
+	}
+
+	asteroid_belt = {
+		type = debris_asteroid_belt
+		radius = {
+			min = 90
+			max = 110
+		}
+	}
+
+	planet = {
+		name = V_SS #宁静
+		class = pc_gas_giant
+		has_ring = yes
+		orbit_distance = { min = 100 max = 150 }
+		orbit_angle = 60
+		size = 45
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+
+
+	}
+
+	planet = {
+		name = V_SUN #加勒比
+		class = pc_barren_cold
+		has_ring = no
+		orbit_distance = {min = 70 max = 100}
+		orbit_angle = {min = 20 max = 100}
+		size = 20
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
 		}
 	}
 }
