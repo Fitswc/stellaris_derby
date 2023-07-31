@@ -1,0 +1,235 @@
+#理事长
+uma_chairman = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_galactic_stock_exchange
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	planet_modifier = {    
+		planet_stability_add = 10
+	}
+
+	resources = {
+		category = planet_merchants
+		upkeep = {
+			food = 10
+			consumer_goods = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+		modifier = {
+			
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight                #假定后续更新有与贸易相关的特质，则增加权重
+		#modifier = {
+		#	factor = 2.0
+		#	has_trait =                      
+		#}
+
+		modifier = {
+			factor = 5
+			has_job = uma_satonomerchant
+		}
+		modifier = {
+			factor = 5
+			owner = { has_civic = civic_umasatonodiamond }
+		}
+	}
+}
+
+#玩家
+uma_player = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_galactic_stock_exchange
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	planet_modifier = {    
+		planet_amenities_add = 5
+	}
+
+	resources = {
+		category = planet_merchants
+		produces = {
+			unity = 5
+		}
+		upkeep = {
+			energy = 1
+			consumer_goods = 1
+			food = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+		modifier = {
+			
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight                #假定后续更新有与贸易相关的特质，则增加权重
+		#modifier = {
+		#	factor = 2.0
+		#	has_trait =                      
+		#}
+
+		modifier = {
+			factor = 5
+			has_job = uma_satonomerchant
+		}
+		modifier = {
+			factor = 5
+			owner = { has_civic = civic_umasatonodiamond }
+		}
+	}
+}
+
+#玩家
+uma_automation_adm = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_galactic_stock_exchange
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	planet_modifier = {    
+	}
+
+	resources = {
+		category = planet_merchants
+		produces = {
+			unity = 100
+		}
+		upkeep = {
+			consumer_goods = 5
+			food = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+		modifier = {
+			
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight                #假定后续更新有与贸易相关的特质，则增加权重
+		#modifier = {
+		#	factor = 2.0
+		#	has_trait =                      
+		#}
+
+		modifier = {
+			factor = 5
+			has_job = uma_satonomerchant
+		}
+		modifier = {
+			factor = 5
+			owner = { has_civic = civic_umasatonodiamond }
+		}
+	}
+}
+
+#玩家
+uma_dining = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_galactic_stock_exchange
+	clothes_texture_index = 1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	planet_modifier = {    
+		planet_amenities_add = 10
+	}
+
+	resources = {
+		category = planet_merchants
+		produces = {
+			unity = 10
+		}
+		upkeep = {
+			food = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+		modifier = {
+			
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight                #假定后续更新有与贸易相关的特质，则增加权重
+		#modifier = {
+		#	factor = 2.0
+		#	has_trait =                      
+		#}
+
+		modifier = {
+			factor = 5
+			has_job = uma_satonomerchant
+		}
+		modifier = {
+			factor = 5
+			owner = { has_civic = civic_umasatonodiamond }
+		}
+	}
+}
