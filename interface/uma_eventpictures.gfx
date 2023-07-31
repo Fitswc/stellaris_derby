@@ -26,6 +26,7 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+<<<<<<< HEAD
 	spriteType = {
 		name = "GFX_evt_uma_racing_couse"
 		texturefile = "gfx/event_pictures/uma_racing_couse.dds"
@@ -53,6 +54,9 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+=======
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 
 	####异常点配图（虽说事件拿去用完全没关系）
@@ -61,6 +65,7 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uma_small_stream.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
+<<<<<<< HEAD
 	}
 
 	spriteType = {
@@ -209,4 +214,9 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+=======
+	}	
+
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }

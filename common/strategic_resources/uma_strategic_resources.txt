@@ -29,9 +29,12 @@ uma_threegodness_knowledge = {
 uma_crystal_carrot = {
 	tradable = no
 	max = 50000
+<<<<<<< HEAD
 	category = strategic #将水晶萝卜定义为战略资源，vsc报错不用管
     deficit_situation = situation_uma_crystal_carrot_deficit
 
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	##AI_category = strategic_resource
 
 	prerequisites = { "tech_uma_crysal_carrot_mining" }

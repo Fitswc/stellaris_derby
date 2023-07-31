@@ -9,7 +9,11 @@ uma_fuel_purge_small = {
 	possible = {
 		owner = {
 			AND = {
+<<<<<<< HEAD
 				#has_origin = origin_uma_candleoff
+=======
+				#has_civic = civic_uma_candleoff
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				has_policy_flag = policy_uma_fuel_convertion_small
 			}
 		}
@@ -21,8 +25,13 @@ uma_fuel_purge_small = {
 	resources = {
 		category = planet_jobs
 		produces = {
+<<<<<<< HEAD
 			unity = 0.5
 			society_research = 1
+=======
+			unity = 1
+			society_research = 2
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 		upkeep = {
 			trigger = {
@@ -64,8 +73,13 @@ uma_fuel_purge_medium = {
 	resources = {
 		category = planet_jobs
 		produces = {
+<<<<<<< HEAD
 			unity = 1
 			society_research = 3
+=======
+			unity = 5
+			society_research = 25
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 		upkeep = {
 			trigger = {
@@ -95,7 +109,11 @@ uma_fuel_purge_big = {
 	possible = {
 		owner = {
 			AND = {
+<<<<<<< HEAD
 				has_origin = origin_uma_candleoff
+=======
+				has_civic = civic_uma_candleoff
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				has_policy_flag = policy_uma_fuel_convertion_big
 			}
 		}
@@ -108,8 +126,13 @@ uma_fuel_purge_big = {
 	resources = {
 		category = planet_jobs
 		produces = {
+<<<<<<< HEAD
 			unity = 3
 			society_research = 5
+=======
+			unity = 60
+			society_research = 300
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 		upkeep = {
 			trigger = {

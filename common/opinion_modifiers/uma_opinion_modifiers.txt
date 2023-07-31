@@ -39,3 +39,21 @@ opinion_uma_humiliate_spiritualist_council = {
 	}
 }
 
+<<<<<<< HEAD
+=======
+######堕落帝国态度######
+
+#年轻的后进者
+opinion_uma_fallen_empire_love_young_umamusume = {
+	trigger = {
+		FROM = { has_authority = auth_trainingcenter }
+	}
+
+	opinion = {
+		modifier = {
+			add = 100
+			is_uma_fallen_empire = yes
+		}
+	}
+}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618

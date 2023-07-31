@@ -91,7 +91,11 @@ country_event = {
 				break = yes
 			}
 			if = {
+<<<<<<< HEAD
 				limit = { is_ruler = yes }
+=======
+				limit = { leader_class = ruler }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				random_list = {
 					1 = {
 						add_trait = uma_ruler_trait_charmleader
@@ -225,24 +229,37 @@ country_event = {
 			if = {
 				limit = { leader_class = admiral }
 				add_trait = uma_admiral_trait_terriroty_awake
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_terriroty_awake
+=======
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				break = yes
 			}
 			if = {
 				limit = { leader_class = general }
 				add_trait = uma_general_trait_terriroty_awake
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_terriroty_awake
+=======
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				break = yes
 			}
 			if = {
 				limit = { leader_class = governor }
 				add_trait = uma_governor_trait_terriroty_awake
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_terriroty_awake
+=======
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				break = yes
 			}
 			if = {
 				limit = { leader_class = scientist }
 				add_trait = uma_scientist_trait_terriroty_awake
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_terriroty_awake
 				break = yes
 			}
@@ -252,6 +269,17 @@ country_event = {
 ##				add_trait = uma_ruler_trait_terriroty_awake
 #				break = yes
 #			}
+=======
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = uma_ruler_trait_terriroty_awake
+				add_ruler_trait = uma_ruler_trait_terriroty_awake
+				break = yes
+			}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 }
@@ -328,6 +356,7 @@ country_event = {
 # 					random_list = {
 # 						6 = {
 # 							add_trait = uma_admiral_trait_yaruki_5
+<<<<<<< HEAD
 # 							add_trait = uma_ruler_trait_yaruki_5
 # 						}
 # 						9 = {
@@ -337,6 +366,17 @@ country_event = {
 # 						12 = {
 # 							add_trait = uma_admiral_trait_yaruki_3
 # 							add_trait = uma_ruler_trait_yaruki_3
+=======
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_admiral_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_admiral_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 # 						}
 # 					}
 # 				}
@@ -345,6 +385,7 @@ country_event = {
 # 					random_list = {
 # 						6 = {
 # 							add_trait = uma_general_trait_yaruki_5
+<<<<<<< HEAD
 # 							add_trait = uma_ruler_trait_yaruki_5
 # 						}
 # 						9 = {
@@ -354,6 +395,17 @@ country_event = {
 # 						12 = {
 # 							add_trait = uma_general_trait_yaruki_3
 # 							add_trait = uma_ruler_trait_yaruki_3
+=======
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_general_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_general_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 # 						}
 # 					}
 # 				}
@@ -362,6 +414,7 @@ country_event = {
 # 					random_list = {
 # 						6 = {
 # 							add_trait = uma_governor_trait_yaruki_5
+<<<<<<< HEAD
 # 							add_trait = uma_ruler_trait_yaruki_5
 # 						}
 # 						9 = {
@@ -371,6 +424,17 @@ country_event = {
 # 						12 = {
 # 							add_trait = uma_governor_trait_yaruki_3
 # 							add_trait = uma_ruler_trait_yaruki_3
+=======
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_governor_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_governor_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 # 						}
 # 					}
 # 				}
@@ -379,6 +443,7 @@ country_event = {
 # 					random_list = {
 # 						6 = {
 # 							add_trait = uma_scientist_trait_yaruki_5
+<<<<<<< HEAD
 # 							add_trait = uma_ruler_trait_yaruki_5
 # 						}
 # 						9 = {
@@ -388,14 +453,31 @@ country_event = {
 # 						12 = {
 # 							add_trait = uma_scientist_trait_yaruki_3
 # 							add_trait = uma_ruler_trait_yaruki_3
+=======
+# 							add_ruler_trait = uma_ruler_trait_yaruki_5
+# 						}
+# 						9 = {
+# 							add_trait = uma_scientist_trait_yaruki_4
+# 							add_ruler_trait = uma_ruler_trait_yaruki_4
+# 						}
+# 						12 = {
+# 							add_trait = uma_scientist_trait_yaruki_3
+# 							add_ruler_trait = uma_ruler_trait_yaruki_3
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 # 						}
 # 					}
 # 				}
 # 				###注：统治者锁定绝好调
 # 				if = {
+<<<<<<< HEAD
 # 					limit = { is_ruler = yes }
 # 					add_trait = uma_ruler_trait_yaruki_5
 # 					add_trait = uma_ruler_trait_yaruki_5
+=======
+# 					limit = { leader_class = ruler }
+# 					add_trait = uma_ruler_trait_yaruki_5
+# 					add_ruler_trait = uma_ruler_trait_yaruki_5
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 # 				}
 # 			}
 # 			every_pool_leader = {

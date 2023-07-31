@@ -16,11 +16,18 @@ uma_country = {
 		trait = "uma_trait_musume" #这里是特质
 		trait = "uma_trait_communal"
         trait = "uma_trait_spd1"
+<<<<<<< HEAD
 		gender = female
         #trait = "trait_slow_breeders"
 	}
 
 	room = "traincenter_06_room" #背景房间
+=======
+        #trait = "trait_slow_breeders"
+	}
+
+	room = "personality_federation_builders_room" #背景房间
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	authority = "auth_trainingcenter" #政府制度
 	civics = { "civic_umaairgroove" "civic_umamayanotopgun" } #国家理念
@@ -68,9 +75,15 @@ uma_country = {
 		portrait = "17a"
 		texture = 0
 		clothes = 0
+<<<<<<< HEAD
 		is_ruler = yes
 		ruler_title = PRESCRIPTED_ruler_title_uma_toresen_republic
 		ruler_title_female = PRESCRIPTED_ruler_title_uma_toresen_republic
 		ruler_title_male = PRESCRIPTED_ruler_title_uma_toresen_republic
+=======
+		leader_class = ruler
+		ruler_title = PRESCRIPTED_ruler_title_uma_toresen_republic
+		ruler_title_female = PRESCRIPTED_ruler_title_uma_toresen_republic
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }

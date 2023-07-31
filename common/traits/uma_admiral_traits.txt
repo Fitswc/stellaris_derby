@@ -10,6 +10,10 @@ uma_admiral_trait_symbolihonor = {
 	leader_potential_add = {
 		is_species = umamusume
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	opposites = { "uma_admiral_trait_mejirohonor" }
 	initial = no
@@ -29,6 +33,10 @@ uma_admiral_trait_mejirohonor = {
 	leader_potential_add = {
 		is_species = umamusume
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	opposites = { "uma_admiral_trait_symbolihonor" }
 	initial = no
@@ -47,6 +55,10 @@ uma_admiral_trait_charmleader = {
 		is_species = umamusume
 		has_trait = uma_trait_leadercharm
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no
@@ -63,6 +75,10 @@ uma_admiral_trait_kishouhageshii = {
 		is_species = umamusume
 		has_trait = uma_trait_kishouhageshii
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no
@@ -81,6 +97,10 @@ uma_admiral_trait_amulet = {
 		ship_disengage_chance_mult = 1
 		ship_evasion_add = 20
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -95,6 +115,10 @@ uma_admiral_trait_horn = {
 		ship_weapon_damage = 0.25
 		ship_fire_rate_mult = 0.25
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -109,6 +133,10 @@ uma_admiral_trait_tomorrow_star = {
 		ship_armor_mult = 0.2
 		species_leader_exp_gain = 0.25
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -122,6 +150,10 @@ uma_admiral_trait_training_book = {
 		leader_skill_levels =  5
 		species_leader_exp_gain = 1.5
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -137,6 +169,10 @@ uma_admiral_trait_vegetable_drink = {
 		ship_shield_mult = 0.3
 		ship_interstellar_speed_mult = 0.2
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -151,6 +187,10 @@ uma_admiral_trait_power_sf = {
 		ship_armor_mult = 0.2
 		ship_shield_mult = 0.2
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -160,7 +200,11 @@ uma_admiral_trait_power_sf = {
 ###干劲特质###
 ##############
 #绝好调
+<<<<<<< HEAD
 uma_admiral_trait_yaruki_five = {
+=======
+uma_admiral_trait_yaruki_5 = {
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"
 	modifier = {
@@ -168,12 +212,20 @@ uma_admiral_trait_yaruki_five = {
         ship_weapon_damage = 0.2
 		ship_weapon_range_mult = 0.10
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
 }
 #好调
+<<<<<<< HEAD
 uma_admiral_trait_yaruki_four = {
+=======
+uma_admiral_trait_yaruki_4 = {
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"
 	modifier = {
@@ -181,40 +233,68 @@ uma_admiral_trait_yaruki_four = {
         ship_weapon_damage = 0.1
 		ship_weapon_range_mult = 0.05
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
 }
 #普通
+<<<<<<< HEAD
 uma_admiral_trait_yaruki_three = {
+=======
+uma_admiral_trait_yaruki_3 = {
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
 	modifier = {
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
 }
 #不调
+<<<<<<< HEAD
 uma_admiral_trait_yaruki_two = {
+=======
+uma_admiral_trait_yaruki_2 = {
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_2.png"
 	modifier = {
 		ship_fire_rate_mult = -0.05
         ship_weapon_damage = -0.05
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
 }
 #绝不调
+<<<<<<< HEAD
 uma_admiral_trait_yaruki_one = {
+=======
+uma_admiral_trait_yaruki_1 = {
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"
 	modifier = {
 		ship_fire_rate_mult = -0.1
         ship_weapon_damage = -0.1
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -232,6 +312,10 @@ uma_admiral_trait_terriroty_awake = {
 		ship_weapon_damage = 0.1
 		ship_tracking_add = 5
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
 	randomized = no	
@@ -252,6 +336,10 @@ uma_admiral_trait_sp_oguri_cap = {
 		ship_interstellar_speed_mult = 0.2
 		ship_fire_rate_mult = 0.2
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no	
@@ -269,6 +357,10 @@ uma_admiral_trait_sp_seiun_sky_1 = {
 		ship_weapon_damage = -0.95
 		ship_fire_rate_mult = -0.95
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no	
@@ -282,6 +374,7 @@ uma_admiral_trait_sp_seiun_sky_2 = {
 		always = no
 	}
 	immortal_leaders = yes
+<<<<<<< HEAD
 	triggered_modifier = {
 		potential = {
 			has_leader_flag = uma_satono_sky_ii
@@ -290,11 +383,17 @@ uma_admiral_trait_sp_seiun_sky_2 = {
 		ship_fire_rate_mult = 0.7
 		ship_tracking_add = 40
 	}
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	modifier = {
 		ship_weapon_damage = 0.4
 		ship_fire_rate_mult = 0.4
 		ship_tracking_add = 20
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no	
@@ -313,6 +412,10 @@ uma_admiral_trait_sp_king_halo = {
 		ship_weapon_damage = 0.2
 		ship_weapon_range_mult = 0.1
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no		
@@ -331,6 +434,10 @@ uma_admiral_trait_sp_al_condor_pasa = {
 		ship_ftl_jumpdrive_range_mult = 0.5
 		ship_fire_rate_mult = 0.2
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no		
@@ -350,6 +457,10 @@ uma_admiral_trait_sp_kitasan_black = {
 		ship_hull_regen_add_perc = 0.02
 		ship_shield_regen_add_perc = 0.02
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no		
@@ -363,6 +474,7 @@ uma_admiral_trait_sp_nice_nature = {
 		always = no
 	}
 	immortal_leaders = yes
+<<<<<<< HEAD
 	triggered_modifier = {
 		potential = {
 			has_leader_flag = adm_nn_improved
@@ -371,11 +483,17 @@ uma_admiral_trait_sp_nice_nature = {
 		ship_fire_rate_mult = 0.233
 		ship_evasion_add = 23
 	}
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	modifier = {
 		ship_interstellar_speed_mult = 0.133
 		ship_fire_rate_mult = 0.133
 		ship_evasion_add = 13
 	}
+<<<<<<< HEAD
+=======
+	leader_trait = { admiral }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	leader_class = { admiral }
 	initial = no
     randomized = no		

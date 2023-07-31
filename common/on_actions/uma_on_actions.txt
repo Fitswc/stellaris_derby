@@ -7,17 +7,28 @@ on_game_start = {
 		#uma_shop_center.1
 		uma_fallen_empire.3 #创建堕落帝国（前导事件）
 		uma_fallen_empire.1000
+<<<<<<< HEAD
 		uma_satono.90
 		uma_suzuka.1
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
 #游戏开始时玩家国家触发
+<<<<<<< HEAD
 on_game_start_country = {
 	events = {
 		uma_crisis.10000
 	}
 }
+=======
+# on_game_start_country = {
+# 	events = {
+# 		uma_system_ini.1 #特殊领袖所在的星系
+# 	}
+# }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 ######!!!!!!!!
 ######请注意，不要试图使用on_game_start_country来创建自建星系
@@ -57,10 +68,13 @@ on_custom_diplomacy = {
 		uma_shop_center.3 #进入商城的前置页面
 		uma_nice_nature.2 #进入优秀素质的前置界面
 		uma_fallen_empire.1001
+<<<<<<< HEAD
 		uma_satono.30
 		uma_crisis.111
 		uma_crisis.112
 		uma_crisis.113
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
@@ -70,11 +84,14 @@ on_monthly_pulse_country = {
 	events = {
 		uma_monthly.1 #sky 事件链刷出
 		uma_monthly.2 #绿茵祈愿/小草 事件链刷出
+<<<<<<< HEAD
 		uma_tradition.1 #Traditions
 		uma_tradition.3 #Traditions
 		uma_crisis.1003
 		uma_crisis.2003
 		uma_crisis.3003
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
@@ -84,11 +101,14 @@ on_yearly_pulse_country = {
 		uma_gui_test.3 #刷新商城商品
 		uma_leader.7 #每年随机调整一次心情
 		uma_events_effect.7 #每年更新商城的抽奖次数
+<<<<<<< HEAD
 		uma_autoroll.1 #自动抽卡sil
 		uma_autoroll.4 #自动抽卡win
 		uma_events_effect.4 #Special Leader头像自动重整
 		uma_satono.402
 		uma_fallen_empire.2077
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
@@ -112,12 +132,15 @@ on_tech_increased = {
 	}
 }
 
+<<<<<<< HEAD
 on_planet_surveyed = {
 	events = {
 		uma_satono.400
 	}
 }
 
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 ##设置flag，确认mod打开，以方便适配
 on_press_begin = {
@@ -157,9 +180,12 @@ on_space_battle_lost = {
 on_fleet_destroyed_perp = {
 	events = {
 		uma_shop_center.4 #商城被毁
+<<<<<<< HEAD
 		uma_crisis.1020
 		uma_crisis.2020
 		#uma_fallen_empire.1151
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
@@ -171,12 +197,16 @@ on_colonized = {
 	events = {
 		uma_events_effect.5
 		uma_events_effect.6
+<<<<<<< HEAD
 		uma_satono.401
 		uma_fallen_empire.1141
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 
 }
 
+<<<<<<< HEAD
 
 on_entering_system_first_time = {
 	events = {
@@ -198,6 +228,18 @@ on_tech_increased = {
 		uma_fallen_empire.1111
 		uma_ss_arc.20
 		uma_ss_arc.22
+=======
+on_entering_system_first_time = {
+	events = {
+		uma_fallen_empire.21
+		tachyon_coffee.1
+	}
+}
+
+on_tech_increased = {
+	events = {
+		uma_fallen_empire.1111
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
@@ -213,6 +255,7 @@ on_ship_built = {
 	}
 }
 
+<<<<<<< HEAD
 #on_colonized = {
 #	events = {
 #		uma_fallen_empire.1141
@@ -234,3 +277,16 @@ on_ascension_perk_picked = {
 }
 
 
+=======
+on_colonized = {
+	events = {
+		uma_fallen_empire.1141
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		uma_fallen_empire.1151
+	}
+}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618

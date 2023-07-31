@@ -63,11 +63,15 @@ country_event = {
 	immediate = {
 		event_target:uma_seiun_sky_admiral = {
 			if = {
+<<<<<<< HEAD
 				limit = {
 					AND = {
 						has_trait = uma_admiral_trait_sp_seiun_sky_1
 					}
 				}
+=======
+				limit = { has_trait = uma_admiral_trait_sp_seiun_sky_1 }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				remove_trait = uma_admiral_trait_sp_seiun_sky_1
 				add_trait = uma_admiral_trait_sp_seiun_sky_2
 			}
@@ -138,6 +142,7 @@ country_event = {
 			}
 			if = {
 				limit = {
+<<<<<<< HEAD
 					exists = event_target:uma_agnes_digital_governor
 				}
 				event_target:uma_agnes_digital_governor = {
@@ -146,6 +151,8 @@ country_event = {
 			}
 			if = {
 				limit = {
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 					exists = event_target:uma_is_leader_kitasan_black
 				}
 				event_target:uma_is_leader_kitasan_black = {
@@ -158,7 +165,11 @@ country_event = {
 					exists = event_target:uma_is_leader_admiral_nature
 				}
 				event_target:uma_is_leader_admiral_nature = {
+<<<<<<< HEAD
 					change_leader_portrait = "46c"
+=======
+					change_leader_portrait = "19c"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				}
 			}
 			if = {
@@ -166,7 +177,11 @@ country_event = {
 					exists = event_target:uma_is_leader_governor_nature
 				}
 				event_target:uma_is_leader_governor_nature = {
+<<<<<<< HEAD
 					change_leader_portrait = "46c"
+=======
+					change_leader_portrait = "19c"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				}
 			}
 			if = {
@@ -174,7 +189,11 @@ country_event = {
 					exists = event_target:uma_is_leader_scientist_nature
 				}
 				event_target:uma_is_leader_scientist_nature = {
+<<<<<<< HEAD
 					change_leader_portrait = "46c"
+=======
+					change_leader_portrait = "19c"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				}
 			}
 			if = {
@@ -182,6 +201,7 @@ country_event = {
 					exists = event_target:uma_is_leader_general_nature
 				}
 				event_target:uma_is_leader_general_nature = {
+<<<<<<< HEAD
 					change_leader_portrait = "46c"
 				}
 			}
@@ -215,6 +235,9 @@ country_event = {
 				}
 				event_target:uma_is_leader_deep = {
 					change_leader_portrait = "DEEP_COMM"
+=======
+					change_leader_portrait = "19c"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				}
 			}
 		}

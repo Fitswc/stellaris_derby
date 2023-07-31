@@ -222,12 +222,19 @@ country_event = {
 		custom_tooltip = uma_special_leader_seiun_sky_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = SKY
+=======
+				name = "星云天空"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				#species = event_target:uma_leader_seiun_sky
 				species = root
 				gender = female
 				class = governor
+<<<<<<< HEAD
 				custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				skill = 8
 				set_age = 18
 				traits = {
@@ -238,19 +245,27 @@ country_event = {
 				effect = {
 					set_leader_flag = uma_is_special_leader
 					set_leader_flag = uma_is_seiun_sky
+<<<<<<< HEAD
 					#########
 					set_leader_flag = uma_is_gov_seiun_sky
 					#########
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 					save_global_event_target_as = uma_is_leader_seiun_sky
 				}
 			}
 			last_created_leader = {
 				change_leader_portrait = "20c"
+<<<<<<< HEAD
 	#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+=======
+				add_ruler_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
 			}
 		}
 	}
+<<<<<<< HEAD
 	after = {
 		create_message = {
 			type = MESSAGE_RECRUITED_LEADER
@@ -268,6 +283,8 @@ country_event = {
 			}
 		}
 	}
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 }
 
@@ -303,14 +320,21 @@ country_event = {
 		custom_tooltip = uma_special_leader_seiun_sky_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = SKY
+=======
+				name = "星云天空"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				#species = event_target:uma_leader_seiun_sky
 				species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
 				gender = female
 				class = admiral
 				skill = 8
 				set_age = 18
+<<<<<<< HEAD
 				custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				traits = {
 					trait = uma_admiral_trait_sp_seiun_sky_1
 					trait = leader_trait_trickster
@@ -320,17 +344,25 @@ country_event = {
 					save_global_event_target_as = uma_seiun_sky_admiral
 					set_leader_flag = uma_is_special_leader
 					set_leader_flag = uma_is_seiun_sky
+<<<<<<< HEAD
 					set_leader_flag = uma_is_ar_seiun_sky
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 					save_global_event_target_as = uma_is_leader_seiun_sky
 				}
 			}
 			last_created_leader = {
 				change_leader_portrait = "20c"
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+=======
+				add_ruler_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
 			}
 		}
 	}
+<<<<<<< HEAD
 	after = {
 		create_message = {
 			type = MESSAGE_RECRUITED_LEADER
@@ -348,6 +380,8 @@ country_event = {
 			}
 		}
 	}
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 }
 
@@ -1405,9 +1439,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.57.a ##老毛病又犯了？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.58
 			}
+=======
+			id = uma_special_leader.58
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1429,9 +1467,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.58.a ##KD是你做的吗？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.59
 			}
+=======
+			id = uma_special_leader.59
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1453,9 +1495,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.59.a ##大概只有你才高的出这种东西
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.60
 			}
+=======
+			id = uma_special_leader.60
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1477,9 +1523,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.60.a ##什么？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.61
 			}
+=======
+			id = uma_special_leader.61
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1501,9 +1551,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.61.a ##额...切断通讯好了
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.62
 			}
+=======
+			id = uma_special_leader.62
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1584,9 +1638,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.64.a #有关KD的事情
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.65
 			}
+=======
+			id = uma_special_leader.65
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1664,9 +1722,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.67.a #我会给你资源，你愿意吗？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.68
 			}
+=======
+			id = uma_special_leader.68
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1717,7 +1779,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_agnes_digital_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = DID
+=======
+				name = "爱丽数码"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				#species = event_target:uma_leader_seiun_sky
 				species = root
 				gender = female
@@ -1737,7 +1803,11 @@ country_event = {
 			}
 			last_created_leader = {
 				change_leader_portrait = "19c"
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_agnes_digital #选举为领袖的时候才会保留特质！
+=======
+				add_ruler_trait = uma_ruler_trait_sp_agnes_digital #选举为领袖的时候才会保留特质！
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
 			}
 		}		
@@ -1796,10 +1866,14 @@ country_event = {
 	option = {
 		name = uma_special_leader.81.a #你好，三着女士
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 				id = uma_special_leader.82
 			}
 			
+=======
+			id = uma_special_leader.82
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1822,9 +1896,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.82.a #能讲讲你自己吗
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.83
 			}
+=======
+			id = uma_special_leader.83
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1847,10 +1925,14 @@ country_event = {
 	option = {
 		name = uma_special_leader.83.a #能连续三次闯入总决赛的马娘可不普通哦
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			
 			id = uma_special_leader.84
 			}
+=======
+			id = uma_special_leader.84
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1873,9 +1955,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.84.a #要我们帮你做个检查吗？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.85
 			}
+=======
+			id = uma_special_leader.85
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1898,9 +1984,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.85.a #完全免费哦
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.86
 			}
+=======
+			id = uma_special_leader.86
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1970,9 +2060,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.88.a #为何不出全力？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.89
 			}
+=======
+			id = uma_special_leader.89
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -1995,9 +2089,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.89.a #真的吗？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.90
 			}
+=======
+			id = uma_special_leader.90
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -2067,9 +2165,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.92.a #优秀素质小姐？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.93
 			}
+=======
+			id = uma_special_leader.93
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -2092,9 +2194,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.93.a #你们？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.94
 			}
+=======
+			id = uma_special_leader.94
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -2117,10 +2223,14 @@ country_event = {
 	option = {
 		name = uma_special_leader.94.a #？？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			
 			id = uma_special_leader.95
 			}
+=======
+			id = uma_special_leader.95
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -2143,9 +2253,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.95.a #为什么这么认为？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.96
 			}
+=======
+			id = uma_special_leader.96
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -2168,9 +2282,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.96.a #那之前的优秀素质怎么了？
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.97
 			}
+=======
+			id = uma_special_leader.97
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
@@ -2193,9 +2311,13 @@ country_event = {
 	option = {
 		name = uma_special_leader.97.a #我明白了
 		hidden_effect = {
+<<<<<<< HEAD
 			country_event = {
 			id = uma_special_leader.98
 			}
+=======
+			id = uma_special_leader.98
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 

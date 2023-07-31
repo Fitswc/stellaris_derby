@@ -365,5 +365,42 @@ ship_design = {
 			template = "AUTO_REPAIR"
 		}
 	}
+<<<<<<< HEAD
 	required_component="SENSOR_4"
+=======
+	required_component = "SENSOR_4"
+}
+
+ship_design = {
+	name = "NAME_uma_mission_ship_1"
+	ship_size = UMA_mission_ship_key
+
+	section = {
+		template = "UMA_mission_ship_key"
+		slot = "mid"
+
+	}
+
+	required_component="SENSOR_4"
+}
+
+ship_design = {
+	name = "NAME_uma_mission_ship_2"
+	ship_size = UMA_mission_ship_key
+
+	section = {
+		template = "UMA_mission_ship_key"
+		slot = "mid"
+	}
+}
+
+ship_design = {
+	name = "NAME_uma_mission_ship_3"
+	ship_size = UMA_mission_ship_key
+
+	section = {
+		template = "UMA_mission_ship_key"
+		slot = "mid"
+	}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }

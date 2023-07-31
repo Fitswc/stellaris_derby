@@ -1,7 +1,11 @@
 @base_moon_distance = 10
 
 uma_shop_center_system_initializer = {
+<<<<<<< HEAD
 	name = IV_GH #"时之实" #绿帽的星系，对应的自然是绿帽的真名——时之实（丰收时刻/傲视一切）
+=======
+	name = "时之实" #绿帽的星系，对应的自然是绿帽的真名——时之实（丰收时刻/傲视一切）
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	class = "sc_a"
 
 	flags = { uma_shop_center_system }
@@ -11,15 +15,30 @@ uma_shop_center_system_initializer = {
         size = { min = 25 max = 30 }
         orbit_distance = 0
         orbit_angle = 1
+<<<<<<< HEAD
     }
 
 	planet = {
 		name = "Theft" #父 theft  Grand Theft Auto!!!!!!!!
+=======
+
+		flags = { uma_is_special_planet }
+    }
+
+	planet = {
+		name = "Theft" #父 theft
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		class = "pc_molten"
 		orbit_distance = 40
 		orbit_angle = 48 #1948
 		size = 15
 		has_ring = no
+<<<<<<< HEAD
+=======
+
+		flags = { uma_is_special_planet }
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -33,6 +52,12 @@ uma_shop_center_system_initializer = {
 		orbit_angle = 152 #5.2
 		size = 25
 		has_ring = no
+<<<<<<< HEAD
+=======
+
+		flags = { uma_is_special_planet }
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -40,12 +65,22 @@ uma_shop_center_system_initializer = {
 	}
 
 	planet = {
+<<<<<<< HEAD
 		name = IV_GUIT #"吉他" #毕竟是“贸易中心”
+=======
+		name = "吉他" #毕竟是“贸易中心”
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		class = "pc_gas_giant"
 		orbit_distance = 120
 		orbit_angle = 275
 		size = 40
 		has_ring = no
+<<<<<<< HEAD
+=======
+
+		flags = { uma_is_special_planet }
+		
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes

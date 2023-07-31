@@ -1,7 +1,11 @@
 @base_moon_distance = 10
 
 uma_seiun_sky_system_initializer = {
+<<<<<<< HEAD
 	name = II_BP #"Bellis perennis" #意为“雏菊”，是现实中星云天空和西野花的后代。
+=======
+	name = "Bellis perennis" #意为“雏菊”，是现实中星云天空和西野花的后代。
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	class = "sc_g"
 
 	flags = { uma_seiun_sky_system }
@@ -17,11 +21,19 @@ uma_seiun_sky_system_initializer = {
 		class = pc_gaia
 		orbit_distance = 70
 		orbit_angle = { min = 90 max = 350 }
+<<<<<<< HEAD
 		name = II_SKY #"青云"
 		size = 20 #20格盖亚星球
 		modifiers = none
 
 		flags = { uma_planet_seiun_sky_star }
+=======
+		name = "青云"
+		size = 20 #20格盖亚星球
+		modifiers = none
+
+		flags = { uma_planet_seiun_sky_star uma_is_special_planet }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		#anomaly = uma_seiun_sky_anomoly #必定刷出“隐居者”
 
 		init_effect = {
@@ -43,9 +55,17 @@ uma_seiun_sky_system_initializer = {
             orbit_distance = 5
             orbit_angle = { min = 90 max = 270 }
 			size = 10 #小花对应的盖亚星球只有10格
+<<<<<<< HEAD
 			name = II_FLO #"花"
 			modifiers = none
 
+=======
+			name = "花"
+			modifiers = none
+
+			flags = { uma_is_special_planet }
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes

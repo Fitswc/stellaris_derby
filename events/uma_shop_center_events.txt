@@ -129,12 +129,20 @@ country_event = {
 				#生成领袖
 				class = ruler
 				species = this				#领袖种族
+<<<<<<< HEAD
 				name = HT				#领袖名字（当前为随机）
+=======
+				name = "骏川手纲"				#领袖名字（当前为随机）
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				skill = 10
 			}
 			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
 			last_created_leader = {
+<<<<<<< HEAD
 			add_trait = leader_trait_ruler_chosen #确保不朽
+=======
+			add_ruler_trait = leader_trait_ruler_chosen #确保不朽
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			change_leader_portrait = "C01"
 			}
 			
@@ -346,8 +354,12 @@ country_event = {
 
 	option = {
 		name = uma_shop_center.11.b	#单抽！
+<<<<<<< HEAD
 		allow = {
 			has_policy_flag = uma_autoroll_off
+=======
+		allow = { 
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			resource_stockpile_compare = {
 				resource = uma_crystal_carrot
 				value >= 150
@@ -1130,7 +1142,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_king_halo_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KH
+=======
+				name = "圣王光环"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = governor
@@ -1149,7 +1165,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "47c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_king_halo
+=======
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1159,7 +1179,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_king_halo_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KH
+=======
+				name = "圣王光环"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = admiral
@@ -1178,7 +1202,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "47c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_king_halo
+=======
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1188,7 +1216,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_king_halo_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KH
+=======
+				name = "圣王光环"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = scientist
@@ -1207,7 +1239,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "47c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_king_halo
+=======
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1217,7 +1253,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_king_halo_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KH
+=======
+				name = "圣王光环"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = general
@@ -1236,7 +1276,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "47c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_king_halo
+=======
+				add_ruler_trait = uma_ruler_trait_sp_king_halo
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1258,7 +1302,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = EI
+=======
+				name = "神鹰"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = governor
@@ -1277,7 +1325,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "14c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_al_condor_pasa
+=======
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1287,7 +1339,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = EI
+=======
+				name = "神鹰"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = admiral
@@ -1306,7 +1362,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "14c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_al_condor_pasa
+=======
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1316,7 +1376,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = EI
+=======
+				name = "神鹰"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = scientist
@@ -1335,7 +1399,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "14c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_al_condor_pasa
+=======
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1345,7 +1413,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_al_condor_pasa_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = EI
+=======
+				name = "神鹰"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = general
@@ -1364,7 +1436,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "14c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_al_condor_pasa
+=======
+				add_ruler_trait = uma_ruler_trait_sp_al_condor_pasa
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1386,7 +1462,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_kitasan_black_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KB
+=======
+				name = "北部玄驹"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = governor
@@ -1406,7 +1486,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "67c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_kitasan_black
+=======
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1416,7 +1500,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_kitasan_black_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KB
+=======
+				name = "北部玄驹"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = admiral
@@ -1436,7 +1524,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "67c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_kitasan_black
+=======
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1446,7 +1538,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_kitasan_black_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KB
+=======
+				name = "北部玄驹"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = scientist
@@ -1466,7 +1562,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "67c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_kitasan_black
+=======
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -1476,7 +1576,11 @@ country_event = {
 		custom_tooltip = uma_special_leader_kitasan_black_will_join
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = KB
+=======
+				name = "北部玄驹"
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				species = root
 				gender = female
 				class = general
@@ -1496,7 +1600,11 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "67c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 #				add_trait = uma_ruler_trait_sp_kitasan_black
+=======
+				add_ruler_trait = uma_ruler_trait_sp_kitasan_black
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}

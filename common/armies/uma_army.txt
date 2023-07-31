@@ -3,14 +3,20 @@
 #黑色军团
 #我们是盖叶的黑色军团（bushi）
 uma_black_army = {
+<<<<<<< HEAD
 	damage = 2.50
 	health = 2.56
+=======
+	damage = 3.00
+	health = 3.00
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	morale = 3.00
 	morale_damage = 3.00
 	collateral_damage = 2.00
 	war_exhaustion = 0.25
 	time = 200
 	icon = GFX_uma_black_army
+<<<<<<< HEAD
 	prerequisites = { "tech_assault_armies"}
 	resources = {
 		category = armies
@@ -21,11 +27,24 @@ uma_black_army = {
 
 		upkeep = {
 			energy = 3
+=======
+	prerequisites = { "tech_assault_armies" }
+	resources = {
+		category = armies
+		cost = {
+			minerals = 300
+            alloys = 100
+		}
+
+		upkeep = {
+			energy = 2
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 
 
     #判定马娘国家
+<<<<<<< HEAD
 #   potential_country = {
 #		has_authority = auth_trainingcenter
 #	}
@@ -43,6 +62,25 @@ uma_black_army = {
 		}
 	}
 
+=======
+    potential_country = {
+		has_authority = auth_trainingcenter
+	}
+
+    #判定国策
+	potential = {
+		from = {
+            has_civic = civic_umaeishinflash
+		}
+	}
+
+    #需要赛马娘人口
+    allow = {
+        any_owned_pop = {
+			has_trait = uma_trait_musume
+		}
+    }
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	ai_weight = {
 		base = 100

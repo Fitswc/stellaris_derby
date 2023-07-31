@@ -2,7 +2,11 @@ origin_uma_below_threegodness = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_syncretic_evolution.dds" #到时候得自己做新的图
 	picture = "GFX_origin_below_threegodness"
+<<<<<<< HEAD
 	#max_once_global = yes #唯一的起源！
+=======
+	max_once_global = yes #唯一的起源！
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	#potential = {
 	#	authority = { value = auth_trainingcenter }
@@ -20,6 +24,7 @@ origin_uma_below_threegodness = {
 
 	description = "origin_tooltip_uma_below_threegodness"
 
+<<<<<<< HEAD
 }
 
 #origin_uma_salvation_of_the_soul = {
@@ -70,4 +75,6 @@ origin_uma_candleoff = {
 	random_weight = {
 		base = 0.1
 	}
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }

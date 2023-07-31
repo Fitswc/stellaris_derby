@@ -353,10 +353,14 @@ ap_synthetic_evolution = {
 		}
 		modifier = {
 			factor = 0
+<<<<<<< HEAD
 			OR = {
 				has_origin = origin_necrophage
 				has_origin = origin_slavers
 			}
+=======
+			has_origin = origin_necrophage
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 }

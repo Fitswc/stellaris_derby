@@ -4,7 +4,10 @@ uma_trait_musume = {
 	allowed_archetypes={UMA}
 	sorting_priority = 30
 	icon="gfx/interface/icons/traits/uma_trait_musume.png"
+<<<<<<< HEAD
 	custom_tooltip_with_modifiers = uma_trait_musume_effect
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
     leader_age_min = 13
     leader_age_max = 18
     initial = no
@@ -707,4 +710,19 @@ trait_uma_terriroty_awake = {
 		army_health = 0.3
 	}
 
+<<<<<<< HEAD
+=======
+}
+
+uma_trait_fallen = {
+	icon="gfx/interface/icons/traits/uma_trait_kishouhageshii.png"
+	cost= 0
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_fallen"  }
+	modifier={
+		planet_jobs_produces_mult = -0.5
+		army_damage_mult = -0.5
+		army_health = -0.5
+	}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 }

@@ -1,5 +1,6 @@
 namespace = uma_little_event
 
+<<<<<<< HEAD
 #Trigger-Event Index
 # .100 -> 节食潮
 # .200 -> 帽
@@ -32,20 +33,35 @@ country_event = {
 	}
 }
 
+=======
+###节食潮事件链
+
+#节食潮
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 country_event = {
 	id = uma_little_event.1
 	title = "uma_little_event.1.name"
 	desc = "uma_little_event.1.desc"
 	picture = GFX_evt_uma_normal_school
+<<<<<<< HEAD
 	is_triggered_only = yes
+=======
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	trigger = {
 		has_authority = auth_trainingcenter
 	}
 
 	fire_only_once = yes
+<<<<<<< HEAD
 	#mean_time_to_happen = {
 	#	years = 30
 	#}
+=======
+	mean_time_to_happen = {
+		years = 30
+	}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 
 	option = {
@@ -141,6 +157,7 @@ country_event = {
 
 
 ###食物失窃事件
+<<<<<<< HEAD
 #######专门触发 帽 的事件的事件，代替MTTH
 country_event = {
 	id = uma_little_event.200
@@ -165,6 +182,8 @@ country_event = {
 		}
 	}
 }
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 ###食物失窃！
 country_event = {
@@ -172,15 +191,25 @@ country_event = {
 	title = "uma_little_event.10.name"
 	desc = "uma_little_event.10.desc"
 	picture = GFX_evt_uma_normal_school
+<<<<<<< HEAD
 	is_triggered_only = yes
+=======
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	trigger = {
 		has_authority = auth_trainingcenter
 	}
 
 	fire_only_once = yes
+<<<<<<< HEAD
 	#mean_time_to_happen = {
 	#	years = 50
 	#}
+=======
+	mean_time_to_happen = {
+		years = 50
+	}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 
 	option = {
@@ -238,6 +267,7 @@ country_event = {
 		name = "uma_little_event.11.a"
 		
 		custom_tooltip = uma_special_leader_oguri_cap_will_join
+<<<<<<< HEAD
 		hidden_effect = {
 
 			create_leader = {
@@ -282,6 +312,32 @@ country_event = {
 				}
 			}
 		}
+=======
+		create_leader = {
+			name = "小栗帽"
+			#species = event_target:uma_leader_oguri_cap
+			species = root
+			gender = female
+			class = governor
+			skill = 6
+			set_age = 18
+			traits = {
+				trait = uma_governor_trait_sp_oguri_cap
+				trait = leader_trait_agrarian_upbringing
+				trait = leader_trait_righteous
+			}
+			effect = {
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_oguri_cap
+				save_global_event_target_as = uma_is_leader_oguri_cap
+			}
+		}
+		last_created_leader = {
+			change_leader_portrait = "06c"
+			add_ruler_trait = uma_ruler_trait_sp_oguri_cap
+			uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+		}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 
 	option = {
@@ -291,11 +347,18 @@ country_event = {
 
 		hidden_effect = {
 			create_leader = {
+<<<<<<< HEAD
 				name = OC #"小栗帽"
 				#species = event_target:uma_leader_oguri_cap
 				species = root
 				gender = female
 				custom_catch_phrase = uma_special_leader_oguri_cap_will_join
+=======
+				name = "小栗帽"
+				#species = event_target:uma_leader_oguri_cap
+				species = root
+				gender = female
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 				class = governor
 				skill = 6
 				set_age = 18
@@ -313,6 +376,7 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "06c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+<<<<<<< HEAD
 				#				add_trait = uma_ruler_trait_sp_oguri_cap
 			}
 			create_message = {
@@ -329,6 +393,9 @@ country_event = {
 					key = "border"
 					value = "GFX_border_legendary"
 				}
+=======
+				add_ruler_trait = uma_ruler_trait_sp_oguri_cap
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		add_modifier = {
@@ -349,6 +416,7 @@ country_event = {
 
 
 ###名次竞猜事件链
+<<<<<<< HEAD
 #星球上的名次竞猜事件Trigger
 country_event = {
 	id = uma_little_event.300
@@ -373,12 +441,19 @@ country_event = {
 	}
 }
 
+=======
+#星球上的名次竞猜事件
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 country_event = {
 	id = uma_little_event.20
 	title = "uma_little_event.20.name"
 	desc = "uma_little_event.20.desc"
 	picture = GFX_evt_uma_normal_school
+<<<<<<< HEAD
 	is_triggered_only = yes
+=======
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	trigger = {
 		has_authority = auth_trainingcenter
 		any_owned_planet = {
@@ -391,9 +466,15 @@ country_event = {
 	}
 
 	fire_only_once = yes
+<<<<<<< HEAD
 	#mean_time_to_happen = {
 	#	years = 20
 	#}
+=======
+	mean_time_to_happen = {
+		years = 20
+	}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	immediate = {
 		hidden_effect = {
@@ -506,6 +587,7 @@ planet_event = {
 	}
 
 }
+<<<<<<< HEAD
 
 # F小事件
 country_event = {
@@ -563,3 +645,5 @@ country_event = {
 		name = uma_little_event.24.a
 	}
 }
+=======
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618

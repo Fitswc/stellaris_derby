@@ -21,6 +21,20 @@ is_uma_country = {
 
 
 
+<<<<<<< HEAD
+=======
+###关于判定是否是马娘堕落帝国[scope:country]
+is_uma_fallen_empire = {
+	OR = {
+		has_authority = auth_uma_fallen_empire
+		#has_authority = auth_awaken_uma_fallen_empire
+	}
+}
+
+
+
+
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 ###判断领袖内恰的个数（scope：country）
 uma_num_of_nature_equal_or_better_than_three = {
 	# calc_true_if = {
@@ -40,36 +54,61 @@ uma_num_of_nature_equal_or_better_than_three = {
 ####检测马娘领袖是否有干劲特质###
 uma_admiral_have_yaruki_trait = {
 	OR = {
+<<<<<<< HEAD
 		has_trait = uma_admiral_trait_yaruki_five
 		has_trait = uma_admiral_trait_yaruki_four
 		has_trait = uma_admiral_trait_yaruki_three
 		has_trait = uma_admiral_trait_yaruki_two
 		has_trait = uma_admiral_trait_yaruki_one
+=======
+		has_trait = uma_admiral_trait_yaruki_5
+		has_trait = uma_admiral_trait_yaruki_4
+		has_trait = uma_admiral_trait_yaruki_3
+		has_trait = uma_admiral_trait_yaruki_2
+		has_trait = uma_admiral_trait_yaruki_1
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
 uma_general_have_yaruki_trait = {
 	OR = {
+<<<<<<< HEAD
 		has_trait = uma_general_trait_yaruki_five
 		has_trait = uma_general_trait_yaruki_four
 		has_trait = uma_general_trait_yaruki_three
 		has_trait = uma_general_trait_yaruki_two
 		has_trait = uma_general_trait_yaruki_one
+=======
+		has_trait = uma_general_trait_yaruki_5
+		has_trait = uma_general_trait_yaruki_4
+		has_trait = uma_general_trait_yaruki_3
+		has_trait = uma_general_trait_yaruki_2
+		has_trait = uma_general_trait_yaruki_1
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
 uma_governor_have_yaruki_trait = {
 	OR = {
+<<<<<<< HEAD
 		has_trait = uma_governor_trait_yaruki_five
 		has_trait = uma_governor_trait_yaruki_four
 		has_trait = uma_governor_trait_yaruki_three
 		has_trait = uma_governor_trait_yaruki_two
 		has_trait = uma_governor_trait_yaruki_one
+=======
+		has_trait = uma_governor_trait_yaruki_5
+		has_trait = uma_governor_trait_yaruki_4
+		has_trait = uma_governor_trait_yaruki_3
+		has_trait = uma_governor_trait_yaruki_2
+		has_trait = uma_governor_trait_yaruki_1
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 	}
 }
 
 uma_scientist_have_yaruki_trait = {
 	OR = {
+<<<<<<< HEAD
 		has_trait = uma_scientist_trait_yaruki_five
 		has_trait = uma_scientist_trait_yaruki_four
 		has_trait = uma_scientist_trait_yaruki_three
@@ -87,16 +126,43 @@ uma_scientist_have_yaruki_trait = {
 #		has_trait = uma_ruler_trait_yaruki_1
 #	}
 #}
+=======
+		has_trait = uma_scientist_trait_yaruki_5
+		has_trait = uma_scientist_trait_yaruki_4
+		has_trait = uma_scientist_trait_yaruki_3
+		has_trait = uma_scientist_trait_yaruki_2
+		has_trait = uma_scientist_trait_yaruki_1
+	}
+}
+
+uma_ruler_have_yaruki_trait = {
+	OR = {
+		has_trait = uma_ruler_trait_yaruki_5
+		has_trait = uma_ruler_trait_yaruki_4
+		has_trait = uma_ruler_trait_yaruki_3
+		has_trait = uma_ruler_trait_yaruki_2
+		has_trait = uma_ruler_trait_yaruki_1
+	}
+}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 #####检测是否为最好干劲#####
 uma_not_has_highest_kanshi_trigger = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_yaruki_5
 			has_trait = uma_scientist_trait_yaruki_five
 			has_trait = uma_governor_trait_yaruki_five
 			has_trait = uma_general_trait_yaruki_five
 			has_trait = uma_admiral_trait_yaruki_five
+=======
+			has_trait = uma_ruler_trait_yaruki_5
+			has_trait = uma_scientist_trait_yaruki_5
+			has_trait = uma_governor_trait_yaruki_5
+			has_trait = uma_general_trait_yaruki_5
+			has_trait = uma_admiral_trait_yaruki_5
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 }
@@ -105,11 +171,19 @@ uma_not_has_highest_kanshi_trigger = {
 uma_is_not_lowest_kanshi = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_yaruki_1
 			has_trait = uma_scientist_trait_yaruki_one
 			has_trait = uma_governor_trait_yaruki_one
 			has_trait = uma_general_trait_yaruki_one
 			has_trait = uma_admiral_trait_yaruki_one
+=======
+			has_trait = uma_ruler_trait_yaruki_1
+			has_trait = uma_scientist_trait_yaruki_1
+			has_trait = uma_governor_trait_yaruki_1
+			has_trait = uma_general_trait_yaruki_1
+			has_trait = uma_admiral_trait_yaruki_1
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		}
 	}
 }
@@ -118,12 +192,20 @@ uma_is_not_lowest_kanshi = {
 #蹄铁可用性
 uma_not_has_titie_trait = {
 	OR = {
+<<<<<<< HEAD
 		is_ruler = yes
+=======
+		leader_class = ruler
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		leader_class = governor
 	}
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_horse_shoes_ultra
+=======
+			has_trait = uma_ruler_trait_horse_shoes_ultra
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_horse_shoes_ultra
 		} 
 	}
@@ -147,7 +229,11 @@ uma_not_has_amulet_trait = {
 uma_not_has_horn_trait = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_horn
+=======
+			has_trait = uma_ruler_trait_horn
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_horn
 			has_trait = uma_admiral_trait_horn
 			has_trait = uma_general_trait_horn
@@ -159,13 +245,21 @@ uma_not_has_horn_trait = {
 #学者帽可用性
 uma_not_has_school_hat_trait = {
 	OR = {
+<<<<<<< HEAD
 		is_ruler = yes
+=======
+		leader_class = ruler
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		leader_class = scientist
 		leader_class = governor
 	}
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_special_scholar
+=======
+			has_trait = uma_ruler_trait_special_scholar
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_scientist_trait_special_scholar
 			has_trait = uma_governor_trait_special_scholar
 		}
@@ -176,7 +270,11 @@ uma_not_has_school_hat_trait = {
 uma_not_has_training_book_trait = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_training_book
+=======
+			has_trait = uma_ruler_trait_training_book
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_training_book
 			has_trait = uma_admiral_trait_training_book
 			has_trait = uma_general_trait_training_book
@@ -189,7 +287,11 @@ uma_not_has_training_book_trait = {
 uma_not_has_tomorrow_star_trait = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_tomorrow_star
+=======
+			has_trait = uma_ruler_trait_tomorrow_star
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_tomorrow_star
 			has_trait = uma_admiral_trait_tomorrow_star
 			has_trait = uma_general_trait_tomorrow_star
@@ -201,12 +303,20 @@ uma_not_has_tomorrow_star_trait = {
 #小镜子可用性
 uma_not_has_lovely_trait = {
 	OR = {
+<<<<<<< HEAD
 		is_ruler = yes
+=======
+		leader_class = ruler
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 		leader_class = governor
 	}
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_lovely
+=======
+			has_trait = uma_ruler_trait_lovely
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_lovely
 		}
 	}
@@ -216,7 +326,11 @@ uma_not_has_lovely_trait = {
 uma_not_has_vegetable_drink_trait = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_vegetable_drink
+=======
+			has_trait = uma_ruler_trait_vegetable_drink
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_vegetable_drink
 			has_trait = uma_admiral_trait_vegetable_drink
 			has_trait = uma_general_trait_vegetable_drink
@@ -229,7 +343,11 @@ uma_not_has_vegetable_drink_trait = {
 uma_not_has_power_sf_trait = {
 	NOT = {
 		OR = {
+<<<<<<< HEAD
 #			has_trait = uma_ruler_trait_power_sf
+=======
+			has_trait = uma_ruler_trait_power_sf
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			has_trait = uma_governor_trait_power_sf
 			has_trait = uma_admiral_trait_power_sf
 			has_trait = uma_general_trait_power_sf

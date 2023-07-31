@@ -24,6 +24,7 @@ planet_event = {
 	}
 
 	immediate = {
+<<<<<<< HEAD
 		hidden_effect = {
 			owner = {
 				uma_refresh_slot_1_goods_effect = yes
@@ -131,6 +132,113 @@ planet_event = {
 					which = uma_shop_gecha_unlucky_times
 					value = 0
 				}
+=======
+		owner = {
+			uma_refresh_slot_1_goods_effect = yes
+			uma_refresh_slot_2_goods_effect = yes
+			uma_refresh_slot_3_goods_effect = yes
+			uma_refresh_slot_4_goods_effect = yes
+			uma_refresh_slot_5_goods_effect = yes
+			uma_refresh_slot_6_goods_effect = yes
+			###初始化资源
+			set_variable = {
+				which = uma_num_of_coin
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_1
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_2
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_3
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_4
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_5
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_6
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_7
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_8
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_9
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_10
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_11
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_12
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_13
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_14
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_15
+				value = 0
+			}
+			set_variable = {
+				which = uma_num_of_good_16
+				value = 0
+			}
+			set_variable = {
+				which = uma_intelligence_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_kenshi_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_power_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_endurance_goods_used
+				value = 0
+			}
+			set_variable = {
+				which = uma_speed_goods_used
+				value = 0
+			}
+			###允许抽奖的次数（每年刷新）
+			set_variable = {
+				which = uma_shop_gecha_times_allowed
+				value = 3
+			}
+			###抽奖没有获得特殊领袖或者道具的计数（到了20次提升概率）
+			set_variable = {
+				which = uma_shop_gecha_unlucky_times
+				value = 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -177,12 +285,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_1
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_1
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.a"
@@ -195,12 +310,19 @@ country_event = {
 	
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_2
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_2
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.b"
@@ -213,12 +335,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_3
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_3
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.c"
@@ -231,12 +360,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_4
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_4
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.d"
@@ -249,12 +385,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_5
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_5
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.e"
@@ -267,12 +410,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_6
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_6
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.f"
@@ -285,12 +435,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_7
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_7
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.g"
@@ -303,12 +460,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_8
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_8
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.4.h"
@@ -346,12 +510,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_9
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_9
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.5.a"
@@ -364,12 +535,19 @@ country_event = {
 	
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_10
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_10
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.5.b"
@@ -382,12 +560,19 @@ country_event = {
 
 	option = {
 		allow = {
+<<<<<<< HEAD
 			custom_tooltip = {
 				fail_text = uma_you_dont_have_this_goods
 				check_variable = {
 					which = uma_num_of_good_11
 					value > 0
 				}
+=======
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_11
+				value > 0
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 		name = "uma_gui_test.5.c"
@@ -398,6 +583,7 @@ country_event = {
 		}
 	}
 
+<<<<<<< HEAD
 	#option = {
 	#	allow = {
 	#		fail_text = uma_you_dont_have_this_goods
@@ -492,6 +678,102 @@ country_event = {
 	#		uma_upgrade_speed_goods_effect = yes
 	#	}
 	#}
+=======
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_12
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.d"
+		custom_tooltip = uma_use_intelligence_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_12
+				value = 1
+			}
+			uma_upgrade_intelligence_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_13
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.e"
+		custom_tooltip = uma_use_kenshi_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_13
+				value = 1
+			}
+			uma_upgrade_kenshi_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_14
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.f"
+		custom_tooltip = uma_use_power_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_14
+				value = 1
+			}
+			uma_upgrade_power_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_15
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.g"
+		custom_tooltip = uma_use_endurance_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_15
+				value = 1
+			}
+			uma_upgrade_endurance_goods_effect = yes
+		}
+	}
+
+	option = {
+		allow = {
+			fail_text = uma_you_dont_have_this_goods
+			check_variable = {
+				which = uma_num_of_good_16
+				value > 0
+			}
+		}
+		name = "uma_gui_test.5.h"
+		custom_tooltip = uma_use_speed_book
+		hidden_effect = {
+			subtract_variable = {
+				which = uma_num_of_good_16
+				value = 1
+			}
+			uma_upgrade_speed_goods_effect = yes
+		}
+	}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	option = {
 		name = "uma_gui_test.5.sooner"

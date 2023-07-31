@@ -32,8 +32,12 @@ country_event = {
 				limit = {
 					has_deposit = d_uma_threegodness_relic
 				}
+<<<<<<< HEAD
 #				planet_event = {id = umaarc.1000 days = 1800 random = 720}
 				planet_event = {id = umaarc.1000 days = 100 random = 500}
+=======
+				planet_event = {id = umaarc.1000 days = 1800 random = 720}
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 			}
 		}
 	}
@@ -234,6 +238,7 @@ planet_event = {
 
     option = {
 		name = umaarc.1006.a
+<<<<<<< HEAD
 		remove_deposit = d_uma_threegodness_relic
 		add_deposit = d_uma_threegodness_museum
 		hidden_effect = {
@@ -244,6 +249,10 @@ planet_event = {
 				}
 			}
 		}
+=======
+			remove_deposit = d_uma_threegodness_relic
+            add_deposit = d_uma_threegodness_museum
+>>>>>>> aee52f277a05195747a497f5fb1a22d84ccdb618
 
 	}
 }
