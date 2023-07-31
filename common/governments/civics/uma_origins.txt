@@ -53,17 +53,19 @@ origin_uma_candleoff = {
 		ethics = {
 			value = ethic_fanatic_xenophobe
 		}
-		civics = {
-			NOT = {
-				value = civic_fanatic_purifiers
-			}
-		}
 		species_archetype = { value = UMA }
 	}
 	modifier = {
-
-
-
+		ship_hull_mult = 0.9
+		ship_fire_rate_mult = 0.8
+		ship_weapon_damage = 0.8
+		ship_hull_regen_add_perc = 0.8
+		ship_armor_regen_add_perc = 0.8
+		starbase_shipyard_build_speed_mult = 0.4
+		starbase_shipyard_build_cost_mult = -0.3
+		army_damage_mult = 0.65
+		country_war_exhaustion_mult = -0.4
+		country_naval_cap_mult = 0.5
 	}
 	random_weight = {
 		base = 0.1

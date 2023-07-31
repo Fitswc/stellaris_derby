@@ -219,12 +219,56 @@ country_event = {
 	#欢迎加入
 	option = {
 		name = uma_special_leader.7.a #我了解了
+		custom_tooltip = uma_special_leader_seiun_sky_will_join
 		hidden_effect = {
-			country_event = {
-				id = uma_special_leader.9001
+			create_leader = {
+				name = SKY
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = governor
+				custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+				skill = 8
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_seiun_sky
+					trait = leader_trait_intellectual
+					trait = leader_trait_righteous
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					#########
+					set_leader_flag = uma_is_gov_seiun_sky
+					#########
+					save_global_event_target_as = uma_is_leader_seiun_sky
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "20c"
+	#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
 			}
 		}
 	}
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_seiun_sky
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_seiun_sky
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+	}
+
 }
 
 ######################################
@@ -256,273 +300,56 @@ country_event = {
 	#欢迎加入
 	option = {
 		name = uma_special_leader.8.a #我了解了
+		custom_tooltip = uma_special_leader_seiun_sky_will_join
 		hidden_effect = {
-			country_event = {
-				id = uma_special_leader.9000
-			}
-		}
-	}
-}
-
-
-country_event = {
-	id = uma_special_leader.9000
-	title = SKY
-	desc = uma_special_leader.9000.desc
-	is_triggered_only = yes
-
-	picture = GFX_leader_recruitment_bg_legendary_azaryn
-	event_window_type = leader_recruit
-	picture_event_data = {
-		portrait = event_target:uma_is_leader_seiun_sky #注意区分
-	}
-
-	immediate = {
-		create_country = {
-			name = "NAME_uma_empty"
-			type = global_event
-			auto_delete = yes
-			flag = {
-				icon = {
-					category = "special"
-					file = "unknown.dds"
+			create_leader = {
+				name = SKY
+				#species = event_target:uma_leader_seiun_sky
+				species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+				gender = female
+				class = admiral
+				skill = 8
+				set_age = 18
+				custom_catch_phrase = uma_special_leader_seiun_sky_will_join
+				traits = {
+					trait = uma_admiral_trait_sp_seiun_sky_1
+					trait = leader_trait_trickster
+					trait = leader_trait_gale_speed
 				}
-				background = {
-					category = "backgrounds"
-					file = "00_solid.dds"
-				}
-				colors = {
-					"red"
-					"red"
-					"null"
-					"null"
-				}
-			}
-			effect = {
-				save_event_target_as = uma_empty_country
-			}
-		}
-		event_target:uma_empty_country = {
-			create_species = {
-				name = "NAME_Unknown"
-				class = umamusume
-				portrait = umamusume
-				namelist = "UMAname"
-				traits = random
 				effect = {
-					save_event_target_as = uma_legendary_leader_species
+					save_global_event_target_as = uma_seiun_sky_admiral
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_seiun_sky
+					set_leader_flag = uma_is_ar_seiun_sky
+					save_global_event_target_as = uma_is_leader_seiun_sky
 				}
 			}
-			uma_create_leader_sky_admiral = yes
-		}
-	}
-
-	option = {
-		name = uma_special_leader.9000.a
-		response_text = uma_special_leader.9000.a.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = uma_special_leader.9000.b
-		response_text = uma_special_leader.9000.b.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = uma_special_leader.9000.c
-		response_text = uma_special_leader.9000.c.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = HIRE
-		tag = hire_leader
-		custom_tooltip = uma_little_event.12.hire_tooltip #空的
-		hidden_effect = {
-			uma_create_leader_sky_admiral = yes
 			last_created_leader = {
 				change_leader_portrait = "20c"
 #				add_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
 			}
-			create_message = {
-				type = MESSAGE_RECRUITED_LEADER
-				localization = MESSAGE_RECRUITED_LEADER_DESC
-				days = @toast_message_days
-				target = event_target:uma_seiun_sky_admiral
-				variable = {
-					type = name
-					localization = LEADER
-					scope = event_target:uma_seiun_sky_admiral
-				}
-				variable = {
-					key = "border"
-					value = "GFX_border_legendary"
-				}
+		}
+	}
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_seiun_sky
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_seiun_sky
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
 			}
 		}
 	}
 
-	option = {
-		name = DISMISS
-		tag = dismiss_leader
-		hidden_effect = {
-			event_target:uma_is_leader_deep = {
-				kill_leader = { show_notification = no }
-			}
-		}
-	}
 }
-
-
-
-
-country_event = {
-	id = uma_special_leader.9001
-	title = SKY
-	desc = uma_special_leader.9000.desc
-	is_triggered_only = yes
-
-	picture = GFX_leader_recruitment_bg_legendary_azaryn
-	event_window_type = leader_recruit
-	picture_event_data = {
-		portrait = event_target:uma_is_leader_seiun_sky #注意区分
-	}
-
-	immediate = {
-		create_country = {
-			name = "NAME_uma_empty"
-			type = global_event
-			auto_delete = yes
-			flag = {
-				icon = {
-					category = "special"
-					file = "unknown.dds"
-				}
-				background = {
-					category = "backgrounds"
-					file = "00_solid.dds"
-				}
-				colors = {
-					"red"
-					"red"
-					"null"
-					"null"
-				}
-			}
-			effect = {
-				save_event_target_as = uma_empty_country
-			}
-		}
-		event_target:uma_empty_country = {
-			create_species = {
-				name = "NAME_Unknown"
-				class = umamusume
-				portrait = umamusume
-				namelist = "UMAname"
-				traits = random
-				effect = {
-					save_event_target_as = uma_legendary_leader_species
-				}
-			}
-			uma_create_leader_sky_governor = yes
-		}
-	}
-
-	option = {
-		name = uma_special_leader.9000.a
-		response_text = uma_special_leader.9000.a.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = uma_special_leader.9000.b
-		response_text = uma_special_leader.9000.b.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = uma_special_leader.9000.c
-		response_text = uma_special_leader.9000.c.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = HIRE
-		tag = hire_leader
-		custom_tooltip = uma_little_event.12.hire_tooltip #空的
-		hidden_effect = {
-			uma_create_leader_sky_governor = yes
-			last_created_leader = {
-				change_leader_portrait = "20c"
-#				add_trait = uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-			}
-			create_message = {
-				type = MESSAGE_RECRUITED_LEADER
-				localization = MESSAGE_RECRUITED_LEADER_DESC
-				days = @toast_message_days
-				target = event_target:uma_seiun_sky_governor
-				variable = {
-					type = name
-					localization = LEADER
-					scope = event_target:uma_seiun_sky_governor
-				}
-				variable = {
-					key = "border"
-					value = "GFX_border_legendary"
-				}
-			}
-		}
-	}
-
-	option = {
-		name = DISMISS
-		tag = dismiss_leader
-		hidden_effect = {
-			event_target:uma_is_leader_deep = {
-				kill_leader = { show_notification = no }
-			}
-		}
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ####草上飞（绿茵祈愿）事件链
@@ -1874,11 +1701,11 @@ country_event = {
 ###爱众生
 country_event = {
 	id = uma_special_leader.69
-	title = "uma_special_leader.69.name"
-	desc = "uma_special_leader.69.desc"
-	picture = GFX_evt_uma_racing
+    title = "uma_special_leader.69.name"
+    desc = "uma_special_leader.69.desc"
+    picture = GFX_evt_uma_racing
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
 	#必要的牺牲
 	option = {
@@ -1887,155 +1714,35 @@ country_event = {
 			modifier = uma_agnes_digital_in_toresen_school
 			days = -1
 		}
-		#		custom_tooltip = uma_special_leader_agnes_digital_will_join
+		custom_tooltip = uma_special_leader_agnes_digital_will_join
 		hidden_effect = {
-			country_event = {
-				id = uma_special_leader.72
-			}
-		}
-	}
-
-	after = {
-		random_list = {
-			50 = {
-				country_event = {
-					id = uma_special_leader.70
-					days = 740
-					random = 20
+			create_leader = {
+				name = DID
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = governor
+				skill = 7
+				set_age = 18
+				traits = {
+					trait = uma_governor_trait_sp_agnes_digital
+					trait = leader_trait_righteous
+					trait = leader_trait_intellectual
 				}
-			}
-			50 = {
-				add_resource = {
-					influence = 1
-				}
-			}
-		}
-	}
-}
-
-country_event = {
-	id = uma_special_leader.72
-	title = DID
-	desc = uma_special_leader.72.desc
-	is_triggered_only = yes
-
-	picture = GFX_uma_leader_digital
-	event_window_type = leader_recruit
-
-	picture_event_data = {
-		portrait = event_target:uma_agnes_digital_governor
-	}
-
-	immediate = {
-		create_country = {
-			name = "NAME_uma_empty"
-			type = global_event
-			auto_delete = yes
-			flag = {
-				icon = {
-					category = "special"
-					file = "unknown.dds"
-				}
-				background = {
-					category = "backgrounds"
-					file = "00_solid.dds"
-				}
-				colors = {
-					"red"
-					"red"
-					"null"
-					"null"
-				}
-			}
-			effect = {
-				save_event_target_as = uma_empty_country
-			}
-		}
-		event_target:uma_empty_country = {
-			create_species = {
-				name = "NAME_Unknown"
-				class = umamusume
-				portrait = umamusume
-				namelist = "UMAname"
-				traits = random
 				effect = {
-					save_event_target_as = uma_legendary_leader_species
+					save_global_event_target_as = uma_agnes_digital_governor
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_agnes_digital
 				}
 			}
-			uma_create_leader_did = yes
-		}
-	}
-
-	option = {
-		name = uma_special_leader.72.a
-		response_text = uma_special_leader.72.a.resp
-		is_dialog_only = yes
-	}
-	option = {
-		name = uma_special_leader.72.b
-		response_text = uma_special_leader.72.b.resp
-		is_dialog_only = yes
-	}
-	option = {
-		name = uma_special_leader.72.c
-		response_text = uma_special_leader.72.c.resp
-		is_dialog_only = yes
-	}
-
-	option = {
-		name = HIRE
-		tag = hire_leader
-		custom_tooltip = uma_special_leader.72.hire_tooltip
-		hidden_effect = {
-			uma_create_leader_did = yes
 			last_created_leader = {
-#				change_leader_portrait = DEEP_COMM
 				change_leader_portrait = "19c"
-				uma_initialize_leader_yaruki_effect = yes
+#				add_trait = uma_ruler_trait_sp_agnes_digital #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
 			}
-			create_message = {
-				type = MESSAGE_RECRUITED_LEADER
-				localization = MESSAGE_RECRUITED_LEADER_DESC
-				days = @toast_message_days
-				target = event_target:uma_agnes_digital_governor
-				variable = {
-					type = name
-					localization = LEADER
-					scope = event_target:uma_agnes_digital_governor
-				}
-				variable = {
-					key = "border"
-					value = "GFX_border_legendary"
-				}
-			}
-		}
+		}		
 	}
 
-	option = {
-		name = DISMISS
-		tag = dismiss_leader
-		hidden_effect = {
-			event_target:uma_is_leader_deep = {
-				kill_leader = { show_notification = no }
-			}
-		}
-	}
-}
-
-country_event = {
-	id = uma_special_leader.70
-	title = uma_special_leader.70.title
-	desc = uma_special_leader.70.desc
-	picture = GFX_evt_uma_normal_school
-	is_triggered_only = yes
-
-	trigger = {
-		exists = event_target:uma_agnes_digital_governor
-	}
-
-	option = {
-		name = uma_special_leader.70.a
-	}
 }
 
 

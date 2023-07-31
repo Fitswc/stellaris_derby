@@ -1,0 +1,14 @@
+ship_design = {
+	name = "NAME_Xiaojin"
+	ship_size = small_ship_ai
+	section = {
+		template = "ai_warship_small_key"
+		slot = "mid"
+
+		
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="COMBAT_COMPUTER_PICKET_SAPIENT"
+	required_component="SHIP_THRUSTER_4"
+	required_component="SENSOR_4"
+}
