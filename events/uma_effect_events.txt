@@ -345,6 +345,16 @@ country_event = {
 					set_name = CHEVAL
 				}
 			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_sweepy_tonson
+				}
+				event_target:uma_is_leader_sweepy_tonson = {
+					change_leader_portrait = 56c
+					set_name = SWEEPY
+				}
+			}
 			###SUB
 			if = {
 				limit = {
