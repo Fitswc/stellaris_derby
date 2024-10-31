@@ -1016,3 +1016,44 @@ tech_uma_ring_world = {
 
 	}
 }
+
+
+tech_uma_pirate_section = { #马娘甜点产业
+    cost = 10000
+    area = engineering
+    tier = 4
+    category = { industry }
+    weight = 200
+
+    potential = {
+        OR = {
+			has_authority = auth_trainingcenter
+            #is_uma_fallen_empire = yes
+		}
+    }
+ prereqfor_desc = {
+        ship = {
+            title = "tech_uma_pirate_section_tech_title"
+            desc = "tech_uma_pirate_section_tech_desc"
+        }
+    }
+
+
+
+    modifier = {
+
+    }
+
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            days_passed >= 100
+            factor = 4
+        }
+    }
+
+    ai_weight ={
+        factor = 0
+    }
+
+}
