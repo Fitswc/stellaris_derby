@@ -1,0 +1,43 @@
+#三女神小棋子 -> +三女神研究员产出
+#经典赛奖杯 -> +unity/赛马娘加成
+#梦想的光辉 -> +unity
+#有偿萝卜石 -> +马娘增长速度
+#手纲吉祥物 -> +tradevalue
+#医务室 -> 寿命+
+#闹钟 -> -cooldown（议程）
+#演唱会录像 -> +艺人产出+
+#芭菲 -> happiness+
+#闪耀月刊 -> +unity
+#TP饮料 -> +全产
+#特雷森小说史 -> +三女神知识/soci research
+#纸堆 -> 建造速度+
+#四叶草 -> energy+
+#刻着马马脸的五角星碎片 -> skill +
+
+
+#速子的药 -> +research3
+#内恰的情人节礼物 -> +energy/pop happiness
+
+
+
+
+ancient_bust = {
+	icon = "GFX_specimen_ancient_bust"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = common
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		potential = { is_gestalt = no }
+		trade_value_mult = 0.03
+	}
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		potential = { is_gestalt = yes }
+		planet_jobs_energy_produces_mult = 0.02
+	}
+}
