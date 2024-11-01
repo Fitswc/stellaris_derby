@@ -1,0 +1,38 @@
+
+weapon_component_template = {
+	# World Cracker
+	key = "UMA_PLANET_KILLER_TRANSFORM"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_uma_tranform" }
+
+	icon = GFX_ship_part_uma_transform_pk
+	icon_frame = 1
+
+	size_restriction = { colossus }
+	component_set = "UMA_PLANET_KILLER_TRANSFORM"
+
+	planet_destruction_gfx = "neutron_planet_gfx"
+
+	ai_weight = {
+		factor = 1
+	}
+
+	power = -7500
+	windup = { min = 110 max = 110 }   # 在巨像类武器中，这个数值被定义为开火准备时间，单位天
+	total_fire_time = 46            # 在巨像类武器中，这个数值被定义为开火时间，单位为天
+	accuracy = 1 #
+	damage = { min = 0 max = 0 }
+	range = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3
+			uma_crystal_carrot = 3
+		}
+	}
+}
+
+

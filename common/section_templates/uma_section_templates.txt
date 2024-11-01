@@ -331,12 +331,6 @@ ship_section_template = {
 		locatorname = "small_gun_03"
 	}
 
-	component_slot = {
-		name = "LARGE_GUN_01"
-		template = "large_turret"
-		locatorname = "large_gun_01"
-	}
-
 
 	ship_modifier = {
 		ship_steal_defeated_ship_chance = 0.7
@@ -344,7 +338,6 @@ ship_section_template = {
 	}
 
 	small_utility_slots = 3
-	large_utility_slots = 1
 	aux_utility_slots = 1
 
 	ai_weight = {
@@ -367,7 +360,7 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			alloys = @section_cost
+			alloys = 40
 		}
 	}
 }
