@@ -520,3 +520,32 @@ d_palai_plateau = {
 		base = 0
 	}
 }
+
+
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+
+
+d_uma_crystal_carrot_pk = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			uma_crystal_carrot = 1
+			multiplier = uma_planet_size_pk_uma_come_to_ccp
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = {
+		always = no
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
