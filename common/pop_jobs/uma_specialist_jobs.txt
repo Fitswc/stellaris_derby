@@ -325,12 +325,12 @@ uma_researcher = {
 	resources = {
 		category = planet_uma_researcher #马娘科学家和科学主管都属于马娘研究者大类，但还是写最小类！
 		produces = {
-			engineering_research = 8
-			physics_research = 8
-			society_research = 8
+			engineering_research = 13
+			physics_research = 13
+			society_research = 13
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 4
 		}
 	}
 

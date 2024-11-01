@@ -286,6 +286,7 @@ uma_comm_with_fe = {
 		has_authority = auth_trainingcenter
 		years_passed >= 40
 		NOT = {
+			has_country_flag = uma_has_established_communication
 			has_communications = event_target:uma_is_fe_office
 		}
 	}
