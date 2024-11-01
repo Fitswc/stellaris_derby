@@ -248,7 +248,7 @@ uma_tgrd_gui_arrow_buttf = {
 	effect = {  }
 }
 
-#### ##TODO:描述完善
+#######
 
 uma_tgrd_gui_tech_carrot_ana = {
 	potential = {
@@ -1727,3 +1727,164 @@ uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 		}
 	}
 }
+
+
+
+uma_complet_uma_tgrd_gui_tech_carrot_ana = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_crystal_carrot_analyzing
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_carrot_pro = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_crysal_carrot_producing
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_atom_breker = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_atom_breker
+	}
+	allow = { always = yes }
+
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_atom_sticker = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_atom_sticker
+	}
+	allow = { always = yes }
+}
+uma_complet_uma_tgrd_gui_tech_uma_effective_catalyst = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_effective_catalyst
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}has_technology = tech_uma_tg_alloys_maker_Automatic
+
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_alloys_maker_Automatic_2
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_custom_goods_productor
+	}
+
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_custom_goods_productor_2
+	}
+
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_industrial_complex = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_industrial_complex
+	}
+
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_planet_energy_extractor
+	}
+
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_planet_energy_extractor_2
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_resource_soil = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_resource_soil
+	}
+	allow = { always = yes }
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_super_high_temp_container = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_super_high_temp_container
+	}
+	allow = { always = yes }
+}
+
