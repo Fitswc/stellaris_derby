@@ -54,7 +54,7 @@ uma_buffet = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
 	triggered_country_modifier = {
@@ -69,7 +69,7 @@ uma_building_maunal = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
 	triggered_country_modifier = {
@@ -84,7 +84,7 @@ uma_care_kit = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_rare
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
@@ -99,7 +99,7 @@ uma_cheval_hat = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_leader
+		RARITY = epic
 	}
 
 	triggered_country_modifier = {
@@ -114,7 +114,7 @@ uma_clock = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_rare
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
@@ -129,7 +129,7 @@ uma_clover = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_rare
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
@@ -144,7 +144,7 @@ uma_coin = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_rare
+		RARITY = rare
 	}
 
 	resources = {
@@ -161,14 +161,14 @@ uma_history_book = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
 	resources = {
 		category = specimens
 		produces = {
 			uma_threegodness_knowledge = 20
-			social_research = 40
+			society_research = 40
 		}
 	}
 }
@@ -179,12 +179,12 @@ uma_kasume_doll = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		trade_value_add = 0.07
 	}
 }
 
@@ -194,12 +194,13 @@ uma_live_video = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		planet_amenities_add = 0.01
+		planet_uma_umaidol_produces_mult = 0.03
 	}
 }
 
@@ -209,12 +210,18 @@ nn_gift = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = epic
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
 		pop_happiness = 0.02
+	}
+	resources = {
+		category = specimens
+		produces = {
+			energy = 33
+		}
 	}
 }
 
@@ -224,12 +231,12 @@ uma_piece_uma = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		pspecies_leader_exp_gain = 0.02
 	}
 }
 
@@ -239,42 +246,46 @@ uma_shine_of_dream = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = rare
 	}
 
-	triggered_country_modifier = {
-		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+	resources = {
+		category = specimens
+		produces = {
+			unity = 50
+		}
 	}
 }
 
 uma_shoe_trophy = {
 	icon = "GFX_uma_specimen_uma_shoe_trophy"
-	type = aesthetic_wonder
+	type = historical_item
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
-	triggered_country_modifier = {
-		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 30
+		}
 	}
 }
 
-uuma_sky_flower = {
+uma_sky_flower = {
 	icon = "GFX_uma_specimen_uma_sky_flower"
 	type = aesthetic_wonder
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = epic
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		planet_jobs_upkeep_mult = -0.03
 	}
 }
 
@@ -284,12 +295,12 @@ uma_strength_crystal = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		pop_growth_speed = 0.05
 	}
 }
 
@@ -299,12 +310,15 @@ uma_sweepy = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = epic
 	}
 
-	triggered_country_modifier = {
-		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 30
+			engineering_research = 30
+		}
 	}
 }
 
@@ -314,27 +328,27 @@ uma_tg_chess = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		planet_uma_researcher_produces_mult = 0.04
 	}
 }
 
 uma_tp = {
 	icon = "GFX_uma_specimen_uma_tp"
-	type = aesthetic_wonder
+	type = historical_item
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = rare
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		planet_jobs_produces_mult = 0.03
 	}
 }
 
@@ -344,12 +358,18 @@ uma_trophy_classic = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		planet_uma_racing_umamusume_produces_mult = 0.03
+	}
+	resources = {
+		category = specimens
+		produces = {
+			unity = 30
+		}
 	}
 }
 
@@ -359,12 +379,12 @@ uma_tt_shoes = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = epic
 	}
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+		planet_jobs_worker_produces_mult = 0.03
 	}
 }
 
@@ -374,12 +394,14 @@ uma_twinkle_maz = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = common
 	}
 
-	triggered_country_modifier = {
-		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+	resources = {
+		category = specimens
+		produces = {
+			unity = 40
+		}
 	}
 }
 
@@ -389,12 +411,16 @@ uma_ty_medicine = {
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = uma_common
+		RARITY = epic
 	}
 
-	triggered_country_modifier = {
-		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		pop_happiness = 0.02
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 30
+			engineering_research = 30
+			physics_research = 30
+		}
 	}
 }
 
