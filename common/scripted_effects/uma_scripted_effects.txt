@@ -4687,3 +4687,118 @@ uma_archaeological_site_on_roll_failed = {
 		}
 	}
 }
+
+
+
+uma_random_specimen = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clock  } }
+			}
+			give_specimen = { key = uma_clock  }
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clover } }
+			}
+			give_specimen = { key = uma_clover}
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_coin}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_live_video}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_shine_of_dream}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_shoe_trophy}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_strength_crystal}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_tp}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_trophy_classic}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_twinkle_maz}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_trophy_classic}
+		}
+	}
+
+	change_variable = {
+		which = uma_count_specimen_counter
+		value = 1
+	}
+}

@@ -113,6 +113,18 @@ fleet_event = {
 
 	option = {
 		name = CURIOUS #占位符
+		##
+		hidden_effect = {
+			random_list = {
+				50 = {
+					give_specimen = { key = uma_building_maunal }
+				}
+				50 = {
+
+				}
+			}
+		}
+		##
 		small_artifact_reward = yes
 	}
 }
@@ -244,6 +256,19 @@ planet_event = {
 				}
 			}
 		}
+
+		##
+		hidden_effect = {
+			random_list = {
+				50 = {
+					give_specimen = { key = uma_care_kit }
+				}
+				50 = {
+
+				}
+			}
+		}
+		##
 
 	}
 }

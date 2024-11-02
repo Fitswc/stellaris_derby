@@ -887,6 +887,7 @@ country_event = {
 		name = uma_sweepy.31.a
 		response_text = uma_sweepy.31.desc.repo
 		hidden_effect = {
+			give_specimen = { key = uma_sweepy}
 			custom_tooltip = uma_sweepy.31.tt
 			hidden_effect = {
 				uma_create_leader_sweepy = yes

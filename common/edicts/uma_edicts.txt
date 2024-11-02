@@ -310,3 +310,37 @@ uma_comm_with_fe = {
 	}
 
 }
+
+
+uma_fine_sth_in_wearhouse = {
+	length = 0
+	icon = GFX_mod_job_uma_racing_umamusume_produces_add
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = 22
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		check_variable = {
+			which = uma_count_specimen_counter
+			value <= 5
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			uma_random_specimen = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}

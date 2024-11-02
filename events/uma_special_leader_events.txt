@@ -238,6 +238,7 @@ country_event = {
 			country_event = {
 				id = uma_special_leader.9001
 			}
+			give_specimen = { key = uma_sky_flower}
 		}
 	}
 }
@@ -275,6 +276,7 @@ country_event = {
 			country_event = {
 				id = uma_special_leader.9000
 			}
+			give_specimen = { key = uma_sky_flower}
 		}
 	}
 }
@@ -2604,6 +2606,10 @@ country_event = {
 		}
 		custom_tooltip = uma_recruit_nice_nature_hint
 		hidden_effect = { establish_communications_no_message = event_target:uma_is_nice_nature_enclave_i }
+	}
+
+	after = {
+		give_specimen = { key = nn_gift}
 	}
 
 }

@@ -525,6 +525,7 @@ country_event = {
 
 	#随机选取8领袖（额外限制：必须是马娘，因为只有马娘才会有心情）
 	immediate = {
+		give_specimen = { key = uma_buffet }
 		random_owned_leader = {
 			limit = { 
 				NOT = { has_leader_flag = uma_selected_leader_goods }

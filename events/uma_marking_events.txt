@@ -59,6 +59,10 @@ event = {
 				id = uma_mmu.1
 				days = 3
 			}
+			set_variable = {
+				which = uma_count_specimen_counter
+				value = 0
+			}
 			country_event = {
 				id = uma_marking.2
 			}
@@ -66,13 +70,3 @@ event = {
 	}
 }
 
-
-
-country_event = {
-	id  = uma_marking.3
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		give_specimen = { key = uma_history_book }
-	}
-}
