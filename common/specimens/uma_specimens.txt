@@ -13,31 +13,390 @@
 #纸堆 -> 建造速度+
 #四叶草 -> energy+
 #刻着马马脸的五角星碎片 -> skill +
+#上古货币 -> unity+
+#上古鞋子奖杯 -> soci+
 
 
 #速子的药 -> +research3
 #内恰的情人节礼物 -> +energy/pop happiness
+#东商的扫帚 -> engineering+/phy+
+#高尚的(其中一顶)帽子 -> happiness+
+#sky的雏菊发卡 -> -upkeep
+#帝宝的靴子 -> worker pro+
+
+##
+#aesthetic_wonder 美学大观
+#xeno_geology 异星地质样本
+#historical_item 上古遗珍
 
 
 
+#ancient_bust = {
+#	icon = "GFX_specimen_ancient_bust"
+#	type = aesthetic_wonder
+#
+#	inline_script = {
+#		script = "grand_archive/set_specimen_rarity"
+#		RARITY = common
+#	}
+#
+#	triggered_country_modifier = {
+#		mult = value:aesthetic_wonder_specimens_modifiers_mult
+#		potential = { is_gestalt = yes }
+#		planet_jobs_energy_produces_mult = 0.02
+#	}
+#}
 
-ancient_bust = {
-	icon = "GFX_specimen_ancient_bust"
+
+uma_buffet = {
+	icon = "GFX_uma_specimen_uma_buffet"
 	type = aesthetic_wonder
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
-		RARITY = common
+		RARITY = uma_common
 	}
 
 	triggered_country_modifier = {
-		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		potential = { is_gestalt = no }
-		trade_value_mult = 0.03
-	}
-	triggered_country_modifier = {
-		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.02
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
 	}
 }
+
+uma_building_maunal = {
+	icon = "GFX_uma_specimen_uma_building_maunal"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		planet_building_build_speed_mult = 0.03
+	}
+}
+
+uma_care_kit = {
+	icon = "GFX_uma_specimen_uma_care_kit"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_growth_speed = 0.03
+	}
+}
+
+uma_cheval_hat = {
+	icon = "GFX_uma_specimen_uma_cheval_hat"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_leader
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.05
+	}
+}
+
+uma_clock = {
+	icon = "GFX_uma_specimen_uma_clock"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		ship_winddown_mult = -0.02
+	}
+}
+
+uma_clover = {
+	icon = "GFX_uma_specimen_uma_clover"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_rare
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		planet_jobs_energy_produce = 0.02
+	}
+}
+
+uma_coin = {
+	icon = "GFX_uma_specimen_uma_coin"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_rare
+	}
+
+	resources = {
+		category = specimens
+		produces = {
+			unity = 50
+		}
+	}
+}
+
+uma_history_book = {
+	icon = "GFX_uma_specimen_uma_history_book"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	resources = {
+		category = specimens
+		produces = {
+			uma_threegodness_knowledge = 20
+			social_research = 40
+		}
+	}
+}
+
+uma_kasume_doll = {
+	icon = "GFX_uma_specimen_uma_kasume_doll"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_live_video = {
+	icon = "GFX_uma_specimen_uma_live_video"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+nn_gift = {
+	icon = "GFX_uma_specimen_uma_nn_gift"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_piece_uma = {
+	icon = "GFX_uma_specimen_uma_piece_uma"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_shine_of_dream = {
+	icon = "GFX_uma_specimen_uma_shine_of_dream"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_shoe_trophy = {
+	icon = "GFX_uma_specimen_uma_shoe_trophy"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uuma_sky_flower = {
+	icon = "GFX_uma_specimen_uma_sky_flower"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_strength_crystal = {
+	icon = "GFX_uma_specimen_uma_strength_crystal"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_sweepy = {
+	icon = "GFX_uma_specimen_uma_sweepy"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_tg_chess = {
+	icon = "GFX_uma_specimen_uma_tg_chess"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_tp = {
+	icon = "GFX_uma_specimen_uma_tp"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_trophy_classic = {
+	icon = "GFX_uma_specimen_uma_trophy_classic"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_tt_shoes = {
+	icon = "GFX_uma_specimen_uma_tt_shoes"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_twinkle_maz = {
+	icon = "GFX_uma_specimen_uma_twinkle_maz"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+uma_ty_medicine = {
+	icon = "GFX_uma_specimen_uma_ty_medicine"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = uma_common
+	}
+
+	triggered_country_modifier = {
+		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		pop_happiness = 0.02
+	}
+}
+
+
+
