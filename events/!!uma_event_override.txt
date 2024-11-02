@@ -236,6 +236,11 @@ country_event = {
 	option = {
 		name = uma_grand_archive.9010.d
 		trigger = {
+			FromFrom = {
+				NOT = {
+					is_species_class = umamusume
+				}
+			}
 			OR = {
 				has_authority = auth_trainingcenter
 				is_species_class = umamusume
