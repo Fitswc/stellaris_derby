@@ -1740,6 +1740,8 @@ uma_complet_uma_tgrd_gui_tech_carrot_ana = {
 	}
 	allow = {
 		always = yes
+	}
+	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
 	}
 }
@@ -1752,8 +1754,10 @@ uma_complet_uma_tgrd_gui_tech_carrot_pro = {
 		}
 		has_technology = tech_uma_crysal_carrot_producing
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_atom_breker = {
@@ -1764,8 +1768,10 @@ uma_complet_uma_tgrd_gui_tech_uma_atom_breker = {
 		}
 		has_technology = tech_uma_atom_breker
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 
 
 }
@@ -1778,8 +1784,10 @@ uma_complet_uma_tgrd_gui_tech_uma_atom_sticker = {
 		}
 		has_technology = tech_uma_atom_sticker
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 uma_complet_uma_tgrd_gui_tech_uma_effective_catalyst = {
 	potential = {
@@ -1789,8 +1797,10 @@ uma_complet_uma_tgrd_gui_tech_uma_effective_catalyst = {
 		}
 		has_technology = tech_uma_effective_catalyst
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic = {
@@ -1801,8 +1811,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic = {
 		}has_technology = tech_uma_tg_alloys_maker_Automatic
 
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2 = {
@@ -1813,8 +1825,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2 = {
 		}
 		has_technology = tech_uma_tg_alloys_maker_Automatic_2
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor = {
@@ -1826,8 +1840,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor = {
 		has_technology = tech_uma_tg_custom_goods_productor
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2 = {
@@ -1839,8 +1855,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2 = {
 		has_technology = tech_uma_tg_custom_goods_productor_2
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes}
+	effect = {
+	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_industrial_complex = {
@@ -1852,8 +1870,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_industrial_complex = {
 		has_technology = tech_uma_tg_industrial_complex
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor = {
@@ -1865,8 +1885,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor = {
 		has_technology = tech_uma_tg_planet_energy_extractor
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2 = {
@@ -1877,8 +1899,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2 = {
 		}
 		has_technology = tech_uma_tg_planet_energy_extractor_2
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_tg_resource_soil = {
@@ -1889,8 +1913,10 @@ uma_complet_uma_tgrd_gui_tech_uma_tg_resource_soil = {
 		}
 		has_technology = tech_uma_tg_resource_soil
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_uma_super_high_temp_container = {
@@ -1901,8 +1927,10 @@ uma_complet_uma_tgrd_gui_tech_uma_super_high_temp_container = {
 		}
 		has_technology = tech_uma_super_high_temp_container
 	}
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 
@@ -1914,10 +1942,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_high_presure_molt = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_high_presure_molt
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 
 }
 
@@ -1927,10 +1958,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_weapon_controler = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_weapon_controler
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_energy_raiser_b70 = {
@@ -1939,10 +1973,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_energy_raiser_b70 = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_energy_raiser_b70
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector = {
@@ -1951,10 +1988,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_high_energy_electoric_projector
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_combine_light_projector = {
@@ -1963,10 +2003,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_combine_light_projector = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_combine_light_projector
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_MAAM = {
@@ -1975,10 +2018,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_MAAM = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_MAAM
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_QAAM = {
@@ -1987,10 +2033,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_QAAM = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_QAAM
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction = {
@@ -1999,10 +2048,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_tg_reaction
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_tech_uma_arch_weapon = {
@@ -2011,10 +2063,13 @@ uma_complet_uma_tgrd_gui_tech_tech_tech_uma_arch_weapon = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_arch_weapon
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction_2 = {
@@ -2023,10 +2078,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction_2 = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_tg_reaction_2
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2 = {
@@ -2035,10 +2093,14 @@ uma_complet_uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2 = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_arch_weapon_2
+
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction_3 = {
@@ -2047,10 +2109,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction_3 = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_tg_reaction_3
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_nice_nature_ring = {
@@ -2059,10 +2124,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_nice_nature_ring = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_nice_nature_ring
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_energy_wall_shield = {
@@ -2071,10 +2139,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_energy_wall_shield = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_energy_wall_shield
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_wall_armor = {
@@ -2083,10 +2154,13 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_wall_armor = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_wall_armor
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
 
 uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
@@ -2095,8 +2169,11 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 			which = uma_tgrd_cat_show
 			value = 1
 		}
+		has_technology = tech_uma_army_enhance_treatment
 	}
 
-	allow = { always = yes
-	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
 }
