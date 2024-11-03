@@ -324,9 +324,11 @@ uma_fine_sth_in_wearhouse = {
 
 	potential = {
 		has_authority = auth_trainingcenter
+		days_passed >= 1065
 	}
 
 	allow = {
+
 		check_variable = {
 			which = uma_count_specimen_counter
 			value <= 5

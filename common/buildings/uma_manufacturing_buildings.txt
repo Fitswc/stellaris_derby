@@ -357,12 +357,7 @@ building_uma_crystal_carrot_producing_realm_complex = {
 		text = job_uma_crystal_carrot_engineer_effect_desc
 	}
 
-	show_tech_unlock_if = {
-		OR = {
-			has_authority = auth_trainingcenter
-			#is_uma_fallen_empire = yes
-		}
-	}
+
 
 }
 
@@ -1040,6 +1035,12 @@ building_uma_crystal_alloy_realm_complex = {
 		NOT = { has_modifier = slave_colony }
 	}
 
+	allow = {
+		owner = {
+			has_technology = "tech_uma_crystal_alloy_auto_production"
+		}
+	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -1098,15 +1099,9 @@ building_uma_crystal_alloy_realm_complex = {
 	}
 
 	prerequisites = {
-		"tech_uma_crystal_alloy_auto_production"
+
 	}
 
-	show_tech_unlock_if = {
-		OR = {
-			has_authority = auth_trainingcenter
-			#is_uma_fallen_empire = yes
-		}
-	}
 
 }
 
@@ -2007,6 +2002,7 @@ building_uma_crystal_consumer_goods_realm_complex = {
 	potential = {
 		exists = owner
 		owner = {
+			has_technology = "tech_uma_advanced_crystal_consumer_goods_production"
 			OR = {
 				has_tradition = uma_realm_self_trigger
 #				has_ascension_perk = ap_uma_mixture_ap_2
@@ -2077,7 +2073,7 @@ building_uma_crystal_consumer_goods_realm_complex = {
 	}
 
 	prerequisites = {
-		"tech_uma_advanced_crystal_consumer_goods_production"
+
 	}
 
 

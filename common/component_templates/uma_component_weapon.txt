@@ -1088,8 +1088,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 79
-		max = 100
+		min = 100
+		max = 279
 	}
 	windup ={
 		min = 1
@@ -1144,8 +1144,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 125
-		max = 245
+		min = 225
+		max = 345
 	}
 	windup ={
 		min = 1
@@ -1200,8 +1200,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 270
-		max = 570
+		min = 470
+		max = 870
 	}
 	windup ={
 		min = 1
@@ -1255,8 +1255,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 350
-		max = 650
+		min = 2000
+		max = 5500
 	}
 	windup ={
 		min = 1
@@ -1270,9 +1270,9 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 52
-	accuracy = 0.85
-	tracking = 0.25
+	range = 200
+	accuracy = 1
+	tracking = 0.3
 
     ai_weight ={
         factor = 0
@@ -1367,8 +1367,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 95
-		max = 133
+		min = 195
+		max = 233
 	}
 	windup ={
 		min = 5
@@ -1423,8 +1423,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 165
-		max = 285
+		min = 265
+		max = 385
 	}
 	windup ={
 		min = 5
@@ -1479,8 +1479,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 310
-		max = 610
+		min = 410
+		max = 710
 	}
 	windup ={
 		min = 5
@@ -1534,8 +1534,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 390
-		max = 690
+		min = 2400
+		max = 5800
 	}
 	windup ={
 		min = 5
@@ -1549,9 +1549,9 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 52
-	accuracy = 0.85
-	tracking = 0.25
+	range = 270
+	accuracy = 1
+	tracking = 0.45
 
     ai_weight ={
         factor = 0
@@ -1589,8 +1589,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 490
-		max = 790
+		min = 4900
+		max = 8000
 	}
 	windup ={
 		min = 5
