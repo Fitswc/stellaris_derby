@@ -1183,7 +1183,7 @@ country_event = {
 		enable_special_project = {
 			name = UMA_FINE_LOST
 			owner = this
-			location = This.capital_scope
+			location = capital_scope
 		}
 		hidden_effect = {
 			event_target:uma_is_leader_fine = {

@@ -654,13 +654,13 @@ planet_event = {
 		}
 	}
 	#Uma Crystal
-	option = {
-		name = uma_threegodness_rd.10086.l
-		hidden_effect = {
-			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_uma_crystal
-		}
-	}
+#	option = {
+#		name = uma_threegodness_rd.10086.l
+#		hidden_effect = {
+#			uma_tgrd_clear_TGAC_flag = yes
+#			set_planet_flag = uma_TGAC_produce_uma_crystal
+#		}
+#	}
 }
 
 
