@@ -73,9 +73,6 @@ country_event = {
 
 	immediate = {
 
-		begin_event_chain = {
-			event_chain = uma_fm_full
-		}
 
 	}
 
@@ -99,6 +96,15 @@ country_event = {
 	picture_event_data = {
 		portrait = 22c
 		room = traincenter_06_room
+	}
+
+	immediate = {
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = uma_fm_full
+				target = Root
+			}
+		}
 	}
 
 
@@ -1180,19 +1186,9 @@ country_event = {
 
 	option = {
 		name = uma_finemotion.62.a
-		Root = {
-			enable_special_project = {
-				name = UMA_FINE_LOST
-				owner = Root
-				location = capital_scope
-			}
-		}
-		hidden_effect = {
-			event_target:uma_is_leader_fine = {
-				kill_leader = {
-					show_notification = no
-				}
-			}
+		enable_special_project = {
+			name = UMA_FINE_LOST
+			owner = This
 		}
 	}
 
@@ -1205,11 +1201,6 @@ country_event = {
 			country_event = {
 				id = uma_finemotion.100
 				days = 20
-			}
-			event_target:uma_is_leader_fine = {
-				kill_leader = {
-					show_notification = no
-				}
 			}
 
 			create_point_of_interest = {
@@ -1234,6 +1225,18 @@ country_event = {
 		#			target = this
 		#		}
 	}
+
+#	after = {
+#		hidden_effect = {
+#			hidden_effect = {
+#			event_target:uma_is_leader_fine = {
+#				kill_leader = {
+#					show_notification = no
+#				}
+#			}
+#		}
+#		}
+#	}
 
 }
 
