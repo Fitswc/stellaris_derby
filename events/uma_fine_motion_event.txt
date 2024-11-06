@@ -1180,10 +1180,12 @@ country_event = {
 
 	option = {
 		name = uma_finemotion.62.a
-		enable_special_project = {
-			name = UMA_FINE_LOST
-			owner = this
-			location = capital_scope
+		Root = {
+			enable_special_project = {
+				name = UMA_FINE_LOST
+				owner = Root
+				location = capital_scope
+			}
 		}
 		hidden_effect = {
 			event_target:uma_is_leader_fine = {
