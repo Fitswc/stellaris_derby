@@ -2193,8 +2193,8 @@ country_event = {
 		hidden_effect = {
 			enable_special_project = {
 				name =  UMA_TUNNEL
-				owner =  This
-				location = event_target:uma_naka_invasion_spawn_system
+				owner =  Root
+				location = event_target:uma_naka_invasion_spawn_system.star
 			}
 		}
 	}
