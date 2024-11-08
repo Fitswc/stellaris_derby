@@ -1624,6 +1624,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		AND = {
+			exists = event_target:Orfevre_portal_holder
 			NOT = {
 				has_global_flag = uma_gold_invasion_change
 			}
