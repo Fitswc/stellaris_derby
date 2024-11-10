@@ -179,6 +179,7 @@ building_uma_field_powering_complex_realm = {
 	potential = {
 		exists = owner
 		owner = {
+			has_technology = "tech_uma_tama_force_powering_advance_use"
 			OR = {
 				has_tradition = uma_realm_self_trigger
 #				has_ascension_perk = ap_uma_mixture_ap_2
@@ -245,14 +246,8 @@ building_uma_field_powering_complex_realm = {
 	}
 
 	prerequisites = {
-		"tech_uma_tama_force_powering_advance_use"
+
 	}
 
-	show_tech_unlock_if = {
-		OR = {
-			has_authority = auth_trainingcenter
-			#is_uma_fallen_empire = yes
-		}
-	}
 
 }
