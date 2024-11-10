@@ -354,11 +354,5 @@ building_uma_core_mining_complex_realm = {
 		"tech_uma_crystal_core_mining"
 	}
 
-	show_tech_unlock_if = {
-		OR = {
-			has_authority = auth_trainingcenter
-			#is_uma_fallen_empire = yes
-		}
-	}
 
 }
