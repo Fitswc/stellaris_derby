@@ -236,7 +236,7 @@ building_uma_yellow_market = {
 			consumer_goods = 4
 		}
 		produces = {
-			energy = 200
+			energy = 20
 		}
 	}
 
@@ -251,6 +251,7 @@ building_uma_yellow_market = {
 			}
 		}
 		modifier = {
+			job_clerk_add = 1
 			pop_happiness = 1
 			planet_crime_add = 30
 			planet_stability_add = -6
@@ -300,7 +301,7 @@ building_uma_crime_smuggle_bay = {
 			consumer_goods = 4
 		}
 		produces = {
-			energy = 110
+			energy = 10
 		}
 	}
 
@@ -315,6 +316,7 @@ building_uma_crime_smuggle_bay = {
 			}
 		}
 		modifier = {
+			job_clerk_add = 1
 			planet_crime_add = 30
 			planet_stability_add = -10
 		}
@@ -379,6 +381,7 @@ building_uma_crime_underground_club = {
 			}
 		}
 		modifier = {
+			job_clerk_add = 2
 			planet_crime_add = 40
 			planet_stability_add = -20
 		}

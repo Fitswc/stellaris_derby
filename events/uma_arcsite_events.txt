@@ -248,6 +248,9 @@ planet_event = {
 		name = umaarc.1006.a
 		remove_deposit = d_uma_threegodness_relic
 		add_deposit = d_uma_threegodness_museum
+		last_added_deposit = {
+			set_deposit_flag = uma_keep_deposit_on_terraform
+		}
 		hidden_effect = {
 			planet_owner = {
 				country_event = {
