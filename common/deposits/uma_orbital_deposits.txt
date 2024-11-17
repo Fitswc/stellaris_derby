@@ -125,4 +125,23 @@ d_uma_crystal_carrot_3 = {
 
 }
 
+d_uma_crystal_carrot_pk = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			uma_crystal_carrot = 30
+#			multiplier = uma_planet_size_pk_uma_come_to_ccp
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
 ###在这儿结束###
