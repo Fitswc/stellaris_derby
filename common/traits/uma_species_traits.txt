@@ -845,7 +845,7 @@ trait_uma_conservational = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	opposites = { "trait_wasteful" }
+	opposites = { "trait_uma_lot_of_money_so_i_wasteful" }
 	allowed_archetypes = { UMA }
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.17
@@ -861,7 +861,7 @@ trait_uma_lot_of_money_so_i_wasteful = {
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
-	opposites = { "trait_conservational" }
+	opposites = { "trait_uma_conservational" }
 	allowed_archetypes = { UMA }
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = 0.13
