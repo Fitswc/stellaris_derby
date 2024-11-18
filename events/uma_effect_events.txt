@@ -241,6 +241,16 @@ country_event = {
 				}
 			}
 
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_tama
+				}
+				event_target:uma_is_leader_tama = {
+					change_leader_portrait = "21c"
+					set_name = TAMA
+				}
+			}
+
 			##咕噜
 			if = {
 				limit = {
