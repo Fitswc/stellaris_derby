@@ -76,6 +76,7 @@ country_event = {
 				}
 				random_system_planet = {
 					limit = {
+						is_primary_star = no
 						OR = {
 							uma_is_normal_habitat_planet = no
 							uma_is_pd_habitat_planet = no
