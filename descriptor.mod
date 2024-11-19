@@ -5,6 +5,7 @@ tags={
 	"Leaders"
 	"Gameplay"
 	"Events"
+	"Umamusume"
 }
 name="Umamusume - Stellar Derby"
 picture="thumbnail.png"
