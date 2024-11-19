@@ -1186,6 +1186,13 @@ country_event = {
 
 	option = {
 		name = uma_finemotion.62.a
+		hidden_effect = {
+			event_target:uma_is_leader_fine = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
 		enable_special_project = {
 			name = UMA_FINE_LOST
 			owner = This
@@ -1198,6 +1205,11 @@ country_event = {
 			has_country_flag = uma_finemotion_pri_meet_finished
 		}
 		hidden_effect = {
+			event_target:uma_is_leader_fine = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
 			country_event = {
 				id = uma_finemotion.100
 				days = 20
