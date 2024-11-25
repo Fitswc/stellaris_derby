@@ -58,24 +58,24 @@ building_uma_toresen_lab = {
 			}
 		}
 		modifier = {
-			job_uma_researcher_add = 2
+			job_uma_researcher_add = 1
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			is_capital = yes
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
+#	triggered_planet_modifier = {
+#		potential = {
+#			is_capital = yes
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
 					#is_uma_fallen_empire = yes
-				}
-			}
-		}
+#				}
+#			}
+#		}
 
-		job_uma_threegodness_knowledge_scholar_add = 1
-	}
+#		job_uma_threegodness_knowledge_scholar_add = 1
+#	}
 
 	triggered_desc = {
 		trigger = {

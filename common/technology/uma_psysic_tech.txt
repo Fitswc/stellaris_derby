@@ -100,12 +100,12 @@ tech_uma_threegodness_knowledge_first_known = { #三女神知识初探（挖掘�
 
 
 tech_uma_torensen_lab_building = { #特雷森实验室建设
-    cost = 5000
+    cost = 0
     area = physics
-    tier = 2
+    tier = 0
     category = { computing }
-    prerequisites = { tech_basic_science_lab_2 tech_administrative_ai }
-    weight = 100
+    prerequisites = { tech_administrative_ai }
+    weight = 120
 
 	potential = {
 		OR = {
