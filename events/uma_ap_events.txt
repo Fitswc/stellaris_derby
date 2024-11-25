@@ -1019,45 +1019,39 @@ country_event = {
 ##Country Trader
 country_event = {
 	id = uma_ap.40
-	hide_window = yes
+	title = uma_ap.40.title
+	desc = uma_ap.40.desc
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			has_ascension_perk = ap_uma_zenshizenren_ap_2
-			has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
-		}
-		NOT = {
-			has_country_flag = uma_ap_2_evt_happened
-		}
+
 	}
 
 	immediate = {
-		set_country_flag = uma_ap_2_evt_happened
-		switch = {
-			trigger = has_ascension_perk
 
-			ap_uma_zenshizenren_ap_2 = {
-				fire_on_action = {
-					on_action = uma_ap_2_factor_illness
-					scopes = {
-						from = Root
-					}
-				}
-			}
+	}
 
-			ap_uma_fly_me_to_the_star_ap_two = {
-				fire_on_action = {
-					on_action = uma_ap_2_realm_illness
-					scopes = {
-						from = Root
-					}
-				}
-			}
+	option = {
+		name = uma_ap.40.a
+		start_situation = {
+			type = situation_uma_ap_2_situation_system_factor
+			target = this
+			effect = {}
 		}
 	}
 }
 
+
+situation_event = {
+	id = uma_ap.41
+	title = uma_ap.41.title
+	desc = uma_ap.41.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.41.a
+	}
+}
 
 
 

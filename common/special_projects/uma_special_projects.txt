@@ -1198,3 +1198,21 @@ special_project = {
 	}
 }
 
+
+
+special_project = {
+	key = "UMA_AP_II_STAR_FORGGING_BEGINNING"
+	days_to_research = 100
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+#	picture =
+
+	event_scope = country_event
+
+	on_success = {
+		owner = {
+			country_event = {
+
+			}
+		}
+	}
+}

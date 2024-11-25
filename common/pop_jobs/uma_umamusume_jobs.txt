@@ -88,8 +88,9 @@ uma_racing_umamusume = {
 	resources = {
 		category = planet_uma_racing_umamusume
 		produces = {
-			unity = 6
-
+			unity = 5
+			society_research = 2
+			engineering_research = 2
 		}
 		upkeep = {
 			consumer_goods = 2

@@ -20,7 +20,7 @@ r
 	resources = {
 		category = planet_uma_umaidol #这个接受planet_uma_umaidol(位于uma_categories)
 		produces = {
-			unity = 8
+			unity = 6
 			society_research = 4
 		}
 		upkeep = {
@@ -29,7 +29,7 @@ r
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 8
+		planet_amenities_add = 10
 	}
 
 	
@@ -997,6 +997,7 @@ uma_darkmatter_collector = {
 		upkeep = {
 			energy = 4
 			uma_crystal_carrot = 1
+			unity = 2
 		}
 	}
 

@@ -26,6 +26,9 @@ uma_crystal_carrot_miner ={
 			minerals = 8
 			uma_crystal_carrot = 4	
 		}
+		upkeep = {
+			unity = 1
+		}
 	}
 
 	weight = {
@@ -122,7 +125,7 @@ uma_carrot_farmer = {
 	resources = {
 		category = planet_uma_carrot_farmer
 		produces = {
-			food = 10
+			food = 14
 		}
 		###转基因胡萝卜实验的额外产出
 		produces = {
@@ -135,7 +138,7 @@ uma_carrot_farmer = {
 			society_research = 3
 		}
 		upkeep = {
-			unity = 1
+			unity = 3
 		}
 	}
 
@@ -461,7 +464,7 @@ uma_core_miner = {
 			minerals = 16
 		}
 		upkeep = {
-			unity = 2
+			unity = 3
 		}
 	}
 
