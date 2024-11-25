@@ -908,7 +908,7 @@ leader_trait_tianming1_general = {
 #		has_trait = subclass_jidongxueshuo_general
 	}
 	leader_class = { commander }
-	custom_tooltip = leader_trait_lueduozhe_effect
+	custom_tooltip_with_modifiers = leader_trait_lueduozhe_effect
 	selectable_weight = {                                                   #权重  
 		weight = 1000
 	}
@@ -926,10 +926,11 @@ leader_trait_tianming2_general = {
 		TIER = none
 	}
 	planet_modifier = {
-		planet_soldiers_energy_produces_add = 2
-		planet_soldiers_minerals_produces_add = 6
-		planet_soldiers_unity_produces_add = 5
-		planet_soldiers_alloys_produces_add = 1
+		planet_soldiers_energy_produces_add = 9
+		planet_soldiers_minerals_produces_add = 14
+#		planet_soldiers_unity_produces_add = 5
+		army_defense_morale_mult = 0.4
+		planet_soldiers_alloys_produces_add = 3
 	}
 	leader_potential_add = {
 

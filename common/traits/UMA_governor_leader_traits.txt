@@ -1480,6 +1480,14 @@ leader_trait_tianming5_governor = {
 		RESOURCE = uma_crystal_carrot
 		AMOUNT = 150
 	}
+
+	planet_modifier = {
+		planet_jobs_uma_crystal_carrot_produces_mult = 0.6
+		planet_jobs_rare_crystals_produces_mult = 0.6
+		planet_amenities_mult = 0.3
+		planet_jobs_unity_upkeep_mult = 0.2
+	}
+
 	leader_potential_add = {
 
 		from = { is_species_class = umamusume }
