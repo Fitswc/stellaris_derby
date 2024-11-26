@@ -104,8 +104,7 @@ tech_uma_torensen_lab_building = { #特雷森实验室建设
     area = physics
     tier = 0
     category = { computing }
-    prerequisites = { tech_administrative_ai }
-    weight = 120
+    start_tech = yes
 
 	potential = {
 		OR = {
