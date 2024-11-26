@@ -16,7 +16,7 @@ pc_uma_school = {
 
 	modifier = {
 		planet_jobs_produces_mult = 0.30
-		planet_max_buildings_add = 12
+		planet_max_buildings_add = 99
 		planet_uma_racing_umamusume_produces_mult = 0.3
 		planet_uma_trainer_produces_mult = 0.3
 		pop_growth_speed = 0.80
@@ -162,7 +162,7 @@ pc_uma_ringworld_habitable = {
 	uses_alternative_skies_for_moons = yes
 
 	modifier = {
-		planet_max_buildings_add = 15
+		planet_max_buildings_add = 99
 		planet_resettlement_unemployed_destination_mult = 0.5
 	}
 
@@ -187,7 +187,7 @@ pc_uma_industrial = {
 
 	modifier = {
 		planet_jobs_produces_mult = 0.40
-		planet_max_buildings_add = 17
+		planet_max_buildings_add = 99
 		planet_jobs_minerals_produces_mult = 0.3
 		planet_jobs_alloys_produces_mult = 0.3
 		planet_jobs_energy_produces_mult = 0.3
