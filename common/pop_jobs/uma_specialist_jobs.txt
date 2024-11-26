@@ -210,13 +210,13 @@ uma_threegodness_knowledge_scholar = {
 	resources = {
 		category = planet_uma_threegodness_knowledge_scholar
 		produces = {
-			uma_threegodness_knowledge = 2
-			physics_research = 6
-			engineering_research = 6
-			society_research = 6
+			uma_threegodness_knowledge = 3
+			physics_research = 9
+			engineering_research = 9
+			society_research = 9
 		}
 		upkeep = {
-			consumer_goods = 1
+			consumer_goods = 3
 			unity = 3
 		}
 	}
@@ -267,9 +267,10 @@ uma_crystal_carrot_engineer = {
 	resources = {
 		category = planet_uma_crystal_carrot_engineer #单独一类
 		produces = {
+			# 5：6
 			uma_crystal_carrot = 6
-			physics_research = 10
-			engineering_research = 10
+			physics_research = 9
+			engineering_research = 9
 		}
 		upkeep = {
 			energy = 10
@@ -325,10 +326,11 @@ uma_researcher = {
 	resources = {
 		category = planet_uma_researcher #马娘科学家和科学主管都属于马娘研究者大类，但还是写最小类！
 		produces = {
-			engineering_research = 11
-			physics_research = 11
-			society_research = 11
+			engineering_research = 8
+			physics_research = 8
+			society_research = 8
 		}
+		#1:2 Ori:2:3
 		upkeep = {
 			consumer_goods = 4
 		}
@@ -382,7 +384,7 @@ uma_sweet_master = {
 	resources = {
 		category = planet_uma_sweet_master #使得其可以单独得到修正
 		produces = {
-			consumer_goods = 6
+			consumer_goods = 12
 		}
 		upkeep = {
 			food = 12
@@ -474,7 +476,7 @@ uma_sweet_manager = {
 	}
 
 	planet_modifier = {
-		planet_uma_sweet_master_produces_mult = 0.1
+		planet_uma_sweet_master_produces_mult = 0.2
 	}
 
 	weight = {
@@ -523,10 +525,9 @@ uma_horseshoe_crafter = {
 		category = planet_uma_horseshoe_crafter #使得其可以单独得到修正
 		produces = {
 			alloys = 8
-			engineering_research = 4
 		}
 		upkeep = {
-			minerals = 14
+			minerals = 12
 		}
 	}
 
@@ -585,10 +586,10 @@ uma_live_clothes_crafter = {
 	resources = {
 		category = planet_uma_live_clothes_crafter #使得其可以单独得到修正
 		produces = {
-			unity = 6
+			unity = 12
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 4
 		}
 	}
 
@@ -735,11 +736,10 @@ uma_crystal_consumer_goods_crafter = {
 	resources = {
 		category = planet_uma_crystal_consumer_goods_crafter #使得其可以单独得到修正
 		produces = {
-			consumer_goods = 12
+			consumer_goods = 24
 		}
 		upkeep = {
-			energy = 4
-			minerals = 8
+			minerals = 12
 			uma_crystal_carrot = 2
 		}
 	}
@@ -790,16 +790,19 @@ uma_dormitory_administrator = {
 	resources = {
 		category = planet_uma_dormitory_administrator #使得其可以单独得到修正
 		produces = {
-			unity = 4
+			unity = 3
 		}
 		upkeep = {
-			consumer_goods = 2
-			food = 2			
+			consumer_goods = 3
 		}
 	}
 
 	planet_modifier = {
 		planet_amenities_add = 8
+
+	}
+	country_modifier = {
+		country_admin_cap_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
@@ -924,7 +927,7 @@ uma_trader = {
 		potential = {
 			always = yes
 		}
-		trade_value_add = 15
+		trade_value_add = 16
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
@@ -992,12 +995,15 @@ uma_darkmatter_collector = {
 	resources = {
 		category = planet_uma_darkmatter
 		produces = {
-			sr_dark_matter = 4
+			sr_dark_matter = 7
+			engineering_research = 6
+			physics_research = 6
 		}
 		upkeep = {
-			energy = 4
-			uma_crystal_carrot = 1
-			unity = 2
+			energy = 10
+			uma_crystal_carrot = 2
+			unity = 10
+			minerals = 10
 		}
 	}
 
@@ -1012,6 +1018,268 @@ uma_darkmatter_collector = {
 		modifier = {
 			factor = 0.1
 			is_domestic_servant = yes
+		}
+	}
+}
+
+
+
+uma_chemrist = {
+	category = specialist
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_uma_chemical_plant
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_uma_chemrist
+		produces = {
+			volatile_motes = 10
+			engineering_research = 6
+			physics_research = 6
+		}
+		upkeep = {
+
+			minerals = 10
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 200
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}
+	}
+}
+
+
+uma_translucer= {
+	category = specialist
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_uma_crystal_plant
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_uma_translucer
+		produces = {
+			rare_crystals = 10
+			engineering_research = 6
+			physics_research = 6
+		}
+		upkeep = {
+
+			energy = 10
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 200
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
+		}
+	}
+}
+
+
+
+
+
+uma_gas_collector = {
+	category = specialist
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_uma_dark_matter_plant
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_uma_gas
+		produces = {
+			exotic_gases = 10
+			engineering_research = 6
+			physics_research = 6
+		}
+		upkeep = {
+
+			minerals = 10
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 200
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
+		}
+		modifier = {
+			factor = 0.25
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
 		}
 	}
 }
