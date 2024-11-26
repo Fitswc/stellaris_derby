@@ -4,6 +4,9 @@ uma_bourbon_arc = {
 	stages = 6
 	max_instances = 1
 	weight = 0 #需要Trigger事件创建敌对舰船并生成坟
+	on_create = {
+		save_global_event_target_as = uma_bourbon_arc_site_here
+	}
 	allow = {
 		is_ship_class = shipclass_science_ship
 		exists = leader
