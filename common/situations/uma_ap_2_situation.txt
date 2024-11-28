@@ -107,5 +107,8 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
 			current_stage >= 50
 		}
+		on_select = {
+			abort_situation = Root
+		}
 	}
 }
