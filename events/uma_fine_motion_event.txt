@@ -13,10 +13,14 @@ first_contact_event = {
 			}
 			has_authority = auth_trainingcenter
 		}
+		NOT = {
+			has_global_flag = uma_fine_had_spawmed_in_global
+		}
 	}
 
 
 	immediate = {
+		set_global_flag = uma_fine_had_spawmed_in_global
 		owner = {
 			country_event = {
 				id = uma_finemotion.2

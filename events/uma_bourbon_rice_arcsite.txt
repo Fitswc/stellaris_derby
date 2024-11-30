@@ -752,13 +752,13 @@ country_event = {
 
 	trigger = {
 		NOT = {
-			has_global_flag = uma_bour_arc_system_had_been_spawned
+#			has_global_flag = uma_bour_arc_system_had_been_spawned
 		}
 	}
 
 
 	immediate = {
-		set_global_flag = uma_bour_arc_system_had_been_spawned
+#		set_global_flag = uma_bour_arc_system_had_been_spawned
 		if = {
 			limit = { count_system = { count <= 250 } } #200
 			no_scope = {
