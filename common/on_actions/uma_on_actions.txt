@@ -532,3 +532,13 @@ on_destroy_planet_with_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL = {
 		probuma.5
 	}
 }
+
+
+#Executed right after country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+
+	}
+}
