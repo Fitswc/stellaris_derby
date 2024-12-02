@@ -1,18 +1,31 @@
 situation_uma_ap_2_situation_system_factor = {
 	picture = GFX_situation_uma_satono_top_food #AP2
 	category = positive
-	complete_icon = GFX_situation_outcome_meh #AP2
 	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_ascension
 	start_value = 1
 	on_start = {
 
 	}
 	monthly_progress = {
-		base = 5
+		#On average, the situation should take about 5 years to complete
+		base = 10
+		# Modifiers are defined in tooltip order, most important first
+		modifier = {
+			mult = 1.5
+			desc = "uma_ap_2_situation_factor_default"
+			current_situation_approach = situation_cyberization_overdrive
+		}
+		modifier = {
+			mult = 1.9
+			desc = "uma_ap_2_situation_factor_danage"
+			current_situation_approach = situation_cyberization_cautious
+		}
 	}
 	on_progress_complete = {
 
 	}
+
 	stages = {
 		25 = {
 			icon = GFX_situation_stage_1
@@ -68,10 +81,10 @@ situation_uma_ap_2_situation_system_factor = {
 		}
 	}
 
-	approach = {
-		#小心谨慎
-		name = uma_ap_2_situation_factor_careful
-	}
+#	approach = {
+#		#小心谨慎
+#		name = uma_ap_2_situation_factor_careful
+#	}
 #	approach = {
 #		name =
 #		icon =
@@ -96,6 +109,10 @@ situation_uma_ap_2_situation_system_factor = {
 		on_select = {
 			custom_tooltip = uma_ap_2_situation_factor_default_tt
 		}
+		ai_weight = 10
+		modifier = {
+			all_technology_research_speed = -0.05
+		}
 	}
 
 	approach = {
@@ -103,6 +120,10 @@ situation_uma_ap_2_situation_system_factor = {
 		name = uma_ap_2_situation_factor_danage
 		on_select = {
 			custom_tooltip = uma_ap_2_situation_factor_danage_tt
+		}
+		ai_weight = 0
+		modifier = {
+			all_technology_research_speed = -0.1
 		}
 	}
 
@@ -115,6 +136,12 @@ situation_uma_ap_2_situation_system_factor = {
 		}
 		on_select = {
 			abort_situation = Root
+		}
+		ai_weight = {
+			modifier = {
+				current_stage >= 75
+			}
+			factor = 100
 		}
 	}
 }
