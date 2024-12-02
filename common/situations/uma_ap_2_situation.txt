@@ -93,11 +93,17 @@ situation_uma_ap_2_situation_system_factor = {
 		#默认
 		name = uma_ap_2_situation_factor_default
 		default = yes
+		on_select = {
+			custom_tooltip = uma_ap_2_situation_factor_default_tt
+		}
 	}
 
 	approach = {
 		#急速
 		name = uma_ap_2_situation_factor_danage
+		on_select = {
+			custom_tooltip = uma_ap_2_situation_factor_danage_tt
+		}
 	}
 
 	approach = {
