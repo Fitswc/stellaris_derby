@@ -9,7 +9,7 @@ planet_event = {
 	#fire_only_once = yes
 	trigger = {
 		owner = {
-			is_ai = no 
+			is_ai = no
 			has_authority = auth_trainingcenter
 		}
 	}
@@ -19,12 +19,17 @@ planet_event = {
 			limit = {
 				is_multiplayer = yes
 			}
-			owner = {
-				save_event_target_as = uma_player_country
-			}
+#			owner = {
+#				save_event_target_as = uma_player_country
+#			}
 
-			no_scope = {
-
+			random_country = {
+				limit = {
+					is_country_type = global_event
+				}
+				country_event = {
+					id = uma_system_ini.2
+				}
 			}
 
 			owner = {
@@ -85,7 +90,7 @@ planet_event = {
 }
 
 
-event = {
+country_event = {
 	id = uma_system_ini.2
 	hide_window = yes
 	is_triggered_only = yes
@@ -97,6 +102,7 @@ event = {
 	}
 
 	immediate = {
+		set_global_flag = uma_has_been_spawn_system_in_multiplayer
 		###定位阶段
 		###确定sky的星系
 		uma_spawn_system_around_solar_system_multiplayer = {
@@ -129,6 +135,17 @@ event = {
 			UMA_INITIALIZER = "uma_shop_center_system_initializer"
 			FLAG = uma_shop_center_system_created
 			SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+		}
+
+		random_country = {
+			limit = {
+				is_ai = no
+				has_authority = auth_trainingcenter
+			}
+			country_event = {
+				id = uma_shop_center.1
+				#days = 10 为什么会有个延时？
+			}
 		}
 	}
 }
