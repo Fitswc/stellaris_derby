@@ -48,7 +48,15 @@ can_build_branch_office_on_planet = {
 		OR = {
 			root = { is_criminal_syndicate = yes }
 			###UMA####
-			owner = { has_authority = auth_trainingcenter }
+			owner = {
+				AND = {
+					has_commercial_pact = root
+					has_authority = auth_trainingcenter
+				}
+			}
+#			owner = {
+#				is_same_value = root
+#			}
 			##########
 			owner = { has_commercial_pact = root }
 			owner = { is_in_federation_with = root }
@@ -183,12 +191,14 @@ can_build_branch_office_on_planet = {
 # Checked by is_criminal_syndicate trigger
 is_criminal_syndicate_rule = {
 	OR = {
-		OR = {
-			has_authority = auth_corporate
-			has_valid_civic = civic_galactic_sovereign_megacorp
+		AND = {
+			OR = {
+				is_megacorp = yes
+				has_valid_civic = civic_galactic_sovereign_megacorp
+			}
+			has_valid_civic = civic_criminal_heritage
 		}
-		has_valid_civic = civic_criminal_heritage
-		##UMA
+
 		has_origin = origin_uma_business_MAN
 	}
 }
