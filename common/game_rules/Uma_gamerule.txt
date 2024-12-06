@@ -54,9 +54,10 @@ can_build_branch_office_on_planet = {
 					has_authority = auth_trainingcenter
 				}
 			}
-#			owner = {
-#				is_same_value = root
-#			}
+			owner = {
+				has_authority = auth_trainingcenter
+				is_same_value = root
+			}
 			##########
 			owner = { has_commercial_pact = root }
 			owner = { is_in_federation_with = root }
