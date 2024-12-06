@@ -1042,6 +1042,7 @@ country_event = {
 }
 
 
+##准备完成（注意这里让玩家选择第一个侧重点）
 situation_event = {
 	id = uma_ap.41
 	title = uma_ap.41.title
@@ -1053,6 +1054,17 @@ situation_event = {
 	}
 }
 
+#因子健康中心升级请求（）
+situation_event = {
+	id = uma_ap.42
+	title = uma_ap.42.title
+	desc = uma_ap.42.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.42.a
+	}
+}
 
 
 

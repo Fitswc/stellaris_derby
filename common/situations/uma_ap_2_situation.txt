@@ -102,9 +102,17 @@ situation_uma_ap_2_situation_system_factor = {
 #		ai_weight =
 #	}
 
+	#这里让玩家选择数值方向 但最终都是人口减少换增益
+	on_monthly = {
+
+
+	}
+
 	approach = {
 		#默认
 		name = uma_ap_2_situation_factor_default
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
 		default = yes
 		on_select = {
 			custom_tooltip = uma_ap_2_situation_factor_default_tt
@@ -116,6 +124,8 @@ situation_uma_ap_2_situation_system_factor = {
 	}
 
 	approach = {
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
 		#急速
 		name = uma_ap_2_situation_factor_danage
 		on_select = {
@@ -130,6 +140,8 @@ situation_uma_ap_2_situation_system_factor = {
 	approach = {
 		#中断
 		name = uma_ap_2_situation_factor_break
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
 			current_stage >= 50
