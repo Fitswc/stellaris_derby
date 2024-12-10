@@ -1018,6 +1018,26 @@ country_event = {
 
 ##Country Trader
 country_event = {
+	id = uma_ap.39
+	title = uma_ap.39.title
+	desc = uma_ap.39.desc
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ap.39.a
+
+	}
+}
+
+country_event = {
 	id = uma_ap.40
 	title = uma_ap.40.title
 	desc = uma_ap.40.desc

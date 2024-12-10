@@ -151,7 +151,7 @@ situation_uma_ap_2_situation_system_factor = {
 		}
 		ai_weight = {
 			modifier = {
-				current_stage >= 75
+				current_stage >= 25
 			}
 			factor = 100
 		}
