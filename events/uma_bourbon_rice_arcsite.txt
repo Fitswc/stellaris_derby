@@ -859,7 +859,7 @@ country_event = {
 	option = {
 		name = uma_bour_arc.16.a
 		add_resource = {
-			alloys = 200
+			alloys = -200
 		}
 		hidden_effect = {
 			set_visited = event_target:uma_bourbon_system_here
