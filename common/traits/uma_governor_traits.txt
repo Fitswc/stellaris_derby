@@ -53,8 +53,14 @@ uma_governor_trait_horse_shoes_ultra = {
 		planet_uma_trainer_society_research_produces_add = 2
 	}
 
+	triggered_councilor_modifier= {
+
+		all_technology_research_speed = 0.2
+	}
+
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_horse_shoes_ultra.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_horse_shoes_ultra.dds"}
 	initial = no
 	randomized = no	
 }
@@ -69,8 +75,15 @@ uma_governor_trait_horn = {
 		planet_crime_add = -20
 	}
 
+	triggered_councilor_modifier = {
+
+		planet_jobs_produces_mult = 0.35
+		planet_stability_add = 10
+		planet_crime_add = -20
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_horn.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_horn.dds"}
 	initial = no
 	randomized = no	
 }
@@ -88,8 +101,18 @@ uma_governor_trait_special_scholar = {
 		planet_uma_researcher_society_research_produces_add = 1
 	}
 
+	triggered_councilor_modifier= {
+
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_uma_researcher_physics_research_produces_add = 2
+		planet_uma_researcher_engineering_research_produces_add = 2
+		planet_uma_researcher_society_research_produces_add = 1
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"}
 	initial = no
 	randomized = no	
 }
@@ -103,8 +126,10 @@ uma_governor_trait_training_book = {
 		species_leader_exp_gain = 1.5
 	}
 
+
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_training_book.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_training_book.dds"}
 	initial = no
 	randomized = no	
 }
@@ -123,8 +148,17 @@ uma_governor_trait_tomorrow_star = {
 		species_leader_exp_gain = 0.25
 	}
 
+
+
+	triggered_councilor_modifier = {
+
+		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.1
+		planet_immigration_pull_mult = 1
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"}
 	initial = no
 	randomized = no	
 }
@@ -139,8 +173,15 @@ uma_governor_trait_lovely = {
 		planet_immigration_pull_mult = 1
 	}
 
+	triggered_councilor_modifier = {
+
+		planet_jobs_unity_produces_mult = 0.2
+		pop_happiness = 0.1
+		planet_immigration_pull_mult = 1
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_lovely.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_lovely.dds"}
 	initial = no
 	randomized = no	
 }
@@ -153,8 +194,13 @@ uma_governor_trait_vegetable_drink = {
 		planet_jobs_produces_mult = 0.4
 	}
 
+	triggered_councilor_modifier = {
+
+		planet_jobs_produces_mult = 0.4
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"}
 	initial = no
 	randomized = no	
 }
@@ -167,8 +213,13 @@ uma_governor_trait_power_sf = {
 		planet_jobs_produces_mult = 0.2
 	}
 
+	triggered_councilor_modifier = {
+
+		planet_jobs_produces_mult = 0.2
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_power_sf.dds"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_power_sf.dds"}
 	initial = no
 	randomized = no	
 }
@@ -185,8 +236,13 @@ uma_governor_trait_yaruki_five = {
 		planet_stability_add = 5
 	}
 
+	triggered_councilor_modifier = {
+
+		country_admin_cap_mult = 0.06
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_5.png"}
 	initial = no
 	randomized = no	
 }
@@ -199,8 +255,13 @@ uma_governor_trait_yaruki_four = {
 		planet_stability_add = 2
 	}
 
+	triggered_councilor_modifier = {
+
+		country_admin_cap_mult = 0.04
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_4.png"}
 	initial = no
 	randomized = no	
 }
@@ -211,15 +272,20 @@ uma_governor_trait_yaruki_three = {
 	planet_modifier = {
 	}
 
-	leader_class = { official }
-	inline_script = {
-		script = trait/icon
-		CLASS = official
-		RARITY = common
-		COUNCIL = no
-		TIER = none
-		ICON = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
+	triggered_councilor_modifier = {
+
+
 	}
+
+	leader_class = { official }
+#	inline_script = {
+#		script = trait/icon
+#		CLASS = official
+#		RARITY = common
+#		COUNCIL = no
+#		TIER = none
+#		ICON = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
+#	}
 	initial = no
 	randomized = no	
 }
@@ -232,8 +298,13 @@ uma_governor_trait_yaruki_two = {
 		planet_stability_add = -2
 	}
 
+	triggered_councilor_modifier = {
+
+		country_admin_cap_mult = -0.04
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_2.png" }
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_2.png" }
 	initial = no
 	randomized = no	
 }
@@ -246,8 +317,13 @@ uma_governor_trait_yaruki_one = {
 		planet_stability_add = -5
 	}
 
+	triggered_councilor_modifier = {
+
+		country_admin_cap_mult = -0.06
+	}
+
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_yaruki_1.png"}
 	initial = no
 	randomized = no	
 }
@@ -263,7 +339,7 @@ uma_governor_trait_terriroty_awake = {
 	}
 
 	leader_class = { official }
-	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"}
+#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"}
 	initial = no
 	randomized = no	
 }

@@ -96,6 +96,21 @@ uma_admiral_trait_amulet = {
 		ship_disengage_chance_mult = 1
 		ship_evasion_add = 20
 	}
+	army_modifier = {
+		army_damage_mult = 0.5
+        army_collateral_damage_mult = 1
+		army_health = 0.5
+	}
+
+	councilor_modifier = {
+		army_health = 0.5
+		army_damage_mult = 0.5
+		ship_weapon_damage = 0.2
+		ship_disengage_chance_mult = 1
+	}
+
+
+
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -110,6 +125,19 @@ uma_admiral_trait_horn = {
 		ship_weapon_damage = 0.25
 		ship_fire_rate_mult = 0.25
 	}
+	army_modifier = {
+		army_damage_mult = 0.5
+        army_collateral_damage_mult = 1
+		army_health = 0.5
+	}
+
+	councilor_modifier = {
+		ship_interstellar_speed_mult = 0.25
+		ship_weapon_damage = 0.25
+		army_damage_mult = 0.5
+		army_health = 0.5
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -124,9 +152,19 @@ uma_admiral_trait_tomorrow_star = {
 		ship_armor_mult = 0.2
 
 	}
+	army_modifier = {
+		army_damage_mult = 0.25
+		army_morale = 0.25
+	}
 	self_modifier = {
 		species_leader_exp_gain = 0.25
 	}
+
+	councilor_modifier = {
+		army_morale = 0.25
+		ship_weapon_damage = 0.15
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -136,7 +174,7 @@ uma_admiral_trait_tomorrow_star = {
 uma_admiral_trait_training_book = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
-	fleet_modifier = {
+	self_modifier = {
 		leader_skill_levels =  5
 		species_leader_exp_gain = 1.5
 	}
@@ -155,6 +193,17 @@ uma_admiral_trait_vegetable_drink = {
 		ship_shield_mult = 0.3
 		ship_interstellar_speed_mult = 0.2
 	}
+	army_modifier = {
+		army_damage_mult = 1
+		army_morale = 1
+		army_disengage_chance_mult = 0.5
+	}
+	councilor_modifier = {
+		army_morale = 1
+		army_disengage_chance_mult = 0.5
+		ship_shield_mult = 0.3
+		ship_interstellar_speed_mult = 0.2
+	}
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -169,6 +218,19 @@ uma_admiral_trait_power_sf = {
 		ship_armor_mult = 0.2
 		ship_shield_mult = 0.2
 	}
+	army_modifier = {
+		army_damage_mult = 0.5
+		army_morale = 0.5
+		army_disengage_chance_mult = 0.25
+	}
+
+	councilor_modifier = {
+		army_morale = 0.5
+		army_disengage_chance_mult = 0.25
+		ship_armor_mult = 0.2
+		ship_shield_mult = 0.2
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -186,6 +248,11 @@ uma_admiral_trait_yaruki_five = {
         ship_weapon_damage = 0.2
 		ship_weapon_range_mult = 0.10
 	}
+
+	councilor_modifier = {
+        ship_weapon_damage = 0.07
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -199,6 +266,10 @@ uma_admiral_trait_yaruki_four = {
         ship_weapon_damage = 0.1
 		ship_weapon_range_mult = 0.05
 	}
+
+	councilor_modifier = {
+        ship_weapon_damage = 0.05
+	}
 	leader_class = { commander }
 	initial = no
 	randomized = no	
@@ -208,6 +279,9 @@ uma_admiral_trait_yaruki_three = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_3.png"
 	fleet_modifier = {
+	}
+	councilor_modifier = {
+
 	}
 	leader_class = { commander }
 	initial = no
@@ -219,6 +293,10 @@ uma_admiral_trait_yaruki_two = {
 	icon = "gfx/interface/icons/traits/uma_trait_yaruki_2.png"
 	fleet_modifier = {
 		ship_fire_rate_mult = -0.05
+        ship_weapon_damage = -0.05
+	}
+
+	councilor_modifier = {
         ship_weapon_damage = -0.05
 	}
 	leader_class = { commander }
@@ -233,6 +311,11 @@ uma_admiral_trait_yaruki_one = {
 		ship_fire_rate_mult = -0.1
         ship_weapon_damage = -0.1
 	}
+
+	councilor_modifier = {
+        ship_weapon_damage = -0.07
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no	
