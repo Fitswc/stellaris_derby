@@ -758,3 +758,78 @@ uma_governor_trait_sp_cheval = {
 	randomized = no
 	immortal_leaders = yes
 }
+
+
+
+uma_governor_trait_mini_flare={
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_uma_governor_trait_mini_flare"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	councilor_modifier = {
+		country_cost_mult = -0.1
+		country_trade_fee = -0.1
+	}
+	modifier = {
+		country_cost_mult = -0.1
+		country_trade_fee = -0.1
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_flare= {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_uma_governor_trait_flare"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	councilor_modifier = {
+		country_cost_mult = -0.2
+		country_trade_fee = -0.2
+	}
+	modifier = {
+		country_cost_mult = -0.2
+		country_trade_fee = -0.2
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_never_forget= {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_uma_governor_trait_never_forget"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	councilor_modifier = {
+		physics_tech_cost_mult = -0.2
+		society_tech_cost_mult = -0.2
+		engineering_tech_cost_mult = -0.2
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+

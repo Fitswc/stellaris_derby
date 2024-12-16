@@ -20,7 +20,7 @@ event = {
 				log = UMA_ORIGINS_LAUNCH
 				country_event = {
 					id = uma_origin.2
-					#days = 0
+					days = 6 ##From Better UMA By ATR
 				}
 			}
 			else_if = {
@@ -37,6 +37,7 @@ event = {
 				log = UMA_ZERO_LAUNCH
 				country_event = {
 					id = uma_origin.4
+					days = 6 ##From Better UMA By ATR
 				}
 			}
 		}

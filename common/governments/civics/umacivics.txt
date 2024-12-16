@@ -413,3 +413,20 @@ civic_uma_my_venus_park = {
 		diplo_action_acceptance_add = 40
 	}
 }
+
+
+#By ATR From StellarDerby Machan&trade extension
+
+civic_uma_aston_machan = {
+	icon = "gfx/interface/icons/governments/civics/mj.png"
+	potential = {
+		authority = { value=auth_trainingcenter }
+	}
+	possible= {	}
+	random_weight = { base = 0 }
+
+	modifier={
+		trade_value_mult = 0.16
+		trade_value_add = 10
+	}
+}
