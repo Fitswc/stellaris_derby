@@ -1068,4 +1068,34 @@ situation_event = {
 # 1   2    3   4  5   6     7   8   9
 ##5% 10% 15% 20% 25% 30% | 35% 40% 50%
 
+##Setup
+country_event = {
+	id = uma_ap.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = uma_ap2_factor_power_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_speed_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_stamina_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_wisdom_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_charm_rate
+			value = 0
+		}
+	}
+}
+
 
