@@ -88,13 +88,13 @@ uma_racing_umamusume = {
 	resources = {
 		category = planet_uma_racing_umamusume
 		produces = {
-			unity = 6
-			society_research = 3
-			engineering_research = 3
-			physics_research = 3
+			unity = 3
+			society_research = 2
+			engineering_research = 2
+			physics_research = 2
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 1
 		}
 	}
 
@@ -147,11 +147,11 @@ uma_racing_ura_members = {
 	resources = {
 		category = uma_racing_ura_members
 		produces = {
-			unity = 6
-			society_research = 6
+			unity = 2
+			society_research = 4
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 1
 		}
 	}
 
