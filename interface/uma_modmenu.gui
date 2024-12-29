@@ -40,7 +40,7 @@ guiTypes = {
 			spriteType = "GFX_uma_mmu_team"
 			position = { x = 23 y = 854 }
 			orientation = "UPPER_LEFT"
-			web_link = "https://stellarderby-wiki.pages.dev/#/credit"
+			web_link = "https://stellarderby-wiki.pages.dev"
 		}
 
 		ButtonType = {
@@ -49,6 +49,24 @@ guiTypes = {
 			position = { x = 97 y = 854 }
 			orientation = "UPPER_LEFT"
 			pdx_tooltip = "uma_mmu_donate"
+		}
+
+		ButtonType = {
+			name = "uma_mmu_mid_diff_title"
+			buttonText = uma_mmu_mid_diff_title_t
+			buttonFont = "large_title_font"
+			position = { x = 570 y = -65 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "V"
+		}
+
+		ButtonType = {
+			name = "uma_mmu_mid_diff_title_desc"
+			buttonText = uma_mmu_mid_diff_title_desc_t
+			buttonFont = "large_title_font"
+			position = { x = 550 y = -15 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "S"
 		}
 
 		effectButtonType = {
@@ -74,6 +92,25 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_mid_game_difficult_easy"
 		}
+
+		ButtonType = {
+			name = "uma_mmu_end_diff_title"
+			buttonText = uma_mmu_end_diff_title_t
+			buttonFont = "large_title_font"
+			position = { x = 570 y = 207 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "V"
+		}
+
+		ButtonType = {
+			name = "uma_mmu_end_diff_title_desc"
+			buttonText = uma_mmu_mid_diff_title_desc_t
+			buttonFont = "large_title_font"
+			position = { x = 550 y = 260 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "S"
+		}
+
 
 		effectButtonType = {
 			name = uma_mmu_unfinished
@@ -105,6 +142,24 @@ guiTypes = {
 			position = { x = 972 y = 392 }
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_change_end_game_ban"
+		}
+
+		ButtonType = {
+			name = "uma_mmu_gs_diff_title"
+			buttonText = uma_mmu_gs_diff_title_t
+			buttonFont = "large_title_font"
+			position = { x = 570 y = 480 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "V"
+		}
+
+		ButtonType = {
+			name = "uma_mmu_gs_rs_diff_title_desc"
+			buttonText = uma_mmu_gs_rs_diff_title_desc
+			buttonFont = "large_title_font"
+			position = { x = 550 y = 534 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "S"
 		}
 
 		effectButtonType = {
