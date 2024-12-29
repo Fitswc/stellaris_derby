@@ -4802,3 +4802,21 @@ uma_random_specimen = {
 		value = 1
 	}
 }
+
+
+uma_season_give_random_season = {
+	random_list = {
+		25 = {
+			add_deposit = d_uma_season_spring
+		}
+		25 = {
+			add_deposit = d_uma_season_summer
+		}
+		25 = {
+			add_deposit = d_uma_season_autumn
+		}
+		25 = {
+			add_deposit = d_uma_season_winter
+		}
+	}
+}

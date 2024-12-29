@@ -1,0 +1,181 @@
+d_uma_season_spring = {
+	is_for_colonizable = yes
+	icon = d_uma_season_spring
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Mild planet
+				uma_is_mild_planet = yes
+			}
+		}
+		pop_growth_speed = 0.1
+		planet_jobs_food_produces_mult = 0.05
+
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Hot planet
+				uma_is_hot_planet = yes
+			}
+		}
+		pop_growth_speed = 0.1
+		planet_jobs_food_produces_mult = 0.06
+		planet_jobs_energy_upkeep_mult = 0.005
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Cold planet
+				uma_is_cold_planet = yes
+			}
+		}
+		pop_growth_speed = 0.1
+		planet_jobs_food_produces_mult = 0.03
+		planet_jobs_energy_upkeep_mult = 0.005
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}
+
+d_uma_season_summer = {
+	is_for_colonizable = yes
+	icon = d_uma_season_summer
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Mild planet
+				is_planet_class = pc_continental
+				is_planet_class = pc_savannah
+				is_planet_class = pc_ocean
+			}
+		}
+		pop_growth_speed = 0.05
+		planet_jobs_food_produces_mult = 0.08
+		planet_jobs_energy_upkeep_mult = 0.005
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Hot planet
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_tropical
+			}
+		}
+		pop_growth_speed = 0.05
+		planet_jobs_food_produces_mult = 0.06
+		planet_jobs_energy_upkeep_mult = 0.008
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				is_planet_class = pc_tundra
+				is_planet_class = pc_arctic
+				is_planet_class = pc_alpine
+			}
+		}
+		pop_growth_speed = 0.05
+		planet_jobs_food_produces_mult = 0.04
+		planet_jobs_energy_upkeep_mult = 0.008
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}
+
+d_uma_season_autumn = {
+	is_for_colonizable = yes
+	icon = d_uma_season_autumn
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Mild planet
+				uma_is_mild_planet = yes
+			}
+		}
+		pop_growth_speed = -0.05
+		planet_jobs_food_produces_mult = 0.1
+		planet_jobs_energy_upkeep_mult = 0.01
+
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Hot planet
+				uma_is_hot_planet = yes
+			}
+		}
+		pop_growth_speed = -0.05
+		planet_jobs_food_produces_mult = 0.08
+
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Cold planet
+				uma_is_cold_planet = yes
+			}
+		}
+		pop_growth_speed = -0.05
+		planet_jobs_food_produces_mult = 0.05
+		planet_jobs_energy_upkeep_mult = 0.02
+
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}
+
+d_uma_season_winter = {
+	is_for_colonizable = yes
+	icon = d_uma_season_winter
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Mild planet
+				uma_is_mild_planet = yes
+			}
+		}
+		pop_growth_speed = -0.08
+		planet_jobs_food_produces_mult = -0.1
+
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Hot planet
+				uma_is_hot_planet = yes
+			}
+		}
+		pop_growth_speed = -0.08
+
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				#Cold planet
+				uma_is_cold_planet = yes
+			}
+		}
+		pop_growth_speed = -0.08
+		planet_jobs_food_produces_mult = -0.1
+
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+}

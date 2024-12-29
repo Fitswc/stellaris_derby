@@ -1,3 +1,74 @@
 namespace = uma_season
 
 
+#Run when colonize the new colony
+planet_event = {
+	id= uma_season.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		uma_season_give_random_season = yes
+	}
+}
+
+country_event = {
+	id = uma_season.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				is_colony = yes
+				OR = {
+					has_deposit = d_uma_season_spring
+					has_deposit = d_uma_season_summer
+					has_deposit = d_uma_season_autumn
+					has_deposit = d_uma_season_winter
+				}
+			}
+			planet_event = {
+				id = uma_season.3
+			}
+		}
+	}
+}
+
+
+#Changing season on planet(Colonies only)
+planet_event = {
+	id = uma_season.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		switch = {
+			trigger = has_deposit
+
+			d_uma_season_spring = {
+				add_deposit = d_uma_season_summer
+				remove_deposit = d_uma_season_spring
+			}
+
+			d_uma_season_summer = {
+				add_deposit = d_uma_season_autumn
+				remove_deposit = d_uma_season_summer
+			}
+
+			d_uma_season_autumn = {
+				add_deposit = d_uma_season_winter
+				remove_deposit = d_uma_season_autumn
+			}
+
+			d_uma_season_winter = {
+				add_deposit = d_uma_season_spring
+				remove_deposit = d_uma_season_winter
+			}
+		}
+	}
+}
