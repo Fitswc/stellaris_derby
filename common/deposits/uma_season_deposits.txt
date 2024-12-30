@@ -104,6 +104,7 @@ d_uma_season_autumn = {
 		}
 		pop_growth_speed = -0.05
 		planet_jobs_food_produces_mult = 0.1
+		planet_pops_food_upkeep_mult = 0.05
 		planet_jobs_energy_upkeep_mult = 0.01
 
 	}
@@ -116,6 +117,7 @@ d_uma_season_autumn = {
 		}
 		pop_growth_speed = -0.05
 		planet_jobs_food_produces_mult = 0.08
+		planet_pops_food_upkeep_mult = 0.03
 
 	}
 	triggered_planet_modifier = {
@@ -149,7 +151,9 @@ d_uma_season_winter = {
 			}
 		}
 		pop_growth_speed = -0.08
-		planet_jobs_food_produces_mult = -0.1
+		planet_jobs_food_produces_mult = -0.05
+		planet_pops_food_upkeep_mult = 0.03
+		planet_jobs_energy_upkeep_mult = 0.005
 
 	}
 	triggered_planet_modifier = {
@@ -160,6 +164,8 @@ d_uma_season_winter = {
 			}
 		}
 		pop_growth_speed = -0.08
+		planet_jobs_food_produces_mult = 0.03
+
 
 	}
 	triggered_planet_modifier = {
@@ -170,7 +176,10 @@ d_uma_season_winter = {
 			}
 		}
 		pop_growth_speed = -0.08
-		planet_jobs_food_produces_mult = -0.1
+		planet_jobs_food_produces_mult = -0.08
+		planet_pops_food_upkeep_mult = 0.02
+		planet_jobs_energy_upkeep_mult = 0.02
+
 
 	}
 

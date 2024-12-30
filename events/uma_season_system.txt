@@ -7,6 +7,10 @@ planet_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
+	trigger = {
+		###TODO:记得仅限马娘政体可用！！！！！！！
+	}
+
 	immediate = {
 		uma_season_give_random_season = yes
 	}
