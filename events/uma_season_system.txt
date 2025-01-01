@@ -8,13 +8,19 @@ planet_event = {
 	hide_window = yes
 
 	trigger = {
-		###TODO:记得仅限马娘政体可用！！！！！！！
+		has_global_flag = uma_global_game_setting_gamesystem_season_enable
 	}
 
 	immediate = {
 		uma_season_give_random_season = yes
+		last_added_deposit = {
+			set_deposit_flag = uma_keep_deposit_on_terraform
+			set_deposit_flag = keep_deposit_on_terraform
+		}
 	}
 }
+
+
 
 country_event = {
 	id = uma_season.2
@@ -72,6 +78,122 @@ planet_event = {
 			d_uma_season_winter = {
 				add_deposit = d_uma_season_spring
 				remove_deposit = d_uma_season_winter
+			}
+		}
+		last_added_deposit = {
+			set_deposit_flag = uma_keep_deposit_on_terraform
+			set_deposit_flag = keep_deposit_on_terraform
+		}
+	}
+
+	after = {
+		planet_event = {
+			id = uma_season.4
+			days = 5
+		}
+	}
+}
+
+planet_event = {
+	id = uma_season.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			20 = {
+				add_modifier = {
+					modifier = uma_season_rain
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_spring
+					}
+				}
+			}
+			20 = {
+				add_modifier = {
+					modifier = uma_season_cold_spring
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_spring
+					}
+				}
+			}
+			20 = {
+				add_modifier = {
+					modifier = uma_season_hot_spring
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_spring
+					}
+				}
+			}
+
+			##SUM
+			20 = {
+				add_modifier = {
+					modifier = uma_season_hot_summer
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_summer
+					}
+				}
+			}
+			20 = {
+				add_modifier = {
+					modifier = uma_season_hurricane_frequency
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_summer
+					}
+				}
+			}
+
+			##AUT
+
+			##WINT
+			20 = {
+				add_modifier = {
+					modifier = uma_season_cold_winter
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_winter
+					}
+				}
+			}
+			20 = {
+				add_modifier = {
+					modifier = uma_season_winter_sad
+					days = 100
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_deposit = d_uma_season_winter
+					}
+				}
+			}
+
+			40 = {
+
 			}
 		}
 	}

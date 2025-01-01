@@ -148,14 +148,45 @@ uma_preftl_great_disease = {
 	planet_stability_add = 100
 }
 
-
+#Spring
 uma_season_rain = {
 	pop_happiness = -0.03
 }
 
+uma_season_cold_spring = {
+	planet_jobs_energy_upkeep_mult = 0.01
+	planet_jobs_food_produces_mult = -0.01
+}
+
+uma_season_hot_spring = {
+	planet_jobs_energy_upkeep_mult = -0.01
+	planet_jobs_food_produces_mult = 0.01
+}
+
+#Summer
+uma_season_hot_summer = {
+	planet_jobs_food_produces_mult = -0.01
+	planet_jobs_energy_upkeep_mult = 0.01
+}
+
+uma_season_hurricane_frequency = {
+	planet_jobs_food_produces_mult = -0.01
+	planet_jobs_energy_upkeep_mult = -0.005
+}
 
 
+#Autumn
 
+#Oh I love autumn
+
+#Winter
+uma_season_cold_winter = {
+	planet_jobs_energy_upkeep_mult = 0.01
+}
+
+uma_season_winter_sad = {
+	pop_happiness = -0.01
+}
 
 
 
