@@ -36,13 +36,8 @@ country_event = {
 	}
 
 	after = {
-		every_planet_within_border = {
-			limit = {
-				is_colony = yes
-			}
-			planet_event = {
-				id = uma_season.1
-			}
+		country_event = {
+			id = uma_season.0
 		}
 	}
 }
