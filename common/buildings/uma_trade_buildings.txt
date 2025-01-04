@@ -1,0 +1,97 @@
+#############
+# Trade buildings
+# #By ATR From StellarDerby Machan&trade extension
+#############
+building_uma_commercial_zone = {
+	base_buildtime = 200
+	category = trade
+	base_cap_amount = 30
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = penal_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+		job_uma_trader_add = 1
+		job_clerk_per_pop = 0.066
+		job_uma_trader_per_pop = 0.033
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_umasatonodiamond
+			}
+		}
+		modifier = {
+			job_clerk_add = 2
+			job_uma_trader_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_uma_aston_machan
+			}
+		}
+		modifier = {
+			job_clerk_add = 2
+			job_uma_trader_add = 1
+		}
+	}
+
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_uma_trader_effect_desc
+	}
+
+	prerequisites = {
+		"tech_interplanetary_commerce"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}

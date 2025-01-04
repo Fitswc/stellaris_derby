@@ -2226,7 +2226,14 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		NOT = {
+			has_global_flag = uma_gold_inviade_system_generated
+		}
+	}
+
 	immediate = {
+		set_global_flag = uma_gold_inviade_system_generated
 		if = {
 			limit = { count_system = { count <= 250 } } #200
 			no_scope = {

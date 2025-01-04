@@ -120,7 +120,7 @@ uma_create_leader_ty = {
 			trait = leader_trait_digu_scientists_2
 			trait = leader_trait_zhujuezhixin_scientists
 			trait = leader_trait_uma_generic
-			trait = subclass_zuozhou_scientists
+#			trait = subclass_zuozhou_scientists
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
@@ -399,6 +399,7 @@ uma_create_leader_sweepy = {
 			trait = uma_scientists_trait_sp_sweep
 			trait = subclass_xiantoudefengjing_scientists
 			trait = leader_trait_tansuozhe_scientists
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader

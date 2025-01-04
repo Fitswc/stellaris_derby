@@ -133,9 +133,8 @@ uma_fine_planet_spirits_spring = {
 
 
 uma_add_treater = {
-	job_uma_trader_add = 2
+	job_uma_trader_per_pop = 0.04
 	hide_from_country_list = yes
-	show_only_custom_tooltip = yes
 	icon_frame = 1
 	icon = "gfx/interface/icons/planet_modifiers/uma_add_treater.dds"
 }

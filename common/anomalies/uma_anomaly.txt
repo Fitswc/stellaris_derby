@@ -145,3 +145,16 @@ uma_soe_anolomy = {
 		}
 	}
 }
+
+
+#By ATR From StellarDerby Machan&trade extension
+
+uma_am_anomaly = {
+    desc = uma_am_anomaly_desc
+    picture = GFX_evt_ocean
+    level = 1
+
+    on_success = {
+        1 = { anomaly_event = uma_never_forget.9 }
+    }
+}

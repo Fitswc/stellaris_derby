@@ -134,6 +134,13 @@ subclass_guojiayuanshou_ruler = {
 		from = { is_species_class = umamusume }
 		is_ruler = yes
 	}
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
+	}
 	leader_class = { scientist official commander envoy }
 	background_icon = "GFX_leader_subclass_official_economy_councilor_background"
 }
@@ -223,6 +230,13 @@ leader_trait_shengchanzhuanjing_rule = {
 		planet_jobs_produces_mult = 0.1
 	}
 
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
+	}
 	leader_trait_type = veteran
 	leader_class = { scientist official commander envoy }
 	custom_tooltip_with_modifiers = only_one_governor_focus
@@ -295,6 +309,13 @@ leader_trait_qiguanzhuanjing_rule = {
 	}
 	councilor_modifier = {
 		megastructure_build_speed_mult = 0.1
+	}
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
 	}
 	leader_trait_type = veteran
 	leader_class = { scientist official commander envoy }
@@ -377,6 +398,13 @@ leader_trait_ludoufu_rule = {
 		from = { is_species_class = umamusume }
 #		has_trait = subclass_guojiayuanshou_ruler
 		is_ruler = yes
+	}
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
 	}
 	leader_class = { scientist official commander envoy }
 	background_icon = "GFX_leader_subclass_official_economy_councilor_background"

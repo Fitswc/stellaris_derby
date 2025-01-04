@@ -52,7 +52,7 @@ country_event = {
 		#生产新甜品
 		name = "uma_little_event.1.a"
 		add_resource = {
-			energy = 2000
+			energy = -2000
 		}
 		add_modifier = {
 			modifier = uma_enough_sweets

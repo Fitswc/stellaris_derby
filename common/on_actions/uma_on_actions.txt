@@ -22,6 +22,10 @@ on_game_start_country = {
 	events = {
 #		uma_crisis.10000
 		uma_civics_event.3
+
+		#By ATR From StellarDerby Machan&trade extension
+		uma_never_forget.1 #开局事件，选择麻酱作为初始国策的获得一个5级贸易领袖
+		##
 	}
 }
 
@@ -113,6 +117,15 @@ on_yearly_pulse_country = {
 	}
 
 }
+
+on_bi_yearly_pulse_country = {
+    events = {
+        uma_never_forget.7 #二段领域飞后生成麻酱所在的星系
+    }
+}
+
+
+
 
 #马娘随机领袖特质
 on_leader_spawned = {
@@ -530,5 +543,15 @@ on_destroy_planet_with_UMA_PLANET_KILLER_TRANSFORM = {
 on_destroy_planet_with_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL = {
 	events = {
 		probuma.5
+	}
+}
+
+
+#Executed right after country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+
 	}
 }

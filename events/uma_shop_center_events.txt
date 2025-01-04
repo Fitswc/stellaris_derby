@@ -135,7 +135,7 @@ country_event = {
 			}
 			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
 			last_created_leader = {
-			add_trait = leader_trait_ruler_chosen #确保不朽
+#			add_trait = leader_trait_ruler_chosen #确保不朽
 			change_leader_portrait = "C01"
 			}
 			

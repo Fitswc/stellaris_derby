@@ -211,12 +211,12 @@ uma_threegodness_knowledge_scholar = {
 		category = planet_uma_threegodness_knowledge_scholar
 		produces = {
 			uma_threegodness_knowledge = 3
-			physics_research = 9
-			engineering_research = 9
-			society_research = 9
+			physics_research = 6
+			engineering_research = 6
+			society_research = 6
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 2
 			unity = 3
 		}
 	}
@@ -467,16 +467,11 @@ uma_sweet_manager = {
 		}
 	}
 
-	planet_modifier = {
-		planet_amenities_add = 4
-	}
-
-	planet_modifier = {
-		trade_value_add = 10
-	}
 
 	planet_modifier = {
 		planet_uma_sweet_master_produces_mult = 0.2
+		planet_amenities_add = 4
+		trade_value_add = 10
 	}
 
 	weight = {
@@ -525,6 +520,7 @@ uma_horseshoe_crafter = {
 		category = planet_uma_horseshoe_crafter #使得其可以单独得到修正
 		produces = {
 			alloys = 8
+			engineering_research = 2
 		}
 		upkeep = {
 			minerals = 12

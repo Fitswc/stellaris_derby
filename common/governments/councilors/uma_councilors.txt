@@ -293,3 +293,21 @@ councilor_umamihonobourbon = {
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
+
+#By ATR From StellarDerby Machan&trade extension
+
+councilor_uma_aston_machan = {
+	leader_class = { official }
+	civic = civic_uma_aston_machan
+
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+		}
+	}
+	custom_tooltip = "councilor_uma_aston_machan_custom_modifier_desc"
+	modifier = {
+		trade_value_mult = 0.1
+	}
+	icon = "GFX_icon_councilor_ruler"
+}

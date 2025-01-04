@@ -261,27 +261,53 @@ uma_nice_nature_enclave = {
 }
 
 ###绿帽商城country_type
+#uma_shop_center_enclave = {
+#	blocks_piracy = yes
+#	show_in_contacts_list = yes
+#	minimalist_contacts_list_profile = yes
+#	can_have_their_comms_shared = yes
+#	government = yes
+#	is_enclave = yes	#是飞地吗？
+#	observable = no
+#	ai = {	#飞地不需要AI
+#		enabled = no
+#	}
+#	faction = {
+#		neutral = yes #不会被主动攻击，也不会主动攻击他人
+#		hostile = no
+#		needs_border_access = no
+#		generate_borders = no
+#		needs_colony = no
+#		auto_delete = no
+#	}
+#	custom_diplomacy = yes	#自定义外交，用于触发外交事件
+#	custom_opinion = yes	#自定义好感，用于事件调整国家好感
+#	modules = {
+#		basic_technology_module = {}
+#		standard_event_module = {}
+#		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
+#		#basic_technology_module = {}
+#	}
+#}
+
 uma_shop_center_enclave = {
 	blocks_piracy = yes
 	show_in_contacts_list = yes
-	minimalist_contacts_list_profile = yes
 	can_have_their_comms_shared = yes
 	government = yes
-	is_enclave = yes	#是飞地吗？
+	is_enclave = yes
 	observable = no
-	ai = {	#飞地不需要AI
+	ai = {
 		enabled = no
 	}
 	faction = {
-		neutral = yes #不会被主动攻击，也不会主动攻击他人
 		hostile = no
 		needs_border_access = no
 		generate_borders = no
 		needs_colony = no
-		auto_delete = no
 	}
-	custom_diplomacy = yes	#自定义外交，用于触发外交事件
-	custom_opinion = yes	#自定义好感，用于事件调整国家好感
+	custom_diplomacy = yes
+	custom_opinion = yes
 	modules = {
 		basic_technology_module = {}
 		standard_event_module = {}
