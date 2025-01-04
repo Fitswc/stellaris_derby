@@ -5,7 +5,7 @@
 building_uma_commercial_zone = {
 	base_buildtime = 200
 	category = trade
-	base_cap_amount = 30
+#	base_cap_amount = 30
 
 	potential = {
 		exists = owner
@@ -46,8 +46,7 @@ building_uma_commercial_zone = {
 	planet_modifier = {
 		job_clerk_add = 2
 		job_uma_trader_add = 1
-		job_clerk_per_pop = 0.066
-		job_uma_trader_per_pop = 0.033
+		job_uma_trader_per_pop = 0.03
 	}
 
 	triggered_planet_modifier = {
