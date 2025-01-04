@@ -22,8 +22,25 @@ uma_trainer = {
 	resources = {
 		category = planet_uma_trainer
 		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_technology = tech_uma_training_aiding_algorithm
+					}
+				}
+			}
 			unity = 12
 			society_research = 12
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_technology = tech_uma_training_aiding_algorithm
+				}
+			}
+			unity = 14
+			society_research = 12
+			engineering_research = 3
 		}
 		upkeep = {
 			consumer_goods = 3
