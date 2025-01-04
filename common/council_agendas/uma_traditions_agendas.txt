@@ -1,8 +1,8 @@
-@base_uma_agenda_cost = 600
+@base_uma_agenda_cost = 8000
 
 agenda_uma_agenda_race = {
 	agenda_cost = @base_uma_agenda_cost
-	agenda_cooldown = 1800
+	agenda_cooldown = 5600
 	potential = {
 		has_tradition = uma_palace_finish
 	}
@@ -31,7 +31,7 @@ agenda_uma_agenda_race = {
 
 agenda_uma_agenda_labor = {
 	agenda_cost = @base_uma_agenda_cost
-	agenda_cooldown = 1800
+	agenda_cooldown = 5600
 	potential = {
 		has_tradition = uma_palace_finish
 	}
@@ -44,7 +44,7 @@ agenda_uma_agenda_labor = {
 
 agenda_uma_agenda_moral = {
 	agenda_cost = @base_uma_agenda_cost
-	agenda_cooldown = 1800
+	agenda_cooldown = 5600
 	potential = {
 		has_tradition = uma_palace_finish
 	}
@@ -57,7 +57,7 @@ agenda_uma_agenda_moral = {
 
 agenda_uma_agenda_art = {
 	agenda_cost = @base_uma_agenda_cost
-	agenda_cooldown = 1800
+	agenda_cooldown = 5600
 	potential = {
 		has_tradition = uma_palace_finish
 	}
@@ -70,7 +70,7 @@ agenda_uma_agenda_art = {
 
 agenda_uma_agenda_tech = {
 	agenda_cost = @base_uma_agenda_cost
-	agenda_cooldown = 1800
+	agenda_cooldown = 5600
 	potential = {
 		has_tradition = uma_palace_finish
 	}
@@ -83,7 +83,7 @@ agenda_uma_agenda_tech = {
 
 agenda_uma_agenda_edu = {
 	agenda_cost = @base_uma_agenda_cost
-	agenda_cooldown = 1800
+	agenda_cooldown = 5600
 	potential = {
 		has_tradition = uma_palace_finish
 	}
