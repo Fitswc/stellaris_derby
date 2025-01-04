@@ -1,0 +1,385 @@
+##
+uma_factor_speed_add_modifier = {
+	if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 1
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 6
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 7
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 8
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = speed
+				VAL = 9
+			}
+		}
+	}
+
+}
+
+uma_factor_power_add_modifier = {
+	if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 1
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 6
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 7
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 8
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = power
+				VAL = 9
+			}
+		}
+	}
+
+}
+
+uma_factor_stamina_add_modifier = {
+	if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 1
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 6
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 7
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 8
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = stamina
+				VAL = 9
+			}
+		}
+	}
+
+}
+
+uma_factor_wisdom_add_modifier = {
+	if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 1
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 6
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 7
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 8
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = wisdom
+				VAL = 9
+			}
+		}
+	}
+
+}
+
+uma_factor_charm_add_modifier = {
+	if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 1
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 5
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 6
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 7
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 8
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			uma_check_factor_rate = {
+				TYPE = charm
+				VAL = 9
+			}
+		}
+	}
+
+}

@@ -1098,10 +1098,20 @@ country_event = {
 	}
 }
 
+#Check & Give
 country_event = {
-	id = uma_ap.44
+	id = uma_ap.90
 	hide_window = yes
 	is_triggered_only = yes
+
+	immediate = {
+		#
+		uma_factor_speed_add_modifier = yes
+		uma_factor_power_add_modifier = yes
+		uma_factor_charm_add_modifier = yes
+		uma_factor_stamina_add_modifier = yes
+		uma_factor_wisdom_add_modifier = yes
+	}
 }
 
 
