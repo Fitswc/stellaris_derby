@@ -211,9 +211,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 9
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 9
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM9
@@ -221,9 +239,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 8
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 8
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM8
@@ -231,9 +267,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 7
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 7
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM7
@@ -241,9 +295,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 6
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 6
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM6
@@ -251,9 +323,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 5
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 5
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM5
@@ -261,9 +351,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 4
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 4
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM4
@@ -271,9 +379,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 3
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 3
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM3
@@ -281,9 +407,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 2
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 2
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM2
@@ -291,9 +435,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 1
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 1
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM1
@@ -310,9 +472,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 9
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 9
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 9
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM9
@@ -320,9 +500,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 8
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 8
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 8
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM8
@@ -330,9 +528,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 7
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 7
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 7
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM7
@@ -340,9 +556,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 6
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 6
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 6
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM6
@@ -350,9 +584,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 5
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 5
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM5
@@ -360,9 +612,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 4
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 4
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 4
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM4
@@ -370,9 +640,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 3
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 3
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 3
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM3
@@ -380,9 +668,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 2
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 2
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 2
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM2
@@ -390,9 +696,27 @@ define_text = {
 
 	text = {
 		trigger = {
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value = 1
+			OR = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 1
+				}
 			}
 		}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM1
