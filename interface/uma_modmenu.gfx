@@ -68,6 +68,15 @@ spriteTypes = {
 		name = GFX_uma_mmu_vill
 		textureFile = "gfx/interface/uma_modmenu/vill.DDS"
 	}
+	spriteType = {
+		name = GFX_uma_mmu_on
+		textureFile = "gfx/interface/uma_modmenu/on.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_off
+		textureFile = "gfx/interface/uma_modmenu/off.dds"
+	}
 
 	spriteType = {
 		name = "GFX_text_uma_donate_wechat"
