@@ -84,6 +84,12 @@ uma_factor_power_add_modifier = {
 				VAL = 1
 			}
 		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_1
+			change_scoped_species = yes
+			portrait = Root
+		}
 
 	}
 	else_if = {
@@ -93,6 +99,12 @@ uma_factor_power_add_modifier = {
 				VAL = 2
 			}
 		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_2
+			change_scoped_species = yes
+			portrait = Root
+		}
 	}
 	else_if = {
 		limit = {
@@ -100,6 +112,12 @@ uma_factor_power_add_modifier = {
 				TYPE = power
 				VAL = 3
 			}
+		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_3
+			change_scoped_species = yes
+			portrait = Root
 		}
 	}
 	else_if = {
@@ -109,6 +127,12 @@ uma_factor_power_add_modifier = {
 				VAL = 4
 			}
 		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_4
+			change_scoped_species = yes
+			portrait = Root
+		}
 	}
 	else_if = {
 		limit = {
@@ -116,6 +140,12 @@ uma_factor_power_add_modifier = {
 				TYPE = power
 				VAL = 5
 			}
+		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_5
+			change_scoped_species = yes
+			portrait = Root
 		}
 	}
 	else_if = {
@@ -125,6 +155,12 @@ uma_factor_power_add_modifier = {
 				VAL = 6
 			}
 		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_6
+			change_scoped_species = yes
+			portrait = Root
+		}
 	}
 	else_if = {
 		limit = {
@@ -132,6 +168,12 @@ uma_factor_power_add_modifier = {
 				TYPE = power
 				VAL = 7
 			}
+		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_7
+			change_scoped_species = yes
+			portrait = Root
 		}
 	}
 	else_if = {
@@ -141,6 +183,12 @@ uma_factor_power_add_modifier = {
 				VAL = 8
 			}
 		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_8
+			change_scoped_species = yes
+			portrait = Root
+		}
 	}
 	else_if = {
 		limit = {
@@ -148,6 +196,12 @@ uma_factor_power_add_modifier = {
 				TYPE = power
 				VAL = 9
 			}
+		}
+		modify_species = {
+			species = Root.owner_main_species
+			add_trait = uma_trait_ap2_factor_power_9
+			change_scoped_species = yes
+			portrait = Root
 		}
 	}
 
