@@ -1,27 +1,3 @@
-defined_text = {
-	name = GetGlxName
-	text = {
-		trigger = {
-			has_country_flag = uma_ks_name_a
-		}
-		localization_key = QL
-	}
-	text = {
-		trigger = {
-			has_country_flag = uma_ks_name_b
-		}
-		localization_key = GLX
-	}
-	text = {
-		trigger = {
-			has_country_flag = uma_ks_name_c
-		}
-		localization_key = QLLZ
-	}
-	text = {
-		trigger = {
-			has_country_flag = uma_ks_name_d
-		}
-		localization_key = BOBO
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc8377e0da2a0d19b2333461edb6c6704ff26ef142ffb46b91b269f98dbc360b
+size 406

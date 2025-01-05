@@ -1,15 +1,3 @@
-######堕落帝国态度######
-
-#年轻的后进者
-opinion_uma_fallen_empire_love_young_umamusume = {
-	trigger = {
-		FROM = { has_authority = auth_trainingcenter }
-	}
-
-	opinion = {
-		modifier = {
-			add = 100
-			is_uma_fallen_empire = yes
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:56d883733f56892f5e4794d8f5bb20af8818a4e40607806f84179d695cc4778a
+size 249

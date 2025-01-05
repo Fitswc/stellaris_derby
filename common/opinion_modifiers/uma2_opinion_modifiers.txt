@@ -1,16 +1,3 @@
-#赛马娘关系修正
-triggered_opinion_civic_uma_candleoff = {
-	trigger = {
-		NOR = {
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
-		FROM = {
-			#has_valid_civic = civic_uma_candleoff #改成起源了
-                        has_origin = origin_uma_candleoff
-		}
-	}
-	opinion = {
-		base = -1000
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5216863c6041c65ae0eb27d49459d20994d299836dfa208120985aba9ff75679
+size 338

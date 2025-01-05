@@ -1,26 +1,3 @@
-entity = {
-	name = "frontend_background_entity"
-	
-	locator = { name = "loc" position = { 0.0 0.025 0.0 } }
-	
-	attach = { loc = "frontend_background_attached_entity" }
-	
-}
-
-entity = {
-	name = "federations_frontend_entity"
-	pdxmesh = "frontend_background_mesh"
-	
-	default_state = "idle"
-	state = {
-		name = "idle"
-		animation = "idle"
-	}
-	
-	scale = 1.06
-}
-
-animation = {
-	name = "frontend_background_idle_animation"
-	file = "frontend_background_idle.anim"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5600c2e7a4e87a3c865975558847dc0700e7f22a624fe9034ff24d86da60d26
+size 455

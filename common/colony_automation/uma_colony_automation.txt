@@ -1,36 +1,3 @@
-automate_uma_school_planet = {
-	category = "planet_automation_designation_construction"
-
-	available = {
-		has_designation = col_uma_academy
-	}
-
-	prio_districts = {
-		district_uma_logistics_area
-		district_uma_teaching_area
-	}
-
-	buildings = {
-		1 = {
-			building = building_capital
-			available = {
-				always = yes
-			}
-		}
-		3 = {
-			building = building_uma_simple_carrot_farm
-		}
-		3 = {
-			building = building_uma_crystal_alloy_workhouse
-		}
-		2 = {
-			building = building_uma_crystal_consumer_goods_workhouse
-		}
-		2 = {
-			building = building_uma_toresen_lab
-		}
-
-	}
-
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:541e8f54c60d3933e7c39837886a439888fd776a86480124c4e3e3a0ee7dc926
+size 576

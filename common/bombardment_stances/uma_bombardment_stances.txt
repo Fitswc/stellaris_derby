@@ -1,22 +1,3 @@
-#轨道轰炸
-#“光殇”轨道轰炸
-uma_lightoff = {
-	trigger = {
-		owner = {
-			has_origin = origin_uma_candleoff
-		}
-	}
-	default = no
-	stop_when_armies_dead = no
-	abduct_pops = no
-	planet_damage = 10
-	army_damage = 50
-	kill_pop_chance = {
-		base = 1
-	}
-	min_pops_to_kill_pop = 0
-	ai_weight = {
-		weight = 0
-	}
-
-} 
+version https://git-lfs.github.com/spec/v1
+oid sha256:52a289bd356070628ee83036c6508250017aef6a2bc02f51f441769449f15aca
+size 319

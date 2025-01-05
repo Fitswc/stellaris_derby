@@ -1,32 +1,3 @@
-# Portrait sets associated with species classes.
-# Portrait sets are grouped into portrait categories to be shown on empire editor. Check out portrait_categories database.
-# portraits = {}									List of portraits which are available for the species class without any conditions
-# conditional_portraits = {}
-#	randomizable = yes/no/trigger (default: yes)	Condition that specifies if the portraits in the list below can be used with species which design is randomly generated
-#	playable = yes/no/trigger (default: yes)		Condition that specifies if the portraits in the list below are available in empire design view
-#	portraits = {}									List of portraits which can be used by species of corresponding class depending on the
-# non_randomized_portraits							List of portraits which are not available for empires whose design was randomly generated
-# non_pre_ftl_portraits								List of portraits which are not available for pre-ftl empires
-# uplifted_portraits = {}							List of portraits which will be used by species of corresponding class after uplifting
-#
-
-
-
-
-umamusume = {
-	species_class = umamusume
-	uplifted_portraits = {
-		umamusume
-	}
-	portraits = {
-		"umamusume"
-		"umamusume_winning_suit"
-	}
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-		"umamusume"
-		"umamusume_winning_suit"
-	}
-}
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6ccc0e4390352f266511e504b788cd78f47879cdefadcfb78e9095c5d986a95
+size 1345

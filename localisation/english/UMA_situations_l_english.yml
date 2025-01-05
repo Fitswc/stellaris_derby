@@ -1,17 +1,3 @@
-﻿l_english:
- l_simp_chinese: 
- string_expenditures_greater_than_income_uma_crystal_carrot: "$uma_crystal_carrot$ Deficit"
- string_not_in_deficit_uma_crystal_carrot: "$uma_crystal_carrot$ Monthly balance is positive"
- string_resource_reserves_uma_crystal_carrot: "$uma_crystal_carrot$ Reserves"
-  
- situation_uma_crystal_carrot_deficit: "$uma_crystal_carrot$ Shortage"
- situation_uma_crystal_carrot_deficit_type: "$situation_uma_crystal_carrot_deficit$"
- situation_uma_crystal_carrot_deficit_desc: "Our $uma_crystal_carrot$ Deficit is out of control! $situation_deficit_desc_base$"
- situation_uma_crystal_carrot_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
- deficit_approach_invest_in_uma_crystal_carrot_producers: "Invest $uma_crystal_carrot$ Produce"
-  
- uma_situation_deficit.100.name: "Severe $uma_crystal_carrot$ Deficit"
- uma_situation_deficit.100.desc: "Our $uma_crystal_carrot$ Has fallen into a Severe Shortage, As an important industrial material, This situation had influenced our Infrastructure construction and maintenance seriously, Related organizations obtest §Y[Root.Owner.GetRulerTitle]§!§H[Root.Owner.GetRulerName]§! Take effective measures to control the situation as soon as possible, Otherwise, a large number of construction projects will soon be shut down"
- uma_situation_deficit.100.A: "Dismantle the Infrastructure in §B[looted_planet.GetName]§! to recycle $uma_crystal_carrot$"
- uma_NO_PANIC: "Don't worry, All under my control"
- uma_situation_deficit.101.desc: "§H[Root.Owner.GetName]§! Have been unable to cope with the $uma_crystal_carrot$ Shortage caused a serious impact on infrastructure, Now we have to declare bankruptcy and default on debts, A new austerity plan is being drafted to cut spending So that we can gradually rebuild resource reserves and affected construction projects"
+version https://git-lfs.github.com/spec/v1
+oid sha256:bcc82d539c591d5ec27eafd00de722d3cdd30af80cb289965a51ae18bd795bd9
+size 1860
