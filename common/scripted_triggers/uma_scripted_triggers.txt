@@ -288,3 +288,29 @@ uma_has_ap_two_realm = {
 uma_has_ap_two_factor = {
 	has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
 }
+
+
+
+uma_is_mild_planet = {
+	OR = {
+		is_planet_class = pc_continental
+		is_planet_class = pc_savannah
+		is_planet_class = pc_ocean
+	}
+}
+
+uma_is_hot_planet = {
+	OR = {
+		is_planet_class = pc_desert
+		is_planet_class = pc_arid
+		is_planet_class = pc_tropical
+	}
+}
+
+uma_is_cold_planet = {
+	OR = {
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_alpine
+	}
+}

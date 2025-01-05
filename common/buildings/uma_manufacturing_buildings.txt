@@ -1995,6 +1995,96 @@ building_uma_gas_plant = {
 
 }
 
+#3429941835
+
+building_uma_gas_plant_realm = {
+	base_buildtime = 900
+	icon = building_uma_gas_plant
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	can_build = no
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	allow = {
+		owner = {
+			has_technology = "tech_exotic_gases"
+			has_technology = "tech_uma_crysal_carrot_mining"
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 100
+			alloys = 10
+		}
+		upkeep = {
+			minerals = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_gas_collector_add = 3
+		}
+	}
+	planet_modifier = {
+#		planet_uma_chemrist_produces_mult = 0.15
+		planet_uma_gas_collector_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_gas_effect_desc
+	}
+
+
+}
+
 
 
 building_uma_gas_plant_realm = {

@@ -2177,3 +2177,38 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
 	}
 }
+
+uma_mmu_gs_season_on = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_rs_season_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_season_enable
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_season
+		set_global_flag = uma_global_game_setting_gamesystem_season_enable
+		remove_global_flag = uma_global_game_setting_gamesystem_season_disable
+	}
+
+}
+
+uma_mmu_gs_season_off = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_rs_season_off_will
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_season_disable
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_season_off
+		set_global_flag = uma_global_game_setting_gamesystem_season_disable
+		remove_global_flag = uma_global_game_setting_gamesystem_season_enable
+	}
+}

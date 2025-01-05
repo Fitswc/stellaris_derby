@@ -20,6 +20,12 @@ country_event = {
 		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
 		set_global_flag = uma_global_game_setting_gamesystem_gdi_full
 		set_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+		if = {
+			limit = {
+				has_authority = auth_trainingcenter
+			}
+			set_global_flag = uma_global_game_setting_gamesystem_season_enable
+		}
 	}
 
 	option = {
@@ -27,6 +33,12 @@ country_event = {
 		custom_gui = "uma_hiding_button"
 		default_hide_option = yes
 #		remove_country_flag = uma_mmu_has_opened
+	}
+
+	after = {
+		country_event = {
+			id = uma_season.0
+		}
 	}
 }
 

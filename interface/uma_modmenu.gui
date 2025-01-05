@@ -178,6 +178,31 @@ guiTypes = {
 			effect = "uma_mmu_gs_dnd"
 		}
 
+		ButtonType = {
+			name = "uma_mmu_gs_rs_season_title_desc"
+			buttonText = uma_mmu_gs_rs_season_title_desc
+			buttonFont = "large_title_font"
+			position = { x = 550 y = 660 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "S"
+		}
+
+		effectButtonType = {
+			name = uma_mmu_mmu_gs_on
+			spriteType = "GFX_uma_mmu_on"
+			position = { x = 591 y = 795 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_gs_season_on"
+		}
+
+		effectButtonType = {
+			name = uma_mmu_mmu_gs_off
+			spriteType = "GFX_uma_mmu_off"
+			position = { x = 783 y = 795 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_gs_season_off"
+		}
+
 #		effectButtonType = {
 #			name = uma_mmu_mmu_gs_coc
 #			spriteType = "GFX_uma_mmu_coc"
