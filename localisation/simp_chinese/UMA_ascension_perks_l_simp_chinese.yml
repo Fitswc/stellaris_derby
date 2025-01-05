@@ -108,7 +108,7 @@ UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: ""
 UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
-UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: ""
+UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_tracking_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: ""
 
 
@@ -125,7 +125,7 @@ mod_pop_environment_tolerance: "£mod_pop_environment_tolerance£宜居度"
 mod_uma_ship_hull_mult: "£mod_ship_hull_mult£船体值"
 mod_uma_army_health: "£mod_army_health£军队生命值"
 mod_uma_command_limit_mult: "£mod_command_limit_mult£舰队指挥上限"
-
+mod_uma_ship_tracking_mult: "£mod_ship_tracking_mult£追踪"
 
 UMA_AP2_MODIFIER_FACTOR_NUM9: "§G+45%§!"
 UMA_AP2_MODIFIER_FACTOR_NUM8: "§G+40%§!"
