@@ -1,3 +1,199 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca1c88052d07f4d722952c608e4c1ec7013bcda1758473f5d343b92fd0692165
-size 3547
+###训练员
+uma_trainer = {
+	category = umamusume
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
+	clothes_texture_index = 3
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_trainer
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_technology = tech_uma_training_aiding_algorithm
+					}
+				}
+			}
+			unity = 12
+			society_research = 12
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_technology = tech_uma_training_aiding_algorithm
+				}
+			}
+			unity = 14
+			society_research = 12
+			engineering_research = 3
+		}
+		upkeep = {
+			consumer_goods = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_uma_personality_training_assistant }
+		}
+		modifier = {
+			planet_uma_racing_umamusume_produces_mult = 0.2
+		}
+	}
+
+	planet_modifier = {
+		planet_uma_racing_umamusume_produces_mult = 0.1
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+
+		modifier = {
+			factor = 1.5
+			NOT = { has_job = uma_racing_umamusume }
+		}
+
+		modifier = {
+			factor = 0.1
+			is_domestic_servant = yes
+		}
+	}
+}
+
+###赛马娘
+uma_racing_umamusume = {
+	category = umamusume
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
+	clothes_texture_index = 3
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_racing_umamusume
+		produces = {
+			unity = 6
+			society_research = 3
+			engineering_research = 3
+			physics_research = 3
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 4
+		trade_value_add = 8
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+
+		modifier = {
+			factor = 1.5
+			NOT = { has_job = uma_racing_umamusume }
+		}
+
+		modifier = {
+			factor = 0.1
+			is_domestic_servant = yes
+		}
+	}
+}
+
+
+uma_racing_ura_members = {
+	category = umamusume
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_uma_modern_racing_course ##之后这里改成我们自己的建筑！
+	clothes_texture_index = 3
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = uma_racing_ura_members
+		produces = {
+			unity = 6
+			society_research = 6
+		}
+		upkeep = {
+			consumer_goods = 3
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 4
+		planet_uma_racing_umamusume_produces_mult = 0.05
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+
+
+		modifier = {
+			factor = 0.1
+			is_domestic_servant = yes
+		}
+	}
+}
+
+
+
+
+

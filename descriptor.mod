@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e2f2f960d92e836d3b707ea89656ec1e873ba83e71fd293e4f7dc6850b15ee6
-size 211
+version="0.5.58"
+tags={
+	"Species"
+	"Technologies"
+	"Leaders"
+	"Gameplay"
+	"Events"
+	"Umamusume"
+}
+name="Umamusume - Stellar Derby"
+picture="thumbnail.png"
+supported_version="v3.14.*"
+remote_file_id="2839788926"
