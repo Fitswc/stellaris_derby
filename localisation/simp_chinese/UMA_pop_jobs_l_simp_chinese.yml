@@ -1,3 +1,221 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e9aafae05268b5eb751498f8dfd525a9c035985853b11ba02555a82242cbe2e8
-size 22759
+﻿l_simp_chinese:
+##################统治者级别
+job_uma_satonomerchant:0 "里见集团董事"
+job_uma_satonomerchant_plural:0 "里见集团董事"
+job_uma_satonomerchant_add:0 "里见集团董事"
+job_uma_satonomerchant_desc:0 "里见集团在各个星球上下派的执行董事，负责为其所属星球提供经济上的建设支持，这对于我们的经济发展状况来说是具有一定积极作用的，但我们仍需要警惕她们利用资本入侵政坛与其他领域的可能性行动，我们需要把握好控制她们的缰绳。"
+mod_job_uma_satonomerchant_per_pop:0 "每$VALUE$个人口提供§G+1§!个里见集团董事岗位"
+job_uma_satonomerchant_effect_desc:0 "£job_uma_satonomerchant£ $job_uma_satonomerchant_plural$ 消耗 £consumer_goods£ §Y消费品§!，增加星球的 £trade_value£ §Y贸易值§!。"
+
+job_uma_head_researcher:0 "马娘科学主管"
+job_uma_head_researcher_plural:0 "马娘科学主管"
+job_uma_head_researcher_add:0 "马娘科学主管"
+job_uma_head_researcher_desc:0 "身为各自领域佼佼者的她们在科学界拥有着极高的话语权重，她们将作为一个时代的引路人，利用自己的才能为我们照亮未知的前路。"
+job_uma_head_researcher_effect_desc:0 "£job_uma_head_researcher£ $job_uma_head_researcher$ 消耗 £consumer_goods£ §Y消费品§! 和 £uma_crystal_carrot£ §Y水晶萝卜§!，产出 £physics£ §Y物理学研究§!、 £engineering£ §Y工程学研究§! 和 £society£ §Y社会学研究§!，并增加£job_uma_researcher£ $job_uma_researcher$岗位的产出。" 
+mod_job_uma_head_researcher_add:0 "§Y$VALUE$§!马娘科学主管岗位"
+
+##################专家级别
+job_uma_researcher:0 "马娘科学家"
+job_uma_researcher_plural:0 "马娘科学家"
+job_uma_researcher_add:0 "马娘科学家"
+job_uma_researcher_desc:0 "所有被严格筛选之下的马娘科学家都有着共同的特点：她们年轻，才华横溢，对于自身职业的重要性有所了然，因而对此抱有极高的热忱与憧憬；她们想要一展宏图，为此，她们已经忍耐的够久了。"
+job_uma_researcher_effect_desc:0 "£job_uma_researcher£ $job_uma_researcher$ 消耗 £consumer_goods£ §Y消费品§!，产出 £physics£ §Y物理学研究§!、 £engineering£ §Y工程学研究§! 和 £society£ §Y社会学研究§!。" 
+mod_job_uma_researcher_add:0 "§Y$VALUE$§!马娘科学家岗位"
+
+
+job_uma_umaidol:0 "马娘偶像"
+job_uma_umaidol_plural:0 "马娘偶像"
+job_uma_umaidol_add:0 "§Y$VALUE$§!£job_uma_umaidol£马娘偶像岗位"
+job_uma_umaidol_desc:0 "最早的马娘偶像概念由飞鹰子提出，随后她凭借着自己的努力逐步成为了一部分小马娘心目中的憧憬对象，并随之诞生了马娘偶像这一特殊的职业。飞鹰子最初开创的偶像培育企划至今仍旧火爆，许多梦想于此的马娘们迫切的想要登上属于自己的舞台，就像她们的前辈与目标，醒目飞鹰一样。"
+mod_job_uma_umaidol_per_pop:0 "每$VALUE$个人口提供§G+1§!个马娘偶像岗位"
+job_uma_umaidol_effect_desc:0 "£job_uma_umaidol£ $job_uma_umaidol_plural$ 消耗 £consumer_goods£ §Y消费品§!，产出 £unity£ §Y凝聚力§!、 £society£ §Y社会学研究§! 和£amenities£ §Y舒适度§!。"
+
+job_uma_judgement:0 "风纪队员"
+job_uma_judgement_plural:0 "风纪队员"
+job_uma_judgement_add:0 "风纪队员"
+job_uma_judgement_desc:0 "是最初由青竹回忆创建的“学生风纪督导委员会”所诞生出的职业，即“风纪委员”。最早的执法范围是在特雷森学院内部，后来逐渐向秘密警察的方向靠拢，负责管理地方上的违法违禁行为；若是在战时，也会作为特别人员管理占领区人民。"
+mod_job_uma_judgement_per_pop:0 "每$VALUE$个人口提供§G+1§!个风纪委员岗位"
+
+job_uma_threegodness_knowledge_scholar:0 "三女神知识研究者"
+job_uma_threegodness_knowledge_scholar_plural:0 "三女神知识研究者"
+job_uma_threegodness_knowledge_scholar_add:0 "三女神知识研究者"
+job_uma_threegodness_knowledge_scholar_desc:0 "她们是三女神底下最为虔敬的学者，并以学习与传承三女神遗留下的知识为己任。她们清楚的知道，三女神是三位孩童气很重的大人，她们在宇宙的各处留下了自己的足迹，并隐晦地告诉给了自己的造物，让她们去寻找，她们也只得跟自己的大人玩上这一局捉迷藏游戏，尽管这将付出一代又一代人的努力。"
+job_uma_threegodness_knowledge_scholar_effect_desc:0 "£job_uma_threegodness_knowledge_scholar£  $job_uma_threegodness_knowledge_scholar$ 消耗 £unity£ §Y凝聚力§! 和 £consumer_goods£ §Y消费品§!，产出 £uma_threegodness_knowledge£ §Y三女神知识§!、 £physics£ §Y物理学研究§!、 £engineering£ §Y工程学研究§! 和 £society£ §Y社会学研究§!。"
+mod_job_uma_threegodness_knowledge_scholar_add:0 "§Y$VALUE$§!三女神知识研究者岗位"
+
+job_uma_racing_umamusume:0 "赛马娘"
+job_uma_racing_umamusume_plural:0 "赛马娘"
+job_uma_racing_umamusume_add:0 "赛马娘"
+job_uma_racing_umamusume_desc:0 "在国家体制建立之后诞生赛马娘职业，从古代至星际时代都是马娘们的主流。她们生而驰骋在赛场上，为抵达荣誉的顶点而不断奔跑下去。在星际时代后，所有的赛马娘们迫切的想要在星环上进行一场太空竞赛。"
+uma_job_uma_racing_umamusume_effect_desc:0 "£job_uma_racing_umamusume£  $job_uma_racing_umamusume$ 消耗 £consumer_goods£ §Y消费品§! 和 £food£ §Y食物§!，产出 £unity£ §Y凝聚力§! 和 £society£ §Y社会学研究§!。"
+mod_job_uma_racing_umamusume_add:0 "§Y$VALUE$§!赛马娘岗位"
+    
+job_uma_trainer:0 "训练员"
+job_uma_trainer_plural:0 "训练员"
+job_uma_trainer_add:0 "训练员"
+job_uma_trainer_desc:0 "俗话说，如果说赛马娘是马娘文明的灵魂，那么训练员就是赛马娘们的灵魂。训练员，在马娘们的文明中是极其特殊而又极其重要的存在。她们为马娘文明中的佼佼者——赛马娘，提供训练上的指导和生活上的关怀，从而帮助她们完全地发掘自己的潜力，成为一位伟大的赛跑者。"
+job_uma_trainer_effect_desc:0 "£job_uma_trainer£ $job_uma_trainer_plural$ 消耗 £consumer_goods£ §Y消费品§!，产出 £unity£ §Y凝聚力§!和 £society£ §Y社会学研究§!，并且增加£job_uma_racing_umamusume£  $job_uma_racing_umamusume$ 岗位的产出。"
+mod_job_uma_trainer_add:0 "§Y$VALUE$§!训练员岗位"
+
+job_uma_crystal_carrot_engineer:0 "水晶萝卜工程师"
+job_uma_crystal_carrot_engineer_plural:0 "水晶萝卜工程师"
+job_uma_crystal_carrot_engineer_add:0 "水晶萝卜工程师"
+job_uma_crystal_carrot_engineer_desc:0 "水晶萝卜工程师是所有工程师领域中最为尖端，同时又对专业知识要求极为苛刻的职业。她们利用自身过硬的专业知识与专门的生产设备将矿物与能量巧妙结合在一起，将其构造为马娘文化所独有的稀有资源——水晶萝卜。"
+job_uma_crystal_carrot_engineer_effect_desc:0 "£job_uma_crystal_carrot_engineer£ $job_uma_crystal_carrot_engineer_plural$ 消耗 £energy£ §Y能量币§! 和 £minerals£ §Y矿物§!，产出 £physics£ §Y物理学研究§!、 £engineering£ §Y工程学研究§! 和 £uma_crystal_carrot£ §Y水晶萝卜§!"
+mod_job_uma_crystal_carrot_engineer_add:0 "§Y$VALUE$§!水晶萝卜工程师岗位"
+###第二版
+job_uma_sweet_master:0 "甜点师"
+job_uma_sweet_master_plural:0 "甜点师"
+job_uma_sweet_master_add:0 "甜点师"
+job_uma_sweet_master_desc:0 "马娘们都是嘴尖儿的不得了的主，而甜点师们则凭借自己独特的手艺，用自己手工制作的一系列甜点小吃填补这些马娘们好吃的小嘴儿与胃口，因此常常被马娘们推崇，总是畅销无比。"
+job_uma_sweet_master_effect_desc:0 "£job_uma_sweet_master£ $job_uma_sweet_master_plural$ 消耗 £food£ §Y食物§!，产出 £consumer_goods£ §Y消费品§! 和 £amenities£ §Y舒适度§!"
+mod_job_uma_sweet_master_add:0 "§Y$VALUE$§!甜点师岗位"
+
+job_uma_sweet_manager:0 "甜点商城经理"
+job_uma_sweet_manager_plural:0 "甜点商城经理"
+job_uma_sweet_manager_add:0 "甜点商城经理"
+job_uma_sweet_manager_desc:0 "甜点商城经理主要负责甜点商城的经营与日常运作等相关事务。由于一般的经理在担任这个职位之前都是专业的甜点师，所以她们也会进行甜点师培训等事宜，保证新鲜血液的流入。"
+job_uma_sweet_manager_effect_desc:0 "£job_uma_sweet_manager£ $job_uma_sweet_managerr_plural$ 消耗 £unity£ §Y凝聚力§!，产出 £consumer_goods£ §Y消费品§! £trade_value£ §Y贸易额§!和 £amenities£ §Y舒适度§!，并且增加£job_uma_sweet_master£  $job_uma_sweet_master$ 岗位的产出。"
+mod_job_uma_sweet_manager_add:0 "§Y$VALUE$§!甜点商城经理岗位"
+
+job_uma_horseshoe_crafter:0 "蹄铁工匠"
+job_uma_horseshoe_crafter_plural:0 "蹄铁工匠"
+job_uma_horseshoe_crafter_add:0 "蹄铁工匠"
+job_uma_horseshoe_crafter_desc:0 "专门从事蹄铁锻造工作的马娘工匠，长时间的蹄铁锻造让工匠们养成了敏锐的嗅觉与独到的锻造理解，她们根据平均数值打造出所有马娘都适宜的优质蹄铁，而根据每位定制者的要求，则可以更进一步。她们无一例外都是精益求精之辈。"
+job_uma_horseshoe_crafter_effect_desc:0 "£job_uma_horseshoe_crafter£ $job_uma_horseshoe_crafter_plural$ 消耗 £minerals£ §Y矿物§!，产出 £alloys£ §Y合金§! 和 £engineering£ §Y工程学研究§!"
+mod_job_uma_horseshoe_crafter_add:0 "§Y$VALUE$§!蹄铁工匠岗位"
+
+job_uma_live_clothes_crafter:0 "决胜服设计师"
+job_uma_live_clothes_crafter_plural:0 "决胜服设计师"
+job_uma_live_clothes_crafter_add:0 "决胜服设计师"
+job_uma_live_clothes_crafter_desc:0 "对于赛马娘而言，除了自己结婚时的婚纱，此生最为重要的服装便是完全属于自己的那一套决胜服。决胜服设计师们在听取每一位赛马娘的服装需求的同时也接过了赛马娘们所承载着的梦想，她们拼尽全力，让所有的赛马娘都在赛场上展现不输于任何人的气势，并成为寄托着所有人梦想的赛马娘。"
+job_uma_live_clothes_crafter_effect_desc:0 "£job_uma_live_clothes_crafter£ $job_uma_live_clothes_crafter_plural$ 消耗 £consumer_goods£ §Y消费品§!，产出 £unity£ §Y凝聚力§!  £amenities£ §Y舒适度§! 和 £trade_value£ §Y贸易额§!"
+mod_job_uma_live_clothes_crafter_add:0 "§Y$VALUE$§!决胜服设计师岗位"
+
+job_uma_crystal_alloy_crafter:0 "水晶合金工匠"
+job_uma_crystal_alloy_crafter_plural:0 "水晶合金工匠"
+job_uma_crystal_alloy_crafter_add:0 "水晶合金工匠"
+job_uma_crystal_alloy_crafter_desc:0 "她们是合金产业链中的中坚力量，她们通过利用专门的器械，以极精密的操作技巧，将一定程度的矿物资源与水晶萝卜进行结合，并以此生产出强于一般合金的水晶合金。"
+job_uma_crystal_alloy_crafter_effect_desc:0 "£job_uma_crystal_alloy_crafter£ $job_uma_crystal_alloy_crafter$ 消耗 £minerals£ §Y矿物§! 和 £uma_crystal_carrot£ §Y水晶萝卜§!，产出 数量可观的 £alloys£ §Y合金§!"
+mod_job_uma_crystal_alloy_crafter_add:0 "§Y$VALUE$§!水晶合金工匠岗位"
+
+job_uma_crystal_consumer_goods_crafter:0 "水晶日用品工匠"
+job_uma_crystal_consumer_goods_crafter_plural:0 "水晶日用品工匠"
+job_uma_crystal_consumer_goods_crafter_add:0 "水晶日用品工匠"
+job_uma_crystal_consumer_goods_crafter_desc:0 "这些心灵手巧的工匠擅长将一般的材料和水晶萝卜结合，并以此制造出各种马娘们所喜爱的日常消费品。一些鼎鼎大名的优骏马偶也是出自她们之手。"
+job_uma_crystal_consumer_goods_crafter_effect_desc:0 "£job_uma_crystal_consumer_goods_crafter£ $job_uma_crystal_consumer_goods_crafter$ 消耗 £minerals£ §Y矿物§! £energy£ §Y能量币§!和 £uma_crystal_carrot£ §Y水晶萝卜§!，产出 数量可观的 £consumer_goods£ §Y消费品§!"
+mod_job_uma_crystal_consumer_goods_crafter_add:0 "§Y$VALUE$§!水晶日用品工匠岗位"
+###第三版
+job_uma_dormitory_administrator:0 "宿舍长"
+job_uma_dormitory_administrator_plural:0 "宿舍长"
+job_uma_dormitory_administrator_add:0 "宿舍长"
+job_uma_dormitory_administrator_desc:0 "宿舍长，特雷森学院最早时便已出现，并存在着的职业。她们往往都是性情极其温和之人，对待自己负责的小马娘时也总是处处负责；而当她们的小马娘遇到什么危险情况时也会变得刚烈起来，大有以命相搏之感。总之她们都是被马娘们极为信赖的存在，在情感上或许已堪比自己的亲父母。"
+job_uma_dormitory_administrator_effect_desc:0 "£job_uma_dormitory_administrator£ $job_uma_dormitory_administrator$ 消耗 £food£ §Y食物§! 和 £consumer_goods£ §Y消费品§!，产出 £unity£ §Y凝聚力§! £amenities£ §Y舒适度§! 和 £stability£ §Y稳定度§!"
+mod_job_uma_dormitory_administrator_add:0 "§Y$VALUE$§!宿舍长岗位"
+
+job_uma_school_reseacher:0 "学院研究员"
+job_uma_school_reseacher_plural:0 "学院研究员"
+job_uma_school_reseacher_add:0 "学院研究员"
+job_uma_school_reseacher_desc:0 "就像大学教授一样，这些学院研究员们身兼两职——她们一方面会为学院中的马娘们传授一般的文化知识，来帮助她们更好的理解这个社会；而另一方面，她们时常也会利用学校所配置的一般研究室来进行各领域的研究。尽管她们的相关设施比不上一般的研究员，但她们本人的学识水平可不一定比她们要差。"
+job_uma_school_reseacher_effect_desc:0 "£job_uma_school_reseacher£ $job_uma_school_reseacher$ 消耗 £unity£ §Y凝聚力§! 和 £consumer_goods£ §Y消费品§!，产出可观的 £physics£ §Y物理学研究§!、£engineering£ §Y工程学研究§! 和 £society£ §Y社会学研究§!"
+mod_job_uma_school_reseacher_add:0 "§Y$VALUE$§!学院研究员岗位"
+
+##################劳工级别
+job_uma_crystal_carrot_miner:0 "水晶萝卜矿工"
+job_uma_crystal_carrot_miner_plural:0 "水晶萝卜矿工"
+job_uma_crystal_carrot_miner_add:0 "水晶萝卜矿工"
+job_uma_crystal_carrot_miner_desc:0 "这些马娘矿工们在水晶萝卜矿脉中辛勤地工作，开采出宝贵的水晶萝卜矿石。"
+job_uma_crystal_carrot_miner_effect_desc:0 "£job_uma_crystal_carrot_miner£ $job_uma_crystal_carrot_miner$ 产出 £minerals£ §Y矿物§! 和 £uma_crystal_carrot£ §Y水晶萝卜§!"
+mod_job_uma_crystal_carrot_miner_add:0 "§Y$VALUE$§!水晶萝卜矿工岗位"
+###第二版
+job_uma_carrot_farmer:0 "胡萝卜农夫"
+job_uma_carrot_farmer_plural:0 "胡萝卜农夫"
+job_uma_carrot_farmer_add:0 "胡萝卜农夫"
+job_uma_carrot_farmer_desc:0 "她们深谙农业一道，对于培育胡萝卜有着严格的规划与标准，譬如什么时候施肥浇水，施多少肥，浇多少水等等。她们的严谨程度并不比科学家要差，理想与抱负也同样不低。她们憧憬着那个所有马娘都能吃饱穿暖的世界，并以慈爱的目光呵护着自己那片丰饶的胡萝卜田地。"
+job_uma_carrot_farmer_effect_desc:0 "£job_uma_carrot_farmer£ $job_uma_carrot_farmer$ 产出 £food£ §Y食物§!"
+mod_job_uma_carrot_farmer_add:0 "§Y$VALUE$§!胡萝卜农夫岗位"
+
+job_uma_bee_farmer:0 "养蜂人"
+job_uma_bee_farmer_plural:0 "养蜂人"
+job_uma_bee_farmer_add:0 "养蜂人"
+job_uma_bee_farmer_desc:0 "除了美味的胡萝卜外，不少的马娘也喜爱着那些甜而不腻的蜂蜜特饮，如东海帝王。即便马娘们自诩身强体壮，但碰到那蜜蜂蜇人的尾刺，也不免担惊受怕起来。而承担起这“虎口夺食”这一职责的人则是养蜂人了。她们穿着厚重的防护服，每日都要与成群结队的蜜蜂打交道，来为那些喜爱着蜂蜜特饮的马娘们取来那关键的新鲜的蜂蜜。"
+job_uma_bee_farmer_effect_desc:0 "£job_uma_bee_farmer£ $job_uma_bee_farmer$ 产出 £food£ §Y食物§! 和 £amenities£ §Y舒适度§!。"
+mod_job_uma_bee_farmer_add:0 "§Y$VALUE$§!养蜂人岗位"
+
+job_uma_field_powering_technician:0 "马娘场发电技师"
+job_uma_field_powering_technician_plural:0 "马娘场发电技师"
+job_uma_field_powering_technician_add:0 "马娘场发电技师"
+job_uma_field_powering_technician_desc:0 "这些工程师利用水晶萝卜来模拟玉藻十字的“马娘场”，从而生产出大量的电力。这似乎听起来很神奇，但确实就是这样。"
+job_uma_field_powering_technician_effect_desc:0 "£job_uma_field_powering_technician£ $job_uma_field_powering_technician$ 消耗 £uma_crystal_carrot£ §Y水晶萝卜§!，产出 数量可观的 £energy£ §Y能量币§!"
+mod_job_uma_field_powering_technician_add:0 "§Y$VALUE$§!马娘场发电技师岗位"
+
+###第三版
+job_uma_core_miner:0 "地心钻探工"
+job_uma_core_miner_plural:0 "地心钻探工"
+job_uma_core_miner_add:0 "地心钻探工"
+job_uma_core_miner_desc:0 "与普通的矿工相比较，地心钻探工所要深入的深度要比矿坑深得多，而对我们最直接的回报便是大量未经开采的稀有矿物，它们能在许多领域为我们提供帮助；但对于极深的地底，我们是不甚了解的，因此进行这项工作是极危险的事，稍出意外便只能永远深陷于不见天日的地底。因此她们配给探窟家每人一颗的特殊胶囊，若是真的发生特殊情况了，那便服下它。因而，参与这些探窟行动的无一例外都是身体素质与心理素质极为坚韧的马娘。"
+job_uma_core_miner_effect_desc:0 "£job_uma_core_miner£ $job_uma_core_miner$ 消耗 £unity£ §Y凝聚力§!，产出 数量可观的 £minerals£ §Y矿物§!"
+mod_job_uma_core_miner_add:0 "§Y$VALUE$§!地心钻探工岗位"
+
+job_uma_racing_ura_president: "URA赛事分级委员会长"
+uma_racing_ura_president: "$job_uma_racing_ura_president$"
+job_uma_racing_ura_president_plural: "URA赛事分级委员会长"
+job_uma_racing_ura_president_desc: "对每场URA赛事，URA分级委员会都要作出详尽的计划书，而审核和决策的职责就落在了URA分级委员会长的头上"
+mod_job_uma_racing_ura_president_add: "§Y$VALUE$§!URA赛事分级委员会长岗位"
+job_uma_racing_ura_members: "URA赛事分级委员会成员"
+uma_racing_ura_members: "$job_uma_racing_ura_members$"
+job_uma_racing_ura_members_plural: "URA赛事分级委员会成员"
+job_uma_racing_ura_members_desc: "对每场URA赛事，URA分级委员会都要作出详尽的计划书，而制定计划的职责就落在了URA分级委员会成员的头上"
+mod_job_uma_racing_ura_members_add: "§Y$VALUE$§!URA赛事分级委员会成员岗位"
+job_uma_racing_ura_couse_worker: "URA赛场后勤人员"
+uma_racing_ura_couse_worker: "$job_uma_racing_ura_couse_worker$"
+job_uma_racing_ura_couse_worker_plural: "URA赛场后勤人员"
+job_uma_racing_ura_couse_worker_desc: "在竞争如此激烈的比赛中，后勤人员的重要性无法被忽视"
+mod_job_uma_racing_ura_couse_worker_add: "§Y$VALUE$§!URA赛场后勤人员岗位"
+
+
+
+##Categories
+pop_cat_umamusume: "赛马娘"
+pop_cat_umamusume_plural: "赛马娘"
+pop_cat_umamusume_desc: "这些是现役的赛马娘和URA的委员会成员们。"
+mod_pop_cat_umamusume_happiness: "现役赛马娘们的幸福程度"
+mod_pop_cat_umamusume_political_power: "£political_power£$umamusume$政治权力"
+
+
+#0.5
+
+job_uma_trader: "马娘商人"
+mod_job_uma_trader_add: "§Y$VALUE$§!马娘商人岗位"
+mod_job_uma_trader_per_pop: "每个人口产生的马娘商人岗位"
+job_uma_trader_effect_desc: "£job_uma_trader£ $job_uma_trader$ 消耗 £consumer_goods£ §Y消费品§!，产出 可观的 £trade_value£ §Y贸易额§!"
+job_uma_trader_desc: "马娘商人们会使用他们手上的资金大量购入某件物品，再通过正规渠道和巧妙的话术转手卖出，以赚取大量的利润。与普通商人相比，这些马娘商人接受过更高级的行商教育，手头的资源也更加的充裕(样貌也不俗?)，因此能为我们带来大量的贸易额"
+job_uma_trader_plural: "马娘商人"
+
+
+job_uma_chemrist: "水晶胡萝卜化学家"
+mod_job_uma_chemrist_add: "§Y$VALUE$§!£job_uma_chemrist£水晶胡萝卜化学家岗位"
+mod_job_uma_chemrist_per_pop: "每个人口产生的水晶胡萝卜化学家岗位"
+job_uma_chemrist_desc: "水晶胡萝卜化学家们熟练的运用水晶胡萝卜将矿物转化为易爆微粒,当然,这个过程也充满了危险"
+job_uma_chemrist_effect_desc: "£job_uma_chemrist£ $job_uma_chemrist$ 消耗 £minerals£ §Y矿物§!和£uma_crystal_carrot£ §Y水晶胡萝卜§!，产出 数量可观的 £volatile_motes£ §Y易爆微粒§!"
+
+job_uma_translucer: "水晶胡萝卜转换师"
+mod_job_uma_translucer_add: "§Y$VALUE$§!£job_uma_translucer£水晶胡萝卜转换师岗位"
+mod_job_uma_translucer_per_pop: "每个人口产生的水晶胡萝卜转换师岗位"
+job_uma_translucer_desc: "这些马娘们使用高精度仪器，将一块块水晶胡萝卜转化为稀有水晶"
+job_uma_crystal_effect_desc: "£job_uma_translucer£ $job_uma_translucer$ 消耗 £uma_crystal_carrot£ §Y水晶胡萝卜§!，产出 数量可观的 £rare_crystals£ §Y稀有水晶§!"
+
+job_uma_darkmatter_collector: "暗物质收集专家"
+mod_job_uma_darkmatter_collector_add: "§Y$VALUE$§!£job_uma_darkmatter_collector£暗物质收集专家岗位"
+mod_job_uma_darkmatter_collector_per_pop: "每个人口产生的暗物质收集专家岗位"
+job_uma_darkmatter_collector_desc: "这些马娘穿着厚重的防护服，在危险的小型黑洞周围小心翼翼地收集暗物质"
+job_uma_darkmatter_effect_desc: "£job_uma_darkmatter_collector£ $job_uma_darkmatter_collector$ 消耗 £energy£ §Y能量§!和£uma_crystal_carrot£ §Y水晶胡萝卜§!，产出 数量可观的 £sr_dark_matter£ §Y暗物质§!"
+
+job_uma_gas_collector: "异星天然气收集工"
+mod_job_uma_gas_collector_add: "§Y$VALUE$§!£job_uma_gas_collector£异星天然气收集工岗位"
+mod_job_uma_gas_collector_per_pop: "每个人口产生的异星天然气收集工岗位"
+job_uma_gas_collector_desc: "这些马娘操作着不同的管道，确保设备产生的异星天然气可以准确无误地输送到各个容器中"
+job_uma_gas_effect_desc: "£job_uma_gas_collector£ $job_uma_gas_collector$ 消耗 £minerals£ §Y矿物§!和£uma_crystal_carrot£ §Y水晶胡萝卜§!，产出 数量可观的 £exotic_gases£ §Y异星天然气§!"
+
+
+mod_planet_uma_gas_produces_mult: "£job_uma_gas_collector£异星天然气收集工 产出"
