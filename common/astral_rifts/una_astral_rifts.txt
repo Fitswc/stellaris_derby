@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f20cc6b8c5024e50070a1702737b7b868b77a299f1845d1a535b2e60c973722a
-size 221
+uma_ar_cheval = {
+	name = uma_ar_cheval
+	event_weight = {
+		weight = 0
+	}
+	event = uma_cheval.2
+	randomized = no
+	flags = {
+		uma_cheval_astral_rift
+	}
+	on_roll_failed = {
+		standard_astral_rift_on_roll_failed = yes
+	}
+}
+
