@@ -1,3 +1,366 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d91b1c07abad2f3bc0b8f10bc46d20225bf1e2209f0f9b5cf31d3e1a74cfe237
-size 6275
+#居住模块(House)
+#学院模块(research)
+#重工业模块（Alloy）
+#轻工业模块(Consume Good)
+
+
+#农业模块(Food)
+
+@rw_cost = 1000
+@rw_cost_sr = 50
+@rw_maintenance = 5
+@rw_maintenance_sr = 2
+@rw_district_buildtime = 360
+
+district_uma_dormitory_ring = {
+	base_buildtime = 500
+	icon = "district_uma_dormitory"
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		exists = from
+		from = { is_regular_empire = yes }
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		uses_district_set = uma_ring_world
+	}
+
+	conversion_ratio = 0.5
+	convert_to = {
+		district_rw_nexus
+		district_rw_hive
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+			uma_crystal_carrot = 30
+		}
+		upkeep = {
+			energy = 5
+			uma_crystal_carrot = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		job_clerk_add = 6
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		job_uma_dormitory_administrator_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 9
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+		}
+		modifier = {
+			job_clerk_add = 3
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		text = job_uma_dormitory_administrator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+
+}
+
+###教学区划
+district_uma_teaching_area_ring = {
+	base_buildtime = 500
+	is_capped_by_modifier = no
+	icon = "district_uma_teaching_area"
+
+	show_on_uncolonized = {
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		uses_district_set = uma_ring_world
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+			uma_crystal_carrot = 2
+		}
+		upkeep = {
+			energy = 5
+			uma_crystal_carrot = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		job_uma_school_reseacher_add = 5
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		text = job_uma_school_reseacher_effect_desc
+	}
+}
+
+district_uma_ring_industrial = {
+	base_buildtime = 400
+	is_capped_by_modifier = no
+	icon = district_industrial
+
+	show_on_uncolonized = { uses_district_set = uma_ring_world }
+
+	potential = {
+		uses_district_set = uma_ring_world
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 340
+			uma_crystal_carrot = 40
+		}
+		upkeep = {
+			energy = @rw_maintenance
+	#		uma_crystal_carrot = @rw_maintenance_sr
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = industrial_maintenance
+				}
+			}
+			energy = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_housing_add = 10
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		job_uma_crystal_alloy_crafter_add = 5
+		job_uma_crystal_consumer_goods_crafter_add = 4
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_alloy_crafter_effect_desc
+		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+	}
+}
+
+###后勤区划
+district_uma_ring_logistics_area = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	icon = district_uma_logistics_area
+
+	show_on_uncolonized = {
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		uses_district_set = uma_ring_world
+	}
+
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 500
+			uma_crystal_carrot = 40
+		}
+		upkeep = {
+			energy = 5
+			uma_crystal_carrot = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		job_uma_carrot_farmer_add = 5
+		job_uma_field_powering_technician_add = 3
+		job_uma_crystal_carrot_engineer_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+			owner = { has_technology = tech_uma_code_hachimi }
+		}
+		job_uma_bee_farmer_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		text = job_uma_bee_farmer_effect_desc
+	}
+
+}
+
+
+district_uma_ring_commercial_area = {
+	base_buildtime = 560
+	is_capped_by_modifier = no
+	icon = district_uma_ring_commercial_area
+
+	show_on_uncolonized = {
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		uses_district_set = uma_ring_world
+	}
+
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 999
+			alloys = 998
+		}
+		upkeep = {
+			energy = 5
+			uma_crystal_carrot = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		job_uma_sweet_manager_add = 3
+		job_uma_sweet_master_add = 3
+		job_uma_horseshoe_crafter_add = 2
+		job_uma_live_clothes_crafter_add = 3
+		job_uma_trader_add = 2
+	}
+}

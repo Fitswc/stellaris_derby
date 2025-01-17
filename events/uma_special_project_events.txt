@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e560b7ad363e8de4e53f4267405b424ffff3f5e7758a236cf81e5c1a11cf1c40
-size 643
+namespace = umaproject
+#成立三女神知识研究所特殊项目事件
+
+country_event = {
+	id = umaproject.101
+	title = "umaproject.101.name"
+	desc = "umaproject.101.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_uma_threegodness_knowledge_first_known 
+	}
+
+	option = {
+		name = "umaproject.101.a"
+		hidden_effect = { save_event_target_as = establishing_threegodness_research_dept }
+		capital_scope = {
+			enable_special_project = {
+				name = "ESTABLISH_THREEGODNESS_RESEARCH_DEPT_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+
+}

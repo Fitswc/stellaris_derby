@@ -1,3 +1,148 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6ff3a8ee33b54ad21767a8339a52b078b5bf1aa777b67505be088106f6c1d716
-size 2179
+###特殊的非殖民星球矿产资源###
+
+###水晶萝卜
+
+
+#1块水晶萝卜
+d_uma_crystal_carrot_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			uma_crystal_carrot = 1
+		}
+	}
+
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	drop_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.5
+			is_asteroid = yes
+		}
+		modifier = {
+			factor = 0
+			is_planet_class = pc_toxic
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				is_planet_class = pc_molten
+				is_planet_class = pc_frozen				
+			}
+		}
+		modifier = {
+			factor = 2
+			is_inside_nebula = yes
+		}
+	}
+
+}
+
+#2块水晶萝卜
+d_uma_crystal_carrot_2 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			uma_crystal_carrot = 2
+		}
+	}
+
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	drop_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 0.5
+			is_asteroid = yes
+		}
+		modifier = {
+			factor = 0
+			is_planet_class = pc_toxic
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				is_planet_class = pc_molten
+				is_planet_class = pc_frozen				
+			}
+		}
+		modifier = {
+			factor = 2
+			is_inside_nebula = yes
+		}
+	}
+
+}
+
+#3块水晶萝卜
+d_uma_crystal_carrot_3 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			uma_crystal_carrot = 3
+		}
+	}
+
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = {
+		can_have_mineral_deposits = yes
+	}
+
+	drop_weight = {
+		weight = 0.25
+		modifier = {
+			factor = 0.5
+			is_asteroid = yes
+		}
+		modifier = {
+			factor = 0
+			is_planet_class = pc_toxic
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				is_planet_class = pc_molten
+				is_planet_class = pc_frozen				
+			}
+		}
+		modifier = {
+			factor = 2
+			is_inside_nebula = yes
+		}
+	}
+
+}
+
+d_uma_crystal_carrot_pk = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			uma_crystal_carrot = 30
+#			multiplier = uma_planet_size_pk_uma_come_to_ccp
+		}
+	}
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	potential = { always = no }
+
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+###在这儿结束###

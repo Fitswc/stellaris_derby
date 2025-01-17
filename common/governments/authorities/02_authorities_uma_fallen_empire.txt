@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96bc95124ab8ee54b083ec92227c798ff2a505c1d5a40778321cfaa09bf65b7f
-size 931
+auth_uma_fallen_empire = {
+
+	has_heir = no
+	ruler_council_position = councilor_ruler_uma_fallen_empire_p
+    icon="gfx/interface/icons/governments/authorities/auth_trainingcenter.png"
+	election_type = oligarchic
+	election_term_years = 4000
+	election_term_variance = 0
+	can_have_emergency_elections = yes
+	emergency_election_cost = 50
+	max_election_candidates = 6
+	can_reform = no
+	valid_for_released_vassal = no
+	
+	has_agendas = yes
+
+	potential = {
+		country_type = {
+			OR = {
+				value = uma_fallen_empire 
+				value = uma_awakened_fallen_empire
+			}
+		}
+	}
+
+	random_weight = {
+		modifier = {
+			factor = 0
+		}
+	}
+	possible = {
+		ethics={
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		#civics = {
+		#	NOR = {
+		#		value = civic_fanatic_purifiers
+		#	}
+		#}		
+	}
+	traits = {
+		trait = uma_trait_musume
+	}
+	# tags = {
+	# 	UMAMUSUME_FALLEN_EMPIRE
+	# }		
+	country_modifier = {
+		country_unity_produces_mult = 0.25
+	}
+}

@@ -1,3 +1,653 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b02b36d7d0e95bd87273fefc3fdbdbf47d571548edf7cb2879997ab4ddbc3c6f
-size 13587
+uma_create_pre_ftl = {
+	optimize_memory
+	uma_select_pre_ftl_origin = yes
+	uma_create_pre_ftl_species = yes
+	uma_create_pre_ftl_empire = yes
+	uma_setup_pre_ftl_planet = yes
+}
+
+
+
+
+# This is called before the pre-ftl species is created due to interactions between various origins and the pop creation effect.
+uma_select_pre_ftl_origin = {
+	random_list = {
+		# Default pre-ftl origin
+		# All other origins require First Contact.(限制dlc)
+		100 = { set_planet_flag = pre_ftl_default }
+
+		# Life-Seeded (requires Apocalypse)
+		5 = {
+			modifier = {
+				factor = 0
+				NOT = {
+					host_has_dlc = "Apocalypse"
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_first_contact_dlc = no #没有这个dlc
+					any_galaxy_planet = {
+						has_planet_flag = pre_ftl_life_seeded
+					}
+					any_country = {
+						has_origin = origin_life_seeded
+					}
+				}
+			}
+			set_planet_flag = pre_ftl_life_seeded #生命之籽
+			change_pc = pc_gaia
+			create_life_seeded_planet = yes #很好的资源
+		}
+	}
+}
+
+uma_create_pre_ftl_species = {
+	create_species = {
+		name = pre_umamusume
+		class = PRE_UMA
+		portrait = umamusume
+		homeworld = THIS
+		gender = female
+		traits = {
+			trait = uma_trait_musume
+		}
+	}
+}
+
+uma_create_pre_ftl_empire = {
+	random_list = {
+		# 史前时代
+		90 = {
+			uma_create_very_early_pre_ftl_empire = yes
+		}
+		# 中世纪
+		5 = {
+			uma_create_early_pre_ftl_empire = yes
+		}
+		# 工业时代
+		5 = {
+			uma_create_late_pre_ftl_empire = yes
+		}
+	}
+}
+
+uma_create_late_pre_ftl_empire = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_increasing_urbanization
+			civic = civic_atmospheric_pollution
+		}
+		species = last_created_species
+		ethos = random
+		flag = {
+			icon = {
+				category = "pre_ftl"
+				file = "preftl_industrial_age.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_default"
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = industrial_01
+		random_list = {
+			25 = {
+				set_country_flag = industrial_age
+				set_pre_ftl_age = industrial_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_industrial_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"beige"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = {
+				set_country_flag = machine_age
+				set_pre_ftl_age = machine_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_machine_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"yellow"
+						"orange"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = {
+				set_country_flag = atomic_age
+				set_pre_ftl_age = atomic_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_atomic_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"beige"
+						"brown"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = {
+				set_country_flag = early_space_age
+				set_pre_ftl_age = early_space_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_early_space_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"grey"
+						"dark_grey"
+						"null"
+						"null"
+					}
+				}
+			}
+		}
+	}
+	uma_set_pre_ftl_origin = yes
+}
+
+uma_create_very_early_pre_ftl_empire = {
+	create_country = {
+		name = random
+		authority = random
+		day_zero_contact = no
+
+		civics = {
+			civic = civic_secret_of_fire
+			civic = civic_flat_world_theory
+		}
+		species = last_created_species
+		ethos = random
+		flag = {
+			icon = {
+				category = "pre_ftl"
+				file = "preftl_stone_age.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_default"
+		type = primitive
+		effect = {
+			set_graphical_culture = preindustrial_01
+			random_list = {
+				2 = {
+					set_country_flag = stone_age
+					set_pre_ftl_age = stone_age
+					change_government = {
+						authority = random
+						civics = {
+							civic = civic_secret_of_fire
+							civic = civic_the_wheel
+						}
+					}
+				}
+				1 = {
+					set_country_flag = bronze_age
+					set_pre_ftl_age = bronze_age
+					change_government = {
+						authority = random
+						civics = {
+							civic = civic_secret_of_fire
+							civic = civic_the_wheel
+						}
+					}
+					change_country_flag = {
+						icon = {
+							category = "pre_ftl"
+							file = "preftl_bronze_age.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "new_dawn.dds"
+						}
+						colors={
+							"green"
+							"dark_green"
+							"null"
+							"null"
+						}
+					}
+				}
+				1 = {
+					set_country_flag = iron_age
+					set_pre_ftl_age = iron_age
+					change_country_flag = {
+						icon = {
+							category = "pre_ftl"
+							file = "preftl_iron_age.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "new_dawn.dds"
+						}
+						colors={
+							"purple"
+							"dark_purple"
+							"null"
+							"null"
+						}
+					}
+				}
+			}
+		}
+	}
+	uma_set_pre_ftl_origin = yes
+}
+
+uma_create_early_pre_ftl_empire = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_landed_nobility
+			civic = civic_flat_world_theory
+		}
+		species = last_created_species
+		ethos = random
+		flag = {
+			icon = {
+				category = "pre_ftl"
+				file = "preftl_stone_age.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_default"
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = preindustrial_01
+		random_list = {
+			20 = {
+				set_country_flag = stone_age
+				set_pre_ftl_age = stone_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+			}
+			20 = {
+				set_country_flag = bronze_age
+				set_pre_ftl_age = bronze_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_bronze_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"green"
+						"dark_green"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = iron_age
+				set_pre_ftl_age = iron_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_iron_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"purple"
+						"dark_purple"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = late_medieval_age
+				set_pre_ftl_age = late_medieval_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_medieval_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"light_blue"
+						"blue"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = renaissance_age
+				set_pre_ftl_age = renaissance_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_renaissance_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"pink"
+						"burgundy"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = steam_age
+				set_pre_ftl_age = steam_age
+				change_country_flag = {
+					icon = {
+						category = "pre_ftl"
+						file = "preftl_steam_age.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"orange"
+						"red"
+						"null"
+						"null"
+					}
+				}
+			}
+		}
+	}
+	uma_set_pre_ftl_origin = yes
+}
+
+
+uma_set_pre_ftl_origin = {
+	switch = {
+		trigger = has_planet_flag
+		pre_ftl_default = {
+			owner = {
+				set_origin = origin_default_pre_ftl
+			}
+		}
+		pre_ftl_life_seeded = {
+			owner = {
+				set_origin = origin_life_seeded
+			}
+		}
+	}
+}
+
+
+
+uma_setup_pre_ftl_planet = {
+	set_owner = last_created_country
+	set_capital = yes
+
+	remove_building = building_colony_shelter
+	last_created_country = {
+		switch = {
+			trigger = has_country_flag
+			stone_age = {
+				prev = {
+					add_building = building_crude_huts
+					add_building = building_uma_crude_racing_cause
+					remove_building = building_colony_shelter
+					while = {
+						count = @stone_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			bronze_age = {
+				prev = {
+					add_building = building_primitive_dwellings
+					add_building = building_stone_palace
+					add_building = building_uma_primitive_racing_causes
+					remove_building = building_colony_shelter
+					while = {
+						count = @bronze_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			iron_age = {
+				prev = {
+					add_building = building_primitive_dwellings
+					add_building = building_stone_palace
+					add_building = building_uma_primitive_racing_causes
+					remove_building = building_colony_shelter
+					while = {
+						count = @iron_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			late_medieval_age = {
+				prev = {
+					add_building = building_primitive_dwellings
+					add_building = building_primitive_dwellings
+					add_building = building_stone_palace
+					add_building = building_uma_primitive_racing_causes
+					remove_building = building_colony_shelter
+					while = {
+						count = @late_medieval_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			renaissance_age = {
+				prev = {
+					add_building = building_primitive_dwellings
+					add_building = building_primitive_dwellings
+					add_building = building_uma_primitive_racing_causes
+					add_building = building_stone_palace
+					remove_building = building_colony_shelter
+					while = {
+						count = @renaissance_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			steam_age = {
+				prev = {
+					add_building = building_urban_dwellings
+					add_building = building_primitive_factory
+					add_building = building_primitive_mine
+					add_building = building_uma_primitive_racing_causes_steam_ages
+					add_building = building_stone_palace
+					remove_building = building_colony_shelter
+					while = {
+						count = @steam_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			industrial_age = {
+				prev = {
+					add_building = building_primitive_farm
+					add_building = building_primitive_factory
+					add_building = building_primitive_mine
+					add_building = building_uma_primitive_racing_causes_steam_ages
+					add_building = building_primitive_power_plant
+					add_building = building_primitive_capital
+					add_building = building_urban_dwellings
+					remove_building = building_colony_shelter
+					while = {
+						count = @industrial_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			machine_age = {
+				prev = {
+					add_building = building_primitive_farm
+					add_building = building_primitive_factory
+					add_building = building_primitive_mine
+					add_building = building_primitive_power_plant
+					add_building = building_uma_primitive_racing_causes_steam_ages
+					add_building = building_primitive_capital
+					add_building = building_urban_dwellings
+					remove_building = building_colony_shelter
+					while = {
+						count = @machine_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			atomic_age = {
+				prev = {
+					add_building = building_primitive_farm
+					add_building = building_primitive_factory
+					add_building = building_primitive_mine
+					add_building = building_primitive_power_plant
+					add_building = building_uma_primitive_racing_causes_steam_ages
+					add_building = building_primitive_capital
+					add_building = building_urban_dwellings
+					remove_building = building_colony_shelter
+					while = {
+						count = @atomic_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+			early_space_age = {
+				prev = {
+					add_building = building_primitive_farm
+					add_building = building_primitive_factory
+					add_building = building_primitive_mine
+					add_building = building_primitive_power_plant
+					add_building = building_uma_basic_racing_course
+					add_building = building_primitive_capital
+					add_building = building_urban_dwellings
+					remove_building = building_colony_shelter
+					while = {
+						count = @early_space_age_pops
+						create_pop = {
+							species = last_created_species
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			last_created_country = {
+				OR = {
+					has_country_flag = machine_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
+			}
+		}
+		uma_create_pre_ftl_blockers = yes
+	}
+}
+
+uma_create_pre_ftl_blockers = {
+	add_deposit = d_decrepit_dwellings
+	add_deposit = d_failing_infrastructure
+}
+
+#不用cleanup

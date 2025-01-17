@@ -1,3 +1,66 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:326d0b398325b664b4d44b0796fa45feb8d44a7a79912f81f5793e9794dc2018
-size 1187
+uma_mid_crisis = {
+	aggressiveness = 1.90
+	trade_willingness = 0
+	bravery = 2
+	combat_bravery = 2.9	# rarely ever retreat in battle
+
+	military_spending = 1.5
+	colony_spending = 1
+
+	federation_acceptance = -10
+	nap_acceptance = -50
+	defensive_pact_acceptance = -20
+	migration_pact_acceptance = -50
+
+
+	advanced_start_chance = 75
+
+	weapon_preferences = weapon_type_strike_craft
+	armor_ratio = 0.6
+	shields_ratio = 0.5
+	hull_ratio = 0.5
+
+	threat_modifier = 0.1
+	threat_others_modifier = 0.4
+	friction_modifier = 1.9
+	claims_modifier = 2.0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		uplifter = no
+		infiltrator = no
+		dominator = yes
+		slaver = no
+		purger = no
+		displacer = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = no
+		sneak_attacker = yes
+		wants_tribute = no
+		decadent = no
+		isolationist = no
+		attack_neutrals = yes
+		holy_planets = no
+		demands_clear_borders = no
+		crisis_leader = no
+	}
+	
+
+	allow = {
+		OR = {
+			is_country_type = nakayamasentai
+			is_country_type = goldshipsentai
+			is_country_type = orfevresentai
+		}
+	}
+
+	weight_modifier = {
+		weight = 999999
+	}
+ }

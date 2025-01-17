@@ -1,3 +1,464 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6570606f64e839989b8b1501bc407934b1fadaed39cea76fb797e71bbba9684c
-size 7501
+building_uma_model_market = { #换图
+	base_buildtime = 500
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			consumer_goods = 3
+			minerals = 2
+		}
+		produces = {
+			energy = 40
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
+			pop_happiness = 0.15
+			planet_jobs_energy_produces_mult = -0.15
+		}
+	}
+}
+
+building_uma_cos_suit_mareket = {
+	base_buildtime = 200
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			alloys = 200
+		}
+		upkeep = {
+			alloys = 3
+		}
+		produces = {
+			energy = 40
+
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
+			trade_value_add = 2
+		}
+	}
+}
+
+#私营矿物提取站
+building_uma_private_mining_station = {
+	base_buildtime = 200
+	can_build = yes
+	category = manufacturing
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 10
+		}
+		upkeep = {
+			minerals = 1
+		}
+		produces = {
+			minerals = 21
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+			trade_value_add = 2
+		}
+	}
+}
+
+
+#赛马竞猜（彩票）
+building_uma_private_racing_ticket_station = {
+	base_buildtime = 200
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 20
+		}
+		upkeep = {
+			energy = 5
+		}
+		produces = {
+			energy = 25
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
+			trade_value_add = 2
+		}
+	}
+}
+
+#以下building为罪马所有
+building_uma_yellow_market = {
+	base_buildtime = 400
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+			is_criminal_syndicate = yes
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+	destroy_trigger = {
+		planet_crime <= 14
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			alloys = 400
+			consumer_goods = 70
+		}
+		upkeep = {
+			consumer_goods = 4
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
+			pop_happiness = 1
+			planet_crime_add = 30
+			planet_stability_add = -6
+		}
+	}
+
+	on_built = {
+		owner = {
+			change_variable = {
+				which = uma_count_bad_corp_building_country
+				value = 1
+			}
+		}
+	}
+}
+
+#走私港
+building_uma_crime_smuggle_bay = {
+	base_buildtime = 400
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+			is_criminal_syndicate = yes
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+	destroy_trigger = {
+		planet_crime <= 14
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 70
+		}
+		upkeep = {
+			consumer_goods = 4
+		}
+		produces = {
+			energy = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_clerk_add = 1
+			planet_crime_add = 30
+			planet_stability_add = -10
+		}
+	}
+
+	on_built = {
+		owner = {
+			change_variable = {
+				which = uma_count_bad_corp_building_country
+				value = 1
+			}
+		}
+	}
+}
+
+#马娘地下俱乐部
+building_uma_crime_underground_club = {
+	base_buildtime = 400
+	can_build = yes
+	category = amenity
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+			is_criminal_syndicate = yes
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+	destroy_trigger = {
+		planet_crime <= 14
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 70
+		}
+		upkeep = {
+			consumer_goods = 4
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_clerk_add = 2
+			planet_crime_add = 40
+			planet_stability_add = -20
+		}
+	}
+
+	on_built = {
+		owner = {
+			change_variable = {
+				which = uma_count_bad_corp_building_country
+				value = 1
+			}
+		}
+	}
+}
+
+#
+building_uma_crime_underground_weapon_maker = {
+	base_buildtime = 400
+	can_build = yes
+	category = trade
+	owner_type = corporate
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_trainingcenter
+			is_criminal_syndicate = yes
+		}
+		is_artificial = no
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+	}
+
+	destroy_trigger = {
+		planet_crime <= 14
+	}
+
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 70
+		}
+		upkeep = {
+			alloys = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+			branch_office_owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			planet_stability_add = -20
+		}
+	}
+
+	planet_modifier = {
+		army_starting_experience_add = 90
+	}
+
+	on_built = {
+		owner = {
+			change_variable = {
+				which = uma_count_bad_corp_building_country
+				value = 1
+			}
+		}
+	}
+}
+

@@ -1,3 +1,57 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b0430a769099df7e61f3263b2fd12cdf761037738f6fd280056b57a54fa77ff8
-size 1765
+#	地块对象, 用于提供转化岗位
+#	注意你不需要给每个mod只建立一个地块对象, 有的mod会按照内部阵营提供许多岗位, 那么你可能需要按照阵营建立地块, 并且用阵营名称作为其"次级名称"
+
+
+PR_deposit_JOB_convert_UMA = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	should_swap_deposit_on_terraforming = no
+	drop_weight = { weight = 0 }
+
+
+	# 我一般会按照岗位所属文件打个分组标签, 方便维护, 注意, 所有你需要转化的岗位都要写
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers"
+		CAT = planet_miners
+		JOB = uma_crystal_carrot_miner
+	}
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers"
+		CAT = planet_uma_carrot_farmer
+		JOB = uma_carrot_farmer
+	}
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers"
+		CAT = planet_uma_bee_farmer
+		JOB = uma_bee_farmer
+	}
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers"
+		CAT = planet_uma_field_powering_technician
+		JOB = uma_field_powering_technician
+	}
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers"
+		CAT = planet_uma_core_miner
+		JOB = uma_core_miner
+	}
+	# 类型一: 不存在|按人口增加|的普通岗位
+	# JOB = 原岗位名
+	# CAT = 原岗位对应的|行业属性|
+
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers_PER"
+		CAT = planet_enforcers
+		JOB = uma_judgement
+	}
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers_PER"
+		CAT = planet_uma_umaidol
+		JOB = uma_umaidol
+	}
+	inline_script = {
+		script = "deposits/PR_deposit_job_convert_TRGR_modifiers_PER"
+		CAT = planet_merchants
+		JOB = uma_satonomerchant
+	}
+}

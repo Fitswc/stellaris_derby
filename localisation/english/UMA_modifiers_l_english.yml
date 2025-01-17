@@ -1,3 +1,240 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe62d58d0b9fa64cdc18b25a2b6026ca67bc050b41eb23813821a48f4b5aaf0c
-size 21290
+﻿l_english:
+ mod_planet_pops_food_upkeep_mult: "$planet_pops_organics_food_upkeep_mult$"
+ mod_UMA_pop_growth_speed: "Umamusume population growth rate"
+ mod_UMA_species_trait_points_add: "Umamusume species modification points§$VALUE$§!"
+ mod_UMAMUSUME_species_trait_points_add: "Umamusume species modification points§$VALUE$§!"
+ mod_UMA_pop_happiness_desc: "The happiness of the Umamusume population will be affected by this value"
+ mod_UMA_pop_happiness: "Umamusume Population Happiness"
+ mod_UMA_species_trait_picks_add: "Umamusume species trait selection"
+  
+ ###岗位产出修正 
+ mod_planet_jobs_uma_threegodness_knowledge_produces_mult: "£job_uma_threegodness_knowledge_scholar£ Three Goddesses Knowledge Researcher Job Output§$VALUE$§!"
+ mod_planet_uma_head_researcher_produces_mult: "£job_uma_head_researcher£ The output of the position of director of research and study of horse niang§$VALUE$§!"
+ mod_planet_uma_racing_umamusume_produces_mult: "£job_uma_racing_umamusume£ Umamusume post output §$VALUE$§!"
+ mod_planet_uma_researcher_produces_mult: "£job_uma_researcher£Umamusume scientist post output§$VALUE$§!"
+  
+ mod_planet_uma_racing_umamusume_energy_produces_add: "£job_uma_racing_umamusume£ Umamusume post output £energy£ §YEnergy§!§$VALUE$§!"
+ mod_planet_uma_racing_umamusume_unity_produces_mult: "£job_uma_racing_umamusume£ Umamusume post output £unity£ §YUnity§!§$VALUE$§!"
+ mod_planet_uma_racing_umamusume_physics_research_produces_add: "£job_uma_racing_umamusume£ Umamusume post output £physics£ §YPhysics Research§!§$VALUE$§!"
+ mod_planet_uma_racing_umamusume_engineering_research_produces_add: "£job_uma_racing_umamusume£ Umamusume post output £engineering£ §YEngineering Research§!§$VALUE$§!"
+ mod_planet_uma_racing_umamusume_society_research_produces_add: "£job_uma_racing_umamusume£ Umamusume post output £society£ §YSociological Research §!§$VALUE$§!"
+  
+ mod_planet_uma_researcher_physics_research_produces_add: "£job_uma_researcher£ Umamusume Researcher Post Output £physics£ §YPhysics Research§!§$VALUE$§!"
+ mod_planet_uma_researcher_engineering_research_produces_add: "£job_uma_researcher£ Umamusume Researcher Post Output £engineering£ §YEngineering Research§!§$VALUE$§!"
+ mod_planet_uma_researcher_society_research_produces_add: "£job_uma_researcher£ Umamusume Researcher Post Output £society£ §YSociological Research §!§$VALUE$§!"
+  
+ mod_planet_uma_trainer_produces_mult: "£job_uma_trainer£ Output of trainer positions §$VALUE$§!"
+ mod_planet_uma_trainer_physics_research_produces_add: "£job_uma_trainer£ Output of trainer positions £physics£ §YPhysics Research§!§$VALUE$§!"
+ mod_planet_uma_trainer_engineering_research_produces_add: "£job_uma_trainer£ Output of trainer positions £engineering£ §YEngineering Research§!§$VALUE$§!"
+ mod_planet_uma_trainer_society_research_produces_add: "£job_uma_trainer£ Output of trainer positions £society£ §YSociological Research §!§$VALUE$§!"
+  
+  
+ ###第二版 
+ mod_planet_uma_sweet_master_produces_mult: "£job_uma_sweet_master£ $job_uma_sweet_master$ Job Output §$VALUE$§!"
+ mod_planet_uma_horseshoe_crafter_produces_mult: "£job_uma_horseshoe_crafter£ $job_uma_horseshoe_crafter$ Job Output §$VALUE$§!"
+ mod_planet_uma_live_clothes_crafter_produces_mult: "£job_uma_live_clothes_crafter£ $job_uma_live_clothes_crafter$ Job Output §$VALUE$§"
+ mod_planet_uma_carrot_farmer_produces_mult: "£job_uma_carrot_farmer£ $job_uma_carrot_farmer$ Job Output §$VALUE$§!"
+  
+ ###第三版 
+ mod_planet_uma_core_miner_produces_mult: "£job_uma_core_miner£ $job_uma_core_miner$ Job Output §$VALUE$§!"
+  
+ ###岗位维护修正 
+ mod_planet_uma_racing_umamusume_upkeep_mult: "£job_uma_racing_umamusume£ Umamusume Post Maintenance Fee §$VALUE$§!"
+  
+ ###岗位数目增加修正 
+ mod_job_uma_racing_umamusume_add: "§Y$VALUE$§!Umamusume Jobs"
+ mod_job_uma_trainer: "£job_uma_trainer£ Trainer positions §$VALUE$§!"
+ mod_job_uma_crystal_carrot_engineer_add: "§Y$VALUE$§!Crystal Carrot Engineer Job"
+ mod_job_uma_researcher_add: "§Y$VALUE$§!Umamusume Scientist Jobs"
+ mod_job_uma_head_researcher_add: "§Y$VALUE$§!Umamusume Science Supervisor Jobs"
+  
+ ###9.2 tom新增 
+ mod_planet_jobs_worker_uma_crystal_carrot_produces_mult: "£job£Job Output £uma_crystal_carrot£Crystal Carrots §G$VALUE$§!"
+ mod_planet_jobs_worker_energy_produces_mult: "£job£Jobs Output £energy£Energy§G$VALUE$§!"
+ mod_planet_uma_research_related_produces_mult: "£uma_text_researcher£Umamusume scientists and £uma_text_head_researcher£ Scientific Supervisor Job Output §G$VALUE$§!"
+ ###关于比赛buff的修正 
+  
+ #星球的修正 
+ uma_has_held_the_planet_race: "Planet Derby has been held"
+ uma_planet_derby_held: "Planet Derby Venue"
+ uma_planet_derby_held_desc: "This planet is holding the biggest event on the planet"
+ uma_nation_derby_held_here: "The Twinkle Series is held"
+ uma_nation_derby_held_here_desc: "The planet was chosen to host the national event, the Twinkle Series, which made the planet incredibly lively."
+ uma_planet_hero_racing_umamusume: "The Mighty Umamusume"
+ uma_planet_hero_racing_umamusume_desc: "The birth of a powerful racehorse on this planet is inspiring everyone on it."
+  
+  
+ #国家的修正 
+ uma_has_held_national_derby: "Twinkle Series competitions have been held"
+ uma_national_derby_held: "Twinkle Series held"
+ uma_national_derby_held_desc: "Our country is holding the Twinkle Series, which has put our country into a very lively period."
+ uma_planet_hero_in_country: "Planet Match Maker"
+ uma_planet_hero_in_country_desc: "A Umamusume who has dominated the planet competition is making a splash in the national competition."
+ uma_double_crown_racing_umamusume: "Two Crown Umamusume"
+ uma_double_crown_racing_umamusume_desc: "A two-time champion Umamusume has brought a wave of competition to the country."
+ uma_triple_crown_racing_umamusume: "Triple Crown Umamusume"
+ uma_triple_crown_racing_umamusume_desc: "The birth of the Triple Crown Umamusume has greatly inspired the entire population of the country."
+ uma_no_fail_triple_crown_racing_umamusume: "Undefeated Triple Crown Umamusume"
+ uma_no_fail_triple_crown_racing_umamusume_desc: "The legendary undefeated Triple Crown Umamusume is leading an unprecedented race and production boom in the country."
+ uma_six_crown_racing_umamusume: "The ancient Umamusume king road completely dominated the Umamusume"
+ uma_six_crown_racing_umamusume_desc: "A legendary Umamusume who dominated the old Umamusume season is running on the track and her story will always encourage us."
+ uma_gacha_cool_down: "Shopping mall lottery cooling down"
+  
+  
+ #######科技带来的buff修正 
+ uma_prosperity_colony_1: "Prosperous development of the colony"
+ uma_prosperity_colony_1_desc: "Thanks to good governance, the colony is experiencing a period of rapid growth."
+ uma_prosperity_colony_2: "Prosperous development of the colony"
+ uma_prosperity_colony_2_desc: "Thanks to good governance, the colony is experiencing a period of rapid growth."
+  
+  
+  
+ ###小事件buff 
+  
+ #星球修正 
+ uma_nation_suppoted_gambling: "Uncontrolled ranking competition"
+ uma_nation_suppoted_gambling_desc: "This is a planet where illegal horse racing roster betting is growing wildly and uncontrollably, seriously disrupting the racing and economic order of the planet."
+ uma_nation_ban_gambling: "Banned ranking contests"
+ uma_nation_ban_gambling_desc: "Although official bans have been placed on roster interactions on this planet, there are still a few underground guessing venues that are quietly operating."
+ uma_national_guessing_game: "National Competitive Institutions"
+ uma_national_guessing_game_desc: "The ranking contests on this planet have been centrally managed by the national contests agency."
+  
+ #国家修正 
+ uma_enough_sweets: "Increasing the supply of desserts"
+ uma_enough_sweets_desc: "To solve the problem of Umamusume's diet, we have developed and put into the market a new dessert."
+ uma_encourage_reducing_food_consumption: "Encourage dieting"
+ uma_encourage_reducing_food_consumption_desc: "We are encouraging the Umamusume to go on a diet, which greatly reduces their material consumption, but also makes them thin and weak"
+ uma_become_too_fat: "A little fat"
+ uma_become_too_fat_desc: "Because we provide too many desserts, the Umamusume generally appear to gain weight, which affects their health"
+ uma_scientific_nutrition_supply: "Reasonable dieting education"
+ uma_scientific_nutrition_supply_desc: "By educating the Umamusume on proper dieting, the health of the Umamusume has improved significantly."
+ uma_subsidy_restaurant: "Subsidized cafeteria"
+ uma_subsidy_restaurant_desc: "Considering some of the Umamusume who eat huge amounts of food, we will subsidize the cafeteria in the country to host these Umamusume in these cafeterias."
+  
+  
+ ###飞升修正 
+ uma_terrirory_knowledge_hobby: "Interests and Fields"
+ uma_terrirory_knowledge_hobby_desc: "The Umamusume's Field seems to activate more strongly in areas of interest, and by using this characteristic, we can make the Field more beneficial to our productive lives."
+ uma_terrirory_knowledge_dream: "Dream Studies"
+ uma_terrirory_knowledge_dream_desc: "We conducted an in-depth study of the dreams of these Umamusume. We found that these dreams seem to be a reflection of Umamusume's '§Y subconscious§!' of the Umamusume. Although it is difficult for us to figure out the principle inside, the preliminary results have been long enough for us to study."
+ uma_terrirory_dream_stopped: "Curbing the dream"
+ uma_terrirory_dream_stopped_desc: "With the help of the drug, the Umamusumes were at least able to have a good dream"
+ uma_terrirory_dream_unstopped: "Unbridled Dreams"
+ uma_terrirory_dream_unstopped_desc: "Nightmares are plaguing some of the Umamusumes who have activated the field"
+ uma_kenshi_racing_umamusume_test: "Factor detection in competition"
+ uma_kenshi_racing_umamusume_test_desc: "We are implementing factor testing in our competitions to prevent unfair results for Umamusume without factor modifications and factor modified Umamusume in the same competition"
+ uma_kenshi_champion_doubted: "The challenged champion"
+ uma_kenshi_champion_doubted_desc: "There are rumors that are questioning the fairness of the championship"
+ uma_kenshi_uncontrolled_power: "Uncontrolled Power"
+ uma_kenshi_uncontrolled_power_desc: "Some of the maenads who underwent factor modification apparently couldn't control their power very well, and this caused... Uh... Some trouble"
+ uma_kenshi_power_adaption_training: "Strength control training program"
+ uma_kenshi_power_adaption_training_desc: "We are conducting a training program designed to teach Umamusumes to control her strength"
+ uma_kenshi_power_adaption_training_good: "Get control of the power"
+ uma_kenshi_power_adaption_training_good_desc: "After training, our Umamusumes have learned how to control and use their strength."
+ uma_kenshi_ban_the_media: "Regulation of network accounts"
+ uma_kenshi_ban_the_media_desc: "We have blocked some accounts that spread rumors, however, this incident still has some negative impact."
+ uma_kenshi_fear_of_this: "Fear of Factor Transformation"
+ uma_kenshi_fear_of_this_desc: "As it happens, this philosophical question has caused some Umamusumes to fear factor modification. However, it has also allowed our scientists to further consider some of the side effects of factor modification."
+  
+ ###特殊领袖事件修正 
+ uma_kenshi_contamination: "Factor contamination"
+ uma_kenshi_contamination_desc: "Due to our recklessness, the Green Wonder factor contaminated our factor pool and caused serious damage to the planet."
+ uma_grass_wonder_kenshi_library: "Factor library of the grass on the fly"
+ uma_grass_wonder_kenshi_library_desc: "Our scientists have isolated a staggering number of intrinsic factors from the Green Wonder... Ah no, the Grass Wonder has isolated a surprising number of intrinsic factors, which have been stabilized and added to our factor library. These intrinsic factors cover almost all common species, making it easy for us to use them in the productive lives of Umamusume. At the same time, the Factor Library of Kusakami has greatly contributed to our research in factorology and even biology in general.\n\n§RWhat do we need to do so that we don't repeat the same mistakes?§!"
+ uma_raze_in_mystery_galgame: "Koi Derby"
+ uma_raze_in_mystery_galgame_desc: "A game called "Koi Derby" has recently exploded in the country, and this has led many young Umamusumes to look forward to a career as a Umamusume."
+ uma_koi_derby_ii: "Sequel!"
+ uma_koi_derby_ii_desc: "The popular game "Koi Derby" has recently released a sequel. Unlike many games with sequels, the sequel to "Koi Derby" is of even higher quality than the first one. This makes the country once again set off a wave of game craze."
+ uma_selecting_race_successfully_hold: "Auditions held successfully"
+ uma_selecting_race_successfully_hold_desc: "This highly anticipated audition was held successfully"
+ uma_controlled_kd: "Regulated KD"
+ uma_controlled_kd_desc: "To reduce the pressure on our Umamusume selection department and to lead the public to a better understanding of the profession of Umamusume, we will regulate the content of KD."
+ uma_agnes_digital_in_toresen_school: "Our Digital Director"
+ uma_agnes_digital_in_toresen_school_desc: "After Agnes Digital became our Director of Admissions, she made a deep change in our admissions system. This has allowed our admissions system to operate with unprecedented efficiency. At the same time, Digital herself has gained a high reputation for her selfless love for our maidens, earning her the nickname "Our Digital Director."
+ uma_nice_natures_knowledge: "Nice Nature's Knowledge"
+ uma_nice_natures_knowledge_desc: "As a traveler who has traveled between countless worlds, Natures' experience is extremely rich. And these experiences will surely guide our country in every way."
+ ################## 
+ ###商店有关修正### 
+ ################## 
+ #基础修正 
+ uma_intelligence_goods_basic_modifier: "Intelligence enhancement"
+ uma_intelligence_goods_special_modifier: "Intelligence enhancement (bonus every 10 levels)"
+ uma_kenshi_goods_basic_modifier: "Increased willpower"
+ uma_kenshi_goods_special_modifier: "Increased willpower(bonus every 10 levels)"
+ uma_power_goods_basic_modifier: "Strength enhancement"
+ uma_power_goods_special_modifier: "Strength enhancement(bonus every 10 levels)"
+ uma_endurance_goods_basic_modifier: "Endurance enhancement"
+ uma_endurance_goods_special_modifier: "Endurance enhancement(bonus every 10 levels)"
+ uma_speed_goods_basic_modifier: "Speed enhancement"
+ uma_speed_goods_special_modifier: "Speed enhancement(bonus every 10 levels)"
+ #商城抽奖buff 
+ uma_lucky_items: "Lucky prop"
+ uma_lucky_items_desc: "The magic of the lucky prop is sheltering the country"
+ uma_racing_holding_tips: "Tournament Operation Guide"
+ uma_racing_holding_tips_desc: "We've got a lot of tips for running horse races from the race operations guide"
+ uma_fleet_battle_tips: "Fleet Tactics Manual"
+ uma_fleet_battle_tips_desc: "These fleet tactics manual contains a lot of knowledge about fleet formations and battles, which is extremely inspiring for our fleet battles."
+ uma_high_power_energy_block: "High energy blocks"
+ uma_high_power_energy_block_desc: "This high-energy energy block emits a strange energy field, and although we can't figure out exactly where this energy block came from, at least we can use this energy block to give us a lot of energy."
+ uma_miracle_industry_machine: "Miracle Industrial Equipment"
+ uma_miracle_industry_machine_desc: "By restoring, reverse engineering and upgrading the acquired ancient industrial equipment, we have significantly increased the output of our industry."
+ uma_ancient_carrot_seed: "Excellent carrot seeds"
+ uma_ancient_carrot_seed_desc: "The new carrot variety grown from this carrot seed quickly replaced the previous variety with its extremely high output and delicious taste."
+ uma_different_dimention_observer: "The world inside the kaleidoscope"
+ uma_different_dimention_observer_desc: "Through this kaleidoscopic device, we can observe §R a completely different world§! In this world, §Y "we" still exist §! and live in a country called §Y Japan§! in a country called Central Traincent Academy. Living a completely different but equally colorful life. By observing them, we can learn a lot from them..."
+ uma_umamusume_diary: "Observation Diary of Umamusume"
+ uma_umamusume_diary_desc: "It seems to have been written by a senior trainer of the former Umamusume civilization, and it contains a lot of information on the habits of Umamusume, etc. It is a valuable document for observing and recording the Umamusume population in all aspects."
+  
+  
+ ####堕落帝国修正#### 
+ uma_fallen_empire_enhancement_modifier: "Fallen Traincent's cheat buff"
+ uma_fallen_empire_enhancement_modifier_desc: "Come on, it's a Umamusume Fallen empire, it's easily to laid down? There will definitely have cheat buffs!"
+  
+ uma_skill_haozhuanyixi: "A Breath Of Good Fortune"
+ uma_skill_haozhuanyixi_desc: "This particular skill taught to us by the Fallen Empire strengthens the shields and armor of our ships."
+ uma_skill_yiwenzi: "Initial D"
+ uma_skill_yiwenzi_desc: "Thanks to the President of a council's gift, we have acquired this legendary gold skill. This allowed our ships to turn in like the wind and be able to rebuild Byreland in one day."
+ uma_fallen_empire_civil_racing: "Fallen Traincent's Event'"
+ uma_fallen_empire_civil_racing_desc: "We visited Fallen Traincent's competition. Although their Umamusumes' physical quality was unexpectedly poor, their competition organization was extremely advanced. By learning their organizational style, we can significantly improve the quality of domestic competitions."
+ uma_fallen_empire_administeration_experience: "Fallen Traincent's management experience"
+ uma_fallen_empire_administeration_experience_desc: "Although most people in Fallen Traincent have been addicted to VR for a long time, it is also difficult to manage such a large country. We can learn from their experience in this field and use it for us."
+ uma_new_umamusume_from_fallen_empire: "Hope successor"
+ uma_new_umamusume_from_fallen_empire_desc: "Deep Impact's delegation has brought us many cutting-edge technologies and the latest scientific research achievements from Fallen Traincent, which has greatly promoted the scientific and technological development of our country."
+ uma_fallen_empire_visit_cooldown: "Fallen Traincent visit cooldown"
+ uma_fallen_empire_visit_cooldown_desc: "We have visited Fallen Traincent recently and it will take some time to organize a new delegation."
+ uma_fallen_empire_knowledge_seiunsky: "VR training method"
+ uma_fallen_empire_knowledge_seiunsky_desc: "Seiun Sky learned the VR technology used by Fallen Traincent during the inspection. After development, she improved it into a VR training method and widely used it among our soldiers and ordinary people."
+ uma_fallen_empire_knowledge_oguricap: "Oguri's Mobile Restaurant"
+ uma_fallen_empire_knowledge_oguricap_desc: "During the inspection, Oguri Cap learned a lot about food transportation and supply, which will establish a more stable and efficient food supply system for our people."
+ uma_fallen_empire_knowledge_agnesdigital: "Digital's social research"
+ uma_fallen_empire_knowledge_agnesdigital_desc: "Agnes Digital has compiled a detailed report on the residents of Fallen Traincent, which has brought great benefits to our sociological research and planetary governance."
+  
+ ###其它 
+ shipclass_military_hull_mult: "Hull value increase for all ships"
+ mod_UMA_pop_growth_speed_DESC: "The growth rate of the Umamusume population within our empire"
+  
+ ##这是茶座 
+ uma_diplo_modi: "Ministry of Foreign Affairs led by Manhattan Cafe"
+ uma_deep_impact_gift: "Deep Impact's Gift"
+ tachyon_coffee_conspiracy: "A Conspiracy Against The Government"
+  
+  
+  
+ mod_shipclass_military_hull_mult: "£mod_ship_hull_mult£Military ship hull:"
+ mod_planet_structures_uma_crystal_carrot_upkeep_mult: "£uma_crystal_carrot£Crystal carrot maintenance fee:"
+ mod_planet_entertainers_unity_produces_add: "£job_entertainer£艺人£unity£Unity Product:"
+  
+ uma_candle_off_debuff: "War economy"
+ uma_candle_off_debuff_a: "Burnt out embers: Military ships"
+ uma_candle_off_debuff_b: "Burnt out embers: Military factories"
+  
+ mod_leader_officials_uma_crystal_carrot_produces_add: "£official£Official£uma_crystal_carrot£Crystal Carrot Produce:"
+ mod_planet_district_uma_dormitory_build_speed_mult: "Dormitory area construction speed:"
+ mod_planet_district_uma_logistics_area_build_speed_mult: "Logistics Zone Construction Speed:"
+ mod_planet_district_uma_teaching_area_build_speed_mult: "Teaching area construction speed:"
+ mod_planet_district_uma_training_course_build_speed_mult: "Training zone construction speed:"
+  
+  
+  
+ uma_add_treater: "Umamusume Merchant"
+ uma_add_treater_desc: "Because of the existence of commercial buildings, our planet has produced Umamusume merchants"

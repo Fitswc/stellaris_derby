@@ -1,3 +1,723 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3312224687ff75c0b264e319fbb7dd458fbe7b9481efbb90713db0c3a8530b7c
-size 13859
+#############
+#Project:马娘FTL星球
+#根据星海德比小说设定集改编
+#文案：咕噜，小雨，数码
+#Programmer：F
+#Adaptor：F
+
+#################
+namespace = uma_preftl
+
+##原始社会/封建社会/工业革命/FTL
+##random 25possibilities pre ages
+
+#生成
+country_event = {
+	id = uma_preftl.9999
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = uma_has_create_pre_ftl_civilisation
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_has_create_pre_ftl_civilisation
+		random_system = {
+			set_star_flag = uma_pre_ftl_system
+			limit = {
+				distance = {
+					source = root.solar_system
+					min_jumps = 2
+					max_jumps = 10
+				}
+				any_system_planet = {
+					this = {
+						OR = {
+							is_planet_class = pc_gaia
+							is_planet_class = pc_tropical
+							is_planet_class = pc_continental
+							is_planet_class = pc_savannah
+						}
+					}
+				}
+			}
+			random_system_planet = {
+				limit = {
+					OR = {
+						is_planet_class = pc_gaia
+						is_planet_class = pc_tropical
+						is_planet_class = pc_continental
+						is_planet_class = pc_savannah
+					}
+				}
+				uma_create_pre_ftl =  yes
+				set_planet_flag = uma_pre_ftl_planet_here
+				save_global_event_target_as = uma_pre_ftl_planet_in_global
+			}
+		}
+
+	}
+	after = {
+		log = UMA_PREFTL_CIV_HAD_GENERATED
+	}
+}
+
+
+
+
+ship_event = {
+	id = uma_preftl.9998
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_planet_flag = uma_pre_ftl_planet_here
+			exists = event_target:uma_pre_ftl_planet_in_global
+		}
+	}
+
+	immediate = {
+		root.owner = {
+			country_event = {
+				id = uma_preftl.9997
+				days = 30
+			}
+			set_country_flag = uma_preftl_observation_built
+		}
+	}
+}
+
+country_event = {
+	id = uma_preftl.9997
+	title = uma_preftl.9997.title
+	desc = uma_preftl.9997.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	picture = GFX_evt_uma_preftl_meet
+
+	trigger = {
+		has_country_flag = uma_preftl_observation_built
+	}
+
+	option = {
+		name = uma_preftl.9997.a
+	}
+}
+
+
+
+
+##石器社会(Passive)
+situation_event = {
+	id = uma_preftl.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { #这里的owner是土著吗？
+			NOT = {
+				has_country_flag = uma_preftl_1_fired
+			}
+			is_regular_pre_ftl = yes
+			OR = {
+				has_pre_ftl_age = stone_age
+				is_species_class = PRE_UMA
+				is_species_class = umamusume
+			}
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					OR = {
+						has_mission = passive_observation
+						has_mission = specimen_collection
+					}
+				}
+				observation_outpost_owner = {
+					is_ai = no
+					is_species_class = umamusume
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = uma_preftl_1_fired
+			save_event_target_as = uma_pre_ftl_country
+			capital_scope = {
+				save_event_target_as = uma_pre_ftl_planet
+				observation_outpost_owner = {
+					country_event = {
+						id = uma_preftl.2
+					}
+				}
+			}
+		}
+		set_situation_flag = has_ongoing_observation_event_chain
+		# Setting this flag for the duration of the entire event chain
+		# to prevent other observation events from interfering.
+	}
+}
+
+#山洪爆发
+country_event = {
+	id = uma_preftl.2
+	title = uma_preftl.2.title
+	desc = uma_preftl.2.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	trackable = yes
+	picture = GFX_evt_uma_tarfhoon
+
+
+	immediate = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = yes
+		}
+	}
+
+	option = {
+		name = uma_preftl.2.a
+		custom_tooltip = uma_preftl.2.a.tt
+		enable_special_project = {
+			name = UMA_PRE_FTL_FLOOD
+			location = event_target:uma_pre_ftl_planet
+			owner = root
+		}
+
+	}
+	option = {
+		name = uma_preftl.2.b
+		custom_tooltip = uma_preftl.2.b.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_preftl.3
+				days = 70
+			}
+		}
+	}
+
+	after = {
+		custom_tooltip = cannot_reveal_tt
+		custom_tooltip = cannot_dismantle_outpost_tt
+	}
+}
+
+
+
+country_event = {
+	id = uma_preftl.3
+	title = uma_preftl.3.title
+	desc = uma_preftl.3.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	picture = GFX_evt_uma_tarfhoon
+
+	option = {
+		name = uma_preftl.3.a #天哪
+		event_target:uma_pre_ftl_planet = {
+			go_to_next_pre_ftl_age = yes #石器->青铜
+		}
+	}
+	after = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = no
+		}
+		event_target:uma_pre_ftl_country = {
+			random_situation = {
+				limit = {
+					is_situation_type = pre_ftl_tech_progress_situation
+				}
+				remove_situation_flag = has_ongoing_observation_event_chain
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_preftl.4
+	title = uma_preftl.4.title
+	desc = uma_preftl.4.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	picture = GFX_evt_uma_tarfhoon
+
+	option = {
+		name = uma_preftl.4.a
+		event_target:uma_pre_ftl_country = {
+			add_awareness = 7
+		}
+	}
+
+	after = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = no
+		}
+		event_target:uma_pre_ftl_country = {
+			random_situation = {
+				limit = {
+					is_situation_type = pre_ftl_tech_progress_situation
+				}
+				remove_situation_flag = has_ongoing_observation_event_chain
+			}
+		}
+	}
+}
+
+
+
+
+##青铜时代/大竞走(Passive)
+situation_event = {
+	id = uma_preftl.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { #这里的owner是土著吗？
+			NOT = {
+				has_country_flag = uma_preftl_5_fired
+			}
+			is_regular_pre_ftl = yes
+			OR = {
+				has_pre_ftl_age = bronze_age
+				is_species_class = PRE_UMA
+				is_species_class = umamusume
+			}
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					OR = {
+						has_mission = passive_observation
+						has_mission = specimen_collection
+					}
+				}
+				observation_outpost_owner = {
+					is_ai = no
+					is_species_class = umamusume
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = uma_preftl_5_fired
+			save_event_target_as = uma_pre_ftl_country
+			capital_scope = {
+				save_event_target_as = uma_pre_ftl_planet
+				observation_outpost_owner = {
+					country_event = {
+						id = uma_preftl.6
+					}
+				}
+			}
+		}
+		set_situation_flag = has_ongoing_observation_event_chain
+		# Setting this flag for the duration of the entire event chain
+		# to prevent other observation events from interfering.
+	}
+}
+
+
+#战争与竞走（StoryOnly）
+country_event = {
+	id = uma_preftl.6
+	title = uma_preftl.6.title
+	desc = uma_preftl.6.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	picture = GFX_evt_uma_preftl_mess
+
+
+	immediate = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = yes
+		}
+	}
+
+	option = {
+		name = uma_preftl.6.a
+		hidden_effect = {
+			event_target:uma_pre_ftl_planet.observation_outpost = {
+				set_event_locked = no
+			}
+			event_target:uma_pre_ftl_country = {
+				go_to_next_pre_ftl_age = yes
+				random_situation = {
+					limit = {
+						is_situation_type = pre_ftl_tech_progress_situation
+					}
+					remove_situation_flag = has_ongoing_observation_event_chain
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = uma_preftl.699
+				days = 700
+				random = 300
+			}
+		}
+	}
+}
+
+#不要铁器
+country_event = {
+	id = uma_preftl.699
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:uma_pre_ftl_country = {
+			go_to_next_pre_ftl_age = yes
+		}
+	}
+}
+
+
+
+##中古时代
+situation_event = {
+	id = uma_preftl.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			#这里的owner是土著吗？
+			NOT = {
+				has_country_flag = uma_preftl_7_fired
+			}
+			is_regular_pre_ftl = yes
+			OR = {
+				has_pre_ftl_age = late_medieval_age
+				AND = {
+					OR = {
+						is_species_class = PRE_UMA
+						is_species_class = umamusume
+					}
+				}
+			}
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					OR = {
+						has_mission = passive_observation
+						has_mission = specimen_collection
+					}
+				}
+				observation_outpost_owner = {
+					is_ai = no
+					is_species_class = umamusume
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = uma_preftl_7_fired
+			save_event_target_as = uma_pre_ftl_country
+			capital_scope = {
+				save_event_target_as = uma_pre_ftl_planet
+			}
+		}
+
+		owner = {
+			capital_scope = {
+				observation_outpost_owner = {
+					country_event = {
+						id = uma_preftl.8
+					}
+				}
+			}
+		}
+
+		set_situation_flag = has_ongoing_observation_event_chain
+		# Setting this flag for the duration of the entire event chain
+		# to prevent other observation events from interfering.
+	}
+}
+
+#大瘟疫（Player intervene）
+country_event = {
+	id = uma_preftl.8
+	title = uma_preftl.8.title
+	desc = uma_preftl.8.desc
+	is_triggered_only = yes
+	location = From
+	picture = GFX_evt_uma_great_disease
+
+	immediate = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = yes
+		}
+		event_target:uma_pre_ftl_planet = {
+			add_modifier = {
+				modifier = uma_preftl_great_disease
+				months = 8
+			}
+		}
+	}
+
+	option = {
+		name = uma_preftl.8.a
+		custom_tooltip = uma_preftl.2.a.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_preftl.12
+				days = 240
+				random = 70
+			}
+		}
+	}
+	option = {
+		name = uma_preftl.8.b
+		custom_tooltip = uma_preftl.8.b.tt
+		enable_special_project = {
+			name = UMA_PRE_FTL_GD_B
+			owner = Root
+		}
+	}
+	option = {
+		name = uma_preftl.8.c
+		custom_tooltip = uma_preftl.8.c.tt
+		enable_special_project = {
+			name = UMA_PRE_FTL_GD_C
+			owner = This
+		}
+	}
+
+	after = {
+		custom_tooltip = cannot_reveal_tt
+		custom_tooltip = cannot_dismantle_outpost_tt
+	}
+}
+
+
+country_event = {
+	id = uma_preftl.9
+	title = uma_preftl.9.title
+	desc = uma_preftl.9.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	picture = GFX_evt_uma_great_disease
+
+	option = {
+		name = uma_preftl.9.a
+	}
+}
+
+country_event = {
+	id = uma_preftl.10
+	title = uma_preftl.10.title
+	picture = GFX_evt_uma_preftl_dis_fin
+	desc = {
+		trigger = {
+			has_country_flag = uma_gd_roll_2
+		}
+		text = uma_preftl.10.desc
+	}
+	desc = {
+		trigger = {
+			has_country_flag = uma_gd_roll_1
+		}
+		text = uma_preftl.10.desc.b
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = uma_preftl.10.a
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = no
+		}
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = pre_ftl_tech_progress_situation
+				}
+				remove_situation_flag = has_ongoing_observation_event_chain
+			}
+			event_target:uma_pre_ftl_planet = {
+				remove_modifier = uma_preftl_great_disease
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = uma_preftl.11
+	title = uma_preftl.10.title
+	desc = uma_preftl.11.desc
+	picture = GFX_evt_uma_preftl_dis_fin
+	is_triggered_only = yes
+
+	option = {
+		name = uma_preftl.10.a
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = no
+		}
+		custom_tooltip = uma_preftl.11.tt
+		tooltip = {
+			event_target:uma_pre_ftl_country = {
+				add_awareness = 10
+			}
+		}
+		hidden_effect = {
+			random_situation = {
+				limit = {
+					is_situation_type = pre_ftl_tech_progress_situation
+				}
+				remove_situation_flag = has_ongoing_observation_event_chain
+			}
+			event_target:uma_pre_ftl_planet = {
+				remove_modifier = uma_preftl_great_disease
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_preftl.12
+	title = uma_preftl.12.title
+	desc = uma_preftl.12.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_preftl_dis_fin
+
+	immediate = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = no
+		}
+		random_situation = {
+			limit = {
+				is_situation_type = pre_ftl_tech_progress_situation
+			}
+			remove_situation_flag = has_ongoing_observation_event_chain
+		}
+		event_target:uma_pre_ftl_planet = {
+			remove_modifier = uma_preftl_great_disease
+		}
+	}
+
+	option = {
+		name = uma_preftl.12.a
+		go_to_next_pre_ftl_age = yes
+	}
+}
+
+
+##大航海
+situation_event = {
+	id = uma_preftl.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			#这里的owner是土著吗？
+			NOT = {
+				has_country_flag = uma_preftl_14_fired
+			}
+			is_regular_pre_ftl = yes
+			OR = {
+				has_pre_ftl_age = renaissance_age
+				AND = {
+					OR = {
+						is_species_class = PRE_UMA
+						is_species_class = umamusume
+					}
+				}
+			}
+			capital_scope = {
+				has_observation_outpost = yes
+				observation_outpost = {
+					OR = {
+						has_mission = passive_observation
+						has_mission = specimen_collection
+					}
+				}
+				observation_outpost_owner = {
+					is_ai = no
+					is_species_class = umamusume
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = uma_preftl_14_fired
+			save_event_target_as = uma_pre_ftl_country
+			capital_scope = {
+				save_event_target_as = uma_pre_ftl_planet
+			}
+		}
+
+		owner = {
+			capital_scope = {
+				observation_outpost_owner = {
+					country_event = {
+						id = uma_preftl.15
+					}
+				}
+			}
+		}
+
+		set_situation_flag = has_ongoing_observation_event_chain
+		# Setting this flag for the duration of the entire event chain
+		# to prevent other observation events from interfering.
+	}
+}
+
+#（StoryOnly）
+country_event = {
+	id = uma_preftl.15
+	title = uma_preftl.15.title
+	desc = uma_preftl.15.desc
+	is_triggered_only = yes
+	location = event_target:uma_pre_ftl_planet
+	picture = GFX_evt_uma_preftl_great_trip
+
+
+	immediate = {
+		event_target:uma_pre_ftl_planet.observation_outpost = {
+			set_event_locked = yes
+		}
+	}
+
+	option = {
+		name = uma_preftl.15.a
+		hidden_effect = {
+			event_target:uma_pre_ftl_planet.observation_outpost = {
+				set_event_locked = no
+			}
+			event_target:uma_pre_ftl_country = {
+				go_to_next_pre_ftl_age = yes
+				random_situation = {
+					limit = {
+						is_situation_type = pre_ftl_tech_progress_situation
+					}
+					remove_situation_flag = has_ongoing_observation_event_chain
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

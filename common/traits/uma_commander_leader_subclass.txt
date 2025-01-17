@@ -1,3 +1,115 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a663dd1976d00f966b70b4b6efd37966bedf1ff0e12af0e243d71136acfcf518
-size 2709
+###分类天赋树###
+##Commander
+###征服者(Admiral)
+subclass_zhengfuzhe_general = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_admiral
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = admiral_subclass_tt
+	fleet_modifier = {
+		ship_speed_mult = 1.0
+		ship_weapon_range_mult = 0.25
+		ship_weapon_damage = 0.4
+	}
+	leader_potential_add = {
+		#判定范围
+		from = {
+			is_species_class = umamusume
+#			has_authority = auth_trainingcenter
+		}
+
+	}
+	leader_class = { commander }
+	background_icon = "GFX_leader_subclass_commander_admiral_background"
+}
+
+
+
+###星球机动(General)
+subclass_jidongxueshuo_general = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_general
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = general_subclass_tt
+	leader_potential_add = {                                                #判定范围
+		from = {
+			is_species_class = umamusume
+#			has_authority = auth_trainingcenter
+		}
+
+	}
+	army_modifier = {
+		army_damage_mult = 0.3
+		army_attack_morale_mult = 0.2
+	}
+	leader_class = { commander }
+
+	background_icon = "GFX_leader_subclass_commander_general_background"
+}
+
+
+###存护者(Governor)
+subclass_cunhuzhe_governor = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_governor
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = governor_subclass_tt
+	leader_potential_add = {                                                #判定范围
+		from = {
+			is_species_class = umamusume
+#			has_authority = auth_trainingcenter
+		}
+	}
+	planet_modifier = {
+		army_health = 0.25
+		army_defense_damage_mult = 0.25
+	}
+	self_modifier = {
+		planet_combat_width_add = -4
+	}
+	leader_class = { commander }
+
+	background_icon = "GFX_leader_subclass_commander_governor_background"
+}
+
+
+###一马当先(Councilor)
+subclass_zhanluezhihui_councilor = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_councilor
+		COUNCIL = yes
+	}
+	custom_tooltip_with_modifiers = councilor_subclass_tt
+	leader_potential_add = {                                                #判定范围
+		from = {
+			is_species_class = umamusume
+#			has_authority = auth_trainingcenter
+		}
+	}
+	councilor_modifier = {
+		armies_cost_mult = -0.2
+		armies_upkeep_mult = -0.2
+		ship_military_cost_mult = -0.05
+		ship_starting_experience_add = 100
+	}
+	leader_class = { commander }
+
+	background_icon = "GFX_leader_subclass_commander_councilor_background"
+}
+
+

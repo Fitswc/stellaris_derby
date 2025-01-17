@@ -1,3 +1,312 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:575a41cd196597e515b2348b0ede6c85c19a8124fbccad5d2f0b14c58d074509
-size 5560
+namespace = uma_autorollsilevent
+#静默模式下的出卡事件,没有抽卡马娘
+
+
+#100商店币
+country_event = {
+	id = uma_autorollsilevent.100 #事件文本
+	is_triggered_only = yes #通过引入事件触发
+	hide_window = yes
+
+	immediate = {
+				hidden_effect = {
+					change_variable = {
+						which = uma_num_of_coin
+						value = 100
+					}
+			}
+		}
+	}
+#	option = {
+#		name = uma_autorollsilevent.100.a
+#		custom_tooltip = uma_add_shop_coin_100
+#		hidden_effect = {
+#			change_variable = {
+#				which = uma_num_of_coin
+#				value = 100
+#			}
+#		}
+#	}
+#}
+
+#50商店币
+country_event = {
+	id = uma_autorollsilevent.101
+	is_triggered_only = yes		#通过引入事件触发
+	hide_window = yes
+	immediate = {
+		hidden_effect = {
+			change_variable = {
+				which = uma_num_of_coin
+				value = 50
+			}
+		}
+	}
+	#option = {
+	#	name = uma_autorollsilevent.101.a
+	#	custom_tooltip = uma_add_shop_coin_50
+	#	hidden_effect = {
+	#		change_variable = {
+	#			which = uma_num_of_coin
+	#			value = 50
+	#		}
+	#	}
+	#}
+}
+
+#3000能量币（小型能量块）
+country_event = {
+	id = uma_autorollsilevent.102
+	is_triggered_only = yes		#通过引入事件触发
+	hide_window = yes
+
+	immediate = {
+		add_resource = {
+			energy = 3000
+		}
+	}
+}
+
+#3000食物（超大号胡萝卜汉堡肉）
+country_event = {
+	id = uma_autorollsilevent.103
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = {
+			food = 3000
+		}
+	}
+}
+
+#3000矿物（一块富金属矿石）
+country_event = {
+	id = uma_autorollsilevent.104
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = {
+			minerals = 3000
+		}
+	}
+
+}
+
+#1000合金（一块合金）
+country_event = {
+	id = uma_autorollsilevent.105
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+				add_resource = {
+			alloys = 1000
+		}
+	}
+}
+
+#1000消费品（马娘日用品组合）
+country_event = {
+	id = uma_autorollsilevent.106
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = {
+			consumer_goods = 1000
+		}
+	}
+}
+
+#500水晶萝卜（更多的水晶萝卜？）
+country_event = {
+	id = uma_autorollsilevent.107
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = 500
+		}
+	}
+}
+
+#500三女神知识（三女神古籍）
+country_event = {
+	id = uma_autorollsilevent.108
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = {
+			uma_threegodness_knowledge = 500
+		}
+	}
+}
+
+#资源大礼包！
+country_event = {
+	id = uma_autorollsilevent.109
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = {
+			energy = 6000
+			food = 6000
+			minerals = 6000
+			alloys = 2000
+			consumer_goods = 2000
+			uma_crystal_carrot = 1000
+			uma_threegodness_knowledge = 1000
+		}
+	}
+}
+
+#一件小小的开运道具
+country_event = {
+	id = uma_autorollsilevent.110
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_lucky_items
+			days = 7300
+		}
+	}
+}
+
+#赛事运营指南
+country_event = {
+	id = uma_autorollsilevent.111
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+	immediate = {
+		add_modifier = {
+			modifier = uma_racing_holding_tips
+			days = 7300
+		}
+	}
+}
+
+#古老的百科全书
+country_event = {
+	id = uma_autorollsilevent.112
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 6
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 6
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 6
+		}
+	}
+}
+
+#一堆古代文物
+country_event = {
+	id = uma_autorollsilevent.113
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_resource = { minor_artifacts = 20 }
+	}
+
+}
+
+#一本舰队战术手册
+country_event = {
+	id = uma_autorollsilevent.114
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_fleet_battle_tips
+			days = 7300
+		}
+	}
+}
+
+####唯一事件
+#高能能量块
+country_event = {
+	id = uma_autorollsilevent.115
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_high_power_energy_block
+			days = -1
+		}
+	}
+}
+
+###奇迹工业设备
+country_event = {
+	id = uma_autorollsilevent.116
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_miracle_industry_machine
+			days = -1
+		}
+	}
+}
+
+###优良胡萝卜种
+country_event = {
+	id = uma_autorollsilevent.117
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_ancient_carrot_seed
+			days = -1
+		}
+	}
+}
+
+###诡异的观测设备（万花镜\异次元观测设备\动画维度观测设备）
+country_event = {
+	id = uma_autorollsilevent.118
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_different_dimention_observer
+			days = -1
+		}
+	}
+}
+
+###马娘观察日记
+country_event = {
+	id = uma_autorollsilevent.119
+	hide_window = yes
+	is_triggered_only = yes		#通过引入事件触发
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_umamusume_diary
+			days = -1
+		}
+	}
+}

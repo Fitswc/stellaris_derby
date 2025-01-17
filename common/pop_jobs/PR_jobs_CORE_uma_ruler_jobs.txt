@@ -1,3 +1,68 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:66cc27065fd0bc8d1bff0043768097b33fdbc0dcb75114cf9b0b3a719110c0c9
-size 1327
+##PR适配
+
+
+#里见商事经理
+PR_job_CONVERT_uma_satonomerchant = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_galactic_stock_exchange
+	clothes_texture_index = 1
+
+	icon = uma_satonomerchant
+	inline_script = {
+		script = "jobs/PR_trgr_pop_modifier_JOB_integrated_VAR"
+		JOB = uma_satonomerchant
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		#贸易额+20 星球贸易额+10%
+		trade_value_add = 20
+		trade_value_mult = 0.10
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+		mult = planet.value:PR_prmt_sv_plnt_JOB_efficiency|JOB|uma_satonomerchant|	#_|PR参数|
+	}
+
+	resources = {
+		category = planet_merchants
+		upkeep = {
+			consumer_goods = 2
+			mult = planet.value:PR_prmt_sv_plnt_JOB_efficiency|CHAIN|general|JOB|uma_satonomerchant|
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+		modifier = {
+			
+		}
+	}
+
+	
+
+	weight = {
+		inline_script = {
+			script = "jobs/PR_weight_JOB_convert"
+			SVAR = ruler
+			JOB = uma_satonomerchant
+		}    #_|PR参数|
+	}
+}

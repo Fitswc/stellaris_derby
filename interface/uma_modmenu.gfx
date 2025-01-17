@@ -1,3 +1,77 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd153274cb015e9b4c562476b885c79e162e32f8bf63275d3bbdecbfb0c2b4f2
-size 1564
+spriteTypes = {
+	#mmu
+	spriteType = {
+		name = GFX_uma_mmu_bg
+		textureFile = "gfx/interface/uma_modmenu/BG.DDS"
+	}
+
+
+	spriteType = {
+		name = GFX_uma_mmu_save
+		textureFile = "gfx/interface/uma_modmenu/Done.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_team
+		textureFile = "gfx/interface/uma_modmenu/Team.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_donate
+		textureFile = "gfx/interface/uma_modmenu/Donate.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_mid_GI
+		textureFile = "gfx/interface/uma_modmenu/G1_up.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_mid_GII
+		textureFile = "gfx/interface/uma_modmenu/G2_up.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_mid_GIII
+		textureFile = "gfx/interface/uma_modmenu/G3_up.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_unifinish
+		textureFile = "gfx/interface/uma_modmenu/Unfinish_button.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_gs_weak
+		textureFile = "gfx/interface/uma_modmenu/Weak.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_gs_full
+		textureFile = "gfx/interface/uma_modmenu/Full.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_gs_none
+		textureFile = "gfx/interface/uma_modmenu/None.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_dnd
+		textureFile = "gfx/interface/uma_modmenu/DND.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_coc
+		textureFile = "gfx/interface/uma_modmenu/COC.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_vill
+		textureFile = "gfx/interface/uma_modmenu/vill.DDS"
+	}
+
+	spriteType = {
+		name = "GFX_text_uma_donate_wechat"
+		textureFile = "gfx/interface/uma_modmenu/uma_wechat_reward.dds"
+	}
+}

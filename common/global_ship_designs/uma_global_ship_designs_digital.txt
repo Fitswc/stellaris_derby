@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d75ebbf1656eddf9d2248cfb0b7356eaa39e990c885f41c0db597dfa43ddaee7
-size 753
+###ship_design需要引用shipsize，ship_size给模板（武器槽位有哪些），ship_design则是确定这些模板里面给哪些武器
+# Small Space Amoeba-升级版
+
+ship_design = {
+	name = "NAME_Uma_Fallen_Empire_Amoeba_MKII" #本地化的key
+	ship_size = uma_fallen_mission_amoeba
+	hide_size = yes
+
+	section = {
+		template = "space_amoeba_small_beige_blue"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="BIO_DRIVE"
+}

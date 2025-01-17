@@ -1,3 +1,253 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:416935fdf8e27b8bf6eab0ad7b1361d5a960a505f9ccce3ff46acbfff18d42ec
-size 5840
+######################
+#######舰船部件#######
+######################
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_aura_furyou_halo"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_aura_furyou_halo.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_aura_shige_halo"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_aura_shige_halo.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_auro_ats_01"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_auro_ats_01.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_computer_running_way_1"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_computer_running_way_1.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_computer_running_way_2"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_computer_running_way_2.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_computer_running_way_3"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_computer_running_way_3.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_computer_running_way_4"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_computer_running_way_4.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_twin_turbo_booster"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_twin_turbo_booster.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_aurora_emitter"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_aurora_emitter.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_big_eater_shield_energy_retribution"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_big_eater_shield_energy_retribution.dds"
+	}
+}
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_color_mass_accelerator"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_color_mass_accelerator.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_crystal_carrot_corvette"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_crystal_carrot_corvette.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_crystal_carrot_corvette_mk2.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_fermion_armor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_fermion_armor.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_hadron_disruptor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_hadron_disruptor.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_high_energy_light_particle_shield"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_high_energy_light_particle_shield.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_high_energy_plasma"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_high_energy_plasma.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_mejiro_bright_laser"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_mejiro_bright_laser.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_string_lance"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_string_lance.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_string_lance_titan"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_string_lance_titan.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_three_godness_jump_drive"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_three_godness_jump_drive.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_wave_function_disruption_lance"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_wave_function_disruption_lance.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_cc_engine"
+		textureFile = "gfx/interface/icons/ship_parts/uma_cc_ship_thruster.dds"
+	}
+}
+
+
+
+###TGRD MIll
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_reaction"
+		textureFile = "gfx/interface/icons/ship_parts/tg_reaction.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_reaction_2"
+		textureFile = "gfx/interface/icons/ship_parts/tg_reaction_2.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_reaction_3"
+		textureFile = "gfx/interface/icons/ship_parts/tg_reaction_3.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_nn_halo"
+		textureFile = "gfx/interface/icons/ship_parts/tg_nn_halo.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_shield"
+		textureFile = "gfx/interface/icons/ship_parts/tg_wall_shield.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_armor"
+		textureFile = "gfx/interface/icons/ship_parts/tg_wall_armor.dds"
+	}
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_MAAM"
+		textureFile = "gfx/interface/icons/ship_parts/tg_MAAM.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_QAAM"
+		textureFile = "gfx/interface/icons/ship_parts/tg_QAAM.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_aech_weapon"
+		textureFile = "gfx/interface/icons/ship_parts/tg_arch_weapon.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_tg_arch_weapon_2"
+		textureFile = "gfx/interface/icons/ship_parts/tg_arch_weapon_2.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_transform_pk"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_transform_pk.dds"
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_uma_crystal_carrot_pk"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_uma_crystal_carrot_pk.dds"
+	}
+}
+
+

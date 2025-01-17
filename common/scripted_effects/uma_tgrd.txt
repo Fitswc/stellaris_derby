@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1efa6938bed636c35b1f73133a59060ea5d5f43f78fa9fb3f8bde75c5f47dcb6
-size 462
+uma_tgrd_clear_TGAC_flag = {
+	optimize_memory
+	remove_planet_flag = uma_TGAC_produce_alloys
+	remove_planet_flag = uma_TGAC_produce_goods
+	remove_planet_flag = uma_TGAC_produce_molts
+	remove_planet_flag = uma_TGAC_produce_gas
+	remove_planet_flag = uma_TGAC_produce_crystal
+	remove_planet_flag = uma_TGAC_produce_livingmat
+	remove_planet_flag = uma_TGAC_produce_darkm
+	remove_planet_flag = uma_TGAC_produce_nano
+	remove_planet_flag = uma_TGAC_produce_uma_crystal
+}

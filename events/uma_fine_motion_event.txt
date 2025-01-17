@@ -1,3 +1,2181 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:edde500e1959de5f688bfe02bf67bc0e4c6173c9a0574399b5e31f1db13ddd65
-size 37529
+namespace = uma_finemotion
+
+
+#Trigger(On First Contact)
+first_contact_event = {
+	id = uma_finemotion.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = uma_fine_motion_happened
+			}
+			has_authority = auth_trainingcenter
+		}
+		NOT = {
+			has_global_flag = uma_fine_had_spawmed_in_global
+		}
+	}
+
+
+	immediate = {
+		set_global_flag = uma_fine_had_spawmed_in_global
+		owner = {
+			country_event = {
+				id = uma_finemotion.2
+				days = 300
+			}
+			set_country_flag = uma_fine_motion_happened
+
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.2
+	title = uma_finemotion_unknow_name
+	desc = uma_finemotion.2.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room#占位符
+	}
+
+	trigger = {
+		OR = {
+			has_origin = origin_uma_below_threegodness
+			has_origin = origin_uma_candleoff
+			has_origin = origin_uma_business_MAN
+		}
+		has_authority = auth_trainingcenter
+	}
+
+	option = {
+		name = uma_finemotion.2.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.3
+	title = uma_finemotion
+	desc = uma_finemotion.3.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	immediate = {
+
+
+	}
+
+	option = {
+		name = uma_finemotion.3.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.4
+	title = uma_finemotion
+	desc = uma_finemotion.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	immediate = {
+		hidden_effect = {
+			begin_event_chain = {
+				event_chain = uma_fm_full
+				target = Root
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_finemotion.4.a
+		response_text = uma_finemotion.4.a.respon
+		end_event_chain = uma_fm_full
+	}
+
+	option = {
+		name = uma_finemotion.4.b
+		hidden_effect = {
+			set_country_flag = uma_finemotion_happened
+			create_point_of_interest = {
+				id = uma_fm_1
+				name = uma_fm_1_name
+				desc = uma_fm_1_desc
+				event_chain = uma_fm_full
+				location = capital_scope
+			}
+			create_leader = {
+				name = FINE
+				species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+				event_leader = no
+				immortal = no
+				gender = female
+				class = official
+				skill = 2
+				set_age = 17
+				custom_catch_phrase = uma_special_leader_fine_catch_phrase
+				background_planet = this.home_planet
+				background_job = uma_racing_umamusume
+				traits = {
+					trait = uma_governor_trait_sp_fine
+					trait = leader_trait_jijiankuangmo_governor
+					trait = leader_trait_guihuadaren_governor
+					trait = leader_trait_zhuzhongminsheng_governor
+				}
+				effect = {
+					change_leader_portrait = "22c"
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_fine
+					save_global_event_target_as = uma_is_leader_fine
+				}
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_fine
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_fine
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+}
+
+
+#ARC(Trigger)
+
+fleet_event = {
+	id = uma_finemotion.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = uma_finemotion_2_happened
+			}
+			has_country_flag = uma_finemotion_happened
+		}
+	}
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_fm_full
+				amount = 1
+				counter = uma_fm_arc
+			}
+			country_event = {
+				id = uma_finemotion.6
+				days = 200
+			}
+			set_country_flag = uma_finemotion_2_happened
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.6
+	title = uma_finemotion
+	desc = uma_finemotion.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_fine_event_break
+		}
+	}
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.6.a
+		hidden_effect = {
+			set_country_flag = uma_finemotion_2_happened
+			country_event = {
+				id = uma_finemotion.7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.7
+	title = uma_finemotion
+	desc = uma_finemotion.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.7.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.8
+	title = uma_finemotion
+	desc = uma_finemotion.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.8.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.9
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.9
+	title = uma_finemotion
+	desc = uma_finemotion.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.9.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.10
+	title = uma_finemotion
+	desc = uma_finemotion.10.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.10.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.11
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.11
+	title = uma_finemotion
+	desc = uma_finemotion.11.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.11.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.12
+	title = uma_finemotion
+	desc = uma_finemotion.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_arc_room
+	}
+
+	option = {
+		name = uma_finemotion.12.a
+		enable_special_project = {
+			name = UMA_FINE_RESEARH
+			owner = this
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.13
+	is_triggered_only = yes
+	hide_window = yes
+
+
+	immediate = {
+		random_list = {
+			80 = {
+				country_event = {
+					id = uma_finemotion.14
+					days = 20
+				}
+			}
+			20 = {
+				country_event = {
+					id = uma_finemotion.15
+					days = 20
+				}
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_finemotion.14
+	title = uma_finemotion
+	desc = uma_finemotion.14.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_finemotion.14.a
+		add_modifier = {
+			modifier = uma_fine
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.30
+				days = 183
+				random = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.15
+	title = uma_finemotion
+	desc = uma_finemotion.15.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_finemotion.15.a
+		hidden_effect = {
+			add_resource = {
+				food = -5000000
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.30
+				days = 183
+				random = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.166
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = uma_finemotion_3_happened
+		}
+		has_country_flag = uma_finemotion_happened
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_finemotion.16
+			days = 50
+		}
+	}
+}
+
+
+
+##GOVERNMENT Change
+country_event = {
+	id = uma_finemotion.16
+	title = uma_finemotion
+	desc = uma_finemotion.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		NOT = {
+			OR = {
+				has_country_flag = uma_finemotion_3_happened
+				has_country_flag = uma_fine_event_break
+			}
+		}
+		has_country_flag = uma_finemotion_happened
+	}
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		hidden_effect = {
+
+			add_event_chain_counter = {
+				event_chain = uma_fm_full
+				amount = 1
+				counter = uma_fm_arc
+			}
+
+		}
+		name = uma_finemotion.16.a
+		hidden_effect = {
+			set_country_flag = uma_finemotion_3_happened
+			country_event = {
+				id = uma_finemotion.17
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.17
+	title = uma_finemotion
+	desc = uma_finemotion.17.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+
+	}
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.17.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.18
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.18
+	title = uma_finemotion
+	desc = uma_finemotion.18.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.18.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.19
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.19
+	title = uma_finemotion
+	desc = uma_finemotion.19.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.19.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.20
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.20
+	title = uma_finemotion
+	desc = uma_finemotion.20.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.20.a
+		response_text = uma_finemotion.20.a.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_finemotion.20.b
+		response_text = uma_finemotion.20.b.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_finemotion.20.c
+		response_text = uma_finemotion.20.c.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_finemotion.20.d
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.21
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.21
+	title = uma_finemotion
+	desc = uma_finemotion.21.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.21.a
+		response_text = uma_finemotion.21.a.resp
+		add_modifier = {
+			modifier = uma_fine_royal_star
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.30
+				days = 183
+				random = 20
+			}
+		}
+	}
+}
+
+##Technology
+country_event = {
+	id = uma_finemotion.222
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_battleships
+		has_country_flag = uma_finemotion_happened
+		NOT = {
+			OR = {
+				has_country_flag = uma_finemotion_4_happened
+				has_country_flag = uma_fine_event_break
+			}
+		}
+	}
+
+	immediate = {
+
+		add_event_chain_counter = {
+			event_chain = uma_fm_full
+			amount = 1
+			counter = uma_fm_arc
+		}
+
+		country_event = {
+			id = uma_finemotion.22
+			days = 20
+		}
+		set_country_flag = uma_finemotion_4_happened
+	}
+}
+
+
+
+country_event = {
+	id = uma_finemotion.22
+	title = uma_finemotion
+	desc = uma_finemotion.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.22.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.23
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.23
+	title = uma_finemotion
+	desc = uma_finemotion.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.23.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.24
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.24
+	title = uma_finemotion
+	desc = uma_finemotion.24.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.24.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.25
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.25
+	title = uma_finemotion
+	desc = uma_finemotion.25.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.25.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.26
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.26
+	title = uma_finemotion
+	desc = uma_finemotion.26.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.26.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.30
+				days = 183
+				random = 20
+			}
+		}
+	}
+	option = {
+		name = uma_finemotion.26.b
+		response_text = uma_finemotion.26.b.resp
+		add_modifier = {
+			modifier = uma_fine_royal_sword
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.30
+				days = 183
+				random = 20
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_finemotion.30
+	title = uma_finemotion.30.title
+	desc = uma_finemotion.30.desc
+	picture = GFX_evt_uma_fine_lamen_heat
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			has_country_flag = uma_finemotion_3_happened
+			has_country_flag = uma_finemotion_2_happened
+			has_country_flag = uma_finemotion_4_happened
+			has_country_flag = uma_finemotion_happened
+			NOT = {
+				OR = {
+					has_country_flag = uma_finemotion_5_happened
+					has_country_flag = uma_fine_event_break
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_finemotion_5_happened
+	}
+
+	option = {
+		name = uma_finemotion.30.a
+		enable_special_project = {
+			name = UMA_FINE_FIND
+			owner = this
+		}
+	}
+
+	option = {
+		name = uma_finemotion.30.b
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.60
+				days = 750
+			}
+		}
+	}
+
+	option = {
+		name = uma_finemotion.30.c
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.50
+				days = 240
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_finemotion.31
+	title = uma_finemotion.31.title
+	desc = uma_finemotion.31.desc
+	picture = GFX_evt_uma_fine_lamen_heat
+	is_triggered_only = yes
+
+	option = {
+		name = uma_finemotion.31.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.32
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.32
+	title = uma_finemotion_vtuber
+	desc = uma_finemotion.32.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+#		portrait =
+		room = uma_fine_cast_room
+	}
+
+	option = {
+		name = uma_finemotion.32.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.33
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.33
+	title = uma_finemotion
+	desc = uma_finemotion.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_cast_room
+	}
+
+	option = {
+		name = uma_finemotion.33.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.34
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.34
+	title = uma_finemotion
+	desc = uma_finemotion.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_cast_room
+	}
+
+	option = {
+		name = uma_finemotion.34.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.35
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.35
+	title = uma_finemotion
+	desc = uma_finemotion.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_fine_cast_room
+	}
+
+	option = {
+		name = uma_finemotion.35.a
+		add_modifier = {
+			modifier = uma_fine_royal_noodle
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.36
+				days = 364
+			}
+		}
+	}
+}
+
+
+
+
+##Pri
+country_event = {
+	id = uma_finemotion.36
+	title = uma_finemotion.36.title
+	desc = uma_finemotion.36.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_finemotion.36.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.37
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.37
+	title = uma_finemotion
+	desc = uma_finemotion.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.37.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.38
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_finemotion.38
+	title = uma_finemotion
+	desc = uma_finemotion.38.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.38.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.39
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_finemotion.39
+	title = uma_finemotion
+	desc = uma_finemotion.39.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.39.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.40
+			}
+		}
+
+	}
+}
+
+
+country_event = {
+	id = uma_finemotion.40
+	title = uma_finemotion
+	desc = uma_finemotion.40.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.40.a
+		response_text = uma_finemotion.40.a.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_finemotion.40.b
+		response_text = uma_finemotion.40.b.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_finemotion.40.c
+		response_text = uma_finemotion.40.c.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.60
+				days = 240
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			set_country_flag = uma_finemotion_pri_meet_finished
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_finemotion.50
+	title = uma_finemotion.50.title
+	desc = uma_finemotion.50.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_finemotion.50.a
+		hidden_effect = {
+			remove_modifier = uma_fine
+			remove_modifier = uma_fine_royal_star
+			remove_modifier = uma_fine_royal_sword
+			remove_modifier = uma_fine_royal_noodle
+			this.home_planet = {
+				add_planet_devastation = 100
+			}
+			event_target:uma_is_leader_fine = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+	}
+}
+
+
+#根除噩梦
+country_event = {
+	id = uma_finemotion.60
+	title = uma_finemotion
+	desc = uma_finemotion.60.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_fine_event_break
+		}
+	}
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.60.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.61
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.61
+	title = uma_finemotion
+	desc = uma_finemotion.61.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.61.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.62
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.62
+	title = uma_finemotion
+	desc = uma_finemotion.62.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.62.a
+		hidden_effect = {
+			event_target:uma_is_leader_fine = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+		enable_special_project = {
+			name = UMA_FINE_LOST
+			owner = This
+		}
+	}
+
+	option = {
+		name = uma_finemotion.62.b
+		trigger = {
+			has_country_flag = uma_finemotion_pri_meet_finished
+		}
+		hidden_effect = {
+			event_target:uma_is_leader_fine = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+			country_event = {
+				id = uma_finemotion.100
+				days = 20
+			}
+
+			create_point_of_interest = {
+				id = uma_fm_2
+				name = uma_fm_2_name
+				desc = uma_fm_2_desc
+				event_chain = uma_fm_full
+				location = capital_scope
+			}
+		}
+
+		add_modifier = {
+			modifier = uma_fine_skyfall
+			months = 6
+		}
+		remove_modifier = uma_fine
+		remove_modifier = uma_fine_royal_star
+		remove_modifier = uma_fine_royal_sword
+		remove_modifier = uma_fine_royal_noodle
+		#		begin_event_chain = {
+		#			event_chain = uma_fine_finding
+		#			target = this
+		#		}
+	}
+
+#	after = {
+#		hidden_effect = {
+#			hidden_effect = {
+#			event_target:uma_is_leader_fine = {
+#				kill_leader = {
+#					show_notification = no
+#				}
+#			}
+#		}
+#		}
+#	}
+
+}
+
+
+
+
+
+#ShipCreator
+country_event = {
+	id = uma_finemotion.100
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		save_global_event_target_as = uma_fine_player_country
+		create_country = {
+			name = UNKNOWN
+			type = uma_fine
+			name_list = random
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags01.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"red_orange"
+					"blue"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_hostile = event_target:uma_fine_player_country
+				set_country_flag = uma_fine_hostile
+				save_global_event_target_as = uma_fine_hostile
+				create_ship_design = { design = "NAME_Void_Shaper" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Unbidden_Anchor" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Unbidden_Starbase" }
+				add_ship_design = last_created_design
+			}
+		}
+		event_target:uma_fine_hostile = {
+			create_fleet = {
+				name = "goldi_ship_object"
+				effect = {
+					set_owner = event_target:uma_fine_hostile
+					save_global_event_target_as = uma_fine_hostile_fleet
+					set_fleet_flag = uma_fine_attack_fleet
+					while = {
+						count = 20
+						create_ship = {
+							name = "NAME_FINE_HOSTYLE"
+							design = "NAME_Revenant"
+							graphical_culture = "extra_dimensional_01"
+							effect = {
+								set_ship_flag = fine_ship_hostile
+								save_event_target_as = fine_ship_hostile
+							}
+						}
+						set_location = {
+							target = event_target:uma_fine_player_country.capital_scope
+							distance = 50
+							angle = random
+						}
+						set_fleet_stance = passive
+						set_aggro_range = 100
+						set_aggro_range_measure_from = self
+						set_event_locked = yes
+						set_fleet_bombardment_stance = armageddon
+					}
+				}
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = uma_finemotion.102
+			days = 50
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_finemotion.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_fine_friend_go_away
+		}
+	}
+
+	immediate = {
+		save_global_event_target_as = uma_fine_player_country
+		create_country = {
+			name = UNKNOWN
+			type = uma_fine_friend
+			name_list = random
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags01.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"red_orange"
+					"blue"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_hostile = event_target:uma_fine_hostile
+				set_faction_hostility = {
+					target = event_target:uma_fine_player_country
+					set_friendly = yes
+				}
+				set_country_flag = uma_fine_friend
+				save_global_event_target_as = uma_fine_friend
+				create_ship_design = { design = "NAME_Void_Shaper" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Unbidden_Anchor" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Unbidden_Starbase" }
+				add_ship_design = last_created_design
+			}
+		}
+		event_target:uma_fine_friend = {
+			create_fleet = {
+				name = "goldi_ship_object"
+				effect = {
+					set_owner = event_target:uma_fine_friend
+					set_fleet_flag = uma_fine_defend_fleet
+					while = {
+						count = 19
+						create_ship = {
+							name = "NAME_FINE_HOSTYLE"
+							design = "NAME_Revenant"
+							graphical_culture = "extra_dimensional_01"
+							effect = {
+								set_ship_flag = fine_ship_friend
+								save_event_target_as = fine_ship_friend
+							}
+						}
+						set_location = {
+							target = event_target:uma_fine_player_country.capital_scope
+							distance = 50
+							angle = random
+						}
+						set_fleet_stance = passive
+						set_fleet_bombardment_stance = armageddon
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.102
+	title = uma_finemotion.102.title
+	desc = uma_finemotion.102.desc
+	picture = GFX_evt_small_space_battle
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_fine_friend_go_away
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_finemotion.101
+		}
+		event_target:uma_fine_hostile_fleet = {
+			set_event_locked = no
+		}
+	}
+	option = {
+		name = uma_finemotion.102.a
+	}
+
+}
+
+
+country_event = {
+	id = uma_finemotion.70
+	title = uma_finemotion.70.title
+	desc = uma_finemotion.70.desc
+	picture = GFX_evt_crisis_defeated
+	is_triggered_only = yes
+
+	trigger = {
+		fromfromfrom = {
+			has_fleet_flag = uma_fine_attack_fleet
+		}
+	}
+
+	immediate = {
+		create_point_of_interest = {
+			id = uma_fm_3
+			name = uma_fm_3_name
+			desc = uma_fm_3_desc
+			event_chain = uma_fm_full
+			location = capital_scope
+		}
+		event_target:uma_fine_hostile = {
+			destroy_country = yes
+		}
+		enable_special_project = {
+			name = UMA_FINE_ANA
+			owner = this
+		}
+		event_target:uma_fine_friend = {
+			destroy_country = yes
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+		}
+		set_country_flag = uma_fine_friend_go_away
+	}
+	option = {
+		name = uma_finemotion.70.a
+	}
+
+}
+
+
+country_event = {
+	id = uma_finemotion.74
+	title = uma_finemotion.74.title
+	desc = uma_finemotion.74.desc
+	picture = GFX_evt_small_space_battle
+	is_triggered_only = yes
+
+	option = {
+		name = uma_finemotion.74.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.75
+			}
+		}
+	}
+}
+
+
+
+
+
+##System Creator
+##星系生成器！！
+
+country_event = {
+	id = uma_finemotion.75
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+
+		create_point_of_interest = {
+			id = uma_fm_4
+			name = uma_fm_4_name
+			desc = uma_fm_4_desc
+			event_chain = uma_fm_full
+			location = event_target:uma_where_fine_is
+		}
+
+		uma_spawn_system_around_solar_system = {
+			MIN_JUMPS = 1
+			MAX_JUMPS = 5
+			UMA_INITIALIZER = "uma_fine_initializer"
+			FLAG = uma_fine_system_created
+			SAVE_GLOBAL_TARGET = uma_where_fine_is
+		}
+
+		event_target:uma_fine_arc_here = {
+			create_archaeological_site = uma_fine_digsite
+		}
+	}
+}
+
+
+
+
+
+
+
+fleet_event = {
+	id = uma_finemotion.1001
+	title = uma_finemotion.1001.name
+	desc = uma_finemotion.1001.desc
+	picture = GFX_evt_planet_beam #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_finemotion.1002
+	title = uma_finemotion.1002.name
+	desc = uma_finemotion.1002.desc
+	picture = GFX_evt_glitchy_matrix #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_finemotion.1002.a #占位符
+		small_artifact_reward = yes
+		hidden_effect = {
+			archaeological_site = {
+				add_stage_clues = 3
+			}
+		}
+		owner = {
+			add_resource = {
+				energy = -5000
+			}
+		}
+	}
+	option = {
+		name = uma_finemotion.1002.b #占位符
+		small_artifact_reward = yes
+		hidden_effect = {
+			archaeological_site = {
+				add_stage_clues = -2
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_finemotion.1003
+	title = uma_finemotion.1003.name
+	desc = uma_finemotion.1003.desc
+	picture = GFX_evt_glitchy_matrix #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_finemotion.1004
+	title = uma_finemotion.1004.name
+	desc = uma_finemotion.1004.desc
+	picture = GFX_uma_ano_bour_forest #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_finemotion.1004.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_finemotion.1005
+	title = uma_finemotion.1005.name
+	desc = uma_finemotion.1005.desc
+	picture = GFX_evt_black_hole #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_finemotion.1005.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_finemotion.1006
+	title = uma_finemotion.1006.name
+	desc = uma_finemotion.1006.desc
+	picture = GFX_evt_uma_suzuka_arc_star_report #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_finemotion.1006.a #占位符
+		small_artifact_reward = yes
+		owner = {
+			country_event = {
+				id = uma_finemotion.80
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_finemotion.80
+	title = uma_finemotion
+	desc = uma_finemotion.80.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		name = uma_finemotion.80.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.81
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.81
+	title = uma_finemotion
+	desc = uma_finemotion.81.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		name = uma_finemotion.81.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.82
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.82
+	title = uma_finemotion
+	desc = uma_finemotion.82.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		name = uma_finemotion.82.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.83
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.83
+	title = uma_finemotion
+	desc = uma_finemotion.83.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		name = uma_finemotion.83.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.84
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.84
+	title = uma_finemotion
+	desc = uma_finemotion.84.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		name = uma_finemotion.84.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.85
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.85
+	title = uma_finemotion
+	desc = uma_finemotion.85.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		name = uma_finemotion.85.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.86
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.86
+	title = uma_finemotion
+	desc = uma_finemotion.86.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = extradimensional_blue_room
+	}
+
+	option = {
+		hidden_effect = {
+			random_galaxy_planet = {
+				limit = {
+					has_planet_flag = uma_fine_planet_here
+				}
+				save_event_target_as = uma_fine_plane
+			}
+
+			create_point_of_interest = {
+				id = uma_fm_5
+				name = uma_fm_5_name
+				desc = uma_fm_5_desc
+				event_chain = uma_fm_full
+				location = event_target:uma_fine_plane
+			}
+		}
+
+		name = uma_finemotion.86.a
+		custom_tooltip = uma_finemotion.86.tooltip
+		add_modifier = {
+			modifier = uma_fine
+		}
+		add_modifier = {
+			modifier = uma_fine_royal_noodle
+		}
+		add_modifier = {
+			modifier = uma_fine_royal_sword
+		}
+		add_modifier = {
+			modifier = uma_fine_royal_star
+		}
+		event_target:uma_fine_arc_here = {
+			add_modifier = {
+				modifier = uma_fine_planet_spirits_spring
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_finished_fine_finding_event
+		}
+	}
+}
+
+planet_event = {
+	id = uma_finemotion.888
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = uma_fine_planet_here
+		owner = {
+			has_country_flag = uma_finished_fine_finding_event
+		}
+	}
+
+	immediate = {
+		owner = {
+			end_event_chain = uma_fm_full
+			country_event = {
+				id = uma_finemotion.87
+				days = 100
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+country_event = {
+	id = uma_finemotion.87
+	title = uma_finemotion
+	desc = uma_finemotion.87.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_school_room
+	}
+
+	option = {
+		name = uma_finemotion.87.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.88
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.88
+	title = uma_finemotion
+	desc = uma_finemotion.88.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_school_room
+	}
+
+	option = {
+		name = uma_finemotion.88.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.89
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.89
+	title = uma_finemotion
+	desc = uma_finemotion.89.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_school_room
+	}
+
+	option = {
+		name = uma_finemotion.89.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.90
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.90
+	title = uma_finemotion
+	desc = uma_finemotion.90.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_school_room
+	}
+
+	option = {
+		name = uma_finemotion.90.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.91
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.91
+	title = uma_finemotion
+	desc = uma_finemotion.91.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_school_room
+	}
+
+	option = {
+		name = uma_finemotion.91.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.92
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_finemotion.92
+	title = uma_finemotion
+	desc = uma_finemotion.92.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = uma_school_room
+	}
+
+	option = {
+		name = uma_finemotion.92.a
+		response_text = uma_finemotion.92.a.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.93
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.93
+	title = uma_finemotion.93.title
+	desc = uma_finemotion.93.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	option = {
+		name = uma_finemotion.93.a
+		hidden_effect = {
+			country_event = {
+				id = uma_finemotion.94
+				days = 200
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_finemotion.94
+	title = uma_finemotion
+	desc = uma_finemotion.94.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = 22c
+		room = traincenter_06_room
+	}
+
+	option = {
+		name = uma_finemotion.94.a
+		response_text = uma_finemotion.94.a.resp
+		hidden_effect = {
+			create_leader = {
+				name = FINE
+				species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+				event_leader = no
+				immortal = yes
+				gender = female
+				class = official
+				skill = 2
+				set_age = 17
+				custom_catch_phrase = uma_special_leader_fine_catch_phrase
+				background_planet = this.home_planet
+				background_job = uma_racing_umamusume
+				traits = {
+					trait = uma_governor_trait_sp_fine
+					trait = uma_governor_trait_sp_fine_er
+					trait = leader_trait_jijiankuangmo_governor
+					trait = leader_trait_guihuadaren_governor
+					trait = leader_trait_zhuzhongminsheng_governor
+				}
+				effect = {
+					change_leader_portrait = "22c"
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_fine
+					save_global_event_target_as = uma_is_leader_fine
+				}
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_fine
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_fine
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+}
+
+
+#如果Fine不幸去世
+country_event = {
+	id = uma_finemotion.2077
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_leader_flag = uma_is_fine
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_fine_event_break
+		if = {
+			limit = {
+				has_event_chain = uma_fm_full
+			}
+			end_event_chain = uma_fm_full
+		}
+	}
+}

@@ -1,3 +1,715 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9075419002e2462e2fa75fdf3e233fe0af1d4d21512a893d6b681039d09a2147
-size 12720
+namespace = uma_little_event
+
+#Trigger-Event Index
+# .100 -> 节食潮
+# .200 -> 帽
+# .300 -> 名次竞猜
+
+###节食潮事件链
+
+
+#节食潮
+#节食潮的Trigger事件
+country_event = {
+	id = uma_little_event.100
+	hide_window = yes
+	#这里没有使用is_trigger_only故该事件的days是从游戏开始计时
+	trigger = {
+		has_authority = auth_trainingcenter
+		NOT = {
+			has_country_flag = uma_food_d_was_happened
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_food_d_was_happened_was_happened
+	}
+	after = {
+		country_event = {
+			id = uma_little_event.1
+			days = 10950
+			random = 50
+		}
+	}
+}
+
+country_event = {
+	id = uma_little_event.1
+	title = "uma_little_event.1.name"
+	desc = "uma_little_event.1.desc"
+	picture = GFX_evt_uma_normal_school
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_trainingcenter
+	}
+
+	fire_only_once = yes
+	#mean_time_to_happen = {
+	#	years = 30
+	#}
+
+
+	option = {
+		#生产新甜品
+		name = "uma_little_event.1.a"
+		add_resource = {
+			energy = -2000
+		}
+		add_modifier = {
+			modifier = uma_enough_sweets
+			days = 180
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.2 #发胖
+				days = 180
+			}
+		}
+	}
+
+	option = {
+		#那就节食罢
+		name = "uma_little_event.1.b"
+		add_modifier = {
+			modifier = uma_encourage_reducing_food_consumption
+			days = 730
+		}
+	}
+
+	option = {
+		#开展教育活动
+		name = "uma_little_event.1.c"
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.3 #节食教育普及
+				days = 1825
+			}
+		}
+	}
+
+}
+
+
+#发胖！
+country_event = {
+	id = uma_little_event.2
+	title = "uma_little_event.2.name"
+	desc = "uma_little_event.2.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		has_authority = auth_trainingcenter
+	}
+
+	is_triggered_only = yes
+
+
+	option = {
+		#发胖了
+		name = "uma_little_event.2.a"
+		add_modifier = {
+			modifier = uma_become_too_fat
+			days = 1825
+		}
+	}
+
+}
+
+#合理营养供给
+country_event = {
+	id = uma_little_event.3
+	title = "uma_little_event.3.name"
+	desc = "uma_little_event.3.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		has_authority = auth_trainingcenter
+	}
+
+	is_triggered_only = yes
+
+
+	option = {
+		#发胖了
+		name = "uma_little_event.3.a"
+		add_modifier = {
+			modifier = uma_scientific_nutrition_supply
+			days = 1825
+		}
+	}
+
+}
+
+
+###食物失窃事件
+#######专门触发 帽 的事件的事件，代替MTTH
+country_event = {
+	id = uma_little_event.200
+	hide_window = yes
+	fire_only_once = yes
+	#这里没有使用is_trigger_only故该事件的60days是从游戏开始计时
+	trigger = {
+		has_authority = auth_trainingcenter
+		#NOT = {
+		#	has_country_flag = uma_cap_was_happened
+		#}
+	}
+
+	#immediate = {
+	#	set_country_flag = uma_cap_was_happened
+	#}
+	immediate = {
+		country_event = {
+			id = uma_little_event.10
+			days = 700
+			random = 15
+		}
+	}
+}
+
+###食物失窃！
+country_event = {
+	id = uma_little_event.10
+	title = "uma_little_event.10.name"
+	desc = "uma_little_event.10.desc"
+	picture = GFX_evt_uma_normal_school
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_trainingcenter
+	}
+
+	fire_only_once = yes
+	#mean_time_to_happen = {
+	#	years = 50
+	#}
+
+
+	option = {
+		#给我查！
+		name = "uma_little_event.10.a"
+		add_resource = {
+			food = -100
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.11
+				days = 180
+			}
+		}
+	}
+
+	option = {
+		#丢点东西很正常，别去管它
+		name = "uma_little_event.10.b"
+		add_resource = {
+			food = -100
+		}
+	}
+
+}
+
+
+
+
+#找到犯人了！
+country_event = {
+	id = uma_little_event.11
+	title = "uma_little_event.11.name"
+	desc = "uma_little_event.11.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		has_authority = auth_trainingcenter
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		# create_species = {
+		# 	class = umamusume
+		# 	portrait = 06a
+		# 	effect = {
+		# 		save_event_target_as = uma_leader_oguri_cap
+		# 	}
+		# }
+	}
+
+	option = {
+		#这位马娘一看就不是一般人，让其加入我们
+		name = "uma_little_event.11.a"
+
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.12
+			}
+		}
+	}
+
+	option = {
+		#看来我们需要补贴一下我们国家的自助餐厅...
+		name = "uma_little_event.11.b"
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.12
+			}
+		}
+		add_modifier = {
+			modifier = uma_subsidy_restaurant
+			days = -1
+		}
+
+	}
+
+	option = {
+		#她似乎不是很适合呆在这边，遣送她回老家吧
+		name = "uma_little_event.11.c"
+	}
+
+}
+
+#修破防了，不修了不修了
+country_event = {
+	id = uma_little_event.12
+	title = OC
+	desc = uma_little_event.12.desc
+	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
+
+	picture = GFX_uma_leader_oguri
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_oguri_cap
+	}
+
+	immediate = {
+		play_sound = uma_hire_Cap
+		create_country = {
+            name = "NAME_uma_empty_oc"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = uma_oc_country
+            }
+        }
+        event_target:uma_oc_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			uma_create_leader_oc = yes
+		}
+	}
+
+	option = {
+		name = uma_little_event.12.a
+		response_text = uma_little_event.12.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_little_event.12.b
+		response_text = uma_little_event.12.b.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_little_event.12.c
+		response_text = uma_little_event.12.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = HIRE
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_oguri_cap
+			gender = female
+			species = prev.species
+		}
+		hidden_effect = {
+			last_created_leader = {
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_oguri_cap
+				save_global_event_target_as = uma_is_leader_oguri_cap
+				set_leader_flag = legendary_leader
+				change_leader_portrait = "06c"
+				uma_initialize_leader_yaruki_effect = yes
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_oguri_cap
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_oguri_cap
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_oguri_cap= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_oc_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+
+
+###名次竞猜事件链
+#星球上的名次竞猜事件Trigger
+country_event = {
+	id = uma_little_event.300
+	hide_window = yes
+	#这里没有使用is_trigger_only故该事件的60days是从游戏开始计时
+	trigger = {
+		has_authority = auth_trainingcenter
+		NOT = {
+			has_country_flag = uma_guest_was_happened
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_guest_was_happened
+	}
+	after = {
+		country_event = {
+			id = uma_little_event.20
+			days = 7300
+			random = 100
+		}
+	}
+}
+
+country_event = {
+	id = uma_little_event.20
+	title = "uma_little_event.20.name"
+	desc = "uma_little_event.20.desc"
+	picture = GFX_evt_uma_normal_school
+	is_triggered_only = yes
+	trigger = {
+		has_authority = auth_trainingcenter
+		any_owned_planet = {
+			OR = {
+				has_building = building_uma_basic_racing_course
+				has_building = building_uma_modern_racing_course
+				has_building = building_uma_top_racing_course
+			}
+		}
+	}
+
+	fire_only_once = yes
+	#mean_time_to_happen = {
+	#	years = 20
+	#}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_planet = {
+				limit = {
+					OR = {
+						has_building = building_uma_basic_racing_course
+						has_building = building_uma_modern_racing_course
+						has_building = building_uma_top_racing_course
+					}
+				}
+				save_event_target_as = uma_gambling_planet
+			}
+		}
+	}
+
+	option = {
+		#梭哈！
+		name = "uma_little_event.20.a"
+		custom_tooltip = uma_warning_of_gambling
+		event_target:uma_gambling_planet = {
+			add_modifier = {
+				modifier = uma_nation_suppoted_gambling
+				days = 7300
+			}
+		}
+		
+	}
+
+	option = {
+		#这有违竞技精神，阻止他们
+		name = "uma_little_event.20.b"
+		event_target:uma_gambling_planet = {
+			add_modifier = {
+				modifier = uma_nation_ban_gambling
+				days = 7300
+			}
+		}
+		hidden_effect = {
+			event_target:uma_gambling_planet = {
+				planet_event = {
+					id = uma_little_event.21
+					days = 365
+				}
+			} 
+		}
+	}
+
+}
+
+#根除竞猜活动
+planet_event = {
+	id = uma_little_event.21
+	title = "uma_little_event.21.name"
+	desc = "uma_little_event.21.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	is_triggered_only = yes
+
+
+	option = {
+		#驳回
+		name = "uma_little_event.21.a"
+	}
+
+	option = {
+		#好点子
+		name = "uma_little_event.21.b"	
+		owner = {
+			enable_special_project = {
+				name = "FIND_OUT_GOOD_WAY_TO_DEAL_WITH_GAMBLING"
+				location = root
+				owner = this
+			}
+		}
+	}
+
+}
+
+#国立竞猜事业！
+planet_event = {
+	id = uma_little_event.22
+	title = "uma_little_event.22.name"
+	desc = "uma_little_event.22.desc"
+	picture = GFX_evt_uma_normal_school
+
+	trigger = {
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	is_triggered_only = yes
+
+
+	option = {
+		#我也能买一张吗？
+		name = "uma_little_event.22.a"
+		remove_modifier = uma_nation_ban_gambling
+		add_modifier = {
+			modifier = uma_national_guessing_game
+			days = -1
+		}
+	}
+
+}
+
+# F小事件
+country_event = {
+	id = uma_little_event.23
+	hide_window = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_authority = auth_trainingcenter
+	}
+
+	immediate = {
+		random_list = {
+			1 = {
+				country_event = {
+					id = uma_little_event.25
+				}
+			}
+			99 = {
+				add_resource = {
+					influence = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_little_event.25
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = {
+			influence = 1
+		}
+	}
+}
+
+country_event = {
+	id = uma_little_event.24
+	title = uma_little_event.24.title
+	desc = uma_little_event.24.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_normal_school
+
+
+	trigger = {
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	option = {
+		name = uma_little_event.24.a
+	}
+}
+
+
+country_event = {
+	id = uma_little_event.26
+	title = uma_little_event.26.title
+	desc = uma_little_event.26.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_wws_evt
+
+	trigger = {
+		years_passed >= 20
+		NOT = {
+			has_country_flag = uma_wws_evt_happened
+		}
+		has_authority = auth_trainingcenter
+	}
+
+	immediate = {
+		set_country_flag = uma_wws_evt_happened
+	}
+
+	option = {
+		name = uma_little_event.26.a
+		add_resource = {
+			society_research = 14.3
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.27
+				days = 200
+				random = 40
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_little_event.27
+	title = uma_little_event.27.title
+	desc = uma_little_event.27.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_wws_evt_ss_not_in_game
+
+
+	option = {
+		name = uma_little_event.27.a
+		custom_tooltip = uma_little_event.27.a.tt
+		add_resource = {
+			society_research = 14.3
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.28
+				days = 100
+				random = 40
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_little_event.28
+	title = uma_little_event.28.title
+	desc = uma_little_event.28.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_wws_evt_i_like_ss
+
+	option = {
+		name = uma_little_event.28.a
+		custom_tooltip = uma_little_event.28.a.tt
+		add_resource = {
+			society_research = 14.3
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = uma_little_event.29
+				days = 100
+				random = 40
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_little_event.29
+	title = uma_little_event.29.title
+	desc = uma_little_event.29.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_fallen_empire_deep
+
+
+
+	option = {
+		name = uma_little_event.29.a
+		add_resource = {
+			society_research = 14.3
+		}
+	}
+}

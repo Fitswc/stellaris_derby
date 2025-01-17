@@ -1,3 +1,51 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:048bb73b49687849d277340b7c93194efd15187828f1e4499cfce00b7c4dbdb2
-size 869
+###各种小机制事件
+
+
+
+namespace = uma_bg
+
+planet_event = {
+	id = uma_bg.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_active_building = building_commercial_zone
+					has_active_building = building_commercial_megaplex
+				}
+				NOT = {
+					has_planet_flag = uma_has_trader_exist
+				}
+			}
+			set_planet_flag = uma_has_trader_exist
+			add_modifier = {
+				modifier = uma_add_treater
+				clear_on_owner_change = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_active_building = building_commercial_zone
+						has_active_building = building_commercial_megaplex
+					}
+					has_planet_flag = uma_has_trader_exist
+				}
+			}
+			remove_planet_flag = uma_has_trader_exist
+			remove_modifier = uma_add_treater
+		}
+
+	}
+}

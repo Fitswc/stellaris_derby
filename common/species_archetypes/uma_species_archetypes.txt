@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0671a6750af358b63a4609d713c765d8454535002b02f79e0b4d380ced414b36
-size 858
+# species_trait_points: base number of species trait points available for this species class
+# species_max_traits: maximum number of traits that species of this class can have (doesn't count those with cost == 0)
+
+#EXAMPLE OF MODDED SPECIES ARCHETYPE
+#Will be able to use traits valid for BIOLOGICAL, ROBOT and BIOLOGICAL2
+#Has the exact same trait points as BIOLOGICAL
+#BIOLOGICAL2 = {
+#	inherit_trait_points_from = BIOLOGICAL
+#	inherit_traits_from = { BIOLOGICAL ROBOT }
+
+#	robotic: is this archetype's species robotic? Governs various things:
+#		- does the species count as robotic (for is_robotic = yes, and various hardcoded checks)
+#		- notably can the species grow, or is just assembled?
+#	uses_modifiers: should modifiers be generated for this archetype at all?
+#}
+
+
+UMA = {
+	species_trait_points = 3
+	species_max_traits = 6
+#	uses_modifiers = no
+}
+
+

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a68969ac936804f525b115c5d9f51ca5b98855c336049da6a05cb8a541bed4c6
-size 721
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_uma_fly_me_to_the_star"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_uma_fly_me_to_the_star.dds"
+	}
+	spriteType = {
+		name = "GFX_ap_uma_zenshizenren"
+		textureFile = "gfx/interface/icons/ascension_perks/ap_uma_zenshizenren.dds"
+	}
+
+	spriteType = {
+		name = GFX_ap_uma_fly_me_to_the_star_ap_two
+		textureFile = "gfx/interface/icons/ascension_perks/ap_uma_fly_me_to_the_star_ap_two.dds"
+	}
+	spriteType = {
+		name = GFX_ap_uma_zenshizenren_ap_2
+		textureFile = "gfx/interface/icons/ascension_perks/ap_uma_zenshizenren_ap_2.dds"
+	}
+
+	spriteType = {
+		name = GFX_ap_uma_mixture_ap_2
+		textureFile = "gfx/interface/icons/ascension_perks/ap_uma_mixture_ap_2.dds"
+	}
+}

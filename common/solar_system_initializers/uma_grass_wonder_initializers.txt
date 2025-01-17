@@ -1,3 +1,116 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0acbbb1bb763eec8d70cefe7d33cf1543011a2e3d8c13577eaaefcc3e0222cb7
-size 2561
+@base_moon_distance = 10
+
+
+uma_grass_wonder_system_initializer = {
+	name = I_POX #"菲尼克斯" #即“凤凰”，暗示了小草的外号——“不死鸟”
+	class = "sc_a"
+
+	flags = { uma_grass_wonder_system }
+
+	planet = {
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 95
+	}
+
+
+	planet = {
+		class = pc_relic
+		orbit_distance = 60
+		orbit_angle = 80
+		name = I_PHNN #"菲尼学院"
+		size = 26 #26格的超大遗落星球（后面或许可以改成“学院星球”？）
+		modifiers = none
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { uma_planet_phoenix_school_star uma_planet_flag_phoenix_school_relic uma_planet_flag_phoenix_racing_course_relic } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			save_global_event_target_as = uma_grass_wonder_planet
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_phoenix_school_relic
+			add_deposit = d_phoenix_racing_course_relic
+		}
+	}
+
+
+	planet = {
+		name = I_FH #"熔火之心" #彩蛋？谁知道呢？
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 15
+		size = 15
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+
+	planet = {
+		name = I_SF #"星辰"
+		class = "pc_gas_giant"
+		orbit_distance = 75
+		orbit_angle = -160
+		size = 40
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes			
+		}
+	}
+
+	
+	planet = {
+		name = I_SG #"秘密毕业" #夺笋啊，夺笋！
+		class = "pc_continental"
+		orbit_distance = 65
+		orbit_angle = 25
+		size = 20
+		has_ring = no
+		modifiers = none
+
+		init_effect = {
+			set_planet_flag = uma_suzuka_loaded
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_rugged_woods
+			add_deposit = d_rugged_woods
+			add_deposit = d_fertile_lands
+			add_deposit = d_fertile_lands
+			add_deposit = d_lush_jungle
+			add_deposit = d_green_hills
+			add_deposit = d_rich_mountain
+			add_deposit = d_mineral_fields
+			add_deposit = d_searing_desert
+			add_deposit = d_searing_desert
+			add_deposit = d_rushing_waterfalls
+			add_deposit = d_rushing_waterfalls
+		}
+	}
+
+	planet = {
+		name = I_HY #皓月
+		class = pc_barren
+		orbit_distance = { min = 69 max = 80 }
+		orbit_angle = { min = 40 max = 120}
+		size = 35
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+}

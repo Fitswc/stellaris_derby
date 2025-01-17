@@ -1,3 +1,272 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63bccaa12ff142ee0d966222b8330140c3a7f012b4d327f9a38b4c3508679d2f
-size 6483
+@base_moon_distance = 10
+
+
+uma_gold_system_initializer = {
+	name = GO_M
+	class = "sc_g"
+
+	flags = { uma_gold_invasion_system }
+
+	planet = {
+		class = star
+		size = { min = 25 max = 30 }
+		orbit_distance = 0
+		orbit_angle = 1
+		init_effect = {
+			set_owner = event_target:uma_gold_invasion_family_country
+		}
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 95
+	}
+
+
+	planet = {
+		class = pc_uma_school
+		orbit_distance = 60
+		orbit_angle = 80
+		name = GO_I #"菲尼学院"
+		size = 12 #26格的超大遗落星球（后面或许可以改成“学院星球”？）
+		modifiers = none
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { uma_gold_planet_I } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			#		save_global_event_target_as = uma_grass_wonder_planet
+			prevent_anomaly = yes
+			set_owner = event_target:uma_gold_invasion_family_country
+		}
+	}
+
+
+	planet = {
+		class = pc_uma_school
+		orbit_distance = 60
+		orbit_angle = 80
+		name = GO_II #"菲尼学院"
+		size = 16 #26格的超大遗落星球（后面或许可以改成“学院星球”？）
+		modifiers = none
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { uma_gold_planet_II } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			#		save_global_event_target_as = uma_grass_wonder_planet
+			prevent_anomaly = yes
+			set_owner = event_target:uma_gold_invasion_family_country
+		}
+	}
+
+	planet = {
+		class = pc_uma_school
+		orbit_distance = 60
+		orbit_angle = 80
+		name = GO_III #"菲尼学院"
+		size = 18 #26格的超大遗落星球（后面或许可以改成“学院星球”？）
+		modifiers = none
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { uma_gold_planet_III } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			#		save_global_event_target_as = uma_grass_wonder_planet
+			prevent_anomaly = yes
+			set_owner = event_target:uma_gold_invasion_family_country
+		}
+	}
+
+	planet = {
+		class = pc_uma_school
+		orbit_distance = 60
+		orbit_angle = 80
+		name = GO_IIII #
+		size = 25
+		modifiers = none
+		moon = {
+			name = GO_IIII_M
+			class = pc_barren
+			orbit_distance = 36
+			orbit_angle = random
+			size = 10
+			has_ring = yes
+			tile_blockers = none
+			modifiers = none
+			resource = minerals
+			anomaly = none
+			deposit_blockers = none
+		}
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { uma_gold_planet_IV } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			#		save_global_event_target_as = uma_gold
+			prevent_anomaly = yes
+			set_owner = event_target:uma_gold_invasion_family_country
+		}
+	}
+
+	init_effect = {
+		create_starbase = {
+			owner = event_target:uma_gold_invasion_family_country
+			size = starbase_exd
+			effect = {
+				save_global_event_target_as = uma_gold_starbase
+			}
+		}
+		event_target:uma_gold_invasion_family_country = {
+			create_leader = {
+				class = commander
+				species = owner_main_species
+				name = random
+				skill = 3
+				randomize_traits = yes
+				hide_age = yes
+			}
+			create_fleet = {
+				name = "Gold_ship_defend_fleet"
+				effect = {
+					set_owner = event_target:uma_gold_invasion_family_country
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+					assign_leader = last_created_leader
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_Revenant"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 16
+						create_ship = {
+							name = random
+							design = "NAME_Phantom"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 25
+						create_ship = {
+							name = random
+							design = "NAME_Wraith"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					set_location = {
+						target = event_target:uma_gold_starbase
+						distance = 10
+						angle = random
+					}
+					set_fleet_stance = passive
+					#						set_aggro_range = 500
+					#						set_aggro_range_measure_from = self
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+			create_fleet = {
+				name = "Gold_ship_defend_fleet_II"
+				effect = {
+					set_owner = event_target:uma_gold_invasion_family_country
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+					assign_leader = last_created_leader
+					while = {
+						count = 13
+						create_ship = {
+							name = random
+							design = "NAME_Revenant"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 19
+						create_ship = {
+							name = random
+							design = "NAME_Phantom"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 27
+						create_ship = {
+							name = random
+							design = "NAME_Wraith"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					set_location = {
+						target = event_target:uma_gold_starbase
+						distance = 40
+						angle = random
+					}
+					set_fleet_stance = passive
+					#						set_aggro_range = 500
+					#						set_aggro_range_measure_from = self
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+			create_fleet = {
+				name = "Gold_ship_defend_fleet_III"
+				effect = {
+					set_owner = event_target:uma_gold_invasion_family_country
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+					assign_leader = last_created_leader
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_Revenant"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 16
+						create_ship = {
+							name = random
+							design = "NAME_Phantom"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 25
+						create_ship = {
+							name = random
+							design = "NAME_Wraith"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					set_location = {
+						target = event_target:uma_gold_starbase
+						distance =30
+						angle = random
+					}
+					set_fleet_stance = passive
+					#						set_aggro_range = 500
+					#						set_aggro_range_measure_from = self
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+	}
+}
+
+

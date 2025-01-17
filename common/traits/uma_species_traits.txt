@@ -1,3 +1,1048 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26d38117340b8679623ae4444eefad4c6056834b127536e2de8a8106dcc630a9
-size 22439
+###基础特质
+uma_trait_musume = {
+	cost=0
+	allowed_archetypes={UMA}
+	sorting_priority = 30
+	icon="gfx/interface/icons/traits/uma_trait_musume.png"
+	custom_tooltip_with_modifiers = uma_trait_musume_effect
+    leader_age_min = 13
+    leader_age_max = 18
+    initial = no
+	randomized = no
+	advanced_trait=no
+	modifier={
+		planet_jobs_minerals_produces_mult = 0.20
+	    planet_pops_food_upkeep_mult = 0.2
+		army_damage_mult = 0.2
+	}
+
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_strength_level_1
+			}
+		}
+		planet_jobs_food_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = 0.05
+		pop_housing_usage_mult = -0.025
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_strength_level_2
+			}
+		}
+		planet_jobs_food_produces_mult = 0.1
+		planet_jobs_minerals_produces_mult = 0.1
+		pop_housing_usage_mult = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_strength_level_3
+			}
+		}
+		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.15
+		pop_housing_usage_mult = -0.075
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_strength_level_4
+			}
+		}
+		planet_jobs_food_produces_mult = 0.2
+		planet_jobs_minerals_produces_mult = 0.2
+		pop_housing_usage_mult = -0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_strength_level_5
+			}
+		}
+		planet_jobs_food_produces_mult = 0.25
+		planet_jobs_minerals_produces_mult = 0.25
+		pop_housing_usage_mult = -0.125
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_intelligence_level_1
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_intelligence_level_2
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_intelligence_level_3
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_intelligence_level_4
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_society_research_produces_mult = 0.2
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_intelligence_level_5
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_will_level_1
+			}
+		}
+		pop_environment_tolerance = 0.05
+		planet_pops_food_upkeep_mult = -0.03
+		pop_housing_usage_mult = -0.025
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_will_level_2
+			}
+		}
+		pop_environment_tolerance = 0.1
+		planet_pops_food_upkeep_mult = -0.06
+		pop_housing_usage_mult = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_will_level_3
+			}
+		}
+		pop_environment_tolerance = 0.15
+		planet_pops_food_upkeep_mult = -0.09
+		pop_housing_usage_mult = -0.075
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_will_level_4
+			}
+		}
+		pop_environment_tolerance = 0.2
+		planet_pops_food_upkeep_mult = -0.12
+		pop_housing_usage_mult = -0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = uma_kenshi_will_level_5
+			}
+		}
+		pop_environment_tolerance = 0.25
+		planet_pops_food_upkeep_mult = -0.15
+		pop_housing_usage_mult = -0.15	
+	}
+
+	slave_cost = {
+		energy = 50
+	}
+}
+
+uma_trait_musume1={
+	cost=0
+	allowed_archetypes={UMA}
+	sorting_priority = 30
+	icon="gfx/interface/icons/traits/uma_trait_musume1.png"
+    leader_age_min = 13
+    leader_age_max = 18
+    initial = no
+    improves_leaders = yes
+	initial = no
+	randomized = no
+	modification = no
+	advanced_trait = yes
+	modifier={
+	    planet_pops_food_upkeep_mult = 0.4
+		army_damage_mult = 0.4
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+uma_trait_musume2={
+	cost=0
+	allowed_archetypes={UMA}
+	sorting_priority = 30
+	icon="gfx/interface/icons/traits/uma_trait_musume2.png"
+    leader_age_min = 13
+    leader_age_max = 18
+    initial = no
+	improves_leaders = yes
+	initial = no
+	randomized = no
+	modification = no
+	advanced_trait = yes
+	immortal_leaders = yes
+	modifier={
+	    planet_pops_food_upkeep_mult = 0.6
+		army_damage_mult = 0.8
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+###可选特质
+uma_trait_spd1={
+	cost=1
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/spd1.png"
+	opposites = { "uma_trait_spd-1" "uma_trait_spd2" }
+	modifier={
+		army_damage_mult = 0.2
+		pop_growth_speed = 0.05
+	}
+}
+
+uma_trait_spd2={
+	cost=3
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/spd2.png"
+	opposites = { "uma_trait_spd-1" "uma_trait_spd1" }
+	modifier={
+		army_damage_mult = 0.4
+		pop_growth_speed = 0.1
+		pop_environment_tolerance = 0.15
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+uma_trait_spd-1={
+	cost=-1
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/spd-1.png"
+	opposites = { "uma_trait_spd1" "uma_trait_spd2" }
+	modifier={
+		army_damage_mult = -0.2
+		pop_growth_speed = -0.05
+	}
+}
+
+uma_trait_sta1={
+	cost=1
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/sta1.png"
+	opposites = { "uma_trait_sta-1" "uma_trait_sta2" }
+	modifier={
+		pop_environment_tolerance = 0.05
+		pop_growth_speed = 0.05
+		pop_housing_usage_mult = -0.05
+	}
+}
+
+uma_trait_sta2={
+	cost=3
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_sta1" "uma_trait_sta-1" }
+	icon="gfx/interface/icons/traits/sta2.png"
+	modifier={
+		pop_growth_speed = 0.10
+		pop_environment_tolerance = 0.15
+		pop_housing_usage_mult = -0.1
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+uma_trait_sta-1={
+	cost=-1
+	opposites = { "uma_trait_sta1" "uma_trait_sta2" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/sta-1.png"
+	modifier={
+		pop_growth_speed = -0.05
+		pop_housing_usage_mult = 0.05
+	}
+}
+
+uma_trait_str1={
+	cost=1
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_str-1" "uma_trait_str2" }
+	icon="gfx/interface/icons/traits/str1.png"
+	modifier={
+		army_damage_mult = 0.1
+		planet_jobs_produces_mult = 0.05
+	}
+}
+
+uma_trait_str2={
+	cost=3
+	opposites = { "uma_trait_str-1" "uma_trait_str1" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/str2.png"
+	modifier={
+		army_damage_mult = 0.2
+		planet_jobs_produces_mult = 0.10
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+uma_trait_str-1={
+	cost=-1
+	opposites = { "uma_trait_str1" "uma_trait_str2" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/str-1.png"
+	modifier={
+		army_damage_mult = -0.05
+		planet_jobs_produces_mult = -0.05
+	}
+}
+
+uma_trait_wil1={
+	cost=1
+	opposites = { "uma_trait_wil-1" "uma_trait_wil2" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/wil1.png"
+	modifier={
+	    planet_pops_consumer_goods_upkeep_mult = -0.05
+		planet_pops_food_upkeep_mult = -0.1
+	    pop_environment_tolerance = 0.05
+	}
+}
+
+uma_trait_wil2={
+	cost=3
+	opposites = { "uma_trait_wil-1" "uma_trait_wil1" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/wil2.png"
+	modifier={
+	    planet_pops_consumer_goods_upkeep_mult = -0.1
+		planet_pops_food_upkeep_mult = -0.2
+	    pop_environment_tolerance = 0.1
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+uma_trait_wil-1={
+	cost=-1
+	opposites = { "uma_trait_wil1" "uma_trait_wil2" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/wil-1.png"
+	modifier={
+		planet_pops_consumer_goods_upkeep_mult = 0.05
+		pop_environment_tolerance = -0.05
+	}
+}
+
+uma_trait_int1={
+	cost=1
+	opposites = { "uma_trait_int-1" "uma_trait_int2" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/int1.png"
+	modifier={
+	    planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+}
+
+uma_trait_int2={
+	cost=3
+	opposites = { "uma_trait_int-1" "uma_trait_int1" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/int2.png"
+	modifier={
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		leader_skill_levels = 1
+		species_leader_exp_gain = 0.1
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+uma_trait_int-1={
+	cost=-1
+	opposites = { "uma_trait_int1" "uma_trait_int2" }
+	allowed_archetypes={UMA}
+	icon="gfx/interface/icons/traits/int-1.png"
+	modifier={
+		planet_jobs_engineering_research_produces_mult = -0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+		species_leader_exp_gain = -0.10
+	}
+}
+
+uma_trait_naturelover={
+	icon="gfx/interface/icons/traits/uma_trait_naturelover.png"
+	cost= 1
+	opposites = { "uma_trait_urbancitizens"  }
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_naturelover_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				num_districts = { type = district_farming value > 4 }	
+			}
+		}
+		planet_jobs_unity_produces_mult = 0.1
+        pop_amenities_usage_mult = -0.05
+	}
+	#triggered_pop_modifier = {   #研究马娘专属科技后解锁更强加成
+	#	potential = {
+	#		exists = planet
+	#		planet = { is_planet_class = 	}
+	#	}
+	#	
+	#}
+	
+}
+uma_trait_urbancitizens={
+	icon="gfx/interface/icons/traits/uma_trait_urbancitizens.png"
+	cost= 1
+	opposites = { "uma_trait_naturelover"  }
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_urbancitizens_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				OR = { num_districts = { type = district_city value > 5 }
+			               is_planet_class = pc_relic	}
+				
+			}
+		}
+		planet_jobs_unity_produces_mult = 0.1
+        pop_amenities_usage_mult = -0.05
+	}
+	#triggered_pop_modifier = {   #研究马娘专属科技后解锁更强加成
+	#	potential = {
+	#		exists = planet
+	#		planet = { is_planet_class = 	}
+	#	}	
+	#}
+}
+
+uma_trait_communal={
+	icon="gfx/interface/icons/traits/uma_trait_communal.png"
+	cost= 1
+	opposites = { "uma_trait_tsundere"  }
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_communal_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { num_pops > 50 }
+				
+		}
+	    species_empire_size_mult = -0.05
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.1
+    }
+}
+
+uma_trait_tsundere={
+	icon="gfx/interface/icons/traits/uma_trait_tsundere.png"
+	cost= -1
+	opposites = { "uma_trait_communal"  }
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_tsundere_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { num_pops > 50 }
+				
+		}
+		species_empire_size_mult = 0.05
+		planet_jobs_produces_mult = -0.05
+		planet_jobs_unity_produces_mult = -0.1
+    }
+}
+
+uma_trait_genki={
+	icon="gfx/interface/icons/traits/uma_trait_genki.png"
+	cost= 0
+	opposites = { "uma_trait_moyu"  }
+	allowed_archetypes={UMA}
+	modifier={
+		planet_pops_food_upkeep_mult = 0.15
+		planet_jobs_produces_mult = 0.05
+	
+	}
+}
+
+uma_trait_moyu={
+	icon="gfx/interface/icons/traits/uma_trait_moyu.png"
+	cost= 0
+	opposites = { "uma_trait_genki"  }
+	allowed_archetypes={UMA}
+	modifier={
+		planet_pops_food_upkeep_mult = -0.15
+		planet_jobs_produces_mult = -0.05
+	}
+}
+
+uma_trait_honorseeker={
+	icon="gfx/interface/icons/traits/uma_trait_honorseeker.png"
+	cost= 1
+	allowed_archetypes={UMA}
+	modifier={
+	    army_morale = 0.2
+		army_damage_mult = 0.2
+	}
+}
+
+uma_trait_houseworkpro={
+	icon="gfx/interface/icons/traits/uma_trait_houseworkpro.png"
+	cost= 1
+	opposites = { "uma_trait_houseworkidiot"  }
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_houseworkpro_tooltip
+	modifier={
+		pop_amenities_usage_mult = -0.05
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { num_pops < 30 }
+		}
+		planet_jobs_unity_produces_mult = 0.05
+    }
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { num_pops >= 30 }
+		}
+		pop_housing_usage_mult = -0.05
+    }
+}
+
+uma_trait_houseworkidiot={
+	icon="gfx/interface/icons/traits/uma_trait_houseworkidiot.png"
+	cost= -1
+	opposites = { "uma_trait_houseworkpro"  }
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_houseworkidiot_tooltip
+	modifier={
+		pop_amenities_usage_mult = 0.05
+	}
+	triggered_pop_modifier = {
+		potential = {
+            exists = planet
+			planet = { num_pops < 30 }
+		}
+		planet_jobs_unity_produces_mult = -0.05
+    }
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { num_pops >= 30 }
+		}
+		pop_housing_usage_mult = 0.05
+    }
+}
+
+uma_trait_leadercharm={
+	icon="gfx/interface/icons/traits/uma_trait_leadercharm.png"
+	cost= 1
+	allowed_archetypes={UMA}
+	modifier={
+		leader_skill_levels =  1
+		species_leader_exp_gain = 0.2
+	}
+}
+
+uma_trait_desireforknowledge={
+	icon="gfx/interface/icons/traits/uma_trait_desireforknowledge.png"
+	cost= 2
+	allowed_archetypes={UMA}
+	custom_tooltip_with_modifiers = uma_trait_desireforknowledge_tooltip
+	triggered_pop_modifier = {
+		potential = {
+            exists = planet
+			OR = {
+				planet = { has_building = building_research_lab_1  } 
+				planet = { has_building = building_research_lab_2  } 
+				planet = { has_building = building_research_lab_3  } 
+			}
+		}
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+    }
+	modifier={
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+}
+
+uma_trait_kishouyasashii={
+	icon="gfx/interface/icons/traits/uma_trait_kishouyasashii.png"
+	cost= 1
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_kishouhageshii"  }
+	modifier={
+		pop_housing_usage_mult = -0.1
+	}
+}
+
+uma_trait_kishouhageshii={
+	icon="gfx/interface/icons/traits/uma_trait_kishouhageshii.png"
+	cost= -1
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_kishouyasashii"  }
+	modifier={
+		pop_housing_usage_mult = 0.1
+	}
+}
+
+uma_trait_thethesuki={
+	icon="gfx/interface/icons/traits/uma_trait_thethesuki.png"
+	cost= 1
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_thethekirai"  }
+	modifier={
+		pop_growth_speed = 0.2
+	}
+}
+
+uma_trait_thethekirai={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png"
+	cost= -2
+	allowed_archetypes={UMA}
+	opposites = { "uma_trait_thethesuki"  }
+	modifier={
+		pop_growth_speed = -0.1
+	}
+}
+
+
+#New
+uma_trait_glass_feet = {
+	icon = "gfx/interface/icons/traits/uma_trait_glass_feet.dds"
+	cost = -2
+	allowed_archetypes = { UMA }
+	modifier = {
+		planet_uma_racing_umamusume_upkeep_mult = 0.1
+		planet_building_build_speed_mult = -0.1
+		planet_jobs_produces_mult = -0.07
+		pop_growth_speed = 0.1
+	}
+}
+
+
+#高效资源利用
+trait_uma_energy_net_master = {
+	icon = "gfx/interface/icons/traits/trait_uma_energy_net_master.dds"
+	cost = 2
+    category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = {
+		uma_trait_houseworkidiot
+	}
+	allowed_archetypes = { UMA }
+	modifier = {
+		planet_jobs_upkeep_mult = -0.08
+		pop_job_trade_mult = 0.15
+	}
+}
+
+
+#基础海外适应训练
+trait_uma_adaptive_train = {
+	icon = "gfx/interface/icons/traits/trait_uma_adaptive_train.dds"
+	cost = 2
+    category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { trait_uma_ignoreadaptive_train }
+	allowed_archetypes = { UMA }
+	modifier = {
+		pop_environment_tolerance = 0.18
+	}
+}
+
+#忽视海外适应训练
+trait_uma_ignoreadaptive_train = {
+	icon = "gfx/interface/icons/traits/trait_uma_ignoreadaptive_train.dds"
+	cost = -2
+    category = normal
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { trait_uma_adaptive_train }
+	allowed_archetypes = { UMA }
+	modifier = {
+		pop_environment_tolerance = -0.18
+	}
+}
+
+#天资聪慧
+trait_uma_leader_is_talented = {
+	icon = "gfx/interface/icons/traits/trait_uma_leader_is_talented.dds"
+	cost = 1
+    category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	allowed_archetypes = { UMA}
+	opposites = {  }
+	modifier = {
+		negative_leader_traits_species = -1
+		leaders_upkeep_mult = -0.12
+	}
+	triggered_leader_modifier = {
+		potential = {
+			OR = {
+				has_trait = uma_trait_int2
+				has_trait = uma_trait_desireforknowledge
+			}
+		}
+		leaders_upkeep_mult = -0.19
+	}
+}
+
+
+#志在四方
+trait_uma_my_will_in_whole_world = {
+	icon = "gfx/interface/icons/traits/trait_uma_my_will_in_whole_world.dds"
+	cost = 1
+    category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_uma_i_love_my_home" }
+	allowed_archetypes = { UMA }
+	modifier = {
+		pop_growth_from_immigration = 0.2
+		pop_resettlement_cost_mult = -0.25
+	}
+}
+
+#恋家
+trait_uma_i_love_my_home = {
+	icon = "gfx/interface/icons/traits/trait_uma_i_love_my_home.dds"
+	cost = -1
+    category = normal
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	opposites = { "trait_uma_my_will_in_whole_world" }
+	allowed_archetypes = { UMA }
+	modifier = {
+		pop_growth_from_immigration = -0.2
+		pop_resettlement_cost_mult = 0.25
+	}
+}
+
+
+#勤俭持家
+trait_uma_conservational = {
+	icon = "gfx/interface/icons/traits/trait_uma_conservational.dds"
+	cost = 1
+    category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_uma_lot_of_money_so_i_wasteful" }
+	allowed_archetypes = { UMA }
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.17
+		planet_pops_food_upkeep_mult = -0.17
+	}
+}
+
+#挥金如土
+trait_uma_lot_of_money_so_i_wasteful = {
+	icon = "gfx/interface/icons/traits/trait_uma_lot_of_money_so_i_wasteful.dds"
+	cost = -1
+    category = normal
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	opposites = { "trait_uma_conservational" }
+	allowed_archetypes = { UMA }
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = 0.13
+		planet_pops_food_upkeep_mult = -0.13
+	}
+}
+
+
+###飞升特质
+#领域觉醒
+
+trait_uma_terriroty_awake = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"
+	potential_crossbreeding_chance = 0
+	allowed_archetypes = { UMA }
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		army_damage_mult = 0.3
+		army_health = 0.3
+	}
+
+}
+
+
+
+
+###转化特质
+trait_uma_new_bottle_but_old_wine = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_uma_new_bottle_but_old_wine.dds"
+	potential_crossbreeding_chance = 0
+	allowed_archetypes = { UMA }
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+
+	modifier = {
+		pop_growth_speed = -0.15
+		pop_amenities_usage_mult = 0.1
+	}
+}
+
+
+
+
+
+
+
+
+
+
+uma_trait_gold_family_basic={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png"
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+	modifier= {
+		pop_growth_speed = -0.2
+		planet_jobs_produces_mult = 0.05
+		pop_happiness = 0.1
+		planet_stability_add = -5
+	}
+}
+
+uma_trait_gold_family={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png"
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+	modifier= {
+		pop_growth_speed = -0.1
+		planet_jobs_produces_mult = 0.1
+		pop_happiness = 0.1
+		planet_stability_add = -5
+	}
+}
+
+uma_trait_gold_family_advance= {
+	icon = "gfx/interface/icons/traits/uma_trait_thethekirai.png"
+	cost = 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes = { UMA }
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+	modifier = {
+		pop_growth_speed = -0.04
+		planet_jobs_produces_mult = 0.1
+		pop_happiness = 0.1
+		planet_stability_add = -10
+	}
+}
+
+
+
+
+
+
+
+#可以用作二段因子的参考？
+#trait_auto_mod_biological = {
+#	cost = 3
+#	auto_mod = yes
+#	category = normal
+#
+#	allowed_archetypes = { BIOLOGICAL LITHOID }
+#	initial = no
+#	randomized = no
+#	species_potential_add = {
+#		hidden_trigger = { exists = from }
+#		from = {
+#			has_technology = tech_gene_expressions
+#		}
+#	}
+#	species_possible_remove = {
+#		always = yes
+#	}
+#	species_possible_merge_remove = {
+#		always = yes
+#	}
+#	potential_crossbreeding_chance = 1.0
+#	slave_cost = {
+#		energy = 1000
+#	}
+#	assembly_score = {
+#		base = 2
+#	}
+#	custom_tooltip_with_modifiers = automodding_trait_biological_tooltip
+#}
+
+
+
+
+
+

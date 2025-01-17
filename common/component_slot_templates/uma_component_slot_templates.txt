@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3f8f5459d5f960e3023b8cc9b964c894cfadedad7a46cd64eedf3a7bde6ca30
-size 355
+UMA_large_turret = {
+	size = large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "large_kinetic_gun_entity"
+		weapon_type_energy = "large_laser_gun_entity"
+	}
+}
+UMA_extra_large_turret = {
+	size = extra_large
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "large_laser_gun_entity"
+		weapon_type_energy = "large_laser_gun_entity"
+	}
+}

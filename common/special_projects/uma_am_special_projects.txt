@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4a61e85a9670cb6e2cfb1190468f450fde795e1f5e9d13bdacfee6d96162701
-size 700
+#开始找麻酱
+
+special_project = {
+	key = "FIND_WHAT_WE_LOST"
+	days_to_research = 7200
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_society_research
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		country_event = {
+			id = uma_never_forget.6
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "FIND_AM_LOCATION"
+	cost = 1000
+	sound = no
+	tech_department = physics_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_society_research
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		country_event = {
+			id = uma_never_forget.8
+		}
+	}
+
+	on_fail = {
+	}
+}

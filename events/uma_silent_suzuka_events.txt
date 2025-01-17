@@ -1,3 +1,1166 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b28c1864c0f7ac234ebcb99a9e0f72598d6c37a38cb7127b8b3e08c18b36b54
-size 18700
+############################
+#    Written By Fitswc
+#    I'm back!!
+#    SilentSuzuka Events Combination
+############################
+namespace = uma_suzuka
+
+
+
+#延迟触发器
+event = {
+	id = uma_suzuka.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = uma_suzuka_loaded
+			}
+			add_anomaly = {
+				category = uma_suzuka_anolomy
+			}
+		}
+	}
+}
+
+
+
+#country_event = {
+#	id = uma_suzuka.1
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		NOT = {
+#			has_country_flag = uma_suzuka_found
+#		}
+#		has_authority = auth_trainingcenter
+#	}
+#
+#	immediate = {
+#		set_variable = {
+#			which =  uma_num_of_suzuka
+#			value =  0
+#		}
+#		every_galaxy_planet = {
+#			limit =  {
+#				NOR = {
+#					is_under_colonization = yes
+#					check_variable = {
+#						which = uma_num_of_suzuka
+#						value >=1
+#					}
+#					is_capital = yes
+#				}
+#				is_planet_class = pc_continental
+#			}
+#			set_planet_flag = uma_suzuka_here
+#			save_global_event_target_as = uma_suzuka_planet_here
+#			change_variable = {
+#				which = uma_num_of_suzuka
+#				value = 1
+#			}
+#		}
+#		set_country_flag = uma_suzuka_found
+#		event_target:uma_suzuka_planet_here = {
+#			planet_event = {
+#				id = uma_suzuka.2
+#			}
+#		}
+#	}
+#}
+
+#planet_event = {
+#	id = uma_suzuka.2
+#	title = uma_suzuka.2.title
+#	desc = uma_suzuka.2.desc
+#	#picture = #?
+#	is_triggered_only = yes
+#	location = event_target:uma_suzuka_planet_here
+#
+#	option = {
+#		name = uma_suzuka.2.a
+#		enable_special_project = {
+#			name = UMA_SILENT_SUZUKA_WAS_FOUND
+#			owner = fromfrom
+#			location = event_target:uma_suzuka_planet_here
+#		}
+#	}
+#	option = {
+#		name = uma_suzuka.2.b
+#	}
+#}
+#A1
+ship_event = {
+	id = uma_suzuka.3
+	title = uma_suzuka.3.title
+	desc = uma_suzuka.3.desc
+	picture = GFX_evt_uma_suzuka_discovered
+	is_triggered_only = yes
+
+
+	immediate = {
+		uma_rs_difficult_set_up = { DIFFICULT_RATIO = 1 }
+		uma_rs_generate_random_number = yes
+		uma_rs_1dr = yes
+		uma_rs_judging = yes
+	}
+
+
+	option = {
+		name = uma_suzuka.3.a
+		owner = {
+			add_resource = {
+				energy = -3000
+			}
+
+			country_event = {
+				id = uma_suzuka.4
+				days = 300
+				random = 30
+			}
+		}
+	}
+
+	option = {
+		name = uma_suzuka.3.b
+		owner = {
+			add_resource = {
+				energy = -200
+			}
+			if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_gamesystem_rs_vill
+				}
+				random_list = {
+					50 = {
+						country_event = {
+							id = uma_suzuka.5
+							days = 300
+							random = 30
+						}
+					}
+					50 = {
+						country_event = {
+							id = uma_suzuka.20
+							days = 300
+							random = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+				}
+				if = {
+					custom_tooltip = uma_crisis.7010.a.tp
+					limit = {
+						has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+					}
+					if = {
+						limit = {
+							has_country_flag = uma_rs_success
+						}
+						hidden_effect = {
+							country_event = {
+								id = uma_suzuka.5
+								days = 300
+								random = 30
+							}
+							uma_rs_cleanup = yes
+						}
+					}
+					else = {
+						country_event = {
+							id = uma_suzuka.20
+							days = 300
+							random = 30
+						}
+						uma_rs_cleanup = yes
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_suzuka.3.c
+	}
+
+
+	after = {
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+			}
+			create_message = {
+				type = UMA_RANDOM_SYSTEM_RESULT
+				localization = UMA_RANDOM_SYSTEM_RESULT_DESC
+				days = 3
+				target = Root
+			}
+		}
+	}
+}
+
+#A2-1
+country_event = {
+	id = uma_suzuka.4
+	title = uma_suzuka.4.title
+	desc = uma_suzuka.4.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_discovered
+
+	option = {
+		name = uma_suzuka.4.a
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.6
+				days = 100
+			}
+		}
+	}
+}
+
+#A2-2
+country_event = {
+	id = uma_suzuka.5
+	title = uma_suzuka.5.title
+	desc = uma_suzuka.5.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_discovered
+
+	option = {
+		name = uma_suzuka.5.a
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.7
+				days = 100
+			}
+		}
+	}
+}
+
+#A2-F
+country_event = {
+	id = uma_suzuka.20
+	title = uma_suzuka.20.title
+	desc = uma_suzuka.20.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_discovered
+
+	option = {
+		name = uma_suzuka.20.a
+		add_resource = {
+			influence = 20
+		}
+	}
+}
+
+
+#A3-1(上游为全球扫描)
+country_event = {
+	id = uma_suzuka.6
+	title = uma_suzuka.6.title
+	desc = uma_suzuka.6.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_onplanet_scenery
+
+	option = {
+		name = uma_suzuka.6.a
+		country_event = {
+			id = uma_suzuka.9
+			days = 170
+			random = 1
+		}
+	}
+}
+
+#A3-1(上游为抽样扫描)
+country_event = {
+	id = uma_suzuka.7
+	title = uma_suzuka.6.title
+	desc = uma_suzuka.6.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_onplanet_scenery
+
+	option = {
+		name = uma_suzuka.6.a
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.8
+				days = 170
+				random = 1
+			}
+		}
+	}
+}
+
+#A4
+country_event = {
+	id = uma_suzuka.8
+	title = uma_suzuka.8.title
+	desc = uma_suzuka.8.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_onplanet_scenery
+
+	option = {
+		name = uma_suzuka.8.a
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.13
+			}
+		}
+	}
+	option = {
+		name = uma_suzuka.8.b #不打扰
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.12
+				days = 100
+				random = 3
+			}
+		}
+	}
+}
+
+#A4
+country_event = {
+	id = uma_suzuka.9
+	title = uma_suzuka.9.title
+	desc = uma_suzuka.9.desc #全球扫描导致的骨折
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_onplanet_scenery
+
+	option = {
+		name = uma_suzuka.9.a
+		add_resource = {
+			energy = -100
+		}
+		country_event = {
+			id = uma_suzuka.10
+			days = 40
+			random = 5
+		}
+	}
+	option = {
+		name = uma_suzuka.9.b #放着不管
+		hidden_effect = {
+			event_target:uma_suzuka_planet_here = {
+				planet_event = {
+					id = uma_suzuka.11
+					days = 1200
+					random = 5
+				}
+			}
+		}
+	}
+
+}
+
+#准备开外交菜单
+country_event = {
+	id = uma_suzuka.10
+	title = uma_suzuka.10.title
+	desc = uma_suzuka.10.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_hospital_before_door
+
+	option = {
+		name = uma_suzuka.10.a
+		country_event = {
+			id = uma_suzuka.19
+		}
+	}
+}
+
+#A9
+planet_event = {
+	id =uma_suzuka.11
+	title = uma_suzuka.11.title
+	desc = uma_suzuka.11.desc
+	is_triggered_only = yes
+	location = event_target:uma_suzuka_planet_here
+	picture = GFX_evt_uma_suzuka_onplanet_dead
+
+	option = {
+		name = GOOD
+	}
+}
+
+country_event = {
+	id = uma_suzuka.12
+	title = uma_suzuka.12.title
+	desc = uma_suzuka.12.desc
+	#picture =
+	is_triggered_only = yes
+
+	option = {
+		name = uma_suzuka.12.a
+		add_resource = {
+			unity = 200
+		}
+	}
+}
+
+
+
+
+
+#通信菜单事件#######################################################################################
+
+#D1
+country_event = {
+	id =uma_suzuka.13
+	title = uma_suzuka.13.title #Text : ???
+	desc = uma_suzuka.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		#头像？不需要
+	}
+
+	option = {
+		name = uma_suzuka.13.a #早
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.14
+	title = uma_suzuka.13.title
+	desc = uma_suzuka.14.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS_BIGSURP
+	}
+
+	option = {
+		name = uma_suzuka.14.a #I [?] From [?]
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.15
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.15.a #Why
+		country_event = {
+			id = uma_suzuka.16
+		}
+	}
+	option = {
+		name = uma_suzuka.15.b #Absorb
+		country_event = {
+			id = uma_suzuka.17
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.16
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.16.a #Because it's beautiful
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.17
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.17.desc #I ?
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS_SUR
+	}
+
+	option = {
+		name = uma_suzuka.17.a #Yes!
+		country_event = {
+			id = uma_suzuka.18
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_suzuka.18
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.18.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS_GOOD
+	}
+
+
+	immediate = {
+		hidden_effect = {
+			uma_rs_difficult_set_up = { DIFFICULT_RATIO = 2 }
+			uma_rs_generate_random_number = yes
+			uma_rs_1dr = yes
+			uma_rs_judging = yes
+		}
+	}
+
+	option = {
+		name = uma_suzuka.18.a
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
+			}
+			random_list = {
+				50 = {
+					country_event = {
+						id = uma_suzuka.35
+						days = 30
+						random = 2
+					}
+				}
+
+				50 = {
+					country_event = {
+						id = uma_suzuka.36
+						days = 30
+						random = 2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+			}
+			if = {
+				custom_tooltip = uma_crisis.7010.a.tp
+				limit = {
+					has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+				}
+				if = {
+					limit = {
+						has_country_flag = uma_rs_fail
+					}
+					hidden_effect = {
+						country_event = {
+							id = uma_suzuka.36
+							days = 30
+							random = 2
+						}
+
+					}
+				}
+				else = {
+					country_event = {
+						id = uma_suzuka.35
+						days = 30
+						random = 2
+					}
+
+				}
+			}
+		}
+	}
+
+
+	after = {
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+			}
+			create_message = {
+				type = UMA_RANDOM_SYSTEM_RESULT
+				localization = UMA_RANDOM_SYSTEM_RESULT_DESC
+				days = 3
+				target = Root
+			}
+			uma_rs_cleanup = yes
+		}
+	}
+}
+
+
+##伤后事件(全球扫描)
+country_event = {
+	id = uma_suzuka.19
+	title = uma_suzuka.13.title
+	desc = uma_suzuka.19.desc #怎么会这样呢？
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_GOOD
+	}
+
+	immediate = {
+		set_country_flag = uma_suzuka_d2
+	}
+
+	option = {
+		name = uma_suzuka.19.a #早啊
+		country_event = {
+			id = uma_suzuka.21
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.21
+	title = uma_suzuka.13.title
+	desc = uma_suzuka.21.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_SUR
+	}
+
+	option = {
+		name = uma_suzuka.21.a #I'm
+		country_event = {
+			id = uma_suzuka.22
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.22
+	title = uma_suzuka.13.title
+	desc = uma_suzuka.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_ANG
+	}
+
+	option = {
+		name = uma_suzuka.22.a
+		country_event = {
+			id = uma_suzuka.23
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.23
+	title = uma_suzuka.13.title
+	desc = uma_suzuka.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_ANG
+	}
+
+	option = {
+		name = uma_suzuka.23.a
+		country_event = {
+			id = uma_suzuka.24
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_suzuka.24
+	title = uma_suzuka.13.title
+	desc = uma_suzuka.24.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_GOOD
+	}
+
+	option = {
+		name = uma_suzuka.24.a #again?
+		if = { #快速判断
+			limit = {
+				exists = event_target:is_the_uma_the_threegodness_knowledge_research_dept
+			}
+			country_event = {
+				id = uma_suzuka.25
+			}
+		}
+		else = {
+			country_event = {
+				id = uma_suzuka.32
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_suzuka.25
+	title = uma_suzuka.spname
+	desc = uma_suzuka.25.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SP_BIGSUR
+	}
+
+	option = {
+		name = uma_suzuka.25.a
+		country_event = {
+			id = uma_suzuka.26
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.26
+	title = uma_suzuka.spname
+	desc = uma_suzuka.26.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SP_HAP_MO_EC
+	}
+
+	option = {
+		name = uma_suzuka.next
+		country_event = {
+			id = uma_suzuka.27
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.27
+	title = uma_suzuka.spname
+	desc = uma_suzuka.27.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_SHY
+	}
+
+	option = {
+		name = uma_suzuka.next
+		country_event = {
+			id = uma_suzuka.28
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.28
+	title = uma_suzuka.spname
+	desc = uma_suzuka.28.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SP_HAP_MC
+	}
+
+	option = {
+		name = uma_suzuka.28.a
+		country_event = {
+			id = uma_suzuka.29
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.29
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.29.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.29.a
+		country_event = {
+			id = uma_suzuka.30
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.30
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.30.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.30.a
+		country_event = {
+			id = uma_suzuka.31
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.31
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.31.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.31.a
+		country_event = {
+			id = uma_suzuka.40
+			days = 30
+			random = 2
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_suzuka.32
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.32.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS_GOOD
+	}
+
+	option = {
+		name = uma_suzuka.32.a
+		country_event = {
+			id = uma_suzuka.33
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.33
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.30.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.30.a
+		country_event = {
+			id = uma_suzuka.34
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.34
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.31.a
+		country_event = {
+			id = uma_suzuka.40
+			days = 100
+			random = 2
+		}
+	}
+}
+
+#B1
+country_event = {
+	id = uma_suzuka.35
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.31.a
+		country_event = {
+			id = uma_suzuka.40
+			days = 30
+			random = 2
+		}
+	}
+}
+#B2
+country_event = {
+	id = uma_suzuka.36
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.36.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS
+	}
+
+	option = {
+		name = uma_suzuka.36.a
+		country_event = {
+			id = uma_suzuka.37
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.37
+	title = uma_suzuka.ssname
+	desc = uma_suzuka.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_plain_room
+		portrait = SS_ANG
+	}
+
+	option = {
+		name = uma_suzuka.37.a
+		country_event = {
+			id = uma_suzuka.38
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.38
+	title = uma_suzuka.38.title
+	desc = uma_suzuka.38.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_normal_school
+
+	option = {
+		name = uma_suzuka.38.a
+		add_resource = {
+			influence = 200
+		}
+	}
+}
+
+
+##B3
+country_event = {
+	id = uma_suzuka.40
+	title = uma_suzuka.40.title
+	desc = uma_suzuka.40.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_traincent
+
+	option = {
+		name = uma_suzuka.40.a
+		country_event = {
+			id = uma_suzuka.42
+			days = 100
+		}
+#		if = {
+#			limit = {
+#				has_country_flag = uma_suzuka_d2
+#			}
+#			random_list = {
+#				99 = {
+#					country_event = {
+#						id = uma_suzuka.42
+#						days = 100
+#					}
+#				}
+#				1 = {
+#					country_event = {
+#						id = uma_suzuka.41
+#						days = 100
+#					}
+#				}
+#			}
+#		}
+#		else = {
+#			country_event = {
+#				id = uma_suzuka.42
+#				days = 150
+#			}
+#		}
+	}
+	option = {
+		name = uma_suzuka.40.b
+		country_event = {
+			id = uma_suzuka.43
+			days = 50
+			random = 3
+		}
+	}
+}
+
+#C1
+country_event = {
+	id = uma_suzuka.41
+	title = uma_suzuka.41.title
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			exists = event_target:is_the_uma_the_threegodness_knowledge_research_dept
+		}
+		text = uma_suzuka.41.desc_a
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				exists = event_target:is_the_uma_the_threegodness_knowledge_research_dept
+			}
+		}
+		text = uma_suzuka.41.desc_b
+	}
+	picture = GFX_evt_uma_suzuka_fracture
+
+	option = {
+		name = uma_suzuka.41.a
+		hidden_effect = {
+			country_event = {
+				id = uma_suzuka.44
+				days = 100
+				random = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.42
+	title = uma_suzuka.42.title
+	desc = uma_suzuka.42.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing_couse
+
+	option = {
+		name = uma_suzuka.42.a
+		add_modifier = {
+			modifier = uma_trainer_silent_suzuka
+		}
+		hidden_effect = {
+			remove_country_flag = uma_suzuka_event_is_doing
+		}
+	}
+}
+
+country_event = {
+	id = uma_suzuka.43
+	title = uma_suzuka.43.title
+	desc = uma_suzuka.43.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_traincent
+
+	option = {
+		name = uma_suzuka.43.a
+
+		add_modifier = {
+			modifier = uma_trainer_silent_suzuka
+		}
+		hidden_effect = {
+			remove_country_flag = uma_suzuka_event_is_doing
+		}
+	}
+}
+#E1
+country_event = {
+	id = uma_suzuka.44
+	title = uma_suzuka.44.title
+	desc = uma_suzuka.44.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_traincent_second
+
+	option = {
+		name = uma_suzuka.44.a
+		hidden_effect = {
+			add_modifier = {
+				modifier = uma_trainer_silent_suzuka_dream_break
+			}
+			remove_country_flag = uma_suzuka_event_is_doing
+		}
+	}
+}
+
+#####下面接咕噜的考古事件(下转uma_ss_arc)
+##

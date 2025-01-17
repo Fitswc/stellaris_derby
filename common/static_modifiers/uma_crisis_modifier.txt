@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0fa2057400a0e3d0befb49dad08d77ae9ba90fbbb1df5652215fca20dd90fc25
-size 388
+uma_crisis_modifier_easy = {
+	ship_weapon_damage = -0.02
+	starbase_building_build_speed_mult = 0.06
+
+}
+
+
+
+uma_crisis_modifier_normal = {
+	ship_weapon_damage = 0.02
+	starbase_building_build_speed_mult = 0.06
+
+}
+
+uma_crisis_modifier_difficult = {
+	ship_weapon_damage = 0.07
+	starbase_building_build_speed_mult = 0.06
+}
+
+
+uma_crisis_modifier_building_o = {
+	country_resource_max_add = 10000
+}

@@ -1,3 +1,143 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e21011b943341e38b8925f270d245282a703cb212ba755d2160b09bdfc98ff5
-size 2786
+origin_uma_below_threegodness = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_syncretic_evolution.dds" #到时候得自己做新的图
+	picture = "GFX_origin_below_threegodness"
+	#max_once_global = yes #唯一的起源！
+
+	#potential = {
+	#	authority = { value = auth_trainingcenter }
+		#is_ai = no
+	#}
+
+	possible = {
+		authority = { value = auth_trainingcenter }
+		species_archetype = { value = UMA }
+	}
+
+	random_weight = {
+		base = 1000
+	}
+
+	description = "origin_tooltip_uma_below_threegodness"
+
+}
+
+
+#origin_uma_salvation_of_the_soul = {
+#	is_origin = yes
+#	icon = "gfx/interface/icons/origins/unused/origins_covert_action.dds"
+#	picture = ""#欸我没有
+#	possible = {
+#		authority = { value = auth_trainingcenter }
+#		species_archetype = { value = UMA }
+#		civics = { value = civic_uma_candleoff }
+#	}
+#	random_weight = {
+#		base = 0.05
+#	}
+#	description = "origin_tooltip_uma_salvation_of_the_soul" #描述
+#}
+
+origin_uma_candleoff = {
+	#烛尽光殇
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_candleoff.dds"
+	picture = "GFX_origin_uma_candleoff"
+	description = civic_uma_candleoff_effects
+	potential = {
+		country_type = {
+			NOT = {
+				value = primitive
+			}
+		}
+	}
+	possible = {
+		authority = {
+			value = auth_trainingcenter
+		}
+		ethics = {
+			value = ethic_fanatic_xenophobe
+		}
+		civics = {
+			NOT = {
+				value = civic_fanatic_purifiers
+			}
+		}
+		species_archetype = { value = UMA }
+	}
+	modifier = {
+	}
+	random_weight = {
+		base = 0.1
+	}
+}
+
+
+##商业头脑(企业类型)
+origin_uma_business_MAN = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_uma_business_MAN.dds"
+	picture = "GFX_origin_uma_business_MAN"
+	description = origin_uma_business_MAN_effect
+	potential = {
+		country_type = {
+			NOT = {
+				value = primitive
+			}
+		}
+	}
+	possible = {
+		authority = {
+			value = auth_trainingcenter
+		}
+		species_archetype = { value = UMA }
+	}
+	playable = {
+		has_megacorp = yes
+	}
+	modifier = {
+		commercial_pact_mult = 0.4
+		empire_size_colonies_mult = 0.25
+		spy_network_daily_value_mult = 0.30
+		intel_decryption_add = 2
+	}
+
+	random_weight = {
+		base = 0.1
+	}
+}
+
+###初兴之邦
+#origin_uma_total_war_end = {
+#	is_origin = yes
+#	icon = "gfx/interface/icons/origins/origin_uma_business_MAN.dds"
+#	picture = "GFX_origin_uma_business_MAN"
+#	description = origin_uma_business_MAN_effect
+#	potential = {
+#		country_type = {
+#			NOT = {
+#				value = primitive
+#			}
+#		}
+#	}
+#	possible = {
+#		authority = {
+#			value = auth_trainingcenter
+#		}
+#		species_archetype = { value = UMA }
+#	}
+#	playable = {
+#		has_megacorp = yes
+#	}
+#	modifier = {
+#		commercial_pact_mult = 0.4
+#		empire_size_colonies_mult = 0.25
+#		spy_network_daily_value_mult = 0.30
+#		intel_decryption_add = 2
+#	}
+#
+#	random_weight = {
+#		base = 0.1
+#	}
+#}
+

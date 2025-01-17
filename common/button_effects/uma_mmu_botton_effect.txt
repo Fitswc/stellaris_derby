@@ -1,3 +1,2180 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:02e2372b82a96b6743ba446447c588c9e2997a0d9bc103243ed858a4d71431cc
-size 45155
+
+uma_mmu_change_end_game_ban = {
+	allow = {
+		always = no
+	}
+
+	potential = {
+		always = yes
+	}
+
+}
+
+uma_mmu_unfinished_effect = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_mmu_unfinished
+    }
+}
+
+uma_mmu_mid_game_difficult_easy = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_easy_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_easy
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+	}
+}
+
+uma_mmu_mid_game_difficult_normal = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_normal_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_normal
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+	}
+}
+
+uma_mmu_mid_game_difficult_hard = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_hard_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_hard
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+	}
+}
+
+
+uma_mmu_gs_vill = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_rs_vill_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_vill
+		set_global_flag = uma_global_game_setting_gamesystem_rs_vill
+		remove_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+	}
+}
+
+uma_mmu_gs_dnd = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_rs_dnd_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_dnd
+		set_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+		remove_global_flag = uma_global_game_setting_gamesystem_rs_vill
+	}
+}
+
+uma_mmu_gs_coc = {
+	allow = {
+		always = no
+	}
+	potential = {
+		always = yes
+	}
+	 effect = {
+        custom_tooltip = uma_mmu_unfinished_coc
+    }
+}
+
+
+
+uma_mmu_gs_gdi_weak = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_qs_qdi_weak_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_gdi_weak
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_qs_qdi_weak
+		set_global_flag = uma_global_game_setting_gamesystem_gdi_weak
+		remove_global_flag = uma_global_game_setting_gamesystem_gdi_full
+		remove_global_flag = uma_global_game_setting_gamesystem_gdi_none
+	}
+}
+
+uma_mmu_gs_gdi_full = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_qs_qdi_full_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_gdi_full
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_qs_qdi_full
+		set_global_flag = uma_global_game_setting_gamesystem_gdi_full
+		remove_global_flag = uma_global_game_setting_gamesystem_gdi_weak
+		remove_global_flag = uma_global_game_setting_gamesystem_gdi_none
+	}
+}
+
+uma_mmu_gs_gdi_none = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_qs_qdi_none_on
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_gdi_none
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_qs_qdi_none
+		set_global_flag = uma_global_game_setting_gamesystem_gdi_none
+		remove_global_flag = uma_global_game_setting_gamesystem_gdi_weak
+		remove_global_flag = uma_global_game_setting_gamesystem_gdi_full
+	}
+}
+
+
+
+
+#############TGRD
+
+uma_tgrd_gui_tech_cat_milltary_butte = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				which = uma_tgrd_cat_show
+				value = 1
+			}
+		}
+	}
+}
+
+
+uma_tgrd_gui_tech_produce_butte = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				which = uma_tgrd_cat_show
+				value = 0
+			}
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tree_buttf = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+
+uma_tgrd_gui_arrow_buttf = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {  }
+}
+
+#######
+
+uma_tgrd_gui_tech_carrot_ana = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_crystal_carrot_analyzing
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger
+			fail_text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 3000
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -3000
+		}
+		give_technology = {
+			tech = tech_uma_crystal_carrot_analyzing
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_carrot_pro = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_crysal_carrot_producing
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_carrot_pro_tt_trigger
+			fail_text = uma_tgrd_gui_tech_carrot_pro_tt_trigger_fail
+			has_technology = tech_uma_crystal_carrot_analyzing
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 500
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 300
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_pro_tt
+		add_resource = {
+			uma_threegodness_knowledge = -500
+			energy = -4000
+			alloys = -300
+		}
+		give_technology = {
+			tech = tech_uma_crysal_carrot_producing
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_atom_breker = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_atom_breker
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_atom_breker_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_atom_breker_tt_trigger_fail
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_atom_breker_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_atom_breker
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_atom_sticker = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_atom_sticker
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_atom_sticker_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_atom_sticker_tt_trigger_fail
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_atom_sticker_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_atom_sticker
+			message = yes
+		}
+	}
+}
+uma_tgrd_gui_tech_uma_effective_catalyst = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_effective_catalyst
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_effective_catalyst_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_effective_catalyst_tt_trigger_fail
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_effective_catalyst_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_effective_catalyst
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_alloys_maker_Automatic
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt_trigger_fail
+			has_technology = tech_uma_super_high_temp_container
+			has_technology = tech_uma_effective_catalyst
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 5000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 400
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -5000
+			alloys = -400
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_alloys_maker_Automatic
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_alloys_maker_Automatic_2
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt_trigger_fail
+
+			has_technology = tech_uma_tg_alloys_maker_Automatic
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 6000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt
+		add_resource = {
+			uma_threegodness_knowledge = -4000
+			energy = -6000
+			alloys = -500
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_alloys_maker_Automatic_2
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_custom_goods_productor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_custom_goods_productor
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt_trigger_fail
+
+			has_technology = tech_uma_atom_breker
+			has_technology = tech_uma_atom_sticker
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 5000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 400
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -5000
+			alloys = -400
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_custom_goods_productor
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_custom_goods_productor_2
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt_trigger_fail
+			has_technology = tech_uma_tg_custom_goods_productor
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 6000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt
+		add_resource = {
+			uma_threegodness_knowledge = -4000
+			energy = -6000
+			alloys = -500
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_custom_goods_productor_2
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_industrial_complex = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_industrial_complex
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt_trigger_fail
+			has_technology = tech_uma_tg_alloys_maker_Automatic_2
+			has_technology = tech_uma_tg_custom_goods_productor_2
+			has_technology = tech_uma_tg_planet_energy_extractor_2
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 7000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 7000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 5000
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt
+		add_resource = {
+			uma_threegodness_knowledge = -7000
+			energy = -7000
+			alloys = -5000
+			minerals = -4000
+		}
+		give_technology = {
+			tech = tech_uma_tg_industrial_complex
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_planet_energy_extractor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_planet_energy_extractor
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt_trigger_fail
+			has_technology = tech_uma_crystal_carrot_analyzing
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 5000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 400
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -5000
+			alloys = -400
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_planet_energy_extractor
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_planet_energy_extractor_2
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt_trigger_fail
+			has_technology = tech_uma_tg_planet_energy_extractor
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 6000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt
+		add_resource = {
+			uma_threegodness_knowledge = -4000
+			energy = -6000
+			alloys = -500
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_planet_energy_extractor_2
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_tg_resource_soil = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_resource_soil
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_tg_resource_soil_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_tg_resource_soil_tt_trigger_fail
+			has_technology = tech_uma_crystal_carrot_analyzing
+			has_technology = tech_uma_atom_sticker
+			has_technology = tech_uma_atom_breker
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 5000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 400
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_tg_resource_soil_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -5000
+			alloys = -400
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_resource_soil
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_uma_super_high_temp_container = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_super_high_temp_container
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_uma_super_high_temp_container_tt_trigger
+			fail_text = uma_tgrd_gui_tech_uma_super_high_temp_container_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_uma_super_high_temp_container_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_super_high_temp_container
+			message = yes
+		}
+	}
+}
+
+
+#######Mill
+
+uma_tgrd_gui_tech_tree_mill = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {  }
+}
+
+uma_tgrd_gui_arrow = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {  }
+}
+##### Mill
+
+uma_tgrd_gui_tech_tech_uma_high_presure_molt = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_high_presure_molt
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_high_presure_molt
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_weapon_controler = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_weapon_controler
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_weapon_controler
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_energy_raiser_b70 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_energy_raiser_b70
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_energy_raiser_b70
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_high_energy_electoric_projector
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_high_energy_electoric_projector
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_combine_light_projector = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_combine_light_projector
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 400
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt
+		add_resource = {
+			uma_threegodness_knowledge = -400
+			energy = -4000
+		}
+		give_technology = {
+			tech = tech_uma_combine_light_projector
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_MAAM = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_MAAM
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger_fail
+			has_technology = tech_uma_high_presure_molt
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_MAAM_tt
+		add_resource = {
+			uma_threegodness_knowledge = -2000
+			energy = -5000
+			alloys = -500
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_MAAM
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_QAAM = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_QAAM
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger_fail
+
+			has_technology = tech_uma_weapon_controler
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_QAAM_tt
+		add_resource = {
+			uma_threegodness_knowledge = -2000
+			energy = -5000
+			minerals = -400
+			alloys = -500
+		}
+		give_technology = {
+			tech = tech_uma_QAAM
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_tg_reaction = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_reaction
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger_fail
+
+			has_technology = tech_uma_energy_raiser_b70
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt
+		add_resource = {
+			uma_threegodness_knowledge = -2000
+			energy = -4000
+			minerals = -400
+			alloys = -500
+		}
+		give_technology = {
+			tech = tech_uma_tg_reaction
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_tech_uma_arch_weapon = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_arch_weapon
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger_fail
+
+			has_technology = tech_uma_combine_light_projector
+			has_technology = tech_uma_high_energy_electoric_projector
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt
+		add_resource = {
+			uma_threegodness_knowledge = -2000
+			energy = -4000
+			minerals = -400
+			alloys = -500
+		}
+		give_technology = {
+			tech = tech_uma_arch_weapon
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_tg_reaction_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_reaction_2
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger_fail
+
+			has_technology = tech_uma_tg_reaction
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 6000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt
+		add_resource = {
+			uma_threegodness_knowledge = -4000
+			energy = -6000
+			alloys = -500
+			minerals = -400
+		}
+		give_technology = {
+			tech = tech_uma_tg_reaction_2
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_arch_weapon_2
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger_fail
+
+			has_technology = tech_uma_arch_weapon
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 6000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 400
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt
+		add_resource = {
+			uma_threegodness_knowledge = -4000
+			energy = -6000
+			minerals = -400
+			alloys = -500
+		}
+		give_technology = {
+			tech = tech_uma_arch_weapon_2
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_tg_reaction_3 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_tg_reaction_3
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger_fail
+
+			has_technology = tech_uma_tg_reaction_2
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 7000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 7000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 600
+			}
+			has_country_resource = {
+				type = minerals
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt
+		add_resource = {
+			uma_threegodness_knowledge = -7000
+			energy = -7000
+			minerals = -500
+			alloys = -600
+		}
+		give_technology = {
+			tech = tech_uma_tg_reaction_3
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_nice_nature_ring = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_nice_nature_ring
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger_fail
+
+			has_technology = tech_uma_weapon_controler
+			has_technology = tech_uma_high_presure_molt
+			has_technology = tech_uma_combine_light_projector
+			has_technology = tech_uma_high_energy_electoric_projector
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 1000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -1000
+		}
+		give_technology = {
+			tech = tech_uma_nice_nature_ring
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_energy_wall_shield = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_energy_wall_shield
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger_fail
+
+			has_technology = tech_uma_weapon_controler
+			has_technology = tech_uma_high_presure_molt
+			has_technology = tech_uma_combine_light_projector
+			has_technology = tech_uma_high_energy_electoric_projector
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -4000
+			alloys = -500
+		}
+		give_technology = {
+			tech = tech_uma_energy_wall_shield
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_wall_armor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_wall_armor
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger_fail
+
+			has_technology = tech_uma_weapon_controler
+			has_technology = tech_uma_high_presure_molt
+			has_technology = tech_uma_combine_light_projector
+			has_technology = tech_uma_high_energy_electoric_projector
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 1000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 4000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 500
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_wall_armor_tt
+		add_resource = {
+			uma_threegodness_knowledge = -1000
+			energy = -4000
+			alloys = -500
+		}
+		give_technology = {
+			tech = tech_uma_wall_armor
+			message = yes
+		}
+	}
+}
+
+uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+	}
+	allow = {
+#		custom_tooltip = {
+#			text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger_tech
+#			NOT = {
+#				has_technology = tech_uma_army_enhance_treatment
+#			}
+#		}
+		custom_tooltip = {
+			text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger
+			fail_text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger_fail
+
+			has_country_resource = {
+				type = uma_threegodness_knowledge
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 2000
+			}
+		}
+
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt
+		add_resource = {
+			uma_threegodness_knowledge = -2000
+			energy = -2000
+		}
+		give_technology = {
+			tech = tech_uma_army_enhance_treatment
+			message = yes
+		}
+	}
+}
+
+
+
+uma_complet_uma_tgrd_gui_tech_carrot_ana = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_crystal_carrot_analyzing
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_carrot_pro = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_crysal_carrot_producing
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_atom_breker = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_atom_breker
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+
+
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_atom_sticker = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_atom_sticker
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+uma_complet_uma_tgrd_gui_tech_uma_effective_catalyst = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_effective_catalyst
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}has_technology = tech_uma_tg_alloys_maker_Automatic
+
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_alloys_maker_Automatic_2
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_custom_goods_productor
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_custom_goods_productor_2
+	}
+
+	allow = { always = yes}
+	effect = {
+	custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_industrial_complex = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_industrial_complex
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_planet_energy_extractor
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_planet_energy_extractor_2
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_tg_resource_soil = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_tg_resource_soil
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_uma_super_high_temp_container = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+		has_technology = tech_uma_super_high_temp_container
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+
+##### Mill
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_high_presure_molt = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_high_presure_molt
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_weapon_controler = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_weapon_controler
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_energy_raiser_b70 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_energy_raiser_b70
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_high_energy_electoric_projector
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_combine_light_projector = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_combine_light_projector
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_MAAM = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_MAAM
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_QAAM = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_QAAM
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_tg_reaction
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_tech_uma_arch_weapon = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_arch_weapon
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_tg_reaction_2
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_arch_weapon_2
+
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_tg_reaction_3 = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_tg_reaction_3
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_nice_nature_ring = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_nice_nature_ring
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_energy_wall_shield = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_energy_wall_shield
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_wall_armor = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_wall_armor
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}
+
+uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
+	potential = {
+		check_variable = {
+			which = uma_tgrd_cat_show
+			value = 1
+		}
+		has_technology = tech_uma_army_enhance_treatment
+	}
+
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+	}
+}

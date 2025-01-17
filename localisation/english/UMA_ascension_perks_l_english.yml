@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1939f330790ee9928c68fd8b7d17a8610a73537fcdcf7d592cf8189125c1d8bd
-size 4183
+﻿l_english:
+ ###飞升有关本地化### 
+ uma_abandon_normal_ascension: "Because of Umamusume's §Y Body §! And §Y Soul §! are §R Very Special§!, so they can't use the normal Ascension Path for the organism."
+ ###全身全灵 
+ ap_uma_zenshizenren: "Whole Body All Souls"
+ ap_uma_zenshizenren_desc: "In the past, only a handful of elites in each generation of Umamusume were able to awaken the Realm in the competition. Now, after a long period of statistics, research and experiments on the Realm, we have initially grasped the secret of the Realm:when the goals of body and mind are extremely unified, the Realm can be stimulated. \nNow, our scientists can adjust the emotions of Umamusume through psychological means, to achieve as much as possible the synchronization of body and mind and in this way stimulate the Realm. This allows Umamusume to open the "Realm" not only in the race but also in their work in all walks of life."
+ uma_will_enable_zenshizenren_ap: "We will initiate a §YSpecial Projects§! to help §YAll§! Umamusume§Yto open the 'Realm'§!"
+ uma_requires_technology_uma_terriroty_in_use: "Need Technology §YThe Inspiration and Applications of the 'Realm'§!"
+ uma_must_be_toresen_auth: "The Polity Must be §YTraincent College§!"
+ ###摘星 
+ ap_uma_fly_me_to_the_star: "Fly me to the star"
+ ap_uma_fly_me_to_the_star_desc: "Once, the "Factor" just like a star in the night sky, intimate but distant and untouchable, she guiding the way ahead for each Umamusume, Generations of scientists have worked together to build a star ladder, Later, When children want to pluck the stars from the sky, Their Mothers can point to their daughters' chests gently, and said "The star is already here.""
+ uma_will_enable_keisun_ap: "We will initiate a §YSpecial Project§! to help §YAll§! Umamusume strengthen their §YCommon 'Factor' §!"
+ #uma_requires_technology_uma_complex_keisun_test: "需要科技§Y综合遗传实验§!"  <"Requires technology §Y综合遗传实验§!">  #NT!
+  
+ ap_uma_all_galaxy_full_umamusume: "Full Galaxy Full Umamusume"
+ ap_uma_all_galaxy_full_umamusume_desc: "I don't care about species diversity! I want the whole galaxy to be filled with Umamusume! Change! Change!"  #NT!
+ uma_requires_technology_uma_complex_keisun_test: "Need Technology §YIntegrated genetic experiments§!"
+ uma_requires_first_ascension_perks_1: "$TRIGGER_FAIL$Need ascension perk §YFly me to the star§!"
+ uma_requires_first_ascension_perks_2: "$TRIGGER_FAIL$Need to ascension perk §YWhole Body All Souls§!"
+  
+  
+ ap_uma_fly_me_to_the_star_ap_two: "Casting Stars"
+ ap_uma_fly_me_to_the_star_ap_two_desc: "£uma_sd£§YUmamusume:StellarDerby§!\nI also cast the stars\n§RThis ascension perks cannot coexist with['ascension_perk:ap_uma_zenshizenren_ap_2'] and ['ascension_perk:ap_uma_mixture_ap_2']§!"
+ ap_uma_zenshizenren_ap_2: "Heart of everything"
+ ap_uma_zenshizenren_ap_2_desc: "£uma_sd£§YUmamusume:StellarDerby§!\nThe universe is in my heart\n§RThis ascension perks cannot coexist with['ascension_perk:ap_uma_fly_me_to_the_star_ap_two'] and ['ascension_perk:ap_uma_mixture_ap_2']§!"
+ uma_requires_first_ascension_perks_both: "$TRIGGER_FAIL$ Requires ['ascension_perk:ap_uma_zenshizenren'] and ['ascension_perk:ap_uma_fly_me_to_the_star']"
+ ap_uma_mixture_ap_2: "Factor-Realm fusion"
+ ap_uma_mixture_ap_2_desc: "£uma_sd£§YUmamusume:StellarDerby§!\nWe follow the path of moderation, choosing the best from the two and discarding the worst, embracing both, and can avoid falling into a passive situation. \n§RThis ascension perks cannot coexist with['ascension_perk:ap_uma_zenshizenren_ap_2'] and ['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']§!"
+ ap_uma_mixture_ap_2_tt: "\n§YUnlock building：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']"
+  
+ ap_uma_fly_me_to_the_star_ap_two_tt: "\n§YUnlock Traditions:§!['tradition_category:tradition_uma_tradition_factor']"
+ ap_uma_zenshizenren_ap_two_tt: "\n§YUnlock Traditions:§!['tradition_category:tradition_uma_tradition_realm']"
+  
+ mod_shipclass_military_damage_mult: "£shipclass_military£ Military Ship Damage:"

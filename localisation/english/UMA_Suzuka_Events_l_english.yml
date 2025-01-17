@@ -1,3 +1,183 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cacfb3ae7d61888873fb90fee021aa165461971428ea91477d825e9dd4c6e80c
-size 12635
+﻿l_english:
+
+  
+ UMA_SILENT_SUZUKA_WAS_FOUND: "Prepare for planet scan"
+ UMA_SILENT_SUZUKA_WAS_FOUND_DESC: "Our Orbiting Planet Explorer picked up a flash of a fast-moving object during a routine random scan of the planet, and even though the object was only there for a few seconds, our computer picked it up, and although this low-resolution image, which is similar to the ancient image, doesn't show much, But our scientists were able to identify it as a living creature by its shape, and while living things are quite normal on such a comfortable planet, something that can move at such high speeds seems unlikely given the local climate."
+  
+ uma_suzuka_anolomy: "Terrestrial meteor"
+ uma_suzuka_anolomy_desc: "Our orbiting Planet Explorer was doing a routine random scan of the planet [From.Planet.GetName] when it spotted a flash of a fast-moving object, and even though it only appeared for a few seconds, our computer picked it up, Although there is little to show in this low-resolution image of similar ancient quality, our scientists were able to identify it as a living creature by its body shape, and although it is normal for life to exist on such a comfortable planet, it seems unlikely that such creatures can move at such high speeds, given the local climate conditions."
+ uma_suzuka.2.title: "Terrestrial meteor"
+ uma_suzuka.2.desc: "Our orbiting Planet Explorer was doing a routine random scan of the planet [This.Getname] when it spotted a flash of a fast-moving object. Even though the object only appeared for a few seconds, our computer picked it up, and although This low-resolution image of similar ancient quality is basically invisible, But our scientists were able to identify it as a living creature by its shape, and while living things are quite normal on such a comfortable planet, something that can move at such high speeds seems unlikely given the local climate."
+ uma_suzuka.2.a: "I felt it necessary to investigate"
+ uma_suzuka.2.b: "I believe evolution will explain this phenomenon"
+  
+ uma_suzuka.3.title: "Now we just have to choose our options..."
+ uma_suzuka.3.desc: "We intend to do a scan of the planet, but finding an object on a huge planet is not an ordinary difficulty, our scientists have provided two scanning options, and now we just need to make some small decisions."
+ uma_suzuka.3.a: "Global face scan"
+ uma_suzuka.3.b: "Random sampling scan"
+ uma_suzuka.3.c: "That seems a little expensive"
+  
+ uma_suzuka.4.title: "Global Scan"
+ uma_suzuka.4.desc: "After more than 300 days of global scanning, we finally found this flash again in a scan, but this time, it is like a race with our scanning light, you chase me; Our scientists, on the boat, watched this wonderful race with great interest, immersed in the graceful running posture of this creature; It was only when they found that the target they were tracking had suddenly stopped that they began to prepare for the airdrop for the field study."
+ uma_suzuka.4.a: "What species has such speed?"
+ uma_suzuka.5.title: "Sampling Scan"
+ uma_suzuka.5.desc: "Through our sampling survey, which is like a crab digging a hole, we have not obtained much except for some local organisms that we have not seen before; But at the last inspection, we detected a slight anomaly on a prairie, and now our scientists are preparing to airdrop it for a field trip."
+ uma_suzuka.5.a: "What species has such speed?"
+ uma_suzuka.20.title: "So What we found?"
+ uma_suzuka.20.desc: "After more than 30 days of random sampling, we all found entities with corresponding characteristics, it is possible that it has found our whereabouts, or it is possible that we are not so lucky..."
+ uma_suzuka.20.a: "Let's put this in the past"
+  
+ uma_suzuka.6.title: "The colorful scenery"
+ uma_suzuka.6.desc: "Accompanied by the accompanying security, our scientists landed on this planet, in the process of going to the marked location, our scientists have been marveling at this beautiful scenery, although it is a prairie, but under the background of different vegetation, it has a colorful color."
+ uma_suzuka.6.a: "It must be nice to run here."
+  
+ uma_suzuka.8.title: "Oh, it's a lovely Umamusume"
+ uma_suzuka.8.desc: "It may be that this dreamlike scene is so rare that our team took a little longer than expected to reach the target location; As the scientists approached the target point, escorted by security guards with guns raised, our scientists saw a Umamusume lying leisurely on the ground, seemingly asleep. In the breeze, she looks very lovely. Should we disturb her?"
+ uma_suzuka.8.a: "Ask her"
+ uma_suzuka.8.b: "Better not disturb her"
+  
+ uma_suzuka.9.title: "Oh, it's a wounded Umamusume"
+ uma_suzuka.9.desc: "It may be that this dreamlike scene is so rare that our team took a little longer than expected to reach the target location; As the scientists approached the target point, escorted by security guards with guns raised, our scientists saw a Umamusume lying on her side on the ground with her hands around her legs in pain, seemingly unconscious from the pain."
+ uma_suzuka.9.a: "Bring her back so the doctor can look at her"
+ uma_suzuka.9.b: "It's not our business"
+  
+ uma_suzuka.10.title: "Heal!"
+ uma_suzuka.10.desc: "After the doctor's diagnosis and treatment, Umamusume's fracture has been completely cured, but because of this fracture, running should be a bit of a step for her."
+ uma_suzuka.10.a: "What a shame. Ah, she should be awake"
+  
+ uma_suzuka.11.title: "Death"
+ uma_suzuka.11.desc: "Three years later, when our detector scanned [This.Planet.GetName] again, it found that the Umamusume we had left behind had become a white bone; The beautiful scenery is still there, but the horses that ran in it are gone; We are born in the land, and eventually return to the land, perhaps, this is the best outcome."
+  
+ uma_suzuka.12.title: "Let's keep running"
+ uma_suzuka.12.desc: "We didn't bother her, just gently put a new pair of running shoes beside her and left. Since then, in all our tests, the Umamusume has appeared in our field of vision, and the scenery around her perfectly sets off her beautiful figure; Look, she is waving at us!"
+ uma_suzuka.12.a: "Looks like we made the right choice"
+  
+  
+ uma_suzuka.13.title: "???"
+ uma_suzuka.ssname: "Silent Suzuka"
+ uma_suzuka.spname: "Special Week"
+ uma_suzuka.next: "Next"
+  
+ uma_suzuka.13.desc: "Um...... The view ahead...... Never...... Hey hey....."
+ uma_suzuka.13.a: "Good Morning!"
+  
+ uma_suzuka.14.desc: "Aaargh! Good morning, please, excuse me, you are ......"
+ uma_suzuka.14.a: "I'm [Root.GetLeaderName] from [Root.GetHomeWorldName], what's your name?"
+  
+ uma_suzuka.15.desc: "My name is Silent Suzuka. Can I help you, please?"
+ uma_suzuka.15.a: "Why are you here all alone?"
+ uma_suzuka.15.b: "I see you're running pretty well. Be the kids' trainer"
+  
+ uma_suzuka.16.desc: "Because the view here is beautiful."
+ uma_suzuka.16.a: "That it..."
+  
+ uma_suzuka.17.desc: "Eh?Me?"
+ uma_suzuka.17.a: "Yes!"
+  
+ uma_suzuka.18.desc: "Well, let me think about it."
+ uma_suzuka.18.a: "Waiting for you"
+  
+  
+ uma_suzuka.19.desc: "How did that happen? (Lift her leg)"
+ uma_suzuka.19.a: "Good Morning!"
+  
+ uma_suzuka.21.desc: "Ah!You are...."
+ uma_suzuka.21.a: "I'm [This.GetRulerName]"
+  
+ uma_suzuka.22.desc: "That... [This.GetRulerName], please answer two questions for me.\nFirst of all, why I'm here."
+ uma_suzuka.22.a: "We found you unconscious in the grass, and we brought you back."
+  
+ uma_suzuka.23.desc: "Second, where is this?"
+ uma_suzuka.23.a: "Here is Traincent Academy"
+  
+ uma_suzuka.24.desc: "Ah,Traincent, Back again......"
+ uma_suzuka.24.a: "Again?"
+  
+ uma_suzuka.25.desc: "Suzuka-San！！"
+ uma_suzuka.25.a: "Special Week？"
+  
+ uma_suzuka.26.desc: "Yaaawn... Ah, it's the president. I heard Suzuka was hurt, so I came to see him."
+ uma_suzuka.27.desc: "Special Week, you're still the same."
+ uma_suzuka.28.desc: "Hey hey, this is not worried about Suzuka SAN... Oh, right [This.GetRulerTitle], you don't know, this is Silent Suzuka, she is my idol oh!"
+ uma_suzuka.28.a: "Nice to recognize you, Silent Suzuka"
+ uma_suzuka.29.desc: "Nice to meet you again, Chairman"
+ uma_suzuka.29.a: "I'm sure you'll make a good trainer. We don't have a good trainer here right now."
+ uma_suzuka.30.desc: "Is this supposed to get me into the academy?"
+ uma_suzuka.30.a: "Yes"
+ uma_suzuka.31.desc: "Well... For the sake of the Special Week, I said yes, but I have one small request......"
+ uma_suzuka.31.a: "All Free to ask."
+ uma_suzuka.31.end: "Thank"
+ uma_suzuka.32.desc: "I used to live here, and after I graduated, I went out and traveled everywhere, until I found this perfect planet, and I lived on it, where no one could compete with me for the view."
+ uma_suzuka.32.a: "Well, I think you'll make a good trainer. We're in short supply of a good trainer right now."
+ uma_suzuka.34.desc: "Well, I'll do it on the condition that you get me back, but on one small condition."
+ uma_suzuka.35.desc: "Okay, I said yes, but I have a few minor requirements."
+ uma_suzuka.36.desc: "I appreciate your kindness, but..."
+ uma_suzuka.36.a: "But?"
+ uma_suzuka.37.desc: "I can't accept you"
+ uma_suzuka.37.a: "Why?"
+ uma_suzuka.38.title: "Leave"
+ uma_suzuka.38.desc: "Silent Suzuka only left a §Y leading scenery, never let §! He left, and since then, the planet has lost a running creature."
+ uma_suzuka.38.a: "Oh, So shame"
+  
+  
+ uma_trainer_silent_suzuka: "Trainer Silent Suzuka"
+ uma_trainer_silent_suzuka_dream_break: "Trainer Silent Suzuka"
+  
+  
+ uma_suzuka.40.title: "Silent Suzuka's Wish"
+ uma_suzuka.40.desc: "After a few days,Silent Suzuka taught the Central Academy's trainers, and it seemed that the Umamusume under her guidance had perfected their craft. As for her little request..."
+ uma_suzuka.40.a: "Let the horn blow!"
+ uma_suzuka.40.b: "We can't grant that request, but..."
+ uma_suzuka.41.title: "Fallen Star"
+ uma_suzuka.41.desc_a: "In this all-Academy middle distance race, Silent Suzuka showed a perfect start.\nHowever, on the turn four Silent Suzuka suddenly stalled, the injured leg as broken, weak and weak. Seeing the Special Week in the stands, he immediately jumped off the stands, along the outer runway, and rushed to the Silent Suzuka who was ready to fall; He grabbed her before she could wipe the floor with her face, then took Silent Suzuka to an ambulance through tears."
+ uma_suzuka.41.desc_b: "In this all-Academy middle distance race, Silent Suzuka showed a perfect start.\nHowever, when turning in the fourth corner, Silent Suzuka suddenly stalled, and the injured leg was weak and weak as if broken. Several doctors in the stand saw it, and immediately jumped off the stand, along the outer runway, and rushed to Silent Suzuka, who was ready to fall. He grabbed Silent Suzuka before she could wipe the floor with her face and carried her to an ambulance on a stretcher."
+ uma_suzuka.41.a: "Silent Suzuka!"
+  
+ uma_suzuka.42.title: "Shining Star"
+ uma_suzuka.42.desc: "In the middle distance race of the whole college, Silent Suzuka successfully led the whole race with her unexpected "escape" running method. Her unique running method and beautiful posture left a deep impression on many people present; After that, for some reason, more people turned to Silent Suzuka to train with them."
+ uma_suzuka.42.a: "Looks like we found the right guy"
+ uma_suzuka.43.title: "Silent Star"
+ uma_suzuka.43.desc: "We refused Silent Suzuka's request, but as compensation, we allowed her to run with the students during training. Now, we can often see Silent Suzuka running on the track with students. Although she can't reach the previous speed, it is enough for her to see the scenery ahead"
+ uma_suzuka.43.a: "Beautiful"
+ uma_suzuka.44.title: "Broken Star"
+ uma_suzuka.44.desc: "By straining herself too hard, Silent Suzuka broke her bones again, and the bones in her legs became very weak due to multiple fractures.\nIn order to prevent her from happening again, the doctor gave her a fixed device, although she can run again, but the speed is certainly not as fast as before; From then on, Silent Suzuka could often be seen sitting on a bench next to the track after school, touching his leg while looking at the students left to train on their own.\nSometimes she would run a lap by herself and finally leave with a sigh, looking at the stopwatch in her hand. Although she always smiled when talking with us, the bitterness and pain of not running behind her could not be covered up."
+ uma_suzuka.44.a: "......"
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

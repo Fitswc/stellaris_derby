@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:135136aae13c1f7800844890871afb971b12fc2e2b4f0dac36a0e70bc9ab91ba
-size 223
+###特雷森马娘共同体（Rupublic of Toresen,ROT） 开局介绍
+
+part = {
+        location = 0
+        localization = "START_SCREEN_ROT"	
+        trigger = {
+               has_country_flag = umamusume_1
+        }		
+}

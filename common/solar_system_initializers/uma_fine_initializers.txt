@@ -1,3 +1,106 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19007577e72c0e34deba242683d49e75f8884595517e56eb166334e84a7a2645
-size 1419
+uma_fine_initializer = {
+
+	name = uma_fine_planet
+	class = "sc_b"
+
+	flags = { uma_fine_system }
+
+	planet = {
+		class = star
+		size = {
+			min = 25
+			max = 35
+		}
+		orbit_distance = 0
+		orbit_angle = 1
+	}
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 60
+	}
+
+	planet = {
+		class = pc_gaia
+		orbit_distance = 60
+		orbit_angle = 90
+		name = U_F_I
+		size = 20
+#		anomaly = uma_bourbon_anomaly_second
+
+		flags = {
+		}
+
+		init_effect = {
+			save_global_event_target_as = uma_fine_arc_here
+			set_planet_flag = uma_fine_planet_here
+#			prevent_anomaly = yes
+		}
+
+		moon = {
+			count = {
+				max = 2
+				min = 0
+			}
+			orbit_distance = 2.5
+			size = 1
+		}
+	}
+
+	planet = {
+		name = U_F_II
+		class = pc_barren
+		orbit_distance = {
+			max = 120
+			min = 75
+		}
+		orbit_angle = {
+			max = 20
+			min = -150
+		}
+		size = 19
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = U_F_III
+		class = pc_frozen
+		orbit_distance = {
+			max = 110
+			min = 80
+		}
+		orbit_angle = {
+			max = 60
+			min = -170
+		}
+		size = 19
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = U_F_IIII
+		class = pc_asteroid
+		orbit_distance = {
+			max = 70
+			min = 90
+		}
+		orbit_angle = {
+			max = 20
+			min = -150
+		}
+		size = 20
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+}

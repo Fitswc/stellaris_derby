@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:381208d8a0a96850fa2c18c666f1cd038e162b907d1cd50f6abe7b80bf97b3f0
-size 833
+# Icons set here are the ones shown in component editor list.
+
+
+component_set = {
+	key = "BIG_EATER"
+
+	icon = "GFX_ship_part_uma_big_eater_shield_energy_retribution"
+	icon_frame = 1
+}
+component_set = {
+	key = "TWIN_TURBO_BOOSTER"
+
+	icon = "GFX_ship_part_twin_turbo_booster"
+	icon_frame = 1
+}
+component_set = {
+	key = "UMA_ARMOR"
+
+	icon = "GFX_ship_part_uma_fermion_armor"
+	icon_frame = 1
+}
+component_set = {
+	key = "UMA_SHIELD"
+
+	icon = "GFX_ship_part_uma_high_energy_light_particle_shield"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "UMA_REALM_STICKER"
+	icon = GFX_ship_part_uma_hadron_disruptor#TODO:图标更换(领域干扰器:Component_Set)
+	icon_frame = 1
+}
+
+component_set = {
+	key = "UMA_REALM_STICKER_MATRIX"
+	icon = GFX_ship_part_aura_shige_halo#TODO:图标更换(光环：领域干扰矩阵:Component_Set)
+	icon_frame = 1
+}

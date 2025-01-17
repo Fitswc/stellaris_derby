@@ -1,3 +1,100 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b61504be2c643a5583c01d0f74f16e04369b7b30930153711b12a14e3a5a976
-size 2213
+@base_moon_distance = 10
+
+
+uma_seiun_sky_system_initializer = {
+	name = II_BP #"Bellis perennis" #意为“雏菊”，是现实中星云天空和西野花的后代。
+	class = "sc_g"
+
+	flags = { uma_seiun_sky_system }
+
+	planet = {
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+	planet = {
+		class = pc_gaia
+		orbit_distance = 70
+		orbit_angle = { min = 90 max = 350 }
+		name = II_SKY #"青云"
+		size = 20 #20格盖亚星球
+		modifiers = none
+
+		flags = { uma_planet_seiun_sky_star }
+		#anomaly = uma_seiun_sky_anomoly #必定刷出“隐居者”
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			save_global_event_target_as = uma_seiun_sky_planet
+			add_deposit = d_hot_springs
+			add_deposit = d_rushing_waterfalls
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_rugged_woods
+			add_deposit = d_fertile_lands
+			add_deposit = d_great_river
+		}
+
+        change_orbit = @base_moon_distance
+
+        moon = {
+            class = pc_gaia
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+			size = 10 #小花对应的盖亚星球只有10格
+			name = II_FLO #"花"
+			modifiers = none
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				add_deposit = d_fertile_lands
+				add_deposit = d_great_river
+				add_deposit = d_rugged_woods
+			}
+
+        }
+	}
+
+	planet = {
+		name = II_Mill #米尔斯，sky原型母
+		class = pc_gas_giant
+		has_ring = yes
+		orbit_distance = { min = 1100 max = 150 }
+		orbit_angle = 60
+		size = 45
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+
+		moon = {
+			class = pc_crystal_asteroid
+			orbit_distance = 10
+			orbit_angle = { min = 50 max = 270 }
+			size = 2
+			name = II_STH #雪弗斯，sky原型父名音译
+			modifiers = none
+
+			init_effect = {
+				prevent_anomaly = no
+				clear_deposits = yes
+			}
+		}
+	}
+
+	planet = {
+		name = II_FR #Soirée de Chaton(法文：小猫的舞会，对应sky服装Ⅱ)
+		class = pc_barren_cold
+		has_ring = no
+		orbit_distance = {min = 50 max = 70}
+		orbit_angle = {min = 20 max = 100}
+		size = 20
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+	}
+}

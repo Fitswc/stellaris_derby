@@ -1,3 +1,186 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dec37836aa8d5b731f8918db9bae4e8a185d1521a8eeee261bb47f426cc005f
-size 3062
+namespace = uma_autoroll
+
+#自动抽卡Sil-mode_第一抽!
+country_event = {
+	id = uma_autoroll.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_policy_flag = uma_autoroll_sil_on
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+	}
+
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		hidden_effect = {
+			uma_auto_sil_roll = yes
+			country_event = {
+				id = uma_autoroll.2
+			}
+		}
+
+	}
+}
+
+#自动抽卡Sil-mode_第二抽!
+country_event = {
+	id = uma_autoroll.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_policy_flag = uma_autoroll_sil_on
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+	}
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		hidden_effect = {
+			uma_auto_sil_roll = yes
+			country_event = {
+				id = uma_autoroll.3
+
+			}
+		}
+	}
+}
+
+#自动抽卡Sil-mode_第三抽!
+country_event = {
+	id = uma_autoroll.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_policy_flag = uma_autoroll_sil_on
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+	}
+
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		hidden_effect = {
+			uma_auto_sil_roll = yes
+		}
+	}
+}
+
+#自动抽卡Win-mode_第一抽!
+country_event = {
+	id = uma_autoroll.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_policy_flag = uma_autoroll_win_on
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+	}
+
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		hidden_effect = {
+			uma_auto_win_roll = yes
+			country_event = {
+				id = uma_autoroll.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_autoroll.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_policy_flag = uma_autoroll_win_on
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+	}
+
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		hidden_effect = {
+			uma_auto_win_roll = yes
+			country_event = {
+				id = uma_autoroll.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_autoroll.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_policy_flag = uma_autoroll_win_on
+			resource_stockpile_compare = {
+				resource = uma_crystal_carrot
+				value >= 150
+			}
+			check_variable = {
+				which = uma_shop_gecha_times_allowed
+				value > 0
+			}
+		}
+	}
+
+	immediate = {
+		add_resource = {
+			uma_crystal_carrot = -150
+		}
+		hidden_effect = {
+			uma_auto_win_roll = yes
+		}
+	}
+}

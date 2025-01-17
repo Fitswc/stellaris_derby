@@ -1,3 +1,143 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bf755bbfe9f2a1489320945d984cb30c8cfa61c834019d01bb5e8e5847469bad
-size 2640
+uma_tachyon_supervisor_relics = {
+	activation_duration = 3600
+	portrait = "GFX_relic_mechano_calibrator"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 3000
+		}
+	}
+
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "tachyon_supervisor"
+			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+uma_intact_supervisor_relics = {
+	activation_duration = 3600
+	portrait = "GFX_relic_mechano_calibrator"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 3000
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_engineering_research_produces_mult = 0.06
+		planet_jobs_physics_research_produces_mult = 0.06
+		planet_jobs_society_research_produces_mult = 0.06
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "intact_supervisor"
+			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+#uma_umamusume_datebase = {
+#	activation_duration = 3600
+#
+#	portrait = "GFX_relic_mechano_calibrator"
+#	sound = "relic_activation_ether_drake_trophy"
+#
+#	resources = {
+#		category = relics
+#		# Activation cost
+#		cost = {
+#			energy = 3000
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 0
+#	}
+#
+#	triggered_country_modifier = {
+#		potential = {
+#			always = yes
+#		}
+#		planet_jobs_engineering_research_produces_mult = 0.06
+#		planet_jobs_physics_research_produces_mult = 0.06
+#		planet_jobs_society_research_produces_mult = 0.06
+#	}
+#
+#	score = 1000
+#
+#	active_effect = {
+#	}
+#
+#	# Possible check for activation
+#	possible = {
+#		custom_tooltip = {
+#			fail_text = "requires_relic_no_cooldown"
+#			NOT = { has_modifier = relic_activation_cooldown }
+#		}
+#	}
+#}

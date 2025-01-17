@@ -1,3 +1,318 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8376d3825c8cedc50bc24a861719872c5693a4cfbaaea75938a813527689d67b
-size 6296
+#驴改规则了，由原来的Merge改成LIOS(后进覆盖)力！
+#驴你抽什么风！
+#妈的不管了，直接盖，再见了您内
+#Override
+
+
+defined_text = {
+	name = LeaderTierName
+	random = no
+	text = {
+		trigger = {
+			has_leader_flag = renowned_leader
+		}
+		localization_key = CLASS_TIER_RENOWNED
+	}
+	text = {
+		trigger = {
+			has_leader_flag = legendary_leader
+			NOT = {
+				OR = {
+					has_leader_flag = uma_is_deep
+					has_leader_flag = uma_is_oguri_cap
+					has_leader_flag = uma_is_agnes_digital
+					has_leader_flag = uma_is_seiun_sky
+					has_leader_flag = uma_is_tokai_teio
+					has_leader_flag = uma_is_cheval_grand
+					##DDOD-Sub
+					has_leader_flag = Jantis_leader
+				}
+			}
+		}
+		localization_key = CLASS_TIER_LEGENDARY
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_deep
+			}
+		}
+		localization_key = UMA_CLASS_TIER_DEEP
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_oguri_cap
+			}
+		}
+		localization_key = UMA_CLASS_TIER_OGURI
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_agnes_digital
+			}
+		}
+		localization_key = UMA_CLASS_TIER_DID
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_seiun_sky
+			}
+		}
+		localization_key = UMA_CLASS_TIER_SKY
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_tokai_teio
+			}
+		}
+		localization_key = UMA_CLASS_TIER_TET
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_cheval_grand
+			}
+		}
+		localization_key = UMA_CLASS_TIER_CHEVAL
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = Jantis_leader
+			}
+		}
+		localization_key = UMA_CLASS_TIER_JANTIS
+	}
+
+	default = LEADER_CLASS_TEXT
+}
+
+defined_text = {
+	name = ClassPrefix
+	random = no
+	text = {
+		trigger = {
+			has_leader_flag = renowned_leader
+		}
+		localization_key = CLASS_PREFIX_RENOWNED
+	}
+	text = {
+		trigger = {
+			has_leader_flag = legendary_leader
+			NOT = {
+				OR = {
+					has_leader_flag = uma_is_deep
+					has_leader_flag = uma_is_oguri_cap
+					has_leader_flag = uma_is_agnes_digital
+					has_leader_flag = uma_is_seiun_sky
+					has_leader_flag = uma_is_tokai_teio
+					has_leader_flag = uma_is_cheval_grand
+					has_leader_flag = Jantis_leader
+				}
+			}
+		}
+		localization_key = CLASS_PREFIX_LEGENDARY
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_deep
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_DEEP
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_oguri_cap
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_OGURI
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_agnes_digital
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_DID
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_seiun_sky
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_SKY
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_tokai_teio
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_TET
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = uma_is_cheval_grand
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_CHEVAL
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				has_leader_flag = legendary_leader
+				has_leader_flag = Jantis_leader
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_JANTIS
+	}
+
+	default = CLASS_PREFIX_NONE
+}
+
+
+#defined_text = {
+#	name = GetScriptedCouncilBackground
+#	###马娘
+#	text = {
+#		localization_key = GFX_council_room_uma
+#		trigger = {
+#			has_authority = auth_trainingcenter
+#		}
+#	}
+#	###
+#	text = {
+#		localization_key = GFX_council_room_common
+#		trigger = {
+#			has_paragon_dlc = no
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_corporate
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_corporate
+#			country_has_extra_council_position = no
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_corporate_offset
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_corporate
+#			country_has_extra_council_position = yes
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_democratic
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_democratic
+#			country_has_extra_council_position = no
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_democratic_offset
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_democratic
+#			country_has_extra_council_position = yes
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_dictatorial
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_dictatorial
+#			country_has_extra_council_position = no
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_dictatorial_offset
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_dictatorial
+#			country_has_extra_council_position = yes
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_hive
+#		trigger = {
+#			has_paragon_dlc = yes
+#			is_hive_empire = yes
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_imperial
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_imperial
+#			country_has_extra_council_position = no
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_imperial_offset
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_imperial
+#			country_has_extra_council_position = yes
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_machine
+#		trigger = {
+#			has_paragon_dlc = yes
+#			is_machine_empire = yes
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_oligarchic
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_oligarchic
+#			country_has_extra_council_position = no
+#		}
+#	}
+#	text = {
+#		localization_key = GFX_council_room_oligarchic_offset
+#		trigger = {
+#			has_paragon_dlc = yes
+#			has_authority = auth_oligarchic
+#			country_has_extra_council_position = yes
+#		}
+#	}
+#}

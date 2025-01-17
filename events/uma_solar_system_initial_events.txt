@@ -1,3 +1,152 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8844a2de21b098a9c89e3661eb786b0c71f4f9bd0a88efefeac665940421d3a4
-size 3299
+namespace = uma_system_ini
+
+
+#目前使用的星系生成事件，挂靠在母星初始化的onaction里
+planet_event = {
+    id = uma_system_ini.1
+    hide_window = yes
+    is_triggered_only = yes
+
+	#fire_only_once = yes
+	trigger = {
+		owner = {
+			is_ai = no
+			has_authority = auth_trainingcenter
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_multiplayer = yes
+			}
+#			owner = {
+#				save_event_target_as = uma_player_country
+#			}
+
+			random_country = {
+				limit = {
+					is_country_type = global_event
+				}
+				country_event = {
+					id = uma_system_ini.2
+				}
+			}
+
+			owner = {
+				country_event = {
+					id = uma_shop_center.1
+					#days = 10 为什么会有个延时？
+				}
+			}
+		}
+		else = {
+			owner = {
+				save_event_target_as = uma_player_country
+			}
+
+			###定位阶段
+			###确定sky的星系
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 2
+				UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
+				FLAG = uma_seiun_sky_system_created
+				SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
+			}
+
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 2
+				UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
+				FLAG = uma_grass_wonder_system_created
+				SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
+			}
+
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 2
+				UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
+				FLAG = uma_tachyon_coffee_system_created
+				SAVE_GLOBAL_TARGET = uma_where_coffee_is
+			}
+
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 5
+				MAX_JUMPS = 10
+				UMA_INITIALIZER = "uma_shop_center_system_initializer"
+				FLAG = uma_shop_center_system_created
+				SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+			}
+
+			owner = {
+				country_event = {
+					id = uma_shop_center.1
+					days = 5
+				}
+			}
+		}
+				
+    }	
+}
+
+
+country_event = {
+	id = uma_system_ini.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = uma_has_been_spawn_system_in_multiplayer
+		}
+	}
+
+	immediate = {
+		set_global_flag = uma_has_been_spawn_system_in_multiplayer
+		###定位阶段
+		###确定sky的星系
+		uma_spawn_system_around_solar_system_multiplayer = {
+			MIN_JUMPS = 1
+			MAX_JUMPS = 3
+			UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
+			FLAG = uma_seiun_sky_system_created
+			SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
+		}
+
+		uma_spawn_system_around_solar_system = {
+			MIN_JUMPS = 1
+			MAX_JUMPS = 3
+			UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
+			FLAG = uma_grass_wonder_system_created
+			SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
+		}
+
+		uma_spawn_system_around_solar_system_multiplayer = {
+			MIN_JUMPS = 1
+			MAX_JUMPS = 3
+			UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
+			FLAG = uma_tachyon_coffee_system_created
+			SAVE_GLOBAL_TARGET = uma_where_coffee_is
+		}
+
+		uma_spawn_system_around_solar_system_multiplayer = {
+			MIN_JUMPS = 5
+			MAX_JUMPS = 10
+			UMA_INITIALIZER = "uma_shop_center_system_initializer"
+			FLAG = uma_shop_center_system_created
+			SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+		}
+
+		random_country = {
+			limit = {
+				is_ai = no
+				has_authority = auth_trainingcenter
+			}
+			country_event = {
+				id = uma_shop_center.1
+				days = 5
+			}
+		}
+	}
+}

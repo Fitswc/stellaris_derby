@@ -1,3 +1,540 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c498f223c557e6f868d159f9937e7d5d48fa7f25e7c0715b24d0b2331926326e
-size 9796
+namespace = uma_cheval
+
+##
+
+country_event = {
+	id = uma_cheval.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = UMA_CHEVAL_RIFT_GENERATED
+		random_system = {
+			limit = {
+				distance = {
+					source = root.solar_system
+					min_jumps = 4
+					max_jumps = 9
+				}
+			}
+			set_star_flag = uma_cheval_system
+			spawn_astral_rift = {
+				random_pos = yes
+				orbit_distance = 70
+				orbit_angle = 120
+				tolerance = 360
+				id = uma_ar_cheval
+				spawn_sound = no
+			}
+		}
+	}
+}
+
+
+
+
+astral_rift_event = {
+	id = uma_cheval.2
+	title = uma_cheval.2.title
+	desc = uma_cheval.2.desc
+	astral_rift = yes
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	picture = GFX_evt_uma_cheval_outher_world
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.2.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.3
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+
+astral_rift_event = {
+	id = uma_cheval.3
+	title = uma_cheval.3.title
+	desc = uma_cheval.3.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_limited_sky
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.3.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.4
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_cheval.4
+	title = uma_cheval.4.title
+	desc = uma_cheval.4.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_manmade_building
+	is_triggered_only = yes
+	difficulty = 0
+
+	option = {
+		name = uma_cheval.4.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.5
+			on_roll_failed = uma_cheval.5
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_cheval.5
+	title = uma_cheval.5.title
+	desc = uma_cheval.5.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_manmade_building
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.5.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.6
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+
+astral_rift_event = {
+	id = uma_cheval.6
+	title = uma_cheval.6.title
+	desc = uma_cheval.6.desc
+	picture = GFX_evt_uma_cheval_little_house
+	astral_rift = yes
+	show_sound = event_wind_ruins
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.6.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.7
+		}
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+	option = {
+		name = uma_cheval.6.b
+		set_next_astral_rift_event = {
+			id = uma_cheval.7
+		}
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+
+
+astral_rift_event = {
+	id = uma_cheval.7
+	title = uma_cheval.7.title
+	desc = uma_cheval.7.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_we_should_think_more
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.7.a
+		finish_astral_rift = yes
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+	option = {
+		name = uma_cheval.7.b
+		set_next_astral_rift_event = {
+			id = uma_cheval.8
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+#Focus-open
+astral_rift_event = {
+	id = uma_cheval.8
+	title = uma_cheval.8.title
+	desc = uma_cheval.8.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_we_should_think_more
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.8.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.9
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_cheval.9
+	title = uma_cheval.9.title
+	desc = uma_cheval.9.desc
+	picture = GFX_evt_uma_cheval_fishing
+	astral_rift = yes
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.9.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.10
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+	option = {
+		name = uma_cheval.9.b
+		set_next_astral_rift_event = {
+			id = uma_cheval.12
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_cheval.10
+	title = uma_cheval.10.title
+	desc = uma_cheval.10.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_fishing
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.10.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.11
+		}
+
+		ai_chance = {
+			inline_script = astral_rift/rift_difficulty_ai_weight
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_cheval.12
+	title = uma_cheval.12.title
+	desc = uma_cheval.12.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_fishing
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.12.a
+		set_next_astral_rift_event = {
+			id = uma_cheval.10
+		}
+
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_cheval.11
+	title = uma_cheval.11.title
+	desc = uma_cheval.11.desc
+	astral_rift = yes
+	picture = GFX_evt_uma_cheval_goingout
+	is_triggered_only = yes
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_cheval.11.a
+		finish_astral_rift = yes
+		hidden_effect = {
+			explorer = {
+				country_event = {
+					id = uma_cheval.13
+					days = 30
+				}
+			}
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_cheval.13
+	title = uma_cheval.13.title
+	desc = uma_cheval.13.desc
+	picture = GFX_evt_uma_cheval_trainroom
+	is_triggered_only = yes
+
+	option = {
+		name = uma_cheval.13.a
+		hidden_effect = {
+			country_event = {
+				id = uma_cheval.14
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_cheval.14
+	title = CHEVAL
+	desc = uma_cheval.14.desc
+	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
+
+	picture = GFX_uma_leader_cheval
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_cheval_grand
+	}
+
+	immediate = {
+		play_sound = uma_hire_Cheval
+		create_country = {
+            name = "NAME_uma_empty_cg"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = uma_cg_country
+            }
+        }
+        event_target:uma_cg_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			uma_create_leader_cheval = yes
+		}
+	}
+
+	option = {
+		name = uma_cheval.14.a
+		response_text = uma_cheval.14.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_cheval.14.b
+		response_text = uma_cheval.14.b.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_cheval.14.c
+		response_text = uma_cheval.14.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_cheval.14.hire
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_cheval_grand
+			species = root.species
+			gender = female
+		}
+		hidden_effect = {
+			last_created_leader = {
+				change_leader_portrait = "76c"
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_cheval_grand
+				save_global_event_target_as = uma_is_leader_cheval_grand
+				set_leader_flag = legendary_leader
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_cheval_grand
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_cheval_grand
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+		give_specimen = { key = uma_cheval_hat }
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_cheval_grand= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_cg_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_cheval.15
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:uma_is_leader_cheval_grand = {
+
+			if = {
+				limit = {
+					has_leader_flag = uma_changed_cheval
+				}
+				change_leader_portrait = 76c
+				remove_leader_flag = uma_changed_cheval
+			}
+			else = {
+				change_leader_portrait = 76d
+				set_leader_flag = uma_changed_cheval
+
+			}
+		}
+	}
+}

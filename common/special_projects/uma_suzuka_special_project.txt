@@ -1,3 +1,108 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc97111421db48eef2498bb49de4dd7ec62851a8184dce693d766fd1abaad303
-size 1752
+#special_project = {
+#	key = "UMA_SILENT_SUZUKA_WAS_FOUND" #准备星球扫描
+#	days_to_research = 240
+#	tech_department = engineering_technology
+#	icon = gfx/interface/icons/situation_log/situation_log_scanning_beam.dds
+#	#picture = #谢邀
+#
+#	event_scope = country_event
+#
+#	on_success = {
+#		owner = {
+#			country_event = {
+#				id = uma_suzuka.3
+#				days = 10
+#			}
+#		}
+#	}
+#
+#	on_fail = {
+#		#空!
+#	}
+#
+#	on_cancel = {
+#	}
+#}
+
+
+special_project = {
+	key = "UMA_SILENT_SUZUKA_TRANGLE_STAR" #观星
+	days_to_research = 340
+	tech_department = engineering_technology
+	cost = {
+		base = 10000
+	}
+	icon = gfx/interface/icons/situation_log/situation_log_planet.dds
+	#picture = #谢邀
+	event_chain = uma_ayb_full
+
+	event_scope = country_event
+
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_ss_arc.16
+				days = 30
+			}
+		}
+	}
+
+	on_fail = {
+		#空!
+	}
+
+}
+
+special_project = {
+	key = "UMA_SILENT_SUZUKA_ANA_CODE"
+	days_to_research = 340
+	tech_department = engineering_technology
+	cost = {
+		base = 10000
+	}
+	icon = gfx/interface/icons/situation_log/situation_log_planet.dds
+	picture = GFX_evt_intelligence_report
+	event_chain = uma_ayb_full
+
+	event_scope = country_event
+
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_ss_arc.18
+				days = 30
+			}
+		}
+	}
+
+	on_fail = {
+		#空!
+	}
+}
+
+special_project = {
+	key = "UMA_SILENT_SUZUKA_ANA_MACHINE"
+	days_to_research = 340
+	tech_department = engineering_technology
+	cost = {
+		base = 10000
+	}
+	icon = gfx/interface/icons/situation_log/situation_log_planet.dds
+	picture = GFX_evt_ancient_databank
+	event_chain = uma_ayb_full
+	event_scope = country_event
+
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_ss_arc.19
+				days = 30
+			}
+		}
+	}
+
+	on_fail = {
+		#空!
+	}
+
+}

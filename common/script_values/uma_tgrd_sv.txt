@@ -1,3 +1,120 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be9dd79dae851595714d55750a29b5fe3927c107032c35ebd415af75bb8baa9e
-size 1703
+uma_tg_alloys_maker_Automatic_upkeep_sv = {
+	base = 1
+
+#	set = This.owner.uma_tgrd_energy_income
+#	mult = 0.2
+#	floor = yes
+
+
+
+	modifier = {
+		set = This.owner.uma_tgrd_energy_income
+
+		owner = {
+			check_variable = {
+				which = uma_tgrd_energy_income
+				value > 0
+			}
+		}
+
+	}
+	mult = 0.1
+	floor = yes
+
+	add = value:ten_percent_main_species
+	floor = yes
+
+}
+
+uma_tg_custom_goods_productor_upkeep_and_produce_sv = {
+	base = 0
+
+#	set = This.owner.uma_tgrd_foods_income
+	modifier = {
+		set = This.owner.uma_tgrd_foods_income
+
+		owner = {
+			check_variable = {
+				which = uma_tgrd_foods_income
+				value > 0
+			}
+		}
+
+	}
+	mult = 0.3
+	floor = yes
+
+
+	modifier = {
+		set = This.owner.uma_tgrd_uma_crystal_carrot_income
+
+		owner = {
+			check_variable = {
+				which = uma_tgrd_uma_crystal_carrot_income
+				value > 0
+			}
+		}
+
+	}
+#	add = This.owner.uma_tgrd_uma_crystal_carrot_income
+	mult = 0.1
+	floor = yes
+
+	add = value:ten_percent_main_species
+	floor = yes
+}
+
+uma_tg_TGAC_upkeep_and_produce_sv = {
+	base = 1
+
+
+	modifier = {
+		set = This.owner.uma_tgrd_energy_income
+
+		owner = {
+			check_variable = {
+				which = uma_tgrd_energy_income
+				value > 0
+			}
+		}
+
+	}
+#	set = This.owner.uma_tgrd_energy_income
+	mult = 0.2
+	floor = yes
+
+
+	modifier = {
+		set = This.owner.uma_tgrd_uma_crystal_carrot_income
+
+		owner = {
+			check_variable = {
+				which = uma_tgrd_uma_crystal_carrot_income
+				value > 0
+			}
+		}
+
+	}
+#	add = This.owner.uma_tgrd_uma_crystal_carrot_income
+	mult = 0.1
+	floor = yes
+
+	add = value:ten_percent_main_species
+	floor = yes
+}
+
+
+
+uma_tg_plantry_energy_extr_sv = {
+	base = 1
+
+	complex_trigger_modifier = {
+		trigger = planet_size
+		trigger_scope = planet
+
+		mode = set
+	}
+
+	multiply = 4.7
+}
+

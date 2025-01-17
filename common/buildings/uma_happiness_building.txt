@@ -1,3 +1,65 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af0f03572afe754a876519248049268599d2e4f7ef97619a083f79a2fe7a3f04
-size 948
+
+building_uma_live_ground = {
+	base_buildtime = 500
+	can_build = yes
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	planet_modifier = {
+		job_uma_umaidol_add = 2
+		pop_environment_tolerance = 0.1
+		planet_amenities_add = 6
+		pop_happiness = 0.1
+		pop_growth_speed = 0.06
+	}
+
+
+
+	show_tech_unlock_if = {
+		has_authority = auth_trainingcenter
+	}
+
+	triggered_desc = {
+		text = job_uma_umaidol_effect_desc_2
+	}
+}

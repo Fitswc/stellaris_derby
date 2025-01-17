@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b98ca39dc6cd1bc26db6000ef016d26092e9a92651d402a90de63567fa46d7a7
-size 451
+# Abandoned Ship
+ambient_object = {
+	name = "tachyon_coffee_ship_object"
+	description = "tachyon_coffee_ship_object_desc"
+	tooltip = "tachyon_coffee_ship_object_tooltip"
+	entity = "eventship_04_yellow_green_entity"
+	selectable = yes
+	show_name = yes
+}
+
+
+ambient_object = {
+	name = "zf_ship_object"
+	description = "zf_ship_object_desc"
+	tooltip = "zf_ship_object_tooltip"
+	entity = "eventship_04_yellow_green_entity"
+	selectable = yes
+	show_name = yes
+}

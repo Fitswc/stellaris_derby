@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65b1c11226cf26441a8f8dcc57e73a2f7e6b5b2ed0b30d15fc4303affe1325fb
-size 589
+#赛马娘战争借口
+cb_uma_candleoff = {
+	show_in_diplomacy = yes
+	show_notification = yes
+    potential = {
+		has_origin = origin_uma_candleoff
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+cb_uma_business_war = {
+	show_in_diplomacy = yes
+	show_notification = yes
+    potential = {
+		has_origin = origin_uma_business_MAN
+	}
+	is_valid = {
+		From = {
+			is_megacorp = yes
+		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

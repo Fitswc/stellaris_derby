@@ -1,3 +1,475 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:20ecf28e5c0932ba5ec6b5fce1e298c526d4e9228c74fdbadec43560c6c317d6
-size 9755
+namespace = uma_traits_leader
+###给领袖加特质的事件
+
+country_event = {
+	id = uma_traits_leader.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		from = {
+			species = { has_trait = uma_trait_musume }
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait_no_notify = leader_trait_uma_generic
+		}
+	}
+}
+
+
+###科研船探索的收获
+ship_event = { 
+	id = uma_traits_leader.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		leader = { has_trait = subclass_xiantoudefengjing_scientists}
+	}
+
+	immediate = {
+		owner = {
+			add_resource = { unity = 15 }
+		}
+	}
+}
+###完成特殊项目获得
+country_event = {
+	id = uma_traits_leader.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = FROMFROMFROM
+	}
+
+	immediate = {
+		FROMFROMFROM = {
+			if = {
+				limit = { exists = leader }
+				leader = {
+					if = {
+						limit = { has_trait = leader_trait_datushuguan_scientists }
+						ROOT = {
+							add_resource = {
+								unity = 300
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								has_trait = leader_trait_datushuguan_scientists_2
+								has_trait = leader_trait_datushuguan_scientists_3
+							}
+						}
+						ROOT = {
+							add_resource = {
+								unity = 600
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+###完成调查时获得
+ship_event = {
+	id = uma_traits_leader.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		ship_event = {
+			id = uma_traits_leader.7
+			scopes = {
+				from = from
+			}
+			days = 1
+		}
+		ship_event = {
+			id = uma_traits_leader.5
+			scopes = {
+				from = from
+			}
+			days = 1
+		}
+		ship_event = {
+			id = uma_traits_leader.6
+			scopes = {
+				from = from
+			}
+			days = 1
+		}
+	}
+}
+ship_event = {
+	id = uma_traits_leader.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = leader
+		leader = {
+			has_trait_tier1or2or3 = {
+				TRAIT = leader_trait_yingyan_scientists
+			} 
+		}
+		FROM = {
+			has_anomaly = no
+			is_colonizable = no
+			OR = {
+				can_have_mineral_deposits = yes
+				can_have_energy_deposits = yes
+			}
+			OR = {
+				has_deposit_for = shipclass_mining_station
+				num_deposits = 0
+			}
+			NOT = {
+				has_planet_flag = prospected_by@root.owner
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				leader = {
+					has_trait = leader_trait_yingyan_scientists
+				}
+			}
+			scientist_prospector_effect = { CHANCE = 10 }
+		}
+		else = {
+			scientist_prospector_effect = { CHANCE = 15 }
+		}
+	}
+}
+ship_event = {
+	id = uma_traits_leader.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = leader
+		leader = {
+			has_trait_tier1or2or3 = {
+				TRAIT = leader_trait_yingyan_scientists
+			} 
+		}
+		FROM = {
+			has_anomaly = no
+			is_colonizable = no
+			OR = {
+				can_have_society_deposits = yes
+				can_have_physics_deposits = yes
+				can_have_engineering_deposits = yes
+			}
+			OR = {
+				has_deposit_for = shipclass_research_station
+				num_deposits = 0
+			}
+			NOT = {
+				has_planet_flag = prospected_by@root.owner
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				leader = {
+					has_trait = leader_trait_yingyan_scientists
+				}
+			}
+			scientist_prospector_effect = {CHANCE = 10}
+		}
+		else = {
+			scientist_prospector_effect = {CHANCE = 5}
+		}
+	}
+}
+ship_event = {
+	id = uma_traits_leader.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = leader
+		leader = {
+			has_trait = leader_trait_tianming1_scientists
+		}
+		FROM = {
+			has_anomaly = no
+			is_colonizable = no
+			OR = {
+				can_have_volatile_motes_deposit = yes
+				can_have_rare_crystals_deposits = yes
+				can_have_exotic_gases_deposits = yes
+			}
+			OR = {
+				has_deposit_for = shipclass_mining_station
+				num_deposits = 0
+			}
+			NOT = {
+				has_planet_flag = prospected_by@root.owner
+			}
+		}
+	}
+
+	immediate = {
+		scientist_prospector_effect = {CHANCE = 20}
+	}
+}
+ship_event = {
+	id = uma_traits_leader.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		leader = { has_trait = leader_trait_tianming1_scientists }
+	}
+
+	immediate = {
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 2
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_traits_leader.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = { # Winning ship.
+			if = {
+				limit = { exists = fleet.leader }
+				fleet.leader = {
+					if = {
+						limit = {
+							OR = {
+								has_trait = leader_trait_tianming1_admiral
+							}
+							ROOT.FROM = { # Owner of losing ship.
+								is_default_or_fallen = yes
+							}
+						}
+						if = {
+							limit = { has_trait = leader_trait_tianming1_admiral }
+							ROOT = { # Owner of winning ship.
+								add_resource = {
+									energy = 50
+									alloys = 50
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}				
+}
+country_event = {
+	id = uma_traits_leader.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = {
+			every_ground_combat_attacker = {
+				if = {
+					limit = { exists = leader }
+					leader = {
+						save_event_target_as = attacking_general
+						if = {
+							limit = {
+								has_trait = leader_trait_tianming1_general
+							}
+							ROOT = {
+								# Basic Resources - Regular Districts
+								add_resource = {
+									energy = 200
+									mult = FROMFROM.value:count_districts|TYPE|generator|
+								}
+								add_resource = {
+									minerals = 200
+									mult = FROMFROM.value:count_districts|TYPE|mining|
+								}
+								add_resource = {
+									food = 200
+									mult = FROMFROM.value:count_districts|TYPE|farming|
+								}
+								# Basic Resources - Uncapped Districts
+								add_resource = {
+									energy = 200
+									mult = FROMFROM.value:count_districts|TYPE|generator_uncapped|
+								}
+								add_resource = {
+									minerals = 200
+									mult = FROMFROM.value:count_districts|TYPE|mining_uncapped|
+								}
+								add_resource = {
+									food = 200
+									mult = FROMFROM.value:count_districts|TYPE|farming_uncapped|
+								}
+								# Advanced Resources - Regular Districts
+								add_resource = {
+									alloys = 100
+									mult = FROMFROM.value:count_districts|TYPE|industrial|
+								}
+								add_resource = {
+									consumer_goods = 100
+									mult = FROMFROM.value:count_districts|TYPE|industrial|
+								}
+								# Basic Resources - Habitat Districts
+								add_resource = {
+									energy = 200
+										mult = FROMFROM.value:count_districts|TYPE|hab_energy|
+									}
+								add_resource = {
+									minerals = 200
+									mult = FROMFROM.value:count_districts|TYPE|hab_mining|
+								}
+								# Advanced Resources - Habitat Districts
+								add_resource = {
+									alloys = 100
+									mult = FROMFROM.value:count_districts|TYPE|hab_industrial|
+								}
+								add_resource = {
+									consumer_goods = 100
+									mult = FROMFROM.value:count_districts|TYPE|hab_industrial|
+								}
+								# Research - Habitat Districts
+								add_resource = {
+									physics_research = 50
+									society_research = 50
+									engineering_research = 50
+									mult = FROMFROM.value:count_districts|TYPE|hab_science|
+								}
+								# Advanced Resources - Ecu Districts
+								add_resource = {
+									alloys = 100
+									mult = FROMFROM.value:count_ecu_districts_equiv|TYPE|arcology_arms_industry|
+								}
+								add_resource = {
+									consumer_goods = 100
+									mult = FROMFROM.value:count_ecu_districts_equiv|TYPE|arcology_civilian_industry|
+								}
+								# Basic Resources - Ringworld Districts
+								add_resource = {
+									energy = 200
+									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_generator|
+								}
+								add_resource = {
+									food = 200
+									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_farming|
+								}
+								# Advanced Resources - Ringworld Districts
+								add_resource = {
+									alloys = 100
+									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_industrial|
+								}
+								add_resource = {
+									consumer_goods = 100
+									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_industrial|
+								}
+								# Research - Ringworld Districts
+								add_resource = {
+									physics_research = 50
+									society_research = 50
+									engineering_research = 50
+									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_science|
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#planet_event = {
+#	id = uma_traits_leader.11
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		if = {
+#			limit = { has_ground_combat = no }
+#			remove_planet_flag = checking_supreme_warrior
+#		}
+#		else = {
+#			# Handle both sides of the ground combat
+#
+#
+#			# Do the same check again in X days
+#			planet_event = { id = uma_traits_leader.11 days = 5 } # NOTE: Update custom loc for effect when changing days
+#		}
+#	}
+#}
+
+
+
+planet_event = {
+	id = uma_traits_leader.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_ground_combat = yes
+		any_ground_combat_attacker = {
+			leader = {
+				has_trait = leader_trait_tianming4_general
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			20 = {
+				random_planet_army = {
+					limit = {
+						is_defensive_army = yes
+						owner = {
+							NOT = {
+								has_authority = auth_trainingcenter
+							}
+						}
+					}
+					set_owner = event_target:uma_player_umamusume_empire
+				}
+			}
+			20 = {
+				UMA_random_kill_army_if_supreme_warrior = { SIDE_A = attacker SIDE_B = defender }
+				UMA_random_kill_army_if_supreme_warrior = { SIDE_A = defender SIDE_B = attacker }
+			}
+			80 = {
+				owner = {
+					add_resource = {
+						influence = 1
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		planet_event = {
+			id = uma_traits_leader.11
+			days = 10
+		}
+	}
+}
