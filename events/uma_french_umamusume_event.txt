@@ -192,7 +192,7 @@ country_event = {
 	immediate = {
 		This.capital_scope = {
 			create_ambient_object = {
-				type = zf_ship_object
+				type = uma_ambient_object_zf_ship_object
 				entity_offset_height = { min = 0 max = 7 }
 				location = this
 				duration = 60

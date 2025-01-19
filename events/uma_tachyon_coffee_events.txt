@@ -19,7 +19,7 @@ ship_event = {
 
 		event_target:uma_tachyon_coffee_planet = {
 			create_ambient_object = {
-				type = "tachyon_coffee_ship_object"
+				type = "uma_ambient_object_tachyon_coffee_ship_object"
 				entity_offset_height = { min = 0 max = 7 }
 				location = this
 				effect = {

@@ -1,6 +1,6 @@
 # 开局三女神遗址
-threegodnessrelic_digsite = {
-	desc = threegodnessrelic_digsite_desc
+uma_threegodnessrelic_digsite = {
+	desc = uma_threegodnessrelic_digsite_desc
 	picture = GFX_evt_hidden_door #占位符
 	stages = 5
 	max_instances = 1
@@ -175,3 +175,5 @@ silent_suzuka_relic = {
 		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
 	}
 }
+
+
