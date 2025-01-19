@@ -11,6 +11,7 @@ planet_uma_umaidol = { #马娘偶像的buff单独拿出来，不受演艺人员b
 	#}
 }
 
+
 planet_racing_related = { #包括训练员 解说员 赛马娘两类职业
 	icon = "job_uma_racing_umamusume"
 	parent = planet_jobs_productive
@@ -280,30 +281,43 @@ planet_uma_gas = {
 #宿舍长
 planet_uma_dormitory_administrator = {
 	parent = planet_clerks
-	#generate_mult_modifiers = {
-	#	produces
-		#upkeep
-	#}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #学院研究员
 planet_uma_school_reseacher = {
 	parent = planet_researchers
-	#generate_mult_modifiers = {
-	#	produces
+	generate_mult_modifiers = {
+		produces
 		#upkeep
-	#}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	}
+	generate_add_modifiers = {
+		produces
+		#upkeep
+	}
 }
 
-uma_racing_ura_president = {
+#uma_racing_ura_president = {
+#	icon = "job_uma_racing_umamusume"
+#	parent = planet_racing_related
+#	generate_mult_modifiers = {
+#		produces
+#		upkeep
+#	}
+#	generate_add_modifiers = {
+#		produces
+#		#upkeep
+#	}
+#}
+
+planet_uma_racing_ura_members = {
 	icon = "job_uma_racing_umamusume"
 	parent = planet_racing_related
 	generate_mult_modifiers = {
@@ -316,31 +330,18 @@ uma_racing_ura_president = {
 	}
 }
 
-uma_racing_ura_members = {
-	icon = "job_uma_racing_umamusume"
-	parent = planet_racing_related
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		#upkeep
-	}
-}
-
-uma_racing_ura_couse_worker = {
-	icon = "job_uma_racing_umamusume"
-	parent = planet_racing_related
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		#upkeep
-	}
-}
+#uma_racing_ura_couse_worker = {
+#	icon = "job_uma_racing_umamusume"
+#	parent = planet_racing_related
+#	generate_mult_modifiers = {
+#		produces
+#		upkeep
+#	}
+#	generate_add_modifiers = {
+#		produces
+#		#upkeep
+#	}
+#}
 
 planet_uma_racing_umamusume = {
 	icon = "job_uma_racing_umamusume"

@@ -1,6 +1,7 @@
 #	地块对象, 用于提供转化岗位
 #	注意你不需要给每个mod只建立一个地块对象, 有的mod会按照内部阵营提供许多岗位, 那么你可能需要按照阵营建立地块, 并且用阵营名称作为其"次级名称"
 
+
 PR_deposit_JOB_convert_UMA = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare

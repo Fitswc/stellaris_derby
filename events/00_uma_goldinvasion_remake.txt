@@ -6,6 +6,7 @@
 ##########################
 namespace = uma_crisis
 
+
 #country_event = {
 #	id = uma_crisis.10000
 #	hide_window = yes
@@ -938,6 +939,14 @@ country_event = {
 		name = uma_crisis.112.c
 		response_text = uma_crisis.112.c.response
 	}
+
+	option = {
+		trigger = {
+			exists = event_target:Orfevre_crisis_country
+		}
+		name = uma_crisis.112.d
+
+	}
 }
 
 country_event = {
@@ -975,6 +984,124 @@ country_event = {
 	option = {
 		name = uma_crisis.1122.a
 		response_text = uma_crisis.1122.a.response
+	}
+}
+
+country_event = {
+	id = uma_crisis.1123
+	title = TRANSMISSION
+	desc = uma_crisis.1123.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = "NY"
+		room = uma_shoping_center_room
+	}
+
+	option = {
+		name = uma_crisis.1123.a
+		allow = {
+			custom_tooltip_fail = {
+				text = uma_crisis.1123.a.tt
+				has_country_resource = {
+					type = energy
+					amount >= 5000
+				}
+
+				has_country_resource = {
+					type = minerals
+					amount >= 5000
+				}
+
+				has_country_resource = {
+					type = food
+					amount >= 5000
+				}
+
+				has_country_resource = {
+					type = alloys
+					amount >= 5000
+				}
+
+				has_country_resource = {
+					type = uma_crystal_carrot
+					amount >= 1000
+				}
+			}
+		}
+		add_resource = {
+			energy = -5000
+			minerals = -5000
+			food = -5000
+			alloys = -5000
+			uma_crystal_carrot = -1000
+		}
+		hidden_effect = {
+			event_target:naka_portal = {
+				set_event_locked = no
+			}
+			random_country = {
+				limit = {
+					is_country_type = nakayamasentai
+				}
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
+			}
+			event_target:naka_portal_holder = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+
+			event_target:goldship_crisis_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+			event_target:gold_portal_holder = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+			event_target:Orfevre_portal_holder = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+			event_target:Orfevre_crisis_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+		}
+	}
+
+	option = {
+		name = uma_crisis.1123.b
+		response_text = uma_crisis.1123.b.rp
 	}
 }
 

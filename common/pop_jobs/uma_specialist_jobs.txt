@@ -1,10 +1,11 @@
 ###马娘偶像
+
 uma_umaidol = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_holo_theatres
 	clothes_texture_index = 3
-r
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -211,12 +212,12 @@ uma_threegodness_knowledge_scholar = {
 		category = planet_uma_threegodness_knowledge_scholar
 		produces = {
 			uma_threegodness_knowledge = 3
-			physics_research = 6
-			engineering_research = 6
-			society_research = 6
+			physics_research = 9
+			engineering_research = 9
+			society_research = 9
 		}
 		upkeep = {
-			consumer_goods = 2
+			consumer_goods = 3
 			unity = 3
 		}
 	}
@@ -275,6 +276,7 @@ uma_crystal_carrot_engineer = {
 		upkeep = {
 			energy = 10
 			minerals = 10
+			food = 10
 		}
 	}
 
@@ -326,9 +328,9 @@ uma_researcher = {
 	resources = {
 		category = planet_uma_researcher #马娘科学家和科学主管都属于马娘研究者大类，但还是写最小类！
 		produces = {
-			engineering_research = 8
-			physics_research = 8
-			society_research = 8
+			engineering_research = 9
+			physics_research = 9
+			society_research = 9
 		}
 		#1:2 Ori:2:3
 		upkeep = {
@@ -519,8 +521,8 @@ uma_horseshoe_crafter = {
 	resources = {
 		category = planet_uma_horseshoe_crafter #使得其可以单独得到修正
 		produces = {
-			alloys = 8
-			engineering_research = 2
+			alloys = 6
+#			engineering_research = 2
 		}
 		upkeep = {
 			minerals = 12
@@ -796,7 +798,7 @@ uma_dormitory_administrator = {
 
 	}
 	country_modifier = {
-		country_admin_cap_add = 6
+		country_admin_cap_add = 5
 	}
 
 	triggered_planet_modifier = {
@@ -989,14 +991,13 @@ uma_darkmatter_collector = {
 	resources = {
 		category = planet_uma_darkmatter
 		produces = {
-			sr_dark_matter = 7
-			engineering_research = 6
-			physics_research = 6
+			sr_dark_matter = 6
+			engineering_research = 9
+			physics_research = 9
 		}
 		upkeep = {
 			energy = 10
 			uma_crystal_carrot = 2
-			unity = 10
 			minerals = 10
 		}
 	}
@@ -1042,9 +1043,9 @@ uma_chemrist = {
 	resources = {
 		category = planet_uma_chemrist
 		produces = {
-			volatile_motes = 10
-			engineering_research = 6
-			physics_research = 6
+			volatile_motes = 6
+			engineering_research = 9
+			physics_research = 9
 		}
 		upkeep = {
 
@@ -1128,9 +1129,9 @@ uma_translucer= {
 	resources = {
 		category = planet_uma_translucer
 		produces = {
-			rare_crystals = 10
-			engineering_research = 6
-			physics_research = 6
+			rare_crystals = 6
+			engineering_research = 9
+			physics_research = 9
 		}
 		upkeep = {
 
@@ -1217,9 +1218,9 @@ uma_gas_collector = {
 	resources = {
 		category = planet_uma_gas
 		produces = {
-			exotic_gases = 10
-			engineering_research = 6
-			physics_research = 6
+			exotic_gases = 6
+			engineering_research = 9
+			physics_research = 9
 		}
 		upkeep = {
 

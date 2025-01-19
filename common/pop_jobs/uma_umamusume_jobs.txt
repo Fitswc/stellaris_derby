@@ -1,4 +1,5 @@
 ###训练员
+
 uma_trainer = {
 	category = umamusume
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -105,10 +106,10 @@ uma_racing_umamusume = {
 	resources = {
 		category = planet_uma_racing_umamusume
 		produces = {
-			unity = 3
-			society_research = 2
-			engineering_research = 2
-			physics_research = 2
+			unity = 6
+			society_research = 3
+			engineering_research = 3
+			physics_research = 3
 		}
 		upkeep = {
 			consumer_goods = 1
@@ -162,13 +163,13 @@ uma_racing_ura_members = {
 	}
 
 	resources = {
-		category = uma_racing_ura_members
+		category = planet_uma_racing_ura_members
 		produces = {
-			unity = 2
-			society_research = 4
+			unity = 6
+			society_research = 6
 		}
 		upkeep = {
-			consumer_goods = 1
+			consumer_goods = 3
 		}
 	}
 

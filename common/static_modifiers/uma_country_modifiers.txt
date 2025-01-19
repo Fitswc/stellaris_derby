@@ -2,6 +2,7 @@
 
 ###比赛系列
 
+
 #已举办闪光系列比赛
 uma_has_held_national_derby = {
 	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
@@ -525,4 +526,63 @@ uma_gold_family = {
 	trade_value_mult = 0.2
 	army_damage_mult = 0.1
 }
+
+#华润燃气
+uma_satono_modifier_d = {
+	planet_jobs_energy_produces_mult = 0.05
+	pop_happiness = 0.03
+}
+
+#食物的辅助
+uma_satono_modifier_s = {
+	leader_lifespan_add = 10
+	planet_jobs_produces_mult = 0.04
+	planet_pops_food_upkeep_mult = 0.04
+}
+
+
+#似乎有点胖
+uma_satono_modifier_f = {
+	pop_housing_usage_mult = 0.05
+	planet_pops_food_upkeep_mult = 0.04
+	pop_happiness = 0.04
+	ship_speed_mult = -0.02
+}
+
+uma_satono_modifier_j = {
+	monthly_trades_energy_produces_add = 6
+}
+
+##空的修正，用于计时，现已被timed-countryflag取代
+#uma_satono_modifier_cooldown = {
+#
+#}
+
+uma_satono_modifier_tf_s = {
+	planet_jobs_produces_mult = 0.08
+	planet_pops_food_upkeep_mult = 0.06
+}
+
+
+
+welcome_tokaiteio = {
+	pop_happiness = 0.1
+	species_leader_exp_gain = 0.1
+
+}
+welcome_tokaiteio_1 = {
+	pop_happiness = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+
+}
+welcome_tokaiteio_2 = {
+	pop_happiness = 0.1
+	species_leader_exp_gain = 0.1
+	planet_jobs_unity_produces_mult = 0.1
+}
+
+
+
+
+
 

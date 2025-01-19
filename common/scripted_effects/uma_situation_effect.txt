@@ -1,0 +1,33 @@
+#局势相关
+#资源短缺对策
+#scope (situation)
+
+uma_situation_deficit_locate_looted_planet = {
+    owner = {
+        ordered_owned_planet = {
+            limit = { is_capital = no }
+            order_by = trigger:num_pops
+            position = 0
+            save_event_target_as = looted_planet
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:looted_planet }
+            }
+            capital_scope = {
+                save_event_target_as = looted_planet
+            }
+        }
+    }
+}
+uma_situation_deficit_loot_planet = {
+    owner = {
+        add_resource = {
+            $resource$ = $number$
+            mult = event_target:looted_planet.trigger:num_pops
+        }
+    }
+    event_target:looted_planet = {
+        add_planet_devastation = 25
+    }
+}

@@ -15,6 +15,7 @@ opinion_uma_refuse_to_attend_spiritualist_council = {
 	}
 }
 
+
 ##同意参会
 opinion_uma_agree_to_attend_spiritualist_council = {
 	opinion = {
@@ -39,3 +40,67 @@ opinion_uma_humiliate_spiritualist_council = {
 	}
 }
 
+#赛马娘光殇关系修正
+triggered_opinion_civic_uma_candleoff = {
+	trigger = {
+		NOR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+		FROM = {
+			#has_valid_civic = civic_uma_candleoff #改成起源了
+			has_origin = origin_uma_candleoff
+		}
+	}
+	opinion = {
+		base = -1000
+	}
+}
+
+#Corp
+opinion_uma_we_sell_sth_bad_to_others = {
+	trigger = {
+		FROM = {
+			has_authority = auth_trainingcenter
+		}
+		any_planet_within_border = {
+			check_variable = {
+				which = uma_count_bad_corp_building_country
+				value >= 1
+			}
+			has_branch_office = yes
+			branch_office_owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	opinion = {
+		base = -10
+		modifier = {
+			multiply = this.uma_count_bad_corp_building_country
+
+			check_variable = {
+				which = uma_count_bad_corp_building_country
+				value >= 1
+			}
+		}
+	}
+}
+
+
+######堕落帝国态度######
+
+#年轻的后进者
+opinion_uma_fallen_empire_love_young_umamusume = {
+	trigger = {
+		FROM = { has_authority = auth_trainingcenter }
+	}
+
+	opinion = {
+		modifier = {
+			add = 100
+			is_uma_fallen_empire = yes
+		}
+	}
+}

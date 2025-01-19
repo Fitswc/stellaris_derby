@@ -2,6 +2,7 @@ guiTypes = {
 
 	### FACTION OVERVIEW GUI ###
 
+
 	containerWindowType = {
 		name = "uma_modmenu_main_windows"
 		orientation = center
@@ -38,7 +39,7 @@ guiTypes = {
 		ButtonType = {
 			name = uma_mmu_team_button
 			spriteType = "GFX_uma_mmu_team"
-			position = { x = 23 y = 854 }
+			position = { x = 97 y = 854 }
 			orientation = "UPPER_LEFT"
 			web_link = "https://stellarderby-wiki.pages.dev"
 		}
@@ -46,7 +47,7 @@ guiTypes = {
 		ButtonType = {
 			name = uma_mmu_donate_button
 			spriteType = "GFX_uma_mmu_donate"
-			position = { x = 97 y = 854 }
+			position = { x = 23 y = 854 }
 			orientation = "UPPER_LEFT"
 			pdx_tooltip = "uma_mmu_donate"
 		}

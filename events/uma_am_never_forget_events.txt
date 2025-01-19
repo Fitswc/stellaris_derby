@@ -12,6 +12,7 @@ country_event = {
     hide_window = yes
     is_triggered_only = yes
 
+
     immediate = {
         if = {
             limit = { has_civic = civic_uma_aston_machan }

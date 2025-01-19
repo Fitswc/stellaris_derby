@@ -10,6 +10,7 @@ uma_research_chain = {
 	}
 }
 
+
 uma_building_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_society_research
@@ -51,28 +52,19 @@ uma_destroy_ship_chain = {
 }
 
 
-uma_fine_finding = {
+gold_counterattack = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_uma_satono_school
-	
+	picture = GFX_evt_alien_propaganda
+	counter = {
+		uma_gold_att_the_ship_we_killed = {
+			max = 350
+		}
+		uma_gold_att_the_ship_we_killed_ny = {
+			max = 350
+		}
+		uma_gold_att_the_ship_we_killed_of = {
+			max = 350
+		}
+	}
 }
 
-
-uma_sweepy_heat_building = {
-	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
-	picture = GFX_evt_uma_satono_school
-
-}
-
-
-uma_sweepy_ice_from_sky = {
-	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
-	picture = GFX_evt_uma_satono_school
-
-}
-
-uma_sweepy_strength_carrot = {
-	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
-	picture = GFX_evt_uma_satono_school
-
-}

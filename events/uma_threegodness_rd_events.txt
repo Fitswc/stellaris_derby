@@ -4,6 +4,7 @@ namespace = uma_threegodness_rd
 
 ###三女神知识研究所有关事件
 
+
 #开局的飞地生成（虽然不需要在地图上，但还是要创造国家）
 event = {
 	id = uma_threegodness_rd.1
@@ -481,6 +482,33 @@ country_event = {
 			}			
 		}
 		remove_country_flag = uma_has_buy_tech #移除已经研究科技旗帜
+	}
+
+}
+
+country_event = {
+	id = uma_threegodness_rd.1001
+	title = "umaproject.101.name"
+	desc = "umaproject.101.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_laboratory_sound
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_uma_threegodness_knowledge_first_known
+	}
+
+	option = {
+		name = "umaproject.101.a"
+		hidden_effect = { save_event_target_as = establishing_threegodness_research_dept }
+		capital_scope = {
+			enable_special_project = {
+				name = "ESTABLISH_THREEGODNESS_RESEARCH_DEPT_PROJECT"
+				location = this
+				owner = root
+			}
+		}
 	}
 
 }

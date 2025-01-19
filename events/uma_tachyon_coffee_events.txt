@@ -12,13 +12,14 @@ ship_event = {
 		FROM = { has_star_flag = uma_tachyon_coffee_system }
 	}
 
+
 	option = {
 		name = "tachyon_coffee.101"
 		hidden_effect = { save_event_target_as = tachyon_coffee_events }
 
 		event_target:uma_tachyon_coffee_planet = {
 			create_ambient_object = {
-				type = "tachyon_coffee_ship_object"
+				type = "uma_ambient_object_tachyon_coffee_ship_object"
 				entity_offset_height = { min = 0 max = 7 }
 				location = this
 				effect = {
@@ -778,7 +779,7 @@ country_event = {
 		name = "tachyon_coffee.20312"
 		hidden_effect = {
 			event_target:uma_tachyon_coffee_starbase = {
-				create_archaeological_site = tachyon_coffee_relic
+				create_archaeological_site = uma_tachyon_coffee_relic
 				save_event_target_as = tachyon_coffee_relic_starbase
 			}
 		}
@@ -1102,7 +1103,7 @@ country_event = {
 						uma_is_ringworld = yes
 					}
 				}
-				create_archaeological_site = tachyon_coffee_pre_civils_relic
+				create_archaeological_site = uma_tachyon_coffee_pre_civils_relic
 				save_event_target_as = tachyon_coffee_pre_civils_relic
 			}
 		}

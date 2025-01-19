@@ -1,3 +1,22 @@
+uma_scientist_trait_kishouyasashii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouyasashii.png"
+	councilor_modifier = {
+		all_technology_research_speed = 0.15
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_kishouhageshii
+	}
+
+	leader_class = { scientist }
+#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+    randomized = no
+
+}
+
+
 ###地固1
 leader_trait_digu_scientists = {
 	starting_ruler_trait = yes                                              #国家领袖初始可随机出特性
@@ -22,6 +41,7 @@ leader_trait_digu_scientists = {
 		weight = 1000
 	}
 }
+
 ###地固2
 leader_trait_digu_scientists_2 = {
 	replace_traits = { "leader_trait_digu_scientists" }                     #替换掉原来等级低的技能用的

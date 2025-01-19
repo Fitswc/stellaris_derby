@@ -16,6 +16,7 @@ uma_trait_musume = {
 		army_damage_mult = 0.2
 	}
 
+
 	triggered_pop_modifier = {
 		potential = {
 			exists = owner
@@ -417,7 +418,7 @@ uma_trait_int2={
 		planet_jobs_engineering_research_produces_mult = 0.1
 		planet_jobs_physics_research_produces_mult = 0.1
 		planet_jobs_society_research_produces_mult = 0.1
-		leader_skill_levels = 1
+		leader_upkeep_empire_size_mult = -0.1
 		species_leader_exp_gain = 0.1
 	}
 	slave_cost = {
@@ -613,7 +614,7 @@ uma_trait_leadercharm={
 	cost= 1
 	allowed_archetypes={UMA}
 	modifier={
-		leader_skill_levels =  1
+		leader_initial_skill = 2
 		species_leader_exp_gain = 0.2
 	}
 }
@@ -924,12 +925,6 @@ trait_uma_new_bottle_but_old_wine = {
 		pop_amenities_usage_mult = 0.1
 	}
 }
-
-
-
-
-
-
 
 
 

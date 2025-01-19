@@ -1,0 +1,15 @@
+uma_ar_cheval = {
+	name = uma_ar_cheval
+	event_weight = {
+		weight = 0
+	}
+	event = uma_cheval.2
+	randomized = no
+	flags = {
+		uma_cheval_astral_rift
+	}
+	on_roll_failed = {
+		standard_astral_rift_on_roll_failed = yes
+	}
+}
+
