@@ -1,3 +1,7 @@
+
+
+
+##Traits Effect
 UMA_random_kill_army_if_supreme_warrior = {
 
 	if = {
@@ -9,7 +13,7 @@ UMA_random_kill_army_if_supreme_warrior = {
 				}
 			}
 		}
-		
+
 		random_list = {
 			60 = {}
 			40 = {
@@ -616,4 +620,3 @@ uma_delete_vallian_trait = {
 	remove_trait = leader_trait_towel
 	remove_trait = leader_trait_percussive_maintainer
 }
-

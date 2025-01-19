@@ -26,11 +26,11 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_STRONG_PLASMA"
+			template = "UMA_LARGE_STRONG_PLASMA"
 		}
 		component = {
 			slot = "LARGE_GUN_02"
-			template = "LARGE_STRONG_PLASMA"
+			template = "UMA_LARGE_STRONG_PLASMA"
 		}
 		component = {
 			slot = "LARGE_GUN_03"
@@ -38,15 +38,15 @@ ship_design = {
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "MEDIUM_HADRON_DISRUPTOR"
+			template = "UMA_MEDIUM_HADRON_DISRUPTOR"
 		}
 		component = {
 			slot = "MEDIUM_GUN_02"
-			template = "MEDIUM_STRONG_PLASMA"
+			template = "UMA_MEDIUM_STRONG_PLASMA"
 		}
 		component = {
 			slot = "MEDIUM_GUN_03"
-			template = "MEDIUM_STRONG_PLASMA"
+			template = "UMA_MEDIUM_STRONG_PLASMA"
 		}
 		component = {
 			slot = "MEDIUM_GUN_04"
@@ -54,11 +54,11 @@ ship_design = {
 		}
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "PD_01"
@@ -89,7 +89,7 @@ ship_design = {
 			template = "LARGE_PSI_SHIELD"
 		}
 	}
-	required_component = "CARROT_BATTERY_2_BATTLESHIP"
+	required_component = "UMA_CARROT_BATTERY_2_BATTLESHIP"
 	required_component="UMA_JUMP_DRIVE"
 	required_component="COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component="SENSOR_4"
@@ -107,7 +107,7 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_STRONG_PLASMA"
+			template = "UMA_LARGE_STRONG_PLASMA"
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
@@ -154,7 +154,7 @@ ship_design = {
 			template = "MEDIUM_PSI_SHIELD"
 		}
 	}
-	required_component = "CARROT_BATTERY_2_CRUISER"
+	required_component = "UMA_CARROT_BATTERY_2_CRUISER"
 	required_component="UMA_JUMP_DRIVE"
 	required_component="COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component="SENSOR_4"
@@ -172,15 +172,15 @@ ship_design = {
 
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "MEDIUM_MJR_LASER"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_02"
-			template = "MEDIUM_MJR_LASER"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_03"
-			template = "MEDIUM_MJR_LASER"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_UTILITY_1"
@@ -204,7 +204,7 @@ ship_design = {
 		}
 	}
 
-	required_component = "CARROT_BATTERY_2_CRUISER"
+	required_component = "UMA_CARROT_BATTERY_2_CRUISER"
 	required_component="UMA_JUMP_DRIVE"
 	required_component="COMBAT_COMPUTER_LINE_DEFAULT"
 	required_component="SENSOR_4"

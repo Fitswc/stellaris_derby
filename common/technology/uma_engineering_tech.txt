@@ -997,8 +997,6 @@ tech_uma_ring_world = {
 	ai_update_type = all
 	prerequisites = {
         "tech_mega_engineering"
-        "tech_uma_crystal_alloy_production"
-        "tech_uma_crystal_consumer_goods_production"
     }
 	weight = 100
 	is_rare = yes

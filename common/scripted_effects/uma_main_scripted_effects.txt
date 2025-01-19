@@ -1730,125 +1730,46 @@ uma_random_change_leader_yaruki_effect = {
 			}
 		}
 	}
-	###统治者
-	#if = {
-	#	limit = { is_ruler = yes }
-	#	if = {
-	#		limit = { NOT = { uma_ruler_have_yaruki_trait = yes } }
-	#		uma_initialize_leader_yaruki_effect = yes
-	#	}
-	#	if = {
-	#		limit = { has_trait = uma_ruler_trait_yaruki_5 }
-	#		random_list = {
-	#			7 = {
-#
-	#			}
-	#			3 = {
-	#				remove_trait = uma_ruler_trait_yaruki_5
-	#				add_trait = uma_ruler_trait_yaruki_4
-	#				remove_trait = uma_ruler_trait_yaruki_5
-	#				add_trait= uma_ruler_trait_yaruki_4
-	#			}
-	#		}
-	#	}
-	#	if = {
-	#		limit = { has_trait = uma_ruler_trait_yaruki_4 }
-	#		random_list = {
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_4
-	#				add_trait = uma_ruler_trait_yaruki_5
-	#				remove_trait = uma_ruler_trait_yaruki_4
-	#				add_trait= uma_ruler_trait_yaruki_5
-	#			}
-	#			16 = {
-#
-	#			}
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_4
-	#				add_trait = uma_ruler_trait_yaruki_3
-	#				remove_trait = uma_ruler_trait_yaruki_4
-	#				add_trait= uma_ruler_trait_yaruki_3
-	#			}
-	#		}
-	#	}
-	#	if = {
-	#		limit = { has_trait = uma_ruler_trait_yaruki_3 }
-	#		random_list = {
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_3
-	#				add_trait = uma_ruler_trait_yaruki_4
-	#				remove_trait = uma_ruler_trait_yaruki_3
-	#				add_trait= uma_ruler_trait_yaruki_4
-	#			}
-	#			16 = {
-#
-	#			}
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_3
-	#				add_trait = uma_ruler_trait_yaruki_2
-	#				remove_trait = uma_ruler_trait_yaruki_3
-	#				add_trait= uma_ruler_trait_yaruki_2
-	#			}
-	#		}
-	#	}
-	#	if = {
-	#		limit = { has_trait = uma_ruler_trait_yaruki_2 }
-	#		random_list = {
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait = uma_ruler_trait_yaruki_3
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait= uma_ruler_trait_yaruki_3
-	#			}
-	#			16 = {
-#
-	#			}
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait = uma_ruler_trait_yaruki_1
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait= uma_ruler_trait_yaruki_1
-	#			}
-	#		}
-	#	}
-	#	if = {
-	#		limit = { has_trait = uma_ruler_trait_yaruki_2 }
-	#		random_list = {
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait = uma_ruler_trait_yaruki_3
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait= uma_ruler_trait_yaruki_3
-	#			}
-	#			16 = {
-#
-	#			}
-	#			8 = {
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait = uma_ruler_trait_yaruki_1
-	#				remove_trait = uma_ruler_trait_yaruki_2
-	#				add_trait= uma_ruler_trait_yaruki_1
-	#			}
-	#		}
-	#	}
-	#	if = {
-	#		limit = { has_trait = uma_ruler_trait_yaruki_1 }
-	#		random_list = {
-	#			5 = {
-#
-	#			}
-	#			5 = {
-	#				remove_trait = uma_ruler_trait_yaruki_1
-	#				add_trait = uma_ruler_trait_yaruki_2
-	#				remove_trait = uma_ruler_trait_yaruki_1
-	#				add_trait= uma_ruler_trait_yaruki_2
-	#			}
-	#		}
-	#	}
-	#}
+
 
 }
 ###刷新领袖干劲用的封装（顺便防止重复刷新）
+uma_initialize_leader_yaruki_effect = {
+	if = {
+		limit = {
+			NOT = { has_trait = uma_trait_yaruki_five }
+			NOT = { has_trait = uma_trait_yaruki_four }
+			NOT = { has_trait = uma_trait_yaruki_three }
+			NOT = { has_trait = uma_trait_yaruki_two }
+			NOT = { has_trait = uma_trait_yaruki_one }
+		}
+		random_list = {
+			6 = {
+				add_trait_no_notify = uma_trait_yaruki_five
+				#				add_trait= uma_ruler_trait_yaruki_5
+			}
+			10 = {
+				add_trait_no_notify = uma_trait_yaruki_four
+				#				add_trait= uma_ruler_trait_yaruki_4
+			}
+			12 = {
+				add_trait_no_notify = uma_trait_yaruki_three
+				#				add_trait= uma_ruler_trait_yaruki_3
+			}
+			4 = {
+				add_trait_no_notify = uma_trait_yaruki_two
+				#				add_trait= uma_ruler_trait_yaruki_2
+			}
+			3 = {
+				add_trait_no_notify = uma_trait_yaruki_one
+				#				add_trait= uma_ruler_trait_yaruki_1
+			}
+		}
+		break = yes
+	}
+}
+
+
 uma_initialize_leader_yaruki_effect = {
 	if = {
 		limit = {
@@ -1884,39 +1805,6 @@ uma_initialize_leader_yaruki_effect = {
 		break = yes
 	}
 
-	#if = {
-	#	limit = {
-	#		leader_class = general
-	#		NOT = { has_trait = uma_general_trait_yaruki_five }
-	#		NOT = { has_trait = uma_general_trait_yaruki_four }
-	#		NOT = { has_trait = uma_general_trait_yaruki_three }
-	#		NOT = { has_trait = uma_general_trait_yaruki_two }
-	#		NOT = { has_trait = uma_general_trait_yaruki_one }
-	#	}
-	#	random_list = {
-	#		6 = {
-	#			add_trait_no_notify = uma_general_trait_yaruki_five
-	#			#add_trait= uma_ruler_trait_yaruki_5
-	#		}
-	#		10 = {
-	#			add_trait_no_notify = uma_general_trait_yaruki_four
-	#			#add_trait= uma_ruler_trait_yaruki_4
-	#		}
-	#		12 = {
-	#			add_trait_no_notify = uma_general_trait_yaruki_three
-	#			#add_trait= uma_ruler_trait_yaruki_3
-	#		}
-	#		4 = {
-	#			add_trait_no_notify = uma_general_trait_yaruki_two
-	#			#add_trait= uma_ruler_trait_yaruki_2
-	#		}
-	#		3 = {
-	#			add_trait_no_notify = uma_general_trait_yaruki_one
-	#			#add_trait= uma_ruler_trait_yaruki_1
-	#		}
-	#	}
-	#	break = yes
-	#}
 	
 	if = {
 		limit = {
@@ -1988,6 +1876,7 @@ uma_initialize_leader_yaruki_effect = {
 
 	##领袖锁死满心情
 	##才，才不是为了降低初始的游戏难度呢，哼~
+	#傲娇也没用，驴帮你无效完了
 	if = {
 		limit = { is_ruler = yes }
 #		remove_trait = uma_governor_trait_yaruki_one
@@ -4802,4 +4691,18 @@ uma_random_specimen = {
 		which = uma_count_specimen_counter
 		value = 1
 	}
+}
+
+
+uma_tgrd_clear_TGAC_flag = {
+	optimize_memory
+	remove_planet_flag = uma_TGAC_produce_alloys
+	remove_planet_flag = uma_TGAC_produce_goods
+	remove_planet_flag = uma_TGAC_produce_molts
+	remove_planet_flag = uma_TGAC_produce_gas
+	remove_planet_flag = uma_TGAC_produce_crystal
+	remove_planet_flag = uma_TGAC_produce_livingmat
+	remove_planet_flag = uma_TGAC_produce_darkm
+	remove_planet_flag = uma_TGAC_produce_nano
+	remove_planet_flag = uma_TGAC_produce_uma_crystal
 }

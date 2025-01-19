@@ -6,7 +6,7 @@
 
 #######镭射线#######
 weapon_component_template = { #MJR激光器
-    key = "SMALL_MJR_LASER"
+    key = "UMA_SMALL_MJR_LASER"
     size = small
     type = instant
     icon = "GFX_ship_part_uma_mejiro_bright_laser"
@@ -59,7 +59,7 @@ weapon_component_template = { #MJR激光器
 
 
 weapon_component_template = { #MJR激光器
-    key = "MEDIUM_MJR_LASER"
+    key = "UMA_MEDIUM_MJR_LASER"
     size = medium
     type = instant
     icon = "GFX_ship_part_uma_mejiro_bright_laser"
@@ -118,7 +118,7 @@ weapon_component_template = { #MJR激光器
 
 
 weapon_component_template = { #MJR激光器
-    key = "LARGE_MJR_LASER"
+    key = "UMA_LARGE_MJR_LASER"
     size = large
     type = instant
     icon = "GFX_ship_part_uma_mejiro_bright_laser"
@@ -421,7 +421,7 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 
 ############等离子发射器############
 weapon_component_template = { #强等离子发射器
-	key = "SMALL_STRONG_PLASMA"
+	key = "UMA_SMALL_STRONG_PLASMA"
 	size = small
 	type = instant
 
@@ -477,7 +477,7 @@ weapon_component_template = { #强等离子发射器
 
 
 weapon_component_template = { #强等离子发射器
-	key = "MEDIUM_STRONG_PLASMA"
+	key = "UMA_MEDIUM_STRONG_PLASMA"
 	size = medium
 	type = instant
 
@@ -533,7 +533,7 @@ weapon_component_template = { #强等离子发射器
 
 
 weapon_component_template = { #强等离子发射器
-	key = "LARGE_STRONG_PLASMA"
+	key = "UMA_LARGE_STRONG_PLASMA"
 	size = large
 	type = instant
 
@@ -591,7 +591,7 @@ weapon_component_template = { #强等离子发射器
 
 #############裂解炮##############
 weapon_component_template = { #高能强子裂解炮
-	key = "SMALL_HADRON_DISRUPTOR"
+	key = "UMA_SMALL_HADRON_DISRUPTOR"
 	size = small
 	type = instant
 
@@ -647,7 +647,7 @@ weapon_component_template = { #高能强子裂解炮
 
 
 weapon_component_template = {
-	key = "MEDIUM_HADRON_DISRUPTOR"
+	key = "UMA_MEDIUM_HADRON_DISRUPTOR"
 	size = medium
 	type = instant
 
@@ -704,7 +704,7 @@ weapon_component_template = {
 
 ###########电弧武器##########
 weapon_component_template = { #“极光”电弧束
-	key = "AURORA_EMITTER"
+	key = "UMA_AURORA_EMITTER"
 	size = extra_large
 	type = instant
 
@@ -765,7 +765,7 @@ weapon_component_template = { #“极光”电弧束
 
 ##############光矛武器############
 weapon_component_template = { #弦光矛
-	key = "STRING_ENERGY_LANCE"
+	key = "UMA_STRING_ENERGY_LANCE"
 	size = extra_large
 	type = instant
 
@@ -835,7 +835,7 @@ weapon_component_template = { #弦光矛
 # 	use_ship_kill_target = no
 
 # 	prerequisites = { "tech_local_wave_function" }
-# 	component_set = "WAVE_FUNCTION_RAY"
+# 	component_set = "UMA_WAVE_FUNCTION_RAY"
 # 	projectile_gfx = "tachyon_lance"
 # 	tags = { weapon_type_energy }
 # 	ai_tags = { weapon_role_artillery }
@@ -882,7 +882,7 @@ weapon_component_template = { #弦光矛
 
 ##T
 weapon_component_template = { #弦光矛-Nova
-	key = "STRING_ENERGY_LANCE_TITAN"
+	key = "UMA_STRING_ENERGY_LANCE_TITAN"
 	size = titanic
 	type = instant
 	prio_projectile = yes

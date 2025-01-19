@@ -1,5 +1,5 @@
 #飞地的默认空间站设计，在刷船时调用，如果你想在这方面整活，建议单独写一个新设计或者新的ship_size
-#*当然是在别的文件夹里*
+###ship_design需要引用shipsize，ship_size给模板（武器槽位有哪些），ship_design则是确定这些模板里面给哪些武器
 
 ship_design = {
 	name = "NAME_UMA_enclave_station"
@@ -218,51 +218,51 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_STRONG_PLASMA" #这里面是决定武器的，要用complnent_templates里面的武器的key对应，以识别武器
+			template = "UMA_LARGE_STRONG_PLASMA" #这里面是决定武器的，要用complnent_templates里面的武器的key对应，以识别武器
 		}
 		component = {
 			slot = "LARGE_GUN_02"
-			template = "LARGE_STRONG_PLASMA"
+			template = "UMA_LARGE_STRONG_PLASMA"
 		}
 		component = {
 			slot = "LARGE_GUN_03"
-			template = "LARGE_STRONG_PLASMA"
+			template = "UMA_LARGE_STRONG_PLASMA"
 		}
 		component = {
 			slot = "LARGE_GUN_04"
-			template = "LARGE_MJR_LASER"
+			template = "UMA_LARGE_MJR_LASER"
 		}
 		component = {
 			slot = "LARGE_GUN_05"
-			template = "LARGE_MJR_LASER"
+			template = "UMA_LARGE_MJR_LASER"
 		}
 		component = {
 			slot = "LARGE_GUN_06"
-			template = "LARGE_MJR_LASER"
+			template = "UMA_LARGE_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "MEDIUM_MJR_LASER"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_02"
-			template = "MEDIUM_MJR_LASER"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_03"
-			template = "MEDIUM_MJR_LASER"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_04"
-			template = "MEDIUM_STRONG_PLASMA"
+			template = "UMA_MEDIUM_STRONG_PLASMA"
 		}
 		component = {
 			slot = "MEDIUM_GUN_05"
-			template = "MEDIUM_STRONG_PLASMA"
+			template = "UMA_MEDIUM_STRONG_PLASMA"
 		}
 		component = {
 			slot = "MEDIUM_GUN_06"
-			template = "MEDIUM_STRONG_PLASMA"
+			template = "UMA_MEDIUM_STRONG_PLASMA"
 		}
 		component = {
 			slot = "PD_01"
@@ -298,27 +298,27 @@ ship_design = {
 		}
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_GUN_03"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_GUN_04"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_GUN_05"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 		component = {
 			slot = "SMALL_GUN_06"
-			template = "SMALL_MJR_LASER"
+			template = "UMA_SMALL_MJR_LASER"
 		}
 
 		component = {
@@ -367,4 +367,35 @@ ship_design = {
 		}
 	}
 	required_component="SENSOR_4"
+}
+
+# Small Space Amoeba-升级版
+
+ship_design = {
+	name = "NAME_Uma_Fallen_Empire_Amoeba_MKII" #本地化的key
+	ship_size = uma_fallen_mission_amoeba
+	hide_size = yes
+
+	section = {
+		template = "space_amoeba_small_beige_blue"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="BIO_DRIVE"
 }

@@ -1,84 +1,11 @@
-@shipAuraRange = 80
 
-@cost1 = 3
-@cost2 = 6
-@cost3 = 9
-@cost4 = 12
-@cost5 = 15
-
-@power_1 = -10
-@power_2 = -15
-@power_3 = -20
-@power_4 = -25
-@power_5 = -30
-
-
-@destroyer_power_1 = -20
-@destroyer_power_2 = -30
-@destroyer_power_3 = -40
-@destroyer_power_4 = -50
-@destroyer_power_5 = -60
-
-@cruiser_power_1 = -40
-@cruiser_power_2 = -60
-@cruiser_power_3 = -80
-@cruiser_power_4 = -100
-@cruiser_power_5 = -120
-
-@battleship_power_1 = -80
-@battleship_power_2 = -120
-@battleship_power_3 = -160
-@battleship_power_4 = -200
-@battleship_power_5 = -240
-
-@titan_power_1 = -160
-@titan_power_2 = -240
-@titan_power_3 = -320
-@titan_power_4 = -400
-@titan_power_5 = -480
-
-@colossus_power_1 = -200
-@colossus_power_2 = -300
-@colossus_power_3 = -400
-@colossus_power_4 = -500
-@colossus_power_5 = -600
-
-@destroyer_cost1 = 6
-@destroyer_cost2 = 12
-@destroyer_cost3 = 18
-@destroyer_cost4 = 24
-@destroyer_cost5 = 30
-
-@cruiser_cost1 = 12
-@cruiser_cost2 = 24
-@cruiser_cost3 = 36
-@cruiser_cost4 = 48
-@cruiser_cost5 = 60
-
-@battleship_cost1 = 24
-@battleship_cost2 = 48
-@battleship_cost3 = 72
-@battleship_cost4 = 96
-@battleship_cost5 = 120
-
-@titan_cost1 = 48
-@titan_cost2 = 96
-@titan_cost3 = 144
-@titan_cost4 = 192
-@titan_cost5 = 240
-
-@colossus_cost1 = 60
-@colossus_cost2 = 120
-@colossus_cost3 = 180
-@colossus_cost4 = 240
-@colossus_cost5 = 300
 #############
 #    A槽    #
 #############
 
 ##########反应堆##########
 utility_component_template = { #晶体反应堆
-	key = "CARROT_BATTERY_CORVETTE"
+	key = "UMA_CARROT_BATTERY_CORVETTE"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette"
 	icon_frame = 1
@@ -108,7 +35,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆
-	key = "CARROT_BATTERY_DESTROYER"
+	key = "UMA_CARROT_BATTERY_DESTROYER"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette"
 	icon_frame = 1
@@ -138,7 +65,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆
-	key = "CARROT_BATTERY_CRUISER"
+	key = "UMA_CARROT_BATTERY_CRUISER"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette"
 	icon_frame = 1
@@ -167,7 +94,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆
-	key = "CARROT_BATTERY_BATTLESHIP"
+	key = "UMA_CARROT_BATTERY_BATTLESHIP"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette"
 	icon_frame = 1
@@ -196,7 +123,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆
-	key = "CARROT_BATTERY_TITAN"
+	key = "UMA_CARROT_BATTERY_TITAN"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette"
 	icon_frame = 1
@@ -224,7 +151,7 @@ utility_component_template = { #晶体反应堆
 }
 
 utility_component_template = { #晶体反应堆
-	key = "CARROT_BATTERY_STARBASE"
+	key = "UMA_CARROT_BATTERY_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette"
 	icon_frame = 1
@@ -260,7 +187,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "CARROT_BATTERY_2_CORVETTE"
+	key = "UMA_CARROT_BATTERY_2_CORVETTE"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
 	icon_frame = 1
@@ -292,7 +219,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "CARROT_BATTERY_2_DESTROYER"
+	key = "UMA_CARROT_BATTERY_2_DESTROYER"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
 	icon_frame = 1
@@ -322,7 +249,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "CARROT_BATTERY_2_CRUISER"
+	key = "UMA_CARROT_BATTERY_2_CRUISER"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
 	icon_frame = 1
@@ -352,7 +279,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "CARROT_BATTERY_2_BATTLESHIP"
+	key = "UMA_CARROT_BATTERY_2_BATTLESHIP"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
 	icon_frame = 1
@@ -382,7 +309,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "CARROT_BATTERY_2_TITAN"
+	key = "UMA_CARROT_BATTERY_2_TITAN"
 	size = small
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
 	icon_frame = 1
@@ -412,7 +339,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "CARROT_BATTERY_2_STARBASE"
+	key = "UMA_CARROT_BATTERY_2_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_crystal_carrot_corvette_mk2"
 	icon_frame = 1
@@ -451,7 +378,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 ##################护盾充能系统###############
 utility_component_template = { #“大胃王”护盾能量分配系统
-	key = "BIG_EATER"
+	key = "UMA_BIG_EATER"
 	size = aux
 	icon = "GFX_ship_part_uma_big_eater_shield_energy_retribution"
 	icon_frame = 1
@@ -610,7 +537,7 @@ utility_component_template = { #先手必胜
 
 ##############泰坦光环#############
 utility_component_template = { #“重场”光环
-	key = "SHIGE_HALO"
+	key = "UMA_SHIGE_HALO"
 	size = medium
 	icon = "GFX_ship_part_aura_shige_halo"
 	icon_frame = 1
@@ -623,7 +550,7 @@ utility_component_template = { #“重场”光环
 	component_set = "ship_aura_components"
 
 	hostile_aura = {
-		name = "SHIGE"
+		name = "UMA_SHIGE"
 		radius = @shipAuraRange
 		apply_on = ships
 
@@ -655,7 +582,7 @@ utility_component_template = { #“重场”光环
 
 
 utility_component_template = { #“不良场”光环
-	key = "FURYOU_HALO"
+	key = "UMA_FURYOU_HALO"
 	size = medium
 	icon = "GFX_ship_part_aura_furyou_halo"
 	icon_frame = 1
@@ -668,7 +595,7 @@ utility_component_template = { #“不良场”光环
 	component_set = "ship_aura_components"
 
 	hostile_aura = {
-		name = "FURYOU_0"
+		name = "UMA_FURYOU_0"
 		radius = @shipAuraRange
 		apply_on = ships
 
@@ -695,7 +622,7 @@ utility_component_template = { #“不良场”光环
 
 
 	friendly_aura = {
-		name = "FURYOU_1"
+		name = "UMA_FURYOU_1"
 		radius = @shipAuraRange
 		apply_on = ships
 
@@ -772,7 +699,7 @@ utility_component_template = { #ATS-01“针灸”协同光环
 
 ################反应堆#################
 utility_component_template = { #“双涡轮”反应堆增压器
-	key = "TWIN_TURBO_BOOSTER"
+	key = "UMA_TWIN_TURBO_BOOSTER"
 	size = aux
 	icon = "GFX_ship_part_twin_turbo_booster"
 	icon_frame = 1
@@ -1117,10 +1044,10 @@ utility_component_template = {
 
 
 
-##TG_REACTION_MILL
+##UMA_TG_REACTION_MILL
 
 utility_component_template = { #晶体反应堆
-	key = "TG_REACTION_STARBASE"
+	key = "UMA_TG_REACTION_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1156,7 +1083,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_CORVETTE"
+	key = "UMA_TG_REACTION_CORVETTE"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1188,7 +1115,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_DESTROYER"
+	key = "UMA_TG_REACTION_DESTROYER"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1218,7 +1145,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_CRUISER"
+	key = "UMA_TG_REACTION_CRUISER"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1248,7 +1175,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_BATTLESHIP"
+	key = "UMA_TG_REACTION_BATTLESHIP"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1278,7 +1205,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_TITAN"
+	key = "UMA_TG_REACTION_TITAN"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1308,7 +1235,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_STARBASE"
+	key = "UMA_TG_REACTION_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_tg_reaction"
 	icon_frame = 1
@@ -1349,7 +1276,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆
-	key = "TG_REACTION_2_STARBASE"
+	key = "UMA_TG_REACTION_2_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1385,7 +1312,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_2_CORVETTE"
+	key = "UMA_TG_REACTION_2_CORVETTE"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1417,7 +1344,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_2_DESTROYER"
+	key = "UMA_TG_REACTION_2_DESTROYER"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1447,7 +1374,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_2_CRUISER"
+	key = "UMA_TG_REACTION_2_CRUISER"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1477,7 +1404,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_2_BATTLESHIP"
+	key = "UMA_TG_REACTION_2_BATTLESHIP"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1507,7 +1434,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_2_TITAN"
+	key = "UMA_TG_REACTION_2_TITAN"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1537,7 +1464,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_2_STARBASE"
+	key = "UMA_TG_REACTION_2_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_tg_reaction_2"
 	icon_frame = 1
@@ -1577,7 +1504,7 @@ utility_component_template = { #晶体反应堆-MK2
 ### Gen 3
 
 utility_component_template = { #晶体反应堆
-	key = "TG_REACTION_3_STARBASE"
+	key = "UMA_TG_REACTION_3_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1613,7 +1540,7 @@ utility_component_template = { #晶体反应堆
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_3_CORVETTE"
+	key = "UMA_TG_REACTION_3_CORVETTE"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1645,7 +1572,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_3_DESTROYER"
+	key = "UMA_TG_REACTION_3_DESTROYER"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1675,7 +1602,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_3_CRUISER"
+	key = "UMA_TG_REACTION_3_CRUISER"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1705,7 +1632,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_3_BATTLESHIP"
+	key = "UMA_TG_REACTION_3_BATTLESHIP"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1735,7 +1662,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_3_TITAN"
+	key = "UMA_TG_REACTION_3_TITAN"
 	size = small
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1765,7 +1692,7 @@ utility_component_template = { #晶体反应堆-MK2
 
 
 utility_component_template = { #晶体反应堆-MK2
-	key = "TG_REACTION_3_STARBASE"
+	key = "UMA_TG_REACTION_3_STARBASE"
 	size = large
 	icon = "GFX_ship_part_uma_tg_reaction_3"
 	icon_frame = 1
@@ -1805,7 +1732,7 @@ utility_component_template = { #晶体反应堆-MK2
 ###TG TITAN ARNOR
 
 utility_component_template = {
-	key = "TG_NN_HALO"
+	key = "UMA_TG_NN_HALO"
 	size = medium
 	icon = "GFX_ship_part_uma_tg_nn_halo"
 	icon_frame = 1
@@ -1818,7 +1745,7 @@ utility_component_template = {
 	component_set = "ship_aura_components"
 
 	hostile_aura = {
-		name = "TG_NN"
+		name = "UMA_TG_NN"
 		radius = 140
 		apply_on = ships
 
