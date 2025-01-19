@@ -83,63 +83,15 @@ uma_num_of_nature_equal_or_better_than_three = {
 ####检测马娘领袖是否有干劲特质###
 uma_admiral_have_yaruki_trait = {
 	OR = {
-		has_trait = uma_admiral_trait_yaruki_five
-		has_trait = uma_admiral_trait_yaruki_four
-		has_trait = uma_admiral_trait_yaruki_three
-		has_trait = uma_admiral_trait_yaruki_two
-		has_trait = uma_admiral_trait_yaruki_one
+		has_trait = uma_trait_yaruki_five
 	}
-}
-
-uma_general_have_yaruki_trait = {
-	OR = {
-		has_trait = uma_general_trait_yaruki_five
-		has_trait = uma_general_trait_yaruki_four
-		has_trait = uma_general_trait_yaruki_three
-		has_trait = uma_general_trait_yaruki_two
-		has_trait = uma_general_trait_yaruki_one
 	}
-}
-
-uma_governor_have_yaruki_trait = {
-	OR = {
-		has_trait = uma_governor_trait_yaruki_five
-		has_trait = uma_governor_trait_yaruki_four
-		has_trait = uma_governor_trait_yaruki_three
-		has_trait = uma_governor_trait_yaruki_two
-		has_trait = uma_governor_trait_yaruki_one
-	}
-}
-
-uma_scientist_have_yaruki_trait = {
-	OR = {
-		has_trait = uma_scientist_trait_yaruki_five
-		has_trait = uma_scientist_trait_yaruki_four
-		has_trait = uma_scientist_trait_yaruki_three
-		has_trait = uma_scientist_trait_yaruki_two
-		has_trait = uma_scientist_trait_yaruki_one
-	}
-}
-
-#uma_ruler_have_yaruki_trait = {
-#	OR = {
-#		has_trait = uma_ruler_trait_yaruki_5
-#		has_trait = uma_ruler_trait_yaruki_4
-#		has_trait = uma_ruler_trait_yaruki_3
-#		has_trait = uma_ruler_trait_yaruki_2
-#		has_trait = uma_ruler_trait_yaruki_1
-#	}
-#}
 
 #####检测是否为最好干劲#####
 uma_not_has_highest_kanshi_trigger = {
 	NOT = {
 		OR = {
-#			has_trait = uma_ruler_trait_yaruki_5
-			has_trait = uma_scientist_trait_yaruki_five
-			has_trait = uma_governor_trait_yaruki_five
-			has_trait = uma_general_trait_yaruki_five
-			has_trait = uma_admiral_trait_yaruki_five
+			has_trait = uma_trait_yaruki_five
 		}
 	}
 }
@@ -148,11 +100,8 @@ uma_not_has_highest_kanshi_trigger = {
 uma_is_not_lowest_kanshi = {
 	NOT = {
 		OR = {
-#			has_trait = uma_ruler_trait_yaruki_1
-			has_trait = uma_scientist_trait_yaruki_one
-			has_trait = uma_governor_trait_yaruki_one
-			has_trait = uma_general_trait_yaruki_one
-			has_trait = uma_admiral_trait_yaruki_one
+
+			has_trait = uma_trait_yaruki_one
 		}
 	}
 }

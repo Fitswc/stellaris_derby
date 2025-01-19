@@ -30,6 +30,33 @@ uma_trait_yaruki_five = {
 		army_morale = 0.20
 	}
 	#
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.15
+		planet_stability_add = 5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = 0.06
+	}
+	#
+	triggered_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.2
+		ship_archaeological_site_clues_add = 2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.1
+	}
 
 	leader_class = { commander scientist official envoy }
 	initial = no
@@ -63,6 +90,33 @@ uma_trait_yaruki_four = {
 		army_morale = 0.1
 	}
 	#
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.1
+		planet_stability_add = 2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = 0.04
+	}
+	#
+	triggered_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.1
+		ship_archaeological_site_clues_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.05
+	}
 
 	leader_class = { commander scientist official envoy }
 	initial = no
@@ -108,6 +162,32 @@ uma_trait_yaruki_two = {
 		army_morale = -0.05
 	}
 	#
+	triggered_planet_modifier = {
+		potential = {
+			leader_class = official
+		}
+		planet_jobs_produces_mult = -0.025
+		planet_stability_add = -2
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = official
+		}
+		country_admin_cap_mult = -0.04
+	}
+	#
+	triggered_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		science_ship_survey_speed = -0.05
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = -0.025
+	}
 
 	leader_class = { commander scientist official envoy }
 	initial = no
@@ -155,6 +235,18 @@ uma_trait_yaruki_one = {
 		country_admin_cap_mult = -0.06
 	}
 	#
+	triggered_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		science_ship_survey_speed = -0.1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			leader_class = scientist
+		}
+		all_technology_research_speed = -0.05
+	}
 
 	leader_class = { commander scientist official envoy }
 	initial = no
