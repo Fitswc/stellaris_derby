@@ -91,7 +91,7 @@ uma_admiral_trait_training_book = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
 	self_modifier = {
-		leader_skill_levels =  5
+		leader_upkeep_empire_size_mult = -0.05
 		species_leader_exp_gain = 1.5
 	}
 	leader_class = { commander }
@@ -240,7 +240,8 @@ uma_governor_trait_training_book = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
 	self_modifier = {
-		leader_skill_levels =  5
+#		leader_skill_levels =  5
+		leader_upkeep_empire_size_mult = -0.05
 		species_leader_exp_gain = 1.5
 	}
 
@@ -413,7 +414,8 @@ uma_ruler_trait_training_book = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
 	councilor_modifier = {
-		leader_skill_levels =  5
+#		leader_skill_levels =  5
+		leader_upkeep_empire_size_mult = -0.05
 		species_leader_exp_gain = 1.5
 	}
 #	councilor_trait = yes
@@ -570,7 +572,8 @@ uma_scientist_trait_training_book = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
 	councilor_modifier = {
-		leader_skill_levels =  5
+#		leader_skill_levels =  5
+		leader_upkeep_empire_size_mult = -0.05
 		species_leader_exp_gain = 1.5
 	}
 

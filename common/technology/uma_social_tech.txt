@@ -1464,7 +1464,7 @@ tech_uma_psychology_3 = { #理性认知教育
     }
 
     modifier = {
-        leader_skill_levels = 1
+        leader_cost_empire_size_mult = -0.05
         species_leader_exp_gain = 0.15
     }
 

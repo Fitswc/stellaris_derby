@@ -1148,7 +1148,7 @@ uma_scientists_trait_sp_zf_top = {
 		always = no
 	}
 	self_modifier = {
-		leader_skill_levels = 5
+		leader_upkeep_empire_size_mult = -0.1
 		species_leader_exp_gain = 0.15
 	}
 	leader_class = { scientist }
