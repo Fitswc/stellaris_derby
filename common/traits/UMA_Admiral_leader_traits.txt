@@ -1,3 +1,89 @@
+uma_admiral_trait_symbolihonor = {
+	cost = 1
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_admiral_trait_symbolihonor"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 3
+	}
+	fleet_modifier = {
+		ship_weapon_damage = 0.05
+		ship_weapon_range_mult = 0.10
+		ship_disengage_chance_mult = -0.10
+
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+	}
+	leader_class = { commander }
+	opposites = { "uma_admiral_trait_mejirohonor" }
+	initial = no
+    randomized = no
+
+}
+
+
+uma_admiral_trait_mejirohonor = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/mejirohonor.png"
+	fleet_modifier = {
+		ship_armor_mult = 0.10
+		ship_hull_regen_add_perc = 0.8
+		ship_armor_regen_add_perc = 0.8
+
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+	}
+	leader_class = { commander }
+	opposites = { "uma_admiral_trait_symbolihonor" }
+	initial = no
+    randomized = no
+
+}
+
+uma_admiral_trait_charmleader = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/charmleader.png"
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.10
+        ship_weapon_damage = 0.05
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+		has_trait = uma_trait_leadercharm
+	}
+	leader_class = { commander }
+	initial = no
+    randomized = no
+}
+
+uma_admiral_trait_kishouhageshii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouhageshii.png"
+	fleet_modifier = {
+		ship_weapon_damage = 0.10
+        ship_speed_mult = 0.05
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+		has_trait = uma_trait_kishouhageshii
+	}
+	leader_class = { commander }
+	initial = no
+    randomized = no
+}
+
 ###传统艺能1
 #leader_trait_chuantongyineng_admiral = {
 #	inline_script = {

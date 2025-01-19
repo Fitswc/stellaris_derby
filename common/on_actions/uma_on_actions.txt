@@ -34,6 +34,7 @@ on_game_start_country = {
 on_press_begin = {
 	events = {
 		uma_mmu.1
+#		uma_marking.1#立flag的事件
 	}
 }
 
@@ -104,12 +105,13 @@ on_yearly_pulse_country = {
 	events = {
 		uma_gui_test.3 #刷新商城商品
 		uma_leader.7 #每年随机调整一次心情
-		uma_events_effect.7 #每年更新商城的抽奖次数
+		uma_bg.17 #每年更新商城的抽奖次数
 		uma_autoroll.1 #自动抽卡sil
 		uma_autoroll.4 #自动抽卡win
-		uma_events_effect.4 #Special Leader头像自动重整
+		uma_bg.14 #Special Leader头像自动重整
 		uma_satono.402
 		uma_fallen_empire.2077
+		uma_fallen_empire.40 #堕落定期触发（5年检测）
 	}
 
 	random_events = {
@@ -127,8 +129,8 @@ on_bi_yearly_pulse_country = {
 
 
 
-
-#马娘随机领袖特质
+#领袖生成
+# scope: country, from: leader
 on_leader_spawned = {
 	events = {
 		uma_leader.1
@@ -137,15 +139,27 @@ on_leader_spawned = {
 		uma_leader.4
 		uma_leader.5
 		uma_leader.6 #特殊：干劲特质添加
+
+		uma_bg.10001
+
+		uma_leader.9
+#		umatool.1
+
+		uma_traits_leader.1 #特殊：马娘特质添加
 	}
 }
 
 on_tech_increased = {
 	events = {
-		umaproject.101
+		uma_threegodness_rd.1001
 		uma_special_leader.12
 		uma_special_leader.50 #触发数码事件链
 		uma_finemotion.222
+		###任务触发
+		uma_fallen_empire.1111
+
+		uma_ayb_arc.20
+		uma_ayb_arc.22
 	}
 }
 
@@ -157,31 +171,25 @@ on_planet_surveyed = {
 }
 
 
-##设置flag，确认mod打开，以方便适配
-on_press_begin = {
-	events = {
-		uma_marking.1#立flag的事件
-	}
-}
 
 ##舰队接战
 on_entering_battle = {
 	events = {
-		uma_events_effect.1 #sky事件，更换buff
+		uma_bg.10 #sky事件，更换buff
 	}
 }
 
 ##舰队战斗胜利
 on_space_battle_won = {
 	events = {
-		uma_events_effect.3
+		uma_bg.13
 	}
 }
 
 ##舰队战斗失败
 on_space_battle_lost = {
 	events = {
-		uma_events_effect.3
+		uma_bg.13
 	}
 }
 
@@ -208,6 +216,10 @@ on_ship_destroyed_perp = {
 		uma_crisis.90000
 		uma_crisis.90001
 		uma_crisis.90002
+		#####Leviathan Action
+		uma_leviathan.1
+
+		uma_traits_leader.9
 	}
 }
 
@@ -217,11 +229,12 @@ on_ship_destroyed_perp = {
 on_colonized = {
 	###这两个事件是特殊科技，给殖民星球上buff的
 	events = {
-		uma_events_effect.5
-		uma_events_effect.6
+		uma_bg.15
+		uma_bg.16
 		uma_satono.401
 		uma_fallen_empire.1141
 		uma_finemotion.888
+#		uma_fallen_empire.1141
 	}
 
 }
@@ -235,22 +248,16 @@ on_entering_system_first_time = {
 
 on_entering_system = {
 	events = {
+		uma_crisis.6660
 	}
 }
 
 
-###任务触发
-on_tech_increased = {
-	events = {
-		uma_fallen_empire.1111
-		uma_ss_arc.20
-		uma_ss_arc.22
-	}
-}
 
 on_building_complete = {
 	events = {
 		uma_fallen_empire.1121
+		uma_bg.1
 	}
 }
 
@@ -279,39 +286,27 @@ on_ship_built = {
 	}
 }
 
-#on_colonized = {
-#	events = {
-#		uma_fallen_empire.1141
-#	}
-#}
-
-#领袖生成
-# scope: country, from: leader
-on_leader_spawned = {
-    events = {
-        uma_species.10001
-    }
-}
 
 on_ascension_perk_picked = {
 	events = {
-		uma_ss_arc.6
+		uma_ayb_arc.6
 		uma_bour_arc.14
 	}
 }
 
+#####飞船进入一个星系后的事件#####
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
 on_entering_system_fleet = {
 	events = {
 		uma_bour_arc.9999
 		uma_bour_arc.17
+		uma_fallen_empire.21 #飞船开进堕落疆域旁
 	}
 }
 
-on_entering_system = {
-	events = {
-		uma_crisis.6660
-	}
-}
+
 
 on_entering_gold_tunnel = {
 	events = {
@@ -351,24 +346,13 @@ on_leader_death = {
 	}
 }
 
-on_leader_spawned = {
-	events = {
-		uma_leader.9
-		umatool.1
-	}
-}
 
 on_branch_office_established = {
 	events = {
-		uma_corp.1
+		uma_bg.2
 	}
 }
 
-on_building_complete = {
-	events = {
-		uma_bg.1
-	}
-}
 
 on_monthly_pulse_pre_ftl_observation = {
 	random_events = {
@@ -386,49 +370,7 @@ on_building_observation_station = {
 
 
 
-#####Leviathan Action
-on_ship_destroyed_perp = {
-	events = {
-		uma_leviathan.1
-	}
-}
 
-
-on_yearly_pulse_country = {
-	events = {
-		uma_fallen_empire.40 #堕落定期触发（5年检测）
-	}
-}
-
-
-#####飞船进入一个星系后的事件#####
-# A fleet has entered a system | See also: on_fleet_auto_move_arrival
-# Scope = Fleet
-# From = System
-on_entering_system_fleet = {
-	events = {
-		uma_fallen_empire.21 #飞船开进堕落疆域旁
-	}
-}
-
-
-####只有一次
-on_entering_system_first_time = {
-	events = {
-		#wg_boss.10000
-	}
-}
-
-
-
-#游戏开始时
-
-#马娘随机领袖特质
-on_leader_spawned = {
-	events = {
-		uma_traits_leader.1 #特殊：马娘特质添加
-	}
-}
 #探索完成时
 on_survey = {
 	events = {
@@ -458,12 +400,7 @@ special_project_success = {
 		uma_traits_leader.3
 	}
 }
-#当摧毁舰船时
-on_ship_destroyed_perp = {
-	events = {
-		uma_traits_leader.9
-	}
-}
+
 #星球入侵胜利时
 on_planet_attackers_win = {
 	events = {

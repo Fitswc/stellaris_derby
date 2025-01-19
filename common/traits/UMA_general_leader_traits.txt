@@ -1,3 +1,86 @@
+uma_general_trait_symbolihonor = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/symbolihonor.png"
+	army_modifier = {
+		army_damage_mult = 0.15
+		army_morale = 0.15
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+	}
+
+	leader_class = { commander }
+	opposites = { "uma_general_trait_mejirohonor" }
+	initial = no
+    randomized = no
+
+}
+
+
+uma_general_trait_mejirohonor = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/mejirohonor.png"
+	army_modifier = {
+		army_health = 0.15
+		army_morale = 0.15
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+	}
+
+	leader_class = { commander }
+	opposites = { "uma_general_trait_symbolihonor" }
+	initial = no
+    randomized = no
+
+}
+
+uma_general_trait_charmleader = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/charmleader.png"
+	army_modifier = {
+		army_morale = 0.20
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+		has_trait = uma_trait_leadercharm
+	}
+
+	leader_class = { commander }
+	initial = no
+    randomized = no
+}
+
+uma_general_trait_kishouhageshii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouhageshii.png"
+	army_modifier = {
+		army_damage_mult = 0.25
+        army_collateral_damage_mult = 0.25
+		army_disengage_chance_mult = -0.20
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+		}
+		has_trait = uma_trait_kishouhageshii
+	}
+
+	leader_class = { commander }
+	initial = no
+    randomized = no
+}
+
+
+
+
+
 ###冲锋
 leader_trait_chongfeng_general = {
 	inline_script = {
