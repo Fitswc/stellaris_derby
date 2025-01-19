@@ -13,7 +13,7 @@ weapon_component_template = { #MJR激光器
     icon_frame = 1
 	power = -30
     prerequisites = { tech_uma_MJR }
-    component_set = "MJR_LASER"
+    component_set = "UMA_MJR_LASER"
     projectile_gfx = "gamma_laser_s"
     tags = { weapon_type_energy }
     ai_tags = { weapon_role_anti_armor }
@@ -68,7 +68,7 @@ weapon_component_template = { #MJR激光器
     prerequisites = {
         tech_uma_MJR
     }
-    component_set = "MJR_LASER"
+    component_set = "UMA_MJR_LASER"
     projectile_gfx = "gamma_laser_m"
     tags = {
         weapon_type_energy
@@ -127,7 +127,7 @@ weapon_component_template = { #MJR激光器
     prerequisites = {
         tech_uma_MJR
     }
-    component_set = "MJR_LASER"
+    component_set = "UMA_MJR_LASER"
     projectile_gfx = "gamma_laser_l"
     tags = {
         weapon_type_energy
@@ -430,7 +430,7 @@ weapon_component_template = { #强等离子发射器
 	#color = { 0.1 1.0 0.1 1 }
 
 	prerequisites = { "tech_strong_plasma" }
-	component_set = "STRONG_PLASMA"
+	component_set = "UMA_STRONG_PLASMA"
 	projectile_gfx = "plasma_cannon_s"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -486,7 +486,7 @@ weapon_component_template = { #强等离子发射器
 	#color = { 0.1 1.0 0.1 1 }
 
 	prerequisites = { "tech_strong_plasma" }
-	component_set = "STRONG_PLASMA"
+	component_set = "UMA_STRONG_PLASMA"
 	projectile_gfx = "plasma_cannon_m"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -542,7 +542,7 @@ weapon_component_template = { #强等离子发射器
 	#color = { 0.1 1.0 0.1 1 }
 
 	prerequisites = { "tech_strong_plasma" }
-	component_set = "STRONG_PLASMA"
+	component_set = "UMA_STRONG_PLASMA"
 	projectile_gfx = "plasma_cannon_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -600,7 +600,7 @@ weapon_component_template = { #高能强子裂解炮
 	#color = { 1.0 1.0 1.0 1 }
 
 	prerequisites = { "tech_hadron_disruptors" }
-	component_set = "HADRON_DISRUPTOR"
+	component_set = "UMA_HADRON_DISRUPTOR"
 	projectile_gfx = "disruptor_3_medium"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
@@ -656,7 +656,7 @@ weapon_component_template = {
 	#color = { 1.0 1.0 1.0 1 }
 
 	prerequisites = { "tech_hadron_disruptors" }
-	component_set = "HADRON_DISRUPTOR"
+	component_set = "UMA_HADRON_DISRUPTOR"
 	projectile_gfx = "disruptor_3_medium"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
@@ -716,7 +716,7 @@ weapon_component_template = { #“极光”电弧束
 	use_ship_kill_target = no
 
 	prerequisites = { "tech_uma_aurora_emitter" }
-	component_set = "AURORA_EMITTER"
+	component_set = "UMA_AURORA_EMITTER"
 	projectile_gfx = "focused_arc_emitter"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
@@ -777,7 +777,7 @@ weapon_component_template = { #弦光矛
 	use_ship_kill_target = no
 
 	prerequisites = { "tech_string_energy_lance" }
-	component_set = "STRING_ENERGY_LANCE"
+	component_set = "UMA_STRING_ENERGY_LANCE"
 	projectile_gfx = "tachyon_lance"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
@@ -895,7 +895,7 @@ weapon_component_template = { #弦光矛-Nova
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
 	prerequisites = { "tech_string_energy_lance"}
-	component_set = "STRING_ENERGY_LANCE"
+	component_set = "UMA_STRING_ENERGY_LANCE"
 	projectile_gfx = "string_energy_lance"
 	size_restriction = { titan cosmo_crisis_titan ion_cannon }
 	resources = {

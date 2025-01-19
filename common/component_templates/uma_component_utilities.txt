@@ -471,7 +471,7 @@ utility_component_template = { #“大胃王”护盾能量分配系统
 			# ship_armor_regen_add_perc = 1.0		
 			ship_shield_regen_add_perc = 0.55
 	}
-	component_set = "BIG_EATER"
+	component_set = "UMA_BIG_EATER"
 	resources = {
 		category = ship_components
 		cost = {
@@ -785,7 +785,7 @@ utility_component_template = { #“双涡轮”反应堆增压器
 	}
 
 	prerequisites = { "tech_uma_twin_turbo" }
-	component_set = "TWIN_TURBO_BOOSTER"
+	component_set = "UMA_TWIN_TURBO_BOOSTER"
 
 	ai_weight = {
 		factor = 0
