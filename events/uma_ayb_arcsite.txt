@@ -1,18 +1,18 @@
-namespace = uma_ss_arc
+namespace = uma_ayb_arc
 
 
 ##变阿雅贝了
 
 ##虚假的星空Trigger
 country_event = {
-	id = uma_ss_arc.1
+	id = uma_ayb_arc.1
 	hide_window = yes
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	immediate = {
 		country_event = {
-			id = uma_ss_arc.2
+			id = uma_ayb_arc.2
 			days = 376
 			random = 10
 		}
@@ -20,9 +20,9 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.2
-	title = uma_ss_arc.2.title
-	desc = uma_ss_arc.2.desc
+	id = uma_ayb_arc.2
+	title = uma_ayb_arc.2.title
+	desc = uma_ayb_arc.2.desc
 	picture = GFX_evt_uma_suzuka_arc_star_second
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
@@ -34,16 +34,16 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.2.a
+		name = uma_ayb_arc.2.a
 		add_resource = {
 			influence = 200
 		}
 	}
 	option = {
-		name = uma_ss_arc.2.b
+		name = uma_ayb_arc.2.b
 		hidden_effect = {
 			country_event = {
-				id = uma_ss_arc.3
+				id = uma_ayb_arc.3
 				days = 300
 				random = 20
 			}
@@ -52,8 +52,8 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.3
-	title = uma_ss_arc.3.title
+	id = uma_ayb_arc.3
+	title = uma_ayb_arc.3.title
 	picture = GFX_evt_uma_suzuka_arc_star
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
@@ -61,7 +61,7 @@ country_event = {
 		trigger = {
 			has_country_flag = uma_ss_got
 		}
-		text = uma_ss_arc.3.desc
+		text = uma_ayb_arc.3.desc
 	}
 
 	immediate = {
@@ -75,7 +75,7 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.3.a.b
+		name = uma_ayb_arc.3.a.b
 #			trigger = {
 #				NOT = {
 #					has_country_flag = uma_ss_got
@@ -88,7 +88,7 @@ country_event = {
 #				}
 #				remove_modifier = uma_trainer_silent_suzuka
 #				country_event = {
-#					id = uma_ss_arc.4
+#					id = uma_ayb_arc.4
 #					days = 366
 #					random = 10
 #				}
@@ -99,20 +99,20 @@ country_event = {
 #				}
 #				remove_modifier = uma_trainer_silent_suzuka_dream_break
 #				country_event = {
-#					id = uma_ss_arc.4
+#					id = uma_ayb_arc.4
 #					days = 366
 #					random = 10
 #				}
 #			}
 			country_event = {
-				id = uma_ss_arc.4
+				id = uma_ayb_arc.4
 				days = 366
 				random = 10
 			}
 		}
 	}
 	option = {
-		name = uma_ss_arc.3.b
+		name = uma_ayb_arc.3.b
 		hidden_effect = {
 			add_resource = {
 				influence = 30
@@ -122,15 +122,15 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.4
-	title = uma_ss_arc.4.title
-	desc = uma_ss_arc.4.desc
+	id = uma_ayb_arc.4
+	title = uma_ayb_arc.4.title
+	desc = uma_ayb_arc.4.desc
 	picture = GFX_evt_uma_suzuka_arc_star
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
 
 	option = {
-		name = uma_ss_arc.4.a
+		name = uma_ayb_arc.4.a
 		hidden_effect = {
 			add_resource = {
 				engineering_research = 1000
@@ -141,10 +141,10 @@ country_event = {
 #		end_event_chain = uma_ayb_weak
 	}
 	option = {
-		name = uma_ss_arc.4.b
+		name = uma_ayb_arc.4.b
 		hidden_effect = {
 			country_event = {
-				id = uma_ss_arc.5
+				id = uma_ayb_arc.5
 			}
 		}
 	}
@@ -158,7 +158,7 @@ country_event = {
 
 #领袖添加事件
 country_event = {
-	id = uma_ss_arc.5
+	id = uma_ayb_arc.5
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -212,7 +212,7 @@ country_event = {
 ##后面是飞升事件
 
 country_event = {
-	id = uma_ss_arc.6
+	id = uma_ayb_arc.6
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -224,7 +224,7 @@ country_event = {
 		}
 		NOT = {
 			OR = {
-				has_country_flag = uma_ss_arc_happened
+				has_country_flag = uma_ayb_arc_happened
 				has_country_flag = uma_ss_break
 			}
 		}
@@ -233,18 +233,18 @@ country_event = {
 
 	immediate = {
 		country_event = {
-			id = uma_ss_arc.7
+			id = uma_ayb_arc.7
 			days = 740
 			random = 20
 		}
-		set_country_flag = uma_ss_arc_happened
+		set_country_flag = uma_ayb_arc_happened
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.7
-	title = uma_ss_arc.7.title
-	desc = uma_ss_arc.7.desc
+	id = uma_ayb_arc.7
+	title = uma_ayb_arc.7.title
+	desc = uma_ayb_arc.7.desc
 	picture = GFX_evt_uma_suzuka_arc_star_report
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
@@ -272,7 +272,7 @@ country_event = {
 		name = GOOD
 		hidden_effect = {
 			country_event = {
-				id = uma_ss_arc.8
+				id = uma_ayb_arc.8
 			}
 		}
 	}
@@ -281,9 +281,9 @@ country_event = {
 
 ###一段飞升后外交
 country_event = {
-	id = uma_ss_arc.8
+	id = uma_ayb_arc.8
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.8.desc
+	desc = uma_ayb_arc.8.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -299,17 +299,17 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.8.a
+		name = uma_ayb_arc.8.a
 		country_event = {
-			id = uma_ss_arc.9
+			id = uma_ayb_arc.9
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.9
+	id = uma_ayb_arc.9
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.9.desc
+	desc = uma_ayb_arc.9.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -319,17 +319,17 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.9.a
+		name = uma_ayb_arc.9.a
 		country_event = {
-			id = uma_ss_arc.10
+			id = uma_ayb_arc.10
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.10
+	id = uma_ayb_arc.10
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.10.desc
+	desc = uma_ayb_arc.10.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -339,17 +339,17 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.10.a
+		name = uma_ayb_arc.10.a
 		country_event = {
-			id = uma_ss_arc.11
+			id = uma_ayb_arc.11
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.11
+	id = uma_ayb_arc.11
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.11.desc
+	desc = uma_ayb_arc.11.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -359,17 +359,17 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.11.a
+		name = uma_ayb_arc.11.a
 		country_event = {
-			id = uma_ss_arc.12
+			id = uma_ayb_arc.12
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.12
+	id = uma_ayb_arc.12
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.12.desc
+	desc = uma_ayb_arc.12.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -379,17 +379,17 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.12.a
+		name = uma_ayb_arc.12.a
 		country_event = {
-			id = uma_ss_arc.13
+			id = uma_ayb_arc.13
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.13
+	id = uma_ayb_arc.13
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.13.desc
+	desc = uma_ayb_arc.13.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -399,17 +399,17 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.13.a
+		name = uma_ayb_arc.13.a
 		country_event = {
-			id = uma_ss_arc.14
+			id = uma_ayb_arc.14
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.14
+	id = uma_ayb_arc.14
 	title = uma_ayb_aybname
-	desc = uma_ss_arc.14.desc
+	desc = uma_ayb_arc.14.desc
 	is_triggered_only = yes
 	diplomatic = yes
 
@@ -418,8 +418,8 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.14.a
-		response_text = uma_ss_arc.14.resp.a
+		name = uma_ayb_arc.14.a
+		response_text = uma_ayb_arc.14.resp.a
 		enable_special_project = {
 			name = UMA_SILENT_SUZUKA_TRANGLE_STAR
 			location = home_planet
@@ -427,16 +427,16 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.14.b
-		response_text = uma_ss_arc.14.resp.b
+		name = uma_ayb_arc.14.b
+		response_text = uma_ayb_arc.14.resp.b
 		country_event = {
-			id = uma_ss_arc.15
+			id = uma_ayb_arc.15
 		}
 	}
 }
 
 country_event = {
-	id = uma_ss_arc.15
+	id = uma_ayb_arc.15
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -452,9 +452,9 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.16
-	title = uma_ss_arc.16.title
-	desc = uma_ss_arc.16.desc
+	id = uma_ayb_arc.16
+	title = uma_ayb_arc.16.title
+	desc = uma_ayb_arc.16.desc
 	picture = GFX_evt_society_cache
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
@@ -470,7 +470,7 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.16.a
+		name = uma_ayb_arc.16.a
 		hidden_effect = {
 			home_planet = {
 				create_archaeological_site = uma_silent_suzuka_relic
@@ -480,9 +480,9 @@ country_event = {
 }
 
 fleet_event = {
-	id = uma_ss_arc.2071
-	desc = uma_ss_arc.2071.desc
-	title = uma_ss_arc.2071.title
+	id = uma_ayb_arc.2071
+	desc = uma_ayb_arc.2071.desc
+	title = uma_ayb_arc.2071.title
 
 	show_sound = event_big_door_opening #占位符
 	location = from
@@ -500,14 +500,14 @@ fleet_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.2071.a
+		name = uma_ayb_arc.2071.a
 	}
 }
 
 fleet_event = {
-	id = uma_ss_arc.2072
-	desc = uma_ss_arc.2072.desc
-	title = uma_ss_arc.2072.title
+	id = uma_ayb_arc.2072
+	desc = uma_ayb_arc.2072.desc
+	title = uma_ayb_arc.2072.title
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -524,14 +524,14 @@ fleet_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.2072.a
+		name = uma_ayb_arc.2072.a
 	}
 }
 
 fleet_event = {
-	id = uma_ss_arc.2073
-	desc = uma_ss_arc.2073.title
-	title = uma_ss_arc.2073.desc
+	id = uma_ayb_arc.2073
+	desc = uma_ayb_arc.2073.title
+	title = uma_ayb_arc.2073.desc
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -547,14 +547,14 @@ fleet_event = {
 		from = { set_site_progress_locked = no }
 	}
 	option = {
-		name = uma_ss_arc.2073.a
+		name = uma_ayb_arc.2073.a
 	}
 }
 
 fleet_event = {
-	id = uma_ss_arc.2074
-	desc = uma_ss_arc.2074.desc
-	title = uma_ss_arc.2074.title
+	id = uma_ayb_arc.2074
+	desc = uma_ayb_arc.2074.desc
+	title = uma_ayb_arc.2074.title
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -570,10 +570,10 @@ fleet_event = {
 		from = { set_site_progress_locked = no }
 	}
 	option = {
-		name = uma_ss_arc.2074.a
+		name = uma_ayb_arc.2074.a
 		owner = {
 			country_event = {
-				id = uma_ss_arc.17
+				id = uma_ayb_arc.17
 				days = 20
 				random = 6
 			}
@@ -582,15 +582,15 @@ fleet_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.17
-	title = uma_ss_arc.17.title
-	desc = uma_ss_arc.17.desc
+	id = uma_ayb_arc.17
+	title = uma_ayb_arc.17.title
+	desc = uma_ayb_arc.17.desc
 	picture = GFX_evt_uma_suzuka_arc_star_analyse
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
 
 	option = {
-		name = uma_ss_arc.17.a
+		name = uma_ayb_arc.17.a
 		hidden_effect = {
 			enable_special_project = {
 				name = UMA_SILENT_SUZUKA_ANA_CODE
@@ -603,16 +603,16 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.18
-	title = uma_ss_arc.18.title
-	desc = uma_ss_arc.18.desc
+	id = uma_ayb_arc.18
+	title = uma_ayb_arc.18.title
+	desc = uma_ayb_arc.18.desc
 	picture = GFX_evt_ancient_databank
 	is_triggered_only = yes
 	event_chain = uma_ayb_full
 
 
 	option = {
-		name = uma_ss_arc.18.a
+		name = uma_ayb_arc.18.a
 		enable_special_project = {
 			name = UMA_SILENT_SUZUKA_ANA_MACHINE
 			location = home_planet
@@ -623,9 +623,9 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.19
-	title = uma_ss_arc.19.title
-	desc = uma_ss_arc.19.desc
+	id = uma_ayb_arc.19
+	title = uma_ayb_arc.19.title
+	desc = uma_ayb_arc.19.desc
 	picture = GFX_evt_ancient_databank
 	is_triggered_only = yes
 
@@ -638,7 +638,7 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.19.a
+		name = uma_ayb_arc.19.a
 		hidden_effect = {
 			add_tech_progress = {
 				tech = tech_uma_realm_stable
@@ -662,9 +662,9 @@ country_event = {
 
 
 country_event = {
-	id = uma_ss_arc.20
-	title = uma_ss_arc.20.title
-	desc = uma_ss_arc.20.desc
+	id = uma_ayb_arc.20
+	title = uma_ayb_arc.20.title
+	desc = uma_ayb_arc.20.desc
 	picture = GFX_evt_circuitry_modification
 	is_triggered_only = yes
 
@@ -690,20 +690,20 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.20.a
+		name = uma_ayb_arc.20.a
 		add_modifier = {
 			modifier = uma_possible_future_one
 		}
 		hidden_effect = {
 			country_event = {
-				id = uma_ss_arc.21
+				id = uma_ayb_arc.21
 				days = 80
 				random = 10
 			}
 		}
 	}
 	option = {
-		name = uma_ss_arc.20.b
+		name = uma_ayb_arc.20.b
 		if = {
 			limit = {
 				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
@@ -718,9 +718,9 @@ country_event = {
 				40 = {
 					#事情暴露
 					hidden_effect = {
-						set_country_flag = uma_ss_arc_uncovered
+						set_country_flag = uma_ayb_arc_uncovered
 						country_event = {
-							id = uma_ss_arc.21
+							id = uma_ayb_arc.21
 						}
 					}
 				}
@@ -736,9 +736,9 @@ country_event = {
 					has_country_flag = uma_rs_fail
 				}
 				hidden_effect = {
-					set_country_flag = uma_ss_arc_uncovered
+					set_country_flag = uma_ayb_arc_uncovered
 					country_event = {
-						id = uma_ss_arc.21
+						id = uma_ayb_arc.21
 					}
 
 				}
@@ -753,13 +753,13 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.20.c
+		name = uma_ayb_arc.20.c
 		add_resource = {
 			influence = 300
 		}
 	}
 	option = {
-		name = uma_ss_arc.20.d
+		name = uma_ayb_arc.20.d
 		allow = {
 			OR = {
 				has_ethic = ethic_authoritarian
@@ -771,7 +771,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.20.e
+		name = uma_ayb_arc.20.e
 		allow = {
 			OR = {
 				has_ethic = ethic_spiritualist
@@ -784,7 +784,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.20.f
+		name = uma_ayb_arc.20.f
 		allow = {
 			OR = {
 				has_ethic = ethic_materialist
@@ -796,7 +796,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.20.g
+		name = uma_ayb_arc.20.g
 		allow = {
 			OR = {
 				has_ethic = ethic_egalitarian
@@ -825,28 +825,28 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.21
-	title = uma_ss_arc.21.title
+	id = uma_ayb_arc.21
+	title = uma_ayb_arc.21.title
 	picture = GFX_evt_civil_action
 	desc = {
 		trigger = {
 			NOT = {
-				has_country_flag = uma_ss_arc_uncovered
+				has_country_flag = uma_ayb_arc_uncovered
 			}
 		}
-		text = uma_ss_arc.21.desc_a
+		text = uma_ayb_arc.21.desc_a
 	}
 	desc = {
 		trigger = {
-			has_country_flag = uma_ss_arc_uncovered
+			has_country_flag = uma_ayb_arc_uncovered
 		}
-		text = uma_ss_arc.21.desc_b
+		text = uma_ayb_arc.21.desc_b
 	}
 	#picture =
 	is_triggered_only = yes
 
 	option = {
-		name = uma_ss_arc.21.a
+		name = uma_ayb_arc.21.a
 		hidden_effect = {
 			add_resource = {
 				influence = -300
@@ -855,7 +855,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.21.b
+		name = uma_ayb_arc.21.b
 		hidden_effect = {
 			add_modifier = {
 				modifier = uma_possible_future_five
@@ -863,7 +863,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.21.c
+		name = uma_ayb_arc.21.c
 		hidden_effect = {
 			add_modifier = {
 				modifier = uma_possible_future_six
@@ -871,7 +871,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_ss_arc.21.d
+		name = uma_ayb_arc.21.d
 		hidden_effect = {
 			add_modifier = {
 				modifier = uma_possible_future_seven
@@ -881,9 +881,9 @@ country_event = {
 }
 
 country_event = {
-	id = uma_ss_arc.22
-	title = uma_ss_arc.22.title
-	desc = uma_ss_arc.22.desc
+	id = uma_ayb_arc.22
+	title = uma_ayb_arc.22.title
+	desc = uma_ayb_arc.22.desc
 	picture = GFX_evt_uma_suzuka_arc_star_second
 	is_triggered_only = yes
 
@@ -904,13 +904,13 @@ country_event = {
 	}
 
 	option = {
-		name = uma_ss_arc.22.a
+		name = uma_ayb_arc.22.a
 	}
 }
 
 
 country_event = {
-	id = uma_ss_arc.2077
+	id = uma_ayb_arc.2077
 	hide_window = yes
 
 	trigger = {

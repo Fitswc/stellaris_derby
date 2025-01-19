@@ -321,7 +321,7 @@ planet_event = {
 				set_country_flag = community_can_build_branch_offices_true #SUGL可以建造地产
 				set_country_flag = community_is_criminal_syndicate_rule_true #SUGL遵循罪企规则
 				country_event = {
-					id = uma_events_effect.8
+					id = uma_bg.18
 				}
 			}
 			else_if = {
