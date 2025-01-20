@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:837c54ef3df3eeea901616ac6f2e4e6cdbeb429d6bed1afd80c38aa93344df09
-size 176
+advisor_2023_10_29_11_16_22 = {
+	name = "advisor_Bourbon"
+	icon = "gfx/interface/icons/advisor/advisor_bourbon.dds"
+	playable = {
+		always = yes
+	}
+	weight = {
+		base = 0
+	}
+}
