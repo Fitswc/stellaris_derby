@@ -5,7 +5,7 @@
 
 #基础赛场
 building_uma_basic_racing_course = {
-	base_buildtime = 100
+	base_buildtime = 200
 	category = unity
 
 
@@ -56,7 +56,7 @@ building_uma_basic_racing_course = {
 		modifier = {
 			job_uma_racing_umamusume_add = 4
 
-			job_uma_racing_ura_members_add = 3
+			job_uma_racing_ura_members_add = 2
 
 
 		}
@@ -96,7 +96,7 @@ building_uma_basic_racing_course = {
 
 #现代化赛场
 building_uma_modern_racing_course = {
-	base_buildtime = 300
+	base_buildtime = 500
 	category = unity
 	can_build = no #升级得来
 
@@ -132,8 +132,7 @@ building_uma_modern_racing_course = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 450
-			energy = 250
+			minerals = 500
 		}
 		upkeep = {
 			energy = 3
@@ -153,7 +152,7 @@ building_uma_modern_racing_course = {
 		modifier = {
 			job_uma_racing_umamusume_add = 6
 
-			job_uma_racing_ura_members_add = 4
+			job_uma_racing_ura_members_add = 3
 
 		}
 	}
@@ -210,7 +209,7 @@ building_uma_modern_racing_course = {
 
 #尖端赛场
 building_uma_top_racing_course = {
-	base_buildtime = 600
+	base_buildtime = 1000
 	category = unity
 	can_build = no #升级得来
 
@@ -246,12 +245,11 @@ building_uma_top_racing_course = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 950
-			energy = 750
+			minerals = 1000
 			uma_crystal_carrot = 100
 		}
 		upkeep = {
-			energy = 6
+			energy = 5
 			uma_crystal_carrot = 1
 		}
 	}

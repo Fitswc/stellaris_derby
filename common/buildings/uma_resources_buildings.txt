@@ -4,7 +4,7 @@
 
 #“玉藻”马娘场发电工厂
 building_uma_field_powerplant = {
-	base_buildtime = 300
+	base_buildtime = 200
 	category = resource
 
 	potential = {
@@ -74,7 +74,7 @@ building_uma_field_powerplant = {
 
 	upgrades = {
 		building_uma_field_powering_complex
-		building_uma_field_powering_complex_realm
+		# building_uma_field_powering_complex_realm
 	}
 
 	show_tech_unlock_if = {
@@ -89,7 +89,7 @@ building_uma_field_powerplant = {
 
 #“玉藻”马娘场发电复合体
 building_uma_field_powering_complex = {
-	base_buildtime = 800
+	base_buildtime = 500
 	category = resource
 	can_build = no
 
@@ -118,8 +118,8 @@ building_uma_field_powering_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 600
-			uma_crystal_carrot = 300
+			minerals = 700
+			uma_crystal_carrot = 250
 		}
 		upkeep = {
 			energy = 3
@@ -158,6 +158,11 @@ building_uma_field_powering_complex = {
 		"tech_uma_tama_force_powering_advance_use"
 	}
 
+	upgrades = {
+		# building_uma_field_powering_complex
+		building_uma_field_powering_complex_realm
+	}
+
 	show_tech_unlock_if = {
 		OR = {
 			has_authority = auth_trainingcenter
@@ -174,7 +179,7 @@ building_uma_field_powering_complex = {
 #“玉藻”马娘场发电复合体
 building_uma_field_powering_complex_realm = {
 	icon = building_uma_field_powering_complex
-	base_buildtime = 800
+	base_buildtime = 100
 	category = resource
 	can_build = no
 
@@ -208,8 +213,8 @@ building_uma_field_powering_complex_realm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 600
-			uma_crystal_carrot = 300
+			minerals = 1000
+			uma_crystal_carrot = 100
 		}
 		upkeep = {
 			energy = 3
@@ -263,7 +268,7 @@ building_uma_field_powering_complex_realm = {
 
 #胡萝卜农场
 building_uma_simple_carrot_farm = {
-	base_buildtime = 100
+	base_buildtime = 200
 	category = resource
 
 
@@ -377,7 +382,7 @@ building_uma_simple_carrot_farm = {
 
 #现代化胡萝卜农场
 building_uma_modern_carrot_farm = {
-	base_buildtime = 300
+	base_buildtime = 500
 	category = resource
 	can_build = no #升级得来
 
@@ -407,7 +412,7 @@ building_uma_modern_carrot_farm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 400
+			minerals = 500
 		}
 		upkeep = {
 			energy = 3
@@ -491,127 +496,9 @@ building_uma_modern_carrot_farm = {
 
 }
 
-#现代化胡萝卜农场
-building_uma_modern_carrot_farm_realm = {
-	icon = building_uma_modern_carrot_farm
-	base_buildtime = 300
-	category = resource
-	can_build = no #升级得来
-
-
-	potential = {
-		exists = owner
-		owner = {
-#			has_technology = "tech_uma_modern_carrot_farm"
-			OR = {
-				has_tradition = uma_realm_self_trigger
-#				has_ascension_perk = ap_uma_mixture_ap_2
-			}
-			OR = {
-				has_authority = auth_trainingcenter
-				#is_uma_fallen_empire = yes
-			}
-		}
-	}
-
-	destroy_trigger = {
-		exists = owner
-		OR = {
-			owner = {
-				NOR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 400
-		}
-		upkeep = {
-			energy = 3
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		modifier = {
-			job_uma_carrot_farmer_add = 7
-		}
-	}
-	planet_modifier = {
-		planet_uma_carrot_farmer_produces_mult = 0.15
-		planet_uma_bee_farmer_produces_mult = 0.15
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_carrot_farmer_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-				has_technology = tech_uma_code_hachimi
-			}
-
-		}
-		modifier = {
-			job_uma_bee_farmer_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-				has_technology = tech_uma_code_hachimi
-			}
-		}
-		text = job_uma_bee_farmer_effect_desc
-	}
-
-	prerequisites = {
-
-	}
-
-
-}
-
-
-
-
 #尖端胡萝卜农场
 building_uma_advance_carrot_farm = {
-	base_buildtime = 600
+	base_buildtime = 900
 	category = resource
 	can_build = no #升级得来
 
@@ -716,7 +603,7 @@ building_uma_advance_carrot_farm = {
 					has_authority = auth_trainingcenter
 					#is_uma_fallen_empire = yes
 				}
-			has_technology = tech_uma_eco_friendly_farming
+				has_technology = tech_uma_eco_friendly_farming
 			}
 		}
 		modifier = {
@@ -740,6 +627,123 @@ building_uma_advance_carrot_farm = {
 	}
 
 }
+
+#领域化胡萝卜农场
+building_uma_modern_carrot_farm_realm = {
+	icon = building_uma_modern_carrot_farm
+	base_buildtime = 100
+	category = resource
+	can_build = no #升级得来
+
+
+	potential = {
+		exists = owner
+		owner = {
+#			has_technology = "tech_uma_modern_carrot_farm"
+			OR = {
+				has_tradition = uma_realm_self_trigger
+#				has_ascension_perk = ap_uma_mixture_ap_2
+			}
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_carrot_farmer_add = 7
+		}
+	}
+	planet_modifier = {
+		planet_uma_carrot_farmer_produces_mult = 0.15
+		planet_uma_bee_farmer_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_carrot_farmer_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+
+		}
+		modifier = {
+			job_uma_bee_farmer_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		text = job_uma_bee_farmer_effect_desc
+	}
+
+	prerequisites = {
+
+	}
+
+
+}
+
+
 
 
 ###赛马娘专属 矿物 建筑###
@@ -871,7 +875,7 @@ building_uma_core_mining_complex_2 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 700
+			minerals = 500
 		}
 		upkeep = {
 			energy = 3
@@ -926,7 +930,7 @@ building_uma_core_mining_complex_2 = {
 
 #深层地心钻探设施
 building_uma_core_mining_complex_3 = {
-	base_buildtime = 1000
+	base_buildtime = 900
 	category = resource
 	can_build = no
 
@@ -960,12 +964,10 @@ building_uma_core_mining_complex_3 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1700
-			uma_crystal_carrot = 200
+			minerals = 900
 		}
 		upkeep = {
-			energy = 3
-			uma_crystal_carrot = 2
+			energy = 5
 		}
 	}
 
@@ -1017,7 +1019,7 @@ building_uma_core_mining_complex_3 = {
 #深层地心钻探设施
 building_uma_core_mining_complex_realm = {
 	icon = building_uma_core_mining_complex_3
-	base_buildtime = 1000
+	base_buildtime = 100
 	category = resource
 	can_build = no
 
@@ -1055,12 +1057,10 @@ building_uma_core_mining_complex_realm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1700
-			uma_crystal_carrot = 200
+			minerals = 1000
 		}
 		upkeep = {
-			energy = 3
-			uma_crystal_carrot = 2
+			energy = 5
 		}
 	}
 
