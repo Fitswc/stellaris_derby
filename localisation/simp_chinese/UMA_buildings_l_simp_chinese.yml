@@ -144,24 +144,34 @@ building_uma_crime_underground_weapon_maker_desc: "提供了一个隐蔽的场�
 
 
 
-building_uma_chemical_plant: "水晶萝卜化学厂"
-building_uma_chemical_plant_desc: "水晶胡萝卜的应用使我们生产易爆微粒的效率大幅提升"
-mod_planet_building_uma_chemical_plant_build_speed_mult: "水晶萝卜化学厂建造速度"
-mod_building_uma_chemical_plant_max: "该星球上可建造的最多的水晶萝卜化学厂数量"
-building_uma_chemical_plant_2:0 "高级水晶萝卜化学厂"
-building_uma_chemical_plant_2_desc:0 "规模化自动化的生产使我们应用水晶胡萝卜生产易爆微粒的效率大幅提升"
-building_uma_crystal_plant: "水晶萝卜转化厂"
-building_uma_crystal_plant_desc: "随着对水晶胡萝卜的了解与对稀有水晶的需求增加,我们的知识终于可以让我们能够以少量的水晶胡萝卜转化为稀有水晶"
-building_uma_dark_matter_plant: "水晶萝卜塌陷模拟仓"
-building_uma_dark_matter_plant_desc: "通过水晶胡萝卜内涵的强大力量，我们得以在室内引起小部分的空间塌缩——产生一个小型黑洞并加以控制,从而我们的专家们可以在其中收集到足够的暗物质"
-building_uma_gas_plant: "水晶胡萝卜异星天然气生成器"
-building_uma_gas_plant_desc: "通过水晶胡萝卜内涵的强大力量,我们得以从矿物中生成大量的异星天然气"
-building_uma_gas_plant_realm_desc: "$building_uma_gas_plant_desc$"
-building_uma_gas_plant_realm: "水晶胡萝卜异星天然气生成器-领域强化ver."
-building_uma_crystal_plant_realm: "水晶萝卜转化厂-领域强化ver."
-building_uma_crystal_plant_realm_desc: "随着对水晶胡萝卜的了解与对稀有水晶的需求增加,我们的知识终于可以让我们能够以少量的水晶胡萝卜转化为稀有水晶"
-building_uma_chemical_plant_realm_desc: "规模化自动化的生产使我们应用水晶胡萝卜生产易爆微粒的效率大幅提升"
-building_uma_chemical_plant_realm: "高级水晶萝卜化学厂-领域强化ver."
+ building_uma_chemical_plant: "水晶萝卜化学厂"
+ building_uma_chemical_plant_desc: "水晶胡萝卜的应用使我们生产易爆微粒的效率大幅提升"
+ mod_planet_building_uma_chemical_plant_build_speed_mult: "水晶萝卜化学厂建造速度"
+ mod_building_uma_chemical_plant_max: "该星球上可建造的最多的水晶萝卜化学厂数量"
+ building_uma_chemical_plant_2:0 "高级水晶萝卜化学厂"
+ building_uma_chemical_plant_2_desc:0 "规模化自动化的生产使我们应用水晶胡萝卜生产易爆微粒的效率大幅提升"
+ building_uma_chemical_plant_realm: "高级水晶萝卜化学厂-领域强化ver."
+ building_uma_chemical_plant_realm_desc: "规模化自动化的生产使我们应用水晶胡萝卜生产易爆微粒的效率大幅提升"
+
+ building_uma_crystal_plant: "水晶萝卜转化厂"
+ building_uma_crystal_plant_desc: "随着对水晶胡萝卜的了解与对稀有水晶的需求增加,我们的知识终于可以让我们能够以少量的水晶胡萝卜转化为稀有水晶"
+ building_uma_crystal_plant_2: "高级水晶萝卜转化厂"
+ building_uma_crystal_plant_2_desc: "规模化自动化的生产使我们水晶胡萝卜转化为稀有水晶的效率大幅提升"
+ building_uma_crystal_plant_realm: "高级水晶萝卜转化厂-领域强化ver."
+ building_uma_crystal_plant_realm_desc: "随着对水晶胡萝卜的了解与对稀有水晶的需求增加,我们的知识终于可以让我们能够以少量的水晶胡萝卜转化为稀有水晶"
+
+ building_uma_gas_plant: "水晶胡萝卜异星天然气生成器"
+ building_uma_gas_plant_desc: "通过水晶胡萝卜内涵的强大力量,我们得以从矿物中生成大量的异星天然气"
+ building_uma_gas_plant_2: "水晶胡萝卜异星天然气工厂"
+ building_uma_gas_plant_2_desc: "通过水晶胡萝卜内涵的强大力量,我们得以从矿物中生成大量的异星天然气"
+ building_uma_gas_plant_realm: "水晶胡萝卜异星天然气工厂-领域强化ver."
+ building_uma_gas_plant_realm_desc: "$building_uma_gas_plant_desc$"
+
+ building_uma_dark_matter_plant: "水晶萝卜塌陷模拟仓"
+ building_uma_dark_matter_plant_desc: "通过水晶胡萝卜内涵的强大力量，我们得以在室内引起小部分的空间塌缩——产生一个小型黑洞并加以控制,从而我们的专家们可以在其中收集到足够的暗物质"
+
+
+
 
 planet_uma_gas_collector_produces_mult: "£job_uma_gas_collector£异星天然气收集工岗位产出: "
 
@@ -174,7 +184,7 @@ mod_job_uma_umaidol_add: "£uma_text_umaidol£马娘偶像岗位:"
 
 ##Realm
 building_uma_crystal_alloy_realm_complex_desc: "一座具有完整生产链的大型水晶合金生产园区，所有的工作人员都经以严加挑选，以完成对尖端大型器械的操控与维修。全自动的机械化钢铁巨兽们伴随着轰鸣咆哮，以极快的生产效率为我们带来了数不尽的财富。而针对领域的专门改造可以使我们的生产效率更上一层楼"
-building_uma_crystal_alloy_realm_complex: "水晶合金复合体-领域适配ver."
+building_uma_crystal_alloy_realm_complex: "水晶合金工厂复合体-领域适配ver."
 building_uma_crystal_carrot_producing_realm_complex_desc: "水晶萝卜在多个领域都拥有良好的应用前景，不同产业则需要不同基本形状、大小等产品要求。我们将开始对生产区域进行细致划分，而后整合为园区进行统一管理。这将有助于简化后续工作步骤，并减少了不符合产业要求的额外产品消耗。而针对领域的专门改造可以使我们的生产效率更上一层楼"
 building_uma_crystal_carrot_producing_realm_complex: "水晶萝卜合成园区-领域适配ver."
 building_uma_crystal_consumer_goods_realm_complex_desc: "基于对马娘用品的重视程度，中小型工厂也被整合如体制内，以统一品牌、统一生产为标准，并规划出各类日用品的专门生产区域以方便管理与调控。若是最大程度上发挥它的生产极限，在理论上它能够满足一个星球的每日消费品需求"
