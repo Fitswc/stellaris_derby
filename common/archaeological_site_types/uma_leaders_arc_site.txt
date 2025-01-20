@@ -11,7 +11,7 @@ uma_tachyon_coffee_relic = {
 		is_ship_class = shipclass_science_ship
 		exists = leader
 		owner = {
-			is_ai = no #AI勿刨我马娘坟
+			is_ai = no #AI勿刨我马ayb
 		}
 	}
 	visible = {
@@ -92,7 +92,7 @@ uma_tachyon_coffee_pre_civils_relic = {
 
 
 uma_silent_suzuka_relic = {
-	desc = uma_ss_arc_relic_desc
+	desc = uma_ayb_arc_relic_desc
 	picture = GFX_evt_hidden_door #占位符
 	stages = 4
 	max_instances = 1
@@ -109,22 +109,22 @@ uma_silent_suzuka_relic = {
 	}
 	stage = {
 		difficulty = 1
-		event = uma_ss_arc.2071
+		event = uma_ayb_arc.2071
 		icon = GFX_archaeology_runes_A1 #占位符
 	}
 	stage = {
 		difficulty = 2
-		event = uma_ss_arc.2072
+		event = uma_ayb_arc.2072
 		icon = GFX_archaeology_runes_A2 #占位符
 	}
 	stage = {
 		difficulty = 3
-		event = uma_ss_arc.2073
+		event = uma_ayb_arc.2073
 		icon = GFX_archaeology_runes_A3 #占位符
 	}
 	stage = {
 		difficulty = 4
-		event = uma_ss_arc.2074
+		event = uma_ayb_arc.2074
 		icon = GFX_archaeology_runes_A4 #占位符
 	}
 
