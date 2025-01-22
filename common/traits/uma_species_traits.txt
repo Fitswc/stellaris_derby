@@ -614,7 +614,8 @@ uma_trait_leadercharm={
 	cost= 1
 	allowed_archetypes={UMA}
 	modifier={
-		leader_initial_skill = 2
+#		leader_initial_skill = 2
+		leader_upkeep_empire_size_mult = -0.15
 		species_leader_exp_gain = 0.2
 	}
 }
