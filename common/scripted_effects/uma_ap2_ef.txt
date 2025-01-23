@@ -437,3 +437,15 @@ uma_factor_charm_add_modifier = {
 	}
 
 }
+
+
+
+
+
+uma_ap2_system_variable_handler = {
+	$METHOD$_variable = {
+		which = uma_ap2_$AREA_TYPE$_rate
+		value = 1
+	}
+
+}

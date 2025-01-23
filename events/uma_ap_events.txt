@@ -1065,8 +1065,8 @@ situation_event = {
 	}
 }
 
-# 1   2    3   4  5   6     7   8   9
-##5% 10% 15% 20% 25% 30% | 35% 40% 50%
+# 1   2    3   4    5   6   7   8   9
+##5% 10% 15% 20%  | 25% 30% 35% 40% 50%
 
 ##Setup
 country_event = {
@@ -1093,6 +1093,11 @@ country_event = {
 		}
 		set_variable = {
 			which = uma_ap2_factor_charm_rate
+			value = 0
+		}
+
+		set_variable = {
+			which = uma_ap2_factor_depth_rate
 			value = 0
 		}
 	}

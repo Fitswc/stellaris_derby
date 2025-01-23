@@ -35,13 +35,40 @@ guiTypes = {
 
 		buttonType = {
 			name = uma_ap_system_factor_speed
-			buttonText = uma_mmu_mid_diff_title_t
+			buttonText = uma_ap_system_factor_speed_t
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 94 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
 
+		buttonType = {
+			name = uma_ap_system_factor_speed
+			buttonText = uma_ap_system_factor_speed_num
+			buttonFont = "standard_font"
+			position = { x = 405 y = 147 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_speed_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_speed_minus
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_speed_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_speed_plus
+		}
+
+
+		#Part2
 		buttonType = {
 			name = "mark_2"
 			quadTextureSprite = "GFX_uma_apsystem_mark"
@@ -50,12 +77,82 @@ guiTypes = {
 		}
 
 		buttonType = {
+			name = uma_ap_system_factor_power
+			buttonText = uma_ap_system_factor_power_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 94 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_power
+			buttonText = uma_ap_system_factor_power_num
+			buttonFont = "standard_font"
+			position = { x = 405 y = 147 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_power_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_power_minus
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_power_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_power_plus
+		}
+
+		#Part3
+		buttonType = {
 			name = "mark_3"
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 321 }
 			orientation = "UPPER_LEFT"
 		}
 
+		buttonType = {
+			name = uma_ap_system_factor_stamina
+			buttonText = uma_ap_system_factor_stamina_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 94 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_stamina
+			buttonText = uma_ap_system_factor_stamina_num
+			buttonFont = "standard_font"
+			position = { x = 405 y = 147 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_stamina_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_stamina_minus
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_stamina_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_stamina_plus
+		}
+
+		#Part4
 		buttonType = {
 			name = "mark_4"
 			quadTextureSprite = "GFX_uma_apsystem_mark"
@@ -64,6 +161,41 @@ guiTypes = {
 		}
 
 		buttonType = {
+			name = uma_ap_system_factor_wisdom
+			buttonText = uma_ap_system_factor_wisdom_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 94 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_wisdom
+			buttonText = uma_ap_system_factor_wisdom_num
+			buttonFont = "standard_font"
+			position = { x = 405 y = 147 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_wisdom_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_wisdom_minus
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_wisdom_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_wisdom_plus
+		}
+
+		#Part5
+		buttonType = {
 			name = "mark_5"
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 558 }
@@ -71,14 +203,80 @@ guiTypes = {
 		}
 
 		buttonType = {
+			name = uma_ap_system_factor_charm
+			buttonText = uma_ap_system_factor_charm_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 94 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_charm
+			buttonText = uma_ap_system_factor_charm_num
+			buttonFont = "standard_font"
+			position = { x = 405 y = 147 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_charm_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_charm_minus
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_charm_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_charm_plus
+		}
+
+		#Part6
+		buttonType = {
 			name = "mark_6"
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 676 }
 			orientation = "UPPER_LEFT"
 		}
 
+		buttonType = {
+			name = uma_ap_system_factor_depth
+			buttonText = uma_ap_system_factor_depth_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 94 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
 
+		buttonType = {
+			name = uma_ap_system_factor_depth
+			buttonText = uma_ap_system_factor_depth_num
+			buttonFont = "standard_font"
+			position = { x = 405 y = 147 }
+			orientation = "UPPER_LEFT"
+			text_color_code = "W"
+		}
 
+		effectButtonType = {
+			name = uma_ap_system_factor_depth_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_depth_minus
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_depth_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_depth_plus
+		}
 
 
 

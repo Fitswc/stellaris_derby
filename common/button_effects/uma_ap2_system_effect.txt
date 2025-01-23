@@ -1,0 +1,187 @@
+uma_ap_system_factor_speed_minus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = subtract
+            AREA_TYPE = factor_speed
+        }
+    }
+}
+
+
+uma_ap_system_factor_speed_plus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+     effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = change
+            AREA_TYPE = factor_speed
+        }
+    }
+}
+
+
+uma_ap_system_factor_power_minus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = subtract
+            AREA_TYPE = factor_power
+        }
+    }
+}
+
+
+uma_ap_system_factor_power_plus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+     effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = change
+            AREA_TYPE = factor_power
+        }
+    }
+}
+
+
+uma_ap_system_factor_stamina_minus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = subtract
+            AREA_TYPE = factor_stamina
+        }
+    }
+}
+
+
+uma_ap_system_factor_stamina_plus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+     effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = change
+            AREA_TYPE = factor_stamina
+        }
+    }
+}
+
+uma_ap_system_factor_wisdom_minus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = subtract
+            AREA_TYPE = factor_wisdom
+        }
+    }
+}
+
+
+uma_ap_system_factor_wisdom_plus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+     effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = change
+            AREA_TYPE = factor_wisdom
+        }
+    }
+}
+
+uma_ap_system_factor_charm_minus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = subtract
+            AREA_TYPE = factor_charm
+        }
+    }
+}
+
+uma_ap_system_factor_charm_plus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+     effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = change
+            AREA_TYPE = factor_charm
+        }
+    }
+}
+
+
+uma_ap_system_factor_depth_minus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = subtract
+            AREA_TYPE = factor_depth
+        }
+    }
+}
+
+
+uma_ap_system_factor_depth_plus = {
+    potential = {
+        always = yes
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        uma_ap2_system_variable_handler = {
+            METHOD = change
+            AREA_TYPE = factor_depth
+        }
+    }
+}

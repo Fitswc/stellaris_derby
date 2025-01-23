@@ -43,36 +43,13 @@ uma_trait_ap2_factor_power_1={
 #	}
 
 	modifier = {
-		army_damage_mult = 0.06
-		planet_jobs_produces_mult = 0.06
-		ship_weapon_damage = 0.06
+		army_damage_mult = 0.05
+		planet_jobs_produces_mult = 0.05
+		ship_weapon_damage = 0.05
 	}
 }
 
 uma_trait_ap2_factor_power_2={
-	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
-	cost= 0
-	potential_crossbreeding_chance = 0
-	allowed_archetypes={UMA}
-	species_potential_add = {
-		always = no
-	}
-	species_possible_remove = {
-		always = no
-	}
-	species_possible_merge_add = {
-		always = no
-	}
-	initial = no
-
-	modifier = {
-		army_damage_mult = 0.08
-		planet_jobs_produces_mult = 0.08
-		ship_weapon_damage = 0.08
-	}
-}
-
-uma_trait_ap2_factor_power_3={
 	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
 	cost= 0
 	potential_crossbreeding_chance = 0
@@ -95,99 +72,30 @@ uma_trait_ap2_factor_power_3={
 	}
 }
 
+uma_trait_ap2_factor_power_3={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.15
+		planet_jobs_produces_mult = 0.15
+		ship_weapon_damage = 0.15
+	}
+}
+
 uma_trait_ap2_factor_power_4={
-	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
-	cost= 0
-	potential_crossbreeding_chance = 0
-	allowed_archetypes={UMA}
-	species_potential_add = {
-		always = no
-	}
-	species_possible_remove = {
-		always = no
-	}
-	species_possible_merge_add = {
-		always = no
-	}
-	initial = no
-
-	modifier = {
-		army_damage_mult = 0.12
-		planet_jobs_produces_mult = 0.12
-		ship_weapon_damage = 0.12
-	}
-}
-
-uma_trait_ap2_factor_power_5={
-	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
-	cost= 0
-	potential_crossbreeding_chance = 0
-	allowed_archetypes={UMA}
-	species_potential_add = {
-		always = no
-	}
-	species_possible_remove = {
-		always = no
-	}
-	species_possible_merge_add = {
-		always = no
-	}
-	initial = no
-
-	modifier = {
-		army_damage_mult = 0.14
-		planet_jobs_produces_mult = 0.14
-		ship_weapon_damage = 0.14
-	}
-}
-
-uma_trait_ap2_factor_power_6={
-	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
-	cost= 0
-	potential_crossbreeding_chance = 0
-	allowed_archetypes={UMA}
-	species_potential_add = {
-		always = no
-	}
-	species_possible_remove = {
-		always = no
-	}
-	species_possible_merge_add = {
-		always = no
-	}
-	initial = no
-
-	modifier = {
-		army_damage_mult = 0.16
-		planet_jobs_produces_mult = 0.16
-		ship_weapon_damage = 0.16
-	}
-}
-
-uma_trait_ap2_factor_power_7={
-	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
-	cost= 0
-	potential_crossbreeding_chance = 0
-	allowed_archetypes={UMA}
-	species_potential_add = {
-		always = no
-	}
-	species_possible_remove = {
-		always = no
-	}
-	species_possible_merge_add = {
-		always = no
-	}
-	initial = no
-
-	modifier = {
-		army_damage_mult = 0.18
-		planet_jobs_produces_mult = 0.18
-		ship_weapon_damage = 0.18
-	}
-}
-
-uma_trait_ap2_factor_power_8={
 	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
 	cost= 0
 	potential_crossbreeding_chance = 0
@@ -210,6 +118,98 @@ uma_trait_ap2_factor_power_8={
 	}
 }
 
+uma_trait_ap2_factor_power_5={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.25
+		planet_jobs_produces_mult = 0.25
+		ship_weapon_damage = 0.25
+	}
+}
+
+uma_trait_ap2_factor_power_6={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.3
+		planet_jobs_produces_mult = 0.3
+		ship_weapon_damage = 0.3
+	}
+}
+
+uma_trait_ap2_factor_power_7={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.35
+		planet_jobs_produces_mult = 0.35
+		ship_weapon_damage = 0.35
+	}
+}
+
+uma_trait_ap2_factor_power_8={
+	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
+	cost= 0
+	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.4
+		planet_jobs_produces_mult = 0.4
+		ship_weapon_damage = 0.4
+	}
+}
+
 uma_trait_ap2_factor_power_9={
 	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png" ##TODO:Change icon
 	cost= 0
@@ -227,9 +227,9 @@ uma_trait_ap2_factor_power_9={
 	initial = no
 
 	modifier = {
-		army_damage_mult = 0.22
-		planet_jobs_produces_mult = 0.22
-		ship_weapon_damage = 0.22
+		army_damage_mult = 0.5
+		planet_jobs_produces_mult = 0.5
+		ship_weapon_damage = 0.5
 	}
 }
 
