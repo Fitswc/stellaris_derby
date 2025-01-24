@@ -80,7 +80,7 @@ guiTypes = {
 			name = uma_ap_system_factor_power
 			buttonText = uma_ap_system_factor_power_t
 			buttonFont = "large_title_font"
-			position = { x = 338 y = 94 }
+			position = { x = 338 y = 213 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -89,7 +89,7 @@ guiTypes = {
 			name = uma_ap_system_factor_power
 			buttonText = uma_ap_system_factor_power_num
 			buttonFont = "standard_font"
-			position = { x = 405 y = 147 }
+			position = { x = 405 y = 265 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -98,7 +98,7 @@ guiTypes = {
 			name = uma_ap_system_factor_power_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 146 }
+			position = { x = 338 y = 265 }
 			effect = uma_ap_system_factor_power_minus
 		}
 
@@ -106,7 +106,7 @@ guiTypes = {
 			name = uma_ap_system_factor_power_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
-			position = { x = 742 y = 146 }
+			position = { x = 742 y = 265 }
 			effect = uma_ap_system_factor_power_plus
 		}
 
@@ -122,7 +122,7 @@ guiTypes = {
 			name = uma_ap_system_factor_stamina
 			buttonText = uma_ap_system_factor_stamina_t
 			buttonFont = "large_title_font"
-			position = { x = 338 y = 94 }
+			position = { x = 338 y = 332 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -131,7 +131,7 @@ guiTypes = {
 			name = uma_ap_system_factor_stamina
 			buttonText = uma_ap_system_factor_stamina_num
 			buttonFont = "standard_font"
-			position = { x = 405 y = 147 }
+			position = { x = 405 y = 379 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -140,7 +140,7 @@ guiTypes = {
 			name = uma_ap_system_factor_stamina_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 146 }
+			position = { x = 338 y = 379 }
 			effect = uma_ap_system_factor_stamina_minus
 		}
 
@@ -148,7 +148,7 @@ guiTypes = {
 			name = uma_ap_system_factor_stamina_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
-			position = { x = 742 y = 146 }
+			position = { x = 742 y = 379 }
 			effect = uma_ap_system_factor_stamina_plus
 		}
 
@@ -164,7 +164,7 @@ guiTypes = {
 			name = uma_ap_system_factor_wisdom
 			buttonText = uma_ap_system_factor_wisdom_t
 			buttonFont = "large_title_font"
-			position = { x = 338 y = 94 }
+			position = { x = 338 y = 451 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -173,7 +173,7 @@ guiTypes = {
 			name = uma_ap_system_factor_wisdom
 			buttonText = uma_ap_system_factor_wisdom_num
 			buttonFont = "standard_font"
-			position = { x = 405 y = 147 }
+			position = { x = 405 y = 504 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -182,7 +182,7 @@ guiTypes = {
 			name = uma_ap_system_factor_wisdom_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 146 }
+			position = { x = 338 y = 502 }
 			effect = uma_ap_system_factor_wisdom_minus
 		}
 
@@ -190,7 +190,7 @@ guiTypes = {
 			name = uma_ap_system_factor_wisdom_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
-			position = { x = 742 y = 146 }
+			position = { x = 742 y = 502 }
 			effect = uma_ap_system_factor_wisdom_plus
 		}
 
@@ -206,7 +206,7 @@ guiTypes = {
 			name = uma_ap_system_factor_charm
 			buttonText = uma_ap_system_factor_charm_t
 			buttonFont = "large_title_font"
-			position = { x = 338 y = 94 }
+			position = { x = 338 y = 569 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -215,7 +215,7 @@ guiTypes = {
 			name = uma_ap_system_factor_charm
 			buttonText = uma_ap_system_factor_charm_num
 			buttonFont = "standard_font"
-			position = { x = 405 y = 147 }
+			position = { x = 405 y = 626 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -224,7 +224,7 @@ guiTypes = {
 			name = uma_ap_system_factor_charm_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 146 }
+			position = { x = 338 y = 626 }
 			effect = uma_ap_system_factor_charm_minus
 		}
 
@@ -232,7 +232,7 @@ guiTypes = {
 			name = uma_ap_system_factor_charm_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
-			position = { x = 742 y = 146 }
+			position = { x = 742 y = 626 }
 			effect = uma_ap_system_factor_charm_plus
 		}
 
@@ -248,7 +248,7 @@ guiTypes = {
 			name = uma_ap_system_factor_depth
 			buttonText = uma_ap_system_factor_depth_t
 			buttonFont = "large_title_font"
-			position = { x = 338 y = 94 }
+			position = { x = 338 y = 687 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -257,7 +257,7 @@ guiTypes = {
 			name = uma_ap_system_factor_depth
 			buttonText = uma_ap_system_factor_depth_num
 			buttonFont = "standard_font"
-			position = { x = 405 y = 147 }
+			position = { x = 405 y = 738 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "W"
 		}
@@ -266,7 +266,7 @@ guiTypes = {
 			name = uma_ap_system_factor_depth_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 146 }
+			position = { x = 338 y = 738 }
 			effect = uma_ap_system_factor_depth_minus
 		}
 
@@ -274,7 +274,7 @@ guiTypes = {
 			name = uma_ap_system_factor_depth_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
-			position = { x = 742 y = 146 }
+			position = { x = 742 y = 738 }
 			effect = uma_ap_system_factor_depth_plus
 		}
 
