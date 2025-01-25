@@ -16,12 +16,12 @@ country_event = {
 
 
 	immediate = {
-#		random_country = {
-#			limit = { is_country_type = global_event }
-#			country_event = {
-#				id = uma_bour_arc.9000
-#			}
-#		}
+		#		random_country = {
+		#			limit = { is_country_type = global_event }
+		#			country_event = {
+		#				id = uma_bour_arc.9000
+		#			}
+		#		}
 		no_scope = {
 			set_global_flag = uma_has_created_bourbon_country
 			create_country = {
@@ -72,27 +72,46 @@ country_event = {
 					}
 				}
 				save_global_event_target_as = uma_bourbon_arc_anomaly_here
-#				add_anomaly = {
-#					category = uma_bourbon_anomaly
-#				}
-				log = RICE_ANOLOMY_GENERATED
-				create_fleet = {
-					name = "uma_bour_arc_acient_defender" #远古智械守卫者
-					effect = {
-						set_owner = event_target:uma_bourbon_arc_fleet_country
-						while = {
-							count = 1
-							create_ship = {
-								name = random
-								design = NAME_Warder_of_the_Ruins
-								graphical_culture = fallen_empire_01
-								upgradable = no
-							}
+				add_anomaly = {
+					category = uma_bourbon_anomaly
+				}
+				begin_event_chain = {
+					event_chain = uma_glx_full
+					target = owner
+				}
+
+				hidden_effect = {
+					owner = {
+						create_point_of_interest = {
+							id = uma_bour_anolomy_poi_1
+							name = "uma_bour_poi"
+							desc = uma_bourbon_anomaly_desc_event
+							event_chain = uma_glx_full
+							location = event_target:uma_bourbon_arc_anomaly_here
 						}
-						set_location = {
-							target = event_target:uma_bourbon_arc_anomaly_here
-							distance = 20
-							angle = random
+					}
+					owner = {
+						set_country_flag = uma_bour_anolomy_generated
+					}
+					log = RICE_ANOLOMY_GENERATED
+					create_fleet = {
+						name = "uma_bour_arc_acient_defender" #远古智械守卫者
+						effect = {
+							set_owner = event_target:uma_bourbon_arc_fleet_country
+							while = {
+								count = 1
+								create_ship = {
+									name = random
+									design = NAME_Warder_of_the_Ruins
+									graphical_culture = fallen_empire_01
+									upgradable = no
+								}
+							}
+							set_location = {
+								target = event_target:uma_bourbon_arc_anomaly_here
+								distance = 15
+								angle = random
+							}
 						}
 					}
 				}
@@ -102,35 +121,35 @@ country_event = {
 }
 
 #创建船专用的敌对国家
-event = {
-	id = uma_bour_arc.9000
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			has_global_flag = uma_has_created_bourbon_country
-		}
-	}
-
-	immediate = {
-		set_global_flag = uma_has_created_bourbon_country
-		create_country = {
-			name = "uma_bour_arc_acient_defender"
-			type = uma_bourbon_arc_country
-			ignore_initial_colony_error = yes
-			authority = random
-			flag = random
-			name_list = random #?
-			origin = origin_default
-			effect = {
-				set_graphical_culture = fallen_empire_01
-				save_global_event_target_as = uma_bourbon_arc_fleet_country
-			}
-
-		}
-	}
-
-}
+#event = {
+#	id = uma_bour_arc.9000
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		NOT = {
+#			has_global_flag = uma_has_created_bourbon_country
+#		}
+#	}
+#
+#	immediate = {
+#		set_global_flag = uma_has_created_bourbon_country
+#		create_country = {
+#			name = "uma_bour_arc_acient_defender"
+#			type = uma_bourbon_arc_country
+#			ignore_initial_colony_error = yes
+#			authority = random
+#			flag = random
+#			name_list = random #?
+#			origin = origin_default
+#			effect = {
+#				set_graphical_culture = fallen_empire_01
+#				save_global_event_target_as = uma_bourbon_arc_fleet_country
+#			}
+#
+#		}
+#	}
+#
+#}
 
 #创建船（30K（我感觉会有300K））
 planet_event = {
