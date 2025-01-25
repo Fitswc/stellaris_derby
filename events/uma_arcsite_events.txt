@@ -212,9 +212,9 @@ fleet_event = {
 		name = REMARKABLE #占位符
 		custom_tooltip = umaarc.1004.tooltip
 		owner = {
-			add_resource = {
-				
-			}  #可考虑的资源奖励
+			#add_resource = {
+			#
+			#}  #可考虑的资源奖励
 			large_artifact_reward = yes
 		}
 		if = {
