@@ -24,8 +24,8 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_strength_level_1
 			}
 		}
-		planet_jobs_food_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
+		planet_jobs_food_produces_mult = 0.03
+		planet_jobs_minerals_produces_mult = 0.03
 		pop_housing_usage_mult = -0.025
 	}
 
@@ -36,8 +36,8 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_strength_level_2
 			}
 		}
-		planet_jobs_food_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.8
+		planet_jobs_minerals_produces_mult = 0.8
 		pop_housing_usage_mult = -0.05
 	}
 
@@ -48,8 +48,8 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_strength_level_3
 			}
 		}
-		planet_jobs_food_produces_mult = 0.15
-		planet_jobs_minerals_produces_mult = 0.15
+		planet_jobs_food_produces_mult = 0.13
+		planet_jobs_minerals_produces_mult = 0.13
 		pop_housing_usage_mult = -0.075
 	}
 
@@ -60,8 +60,8 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_strength_level_4
 			}
 		}
-		planet_jobs_food_produces_mult = 0.2
-		planet_jobs_minerals_produces_mult = 0.2
+		planet_jobs_food_produces_mult = 0.18
+		planet_jobs_minerals_produces_mult = 0.18
 		pop_housing_usage_mult = -0.1
 	}
 
@@ -72,8 +72,8 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_strength_level_5
 			}
 		}
-		planet_jobs_food_produces_mult = 0.25
-		planet_jobs_minerals_produces_mult = 0.25
+		planet_jobs_food_produces_mult = 0.23
+		planet_jobs_minerals_produces_mult = 0.23
 		pop_housing_usage_mult = -0.125
 	}
 
@@ -84,9 +84,9 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_intelligence_level_1
 			}
 		}
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.03
+		planet_jobs_engineering_research_produces_mult = 0.03
+		planet_jobs_society_research_produces_mult = 0.03
 	}
 
 	triggered_pop_modifier = {
@@ -96,9 +96,9 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_intelligence_level_2
 			}
 		}
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.8
+		planet_jobs_engineering_research_produces_mult = 0.8
+		planet_jobs_society_research_produces_mult = 0.8
 	}
 
 	triggered_pop_modifier = {
@@ -108,9 +108,9 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_intelligence_level_3
 			}
 		}
-		planet_jobs_physics_research_produces_mult = 0.15
-		planet_jobs_engineering_research_produces_mult = 0.15
-		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.13
+		planet_jobs_engineering_research_produces_mult = 0.13
+		planet_jobs_society_research_produces_mult = 0.13
 	}
 
 	triggered_pop_modifier = {
@@ -120,9 +120,9 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_intelligence_level_4
 			}
 		}
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.18
+		planet_jobs_engineering_research_produces_mult = 0.18
+		planet_jobs_society_research_produces_mult = 0.18
 	}
 
 	triggered_pop_modifier = {
@@ -132,9 +132,9 @@ uma_trait_musume = {
 				has_country_flag = uma_kenshi_intelligence_level_5
 			}
 		}
-		planet_jobs_physics_research_produces_mult = 0.25
-		planet_jobs_engineering_research_produces_mult = 0.25
-		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_physics_research_produces_mult = 0.23
+		planet_jobs_engineering_research_produces_mult = 0.23
+		planet_jobs_society_research_produces_mult = 0.23
 	}
 
 	triggered_pop_modifier = {
@@ -893,9 +893,9 @@ trait_uma_terriroty_awake = {
 	}
 
 	modifier = {
-		planet_jobs_produces_mult = 0.15
-		army_damage_mult = 0.3
-		army_health = 0.3
+		planet_jobs_produces_mult = 0.10
+		army_damage_mult = 0.25
+		army_health = 0.25
 	}
 
 }
