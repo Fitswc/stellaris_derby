@@ -427,8 +427,8 @@ civic_uma_aston_machan = {
 	random_weight = { base = 0 }
 
 	modifier={
-		trade_value_mult = 0.16
 		trade_value_add = 10
+		pop_happiness = 5
 	}
 }
 

@@ -1,5 +1,7 @@
 #贸易政策（第一个为默认）
 
+#2 parameter = 1:2 | 3 parameter = 1:1:2
+
 uma_basic_resources_trading = {
 	potential = {
 		has_policy_flag = trade_policy_uma_basic_resources_trading
@@ -9,8 +11,8 @@ uma_basic_resources_trading = {
 	}
 	conversion_rate = {
 		energy = 0.5
-		minerals = 0.5
-		food = 0.5
+		minerals = 0.25
+		food = 0.25
 	}
 
 	economic_category = trade_routes
