@@ -3,7 +3,11 @@ uma_ap_system_factor_speed_minus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_speed_rate
+            value >= 0
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -19,7 +23,11 @@ uma_ap_system_factor_speed_plus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_speed_rate
+            value <= 9
+        }
     }
      effect = {
         uma_ap2_system_variable_handler = {
@@ -35,7 +43,11 @@ uma_ap_system_factor_power_minus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_power_rate
+            value >= 0
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -51,7 +63,11 @@ uma_ap_system_factor_power_plus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_power_rate
+            value <= 9
+        }
     }
      effect = {
         uma_ap2_system_variable_handler = {
@@ -67,7 +83,11 @@ uma_ap_system_factor_stamina_minus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_stamina_rate
+            value >= 0
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -83,7 +103,11 @@ uma_ap_system_factor_stamina_plus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_stamina_rate
+            value <= 9
+        }
     }
      effect = {
         uma_ap2_system_variable_handler = {
@@ -98,7 +122,11 @@ uma_ap_system_factor_wisdom_minus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_wisdom_rate
+            value >= 0
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -114,7 +142,11 @@ uma_ap_system_factor_wisdom_plus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_wisdom_rate
+            value <= 9
+        }
     }
      effect = {
         uma_ap2_system_variable_handler = {
@@ -129,7 +161,11 @@ uma_ap_system_factor_charm_minus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_charm_rate
+            value >= 0
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -144,7 +180,11 @@ uma_ap_system_factor_charm_plus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_charm_rate
+            value <= 9
+        }
     }
      effect = {
         uma_ap2_system_variable_handler = {
@@ -160,7 +200,11 @@ uma_ap_system_factor_depth_minus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_depth_rate
+            value >= 0
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -176,7 +220,11 @@ uma_ap_system_factor_depth_plus = {
         always = yes
     }
     allow = {
-        always = yes
+#        always = yes
+        check_variable = {
+            which = uma_ap2_factor_depth_rate
+            value <= 9
+        }
     }
     effect = {
         uma_ap2_system_variable_handler = {
