@@ -25,6 +25,8 @@ guiTypes = {
 			clicksound = "back_click"
 		}#关闭按钮
 
+
+
 		##Part 1 Speed
 		buttonType = {
 			name = "mark_1"
@@ -52,13 +54,7 @@ guiTypes = {
 			effect =uma_ap_system_factor_general_numbershow_effect
 		}
 
-		effectButtonType = {
-			name = uma_ap_system_factor_speed_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 146 }
-			effect = uma_ap_system_factor_speed_minus
-		}
+
 
 		effectButtonType = {
 			name = uma_ap_system_factor_speed_plus
@@ -96,13 +92,7 @@ guiTypes = {
 			effect =uma_ap_system_factor_general_numbershow_effect
 		}
 
-		effectButtonType = {
-			name = uma_ap_system_factor_power_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 265 }
-			effect = uma_ap_system_factor_power_minus
-		}
+
 
 		effectButtonType = {
 			name = uma_ap_system_factor_power_plus
@@ -139,13 +129,7 @@ guiTypes = {
 			effect =uma_ap_system_factor_general_numbershow_effect
 		}
 
-		effectButtonType = {
-			name = uma_ap_system_factor_stamina_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 379 }
-			effect = uma_ap_system_factor_stamina_minus
-		}
+
 
 		effectButtonType = {
 			name = uma_ap_system_factor_stamina_plus
@@ -182,13 +166,7 @@ guiTypes = {
 			effect =uma_ap_system_factor_general_numbershow_effect
 		}
 
-		effectButtonType = {
-			name = uma_ap_system_factor_wisdom_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 502 }
-			effect = uma_ap_system_factor_wisdom_minus
-		}
+
 
 		effectButtonType = {
 			name = uma_ap_system_factor_wisdom_plus
@@ -225,13 +203,7 @@ guiTypes = {
 			effect =uma_ap_system_factor_general_numbershow_effect
 		}
 
-		effectButtonType = {
-			name = uma_ap_system_factor_charm_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 626 }
-			effect = uma_ap_system_factor_charm_minus
-		}
+
 
 		effectButtonType = {
 			name = uma_ap_system_factor_charm_plus
@@ -268,13 +240,7 @@ guiTypes = {
 			effect = uma_ap_system_factor_general_numbershow_effect
 		}
 
-		effectButtonType = {
-			name = uma_ap_system_factor_depth_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 738 }
-			effect = uma_ap_system_factor_depth_minus
-		}
+
 
 		effectButtonType = {
 			name = uma_ap_system_factor_depth_plus
@@ -284,6 +250,49 @@ guiTypes = {
 			effect = uma_ap_system_factor_depth_plus
 		}
 
+		#Minus
+		effectButtonType = {
+			name = uma_ap_system_factor_charm_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 626 }
+			effect = uma_ap_system_factor_charm_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_speed_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_speed_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_power_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 265 }
+			effect = uma_ap_system_factor_power_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_stamina_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 379 }
+			effect = uma_ap_system_factor_stamina_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_wisdom_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 502 }
+			effect = uma_ap_system_factor_wisdom_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_depth_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 738 }
+			effect = uma_ap_system_factor_depth_minus
+		}
 
 
 

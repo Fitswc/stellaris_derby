@@ -36,7 +36,7 @@ ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_uma_field_
 
 ap_uma_fly_me_to_the_star_ap_two_tt: "\n§Y解锁传统树:§!['tradition_category:tradition_uma_tradition_factor']"
 ap_uma_zenshizenren_ap_two_tt: "\n§Y解锁传统树:§!['tradition_category:tradition_uma_tradition_realm']"
-
+ap_uma_fly_me_to_the_star_ap_two_tt_will_event: "将开启一个局势，以帮助马娘们替换和升级自己的固有因子"
 mod_shipclass_military_damage_mult: "£shipclass_military£军用舰船伤害:"
 
 
@@ -104,7 +104,7 @@ uma_ap.42.a: "步步为营"
 
 
 
-UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: ""
+UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: "!"
 UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"

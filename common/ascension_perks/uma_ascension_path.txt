@@ -1,12 +1,17 @@
 ##AP2
 
 
+
 ##摘星（因子飞升二阶段）
 ap_uma_fly_me_to_the_star_ap_two = {
 	on_enabled = {
 		#		custom_tooltip =
 		#Event Require
 		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt
+		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt_will_event
+		country_event = {
+			id = uma_ap.40
+		}
 	}
 
 	possible = {
@@ -22,12 +27,15 @@ ap_uma_fly_me_to_the_star_ap_two = {
 			fail_text = "uma_requires_first_ascension_perks_1"
 			has_ascension_perk = ap_uma_fly_me_to_the_star
 		}
+		has_technology = tech_uma_complex_keisun_test
 	}
 
 	modifier = {
-		UMA_species_trait_points_add = 3
-		planet_jobs_produces_mult = 0.1
-		pop_growth_speed = 0.05
+		#将会改变
+#		UMA_species_trait_points_add = 3
+#		planet_jobs_produces_mult = 0.1
+#		pop_growth_speed = 0.05
+
 #		empire_size_pops_mult = 0.3
 #		empire_size_colonies_mult = 0.3
 	}
@@ -78,6 +86,7 @@ ap_uma_zenshizenren_ap_2 = {
 			fail_text = "uma_requires_first_ascension_perks_2"
 			has_ascension_perk = ap_uma_zenshizenren
 		}
+		has_technology = tech_uma_terriroty_in_use
 	}
 
 

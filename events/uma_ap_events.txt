@@ -1013,6 +1013,9 @@ country_event = {
 }
 
 
+
+
+
 ##AP2
 
 
@@ -1023,49 +1026,48 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-
+		has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
 	}
 
 	immediate = {
-
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.43
+			}
+		}
 	}
 
 	option = {
 		name = uma_ap.40.a
-		start_situation = {
-			type = situation_uma_ap_2_situation_system_factor
-			target = this
-			effect = {}
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.41
+			}
 		}
 	}
 }
 
 country_event = {
 	id = uma_ap.41
-    is_triggered_only = yes
-    diplomatic = yes
- 	custom_gui = uma_aps_main_windows
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = uma_aps_main_windows
 
 	option = {
 		name = ""
 		custom_gui = uma_hiding_button
 		default_hide_option = yes
-	}
-
-}
-
-
-#因子健康中心升级请求（）
-situation_event = {
-	id = uma_ap.42
-	title = uma_ap.42.title
-	desc = uma_ap.42.desc
-	is_triggered_only = yes
-
-	option = {
-		name = uma_ap.42.a
+		hidden_effect = {
+			start_situation = {
+				type = situation_uma_ap_2_situation_system_factor
+				target = this
+				effect = {}
+			}
+		}
 	}
 }
+
+
 
 # 1   2    3   4    5   6   7   8   9
 ##5% 10% 15% 20%  | 25% 30% 35% 40% 50%
