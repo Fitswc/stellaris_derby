@@ -344,7 +344,7 @@ ap_uma_zenshizenren = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
-		has_technology = tech_uma_terriroty_in_use
+#		has_technology = tech_uma_terriroty_in_use
 		custom_tooltip = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"
@@ -403,7 +403,7 @@ ap_uma_fly_me_to_the_star = {
 		# 	fail_text = "uma_requires_technology_uma_complex_keisun_test"
 		# 	has_technology = tech_uma_complex_keisun_test
 		# }
-		has_technology = tech_uma_complex_keisun_test
+#		has_technology = tech_uma_complex_keisun_test
 		custom_tooltip = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"
