@@ -767,6 +767,36 @@ define_text = {
 			}
 		localization_key = UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM1
 	}
+}
 
-
+define_text = {
+	text = {
+		trigger = {
+			owner = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_power_rate
+						value = 0
+					}
+					check_variable = {
+						which = uma_ap2_factor_speed_rate
+						value = 0
+					}
+					check_variable = {
+						which = uma_ap2_factor_charm_rate
+						value = 0
+					}
+					check_variable = {
+						which = uma_ap2_factor_wisdom_rate
+						value = 0
+					}
+					check_variable = {
+						which = uma_ap2_factor_stamina_rate
+						value = 0
+					}
+				}
+			}
+		}
+		localization_key = uma_apsystem_done_tt_3o
+	}
 }

@@ -1058,6 +1058,7 @@ country_event = {
 		custom_gui = uma_hiding_button
 		default_hide_option = yes
 		hidden_effect = {
+
 			start_situation = {
 				type = situation_uma_ap_2_situation_system_factor
 				target = this
