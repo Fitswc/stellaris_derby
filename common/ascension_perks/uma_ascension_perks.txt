@@ -7,7 +7,7 @@
 # 	  }
 
 
-	  
+
 # 	  possible = {
 # 		custom_tooltip = {
 # 			fail_text = "requires_ascension_perks_1"
@@ -35,8 +35,8 @@
 # 		NOT = {
 # 		  has_ascension_perk = ap_inherit_gold }
 # 	  }
-  
-		
+
+
 # 		possible = {
 # 			custom_tooltip = {
 # 				fail_text = "requires_ascension_perks_2"
@@ -47,17 +47,17 @@
 # 				has_ascension_perk = ap_inherit_silver
 # 			}
 # 		}
-		  
+
 # 	  }
 
 # 	  ap_zone_potential = {
-# 		potential ={ 
+# 		potential ={
 # 			has_authority="auth_trainingcenter"
 # 		NOT = {
 # 		  has_ascension_perk = ap_zone_potential }
 # 	  }
-  
-		
+
+
 # 		possible = {
 # 		  custom_tooltip = {
 # 			  fail_text = "requires_ascension_perks_1"
@@ -84,8 +84,8 @@
 # 		NOT = {
 # 		  has_ascension_perk = ap_zone_awaken }
 # 	  }
-  
-		
+
+
 # 		possible = {
 # 			custom_tooltip = {
 # 				fail_text = "requires_ascension_perks_2"
@@ -96,7 +96,7 @@
 # 				has_ascension_perk = ap_zone_potential
 # 			}
 # 		}
-		  
+
 # 	  }
 
 # ###禁止马娘种族使用原版的三大飞升
@@ -328,6 +328,7 @@
 ap_uma_zenshizenren = {
 	on_enabled = {
 		custom_tooltip = "uma_will_enable_zenshizenren_ap"
+#		custom_tooltip = ap_uma_zenshizenren_ap_two_tt
 		hidden_effect = {
 			country_event = { id = uma_ap.2 }
 		}
@@ -344,7 +345,7 @@ ap_uma_zenshizenren = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
-		has_technology = tech_uma_terriroty_in_use
+#		has_technology = tech_uma_terriroty_in_use
 		custom_tooltip = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"
@@ -383,6 +384,7 @@ ap_uma_zenshizenren = {
 ap_uma_fly_me_to_the_star = {
 	on_enabled = {
 		custom_tooltip = "uma_will_enable_keisun_ap"
+#		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt
 		hidden_effect = {
 			country_event = { id = uma_ap.22 }
 			###小草的对话
@@ -403,7 +405,7 @@ ap_uma_fly_me_to_the_star = {
 		# 	fail_text = "uma_requires_technology_uma_complex_keisun_test"
 		# 	has_technology = tech_uma_complex_keisun_test
 		# }
-		has_technology = tech_uma_complex_keisun_test
+#		has_technology = tech_uma_complex_keisun_test
 		custom_tooltip = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"

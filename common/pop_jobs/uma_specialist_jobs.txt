@@ -328,6 +328,18 @@ uma_researcher = {
 	resources = {
 		category = planet_uma_researcher #马娘科学家和科学主管都属于马娘研究者大类，但还是写最小类！
 		produces = {
+			trigger = {
+				uma_we_passed_ap1 = no
+			}
+			engineering_research = 6
+			physics_research = 6
+			society_research = 6
+		}
+		#整点
+		produces = {
+			trigger = {
+				uma_we_passed_ap1 = yes
+			}
 			engineering_research = 9
 			physics_research = 9
 			society_research = 9
