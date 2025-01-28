@@ -8,16 +8,16 @@ situation_uma_ap_2_situation_system_factor = {
 
 	}
 	monthly_progress = {
-		#On average, the situation should take about 5 years to complete
+		#On average, the situation should take about 3 years to complete
 		base = 10
 		# Modifiers are defined in tooltip order, most important first
 		modifier = {
-			mult = 1.5
+			mult = 1
 			desc = "uma_ap_2_situation_factor_default"
 			current_situation_approach = situation_cyberization_overdrive
 		}
 		modifier = {
-			mult = 1.9
+			mult = 1.2
 			desc = "uma_ap_2_situation_factor_danage"
 			current_situation_approach = situation_cyberization_cautious
 		}
@@ -35,7 +35,7 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_system_25
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.41
+					id = uma_ap.51
 					days = 2
 				}
 			}
@@ -49,7 +49,7 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_system_50
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.42
+					id = uma_ap.52
 					days = 2
 				}
 			}
@@ -62,7 +62,7 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_system_75
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.43
+					id = uma_ap.53
 					days = 2
 				}
 			}
@@ -75,7 +75,7 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_system_100
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.44
+					id = uma_ap.54
 					days = 2
 				}
 			}
@@ -103,10 +103,11 @@ situation_uma_ap_2_situation_system_factor = {
 #		ai_weight =
 #	}
 
-	#这里让玩家选择数值方向 但最终都是人口减少换增益
+	#这里是玩家会遇到的负面事件
 	on_monthly = {
-
-
+		events = {
+			uma_ap_
+		}
 	}
 
 	approach = {

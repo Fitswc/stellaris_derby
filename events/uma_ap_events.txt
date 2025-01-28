@@ -1125,3 +1125,78 @@ country_event = {
 }
 
 
+situation_event = {
+	id = uma_ap.51
+	title = uma_ap.51.title
+	desc = uma_ap.51.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ap.51.a
+	}
+}
+
+situation_event = {
+	id = uma_ap.52
+	title = uma_ap.52.title
+	desc = uma_ap.52.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.52.a
+	}
+}
+
+
+situation_event = {
+	id = uma_ap.53
+	title = uma_ap.53.title
+	desc = uma_ap.53.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.53.a
+	}
+}
+
+situation_event = {
+	id = uma_ap.54
+	title = uma_ap.54.title
+	desc = uma_ap.54.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.54.a
+	}
+}
+
+
+
+#Event pool great evts
+situation_event = {
+	id = uma_ap.55
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				situation_progress >= 35
+				has_situation_flag = uma_ap_factor_stage_1_done
+			}
+
+			AND = {
+				situation_progress >= 60
+			}
+
+			AND = {
+
+			}
+		}
+	}
+}
+
