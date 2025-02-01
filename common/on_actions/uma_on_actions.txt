@@ -555,3 +555,18 @@ on_post_communications_established = {
 
 	}
 }
+
+
+on_uma_ap2_factor_random_event_list ={
+	random_events = {
+		1 = uma_ap.60 # Stage 2 Opportunity
+		1 = uma_ap.60 # Stage 2 Challenge
+		1 = uma_ap.60 # Stage 2 Challenge #有待添加
+		1 = uma_ap.60 # Stage 2 Opportunity
+
+		1 = uma_ap.60 # Stage 3 Opportunity
+		1 = uma_ap.60 # Stage 3 Challenge
+		1 = uma_ap.60 # Stage 3 Challenge #有待添加
+		1 = uma_ap.60 # Stage 3 Opportunity
+	}
+}

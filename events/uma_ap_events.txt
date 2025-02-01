@@ -1185,18 +1185,54 @@ situation_event = {
 	trigger = {
 		OR = {
 			AND = {
-				situation_progress >= 35
+				AND = {
+					situation_progress >= 35
+				}
 				has_situation_flag = uma_ap_factor_stage_1_done
 			}
 
 			AND = {
-				situation_progress >= 60
+				AND = {
+					situation_progress >= 60
+				}
+				has_situation_flag = uma_ap_factor_stage_2_done
 			}
 
-			AND = {
+		}
+	}
 
-			}
+	immediate = {
+		remove_situation_flag = uma_ap_factor_stage_1_done
+		remove_situation_flag = uma_ap_factor_stage_2_done
+
+		fire_on_action = {
+			on_action = on_uma_ap2_factor_random_event_list
 		}
 	}
 }
 
+
+
+#60-
+situation_event = {
+	id = uma_ap.60
+	title = uma_ap.60.title
+	desc = uma_ap.60.desc
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = {
+			has_situation_flag = uma_ap2_factor_60_has_happened
+			situation_progress < 50
+		}
+		situation_progress >= 35
+	}
+
+	immediate = {
+		set_situation_flag = uma_ap_2_situation_factor_pause
+		set_situation_flag = uma_ap2_factor_60_has_happened
+	}
+
+
+}

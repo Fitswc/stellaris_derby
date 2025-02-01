@@ -21,10 +21,18 @@ situation_uma_ap_2_situation_system_factor = {
 			desc = "uma_ap_2_situation_factor_danage"
 			current_situation_approach = situation_cyberization_cautious
 		}
+
+		modifier = {
+			mult = 0
+			desc = "situation_cyberization_pause_desc"
+			has_situation_flag = uma_ap_2_situation_factor_pause
+		}
 	}
 	on_progress_complete = {
 		custom_tooltip = situation_uma_ap_2_situation_system_factor_fin_tt
+		hidden_effect = {
 
+		}
 	}
 
 	stages = {
