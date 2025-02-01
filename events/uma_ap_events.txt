@@ -1411,5 +1411,34 @@ situation_event = {
 
 
 country_event = {
+	id = uma_ap.81
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_country = {
+			name = uma_ap2_factor_hostile_event_country
+			type = uma_ap2_hostile_event_country
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags01.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"red_orange"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+
+			}
+		}
+	}
 
 }
