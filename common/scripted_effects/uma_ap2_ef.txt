@@ -73,7 +73,11 @@ uma_factor_speed_add_modifier = {
 			}
 		}
 	}
-
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
 }
 
 uma_factor_power_add_modifier = {
@@ -204,6 +208,11 @@ uma_factor_power_add_modifier = {
 			portrait = Root
 		}
 	}
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
 
 }
 
@@ -279,6 +288,11 @@ uma_factor_stamina_add_modifier = {
 				TYPE = stamina
 				VAL = 9
 			}
+		}
+	}
+	else = {
+		add_resource = {
+			influence = 0
 		}
 	}
 
@@ -358,6 +372,11 @@ uma_factor_wisdom_add_modifier = {
 			}
 		}
 	}
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
 
 }
 
@@ -435,6 +454,11 @@ uma_factor_charm_add_modifier = {
 			}
 		}
 	}
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
 
 }
 
@@ -443,9 +467,9 @@ uma_factor_charm_add_modifier = {
 
 
 uma_ap2_system_variable_handler = {
+	optimize_memory
 	$METHOD$_variable = {
 		which = uma_ap2_$AREA_TYPE$_rate
 		value = 1
 	}
-
 }

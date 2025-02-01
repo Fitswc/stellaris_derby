@@ -1163,13 +1163,14 @@ situation_event = {
 	}
 }
 
-situation_event = {
+country_event= {
 	id = uma_ap.54
 	title = uma_ap.54.title
 	desc = uma_ap.54.desc
 	is_triggered_only = yes
 
 	option = {
+
 		name = uma_ap.54.a
 	}
 }
@@ -1436,9 +1437,11 @@ country_event = {
 				}
 			}
 			effect = {
-
+				set_country_flag = uma_ap2_factor_hostile_event_country_flag
+				save_global_event_target_as = uma_ap2_factor_hostile_event_country_evtt
 			}
 		}
+
 	}
 
 }
