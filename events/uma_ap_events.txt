@@ -1206,14 +1206,13 @@ situation_event = {
 		remove_situation_flag = uma_ap_factor_stage_2_done
 
 		fire_on_action = {
-			on_action = on_uma_ap2_factor_random_event_list
+			on_action = on_uma_ap2_factor_random_updown_event_list
 		}
 	}
 }
 
 
 
-#60-
 situation_event = {
 	id = uma_ap.60
 	title = uma_ap.60.title
@@ -1234,5 +1233,183 @@ situation_event = {
 		set_situation_flag = uma_ap2_factor_60_has_happened
 	}
 
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_situation_flag = uma_ap2_factor_60_has_happened
+		}
+
+		modifier = {
+			factor = 2
+			situation_progress >= 41
+		}
+	}
+
+
+
+	option = {
+		name = uma_ap.60.a
+		hidden_effect = {
+			owner = {
+				set_country_flag = uma_ap2_factor_reduce_power_and_increase_poph
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.60.b
+		owner = {
+			add_modifier = {
+				modifier = uma_kenshi_power_adaption_training
+				days = 1800
+			}
+			country_event = {
+				id = uma_ap.61
+				days = 150
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.60.c
+		owner = {
+			add_modifier = {
+				modifier = uma_ap2_factor_power_without_countrol
+				days = -1
+			}
+		}
+	}
+
+	after = {
+		remove_situation_flag = uma_ap_2_situation_factor_pause
+	}
+}
+
+country_event = {
+	id = uma_ap.61
+	is_triggered_only = yes
+	title = uma_ap.61.title
+	desc = uma_ap.61.desc
+
+	option = {
+		name = uma_ap.61.a
+		add_modifier = {
+			modifier = uma_ap2_factor_power_countroled
+			days = -1
+		}
+	}
+}
+
+
+
+situation_event = {
+	id = uma_ap.70
+	title = uma_ap.70.title
+	desc = uma_ap.70.desc
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = {
+			has_situation_flag = uma_ap2_factor_70_has_happened
+			situation_progress < 90
+		}
+		situation_progress >= 60
+	}
+
+
+	immediate = {
+		set_situation_flag = uma_ap_2_situation_factor_pause
+		set_situation_flag = uma_ap2_factor_70_has_happened
+	}
+
+	option = {
+		name = uma_ap.70.a
+		custom_tooltip = uma_ap.70.a.tt
+	}
+
+	option = {
+		name = uma_ap.70.b
+		custom_tooltip = uma_ap.70.a.tt
+	}
+
+
+	after = {
+		hidden_effect = {
+			remove_situation_flag = uma_ap_2_situation_factor_pause
+			random_list = {
+				50 = {
+					destroy_situation = This
+					owner = {
+						country_event = {
+							id = uma_ap.71
+						}
+					}
+				}
+				50 = {
+					owner = {
+						add_resource = {
+							influence = 10
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.71
+	title = uma_ap.71.title
+	desc = uma_ap.71.desc
+	is_triggered_only = yes
+
+	trigger = {
+		#
+	}
+
+	option = {
+		name = uma_ap.71.a
+		custom_tooltip = uma_ap.71.a.tt
+	}
+}
+
+
+
+situation_event = {
+	id = uma_ap.80
+	title = uma_ap.80.title
+	desc = uma_ap.80.desc
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = {
+			OR = {
+				has_situation_flag = uma_ap2_factor_80_has_happened
+				has_situation_flag = uma_ap2_factor_70_has_happened
+			}
+			situation_progress < 90
+		}
+		situation_progress >= 80
+	}
+
+
+	immediate = {
+		set_situation_flag = uma_ap_2_situation_factor_pause
+		set_situation_flag = uma_ap2_factor_80_has_happened
+	}
+
+	option = {
+		name = uma_ap.80.a
+		custom_tooltip = uma_ap.80.a.tt
+		destroy_situation = This
+	}
+}
+
+
+country_event = {
 
 }

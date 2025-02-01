@@ -223,6 +223,18 @@ uma_kenshi_power_adaption_training = {
 
 }
 
+uma_ap2_factor_power_without_countrol = {
+	planet_buildings_energy_cost_mult = 0.1
+	army_damage_mult = 0.05
+	ship_weapon_damage = 0.05
+}
+
+uma_ap2_factor_power_countroled = {
+	country_base_energy_produces_add = 100
+	army_damage_mult = 0.05
+	ship_weapon_damage = 0.05
+}
+
 #受到控制的力量
 uma_kenshi_power_adaption_training_good = {
 	planet_jobs_minerals_produces_mult = 0.05
