@@ -297,3 +297,34 @@ uma_check_factor_rate = {
 		value = $VAL$
 	}
 }
+
+uma_ap2_factor_0_fault = {
+	OR = {
+		OR = {
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value < 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value < 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value < 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value < 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value < 5
+			}
+		}
+		check_variable = {
+			which = uma_ap2_factor_summation
+			value <= 6
+		}
+	}
+}

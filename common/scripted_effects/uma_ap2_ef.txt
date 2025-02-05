@@ -473,3 +473,27 @@ uma_ap2_system_variable_handler = {
 		value = 1
 	}
 }
+
+
+uma_ap2_factor_summation = {
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_charm_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_wisdom_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_power_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_speed_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_stamina_rate
+	}
+}

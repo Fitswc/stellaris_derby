@@ -559,9 +559,10 @@ on_post_communications_established = {
 
 on_uma_ap2_factor_random_updown_event_list ={
 	random_events = {
-		1 = uma_ap.60 # Stage 2 Challenge
-		1 = uma_ap.70 # Stage 2 Challenge
+		3 = uma_ap.60 # Stage 2 Challenge
+		3 = uma_ap.70 # Stage 2 Challenge
 
+		3 = uma_ap.80 #Stage3
 		7 = 0
 	}
 }
