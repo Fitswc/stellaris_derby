@@ -1456,7 +1456,7 @@ situation_event = {
 					id = uma_ap.90
 				}
 				country_event = {
-					id = uma_ap.81
+					id = uma_ap.82
 				}
 				modify_species = {
 					species = owner_main_species
@@ -1470,9 +1470,21 @@ situation_event = {
 	}
 }
 
-
 country_event = {
 	id = uma_ap.81
+	title = uma_ap.81.title
+	desc = uma_ap.81.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.81.a
+	}
+
+}
+
+
+country_event = {
+	id = uma_ap.82
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -1531,6 +1543,12 @@ country_event = {
 					effect = {
 
 					}
+				}
+			}
+
+			Root = {
+				country_event = {
+					id = uma_ap.81
 				}
 			}
 		}
