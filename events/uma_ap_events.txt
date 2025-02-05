@@ -1533,8 +1533,11 @@ country_event = {
 			}
 			set_owner = event_target:uma_ap2_factor_hostile_event_country_evtt
 			downgrade_all_buildings = yes
-			random_owned_pop = {
-				kill_pop = yes
+			while = {
+				count = 3
+				random_owned_pop = {
+					kill_pop = yes
+				}
 			}
 			while = {
 				count = 10
