@@ -109,7 +109,7 @@ UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_
 UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
-UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_army_morale$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_UMA_pop_growth_speed$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 
 
 
@@ -129,6 +129,8 @@ mod_uma_ship_experience_gain_mult: "£mod_ship_experience_gain_mult£舰船经�
 mod_all_uma_technology_research_speed: "£mod_country_all_tech_research_speed£研究速度"
 mod_uma_planet_amenities_mult: "£mod_planet_amenities_mult£舒适度"
 mod_uma_army_morale: "£mod_army_morale£陆军士气"
+mod_uma_country_cost_mult: "建筑与区划花费"
+mod_uma_megastructure_milt: "巨构花费"
 
 
 
@@ -200,19 +202,19 @@ uma_ap.70.title: "多重人格"
 uma_ap.70.desc: "似乎出现了一些状况，我们的科学家报告称在隔离受试的志愿者中观察到MPD，某些志愿者出现了人格更替，她们不时表现出完全不同于以往的行为，并且不记得自己的重要信息；然而，她们却可以回忆起与之截然不同的身份信息。而人格间的变化又十分有戏剧性，前一分钟一名志愿者能清楚的回答自己的姓名住址，而后一分钟，这些信息却截然不同。\n我们的科学家怀疑是附加的外部固有因子导致的多重人格体验，不过这尚不能下定论......"
 uma_ap.70.a: "这或许只是偶然事件"
 uma_ap.70.b: "重点观测"
-uma_ap.70.a.tt: "Tips: 局势可以被随时停止，而收益根据§G局势的进度§!给予"
+uma_ap.70.a.tt: "Tips: 局势可以被随时停止，而收益根据§G局势的进度§!(全部进度+一个DEBUFF)给予"
 
 uma_ap.80.title: "多重人格"
 uma_ap.80.desc: "出现了异常！多个地方报告了马娘发疯的现象，甚至军队都受到了波及。这些马娘都有一个共同的特点，就是都观察到了重度的MPD，并且都是接受过因子更替的马娘，她们行为怪异又充满纪律性，更加异常的是，她们似乎热衷于将正常马娘囚禁并且强制进行因子更替手术，虽然我们也不知道那些药剂到底是从哪里来的。这一现象似乎正在蔓延。由于这些疯狂的马娘正在占领我们的各种基础设施，我们的家园受到了不同程度的破坏。幸好国防部长在首次报告时发布了T0级指令，让所有军队成员都对这次因子更迭做了逆向措施，这才使我们拥有反制的手段。不管是否有直接关联，我们都必须终止这一次计划了。"
 uma_ap.80.a: "怎么会这样"
-uma_ap.80.a.tt: "局势将被终止，收益按§G90%§!的进度给予\n我们必须夺回我们的殖民地"
+uma_ap.80.a.tt: "局势将被终止，收益按§G90%§!的进度(全部进度+一个DEBUFF)给予\n我们必须夺回我们的殖民地"
 
 uma_ap.71.title: "人格异常"
 uma_ap.71.desc: "出现了异常！多个地方报告了马娘发疯的现象，甚至军队都受到了波及。这些马娘都有一个共同的特点，就是都观察到了重度的MPD，并且都是接受过因子更替的马娘，她们行为怪异又充满纪律性，更加异常的是，她们似乎热衷于将正常马娘囚禁并且强制进行因子更替手术，虽然我们也不知道那些药剂到底是从哪里来的。这一现象似乎正在蔓延。由于这些疯狂的马娘正在占领我们的各种基础设施，我们的家园受到了不同程度的破坏。幸好国防部长在首次报告时发布了T0级指令，让所有军队成员都对这次因子更迭做了逆向措施，这才使我们拥有反制的手段。不管是否有直接关联，我们都必须终止这一次计划了。"
 uma_ap.71.a: "怎么会这样"
-uma_ap.71.a.tt: "局势将被终止，收益按§G90%§!的进度给予\n我们必须夺回我们的殖民地"
+uma_ap.71.a.tt: "局势将被终止，收益按§G90%§!的进度(全部进度+一个DEBUFF)给予\n我们必须夺回我们的殖民地"
 uma_ap2_factor_hostile_event_country: "发疯的马娘"
-
+uma_ap2_factor_crazy_guys: "疯狂的马娘"
 
 
 

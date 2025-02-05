@@ -215,42 +215,42 @@ guiTypes = {
 		}
 
 		#Part6
-		buttonType = {
-			name = "mark_6"
-			quadTextureSprite = "GFX_uma_apsystem_mark"
-			position = { x = 289 y = 676 }
-			orientation = "UPPER_LEFT"
-		}
-
-		buttonType = {
-			name = uma_ap_system_factor_depth_t
-			buttonText = uma_ap_system_factor_depth_t
-			buttonFont = "large_title_font_28"
-			position = { x = 338 y = 593 }
-			orientation = "UPPER_LEFT"
-			text_color_code = "T"
-		}
-
-		effectButtonType = {
-			name = uma_ap_system_factor_depth_num
-			buttonText = uma_ap_system_factor_depth_num
-			buttonFont = "large_title_font"
-			position = { x = 455 y = 655 }
-			orientation = "UPPER_LEFT"
-			text_color_code = "T"
-			effect = uma_ap_system_factor_general_numbershow_effect
-		}
-
-
-
-		effectButtonType = {
-			name = uma_ap_system_factor_depth_plus
-			quadTextureSprite = "GFX_uma_apsystem_plus"
-			orientation = "UPPER_LEFT"
-			position = { x = 742 y = 738 }
-			effect = uma_ap_system_factor_depth_plus
-		}
-
+#		buttonType = {
+#			name = "mark_6"
+#			quadTextureSprite = "GFX_uma_apsystem_mark"
+#			position = { x = 289 y = 676 }
+#			orientation = "UPPER_LEFT"
+#		}
+#
+#		buttonType = {
+#			name = uma_ap_system_factor_depth_t
+#			buttonText = uma_ap_system_factor_depth_t
+#			buttonFont = "large_title_font_28"
+#			position = { x = 338 y = 593 }
+#			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+#		}
+#
+#		effectButtonType = {
+#			name = uma_ap_system_factor_depth_num
+#			buttonText = uma_ap_system_factor_depth_num
+#			buttonFont = "large_title_font"
+#			position = { x = 455 y = 655 }
+#			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+#			effect = uma_ap_system_factor_general_numbershow_effect
+#		}
+#
+#
+#
+#		effectButtonType = {
+#			name = uma_ap_system_factor_depth_plus
+#			quadTextureSprite = "GFX_uma_apsystem_plus"
+#			orientation = "UPPER_LEFT"
+#			position = { x = 742 y = 738 }
+#			effect = uma_ap_system_factor_depth_plus
+#		}
+#
 		#Minus
 		effectButtonType = {
 			name = uma_ap_system_factor_charm_minus
@@ -287,13 +287,13 @@ guiTypes = {
 			position = { x = 338 y = 502 }
 			effect = uma_ap_system_factor_wisdom_minus
 		}
-		effectButtonType = {
-			name = uma_ap_system_factor_depth_minus
-			quadTextureSprite = "GFX_uma_apsystem_minus"
-			orientation = "UPPER_LEFT"
-			position = { x = 338 y = 738 }
-			effect = uma_ap_system_factor_depth_minus
-		}
+#		effectButtonType = {
+#			name = uma_ap_system_factor_depth_minus
+#			quadTextureSprite = "GFX_uma_apsystem_minus"
+#			orientation = "UPPER_LEFT"
+#			position = { x = 338 y = 738 }
+#			effect = uma_ap_system_factor_depth_minus
+#		}
 
 
 

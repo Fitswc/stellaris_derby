@@ -62,4 +62,47 @@ uma_black_army = {
 			}
 		}
 	}
-} 
+}
+
+
+
+
+#特殊的军队
+uma_ap2_factor_crazy_guys = {
+	damage = 3
+	health = 3
+	morale = 3.00
+	morale_damage = 3.00
+	collateral_damage = 2.00
+	war_exhaustion = 0
+	defensive = yes
+	time = 50
+	icon = GFX_army_type_defensive
+	resources = {
+		category = armies
+		cost = {
+			minerals = 2000
+            alloys = 1500
+		}
+
+		upkeep = {
+			energy = 0
+		}
+	}
+
+
+    #判定马娘国家
+#   potential_country = {
+#		has_authority = auth_trainingcenter
+#	}
+
+    #判定国策
+	potential = {
+		always = no
+	}
+
+
+	ai_weight = {
+		base = 0
+	}
+}

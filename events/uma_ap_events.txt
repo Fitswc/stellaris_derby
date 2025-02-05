@@ -1171,7 +1171,11 @@ country_event= {
 	is_triggered_only = yes
 
 	option = {
-
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.90
+			}
+		}
 		name = uma_ap.54.a
 	}
 }
@@ -1388,6 +1392,17 @@ country_event = {
 	option = {
 		name = uma_ap.71.a
 		custom_tooltip = uma_ap.71.a.tt
+		owner = {
+			country_event = {
+				id = uma_ap.90
+			}
+			modify_species = {
+				species = owner_main_species
+				add_trait = uma_trait_ap2_factor_fail_evt
+				change_scoped_species = yes
+				portrait = This
+			}
+		}
 	}
 }
 
@@ -1434,7 +1449,23 @@ situation_event = {
 	option = {
 		name = uma_ap.80.a
 		custom_tooltip = uma_ap.80.a.tt
+		hidden_effect = {
+			owner = {
 
+				country_event = {
+					id = uma_ap.90
+				}
+				country_event = {
+					id = uma_ap.81
+				}
+				modify_species = {
+					species = owner_main_species
+					add_trait = uma_trait_ap2_factor_fail_evt
+					change_scoped_species = yes
+					portrait = This
+				}
+			}
+		}
 		destroy_situation = This
 	}
 }
@@ -1446,9 +1477,21 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		create_species = {
+			name = uma_ap2_factor_hostile_event_country
+			class = umamusume
+			namelist = UMAname
+			portrait = umamusume
+			traits = random
+			effect = {
+				save_event_target_as = uma_ap2_factor_hostile_event_species_evtt
+
+			}
+		}
 		create_country = {
 			name = uma_ap2_factor_hostile_event_country
 			type = uma_ap2_hostile_event_country
+			species = event_target:uma_ap2_factor_hostile_event_species_evtt
 			flag = {
 				icon = {
 					category = "uiu_flags"
@@ -1477,7 +1520,19 @@ country_event = {
 				is_capital = no
 			}
 			set_owner = event_target:uma_ap2_factor_hostile_event_country_evtt
-			
+
+			while = {
+				count = 10
+				create_army = {
+					name = uma_ap2_factor_crazy_guys
+					owner = event_target:uma_ap2_factor_hostile_event_country_evtt
+					type = uma_ap2_factor_crazy_guys
+					species = event_target:uma_ap2_factor_hostile_event_country_evtt
+					effect = {
+
+					}
+				}
+			}
 		}
 
 	}

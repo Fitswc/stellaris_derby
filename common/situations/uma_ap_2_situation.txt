@@ -88,35 +88,10 @@ situation_uma_ap_2_situation_system_factor = {
 			icon_background = GFX_situation_stage_frame_blue
 			end = 100
 			custom_tooltip = uma_ap_2_situation_system_100
-			on_first_enter = {
-				situation_event = {
-					id = uma_ap.54
-					days = 2
-				}
-			}
+
 		}
 	}
 
-#	approach = {
-#		#小心谨慎
-#		name = uma_ap_2_situation_factor_careful
-#	}
-#	approach = {
-#		name =
-#		icon =
-#		icon_background =
-#		default = yes
-#		allow =
-#		potential =
-#		modifier =
-#		target_modifier =
-#		triggered_modifier =
-#		triggered_target_modifier =
-#		active_tooltip =
-#		resources =
-#		on_select =
-#		ai_weight =
-#	}
 
 	#这里是玩家会遇到的负面事件
 	on_monthly = {

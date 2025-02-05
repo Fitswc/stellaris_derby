@@ -293,7 +293,7 @@ uma_has_ap_two_factor = {
 
 uma_check_factor_rate = {
 	check_variable = {
-		which = uma_ap2_factor_$TYPE$_rate
+		which = Root.uma_ap2_factor_$TYPE$_rate
 		value = $VAL$
 	}
 }
