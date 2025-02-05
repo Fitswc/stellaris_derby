@@ -140,6 +140,16 @@ situation_uma_ap_2_situation_system_factor = {
 		}
 		on_select = {
 			abort_situation = Root
+			hidden_effect = {
+				owner = {
+					modify_species = {
+						species = owner_main_species
+						add_trait = uma_trait_ap2_factor_fail
+						change_scoped_species = yes
+						portrait = This
+					}
+				}
+			}
 		}
 		ai_weight = {
 			modifier = {

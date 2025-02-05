@@ -1532,7 +1532,10 @@ country_event = {
 				is_capital = no
 			}
 			set_owner = event_target:uma_ap2_factor_hostile_event_country_evtt
-
+			downgrade_all_buildings = yes
+			random_owned_pop = {
+				kill_pop = yes
+			}
 			while = {
 				count = 10
 				create_army = {
@@ -1552,6 +1555,56 @@ country_event = {
 				}
 			}
 		}
+	}
+}
 
+country_event = {
+	id = uma_ap.83
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From = {
+			is_country_type = uma_ap2_hostile_event_country
+		}
+		This = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_owned_planet = {
+						is_owned_by = event_target:uma_ap2_factor_hostile_event_country_evtt
+					}
+				}
+			}
+			country_event = {
+				id = uma_ap.84
+			}
+		}
+		else = {
+			add_resource = {
+				influence = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.84
+	title = uma_ap.84.title
+	desc = uma_ap.84.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.84.a
+		add_modifier = {
+			modifier = uma_ap2_factor_bade
+			days = 360
+		}
 	}
 }
