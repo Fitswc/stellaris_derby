@@ -9,7 +9,7 @@ situation_uma_ap_2_situation_system_factor = {
 	}
 	monthly_progress = {
 		#On average, the situation should take about 3 years to complete
-		base = 10
+		base = 5
 		# Modifiers are defined in tooltip order, most important first
 		modifier = {
 			mult = 1
@@ -50,7 +50,7 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_system_25
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.51
+					id = uma_ap.52
 					days = 2
 				}
 			}
@@ -64,7 +64,7 @@ situation_uma_ap_2_situation_system_factor = {
 			custom_tooltip = uma_ap_2_situation_system_50
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.52
+					id = uma_ap.53
 					days = 2
 				}
 			}
@@ -76,10 +76,10 @@ situation_uma_ap_2_situation_system_factor = {
 			end = 75
 			custom_tooltip = uma_ap_2_situation_system_75
 			on_first_enter = {
-				situation_event = {
-					id = uma_ap.53
-					days = 2
-				}
+#				situation_event = {
+#					id = uma_ap.54
+#					days = 2
+#				}
 			}
 		}
 

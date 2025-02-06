@@ -2,9 +2,9 @@
 uma_factor_speed_add_modifier = {
 	if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 1
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 1
 			}
 		}
 		modify_species = {
@@ -17,9 +17,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 2
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 2
 			}
 		}
 		modify_species = {
@@ -31,9 +31,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 3
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 3
 			}
 		}
 		modify_species = {
@@ -45,9 +45,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 4
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 4
 			}
 		}
 		modify_species = {
@@ -59,9 +59,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 5
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 5
 			}
 		}
 		modify_species = {
@@ -73,9 +73,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 6
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 6
 			}
 		}
 		modify_species = {
@@ -87,9 +87,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 7
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 7
 			}
 		}
 		modify_species = {
@@ -101,9 +101,9 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 8
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 8
 			}
 		}
 		modify_species = {
@@ -115,11 +115,12 @@ uma_factor_speed_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = speed
-				VAL = 9
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value = 9
 			}
 		}
+
 		modify_species = {
 			species = Root.owner_main_species
 			add_trait = uma_trait_ap2_factor_speed_9
@@ -134,12 +135,13 @@ uma_factor_speed_add_modifier = {
 	}
 }
 
+
 uma_factor_power_add_modifier = {
 	if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 1
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 1
 			}
 		}
 		modify_species = {
@@ -152,9 +154,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 2
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 2
 			}
 		}
 		modify_species = {
@@ -166,9 +168,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 3
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 3
 			}
 		}
 		modify_species = {
@@ -180,9 +182,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 4
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 4
 			}
 		}
 		modify_species = {
@@ -194,9 +196,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 5
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 5
 			}
 		}
 		modify_species = {
@@ -208,9 +210,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 6
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 6
 			}
 		}
 		modify_species = {
@@ -222,9 +224,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 7
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 7
 			}
 		}
 		modify_species = {
@@ -236,9 +238,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 8
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 8
 			}
 		}
 		modify_species = {
@@ -250,9 +252,9 @@ uma_factor_power_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = power
-				VAL = 9
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value = 9
 			}
 		}
 		modify_species = {
@@ -273,9 +275,9 @@ uma_factor_power_add_modifier = {
 uma_factor_stamina_add_modifier = {
 	if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 1
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 1
 			}
 		}
 		modify_species = {
@@ -288,9 +290,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 2
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 2
 			}
 		}
 		modify_species = {
@@ -302,9 +304,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 3
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 3
 			}
 		}
 		modify_species = {
@@ -316,9 +318,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 4
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 4
 			}
 		}
 		modify_species = {
@@ -330,9 +332,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 5
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 5
 			}
 		}
 		modify_species = {
@@ -344,9 +346,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 6
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 6
 			}
 		}
 		modify_species = {
@@ -358,9 +360,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 7
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 7
 			}
 		}
 		modify_species = {
@@ -372,9 +374,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 8
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 8
 			}
 		}
 		modify_species = {
@@ -386,9 +388,9 @@ uma_factor_stamina_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = stamina
-				VAL = 9
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value = 9
 			}
 		}
 		modify_species = {
@@ -409,9 +411,9 @@ uma_factor_stamina_add_modifier = {
 uma_factor_wisdom_add_modifier = {
 	if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 1
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 1
 			}
 		}
 		modify_species = {
@@ -424,9 +426,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 2
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 2
 			}
 		}
 		modify_species = {
@@ -438,9 +440,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 3
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 3
 			}
 		}
 		modify_species = {
@@ -452,9 +454,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 4
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 4
 			}
 		}
 		modify_species = {
@@ -466,9 +468,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 5
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 5
 			}
 		}
 		modify_species = {
@@ -480,9 +482,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 6
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 6
 			}
 		}
 		modify_species = {
@@ -494,9 +496,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 7
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 7
 			}
 		}
 		modify_species = {
@@ -508,9 +510,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 8
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 8
 			}
 		}
 		modify_species = {
@@ -522,9 +524,9 @@ uma_factor_wisdom_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = wisdom
-				VAL = 9
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value = 9
 			}
 		}
 		modify_species = {
@@ -545,9 +547,9 @@ uma_factor_wisdom_add_modifier = {
 uma_factor_charm_add_modifier = {
 	if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 1
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 1
 			}
 		}
 		modify_species = {
@@ -560,9 +562,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 2
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 2
 			}
 		}
 		modify_species = {
@@ -574,9 +576,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 3
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 3
 			}
 		}
 		modify_species = {
@@ -588,9 +590,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 4
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 4
 			}
 		}
 		modify_species = {
@@ -602,9 +604,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 5
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 5
 			}
 		}
 		modify_species = {
@@ -616,9 +618,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 6
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 6
 			}
 		}
 		modify_species = {
@@ -630,9 +632,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 7
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 7
 			}
 		}
 		modify_species = {
@@ -644,9 +646,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 8
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 8
 			}
 		}
 		modify_species = {
@@ -658,9 +660,9 @@ uma_factor_charm_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			uma_check_factor_rate = {
-				TYPE = charm
-				VAL = 9
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value = 9
 			}
 		}
 		modify_species = {

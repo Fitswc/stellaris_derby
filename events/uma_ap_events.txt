@@ -1118,9 +1118,76 @@ country_event = {
 	immediate = {
 		#
 		uma_factor_speed_add_modifier = yes
+	}
+	after = {
+		country_event = {
+			id = uma_ap.91
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.91
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
 		uma_factor_power_add_modifier = yes
+	}
+	after = {
+		country_event = {
+			id = uma_ap.92
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.92
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+
 		uma_factor_charm_add_modifier = yes
+
+	}
+	after = {
+		country_event = {
+			id = uma_ap.93
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.93
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+
 		uma_factor_stamina_add_modifier = yes
+	}
+	after = {
+		country_event = {
+			id = uma_ap.94
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.94
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
 		uma_factor_wisdom_add_modifier = yes
 	}
 }
