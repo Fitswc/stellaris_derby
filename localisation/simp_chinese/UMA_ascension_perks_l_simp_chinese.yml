@@ -111,7 +111,12 @@ UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIF
 UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 
-
+UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY_NM: "!"
+UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM: "$mod_planet_jobs_produces_mult$\n $mod_army_damage_mult$\n$mod_uma_ship_weapon_damage$"
+UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM: "$mod_uma_empire_size_pops_mult$\n $mod_uma_ship_base_speed_mult$\n$mod_uma_ship_fire_rate_mult$"
+UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM: "$mod_uma_ship_hull_mult$\n $mod_uma_army_health$\n $mod_uma_command_limit_mult$"
+UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST_NM: "$mod_uma_ship_experience_gain_mult$\n$mod_uma_command_limit_mult$\n$mod_all_uma_technology_research_speed$"
+UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM: "$mod_uma_planet_amenities_mult$\n$mod_uma_megastructure_milt$\n$mod_uma_country_cost_mult$"
 
 
 
@@ -162,15 +167,27 @@ uma_ap_system_factor_charm_num: "[owner.uma_ap2_factor_charm_rate] "
 uma_ap_system_factor_wisdom_num: "[owner.uma_ap2_factor_wisdom_rate] "
 uma_ap_system_factor_depth_num: "[owner.uma_ap2_factor_depth_rate] "
 
-uma_ap_system_factor_speed_t: "速度因子"
-uma_ap_system_factor_power_t: "力量因子"
-uma_ap_system_factor_stamina_t: "耐力因子"
-uma_ap_system_factor_charm_t: "魅力因子"
-uma_ap_system_factor_wisdom_t: "智力因子"
+
+uma_ap_system_factor_speed_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST$"
+uma_ap_system_factor_power_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_POWER_EXIST$"
+uma_ap_system_factor_stamina_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST$"
+uma_ap_system_factor_charm_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST$"
+uma_ap_system_factor_wisdom_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST$"
+
+uma_ap_system_factor_speed_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM$"
+uma_ap_system_factor_power_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM$"
+uma_ap_system_factor_stamina_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM$"
+uma_ap_system_factor_charm_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM$"
+uma_ap_system_factor_wisdom_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST_NM$"
 uma_ap_system_factor_depth_t: "固有因子替换深度"
+uma_ap_system_factor_wisdom_t: "智力因子"
+uma_ap_system_factor_charm_t: "魅力因子"
+uma_ap_system_factor_stamina_t: "耐力因子"
+uma_ap_system_factor_power_t: "力量因子"
+uma_ap_system_factor_speed_t: "速度因子"
 
 
-uma_apsystem_done_tt: "点击这里将会保存，且此界面只会出现一次\n [uma_apsystem_done_tt_df] "
+uma_apsystem_done_tt: "点击这里将会保存更改，且此界面只会出现一次\n [uma_apsystem_done_tt_df] "
 uma_apsystem_done_tt_3o: "现在所有选项处于未选中状态(所有选项为0)，这样做会导致一个不能给你带来任何增益的飞升§R占用你的飞升槽§!"
 
 uma_ap.51.title: "准备完成"
