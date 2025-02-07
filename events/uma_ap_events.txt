@@ -1386,7 +1386,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		#
+		NOT = {
+			has_country_flag = uma_ap2_factor_80_has_happened
+		}
 	}
 
 	option = {
@@ -1442,6 +1444,9 @@ situation_event = {
 
 
 	immediate = {
+		owner = {
+			set_country_flag = uma_ap2_factor_80_has_happened
+		}
 		set_situation_flag = uma_ap_2_situation_factor_pause
 		set_situation_flag = uma_ap2_factor_80_has_happened
 	}
