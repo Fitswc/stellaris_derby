@@ -34,7 +34,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 83 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_speed_t_tt
+			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
 		}
 
 		buttonType = {
@@ -44,7 +44,7 @@ guiTypes = {
 			position = { x = 338 y = 0 } #-94
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_speed_t_tt
+			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
 		}
 
 		effectButtonType = {
@@ -55,7 +55,7 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_speed_t_tt
+			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
 		}
 
 
@@ -75,7 +75,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 202 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_power_t_tt
+			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
 		}
 
 		buttonType = {
@@ -85,7 +85,7 @@ guiTypes = {
 			position = { x = 338 y = 119 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_power_t_tt
+			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
 		}
 
 		effectButtonType = {
@@ -96,7 +96,7 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_power_t_tt
+			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
 		}
 
 
@@ -155,7 +155,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 439 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt
+			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
 		}
 
 		buttonType = {
@@ -165,7 +165,7 @@ guiTypes = {
 			position = { x = 338 y = 357 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt
+			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
 		}
 
 		effectButtonType = {
@@ -176,7 +176,7 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt
+			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
 		}
 
 
@@ -195,7 +195,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 558 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_charm_t_tt
+			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
 		}
 
 		buttonType = {
@@ -205,7 +205,7 @@ guiTypes = {
 			position = { x = 338 y = 475 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_charm_t_tt
+			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
 		}
 
 		effectButtonType = {
@@ -216,7 +216,7 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_charm_t_tt
+			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
 		}
 
 
