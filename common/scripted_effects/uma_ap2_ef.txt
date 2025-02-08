@@ -909,9 +909,15 @@ uma_factor_charm_add_modifier = {
 uma_factor_pain_add_modifier = {
 	if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 1
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 1
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 5
+				}
 			}
 		}
 		every_owned_pop = {
@@ -929,9 +935,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 5
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 5
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 10
+				}
 			}
 		}
 		every_owned_pop = {
@@ -948,9 +960,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 10
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 10
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 15
+				}
 			}
 		}
 		every_owned_pop = {
@@ -967,9 +985,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 15
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 15
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 20
+				}
 			}
 		}
 		every_owned_pop = {
@@ -986,9 +1010,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 20
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 20
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 25
+				}
 			}
 		}
 		every_owned_pop = {
@@ -1005,9 +1035,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 25
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 25
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 30
+				}
 			}
 		}
 		every_owned_pop = {
@@ -1024,9 +1060,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >= 30
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 30
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 35
+				}
 			}
 		}
 		every_owned_pop = {
@@ -1043,9 +1085,15 @@ uma_factor_pain_add_modifier = {
 	}
 	else_if = {
 		limit = {
-			check_variable = {
-				which = uma_ap2_factor_summation
-				value >=35
+			AND = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 35
+				}
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value < 45
+				}
 			}
 		}
 		every_owned_pop = {
