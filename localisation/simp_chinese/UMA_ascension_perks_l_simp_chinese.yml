@@ -104,14 +104,14 @@ uma_ap.42.a: "步步为营"
 
 
 
-UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: "!"
+UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: "."
 UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
 
-UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY_NM: "!"
+UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY_NM: "."
 UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM: "$mod_planet_jobs_produces_mult$\n $mod_army_damage_mult$\n$mod_uma_ship_weapon_damage$"
 UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM: "$mod_uma_empire_size_pops_mult$\n $mod_uma_ship_base_speed_mult$\n$mod_uma_ship_fire_rate_mult$"
 UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM: "$mod_uma_ship_hull_mult$\n $mod_uma_army_health$\n $mod_uma_command_limit_mult$"
@@ -165,7 +165,7 @@ uma_ap_system_factor_power_num: "[owner.uma_ap2_factor_power_rate] "
 uma_ap_system_factor_stamina_num: "[owner.uma_ap2_factor_stamina_rate] "
 uma_ap_system_factor_charm_num: "[owner.uma_ap2_factor_charm_rate] "
 uma_ap_system_factor_wisdom_num: "[owner.uma_ap2_factor_wisdom_rate] "
-uma_ap_system_factor_depth_num: "£mod_pop_growth_speed£: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+uma_ap_system_factor_depth_num: "£mod_pop_growth_speed£人口增长速度: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
 
 
 uma_ap_system_factor_speed_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST$"
