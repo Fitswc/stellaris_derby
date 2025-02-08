@@ -17,7 +17,7 @@ situation_uma_ap_2_situation_system_factor = {
 			current_situation_approach = situation_cyberization_overdrive
 		}
 		modifier = {
-			mult = 1.2
+			mult = 1.6
 			desc = "uma_ap_2_situation_factor_danage"
 			current_situation_approach = situation_cyberization_cautious
 		}
@@ -43,52 +43,54 @@ situation_uma_ap_2_situation_system_factor = {
 	}
 
 	stages = {
-		25 = {
+		uma_ap2_factor_25 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_blue
 			end = 25
 			custom_tooltip = uma_ap_2_situation_system_25
 			on_first_enter = {
-				situation_event = {
-					id = uma_ap.52
-					days = 2
-				}
+
 			}
 
 		}
 
-		50 = {
+		uma_ap2_factor_50 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			end = 50
 			custom_tooltip = uma_ap_2_situation_system_50
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.53
+					id = uma_ap.51
 					days = 2
 				}
 			}
 		}
 
-		75 = {
+		uma_ap2_factor_75 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
 			end = 75
 			custom_tooltip = uma_ap_2_situation_system_75
 			on_first_enter = {
-#				situation_event = {
-#					id = uma_ap.54
-#					days = 2
-#				}
+				situation_event = {
+					id = uma_ap.52
+					days = 2
+				}
 			}
 		}
 
-		100 = {
+		uma_ap2_factor_100 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_blue
 			end = 100
 			custom_tooltip = uma_ap_2_situation_system_100
-
+			on_first_enter = {
+				situation_event = {
+					id = uma_ap.53
+					days = 2
+				}
+			}
 		}
 	}
 
@@ -142,11 +144,10 @@ situation_uma_ap_2_situation_system_factor = {
 			abort_situation = Root
 			hidden_effect = {
 				owner = {
-					modify_species = {
-						species = owner_main_species
-						add_trait = uma_trait_ap2_factor_fail
-						change_scoped_species = yes
-						portrait = This
+					every_owned_pop = {
+						modify_species = {
+							add_trait = uma_trait_ap2_factor_fail
+						}
 					}
 				}
 			}
