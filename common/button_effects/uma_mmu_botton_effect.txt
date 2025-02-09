@@ -259,26 +259,38 @@ uma_tgrd_gui_tech_carrot_ana = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_crystal_carrot_analyzing
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_crystal_carrot_analyzing
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger
-			fail_text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_fail
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_carrot_ana_tt_trigger
+				fail_text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_fail
 
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
+				is_scope_type = country
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 3000
+				}
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 3000
-			}
+
 		}
 	}
+
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_carrot_ana_tt
 		add_resource = {
@@ -307,20 +319,29 @@ uma_tgrd_gui_tech_carrot_pro = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_carrot_pro_tt_trigger
-			fail_text = uma_tgrd_gui_tech_carrot_pro_tt_trigger_fail
-			has_technology = tech_uma_crystal_carrot_analyzing
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 500
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 300
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_carrot_pro_tt_trigger
+				fail_text = uma_tgrd_gui_tech_carrot_pro_tt_trigger_fail
+				has_technology = tech_uma_crystal_carrot_analyzing
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 500
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 300
+				}
 			}
 		}
 
@@ -354,15 +375,24 @@ uma_tgrd_gui_tech_uma_atom_breker = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_atom_breker_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_atom_breker_tt_trigger_fail
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_atom_breker_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_atom_breker_tt_trigger_fail
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
 			}
 		}
 
@@ -395,15 +425,25 @@ uma_tgrd_gui_tech_uma_atom_sticker = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_atom_sticker_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_atom_sticker_tt_trigger_fail
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_atom_sticker_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_atom_sticker_tt_trigger_fail
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+
 			}
 		}
 
@@ -435,15 +475,24 @@ uma_tgrd_gui_tech_uma_effective_catalyst = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_effective_catalyst_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_effective_catalyst_tt_trigger_fail
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_effective_catalyst_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_effective_catalyst_tt_trigger_fail
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
 			}
 		}
 
@@ -476,25 +525,34 @@ uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt_trigger_fail
-			has_technology = tech_uma_super_high_temp_container
-			has_technology = tech_uma_effective_catalyst
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 5000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 400
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_tt_trigger_fail
+				has_technology = tech_uma_super_high_temp_container
+				has_technology = tech_uma_effective_catalyst
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 5000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 400
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
 			}
 		}
 
@@ -529,25 +587,34 @@ uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2 = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt_trigger_fail
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_alloys_maker_Automatic_2_tt_trigger_fail
 
-			has_technology = tech_uma_tg_alloys_maker_Automatic
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 6000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
+				has_technology = tech_uma_tg_alloys_maker_Automatic
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 6000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
 			}
 		}
 
@@ -582,26 +649,35 @@ uma_tgrd_gui_tech_uma_tg_custom_goods_productor = {
 #			}
 #		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt_trigger_fail
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_tt_trigger_fail
 
-			has_technology = tech_uma_atom_breker
-			has_technology = tech_uma_atom_sticker
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 5000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 400
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
+				has_technology = tech_uma_atom_breker
+				has_technology = tech_uma_atom_sticker
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 5000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 400
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
 			}
 		}
 
@@ -629,31 +705,40 @@ uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2 = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_custom_goods_productor_2
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_custom_goods_productor_2
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt_trigger_fail
-			has_technology = tech_uma_tg_custom_goods_productor
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 4000
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
 			}
-			has_country_resource = {
-				type = energy
-				amount >= 6000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_custom_goods_productor_2_tt_trigger_fail
+				has_technology = tech_uma_tg_custom_goods_productor
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 6000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
 			}
 		}
 
@@ -681,36 +766,45 @@ uma_tgrd_gui_tech_uma_tg_industrial_complex = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_industrial_complex
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_industrial_complex
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt_trigger_fail
-			has_technology = tech_uma_tg_alloys_maker_Automatic_2
-			has_technology = tech_uma_tg_custom_goods_productor_2
-			has_technology = tech_uma_tg_planet_energy_extractor_2
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 7000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 7000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 5000
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt_trigger_fail
+				has_technology = tech_uma_tg_alloys_maker_Automatic_2
+				has_technology = tech_uma_tg_custom_goods_productor_2
+				has_technology = tech_uma_tg_planet_energy_extractor_2
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 7000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 7000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 5000
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 4000
+				}
+			}
 
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_uma_tg_industrial_complex_tt
@@ -735,34 +829,43 @@ uma_tgrd_gui_tech_uma_tg_planet_energy_extractor = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_planet_energy_extractor
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_planet_energy_extractor
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt_trigger_fail
-			has_technology = tech_uma_crystal_carrot_analyzing
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 5000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 400
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt_trigger_fail
+				has_technology = tech_uma_crystal_carrot_analyzing
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 5000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 400
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+			}
 
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_tt
@@ -787,34 +890,43 @@ uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2 = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_planet_energy_extractor_2
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_planet_energy_extractor_2
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt_trigger_fail
-			has_technology = tech_uma_tg_planet_energy_extractor
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 6000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt_trigger_fail
+				has_technology = tech_uma_tg_planet_energy_extractor
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 6000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+			}
 
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_uma_tg_planet_energy_extractor_2_tt
@@ -839,36 +951,45 @@ uma_tgrd_gui_tech_uma_tg_resource_soil = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_resource_soil
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_resource_soil
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_tg_resource_soil_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_tg_resource_soil_tt_trigger_fail
-			has_technology = tech_uma_crystal_carrot_analyzing
-			has_technology = tech_uma_atom_sticker
-			has_technology = tech_uma_atom_breker
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 5000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 400
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_tg_resource_soil_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_tg_resource_soil_tt_trigger_fail
+				has_technology = tech_uma_crystal_carrot_analyzing
+				has_technology = tech_uma_atom_sticker
+				has_technology = tech_uma_atom_breker
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 5000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 400
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+			}
 
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_uma_tg_resource_soil_tt
@@ -893,26 +1014,35 @@ uma_tgrd_gui_tech_uma_super_high_temp_container = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_super_high_temp_container
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_carrot_ana_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_super_high_temp_container
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_uma_super_high_temp_container_tt_trigger
-			fail_text = uma_tgrd_gui_tech_uma_super_high_temp_container_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_uma_super_high_temp_container_tt_trigger
+				fail_text = uma_tgrd_gui_tech_uma_super_high_temp_container_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_uma_super_high_temp_container_tt
@@ -965,26 +1095,35 @@ uma_tgrd_gui_tech_tech_uma_high_presure_molt = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_high_presure_molt
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_high_presure_molt
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_high_presure_molt_tt
@@ -1007,26 +1146,35 @@ uma_tgrd_gui_tech_tech_uma_weapon_controler = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_weapon_controler
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_weapon_controler
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_weapon_controler_tt
@@ -1049,26 +1197,35 @@ uma_tgrd_gui_tech_tech_uma_energy_raiser_b70 = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_energy_raiser_b70
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_energy_raiser_b70
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt
@@ -1091,26 +1248,35 @@ uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_high_energy_electoric_projector
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_high_energy_electoric_projector
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_high_energy_electoric_projector_tt
@@ -1133,26 +1299,35 @@ uma_tgrd_gui_tech_tech_uma_combine_light_projector = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_combine_light_projector
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_combine_light_projector
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 400
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 400
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_combine_light_projector_tt
@@ -1175,35 +1350,44 @@ uma_tgrd_gui_tech_tech_uma_MAAM = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_MAAM
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_MAAM
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger_fail
-			has_technology = tech_uma_high_presure_molt
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 2000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_MAAM_tt_trigger_fail
+				has_technology = tech_uma_high_presure_molt
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 2000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_MAAM_tt
@@ -1228,35 +1412,44 @@ uma_tgrd_gui_tech_tech_uma_QAAM = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_QAAM
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_QAAM
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger_fail
-
-			has_technology = tech_uma_weapon_controler
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 2000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_QAAM_tt_trigger_fail
 
+				has_technology = tech_uma_weapon_controler
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 2000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_QAAM_tt
@@ -1281,35 +1474,44 @@ uma_tgrd_gui_tech_tech_uma_tg_reaction = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_reaction
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_reaction
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger_fail
-
-			has_technology = tech_uma_energy_raiser_b70
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 2000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt_trigger_fail
 
+				has_technology = tech_uma_energy_raiser_b70
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 2000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_tg_reaction_tt
@@ -1334,36 +1536,45 @@ uma_tgrd_gui_tech_tech_tech_uma_arch_weapon = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_arch_weapon
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_arch_weapon
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger_fail
-
-			has_technology = tech_uma_combine_light_projector
-			has_technology = tech_uma_high_energy_electoric_projector
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 2000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt_trigger_fail
 
+				has_technology = tech_uma_combine_light_projector
+				has_technology = tech_uma_high_energy_electoric_projector
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 2000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_tt
@@ -1388,35 +1599,44 @@ uma_tgrd_gui_tech_tech_uma_tg_reaction_2 = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_reaction_2
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_reaction_2
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger_fail
-
-			has_technology = tech_uma_tg_reaction
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 6000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt_trigger_fail
 
+				has_technology = tech_uma_tg_reaction
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 6000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_tg_reaction_2_tt
@@ -1441,35 +1661,44 @@ uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2 = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_arch_weapon_2
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_arch_weapon_2
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger_fail
-
-			has_technology = tech_uma_arch_weapon
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 6000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 400
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt_trigger_fail
 
+				has_technology = tech_uma_arch_weapon
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 6000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 400
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_tech_uma_arch_weapon_2_tt
@@ -1494,35 +1723,44 @@ uma_tgrd_gui_tech_tech_uma_tg_reaction_3 = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_tg_reaction_3
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_tg_reaction_3
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger_fail
-
-			has_technology = tech_uma_tg_reaction_2
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 7000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 7000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 600
-			}
-			has_country_resource = {
-				type = minerals
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt_trigger_fail
 
+				has_technology = tech_uma_tg_reaction_2
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 7000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 7000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 600
+				}
+				has_country_resource = {
+					type = minerals
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_tg_reaction_3_tt
@@ -1547,30 +1785,39 @@ uma_tgrd_gui_tech_tech_uma_nice_nature_ring = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_nice_nature_ring
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_nice_nature_ring
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger_fail
-
-			has_technology = tech_uma_weapon_controler
-			has_technology = tech_uma_high_presure_molt
-			has_technology = tech_uma_combine_light_projector
-			has_technology = tech_uma_high_energy_electoric_projector
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 1000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt_trigger_fail
 
+				has_technology = tech_uma_weapon_controler
+				has_technology = tech_uma_high_presure_molt
+				has_technology = tech_uma_combine_light_projector
+				has_technology = tech_uma_high_energy_electoric_projector
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 1000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_nice_nature_ring_tt
@@ -1593,34 +1840,43 @@ uma_tgrd_gui_tech_tech_uma_energy_wall_shield = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_energy_wall_shield
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_energy_wall_shield
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger_fail
-
-			has_technology = tech_uma_weapon_controler
-			has_technology = tech_uma_high_presure_molt
-			has_technology = tech_uma_combine_light_projector
-			has_technology = tech_uma_high_energy_electoric_projector
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt_trigger_fail
 
+				has_technology = tech_uma_weapon_controler
+				has_technology = tech_uma_high_presure_molt
+				has_technology = tech_uma_combine_light_projector
+				has_technology = tech_uma_high_energy_electoric_projector
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_energy_wall_shield_tt
@@ -1644,34 +1900,43 @@ uma_tgrd_gui_tech_tech_uma_wall_armor = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_wall_armor
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_wall_armor
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger_fail
-
-			has_technology = tech_uma_weapon_controler
-			has_technology = tech_uma_high_presure_molt
-			has_technology = tech_uma_combine_light_projector
-			has_technology = tech_uma_high_energy_electoric_projector
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 1000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 4000
-			}
-			has_country_resource = {
-				type = alloys
-				amount >= 500
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_wall_armor_tt_trigger_fail
 
+				has_technology = tech_uma_weapon_controler
+				has_technology = tech_uma_high_presure_molt
+				has_technology = tech_uma_combine_light_projector
+				has_technology = tech_uma_high_energy_electoric_projector
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 1000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 4000
+				}
+				has_country_resource = {
+					type = alloys
+					amount >= 500
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_wall_armor_tt
@@ -1695,26 +1960,35 @@ uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 		}
 	}
 	allow = {
-#		custom_tooltip = {
-#			text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger_tech
-#			NOT = {
-#				has_technology = tech_uma_army_enhance_treatment
-#			}
-#		}
+		#		custom_tooltip = {
+		#			text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger_tech
+		#			NOT = {
+		#				has_technology = tech_uma_army_enhance_treatment
+		#			}
+		#		}
 		custom_tooltip = {
-			text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger
-			fail_text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger_fail
-
-			has_country_resource = {
-				type = uma_threegodness_knowledge
-				amount >= 2000
-			}
-			has_country_resource = {
-				type = energy
-				amount >= 2000
-			}
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
 		}
+		conditional_tooltip = {
+			trigger = {
+				is_scope_type = country
+			}
+			custom_tooltip = {
+				text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger
+				fail_text = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt_trigger_fail
 
+				has_country_resource = {
+					type = uma_threegodness_knowledge
+					amount >= 2000
+				}
+				has_country_resource = {
+					type = energy
+					amount >= 2000
+				}
+			}
+
+		}
 	}
 	effect = {
 		custom_tooltip = uma_tgrd_gui_tech_tech_uma_army_enhance_treatment_tt
