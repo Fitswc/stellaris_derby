@@ -541,3 +541,9 @@ uma_gold_family = {
 uma_ap2_factor_bade = {
 	pop_happiness = -0.2
 }
+
+uma_ap2_factor_bade_bad = {
+	leader_upkeep_empire_size_mult = 0.1
+	pop_happiness = -0.1
+	country_unity_produces_mult = -0.05
+}
