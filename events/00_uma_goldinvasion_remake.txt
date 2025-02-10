@@ -2431,6 +2431,14 @@ country_event = {
 		}
 	}
 	after = {
+		hidden_effect = {
+			event_target:uma_gold_invasion_family_country = {
+				set_closed_borders = {
+					who = Root.owner
+					status = no
+				}
+			}
+		}
 		random_system = {
 			limit = {
 				has_star_flag = uma_gold_invasion_system
@@ -2495,6 +2503,7 @@ ship_event = {
 	id= uma_crisis.9999
 	title = uma_crisis.9999.title
 	desc = uma_crisis.9999.desc
+
 	is_triggered_only = yes
 
 	immediate = {
@@ -2516,14 +2525,7 @@ ship_event = {
 	}
 
 	after = {
-		hidden_effect = {
-			event_target:uma_gold_invasion_family_country = {
-				set_closed_borders = {
-					who = Root.owner
-					status = no
-				}
-			}
-		}
+
 	}
 }
 
