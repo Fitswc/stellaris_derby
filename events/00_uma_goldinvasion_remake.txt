@@ -2443,6 +2443,7 @@ country_event = {
 			limit = {
 				has_star_flag = uma_gold_invasion_system
 			}
+			uma_tunnel_spawn = yes
 			save_global_event_target_as = uma_gold_invasion_system_here
 			event_target:uma_naka_invasion_spawn_system = {
 				spawn_natural_wormhole = {
