@@ -1398,10 +1398,25 @@ country_event = {
 	option = {
 		name = uma_ap.71.a
 		custom_tooltip = uma_ap.71.a.tt
+		every_planet_within_border = {
+			limit = {
+				is_colony = yes
+			}
+			add_planet_devastation = 50
+			while = {
+				count = 3
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+		}
 		owner = {
 			country_event = {
 				id = uma_ap.90
 			}
+#			country_event = {
+#				id = uma_ap.82
+#			}
 			every_owned_pop = {
 				modify_species = {
 					add_trait = uma_trait_ap2_factor_fail_evt
@@ -1458,15 +1473,27 @@ situation_event = {
 	option = {
 		name = uma_ap.80.a
 		custom_tooltip = uma_ap.80.a.tt
+
 		hidden_effect = {
 			owner = {
-
+				every_planet_within_border = {
+					limit = {
+						is_colony = yes
+					}
+					add_planet_devastation = 50
+					while = {
+						count = 3
+						random_pop = {
+							kill_pop = yes
+						}
+					}
+				}
 				country_event = {
 					id = uma_ap.90
 				}
-				country_event = {
-					id = uma_ap.82
-				}
+				#				country_event = {
+				#					id = uma_ap.82  #功能占位
+				#				}
 				every_owned_pop = {
 					modify_species = {
 						add_trait = uma_trait_ap2_factor_fail_evt
@@ -1478,17 +1505,7 @@ situation_event = {
 	}
 }
 
-country_event = {
-	id = uma_ap.81
-	title = uma_ap.81.title
-	desc = uma_ap.81.desc
-	is_triggered_only = yes
 
-	option = {
-		name = uma_ap.81.a
-	}
-
-}
 
 
 country_event = {
@@ -1534,6 +1551,7 @@ country_event = {
 			}
 		}
 
+
 		random_planet_within_border = {
 			limit = {
 				is_colony = yes
@@ -1564,16 +1582,46 @@ country_event = {
 				country_event = {
 					id = uma_ap.81
 				}
+				country_event = {
+					id = uma_ap.102
+					days = 100
+				}
 			}
+
+			save_global_event_target_as = uma_ap2_factor_hostile_planet
 		}
 	}
+
+	after = {
+		set_country_flag = uma_ap2_factor_crisis_begin
+	}
+}
+
+country_event = {
+	id = uma_ap.81
+	title = uma_ap.81.title
+	desc = uma_ap.81.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.81.a
+		clear_global_event_target = uma_ap2_factor_hostile_planet
+	}
+
 }
 
 
 country_event = {
-	id = uma_ap.82
+	id = uma_ap.102
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_ap2_factor_crisis_begin
+		NOT = {
+			has_country_flag = uma_ap2_factor_crisis_end
+		}
+	}
 
 	immediate = {
 		random_planet_within_border = {
@@ -1603,9 +1651,14 @@ country_event = {
 
 			Root = {
 				country_event = {
-					id = uma_ap.82
+					id = uma_ap.102
+					days = 100
+				}
+				country_event = {
+					id = uma_ap.81
 				}
 			}
+
 		}
 	}
 }
@@ -1637,6 +1690,7 @@ country_event = {
 			country_event = {
 				id = uma_ap.84
 			}
+			set_country_flag = uma_ap2_factor_crisis_end
 		}
 		else = {
 			add_resource = {
@@ -1669,11 +1723,16 @@ country_event = {
 
 	trigger = {
 		NOT = {
+			has_country_flag = uma_ap2_factor_crisis_end
 			any_planet_within_border = {
 				is_colony = yes
 				is_owned_by = Root
 			}
 		}
+	}
+
+	immediate = {
+		set_country_flag = uma_ap2_factor_crisis_end
 	}
 
 	option = {
@@ -1686,4 +1745,6 @@ country_event = {
 }
 
 
-#Realm -> 强化事项：
+#Realm -> 强化事项： 战斗领域 感知领域 治疗领域 辅助领域 领域混合开关 if 混合开关没有打开 -> 各自领域升级 每项最多为1
+
+
