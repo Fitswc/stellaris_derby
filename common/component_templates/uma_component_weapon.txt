@@ -977,8 +977,8 @@ weapon_component_template = {
 
 	power = -20
 	damage = {
-		min = 50
-		max = 90
+		min = 30
+		max = 70
 	}
 	hull_damage = 2.0
 	shield_damage = 1.8
@@ -986,12 +986,12 @@ weapon_component_template = {
 	armor_damage = 2.0
 	armor_penetration = 1.0
 	windup = {
-		min = 2.0
-		max = 15.0
+		min = 10.0
+		max = 26.0
 	}
-	range = 130
-	accuracy = 1.3
-	tracking = 0.4
+	range = 90
+	accuracy = 0.8
+	tracking = 0.3
 
 	missile_speed = 500
 	missile_evasion = 0.0
@@ -1040,12 +1040,12 @@ weapon_component_template = {
 	armor_damage = 2.5
 	armor_penetration = 1.7
 	windup = {
-		min = 6.8
-		max = 20.0
+		min = 15.0
+		max = 30.0
 	}
 	range = 130
-	accuracy = 7.0
-	tracking = 6.0
+	accuracy = 1.0
+	tracking = 1.0
 
 	missile_speed = 300
 	missile_evasion = 1.0
