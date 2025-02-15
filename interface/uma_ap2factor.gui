@@ -441,6 +441,8 @@ guiTypes = {
 
 
 
+
+
 #Realm
 guiTypes = {
 
@@ -478,38 +480,38 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 83 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_speed_t_tt_t
 		}
 
 		buttonType = {
-			name = uma_ap_system_factor_speed_t
-			buttonText = uma_ap_system_factor_speed_t
+			name = uma_ap_system_realm_speed_t
+			buttonText = uma_ap_system_realm_speed_t
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 0 } #-94
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_speed_t_tt_t
 		}
 
 		effectButtonType = {
-			name = uma_ap_system_factor_speed_num
-			buttonText = uma_ap_system_factor_speed_num
+			name = uma_ap_system_realm_speed_num
+			buttonText = uma_ap_system_realm_speed_num
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 65 } #y-83 x+50
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
+			effect =uma_ap_system_realm_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_realm_speed_t_tt_t
 		}
 
 
 
 		effectButtonType = {
-			name = uma_ap_system_factor_speed_plus
+			name = uma_ap_system_realm_speed_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
 			position = { x = 742 y = 146 }
-			effect = uma_ap_system_factor_speed_plus
+			effect = uma_ap_system_realm_speed_plus
 		}
 
 
@@ -519,38 +521,38 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 202 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_power_t_tt_t
 		}
 
 		buttonType = {
-			name = uma_ap_system_factor_power_t
-			buttonText = uma_ap_system_factor_power_t
+			name = uma_ap_system_realm_power_t
+			buttonText = uma_ap_system_realm_power_t
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 119 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_power_t_tt_t
 		}
 
 		effectButtonType = {
-			name = uma_ap_system_factor_power_num
-			buttonText = uma_ap_system_factor_power_num
+			name = uma_ap_system_realm_power_num
+			buttonText = uma_ap_system_realm_power_num
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 182 }#y-83 x+50
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
+			effect =uma_ap_system_realm_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_realm_power_t_tt_t
 		}
 
 
 
 		effectButtonType = {
-			name = uma_ap_system_factor_power_plus
+			name = uma_ap_system_realm_power_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
 			position = { x = 742 y = 265 }
-			effect = uma_ap_system_factor_power_plus
+			effect = uma_ap_system_realm_power_plus
 		}
 
 		#Part3
@@ -559,38 +561,38 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 321 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_stamina_t_tt_t
 		}
 
 		buttonType = {
-			name = uma_ap_system_factor_stamina_t
-			buttonText = uma_ap_system_factor_stamina_t
+			name = uma_ap_system_realm_stamina_t
+			buttonText = uma_ap_system_realm_stamina_t
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 238 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_stamina_t_tt_t
 		}
 
 		effectButtonType = {
-			name = uma_ap_system_factor_stamina_num
-			buttonText = uma_ap_system_factor_stamina_num
+			name = uma_ap_system_realm_stamina_num
+			buttonText = uma_ap_system_realm_stamina_num
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 296 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
+			effect =uma_ap_system_realm_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_realm_stamina_t_tt_t
 		}
 
 
 
 		effectButtonType = {
-			name = uma_ap_system_factor_stamina_plus
+			name = uma_ap_system_realm_stamina_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
 			position = { x = 742 y = 379 }
-			effect = uma_ap_system_factor_stamina_plus
+			effect = uma_ap_system_realm_stamina_plus
 		}
 
 		#Part4
@@ -599,38 +601,38 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 439 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_wisdom_t_tt_t
 		}
 
 		buttonType = {
-			name = uma_ap_system_factor_wisdom_t
-			buttonText = uma_ap_system_factor_wisdom_t
+			name = uma_ap_system_realm_wisdom_t
+			buttonText = uma_ap_system_realm_wisdom_t
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 357 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_wisdom_t_tt_t
 		}
 
 		effectButtonType = {
-			name = uma_ap_system_factor_wisdom_num
-			buttonText = uma_ap_system_factor_wisdom_num
+			name = uma_ap_system_realm_wisdom_num
+			buttonText = uma_ap_system_realm_wisdom_num
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 421 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
+			effect =uma_ap_system_realm_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_realm_wisdom_t_tt_t
 		}
 
 
 
 		effectButtonType = {
-			name = uma_ap_system_factor_wisdom_plus
+			name = uma_ap_system_realm_wisdom_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
 			position = { x = 742 y = 502 }
-			effect = uma_ap_system_factor_wisdom_plus
+			effect = uma_ap_system_realm_wisdom_plus
 		}
 
 		#Part5
@@ -639,38 +641,38 @@ guiTypes = {
 			quadTextureSprite = "GFX_uma_apsystem_mark"
 			position = { x = 289 y = 558 }
 			orientation = "UPPER_LEFT"
-			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_charm_t_tt_t
 		}
 
 		buttonType = {
-			name = uma_ap_system_factor_charm_t
-			buttonText = uma_ap_system_factor_charm_t
+			name = uma_ap_system_realm_charm_t
+			buttonText = uma_ap_system_realm_charm_t
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 475 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
+			pdx_tooltip = uma_ap_system_realm_charm_t_tt_t
 		}
 
 		effectButtonType = {
-			name = uma_ap_system_factor_charm_num
-			buttonText = uma_ap_system_factor_charm_num
+			name = uma_ap_system_realm_charm_num
+			buttonText = uma_ap_system_realm_charm_num
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 543 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			effect =uma_ap_system_factor_general_numbershow_effect
-			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
+			effect =uma_ap_system_realm_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_realm_charm_t_tt_t
 		}
 
 
 
 		effectButtonType = {
-			name = uma_ap_system_factor_charm_plus
+			name = uma_ap_system_realm_charm_plus
 			quadTextureSprite = "GFX_uma_apsystem_plus"
 			orientation = "UPPER_LEFT"
 			position = { x = 742 y = 626 }
-			effect = uma_ap_system_factor_charm_plus
+			effect = uma_ap_system_realm_charm_plus
 		}
 
 
@@ -684,8 +686,8 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = uma_ap_system_factor_depth_t
-			buttonText = uma_ap_system_factor_depth_t
+			name = uma_ap_system_realm_depth_t
+			buttonText = uma_ap_system_realm_depth_t
 			buttonFont = "large_title_font_28"
 			position = { x = 338 y = 593 }
 			orientation = "UPPER_LEFT"
@@ -693,67 +695,67 @@ guiTypes = {
 		}
 
 		effectButtonType = {
-			name = uma_ap_system_factor_depth_num
-			buttonText = uma_ap_system_factor_depth_num
+			name = uma_ap_system_realm_depth_num
+			buttonText = uma_ap_system_realm_depth_num
 			buttonFont = "large_title_font_28"
 			position = { x = 350 y = 655 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "T"
-			effect = uma_ap_system_factor_general_numbershow_effect
+			effect = uma_ap_system_realm_general_numbershow_effect
 		}
 #
 #
 #
 #		effectButtonType = {
-#			name = uma_ap_system_factor_depth_plus
+#			name = uma_ap_system_realm_depth_plus
 #			quadTextureSprite = "GFX_uma_apsystem_plus"
 #			orientation = "UPPER_LEFT"
 #			position = { x = 742 y = 738 }
-#			effect = uma_ap_system_factor_depth_plus
+#			effect = uma_ap_system_realm_depth_plus
 #		}
 #
 		#Minus
 		effectButtonType = {
-			name = uma_ap_system_factor_charm_minus
+			name = uma_ap_system_realm_charm_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
 			position = { x = 338 y = 626 }
-			effect = uma_ap_system_factor_charm_minus
+			effect = uma_ap_system_realm_charm_minus
 		}
 		effectButtonType = {
-			name = uma_ap_system_factor_speed_minus
+			name = uma_ap_system_realm_speed_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
 			position = { x = 338 y = 146 }
-			effect = uma_ap_system_factor_speed_minus
+			effect = uma_ap_system_realm_speed_minus
 		}
 		effectButtonType = {
-			name = uma_ap_system_factor_power_minus
+			name = uma_ap_system_realm_power_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
 			position = { x = 338 y = 265 }
-			effect = uma_ap_system_factor_power_minus
+			effect = uma_ap_system_realm_power_minus
 		}
 		effectButtonType = {
-			name = uma_ap_system_factor_stamina_minus
+			name = uma_ap_system_realm_stamina_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
 			position = { x = 338 y = 379 }
-			effect = uma_ap_system_factor_stamina_minus
+			effect = uma_ap_system_realm_stamina_minus
 		}
 		effectButtonType = {
-			name = uma_ap_system_factor_wisdom_minus
+			name = uma_ap_system_realm_wisdom_minus
 			quadTextureSprite = "GFX_uma_apsystem_minus"
 			orientation = "UPPER_LEFT"
 			position = { x = 338 y = 502 }
-			effect = uma_ap_system_factor_wisdom_minus
+			effect = uma_ap_system_realm_wisdom_minus
 		}
 #		effectButtonType = {
-#			name = uma_ap_system_factor_depth_minus
+#			name = uma_ap_system_realm_depth_minus
 #			quadTextureSprite = "GFX_uma_apsystem_minus"
 #			orientation = "UPPER_LEFT"
 #			position = { x = 338 y = 738 }
-#			effect = uma_ap_system_factor_depth_minus
+#			effect = uma_ap_system_realm_depth_minus
 #		}
 
 
