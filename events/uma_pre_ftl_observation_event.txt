@@ -124,8 +124,8 @@ situation_event = {
 				has_country_flag = uma_preftl_1_fired
 			}
 			is_regular_pre_ftl = yes
+			has_pre_ftl_age = stone_age
 			OR = {
-				has_pre_ftl_age = stone_age
 				is_species_class = PRE_UMA
 				is_species_class = umamusume
 			}
@@ -284,8 +284,8 @@ situation_event = {
 				has_country_flag = uma_preftl_5_fired
 			}
 			is_regular_pre_ftl = yes
+			has_pre_ftl_age = bronze_age
 			OR = {
-				has_pre_ftl_age = bronze_age
 				is_species_class = PRE_UMA
 				is_species_class = umamusume
 			}
@@ -396,14 +396,10 @@ situation_event = {
 				has_country_flag = uma_preftl_7_fired
 			}
 			is_regular_pre_ftl = yes
+			has_pre_ftl_age = late_medieval_age
 			OR = {
-				has_pre_ftl_age = late_medieval_age
-				AND = {
-					OR = {
-						is_species_class = PRE_UMA
-						is_species_class = umamusume
-					}
-				}
+				is_species_class = PRE_UMA
+				is_species_class = umamusume
 			}
 			capital_scope = {
 				has_observation_outpost = yes
@@ -629,14 +625,10 @@ situation_event = {
 				has_country_flag = uma_preftl_14_fired
 			}
 			is_regular_pre_ftl = yes
+			has_pre_ftl_age = renaissance_age
 			OR = {
-				has_pre_ftl_age = renaissance_age
-				AND = {
-					OR = {
-						is_species_class = PRE_UMA
-						is_species_class = umamusume
-					}
-				}
+				is_species_class = PRE_UMA
+				is_species_class = umamusume
 			}
 			capital_scope = {
 				has_observation_outpost = yes
