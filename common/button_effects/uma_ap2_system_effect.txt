@@ -284,7 +284,7 @@ uma_ap_system_factor_general_numbershow_effect = {
 }
 
 
-#
+###Realm
 
 uma_ap_system_realm_general_numbershow_effect = {
     potential = {
@@ -302,18 +302,18 @@ uma_ap_system_realm_speed_minus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_speed_rate
+            which = uma_ap2_realm_speed_rate
             value > 0
         }
     }
     effect = {
-        custom_tooltip = uma_ap_system_factor_speed_t_tt
+        custom_tooltip = uma_ap_system_realm_speed_t_tt
         hidden_effect = {
             uma_ap2_system_variable_handler = {
                 METHOD = subtract
-                AREA_TYPE = factor_speed
+                AREA_TYPE = realm_speed
             }
-            uma_ap2_factor_summation = yes
+            uma_ap2_realm_summation = yes
         }
     }
 }
@@ -326,18 +326,18 @@ uma_ap_system_realm_speed_plus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_speed_rate
+            which = uma_ap2_realm_speed_rate
             value < 9
         }
     }
      effect = {
-         custom_tooltip = uma_ap_system_factor_speed_t_tt
+         custom_tooltip = uma_ap_system_realm_speed_t_tt
          hidden_effect = {
              uma_ap2_system_variable_handler = {
                  METHOD = change
-                 AREA_TYPE = factor_speed
+                 AREA_TYPE = realm_speed
              }
-             uma_ap2_factor_summation = yes
+             uma_ap2_realm_summation = yes
          }
     }
 }
@@ -350,18 +350,18 @@ uma_ap_system_realm_power_minus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_power_rate
+            which = uma_ap2_realm_power_rate
             value > 0
         }
     }
     effect = {
-        custom_tooltip = uma_ap_system_factor_power_t_tt
+        custom_tooltip = uma_ap_system_realm_power_t_tt
         hidden_effect = {
             uma_ap2_system_variable_handler = {
                 METHOD = subtract
-                AREA_TYPE = factor_power
+                AREA_TYPE = realm_power
             }
-            uma_ap2_factor_summation = yes
+            uma_ap2_realm_summation = yes
         }
     }
 }
@@ -374,18 +374,18 @@ uma_ap_system_realm_power_plus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_power_rate
+            which = uma_ap2_realm_power_rate
             value < 9
         }
     }
      effect = {
-         custom_tooltip = uma_ap_system_factor_power_t_tt
+         custom_tooltip = uma_ap_system_realm_power_t_tt
          hidden_effect = {
              uma_ap2_system_variable_handler = {
                  METHOD = change
-                 AREA_TYPE = factor_power
+                 AREA_TYPE = realm_power
              }
-             uma_ap2_factor_summation = yes
+             uma_ap2_realm_summation = yes
          }
     }
 }
@@ -398,18 +398,18 @@ uma_ap_system_realm_stamina_minus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_stamina_rate
+            which = uma_ap2_realm_stamina_rate
             value > 0
         }
     }
     effect = {
-        custom_tooltip = uma_ap_system_factor_stamina_t_tt
+        custom_tooltip = uma_ap_system_realm_stamina_t_tt
         hidden_effect = {
             uma_ap2_system_variable_handler = {
                 METHOD = subtract
-                AREA_TYPE = factor_stamina
+                AREA_TYPE = realm_stamina
             }
-            uma_ap2_factor_summation = yes
+            uma_ap2_realm_summation = yes
         }
     }
 }
@@ -422,18 +422,18 @@ uma_ap_system_realm_stamina_plus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_stamina_rate
+            which = uma_ap2_realm_stamina_rate
             value < 9
         }
     }
      effect = {
-         custom_tooltip = uma_ap_system_factor_stamina_t_tt
+         custom_tooltip = uma_ap_system_realm_stamina_t_tt
          hidden_effect = {
              uma_ap2_system_variable_handler = {
                  METHOD = change
-                 AREA_TYPE = factor_stamina
+                 AREA_TYPE = realm_stamina
              }
-             uma_ap2_factor_summation = yes
+             uma_ap2_realm_summation = yes
          }
     }
 }
@@ -445,18 +445,18 @@ uma_ap_system_realm_wisdom_minus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_wisdom_rate
+            which = uma_ap2_realm_wisdom_rate
             value > 0
         }
     }
     effect = {
-        custom_tooltip = uma_ap_system_factor_wisdom_t_tt
+        custom_tooltip = uma_ap_system_realm_wisdom_t_tt
         hidden_effect = {
             uma_ap2_system_variable_handler = {
                 METHOD = subtract
-                AREA_TYPE = factor_wisdom
+                AREA_TYPE = realm_wisdom
             }
-            uma_ap2_factor_summation = yes
+            uma_ap2_realm_summation = yes
         }
     }
 }
@@ -469,18 +469,18 @@ uma_ap_system_realm_wisdom_plus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_wisdom_rate
+            which = uma_ap2_realm_wisdom_rate
             value < 9
         }
     }
      effect = {
-         custom_tooltip = uma_ap_system_factor_wisdom_t_tt
+         custom_tooltip = uma_ap_system_realm_wisdom_t_tt
          hidden_effect = {
              uma_ap2_system_variable_handler = {
                  METHOD = change
-                 AREA_TYPE = factor_wisdom
+                 AREA_TYPE = realm_wisdom
              }
-             uma_ap2_factor_summation = yes
+             uma_ap2_realm_summation = yes
          }
     }
 }
@@ -492,18 +492,18 @@ uma_ap_system_realm_charm_minus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_charm_rate
+            which = uma_ap2_realm_charm_rate
             value > 0
         }
     }
     effect = {
-        custom_tooltip = uma_ap_system_factor_charm_t_tt
+        custom_tooltip = uma_ap_system_realm_charm_t_tt
         hidden_effect = {
             uma_ap2_system_variable_handler = {
                 METHOD = subtract
-                AREA_TYPE = factor_charm
+                AREA_TYPE = realm_charm
             }
-            uma_ap2_factor_summation = yes
+            uma_ap2_realm_summation = yes
         }
     }
 }
@@ -515,18 +515,18 @@ uma_ap_system_realm_charm_plus = {
     allow = {
 #        always = yes
         check_variable = {
-            which = uma_ap2_factor_charm_rate
+            which = uma_ap2_realm_charm_rate
             value < 9
         }
     }
      effect = {
-         custom_tooltip = uma_ap_system_factor_charm_t_tt
+         custom_tooltip = uma_ap_system_realm_charm_t_tt
          hidden_effect = {
              uma_ap2_system_variable_handler = {
                  METHOD = change
-                 AREA_TYPE = factor_charm
+                 AREA_TYPE = realm_charm
              }
-             uma_ap2_factor_summation = yes
+             uma_ap2_realm_summation = yes
          }
     }
 }

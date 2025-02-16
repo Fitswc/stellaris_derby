@@ -1172,3 +1172,32 @@ uma_ap2_factor_summation = {
 		value = owner.uma_ap2_factor_stamina_rate
 	}
 }
+
+
+
+uma_ap2_realm_summation = {
+	set_variable = {
+		which = uma_ap2_realm_summation
+		value = 0
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_charm_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_wisdom_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_power_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_speed_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_stamina_rate
+	}
+}
