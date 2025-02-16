@@ -703,17 +703,17 @@ guiTypes = {
 			text_color_code = "T"
 			effect = uma_ap_system_realm_general_numbershow_effect
 		}
-#
-#
-#
-#		effectButtonType = {
-#			name = uma_ap_system_realm_depth_plus
-#			quadTextureSprite = "GFX_uma_apsystem_plus"
-#			orientation = "UPPER_LEFT"
-#			position = { x = 742 y = 738 }
-#			effect = uma_ap_system_realm_depth_plus
-#		}
-#
+
+
+
+		effectButtonType = {
+			name = uma_ap_system_realm_depth_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 738 }
+			effect = uma_ap_system_realm_depth_plus
+		}
+
 		#Minus
 		effectButtonType = {
 			name = uma_ap_system_realm_charm_minus
@@ -750,13 +750,13 @@ guiTypes = {
 			position = { x = 338 y = 502 }
 			effect = uma_ap_system_realm_wisdom_minus
 		}
-#		effectButtonType = {
-#			name = uma_ap_system_realm_depth_minus
-#			quadTextureSprite = "GFX_uma_apsystem_minus"
-#			orientation = "UPPER_LEFT"
-#			position = { x = 338 y = 738 }
-#			effect = uma_ap_system_realm_depth_minus
-#		}
+		effectButtonType = {
+			name = uma_ap_system_realm_depth_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 738 }
+			effect = uma_ap_system_realm_depth_minus
+		}
 
 
 

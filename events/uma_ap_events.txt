@@ -1747,4 +1747,57 @@ country_event = {
 
 #Realm -> 强化事项： 战斗领域 感知领域 治疗领域 辅助领域 领域混合开关 if 混合开关没有打开 -> 各自领域升级 每项最多为1
 
+##Setup
+country_event = {
+	id = uma_ap.43
+	hide_window = yes
+	is_triggered_only = yes
 
+	immediate = {
+		set_variable = {
+			which = uma_ap2_power_power_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_power_speed_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_power_stamina_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_power_wisdom_rate
+			value = 0
+		}
+
+		set_variable = {
+			which = uma_ap2_power_depth_rate
+			value = 0
+		}
+	}
+}
+
+
+
+country_event = {
+	id = uma_ap.100
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = uma_aps_realm_main_windows
+
+	option = {
+		name = ""
+		custom_gui = uma_hiding_button
+		default_hide_option = yes
+		hidden_effect = {
+
+			uma_ap2_factor_summation = yes
+#			start_situation = {
+#				type = situation_uma_ap_2_situation_system_factor
+#				target = this
+#				effect = {}
+#			}
+		}
+	}
+}
