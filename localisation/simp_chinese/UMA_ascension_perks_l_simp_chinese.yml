@@ -335,7 +335,7 @@ uma_trait_ap2_factor_pain_9: "因子改造阵痛$uma_romannum_9$"
 
 uma_ap_system_realm_speed_t: "战斗领域强化"
 uma_ap_system_realm_power_t: "感知领域强化"
-uma_ap_system_realm_stamina_t: "治疗领域强化"
+uma_ap_system_realm_stamina_t: "生产领域强化"
 uma_ap_system_realm_wisdom_t: "辅助领域强化"
 uma_ap_system_realm_charm_t: "领域混合开关"
 uma_ap_system_realm_speed_t_tt: ""
@@ -344,11 +344,36 @@ uma_ap_system_realm_stamina_t_tt: ""
 uma_ap_system_realm_wisdom_t_tt: ""
 uma_ap_system_realm_charm_t_tt: "此开关打开领域混合开关：这将会导致：\n可以 强化/激活 除预设领域外的其他领域选项。但是，§R会增加出现负面事件的概率§!"
 
+UMA_AP2_MODIFIER_REALM_POWER_EMPTY_NM: "."
+UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$\n$mod_army_damage_mult$"
+UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: ""
+UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: ""
+UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: ""
+UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
+
+
+
+mod_uma_ship_orbital_bombardment_mult: "轨道轰炸伤害"
 
 
 
 
+UMA_AP2_MODIFIER_REALM_NUM9: "§G+50%§!"
+UMA_AP2_MODIFIER_REALM_NUM8: "§G+40%§!"
+UMA_AP2_MODIFIER_REALM_NUM7: "§G+35%§!"
+UMA_AP2_MODIFIER_REALM_NUM6: "§G+30%§!"
+UMA_AP2_MODIFIER_REALM_NUM5: "§G+25%§!"
+UMA_AP2_MODIFIER_REALM_NUM4: "§G+20%§!"
+UMA_AP2_MODIFIER_REALM_NUM3: "§G+15%§!"
+UMA_AP2_MODIFIER_REALM_NUM2: "§G+10%§!"
+UMA_AP2_MODIFIER_REALM_NUM1: "§G+5%§!"
 
-
-
-
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM9: "§R-45%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM8: "§R-35%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM7: "§R-30%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM6: "§R-25%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM5: "§R-20%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM4: "§R-15%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM3: "§R-10%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM2: "§R-5%§!"
+UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM1: "§R-2%§!"
