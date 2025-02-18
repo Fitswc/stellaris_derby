@@ -345,8 +345,8 @@ uma_ap_system_realm_wisdom_t_tt: ""
 uma_ap_system_realm_charm_t_tt: "此开关打开领域混合开关：这将会导致：\n可以 强化/激活 除预设领域外的其他领域选项。但是，§R会增加出现负面事件的概率§!"
 
 UMA_AP2_MODIFIER_REALM_POWER_EMPTY_NM: "."
-UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$\n$mod_army_damage_mult$"
-UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: ""
+UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
+UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: "$mod_uma_country_society_research_cost_mult$"
 UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: ""
 UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: ""
 UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
@@ -354,9 +354,9 @@ UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
 
 
 mod_uma_ship_orbital_bombardment_mult: "轨道轰炸伤害"
-
-
-
+mod_uma_country_society_research_produces_mult: "£society_research£社会研究产出"
+mod_country_uma_physics_research_produces_mult: "£physics_research£社会研究产出"
+mod_country_uma_engineering_research_produces_mult: "£engineering_research£社会研究产出"
 
 UMA_AP2_MODIFIER_REALM_NUM9: "§G+50%§!"
 UMA_AP2_MODIFIER_REALM_NUM8: "§G+40%§!"
