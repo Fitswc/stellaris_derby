@@ -1402,9 +1402,9 @@ country_event = {
 			limit = {
 				is_colony = yes
 			}
-			add_planet_devastation = 50
+			add_planet_devastation = 90
 			while = {
-				count = 3
+				count = 6
 				random_pop = {
 					kill_pop = yes
 				}
@@ -1480,9 +1480,9 @@ situation_event = {
 					limit = {
 						is_colony = yes
 					}
-					add_planet_devastation = 50
+					add_planet_devastation = 90
 					while = {
-						count = 3
+						count = 6
 						random_pop = {
 							kill_pop = yes
 						}
