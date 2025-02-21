@@ -1567,3 +1567,29 @@ define_text = {
 		localization_key = uma_apsystem_done_tt_3o
 	}
 }
+
+define_text = {
+	name = uma_apsystem_realm_mix_on_off
+	text = {
+		trigger = {
+			owner = {
+				check_variable = {
+					which = uma_ap2_realm_charm_rate
+					value = 1
+				}
+			}
+		}
+		localization_key = uma_apsystem_realm_mix_on
+	}
+	text = {
+		trigger = {
+			owner = {
+				check_variable = {
+					which = uma_ap2_realm_charm_rate
+					value = 0
+				}
+			}
+		}
+		localization_key = uma_apsystem_realm_mix_off
+	}
+}

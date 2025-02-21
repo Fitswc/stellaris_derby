@@ -516,7 +516,7 @@ uma_ap_system_realm_charm_plus = {
 #        always = yes
         check_variable = {
             which = uma_ap2_realm_charm_rate
-            value < 9
+            value < 1
         }
     }
      effect = {

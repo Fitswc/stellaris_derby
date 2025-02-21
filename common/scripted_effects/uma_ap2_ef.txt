@@ -1182,10 +1182,6 @@ uma_ap2_realm_summation = {
 	}
 	change_variable = {
 		which = uma_ap2_realm_summation
-		value = owner.uma_ap2_realm_charm_rate
-	}
-	change_variable = {
-		which = uma_ap2_realm_summation
 		value = owner.uma_ap2_realm_wisdom_rate
 	}
 	change_variable = {
