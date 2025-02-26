@@ -15,7 +15,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_1
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 
@@ -35,7 +35,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_2
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 	}
@@ -54,7 +54,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_3
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 	}
@@ -73,7 +73,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_4
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 	}
@@ -92,7 +92,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_5
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 	}
@@ -111,7 +111,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_6
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 	}
@@ -130,9 +130,9 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_7
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
-			}
+		}
 	}
 	else_if = {
 		limit = {
@@ -149,7 +149,7 @@ uma_factor_speed_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_speed_8
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
 		}
 	}
@@ -162,19 +162,20 @@ uma_factor_speed_add_modifier = {
 		}
 
 
-every_owned_pop = {
-	limit = {
-		is_species_class = umamusume
-	}
-}		modify_species =
-			species = this
-			add_trait = uma_trait_ap2_factor_speed_9#
-			change_scoped_species = yes
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_factor_speed_9#
+				change_scoped_species = yes
 
+			}
 		}
-	}
 
-}	else = {
+	}
+	else = {
 		add_resource = {
 			influence = 0
 		}
@@ -294,9 +295,9 @@ uma_factor_power_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_power_6
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
-			}
+		}
 	}
 	else_if = {
 		limit = {
@@ -313,9 +314,9 @@ uma_factor_power_add_modifier = {
 			modify_species = {
 				species = this
 				add_trait = uma_trait_ap2_factor_power_7
-#				change_scoped_species = yes
+				#				change_scoped_species = yes
 			}
-			}
+		}
 	}
 	else_if = {
 		limit = {
@@ -1196,4 +1197,428 @@ uma_ap2_realm_summation = {
 		which = uma_ap2_realm_summation
 		value = owner.uma_ap2_realm_stamina_rate
 	}
+}
+
+
+uma_realm_speed_add_modifier = {
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_speed_rate
+				value = 1
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_speed_1
+#				change_scoped_species = yes
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_speed_rate
+				value = 2
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_speed_2
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_speed_rate
+				value = 3
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_speed_3
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_speed_rate
+				value = 4
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_speed_4
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_speed_rate
+				value = 5
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_speed_5
+#				change_scoped_species = yes
+			}
+		}
+	}
+
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+}
+
+
+uma_realm_power_add_modifier = {
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_power_rate
+				value = 1
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_power_1
+#				change_scoped_species = yes
+			}
+			}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_power_rate
+				value = 2
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_power_2
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_power_rate
+				value = 3
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_power_3
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_power_rate
+				value = 4
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_power_4
+#				change_scoped_species = yes
+			}
+			}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_power_rate
+				value = 5
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_power_5
+#				change_scoped_species = yes
+			}
+		}
+	}
+
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+
+}
+
+uma_realm_stamina_add_modifier = {
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_stamina_rate
+				value = 1
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_stamina_1
+#				change_scoped_species = yes
+			}
+		}
+
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_stamina_rate
+				value = 2
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_stamina_2
+#				change_scoped_species = yes
+			}
+			}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_stamina_rate
+				value = 3
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_stamina_3
+#				change_scoped_species = yes
+			}
+			}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_stamina_rate
+				value = 4
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_stamina_4
+#				change_scoped_species = yes
+		}
+			}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_stamina_rate
+				value = 5
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_stamina_5
+#				change_scoped_species = yes
+		}
+			}
+	}
+
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+
+}
+
+uma_realm_wisdom_add_modifier = {
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_wisdom_rate
+				value = 1
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = Root.owner_species
+				add_trait = uma_trait_ap2_realm_wisdom_1
+#				change_scoped_species = yes
+		}
+
+
+}	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_wisdom_rate
+				value = 2
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_wisdom_2
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_wisdom_rate
+				value = 3
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_wisdom_3
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_wisdom_rate
+				value = 4
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_wisdom_4
+#				change_scoped_species = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap2_realm_wisdom_rate
+				value = 5
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = this
+				add_trait = uma_trait_ap2_realm_wisdom_5
+				#				change_scoped_species = yes
+			}
+		}
+	}
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+
 }
