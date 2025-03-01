@@ -300,10 +300,14 @@ uma_ap_system_realm_speed_minus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_speed_rate
             value > 0
+        }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
         }
     }
     effect = {
@@ -324,21 +328,25 @@ uma_ap_system_realm_speed_plus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_speed_rate
             value < 5
         }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
+        }
     }
-     effect = {
-         custom_tooltip = uma_ap_system_realm_speed_t_tt
-         hidden_effect = {
-             uma_ap2_system_variable_handler = {
-                 METHOD = change
-                 AREA_TYPE = realm_speed
-             }
-             uma_ap2_realm_summation = yes
-         }
+    effect = {
+        custom_tooltip = uma_ap_system_realm_speed_t_tt
+        hidden_effect = {
+            uma_ap2_system_variable_handler = {
+                METHOD = change
+                AREA_TYPE = realm_speed
+            }
+            uma_ap2_realm_summation = yes
+        }
     }
 }
 
@@ -348,10 +356,14 @@ uma_ap_system_realm_power_minus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_power_rate
             value > 0
+        }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
         }
     }
     effect = {
@@ -372,21 +384,25 @@ uma_ap_system_realm_power_plus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_power_rate
             value < 5
         }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
+        }
     }
-     effect = {
-         custom_tooltip = uma_ap_system_realm_power_t_tt
-         hidden_effect = {
-             uma_ap2_system_variable_handler = {
-                 METHOD = change
-                 AREA_TYPE = realm_power
-             }
-             uma_ap2_realm_summation = yes
-         }
+    effect = {
+        custom_tooltip = uma_ap_system_realm_power_t_tt
+        hidden_effect = {
+            uma_ap2_system_variable_handler = {
+                METHOD = change
+                AREA_TYPE = realm_power
+            }
+            uma_ap2_realm_summation = yes
+        }
     }
 }
 
@@ -396,10 +412,14 @@ uma_ap_system_realm_stamina_minus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_stamina_rate
             value > 0
+        }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
         }
     }
     effect = {
@@ -420,21 +440,25 @@ uma_ap_system_realm_stamina_plus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_stamina_rate
             value < 5
         }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
+        }
     }
-     effect = {
-         custom_tooltip = uma_ap_system_realm_stamina_t_tt
-         hidden_effect = {
-             uma_ap2_system_variable_handler = {
-                 METHOD = change
-                 AREA_TYPE = realm_stamina
-             }
-             uma_ap2_realm_summation = yes
-         }
+    effect = {
+        custom_tooltip = uma_ap_system_realm_stamina_t_tt
+        hidden_effect = {
+            uma_ap2_system_variable_handler = {
+                METHOD = change
+                AREA_TYPE = realm_stamina
+            }
+            uma_ap2_realm_summation = yes
+        }
     }
 }
 
@@ -443,10 +467,14 @@ uma_ap_system_realm_wisdom_minus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_wisdom_rate
             value > 0
+        }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
         }
     }
     effect = {
@@ -467,21 +495,25 @@ uma_ap_system_realm_wisdom_plus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_wisdom_rate
             value < 5
         }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
+        }
     }
-     effect = {
-         custom_tooltip = uma_ap_system_realm_wisdom_t_tt
-         hidden_effect = {
-             uma_ap2_system_variable_handler = {
-                 METHOD = change
-                 AREA_TYPE = realm_wisdom
-             }
-             uma_ap2_realm_summation = yes
-         }
+    effect = {
+        custom_tooltip = uma_ap_system_realm_wisdom_t_tt
+        hidden_effect = {
+            uma_ap2_system_variable_handler = {
+                METHOD = change
+                AREA_TYPE = realm_wisdom
+            }
+            uma_ap2_realm_summation = yes
+        }
     }
 }
 
@@ -490,10 +522,14 @@ uma_ap_system_realm_charm_minus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_charm_rate
             value > 0
+        }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
         }
     }
     effect = {
@@ -513,20 +549,24 @@ uma_ap_system_realm_charm_plus = {
         always = yes
     }
     allow = {
-#        always = yes
+        #        always = yes
         check_variable = {
             which = uma_ap2_realm_charm_rate
             value < 1
         }
+        check_variable = {
+            which = uma_ap2_realm_charm_rate
+            value = 1
+        }
     }
-     effect = {
-         custom_tooltip = uma_ap_system_realm_charm_t_tt
-         hidden_effect = {
-             uma_ap2_system_variable_handler = {
-                 METHOD = change
-                 AREA_TYPE = realm_charm
-             }
-             uma_ap2_realm_summation = yes
-         }
+    effect = {
+        custom_tooltip = uma_ap_system_realm_charm_t_tt
+        hidden_effect = {
+            uma_ap2_system_variable_handler = {
+                METHOD = change
+                AREA_TYPE = realm_charm
+            }
+            uma_ap2_realm_summation = yes
+        }
     }
 }

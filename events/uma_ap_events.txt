@@ -1801,3 +1801,19 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = uma_ap.110
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+		uma_realm_speed_add_modifier = yes
+		uma_realm_power_add_modifier = yes
+		uma_realm_stamina_add_modifier = yes
+		uma_realm_wisdom_add_modifier = yes
+
+	}
+}
