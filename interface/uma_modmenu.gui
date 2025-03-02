@@ -11,9 +11,11 @@ guiTypes = {
 		size = { width = 1780 height = 960 }
 		scale = 0.5
 
+
 		background = {
 			name = "background"
 			quadTextureSprite = "GFX_uma_mmu_bg"
+			alwaysTransparent = yes
 		}
 
 		buttonType = { #关闭按钮
