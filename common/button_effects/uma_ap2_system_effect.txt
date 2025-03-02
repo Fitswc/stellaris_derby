@@ -527,10 +527,7 @@ uma_ap_system_realm_charm_minus = {
             which = uma_ap2_realm_charm_rate
             value > 0
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
-        }
+
     }
     effect = {
         custom_tooltip = uma_ap_system_realm_charm_t_tt
@@ -554,10 +551,7 @@ uma_ap_system_realm_charm_plus = {
             which = uma_ap2_realm_charm_rate
             value < 1
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
-        }
+
     }
     effect = {
         custom_tooltip = uma_ap_system_realm_charm_t_tt

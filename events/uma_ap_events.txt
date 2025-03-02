@@ -1793,11 +1793,11 @@ country_event = {
 		hidden_effect = {
 
 			uma_ap2_factor_summation = yes
-#			start_situation = {
-#				type = situation_uma_ap_2_situation_system_factor
-#				target = this
-#				effect = {}
-#			}
+			start_situation = {
+				type = situation_uma_ap_2_situation_system_realm
+				target = this
+				effect = {}
+			}
 		}
 	}
 }

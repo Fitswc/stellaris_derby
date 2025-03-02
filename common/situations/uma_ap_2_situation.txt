@@ -196,11 +196,11 @@ situation_uma_ap_2_situation_system_realm = {
 		}
 	}
 	on_progress_complete = {
-		custom_tooltip = situation_uma_ap_2_situation_system_factor_fin_tt
+		custom_tooltip = situation_uma_ap_2_situation_system_realm_fin_tt
 		hidden_effect = {
 			owner = {
 				country_event = {
-					id = uma_ap.54
+					id = uma_ap.154
 				}
 			}
 			Root = {
@@ -210,7 +210,7 @@ situation_uma_ap_2_situation_system_realm = {
 	}
 
 	stages = {
-		uma_ap2_factor_25 = {
+		uma_ap2_realm_25 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_blue
 			end = 25
@@ -221,40 +221,40 @@ situation_uma_ap_2_situation_system_realm = {
 
 		}
 
-		uma_ap2_factor_50 = {
+		uma_ap2_realm_50 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			end = 50
-			custom_tooltip = uma_ap_2_situation_system_50
+			custom_tooltip = uma_ap_2_situation_system_50_realm
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.51
+					id = uma_ap.151
 					days = 2
 				}
 			}
 		}
 
-		uma_ap2_factor_75 = {
+		uma_ap2_realm_75 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
 			end = 75
-			custom_tooltip = uma_ap_2_situation_system_75
+			custom_tooltip = uma_ap_2_situation_system_75_realm
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.52
+					id = uma_ap.152
 					days = 2
 				}
 			}
 		}
 
-		uma_ap2_factor_100 = {
+		uma_ap2_realm_100 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_blue
 			end = 100
-			custom_tooltip = uma_ap_2_situation_system_100
+			custom_tooltip = uma_ap_2_situation_system_100_realm
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.53
+					id = uma_ap.153
 					days = 2
 				}
 			}
