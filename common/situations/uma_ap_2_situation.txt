@@ -253,10 +253,6 @@ situation_uma_ap_2_situation_system_realm = {
 			end = 100
 			custom_tooltip = uma_ap_2_situation_system_100_realm
 			on_first_enter = {
-				situation_event = {
-					id = uma_ap.153
-					days = 2
-				}
 			}
 		}
 	}
@@ -321,7 +317,7 @@ situation_uma_ap_2_situation_system_realm = {
 		}
 		ai_weight = {
 			modifier = {
-				current_stage >= uma_ap2_realm_25
+				current_stage >= uma_ap2_realm_50
 			}
 			factor = 100
 		}

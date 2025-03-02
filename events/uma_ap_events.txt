@@ -1817,3 +1817,82 @@ country_event = {
 
 	}
 }
+
+
+## TODO: picture added
+situation_event = {
+	id = uma_ap.151
+	title = uma_ap.151.title
+	desc = uma_ap.151.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ap.151.a
+	}
+}
+
+situation_event = {
+	id = uma_ap.152
+	title = uma_ap.152.title
+	desc = uma_ap.152.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.152.a
+	}
+}
+
+
+country_event = {
+	id = uma_ap.154
+	title = uma_ap.154.title
+	desc = uma_ap.154.desc
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = uma_ap.110
+		}
+	}
+}
+
+
+
+#Event pool great evts
+situation_event = {
+	id = uma_ap.55
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				AND = {
+					situation_progress >= 35
+				}
+
+			}
+
+			AND = {
+				AND = {
+					situation_progress >= 60
+				}
+
+			}
+
+		}
+	}
+
+	immediate = {
+#		remove_situation_flag = uma_ap_factor_stage_1_done
+#		remove_situation_flag = uma_ap_factor_stage_2_done
+
+		fire_on_action = {
+			on_action = on_uma_ap2_factor_random_updown_event_list
+		}
+	}
+}

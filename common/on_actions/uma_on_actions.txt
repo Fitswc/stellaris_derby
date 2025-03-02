@@ -575,3 +575,14 @@ on_uma_ap2_factor_random_updown_event_list ={
 		7 = 0
 	}
 }
+
+
+on_uma_ap2_realm_random_updown_event_list ={
+	random_events = {
+		3 = uma_ap.160 # Stage 2 Challenge
+		3 = uma_ap.170 # Stage 2 Challenge
+
+		3 = uma_ap.180 #Stage3
+		7 = 0
+	}
+}
