@@ -1140,9 +1140,11 @@ uma_factor_pain_add_modifier = {
 
 uma_ap2_system_variable_handler = {
 	optimize_memory
-	$METHOD$_variable = {
-		which = uma_ap2_$AREA_TYPE$_rate
-		value = 1
+	owner = {
+		$METHOD$_variable = {
+			which = uma_ap2_$AREA_TYPE$_rate
+			value = 1
+		}
 	}
 }
 
@@ -1636,6 +1638,7 @@ uma_ap2_realm_check_give_initial = {
 			which = uma_ap2_realm_power_rate
 			value = 1
 		}
+
 	}
 	if = {
 		limit = {
@@ -1647,6 +1650,7 @@ uma_ap2_realm_check_give_initial = {
 			which = uma_ap2_realm_power_rate
 			value = 2
 		}
+
 	}
 
 
@@ -1660,6 +1664,7 @@ uma_ap2_realm_check_give_initial = {
 			which = uma_ap2_realm_wisdom_rate
 			value = 1
 		}
+
 	}
 
 
@@ -1673,6 +1678,7 @@ uma_ap2_realm_check_give_initial = {
 			which = uma_ap2_realm_stamina_rate
 			value = 1
 		}
+
 	}
 	if = {
 		limit = {
@@ -1684,5 +1690,6 @@ uma_ap2_realm_check_give_initial = {
 			which = uma_ap2_realm_stamina_rate
 			value = 2
 		}
+
 	}
 }

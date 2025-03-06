@@ -338,18 +338,31 @@ uma_ap_system_realm_power_t: "感知领域强化"
 uma_ap_system_realm_stamina_t: "生产领域强化"
 uma_ap_system_realm_wisdom_t: "辅助领域强化"
 uma_ap_system_realm_charm_t: "领域混合开关"
-uma_ap_system_realm_speed_t_tt: "$UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM$"
-uma_ap_system_realm_power_t_tt: "$UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM$"
-uma_ap_system_realm_stamina_t_tt: "$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM$"
-uma_ap_system_realm_wisdom_t_tt: "$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM$"
 uma_ap_system_realm_charm_t_tt: "此开关打开领域混合开关：这将会导致：\n可以 强化/激活 除预设领域外的其他领域选项。但是，§R会增加出现负面事件的概率§!"
 
 UMA_AP2_MODIFIER_REALM_POWER_EMPTY_NM: "."
-UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
-UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: "$mod_uma_country_society_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_physics_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_engineering_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
-UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: "$mod_uma_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_starbase_shipyard_build_time_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_country_cost_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
-UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: "$mod_uma_ship_accuracy_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_jumpdrive_cooldown_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_ship_military_upkeep_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
+UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$\n$mod_uma_ship_orbital_bombardment_mult$:\n$mod_army_damage_mult$"
+UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: "$mod_uma_country_society_research_produces_mult$\n $mod_country_uma_physics_research_produces_mult$\n $mod_country_uma_engineering_research_produces_mult$"
+UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: "$mod_uma_planet_jobs_produces_mult$\n$mod_uma_starbase_shipyard_build_time_mult$\n$mod_country_cost_mult$"
+UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: "$mod_uma_ship_accuracy_mult$\n$mod_uma_ship_jumpdrive_cooldown_mult$\n$mod_ship_military_upkeep_mult$"
+
+UMA_AP2_MODIFIER_REALM_POWER_EMPTY: "."
+UMA_AP2_MODIFIER_REALM_SPEED_EXIST: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
+UMA_AP2_MODIFIER_REALM_POWER_EXIST: "$mod_uma_country_society_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_physics_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_engineering_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
+UMA_AP2_MODIFIER_REALM_STAMINA_EXIST: "$mod_uma_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_starbase_shipyard_build_time_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_country_cost_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
+UMA_AP2_MODIFIER_REALM_WISDOM_EXIST: "$mod_uma_ship_accuracy_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_jumpdrive_cooldown_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_ship_military_upkeep_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
 #UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
+
+
+uma_ap_system_realm_speed_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_SPEED_EXIST$"
+uma_ap_system_realm_power_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_POWER_EXIST$"
+uma_ap_system_realm_stamina_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST$"
+uma_ap_system_realm_wisdom_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST$"
+
+uma_ap_system_realm_speed_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM$"
+uma_ap_system_realm_power_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM$"
+uma_ap_system_realm_stamina_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM$"
+uma_ap_system_realm_wisdom_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM$"
 
 
 mod_uma_planet_jobs_produces_mult: "£job£岗位产出的资源"
@@ -404,15 +417,15 @@ uma_apsystem_realm_mix_off: "关"
 
 
 
-situation_uma_ap_2_situation_system_realm_fin_tt: "这个种族：\n[UMA_AP2_MODIFIER_REALM_SPEED][UMA_AP2_MODIFIER_REALM_POWER][UMA_AP2_MODIFIER_REALM_STAMINA][UMA_AP2_MODIFIER_REALM_WISDOM][UMA_AP2_MODIFIER_REALM_CHARM]"
+situation_uma_ap_2_situation_system_realm_fin_tt: "这个种族：\n[UMA_AP2_MODIFIER_REALM_SPEED][UMA_AP2_MODIFIER_REALM_POWER][UMA_AP2_MODIFIER_REALM_STAMINA][UMA_AP2_MODIFIER_REALM_WISDOM]"
 
 situation_uma_ap_2_situation_system_realm: "领域迭代"
 situation_uma_ap_2_situation_system_realm_type: "领域迭代"
 situation_uma_ap_2_situation_system_realm_desc: "REPLACE_ME"
 uma_ap2_realm_25: "准备阶段完成"
-uma_ap2_realm_50: "$领域强化 阶段完成$"
-uma_ap2_realm_75: "$领域激发 阶段完成$"
-uma_ap2_realm_100: "$收尾 阶段$"
+uma_ap2_realm_50: "领域强化阶段完成"
+uma_ap2_realm_75: "领域激发阶段完成"
+uma_ap2_realm_100: "收尾 阶段"
 
 uma_ap_2_situation_system_50_realm: "领域强化 阶段"
 uma_ap_2_situation_system_75_realm: "领域激发 阶段"
@@ -473,7 +486,7 @@ uma_trait_ap2_realm_wisdom_4: "领域: 辅助$uma_romannum_4$"
 uma_trait_ap2_realm_wisdom_4_desc: ""
 uma_trait_ap2_realm_wisdom_5: "领域: 辅助$uma_romannum_5$"
 uma_trait_ap2_realm_wisdom_5_desc: ""
-
+uma_ap2_realm_charm_rate_have_to_greater_than_1: "要激发领域，必须先启用领域混合"
 
 
 uma_ap.160.title: "失眠！"
@@ -483,4 +496,4 @@ uma_ap.160.b: "可以派发安眠药物"
 uma_ap.160.c: "我也想要很长个人的时间"
 
 uma_ap2_realm_insomnia_pills: "未被完全解决的失眠症"
-uma_ap2_realm_insomnia_pills_desc: "缓兵之计不能永远解决这个问题"
+uma_ap2_realm_insomnia_pills_desc: "我们解决了这个问题，暂时的"

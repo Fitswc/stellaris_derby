@@ -300,14 +300,26 @@ uma_ap_system_realm_speed_minus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_speed_rate
-            value > 0
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_speed_rate
+                value > 0
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+        if = {
+            limit = {
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
@@ -328,14 +340,26 @@ uma_ap_system_realm_speed_plus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_speed_rate
-            value < 5
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_speed_rate
+                value < 5
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+        if = {
+            limit = {
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
@@ -357,13 +381,27 @@ uma_ap_system_realm_power_minus = {
     }
     allow = {
         #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_power_rate
-            value > 0
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_power_rate
+                value > 0
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+        if = {
+            limit = {
+
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
@@ -384,14 +422,27 @@ uma_ap_system_realm_power_plus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_power_rate
-            value < 5
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_power_rate
+                value < 5
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+        if = {
+            limit = {
+
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
@@ -412,14 +463,27 @@ uma_ap_system_realm_stamina_minus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_stamina_rate
-            value > 0
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_stamina_rate
+                value > 0
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+        if = {
+            limit = {
+
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
@@ -440,14 +504,27 @@ uma_ap_system_realm_stamina_plus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_stamina_rate
-            value < 5
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_stamina_rate
+                value < 5
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+        if = {
+            limit = {
+
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
@@ -467,15 +544,28 @@ uma_ap_system_realm_wisdom_minus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_wisdom_rate
-            value > 0
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_wisdom_rate
+                value > 0
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
-        }
+       if = {
+           limit = {
+
+               check_variable = {
+                   which = uma_ap2_realm_speed_rate
+                   value = 0
+               }
+           }
+           custom_tooltip_fail = {
+               text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+               check_variable = {
+                   which = uma_ap2_realm_charm_rate
+                   value = 1
+               }
+           }
+       }
     }
     effect = {
         custom_tooltip = uma_ap_system_realm_wisdom_t_tt
@@ -495,14 +585,27 @@ uma_ap_system_realm_wisdom_plus = {
         always = yes
     }
     allow = {
-        #        always = yes
-        check_variable = {
-            which = uma_ap2_realm_wisdom_rate
-            value < 5
+        hidden_trigger = {
+            check_variable = {
+                which = uma_ap2_realm_wisdom_rate
+                value < 5
+            }
         }
-        check_variable = {
-            which = uma_ap2_realm_charm_rate
-            value = 1
+       if = {
+            limit = {
+
+                check_variable = {
+                    which = uma_ap2_realm_speed_rate
+                    value = 0
+                }
+            }
+            custom_tooltip_fail = {
+                text = uma_ap2_realm_charm_rate_have_to_greater_than_1
+                check_variable = {
+                    which = uma_ap2_realm_charm_rate
+                    value = 1
+                }
+            }
         }
     }
     effect = {
