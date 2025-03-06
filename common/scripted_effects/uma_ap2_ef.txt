@@ -1622,3 +1622,67 @@ uma_realm_wisdom_add_modifier = {
 	}
 
 }
+
+
+uma_ap2_realm_check_give_initial = {
+	optimize_memory
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_wisdom_1 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_power_rate
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_wisdom_2 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_power_rate
+			value = 2
+		}
+	}
+
+
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_stamina_1 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_wisdom_rate
+			value = 1
+		}
+	}
+
+
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_power_1 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_stamina_rate
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_power_2 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_stamina_rate
+			value = 2
+		}
+	}
+}

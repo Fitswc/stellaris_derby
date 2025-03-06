@@ -1755,26 +1755,30 @@ country_event = {
 
 	immediate = {
 		set_variable = {
-			which = uma_ap2_power_power_rate
+			which = uma_ap2_realm_power_rate
 			value = 0
 		}
 		set_variable = {
-			which = uma_ap2_power_speed_rate
+			which = uma_ap2_realm_speed_rate
 			value = 0
 		}
 		set_variable = {
-			which = uma_ap2_power_stamina_rate
+			which = uma_ap2_realm_stamina_rate
 			value = 0
 		}
 		set_variable = {
-			which = uma_ap2_power_wisdom_rate
+			which = uma_ap2_realm_wisdom_rate
 			value = 0
 		}
 
 		set_variable = {
-			which = uma_ap2_power_depth_rate
+			which = uma_ap2_realm_depth_rate
 			value = 0
 		}
+	}
+
+	after = {
+		uma_ap2_realm_check_give_initial = yes
 	}
 }
 
@@ -1868,7 +1872,7 @@ country_event = {
 
 #Event pool great evts
 situation_event = {
-	id = uma_ap.55
+	id = uma_ap.155
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -1904,22 +1908,47 @@ situation_event = {
 
 
 #失眠
-country_event = {
+situation_event  = {
 	id = uma_ap.160
 	title = uma_ap.160.title
 	desc = uma_ap.160.desc
 	is_triggered_only = yes
+	situation = This
+
+	trigger = {
+		NOT = {
+			has_situation_flag = uma_ap2_realm_160_happened
+		}
+	}
+
+	immediate = {
+		set_situation_flag = uma_ap2_realm_160_happened
+	}
 
 	option = {
 		name = uma_ap.160.a
-
+		add_situation_progress = -20
 	}
 	option = {
 		name = uma_ap.160.b
+		owner= {
+			add_modifier = {
+				modifier = uma_ap2_realm_insomnia_pills
+				days = 5000
+			}
+		}
 
 	}
 	option = {
 		name = uma_ap.160.c
-
+		owner = {
+			add_modifier = {
+				modifier = uma_ap2_realm_insomnia
+				days = 5000
+			}
+		}
 	}
 }
+
+
+
