@@ -1747,6 +1747,35 @@ country_event = {
 
 #Realm -> 强化事项： 战斗领域 感知领域 治疗领域 辅助领域 领域混合开关 if 混合开关没有打开 -> 各自领域升级 每项最多为1
 
+country_event = {
+	id = uma_ap.140
+	title = uma_ap.140.title
+	desc = uma_ap.140.desc
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.143
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.40.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.100
+			}
+		}
+	}
+}
+
+
 ##Setup
 country_event = {
 	id = uma_ap.143
