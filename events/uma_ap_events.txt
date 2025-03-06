@@ -1858,6 +1858,10 @@ country_event = {
 			id = uma_ap.110
 		}
 	}
+
+	option = {
+		name = uma_ap.154.a
+	}
 }
 
 
@@ -1892,7 +1896,30 @@ situation_event = {
 #		remove_situation_flag = uma_ap_factor_stage_2_done
 
 		fire_on_action = {
-			on_action = on_uma_ap2_factor_random_updown_event_list
+			on_action = on_uma_ap2_realm_random_updown_event_list
 		}
+	}
+}
+
+
+
+#失眠
+country_event = {
+	id = uma_ap.160
+	title = uma_ap.160.title
+	desc = uma_ap.160.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.160.a
+
+	}
+	option = {
+		name = uma_ap.160.b
+
+	}
+	option = {
+		name = uma_ap.160.c
+
 	}
 }
