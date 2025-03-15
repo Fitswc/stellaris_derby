@@ -1,0 +1,62 @@
+uma_leaders = {
+	name = uma_leaders
+	name_plural = uma_leaders_plural
+	description = uma_leaders_description
+	can_research_tech = yes
+	can_research_special_projects = yes
+	can_crew_science_ship = yes
+	can_research_anomalies = yes
+	can_survey = yes
+	can_boost_cloaking_detection = yes
+	can_research_archaeology_site = yes
+	can_explore_rifts = yes
+	can_conduct_active_reconnaissance = yes
+	can_govern_planet = yes
+
+	can_be_assigned_to_federation = yes
+	can_be_assigned_to_galactic_community = yes
+
+	can_lead_navy = yes
+	can_lead_army = yes
+	can_have_traits = yes
+
+	max_trait_points = 1
+	leader_capacity = 3
+	resources = {
+		category = leader_scientists
+		cost = {
+			unity = 1
+			mult = value:leader_cost
+		}
+		inline_script = "paragon/leader_base_upkeep"
+	}
+
+	ai_weight = {
+		base = 0
+	}
+
+	minimum_ai_target = 3
+	leader_background_job_weight = {
+		head_researcher = 100
+		noble = 100
+		colonist = 100
+		researcher = 100
+		xeno_zoo_keeper = 100
+		telepath = 100
+		chemist = 100
+		translucer = 100
+		gas_refiner = 100
+		roboticist = 100
+		healthcare = 100
+		bluelotus_technician = 100
+		foundry = 100
+		catalytic_technician = 100
+		artificer = 100
+		technician = 100
+		gas_extractor = 100
+		mote_harvester = 100
+		puddle_technician = 100
+	}
+	icon = 3
+	paragon_background_selector = "paragon_background_selector"
+}

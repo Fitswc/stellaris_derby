@@ -414,3 +414,36 @@ uma_create_leader_sweepy = {
 		}
 	}
 }
+
+
+uma_create_leader_current = {
+	create_leader = {
+		name = CURRENT
+		species = root
+		event_leader = no
+		gender = female
+		immortal = yes
+		class = official
+		background_planet = event_target:uma_player_umamusume_planet
+		background_job = uma_researcher
+		custom_catch_phrase = uma_sweepy_catch_phrase
+		custom_description = uma_sweepy_backstory
+
+		skip_background_generation = yes
+		skill = 4
+		set_age = 15
+		traits = {
+			0 = uma_scientists_trait_sp_sweep
+			1 = leader_trait_tansuozhe_scientists
+			2 = subclass_xiantoudefengjing_scientists
+			3 = leader_trait_uma_generic
+		}
+		effect = {
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_sweepy_tonson
+			set_leader_flag = legendary_leader
+			save_global_event_target_as = uma_is_leader_sweepy_tonson
+			change_leader_portrait = 56c
+		}
+	}
+}
