@@ -132,7 +132,16 @@ uma_spawn_system_gold_ship_crisis = {
 	}
 
 	else_if = {
-		limit = { count_system = { count <= 450 } }
+		limit = {
+			AND = {
+				count_system = {
+					count <= 450
+				}
+				count_system = {
+					count > 250
+				}
+			}
+		}
 		no_scope = {
 			spawn_system = {
 				min_distance >= 325
@@ -146,7 +155,16 @@ uma_spawn_system_gold_ship_crisis = {
 	}
 
 	else_if = {
-		limit = { count_system = { count <= 650 } }
+		limit = {
+			AND = {
+				count_system = {
+					count <= 650
+				}
+				count_system = {
+					count > 450
+				}
+			}
+		}
 		no_scope = {
 			spawn_system = {
 				min_distance >= 415
@@ -160,7 +178,17 @@ uma_spawn_system_gold_ship_crisis = {
 	}
 
 	else_if = {
-		limit = { count_system = { count <= 850 } }
+		limit = {
+			AND = {
+				count_system = {
+					count <= 850
+				}
+				count_system = {
+					count > 650
+				}
+			}
+		}
+
 		no_scope = {
 			spawn_system = {
 				min_distance >= 445
@@ -185,7 +213,5 @@ uma_spawn_system_gold_ship_crisis = {
 			}
 		}
 	}
-
-
 
 }

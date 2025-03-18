@@ -9,14 +9,6 @@ event = {
     is_triggered_only = yes
 
     immediate = {
-		every_playable_country = {
-			random_country = {
-				limit = {
-					has_authority = auth_trainingcenter
-				}
-				uma_spawn_system_gold_ship_crisis = yes
-			}
-		}
 
 		every_playable_country = {
 			if = {
@@ -281,6 +273,10 @@ country_event = {
 		country_event = {
 			id = uma_fz.1
 		}
+
+		country_event = {
+			id = uma_origin.5
+		}
 	}
 
 }
@@ -391,5 +387,26 @@ country_event = {
 		country_event = {
 			id = uma_fz.1
 		}
+
+		country_event = {
+			id = uma_origin.5
+		}
+	}
+}
+
+country_event = {
+	id = uma_origin.5
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOt = {
+			has_global_flag = uma_spawn_system_gold_ship_crisis_true
+		}
+	}
+
+	immediate = {
+		set_global_flag = uma_spawn_system_gold_ship_crisis_true
+		uma_spawn_system_gold_ship_crisis = yes
 	}
 }
