@@ -80,63 +80,33 @@ country_event = {
 			}
 		}
 		owner_species = { save_event_target_as = owner_species }
-		create_country = {
-			name = "NAME_Gold_Ship_Fleet" #黄金家族
-			species = root.species
-			type = uma_faction
-			name_list = UMAname
-			auto_delete = no
-			flag = {
-				icon = {
-					category = "uiu_flags"
-					file = "uiu_flags02.dds"
-				}
-				background = {
-					category = "backgrounds"
-					file = "circle.dds"
-				}
-				colors = {
-					"red_orange"
-					"blue"
-					"null"
-					"null"
-				}
-			}
-			effect = {
-				set_country_flag = gold_ship
-				establish_communications_no_message = root
-				establish_contact = { who = root location = root.capital_scope }
-				save_global_event_target_as = uma_gold_invasion_family_country
-				create_ship_design = { design = "NAME_Void_Shaper" }
-				add_ship_design = last_created_design
-				create_ship_design = { design = "NAME_Unbidden_Anchor" }
-				add_ship_design = last_created_design
-				create_ship_design = { design = "NAME_Unbidden_Starbase"}
-				add_ship_design = last_created_design
-				create_fleet = {
-					name = "goldi_ship_object" #神秘的船
-					effect = {
-						save_global_event_target_as = uma_glod_ship_titan
-						set_owner = prev
-						create_ship_design = {
-							design = "NAME_Monadic_Qerr"
+		event_target:uma_gold_invasion_family_country = {
+			establish_communications_no_message = root
+			establish_contact = { who = root location = root.capital_scope }
+
+			create_fleet = {
+				name = "goldi_ship_object" #神秘的船
+				effect = {
+					save_global_event_target_as = uma_glod_ship_titan
+					set_owner = prev
+					create_ship_design = {
+						design = "NAME_Monadic_Qerr"
+					}
+					create_ship = {
+						name = "NAME_Xiaojin"
+						design = last_created_design
+						effect = {
+							set_ship_flag = Gin_ship
+							set_disable_at_health = 0.05
+							save_event_target_as = Gin_ship
 						}
-						create_ship = {
-							name = "NAME_Xiaojin"
-							design = last_created_design
-							effect = {
-								set_ship_flag = Gin_ship
-								set_disable_at_health = 0.05
-								save_event_target_as = Gin_ship
-							}
-						}
-						set_location = event_target:gold_ship_planet
-						set_fleet_stance = passive
-						queue_actions = {
-							repeat = {
-								wait = {
-									duration = 100
-								}
+					}
+					set_location = event_target:gold_ship_planet
+					set_fleet_stance = passive
+					queue_actions = {
+						repeat = {
+							wait = {
+								duration = 100
 							}
 						}
 					}
@@ -144,6 +114,70 @@ country_event = {
 			}
 		}
 	}
+#		create_country = {
+#			name = "NAME_Gold_Ship_Fleet" #黄金家族
+#			species = root.species
+#			type = uma_faction
+#			name_list = UMAname
+#			auto_delete = no
+#			flag = {
+#				icon = {
+#					category = "uiu_flags"
+#					file = "uiu_flags02.dds"
+#				}
+#				background = {
+#					category = "backgrounds"
+#					file = "circle.dds"
+#				}
+#				colors = {
+#					"red_orange"
+#					"blue"
+#					"null"
+#					"null"
+#				}
+#			}
+#			effect = {
+#				set_country_flag = gold_ship
+#				establish_communications_no_message = root
+#				establish_contact = { who = root location = root.capital_scope }
+#				save_global_event_target_as = uma_gold_invasion_family_country
+#				create_ship_design = { design = "NAME_Void_Shaper" }
+#				add_ship_design = last_created_design
+#				create_ship_design = { design = "NAME_Unbidden_Anchor" }
+#				add_ship_design = last_created_design
+#				create_ship_design = { design = "NAME_Unbidden_Starbase"}
+#				add_ship_design = last_created_design
+#				create_fleet = {
+#					name = "goldi_ship_object" #神秘的船
+#					effect = {
+#						save_global_event_target_as = uma_glod_ship_titan
+#						set_owner = prev
+#						create_ship_design = {
+#							design = "NAME_Monadic_Qerr"
+#						}
+#						create_ship = {
+#							name = "NAME_Xiaojin"
+#							design = last_created_design
+#							effect = {
+#								set_ship_flag = Gin_ship
+#								set_disable_at_health = 0.05
+#								save_event_target_as = Gin_ship
+#							}
+#						}
+#						set_location = event_target:gold_ship_planet
+#						set_fleet_stance = passive
+#						queue_actions = {
+#							repeat = {
+#								wait = {
+#									duration = 100
+#								}
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
 	option = {
 		name = "uma_crisis.00.a"
 		begin_event_chain = {
@@ -2361,74 +2395,74 @@ country_event = {
 
 	immediate = {
 		set_global_flag = uma_gold_inviade_system_generated
-		if = {
-			limit = { count_system = { count <= 250 } } #200
-			no_scope = {
-				spawn_system = {
-					min_distance >= 105
-					max_distance <= 215
-					min_orientation_angle = 160
-					max_orientation_angle = 200
-					initializer = "uma_gold_system_initializer"
-					hyperlane = no
-				}
-			}
-		}
-
-		else_if = {
-			limit = { count_system = { count <= 450 } }
-			no_scope = {
-				spawn_system = {
-					min_distance >= 325
-					max_distance <= 335
-					min_orientation_angle = 160
-					max_orientation_angle = 200
-					initializer = "uma_gold_system_initializer"
-					hyperlane = no
-				}
-			}
-		}
-
-		else_if = {
-			limit = { count_system = { count <= 650 } }
-			no_scope = {
-				spawn_system = {
-					min_distance >= 415
-					max_distance <= 425
-					min_orientation_angle = 160
-					max_orientation_angle = 200
-					initializer = "uma_gold_system_initializer"
-					hyperlane = no
-				}
-			}
-		}
-
-		else_if = {
-			limit = { count_system = { count <= 850 } }
-			no_scope = {
-				spawn_system = {
-					min_distance >= 445
-					max_distance <= 455
-					min_orientation_angle = 160
-					max_orientation_angle = 200
-					initializer = "uma_gold_system_initializer"
-					hyperlane = no
-				}
-			}
-		}
-
-		else = {
-			no_scope = {
-				spawn_system = {
-					min_distance >= 475
-					max_distance <= 485
-					min_orientation_angle = 160
-					max_orientation_angle = 200
-					initializer = "uma_gold_system_initializer"
-					hyperlane = no
-				}
-			}
-		}
+#		if = {
+#			limit = { count_system = { count <= 250 } } #200
+#			no_scope = {
+#				spawn_system = {
+#					min_distance >= 105
+#					max_distance <= 215
+#					min_orientation_angle = 160
+#					max_orientation_angle = 200
+#					initializer = "uma_gold_system_initializer"
+#					hyperlane = no
+#				}
+#			}
+#		}
+#
+#		else_if = {
+#			limit = { count_system = { count <= 450 } }
+#			no_scope = {
+#				spawn_system = {
+#					min_distance >= 325
+#					max_distance <= 335
+#					min_orientation_angle = 160
+#					max_orientation_angle = 200
+#					initializer = "uma_gold_system_initializer"
+#					hyperlane = no
+#				}
+#			}
+#		}
+#
+#		else_if = {
+#			limit = { count_system = { count <= 650 } }
+#			no_scope = {
+#				spawn_system = {
+#					min_distance >= 415
+#					max_distance <= 425
+#					min_orientation_angle = 160
+#					max_orientation_angle = 200
+#					initializer = "uma_gold_system_initializer"
+#					hyperlane = no
+#				}
+#			}
+#		}
+#
+#		else_if = {
+#			limit = { count_system = { count <= 850 } }
+#			no_scope = {
+#				spawn_system = {
+#					min_distance >= 445
+#					max_distance <= 455
+#					min_orientation_angle = 160
+#					max_orientation_angle = 200
+#					initializer = "uma_gold_system_initializer"
+#					hyperlane = no
+#				}
+#			}
+#		}
+#
+#		else = {
+#			no_scope = {
+#				spawn_system = {
+#					min_distance >= 475
+#					max_distance <= 485
+#					min_orientation_angle = 160
+#					max_orientation_angle = 200
+#					initializer = "uma_gold_system_initializer"
+#					hyperlane = no
+#				}
+#			}
+#		}
 	}
 	after = {
 		hidden_effect = {

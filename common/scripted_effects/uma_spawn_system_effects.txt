@@ -73,3 +73,119 @@ uma_spawn_system_around_solar_system_multiplayer = {
 		}
 	}
 }
+
+
+
+uma_spawn_system_gold_ship_crisis = {
+	optimize_memory
+	create_country = {
+		name = "NAME_Gold_Ship_Fleet" #黄金家族
+		species = This.species
+		type = uma_faction
+		name_list = UMAname
+		auto_delete = no
+		flag = {
+			icon = {
+				category = "uiu_flags"
+				file = "uiu_flags02.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors = {
+				"red_orange"
+				"blue"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			set_country_flag = gold_ship
+
+			save_global_event_target_as = uma_gold_invasion_family_country
+			create_ship_design = { design = "NAME_Void_Shaper" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Unbidden_Anchor" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Unbidden_Starbase" }
+			add_ship_design = last_created_design
+
+			set_closed_borders = {
+				who = From
+				status = yes
+			}
+		}
+	}
+	if = {
+		limit = { count_system = { count <= 250 } } #200
+		no_scope = {
+			spawn_system = {
+				min_distance >= 105
+				max_distance <= 215
+				min_orientation_angle = 160
+				max_orientation_angle = 200
+				initializer = "uma_gold_system_initializer"
+				hyperlane = no
+			}
+		}
+	}
+
+	else_if = {
+		limit = { count_system = { count <= 450 } }
+		no_scope = {
+			spawn_system = {
+				min_distance >= 325
+				max_distance <= 335
+				min_orientation_angle = 160
+				max_orientation_angle = 200
+				initializer = "uma_gold_system_initializer"
+				hyperlane = no
+			}
+		}
+	}
+
+	else_if = {
+		limit = { count_system = { count <= 650 } }
+		no_scope = {
+			spawn_system = {
+				min_distance >= 415
+				max_distance <= 425
+				min_orientation_angle = 160
+				max_orientation_angle = 200
+				initializer = "uma_gold_system_initializer"
+				hyperlane = no
+			}
+		}
+	}
+
+	else_if = {
+		limit = { count_system = { count <= 850 } }
+		no_scope = {
+			spawn_system = {
+				min_distance >= 445
+				max_distance <= 455
+				min_orientation_angle = 160
+				max_orientation_angle = 200
+				initializer = "uma_gold_system_initializer"
+				hyperlane = no
+			}
+		}
+	}
+
+	else = {
+		no_scope = {
+			spawn_system = {
+				min_distance >= 475
+				max_distance <= 485
+				min_orientation_angle = 160
+				max_orientation_angle = 200
+				initializer = "uma_gold_system_initializer"
+				hyperlane = no
+			}
+		}
+	}
+
+
+
+}

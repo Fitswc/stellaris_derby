@@ -10,6 +10,15 @@ event = {
 
     immediate = {
 		every_playable_country = {
+			random_country = {
+				limit = {
+					has_authority = auth_trainingcenter
+				}
+				uma_spawn_system_gold_ship_crisis = yes
+			}
+		}
+
+		every_playable_country = {
 			if = {
 				limit = {
 					OR = {
