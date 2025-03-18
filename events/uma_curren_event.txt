@@ -18,6 +18,12 @@ country_event = {
 
 	option = {
 		name = uma_curren.1.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.2
+				days = 30
+			}
+		}
 	}
 }
 
@@ -39,6 +45,11 @@ country_event = {
 
 	option = {
 		name = uma_curren.2.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.3
+			}
+		}
 	}
 
 	option = {
@@ -79,6 +90,11 @@ country_event = {
 	option = {
 		name = uma_diplomatic_event.skip
 		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.5
+			}
+		}
 	}
 }
 
@@ -104,6 +120,11 @@ country_event = {
 
 	option = {
 		name = uma_curren.4.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.5
+			}
+		}
 	}
 }
 
@@ -169,6 +190,7 @@ country_event = {
 	option = {
 		name = uma_curren.6.a
 		response_text = uma_curren.6.a.tt
+
 	}
 
 	option = {
@@ -176,7 +198,6 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = uma_curren.7
-				days = 50
 			}
 		}
 	}
@@ -198,11 +219,12 @@ country_event = {
 
 	option = {
 		name = uma_curren.7.a
+		#End
 	}
 }
 
 country_event = {
-	id = uma_curren.10
+	id = uma_curren.8
 	hide_window = yes
 	is_triggered_only = yes
 

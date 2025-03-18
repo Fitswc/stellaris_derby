@@ -425,7 +425,7 @@ uma_create_leader_curren = {
 		immortal = yes
 		class = official
 		background_planet = event_target:uma_player_umamusume_planet
-		background_job = uma_researcher
+		background_job = uma_unknown
 		custom_catch_phrase = uma_curren_catch_phrase
 		custom_description = uma_curren_backstory
 
@@ -440,10 +440,10 @@ uma_create_leader_curren = {
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
-			set_leader_flag = uma_is_sweepy_tonson
+			set_leader_flag = uma_is_curren_chan
 			set_leader_flag = legendary_leader
-			save_global_event_target_as = uma_is_leader_sweepy_tonson
-			change_leader_portrait = 56c
+			save_global_event_target_as = uma_is_leader_curren_chan
+			change_leader_portrait = 34c
 		}
 	}
 }
