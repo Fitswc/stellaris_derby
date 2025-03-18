@@ -1,14 +1,14 @@
-namespace = uma_current
+namespace = uma_curren
 
 country_event = {
-	id = uma_current.1
+	id = uma_curren.1
 	is_triggered_only = yes
-	title = uma_current.1.title
-	desc = uma_current.1.desc
+	title = uma_curren.1.title
+	desc = uma_curren.1.desc
 
 	trigger = {
 		empire_size > 100
-		has_country_flag = uma_current_event_1_happened
+		has_country_flag = uma_curren_event_1_happened
 	}
 
 
@@ -17,16 +17,16 @@ country_event = {
 	}
 
 	option = {
-		name = uma_current.1.a
+		name = uma_curren.1.a
 	}
 }
 
 
 country_event = {
-	id = uma_current.2
+	id = uma_curren.2
 	is_triggered_only = yes
-	title = uma_current.2.title
-	desc = uma_current.2.desc
+	title = uma_curren.2.title
+	desc = uma_curren.2.desc
 
 	trigger = {
 
@@ -38,19 +38,19 @@ country_event = {
 	}
 
 	option = {
-		name = uma_current.2.a
+		name = uma_curren.2.a
 	}
 
 	option = {
-		name = uma_current.2.b
+		name = uma_curren.2.b
 	}
 }
 
 
 country_event = {
-	id = uma_current.3
-	title = uma_current_name
-	desc = uma_current.3.desc
+	id = uma_curren.3
+	title = uma_curren_name
+	desc = uma_curren.3.desc
 	diplomatic = yes
 	is_triggered_only = yes
 	picture_event_data = {
@@ -68,97 +68,114 @@ country_event = {
 	}
 
 	option = {
-		name = uma_current.3.a
-	}
-}
-
-country_event = {
-	id = uma_current.4
-	title = uma_current_name
-	desc = uma_current.4.desc
-	diplomatic = yes
-	is_triggered_only = yes
-	picture_event_data = {
-		room = Root
-		portrait = 34c
-	}
-
-	trigger = {
-
-	}
-
-
-	immediate = {
-
-	}
-
-	option = {
-		name = uma_current.4.a
-	}
-}
-
-
-country_event = {
-	id = uma_current.5
-	title = uma_current_name
-	desc = uma_current.5.desc
-	diplomatic = yes
-	is_triggered_only = yes
-	picture_event_data = {
-		room = Root
-		portrait = 34c
-	}
-
-	trigger = {
-
-	}
-
-
-	immediate = {
-
-	}
-
-	option = {
-		name = uma_current.5.a
-	}
-	option = {
-		name = uma_current.5.b
-	}
-	option = {
-		name = uma_current.5.c
-	}
-}
-
-
-country_event = {
-	id = uma_current.6
-	title = uma_current_name
-	desc = uma_current.6.desc
-	diplomatic = yes
-	is_triggered_only = yes
-	picture_event_data = {
-		room = Root
-		portrait = 34c
-	}
-
-	trigger = {
-
-	}
-
-	immediate = {
-
-	}
-
-	option = {
-		name = uma_current.6.a
-		response_text = uma_current.6.a.tt
-	}
-
-	option = {
-		name = uma_current.6.b
+		name = uma_curren.3.a
 		hidden_effect = {
 			country_event = {
-				id = uma_current.7
+				id = uma_curren.4
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+	}
+}
+
+country_event = {
+	id = uma_curren.4
+	title = uma_curren_name
+	desc = uma_curren.4.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = Root
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.4.a
+	}
+}
+
+
+country_event = {
+	id = uma_curren.5
+	title = uma_curren_name
+	desc = uma_curren.5.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = Root
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.5.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.6
+			}
+		}
+	}
+	option = {
+		name = uma_curren.5.b
+
+	}
+	option = {
+		name = uma_curren.5.c
+		#End Events
+	}
+}
+
+
+country_event = {
+	id = uma_curren.6
+	title = uma_curren_name
+	desc = uma_curren.6.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = Root
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.6.a
+		response_text = uma_curren.6.a.tt
+	}
+
+	option = {
+		name = uma_curren.6.b
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.7
 				days = 50
 			}
 		}
@@ -166,15 +183,10 @@ country_event = {
 }
 
 country_event = {
-	id = uma_current.7
-	title = uma_current.7.title
-	desc = uma_current.7.desc
-	diplomatic = yes
+	id = uma_curren.7
+	title = uma_curren.7.title
+	desc = uma_curren.7.desc
 	is_triggered_only = yes
-	picture_event_data = {
-		room = Root
-		portrait = 34c
-	}
 
 	trigger = {
 
@@ -185,12 +197,12 @@ country_event = {
 	}
 
 	option = {
-		name = uma_current.7.a
+		name = uma_curren.7.a
 	}
 }
 
 country_event = {
-	id = uma_current.10
+	id = uma_curren.10
 	hide_window = yes
 	is_triggered_only = yes
 

@@ -416,7 +416,7 @@ uma_create_leader_sweepy = {
 }
 
 
-uma_create_leader_current = {
+uma_create_leader_curren = {
 	create_leader = {
 		name = CURRENT
 		species = root
@@ -426,8 +426,8 @@ uma_create_leader_current = {
 		class = official
 		background_planet = event_target:uma_player_umamusume_planet
 		background_job = uma_researcher
-		custom_catch_phrase = uma_sweepy_catch_phrase
-		custom_description = uma_sweepy_backstory
+		custom_catch_phrase = uma_curren_catch_phrase
+		custom_description = uma_curren_backstory
 
 		skip_background_generation = yes
 		skill = 4
