@@ -159,7 +159,11 @@ country_event = {
 	}
 	option = {
 		name = uma_curren.5.b
-
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.8
+			}
+		}
 	}
 	option = {
 		name = uma_curren.5.c
@@ -190,7 +194,11 @@ country_event = {
 	option = {
 		name = uma_curren.6.a
 		response_text = uma_curren.6.a.tt
-
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.8
+			}
+		}
 	}
 
 	option = {
@@ -225,16 +233,172 @@ country_event = {
 
 country_event = {
 	id = uma_curren.8
-	hide_window = yes
+	title = CURREN
+	desc = uma_curren.8.desc
 	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
 
+	picture = GFX_uma_leader_zf
+	event_window_type = leader_recruit
 
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_curren
+	}
+
+	immediate = {
+		play_sound = uma_hire_CURREN
+		create_country = {
+            name = "NAME_uma_empty_zf"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = uma_curren_country
+            }
+        }
+        event_target:uma_zf_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			uma_create_leader_curren = yes
+		}
+	}
+
+	option = {
+		name = uma_curren.8.a
+		response_text = uma_curren.8.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_curren.8.b
+		response_text = uma_curren.8.b.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_curren.8.c
+		response_text = uma_curren.8.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_curren.8.hire
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_zf
+			species = root.species
+			gender = female
+		}
+		hidden_effect = {
+			last_created_leader = {
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_curren_chan
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = uma_is_leader_curren_chan
+				change_leader_portrait = 34c
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_curren_chan
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_curren_chan
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_curren_country = {
+				destroy_country = yes
+			}
+		}
+	}
 }
 
 
 
+country_event = {
+	id = uma_curren.10
+	title = uma_curren.10.title
+	desc = uma_curren.10.desc
+	is_triggered_only = yes
+
+	immediate = {
 
 
+	}
+
+	option = {
+		name = uma_curren.10.a
+		hidden_effect = {
+			enable_special_project = {
+				name = uma_curren_whatislove
+				location = Root.capital_scope
+				owner = Root
+			}
+		}
+	}
+
+	option = {
+		name = uma_curren.10.b
+	}
+}
+
+
+country_event = {
+	id = uma_curren.11
+	title = uma_curren.11.title
+	desc = uma_curren.11.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+
+	}
+}
 
 
 
