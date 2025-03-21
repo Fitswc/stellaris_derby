@@ -272,7 +272,7 @@ country_event = {
                 save_event_target_as = uma_curren_country
             }
         }
-        event_target:uma_zf_country = {
+        event_target:uma_curren_country = {
 			create_species = {
 				name = "NAME_Unknown"
 				class = umamusume
@@ -309,7 +309,7 @@ country_event = {
 		name = uma_curren.8.hire
 		tag = hire_leader
 		clone_leader = {
-			target = event_target:uma_is_leader_zf
+			target = event_target:uma_is_leader_curren_chan
 			species = root.species
 			gender = female
 		}
@@ -895,7 +895,11 @@ country_event = {
 	}
 	option = {
 		name = uma_curren.42.b
-
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.44
+			}
+		}
 	}
 
 }
@@ -944,6 +948,162 @@ country_event = {
 
 	option = {
 		name = uma_curren.44.a
-
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.45
+				days = 3
+			}
+		}
 	}
 }
+
+
+country_event = {
+	id = uma_curren.45
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		export_trigger_value_to_variable = {
+			trigger = num_ships
+			variable = uma_curren_num_ship_having
+			rounded = yes
+		}
+
+		change_variable = {
+			which = uma_curren_num_ship_having
+			value = -5
+		}
+
+		random_system_within_border = {
+			limit = {
+				distance_to_capital > 5
+			}
+			save_event_target_as = uma_curren_hostile_system
+		}
+
+		create_species = {
+			name = "NAME_goldship_species"
+			class = umamusume
+			namelist = UMAname
+			portrait = umamusume
+			traits = random
+			effect = { save_event_target_as = uma_curren_species }
+		}
+
+		create_country = {
+			name = "NAME_uma_curren_hostile_fleet"
+			type = "uma_fine"
+			species = event_target:uma_curren_species
+			name_list = "UMAname"
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags02.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"indigo"
+					"blue"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				create_ship_design = { design = "NAME_Void_Shaper" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Unbidden_Anchor" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Unbidden_Starbase" }
+				add_ship_design = last_created_design
+				save_global_event_target_as = uma_curren_hostile_fleet
+				set_graphical_culture = extra_dimensional_01
+				#						save_event_target_as = goldshi
+				set_country_flag = uma_curren_hostile_fleet
+				set_aggro_range = 1000
+				set_aggro_range_measure_from = self
+				add_resource = {
+					influence = 40000
+					alloys = 80000
+					minerals = 60000
+					uma_crystal_carrot = 10000
+				}
+			}
+		}
+
+		event_target:uma_curren_hostile_fleet = {
+			create_fleet = {
+				name = NAME_uma_curren_hostile_fleet_cc
+				effect = {
+					set_fleet_flag = uma_curren_hostile_fleet_cc
+					set_owner = event_target:uma_curren_hostile_fleet
+					save_global_event_target_as = uma_curren_hostile_fleet_cc
+					set_global_flag = uma_curren_hostile_fleet_cc_still_here
+
+					set_location = event_target:uma_curren_hostile_system
+
+					while = {
+						count = uma_curren_num_ship_having
+						create_ship = {
+							name = random
+							design = "NAME_uma_GOLDSON"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_curren.50
+	title = uma_curren.50.title
+	desc = uma_curren.50.desc
+	picture = GFX_evt_crisis_defeated
+	is_triggered_only = yes
+
+	trigger = {
+		This = {
+			has_authority = auth_trainingcenter
+		}
+		fromfromfrom = {
+			has_fleet_flag = uma_curren_hostile_fleet_cc
+		}
+	}
+
+	immediate = {
+		event_target:uma_curren_hostile_fleet = {
+			destroy_country = yes
+		}
+	}
+	option = {
+		name = uma_curren.50.a
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:uma_is_leader_curren_chan
+				species = root.species
+				gender = female
+			}
+			last_created_leader = {
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_curren_chan
+				set_leader_flag = legendary_leader
+				save_global_event_target_as = uma_is_leader_curren_chan
+				change_leader_portrait = 34c
+				change_leader_class = uma_leaders #?
+				add_trait_no_notify = uma_scientists_trait_sp_curren_spark_soujio
+			}
+
+			event_target:uma_curren_capture3_leader_store_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
