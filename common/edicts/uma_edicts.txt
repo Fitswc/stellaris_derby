@@ -347,3 +347,38 @@ uma_fine_sth_in_wearhouse = {
 	}
 
 }
+
+uma_curren_build_research_departure = {
+	length = 0
+	resources = {
+		category = edicts
+		cost = {
+			society_research = 60000
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+
+		has_country_flag = uma_curren_build_research_departure_allow_edicts
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		hidden_effect = {
+			enable_special_project = {
+				name = uma_curren_build_research_dep
+				owner = Root
+				location = Root.capital_scope
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}

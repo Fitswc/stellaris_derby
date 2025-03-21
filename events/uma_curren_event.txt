@@ -249,7 +249,7 @@ country_event = {
 	immediate = {
 		play_sound = uma_hire_CURREN
 		create_country = {
-            name = "NAME_uma_empty_zf"
+            name = "NAME_uma_empty_curren"
             type = global_event
             auto_delete = no
             flag = {
@@ -354,6 +354,12 @@ country_event = {
 		hidden_effect = {
 			event_target:uma_curren_country = {
 				destroy_country = yes
+			}
+			Root = {
+				country_event = {
+					id = uma_curren.10
+					days = 365
+				}
 			}
 		}
 	}
@@ -597,10 +603,347 @@ fleet_event = {
 	option = {
 		name = uma_curren.24.a
 		small_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				set_country_flag = uma_curren_build_research_departure_allow_edicts
+			}
+		}
 	}
 }
 
 
 
+country_event = {
+	id = uma_curren.30
+	title = uma_curren.30.title
+	desc = uma_curren.30.desc
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		create_country = {
+			name = "NAME_uma_empty_curren"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = uma_curren_capture3_leader_store_country
+
+				clone_leader = {
+					target = event_target:uma_is_leader_curren_chan
+					species = root.species
+					gender = female
+				}
+			}
+		}
+
+		event_target:uma_is_leader_curren_chan = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+
+	}
 
 
+	option = {
+		name = uma_curren.30.a
+
+	}
+
+}
+
+
+
+country_event = {
+	id = uma_curren.31
+	title = uma_curren_name
+	desc = uma_curren.31.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.31.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.32
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.42
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.32
+	title = uma_curren_name
+	desc = uma_curren.32.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.32.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.33
+	title = uma_curren_name
+	desc = uma_curren.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.33.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.34
+	title = uma_curren_name
+	desc = uma_curren.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.34.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.35
+	title = uma_curren_name
+	desc = uma_curren.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.35.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.36
+	title = uma_curren_name
+	desc = uma_curren.36.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.36.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.37
+	title = uma_curren_name
+	desc = uma_curren.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.37.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.38
+	title = uma_curren_name
+	desc = uma_curren.38.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.38.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.39
+	title = uma_curren_name
+	desc = uma_curren.39.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.39.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.40
+	title = uma_curren_name
+	desc = uma_curren.40.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.40.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.41
+	title = uma_curren_name
+	desc = uma_curren.41.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.41.a
+	}
+
+}
+
+country_event = {
+	id = uma_curren.42
+	title = uma_curren_name
+	desc = uma_curren.42.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.42.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.43
+			}
+		}
+	}
+	option = {
+		name = uma_curren.42.b
+
+	}
+
+}
+
+
+country_event = {
+	id = uma_curren.43
+	is_triggered_only = yes
+	title = uma_curren.43.title
+	desc = uma_curren.43.desc
+
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.43.a
+		hidden_effect = {
+			remove_modifier = uma_curren_cute_only
+			remove_modifier = uma_curren_tech_ailens
+			event_target:uma_curren_capture3_leader_store_country = {
+				every_owned_leader = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.44
+	is_triggered_only = yes
+	title = uma_curren.44.title
+	desc = uma_curren.44.desc
+
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.44.a
+
+	}
+}
