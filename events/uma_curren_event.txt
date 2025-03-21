@@ -9,6 +9,7 @@ country_event = {
 	trigger = {
 		empire_size > 100
 		has_country_flag = uma_curren_event_1_happened
+		has_authority = auth_trainingcenter
 	}
 
 
@@ -398,13 +399,206 @@ country_event = {
 
 
 	}
+
+	option = {
+		name = uma_curren.11.a
+		add_modifier = {
+			modifier = uma_curren_cute_only
+			days = 1080
+		}
+	}
 }
 
 
+##
+country_event = {
+	id = uma_curren.12
+	title = uma_curren_name
+	desc = uma_curren.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 34b
+	}
+
+	option = {
+		name = uma_curren.12.a
+		response_text = uma_curren.12.a.repo
+	}
+
+	option = {
+		name = uma_curren.12.b
+		response_text = uma_curren.12.b.repo
+	}
+
+	option = {
+		name = uma_curren.12.c
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.13
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.13
+	title = uma_curren_name
+	desc = uma_curren.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 34b
+	}
+
+	option = {
+		name = uma_curren.13.a
+	}
+
+	after = {
+		#
+	}
+}
 
 
+#stage1
+fleet_event = {
+	id = uma_curren.20
+	title = uma_curren.20.title
+	desc = uma_curren.20.desc
+	picture = GFX_evt_uma_satono_two  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
 
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
 
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.20.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage2
+fleet_event = {
+	id = uma_curren.21
+	title = uma_curren.21.title
+	desc = uma_curren.21.desc
+	picture = GFX_evt_uma_satono_two  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.21.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage3
+fleet_event = {
+	id = uma_curren.22
+	title = uma_curren.22.title
+	desc = uma_curren.22.desc
+	picture = GFX_evt_uma_satono_two  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.22.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage4
+fleet_event = {
+	id = uma_curren.23
+	title = uma_curren.23.title
+	desc = uma_curren.23.desc
+	picture = GFX_evt_uma_satono_two  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.23.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage4
+fleet_event = {
+	id = uma_curren.24
+	title = uma_curren.24.title
+	desc = uma_curren.24.desc
+	picture = GFX_evt_uma_satono_two  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.24.a
+		small_artifact_reward = yes
+	}
+}
 
 
 
