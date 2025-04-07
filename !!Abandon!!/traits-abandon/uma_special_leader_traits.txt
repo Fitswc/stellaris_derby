@@ -1232,39 +1232,3 @@ uma_scientists_trait_sp_sweep = {
 	randomized = no
 }
 
-uma_scientists_trait_sp_curren_spark_soujio = {
-	inline_script = {
-		script = trait/icon
-		CLASS = scientist
-		ICON = "GFX_uma_scientists_trait_sp_sweep"
-		RARITY = common
-		COUNCIL = no
-		TIER = 1
-	}
-
-	leader_potential_add = {
-		always = no
-	}
-	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.3
-		pop_happiness = 0.2
-		planet_jobs_unity_upkeep_mult = -0.2
-		pop_growth_speed = -0.3
-	}
-	modifier = {
-		ship_speed_mult = 0.2
-		science_ship_survey_speed = 0.2
-		ship_archaeological_site_clues_add = 3
-	}
-
-	fleet_modifier = {
-		ship_shield_hardening_add = 0.3
-		ship_winddown_mult = -0.15
-		ship_weapon_damage = 0.2 #
-		ship_orbit_upkeep_mult = -0.3
-	}
-
-	leader_class = { uma_leaders }
-	initial = no
-	randomized = no
-}
