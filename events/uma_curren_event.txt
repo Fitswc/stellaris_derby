@@ -247,7 +247,7 @@ country_event = {
 	}
 
 	immediate = {
-		play_sound = uma_hire_CURREN
+		play_sound = uma_hire_Curren
 		create_country = {
             name = "NAME_uma_empty_curren"
             type = global_event
@@ -299,11 +299,6 @@ country_event = {
 		is_dialog_only = yes
 	}
 
-	option = {
-		name = uma_curren.8.c
-		response_text = uma_curren.8.c.resp
-		is_dialog_only = yes
-	}
 
 	option = {
 		name = uma_curren.8.hire
