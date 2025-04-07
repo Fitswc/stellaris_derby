@@ -1,0 +1,347 @@
+uma_scientist_trait_kishouyasashii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouyasashii.png"
+	councilor_modifier = {
+		all_technology_research_speed = 0.15
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_kishouhageshii
+	}
+
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+
+}
+
+
+###地固1
+leader_trait_digu_scientists = {
+	starting_ruler_trait = yes                                              #国家领袖初始可随机出特性
+	#	councilor_trait = yes                                                   #是否是议员特性
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_digu_scientists"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = yes                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.1
+	}
+	leader_class = { scientist }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+###地固2
+leader_trait_digu_scientists_2 = {
+	replace_traits = { "leader_trait_digu_scientists" }                     #替换掉原来等级低的技能用的
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_digu_scientists"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.2
+	}
+	leader_class = { scientist }
+}
+###集思广益1
+leader_trait_jisiguangyi_scientists = {
+	starting_ruler_trait = yes
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_jisiguangyi_scientists"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.05
+		num_tech_alternatives_add = 1
+	}
+	leader_class = { scientist }
+	opposites ={                                                            #互斥项
+		leader_trait_duxingzhe_scientists
+		leader_trait_duxingzhe_scientists_2
+	}
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###集思广益2
+leader_trait_jisiguangyi_scientists_2 = {
+	replace_traits = { "leader_trait_jisiguangyi_scientists" }                     #替换掉原来等级低的技能用的
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_jisiguangyi_scientists"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.1
+		num_tech_alternatives_add = 2
+	}
+	opposites ={                                                            #互斥项
+		leader_trait_duxingzhe_scientists
+		leader_trait_duxingzhe_scientists_2
+	}
+	leader_class = { scientist }
+}
+###独行者1
+leader_trait_duxingzhe_scientists = {
+	starting_ruler_trait = yes
+	#	councilor_trait = yes                                                   #是否是议员特性
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_duxingzhe_scientists"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = yes                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		num_tech_alternatives_add = -1
+		all_technology_research_speed = 0.15
+	}
+	leader_class = { scientist }                                            #特质分类
+	opposites ={                                                            #互斥项
+		leader_trait_jisiguangyi_scientists
+		leader_trait_jisiguangyi_scientists_2
+	}
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###独行者2
+leader_trait_duxingzhe_scientists_2 = {
+	replace_traits = { "leader_trait_duxingzhe_scientists" }                     #替换掉原来等级低的技能用的
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_duxingzhe_scientists"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		num_tech_alternatives_add = -2
+		all_technology_research_speed = 0.3
+	}
+	opposites ={                                                            #互斥项
+		leader_trait_jisiguangyi_scientists
+		leader_trait_jisiguangyi_scientists_2
+	}
+	leader_class = { scientist }
+}
+###好奇心1
+leader_trait_haoqixin_scientists = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_haoqixin_scientists"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.15
+	}
+	leader_class = { scientist }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###好奇心2
+leader_trait_haoqixin_scientists_2 = {
+	replace_traits = { "leader_trait_haoqixin_scientists" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_haoqixin_scientists"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.3
+	}
+	leader_class = { scientist }
+}
+###细致入微1
+leader_trait_xizhiruwei_scientists = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_xizhiruwei_scientists"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.15
+	}
+	leader_class = { scientist }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###细致入微2
+leader_trait_xizhiruwei_scientists_2 = {
+	replace_traits = { "leader_trait_xizhiruwei_scientists" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xizhiruwei_scientists"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.3
+	}
+	leader_class = { scientist }
+}
+###先驱1
+leader_trait_xianqu_scientists = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_xianqu_scientists"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	modifier = {
+		science_ship_survey_speed = 0.15
+	}
+	leader_class = { scientist }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###先驱2
+leader_trait_xianqu_scientists_2 = {
+	replace_traits = { "leader_trait_xianqu_scientists" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xianqu_scientists"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		science_ship_survey_speed = 0.3
+	}
+	leader_class = { scientist }
+}
+###探索者1
+leader_trait_tansuozhe_scientists = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_tansuozhe_scientists"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.15
+	}
+	leader_class = { scientist }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###探索者2
+leader_trait_tansuozhe_scientists_2 = {
+	replace_traits = { "leader_trait_tansuozhe_scientists" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_tansuozhe_scientists"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.3
+	}
+	leader_class = { scientist }
+}

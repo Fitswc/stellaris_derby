@@ -1,4 +1,5 @@
 uma_mid_crisis_ship_creator_goldship = {
+	optimize_memory
 
 	create_leader = {
 		class = commander
@@ -77,6 +78,7 @@ uma_mid_crisis_ship_creator_goldship = {
 }
 
 uma_mid_crisis_ship_creator_naya = {
+	optimize_memory
 	create_leader = {
 		class = commander
 		species = owner_main_species
@@ -153,6 +155,7 @@ uma_mid_crisis_ship_creator_naya = {
 }
 
 uma_mid_crisis_ship_creator_Orfevre = {
+	optimize_memory
 	create_leader = {
 		class = commander
 		species = owner_main_species
@@ -209,6 +212,7 @@ uma_mid_crisis_ship_creator_Orfevre = {
 
 
 uma_mid_crisis_constructor_creator_gold = {
+	optimize_memory
 	create_fleet = {
 		effect = {
 			set_owner = event_target:goldship_crisis_country
@@ -227,6 +231,7 @@ uma_mid_crisis_constructor_creator_gold = {
 }
 
 uma_mid_crisis_constructor_creator_naka = {
+	optimize_memory
 	create_fleet = {
 		effect = {
 			set_owner = event_target:naka_crisis_country
@@ -245,6 +250,7 @@ uma_mid_crisis_constructor_creator_naka = {
 }
 
 uma_mid_crisis_constructor_creator_Orfevre = {
+	optimize_memory
 	create_fleet = {
 		effect = {
 			set_owner = event_target:Orfevre_crisis_country
@@ -265,6 +271,7 @@ uma_mid_crisis_constructor_creator_Orfevre = {
 
 
 uma_mid_crisis_ship_creator_naya_easy = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
@@ -275,6 +282,7 @@ uma_mid_crisis_ship_creator_naya_easy = {
 }
 
 uma_mid_crisis_ship_creator_naya_normal = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
@@ -292,6 +300,7 @@ uma_mid_crisis_ship_creator_naya_normal = {
 }
 
 uma_mid_crisis_ship_creator_naya_difficult = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
 	uma_mid_crisis_ship_creator_naya = yes #舰队创建
@@ -313,6 +322,7 @@ uma_mid_crisis_ship_creator_naya_difficult = {
 
 
 uma_mid_crisis_ship_creator_gold_easy = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
@@ -323,6 +333,7 @@ uma_mid_crisis_ship_creator_gold_easy = {
 }
 
 uma_mid_crisis_ship_creator_gold_normal = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
@@ -340,6 +351,7 @@ uma_mid_crisis_ship_creator_gold_normal = {
 }
 
 uma_mid_crisis_ship_creator_gold_difficult = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
 	uma_mid_crisis_ship_creator_goldship = yes #舰队创建
@@ -361,6 +373,7 @@ uma_mid_crisis_ship_creator_gold_difficult = {
 
 
 uma_mid_crisis_ship_creator_ov_easy = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
@@ -375,6 +388,7 @@ uma_mid_crisis_ship_creator_ov_easy = {
 }
 
 uma_mid_crisis_ship_creator_ov_normal = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
@@ -392,6 +406,7 @@ uma_mid_crisis_ship_creator_ov_normal = {
 }
 
 uma_mid_crisis_ship_creator_ov_difficult = {
+	optimize_memory
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
 	uma_mid_crisis_ship_creator_Orfevre = yes #舰队创建
@@ -417,7 +432,151 @@ uma_mid_crisis_ship_creator_ov_difficult = {
 
 
 
+uma_tunnel_spawn = {
+	optimize_memory
+	create_starbase = {
+		owner = event_target:uma_gold_invasion_family_country
+		size = starbase_exd
+		effect = {
+			save_global_event_target_as = uma_gold_starbase
+		}
+	}
+	event_target:uma_gold_invasion_family_country = {
+		create_fleet = {
+			name = "Gold_ship_defend_fleet"
+			effect = {
+				set_owner = event_target:uma_gold_invasion_family_country
+				create_ship = {
+					name = random
+					design = "NAME_Revenant"
+					graphical_culture = "extra_dimensional_01"
+				}
 
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 16
+					create_ship = {
+						name = random
+						design = "NAME_Phantom"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 25
+					create_ship = {
+						name = random
+						design = "NAME_Wraith"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				set_location = {
+					target = event_target:uma_gold_starbase
+					distance = 10
+					angle = random
+				}
+				set_fleet_stance = passive
+				#						set_aggro_range = 500
+				#						set_aggro_range_measure_from = self
+				set_fleet_bombardment_stance = armageddon
+			}
+		}
+		create_fleet = {
+			name = "Gold_ship_defend_fleet_II"
+			effect = {
+				set_owner = event_target:uma_gold_invasion_family_country
+				create_ship = {
+					name = random
+					design = "NAME_Revenant"
+					graphical_culture = "extra_dimensional_01"
+				}
+				while = {
+					count = 13
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 19
+					create_ship = {
+						name = random
+						design = "NAME_Phantom"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 27
+					create_ship = {
+						name = random
+						design = "NAME_Wraith"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				set_location = {
+					target = event_target:uma_gold_starbase
+					distance = 40
+					angle = random
+				}
+				set_fleet_stance = passive
+				#						set_aggro_range = 500
+				#						set_aggro_range_measure_from = self
+				set_fleet_bombardment_stance = armageddon
+			}
+		}
+		create_fleet = {
+			name = "Gold_ship_defend_fleet_III"
+			effect = {
+				set_owner = event_target:uma_gold_invasion_family_country
+				create_ship = {
+					name = random
+					design = "NAME_Revenant"
+					graphical_culture = "extra_dimensional_01"
+				}
+				while = {
+					count = 10
+					create_ship = {
+						name = random
+						design = "NAME_Revenant"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 16
+					create_ship = {
+						name = random
+						design = "NAME_Phantom"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				while = {
+					count = 25
+					create_ship = {
+						name = random
+						design = "NAME_Wraith"
+						graphical_culture = "extra_dimensional_01"
+					}
+				}
+				set_location = {
+					target = event_target:uma_gold_starbase
+					distance = 30
+					angle = random
+				}
+				set_fleet_stance = passive
+				#						set_aggro_range = 500
+				#						set_aggro_range_measure_from = self
+				set_fleet_bombardment_stance = armageddon
+			}
+		}
+	}
+}
 
 
 

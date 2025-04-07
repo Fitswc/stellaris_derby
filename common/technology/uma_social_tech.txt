@@ -878,105 +878,105 @@ tech_uma_genetics = { #马娘遗传学
 
 ###新因子科技
 #基础因子图谱归纳
-tech_uma_basic_keisun_map = {
-	cost = 10000
-	area = society
-	tier = 3
-    is_rare = yes
-	category = { biology }
-    prerequisites = { "tech_uma_genetics" }
-    weight = 150
-
-	potential = {
-		OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        pop_growth_speed = 0.1
-    }
-
-    weight_modifier = {
-        factor = 1
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-
-###分子因子学
-tech_uma_molecule_keisun_theory = {
-	cost = 15000
-	area = society
-	tier = 4
-    is_rare = yes
-	category = { biology }
-    prerequisites = { "tech_uma_basic_keisun_map" }
-    weight = 175
-
-	potential = {
-		OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        UMA_species_trait_points_add = 1
-    }
-
-    weight_modifier = {
-        factor = 1
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-
-###因子遗传学
-tech_uma_keisun_genetic = {
-	cost = 15000
-	area = society
-	tier = 4
-    is_rare = yes
-	category = { biology }
-    prerequisites = { "tech_uma_molecule_keisun_theory" }
-    weight = 175
-
-	potential = {
-		OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        UMA_species_trait_points_add = 1
-    }
-
-    weight_modifier = {
-        factor = 1
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
+#tech_uma_basic_keisun_map = {
+#	cost = 10000
+#	area = society
+#	tier = 3
+#    is_rare = yes
+#	category = { biology }
+#    prerequisites = { "tech_uma_genetics" }
+#    weight = 150
+#
+#	potential = {
+#		OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#
+#    }
+#
+#    weight_modifier = {
+#        factor = 1
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+#
+####分子因子学
+#tech_uma_molecule_keisun_theory = {
+#	cost = 15000
+#	area = society
+#	tier = 4
+#    is_rare = yes
+#	category = { biology }
+#    prerequisites = { "tech_uma_basic_keisun_map" }
+#    weight = 175
+#
+#	potential = {
+#		OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#        UMA_species_trait_points_add = 1
+#    }
+#
+#    weight_modifier = {
+#        factor = 1
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+#
+####因子遗传学
+#tech_uma_keisun_genetic = {
+#	cost = 15000
+#	area = society
+#	tier = 4
+#    is_rare = yes
+#	category = { biology }
+#    prerequisites = { "tech_uma_molecule_keisun_theory" }
+#    weight = 175
+#
+#	potential = {
+#		OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#
+#    }
+#
+#    weight_modifier = {
+#        factor = 1
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
 
 
 ###综合遗传实验
 tech_uma_complex_keisun_test = {
 	cost = 25000
 	area = society
-	tier = 4
+	tier = 3
     is_rare = yes
     is_dangerous = yes
 	category = { biology }
-    prerequisites = { "tech_uma_keisun_genetic" }
+#    prerequisites = { "tech_uma_keisun_genetic" }
     weight = 200
 
 	potential = {
@@ -987,6 +987,8 @@ tech_uma_complex_keisun_test = {
     }
 
     modifier = {
+		pop_growth_speed = 0.1
+		UMA_species_trait_points_add = 2
         planet_researchers_society_research_produces_mult = 0.2
     }
 
@@ -1097,99 +1099,99 @@ tech_uma_complex_keisun_test = {
 
 ###新领域科技
 #基础领域理论
-tech_uma_basic_territory_theory = {
-    is_rare = yes
-    cost = 10000
-    area = society
-    tier = 3
-    category = { psionics }
-
-    weight = 150
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        planet_jobs_unity_produces_mult = 0.05
-    }
-
-    weight_modifier = {
-        factor = 1
-    }
-
-    ai_weight = {
-        factor = 0
-    }
-
-}
+#tech_uma_basic_territory_theory = {
+#    is_rare = yes
+#    cost = 10000
+#    area = society
+#    tier = 3
+#    category = { psionics }
+#
+#    weight = 150
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#
+#    }
+#
+#    weight_modifier = {
+#        factor = 1
+#    }
+#
+#    ai_weight = {
+#        factor = 0
+#    }
+#
+#}
 
 
 ##巅峰赛根性测试
-tech_uma_top_race_testing = {
-    is_rare = yes
-    cost = 15000
-    area = society
-    tier = 3
-    category = { statecraft }
-    prerequisites = { "tech_uma_basic_territory_theory" }
-    weight = 175
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        planet_uma_racing_umamusume_produces_mult = 0.1
-    }
-
-    weight_modifier = {
-        factor = 1
-    }
-
-    ai_weight = {
-        factor = 0
-    }
-
-}
+#tech_uma_top_race_testing = {
+#    is_rare = yes
+#    cost = 15000
+#    area = society
+#    tier = 3
+#    category = { statecraft }
+#    prerequisites = { "tech_uma_basic_territory_theory" }
+#    weight = 175
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#
+#    }
+#
+#    weight_modifier = {
+#        factor = 1
+#    }
+#
+#    ai_weight = {
+#        factor = 0
+#    }
+#
+#}
 
 
 ##心理领域学基础
-tech_uma_basic_phycoterritory_theory = {
-    is_rare = yes
-    cost = 15000
-    area = society
-    tier = 3
-    category = { biology }
-    prerequisites = { "tech_uma_top_race_testing" }
-    weight = 175
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        planet_stability_add = 5
-    }
-
-    weight_modifier = {
-        factor = 1
-    }
-
-    ai_weight = {
-        factor = 0
-    }
-
-}
+#tech_uma_basic_phycoterritory_theory = {
+#    is_rare = yes
+#    cost = 15000
+#    area = society
+#    tier = 3
+#    category = { biology }
+#    prerequisites = { "tech_uma_top_race_testing" }
+#    weight = 175
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#
+#    }
+#
+#    weight_modifier = {
+#        factor = 1
+#    }
+#
+#    ai_weight = {
+#        factor = 0
+#    }
+#
+#}
 
 
 ##领域启发与应用
@@ -1197,9 +1199,9 @@ tech_uma_terriroty_in_use = {
     is_rare = yes
     cost = 25000
     area = society
-    tier = 4
+    tier = 3
     category = { biology }
-    prerequisites = { "tech_uma_basic_phycoterritory_theory" }
+#    prerequisites = { "tech_uma_basic_phycoterritory_theory" }
     weight = 200
 
     potential = {
@@ -1210,8 +1212,11 @@ tech_uma_terriroty_in_use = {
     }
 
     modifier = {
-        planet_jobs_produces_mult = 0.05
-    }
+		planet_jobs_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.05
+		planet_stability_add = 5
+		planet_uma_racing_umamusume_produces_mult = 0.1
+	}
 
     weight_modifier = {
         factor = 1

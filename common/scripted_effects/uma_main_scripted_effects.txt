@@ -597,6 +597,7 @@ uma_upgrade_kanshi_two_level = {
 
 #蹄铁：添加特质
 uma_add_titie_trait = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_timed_trait = {
@@ -615,6 +616,7 @@ uma_add_titie_trait = {
 
 #护符：添加特质
 uma_add_amulet_trait = {
+	optimize_memory
 	if = {
 		limit = { leader_class = commander }
 		add_timed_trait = {
@@ -633,6 +635,7 @@ uma_add_amulet_trait = {
 
 #大喇叭：添加特质
 uma_add_horn_trait = {
+	optimize_memory
 	if = {
 		limit = { leader_class = commander }
 		add_timed_trait = {
@@ -672,6 +675,7 @@ uma_add_horn_trait = {
 
 #学者帽：添加特质
 uma_add_school_hat_trait = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_trait = uma_ruler_trait_special_scholar
@@ -688,6 +692,7 @@ uma_add_school_hat_trait = {
 
 #训练手册：添加特质
 uma_add_training_book_trait = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_trait = uma_ruler_trait_training_book
@@ -712,6 +717,7 @@ uma_add_training_book_trait = {
 
 #望远镜：增加特质
 uma_add_tomorrow_star_trait = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_trait = uma_ruler_trait_tomorrow_star
@@ -736,6 +742,7 @@ uma_add_tomorrow_star_trait = {
 
 #镜子：添加特质
 uma_add_lovely_trait = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_trait = uma_ruler_trait_lovely
@@ -748,6 +755,7 @@ uma_add_lovely_trait = {
 
 #青汁：增加特质
 uma_add_vegetable_drink_trait = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_timed_trait = {
@@ -787,6 +795,7 @@ uma_add_vegetable_drink_trait = {
 
 #体力65：增加特质
 uma_add_power_sf_trait  = {
+	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
 		add_timed_trait = {
@@ -826,6 +835,7 @@ uma_add_power_sf_trait  = {
 
 ###每年随机浮动领袖的心情
 uma_random_change_leader_yaruki_effect = {
+	optimize_memory
 	###海军上将
 	if = {
 		limit = { NOT = { uma_admiral_have_yaruki_trait = yes } }
@@ -914,6 +924,7 @@ uma_random_change_leader_yaruki_effect = {
 
 ###刷新领袖干劲用的封装（顺便防止重复刷新）
 uma_initialize_leader_yaruki_effect = {
+	optimize_memory
 	if = {
 		limit = {
 			NOT = { has_trait = uma_trait_yaruki_five }
@@ -958,6 +969,7 @@ uma_initialize_leader_yaruki_effect = {
 
 ###刷新槽位1货物的枚举
 uma_refresh_slot_1_goods_effect = {
+	optimize_memory
 	remove_country_flag = uma_slot_1_bought
 	if = {
 		limit = { has_country_flag = uma_slot_1_goods_1_bought }
@@ -1204,6 +1216,7 @@ uma_refresh_slot_1_goods_effect = {
 }
 ###购买槽位1货物的枚举
 uma_buy_slot_1_goods_effect = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = uma_slot_1_goods_1_refreshed }
 		remove_country_flag = uma_slot_1_goods_1_refreshed
@@ -1376,6 +1389,7 @@ uma_buy_slot_1_goods_effect = {
 
 ###刷新槽位2货物的枚举
 uma_refresh_slot_2_goods_effect = {
+	optimize_memory
 	remove_country_flag = uma_slot_2_bought
 	if = {
 		limit = { has_country_flag = uma_slot_2_goods_1_bought }
@@ -1622,6 +1636,7 @@ uma_refresh_slot_2_goods_effect = {
 }
 ###购买槽位2货物的枚举
 uma_buy_slot_2_goods_effect = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = uma_slot_2_goods_1_refreshed }
 		remove_country_flag = uma_slot_2_goods_1_refreshed
@@ -1794,6 +1809,7 @@ uma_buy_slot_2_goods_effect = {
 
 ###刷新槽位3货物的枚举
 uma_refresh_slot_3_goods_effect = {
+	optimize_memory
 	remove_country_flag = uma_slot_3_bought
 	if = {
 		limit = { has_country_flag = uma_slot_3_goods_1_bought }
@@ -2040,6 +2056,7 @@ uma_refresh_slot_3_goods_effect = {
 }
 ###购买槽位3货物的枚举
 uma_buy_slot_3_goods_effect = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = uma_slot_3_goods_1_refreshed }
 		remove_country_flag = uma_slot_3_goods_1_refreshed
@@ -2212,6 +2229,7 @@ uma_buy_slot_3_goods_effect = {
 
 ###刷新槽位4货物的枚举
 uma_refresh_slot_4_goods_effect = {
+	optimize_memory
 	remove_country_flag = uma_slot_4_bought
 	if = {
 		limit = { has_country_flag = uma_slot_4_goods_1_bought }
@@ -2458,6 +2476,7 @@ uma_refresh_slot_4_goods_effect = {
 }
 ###购买槽位4货物的枚举
 uma_buy_slot_4_goods_effect = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = uma_slot_4_goods_1_refreshed }
 		remove_country_flag = uma_slot_4_goods_1_refreshed
@@ -2630,6 +2649,7 @@ uma_buy_slot_4_goods_effect = {
 
 ###刷新槽位5货物的枚举
 uma_refresh_slot_5_goods_effect = {
+	optimize_memory
 	remove_country_flag = uma_slot_5_bought
 	if = {
 		limit = { has_country_flag = uma_slot_5_goods_1_bought }
@@ -2876,6 +2896,7 @@ uma_refresh_slot_5_goods_effect = {
 }
 ###购买槽位5货物的枚举
 uma_buy_slot_5_goods_effect = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = uma_slot_5_goods_1_refreshed }
 		remove_country_flag = uma_slot_5_goods_1_refreshed
@@ -3048,6 +3069,7 @@ uma_buy_slot_5_goods_effect = {
 
 ###刷新槽位6货物的枚举
 uma_refresh_slot_6_goods_effect = {
+	optimize_memory
 	remove_country_flag = uma_slot_6_bought
 	if = {
 		limit = { has_country_flag = uma_slot_6_goods_1_bought }
@@ -3294,6 +3316,7 @@ uma_refresh_slot_6_goods_effect = {
 }
 ###购买槽位6货物的枚举
 uma_buy_slot_6_goods_effect = {
+	optimize_memory
 	if = {
 		limit = { has_country_flag = uma_slot_6_goods_1_refreshed }
 		remove_country_flag = uma_slot_6_goods_1_refreshed
@@ -3469,6 +3492,7 @@ uma_buy_slot_6_goods_effect = {
 #############堕落用#############
 #马娘堕落的礼物
 uma_fallen_empire_gift_effect = {
+	optimize_memory
 	random_list = {
 		10 = {
 			add_resource = { energy = 5000 }
@@ -3492,6 +3516,7 @@ uma_fallen_empire_gift_effect = {
 }
 
 uma_fallen_empire_create_ship_designs = {
+	optimize_memory
 	create_ship_design = { design = NAME_Omega}
 	create_ship_design = { design = NAME_Alpha }
 	create_ship_design = { design = NAME_Beta }
@@ -3507,6 +3532,7 @@ uma_fallen_empire_create_ship_designs = {
 
 
 uma_remove_deposits = {
+	optimize_memory
 	every_deposit = {
 		limit = {
 			NOR = {
@@ -3582,6 +3608,7 @@ uma_archaeological_site_on_roll_failed = {
 
 
 uma_random_specimen = {
+	optimize_memory
 	random_list = {
 		1 = {
 			modifier = {

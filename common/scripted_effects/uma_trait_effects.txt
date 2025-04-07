@@ -3,6 +3,7 @@
 
 ##Traits Effect
 UMA_random_kill_army_if_supreme_warrior = {
+	optimize_memory
 
 	if = {
 		limit = {
@@ -32,6 +33,7 @@ UMA_random_kill_army_if_supreme_warrior = {
 
 
 uma_delete_vallian_trait = {
+	optimize_memory
 	remove_trait = subclass_scientist_explorer
 #		subclass_scientist_analyst
 #		subclass_scientist_researcher
