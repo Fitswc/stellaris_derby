@@ -726,6 +726,9 @@ country_event = {
 		remove_point_of_interest = uma_bour_anolomy_poi_1
 		remove_point_of_interest = uma_bour_anolomy_poi_2
 		remove_point_of_interest = uma_bour_anolomy_poi_3
+		hidden_effect = {
+			set_country_flag = uma_bour_partone_happened
+		}
 	}
 }
 
@@ -739,6 +742,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_country_flag = uma_bour_partone_happened
 		OR = {
 #			has_ascension_perk = ap_uma_zenshizenren
 			has_ascension_perk = ap_uma_fly_me_to_the_star
@@ -784,8 +788,8 @@ country_event = {
 			limit = { count_system = { count <= 250 } } #200
 			no_scope = {
 				spawn_system = {
-					min_distance >= 105
-					max_distance <= 215
+					min_distance >= 95
+					max_distance <= 205
 					min_orientation_angle = 20
 					max_orientation_angle = 300
 					initializer = "uma_bourbon_initializer"
@@ -798,8 +802,8 @@ country_event = {
 			limit = { count_system = { count <= 450 } }
 			no_scope = {
 				spawn_system = {
-					min_distance >= 325
-					max_distance <= 335
+					min_distance >= 315
+					max_distance <= 325
 					min_orientation_angle = 20
 					max_orientation_angle = 300
 					initializer = "uma_bourbon_initializer"
@@ -812,8 +816,8 @@ country_event = {
 			limit = { count_system = { count <= 650 } }
 			no_scope = {
 				spawn_system = {
-					min_distance >= 415
-					max_distance <= 425
+					min_distance >= 405
+					max_distance <= 415
 					min_orientation_angle = 20
 					max_orientation_angle = 300
 					initializer = "uma_bourbon_initializer"
@@ -826,8 +830,8 @@ country_event = {
 			limit = { count_system = { count <= 850 } }
 			no_scope = {
 				spawn_system = {
-					min_distance >= 445
-					max_distance <= 455
+					min_distance >= 435
+					max_distance <= 445
 					min_orientation_angle = 20
 					max_orientation_angle = 300
 					initializer = "uma_bourbon_initializer"
@@ -839,8 +843,8 @@ country_event = {
 		else = {
 			no_scope = {
 				spawn_system = {
-					min_distance >= 475
-					max_distance <= 485
+					min_distance >= 465
+					max_distance <= 475
 					min_orientation_angle = 20
 					max_orientation_angle = 300
 					initializer = "uma_bourbon_initializer"

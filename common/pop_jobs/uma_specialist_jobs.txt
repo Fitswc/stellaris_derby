@@ -935,7 +935,7 @@ uma_trader = {
 		potential = {
 			always = yes
 		}
-		trade_value_add = 16
+		trade_value_add = 10
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
