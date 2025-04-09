@@ -5,6 +5,7 @@ country_event = {
 	is_triggered_only = yes
 	title = uma_curren.1.title
 	desc = uma_curren.1.desc
+	picture = GFX_evt_uma_tales_and_story
 
 
 	trigger = {
@@ -35,6 +36,7 @@ country_event = {
 	is_triggered_only = yes
 	title = uma_curren.2.title
 	desc = uma_curren.2.desc
+	picture = GFX_evt_uma_satono_school
 
 	trigger = {
 
@@ -218,6 +220,7 @@ country_event = {
 	title = uma_curren.7.title
 	desc = uma_curren.7.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	trigger = {
 
@@ -283,6 +286,7 @@ country_event = {
 	title = uma_curren.10.title
 	desc = uma_curren.10.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_racing_legion
 
 	immediate = {
 
@@ -317,6 +321,7 @@ country_event = {
 	title = uma_curren.11.title
 	desc = uma_curren.11.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_racing_legion
 
 	immediate = {
 
@@ -448,7 +453,7 @@ fleet_event = {
 	id = uma_curren.20
 	title = uma_curren.20.title
 	desc = uma_curren.20.desc
-	picture = GFX_evt_uma_satono_two  #快速占位图
+	picture = GFX_evt_archaeology_camp
 	show_sound = archeology_log_entry_positive
 	location = from
 	archaeology = yes
@@ -473,7 +478,7 @@ fleet_event = {
 	id = uma_curren.21
 	title = uma_curren.21.title
 	desc = uma_curren.21.desc
-	picture = GFX_evt_uma_satono_two  #快速占位图
+	picture = GFX_evt_uma_dig_hightech
 	show_sound = archeology_log_entry_positive
 	location = from
 	archaeology = yes
@@ -498,7 +503,7 @@ fleet_event = {
 	id = uma_curren.22
 	title = uma_curren.22.title
 	desc = uma_curren.22.desc
-	picture = GFX_evt_uma_satono_two  #快速占位图
+	picture = GFX_evt_uma_dig_hightech
 	show_sound = archeology_log_entry_positive
 	location = from
 	archaeology = yes
@@ -523,7 +528,7 @@ fleet_event = {
 	id = uma_curren.23
 	title = uma_curren.23.title
 	desc = uma_curren.23.desc
-	picture = GFX_evt_uma_satono_two  #快速占位图
+	picture = GFX_evt_uma_camp
 	show_sound = archeology_log_entry_positive
 	location = from
 	archaeology = yes
@@ -548,7 +553,7 @@ fleet_event = {
 	id = uma_curren.24
 	title = uma_curren.24.title
 	desc = uma_curren.24.desc
-	picture = GFX_evt_uma_satono_two  #快速占位图
+	picture = GFX_evt_uma_camp
 	show_sound = archeology_log_entry_positive
 	location = from
 	archaeology = yes
@@ -580,6 +585,7 @@ country_event = {
 	title = uma_curren.30.title
 	desc = uma_curren.30.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_data
 
 	trigger = {
 
@@ -933,6 +939,7 @@ country_event = {
 	is_triggered_only = yes
 	title = uma_curren.43.title
 	desc = uma_curren.43.desc
+	picture = GFX_evt_uma_misty
 
 
 
@@ -995,7 +1002,7 @@ country_event = {
 
 		change_variable = {
 			which = uma_curren_num_ship_having
-			value = -8
+			value = -5
 		}
 
 		random_system_within_border = {
