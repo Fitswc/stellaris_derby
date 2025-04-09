@@ -1003,61 +1003,50 @@ country_event = {
 				distance_to_capital > 5
 			}
 			save_event_target_as = uma_curren_hostile_system
-		}
 
-		create_species = {
-			name = "NAME_goldship_species"
-			class = umamusume
-			namelist = UMAname
-			portrait = umamusume
-			traits = random
-			effect = { save_event_target_as = uma_curren_species }
-		}
 
-		create_country = {
-			name = "NAME_uma_curren_hostile_fleet"
-			type = "uma_fine"
-			species = event_target:uma_curren_species
-			name_list = "UMAname"
-			flag = {
-				icon = {
-					category = "uiu_flags"
-					file = "uiu_flags02.dds"
+			create_species = {
+				name = "NAME_goldship_species"
+				class = umamusume
+				namelist = UMAname
+				portrait = umamusume
+				traits = random
+				effect = { save_event_target_as = uma_curren_species }
+			}
+
+			create_country = {
+				name = UNKNOWN
+				type = uma_fine
+				name_list = random
+				flag = {
+					icon = {
+						category = "uiu_flags"
+						file = "uiu_flags01.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "circle.dds"
+					}
+					colors = {
+						"red_orange"
+						"blue"
+						"null"
+						"null"
+					}
 				}
-				background = {
-					category = "backgrounds"
-					file = "circle.dds"
-				}
-				colors = {
-					"indigo"
-					"blue"
-					"null"
-					"null"
+				effect = {
+					set_hostile = Root
+					set_country_flag = uma_curren_hostile
+					save_global_event_target_as = uma_fine_hostile
+					create_ship_design = { design = "NAME_Void_Shaper" }
+					add_ship_design = last_created_design
+					create_ship_design = { design = "NAME_Unbidden_Anchor" }
+					add_ship_design = last_created_design
+					create_ship_design = { design = "NAME_Unbidden_Starbase" }
+					add_ship_design = last_created_design
 				}
 			}
-			effect = {
-				create_ship_design = { design = "NAME_Void_Shaper" }
-				add_ship_design = last_created_design
-				create_ship_design = { design = "NAME_Unbidden_Anchor" }
-				add_ship_design = last_created_design
-				create_ship_design = { design = "NAME_Unbidden_Starbase" }
-				add_ship_design = last_created_design
-				save_global_event_target_as = uma_curren_hostile_fleet
-				set_graphical_culture = extra_dimensional_01
-				#						save_event_target_as = goldshi
-				set_country_flag = uma_curren_hostile_fleet
-				set_aggro_range = 1000
-				set_aggro_range_measure_from = self
-				add_resource = {
-					influence = 40000
-					alloys = 80000
-					minerals = 60000
-					uma_crystal_carrot = 10000
-				}
-			}
-		}
 
-		event_target:uma_curren_hostile_fleet = {
 			create_fleet = {
 				name = NAME_uma_curren_hostile_fleet_cc
 				effect = {
@@ -1066,10 +1055,14 @@ country_event = {
 					save_global_event_target_as = uma_curren_hostile_fleet_cc
 					set_global_flag = uma_curren_hostile_fleet_cc_still_here
 
-					set_location = event_target:uma_curren_hostile_system
+					set_location = {
+						target = event_target:uma_curren_hostile_system.star
+						distance = 50
+						angle = random
+					}
 
 					while = {
-						count = uma_curren_num_ship_having
+						count = Root.uma_curren_num_ship_having
 						create_ship = {
 							name = random
 							design = "NAME_uma_GOLDSON"
