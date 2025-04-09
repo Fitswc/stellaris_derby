@@ -1,0 +1,32 @@
+namespace = uma_mejro_ardan
+
+
+
+astral_rift_event = {
+	id = uma_mejro_ardan.1
+	title = uma_mejro_ardan.1.title
+	desc = uma_mejro_ardan.1.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.1.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.2
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
