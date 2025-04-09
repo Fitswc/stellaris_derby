@@ -995,7 +995,7 @@ country_event = {
 
 		change_variable = {
 			which = uma_curren_num_ship_having
-			value = -5
+			value = -8
 		}
 
 		random_system_within_border = {
@@ -1016,7 +1016,7 @@ country_event = {
 
 			create_country = {
 				name = UNKNOWN
-				type = uma_fine
+				type = uma_curren
 				name_list = random
 				flag = {
 					icon = {
@@ -1036,8 +1036,8 @@ country_event = {
 				}
 				effect = {
 					set_hostile = Root
-					set_country_flag = uma_curren_hostile
-					save_global_event_target_as = uma_fine_hostile
+					set_country_flag = uma_curren_hostile_fleet
+					save_global_event_target_as = uma_curren_hostile_fleet
 					create_ship_design = { design = "NAME_Void_Shaper" }
 					add_ship_design = last_created_design
 					create_ship_design = { design = "NAME_Unbidden_Anchor" }
@@ -1067,6 +1067,30 @@ country_event = {
 							name = random
 							design = "NAME_uma_GOLDSON"
 							graphical_culture = "extra_dimensional_01"
+						}
+					}
+
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 300
+
+
+					queue_actions = { #崩溃？
+						repeat = {
+							find_closest_system = {
+								trigger = {
+									id = uma_curren_trigger.1
+									owner = {
+										has_authority = auth_trainingcenter
+									}
+								}
+								found_system = {
+									wait = {
+										duration = 50
+									}
+									move_to = This
+								}
+							}
 						}
 					}
 				}
