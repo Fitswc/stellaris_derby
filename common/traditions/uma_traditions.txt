@@ -206,8 +206,10 @@ uma_factor_adopt = {
 		uma_has_ap_two_factor = yes
 	}
 	modifier = {
+		planet_jobs_produces_mult = 0.1
 		UMA_species_trait_points_add = 2
 	}
+	custom_tooltip_with_modifiers = uma_factor_adopt_tt
 }
 
 #fin.
@@ -229,11 +231,24 @@ uma_factor_speed = {
 
 	}
 	modifier = {
-		army_damage_mult = 0.064
-		planet_jobs_produces_mult = 0.02
-		planet_building_build_speed_mult = 0.054
-		planet_jobs_food_upkeep_mult = 0.054
+#		army_damage_mult = 0.064
+#		planet_jobs_produces_mult = 0.02
+#		planet_building_build_speed_mult = 0.054
+#		planet_jobs_food_upkeep_mult = 0.054
+
 	}
+	triggered_modifier = {
+		potential = {
+			NOT = {
+				any_situation = {
+					has_situation_flag = uma_ap2_factor_had_happened
+				}
+			}
+		}
+		planet_pops_organics_upkeep_mult = -0.05
+
+	}
+	custom_tooltip = uma_tradition_factor_speed_tt
 }
 
 #运动因子强化Ⅱ 3
@@ -244,11 +259,13 @@ uma_factor_strength = {
 		has_tradition = uma_factor_speed
 	}
 	modifier = {
-		ship_weapon_damage = 0.08
-		ship_speed_mult = 0.08
-		ship_sensor_range_add = 2
-		ship_orbit_upkeep_mult = -0.050
+#		ship_weapon_damage = 0.08
+#		ship_speed_mult = 0.08
+#		ship_sensor_range_add = 2
+#		ship_orbit_upkeep_mult = -0.050
+		modify_species_cost_mult = -0.5
 	}
+	custom_tooltip_with_modifiers = uma_tradition_factor_strength_tt
 }
 
 #性格因子强化 2
@@ -258,11 +275,25 @@ uma_factor_wisdom = {
 
 	}
 	modifier = {
-		pop_happiness = 0.08
-		planet_stability_mult = 0.08
-		pop_housing_usage_mult = -0.014
-		planet_jobs_consumer_goods_upkeep_mult = -0.01
+#		pop_happiness = 0.08
+#		planet_stability_mult = 0.08
+#		pop_housing_usage_mult = -0.014
+#		planet_jobs_consumer_goods_upkeep_mult = -0.01
+
 	}
+	triggered_modifier = {
+		potential = {
+			NOT = {
+				any_situation = {
+					has_situation_flag = uma_ap2_factor_had_happened
+				}
+			}
+		}
+		UMA_pop_growth_speed = 0.05
+
+	}
+	custom_tooltip = uma_tradition_factor_wisdom_tt
+
 }
 
 #性格因子强化Ⅱ 5
@@ -273,10 +304,12 @@ uma_factor_willpower = {
 		has_tradition = uma_factor_wisdom
 	}
 	modifier = {
-		pop_growth_speed = 0.06
-		planet_crime_mult = -0.01
-		planet_jobs_produces_mult = 0.06
+#		pop_growth_speed = 0.06
+#		planet_crime_mult = -0.01
+#		planet_jobs_produces_mult = 0.06
+		UMA_pop_growth_speed = 0.05
 	}
+	custom_tooltip = uma_tradition_factor_willpower_tt
 }
 
 #摘星 4
@@ -288,12 +321,14 @@ uma_factor_star_picking = {
 		has_tradition = uma_factor_strength
 	}
 	modifier = {
-		shipclass_military_build_speed_mult = 0.2
-		megastructure_build_speed_mult = 0.2
+#		shipclass_military_build_speed_mult = 0.2
+#		megastructure_build_speed_mult = 0.2
 		pop_growth_speed = 0.05
-		UMA_species_trait_points_add = 4
+		UMA_species_trait_points_add = 2
 		UMA_species_trait_picks_add = 2
 	}
+	custom_tooltip_with_modifiers = uma_factor_star_picking_tt
+
 }
 
 

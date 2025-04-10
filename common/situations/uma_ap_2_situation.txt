@@ -5,7 +5,7 @@ situation_uma_ap_2_situation_system_factor = {
 	complete_icon = GFX_situation_outcome_ascension
 	start_value = 1
 	on_start = {
-
+		set_situation_flag = uma_ap2_factor_had_happened
 	}
 	## TODO: picture added
 	monthly_progress = {
@@ -32,6 +32,9 @@ situation_uma_ap_2_situation_system_factor = {
 	on_progress_complete = {
 		custom_tooltip = situation_uma_ap_2_situation_system_factor_fin_tt
 		hidden_effect = {
+			Root = {
+				remove_situation_flag = uma_ap2_factor_had_happened
+			}
 			owner = {
 				country_event = {
 					id = uma_ap.54
