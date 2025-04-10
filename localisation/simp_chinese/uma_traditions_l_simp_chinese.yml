@@ -60,12 +60,18 @@ uma_realm_self_trigger_desc: "我们使领域的激发会更简单，甚至达�
 uma_realm_full_body: "全身全灵"
 uma_realm_full_body_desc: "领域已经不为‘能改变世界的精英马娘‘所有。现在，每位马娘都拥有了领域，我们也将这份力量充分利用到各行各业之中。宇宙，此时已存我心"
 
-uma_factor_adopt_tt: "在因子局势完成前:\n$situation_speed_tt$: §G+20%§!\n\n在因子局势完成后:\n "
-uma_tradition_factor_speed_tt: "在因子局势完成前:\n$situation_speed_tt$: §G+2%§! \n\n在因子局势完成后:\n £mod_planet_pops_organics_upkeep_mult£$mod_planet_pops_organics_upkeep_mult$: §G-5%§!"
-uma_tradition_factor_wisdom_tt: "在因子局势完成前:\n$situation_speed_tt$: §G+2%§! \n\n在因子局势完成后:\n£mod_pop_growth_speed£$mod_UMA_pop_growth_speed$: §G+5%§! §g(用于抵消修正)§!"
-uma_tradition_factor_strength_tt: "在因子局势完成前:\n$situation_speed_tt$: §G+2%§!\n\n在因子局势完成后:\n "
-uma_tradition_factor_willpower_tt: "在因子局势完成前:\n$situation_speed_tt$: §G+2%§! \n\n在因子局势完成后:\n£mod_pop_growth_speed£$mod_UMA_pop_growth_speed$: §G+5%§! §g(用于抵消修正)§!"
-uma_factor_star_picking_tt: "在因子局势完成前:\n$situation_speed_tt$: §G+2%§!\n\n在因子局势完成后:\n现在§Y转化来的§!马娘人口惩罚将会§Y被取消§!\n"
+uma_factor_adopt_tt: "§H在因子局势完成前:§!\n$situation_speed_tt$: §G+20%§!\n\n§H在因子局势完成后:§!\n "
+uma_tradition_factor_speed_tt: "§H在因子局势完成前:§!\n$situation_speed_tt$: §G+2%§! \n\n§H在因子局势完成后:§!\n £mod_planet_pops_organics_upkeep_mult£$mod_planet_pops_organics_upkeep_mult$: §G-5%§!"
+uma_tradition_factor_wisdom_tt: "§H在因子局势完成前:§!\n$situation_speed_tt$: §G+2%§! \n\n§H在因子局势完成后:§!\n£mod_pop_growth_speed£$mod_UMA_pop_growth_speed$: §G+5%§! §g(用于抵消修正)§!"
+uma_tradition_factor_strength_tt: "§H在因子局势完成前:§!\n$situation_speed_tt$: §G+2%§!\n\n§H在因子局势完成后:§!"
+uma_tradition_factor_willpower_tt: "§H在因子局势完成前:§!\n$situation_speed_tt$: §G+2%§! \n\n§H在因子局势完成后:§!\n£mod_pop_growth_speed£$mod_UMA_pop_growth_speed$: §G+5%§! §g(用于抵消修正)§!"
+uma_factor_star_picking_tt: "§H在因子局势完成前:§!\n$situation_speed_tt$: §G+2%§!\n\n§H在因子局势完成后:§!\n现在§Y转化来的§!马娘人口惩罚将会§Y被取消§!\n"
+
+
+uma_realm_adopt_tt: "§H在领域局势完成前:§!\n$situation_speed_tt$: §G+20%§!\n\n§H在领域局势完成后:§!\n "
+uma_realm_strength_tt: "§H在领域局势完成前:§!\n$situation_speed_tt$: §G+2%§!\n\n§H在领域局势完成后:§!\n"
+uma_realm_trigger_be_simple_tt: "§H在领域局势完成前:§!\n$situation_speed_tt$: §G+2%§!\n\n§H在领域局势完成后:§!\n"
+uma_realm_full_body_tt: "§H在领域局势完成前:§!\n$situation_speed_tt$: §G+2%§!\n\n§H在领域局势完成后:§!\n"
 
 ###################以上，为传统本地化
 
@@ -100,7 +106,7 @@ mod_planet_jobs_food_upkeep_mult: "星球£food£食物维护费:"
 
 ##
 #星球产业增幅器
-uma_realm_field_large_job_to_use_tp: "解锁建筑：['building:building_uma_field_realm_enhence'] 和 ['building:building_realm_planetary_shield_generator']"
+uma_realm_field_large_job_to_use_tp: "解锁建筑：['building:building_realm_planetary_shield_generator']"
 uma_realm_self_trigger_tp: "解锁建筑：['building:building_uma_crystal_alloy_realm_complex']\n['building:building_uma_field_powering_complex_realm']\n['building:building_uma_modern_carrot_farm_realm']\n['building:building_uma_core_mining_complex_realm']\n['building:building_uma_crystal_carrot_producing_realm_complex']\n['building:building_uma_crystal_consumer_goods_realm_complex']"
 
 

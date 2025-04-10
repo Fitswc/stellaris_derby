@@ -354,8 +354,10 @@ uma_realm_adopt = {
 		uma_has_ap_two_realm = yes
 	}
 	modifier = {
-		planet_jobs_produces_mult = 0.05
+		planet_jobs_produces_mult = 0.1
+
 	}
+	custom_tooltip_with_modifiers = uma_realm_adopt_tt
 }
 
 #fin.
@@ -378,10 +380,15 @@ uma_realm_strength = {
 
 	}
 	modifier = {
-		army_damage_mult = 0.05
-		planet_jobs_worker_produces_mult = 0.05
-		planet_jobs_food_upkeep_mult = 0.09
+#		army_damage_mult = 0.05
+#		planet_jobs_worker_produces_mult = 0.05
+#		planet_jobs_food_upkeep_mult = 0.09
 	}
+	triggered_modifier = {
+		planet_jobs_produces_mult = 0.05
+		army_damage_mult = 0.05
+	}
+	custom_tooltip_with_modifiers = uma_realm_strength_tt
 }
 
 #2 - 领域触发简化
@@ -391,11 +398,13 @@ uma_realm_trigger_be_simple = {
 
 	}
 	modifier = {
-		planet_jobs_specialist_produces_mult= 0.06
-		ship_anomaly_research_speed_mult = 0.3
+#		planet_jobs_specialist_produces_mult= 0.06
+#		ship_anomaly_research_speed_mult = 0.3
 		all_technology_research_speed = 0.02
-		ship_archaeological_site_excavation_speed_mult = 0.2
+		ship_archaeological_site_excavation_speed_mult = 0.15
+
 	}
+	custom_tooltip_with_modifiers = uma_realm_trigger_be_simple_tt
 }
 
 #3 - 领域场泛用化
@@ -408,7 +417,7 @@ uma_realm_field_large_job_to_use = {
 
 	modifier = {
 		ship_ftl_jumpdrive_range_mult = 0.1
-		ship_speed_mult = 0.08
+		ship_speed_mult = 0.05
 	}
 	
 	custom_tooltip_with_modifiers = uma_realm_field_large_job_to_use_tp #解锁建筑：领域调幅器->每位马娘都能很好的适应工作 and 领域场行星护盾
@@ -435,9 +444,8 @@ uma_realm_full_body = {
 		has_tradition = uma_realm_field_large_job_to_use
 	}
 	modifier = {
-		army_damage_mult = 0.2
-		planet_jobs_produces_mult = 0.2
-		 army_health = 0.2
+		army_health = 0.2
 		UMA_species_trait_points_add = 2
 	}
+	custom_tooltip_with_modifiers = uma_realm_full_body_tt
 }

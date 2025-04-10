@@ -291,7 +291,18 @@ building_uma_modern_carrot_farm_realm = {
 			job_uma_carrot_farmer_add = 4
 		}
 	}
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
 		planet_uma_carrot_farmer_produces_mult = 0.15
 		planet_uma_bee_farmer_produces_mult = 0.15
 	}

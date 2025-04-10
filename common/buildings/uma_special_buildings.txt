@@ -77,55 +77,55 @@ building_uma_nice_nature_no_restaurant = {
 }
 
 #领域调幅器
-building_uma_field_realm_enhence = {
-	base_buildtime = 300
-	category = resource
-	base_cap_amount = 1
-	can_be_ruined = no
-	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				has_tradition = uma_realm_field_large_job_to_use
-				has_ascension_perk = ap_uma_mixture_ap_2
-			}
-			OR = {
-				has_authority = auth_trainingcenter
-				#is_uma_fallen_empire = yes
-			}
-		}
-	}
-
-	destroy_trigger = {
-		exists = owner
-		OR = {
-			owner = {
-				NOR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			alloys = 3000
-			uma_crystal_carrot = 500
-		}
-		upkeep = {
-			uma_crystal_carrot = 16
-			energy = 140
-		}
-	}
-
-	planet_modifier = {
-		planet_jobs_produces_mult = 0.4
-	}
-
-
-}
+#building_uma_field_realm_enhence = {
+#	base_buildtime = 300
+#	category = resource
+#	base_cap_amount = 1
+#	can_be_ruined = no
+#	potential = {
+#		exists = owner
+#		owner = {
+#			OR = {
+#				has_tradition = uma_realm_field_large_job_to_use
+#				has_ascension_perk = ap_uma_mixture_ap_2
+#			}
+#			OR = {
+#				has_authority = auth_trainingcenter
+#				#is_uma_fallen_empire = yes
+#			}
+#		}
+#	}
+#
+#	destroy_trigger = {
+#		exists = owner
+#		OR = {
+#			owner = {
+#				NOR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#	}
+#
+#	resources = {
+#		category = planet_buildings
+#		cost = {
+#			alloys = 3000
+#			uma_crystal_carrot = 500
+#		}
+#		upkeep = {
+#			uma_crystal_carrot = 16
+#			energy = 140
+#		}
+#	}
+#
+#	planet_modifier = {
+##		planet_jobs_produces_mult = 0.4
+#	}
+#
+#
+#}
 
 
 building_realm_planetary_shield_generator = {
@@ -178,7 +178,7 @@ building_realm_planetary_shield_generator = {
 	}
 
 	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.9
+		planet_orbital_bombardment_damage = -0.85
 		army_defense_health_mult = 0.4
 	}
 
