@@ -1362,7 +1362,7 @@ situation_event = {
 			remove_situation_flag = uma_ap_2_situation_factor_pause
 			random_list = {
 				20 = {
-					destroy_situation = This
+#					destroy_situation = This
 					owner = {
 						country_event = {
 							id = uma_ap.71
@@ -1398,18 +1398,18 @@ country_event = {
 	option = {
 		name = uma_ap.71.a
 		custom_tooltip = uma_ap.71.a.tt
-		every_planet_within_border = {
-			limit = {
-				is_colony = yes
-			}
-			add_planet_devastation = 90
-			while = {
-				count = 6
-				random_pop = {
-					kill_pop = yes
-				}
-			}
-		}
+#		every_planet_within_border = {
+#			limit = {
+#				is_colony = yes
+#			}
+#			add_planet_devastation = 90
+#			while = {
+#				count = 6
+#				random_pop = {
+#					kill_pop = yes
+#				}
+#			}
+#		}
 		owner = {
 			country_event = {
 				id = uma_ap.90
