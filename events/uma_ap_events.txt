@@ -1406,24 +1406,10 @@ country_event = {
 		custom_tooltip = uma_ap.71.a.tt
 
 		hidden_effect = {
-			random_planet_within_border = {
-				limit = {
-					is_colony = yes
-					is_capital = no
-				}
-				planet_event = {
-					id = uma_ap.81
-				}
-
-#				save_global_event_target_as = uma_ap2_factor_hostile_planet
+			country_event = {
+				id = uma_ap.811
 			}
 		}
-		#			every_owned_pop = {
-		#				modify_species = {
-		#					add_trait = uma_trait_ap2_factor_fail_evt
-		#				}
-		#			}
-
 	}
 }
 
@@ -1468,6 +1454,12 @@ situation_event = {
 		}
 		set_situation_flag = uma_ap_2_situation_factor_pause
 		set_situation_flag = uma_ap2_factor_80_has_happened
+
+		owner = {
+			country_event = {
+				id = uma_ap.82
+			}
+		}
 	}
 
 	option = {
@@ -1482,6 +1474,11 @@ situation_event = {
 					}
 					add_planet_devastation = 99
 
+				}
+				hidden_effect = {
+					country_event = {
+						id = uma_ap.811
+					}
 				}
 
 			}
