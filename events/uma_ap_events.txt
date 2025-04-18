@@ -1395,35 +1395,35 @@ country_event = {
 		}
 	}
 
+	immediate = {
+		country_event = {
+			id = uma_ap.82
+		}
+	}
+
 	option = {
 		name = uma_ap.71.a
 		custom_tooltip = uma_ap.71.a.tt
-#		every_planet_within_border = {
-#			limit = {
-#				is_colony = yes
-#			}
-#			add_planet_devastation = 90
-#			while = {
-#				count = 6
-#				random_pop = {
-#					kill_pop = yes
-#				}
-#			}
-#		}
-		owner = {
-			country_event = {
-				id = uma_ap.90
-			}
-#			country_event = {
-#				id = uma_ap.82
-#			}
-			every_owned_pop = {
-				modify_species = {
-					add_trait = uma_trait_ap2_factor_fail_evt
-				}
-			}
 
+		hidden_effect = {
+			random_planet_within_border = {
+				limit = {
+					is_colony = yes
+					is_capital = no
+				}
+				planet_event = {
+					id = uma_ap.81
+				}
+
+#				save_global_event_target_as = uma_ap2_factor_hostile_planet
+			}
 		}
+		#			every_owned_pop = {
+		#				modify_species = {
+		#					add_trait = uma_trait_ap2_factor_fail_evt
+		#				}
+		#			}
+
 	}
 }
 
@@ -1444,7 +1444,7 @@ situation_event = {
 			}
 			situation_progress < 90
 		}
-		situation_progress >= 80
+		situation_progress >= 70
 	}
 
 	weight_multiplier = {
@@ -1480,28 +1480,12 @@ situation_event = {
 					limit = {
 						is_colony = yes
 					}
-					add_planet_devastation = 90
-					while = {
-						count = 6
-						random_pop = {
-							kill_pop = yes
-						}
-					}
+					add_planet_devastation = 99
+
 				}
-				country_event = {
-					id = uma_ap.90
-				}
-				#				country_event = {
-				#					id = uma_ap.82  #功能占位
-				#				}
-				every_owned_pop = {
-					modify_species = {
-						add_trait = uma_trait_ap2_factor_fail_evt
-					}
-				}
+
 			}
 		}
-		destroy_situation = This
 	}
 }
 
@@ -1552,44 +1536,6 @@ country_event = {
 		}
 
 
-		random_planet_within_border = {
-			limit = {
-				is_colony = yes
-				is_capital = no
-			}
-			set_owner = event_target:uma_ap2_factor_hostile_event_country_evtt
-			downgrade_all_buildings = yes
-			while = {
-				count = 3
-				random_owned_pop = {
-					kill_pop = yes
-				}
-			}
-			while = {
-				count = 10
-				create_army = {
-					name = uma_ap2_factor_crazy_guys
-					owner = event_target:uma_ap2_factor_hostile_event_country_evtt
-					type = uma_ap2_factor_crazy_guys
-					species = event_target:uma_ap2_factor_hostile_event_country_evtt
-					effect = {
-
-					}
-				}
-			}
-
-			Root = {
-				country_event = {
-					id = uma_ap.81
-				}
-				country_event = {
-					id = uma_ap.102
-					days = 100
-				}
-			}
-
-			save_global_event_target_as = uma_ap2_factor_hostile_planet
-		}
 	}
 
 	after = {
@@ -1598,70 +1544,84 @@ country_event = {
 }
 
 country_event = {
+	id = uma_ap.811
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			any_galaxy_planet = {
+				is_controlled_by = event_target:uma_ap2_factor_hostile_event_country_evtt
+			}
+			NOT = {
+				has_country_flag = uma_ap2_factor_crisis_end
+			}
+		}
+	}
+
+	immediate = {
+
+		random_planet_within_border = {
+			limit = {
+				is_colony = yes
+				is_capital = no
+			}
+			planet_event = {
+				id = uma_ap.81
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				any_galaxy_planet = {
+					is_controlled_by = event_target:uma_ap2_factor_hostile_event_country_evtt
+				}
+			}
+
+			country_event = {
+				id = uma_ap.811
+				days = 200
+			}
+		}
+
+	}
+}
+
+planet_event = {
 	id = uma_ap.81
 	title = uma_ap.81.title
 	desc = uma_ap.81.desc
 	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		while = {
+			count = 10
+			create_army = {
+				name = uma_ap2_factor_crazy_guys
+				owner = event_target:uma_ap2_factor_hostile_event_country_evtt
+				type = uma_ap2_factor_crazy_guys
+				species = event_target:uma_ap2_factor_hostile_event_country_evtt
+				effect = {
+
+				}
+			}
+		}
+	}
 
 	option = {
 		name = uma_ap.81.a
 		clear_global_event_target = uma_ap2_factor_hostile_planet
 	}
 
+
 }
 
-
-country_event = {
-	id = uma_ap.102
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = uma_ap2_factor_crisis_begin
-		NOT = {
-			has_country_flag = uma_ap2_factor_crisis_end
-		}
-	}
-
-	immediate = {
-		random_planet_within_border = {
-			limit = {
-				is_colony = yes
-			}
-			set_owner = event_target:uma_ap2_factor_hostile_event_country_evtt
-			downgrade_all_buildings = yes
-			while = {
-				count = 3
-				random_owned_pop = {
-					kill_pop = yes
-				}
-			}
-			while = {
-				count = 10
-				create_army = {
-					name = uma_ap2_factor_crazy_guys
-					owner = event_target:uma_ap2_factor_hostile_event_country_evtt
-					type = uma_ap2_factor_crazy_guys
-					species = event_target:uma_ap2_factor_hostile_event_country_evtt
-					effect = {
-
-					}
-				}
-			}
-
-			Root = {
-				country_event = {
-					id = uma_ap.102
-					days = 100
-				}
-				country_event = {
-					id = uma_ap.81
-				}
-			}
-
-		}
-	}
-}
 
 country_event = {
 	id = uma_ap.83
@@ -1683,7 +1643,7 @@ country_event = {
 			limit = {
 				NOT = {
 					any_planet_within_border = {
-						is_owned_by = event_target:uma_ap2_factor_hostile_event_country_evtt
+						is_controlled_by = event_target:uma_ap2_factor_hostile_event_country_evtt
 					}
 				}
 			}
@@ -1722,13 +1682,7 @@ country_event = {
 	desc = uma_ap.85.desc
 
 	trigger = {
-		NOT = {
-			has_country_flag = uma_ap2_factor_crisis_end
-			any_planet_within_border = {
-				is_colony = yes
-				is_owned_by = Root
-			}
-		}
+
 	}
 
 	immediate = {
