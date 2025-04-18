@@ -154,6 +154,7 @@ uma_am_anomaly = {
     desc = uma_am_anomaly_desc
     picture = GFX_evt_ocean
     level = 1
+	should_ai_use = no
 
     on_success = {
         1 = { anomaly_event = uma_never_forget.9 }
