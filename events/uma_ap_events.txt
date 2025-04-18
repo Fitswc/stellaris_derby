@@ -1932,6 +1932,9 @@ country_event = {
 
 	option = {
 		name = uma_ap.154.a
+		hidden_effect = {
+			set_country_flag = uma_ap2_factor_completed
+		}
 	}
 }
 
