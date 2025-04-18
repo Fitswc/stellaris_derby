@@ -1023,6 +1023,7 @@ country_event = {
 	id = uma_ap.40
 	title = uma_ap.40.title
 	desc = uma_ap.40.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	trigger = {
@@ -1133,6 +1134,7 @@ situation_event = {
 	id = uma_ap.51
 	title = uma_ap.51.title
 	desc = uma_ap.51.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	immediate = {
@@ -1148,6 +1150,7 @@ situation_event = {
 	id = uma_ap.52
 	title = uma_ap.52.title
 	desc = uma_ap.52.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	option = {
@@ -1160,6 +1163,7 @@ situation_event = {
 	id = uma_ap.53
 	title = uma_ap.53.title
 	desc = uma_ap.53.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	option = {
@@ -1171,6 +1175,7 @@ country_event= {
 	id = uma_ap.54
 	title = uma_ap.54.title
 	desc = uma_ap.54.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	option = {
@@ -1226,6 +1231,7 @@ situation_event = {
 	id = uma_ap.60
 	title = uma_ap.60.title
 	desc = uma_ap.60.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 	situation = this
 
@@ -1300,6 +1306,7 @@ country_event = {
 	is_triggered_only = yes
 	title = uma_ap.61.title
 	desc = uma_ap.61.desc
+	picture = GFX_evt_uma_kobe
 
 	option = {
 		name = uma_ap.61.a
@@ -1316,6 +1323,7 @@ situation_event = {
 	id = uma_ap.70
 	title = uma_ap.70.title
 	desc = uma_ap.70.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 	situation = this
 
@@ -1387,6 +1395,7 @@ country_event = {
 	id = uma_ap.71
 	title = uma_ap.71.title
 	desc = uma_ap.71.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	trigger = {
@@ -1419,6 +1428,7 @@ situation_event = {
 	id = uma_ap.80
 	title = uma_ap.80.title
 	desc = uma_ap.80.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 	situation = this
 
@@ -1558,31 +1568,52 @@ country_event = {
 
 	immediate = {
 
-		random_planet_within_border = {
+		if = {
 			limit = {
-				is_colony = yes
-				is_capital = no
+				count_controlled_planet = {
+					limit = {
+						is_owned_by = Root
+					}
+					count = 1
+				}
 			}
-			planet_event = {
-				id = uma_ap.81
+			random_planet_within_border = {
+				limit = {
+					NOT = {
+						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+					}
+					is_colony = yes
+					is_capital = yes
+				}
+				planet_event = {
+					id = uma_ap.81
+				}
 			}
+		}
+
+		else = {
+
+			random_planet_within_border = {
+				limit = {
+					NOT = {
+						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+					}
+					is_colony = yes
+					is_capital = no
+				}
+				planet_event = {
+					id = uma_ap.81
+				}
+			}
+
 		}
 	}
 
 	after = {
-		if = {
-			limit = {
-				any_galaxy_planet = {
-					is_controlled_by = event_target:uma_ap2_factor_hostile_event_country_evtt
-				}
-			}
-
-			country_event = {
-				id = uma_ap.811
-				days = 200
-			}
+		country_event = {
+			id = uma_ap.811
+			days = 50 #Test
 		}
-
 	}
 }
 
@@ -1590,6 +1621,7 @@ planet_event = {
 	id = uma_ap.81
 	title = uma_ap.81.title
 	desc = uma_ap.81.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	trigger = {
@@ -1597,6 +1629,7 @@ planet_event = {
 	}
 
 	immediate = {
+		set_planet_flag = uma_ap2_factor_this_planet_has_been_infected
 		while = {
 			count = 10
 			create_army = {
@@ -1615,8 +1648,6 @@ planet_event = {
 		name = uma_ap.81.a
 		clear_global_event_target = uma_ap2_factor_hostile_planet
 	}
-
-
 }
 
 
@@ -1627,7 +1658,10 @@ country_event = {
 
 	trigger = {
 		From = {
-			is_country_type = uma_ap2_hostile_event_country
+			OR = {
+				is_country_type = uma_ap2_hostile_event_country
+				has_country_flag = uma_ap2_factor_hostile_event_country_flag
+			}
 		}
 		This = {
 			has_authority = auth_trainingcenter
@@ -1661,6 +1695,7 @@ country_event = {
 	id = uma_ap.84
 	title = uma_ap.84.title
 	desc = uma_ap.84.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	option = {
@@ -1669,7 +1704,46 @@ country_event = {
 			modifier = uma_ap2_factor_bade
 			days = 360
 		}
+
+		hidden_effect = {
+			event_target:uma_ap2_factor_hostile_event_country_evtt = {
+				destroy_country = yes
+			}
+		}
 	}
+}
+
+country_event = {
+	id = uma_ap.855
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		This = {
+			OR = {
+				is_country_type = uma_ap2_hostile_event_country
+				has_country_flag = uma_ap2_factor_hostile_event_country_flag
+			}
+		}
+		From = {
+			has_authority = auth_trainingcenter
+		}
+
+		FromFrom = {
+			is_capital = yes
+		}
+	}
+
+
+	immediate = {
+		From = {
+			country_event = {
+				id = uma_ap.85
+			}
+		}
+		set_country_flag = uma_ap2_factor_crisis_end
+	}
+
 }
 
 country_event = {
@@ -1677,13 +1751,16 @@ country_event = {
 	is_triggered_only = yes
 	title = uma_ap.85.title
 	desc = uma_ap.85.desc
+	picture = GFX_evt_uma_kobe
 
 	trigger = {
+
 
 	}
 
 	immediate = {
 		set_country_flag = uma_ap2_factor_crisis_end
+		log = UMA_AP2_PLAYER_DEFEAT
 	}
 
 	option = {
@@ -1691,6 +1768,12 @@ country_event = {
 		add_modifier = {
 			modifier = uma_ap2_factor_bade_bad
 			days = -1
+		}
+	}
+
+	after = {
+		event_target:uma_ap2_factor_hostile_event_country_evtt = {
+			destroy_country = yes
 		}
 	}
 }
@@ -1702,6 +1785,7 @@ country_event = {
 	id = uma_ap.140
 	title = uma_ap.140.title
 	desc = uma_ap.140.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	trigger = {
@@ -1808,6 +1892,7 @@ situation_event = {
 	id = uma_ap.151
 	title = uma_ap.151.title
 	desc = uma_ap.151.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	immediate = {
@@ -1823,6 +1908,7 @@ situation_event = {
 	id = uma_ap.152
 	title = uma_ap.152.title
 	desc = uma_ap.152.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	option = {
@@ -1835,6 +1921,7 @@ country_event = {
 	id = uma_ap.154
 	title = uma_ap.154.title
 	desc = uma_ap.154.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 
 	immediate = {
@@ -1892,6 +1979,7 @@ situation_event  = {
 	id = uma_ap.160
 	title = uma_ap.160.title
 	desc = uma_ap.160.desc
+	picture = GFX_evt_uma_kobe
 	is_triggered_only = yes
 	situation = This
 
