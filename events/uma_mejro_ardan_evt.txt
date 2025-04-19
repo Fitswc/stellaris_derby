@@ -246,7 +246,13 @@ country_event = {
 	}
 
 	option = {
-		name = uma_skip
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.12
+			}
+		}
 	}
 }
 
@@ -346,6 +352,31 @@ country_event = {
 	option = {
 		name = uma_mejro_ardan.12.a
 		response_text = uma_mejro_ardan.12.a.repo
+
+	}
+
+	after = {
+		country_event = {
+			id = uma_mejro_ardan.13
+			days = 200
+			random = 100
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_mejro_ardan.13
+	title = uma_mejro_ardan.13.title
+	desc = uma_mejro_ardan.13.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.13.a
 
 	}
 }
