@@ -30,3 +30,164 @@ astral_rift_event = {
 	}
 
 }
+
+astral_rift_event = {
+	id = uma_mejro_ardan.2
+	title = uma_mejro_ardan.2.title
+	desc = uma_mejro_ardan.2.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.2.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.3
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.3
+	title = uma_mejro_ardan.3.title
+	desc = uma_mejro_ardan.3.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.3.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.4
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.4
+	title = uma_mejro_ardan.4.title
+	desc = uma_mejro_ardan.4.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.4.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.5
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.5
+	title = uma_mejro_ardan.5.title
+	desc = uma_mejro_ardan.5.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.5.a
+		finish_astral_rift = yes
+		hidden_effect = {
+			explorer = {
+				enable_special_project = {
+					name = UMA_MEJRO_ARDAN_SAVE_AD
+					owner = This
+					location = This.capital_scope
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_mejro_ardan.6
+	title = uma_mejro_ardan.6.title
+	desc = {
+		trigger = {
+			any_owned_leader = {
+				OR = {
+					exists = event_target:uma_is_leader_tachyon
+					has_leader_flag = uma_is_tachyon
+				}
+			}
+
+		}
+		text = uma_mejro_ardan.6.desc_a
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				any_owned_leader = {
+					OR = {
+						exists = event_target:uma_is_leader_tachyon
+						has_leader_flag = uma_is_tachyon
+					}
+				}
+			}
+		}
+		text = uma_mejro_ardan.6.desc_b
+	}
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.6.a
+	}
+}
