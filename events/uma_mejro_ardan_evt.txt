@@ -381,6 +381,13 @@ country_event = {
 	option = {
 		name = uma_mejro_ardan.13.a
 
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.14
+				days = 10
+			}
+		}
+
 	}
 }
 
@@ -402,9 +409,9 @@ country_event = {
 	}
 
 	immediate = {
-		play_sound = uma_hire_Cheval
+		play_sound = uma_hire_Ardan
 		create_country = {
-            name = "NAME_uma_empty_cg"
+            name = "NAME_uma_empty_ad"
             type = global_event
             auto_delete = no
             flag = {
