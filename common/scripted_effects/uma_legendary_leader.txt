@@ -414,3 +414,32 @@ uma_create_leader_sweepy = {
 		}
 	}
 }
+
+
+uma_create_leader_ardan = {
+	create_leader = {
+		name = ARDAN
+		species = root
+		event_leader = no
+		gender = female
+		immortal = yes
+		class = scientist
+		background_planet = event_target:uma_player_umamusume_planet
+		background_job = uma_researcher
+		custom_catch_phrase = uma_ardan_catch_phrase
+		custom_description = uma_ardan_backstory
+
+		skip_background_generation = yes
+		skill = 4
+		set_age = 15
+		traits = {
+
+		}
+		effect = {
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_mejro_ardan
+			save_global_event_target_as = uma_is_leader_mejro_ardan
+			set_leader_flag = legendary_leader
+		}
+	}
+}
