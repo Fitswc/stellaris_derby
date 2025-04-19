@@ -50,23 +50,20 @@ auth_trainingcenter = {
 		base = 10000
 	}
 
-	advanced_authority_swap = {
-		name = "auth_trainingcenter_factor"
-		description = "auth_trainingcenter_factor_desc"
-		inherit_icon = yes
-		inherit_effects = yes
-		trigger = {
-			is_scope_valid = yes
-			has_country_flag = uma_ap2_factor_completed
-		}
-		modifier = {
-			pop_ethic_spiritualist_attraction_mult = 0.2
-			pop_cyborg_happiness = 0.15
-			pop_non_cyborg_happiness = -0.15
-			pop_factions_produces_mult = 0.10
-			all_technology_research_speed = 0.05
-		}
-	}
+#	advanced_authority_swap = {
+#		name = "auth_trainingcenter_factor"
+#		description = "auth_trainingcenter_factor_desc"
+#		inherit_icon = yes
+#		inherit_effects = yes
+#		trigger = {
+#			is_scope_valid = yes
+#			has_country_flag = uma_ap2_factor_completed
+#		}
+#		modifier = {
+#
+#		}
+#	}
+	#Place holder
 	
 	
 }

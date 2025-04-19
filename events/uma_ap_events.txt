@@ -1371,11 +1371,13 @@ situation_event = {
 			random_list = {
 				20 = {
 #					destroy_situation = This
+#					set_situation_flag = uma_ap2_factor_80_has_happened
 					owner = {
 						country_event = {
 							id = uma_ap.71
 							days = 30
 						}
+
 					}
 				}
 				80 = {
@@ -1405,6 +1407,7 @@ country_event = {
 	}
 
 	immediate = {
+		set_country_flag = uma_ap2_factor_80_has_happened
 		country_event = {
 			id = uma_ap.82
 		}

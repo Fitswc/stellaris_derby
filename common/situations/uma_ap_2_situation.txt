@@ -38,7 +38,7 @@ situation_uma_ap_2_situation_system_factor = {
 		}
 
 		modifier = {
-			mult = 0.02
+			mult = 1.02
 			desc = uma_ap_2_situation_factor_tradition
 			owner = {
 				has_tradition = uma_factor_strength
@@ -48,6 +48,20 @@ situation_uma_ap_2_situation_system_factor = {
 				has_tradition = uma_factor_star_picking
 			}
 		}
+
+		modifier = {
+			mult = 0.2
+			desc = "uma_ap_2_situation_factor_crisis"
+
+			OR = {
+				has_situation_flag = uma_ap2_factor_80_has_happened
+				owner = {
+					has_country_flag = uma_ap2_factor_80_has_happened
+				}
+			}
+		}
+
+
 	}
 	on_progress_complete = {
 		custom_tooltip = situation_uma_ap_2_situation_system_factor_fin_tt
@@ -168,6 +182,7 @@ situation_uma_ap_2_situation_system_factor = {
 			abort_situation = Root
 			hidden_effect = {
 				owner = {
+					set_country_flag = uma_ap2_factor_crisis_end
 					every_owned_pop = {
 						modify_species = {
 							add_trait = uma_trait_ap2_factor_fail
@@ -227,7 +242,7 @@ situation_uma_ap_2_situation_system_realm = {
 		}
 
 		modifier = {
-			mult = 0.02
+			mult = 1.02
 			desc = uma_ap_2_situation_factor_tradition
 			owner = {
 				has_tradition = uma_realm_strength
