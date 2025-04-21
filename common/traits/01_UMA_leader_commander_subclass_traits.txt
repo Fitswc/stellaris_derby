@@ -1,0 +1,1837 @@
+##分类天赋树##
+# Commander
+############
+
+###征服者(Admiral)
+subclass_zhengfuzhe_general = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_admiral
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = admiral_subclass_tt
+	fleet_modifier = {
+		ship_speed_mult = 0.3
+		ship_weapon_range_mult = 0.10
+		ship_weapon_damage = 0.10
+	}
+	leader_potential_add = {
+		#判定范围
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+
+	}
+	leader_class = { commander }
+	background_icon = "GFX_leader_subclass_commander_admiral_background"
+}
+
+###机动学说
+#subclass_zhengfuzhe_general = {
+#	custom_subtitle = commander_subclass
+#	leader_trait_type = subclass_trait
+#	inline_script = {
+#		script = trait/icon_subclass
+#		SUBCLASS = commander_admiral #改
+#		COUNCIL = no
+#	}
+#	custom_tooltip_with_modifiers = jidong_subclass
+#	leader_potential_add = {
+# 判定范围
+#		from = {
+#is_species_class = umamusume
+##		has_authority = auth_trainingcenter
+#		}
+#		is_heir = yes
+#		NOT = {
+#			has_trait = leader_trait_junduizhuanjing_general
+#		}
+#	}
+#	modifier = {
+#		ship_speed_mult = 1.0
+#	}
+#	leader_class = { commander }
+#
+#	subclass_background_icon = "GFX_leader_subclass_commander_admiral_background"
+#}
+
+###突破
+leader_trait_tupo_admiral = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tupo_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		has_trait = subclass_zhengfuzhe_general
+	}
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_tracking_add = 10
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_tupo_admiral_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_tupo_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tupo_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.2
+		ship_tracking_add = 20
+	}
+	leader_class = { commander }
+}
+leader_trait_tupo_admiral_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_tupo_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tupo_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.3
+		ship_tracking_add = 30
+	}
+	leader_class = { commander }
+}
+###短兵相接
+leader_trait_duanbingxiangjie_admiral = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_duanbingxiangjie_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		has_trait = subclass_zhengfuzhe_general
+	}
+	fleet_modifier = {
+		ship_cloaking_strength_add = 2
+		ship_weapon_range_mult = -0.3
+		ship_speed_mult = 0.2
+		ship_evasion_mult = 0.2
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_duanbingxiangjie_admiral_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_duanbingxiangjie_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_duanbingxiangjie_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	fleet_modifier = {
+		ship_cloaking_strength_add = 4
+		ship_weapon_range_mult = -0.3
+		ship_speed_mult = 0.4
+		ship_evasion_mult = 0.4
+	}
+	leader_class = { commander }
+}
+leader_trait_duanbingxiangjie_admiral_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_duanbingxiangjie_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_duanbingxiangjie_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	fleet_modifier = {
+		ship_cloaking_strength_add = 6
+		ship_weapon_range_mult = -0.3
+		ship_speed_mult = 0.6
+		ship_evasion_mult = 0.6
+	}
+	leader_class = { commander }
+}
+###狼群
+leader_trait_langqun_admiral = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_langqun_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		has_trait = subclass_zhengfuzhe_general
+	}
+	fleet_modifier = {
+		s_slot_weapon_fire_rate_mult = 0.20
+		s_slot_weapon_damage_mult = 0.20
+		m_slot_weapon_fire_rate_mult = 0.20
+		m_slot_weapon_damage_mult = 0.20
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_langqun_admiral_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_langqun_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_langqun_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	fleet_modifier = {
+		s_slot_weapon_fire_rate_mult = 0.4
+		s_slot_weapon_damage_mult = 0.4
+		m_slot_weapon_fire_rate_mult = 0.4
+		m_slot_weapon_damage_mult = 0.4
+	}
+	leader_class = { commander }
+}
+
+leader_trait_langqun_admiral_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_langqun_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_langqun_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	fleet_modifier = {
+		s_slot_weapon_fire_rate_mult = 0.6
+		s_slot_weapon_damage_mult = 0.6
+		m_slot_weapon_fire_rate_mult = 0.6
+		m_slot_weapon_damage_mult = 0.6
+	}
+	leader_class = { commander }
+}
+####分类天赋树###
+###一线主力##
+####火力优势
+#subclass_zhengfuzhe_general = {
+#	custom_subtitle = commander_subclass
+#	leader_trait_type = subclass_trait
+#	inline_script = {
+#		script = trait/icon_subclass
+#		SUBCLASS = tactician
+#		COUNCIL = no
+#	}
+#	custom_tooltip_with_modifiers = huoli_subclass
+#	modifier = {
+#		ship_weapon_range_mult = 0.25
+#		ship_weapon_damage = 0.4
+#	}
+#	leader_potential_add = {
+
+#		from = {
+#is_species_class = umamusume
+##		has_authority = auth_trainingcenter
+#		}
+#		is_heir = yes
+#		NOT = {
+#			has_trait = leader_trait_junduizhuanjing_general
+#		}
+#	}
+#	leader_class = { commander }
+#
+#	subclass_background_icon = "GFX_leader_subclass_commander_admiral_background" #改
+#}
+
+###巍然不动
+leader_trait_weiranbudong_admiral = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_weiranbudong_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.3
+		ship_shield_mult = 0.3
+		ship_armor_mult = 0.3
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_zhengfuzhe_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_weiranbudong_admiral_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_weiranbudong_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_weiranbudong_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.6
+		ship_shield_mult = 0.6
+		ship_armor_mult = 0.6
+	}
+	leader_class = { commander }
+}
+
+leader_trait_weiranbudong_admiral_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_weiranbudong_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_weiranbudong_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.9
+		ship_shield_mult = 0.9
+		ship_armor_mult = 0.9
+	}
+	leader_class = { commander }
+}
+###快速火炮
+leader_trait_kuaisuhuopao_admiral = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_kuaisuhuopao_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	fleet_modifier = {
+		ship_weapon_range_mult = 0.1
+		ship_accuracy_add = 10
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_zhengfuzhe_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_kuaisuhuopao_admiral_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_kuaisuhuopao_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_kuaisuhuopao_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	fleet_modifier = {
+		ship_weapon_range_mult = 0.2
+		ship_accuracy_add = 20
+	}
+	leader_class = { commander }
+}
+
+leader_trait_kuaisuhuopao_admiral_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_kuaisuhuopao_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_kuaisuhuopao_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	fleet_modifier = {
+		ship_weapon_range_mult = 0.3
+		ship_accuracy_add = 30
+	}
+	leader_class = { commander }
+}
+###情报优先
+leader_trait_qingbaoyouxian_admiral = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_qingbaoyouxian_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	fleet_modifier = {
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 2
+		ship_weapon_damage = 0.1
+		ship_speed_mult = 0.1
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_zhengfuzhe_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_qingbaoyouxian_admiral_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_qingbaoyouxian_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_qingbaoyouxian_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	fleet_modifier = {
+		ship_sensor_range_add = 2
+		ship_hyperlane_range_add = 4
+		ship_weapon_damage = 0.2
+		ship_speed_mult = 0.2
+	}
+	leader_class = { commander }
+}
+
+leader_trait_qingbaoyouxian_admiral_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_qingbaoyouxian_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_qingbaoyouxian_admiral"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	fleet_modifier = {
+		ship_sensor_range_add = 3
+		ship_hyperlane_range_add = 6
+		ship_weapon_damage = 0.3
+		ship_speed_mult = 0.3
+	}
+	leader_class = { commander }
+}
+
+
+
+
+
+
+################################################################################################
+################################################################################################
+###星球机动(General)
+subclass_jidongxueshuo_general = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_general
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = general_subclass_tt
+	leader_potential_add = {                                                #判定范围
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+
+	}
+	army_modifier = {
+		army_damage_mult = 0.3
+		army_attack_morale_mult = 0.2
+	}
+	leader_class = { commander }
+
+	background_icon = "GFX_leader_subclass_commander_general_background"
+}
+###分类天赋树###
+##进攻##
+###征服者
+#subclass_jidongxueshuo_general = {
+#	custom_subtitle = general_subclass
+#	leader_trait_type = subclass_trait
+#	inline_script = {
+#		script = trait/icon_subclass
+#		SUBCLASS = invader
+#		COUNCIL = no
+#	}
+#	custom_tooltip_with_modifiers = zhengfu_subclass
+#	modifier = {
+#		army_damage_mult = 0.3
+#		army_attack_morale_mult = 0.2
+#	}
+#	leader_potential_add = {
+# 判定范围
+#		from = { is_species_class = umamusume }
+#	}
+#	leader_class = { commander }
+#	subclass_background_icon = "GFX_leader_subclass_commander_general_background"
+#}
+###陷阵
+leader_trait_xianzhen_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_xianzhen_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	army_modifier = {
+		army_damage_mult = 0.1
+		army_morale_damage_mult = 0.1
+		army_health = 0.1
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_jidongxueshuo_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_xianzhen_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_xianzhen_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_xianzhen_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+	}
+	army_modifier = {
+		army_damage_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_health = 0.2
+	}
+	leader_class = { commander }
+}
+leader_trait_xianzhen_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_xianzhen_general_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_xianzhen_general"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+	}
+	army_modifier = {
+		army_damage_mult = 0.3
+		army_morale_damage_mult = 0.3
+		army_health = 0.3
+	}
+	leader_potential_add = {
+
+		has_paragon_dlc = yes
+	}
+	leader_class = { commander }
+}
+###大师级闪电战
+#leader_trait_dashijishandianzhan_general = {
+#	leader_trait_type = veteran
+#	inline_script = {
+#		script = trait/icon
+#		CLASS = commander
+#		ICON = "GFX_leader_trait_dashijishandianzhan_general"
+#		RARITY = free_or_veteran
+#		COUNCIL = no
+#		TIER = 1
+#	}
+#	modifier = {
+#		army_morale_damage_mult = 0.5
+#	}
+#	leader_potential_add = {
+
+#		has_trait = subclass_jidongxueshuo_general
+#	}
+#	leader_class = { commander }
+#	selectable_weight = {                                                   #权重
+#		weight = 1000
+#	}
+#}
+#leader_trait_dashijishandianzhan_general_2 = {
+#	leader_trait_type = veteran
+#	replace_traits = { "leader_trait_dashijishandianzhan_general" }
+#	inline_script = {
+#		script = trait/icon
+#		CLASS = commander
+#		ICON = "GFX_leader_trait_dashijishandianzhan_general"
+#		RARITY = free_or_veteran
+#		COUNCIL = no
+#		TIER = 2
+#	}
+#	modifier = {
+#		army_morale_damage_mult = 1.0
+#	}
+#	leader_class = { commander }
+#}
+#leader_trait_dashijishandianzhan_general_3 = {
+#	leader_trait_type = veteran
+#	replace_traits = { "leader_trait_dashijishandianzhan_general_2" }
+#	inline_script = {
+#		script = trait/icon
+#		CLASS = commander
+#		ICON = "GFX_leader_trait_dashijishandianzhan_general"
+#		RARITY = veteran
+#		COUNCIL = no
+#		TIER = 3
+#	}
+#	modifier = {
+#		army_morale_damage_mult = 1.5
+#	}
+#	leader_potential_add = {
+
+#		has_paragon_dlc = yes
+#	}
+#	leader_class = { commander }
+#}
+###空天一体化
+leader_trait_kongtianyitihua_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_kongtianyitihua_general" #复用！！！！！！！！！！！！！！
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	army_modifier = {
+		army_damage_mult = 0.2
+		army_morale_damage_mult = 0.2
+		army_collateral_damage_mult = 0.2
+		armies_upkeep_mult = 0.1
+	}
+	self_modifier = {
+		planet_combat_width_add = 2
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_jidongxueshuo_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_kongtianyitihua_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_kongtianyitihua_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_kongtianyitihua_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	army_modifier = {
+		army_damage_mult = 0.4
+		army_morale_damage_mult = 0.4
+		army_collateral_damage_mult = 0.4
+		armies_upkeep_mult = 0.2
+	}
+	self_modifier = {
+		planet_combat_width_add = 2
+	}
+	leader_class = { commander }
+}
+leader_trait_kongtianyitihua_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_kongtianyitihua_general_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_kongtianyitihua_general"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	army_modifier = {
+		army_damage_mult = 0.6
+		army_morale_damage_mult = 0.6
+		army_collateral_damage_mult = 0.6
+		armies_upkeep_mult = 0.3
+	}
+	self_modifier = {
+		planet_combat_width_add = 2
+	}
+	leader_potential_add = {
+
+		has_paragon_dlc = yes
+	}
+	leader_class = { commander }
+}
+
+
+
+
+
+################################################################################################
+################################################################################################
+###存护者(Governor)
+subclass_cunhuzhe_governor = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_governor
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = governor_subclass_tt
+	leader_potential_add = {                                                #判定范围
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+	}
+	planet_modifier = {
+		army_health = 0.30
+		army_defense_damage_mult = 0.30
+	}
+	self_modifier = {
+		planet_combat_width_add = -4
+	}
+	leader_class = { commander }
+
+	background_icon = "GFX_leader_subclass_commander_governor_background"
+}
+###分类天赋树###
+##防御##
+###存护者
+#subclass_jidongxueshuo_general = {
+#	custom_subtitle = general_subclass
+#	leader_trait_type = subclass_trait
+#	inline_script = {
+#		script = trait/icon_subclass
+#		SUBCLASS = protector
+#		COUNCIL = no
+#	}
+#	custom_tooltip_with_modifiers = cunhu_subclass
+#	modifier = {
+#		army_health = 0.25
+#		army_defense_damage_mult = 0.25
+#	}
+#	self_modifier = {
+#		planet_combat_width_add = -4
+#	}
+#	leader_potential_add = {
+# 判定范围
+#		from = { is_species_class = umamusume }
+#	}
+#	leader_class = { commander }
+#	subclass_background_icon = "GFX_leader_subclass_commander_general_background"
+#}
+###游击战
+leader_trait_youjizhan_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_youjizhan_general" #复用！！！！！！！！！
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		army_health = 0.5
+	}
+	sector_modifier = {
+		army_health = 0.25
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_cunhuzhe_governor
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_youjizhan_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_youjizhan_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_youjizhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		army_health = 1.0
+	}
+	sector_modifier = {
+		army_health = 0.5
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_class = { commander }
+}
+leader_trait_youjizhan_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_youjizhan_general_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_youjizhan_general"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		army_health = 1.5
+	}
+	sector_modifier = {
+		army_health = 0.75
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_potential_add = {
+
+		has_paragon_dlc = yes
+	}
+	leader_class = { commander }
+}
+###运动战
+leader_trait_yundongzhan_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_yundongzhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		army_defense_damage_mult = 0.3
+		army_morale = 0.2
+	}
+	sector_modifier = {
+		army_defense_damage_mult = 0.15
+		army_morale = 0.1
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_cunhuzhe_governor
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_yundongzhan_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_yundongzhan_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_yundongzhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		army_defense_damage_mult = 0.6
+		army_morale = 0.4
+	}
+	sector_modifier = {
+		army_defense_damage_mult = 0.3
+		army_morale = 0.2
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_class = { commander }
+}
+leader_trait_yundongzhan_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_yundongzhan_general_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_yundongzhan_general"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		army_defense_damage_mult = 0.9
+		army_morale = 0.6
+	}
+	sector_modifier = {
+		army_defense_damage_mult = 0.45
+		army_morale = 0.3
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_potential_add = {
+
+		has_paragon_dlc = yes
+	}
+	leader_class = { commander }
+}
+###星际巷战
+leader_trait_xingjixiangzhan_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_xingjixiangzhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.2
+		army_defense_damage_mult = 0.4
+	}
+	sector_modifier = {
+		planet_orbital_bombardment_damage = -0.1
+		army_defense_damage_mult = 0.2
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_cunhuzhe_governor
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_xingjixiangzhan_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_xingjixiangzhan_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_xingjixiangzhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.4
+		army_defense_damage_mult = 0.6
+	}
+	sector_modifier = {
+		planet_orbital_bombardment_damage = -0.2
+		army_defense_damage_mult = 0.3
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_class = { commander }
+}
+leader_trait_xingjixiangzhan_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_xingjixiangzhan_general_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_xingjixiangzhan_general"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.6
+		army_defense_damage_mult = 0.8
+	}
+	sector_modifier = {
+		planet_orbital_bombardment_damage = -0.3
+		army_defense_damage_mult = 0.4
+	}
+	self_modifier = {
+		planet_combat_width_add = -2
+	}
+	leader_potential_add = {
+
+		has_paragon_dlc = yes
+	}
+	leader_class = { commander }
+}
+
+
+
+
+
+################################################################################################
+################################################################################################
+###一马当先(Councilor)
+subclass_zhanluezhihui_councilor = {
+	custom_subtitle = commander_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = commander_councilor
+		COUNCIL = yes
+	}
+	custom_tooltip_with_modifiers = councilor_subclass_tt
+	leader_potential_add = {                                                #判定范围
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+	}
+	councilor_modifier = {
+		ship_speed_mult = 0.30
+		starbase_shipyard_build_speed_mult = 0.30
+		ship_starting_experience_add = 100
+	}
+	leader_class = { commander }
+
+	background_icon = "GFX_leader_subclass_commander_councilor_background"
+}
+###分类天赋树###
+##统领##
+###一马当先
+#subclass_zhanluezhihui_councilor = {
+#	custom_subtitle = councilor_subclass_general
+#	leader_trait_type = subclass_trait
+#
+#	inline_script = {
+#		script = trait/icon_subclass
+#		SUBCLASS = marshall
+#		COUNCIL = yes
+#	}
+#	leader_potential_add = {
+#
+#	}
+#	custom_tooltip_with_modifiers = councilor_subclass_tt
+#	modifier = {
+#		armies_cost_mult = -0.2
+#		armies_upkeep_mult = -0.2
+#	}
+#	leader_class = { commander }
+#	subclass_background_icon = "GFX_leader_subclass_commander_councilor_background"
+#}
+###荣耀之战
+trait_ruler_rongyaozhizhan_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_ruler_rongyaozhizhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.2
+		defense_armies_add = 2
+		army_experience_gain_mult = 0.2
+		army_morale = 0.2
+	}
+	councilor_modifier = {
+		planet_orbital_bombardment_damage = -0.2
+		defense_armies_add = 2
+		army_experience_gain_mult = 0.2
+		army_morale = 0.2
+	}
+	sector_modifier = {
+		planet_orbital_bombardment_damage = -0.2
+		defense_armies_add = 1
+		army_experience_gain_mult = 0.1
+		army_morale = 0.1
+	}
+	leader_potential_add = {
+
+		OR = {
+			has_trait = subclass_zhanluezhihui_councilor
+			has_trait = subclass_cunhuzhe_governor
+		}
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+trait_ruler_rongyaozhizhan_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "trait_ruler_rongyaozhizhan_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_ruler_rongyaozhizhan_general"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.4
+		defense_armies_add = 4
+		army_experience_gain_mult = 0.4
+		army_morale = 0.4
+	}
+	councilor_modifier = {
+		planet_orbital_bombardment_damage = -0.4
+		defense_armies_add = 4
+		army_experience_gain_mult = 0.4
+		army_morale = 0.4
+	}
+	sector_modifier = {
+		planet_orbital_bombardment_damage = -0.2
+		defense_armies_add = 2
+		army_experience_gain_mult = 0.2
+		army_morale = 0.2
+	}
+	leader_class = { commander }
+}
+
+trait_ruler_rongyaozhizhan_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "trait_ruler_rongyaozhizhan_general_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_ruler_rongyaozhizhan_general"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.6
+		defense_armies_add = 6
+		army_experience_gain_mult = 0.6
+		army_morale = 0.6
+	}
+	councilor_modifier = {
+		planet_orbital_bombardment_damage = -0.6
+		defense_armies_add = 6
+		army_experience_gain_mult = 0.6
+		army_morale = 0.6
+	}
+	sector_modifier = {
+		planet_orbital_bombardment_damage = -0.3
+		defense_armies_add = 3
+		army_experience_gain_mult = 0.3
+		army_morale = 0.3
+	}
+	leader_class = { commander }
+}
+###集结
+trait_ruler_jijie_general = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_trait_ruler_jijie_general"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		armies_cost_mult = -0.2
+		armies_upkeep_mult = -0.2
+	}
+	planet_modifier = {
+		armies_cost_mult = -0.2
+		armies_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		armies_cost_mult = -0.1
+		armies_upkeep_mult = -0.1
+	}
+	leader_potential_add = {
+
+		OR = {
+			has_trait = subclass_zhanluezhihui_councilor
+			has_trait = subclass_cunhuzhe_governor
+		}
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+trait_ruler_jijie_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "trait_ruler_jijie_general" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_trait_ruler_jijie_general"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		armies_cost_mult = -0.4
+		armies_upkeep_mult = -0.4
+	}
+	planet_modifier = {
+		armies_cost_mult = -0.4
+		armies_upkeep_mult = -0.4
+	}
+	sector_modifier = {
+		armies_cost_mult = -0.2
+		armies_upkeep_mult = -0.2
+	}
+	leader_class = { commander }
+}
+trait_ruler_jijie_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "trait_ruler_jijie_general_2" }
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_trait_ruler_jijie_general"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	planet_modifier = {
+		armies_cost_mult = -0.6
+		armies_upkeep_mult = -0.6
+	}
+	councilor_modifier = {
+		armies_cost_mult = -0.6
+		armies_upkeep_mult = -0.6
+	}
+	sector_modifier = {
+		armies_cost_mult = -0.3
+		armies_upkeep_mult = -0.3
+	}
+	leader_class = { commander }
+}
+###陆军教官
+trait_ruler_lujunjiaoguan_general = {
+	leader_trait_type = veteran
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_ruler_lujunjiaoguan_general" #复用！！！！！！！！！！！！！！
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		planet_army_build_speed_mult = 0.3
+		army_starting_experience_add = 200
+	}
+	leader_potential_add = {
+
+		has_trait = subclass_zhanluezhihui_councilor
+
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+trait_ruler_lujunjiaoguan_general_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "trait_ruler_lujunjiaoguan_general" }
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_ruler_lujunjiaoguan_general"
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		planet_army_build_speed_mult = 0.6
+		army_starting_experience_add = 400
+	}
+	leader_class = { commander }
+}
+trait_ruler_lujunjiaoguan_general_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "trait_ruler_lujunjiaoguan_general_2" }
+
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_ruler_lujunjiaoguan_general"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		planet_army_build_speed_mult = 0.9
+		army_starting_experience_add = 600
+	}
+	leader_class = { commander }
+}
+###分类天赋树###
+##国防部长##
+###决战计划
+#subclass_zhanluezhihui_councilor = {
+#	custom_subtitle = councilor_subclass_admiral
+#	leader_trait_type = subclass_trait
+##	councilor_trait = yes
+#	inline_script = {
+#		script = trait/icon_subclass
+#		SUBCLASS = strategist
+#		COUNCIL = yes
+#	}
+#	custom_tooltip_with_modifiers = councilor_subclass_tt
+#	triggered_modifier = {
+#		ship_military_cost_mult = -0.05
+#		shipclass_military_build_speed_mult = 0.1
+#		country_naval_cap_add = 50
+#		ship_starting_experience_add = 100
+#	}
+#
+#	leader_potential_add = {
+#		from = {
+#is_species_class = umamusume
+##		has_authority = auth_trainingcenter
+#		}
+#		is_heir = yes
+#		NOT = {
+#			has_trait = leader_trait_junduizhuanjing_general
+#		}
+#	}
+#	leader_class = { commander }
+#
+#	subclass_background_icon = "GFX_leader_subclass_commander_councilor_background"
+#}
+###驻防者
+leader_trait_zhufangzhe_admiral = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_zhufangzhe_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		has_trait = subclass_zhanluezhihui_councilor
+	}
+	councilor_modifier = {
+		shipsize_military_station_small_build_speed_mult = 0.2
+		shipclass_starbase_damage_mult = 0.3
+		shipclass_starbase_hull_mult = 0.3
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_zhufangzhe_admiral_2 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_zhufangzhe_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_zhufangzhe_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		shipsize_military_station_small_build_speed_mult = 0.4
+		shipclass_starbase_damage_mult = 0.6
+		shipclass_starbase_hull_mult = 0.6
+	}
+	leader_class = { commander }
+}
+leader_trait_zhufangzhe_admiral_3 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_zhufangzhe_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_zhufangzhe_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		shipsize_military_station_small_build_speed_mult = 0.6
+		shipclass_starbase_damage_mult = 0.9
+		shipclass_starbase_hull_mult = 0.9
+	}
+	leader_class = { commander }
+}
+###爱舰如妻
+leader_trait_aijianruqi_admiral = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_aijianruqi_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		has_trait = subclass_zhanluezhihui_councilor
+	}
+	councilor_modifier = {
+		ships_upkeep_mult = -0.05
+		ship_hull_regen_add_perc = 0.02
+		ship_armor_regen_add_perc = 0.02
+		ship_shield_regen_add_perc = 0.02
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_aijianruqi_admiral_2 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_aijianruqi_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_aijianruqi_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		ships_upkeep_mult = -0.1
+		ship_hull_regen_add_perc = 0.04
+		ship_armor_regen_add_perc = 0.04
+		ship_shield_regen_add_perc = 0.04
+	}
+	leader_class = { commander }
+}
+leader_trait_aijianruqi_admiral_3 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_aijianruqi_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_aijianruqi_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		ships_upkeep_mult = -0.15
+		ship_hull_regen_add_perc = 0.06
+		ship_armor_regen_add_perc = 0.06
+		ship_shield_regen_add_perc = 0.06
+	}
+	leader_class = { commander }
+}
+###大舰队
+leader_trait_dajiandui_admiral = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_dajiandui_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		has_trait = subclass_zhanluezhihui_councilor
+	}
+	councilor_modifier = {
+		country_naval_cap_add = 100
+		ship_starting_experience_add = 100
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_dajiandui_admiral_2 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_dajiandui_admiral" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_dajiandui_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		country_naval_cap_add = 200
+		ship_starting_experience_add = 300
+	}
+	leader_class = { commander }
+}
+leader_trait_dajiandui_admiral_3 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_dajiandui_admiral_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_dajiandui_admiral"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		country_naval_cap_add = 300
+		ship_starting_experience_add = 500
+	}
+	leader_class = { commander }
+}
+
+
+
+
+
+
+################################################################################################
+################################################################################################
+###天命天赋树###
+###天命1
+leader_trait_tianming1_admiral = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	fleet_modifier = {
+		ship_evasion_mult = 0.6
+		ship_speed_mult = 1.0
+		ship_weapon_range_mult = 1.0
+		ship_cloaking_strength_add = 10
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+		has_trait = subclass_zhengfuzhe_general
+	}
+	leader_class = { commander }
+	custom_tooltip_with_modifiers = leader_trait_youjizhe_effect
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命2
+leader_trait_tianming2_admiral = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.4
+		ship_weapon_range_mult = 0.4
+		ship_weapon_damage = 0.4
+		ship_hull_mult = 0.6
+		ship_armor_mult = 0.6
+		ship_shield_mult = 0.6
+		command_limit_mult = 1.0
+		ships_upkeep_mult = 1.0
+	}
+	self_modifier = {
+		leaders_upkeep_mult = 0.3
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+		has_trait = subclass_zhengfuzhe_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命3
+leader_trait_tianming3_admiral = {
+	leader_trait_type = destiny
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = influence
+		AMOUNT = 3
+	}
+	councilor_modifier = {
+		ship_military_cost_mult = -0.2
+		ships_upkeep_mult = -0.2
+		country_naval_cap_add = 500
+		ship_starting_experience_add = 1000
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+		has_trait = subclass_zhanluezhihui_councilor
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+###天命5
+leader_trait_tianming5_admiral = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	fleet_modifier = {
+		ship_hull_mult = 0.5
+		ship_armor_mult = 0.5
+		ship_shield_mult = 0.5
+		ship_evasion_mult = 0.6
+		ship_speed_mult = 1.0
+	}
+	leader_potential_add = {
+		from = {
+			is_species_class = umamusume
+			#			has_authority = auth_trainingcenter
+		}
+		has_trait = subclass_zhengfuzhe_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+
+
+
+
+
+
+
+
+################################################################################################
+################################################################################################
+###陆军天命天赋树###
+###天命1
+leader_trait_tianming1_general = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral" #复用！！！！！！！！！
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_jidongxueshuo_general
+	}
+	leader_class = { commander }
+	custom_tooltip_with_modifiers = leader_trait_lueduozhe_effect
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命2
+leader_trait_tianming2_general = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	planet_modifier = {
+		planet_soldiers_energy_produces_add = 15
+		planet_soldiers_minerals_produces_add = 15
+		planet_soldiers_unity_produces_add = 10
+		army_defense_morale_mult = 0.4
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_cunhuzhe_governor
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+
+###天命4
+leader_trait_tianming4_general = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	army_modifier = {
+		army_damage_mult = 1
+		army_morale = 1
+		army_collateral_damage_mult = 1
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_jidongxueshuo_general
+	}
+	leader_class = { commander }
+	custom_tooltip_with_modifiers = leader_trait_zhanmaniang_effect
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命5
+leader_trait_tianming5_general = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	army_modifier = {
+		army_damage_mult = 0.6
+		army_morale = 0.6
+		army_collateral_damage_mult = 0.6
+		army_health = 1.0
+		planet_combat_width_add = 10
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_jidongxueshuo_general
+	}
+	leader_class = { commander }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}

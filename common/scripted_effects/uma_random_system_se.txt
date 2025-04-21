@@ -13,6 +13,7 @@
 
 #Scope back to country(Remember!)
 uma_rs_generate_random_number = {
+	optimize_memory
 	switch = {
 		trigger = has_country_flag
 
@@ -49,6 +50,7 @@ uma_rs_generate_random_number = {
 }
 
 uma_rs_1dr = {
+	optimize_memory
 	set_variable_to_random_value = {
 		which = uma_rs_result_number
 		max = 20
@@ -66,6 +68,7 @@ uma_rs_1dr = {
 
 
 uma_rs_judging = {
+	optimize_memory
 	if = {
 		limit = {
 			check_variable = {
@@ -99,10 +102,12 @@ uma_rs_judging = {
 }
 
 uma_rs_difficult_set_up = {
+	optimize_memory
 	set_country_flag = uma_event_randomsys_diff_$DIFFICULT_RATIO$
 }
 
 uma_rs_cleanup = {
+	optimize_memory
 	remove_country_flag = uma_event_randomsys_diff_3
 	remove_country_flag = uma_event_randomsys_diff_2
 	remove_country_flag = uma_event_randomsys_diff_1

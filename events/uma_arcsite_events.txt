@@ -212,9 +212,9 @@ fleet_event = {
 		name = REMARKABLE #占位符
 		custom_tooltip = umaarc.1004.tooltip
 		owner = {
-			add_resource = {
-				
-			}  #可考虑的资源奖励
+			#add_resource = {
+			#
+			#}  #可考虑的资源奖励
 			large_artifact_reward = yes
 		}
 		if = {
@@ -256,7 +256,7 @@ planet_event = {
 		hidden_effect = {
 			planet_owner = {
 				country_event = {
-					id = uma_ss_arc.1
+					id = uma_ayb_arc.1
 					days = 100
 				}
 			}

@@ -11,6 +11,7 @@ uma_create_pre_ftl = {
 
 # This is called before the pre-ftl species is created due to interactions between various origins and the pop creation effect.
 uma_select_pre_ftl_origin = {
+	optimize_memory
 	random_list = {
 		# Default pre-ftl origin
 		# All other origins require First Contact.(限制dlc)
@@ -44,6 +45,7 @@ uma_select_pre_ftl_origin = {
 }
 
 uma_create_pre_ftl_species = {
+	optimize_memory
 	create_species = {
 		name = pre_umamusume
 		class = PRE_UMA
@@ -57,6 +59,7 @@ uma_create_pre_ftl_species = {
 }
 
 uma_create_pre_ftl_empire = {
+	optimize_memory
 	random_list = {
 		# 史前时代
 		90 = {
@@ -74,6 +77,7 @@ uma_create_pre_ftl_empire = {
 }
 
 uma_create_late_pre_ftl_empire = {
+	optimize_memory
 	create_country = {
 		name = random
 		authority = random
@@ -191,6 +195,7 @@ uma_create_late_pre_ftl_empire = {
 }
 
 uma_create_very_early_pre_ftl_empire = {
+	optimize_memory
 	create_country = {
 		name = random
 		authority = random
@@ -288,6 +293,7 @@ uma_create_very_early_pre_ftl_empire = {
 }
 
 uma_create_early_pre_ftl_empire = {
+	optimize_memory
 	create_country = {
 		name = random
 		authority = random
@@ -444,6 +450,7 @@ uma_create_early_pre_ftl_empire = {
 
 
 uma_set_pre_ftl_origin = {
+	optimize_memory
 	switch = {
 		trigger = has_planet_flag
 		pre_ftl_default = {
@@ -462,6 +469,7 @@ uma_set_pre_ftl_origin = {
 
 
 uma_setup_pre_ftl_planet = {
+	optimize_memory
 	set_owner = last_created_country
 	set_capital = yes
 
@@ -646,6 +654,7 @@ uma_setup_pre_ftl_planet = {
 }
 
 uma_create_pre_ftl_blockers = {
+	optimize_memory
 	add_deposit = d_decrepit_dwellings
 	add_deposit = d_failing_infrastructure
 }

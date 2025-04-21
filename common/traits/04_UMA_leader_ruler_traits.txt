@@ -1,0 +1,419 @@
+######国家元首
+###人口专精
+leader_trait_renkouzhuanjing_rule = {
+	starting_ruler_trait = yes
+	cost = 1
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_renkouzhuanjing_rule"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+
+	#特雷森不存在可选机械智能政体的情况
+	#	triggered_modifier = {
+	#		potential = {
+	#			exists = owner
+	#			owner = { is_machine_empire = no }
+	#		}
+	#		pop_growth_speed = 0.1
+	#	}
+	#	triggered_modifier = {
+	#		potential = {
+	#			exists = owner
+	#			owner = { is_machine_empire = yes }
+	#		}
+	#		planet_pop_assembly_mult = 0.1
+	#	}
+	councilor_modifier = {
+		pop_growth_speed = 0.1
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	leader_class = { scientist official commander envoy }
+	selectable_weight = {
+		weight = 2000
+	}
+}
+leader_trait_renkouzhuanjing_rule_2 = {
+	replace_traits = { "leader_trait_renkouzhuanjing_rule" }
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_renkouzhuanjing_rule"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	#	triggered_modifier = {
+	#		potential = {
+	#			exists = owner
+	#			owner = { is_machine_empire = no }
+	#		}
+	#		pop_growth_speed = 0.2
+	#	}
+	#	triggered_modifier = {
+	#		potential = {
+	#			exists = owner
+	#			owner = { is_machine_empire = yes }
+	#		}
+	#		planet_pop_assembly_mult = 0.2
+	#	}
+	councilor_modifier = {
+		pop_growth_speed = 0.2
+	}
+	leader_class = { scientist official commander envoy }
+}
+###发展领袖
+leader_trait_fazhanlingxiou_rule = {
+	starting_ruler_trait = yes
+	cost = 1
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_fazhanlingxiou_rule"
+		RARITY = common
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		species_leader_exp_gain = 0.2
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	leader_class = { scientist official commander envoy }
+	selectable_weight = {
+		weight = 2000
+	}
+}
+leader_trait_fazhanlingxiou_rule_2 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_fazhanlingxiou_rule" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = GFX_leader_trait_fazhanlingxiou_rule
+		RARITY = common
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		species_leader_exp_gain = 0.5
+	}
+	leader_class = { scientist official commander envoy }
+}
+##########
+###国家元首
+subclass_guojiayuanshou_ruler = {
+	custom_subtitle = councilor_subclass_governor
+	leader_trait_type = subclass
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = official_delegate
+		COUNCIL = yes
+	}
+	custom_tooltip_with_modifiers = leader_subclass_tt
+	councilor_modifier = {
+		species_leader_exp_gain = 0.5
+		leader_trait_selection_options_add = 1
+		planet_pops_upkeep_mult = -0.1
+		empire_size_mult = -0.15
+		pop_government_ethic_attraction = 0.5
+		country_trust_growth = 0.05
+	}
+
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
+	}
+	leader_class = { scientist official commander envoy }
+	background_icon = "GFX_leader_subclass_official_economy_councilor_background"
+}
+###军事专精
+leader_trait_junshizhuanjing_rule = {
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_junshizhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		ship_military_cost_mult = -0.1
+		shipclass_military_build_speed_mult = 0.1
+	}
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = 1000
+	}
+}
+
+leader_trait_junshizhuanjing_rule_2 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_junshizhuanjing_rule" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_junshizhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		ship_military_cost_mult = -0.2
+		shipclass_military_build_speed_mult = 0.2
+	}
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_junshizhuanjing_rule_3 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_junshizhuanjing_rule_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_junshizhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		ship_military_cost_mult = -0.3
+		shipclass_military_build_speed_mult = 0.3
+	}
+
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+###生产专精
+leader_trait_shengchanzhuanjing_rule = {
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_shengchanzhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
+	}
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = 1000
+	}
+}
+
+leader_trait_shengchanzhuanjing_rule_2 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_shengchanzhuanjing_rule" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_shengchanzhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.2
+	}
+
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_shengchanzhuanjing_rule_3 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_shengchanzhuanjing_rule_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_shengchanzhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.3
+	}
+
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+###奇观专精
+leader_trait_qiguanzhuanjing_rule = {
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_qiguanzhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		megastructure_build_speed_mult = 0.1
+	}
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
+	}
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+	selectable_weight = {
+		weight = 1000
+	}
+}
+
+leader_trait_qiguanzhuanjing_rule_2 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_qiguanzhuanjing_rule" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_qiguanzhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		megastructure_build_speed_mult = 0.2
+	}
+
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+leader_trait_qiguanzhuanjing_rule_3 = {
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_qiguanzhuanjing_rule_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_qiguanzhuanjing_rule"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		is_ruler = yes
+	}
+	councilor_modifier = {
+		megastructure_build_speed_mult = 0.3
+	}
+	leader_trait_type = veteran
+	leader_class = { scientist official commander envoy }
+	custom_tooltip_with_modifiers = only_one_governor_focus
+}
+
+
+
+
+
+###学生会会长
+leader_trait_ludoufu_rule = {
+	custom_subtitle = councilor_subclass_governor
+	leader_trait_type = destiny
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_educator"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	custom_tooltip_with_modifiers = councilor_subclass_tt
+	councilor_modifier = {
+		species_leader_exp_gain = 1.0
+		leader_trait_selection_options_add = 2
+		planet_pops_upkeep_mult = -0.2
+		empire_size_mult = -0.3
+		pop_government_ethic_attraction = 0.5
+		country_trust_growth = 0.05
+	}
+
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		#		has_trait = subclass_guojiayuanshou_ruler
+		is_ruler = yes
+	}
+	selectable_weight = {
+		modifier = {
+			is_ruler = yes
+			weight = 999999
+		}
+		weight = 999999
+	}
+	leader_class = { scientist official commander envoy }
+	background_icon = "GFX_leader_subclass_official_economy_councilor_background"
+}
+

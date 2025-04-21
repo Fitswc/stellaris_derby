@@ -3,6 +3,7 @@
 #scope (situation)
 
 uma_situation_deficit_locate_looted_planet = {
+    optimize_memory
     owner = {
         ordered_owned_planet = {
             limit = { is_capital = no }
@@ -21,6 +22,7 @@ uma_situation_deficit_locate_looted_planet = {
     }
 }
 uma_situation_deficit_loot_planet = {
+    optimize_memory
     owner = {
         add_resource = {
             $resource$ = $number$

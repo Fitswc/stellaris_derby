@@ -1,0 +1,1035 @@
+uma_governor_trait_charmleader = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/charmleader.png"
+	planet_modifier = {
+		planet_stability_add = 10
+		planet_crime_mult = -0.15
+	}
+	sector_modifier = {
+		planet_stability_add = 5
+		planet_crime_mult = -0.075
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_leadercharm
+	}
+
+	leader_class = { official }
+	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/charmleader.png"}
+	initial = no
+	randomized = no
+}
+
+
+uma_governor_trait_kishouyasashii = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/kishouyasashii.png"
+	planet_modifier = {
+		planet_stability_add = 10
+		planet_crime_mult = -0.15
+	}
+	sector_modifier = {
+		planet_stability_add = 5
+		planet_crime_mult = -0.075
+	}
+	leader_potential_add = {
+		is_species = umamusume
+		has_trait = uma_trait_kishouhageshii
+	}
+
+	leader_class = { official }
+	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/kishouyasashii.png"}
+	initial = no
+	randomized = no
+}
+
+
+###基建狂魔1
+leader_trait_jijiankuangmo_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                  #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_jijiankuangmo_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.3
+		planet_jobs_minerals_produces_mult = 0.1
+		planet_jobs_energy_produces_mult = 0.1
+	}
+
+	sector_modifier = {
+		planet_building_build_speed_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.05
+		planet_jobs_energy_produces_mult = 0.05
+	}
+	leader_class = { official }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###基建狂魔2
+leader_trait_jijiankuangmo_governor_2 = {
+	replace_traits = { "leader_trait_jijiankuangmo_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_jijiankuangmo_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.6
+		planet_jobs_minerals_produces_mult = 0.2
+		planet_jobs_energy_produces_mult = 0.2
+	}
+	sector_modifier = {
+		planet_building_build_speed_mult = 0.3
+		planet_jobs_minerals_produces_mult = 0.1
+		planet_jobs_energy_produces_mult = 0.1
+	}
+	leader_class = { official }
+}
+###规划达人1
+leader_trait_guihuadaren_governor = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_guihuadaren_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_buildings_upkeep_mult = -0.1
+		planet_districts_upkeep_mult = -0.1
+	}
+	sector_modifier = {
+		planet_buildings_upkeep_mult = -0.05
+		planet_districts_upkeep_mult = -0.05
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###规划达人2
+leader_trait_guihuadaren_governor_2 = {
+	replace_traits = { "leader_trait_guihuadaren_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_guihuadaren_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_buildings_upkeep_mult = -0.2
+		planet_districts_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_buildings_upkeep_mult = -0.1
+		planet_districts_upkeep_mult = -0.1
+	}
+	leader_class = { official }
+}
+###环保主义者1
+leader_trait_huanbaozhuyizhe_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_huanbaozhuyizhe_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+		pop_amenities_usage_mult = -0.15
+		planet_jobs_consumer_goods_produces_mult = -0.05
+		planet_jobs_alloys_produces_mult = -0.05
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.075
+		pop_amenities_usage_mult = -0.075
+		planet_jobs_consumer_goods_produces_mult = -0.025
+		planet_jobs_alloys_produces_mult = -0.025
+	}
+	leader_class = { official }                                             #特质分类
+	opposites ={
+		leader_trait_zhuzhongminsheng_governor
+		leader_trait_zhuzhongminsheng_governor_2
+		leader_trait_zhanbeijia_governor
+		leader_trait_zhanbeijia_governor_2
+	}
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###环保主义者2
+leader_trait_huanbaozhuyizhe_governor_2 = {
+	replace_traits = { "leader_trait_huanbaozhuyizhe_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_huanbaozhuyizhe_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.3
+		pop_amenities_usage_mult = -0.3
+		planet_jobs_consumer_goods_produces_mult = -0.1
+		planet_jobs_alloys_produces_mult = -0.1
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+		pop_amenities_usage_mult = -0.15
+		planet_jobs_consumer_goods_produces_mult = -0.05
+		planet_jobs_alloys_produces_mult = -0.05
+	}
+	opposites ={
+		leader_trait_zhuzhongminsheng_governor
+		leader_trait_zhuzhongminsheng_governor_2
+		leader_trait_zhanbeijia_governor
+		leader_trait_zhanbeijia_governor_2
+	}
+	leader_class = { official }
+}
+###注重民生1
+leader_trait_zhuzhongminsheng_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_zhuzhongminsheng_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = -0.05
+		planet_jobs_consumer_goods_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = -0.025
+		planet_jobs_consumer_goods_produces_mult = 0.075
+	}
+	leader_class = { official }                                            #特质分类
+	opposites ={
+		leader_trait_huanbaozhuyizhe_governor
+		leader_trait_huanbaozhuyizhe_governor_2
+		leader_trait_zhanbeijia_governor
+		leader_trait_zhanbeijia_governor_2
+	}
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###注重民生2
+leader_trait_zhuzhongminsheng_governor_2 = {
+	replace_traits = { "leader_trait_zhuzhongminsheng_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhuzhongminsheng_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = -0.1
+		planet_jobs_consumer_goods_produces_mult = 0.3
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = -0.05
+		planet_jobs_consumer_goods_produces_mult = 0.15
+	}
+	opposites ={
+		leader_trait_huanbaozhuyizhe_governor
+		leader_trait_huanbaozhuyizhe_governor_2
+		leader_trait_zhanbeijia_governor
+		leader_trait_zhanbeijia_governor_2
+	}
+	leader_class = { official }
+}
+###战备家1
+leader_trait_zhanbeijia_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_zhanbeijia_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.15
+		planet_jobs_consumer_goods_produces_mult = -0.05
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = 0.075
+		planet_jobs_consumer_goods_produces_mult = -0.025
+	}
+	opposites ={
+		leader_trait_huanbaozhuyizhe_governor
+		leader_trait_huanbaozhuyizhe_governor_2
+		leader_trait_zhuzhongminsheng_governor
+		leader_trait_zhuzhongminsheng_governor_2
+	}
+	leader_class = { official }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###战备家2
+leader_trait_zhanbeijia_governor_2 = {
+	replace_traits = { "leader_trait_zhanbeijia_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhanbeijia_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.3
+		planet_jobs_consumer_goods_produces_mult = -0.1
+	}
+	sector_modifier = {
+		planet_jobs_alloys_produces_mult = 0.15
+		planet_jobs_consumer_goods_produces_mult = -0.05
+	}
+	opposites ={
+		leader_trait_huanbaozhuyizhe_governor
+		leader_trait_huanbaozhuyizhe_governor_2
+		leader_trait_zhuzhongminsheng_governor
+		leader_trait_zhuzhongminsheng_governor_2
+	}
+	leader_class = { official }
+}
+###跑者1
+leader_trait_paozhe_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_paozhe_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_unity_produces_mult = 0.075
+	}
+	leader_class = { official }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###跑者2
+leader_trait_paozhe_governor_2 = {
+	replace_traits = { "leader_trait_paozhe_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_paozhe_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.3
+	}
+	sector_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+	leader_class = { official }
+}
+###来去无踪1
+leader_trait_laiquwuzong_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_laiquwuzong_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_crime_add = -10
+		planet_jobs_specialist_produces_mult = 0.05
+	}
+	sector_modifier = {
+		planet_crime_add = -5
+		planet_jobs_specialist_produces_mult = 0.025
+	}
+	leader_class = { official }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###来去无踪2
+leader_trait_laiquwuzong_governor_2 = {
+	replace_traits = { "leader_trait_laiquwuzong_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_laiquwuzong_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_crime_add = -20
+		planet_jobs_specialist_produces_mult = 0.1
+	}
+	sector_modifier = {
+		planet_crime_add = -10
+		planet_jobs_specialist_produces_mult = 0.05
+	}
+	leader_class = { official }
+}
+###科技1
+leader_trait_keji_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_keji_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.1
+		planet_researchers_upkeep_mult = -0.1
+	}
+	sector_modifier = {
+		planet_researchers_produces_mult = 0.05
+		planet_researchers_upkeep_mult = -0.05
+	}
+	leader_class = { official }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###科技2
+leader_trait_keji_governor_2 = {
+	replace_traits = { "leader_trait_keji_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_keji_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.2
+		planet_researchers_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_researchers_produces_mult = 0.1
+		planet_researchers_upkeep_mult = -0.1
+	}
+	leader_class = { official }
+}
+###农夫1
+leader_trait_nongfu_governor = {
+	inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = official                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_leader_trait_nongfu_governor"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = 1                                                            #等级
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_farmers_food_produces_add = 1
+		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	sector_modifier = {
+		planet_farmers_food_produces_add = 0.5
+		planet_jobs_food_produces_mult = 0.075
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	leader_class = { official }                                            #特质分类
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+###农夫2
+leader_trait_nongfu_governor_2 = {
+	replace_traits = { "leader_trait_nongfu_governor" }                     #替换掉原来等级低的技能用的
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_nongfu_governor"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	planet_modifier = {
+		planet_farmers_food_produces_add = 2
+		planet_jobs_food_produces_mult = 0.3
+		planet_jobs_unity_produces_mult = 0.2
+	}
+	sector_modifier = {
+		planet_farmers_food_produces_add = 1
+		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	leader_class = { official }
+}
+
+
+
+
+
+
+##NEW
+
+#驻防
+leader_trait_zhufang_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhufang_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		defense_armies_add = 2
+	}
+	sector_modifier = {
+		defense_armies_add = 1
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_zhufang_official_2 = {
+	replace_traits = {
+		leader_trait_zhufang_official
+	}
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhufang_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		defense_armies_add = 4
+	}
+	sector_modifier = {
+		defense_armies_add = 2
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_zhufang_official_3 = {
+	replace_traits = {
+		leader_trait_zhufang_official_2
+	}
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhufang_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		defense_armies_add = 6
+	}
+	sector_modifier = {
+		defense_armies_add = 3
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+
+#征兵计划
+leader_trait_zhengbingjihua_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhengbingjihua_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.15
+		starbase_shipyard_build_speed_mult = 0.15
+	}
+	sector_modifier = {
+		planet_army_build_speed_mult = 0.075
+		starbase_shipyard_build_speed_mult = 0.075
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_zhengbingjihua_official_2 = {
+	replace_traits = { leader_trait_zhengbingjihua_official }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhengbingjihua_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.3
+		starbase_shipyard_build_speed_mult = 0.3
+	}
+	sector_modifier = {
+		planet_army_build_speed_mult = 0.15
+		starbase_shipyard_build_speed_mult = 0.15
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_zhengbingjihua_official_3 = {
+	replace_traits = { leader_trait_zhengbingjihua_official_2 }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_zhengbingjihua_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.45
+		starbase_shipyard_build_speed_mult = 0.45
+	}
+	sector_modifier = {
+		planet_army_build_speed_mult = 0.225
+		starbase_shipyard_build_speed_mult = 0.225
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+#废土清理
+leader_trait_feituqingli_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_feituqingli_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		deposit_blockers_cost_mult = -0.15
+		planet_clear_blocker_speed_mult = 0.3
+	}
+	sector_modifier = {
+		deposit_blockers_cost_mult = -0.075
+		planet_clear_blocker_speed_mult = 0.15
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_feituqingli_official_2 = {
+	replace_traits = { leader_trait_feituqingli_official }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_feituqingli_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		deposit_blockers_cost_mult = -0.3
+		planet_clear_blocker_speed_mult = 0.6
+	}
+	sector_modifier = {
+		deposit_blockers_cost_mult = -0.15
+		planet_clear_blocker_speed_mult = 0.3
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+#业余农学家
+leader_trait_yeyunongxuejia_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_yeyunongxuejia_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.075
+		planet_jobs_society_research_produces_mult = 0.075
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_yeyunongxuejia_official_2 = {
+	replace_traits = { leader_trait_yeyunongxuejia_official }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_yeyunongxuejia_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.3
+		planet_jobs_society_research_produces_mult = 0.3
+	}
+	sector_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+#业余工程师
+leader_trait_yeyugongchengshi_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_yeyugongchengshi_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.15
+		planet_jobs_energy_produces_mult = 0.15
+		planet_jobs_alloys_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_minerals_produces_mult = 0.075
+		planet_jobs_energy_produces_mult = 0.075
+		planet_jobs_alloys_produces_mult = 0.075
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_yeyugongchengshi_official_2 = {
+	replace_traits = { leader_trait_yeyugongchengshi_official }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_yeyugongchengshi_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.3
+		planet_jobs_energy_produces_mult = 0.3
+		planet_jobs_alloys_produces_mult = 0.3
+	}
+	sector_modifier = {
+		planet_jobs_minerals_produces_mult = 0.15
+		planet_jobs_energy_produces_mult = 0.15
+		planet_jobs_alloys_produces_mult = 0.15
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+#业余科学家
+leader_trait_yeyukexuejia_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_yeyukexuejia_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.075
+		planet_jobs_society_research_produces_mult = 0.075
+		planet_jobs_engineering_research_produces_mult = 0.075
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_yeyukexuejia_official_2 = {
+	replace_traits = { leader_trait_yeyukexuejia_official }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_yeyukexuejia_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.3
+		planet_jobs_society_research_produces_mult = 0.3
+		planet_jobs_engineering_research_produces_mult = 0.3
+	}
+	sector_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+#偶像
+leader_trait_ouxiang_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_ouxiang_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		pop_happiness = 0.15
+		planet_amenities_add = 10
+	}
+	sector_modifier = {
+		pop_happiness = 0.075
+		planet_amenities_add = 5
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+
+leader_trait_ouxiang_official_2 = {
+	replace_traits = { leader_trait_ouxiang_official }
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_leader_trait_ouxiang_official"
+		RARITY = common
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+
+	}
+	planet_modifier = {
+		pop_happiness = 0.3
+		planet_amenities_add = 20
+	}
+	sector_modifier = {
+		pop_happiness = 0.15
+		planet_amenities_add = 10
+	}
+	leader_class = { official }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+

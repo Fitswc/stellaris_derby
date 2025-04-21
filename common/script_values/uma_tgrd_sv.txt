@@ -2,7 +2,7 @@ uma_tg_alloys_maker_Automatic_upkeep_sv = {
 	base = 1
 
 #	set = This.owner.uma_tgrd_energy_income
-#	mult = 0.2
+#	mult = 0.02
 #	floor = yes
 
 
@@ -18,7 +18,7 @@ uma_tg_alloys_maker_Automatic_upkeep_sv = {
 		}
 
 	}
-	mult = 0.1
+	mult = 0.03
 	floor = yes
 
 	add = value:ten_percent_main_species
@@ -41,7 +41,7 @@ uma_tg_custom_goods_productor_upkeep_and_produce_sv = {
 		}
 
 	}
-	mult = 0.3
+	mult = 0.03
 	floor = yes
 
 
@@ -57,7 +57,7 @@ uma_tg_custom_goods_productor_upkeep_and_produce_sv = {
 
 	}
 #	add = This.owner.uma_tgrd_uma_crystal_carrot_income
-	mult = 0.1
+	mult = 0.03
 	floor = yes
 
 	add = value:ten_percent_main_species
@@ -80,7 +80,7 @@ uma_tg_TGAC_upkeep_and_produce_sv = {
 
 	}
 #	set = This.owner.uma_tgrd_energy_income
-	mult = 0.2
+	mult = 0.02
 	floor = yes
 
 
@@ -96,7 +96,7 @@ uma_tg_TGAC_upkeep_and_produce_sv = {
 
 	}
 #	add = This.owner.uma_tgrd_uma_crystal_carrot_income
-	mult = 0.1
+	mult = 0.03
 	floor = yes
 
 	add = value:ten_percent_main_species
@@ -115,6 +115,6 @@ uma_tg_plantry_energy_extr_sv = {
 		mode = set
 	}
 
-	multiply = 4.7
+	multiply = 3.0
 }
 
