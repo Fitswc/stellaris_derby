@@ -1,6 +1,37 @@
 namespace = uma_mejro_ardan
 
 
+country_event = {
+	id = uma_mejro_ardan.0
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = UMA_ARDAN_RIFT_GENERATED
+		random_system = {
+			limit = {
+				distance = {
+					source = root.solar_system
+					min_jumps = 4
+					max_jumps = 2
+				}
+			}
+			set_star_flag = uma_ardan_system
+			spawn_astral_rift = {
+				random_pos = yes
+				orbit_distance = 100
+				orbit_angle = 150
+				tolerance = 360
+				id = uma_ar_mejro_ardan
+				spawn_sound = no
+				init_effect = {
+					save_global_event_target_as = uma_ad_ar
+				}
+			}
+		}
+	}
+}
 
 astral_rift_event = {
 	id = uma_mejro_ardan.1
@@ -386,6 +417,12 @@ country_event = {
 				id = uma_mejro_ardan.14
 				days = 10
 			}
+
+			country_event = {
+				id = uma_mejro_ardan.15
+				days = 365
+				random = 60
+			}
 		}
 
 	}
@@ -524,4 +561,48 @@ country_event = {
 
 
 
+country_event = {
+	id = uma_mejro_ardan.15
+	title = uma_mejro_ardan.15.title
+	desc = uma_mejro_ardan.15.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_kobe
+
+	immediate = {
+		random_system = {
+			limit = {
+				has_star_flag = uma_ardan_system
+			}
+
+			spawn_planet = {
+				class = pc_gaia
+				name = uma_pc_ardan_planet
+				location = event_target:uma_ad_ar
+				orbit_location = yes
+				orbit_distance = 200
+				size = 30
+				modifiers = none
+				spawn_beyond_gravity_well = yes
+				orbit_angle_offset = 300
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+					add_deposit = d_Ardan_crystal_core
+					add_deposit = d_Ardan_crystal_Energy_Field
+					add_deposit = d_Ardan_crystal_Mine_Hole
+					add_deposit = d_Ardan_crystal_farm
+					add_deposit = d_uma_crystal_carrot_mine_planet
+					add_deposit = d_rushing_waterfalls
+					add_deposit = d_hot_springs
+					add_deposit = d_bountiful_plains
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_mejro_ardan.15.a
+	}
+
+}
 
