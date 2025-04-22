@@ -1,0 +1,30 @@
+namespace = uma_zephyr
+
+
+planet_event = {
+	id = uma_zephyr.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From = {
+			has_authority = auth_trainingcenter
+		}
+		This.solar_system = {
+			is_surveyed = {
+				who = From
+				status = yes
+			}
+
+		}
+	}
+
+	immediate = {
+		This.solar_system = {
+			log = "UMA_ZEPHY_SURVEY_HAPPENED_AT_SURVEY_[This.GetName]_WHICH_IN_[This.solar_system]"
+			# Scope check
+		}
+
+
+	}
+}
