@@ -399,3 +399,38 @@ ship_design = {
 	}
 	required_component="BIO_DRIVE"
 }
+
+
+
+ship_design = {
+	name = NAME_UMA_SHIP_ZEPHYR
+	ship_size = uma_zephyr_science
+
+	section = {
+		template = "DEFAULT_SCIENCESHIP_SECTION"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_PSI_SHIELD"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_PSI_SHIELD"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "SMALL_PSI_SHIELD"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "MISSILE_1"
+		}
+	}
+
+	required_component = "HYPER_DRIVE_2"
+	required_component = "SHIP_THRUSTER_2"
+	required_component = "SENSOR_2"
+	required_component = "CORVETTE_COLD_FUSION_REACTOR"
+	required_component = "CORVETTE_CLOAKING_1"
+}

@@ -24,7 +24,36 @@ planet_event = {
 			log = "UMA_ZEPHY_SURVEY_HAPPENED_AT_SURVEY_[This.GetName]_WHICH_IN_[This.solar_system]"
 			# Scope check
 		}
+		From = {
+
+		}
+
+	}
+}
 
 
+country_event = {
+	id = uma_zephyr.2
+	title = uma_zephyr.2.title
+	desc = uma_zephyr.2.desc
+	is_triggered_only = yes
+
+
+	option = {
+		create_ship_design = {
+			design = NAME_UMA_SHIP_ZEPHYR
+		}
+		create_fleet = {
+			name = NAME_UMA_SHIP_ZEPHYR
+			effect = {
+				set_owner = Root
+				create_ship = {
+					name = random
+					design = last_created_design
+
+				}
+			}
+		}
+		name = uma_zephyr.2.a
 	}
 }
