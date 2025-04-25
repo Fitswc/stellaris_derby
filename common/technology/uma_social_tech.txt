@@ -880,7 +880,7 @@ tech_uma_genetics = { #马娘遗传学
 tech_uma_basic_keisun_map = {
 	cost = 10000
 	area = society
-	tier = 3
+	tier = 2
     is_rare = yes
 	category = { biology }
     prerequisites = { "tech_uma_genetics" }
@@ -910,7 +910,7 @@ tech_uma_basic_keisun_map = {
 tech_uma_molecule_keisun_theory = {
 	cost = 15000
 	area = society
-	tier = 4
+	tier = 2
     is_rare = yes
 	category = { biology }
     prerequisites = { "tech_uma_basic_keisun_map" }
@@ -940,7 +940,7 @@ tech_uma_molecule_keisun_theory = {
 tech_uma_keisun_genetic = {
 	cost = 15000
 	area = society
-	tier = 4
+	tier = 3
     is_rare = yes
 	category = { biology }
     prerequisites = { "tech_uma_molecule_keisun_theory" }
@@ -971,12 +971,12 @@ tech_uma_keisun_genetic = {
 tech_uma_complex_keisun_test = {
 	cost = 25000
 	area = society
-	tier = 4
+	tier = 3
     is_rare = yes
     is_dangerous = yes
 	category = { biology }
     prerequisites = { "tech_uma_keisun_genetic" }
-    weight = 200
+    weight = 50
 
 	potential = {
 		OR = {
@@ -991,6 +991,10 @@ tech_uma_complex_keisun_test = {
 
     weight_modifier = {
         factor = 1
+		modifier = {
+			multiply = 4
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
     }
 
     ai_weight ={
@@ -1100,7 +1104,7 @@ tech_uma_basic_territory_theory = {
     is_rare = yes
     cost = 10000
     area = society
-    tier = 3
+    tier = 2
     category = { psionics }
 
     weight = 150
@@ -1132,7 +1136,7 @@ tech_uma_top_race_testing = {
     is_rare = yes
     cost = 15000
     area = society
-    tier = 3
+    tier = 2
     category = { statecraft }
     prerequisites = { "tech_uma_basic_territory_theory" }
     weight = 175
@@ -1199,7 +1203,7 @@ tech_uma_terriroty_in_use = {
     tier = 4
     category = { biology }
     prerequisites = { "tech_uma_basic_phycoterritory_theory" }
-    weight = 200
+    weight = 50
 
     potential = {
         OR = {
@@ -1214,6 +1218,10 @@ tech_uma_terriroty_in_use = {
 
     weight_modifier = {
         factor = 1
+		modifier = {
+			multiply = 4
+			has_ascension_perk = ap_uma_zenshizenren
+		}
     }
 
     ai_weight = {
