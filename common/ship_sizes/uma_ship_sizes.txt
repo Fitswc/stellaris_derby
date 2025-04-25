@@ -176,15 +176,8 @@ uma_zephyr_science = {
 	}
 
 	potential_country = {
-		NOT = {
-			is_country_type = enclave_mercenary
-		}
-		OR = {
-			has_technology = tech_hyper_drive_1
-			has_technology = tech_hyper_drive_2
-			has_technology = tech_hyper_drive_3
-			has_technology = tech_jump_drive_1
-			has_technology = tech_psi_jump_drive_1
+		AND = {
+			has_authority = auth_trainingcenter
 		}
 	}
 
