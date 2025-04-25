@@ -8,6 +8,10 @@ ap_uma_fly_me_to_the_star_ap_two = {
 		#		custom_tooltip =
 		#Event Require
 		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt
+		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt_will_event
+		country_event = {
+			id = uma_ap.40
+		}
 	}
 
 	possible = {
@@ -28,9 +32,10 @@ ap_uma_fly_me_to_the_star_ap_two = {
 
 	modifier = {
 		#将会改变
-		UMA_species_trait_points_add = 3
-		planet_jobs_produces_mult = 0.1
-		pop_growth_speed = 0.05
+#		UMA_species_trait_points_add = 3
+#		planet_jobs_produces_mult = 0.1
+#		pop_growth_speed = 0.05
+
 #		empire_size_pops_mult = 0.3
 #		empire_size_colonies_mult = 0.3
 	}
@@ -67,6 +72,10 @@ ap_uma_zenshizenren_ap_2 = {
 	on_enabled = {
 		#Event Require
 		custom_tooltip = ap_uma_zenshizenren_ap_two_tt
+		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt_will_event
+		country_event = {
+			id = uma_ap.140
+		}
 	}
 	possible = {
 		custom_tooltip = {
@@ -86,10 +95,10 @@ ap_uma_zenshizenren_ap_2 = {
 
 
 	modifier = {
-		pop_happiness = 0.13
-		planet_jobs_produces_mult = 0.09
-		army_attack_damage_mult = 0.08
-		shipclass_military_damage_mult = 0.10
+#		pop_happiness = 0.13
+#		planet_jobs_produces_mult = 0.09
+#		army_attack_damage_mult = 0.08
+#		shipclass_military_damage_mult = 0.10
 	}
 
 	potential = {
@@ -145,7 +154,7 @@ ap_uma_mixture_ap_2 = {
 
 	modifier = {
 		pop_happiness = 0.1
-		army_attack_damage_mult = 0.08
+		army_attack_damage_mult = 0.1
 		shipclass_military_damage_mult = 0.10
 		UMA_species_trait_points_add = 3
 		pop_growth_speed = 0.05

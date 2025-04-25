@@ -345,7 +345,18 @@ building_uma_crystal_carrot_producing_realm_complex = {
 			job_uma_crystal_carrot_engineer_add = 4
 		}
 	}
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
 		planet_uma_crystal_carrot_engineer_produces_mult = 0.15
 	}
 
@@ -1091,7 +1102,18 @@ building_uma_crystal_alloy_realm_complex = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
 		planet_uma_crystal_alloy_crafter_produces_mult = 0.15
 	}
 
@@ -2341,6 +2363,19 @@ building_uma_dark_matter_plant = {
 			job_uma_darkmatter_collector_add = 1
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
+		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
 
 	triggered_desc = {
 		trigger = {

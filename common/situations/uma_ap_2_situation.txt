@@ -1,115 +1,384 @@
 situation_uma_ap_2_situation_system_factor = {
 
-	picture = GFX_situation_uma_satono_top_food #AP2
+	picture = GFX_evt_uma_factor_undersea #AP2
 	category = positive
-	complete_icon = GFX_situation_outcome_meh #AP2
 	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_ascension
 	start_value = 1
 	on_start = {
-
+		set_situation_flag = uma_ap2_factor_had_happened
 	}
+	## TODO: picture added
 	monthly_progress = {
+		#On average, the situation should take about 3 years to complete
 		base = 5
+		# Modifiers are defined in tooltip order, most important first
+		modifier = {
+			mult = 1
+			desc = "uma_ap_2_situation_factor_default"
+			current_situation_approach = situation_cyberization_overdrive
+		}
+		modifier = {
+			mult = 1.3
+			desc = "uma_ap_2_situation_factor_danage"
+			current_situation_approach = situation_cyberization_cautious
+		}
+
+		modifier = {
+			mult = 0
+			desc = "situation_cyberization_pause_desc"
+			has_situation_flag = uma_ap_2_situation_factor_pause
+		}
+
+		modifier = {
+			mult = 2
+			desc = "uma_ap_2_situation_factor_tradition"
+			owner = {
+				has_tradition = uma_factor_adopt
+			}
+		}
+
+		modifier = {
+			mult = 1.02
+			desc = uma_ap_2_situation_factor_tradition
+			owner = {
+				has_tradition = uma_factor_strength
+				has_tradition = uma_factor_wisdom
+				has_tradition = uma_factor_speed
+				has_tradition = uma_factor_willpower
+				has_tradition = uma_factor_star_picking
+			}
+		}
+
+		modifier = {
+			mult = 0.2
+			desc = "uma_ap_2_situation_factor_crisis"
+
+			OR = {
+				has_situation_flag = uma_ap2_factor_80_has_happened
+				owner = {
+					has_country_flag = uma_ap2_factor_80_has_happened
+				}
+			}
+		}
+
+
 	}
 	on_progress_complete = {
-
+		custom_tooltip = situation_uma_ap_2_situation_system_factor_fin_tt
+		hidden_effect = {
+			Root = {
+				remove_situation_flag = uma_ap2_factor_had_happened
+			}
+			owner = {
+				country_event = {
+					id = uma_ap.54
+				}
+			}
+			Root = {
+				destroy_situation = this
+			}
+		}
 	}
+
 	stages = {
-		25 = {
+		uma_ap2_factor_25 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_blue
 			end = 25
 			custom_tooltip = uma_ap_2_situation_system_25
 			on_first_enter = {
-				situation_event = {
-					id = uma_ap.41
-					days = 2
-				}
+
 			}
 
 		}
 
-		50 = {
+		uma_ap2_factor_50 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			end = 50
 			custom_tooltip = uma_ap_2_situation_system_50
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.42
+					id = uma_ap.51
 					days = 2
 				}
 			}
 		}
 
-		75 = {
+		uma_ap2_factor_75 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
 			end = 75
 			custom_tooltip = uma_ap_2_situation_system_75
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.43
+					id = uma_ap.52
 					days = 2
 				}
 			}
 		}
 
-		100 = {
+		uma_ap2_factor_100 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_blue
 			end = 100
 			custom_tooltip = uma_ap_2_situation_system_100
 			on_first_enter = {
 				situation_event = {
-					id = uma_ap.44
+					id = uma_ap.53
 					days = 2
 				}
 			}
 		}
 	}
 
-	approach = {
-		#小心谨慎
-		name = uma_ap_2_situation_factor_careful
+
+	#这里是玩家会遇到的负面事件
+	on_monthly = {
+		events = {
+			uma_ap.55
+		}
 	}
-#	approach = {
-#		name =
-#		icon =
-#		icon_background =
-#		default = yes
-#		allow =
-#		potential =
-#		modifier =
-#		target_modifier =
-#		triggered_modifier =
-#		triggered_target_modifier =
-#		active_tooltip =
-#		resources =
-#		on_select =
-#		ai_weight =
-#	}
 
 	approach = {
 		#默认
 		name = uma_ap_2_situation_factor_default
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
 		default = yes
+		on_select = {
+			custom_tooltip = uma_ap_2_situation_factor_default_tt
+		}
+		ai_weight = 10
+		modifier = {
+			all_technology_research_speed = -0.05
+		}
 	}
 
 	approach = {
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
 		#急速
 		name = uma_ap_2_situation_factor_danage
+		on_select = {
+			custom_tooltip = uma_ap_2_situation_factor_danage_tt
+		}
+		ai_weight = 0
+		modifier = {
+			all_technology_research_speed = -0.1
+		}
 	}
 
 	approach = {
 		#中断
 		name = uma_ap_2_situation_factor_break
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
-			current_stage >= 50
+			current_stage >= uma_ap2_factor_50
 		}
 		on_select = {
 			abort_situation = Root
+			hidden_effect = {
+				owner = {
+					set_country_flag = uma_ap2_factor_crisis_end
+					every_owned_pop = {
+						modify_species = {
+							add_trait = uma_trait_ap2_factor_fail
+						}
+					}
+				}
+			}
+		}
+		ai_weight = {
+			modifier = {
+				current_stage >= uma_ap2_factor_25
+			}
+			factor = 100
+		}
+	}
+}
+
+
+
+situation_uma_ap_2_situation_system_realm = {
+	picture = GFX_evt_uma_realm_speedin #AP2
+	category = positive
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_ascension
+	start_value = 1
+	on_start = {
+
+	}
+	## TODO: picture added
+	monthly_progress = {
+		#On average, the situation should take about 3 years to complete
+		base = 5
+		# Modifiers are defined in tooltip order, most important first
+		modifier = {
+			mult = 1
+			desc = "uma_ap_2_situation_factor_default"
+			current_situation_approach = situation_cyberization_overdrive
+		}
+		modifier = {
+			mult = 1.3
+			desc = "uma_ap_2_situation_factor_danage"
+			current_situation_approach = situation_cyberization_cautious
+		}
+
+		modifier = {
+			mult = 0
+			desc = "situation_cyberization_pause_desc"
+			has_situation_flag = uma_ap_2_situation_factor_pause
+		}
+
+		modifier = {
+			mult = 2
+			desc = "uma_ap_2_situation_factor_tradition"
+			owner = {
+				has_tradition = uma_realm_adopt
+			}
+		}
+
+		modifier = {
+			mult = 1.02
+			desc = uma_ap_2_situation_factor_tradition
+			owner = {
+				has_tradition = uma_realm_strength
+				has_tradition = uma_realm_field_large_job_to_use
+				has_tradition = uma_realm_full_body
+				has_tradition = uma_realm_self_trigger
+				has_tradition = uma_realm_trigger_be_simple
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_uma_ap_2_situation_system_realm_fin_tt
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = uma_ap.154
+				}
+			}
+			Root = {
+				destroy_situation = this
+			}
+		}
+	}
+
+	stages = {
+		uma_ap2_realm_25 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 25
+			custom_tooltip = uma_ap_2_situation_system_25
+			on_first_enter = {
+
+			}
+
+		}
+
+		uma_ap2_realm_50 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+			custom_tooltip = uma_ap_2_situation_system_50_realm
+			on_first_enter = {
+				situation_event = {
+					id = uma_ap.151
+					days = 2
+				}
+			}
+		}
+
+		uma_ap2_realm_75 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 75
+			custom_tooltip = uma_ap_2_situation_system_75_realm
+			on_first_enter = {
+				situation_event = {
+					id = uma_ap.152
+					days = 2
+				}
+			}
+		}
+
+		uma_ap2_realm_100 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			custom_tooltip = uma_ap_2_situation_system_100_realm
+			on_first_enter = {
+			}
+		}
+	}
+
+
+	#这里是玩家会遇到的负面事件
+	on_monthly = {
+		events = {
+			uma_ap.155
+		}
+	}
+
+	approach = {
+		#默认
+		name = uma_ap_2_situation_factor_default
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
+		default = yes
+		on_select = {
+			custom_tooltip = uma_ap_2_situation_factor_default_tt
+		}
+		ai_weight = 10
+		modifier = {
+			all_technology_research_speed = -0.05
+		}
+	}
+
+	approach = {
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
+		#急速
+		name = uma_ap_2_situation_factor_danage
+		on_select = {
+			custom_tooltip = uma_ap_2_situation_factor_danage_tt
+		}
+		ai_weight = 0
+		modifier = {
+			all_technology_research_speed = -0.1
+		}
+	}
+
+	approach = {
+		#中断
+		name = uma_ap_2_situation_factor_break
+		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon_background = GFX_situation_approach_bg_green
+		allow = {
+			custom_tooltip = uma_ap_2_situation_factor_break_tt
+			current_stage >= uma_ap2_realm_50
+		}
+		on_select = {
+			abort_situation = Root
+			hidden_effect = {
+				owner = {
+					every_owned_pop = {
+						modify_species = {
+							add_trait = uma_trait_ap2_realm_fail
+						}
+					}
+				}
+			}
+		}
+		ai_weight = {
+			modifier = {
+				current_stage >= uma_ap2_realm_50
+			}
+			factor = 100
 		}
 	}
 }

@@ -468,3 +468,77 @@ can_artifact_analysis_give_uma_clock = {
 can_artifact_analysis_give_uma_clover = {
 
 }
+
+
+
+uma_check_factor_rate = {
+	check_variable = {
+		which = Root.uma_ap2_factor_$TYPE$_rate
+		value = $VAL$
+	}
+}
+
+uma_ap2_factor_0_fault = {
+	OR = {
+		OR = {
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value <= 5
+			}
+		}
+		check_variable = {
+			which = uma_ap2_factor_summation
+			value <= 8
+		}
+	}
+}
+
+uma_check_realm_factor_rate_wisdom_1 = {
+	optimize_memory
+	has_country_flag = uma_kenshi_intelligence_level_1
+	has_country_flag = uma_kenshi_intelligence_level_2
+}
+
+uma_check_realm_factor_rate_wisdom_2 = {
+	optimize_memory
+	has_country_flag = uma_kenshi_intelligence_level_3
+	has_country_flag = uma_kenshi_intelligence_level_4
+	has_country_flag = uma_kenshi_intelligence_level_5
+}
+
+uma_check_realm_factor_rate_stamina_1 = {
+	has_country_flag = uma_kenshi_will_level_1
+	has_country_flag = uma_kenshi_will_level_2
+	has_country_flag = uma_kenshi_will_level_3
+	has_country_flag = uma_kenshi_will_level_4
+	has_country_flag = uma_kenshi_will_level_5
+}
+
+uma_check_realm_factor_rate_power_1 = {
+	optimize_memory
+	has_country_flag = uma_kenshi_strength_level_1
+	has_country_flag = uma_kenshi_strength_level_2
+}
+
+uma_check_realm_factor_rate_power_2 = {
+	optimize_memory
+	has_country_flag = uma_kenshi_strength_level_3
+	has_country_flag = uma_kenshi_strength_level_4
+	has_country_flag = uma_kenshi_strength_level_5
+}
