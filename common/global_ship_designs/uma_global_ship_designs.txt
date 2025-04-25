@@ -426,6 +426,11 @@ ship_design = {
 			slot = "SMALL_GUN_01"
 			template = "MISSILE_1"
 		}
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "MISSILE_1"
+		}
 	}
 
 	required_component = "HYPER_DRIVE_2"

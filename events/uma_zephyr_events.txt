@@ -24,7 +24,52 @@ country_event = {
 			log = "UMA_ZEPHY_SURVEY_HAPPENED_AT_SURVEY_WHICH_IN_[From]"
 			# Scope check
 		}
-		Root = {
+		From = { #system
+			create_country = {
+				name = uma_zephyr_country_name_unknown
+				type = global_event
+				ignore_initial_colony_error = yes
+				authority = random
+				flag = random
+				species = random
+				name_list = random #?
+				origin = origin_default
+				effect = {
+					set_graphical_culture = Root
+					save_global_event_target_as = uma_zephyr_fleet_country
+					create_ship_design = {
+						design = NAME_UMA_SHIP_ZEPHYR
+					}
+
+					Prev = {
+						create_fleet = {
+							name = NAME_UMA_SHIP_ZEPHYR
+							effect = {
+								save_global_event_target_as = uma_zephyr_fleet
+								create_ship = {
+									name = NAME_UMA_SHIP_ZEPHYR
+									design = last_created_design
+									graphical_culture = Root
+								}
+
+								set_location = {
+									target = Prev.star
+									direction = out_system
+									distance = {
+										max = 20
+										min = 15
+									}
+									angle = random
+								}
+							}
+						}
+
+					}
+				}
+			}
+
+
+
 
 		}
 	}
@@ -75,7 +120,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.6
+			}
+		}
 	}
 }
 
@@ -146,5 +197,198 @@ country_event = {
 
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_zephyr_fleet_country = {
+				destroy_country = yes
+			}
+		}
+	}
 }
+
+
+
+ship_event = {
+	id = uma_zephyr.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		This.fleet.owner = {
+			has_authority = auth_trainingcenter
+			NOT = {
+				has_country_flag = uma_zephyr_events_observer_happened
+			}
+		}
+	}
+
+	immediate = {
+		This.fleet.owner = {
+			country_event = {
+				id = uma_zephyr.11
+			}
+		}
+		From = {
+			create_country = {
+				name = uma_zephyr_country_name
+				type = global_event
+				ignore_initial_colony_error = yes
+				authority = random
+				flag = random
+				species = random
+				name_list = random #?
+				origin = origin_default
+				effect = {
+					set_graphical_culture = Root.fleet.owner
+					save_global_event_target_as = uma_zephyr_fleet_country
+					create_ship_design = {
+						design = NAME_UMA_SHIP_ZEPHYR
+					}
+
+					Prev = {
+						create_fleet = {
+							name = NAME_UMA_SHIP_ZEPHYR
+							effect = {
+								save_global_event_target_as = uma_zephyr_fleet
+								create_ship = {
+									name = NAME_UMA_SHIP_ZEPHYR
+									design = last_created_design
+									graphical_culture = Root.fleet.owner
+								}
+
+								set_location = {
+									target = Prev
+									distance = {
+										max = 20
+										min = 15
+									}
+									angle = random
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_zephyr.11
+	title = uma_zephyr.11.title
+	desc = uma_zephyr.11.desc
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = uma_zephyr_events_observer_happened
+	}
+
+	option = {
+		name = uma_zephyr.11.a
+		country_event = {
+			id = uma_zephyr.12
+		}
+	}
+}
+
+country_event = {
+	id = uma_zephyr.12
+	title = uma_zephyr_name
+	desc = uma_zephyr.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	option = {
+		name = uma_zephyr.12.a
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.13
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.15
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_zephyr.13
+	title = uma_zephyr_name
+	desc = uma_zephyr.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	option = {
+		name = uma_zephyr.13.a
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_zephyr.14
+	title = uma_zephyr_name
+	desc = uma_zephyr.14.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	option = {
+		name = uma_zephyr.14.a
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_zephyr.15
+	title = uma_zephyr_name
+	desc = uma_zephyr.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	option = {
+		name = uma_zephyr.15.a
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_zephyr_fleet = {
+				destroy_fleet = This
+				clear_global_event_target = uma_zephyr_fleet
+			}
+		}
+	}
+}
+
 
