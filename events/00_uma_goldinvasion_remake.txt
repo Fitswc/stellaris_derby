@@ -2463,8 +2463,7 @@ country_event = {
 #				}
 #			}
 #		}
-	}
-	after = {
+
 		hidden_effect = {
 			event_target:uma_gold_invasion_family_country = {
 				set_closed_borders = {
@@ -2472,13 +2471,6 @@ country_event = {
 					status = no
 				}
 			}
-		}
-		random_system = {
-			limit = {
-				has_star_flag = uma_gold_invasion_system
-			}
-			uma_tunnel_spawn = yes
-			save_global_event_target_as = uma_gold_invasion_system_here
 			event_target:uma_naka_invasion_spawn_system = {
 				spawn_natural_wormhole = {
 					bypass_type = uma_gold_tunnel
@@ -2490,16 +2482,19 @@ country_event = {
 					}
 				}
 			}
-			spawn_natural_wormhole = {
-				bypass_type = uma_gold_tunnel
-				orbit_distance = 78
-				orbit_angle = random
-				random_pos = yes
-				init_effect = {
-					link_wormholes = event_target:uma_gold_portal_begin
+			event_target:uma_gold_invasion_system_here = {
+				uma_tunnel_spawn = yes
+				spawn_natural_wormhole = {
+					bypass_type = uma_gold_tunnel
+					orbit_distance = 78
+					orbit_angle = random
+					random_pos = yes
+					init_effect = {
+						link_wormholes = event_target:uma_gold_portal_begin
+					}
 				}
-			}
 
+			}
 		}
 	}
 }
