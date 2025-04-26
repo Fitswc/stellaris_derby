@@ -50,7 +50,7 @@ uma_mid_crisis_ship_creator_goldship = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
-	#		set_fleet_bombardment_stance = armageddon
+			set_fleet_bombardment_stance = indiscriminate
 
 		}
 	}
@@ -128,7 +128,7 @@ uma_mid_crisis_ship_creator_naya = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
-	#		set_fleet_bombardment_stance = armageddon
+			set_fleet_bombardment_stance = indiscriminate
 		}
 	}
 	last_created_fleet = {
@@ -205,7 +205,7 @@ uma_mid_crisis_ship_creator_Orfevre = {
 			set_fleet_stance = aggressive
 			set_aggro_range = 500
 			set_aggro_range_measure_from = self
-	#		set_fleet_bombardment_stance = armageddon
+			set_fleet_bombardment_stance = indiscriminate
 		}
 	}
 }
@@ -484,7 +484,7 @@ uma_tunnel_spawn = {
 				set_fleet_stance = passive
 				#						set_aggro_range = 500
 				#						set_aggro_range_measure_from = self
-		#		set_fleet_bombardment_stance = armageddon
+				set_fleet_bombardment_stance = indiscriminate
 			}
 		}
 		create_fleet = {
@@ -528,7 +528,7 @@ uma_tunnel_spawn = {
 				set_fleet_stance = passive
 				#						set_aggro_range = 500
 				#						set_aggro_range_measure_from = self
-		#		set_fleet_bombardment_stance = armageddon
+				set_fleet_bombardment_stance = indiscriminate
 			}
 		}
 		create_fleet = {
@@ -572,7 +572,7 @@ uma_tunnel_spawn = {
 				set_fleet_stance = passive
 				#						set_aggro_range = 500
 				#						set_aggro_range_measure_from = self
-		#		set_fleet_bombardment_stance = armageddon
+				set_fleet_bombardment_stance = indiscriminate
 			}
 		}
 	}
