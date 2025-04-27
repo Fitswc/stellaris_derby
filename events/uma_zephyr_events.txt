@@ -392,3 +392,51 @@ country_event = {
 }
 
 
+
+ship_event = {
+	id = uma_zephyr.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		This.fleet.owner = {
+			has_authority = auth_trainingcenter
+		}
+
+		From = {
+			OR = {
+				has_star_flag = drone_system_1
+				has_star_flag = drone_system_2
+				has_star_flag = drone_system_3
+				has_star_flag = drone_system_4
+
+				has_star_flag = amoeba_1_system
+				has_star_flag = amoeba_2_system
+				has_star_flag = amoeba_3_system
+
+				has_star_flag = crystal_home_system
+
+				has_star_flag = void_system
+			}
+		}
+	}
+
+	immediate = {
+		fleet.owner = {
+			country_event = {
+				id = uma_zephyr.21
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_zephyr.21
+	title = uma_zephyr.21.title
+	desc = uma_zephyr.21.desc
+	is_triggered_only = yes
+
+
+
+}
