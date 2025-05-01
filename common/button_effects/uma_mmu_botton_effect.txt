@@ -26,11 +26,11 @@ uma_mmu_mid_game_difficult_easy = {
 	potential = { always = yes }
 	allow = {
 		custom_tooltip = uma_mmu_midgame_easy_on
-		hidden_trigger = {
-			NOT = {
-				has_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
-			}
-		}
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+		#	}
+		#}
 	}
 	effect = {
 		custom_tooltip = uma_mmu_midgame_easy
@@ -44,11 +44,11 @@ uma_mmu_mid_game_difficult_normal = {
 	potential = { always = yes }
 	allow = {
 		custom_tooltip = uma_mmu_midgame_normal_on
-		hidden_trigger = {
-			NOT = {
-				has_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
-			}
-		}
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		#	}
+		#}
 	}
 	effect = {
 		custom_tooltip = uma_mmu_midgame_normal
@@ -62,10 +62,71 @@ uma_mmu_mid_game_difficult_hard = {
 	potential = { always = yes }
 	allow = {
 		custom_tooltip = uma_mmu_midgame_hard_on
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+		#	}
+		#}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_hard
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+	}
+}
+
+
+uma_mmu_mid_game_difficult_easy_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_easy_on
 		hidden_trigger = {
-			NOT = {
-				has_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
-			}
+
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_easy
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+	}
+}
+
+uma_mmu_mid_game_difficult_normal_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_normal_on
+		hidden_trigger = {
+
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_normal
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+	}
+}
+
+uma_mmu_mid_game_difficult_hard_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_hard_on
+		hidden_trigger = {
+
 		}
 	}
 	effect = {
@@ -81,11 +142,11 @@ uma_mmu_gs_vill = {
 	potential = { always = yes }
 	allow = {
 		custom_tooltip = uma_mmu_rs_vill_on
-		hidden_trigger = {
-			NOT = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
-			}
-		}
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_gamesystem_rs_vill
+		#	}
+		#}
 	}
 	effect = {
 		custom_tooltip = uma_mmu_rs_vill
@@ -98,11 +159,49 @@ uma_mmu_gs_dnd = {
 	potential = { always = yes }
 	allow = {
 		custom_tooltip = uma_mmu_rs_dnd_on
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+		#	}
+		#}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_dnd
+		set_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+		remove_global_flag = uma_global_game_setting_gamesystem_rs_vill
+	}
+}
+
+uma_mmu_gs_vill_ds = {
+	potential = {
+		hidden_trigger = {
+			NOT = {
+				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_rs_vill_on
+
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_vill
+		set_global_flag = uma_global_game_setting_gamesystem_rs_vill
+		remove_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+	}
+}
+
+uma_mmu_gs_dnd_ds = {
+	potential = {
 		hidden_trigger = {
 			NOT = {
 				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
 			}
 		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_rs_dnd_on
+
 	}
 	effect = {
 		custom_tooltip = uma_mmu_rs_dnd
@@ -176,6 +275,75 @@ uma_mmu_gs_gdi_none = {
 		set_global_flag = uma_global_game_setting_gamesystem_gdi_none
 		remove_global_flag = uma_global_game_setting_gamesystem_gdi_weak
 		remove_global_flag = uma_global_game_setting_gamesystem_gdi_full
+	}
+}
+
+uma_mmu_gs_season_on = {
+	potential = { always = yes }
+	allow = {
+#		custom_tooltip = uma_mmu_rs_season_on
+#		hidden_trigger = {
+#			NOT = {
+#				has_global_flag = uma_global_game_setting_gamesystem_season_enable
+#			}
+#		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_season_on
+		set_global_flag = uma_global_game_setting_gamesystem_season_enable
+		remove_global_flag = uma_global_game_setting_gamesystem_season_disable
+	}
+
+}
+
+uma_mmu_gs_season_on_ds = {
+	potential = {
+		hidden_trigger = {
+			has_global_flag = uma_global_game_setting_gamesystem_season_disable
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_season_off_will
+		set_global_flag = uma_global_game_setting_gamesystem_season_enable
+		remove_global_flag = uma_global_game_setting_gamesystem_season_disable
+	}
+
+}
+
+uma_mmu_gs_season_off = {
+	potential = { always = yes }
+	allow = {
+#		custom_tooltip = uma_mmu_rs_season_off_will
+#		hidden_trigger = {
+#			NOT = {
+#				has_global_flag = uma_global_game_setting_gamesystem_season_disable
+#			}
+#		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_season_off
+		set_global_flag = uma_global_game_setting_gamesystem_season_disable
+		remove_global_flag = uma_global_game_setting_gamesystem_season_enable
+	}
+}
+
+
+uma_mmu_gs_season_off_ds = {
+	potential = {
+		hidden_trigger = {
+			has_global_flag = uma_global_game_setting_gamesystem_season_enable
+		}
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		custom_tooltip = uma_mmu_rs_season_on
+		set_global_flag = uma_global_game_setting_gamesystem_season_disable
+		remove_global_flag = uma_global_game_setting_gamesystem_season_enable
 	}
 }
 
@@ -2453,37 +2621,3 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 	}
 }
 
-uma_mmu_gs_season_on = {
-	potential = { always = yes }
-	allow = {
-		custom_tooltip = uma_mmu_rs_season_on
-		hidden_trigger = {
-			NOT = {
-				has_global_flag = uma_global_game_setting_gamesystem_season_enable
-			}
-		}
-	}
-	effect = {
-		custom_tooltip = uma_mmu_rs_season
-		set_global_flag = uma_global_game_setting_gamesystem_season_enable
-		remove_global_flag = uma_global_game_setting_gamesystem_season_disable
-	}
-
-}
-
-uma_mmu_gs_season_off = {
-	potential = { always = yes }
-	allow = {
-		custom_tooltip = uma_mmu_rs_season_off_will
-		hidden_trigger = {
-			NOT = {
-				has_global_flag = uma_global_game_setting_gamesystem_season_disable
-			}
-		}
-	}
-	effect = {
-		custom_tooltip = uma_mmu_rs_season_off
-		set_global_flag = uma_global_game_setting_gamesystem_season_disable
-		remove_global_flag = uma_global_game_setting_gamesystem_season_enable
-	}
-}

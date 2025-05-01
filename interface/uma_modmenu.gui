@@ -58,6 +58,7 @@ guiTypes = {
 			name = "uma_mmu_mid_diff_title"
 			buttonText = uma_mmu_mid_diff_title_t
 			buttonFont = "large_title_font"
+			alwaysTransparent = yes
 			position = { x = 570 y = -65 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "V"
@@ -67,6 +68,7 @@ guiTypes = {
 			name = "uma_mmu_mid_diff_title_desc"
 			buttonText = uma_mmu_mid_diff_title_desc_t
 			buttonFont = "large_title_font"
+			alwaysTransparent = yes
 			position = { x = 550 y = -15 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "S"
@@ -79,6 +81,13 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_mid_game_difficult_hard"
 		}
+		effectButtonType = {
+			name = uma_mmu_mmu_mid_diff_difficult_ds
+			spriteType = "GFX_uma_mmu_mid_GI_disable"
+			position = { x = 591 y = 119 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_mid_game_difficult_hard_ds"
+		}
 
 		effectButtonType = {
 			name = uma_mmu_mmu_mid_diff_normal
@@ -86,6 +95,13 @@ guiTypes = {
 			position = { x = 783 y = 119 }
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_mid_game_difficult_normal"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_mid_diff_normal_ds
+			spriteType = "GFX_uma_mmu_mid_GII_disable"
+			position = { x = 783 y = 119 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_mid_game_difficult_normal_ds"
 		}
 
 		effectButtonType = {
@@ -95,11 +111,19 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_mid_game_difficult_easy"
 		}
+		effectButtonType = {
+			name = uma_mmu_mmu_mid_diff_easy_ds
+			spriteType = "GFX_uma_mmu_mid_GIII_disable"
+			position = { x = 972 y = 119 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_mid_game_difficult_easy_ds"
+		}
 
 		ButtonType = {
 			name = "uma_mmu_end_diff_title"
 			buttonText = uma_mmu_end_diff_title_t
 			buttonFont = "large_title_font"
+			alwaysTransparent = yes
 			position = { x = 570 y = 207 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "V"
@@ -109,6 +133,7 @@ guiTypes = {
 			name = "uma_mmu_end_diff_title_desc"
 			buttonText = uma_mmu_mid_diff_title_desc_t
 			buttonFont = "large_title_font"
+			alwaysTransparent = yes
 			position = { x = 550 y = 260 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "S"
@@ -151,6 +176,7 @@ guiTypes = {
 			name = "uma_mmu_gs_diff_title"
 			buttonText = uma_mmu_gs_diff_title_t
 			buttonFont = "large_title_font"
+			alwaysTransparent = yes
 			position = { x = 570 y = 480 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "V"
@@ -160,6 +186,7 @@ guiTypes = {
 			name = "uma_mmu_gs_rs_diff_title_desc"
 			buttonText = uma_mmu_gs_rs_diff_title_desc
 			buttonFont = "large_title_font"
+			alwaysTransparent = yes
 			position = { x = 550 y = 534 }
 			orientation = "UPPER_LEFT"
 			text_color_code = "S"
@@ -172,6 +199,13 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_gs_vill"
 		}
+		effectButtonType = {
+			name = uma_mmu_mmu_gs_vill_ds
+			spriteType = "GFX_uma_mmu_vill_disable"
+			position = { x = 591 y = 661 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_gs_vill_ds"
+		}
 
 		effectButtonType = {
 			name = uma_mmu_mmu_gs_dnd
@@ -180,30 +214,58 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_gs_dnd"
 		}
+		effectButtonType = {
+			name = uma_mmu_mmu_gs_dnd_ds
+			spriteType = "GFX_uma_mmu_dnd_disable"
+			position = { x = 783 y = 661 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_gs_dnd_ds"
+		}
 
 		ButtonType = {
 			name = "uma_mmu_gs_rs_season_title_desc"
 			buttonText = uma_mmu_gs_rs_season_title_desc
 			buttonFont = "large_title_font"
 			position = { x = 550 y = 660 }
+			alwaysTransparent = yes
 			orientation = "UPPER_LEFT"
 			text_color_code = "S"
 		}
 
+
 		effectButtonType = {
 			name = uma_mmu_mmu_gs_on
-			spriteType = "GFX_uma_mmu_on"
+			quadTextureSprite = "GFX_uma_mmu_on"
 			position = { x = 591 y = 795 }
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_gs_season_on"
+			tooltip_mode_enabled = yes
 		}
+		effectButtonType = {
+			name = uma_mmu_mmu_gs_on_disable
+			quadTextureSprite = "GFX_uma_mmu_on_disable"
+			position = { x = 591 y = 795 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_gs_season_on_ds"
+			tooltip_mode_enabled = yes
+		}
+
 
 		effectButtonType = {
 			name = uma_mmu_mmu_gs_off
-			spriteType = "GFX_uma_mmu_off"
+			quadTextureSprite = "GFX_uma_mmu_off"
 			position = { x = 783 y = 795 }
 			orientation = "UPPER_LEFT"
 			effect = "uma_mmu_gs_season_off"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_gs_off_disable
+			quadTextureSprite = "GFX_uma_mmu_off_disable"
+			position = { x = 783 y = 795 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_gs_season_off_ds"
+			tooltip_mode_enabled = yes
 		}
 
 #		effectButtonType = {
