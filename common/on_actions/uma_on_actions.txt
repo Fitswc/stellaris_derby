@@ -252,7 +252,7 @@ on_colonized = {
 on_entering_system_first_time = {
 	events = {
 		tachyon_coffee.1
-
+		uma_zephyr.20
 	}
 }
 
@@ -500,6 +500,12 @@ on_destroy_planet_with_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL = {
 # This = Country which established the communications
 # From = Country which communications were established with
 on_post_communications_established = {
+	events = {
+
+	}
+}
+
+on_storm_encountered = {
 	events = {
 
 	}

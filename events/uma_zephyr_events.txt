@@ -220,6 +220,7 @@ ship_event = {
 			NOT = {
 				has_country_flag = uma_zephyr_events_observer_happened
 			}
+			has_country_flag = uma_zephyr_events_chain_begin
 		}
 	}
 
@@ -250,6 +251,7 @@ ship_event = {
 						create_fleet = {
 							name = NAME_UMA_SHIP_ZEPHYR
 							effect = {
+								set_owner = event_target:uma_zephyr_fleet_country
 								save_global_event_target_as = uma_zephyr_fleet
 								create_ship = {
 									name = NAME_UMA_SHIP_ZEPHYR
@@ -383,6 +385,9 @@ country_event = {
 
 	after = {
 		hidden_effect = {
+			event_target:uma_zephyr_fleet_country = {
+				destroy_country = yes
+			}
 			event_target:uma_zephyr_fleet = {
 				destroy_fleet = This
 				clear_global_event_target = uma_zephyr_fleet
@@ -401,28 +406,59 @@ ship_event = {
 	trigger = {
 		This.fleet.owner = {
 			has_authority = auth_trainingcenter
+
+			NOT = {
+				has_country_flag = uma_zephyr_events_tiyanki_happened
+			}
+			has_country_flag = uma_zephyr_events_chain_begin
 		}
 
 		From = {
 			OR = {
-				has_star_flag = drone_system_1
-				has_star_flag = drone_system_2
-				has_star_flag = drone_system_3
-				has_star_flag = drone_system_4
-
-				has_star_flag = amoeba_1_system
-				has_star_flag = amoeba_2_system
-				has_star_flag = amoeba_3_system
-
-				has_star_flag = crystal_home_system
-
-				has_star_flag = void_system
+				has_star_flag = tiyanki_graveyard_system
 			}
 		}
 	}
 
 	immediate = {
-		fleet.owner = {
+		From = {
+			create_fleet = {
+				name = NAME_UMA_SHIP_ZEPHYR
+				effect = {
+					create_ship_design = {
+						design = NAME_UMA_SHIP_ZEPHYR
+					}
+					save_global_event_target_as = uma_zephyr_fleet
+					create_ship = {
+						name = NAME_UMA_SHIP_ZEPHYR
+						design = last_created_design
+						graphical_culture = event_target:uma_zephyr_fleet_country
+						effect = {
+							set_disable_at_health = 0.01
+						}
+					}
+
+					set_location = {
+						target = This
+						direction = out_system
+						distance = {
+							max = 20
+							min = 15
+						}
+						angle = random
+					}
+					set_cloaking_active = yes
+				}
+			}
+			event_target:uma_zephyr_fleet_country = {
+				set_faction_hostility = {
+					target = Root.fleet.owner
+					set_friendly = yes
+				}
+			}
+		}
+		This.fleet.owner = {
+			set_country_flag = uma_zephyr_events_tiyanki_happened
 			country_event = {
 				id = uma_zephyr.21
 			}
@@ -433,10 +469,124 @@ ship_event = {
 
 country_event = {
 	id = uma_zephyr.21
-	title = uma_zephyr.21.title
+	title = uma_zephyr_name
 	desc = uma_zephyr.21.desc
 	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
 
+	immediate = {
 
+	}
+
+	option = {
+		name = uma_zephyr.21.a
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.22
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.24
+			}
+		}
+	}
 
 }
+
+country_event = {
+	id = uma_zephyr.22
+	title = uma_zephyr_name
+	desc = uma_zephyr.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_zephyr.22.a
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.23
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_zephyr.23
+	title = uma_zephyr_name
+	desc = uma_zephyr.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_zephyr.23.a
+		hidden_effect = {
+			country_event = {
+				id = uma_zephyr.24
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_zephyr.24
+	title = uma_zephyr_name
+	desc = uma_zephyr.24.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = ethic_spaceship_room
+		portrait = 84c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_zephyr.24.a
+		add_resource = {
+			influence = 1
+		}
+		hidden_effect = {
+			event_target:uma_zephyr_fleet = {
+				destroy_fleet = This
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_zephyr.30
+
+}
+
+
