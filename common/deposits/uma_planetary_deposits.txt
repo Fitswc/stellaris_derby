@@ -528,7 +528,7 @@ d_palai_plateau = {
 #AD
 d_Ardan_crystal_core = {
 	is_for_colonizable = yes
-	icon = d_ruins_large     ######TODO:待更换
+	icon = d_crystal_forest
 	category = deposit_cat_rare
 
 	potential = { always = no }
@@ -542,7 +542,7 @@ d_Ardan_crystal_core = {
 
 d_Ardan_crystal_Energy_Field = {
 	is_for_colonizable = yes
-	icon = d_ruins_large     ######待更换
+	icon = d_uma_threegodness_relic_pic
 	category = deposit_cat_rare
 
 	potential = { always = no }
@@ -555,7 +555,7 @@ d_Ardan_crystal_Energy_Field = {
 
 d_Ardan_crystal_Mine_Hole = {
 	is_for_colonizable = yes
-	icon = d_ruins_large     ######待更换
+	icon = d_crystalline_caverns
 	category = deposit_cat_rare
 
 	potential = { always = no }
@@ -563,18 +563,5 @@ d_Ardan_crystal_Mine_Hole = {
 	planet_modifier = {
 		planet_jobs_minerals_produces_mult = 0.05
 		district_mining_max = 6
-	}
-}
-
-d_Ardan_crystal_farm = {
-	is_for_colonizable = yes
-	icon = d_ruins_large     ######待更换
-	category = deposit_cat_rare
-
-    potential = { always = no }
-
-	planet_modifier = {
-		planet_jobs_food_produces_mult = 0.05
-		district_farming_max = 6
 	}
 }
