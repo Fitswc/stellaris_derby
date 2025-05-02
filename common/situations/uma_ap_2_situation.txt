@@ -8,7 +8,7 @@ situation_uma_ap_2_situation_system_factor = {
 	on_start = {
 		set_situation_flag = uma_ap2_factor_had_happened
 	}
-	## TODO: picture added
+
 	monthly_progress = {
 		#On average, the situation should take about 3 years to complete
 		base = 5
@@ -16,12 +16,12 @@ situation_uma_ap_2_situation_system_factor = {
 		modifier = {
 			mult = 1
 			desc = "uma_ap_2_situation_factor_default"
-			current_situation_approach = situation_cyberization_overdrive
+			current_situation_approach = uma_ap_2_situation_factor_default
 		}
 		modifier = {
 			mult = 1.3
 			desc = "uma_ap_2_situation_factor_danage"
-			current_situation_approach = situation_cyberization_cautious
+			current_situation_approach = uma_ap_2_situation_factor_danage
 		}
 
 		modifier = {
@@ -144,7 +144,7 @@ situation_uma_ap_2_situation_system_factor = {
 	approach = {
 		#默认
 		name = uma_ap_2_situation_factor_default
-		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon = GFX_situation_approach_suspicious
 		icon_background = GFX_situation_approach_bg_green
 		default = yes
 		on_select = {
@@ -157,7 +157,7 @@ situation_uma_ap_2_situation_system_factor = {
 	}
 
 	approach = {
-		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon = GFX_situation_approach_balance_sheet
 		icon_background = GFX_situation_approach_bg_green
 		#急速
 		name = uma_ap_2_situation_factor_danage
@@ -173,7 +173,7 @@ situation_uma_ap_2_situation_system_factor = {
 	approach = {
 		#中断
 		name = uma_ap_2_situation_factor_break
-		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon = GFX_situation_approach_scales
 		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
@@ -212,7 +212,7 @@ situation_uma_ap_2_situation_system_realm = {
 	on_start = {
 
 	}
-	## TODO: picture added
+
 	monthly_progress = {
 		#On average, the situation should take about 3 years to complete
 		base = 5
@@ -327,7 +327,7 @@ situation_uma_ap_2_situation_system_realm = {
 	approach = {
 		#默认
 		name = uma_ap_2_situation_factor_default
-		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon = GFX_situation_approach_suspicious
 		icon_background = GFX_situation_approach_bg_green
 		default = yes
 		on_select = {
@@ -340,7 +340,7 @@ situation_uma_ap_2_situation_system_realm = {
 	}
 
 	approach = {
-		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon = GFX_situation_approach_balance_sheet
 		icon_background = GFX_situation_approach_bg_green
 		#急速
 		name = uma_ap_2_situation_factor_danage
@@ -356,7 +356,7 @@ situation_uma_ap_2_situation_system_realm = {
 	approach = {
 		#中断
 		name = uma_ap_2_situation_factor_break
-		icon = GFX_situation_approach_balance_sheet #TODO:Change_the_icon
+		icon = GFX_situation_approach_scales
 		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
