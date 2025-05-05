@@ -2483,7 +2483,7 @@ country_event = {
 				spawn_natural_wormhole = {
 					bypass_type = uma_gold_tunnel
 					orbit_distance = 200
-					orbit_angle = random
+					orbit_angle = {min = 0 max = 354}
 					random_pos = yes
 					init_effect = {
 						save_global_event_target_as = uma_gold_portal_begin
@@ -2493,7 +2493,7 @@ country_event = {
 			spawn_natural_wormhole = {
 				bypass_type = uma_gold_tunnel
 				orbit_distance = 78
-				orbit_angle = random
+				orbit_angle = {min = 0 max = 354}
 				random_pos = yes
 				init_effect = {
 					link_wormholes = event_target:uma_gold_portal_begin

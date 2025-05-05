@@ -535,7 +535,7 @@ uma_trait_communal={
 	triggered_pop_modifier = {
 		potential = {
 			exists = planet
-			planet = { num_pops > 50 }
+			planet = { pop_amount > 5000 }
 
 		}
 		species_empire_size_mult = -0.05
@@ -553,7 +553,7 @@ uma_trait_tsundere={
 	triggered_pop_modifier = {
 		potential = {
 			exists = planet
-			planet = { num_pops > 50 }
+			planet = { pop_amount > 5000 }
 
 		}
 		species_empire_size_mult = 0.05
@@ -607,14 +607,14 @@ uma_trait_houseworkpro={
 	triggered_pop_modifier = {
 		potential = {
 			exists = planet
-			planet = { num_pops < 30 }
+			planet = { pop_amount < 3000 }
 		}
 		planet_jobs_unity_produces_mult = 0.05
 	}
 	triggered_pop_modifier = {
 		potential = {
 			exists = planet
-			planet = { num_pops >= 30 }
+			planet = { pop_amount >= 3000 }
 		}
 		pop_housing_usage_mult = -0.05
 	}
@@ -632,14 +632,14 @@ uma_trait_houseworkidiot={
 	triggered_pop_modifier = {
 		potential = {
 			exists = planet
-			planet = { num_pops < 30 }
+			planet = { pop_amount < 3000 }
 		}
 		planet_jobs_unity_produces_mult = -0.05
 	}
 	triggered_pop_modifier = {
 		potential = {
 			exists = planet
-			planet = { num_pops >= 30 }
+			planet = { pop_amount >= 3000 }
 		}
 		pop_housing_usage_mult = 0.05
 	}

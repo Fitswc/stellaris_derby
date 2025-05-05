@@ -196,7 +196,7 @@ decision_uma_school_planet_transform = {
 			factor = 2
 			OR = {
 				is_capital = yes
-				num_pops >= 70
+				pop_amount >= 7000
 			}
 		}
 	}
@@ -478,7 +478,7 @@ decision_uma_school_ring_transform = {
 			factor = 2
 			OR = {
 				is_capital = yes
-				num_pops >= 70
+				pop_amount >= 7000
 			}
 		}
 	}
@@ -712,7 +712,7 @@ decision_uma_industrial_planet_transform = {
 			factor = 2
 			OR = {
 				is_capital = yes
-				num_pops >= 70
+				pop_amount >= 7000
 			}
 		}
 	}
