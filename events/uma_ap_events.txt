@@ -332,7 +332,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_1_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_1_actived }
 	}
 
 	is_triggered_only = yes
@@ -387,7 +387,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_2_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_2_actived }
 		any_country = {
 			OR = {
 				has_ethic = ethic_spiritualist
@@ -467,7 +467,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_2_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_2_actived }
 		any_country = {
 			OR = {
 				has_ethic = ethic_spiritualist
@@ -505,7 +505,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_3_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_3_actived }
 	}
 
 	immediate = {
@@ -751,7 +751,7 @@ country_event = {
 	picture = GFX_evt_uma_normal_school
 
 	trigger = {
-		NOT = { has_country_flag = uma_kenshi_ap_event_1_actived } 
+		NOT = { has_country_flag = uma_kenshi_ap_event_1_actived }
 	}
 
 	immediate = {
@@ -762,7 +762,7 @@ country_event = {
 
 	#新的检测方法
 	option = {
-		name = "uma_ap.24.a" 
+		name = "uma_ap.24.a"
 		hidden_effect = {
 			country_event = {
 				id = uma_ap.25
@@ -836,7 +836,7 @@ country_event = {
 	picture = GFX_evt_uma_normal_school
 
 	trigger = {
-		NOT = { has_country_flag = uma_kenshi_ap_event_2_actived } 
+		NOT = { has_country_flag = uma_kenshi_ap_event_2_actived }
 	}
 
 	immediate = {
@@ -847,7 +847,7 @@ country_event = {
 
 	#很好，就这么办
 	option = {
-		name = "uma_ap.27.a" 
+		name = "uma_ap.27.a"
 		add_modifier = {
 			modifier = uma_kenshi_power_adaption_training
 			days = 1800
@@ -905,7 +905,7 @@ country_event = {
 	picture = GFX_evt_uma_normal_school
 
 	trigger = {
-		NOT = { has_country_flag = uma_kenshi_ap_event_3_actived } 
+		NOT = { has_country_flag = uma_kenshi_ap_event_3_actived }
 	}
 
 	immediate = {
@@ -916,7 +916,7 @@ country_event = {
 
 	#召集哲学家
 	option = {
-		name = "uma_ap.29.a" 
+		name = "uma_ap.29.a"
 		hidden_effect = {
 			country_event = {
 				id = uma_ap.30
@@ -984,7 +984,7 @@ country_event = {
 
 	#问题解决？
 	option = {
-		name = "uma_ap.31.a"	
+		name = "uma_ap.31.a"
 		add_modifier = {
 			modifier = uma_kenshi_ban_the_media
 			days = 3650

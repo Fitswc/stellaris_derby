@@ -3,9 +3,9 @@
 
 
 #举办星球级别比赛
-decision_uma_hold_planet_racing = { 
+decision_uma_hold_planet_racing = {
 	owned_planets_only = yes
-	enactment_time = 0 
+	enactment_time = 0
 	sound = event_administrative_work #当然，之后我们要用自己的声音
 	icon = decision_planet_derby_2
 
@@ -79,7 +79,7 @@ decision_uma_school_planet_transform = {
 
 	resources = {
 		category = decisions
-		cost = {		
+		cost = {
 			influence = 200
 			minerals = 9990
 			energy = 5000
@@ -90,7 +90,7 @@ decision_uma_school_planet_transform = {
 	potential = {
 		NOR = {
 			is_planet_class = pc_city
-			is_planet_class = pc_ringworld_habitable			
+			is_planet_class = pc_ringworld_habitable
 			is_planet_class = pc_relic
 			is_planet_class = pc_uma_school #判定By F
 			has_modifier = resort_colony
@@ -126,7 +126,7 @@ decision_uma_school_planet_transform = {
 		custom_tooltip = decision_uma_school_planet_changed
 		hidden_effect = {
 			set_planet_flag = uma_has_change_pc_to_academic_planet
-			owner = { 
+			owner = {
 					if = {
 					limit = { is_ai = yes }
 					change_variable = { which = wg_modified_planet value = 1 }
@@ -134,7 +134,7 @@ decision_uma_school_planet_transform = {
 			}
 			###城市区划的一半变为宿舍区划，农业区划一半变为后勤区划
 			uma_school_planet_get_variable_effect = {
-				DISTRICT = district_city 
+				DISTRICT = district_city
 				VARIABLE = num_housing_districts
 			}
 			uma_school_planet_get_variable_effect = {
@@ -209,7 +209,7 @@ decision_uma_school_planet_transform = {
 
 #####特殊领袖事件相关
 #修复菲尼学院
-decision_uma_reconstrcut_phoenix_school = { 
+decision_uma_reconstrcut_phoenix_school = {
 	owned_planets_only = yes
 	enactment_time = 3650
 	sound = event_administrative_work #当然，之后我们要用自己的声音
@@ -256,7 +256,7 @@ decision_uma_reconstrcut_phoenix_school = {
 
 
 #修复菲尼学院大赛场
-decision_uma_reconstrcut_phoenix_racing_course = { 
+decision_uma_reconstrcut_phoenix_racing_course = {
 	owned_planets_only = yes
 	enactment_time = 3650
 	sound = event_administrative_work #当然，之后我们要用自己的声音
@@ -507,7 +507,7 @@ decision_uma_change_to_uma = {
 				has_authority = auth_trainingcenter
 			}
 		}
-		any_owned_pop = {
+		any_owned_pop_group = {
 			AND = {
 				NOT = {
 					is_same_species_class = Root.owner
@@ -521,7 +521,7 @@ decision_uma_change_to_uma = {
 	}
 
 	allow = {
-		any_owned_pop = {
+		any_owned_pop_group = {
 			NOT = {
 				is_robot_pop = yes
 				is_same_species_class = Root.owner
@@ -532,7 +532,7 @@ decision_uma_change_to_uma = {
 	effect = {
 		custom_tooltip = uma_transform_decision_tooltip
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					AND = {
 						NOT = {
@@ -543,7 +543,7 @@ decision_uma_change_to_uma = {
 						}
 					}
 				}
-#				change_species = Root.owner_main_species
+				#				change_species = Root.owner_main_species
 				if = {
 					limit = {
 						From = {
