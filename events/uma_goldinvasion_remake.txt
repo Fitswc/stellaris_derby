@@ -2920,7 +2920,7 @@ country_event = {
 		name = uma_crisis.8001.a
 		response_text = uma_crisis.8001.a.resp
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_same_species = root
 					NOT = { species = { has_trait = uma_trait_gold_family_basic } }

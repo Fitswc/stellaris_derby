@@ -184,7 +184,7 @@ situation_uma_ap_2_situation_system_factor = {
 			hidden_effect = {
 				owner = {
 					set_country_flag = uma_ap2_factor_crisis_end
-					every_owned_pop = {
+					every_owned_pop_group = {
 						modify_species = {
 							add_trait = uma_trait_ap2_factor_fail
 						}
@@ -366,7 +366,7 @@ situation_uma_ap_2_situation_system_realm = {
 			abort_situation = Root
 			hidden_effect = {
 				owner = {
-					every_owned_pop = {
+					every_owned_pop_group = {
 						modify_species = {
 							add_trait = uma_trait_ap2_realm_fail
 						}
