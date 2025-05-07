@@ -7,6 +7,11 @@ building_uma_field_powerplant = {
 	base_buildtime = 200
 	category = resource
 
+	building_sets = {
+		generator
+		uma_generator
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -92,6 +97,11 @@ building_uma_field_powering_complex = {
 	base_buildtime = 500
 	category = resource
 	can_build = no
+
+	building_sets = {
+		generator
+		uma_generator
+	}
 
 	potential = {
 		exists = owner
@@ -183,6 +193,11 @@ building_uma_field_powering_complex_realm = {
 	category = resource
 	can_build = no
 
+	building_sets = {
+		generator
+		uma_generator
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -270,6 +285,12 @@ building_uma_field_powering_complex_realm = {
 building_uma_simple_carrot_farm = {
 	base_buildtime = 200
 	category = resource
+
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
 
 
 	potential = {
@@ -386,6 +407,12 @@ building_uma_modern_carrot_farm = {
 	category = resource
 	can_build = no #升级得来
 
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
+
 
 	potential = {
 		exists = owner
@@ -501,6 +528,12 @@ building_uma_advance_carrot_farm = {
 	base_buildtime = 900
 	category = resource
 	can_build = no #升级得来
+
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
 
 
 	potential = {
@@ -635,6 +668,12 @@ building_uma_modern_carrot_farm_realm = {
 	category = resource
 	can_build = no #升级得来
 
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
+
 
 	potential = {
 		exists = owner
@@ -756,6 +795,11 @@ building_uma_core_mining_complex_1 = {
 	base_buildtime = 200
 	category = resource
 
+	building_sets = {
+		mining
+		uma_mining
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -844,6 +888,11 @@ building_uma_core_mining_complex_2 = {
 	base_buildtime = 500
 	category = resource
 	can_build = no
+
+	building_sets = {
+		mining
+		uma_mining
+	}
 
 	potential = {
 		exists = owner
@@ -934,6 +983,11 @@ building_uma_core_mining_complex_3 = {
 	category = resource
 	can_build = no
 
+	building_sets = {
+		mining
+		uma_mining
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1022,6 +1076,11 @@ building_uma_core_mining_complex_realm = {
 	base_buildtime = 100
 	category = resource
 	can_build = no
+
+	building_sets = {
+		mining
+		uma_mining
+	}
 
 	potential = {
 		exists = owner

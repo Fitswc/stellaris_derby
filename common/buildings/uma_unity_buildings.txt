@@ -10,6 +10,9 @@ building_uma_basic_racing_course = {
 
 	building_sets = {
 		uma_racing
+		unity
+		urban
+		government
 	}
 
 
@@ -103,6 +106,13 @@ building_uma_modern_racing_course = {
 	base_buildtime = 500
 	category = unity
 	can_build = no #升级得来
+
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
 
 
 	potential = {
@@ -217,6 +227,13 @@ building_uma_top_racing_course = {
 	category = unity
 	can_build = no #升级得来
 
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
+
 
 	potential = {
 		exists = owner
@@ -326,6 +343,13 @@ building_uma_tree_holes = { #中庭的树洞
 	base_buildtime = 300
 	category = unity
 	base_cap_amount = 1
+
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
 	
 	potential = {
 		exists = owner

@@ -7,6 +7,13 @@ building_uma_commercial_zone = {
 	category = trade
 	base_cap_amount = 1 #Restrict of trade pw
 
+	building_sets = {
+		trade
+		uma_trade
+		urban
+		uma_urban
+	}
+
 	potential = {
 		exists = owner
 		owner = {

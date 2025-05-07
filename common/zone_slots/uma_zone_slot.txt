@@ -78,3 +78,42 @@ slot_uma_teaching = {
 		always = yes
 	}
 }
+
+slot_uma_logistic = {
+	include = {
+		zone_food
+		zone_energy
+		zone_trade
+		zone_factory
+	}
+
+	exclude = {
+		zone_machine_replication
+		zone_hive_spawning
+		zone_urban
+		zone_industrial
+		zone_foundry
+		zone_unity
+		zone_unity_spiritualist
+		zone_default
+		zone_minerals
+		zone_urban_energy
+		zone_urban_food
+		zone_fortress
+		zone_urban_minerals
+		zone_foundry_wilderness
+		zone_unity_wilderness
+		zone_research_wilderness
+		zone_research_unity_wilderness
+		zone_fortress_wilderness
+		zone_trade_wilderness
+		zone_research
+		zone_research_unity
+		zone_uma_teaching
+	}
+
+	unlock = {
+		# planet scope
+		always = yes
+	}
+}

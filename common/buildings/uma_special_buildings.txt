@@ -9,6 +9,14 @@ building_uma_nice_nature_no_restaurant = {
 	base_buildtime = 300
 	category = unity
 	base_cap_amount = 1
+
+	building_sets = {
+		uma_urban
+		uma_racing
+		uma_research
+		urban
+		government
+	}
 	
 	potential = {
 		exists = owner
@@ -135,6 +143,12 @@ building_realm_planetary_shield_generator = {
 	position_priority = 100
 	can_be_ruined = no
 	category = army
+
+	building_sets = {
+		government
+		fortress
+		uma_fortress
+	}
 
 	potential = {
 		exists = owner

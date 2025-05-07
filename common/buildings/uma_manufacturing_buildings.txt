@@ -18,6 +18,12 @@ building_uma_crystal_carrot_producing_lab = {
 		NOT = { has_modifier = slave_colony }
 	}
 
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -97,6 +103,12 @@ building_uma_crystal_carrot_producing_center = {
 	base_buildtime = 500
 	can_build = no #升级得来
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -191,6 +203,12 @@ building_uma_crystal_carrot_producing_complex = {
 	can_build = no #升级得来
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -284,6 +302,12 @@ building_uma_crystal_carrot_producing_realm_complex = {
 	base_buildtime = 100
 	can_build = no #升级得来
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
 
 
 	potential = {
@@ -386,6 +410,12 @@ building_uma_crystal_carrot_producing_realm_complex = {
 building_uma_sweet_shop = {
 	base_buildtime = 200
 	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -472,6 +502,11 @@ building_uma_chain_sweet_shop = {
 	base_buildtime = 500
 	can_build = no #升级得来
 	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
 
 	potential = {
 		exists = owner
@@ -571,6 +606,12 @@ building_uma_chain_sweet_shop = {
 building_uma_sport_goods_shop = {
 	base_buildtime = 200
 	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -672,6 +713,11 @@ building_uma_sport_goods_supermarket = {
 	can_build = no #升级得来
 	category = manufacturing
 
+	building_sets = {
+		urban
+		uma_urban
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -771,6 +817,14 @@ building_uma_sport_goods_supermarket = {
 building_uma_crystal_alloy_workhouse = {
 	base_buildtime = 200
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -858,6 +912,13 @@ building_uma_crystal_alloy_factory = {
 	base_buildtime = 500
 	can_build = no #升级得来
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -949,6 +1010,13 @@ building_uma_crystal_alloy_complex = {
 	can_build = no #升级得来
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1039,6 +1107,13 @@ building_uma_crystal_alloy_realm_complex = {
 	base_buildtime = 100
 	can_build = no #升级得来
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -1147,6 +1222,14 @@ building_uma_crystal_alloy_realm_complex = {
 building_uma_crystal_consumer_goods_workhouse = {
 	base_buildtime = 200
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1234,6 +1317,13 @@ building_uma_crystal_consumer_goods_factory = {
 	base_buildtime = 500
 	can_build = no #升级得来
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -1325,6 +1415,13 @@ building_uma_crystal_consumer_goods_complex = {
 	can_build = no #升级得来
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1415,6 +1512,13 @@ building_uma_crystal_consumer_goods_realm_complex = {
 	can_build = no #升级得来
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1500,6 +1604,13 @@ building_uma_chemical_plant = {
 
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -1590,6 +1701,13 @@ building_uma_chemical_plant_2 = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1672,6 +1790,14 @@ building_uma_chemical_plant_realm = {
 
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	can_build = no
 
 	potential = {
@@ -1763,6 +1889,13 @@ building_uma_crystal_plant = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1853,6 +1986,13 @@ building_uma_crystal_plant_2 = {
 	category = manufacturing
 	can_build = no
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1942,6 +2082,13 @@ building_uma_crystal_plant_realm = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 	can_build = no
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -2035,6 +2182,13 @@ building_uma_gas_plant = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2127,6 +2281,13 @@ building_uma_gas_plant_2 = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 	can_build = no
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -2222,6 +2383,13 @@ building_uma_gas_plant_realm = {
 	category = manufacturing
 	can_build = no
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2310,6 +2478,13 @@ building_uma_dark_matter_plant = {
 
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -2412,6 +2587,13 @@ building_uma_tg_alloys_maker_Automatic = {
 	base_buildtime = 300
 	category = resource
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2497,6 +2679,13 @@ building_uma_tg_alloys_maker_Automatic_2 = {
 	category = resource
 	can_build = no
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2580,6 +2769,13 @@ building_uma_tg_custom_goods_productor = {
 	base_buildtime = 300
 	category = resource
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2661,6 +2857,13 @@ building_uma_tg_custom_goods_productor_2 = {
 	category = resource
 	can_build = no
 
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2739,6 +2942,13 @@ building_uma_tg_industrial_complex = {
 	base_buildtime = 400
 	category = resource
 	base_cap_amount = 2
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
 
 	potential = {
 		exists = owner
@@ -2976,6 +3186,11 @@ building_uma_tg_planet_energy_extractor = {
 	base_buildtime = 300
 	category = resource
 
+	building_sets = {
+		generator
+		uma_generator
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3060,6 +3275,11 @@ building_uma_tg_planet_energy_extractor_2 = {
 	category = resource
 	can_build = no
 
+	building_sets = {
+		generator
+		uma_generator
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3137,6 +3357,17 @@ building_uma_tg_planet_energy_extractor_2 = {
 building_uma_tg_resource_soil = {
 	base_buildtime = 300
 	category = resource
+
+	building_sets = {
+		generator
+		mining
+		farming
+		urban
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
 
 	potential = {
 		exists = owner
