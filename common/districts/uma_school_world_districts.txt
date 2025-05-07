@@ -53,7 +53,7 @@ district_uma_dormitory = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_dormitory_administrator_add = 1
+		job_uma_dormitory_administrator_add = 100
 	}
 
 	triggered_planet_modifier = {
@@ -62,7 +62,7 @@ district_uma_dormitory = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 9
+			job_maintenance_drone_add = 900
 		}
 	}
 
@@ -72,7 +72,7 @@ district_uma_dormitory = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -84,7 +84,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -97,7 +97,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -110,7 +110,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 3
+			job_maintenance_drone_add = 300
 		}
 	}
 
@@ -122,7 +122,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 300
 		}
 	}
 
@@ -132,7 +132,7 @@ district_uma_dormitory = {
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 300
 		}
 	}
 
@@ -209,8 +209,8 @@ district_uma_training_course = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_trainer_add = 1
-		job_uma_racing_umamusume_add = 5
+		job_uma_trainer_add = 100
+		job_uma_racing_umamusume_add = 500
 	}
 
 	triggered_desc = {
@@ -275,7 +275,7 @@ district_uma_teaching_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_school_reseacher_add = 5
+		job_uma_school_reseacher_add = 500
 	}
 
 	triggered_desc = {
@@ -333,7 +333,7 @@ district_uma_logistics_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_carrot_farmer_add = 5
+		job_uma_carrot_farmer_add = 500
 	}
 
 	triggered_planet_modifier = {
@@ -342,7 +342,7 @@ district_uma_logistics_area = {
 			owner = { is_uma_country = yes }
 			owner = { has_technology = tech_uma_code_hachimi }
 		}
-		job_uma_bee_farmer_add = 1
+		job_uma_bee_farmer_add = 100
 	}
 
 	triggered_desc = {
@@ -608,8 +608,8 @@ district_uma_dormitory_in_industrial = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 25
-		job_clerk_add = 6
+		planet_housing_add = 2500
+		job_clerk_add = 600
 	}
 
 	triggered_planet_modifier = {
@@ -617,7 +617,7 @@ district_uma_dormitory_in_industrial = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_dormitory_administrator_add = 1
+		job_uma_dormitory_administrator_add = 100
 	}
 
 	triggered_planet_modifier = {
@@ -626,7 +626,7 @@ district_uma_dormitory_in_industrial = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 9
+			job_maintenance_drone_add = 900
 		}
 	}
 
@@ -636,7 +636,7 @@ district_uma_dormitory_in_industrial = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 		}
 	}
 
@@ -648,7 +648,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 		}
 	}
 
@@ -661,7 +661,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 4
+			planet_housing_add = 400
 		}
 	}
 
@@ -674,7 +674,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 3
+			job_maintenance_drone_add = 300
 		}
 	}
 
@@ -686,7 +686,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 300
 		}
 	}
 
@@ -696,7 +696,7 @@ district_uma_dormitory_in_industrial = {
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 300
 		}
 	}
 
@@ -768,7 +768,7 @@ district_uma_energy_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_field_powering_technician_add = 4
+		job_uma_field_powering_technician_add = 400
 	}
 
 
@@ -824,7 +824,7 @@ district_uma_industrial_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_crystal_consumer_goods_crafter_add = 4
+		job_uma_crystal_consumer_goods_crafter_add = 400
 
 	}
 
@@ -877,7 +877,7 @@ district_uma_mining_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_core_miner_add = 4
+		job_uma_core_miner_add = 400
 	}
 
 
@@ -932,7 +932,7 @@ district_uma_heavy_industrial_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_crystal_alloy_crafter_add = 4
+		job_uma_crystal_alloy_crafter_add = 400
 	}
 
 

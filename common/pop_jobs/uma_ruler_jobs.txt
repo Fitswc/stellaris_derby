@@ -26,13 +26,16 @@ uma_satonomerchant = {
 	}
 
 	planet_modifier = {                             #贸易额+20 星球贸易额+10%
-		planet_jobs_trade_produces_mult = 0.1
+#		planet_jobs_trade_produces_mult = 0.1
 	}
 
 	resources = {
 		category = planet_merchants
 		upkeep = {
 			consumer_goods = 2
+		}
+		produces = {
+			trade = 3
 		}
 	}
 

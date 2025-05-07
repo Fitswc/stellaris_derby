@@ -429,8 +429,47 @@ uma_sweet_master = {
 	resources = {
 		category = planet_uma_sweet_master #使得其可以单独得到修正
 		produces = {
+			trigger = {
+				exists = owner
+				NOT = {
+					OR = {
+						owner = { has_technology = tech_uma_sweet_chain_industry_brand_plan }
+						owner = { has_councilor = { COUNCILOR = "councilor_umasatonodiamond" } }
+					}
+				}
+			}
 			consumer_goods = 12
+			trade = 1
 		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+
+					NOT = {
+						owner = { has_councilor = { COUNCILOR = "councilor_umasatonodiamond" } }
+					}
+				}
+			}
+			consumer_goods = 12
+			trade = 2
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				NOT = {
+					owner = {
+						has_technology = tech_uma_sweet_chain_industry_brand_plan
+					}
+				}
+				owner = { has_councilor = { COUNCILOR = "councilor_umasatonodiamond" } }
+			}
+			consumer_goods = 12
+			trade = 4
+		}
+
 		upkeep = {
 			food = 12
 		}
@@ -438,27 +477,8 @@ uma_sweet_master = {
 
 	planet_modifier = {
 		planet_amenities_add = 3
-		planet_jobs_trade_produces_mult = 0.8
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_uma_sweet_chain_industry_brand_plan }
-		}
-		modifier = {
-			planet_jobs_trade_produces_mult = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_councilor = {COUNCILOR = "councilor_umasatonodiamond"} }
-		}
-		modifier = {
-			planet_jobs_trade_produces_mult = 4
-		}
-	}
 
 	weight = {
 		weight = @specialist_job_weight
@@ -513,6 +533,7 @@ uma_sweet_manager = {
 		category = planet_uma_sweet_manager #使得其可以单独得到修正
 		produces = {
 			consumer_goods = 6
+			trade = 7
 		}
 		upkeep = {
 			unity = 6
@@ -523,7 +544,6 @@ uma_sweet_manager = {
 	planet_modifier = {
 		planet_uma_sweet_master_produces_mult = 0.2
 		planet_amenities_add = 4
-		planet_jobs_trade_produces_mult = 10
 	}
 
 	weight = {
@@ -645,6 +665,7 @@ uma_live_clothes_crafter = {
 		category = planet_uma_live_clothes_crafter #使得其可以单独得到修正
 		produces = {
 			unity = 12
+			trade = 4
 		}
 		upkeep = {
 			consumer_goods = 4
@@ -652,7 +673,6 @@ uma_live_clothes_crafter = {
 	}
 
 	planet_modifier = {
-		planet_jobs_trade_produces_mult = 8
 		planet_amenities_add = 5
 	}
 

@@ -58,7 +58,7 @@ building_uma_crystal_carrot_producing_lab = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_carrot_engineer_add = 1
+			job_uma_crystal_carrot_engineer_add = 100
 		}
 	}
 
@@ -150,7 +150,7 @@ building_uma_crystal_carrot_producing_center = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_carrot_engineer_add = 2
+			job_uma_crystal_carrot_engineer_add = 200
 		}
 	}
 
@@ -243,7 +243,7 @@ building_uma_crystal_carrot_producing_complex = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_carrot_engineer_add = 3
+			job_uma_crystal_carrot_engineer_add = 300
 		}
 	}
 
@@ -342,7 +342,7 @@ building_uma_crystal_carrot_producing_realm_complex = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_carrot_engineer_add = 4
+			job_uma_crystal_carrot_engineer_add = 400
 		}
 	}
 	triggered_planet_modifier = {
@@ -433,7 +433,7 @@ building_uma_sweet_shop = {
 			}
 		}
 		modifier = {
-			job_uma_sweet_master_add = 2
+			job_uma_sweet_master_add = 200
 		}
 	}
 
@@ -520,8 +520,8 @@ building_uma_chain_sweet_shop = {
 			}
 		}
 		modifier = {
-			job_uma_sweet_master_add = 4
-			job_uma_sweet_manager_add = 1
+			job_uma_sweet_master_add = 400
+			job_uma_sweet_manager_add = 100
 		}
 	}
 
@@ -618,8 +618,8 @@ building_uma_sport_goods_shop = {
 			}
 		}
 		modifier = {
-			job_uma_horseshoe_crafter_add = 1
-			job_uma_live_clothes_crafter_add = 1
+			job_uma_horseshoe_crafter_add = 100
+			job_uma_live_clothes_crafter_add = 100
 		}
 	}
 
@@ -719,8 +719,8 @@ building_uma_sport_goods_supermarket = {
 			}
 		}
 		modifier = {
-			job_uma_horseshoe_crafter_add = 2
-			job_uma_live_clothes_crafter_add = 2
+			job_uma_horseshoe_crafter_add = 200
+			job_uma_live_clothes_crafter_add = 200
 		}
 	}
 
@@ -819,7 +819,7 @@ building_uma_crystal_alloy_workhouse = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_alloy_crafter_add = 2
+			job_uma_crystal_alloy_crafter_add = 200
 		}
 	}
 
@@ -907,7 +907,7 @@ building_uma_crystal_alloy_factory = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_alloy_crafter_add = 4
+			job_uma_crystal_alloy_crafter_add = 400
 		}
 	}
 
@@ -997,7 +997,7 @@ building_uma_crystal_alloy_complex = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_alloy_crafter_add = 7
+			job_uma_crystal_alloy_crafter_add = 700
 		}
 	}
 
@@ -1098,7 +1098,7 @@ building_uma_crystal_alloy_realm_complex = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_alloy_crafter_add = 8
+			job_uma_crystal_alloy_crafter_add = 800
 		}
 	}
 
@@ -1195,7 +1195,7 @@ building_uma_crystal_consumer_goods_workhouse = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_consumer_goods_crafter_add = 2
+			job_uma_crystal_consumer_goods_crafter_add = 200
 		}
 	}
 
@@ -1283,7 +1283,7 @@ building_uma_crystal_consumer_goods_factory = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_consumer_goods_crafter_add = 4
+			job_uma_crystal_consumer_goods_crafter_add = 400
 		}
 	}
 
@@ -1373,7 +1373,7 @@ building_uma_crystal_consumer_goods_complex = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_consumer_goods_crafter_add = 7
+			job_uma_crystal_consumer_goods_crafter_add = 700
 		}
 	}
 
@@ -1468,7 +1468,7 @@ building_uma_crystal_consumer_goods_realm_complex = {
 			}
 		}
 		modifier = {
-			job_uma_crystal_consumer_goods_crafter_add = 8
+			job_uma_crystal_consumer_goods_crafter_add = 800
 		}
 	}
 	planet_modifier = {
@@ -1549,7 +1549,7 @@ building_uma_chemical_plant = {
 			}
 		}
 		modifier = {
-			job_uma_chemrist_add = 1
+			job_uma_chemrist_add = 100
 		}
 	}
 
@@ -1639,7 +1639,7 @@ building_uma_chemical_plant_2 = {
 			}
 		}
 		modifier = {
-			job_uma_chemrist_add = 2
+			job_uma_chemrist_add = 200
 		}
 	}
 
@@ -1731,7 +1731,7 @@ building_uma_chemical_plant_realm = {
 			}
 		}
 		modifier = {
-			job_uma_chemrist_add = 3
+			job_uma_chemrist_add = 300
 		}
 	}
 	planet_modifier = {
@@ -1812,7 +1812,7 @@ building_uma_crystal_plant = {
 			}
 		}
 		modifier = {
-			job_uma_translucer_add = 1
+			job_uma_translucer_add = 100
 		}
 	}
 
@@ -1902,7 +1902,7 @@ building_uma_crystal_plant_2 = {
 			}
 		}
 		modifier = {
-			job_uma_translucer_add = 2
+			job_uma_translucer_add = 200
 		}
 	}
 
@@ -2001,7 +2001,7 @@ building_uma_crystal_plant_realm = {
 			}
 		}
 		modifier = {
-			job_uma_translucer_add = 3
+			job_uma_translucer_add = 300
 		}
 	}
 	planet_modifier = {
@@ -2084,7 +2084,7 @@ building_uma_gas_plant = {
 			}
 		}
 		modifier = {
-			job_uma_gas_collector_add = 1
+			job_uma_gas_collector_add = 100
 		}
 	}
 
@@ -2177,7 +2177,7 @@ building_uma_gas_plant_2 = {
 			}
 		}
 		modifier = {
-			job_uma_gas_collector_add = 2
+			job_uma_gas_collector_add = 200
 		}
 	}
 
@@ -2282,7 +2282,7 @@ building_uma_gas_plant_realm = {
 			}
 		}
 		modifier = {
-			job_uma_gas_collector_add = 3
+			job_uma_gas_collector_add = 300
 		}
 	}
 	planet_modifier = {
@@ -2360,7 +2360,7 @@ building_uma_dark_matter_plant = {
 			}
 		}
 		modifier = {
-			job_uma_darkmatter_collector_add = 1
+			job_uma_darkmatter_collector_add = 100
 		}
 	}
 	triggered_planet_modifier = {

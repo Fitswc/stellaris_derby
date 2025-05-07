@@ -76,6 +76,12 @@ uma_trade_policy = {
 			
 	}
 	option = {
+		name = trade_policy_uma_vanilla
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
 		name = trade_policy_uma_basic_resources_trading
 		policy_flags = {
 			trade_policy_uma_basic_resources_trading
@@ -150,12 +156,7 @@ uma_trade_policy = {
 			factor = 0
 		}
 	}
-	option = {
-		name = trade_policy_uma_vanilla
-		AI_weight = {
-			factor = 0
-		}
-	}
+
 }
 
 #燃料选择

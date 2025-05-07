@@ -124,6 +124,7 @@ uma_racing_umamusume = {
 			society_research = 3
 			engineering_research = 3
 			physics_research = 3
+			trade = 6
 		}
 		upkeep = {
 			consumer_goods = 1
@@ -132,7 +133,7 @@ uma_racing_umamusume = {
 
 	planet_modifier = {
 		planet_amenities_add = 4
-		planet_jobs_trade_produces_mult = 8
+#		planet_jobs_trade_produces_mult = 8
 	}
 
 	weight = {
