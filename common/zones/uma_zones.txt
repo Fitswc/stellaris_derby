@@ -84,7 +84,6 @@ zone_uma_teaching = {
 		category = planet_zones
 		cost = {
 			minerals = @zone_cost
-
 		}
 
 		upkeep = {
@@ -94,6 +93,11 @@ zone_uma_teaching = {
 
 	triggered_district_planet_modifier = {
 		planet_housing_add = @zone_urban_housing_positive
+		planet_uma_researcher_produces_mult = 0.05
+		job_uma_researcher_add = 50
+		planet_building_uma_toresen_lab_build_speed_mult = 0.1
+		planet_building_uma_toresen_lab_center_build_speed_mult = 0.1
+		planet_building_uma_toresen_lab_top_build_speed_mult = 0.1
 	}
 
 	max_buildings = 3
