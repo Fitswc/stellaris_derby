@@ -3615,14 +3615,14 @@ uma_random_specimen = {
 				factor = 0
 				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clock  } }
 			}
-			give_specimen = { key = uma_clock  }
+			give_specimen = { key = uma_clock  origin = uma_specimen_null}
 		}
 		1 = {
 			modifier = {
 				factor = 0
 				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clover } }
 			}
-			give_specimen = { key = uma_clover}
+			give_specimen = { key = uma_clover origin = uma_specimen_null}
 		}
 		1 = {
 			modifier = {
@@ -3631,17 +3631,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_coin}
-		}
-
-		1 = {
-			modifier = {
-				factor = 0
-				NOR = {
-					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
-				}
-			}
-			give_specimen = { key = uma_live_video}
+			give_specimen = { key = uma_coin origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3651,7 +3641,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_shine_of_dream}
+			give_specimen = { key = uma_live_video origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3661,7 +3651,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_shoe_trophy}
+			give_specimen = { key = uma_shine_of_dream origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3671,7 +3661,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_strength_crystal}
+			give_specimen = { key = uma_shoe_trophy origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3681,7 +3671,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_tp}
+			give_specimen = { key = uma_strength_crystal origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3691,7 +3681,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_trophy_classic}
+			give_specimen = { key = uma_tp origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3701,7 +3691,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_twinkle_maz}
+			give_specimen = { key = uma_trophy_classic origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3711,7 +3701,17 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_trophy_classic}
+			give_specimen = { key = uma_twinkle_maz origin = uma_specimen_null}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_trophy_classic origin = uma_specimen_null}
 		}
 	}
 

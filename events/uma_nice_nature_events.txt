@@ -75,12 +75,12 @@ event = {
         #大概不需要领袖吧
 		last_created_country = {
 			create_leader = {
-				class = ruler
+				class = official
 				species = this				#领袖种族
 				name = NN			#领袖名字（当前为随机）
 				skill = 10
 			}
-			change_leader_portrait = "46c"
+#			change_leader_portrait = "46c"
 #			effect = {
 #				change_leader_portrait = "46c"
 #			}

@@ -464,7 +464,7 @@ d_yinkate_place = {
 			owner = { has_authority = auth_trainingcenter }
 		}
 		modifier = {
-			planet_jobs_specialist_only_produces_mult = 0.2
+			planet_jobs_specialist_produces_mult = 0.2
 			planet_jobs_influence_produces_mult = 0.05
 		}
 	}

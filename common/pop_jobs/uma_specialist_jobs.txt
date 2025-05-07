@@ -2,9 +2,14 @@
 
 uma_umaidol = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_holo_theatres
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_holo_theatres
+		}
+	}
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -40,7 +45,7 @@ uma_umaidol = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.01
+			bonus_pop_growth_mult = 0.01
 		}
 	}
 
@@ -55,7 +60,7 @@ uma_umaidol = {
 
 		modifier = {
 			factor = 1.5
-			has_job = uma_umaidol
+			can_work_specific_job = uma_umaidol
 		}
 		
 		modifier = {
@@ -73,9 +78,15 @@ uma_umaidol = {
 ###风纪委员
 uma_judgement = {
 	category = specialist
-	condition_string = BATTLE_THRALL_JOB_TRIGGER
-	building_icon = building_precinct_house
-	clothes_texture_index = 5
+
+	swappable_data = {
+		default = {
+			condition_string = BATTLE_THRALL_JOB_TRIGGER
+			building_icon = building_precinct_house
+		}
+	}
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -107,13 +118,11 @@ uma_judgement = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
 
 	planet_modifier = {
 		planet_crime_add = -20
 		planet_stability_add = 3
+		planet_defense_armies_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -131,17 +140,17 @@ uma_judgement = {
 
 		modifier = {
 			factor = 5
-			has_job = uma_judgement
+			can_work_specific_job = uma_judgement
 		}
 		modifier = {
 			factor = 10
 			planet = { planet_crime > 15}
-			NOT = { has_job = uma_judgement }
+			NOT = { can_work_specific_job = uma_judgement }
 		}
 		modifier = {
 			factor = 0.01
 			planet = { planet_crime <= 15}
-			NOT = { has_job = uma_judgement }
+			NOT = { can_work_specific_job = uma_judgement }
 		}
 
 		modifier = {
@@ -168,7 +177,7 @@ uma_judgement = {
 		
 		modifier = {
 			factor = 5
-			has_job = uma_judgement
+			can_work_specific_job = uma_judgement
 		}
 		modifier = {
 			factor = 5
@@ -190,9 +199,14 @@ uma_judgement = {
 ###三女神知识研究者
 uma_threegodness_knowledge_scholar = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_toresen_lab
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_toresen_lab
+		}
+	}
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -232,7 +246,7 @@ uma_threegodness_knowledge_scholar = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_threegodness_knowledge_scholar }
+			NOT = { can_work_specific_job =  uma_threegodness_knowledge_scholar }
 		}
 		
 		modifier = {
@@ -247,9 +261,14 @@ uma_threegodness_knowledge_scholar = {
 ###水晶萝卜工程师
 uma_crystal_carrot_engineer = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_crystal_carrot_producing_center ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_crystal_carrot_producing_center ##之后这里改成我们自己的建筑！
+		}
+	}
+
 
 
 	possible_pre_triggers = {
@@ -290,7 +309,7 @@ uma_crystal_carrot_engineer = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_crystal_carrot_engineer }
+			NOT = { can_work_specific_job = uma_crystal_carrot_engineer }
 		}
 		
 		modifier = {
@@ -307,9 +326,15 @@ uma_crystal_carrot_engineer = {
 #马娘科学家
 uma_researcher = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
 
 
 	possible_pre_triggers = {
@@ -360,7 +385,7 @@ uma_researcher = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job = uma_researcher }
 		}
 		
 		modifier = {
@@ -377,9 +402,15 @@ uma_researcher = {
 #甜点制作师
 uma_sweet_master = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_sweet_shop ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sweet_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
 
 
 	possible_pre_triggers = {
@@ -407,7 +438,7 @@ uma_sweet_master = {
 
 	planet_modifier = {
 		planet_amenities_add = 3
-		trade_value_add = 0.8
+		planet_jobs_trade_produces_mult = 0.8
 	}
 
 	triggered_planet_modifier = {
@@ -416,7 +447,7 @@ uma_sweet_master = {
 			owner = { has_technology = tech_uma_sweet_chain_industry_brand_plan }
 		}
 		modifier = {
-			trade_value_add = 2
+			planet_jobs_trade_produces_mult = 2
 		}
 	}
 	triggered_planet_modifier = {
@@ -425,7 +456,7 @@ uma_sweet_master = {
 			owner = { has_councilor = {COUNCILOR = "councilor_umasatonodiamond"} }
 		}
 		modifier = {
-			trade_value_add = 4
+			planet_jobs_trade_produces_mult = 4
 		}
 	}
 
@@ -439,7 +470,7 @@ uma_sweet_master = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job =  uma_researcher }
 		}
 		
 		modifier = {
@@ -453,9 +484,16 @@ uma_sweet_master = {
 #甜点店铺经理
 uma_sweet_manager = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_sweet_shop ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sweet_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
+
 
 
 	possible_pre_triggers = {
@@ -485,7 +523,7 @@ uma_sweet_manager = {
 	planet_modifier = {
 		planet_uma_sweet_master_produces_mult = 0.2
 		planet_amenities_add = 4
-		trade_value_add = 10
+		planet_jobs_trade_produces_mult = 10
 	}
 
 	weight = {
@@ -498,7 +536,7 @@ uma_sweet_manager = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job =  uma_researcher }
 		}
 		
 		modifier = {
@@ -512,9 +550,14 @@ uma_sweet_manager = {
 #蹄铁工匠
 uma_horseshoe_crafter = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_sport_goods_shop ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sport_goods_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
 
 
 	possible_pre_triggers = {
@@ -561,7 +604,7 @@ uma_horseshoe_crafter = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job =  uma_researcher }
 		}
 		
 		modifier = {
@@ -575,9 +618,14 @@ uma_horseshoe_crafter = {
 #决胜服设计师
 uma_live_clothes_crafter = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_sport_goods_shop ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sport_goods_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
 
 
 	possible_pre_triggers = {
@@ -604,7 +652,7 @@ uma_live_clothes_crafter = {
 	}
 
 	planet_modifier = {
-		trade_value_add = 8
+		planet_jobs_trade_produces_mult = 8
 		planet_amenities_add = 5
 	}
 
@@ -629,7 +677,7 @@ uma_live_clothes_crafter = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job =  uma_researcher }
 		}
 		
 		modifier = {
@@ -643,9 +691,15 @@ uma_live_clothes_crafter = {
 #水晶合金工匠
 uma_crystal_alloy_crafter = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_crystal_alloy_factory ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_crystal_alloy_factory ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
 
 
 	possible_pre_triggers = {
@@ -709,7 +763,7 @@ uma_crystal_alloy_crafter = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job =  uma_researcher }
 		}
 		
 		modifier = {
@@ -723,9 +777,15 @@ uma_crystal_alloy_crafter = {
 #水晶消费品工匠
 uma_crystal_consumer_goods_crafter = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_crystal_consumer_goods_factory ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_crystal_consumer_goods_factory ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
 
 
 	possible_pre_triggers = {
@@ -762,7 +822,7 @@ uma_crystal_consumer_goods_crafter = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_researcher }
+			NOT = { can_work_specific_job =  uma_researcher }
 		}
 		
 		modifier = {
@@ -777,9 +837,15 @@ uma_crystal_consumer_goods_crafter = {
 #宿舍管理员
 uma_dormitory_administrator = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_research_lab_1 ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_research_lab_1 ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
 
 
 	possible_pre_triggers = {
@@ -842,9 +908,15 @@ uma_dormitory_administrator = {
 #学院研究员
 uma_school_reseacher = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+		}
+	}
+
+
 
 
 	possible_pre_triggers = {
@@ -906,9 +978,16 @@ uma_school_reseacher = {
 
 uma_trader = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_galactic_stock_exchange ###
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange ###
+		}
+	}
+
+
+
 #	icon = overlord_trader ##
 
 	possible_pre_triggers = {
@@ -929,15 +1008,12 @@ uma_trader = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		produces = {
+			trade = 10
+		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		trade_value_add = 10
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
+
 
 	triggered_planet_modifier = {
 		potential = {
@@ -948,22 +1024,7 @@ uma_trader = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			has_councilor = { COUNCILOR = "councilor_merchant_guilds" }
-		}
 
-		trade_value_add = 1
-		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_merchant_guilds|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_councilor = { COUNCILOR = "councilor_umasatonodiamond" }
-		}
-		trade_value_add = 2
-		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_umasatonodiamond|
-	}
 
 	weight = {
 		weight = @specialist_job_weight
@@ -983,9 +1044,14 @@ uma_trader = {
 
 uma_darkmatter_collector = {
 	category = specialist
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_dark_matter_plant
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_dark_matter_plant
+		}
+	}
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1033,9 +1099,16 @@ uma_darkmatter_collector = {
 
 uma_chemrist = {
 	category = specialist
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_chemical_plant
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_chemical_plant
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1119,9 +1192,17 @@ uma_chemrist = {
 
 uma_translucer= {
 	category = specialist
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_crystal_plant
-	clothes_texture_index = 2
+
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_crystal_plant
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1208,9 +1289,16 @@ uma_translucer= {
 
 uma_gas_collector = {
 	category = specialist
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_dark_matter_plant
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_dark_matter_plant
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes

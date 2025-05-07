@@ -38,7 +38,7 @@ umamusume = {
 			food = 2
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			has_global_flag = galactic_community_resolution_divinity_comfort_the_fallen
 			is_unemployed = yes
@@ -60,7 +60,7 @@ umamusume = {
 		weight = 1
 	}
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_housing_usage_base = 1
 		pop_amenities_usage_base = 1
 	}
@@ -87,25 +87,10 @@ umamusume = {
 		potential = {
 			exists = owner
 			owner = { has_civic = civic_dystopian_society }
-			NOT = { has_job = enforcer }
 		}
 		planet_crime_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_budding_pop = yes
-		}
-		planet_pop_assembly_organic_add = @plantoid_budding_rate
-		mult = value:budding_multiplier
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_tiyanki_pop = yes
-		}
-		planet_pop_assembly_organic_add = @tiyanki_budding_rate
-	}
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -114,16 +99,8 @@ umamusume = {
 	resources = {
 		category = pop_category_specialists
 
-		# Regular food, mineral and energy upkeep.
-		inline_script = "pop_categories/regular_upkeep"
+		inline_script = "pop_categories/living_standard_specialist_production"
 
-		# Additional energy upkeep for cyborgs.
-		inline_script = "pop_categories/cyborg_upkeep"
-
-		# Instrument of Desire Upkeep
-		inline_script = "pop_categories/instrument_upkeep"
-
-		# Exotic Metabolism Upkeep
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
@@ -135,7 +112,6 @@ umamusume = {
 		# Resource Production
 
 		# Lithoid Trait Output
-		inline_script = "pop_categories/trait_production"
 
 		produces = {
 			trigger = {

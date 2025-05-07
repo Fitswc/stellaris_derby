@@ -523,7 +523,7 @@ decision_uma_change_to_uma = {
 	allow = {
 		any_owned_pop_group = {
 			NOT = {
-				is_robot_pop = yes
+				is_robot_pop_group = yes
 				is_same_species_class = Root.owner
 			}
 		}
@@ -538,7 +538,7 @@ decision_uma_change_to_uma = {
 						NOT = {
 							is_same_species_class = Root.owner
 							#							is_being_purged = yes
-							is_robot_pop = yes
+							is_robot_pop_group = yes
 							#							is_enslaved = yes
 						}
 					}

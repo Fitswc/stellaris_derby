@@ -1823,8 +1823,12 @@ leader_trait_tianming5_general = {
 		army_morale = 0.6
 		army_collateral_damage_mult = 0.6
 		army_health = 1.0
+	}
+
+	self_modifier = {
 		planet_combat_width_add = 10
 	}
+
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
 		has_trait = subclass_jidongxueshuo_general

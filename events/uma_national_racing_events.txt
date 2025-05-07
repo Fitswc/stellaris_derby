@@ -163,7 +163,7 @@ country_event = {
 				###要求：未触发过内恰事件链;拥有科技“基础因子图谱归纳”（因为后面有因子检测技术）
 				NOT = { has_country_flag = uma_has_triggered_nice_nature_event_chain }
 				#NOT = { has_country_flag = uma_a_racing_event_chain_on_action }
-				has_technology = tech_uma_basic_keisun_map
+				has_ascension_perk = ap_uma_fly_me_to_the_star
 			}
 
 			random_list = {

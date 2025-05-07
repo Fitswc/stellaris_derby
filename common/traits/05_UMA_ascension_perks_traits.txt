@@ -99,7 +99,7 @@ leader_trait_yinzitisheng_generic = {
 			leader_class = official
 		}
 		planet_jobs_produces_mult = 0.1
-		pop_growth_speed = 0.1
+		bonus_pop_growth_mult = 0.1
 	}
 	triggered_army_modifier = {
 		potential = {
@@ -156,7 +156,7 @@ leader_trait_lingyutisheng_generic = {
 		}
 		planet_stability_add = 5
 		planet_jobs_produces_mult = 0.1
-		pop_growth_speed = 0.05
+		bonus_pop_growth_mult = 0.05
 	}
 	triggered_army_modifier = {
 		potential = {

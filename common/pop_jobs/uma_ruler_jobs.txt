@@ -2,9 +2,14 @@
 
 uma_satonomerchant = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_galactic_stock_exchange
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange
+		}
+	}
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -21,8 +26,7 @@ uma_satonomerchant = {
 	}
 
 	planet_modifier = {                             #贸易额+20 星球贸易额+10%
-		trade_value_add = 20
-		trade_value_mult = 0.10
+		planet_jobs_trade_produces_mult = 0.1
 	}
 
 	resources = {
@@ -52,7 +56,7 @@ uma_satonomerchant = {
 	
 		modifier = {
 			factor = 5
-			has_job = uma_satonomerchant
+			can_work_specific_job = uma_satonomerchant
 		}
 		modifier = {
 			factor = 5
@@ -87,9 +91,14 @@ uma_satonomerchant = {
 #马娘科学主管
 uma_head_researcher = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
+		}
+	}
+
 
 
 	possible_pre_triggers = {
@@ -134,7 +143,9 @@ uma_head_researcher = {
 		
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_head_researcher }
+			NOT = {
+				can_work_specific_job = uma_head_researcher
+			}
 		}
 		
 		modifier = {

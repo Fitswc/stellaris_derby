@@ -1,5 +1,5 @@
 ########学院星球特殊区划########
-
+##TODO：4.0初版，注意发布前更改
 
 ###宿舍区划
 district_uma_dormitory = {
@@ -13,6 +13,12 @@ district_uma_dormitory = {
 
 	potential = {
 		uses_district_set = uma_school_world
+	}
+
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
 	}
 
 	conversion_ratio = 1
@@ -173,6 +179,10 @@ district_uma_training_course = {
 		uses_district_set = uma_school_world
 	}
 
+	zone_slots = {
+		slot_uma_training
+	}
+
 	conversion_ratio = 1
 	convert_to = {
 		district_arcology_organic_housing
@@ -227,13 +237,16 @@ district_uma_training_course = {
 district_uma_teaching_area = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
-
 	show_on_uncolonized = {
 		uses_district_set = uma_school_world
 	}
 
 	potential = {
 		uses_district_set = uma_school_world
+	}
+
+	zone_slots = {
+		slot_uma_teaching
 	}
 
 	conversion_ratio = 1
@@ -288,6 +301,10 @@ district_uma_logistics_area = {
 
 	potential = {
 		uses_district_set = uma_school_world
+	}
+
+	zone_slots = {
+		slot_food
 	}
 
 	conversion_ratio = 1
@@ -565,13 +582,17 @@ district_uma_dormitory_in_industrial = {
 		uses_district_set = uma_industrial_world
 	}
 
-	conversion_ratio = 1
+	conversion_ratio = 0.5
 	convert_to = {
-		district_city
-		district_nexus
-		district_hive
-		district_arcology_housing
-		district_arcology_organic_housing
+		district_rw_nexus
+		district_rw_hive
+		district_mindlink
+	}
+
+	zone_slots = {
+		slot_city_02
+		slot_city_01
+		slot_city_government
 	}
 
 	resources = {
@@ -727,6 +748,10 @@ district_uma_energy_area = {
 #		district_rw_generator
 	}
 
+	zone_slots = {
+		slot_energy
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
@@ -773,8 +798,13 @@ district_uma_industrial_area = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_industrial
+		district_mining
 #		district_rw_generator
+	}
+
+	zone_slots = {
+		slot_city_02
+		slot_city_01
 	}
 
 	resources = {
@@ -828,6 +858,10 @@ district_uma_mining_area = {
 #		district_rw_generator
 	}
 
+	zone_slots = {
+		slot_minerals
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
@@ -872,8 +906,13 @@ district_uma_heavy_industrial_area = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_industrial
+		district_mining
 #		district_rw_generator
+	}
+
+	zone_slots = {
+		slot_city_02
+		slot_city_01
 	}
 
 	resources = {

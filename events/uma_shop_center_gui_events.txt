@@ -11,7 +11,7 @@ country_event = {
  	custom_gui = uma_shoping_center_window
 
 	option = {
-		name = ""
+		name = "uma_specimen_null"
 		custom_gui = uma_hiding_button
 		default_hide_option = yes
 	}
@@ -526,7 +526,7 @@ country_event = {
 
 	#随机选取8领袖（额外限制：必须是马娘，因为只有马娘才会有心情）
 	immediate = {
-		give_specimen = { key = uma_buffet }
+		give_specimen = { key = uma_buffet  origin = uma_specimen_null}
 		random_owned_leader = {
 			limit = { 
 				NOT = { has_leader_flag = uma_selected_leader_goods }

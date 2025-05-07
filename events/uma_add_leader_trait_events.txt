@@ -91,19 +91,19 @@ country_event = {
 				}
 				break = yes
 			}
-			if = {
-				limit = { is_ruler = yes }
-				random_list = {
-					1 = {
-						add_trait = uma_ruler_trait_charmleader
-					}
-					9 = {
-	
-					}
-	
-				}
-				break = yes
-			}
+#			if = {
+#				limit = { is_ruler = yes }
+#				random_list = {
+#					1 = {
+#						add_trait = uma_ruler_trait_charmleader
+#					}
+#					9 = {
+#
+#					}
+#
+#				}
+#				break = yes
+#			}
 #			if = {
 #				limit = { leader_class = commander }
 #				random_list = {

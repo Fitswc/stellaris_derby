@@ -86,11 +86,11 @@ civic_umacurrenchan = {
 		}
 	}
 	
-	modifier={
-	          envoys_add = 2
-			  country_trust_cap_add = 80
-		      country_trust_growth = 0.75
-		      trade_value_mult = 0.2
+	modifier= {
+		envoys_add = 2
+		country_trust_cap_add = 80
+		country_trust_growth = 0.75
+		planet_jobs_trade_produces_mult = 0.2
 	}
 }
 
@@ -427,7 +427,7 @@ civic_uma_aston_machan = {
 	random_weight = { base = 0 }
 
 	modifier={
-		trade_value_add = 10
+		planet_jobs_trade_produces_add = 1
 		pop_happiness = 0.05
 	}
 }

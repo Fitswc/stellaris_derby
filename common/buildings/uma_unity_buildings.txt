@@ -8,6 +8,10 @@ building_uma_basic_racing_course = {
 	base_buildtime = 200
 	category = unity
 
+	building_sets = {
+		uma_racing
+	}
+
 
 	potential = {
 		exists = owner

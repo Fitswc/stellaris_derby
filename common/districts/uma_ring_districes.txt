@@ -12,7 +12,7 @@ district_uma_dormitory_ring = {
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 
-	zone_slots = {
+	zone_slots = { ##TODO:adjust correct slot of zone
 		slot_city_government
 		slot_city_01
 		slot_city_02

@@ -95,7 +95,7 @@ building_uma_cos_suit_mareket = {
 		}
 		modifier = {
 			job_clerk_add = 1
-			trade_value_add = 2
+			planet_jobs_trade_produces_mult = 2
 		}
 	}
 }
@@ -145,7 +145,7 @@ building_uma_private_mining_station = {
 		}
 		modifier = {
 			job_miner_add = 1
-			trade_value_add = 2
+			planet_jobs_trade_produces_mult = 2
 		}
 	}
 }
@@ -197,7 +197,7 @@ building_uma_private_racing_ticket_station = {
 		}
 		modifier = {
 			job_clerk_add = 1
-			trade_value_add = 2
+			planet_jobs_trade_produces_mult = 2
 		}
 	}
 }

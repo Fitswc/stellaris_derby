@@ -290,7 +290,7 @@ uma_factor_wisdom = {
 				}
 			}
 		}
-		UMA_pop_growth_speed = 0.05
+		UMA_bonus_pop_growth_mult = 0.05
 
 	}
 	custom_tooltip = uma_tradition_factor_wisdom_tt
@@ -308,7 +308,7 @@ uma_factor_willpower = {
 #		pop_growth_speed = 0.06
 #		planet_crime_mult = -0.01
 #		planet_jobs_produces_mult = 0.06
-		UMA_pop_growth_speed = 0.05
+		UMA_bonus_pop_growth_mult = 0.05
 	}
 	custom_tooltip = uma_tradition_factor_willpower_tt
 }
@@ -324,7 +324,7 @@ uma_factor_star_picking = {
 	modifier = {
 #		shipclass_military_build_speed_mult = 0.2
 #		megastructure_build_speed_mult = 0.2
-		pop_growth_speed = 0.05
+		bonus_pop_growth_mult = 0.05
 		UMA_species_trait_points_add = 2
 		UMA_species_trait_picks_add = 2
 	}

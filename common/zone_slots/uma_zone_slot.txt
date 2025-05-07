@@ -1,0 +1,83 @@
+slot_uma_training = {
+	include = {
+		zone_uma_training
+	}
+
+	exclude = {
+		zone_default
+		zone_minerals
+		zone_food
+		zone_energy
+		zone_machine_replication
+		zone_hive_spawning
+		zone_urban
+		zone_industrial
+		zone_foundry
+		zone_factory
+		zone_unity
+		zone_unity_spiritualist
+		zone_research
+		zone_research_physics
+		zone_research_engineering
+		zone_research_society
+		zone_research_unity
+		zone_trade
+		zone_fortress
+		zone_urban_food
+		zone_urban_minerals
+		zone_urban_energy
+		zone_foundry_wilderness
+		zone_unity_wilderness
+		zone_research_wilderness
+		zone_research_unity_wilderness
+		zone_fortress_wilderness
+		zone_trade_wilderness
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+
+slot_uma_teaching = {
+	include = {
+		zone_research
+		zone_research_physics
+		zone_research_engineering
+		zone_research_society
+		zone_research_unity
+		zone_uma_teaching
+	}
+
+	exclude = {
+		zone_machine_replication
+		zone_hive_spawning
+		zone_urban
+		zone_industrial
+		zone_foundry
+		zone_factory
+		zone_unity
+		zone_unity_spiritualist
+		zone_default
+		zone_minerals
+		zone_food
+		zone_energy
+		zone_trade
+		zone_fortress
+		zone_urban_food
+		zone_urban_minerals
+		zone_urban_energy
+		zone_foundry_wilderness
+		zone_unity_wilderness
+		zone_research_wilderness
+		zone_research_unity_wilderness
+		zone_fortress_wilderness
+		zone_trade_wilderness
+	}
+
+	unlock = {
+		# planet scope
+		always = yes
+	}
+}

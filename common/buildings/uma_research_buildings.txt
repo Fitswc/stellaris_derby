@@ -8,6 +8,11 @@ building_uma_toresen_lab = {
 	base_buildtime = 200
 	category = research
 
+	building_sets = {
+		uma_research
+		research
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -114,6 +119,11 @@ building_uma_toresen_lab_center = {
 	base_buildtime = 500
 	can_build = no #升级得来
 	category = research
+
+	building_sets = {
+		uma_research
+		research
+	}
 
 	potential = {
 		exists = owner
@@ -222,6 +232,11 @@ building_uma_toresen_lab_top = {
 	base_buildtime = 900
 	can_build = no #升级得来
 	category = research
+
+	building_sets = {
+		uma_research
+		research
+	}
 
 	potential = {
 		exists = owner

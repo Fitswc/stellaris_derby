@@ -1056,7 +1056,7 @@ country_event = {
 	custom_gui = uma_aps_main_windows
 
 	option = {
-		name = ""
+		name = "uma_specimen_null" #TODO:0000
 		custom_gui = uma_hiding_button
 		default_hide_option = yes
 		hidden_effect = {
@@ -1859,7 +1859,7 @@ country_event = {
 	custom_gui = uma_aps_realm_main_windows
 
 	option = {
-		name = ""
+		name = "uma_specimen_null" ##TODO:000
 		custom_gui = uma_hiding_button
 		default_hide_option = yes
 		hidden_effect = {

@@ -411,6 +411,10 @@ country_event = {
 	id = uma_leader.9
 	hide_window = yes
 
+	mean_time_to_happen = {
+		days = 1
+	}
+
 	trigger = {
 #		has_authority = auth_trainingcenter
 		from = {
