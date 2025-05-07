@@ -1,6 +1,7 @@
 slot_uma_training = {
 	include = {
 		zone_uma_training
+		zone_urban
 	}
 
 	exclude = {
@@ -10,7 +11,6 @@ slot_uma_training = {
 		zone_energy
 		zone_machine_replication
 		zone_hive_spawning
-		zone_urban
 		zone_industrial
 		zone_foundry
 		zone_factory
@@ -43,9 +43,6 @@ slot_uma_training = {
 slot_uma_teaching = {
 	include = {
 		zone_research
-		zone_research_physics
-		zone_research_engineering
-		zone_research_society
 		zone_research_unity
 		zone_uma_teaching
 	}

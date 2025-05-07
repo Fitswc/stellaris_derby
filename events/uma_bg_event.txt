@@ -580,3 +580,17 @@ country_event = {
 		}
 	}
 }
+
+
+
+planet_event = {
+	id = uma_bg.19
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		add_building = building_capital
+		remove_building = building_colony_shelter
+	}
+}
