@@ -216,6 +216,12 @@ uma_general_trait_sp_king_halo = {
 		army_damage_mult = 0.5
 	}
 
+	fleet_modifier = {
+		ship_evasion_add = 10
+		ship_weapon_damage = 0.2
+		ship_weapon_range_mult = 0.1
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no
@@ -234,6 +240,12 @@ uma_general_trait_sp_al_condor_pasa = {
 		army_attack_damage_mult = 1
 		army_collateral_damage_mult = 1
 		army_disengage_chance_mult = -1
+	}
+
+	fleet_modifier = {
+		ship_interstellar_speed_mult = 0.25
+		ship_ftl_jumpdrive_range_mult = 0.5
+		ship_fire_rate_mult = 0.2
 	}
 
 	leader_class = { commander }
@@ -255,10 +267,44 @@ uma_general_trait_sp_kitasan_black = {
 		army_damage_mult = 0.5
 	}
 
+	fleet_modifier = {
+		ship_shield_mult = 0.33
+		ship_armor_mult = 0.33
+		ship_hull_regen_add_perc = 0.02
+		ship_shield_regen_add_perc = 0.02
+	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no
 }
+
+#RUN ＆WIN
+uma_admiral_trait_sp_nice_nature = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_nice_nature.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	triggered_fleet_modifier = {
+		potential = {
+			has_leader_flag = adm_nn_improved
+		}
+		ship_interstellar_speed_mult = 0.233
+		ship_fire_rate_mult = 0.233
+		ship_evasion_add = 23
+	}
+	fleet_modifier = {
+		ship_interstellar_speed_mult = 0.133
+		ship_fire_rate_mult = 0.133
+		ship_evasion_add = 13
+	}
+	leader_class = { commander }
+	initial = no
+    randomized = no
+}
+
 
 #八方睥睨
 uma_general_trait_sp_nice_nature = {
@@ -280,6 +326,20 @@ uma_general_trait_sp_nice_nature = {
 		army_damage_mult = 0.3
 		army_collateral_damage_mult = 0.3
 		army_disengage_chance_mult = 0.3
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			has_leader_flag = adm_nn_improved
+		}
+		ship_interstellar_speed_mult = 0.233
+		ship_fire_rate_mult = 0.233
+		ship_evasion_add = 23
+	}
+	fleet_modifier = {
+		ship_interstellar_speed_mult = 0.133
+		ship_fire_rate_mult = 0.133
+		ship_evasion_add = 13
 	}
 
 	leader_class = { commander }
