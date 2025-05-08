@@ -273,6 +273,18 @@ district_uma_ring_industrial = {
 			}
 		}
 		text = job_uma_crystal_alloy_crafter_effect_desc
+
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
 		text = job_uma_crystal_consumer_goods_crafter_effect_desc
 	}
 }

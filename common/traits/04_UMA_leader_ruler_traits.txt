@@ -242,9 +242,7 @@ leader_trait_shengchanzhuanjing_rule = {
 	leader_trait_type = veteran
 	leader_class = { scientist official commander envoy }
 	custom_tooltip_with_modifiers = only_one_governor_focus
-	selectable_weight = {
-		weight = 1000
-	}
+
 }
 
 leader_trait_shengchanzhuanjing_rule_2 = {
@@ -322,9 +320,6 @@ leader_trait_qiguanzhuanjing_rule = {
 	leader_trait_type = veteran
 	leader_class = { scientist official commander envoy }
 	custom_tooltip_with_modifiers = only_one_governor_focus
-	selectable_weight = {
-		weight = 1000
-	}
 }
 
 leader_trait_qiguanzhuanjing_rule_2 = {
