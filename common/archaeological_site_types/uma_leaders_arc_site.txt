@@ -581,3 +581,65 @@ uma_bourbon_arc_second = {
 
 }
 
+uma_curren_arc = {
+	desc = uma_curren_arc_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0 #需要Trigger事件创建敌对舰船并生成坟
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_curren.20
+		icon = GFX_icon_archaeology #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.21
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.22
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.23
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.24
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+
+}

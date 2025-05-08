@@ -37,6 +37,21 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = GFX_uma_mmu_mid_GI_disable
+		textureFile = "gfx/interface/uma_modmenu/G1_up_disable.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_mid_GII_disable
+		textureFile = "gfx/interface/uma_modmenu/G2_up_disable.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_mid_GIII_disable
+		textureFile = "gfx/interface/uma_modmenu/G3_up_disable.dds"
+	}
+
+	spriteType = {
 		name = GFX_uma_mmu_unifinish
 		textureFile = "gfx/interface/uma_modmenu/Unfinish_button.DDS"
 	}
@@ -59,6 +74,10 @@ spriteTypes = {
 		name = GFX_uma_mmu_dnd
 		textureFile = "gfx/interface/uma_modmenu/DND.DDS"
 	}
+	spriteType = {
+		name = GFX_uma_mmu_dnd_disable
+		textureFile = "gfx/interface/uma_modmenu/DND_disable.dds"
+	}
 
 	spriteType = {
 		name = GFX_uma_mmu_coc
@@ -68,6 +87,30 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_uma_mmu_vill
 		textureFile = "gfx/interface/uma_modmenu/vill.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_vill_disable
+		textureFile = "gfx/interface/uma_modmenu/vill_disable.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_on
+		textureFile = "gfx/interface/uma_modmenu/on.dds"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_on_disable
+		textureFile = "gfx/interface/uma_modmenu/on_disable.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_off
+		textureFile = "gfx/interface/uma_modmenu/off.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_off_disable
+		textureFile = "gfx/interface/uma_modmenu/off_disable.dds"
 	}
 
 	spriteType = {

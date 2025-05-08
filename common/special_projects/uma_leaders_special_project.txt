@@ -238,8 +238,10 @@ special_project = {
 			change_pc = pc_nuked
 		}
 		destroy_archaeological_site = event_target:uma_bourbon_arc_site_here ##????
-		country_event = {
-			id = uma_bour_arc.5
+		owner = {
+			country_event = {
+				id = uma_bour_arc.5
+			}
 		}
 	}
 }
@@ -324,7 +326,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_FINE_RESEARH"
-	days_to_research = 360
+#	days_to_research = 360
 	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
 	picture = GFX_evt_physics_research
 	event_chain = uma_fm_full
@@ -401,7 +403,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_FINE_ANA"
-	days_to_research = 240
+#	days_to_research = 240
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_physics_research
 	tech_department = engineering_technology
@@ -639,7 +641,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_TRANGLE_STAR" #观星
-	days_to_research = 340
+#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -653,7 +655,7 @@ special_project = {
 	on_success = {
 		owner = {
 			country_event = {
-				id = uma_ss_arc.16
+				id = uma_ayb_arc.16
 				days = 30
 			}
 		}
@@ -667,7 +669,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_ANA_CODE"
-	days_to_research = 340
+#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -681,7 +683,7 @@ special_project = {
 	on_success = {
 		owner = {
 			country_event = {
-				id = uma_ss_arc.18
+				id = uma_ayb_arc.18
 				days = 30
 			}
 		}
@@ -694,7 +696,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_ANA_MACHINE"
-	days_to_research = 340
+#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -707,7 +709,7 @@ special_project = {
 	on_success = {
 		owner = {
 			country_event = {
-				id = uma_ss_arc.19
+				id = uma_ayb_arc.19
 				days = 30
 			}
 		}
@@ -778,6 +780,60 @@ special_project = {
     }
 }
 
+special_project = {
+    key = "UMA_MEJRO_ARDAN_SAVE_AD"
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_engineering_research
+    tech_department = physics_technology
+    cost = 20000
+    event_scope = country_event
+    on_success = {
+        owner = {
+            country_event = {
+                id = uma_mejro_ardan.6
+            }
+        }
+    }
+}
 
+special_project = {
+    key = "uma_curren_whatislove"
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = GFX_evt_engineering_research
+    tech_department = society_technology
+	cost = 60000
 
+    event_scope = country_event
+    on_success = {
+        owner = {
+            country_event = {
+                id = uma_curren.11
+            }
+        }
+    }
+}
 
+special_project = {
+    key = "uma_curren_build_research_dep"
+    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+    picture = GFX_evt_engineering_research
+    tech_department = society_technology
+	cost = 0
+	days_to_research = 300
+
+    event_scope = country_event
+    on_success = {
+        owner = {
+			add_modifier = {
+				modifier = uma_curren_tech_ailens
+				days = -1
+			}
+
+			country_event = {
+				id = uma_curren.30
+				days = 360
+				random = 5
+			}
+		}
+    }
+}

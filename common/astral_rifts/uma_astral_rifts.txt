@@ -13,3 +13,17 @@ uma_ar_cheval = {
 	}
 }
 
+uma_ar_mejro_ardan = {
+	name = uma_ar_mejro_ardan
+	event_weight = {
+		weight = 0
+	}
+	event = uma_mejro_ardan.1
+	randomized = no
+	flags = {
+		uma_cheval_astral_rift
+	}
+	on_roll_failed = {
+		standard_astral_rift_on_roll_failed = yes
+	}
+}

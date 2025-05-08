@@ -8,6 +8,13 @@ building_uma_basic_racing_course = {
 	base_buildtime = 200
 	category = unity
 
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
+
 
 	potential = {
 		exists = owner
@@ -54,9 +61,9 @@ building_uma_basic_racing_course = {
 			}
 		}
 		modifier = {
-			job_uma_racing_umamusume_add = 4
+			job_uma_racing_umamusume_add = 400
 
-			job_uma_racing_ura_members_add = 2
+			job_uma_racing_ura_members_add = 200
 
 
 		}
@@ -99,6 +106,13 @@ building_uma_modern_racing_course = {
 	base_buildtime = 500
 	category = unity
 	can_build = no #升级得来
+
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
 
 
 	potential = {
@@ -150,9 +164,9 @@ building_uma_modern_racing_course = {
 			}
 		}
 		modifier = {
-			job_uma_racing_umamusume_add = 6
+			job_uma_racing_umamusume_add = 200
 
-			job_uma_racing_ura_members_add = 3
+			job_uma_racing_ura_members_add = 300
 
 		}
 	}
@@ -171,7 +185,7 @@ building_uma_modern_racing_course = {
 
 		}
 		modifier = {
-			job_uma_trainer_add = 1
+			job_uma_trainer_add = 100
 		}
 	}
 
@@ -212,6 +226,13 @@ building_uma_top_racing_course = {
 	base_buildtime = 1000
 	category = unity
 	can_build = no #升级得来
+
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
 
 
 	potential = {
@@ -268,7 +289,7 @@ building_uma_top_racing_course = {
 
 		}
 		modifier = {
-			job_uma_trainer_add = 2
+			job_uma_trainer_add = 200
 		}
 	}
 
@@ -283,9 +304,9 @@ building_uma_top_racing_course = {
 			}
 		}
 		modifier = {
-			job_uma_racing_umamusume_add = 10
+			job_uma_racing_umamusume_add = 300
 
-			job_uma_racing_ura_members_add = 5
+			job_uma_racing_ura_members_add = 500
 
 		}
 	}
@@ -322,6 +343,13 @@ building_uma_tree_holes = { #中庭的树洞
 	base_buildtime = 300
 	category = unity
 	base_cap_amount = 1
+
+	building_sets = {
+		uma_racing
+		unity
+		urban
+		government
+	}
 	
 	potential = {
 		exists = owner

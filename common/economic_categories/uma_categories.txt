@@ -342,16 +342,3 @@ planet_uma_racing_ura_members = {
 #		#upkeep
 #	}
 #}
-
-planet_uma_racing_umamusume = {
-	icon = "job_uma_racing_umamusume"
-	parent = planet_racing_related
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		#upkeep
-	}
-}

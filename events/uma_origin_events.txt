@@ -271,11 +271,20 @@ country_event = {
 			id = uma_cheval.1
 		}
 		country_event = {
+			id = uma_mejro_ardan.0
+			days = 5
+		}
+		country_event = {
 			id = uma_fz.1
 		}
 
 		country_event = {
 			id = uma_origin.5
+		}
+
+		##未知bug补偿
+		add_resource = {
+			food = 200
 		}
 	}
 
@@ -385,11 +394,19 @@ country_event = {
 			id = uma_cheval.1
 		}
 		country_event = {
+			id = uma_mejro_ardan.0
+			days = 5
+		}
+		country_event = {
 			id = uma_fz.1
 		}
 
 		country_event = {
 			id = uma_origin.5
+		}
+
+		add_resource = {
+			food = 200
 		}
 	}
 }

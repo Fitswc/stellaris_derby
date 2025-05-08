@@ -5,6 +5,14 @@ building_uma_live_ground = {
 
 	category = amenity
 
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		uma_entertainment
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -46,11 +54,11 @@ building_uma_live_ground = {
 	}
 
 	planet_modifier = {
-		job_uma_umaidol_add = 2
+		job_uma_umaidol_add = 200
 		pop_environment_tolerance = 0.1
 		planet_amenities_add = 6
 		pop_happiness = 0.1
-		pop_growth_speed = 0.06
+		bonus_pop_growth_mult = 0.06
 	}
 
 

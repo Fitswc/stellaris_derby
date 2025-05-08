@@ -2,10 +2,10 @@
 #残躯化火
 
 purge_types_uma_Cremation_1 = { #文火
-	token = purge_types_uma_Cremation 
+#	token = purge_types_uma_Cremation
 	pop_escape_chance = 0
 	pop_decline_rate = 10 #10月/人
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = 0.1
 	}
 	potential = {
@@ -32,10 +32,10 @@ purge_types_uma_Cremation_1 = { #文火
 	}	
 }
 purge_types_uma_Cremation_2 = { #武火
-	token = purge_types_uma_Cremation 
+#	token = purge_types_uma_Cremation
 	pop_escape_chance = 0
 	pop_decline_rate = 100 #1月/人
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = 0.05
 	}
 	potential = {
@@ -61,10 +61,10 @@ purge_types_uma_Cremation_2 = { #武火
 	}	
 }
 purge_types_uma_Cremation_3 = { #等离子态
-	token = purge_types_uma_Cremation 
+#	token = purge_types_uma_Cremation
 	pop_escape_chance = 0
 	pop_decline_rate = 1000 #1月/10人
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -0.1
 	}
 	potential = {

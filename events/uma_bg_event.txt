@@ -128,8 +128,8 @@ country_event = {
 				limit = {
 					leader = {
 						OR = {
-							has_trait = uma_admiral_trait_sp_seiun_sky_1
-							has_trait = uma_admiral_trait_sp_seiun_sky_2
+							has_trait = uma_commander_trait_sp_seiun_sky_1
+							has_trait = uma_commander_trait_sp_seiun_sky_2
 						}
 					}
 				}
@@ -143,8 +143,8 @@ country_event = {
 				limit = {
 					leader = {
 						OR = {
-							has_trait = uma_admiral_trait_sp_seiun_sky_1
-							has_trait = uma_admiral_trait_sp_seiun_sky_2
+							has_trait = uma_commander_trait_sp_seiun_sky_1
+							has_trait = uma_commander_trait_sp_seiun_sky_2
 						}
 					}
 				}
@@ -171,11 +171,11 @@ country_event = {
 			if = {
 				limit = {
 					AND = {
-						has_trait = uma_admiral_trait_sp_seiun_sky_1
+						has_trait = uma_commander_trait_sp_seiun_sky_1
 					}
 				}
-				remove_trait = uma_admiral_trait_sp_seiun_sky_1
-				add_trait = uma_admiral_trait_sp_seiun_sky_2
+				remove_trait = uma_commander_trait_sp_seiun_sky_1
+				add_trait = uma_commander_trait_sp_seiun_sky_2
 			}
 		}
 	}
@@ -193,9 +193,9 @@ country_event = {
 	immediate = {
 		event_target:uma_seiun_sky_admiral = {
 			if = {
-				limit = { has_trait = uma_admiral_trait_sp_seiun_sky_2 }
-				remove_trait = uma_admiral_trait_sp_seiun_sky_2
-				add_trait = uma_admiral_trait_sp_seiun_sky_1
+				limit = { has_trait = uma_commander_trait_sp_seiun_sky_2 }
+				remove_trait = uma_commander_trait_sp_seiun_sky_2
+				add_trait = uma_commander_trait_sp_seiun_sky_1
 			}
 		}
 	}
@@ -472,6 +472,16 @@ country_event = {
 					set_name = SWEEPY
 				}
 			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_curren_chan
+				}
+				event_target:uma_is_leader_sweepy_tonson = {
+					change_leader_portrait = 36c
+					set_name = CURREN
+				}
+			}
 			###SUB
 			if = {
 				limit = {
@@ -578,5 +588,19 @@ country_event = {
 			who = event_target:uma_it_is_corp_and_we_can_make_it_pay_tax
 			days = -1
 		}
+	}
+}
+
+
+
+planet_event = {
+	id = uma_bg.19
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		add_building = building_capital
+		remove_building = building_colony_shelter
 	}
 }

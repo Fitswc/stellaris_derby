@@ -197,7 +197,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				NOT = { species = { has_trait = trait_uma_terriroty_awake } }
@@ -332,7 +332,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_1_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_1_actived }
 	}
 
 	is_triggered_only = yes
@@ -387,7 +387,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_2_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_2_actived }
 		any_country = {
 			OR = {
 				has_ethic = ethic_spiritualist
@@ -467,7 +467,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_2_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_2_actived }
 		any_country = {
 			OR = {
 				has_ethic = ethic_spiritualist
@@ -505,7 +505,7 @@ country_event = {
 
 	#防止多次触发
 	trigger = {
-		NOT = { has_country_flag = uma_territory_ap_event_3_actived } 
+		NOT = { has_country_flag = uma_territory_ap_event_3_actived }
 	}
 
 	immediate = {
@@ -751,7 +751,7 @@ country_event = {
 	picture = GFX_evt_uma_normal_school
 
 	trigger = {
-		NOT = { has_country_flag = uma_kenshi_ap_event_1_actived } 
+		NOT = { has_country_flag = uma_kenshi_ap_event_1_actived }
 	}
 
 	immediate = {
@@ -762,7 +762,7 @@ country_event = {
 
 	#新的检测方法
 	option = {
-		name = "uma_ap.24.a" 
+		name = "uma_ap.24.a"
 		hidden_effect = {
 			country_event = {
 				id = uma_ap.25
@@ -836,7 +836,7 @@ country_event = {
 	picture = GFX_evt_uma_normal_school
 
 	trigger = {
-		NOT = { has_country_flag = uma_kenshi_ap_event_2_actived } 
+		NOT = { has_country_flag = uma_kenshi_ap_event_2_actived }
 	}
 
 	immediate = {
@@ -847,7 +847,7 @@ country_event = {
 
 	#很好，就这么办
 	option = {
-		name = "uma_ap.27.a" 
+		name = "uma_ap.27.a"
 		add_modifier = {
 			modifier = uma_kenshi_power_adaption_training
 			days = 1800
@@ -905,7 +905,7 @@ country_event = {
 	picture = GFX_evt_uma_normal_school
 
 	trigger = {
-		NOT = { has_country_flag = uma_kenshi_ap_event_3_actived } 
+		NOT = { has_country_flag = uma_kenshi_ap_event_3_actived }
 	}
 
 	immediate = {
@@ -916,7 +916,7 @@ country_event = {
 
 	#召集哲学家
 	option = {
-		name = "uma_ap.29.a" 
+		name = "uma_ap.29.a"
 		hidden_effect = {
 			country_event = {
 				id = uma_ap.30
@@ -984,7 +984,7 @@ country_event = {
 
 	#问题解决？
 	option = {
-		name = "uma_ap.31.a"	
+		name = "uma_ap.31.a"
 		add_modifier = {
 			modifier = uma_kenshi_ban_the_media
 			days = 3650
@@ -1014,14 +1014,618 @@ country_event = {
 }
 
 
+
+
+
 ##AP2
 
 
-##Country Trader
 country_event = {
 	id = uma_ap.40
 	title = uma_ap.40.title
 	desc = uma_ap.40.desc
+	picture = GFX_evt_uma_suzuka_arc_star_analyse
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.43
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.40.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.41
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.41
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = uma_aps_main_windows
+
+	option = {
+		name = "uma_specimen_null" #TODO:0000
+		custom_gui = uma_hiding_button
+		default_hide_option = yes
+		hidden_effect = {
+
+			uma_ap2_factor_summation = yes
+			start_situation = {
+				type = situation_uma_ap_2_situation_system_factor
+				target = this
+				effect = {}
+			}
+		}
+	}
+}
+
+
+
+# 1   2    3   4    5   6   7   8   9
+##5% 10% 15% 20%  | 25% 30% 35% 40% 50%
+
+##Setup
+country_event = {
+	id = uma_ap.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = uma_ap2_factor_power_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_speed_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_stamina_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_wisdom_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_charm_rate
+			value = 0
+		}
+
+		set_variable = {
+			which = uma_ap2_factor_depth_rate
+			value = 0
+		}
+	}
+}
+
+#Check & Give
+country_event = {
+	id = uma_ap.90
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+		uma_factor_speed_add_modifier = yes
+		uma_factor_power_add_modifier = yes
+		uma_factor_charm_add_modifier = yes
+		uma_factor_stamina_add_modifier = yes
+		uma_factor_wisdom_add_modifier = yes
+
+		uma_factor_pain_add_modifier = yes
+
+	}
+}
+
+
+situation_event = {
+	id = uma_ap.51
+	title = uma_ap.51.title
+	desc = uma_ap.51.desc
+	picture = GFX_evt_uma_ap2_star_picking
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ap.51.a
+	}
+}
+
+situation_event = {
+	id = uma_ap.52
+	title = uma_ap.52.title
+	desc = uma_ap.52.desc
+	picture = GFX_evt_uma_ap2_star_picking
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.52.a
+	}
+}
+
+
+situation_event = {
+	id = uma_ap.53
+	title = uma_ap.53.title
+	desc = uma_ap.53.desc
+	picture = GFX_evt_uma_ap2_star_picking
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.53.a
+	}
+}
+
+country_event= {
+	id = uma_ap.54
+	title = uma_ap.54.title
+	desc = uma_ap.54.desc
+	picture = GFX_evt_uma_ap2_firework
+	is_triggered_only = yes
+
+	option = {
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.90
+			}
+		}
+		name = uma_ap.54.a
+	}
+}
+
+
+
+#Event pool great evts
+situation_event = {
+	id = uma_ap.55
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				AND = {
+					situation_progress >= 35
+				}
+
+			}
+
+			AND = {
+				AND = {
+					situation_progress >= 60
+				}
+
+			}
+
+		}
+	}
+
+	immediate = {
+#		remove_situation_flag = uma_ap_factor_stage_1_done
+#		remove_situation_flag = uma_ap_factor_stage_2_done
+
+		fire_on_action = {
+			on_action = on_uma_ap2_factor_random_updown_event_list
+		}
+	}
+}
+
+
+
+situation_event = {
+	id = uma_ap.60
+	title = uma_ap.60.title
+	desc = uma_ap.60.desc
+	picture = GFX_evt_uma_ap2_great_power
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = {
+			has_situation_flag = uma_ap2_factor_60_has_happened
+			situation_progress < 50
+		}
+		situation_progress >= 35
+	}
+
+	immediate = {
+		set_situation_flag = uma_ap_2_situation_factor_pause
+		set_situation_flag = uma_ap2_factor_60_has_happened
+	}
+
+	weight_multiplier = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_situation_flag = uma_ap2_factor_60_has_happened
+		}
+
+		modifier = {
+			factor = 2
+			situation_progress >= 41
+		}
+	}
+
+
+
+	option = {
+		name = uma_ap.60.a
+		hidden_effect = {
+			owner = {
+				set_country_flag = uma_ap2_factor_reduce_power_and_increase_poph
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.60.b
+		owner = {
+			add_modifier = {
+				modifier = uma_kenshi_power_adaption_training
+				days = 1800
+			}
+			country_event = {
+				id = uma_ap.61
+				days = 150
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.60.c
+		owner = {
+			add_modifier = {
+				modifier = uma_ap2_factor_power_without_countrol
+				days = -1
+			}
+		}
+	}
+
+	after = {
+		remove_situation_flag = uma_ap_2_situation_factor_pause
+	}
+}
+
+country_event = {
+	id = uma_ap.61
+	is_triggered_only = yes
+	title = uma_ap.61.title
+	desc = uma_ap.61.desc
+	picture = GFX_evt_uma_satono_school
+
+	option = {
+		name = uma_ap.61.a
+		add_modifier = {
+			modifier = uma_ap2_factor_power_countroled
+			days = -1
+		}
+	}
+}
+
+
+
+situation_event = {
+	id = uma_ap.70
+	title = uma_ap.70.title
+	desc = uma_ap.70.desc
+	picture = GFX_evt_uma_ap2_mpd
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = {
+			has_situation_flag = uma_ap2_factor_70_has_happened
+			situation_progress < 90
+		}
+		situation_progress >= 60
+	}
+
+	weight_multiplier = {
+		factor = 3
+		modifier = {
+			factor = 0
+			has_situation_flag = uma_ap2_factor_70_has_happened
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				uma_ap2_factor_0_fault = yes
+			}
+		}
+	}
+
+	immediate = {
+		set_situation_flag = uma_ap_2_situation_factor_pause
+		set_situation_flag = uma_ap2_factor_70_has_happened
+	}
+
+	option = {
+		name = uma_ap.70.a
+		custom_tooltip = uma_ap.70.a.tt
+	}
+
+	option = {
+		name = uma_ap.70.b
+		custom_tooltip = uma_ap.70.a.tt
+	}
+
+
+	after = {
+		hidden_effect = {
+			remove_situation_flag = uma_ap_2_situation_factor_pause
+			random_list = {
+				20 = {
+#					destroy_situation = This
+#					set_situation_flag = uma_ap2_factor_80_has_happened
+					owner = {
+						country_event = {
+							id = uma_ap.71
+							days = 30
+						}
+
+					}
+				}
+				80 = {
+					owner = {
+						add_resource = {
+							influence = 10
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.71
+	title = uma_ap.71.title
+	desc = uma_ap.71.desc
+	picture = GFX_evt_uma_ap2_mpd
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_ap2_factor_80_has_happened
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_ap2_factor_80_has_happened
+		country_event = {
+			id = uma_ap.82
+		}
+	}
+
+	option = {
+		name = uma_ap.71.a
+		custom_tooltip = uma_ap.71.a.tt
+
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.811
+			}
+		}
+	}
+}
+
+
+
+situation_event = {
+	id = uma_ap.80
+	title = uma_ap.80.title
+	desc = uma_ap.80.desc
+	picture = GFX_evt_uma_ap2_mpd
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = {
+			OR = {
+				has_situation_flag = uma_ap2_factor_80_has_happened
+				has_situation_flag = uma_ap2_factor_70_has_happened
+			}
+			situation_progress < 90
+		}
+		situation_progress >= 70
+	}
+
+	weight_multiplier = {
+		factor = 3
+		modifier = {
+			factor = 0
+			has_situation_flag = uma_ap2_factor_70_has_happened
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				uma_ap2_factor_0_fault = yes
+			}
+		}
+	}
+
+
+	immediate = {
+		owner = {
+			set_country_flag = uma_ap2_factor_80_has_happened
+		}
+		set_situation_flag = uma_ap_2_situation_factor_pause
+		set_situation_flag = uma_ap2_factor_80_has_happened
+
+		owner = {
+			country_event = {
+				id = uma_ap.82
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap.80.a
+		custom_tooltip = uma_ap.80.a.tt
+
+		hidden_effect = {
+			owner = {
+				every_planet_within_border = {
+					limit = {
+						is_colony = yes
+					}
+					add_planet_devastation = 99
+
+				}
+				hidden_effect = {
+					country_event = {
+						id = uma_ap.811
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_ap.82
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_species = {
+			name = uma_ap2_factor_hostile_event_country
+			class = umamusume
+			namelist = UMAname
+			portrait = umamusume
+			traits = random
+			effect = {
+				save_event_target_as = uma_ap2_factor_hostile_event_species_evtt
+
+			}
+		}
+		create_country = {
+			name = uma_ap2_factor_hostile_event_country
+			type = uma_ap2_hostile_event_country
+			species = event_target:uma_ap2_factor_hostile_event_species_evtt
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags01.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"red_orange"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = uma_ap2_factor_hostile_event_country_flag
+				save_global_event_target_as = uma_ap2_factor_hostile_event_country_evtt
+			}
+		}
+
+
+	}
+
+	after = {
+		set_country_flag = uma_ap2_factor_crisis_begin
+	}
+}
+
+country_event = {
+	id = uma_ap.811
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			any_galaxy_planet = {
+				is_controlled_by = event_target:uma_ap2_factor_hostile_event_country_evtt
+			}
+			NOT = {
+				has_country_flag = uma_ap2_factor_crisis_end
+			}
+		}
+	}
+
+	immediate = {
+
+		if = {
+			limit = {
+				count_controlled_planet = {
+					limit = {
+						is_owned_by = Root
+					}
+					count = 1
+				}
+			}
+			random_planet_within_border = {
+				limit = {
+					NOT = {
+						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+					}
+					is_colony = yes
+					is_capital = yes
+				}
+				planet_event = {
+					id = uma_ap.81
+				}
+			}
+		}
+
+		else = {
+
+			random_planet_within_border = {
+				limit = {
+					NOT = {
+						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+					}
+					is_colony = yes
+					is_capital = no
+				}
+				planet_event = {
+					id = uma_ap.81
+				}
+			}
+
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_ap.811
+			days = 150 #Test
+		}
+	}
+}
+
+planet_event = {
+	id = uma_ap.81
+	title = uma_ap.81.title
+	desc = uma_ap.81.desc
+	picture = GFX_evt_city_planet
 	is_triggered_only = yes
 
 	trigger = {
@@ -1029,31 +1633,399 @@ country_event = {
 	}
 
 	immediate = {
+		set_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+		while = {
+			count = 10
+			create_army = {
+				name = uma_ap2_factor_crazy_guys
+				owner = event_target:uma_ap2_factor_hostile_event_country_evtt
+				type = uma_ap2_factor_crazy_guys
+				species = event_target:uma_ap2_factor_hostile_event_country_evtt
+				effect = {
 
+				}
+			}
+		}
 	}
 
 	option = {
-		name = uma_ap.40.a
-		start_situation = {
-			type = situation_uma_ap_2_situation_system_factor
-			target = this
-			effect = {}
+		name = uma_ap.81.a
+		clear_global_event_target = uma_ap2_factor_hostile_planet
+	}
+}
+
+
+country_event = {
+	id = uma_ap.83
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From = {
+			OR = {
+				is_country_type = uma_ap2_hostile_event_country
+				has_country_flag = uma_ap2_factor_hostile_event_country_flag
+			}
+		}
+		This = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_planet_within_border = {
+						is_controlled_by = event_target:uma_ap2_factor_hostile_event_country_evtt
+					}
+				}
+			}
+			country_event = {
+				id = uma_ap.84
+			}
+			set_country_flag = uma_ap2_factor_crisis_end
+		}
+		else = {
+			add_resource = {
+				influence = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.84
+	title = uma_ap.84.title
+	desc = uma_ap.84.desc
+	picture = GFX_evt_uma_ap2_gray
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.84.a
+		add_modifier = {
+			modifier = uma_ap2_factor_bade
+			days = 360
+		}
+
+		hidden_effect = {
+			event_target:uma_ap2_factor_hostile_event_country_evtt = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.855
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		This = {
+			OR = {
+				is_country_type = uma_ap2_hostile_event_country
+				has_country_flag = uma_ap2_factor_hostile_event_country_flag
+			}
+		}
+		From = {
+			has_authority = auth_trainingcenter
+		}
+
+		FromFrom = {
+			is_capital = yes
+		}
+	}
+
+
+	immediate = {
+		From = {
+			country_event = {
+				id = uma_ap.85
+			}
+		}
+		set_country_flag = uma_ap2_factor_crisis_end
+	}
+
+}
+
+country_event = {
+	id = uma_ap.85
+	is_triggered_only = yes
+	title = uma_ap.85.title
+	desc = uma_ap.85.desc
+	picture = GFX_evt_uma_satono_school
+
+	trigger = {
+
+
+	}
+
+	immediate = {
+		set_country_flag = uma_ap2_factor_crisis_end
+		log = UMA_AP2_PLAYER_DEFEAT
+	}
+
+	option = {
+		name = uma_ap.85.a
+		add_modifier = {
+			modifier = uma_ap2_factor_bade_bad
+			days = -1
+		}
+	}
+
+	after = {
+		event_target:uma_ap2_factor_hostile_event_country_evtt = {
+			destroy_country = yes
 		}
 	}
 }
 
 
-situation_event = {
-	id = uma_ap.41
-	title = uma_ap.41.title
-	desc = uma_ap.41.desc
+#Realm -> 强化事项： 战斗领域 感知领域 治疗领域 辅助领域 领域混合开关 if 混合开关没有打开 -> 各自领域升级 每项最多为1
+
+country_event = {
+	id = uma_ap.140
+	title = uma_ap.140.title
+	desc = uma_ap.140.desc
+	picture = GFX_evt_uma_ap2_star
 	is_triggered_only = yes
 
+	trigger = {
+		has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+	}
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.143
+			}
+		}
+	}
+
 	option = {
-		name = uma_ap.41.a
+		name = uma_ap.40.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.100
+			}
+		}
 	}
 }
 
+
+##Setup
+country_event = {
+	id = uma_ap.143
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = uma_ap2_realm_power_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_realm_speed_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_realm_stamina_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_realm_wisdom_rate
+			value = 0
+		}
+
+		set_variable = {
+			which = uma_ap2_realm_depth_rate
+			value = 0
+		}
+	}
+
+	after = {
+		uma_ap2_realm_check_give_initial = yes
+	}
+}
+
+
+
+country_event = {
+	id = uma_ap.100
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = uma_aps_realm_main_windows
+
+	option = {
+		name = "uma_specimen_null" ##TODO:000
+		custom_gui = uma_hiding_button
+		default_hide_option = yes
+		hidden_effect = {
+
+			uma_ap2_factor_summation = yes
+			start_situation = {
+				type = situation_uma_ap_2_situation_system_realm
+				target = this
+				effect = {}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.110
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#
+		uma_realm_speed_add_modifier = yes
+		uma_realm_power_add_modifier = yes
+		uma_realm_stamina_add_modifier = yes
+		uma_realm_wisdom_add_modifier = yes
+
+	}
+}
+
+
+situation_event = {
+	id = uma_ap.151
+	title = uma_ap.151.title
+	desc = uma_ap.151.desc
+	picture = GFX_evt_uma_factor_undersea
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ap.151.a
+	}
+}
+
+situation_event = {
+	id = uma_ap.152
+	title = uma_ap.152.title
+	desc = uma_ap.152.desc
+	picture = GFX_evt_uma_factor_undersea
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.152.a
+	}
+}
+
+
+country_event = {
+	id = uma_ap.154
+	title = uma_ap.154.title
+	desc = uma_ap.154.desc
+	picture = GFX_evt_uma_ap2_realm_fin
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = {
+			id = uma_ap.110
+		}
+	}
+
+	option = {
+		name = uma_ap.154.a
+		hidden_effect = {
+			set_country_flag = uma_ap2_factor_completed
+		}
+	}
+}
+
+
+
+#Event pool great evts
+situation_event = {
+	id = uma_ap.155
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				AND = {
+					situation_progress >= 35
+				}
+
+			}
+
+			AND = {
+				AND = {
+					situation_progress >= 60
+				}
+
+			}
+
+		}
+	}
+
+	immediate = {
+#		remove_situation_flag = uma_ap_factor_stage_1_done
+#		remove_situation_flag = uma_ap_factor_stage_2_done
+
+		fire_on_action = {
+			on_action = on_uma_ap2_realm_random_updown_event_list
+		}
+	}
+}
+
+##TODO: 过度选择后失败->创建怪文书帝国->抑制成功->无事发生   ->抑制失败：进入强制天灾线1
+##天灾线1： ->领域发现‘现实空间’ -> break
+##天灾线2： ->三女神干预(因子/normal触发) -> defend
+##天灾线3: ->时间线入侵(Very normal) -> defend
+
+#失眠
+situation_event  = {
+	id = uma_ap.160
+	title = uma_ap.160.title
+	desc = uma_ap.160.desc
+	picture = GFX_evt_uma_ap2_out_of_sleep
+	is_triggered_only = yes
+	situation = This
+
+	trigger = {
+		NOT = {
+			has_situation_flag = uma_ap2_realm_160_happened
+		}
+	}
+
+	immediate = {
+		set_situation_flag = uma_ap2_realm_160_happened
+	}
+
+	option = {
+		name = uma_ap.160.a
+		add_situation_progress = -20
+	}
+	option = {
+		name = uma_ap.160.b
+		owner= {
+			add_modifier = {
+				modifier = uma_ap2_realm_insomnia_pills
+				days = 5000
+			}
+		}
+
+	}
+	option = {
+		name = uma_ap.160.c
+		owner = {
+			add_modifier = {
+				modifier = uma_ap2_realm_insomnia
+				days = 5000
+			}
+		}
+	}
+}
 
 
 

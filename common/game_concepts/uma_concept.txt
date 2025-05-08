@@ -1,26 +1,44 @@
-uma_three_godnesses_concept = {
-	alias = {
-		uma_three_godnesses_concept
+concept_uma_three_godnesses_concept = {
+	icon = gfx/interface/icons/concepts/uma_threegodness.dds
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_threegodness"
+		picture = "GFX_concept_uma_tg_bg"
 	}
 }
 
 
-uma_race_course_concept = {
+concept_uma_race_course_concept = {
 	icon = "gfx/interface/icons/buildings/building_uma_basic_racing_course.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_racing_couses"
+		picture = "GFX_concept_uma_racing_couses_bg"
+	}
 }
 
-uma_three_godnesses_deposit = {
+concept_uma_three_godnesses_deposit = {
 	icon = gfx/interface/icons/deposits/d_uma_threegodness_relic_pic.dds
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_threegodness"
+		picture = "GFX_evt_archaeological_dig"
+	}
 }
 
-uma_cystal_carrot_mine = {
+concept_uma_cystal_carrot_mine = {
 	icon = "gfx/interface/icons/deposits/d_uma_crystal_carrot_mine_planet_pic.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_crystal_carrot"
+		picture = "GFX_evt_crystal_mining"
+	}
 }
 
-uma_industrial_district = {
+concept_uma_industrial_district = {
 	icon = "gfx/interface/icons/districts/district_industrial.dds"
 }
 
-uma_concept_artisan = {
+concept_uma_concept_artisan = {
 	icon = "gfx/interface/icons/jobs/job_artisan.dds"
 }

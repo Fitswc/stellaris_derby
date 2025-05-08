@@ -12,6 +12,17 @@ weapon_component_template = { #MJR激光器
     icon = "GFX_ship_part_uma_mejiro_bright_laser"
     icon_frame = 1
 	power = -30
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
     prerequisites = { tech_uma_MJR }
     component_set = "UMA_MJR_LASER"
     projectile_gfx = "gamma_laser_s"
@@ -65,6 +76,17 @@ weapon_component_template = { #MJR激光器
     icon = "GFX_ship_part_uma_mejiro_bright_laser"
     icon_frame = 1
     power = -60
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
     prerequisites = {
         tech_uma_MJR
     }
@@ -124,6 +146,18 @@ weapon_component_template = { #MJR激光器
     icon = "GFX_ship_part_uma_mejiro_bright_laser"
     icon_frame = 1
     power = -140
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+
     prerequisites = {
         tech_uma_MJR
     }
@@ -189,6 +223,16 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	icon_frame = 1
 	power = -20
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = {
         tech_uma_mass_accelerator
     }
@@ -247,6 +291,16 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	icon =  "GFX_ship_part_uma_color_mass_accelerator"
 	icon_frame = 1
 	power = -56
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = {
         tech_uma_mass_accelerator
@@ -307,6 +361,16 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	icon_frame = 1
 	power = -105
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = {
         tech_uma_mass_accelerator
     }
@@ -366,6 +430,16 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	icon =  "GFX_ship_part_uma_color_mass_accelerator"
 	icon_frame = 1
 	power = -350
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = {
         tech_uma_mass_accelerator
@@ -429,6 +503,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_strong_plasma" }
 	component_set = "UMA_STRONG_PLASMA"
 	projectile_gfx = "plasma_cannon_s"
@@ -485,6 +569,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_strong_plasma" }
 	component_set = "UMA_STRONG_PLASMA"
 	projectile_gfx = "plasma_cannon_m"
@@ -540,6 +634,16 @@ weapon_component_template = { #强等离子发射器
 	icon = "GFX_ship_part_uma_high_energy_plasma"
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_strong_plasma" }
 	component_set = "UMA_STRONG_PLASMA"
@@ -599,6 +703,17 @@ weapon_component_template = { #高能强子裂解炮
 	icon_frame = 1
 	#color = { 1.0 1.0 1.0 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+
 	prerequisites = { "tech_hadron_disruptors" }
 	component_set = "UMA_HADRON_DISRUPTOR"
 	projectile_gfx = "disruptor_3_medium"
@@ -654,6 +769,16 @@ weapon_component_template = {
 	icon = "GFX_ship_part_uma_hadron_disruptor"
 	icon_frame = 1
 	#color = { 1.0 1.0 1.0 1 }
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_hadron_disruptors" }
 	component_set = "UMA_HADRON_DISRUPTOR"
@@ -713,7 +838,18 @@ weapon_component_template = { #“极光”电弧束
 
 	firing_arc = 35.0
 	min_range = 10.0
-	use_ship_kill_target = no
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	use_ship_main_target = no
 
 	prerequisites = { "tech_uma_aurora_emitter" }
 	component_set = "UMA_AURORA_EMITTER"
@@ -774,7 +910,18 @@ weapon_component_template = { #弦光矛
 
 	firing_arc = 25.0
 	min_range = 10.0
-	use_ship_kill_target = no
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	use_ship_main_target = no
 
 	prerequisites = { "tech_string_energy_lance" }
 	component_set = "UMA_STRING_ENERGY_LANCE"
@@ -891,7 +1038,18 @@ weapon_component_template = { #弦光矛-Nova
 	icon_frame = 1
 
 	firing_arc = 30
-	use_ship_kill_target = no
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery t_slot }
 	prerequisites = { "tech_string_energy_lance"}
@@ -955,6 +1113,16 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_MAAM" }
 	component_set = "UMA_TG_MAAM_MISSILE"
 	projectile_gfx = "UMA_TG_MAAM_missiles"
@@ -1008,6 +1176,16 @@ weapon_component_template = {
 	icon = "GFX_ship_part_uma_tg_QAAM"
 	icon_frame = 1
 	type = missile
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_uma_QAAM" }
 	component_set = "UMA_TG_QAAM_MISSILE"
@@ -1067,6 +1245,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON"
 	projectile_gfx = "plasma_accelerator_s"
@@ -1122,6 +1310,16 @@ weapon_component_template = { #强等离子发射器
 	icon = "GFX_ship_part_uma_tg_aech_weapon"
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON"
@@ -1179,6 +1377,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON"
 	projectile_gfx = "plasma_accelerator_l"
@@ -1234,6 +1442,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON_BIG"
 	projectile_gfx = "plasma_accelerator_l"
@@ -1288,6 +1506,16 @@ weapon_component_template = { #强等离子发射器
 	icon = "GFX_ship_part_uma_tg_aech_weapon"
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON_BIG"
@@ -1346,6 +1574,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_arch_weapon_2" }
 	component_set = "UMA_TG_ARCH_WEAPON"
 	projectile_gfx = "plasma_accelerator_s"
@@ -1401,6 +1639,16 @@ weapon_component_template = { #强等离子发射器
 	icon = "GFX_ship_part_uma_tg_arch_weapon_2"
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON"
@@ -1458,6 +1706,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON"
 	projectile_gfx = "plasma_accelerator_l"
@@ -1513,6 +1771,16 @@ weapon_component_template = { #强等离子发射器
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON_BIG"
 	projectile_gfx = "plasma_accelerator_l"
@@ -1567,6 +1835,16 @@ weapon_component_template = { #强等离子发射器
 	icon = "GFX_ship_part_uma_tg_arch_weapon_2"
 	icon_frame = 1
 	#color = { 0.1 1.0 0.1 1 }
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
 	component_set = "UMA_TG_ARCH_WEAPON_BIG"

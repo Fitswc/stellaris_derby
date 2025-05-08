@@ -76,6 +76,15 @@ uma_trade_policy = {
 			
 	}
 	option = {
+		name = trade_policy_uma_vanilla
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		valid = {
+			days_passed >= 10
+		}
 		name = trade_policy_uma_basic_resources_trading
 		policy_flags = {
 			trade_policy_uma_basic_resources_trading
@@ -85,6 +94,9 @@ uma_trade_policy = {
 		}
 	}
 	option = {
+		valid = {
+			days_passed >= 10
+		}
 		name = trade_policy_uma_industry_trading
 		policy_flags = {
 			trade_policy_uma_industry_trading
@@ -125,6 +137,9 @@ uma_trade_policy = {
 		policy_flags = {
 			trade_policy_uma_cultural_output
 		}
+		valid = {
+			days_passed >= 10
+		}
 		AI_weight = {
 			factor = 0
 		}
@@ -133,6 +148,9 @@ uma_trade_policy = {
 		name = trade_policy_uma_research_support
 		policy_flags = {
 			trade_policy_uma_research_support
+		}
+		valid = {
+			days_passed >= 10
 		}
 		AI_weight = {
 			factor = 0
@@ -150,12 +168,7 @@ uma_trade_policy = {
 			factor = 0
 		}
 	}
-	option = {
-		name = trade_policy_uma_vanilla
-		AI_weight = {
-			factor = 0
-		}
-	}
+
 }
 
 #燃料选择

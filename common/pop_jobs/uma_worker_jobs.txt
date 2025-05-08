@@ -2,9 +2,16 @@
 
 uma_crystal_carrot_miner ={
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_mineral_purification_plant
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_mineral_purification_plant
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -104,9 +111,16 @@ uma_crystal_carrot_miner ={
 ###胡萝卜农夫
 uma_carrot_farmer = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_advance_carrot_farm
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_advance_carrot_farm
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -127,6 +141,7 @@ uma_carrot_farmer = {
 		category = planet_uma_carrot_farmer
 		produces = {
 			food = 20
+			trade = 4
 		}
 		###转基因胡萝卜实验的额外产出
 		produces = {
@@ -143,14 +158,6 @@ uma_carrot_farmer = {
 		}
 	}
 
-	###特色胡萝卜旅游业产出
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_uma_eco_friendly_tourism }
-		}
-		trade_value_add = 4
-	}
 
 	weight = {
 		weight = @worker_job_weight
@@ -225,9 +232,14 @@ uma_carrot_farmer = {
 ###养蜂人
 uma_bee_farmer = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_simple_carrot_farm
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_simple_carrot_farm
+		}
+	}
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -254,12 +266,9 @@ uma_bee_farmer = {
 		}
 	}
 
-	planet_modifier = {
-		planet_amenities_add = 4
-	}
-
 	###给星球的胡萝卜种植者的加成
 	planet_modifier = {
+		planet_amenities_add = 4
 		planet_uma_carrot_farmer_produces_mult = 0.2
 	}
 
@@ -336,9 +345,16 @@ uma_bee_farmer = {
 ###马娘场发电技师
 uma_field_powering_technician = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_field_powerplant
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_field_powerplant
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -440,9 +456,16 @@ uma_field_powering_technician = {
 #地心钻探工
 uma_core_miner = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_uma_core_mining_complex_1
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_core_mining_complex_1
+		}
+	}
+
+
+
 
 	possible_pre_triggers = {
 		has_owner = yes

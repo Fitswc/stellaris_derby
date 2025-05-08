@@ -116,12 +116,14 @@ fleet_event = {
 		name = CURIOUS #占位符
 		##
 		hidden_effect = {
-			random_list = {
-				50 = {
-					give_specimen = { key = uma_building_maunal }
-				}
-				50 = {
+			owner = {
+				random_list = {
+					50 = {
+						give_specimen = { key = uma_building_maunal origin = uma_specimen_null }
+					}
+					50 = {
 
+					}
 				}
 			}
 		}
@@ -264,12 +266,14 @@ planet_event = {
 
 		##
 		hidden_effect = {
-			random_list = {
-				50 = {
-					give_specimen = { key = uma_care_kit }
-				}
-				50 = {
+			owner = {
+				random_list = {
+					50 = {
+						give_specimen = { key = uma_care_kit origin = uma_specimen_null }
+					}
+					50 = {
 
+					}
 				}
 			}
 		}

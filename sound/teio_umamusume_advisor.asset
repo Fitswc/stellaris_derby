@@ -57,11 +57,11 @@ soundgroup =
 		name = "advisor_notification_colony_established_01"
 		file = "vo/umamusume/Teio/advisor_notification_colony_established_01.wav"
 	}
-	soundoverride =
-	{
-		name = "advisor_notification_colony_ship_under_attack_01"
-		file = "vo/umamusume/Teio/advisor_notification_ship_under_attack_01.wav"
-	}
+#	soundoverride =
+#	{
+#		name = "advisor_notification_colony_ship_under_attack_01"
+#		file = "vo/umamusume/Teio/advisor_notification_ship_under_attack_01.wav"
+#	}
 	soundoverride =
 	{
 		name = "advisor_notification_colony_ship_destroyed_01"
@@ -262,11 +262,11 @@ soundgroup =
 		name = "advisor_notification_situation_log_02"
 		file = "vo/umamusume/Teio/advisor_notification_situation_log_02.wav"
 	}
-	soundoverride =
-	{
-		name = "advisor_notification_spacebourne_encounter_01"
-		file = "vo/umamusume/Teio/advisor_notification_spacebourne_encounter_01.wav"
-	}
+#	soundoverride =
+#	{
+#		name = "advisor_notification_spacebourne_encounter_01"
+#		file = "vo/umamusume/Teio/advisor_notification_spacebourne_encounter_01.wav"
+#	}
 	soundoverride =
 	{
 		name = "advisor_notification_spaceport_lost_01"
@@ -327,10 +327,10 @@ soundgroup =
 soundeffect = {
 		name = advisor_generic_phrase
 		sounds = {
-			weighted_sound = { sound = advisor_generic_phrase_01 weight = 1 }
-			weighted_sound = { sound = advisor_generic_phrase_02 weight = 1 }
-			weighted_sound = { sound = advisor_generic_phrase_03 weight = 1 }
-			weighted_sound = { sound = advisor_generic_phrase_04 weight = 1 }
+			weighted_sound = { sound = advisor_sample_vo_01 weight = 1 }
+			weighted_sound = { sound = advisor_sample_vo_02 weight = 1 }
+			weighted_sound = { sound = advisor_sample_vo_03 weight = 1 }
+			weighted_sound = { sound = advisor_sample_vo_03 weight = 1 }
 		}
 		volume = 1.00
 		max_audible = 1
