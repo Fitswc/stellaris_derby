@@ -574,6 +574,7 @@ district_uma_dormitory_in_industrial = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	default_starting_district = yes
 
 	show_on_uncolonized = {
 		uses_district_set = uma_industrial_world
@@ -591,9 +592,9 @@ district_uma_dormitory_in_industrial = {
 	}
 
 	zone_slots = {
+		slot_city_government
 		slot_city_02
 		slot_city_01
-		slot_city_government
 	}
 
 	resources = {
@@ -804,8 +805,7 @@ district_uma_industrial_area = {
 	}
 
 	zone_slots = {
-		slot_city_02
-		slot_city_01
+		slot_uma_light_industrial
 	}
 
 	resources = {
@@ -912,8 +912,7 @@ district_uma_heavy_industrial_area = {
 	}
 
 	zone_slots = {
-		slot_city_02
-		slot_city_01
+		slot_uma_heavy_industrial
 	}
 
 	resources = {

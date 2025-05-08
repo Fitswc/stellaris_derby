@@ -696,6 +696,11 @@ decision_uma_industrial_planet_transform = {
 				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
 				add_deposit = d_phoenix_racing_course
 			}
+
+			planet_event = {
+				id = uma_bg.19
+				days = 2
+			}
 		}
 	}
 

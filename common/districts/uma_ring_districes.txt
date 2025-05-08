@@ -12,7 +12,7 @@ district_uma_dormitory_ring = {
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 
-	zone_slots = { ##TODO:adjust correct slot of zone
+	zone_slots = {
 		slot_city_government
 		slot_city_01
 		slot_city_02
@@ -183,6 +183,10 @@ district_uma_teaching_area_ring = {
 		uses_district_set = uma_ring_world
 	}
 
+	zone_slots = {
+		slot_uma_teaching_and_training
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
@@ -221,6 +225,10 @@ district_uma_ring_industrial = {
 
 	potential = {
 		uses_district_set = uma_ring_world
+	}
+
+	zone_slots = {
+		slot_uma_industrial_mixture
 	}
 
 	resources = {
@@ -283,6 +291,10 @@ district_uma_ring_logistics_area = {
 		uses_district_set = uma_ring_world
 	}
 
+	zone_slots = {
+		slot_uma_logistic
+	}
+
 
 	resources = {
 		category = planet_districts
@@ -337,6 +349,10 @@ district_uma_ring_commercial_area = {
 
 	potential = {
 		uses_district_set = uma_ring_world
+	}
+
+	zone_slots = {
+		slot_city_01
 	}
 
 
