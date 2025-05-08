@@ -833,7 +833,7 @@ trait_uma_leader_is_talented = {
 #志在四方
 trait_uma_my_will_in_whole_world = {
 	icon = "gfx/interface/icons/traits/trait_uma_my_will_in_whole_world.dds"
-	cost = 1
+	cost = 2
 	category = normal
 	species_possible_add = {
 		can_add_genetic_traits = yes
@@ -847,16 +847,16 @@ trait_uma_my_will_in_whole_world = {
 	opposites = { "trait_uma_i_love_my_home" }
 	allowed_archetypes = { UMA }
 	modifier = {
+		planet_colony_development_speed_mult = 0.2
 		pop_demotion_time_mult = 0.2
 		pop_promotion_time_mult = 0.2
-		pop_resettlement_cost_mult = -0.25
 	}
 }
 
 #恋家
 trait_uma_i_love_my_home = {
 	icon = "gfx/interface/icons/traits/trait_uma_i_love_my_home.dds"
-	cost = -1
+	cost = -2
 	category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
@@ -864,9 +864,9 @@ trait_uma_i_love_my_home = {
 	opposites = { "trait_uma_my_will_in_whole_world" }
 	allowed_archetypes = { UMA }
 	modifier = {
+		planet_colony_development_speed_mult = -0.2
 		pop_demotion_time_mult = -0.2
 		pop_promotion_time_mult = -0.2
-		pop_resettlement_cost_mult = 0.25
 	}
 }
 
