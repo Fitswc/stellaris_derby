@@ -327,7 +327,8 @@ decision_uma_school_ring_transform = {
 	}
 
 	potential = {
-		is_ringworld = yes
+#		is_ringworld = yes
+		uma_is_ringworld = yes
 		NOR = {
 			is_planet_class = pc_uma_ringworld_habitable
 			is_planet_class = pc_uma_ringworld
@@ -427,6 +428,7 @@ decision_uma_school_ring_transform = {
 				}
 
 #				clear_deposits = yes
+				remove_all_districts = yes
 				while = {
 					count = uma_rw_city_to_city
 					add_district = district_uma_dormitory_ring
