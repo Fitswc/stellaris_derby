@@ -9,7 +9,7 @@ guiTypes = {
 		origo = center
 		moveable = yes
 		size = { width = 1780 height = 960 }
-		scale = 0.5
+#		scale = 0.5
 
 
 		background = {
@@ -61,7 +61,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = -65 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "V"
+#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -71,7 +71,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = -15 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "S"
+#			text_color_code = "S"
 		}
 
 		effectButtonType = {
@@ -126,7 +126,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = 207 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "V"
+#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -136,7 +136,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = 260 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "S"
+#			text_color_code = "S"
 		}
 
 
@@ -179,7 +179,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = 480 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "V"
+#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -189,7 +189,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = 534 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "S"
+#			text_color_code = "S"
 		}
 
 		effectButtonType = {
@@ -229,7 +229,7 @@ guiTypes = {
 			position = { x = 550 y = 660 }
 			alwaysTransparent = yes
 			orientation = "UPPER_LEFT"
-			text_color_code = "S"
+#			text_color_code = "S"
 		}
 
 
@@ -421,7 +421,8 @@ guiTypes = {
 
 		buttonType = {
 			name = "option_button"
-			quadTextureSprite = ""
+#			quadTextureSprite = ""
+			alwaysTransparent = yes
 			position = { x = 0 y = 0 }
 			font = "malgun_goth_24"
 			text = "OPTION_TEXT"

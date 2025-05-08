@@ -17,7 +17,7 @@ uma_trait_musume = {
 	}
 
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -29,7 +29,7 @@ uma_trait_musume = {
 		pop_housing_usage_mult = -0.025
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -41,7 +41,7 @@ uma_trait_musume = {
 		pop_housing_usage_mult = -0.05
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -53,7 +53,7 @@ uma_trait_musume = {
 		pop_housing_usage_mult = -0.075
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -65,7 +65,7 @@ uma_trait_musume = {
 		pop_housing_usage_mult = -0.1
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -77,7 +77,7 @@ uma_trait_musume = {
 		pop_housing_usage_mult = -0.125
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -89,7 +89,7 @@ uma_trait_musume = {
 		planet_jobs_society_research_produces_mult = 0.05
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -101,7 +101,7 @@ uma_trait_musume = {
 		planet_jobs_society_research_produces_mult = 0.1
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -113,7 +113,7 @@ uma_trait_musume = {
 		planet_jobs_society_research_produces_mult = 0.15
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -125,7 +125,7 @@ uma_trait_musume = {
 		planet_jobs_society_research_produces_mult = 0.2
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -145,7 +145,7 @@ uma_trait_musume = {
 		}
 		pop_environment_tolerance = 0.05
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -165,7 +165,7 @@ uma_trait_musume = {
 		}
 		pop_environment_tolerance = 0.1
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -185,7 +185,7 @@ uma_trait_musume = {
 		}
 		pop_environment_tolerance = 0.15
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -205,7 +205,7 @@ uma_trait_musume = {
 		}
 		pop_environment_tolerance = 0.2
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -225,7 +225,7 @@ uma_trait_musume = {
 		}
 		pop_environment_tolerance = 0.25
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -481,7 +481,7 @@ uma_trait_naturelover={
 	opposites = { "uma_trait_urbancitizens"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_naturelover_tooltip
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -491,7 +491,7 @@ uma_trait_naturelover={
 		planet_jobs_unity_produces_mult = 0.1
 		pop_amenities_usage_mult = -0.05
 	}
-	#triggered_pop_group_modifier = {   #研究马娘专属科技后解锁更强加成
+	#triggered_planet_pop_group_modifier = {   #研究马娘专属科技后解锁更强加成
 	#	potential = {
 	#		exists = planet
 	#		planet = { is_planet_class = 	}
@@ -506,7 +506,7 @@ uma_trait_urbancitizens={
 	opposites = { "uma_trait_naturelover"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_urbancitizens_tooltip
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -518,7 +518,7 @@ uma_trait_urbancitizens={
 		planet_jobs_unity_produces_mult = 0.1
 		pop_amenities_usage_mult = -0.05
 	}
-	#triggered_pop_group_modifier = {   #研究马娘专属科技后解锁更强加成
+	#triggered_planet_pop_group_modifier = {   #研究马娘专属科技后解锁更强加成
 	#	potential = {
 	#		exists = planet
 	#		planet = { is_planet_class = 	}
@@ -532,7 +532,7 @@ uma_trait_communal={
 	opposites = { "uma_trait_tsundere"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_communal_tooltip
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount > 5000 }
@@ -550,7 +550,7 @@ uma_trait_tsundere={
 	opposites = { "uma_trait_communal"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_tsundere_tooltip
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount > 5000 }
@@ -604,14 +604,14 @@ uma_trait_houseworkpro={
 	modifier={
 		pop_amenities_usage_mult = -0.05
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount < 3000 }
 		}
 		planet_jobs_unity_produces_mult = 0.05
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount >= 3000 }
@@ -629,14 +629,14 @@ uma_trait_houseworkidiot={
 	modifier={
 		pop_amenities_usage_mult = 0.05
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount < 3000 }
 		}
 		planet_jobs_unity_produces_mult = -0.05
 	}
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount >= 3000 }
@@ -661,7 +661,7 @@ uma_trait_desireforknowledge={
 	cost= 2
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_desireforknowledge_tooltip
-	triggered_pop_group_modifier = {
+	triggered_planet_pop_group_modifier = {
 		potential = {
 			exists = planet
 			OR = {
@@ -790,7 +790,7 @@ trait_uma_ignoreadaptive_train = {
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
-	potential_crossbreeding_chance = 1.0
+##	potential_crossbreeding_chance = 1.0
 	opposites = { trait_uma_adaptive_train }
 	allowed_archetypes = { UMA }
 	modifier = {
@@ -916,7 +916,7 @@ trait_uma_lot_of_money_so_i_wasteful = {
 trait_uma_terriroty_awake = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/trait_uma_terriroty_awake.png"
-	potential_crossbreeding_chance = 0
+#	potential_crossbreeding_chance = 0
 	allowed_archetypes = { UMA }
 	initial = no
 	randomized = no
@@ -945,7 +945,7 @@ trait_uma_terriroty_awake = {
 trait_uma_new_bottle_but_old_wine = {
 	cost = 0
 	icon = "gfx/interface/icons/traits/trait_uma_new_bottle_but_old_wine.dds"
-	potential_crossbreeding_chance = 0
+#	potential_crossbreeding_chance = 0
 	allowed_archetypes = { UMA }
 	initial = no
 	randomized = no
@@ -971,7 +971,7 @@ trait_uma_new_bottle_but_old_wine = {
 uma_trait_gold_family_basic={
 	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png"
 	cost= 0
-	potential_crossbreeding_chance = 0
+#	potential_crossbreeding_chance = 0
 	allowed_archetypes={UMA}
 	species_potential_add = {
 		always = no
@@ -994,7 +994,7 @@ uma_trait_gold_family_basic={
 uma_trait_gold_family={
 	icon="gfx/interface/icons/traits/uma_trait_thethekirai.png"
 	cost= 0
-	potential_crossbreeding_chance = 0
+#	potential_crossbreeding_chance = 0
 	allowed_archetypes={UMA}
 	species_potential_add = {
 		always = no
@@ -1017,7 +1017,7 @@ uma_trait_gold_family={
 uma_trait_gold_family_advance= {
 	icon = "gfx/interface/icons/traits/uma_trait_thethekirai.png"
 	cost = 0
-	potential_crossbreeding_chance = 0
+#	potential_crossbreeding_chance = 0
 	allowed_archetypes = { UMA }
 	species_potential_add = {
 		always = no
@@ -1064,7 +1064,7 @@ uma_trait_gold_family_advance= {
 #	species_possible_merge_remove = {
 #		always = yes
 #	}
-#	potential_crossbreeding_chance = 1.0
+##	potential_crossbreeding_chance = 1.0
 #	slave_cost = {
 #		energy = 1000
 #	}

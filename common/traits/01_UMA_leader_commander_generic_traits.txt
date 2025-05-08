@@ -469,7 +469,8 @@ leader_trait_qingwuqidashi_commander_3 = {
         script = trait/icon
         CLASS = commander
         ICON = "GFX_leader_trait_qingwuqidashi_commander"
-        RARITY = common
+#        RARITY = common
+        RARITY = veteran
         COUNCIL = no
         TIER = 3
     }
@@ -549,7 +550,8 @@ leader_trait_zhongwuqidashi_commander_3 = {
         script = trait/icon
         CLASS = commander
         ICON = "GFX_leader_trait_zhongwuqidashi_commander"
-        RARITY = common
+#        RARITY = common
+        RARITY = veteran
         COUNCIL = no
         TIER = 3
     }

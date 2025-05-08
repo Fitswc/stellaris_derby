@@ -6,41 +6,41 @@ is_organic_species = {
 			is_archetype = BIOLOGICAL
 			is_archetype = LITHOID
 
-			is_archetype = WARSHIPGIRL				#_wsg
-			is_archetype = SHENHAI
-			is_archetype = UNITED_FLEET
-			is_archetype = NANITES_CROP
-
-			is_archetype = LILY						# 莉莉
-			is_archetype = STARSHIPGIRLS			# swg
-			is_archetype = KANMUSU					# kc
-			is_archetype = DATEALIVE				# DAL
-
-			is_archetype = KANSEN					#_|azl|
-			is_archetype = Dolls					#_灰烬
-			is_archetype = POKEMON					#_[pkman]	[伊布帝国v1.22]=2398450274
-			is_archetype = HUMANOID					#_[ETCPM]
-			is_archetype = MAMMALIAN
-			is_archetype = REPTILIAN
-			is_archetype = AVIAN
-			is_archetype = ARTHROPOID
-			is_archetype = MOLUSCOID
-			is_archetype = FUNGOID
-			is_archetype = PLANTOID
-			is_archetype = NECROID
-			is_archetype = half_species
-			is_archetype = half_species_special
-			is_archetype = half_aberration
-			is_archetype = half_perfect
-			is_archetype = half_amalgamated
-			is_archetype = NYTO						#_|涅托|
-			is_KZ_VOY_organic_species = yes
-		#	is_archetype = ASCENDED					#_|EE|
-			is_archetype = Schale					#_|碧蓝档案|
-			is_archetype = ELF						#_|带刺|
-			is_archetype = Magical_Bitch
-			is_archetype = Magical_Girl
-
+#			is_archetype = WARSHIPGIRL				#_wsg
+#			is_archetype = SHENHAI
+#			is_archetype = UNITED_FLEET
+#			is_archetype = NANITES_CROP
+#
+#			is_archetype = LILY						# 莉莉
+#			is_archetype = STARSHIPGIRLS			# swg
+#			is_archetype = KANMUSU					# kc
+#			is_archetype = DATEALIVE				# DAL
+#
+#			is_archetype = KANSEN					#_|azl|
+#			is_archetype = Dolls					#_灰烬
+#			is_archetype = POKEMON					#_[pkman]	[伊布帝国v1.22]=2398450274
+#			is_archetype = HUMANOID					#_[ETCPM]
+#			is_archetype = MAMMALIAN
+#			is_archetype = REPTILIAN
+#			is_archetype = AVIAN
+#			is_archetype = ARTHROPOID
+#			is_archetype = MOLUSCOID
+#			is_archetype = FUNGOID
+#			is_archetype = PLANTOID
+#			is_archetype = NECROID
+#			is_archetype = half_species
+#			is_archetype = half_species_special
+#			is_archetype = half_aberration
+#			is_archetype = half_perfect
+#			is_archetype = half_amalgamated
+#			is_archetype = NYTO						#_|涅托|
+#			is_KZ_VOY_organic_species = yes
+#		#	is_archetype = ASCENDED					#_|EE|
+#			is_archetype = Schale					#_|碧蓝档案|
+#			is_archetype = ELF						#_|带刺|
+#			is_archetype = Magical_Bitch
+#			is_archetype = Magical_Girl
+#
 			is_archetype = UMA
 			#新增
 		}
@@ -279,67 +279,67 @@ uma_is_ringworld = {
 		is_ringworld = yes
 		is_planet_class = pc_ringworld_habitable
 		# R
-		is_planet_class = pc_ringworld_habitable_uf
-		is_planet_class = pc_ringworld_habitable_sh
-		is_planet_class = pc_ringworld_habitable_wsg
-		is_planet_class = pc_ringworld_habitable_swim
-		is_planet_class = pc_dyson_ring
-		# gigastructure
-		is_planet_class = pc_ringworld_city
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_ringworld_hive
-		is_planet_class = pc_city_ringworld_habitable
-		is_planet_class = pc_gigaorbital_ring
-		is_planet_class = pc_giga_ringworld_habitable
-		# ascendancy_ringworlds
-		is_planet_class = pc_ringworld_eco_city
-		is_planet_class = pc_ringworld_energy_city
-		is_planet_class = pc_ringworld_shrouded_paradise
-		is_planet_class = pc_square_ringworld_city
-		is_planet_class = pc_square_ringworld_energy_city
-		is_planet_class = pc_square_ringworld_machine
-		is_planet_class = pc_square_ringworld_hive
-		is_planet_class = pc_ringworld_assimilated
-		is_planet_class = pc_ringworld_assimilated2
-		is_planet_class = pc_ringworld_assimilated3
-		is_planet_class = pc_ringworld_assimilated4
-		is_planet_class = pc_ringworld_machine_factory
-		is_planet_class = pc_ringworld_bioforge
-		is_planet_class = pc_ringworld_mining
-		is_planet_class = pc_ringworld_energy
-		is_planet_class = pc_ringworld_trade
-		is_planet_class = pc_ringworld_training
-		is_planet_class = pc_ringworld_training_shielded
-		is_planet_class = pc_ringworld_eco
-		is_planet_class = pc_ringworld_farming
-		is_planet_class = pc_ringworld_razed_city
-		is_planet_class = pc_ringworld_razed_energy
-		is_planet_class = pc_ringworld_razed_farming
-		is_planet_class = pc_ringworld_razed_mining
-		is_planet_class = pc_ringworld_razed_training
-		is_planet_class = pc_ringworld_razed_eco
-		# acot
-		is_planet_class = pc_omega_ringworld_seam
-		is_planet_class = pc_omega_ringworld_habitable
-		# AE
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_city
-		}
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_ocean
-		}
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_shrouded
-		}
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_machine
-		}
-		# 星舰少女
-		is_planet_class = pc_swgs_engineer_ringworld_habitable
+#		is_planet_class = pc_ringworld_habitable_uf
+#		is_planet_class = pc_ringworld_habitable_sh
+#		is_planet_class = pc_ringworld_habitable_wsg
+#		is_planet_class = pc_ringworld_habitable_swim
+#		is_planet_class = pc_dyson_ring
+#		# gigastructure
+#		is_planet_class = pc_ringworld_city
+#		is_planet_class = pc_ringworld_machine
+#		is_planet_class = pc_ringworld_hive
+#		is_planet_class = pc_city_ringworld_habitable
+#		is_planet_class = pc_gigaorbital_ring
+#		is_planet_class = pc_giga_ringworld_habitable
+#		# ascendancy_ringworlds
+#		is_planet_class = pc_ringworld_eco_city
+#		is_planet_class = pc_ringworld_energy_city
+#		is_planet_class = pc_ringworld_shrouded_paradise
+#		is_planet_class = pc_square_ringworld_city
+#		is_planet_class = pc_square_ringworld_energy_city
+#		is_planet_class = pc_square_ringworld_machine
+#		is_planet_class = pc_square_ringworld_hive
+#		is_planet_class = pc_ringworld_assimilated
+#		is_planet_class = pc_ringworld_assimilated2
+#		is_planet_class = pc_ringworld_assimilated3
+#		is_planet_class = pc_ringworld_assimilated4
+#		is_planet_class = pc_ringworld_machine_factory
+#		is_planet_class = pc_ringworld_bioforge
+#		is_planet_class = pc_ringworld_mining
+#		is_planet_class = pc_ringworld_energy
+#		is_planet_class = pc_ringworld_trade
+#		is_planet_class = pc_ringworld_training
+#		is_planet_class = pc_ringworld_training_shielded
+#		is_planet_class = pc_ringworld_eco
+#		is_planet_class = pc_ringworld_farming
+#		is_planet_class = pc_ringworld_razed_city
+#		is_planet_class = pc_ringworld_razed_energy
+#		is_planet_class = pc_ringworld_razed_farming
+#		is_planet_class = pc_ringworld_razed_mining
+#		is_planet_class = pc_ringworld_razed_training
+#		is_planet_class = pc_ringworld_razed_eco
+#		# acot
+#		is_planet_class = pc_omega_ringworld_seam
+#		is_planet_class = pc_omega_ringworld_habitable
+#		# AE
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_city
+#		}
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_ocean
+#		}
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_shrouded
+#		}
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_machine
+#		}
+#		# 星舰少女
+#		is_planet_class = pc_swgs_engineer_ringworld_habitable
 	}
 }
 
@@ -348,92 +348,92 @@ uma_is_habitat = {
 	OR = {
 		is_planet_class = pc_habitat
 		# gigastructure
-		is_planet_class = pc_flat_world
-		is_planet_class = pc_squareworld_habitable
-		is_planet_class = pc_interstellar_habitat
-		# Plentiful Traditions
-		is_planet_class = pc_mem_vazuran_habitat
-		is_planet_class = pc_habitat_robot
-		#PD - Planetary Habitats
-		is_planet_class = pc_gghab
-		is_planet_class = pc_tmhab
-		is_planet_class = pc_tmhab2
-		is_planet_class = pc_mmhab
-		is_planet_class = pc_mmhab2
-		is_planet_class = pc_bhab
-		is_planet_class = pc_bchab
-		is_planet_class = pc_mhab
-		is_planet_class = pc_fhab
-		is_planet_class = pc_fmhab
-		is_planet_class = pc_mehab
+#		is_planet_class = pc_flat_world
+#		is_planet_class = pc_squareworld_habitable
+#		is_planet_class = pc_interstellar_habitat
+#		# Plentiful Traditions
+#		is_planet_class = pc_mem_vazuran_habitat
+#		is_planet_class = pc_habitat_robot
+#		#PD - Planetary Habitats
+#		is_planet_class = pc_gghab
+#		is_planet_class = pc_tmhab
+#		is_planet_class = pc_tmhab2
+#		is_planet_class = pc_mmhab
+#		is_planet_class = pc_mmhab2
+#		is_planet_class = pc_bhab
+#		is_planet_class = pc_bchab
+#		is_planet_class = pc_mhab
+#		is_planet_class = pc_fhab
+#		is_planet_class = pc_fmhab
+#		is_planet_class = pc_mehab
 	}
 }
 
 ##PD适配
 uma_is_pd_habitat_planet = {
 	OR = {
-		is_planet_class = "pc_sandsea"
-		is_planet_class = "pc_oasis"
-		is_planet_class = "pc_mesa"
-		is_planet_class = "pc_outback"
-		is_planet_class = "pc_coastal"
-		is_planet_class = "pc_med"
-		is_planet_class = "pc_mangrove"
-		is_planet_class = "pc_wetswamp"
-		is_planet_class = "pc_fog"
-		is_planet_class = "pc_desertislands"
-		is_planet_class = "pc_hajungle"
-		is_planet_class = "pc_cenote"
-		is_planet_class = "pc_forest"
-		is_planet_class = "pc_lake"
-		is_planet_class = "pc_steppe"
-		is_planet_class = "pc_prairie"
-		is_planet_class = "pc_veld"
-		is_planet_class = "pc_semiarid"
-		is_planet_class = "pc_retinal"
-		is_planet_class = "pc_cascadian"
-		is_planet_class = "pc_hadesert"
-		is_planet_class = "pc_snow"
-		is_planet_class = "pc_highland"
-		is_planet_class = "pc_duneforest"
-		is_planet_class = "pc_mushroom"
-		is_planet_class = "pc_swamp"
-		is_planet_class = "pc_mud"
-		is_planet_class = "pc_basalt"
-		is_planet_class = "pc_subarctic"
-		is_planet_class = "pc_antarctic"
-		is_planet_class = "pc_aeolian"
-		is_planet_class = "pc_frozen_desert"
-		is_planet_class = "pc_boreal"
-		is_planet_class = "pc_glacial"
-		is_planet_class = "pc_geothermal"
-		is_planet_class = "pc_karst"
-		is_planet_class = "pc_pd_cold_cave"
-		is_planet_class = "pc_pd_dry_cave"
-		is_planet_class = "pc_reef"
-		is_planet_class = "pc_pd_archipelago"
-		is_planet_class = "pc_primal"
-		is_planet_class = "pc_salt"
-		is_planet_class = "pc_aquifer"
-		is_planet_class = "pc_coral"
-		is_planet_class = "pc_storm"
-		is_planet_class = "pc_pd_iceberg"
-		is_planet_class = "pc_cryoflora"
-		is_planet_class = "pc_lichen"
-		is_planet_class = "pc_eyeball"
-		is_planet_class = "pc_glacio"
-		is_planet_class = "pc_lanthanide"
-		is_planet_class = "pc_megaflora"
-		is_planet_class = "pc_pd_petrified"
-		is_planet_class = "pc_aquatic"
-		is_planet_class = "pc_biolumen"
-		is_planet_class = "pc_superhabitable"
-		is_planet_class = "pc_pd_dry_superhab"
-		is_planet_class = "pc_pd_cold_superhab"
-		is_planet_class = "pc_tidallylocked"
-		is_planet_class = "pc_wettidallylocked"
-		is_planet_class = "pc_supercon"
-		is_planet_class = "pc_pd_sinkhole"
+#		is_planet_class = "pc_sandsea"
+#		is_planet_class = "pc_oasis"
+#		is_planet_class = "pc_mesa"
+#		is_planet_class = "pc_outback"
+#		is_planet_class = "pc_coastal"
+#		is_planet_class = "pc_med"
+#		is_planet_class = "pc_mangrove"
+#		is_planet_class = "pc_wetswamp"
+#		is_planet_class = "pc_fog"
+#		is_planet_class = "pc_desertislands"
+#		is_planet_class = "pc_hajungle"
+#		is_planet_class = "pc_cenote"
+#		is_planet_class = "pc_forest"
+#		is_planet_class = "pc_lake"
+#		is_planet_class = "pc_steppe"
+#		is_planet_class = "pc_prairie"
+#		is_planet_class = "pc_veld"
+#		is_planet_class = "pc_semiarid"
+#		is_planet_class = "pc_retinal"
+#		is_planet_class = "pc_cascadian"
+#		is_planet_class = "pc_hadesert"
+#		is_planet_class = "pc_snow"
+#		is_planet_class = "pc_highland"
+#		is_planet_class = "pc_duneforest"
+#		is_planet_class = "pc_mushroom"
+#		is_planet_class = "pc_swamp"
+#		is_planet_class = "pc_mud"
+#		is_planet_class = "pc_basalt"
+#		is_planet_class = "pc_subarctic"
+#		is_planet_class = "pc_antarctic"
+#		is_planet_class = "pc_aeolian"
+#		is_planet_class = "pc_frozen_desert"
+#		is_planet_class = "pc_boreal"
+#		is_planet_class = "pc_glacial"
+#		is_planet_class = "pc_geothermal"
+#		is_planet_class = "pc_karst"
+#		is_planet_class = "pc_pd_cold_cave"
+#		is_planet_class = "pc_pd_dry_cave"
+#		is_planet_class = "pc_reef"
+#		is_planet_class = "pc_pd_archipelago"
+#		is_planet_class = "pc_primal"
+#		is_planet_class = "pc_salt"
+#		is_planet_class = "pc_aquifer"
+#		is_planet_class = "pc_coral"
+#		is_planet_class = "pc_storm"
+#		is_planet_class = "pc_pd_iceberg"
+#		is_planet_class = "pc_cryoflora"
+#		is_planet_class = "pc_lichen"
+#		is_planet_class = "pc_eyeball"
+#		is_planet_class = "pc_glacio"
+#		is_planet_class = "pc_lanthanide"
+#		is_planet_class = "pc_megaflora"
+#		is_planet_class = "pc_pd_petrified"
+#		is_planet_class = "pc_aquatic"
+#		is_planet_class = "pc_biolumen"
+#		is_planet_class = "pc_superhabitable"
+#		is_planet_class = "pc_pd_dry_superhab"
+#		is_planet_class = "pc_pd_cold_superhab"
+#		is_planet_class = "pc_tidallylocked"
+#		is_planet_class = "pc_wettidallylocked"
+#		is_planet_class = "pc_supercon"
+#		is_planet_class = "pc_pd_sinkhole"
 	}
 }
 

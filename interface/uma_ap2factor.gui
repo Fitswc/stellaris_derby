@@ -8,7 +8,7 @@ guiTypes = {
 		origo = center
 		moveable = yes
 		size = { width = 1780 height = 960 }
-		scale = 0.5
+#		scale = 0.5
 
 		background = {
 			name = "background"
@@ -43,7 +43,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 0 } #-94
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
 		}
 
@@ -53,7 +53,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 65 } #y-83 x+50
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
 		}
@@ -84,7 +84,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 119 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
 		}
 
@@ -94,7 +94,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 182 }#y-83 x+50
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
 		}
@@ -124,7 +124,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 238 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
 		}
 
@@ -134,7 +134,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 296 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
 		}
@@ -164,7 +164,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 357 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
 		}
 
@@ -174,7 +174,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 421 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
 		}
@@ -204,7 +204,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 475 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
 		}
 
@@ -214,7 +214,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 543 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_factor_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
 		}
@@ -245,7 +245,7 @@ guiTypes = {
 			buttonFont = "large_title_font_28"
 			position = { x = 338 y = 593 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 		}
 
 		effectButtonType = {
@@ -254,7 +254,7 @@ guiTypes = {
 			buttonFont = "large_title_font_28"
 			position = { x = 350 y = 655 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect = uma_ap_system_factor_general_numbershow_effect
 		}
 #
@@ -422,7 +422,8 @@ guiTypes = {
 
 		buttonType = {
 			name = "option_button"
-			quadTextureSprite = ""
+#			quadTextureSprite = ""
+			alwaysTransparent = yes
 			position = { x = 0 y = 0 }
 			font = "malgun_goth_24"
 			text = "OPTION_TEXT"
@@ -454,7 +455,7 @@ guiTypes = {
 		origo = center
 		moveable = yes
 		size = { width = 1780 height = 960 }
-		scale = 0.5
+#		scale = 0.5
 
 		background = {
 			name = "background"
@@ -489,7 +490,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 0 } #-94
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_realm_speed_t_tt_t
 		}
 
@@ -499,7 +500,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 65 } #y-83 x+50
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_realm_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_realm_speed_t_tt_t
 		}
@@ -530,7 +531,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 119 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_realm_power_t_tt_t
 		}
 
@@ -540,7 +541,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 182 }#y-83 x+50
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_realm_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_realm_power_t_tt_t
 		}
@@ -570,7 +571,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 238 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_realm_stamina_t_tt_t
 		}
 
@@ -580,7 +581,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 296 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_realm_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_realm_stamina_t_tt_t
 		}
@@ -610,7 +611,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 357 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_realm_wisdom_t_tt_t
 		}
 
@@ -620,7 +621,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 421 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_realm_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_realm_wisdom_t_tt_t
 		}
@@ -650,7 +651,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 338 y = 475 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			pdx_tooltip = uma_ap_system_realm_charm_t_tt_t
 		}
 
@@ -660,7 +661,7 @@ guiTypes = {
 			buttonFont = "large_title_font"
 			position = { x = 455 y = 543 }
 			orientation = "UPPER_LEFT"
-			text_color_code = "T"
+#			text_color_code = "T"
 			effect =uma_ap_system_realm_general_numbershow_effect
 			pdx_tooltip = uma_ap_system_realm_charm_t_tt_t
 		}

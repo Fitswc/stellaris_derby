@@ -238,8 +238,10 @@ special_project = {
 			change_pc = pc_nuked
 		}
 		destroy_archaeological_site = event_target:uma_bourbon_arc_site_here ##????
-		country_event = {
-			id = uma_bour_arc.5
+		owner = {
+			country_event = {
+				id = uma_bour_arc.5
+			}
 		}
 	}
 }
@@ -324,7 +326,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_FINE_RESEARH"
-	days_to_research = 360
+#	days_to_research = 360
 	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
 	picture = GFX_evt_physics_research
 	event_chain = uma_fm_full
@@ -401,7 +403,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_FINE_ANA"
-	days_to_research = 240
+#	days_to_research = 240
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_physics_research
 	tech_department = engineering_technology
@@ -639,7 +641,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_TRANGLE_STAR" #观星
-	days_to_research = 340
+#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -667,7 +669,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_ANA_CODE"
-	days_to_research = 340
+#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -694,7 +696,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_ANA_MACHINE"
-	days_to_research = 340
+#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000

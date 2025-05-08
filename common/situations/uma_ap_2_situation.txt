@@ -177,7 +177,10 @@ situation_uma_ap_2_situation_system_factor = {
 		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
-			current_stage >= uma_ap2_factor_50
+			OR = {
+				current_stage = uma_ap2_factor_75
+				current_stage = uma_ap2_factor_100
+			}
 		}
 		on_select = {
 			abort_situation = Root
@@ -194,7 +197,10 @@ situation_uma_ap_2_situation_system_factor = {
 		}
 		ai_weight = {
 			modifier = {
-				current_stage >= uma_ap2_factor_25
+				OR = {
+					current_stage = uma_ap2_factor_75
+					current_stage = uma_ap2_factor_100
+				}
 			}
 			factor = 100
 		}
@@ -360,7 +366,10 @@ situation_uma_ap_2_situation_system_realm = {
 		icon_background = GFX_situation_approach_bg_green
 		allow = {
 			custom_tooltip = uma_ap_2_situation_factor_break_tt
-			current_stage >= uma_ap2_realm_50
+			OR = {
+				current_stage = uma_ap2_factor_75
+				current_stage = uma_ap2_factor_100
+			}
 		}
 		on_select = {
 			abort_situation = Root
@@ -376,7 +385,10 @@ situation_uma_ap_2_situation_system_realm = {
 		}
 		ai_weight = {
 			modifier = {
-				current_stage >= uma_ap2_realm_50
+				OR = {
+					current_stage = uma_ap2_factor_75
+					current_stage = uma_ap2_factor_100
+				}
 			}
 			factor = 100
 		}

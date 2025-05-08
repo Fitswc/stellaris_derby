@@ -166,13 +166,17 @@ uma_fuel_purge_big = {
 		}
 		upkeep = {
 			trigger = {
-				is_robotic_species = yes
+				pop_group.species = {
+					is_robotic_species = yes
+				}
 			}
 			energy = 3
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
+				pop_group.species = {
+					is_organic_species = yes
+				}
 			}
 			food = 1
 		}

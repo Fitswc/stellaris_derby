@@ -6,7 +6,7 @@ district_uma_dormitory = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
-	default_starting_district = yes
+#	default_starting_district = yes
 
 	show_on_uncolonized = {
 		uses_district_set = uma_school_world
@@ -574,7 +574,7 @@ district_uma_dormitory_in_industrial = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
-	default_starting_district = yes
+#	default_starting_district = yes
 
 	show_on_uncolonized = {
 		uses_district_set = uma_industrial_world

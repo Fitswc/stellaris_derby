@@ -2416,7 +2416,7 @@ country_event = {
 				spawn_natural_wormhole = {
 					bypass_type = uma_gold_tunnel
 					orbit_distance = 200
-					orbit_angle = random
+					orbit_angle = { min = 1 max = 350 }
 					random_pos = yes
 					init_effect = {
 						save_global_event_target_as = uma_gold_portal_begin
@@ -2426,7 +2426,7 @@ country_event = {
 			spawn_natural_wormhole = {
 				bypass_type = uma_gold_tunnel
 				orbit_distance = 78
-				orbit_angle = random
+				orbit_angle = { min = 1 max = 350 }
 				random_pos = yes
 				init_effect = {
 					link_wormholes = event_target:uma_gold_portal_begin
@@ -2955,7 +2955,7 @@ country_event = {
 					icon = {
 						#背景
 						category = "uiu"
-						file = "flag_pointy_20.dds"
+						file = "uiu_flags02.dds"
 					}
 					background = {
 						#次背景
