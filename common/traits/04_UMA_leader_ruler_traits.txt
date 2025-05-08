@@ -30,7 +30,6 @@ leader_trait_renkouzhuanjing_rule = {
 	#	}
 	councilor_modifier = {
 		bonus_pop_growth_mult = 0.1
-		fake_pop_growth_mod = 0.1
 	}
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
@@ -68,7 +67,6 @@ leader_trait_renkouzhuanjing_rule_2 = {
 	#	}
 	councilor_modifier = {
 		bonus_pop_growth_mult = 0.2
-		fake_pop_growth_mod = 0.2
 	}
 	leader_class = { scientist official commander envoy }
 }
