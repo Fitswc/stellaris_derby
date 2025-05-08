@@ -281,6 +281,11 @@ country_event = {
 		country_event = {
 			id = uma_origin.5
 		}
+
+		##未知bug补偿
+		add_resource = {
+			food = 200
+		}
 	}
 
 }
@@ -398,6 +403,10 @@ country_event = {
 
 		country_event = {
 			id = uma_origin.5
+		}
+
+		add_resource = {
+			food = 200
 		}
 	}
 }
