@@ -13,26 +13,45 @@ uma_upgrade_kenshi_strength_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_strength_level_1
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_1
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_1 }
 		remove_country_flag = uma_kenshi_strength_level_1
 		set_country_flag = uma_kenshi_strength_level_2
+		remove_modifier = uma_kenshi_strength_level_1
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_2 }
 		remove_country_flag = uma_kenshi_strength_level_2
 		set_country_flag = uma_kenshi_strength_level_3
+		remove_modifier = uma_kenshi_strength_level_2
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_3
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_3 }
 		remove_country_flag = uma_kenshi_strength_level_3
 		set_country_flag = uma_kenshi_strength_level_4
+		remove_modifier = uma_kenshi_strength_level_3
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_4
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_4 }
 		remove_country_flag = uma_kenshi_strength_level_4
 		set_country_flag = uma_kenshi_strength_level_5
+		remove_modifier = uma_kenshi_strength_level_4
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_5
+		}
 	}
 }
 
@@ -49,26 +68,45 @@ uma_upgrade_kenshi_intelligence_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_intelligence_level_1
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_1
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_1 }
 		remove_country_flag = uma_kenshi_intelligence_level_1
 		set_country_flag = uma_kenshi_intelligence_level_2
+		remove_modifier = uma_kenshi_intelligence_level_1
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_2 }
 		remove_country_flag = uma_kenshi_intelligence_level_2
 		set_country_flag = uma_kenshi_intelligence_level_3
+		remove_modifier = uma_kenshi_intelligence_level_2
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_3
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_3 }
 		remove_country_flag = uma_kenshi_intelligence_level_3
 		set_country_flag = uma_kenshi_intelligence_level_4
+		remove_modifier = uma_kenshi_intelligence_level_3
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_4
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_4 }
 		remove_country_flag = uma_kenshi_intelligence_level_4
 		set_country_flag = uma_kenshi_intelligence_level_5
+		remove_modifier = uma_kenshi_intelligence_level_4
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_5
+		}
 	}
 }
 
@@ -85,26 +123,45 @@ uma_upgrade_kenshi_will_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_will_level_1
+		add_modifier = {
+			modifier = uma_kenshi_will_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_1 }
 		remove_country_flag = uma_kenshi_will_level_1
 		set_country_flag = uma_kenshi_will_level_2
+		remove_modifier = uma_kenshi_will_level_1
+		add_modifier = {
+			modifier = uma_kenshi_will_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_2 }
 		remove_country_flag = uma_kenshi_will_level_2
 		set_country_flag = uma_kenshi_will_level_3
+		remove_modifier = uma_kenshi_will_level_2
+		add_modifier = {
+			modifier = uma_kenshi_will_level_3
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_3 }
 		remove_country_flag = uma_kenshi_will_level_3
 		set_country_flag = uma_kenshi_will_level_4
+		remove_modifier = uma_kenshi_will_level_3
+		add_modifier = {
+			modifier = uma_kenshi_will_level_4
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_4 }
 		remove_country_flag = uma_kenshi_will_level_4
 		set_country_flag = uma_kenshi_will_level_5
+		remove_modifier = uma_kenshi_will_level_4
+		add_modifier = {
+			modifier = uma_kenshi_will_level_5
+		}
 	}
 }
 

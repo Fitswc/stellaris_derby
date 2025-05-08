@@ -631,3 +631,124 @@ uma_ap2_realm_insomnia = {
 	leader_lifespan_add = -10
 	bonus_pop_growth_mult = -0.04
 }
+
+
+uma_kenshi_strength_level_1 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.02
+	planet_jobs_minerals_produces_mult = 0.02
+	pop_housing_usage_mult = -0.025
+}
+
+uma_kenshi_strength_level_2 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.05
+	planet_jobs_minerals_produces_mult = 0.05
+	pop_housing_usage_mult = -0.05
+}
+
+uma_kenshi_strength_level_3 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.08
+	planet_jobs_minerals_produces_mult = 0.08
+	pop_housing_usage_mult = -0.075
+}
+
+uma_kenshi_strength_level_4 = {
+	hide_from_country_list = yes
+	planet_jobs_food_produces_mult = 0.11
+	planet_jobs_minerals_produces_mult = 0.11
+	pop_housing_usage_mult = -0.1
+}
+
+uma_kenshi_strength_level_5 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.15
+	planet_jobs_minerals_produces_mult = 0.15
+	pop_housing_usage_mult = -0.125
+}
+
+uma_kenshi_intelligence_level_1 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.02
+	planet_jobs_engineering_research_produces_mult = 0.02
+	planet_jobs_society_research_produces_mult = 0.02
+}
+
+uma_kenshi_intelligence_level_2 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.05
+	planet_jobs_engineering_research_produces_mult = 0.05
+	planet_jobs_society_research_produces_mult = 0.05
+}
+
+uma_kenshi_intelligence_level_3 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.08
+	planet_jobs_engineering_research_produces_mult = 0.08
+	planet_jobs_society_research_produces_mult = 0.08
+}
+
+uma_kenshi_intelligence_level_4 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.11
+	planet_jobs_engineering_research_produces_mult = 0.11
+	planet_jobs_society_research_produces_mult = 0.11
+}
+
+uma_kenshi_intelligence_level_5 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.15
+	planet_jobs_engineering_research_produces_mult = 0.15
+	planet_jobs_society_research_produces_mult = 0.15
+}
+
+
+uma_kenshi_will_level_1 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.02
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.025
+}
+
+uma_kenshi_will_level_2 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.05
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.05
+}
+
+uma_kenshi_will_level_3 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.08
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.1
+}
+
+uma_kenshi_will_level_4 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.11
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.15
+}
+
+uma_kenshi_will_level_5 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.15
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.2
+}
