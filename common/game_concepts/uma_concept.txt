@@ -41,14 +41,14 @@ concept_uma_race_course_concept = {
 }
 
 
-#concept_uma_member_f_concept = {
-#	icon = "gfx/interface/icons/text_icons/tooltip_job.dds"
-#	databank = {
-#		category = db_umamusume
-#		icon = "GFX_concept_uma_racing_couses"
-#		picture = "GFX_concept_uma_racing_couses_bg"
-#	}
-#}
+concept_uma_member_f_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_f"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
 
 
 

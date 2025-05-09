@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_zoom_level_1_umamusume_frame"
+		texturefile = "gfx/interface/timelines/frames/zoom_level_1_umamusume_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_zoom_level_2_umamusume_frame"
+		texturefile = "gfx/interface/timelines/frames/zoom_level_2_umamusume_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_zoom_level_3_umamusume_frame"
+		texturefile = "gfx/interface/timelines/frames/zoom_level_3_umamusume_frame.dds"
+	}
+
+
+
+
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_oguri_nomask"
+		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_uma_timelines_meet_oguri_nomask"
+		name = "GFX_uma_timelines_meet_oguri_zoom_1"
+		upper_left = { x = 0 y = 0 }
+    	lower_right = { x = 450 y = 150 }
+	}
+	spriteType = {
+		parent = "GFX_uma_timelines_meet_oguri_nomask"
+		name = "GFX_uma_timelines_meet_oguri_zoom_2"
+		upper_left = { x = 242 y = 30 }
+    	lower_right = { x = 352 y = 96 }
+	}
+}
