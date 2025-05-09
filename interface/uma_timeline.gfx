@@ -15,31 +15,35 @@ spriteTypes = {
 	}
 
 
+}
 
+spriteTypes = {
 	spriteType = {
 		name = "GFX_uma_timelines_meet_oguri"
 		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
-		alwaystransparent = yes
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
 	}
-
 	spriteType = {
 		name = "GFX_uma_timelines_meet_oguri_nomask"
 		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
 		alwaystransparent = yes
 	}
+#	spriteType = {
+#		parent = "GFX_uma_timelines_meet_oguri_nomask"
+#		name = "GFX_uma_timelines_meet_oguri_zoom_1"
+#		upper_left = { x = 0 y = 0 }
+#    	lower_right = { x = 450 y = 150 }
+#	}
 	spriteType = {
-		parent = "GFX_uma_timelines_meet_oguri_nomask"
-		name = "GFX_uma_timelines_meet_oguri_zoom_1"
-		upper_left = { x = 0 y = 0 }
-    	lower_right = { x = 450 y = 150 }
-	}
-	spriteType = {
-		parent = "GFX_uma_timelines_meet_oguri_nomask"
+#		parent = "GFX_uma_timelines_meet_oguri_nomask"
 		name = "GFX_uma_timelines_meet_oguri_zoom_2"
-		upper_left = { x = 143 y = 40 }
-    	lower_right = { x = 253 y = 106 }
+		texturefile = "gfx/interface/timelines/uma_timeline_oguri_zoom_2.dds"
+		alwaysTransparent = yes
+#		upper_left = { x = 143 y = 40 }
+#    	lower_right = { x = 253 y = 106 }
 	}
+
 
 	spriteType = {
 		name = "GFX_uma_timelines_meet_sweepy"
@@ -53,16 +57,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy.dds"
 		alwaystransparent = yes
 	}
+#	spriteType = {
+#		parent = "GFX_uma_timelines_meet_sweepy_nomask"
+#		name = "GFX_uma_timelines_meet_sweepy_zoom_1"
+#		upper_left = { x = 0 y = 0 }
+#   		lower_right = { x = 450 y = 150 }
+#	}
 	spriteType = {
-		parent = "GFX_uma_timelines_meet_sweepy_nomask"
-		name = "GFX_uma_timelines_meet_sweepy_zoom_1"
-		upper_left = { x = 0 y = 0 }
-    	lower_right = { x = 450 y = 150 }
-	}
-	spriteType = {
-		parent = "GFX_uma_timelines_meet_sweepy_nomask"
+#		parent = "GFX_uma_timelines_meet_sweepy_nomask"
 		name = "GFX_uma_timelines_meet_oguri_zoom_2"
-		upper_left = { x = 143 y = 40 }
-    	lower_right = { x = 253 y = 106 }
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy_zoom_2.dds"
+		alwaysTransparent = yes
+#		upper_left = { x = 143 y = 40 }
+#   	lower_right = { x = 253 y = 106 }
 	}
 }
