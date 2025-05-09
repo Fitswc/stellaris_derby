@@ -9,9 +9,34 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		parent = "GFX_origin_below_threegodness"
+		name = "GFX_origin_below_threegodness_zoom_1"
+		upper_left = { x = 46 y = 11 }
+    	lower_right = { x = 189 y = 112 }
+	}
+	spriteType = {
+		parent = "GFX_origin_below_threegodness"
+		name = "GFX_origin_below_threegodness_zoom_2"
+		upper_left = { x = 57 y = 16 }
+    	lower_right = { x = 167 y = 96 }
+	}
+
+	spriteType = {
 		name = "GFX_origin_uma_candleoff"
 		textureFile = "gfx/event_pictures/origins/origin_uma_candleoff.dds"
 		alwaysTransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_uma_candleoff"
+		name = "GFX_origin_uma_candleoff_zoom_1"
+		upper_left = { x = 46 y = 11 }
+    	lower_right = { x = 189 y = 112 }
+	}
+	spriteType = {
+		parent = "GFX_origin_uma_candleoff"
+		name = "GFX_origin_uma_candleoff_zoom_2"
+		upper_left = { x = 57 y = 16 }
+    	lower_right = { x = 167 y = 96 }
 	}
 
 
@@ -19,5 +44,18 @@ spriteTypes = {
 		name = "GFX_origin_uma_business_MAN"
 		textureFile = "gfx/event_pictures/origins/origin_uma_business_MAN_bg.dds"
 		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		parent = "GFX_origin_uma_business_MAN"
+		name = "GFX_origin_uma_business_MAN_zoom_1"
+		upper_left = { x = 46 y = 11 }
+    	lower_right = { x = 189 y = 112 }
+	}
+	spriteType = {
+		parent = "GFX_origin_uma_business_MAN"
+		name = "GFX_origin_uma_business_MAN_zoom_2"
+		upper_left = { x = 57 y = 16 }
+    	lower_right = { x = 167 y = 96 }
 	}
 }
