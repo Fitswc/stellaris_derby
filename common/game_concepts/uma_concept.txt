@@ -8,15 +8,6 @@ concept_uma_three_godnesses_concept = {
 }
 
 
-concept_uma_race_course_concept = {
-	icon = "gfx/interface/icons/buildings/building_uma_basic_racing_course.dds"
-	databank = {
-		category = db_umamusume
-		icon = "GFX_concept_uma_racing_couses"
-		picture = "GFX_concept_uma_racing_couses_bg"
-	}
-}
-
 concept_uma_three_godnesses_deposit = {
 	icon = gfx/interface/icons/deposits/d_uma_threegodness_relic_pic.dds
 	databank = {
@@ -28,12 +19,39 @@ concept_uma_three_godnesses_deposit = {
 
 concept_uma_cystal_carrot_mine = {
 	icon = "gfx/interface/icons/deposits/d_uma_crystal_carrot_mine_planet_pic.dds"
+}
+
+
+concept_uma_concept_crystal_carrot = {
+	icon = "gfx/interface/icons/concepts/uma_crystal_carrot.dds"
 	databank = {
 		category = db_umamusume
 		icon = "GFX_concept_uma_crystal_carrot"
-		picture = "GFX_evt_crystal_mining"
+		picture = "GFX_concept_uma_crystal_carrot_bg"
 	}
 }
+
+concept_uma_race_course_concept = {
+	icon = "gfx/interface/icons/buildings/building_uma_basic_racing_course.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_racing_couses"
+		picture = "GFX_concept_uma_racing_couses_bg"
+	}
+}
+
+
+#concept_uma_member_f_concept = {
+#	icon = "gfx/interface/icons/text_icons/tooltip_job.dds"
+#	databank = {
+#		category = db_umamusume
+#		icon = "GFX_concept_uma_racing_couses"
+#		picture = "GFX_concept_uma_racing_couses_bg"
+#	}
+#}
+
+
+
 
 concept_uma_industrial_district = {
 	icon = "gfx/interface/icons/districts/district_industrial.dds"

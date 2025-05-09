@@ -141,7 +141,6 @@ decision_uma_school_planet_transform = {
 				DISTRICT = district_farming
 				VARIABLE = num_farming_districts
 			}
-			change_pc = pc_uma_school
 			remove_all_districts = yes
 			uma_remove_deposits = yes
 #			clear_deposits = yes
@@ -176,10 +175,12 @@ decision_uma_school_planet_transform = {
 				add_deposit = d_phoenix_racing_course
 			}
 
+			change_pc = pc_uma_school
+
 			planet_event = {
 				id = uma_bg.19
-				days = 2
 			}
+			remove_district = district_city
 		}
 	}
 
@@ -655,7 +656,7 @@ decision_uma_industrial_planet_transform = {
 				DISTRICT = district_mining
 				VARIABLE = num_mining_dis
 			}
-			change_pc = pc_uma_industrial
+
 			remove_all_districts = yes
 			uma_remove_deposits = yes
 #			clear_deposits = yes
@@ -699,10 +700,14 @@ decision_uma_industrial_planet_transform = {
 				add_deposit = d_phoenix_racing_course
 			}
 
+			change_pc = pc_uma_industrial
+
 			planet_event = {
 				id = uma_bg.19
-				days = 2
+				days = 1
 			}
+
+			remove_district = district_city
 		}
 	}
 
