@@ -57,6 +57,19 @@ planet_event = {
 
 	option = {
 		name = umaarc.1000.a
+		owner = {
+			hidden_effect = {
+				add_timeline_event = {
+					type = timeline_umamusume
+					override_tooltip = "uma_timeline_meet_arc_threegodness_desc"
+					override_text = { "text:uma_timeline_meet_arc_threegodness" }
+					override_texture = { "background_zoom1:GFX_evt_archaeology_camp_nm" "background_zoom2:GFX_evt_archaeology_camp_nm_zoom2" }
+					override_types = { country }
+					override_id = uma_timeline_meet_arc_threegodness
+					targets = { This }
+				}
+			}
+		}
 		create_archaeological_site = uma_threegodnessrelic_digsite
 		save_event_target_as = threegodnessrelic_planet
 	}

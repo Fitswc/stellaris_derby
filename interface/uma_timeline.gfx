@@ -73,4 +73,16 @@ spriteTypes = {
 	}
 
 
+	spriteType = {
+		name = "GFX_evt_archaeology_camp_nm"
+		texturefile = "gfx/event_pictures/archaeology_camp.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_archaeology_camp_nm_zoom2"
+		texturefile = "gfx/interface/timelines/archaeology_camp_nm_zoom2.dds"
+		alwaystransparent = yes
+	}
+
 }
