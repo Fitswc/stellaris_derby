@@ -923,7 +923,7 @@ country_event = {
 				override_tooltip = "uma_timeline_meet_leader_sweepy_desc"
 				override_text = { "text:uma_timeline_meet_leader_sweepy" }
 				override_types = { country leader }
-				override_texture = { "background_zoom1:GFX_uma_timelines_meet_sweepy" "background_zoom2:GFX_uma_timelines_meet_oguri_zoom_2" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_sweepy" "background_zoom2:GFX_uma_timelines_meet_sweepy_zoom_2" }
 				override_id = uma_timeline_meet_leader_sweepy
 				targets = { Root event_target:uma_is_leader_sweepy_tonson }
 			}
