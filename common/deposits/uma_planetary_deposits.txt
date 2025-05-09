@@ -184,8 +184,7 @@ d_phoenix_school = {
 			planet_jobs_engineering_research_produces_mult = 0.2
 			planet_jobs_society_research_produces_mult = 0.2
 			planet_amenities_mult = 0.25
-			planet_housing_add = 100
-			planet_max_buildings_add = 8
+			planet_housing_add = 1000
 			job_uma_threegodness_knowledge_scholar_add = 100
 		}
 	}
@@ -211,9 +210,9 @@ d_phoenix_racing_course_relic = {
 			owner = { has_authority = auth_trainingcenter }
 		}
 		modifier = {
-			job_uma_racing_umamusume_add = 3
+			job_uma_racing_umamusume_add = 300
 			planet_uma_racing_umamusume_produces_mult = 0.1
-			job_uma_trainer_add = 1
+			job_uma_trainer_add = 100
 			job_uma_threegodness_knowledge_scholar_add = 50
 		}
 	}

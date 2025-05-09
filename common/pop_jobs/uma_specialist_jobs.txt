@@ -35,7 +35,7 @@ uma_umaidol = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 
 	
@@ -476,7 +476,7 @@ uma_sweet_master = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 	}
 
 
@@ -543,7 +543,7 @@ uma_sweet_manager = {
 
 	planet_modifier = {
 		planet_uma_sweet_master_produces_mult = 0.2
-		planet_amenities_add = 4
+		planet_amenities_add = 400
 	}
 
 	weight = {
@@ -673,7 +673,7 @@ uma_live_clothes_crafter = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 
 
@@ -892,7 +892,7 @@ uma_dormitory_administrator = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 8
+		planet_amenities_add = 800
 
 	}
 	country_modifier = {
@@ -1040,7 +1040,7 @@ uma_trader = {
 			exists = owner
 			owner = { has_tradition = tr_mercantile_commercial_enterprise }
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 

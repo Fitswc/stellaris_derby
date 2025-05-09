@@ -16,28 +16,40 @@ spriteTypes = {
 
 
 
-
-
 	spriteType = {
 		name = "GFX_uma_timelines_meet_oguri"
 		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
 		alwaystransparent = yes
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_oguri_nomask"
+		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
+		alwaystransparent = yes
 	}
 	spriteType = {
-		parent = "GFX_uma_timelines_meet_oguri"
+		parent = "GFX_uma_timelines_meet_oguri_nomask"
 		name = "GFX_uma_timelines_meet_oguri_zoom_1"
 		upper_left = { x = 0 y = 0 }
     	lower_right = { x = 450 y = 150 }
 	}
 	spriteType = {
-		parent = "GFX_uma_timelines_meet_oguri"
+		parent = "GFX_uma_timelines_meet_oguri_nomask"
 		name = "GFX_uma_timelines_meet_oguri_zoom_2"
-		upper_left = { x = 242 y = 30 }
-    	lower_right = { x = 352 y = 96 }
+		upper_left = { x = 143 y = 40 }
+    	lower_right = { x = 253 y = 106 }
 	}
 
 	spriteType = {
 		name = "GFX_uma_timelines_meet_sweepy"
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy.dds"
+		alwaystransparent = yes
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_sweepy_nomask"
 		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy.dds"
 		alwaystransparent = yes
 	}
@@ -50,7 +62,7 @@ spriteTypes = {
 	spriteType = {
 		parent = "GFX_uma_timelines_meet_sweepy_nomask"
 		name = "GFX_uma_timelines_meet_oguri_zoom_2"
-		upper_left = { x = 242 y = 30 }
-    	lower_right = { x = 352 y = 96 }
+		upper_left = { x = 143 y = 40 }
+    	lower_right = { x = 253 y = 106 }
 	}
 }
