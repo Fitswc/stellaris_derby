@@ -1540,6 +1540,8 @@ country_event = {
 			MAX_JUMPS = 5
 			UMA_INITIALIZER = "uma_fine_initializer"
 			FLAG = uma_fine_system_created
+			O_ANGLE_MIN = 0
+			O_ANGLE_MAX = 180
 			SAVE_GLOBAL_TARGET = uma_where_fine_is
 		}
 
