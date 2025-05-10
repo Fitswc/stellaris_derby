@@ -678,6 +678,8 @@ country_event = {
 				}
 
 				disable_building = building_uma_tg_industrial_complex
+
+				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
 			}
 			if = {
 				limit = {
@@ -690,10 +692,12 @@ country_event = {
 
 					building_uma_tg_alloys_maker_Automatic = {
 						disable_building = building_uma_tg_alloys_maker_Automatic
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
 					}
 
 					building_uma_tg_alloys_maker_Automatic_2 = {
 						disable_building = building_uma_tg_alloys_maker_Automatic_2
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
 					}
 				}
 			}
@@ -707,6 +711,7 @@ country_event = {
 				}
 
 				disable_building = building_uma_tg_industrial_complex
+				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
 			}
 			if = {
 				limit = {
@@ -719,10 +724,12 @@ country_event = {
 
 					building_uma_tg_custom_goods_productor = {
 						disable_building = building_uma_tg_custom_goods_productor
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
 					}
 
 					building_uma_tg_custom_goods_productor_2 = {
 						disable_building = building_uma_tg_custom_goods_productor_2
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
 					}
 				}
 			}
@@ -775,7 +782,7 @@ country_event = {
 				}
 
 				disable_building = building_uma_tg_industrial_complex
-
+				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_OTHER_RESOURCES_AT [This.GetName] IN [GetYear]"
 			}
 
 
