@@ -15,6 +15,16 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			play_sound = uma_racing_fanfare_1
+
+			add_timeline_event = {
+				type = timeline_umamusume
+				override_tooltip = "uma_timeline_hold_national_racing_desc"
+				override_text = { "text:uma_timeline_hold_national_racing" }
+				override_texture = { "background_zoom1:GFX_uma_timeline_hold_national_racing" "background_zoom2:GFX_uma_timeline_hold_national_racing_zoom_2" }
+				override_types = { country }
+				override_id = uma_timeline_hold_national_racing
+				targets = { Root }
+			}
 		}
 	}
 

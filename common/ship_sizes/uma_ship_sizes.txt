@@ -31,33 +31,33 @@ UMA_enclave_station = {
 
 ###看起来是一般的阿米巴，但其实很强，专门给堕落妈的任务刷（还不止一只）
 ###模板是原版的小阿米巴（space_amoeba)
-uma_fallen_mission_amoeba = {
-	graphical_culture = no
-	is_space_object = yes
-	max_speed = @speed_slow
-	rotation_speed = 0.03
-	collision_radius = 1.0
-	acceleration = 0.5
-	modifier = {
-		ship_evasion_add = 70
-		ship_armor_add = 1200
-	}
-	max_hitpoints = 3600
-	size_multiplier = 1
-	fleet_slot_size = 1
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	icon = ship_size_space_monster
-	class = shipclass_military
-	is_designable = no
-	pre_communications_name = "NO_COMMUNICATIONS_AMOEBA" ###这个我不知道要不要改
-
-	components_add_to_cost = no
-	resources = {
-		category = ships
-			cost = {
-				food = @salvagecostsmall
-				exotic_gases = @salvagecostsmallrare
-    		}
-	}
-}
+#uma_fallen_mission_amoeba = {
+#	graphical_culture = no
+#	is_space_object = yes
+#	max_speed = @speed_slow
+#	rotation_speed = 0.03
+#	collision_radius = 1.0
+#	acceleration = 0.5
+#	modifier = {
+#		ship_evasion_add = 70
+#		ship_armor_add = 1200
+#	}
+#	max_hitpoints = 3600
+#	size_multiplier = 1
+#	fleet_slot_size = 1
+#	section_slots = { "mid" = { locator = "part1" } }
+#	num_target_locators = 0
+#	icon = ship_size_space_monster
+#	class = shipclass_military
+#	is_designable = no
+#	pre_communications_name = "NO_COMMUNICATIONS_AMOEBA" ###这个我不知道要不要改
+#
+#	components_add_to_cost = no
+#	resources = {
+#		category = ships
+#			cost = {
+#				food = @salvagecostsmall
+#				exotic_gases = @salvagecostsmallrare
+#    		}
+#	}
+#}
