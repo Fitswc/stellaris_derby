@@ -10,13 +10,16 @@ country_event = {
 
 	trigger = {
 		empire_size > 100
-		has_country_flag = uma_curren_event_1_happened
+		NOT = {
+			has_country_flag = uma_curren_event_1_happened
+		}
 		has_authority = auth_trainingcenter
+
 	}
 
 
 	immediate = {
-
+		set_country_flag = uma_curren_event_1_happened
 	}
 
 	option = {

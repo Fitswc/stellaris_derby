@@ -418,3 +418,184 @@ building_uma_tree_holes = { #中庭的树洞
 		}
 	}
 }
+
+
+building_uma_dormitary = {
+	base_buildtime = 360
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		resort
+	}
+
+	potential = {
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			AND = {
+				exists = owner
+				owner = {
+					is_void_dweller_empire = yes
+				}
+			}
+		}
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		NOT = { has_building = building_low_tech_capital }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				OR = {
+					is_regular_empire = no
+					NOT = {
+						has_authority = auth_trainingcenter
+					}
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+
+	planet_modifier = {
+		planet_housing_add = 3500
+		planet_amenities_add = 5600
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 400
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	upgrades = {
+		"building_paradise_dome"
+	}
+}
+
+building_uma_paradise = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+		resort
+	}
+
+	potential = {
+		has_building = building_luxury_residence
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			AND = {
+				exists = owner
+				owner = {
+					is_void_dweller_empire = yes
+				}
+			}
+		}
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+			}
+			owner = {
+				OR = {
+					is_regular_empire = no
+					NOT = {
+						has_authority = auth_trainingcenter
+					}
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+
+
+	planet_modifier = {
+		planet_housing_add = 7000
+		planet_amenities_add = 8600
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 400
+			uma_crystal_carrot = 50
+		}
+		upkeep = {
+			energy = 3
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_paradise_dome"
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+		}
+	}
+}

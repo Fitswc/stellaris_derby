@@ -342,3 +342,15 @@ planet_uma_racing_ura_members = {
 #		#upkeep
 #	}
 #}
+
+planet_uma_traders = {
+	parent = planet_traders
+	modifier_category = pop_job
+	generate_add_modifiers = {
+		produces
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
