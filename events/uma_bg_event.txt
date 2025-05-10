@@ -614,3 +614,171 @@ planet_event = {
 		remove_building = building_colony_shelter
 	}
 }
+
+
+country_event = {
+	id = uma_bg.20
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 5
+	}
+#	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			is_colony = yes
+
+			OR = {
+				has_active_building = building_uma_tg_alloys_maker_Automatic
+				has_active_building = building_uma_tg_alloys_maker_Automatic_2
+				has_active_building = building_uma_tg_custom_goods_productor
+				has_active_building = building_uma_tg_custom_goods_productor_2
+				has_active_building = building_uma_tg_industrial_complex
+			}
+
+			OR = {
+				has_resource = {
+					type = minerals
+					amount <= 400
+				}
+				has_resource = {
+					type = uma_crystal_carrot
+					amount <= 400
+				}
+				has_resource = {
+					type = food
+					amount <= 400
+				}
+				has_resource = {
+					type = energy
+					amount <= 400
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				is_colony = yes
+				OR = {
+					has_active_building = building_uma_tg_alloys_maker_Automatic
+					has_active_building = building_uma_tg_alloys_maker_Automatic_2
+					has_active_building = building_uma_tg_custom_goods_productor
+					has_active_building = building_uma_tg_custom_goods_productor_2
+					has_active_building = building_uma_tg_industrial_complex
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_alloy_disable = yes
+					}
+					has_planet_flag = uma_TGAC_produce_alloys
+				}
+
+				disable_building = building_uma_tg_industrial_complex
+			}
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_alloy_disable = yes
+					}
+				}
+				switch = {
+					trigger = has_active_building
+
+					building_uma_tg_alloys_maker_Automatic = {
+						disable_building = building_uma_tg_alloys_maker_Automatic
+					}
+
+					building_uma_tg_alloys_maker_Automatic_2 = {
+						disable_building = building_uma_tg_alloys_maker_Automatic_2
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_custom_goods_disable = yes
+					}
+					has_planet_flag = uma_TGAC_produce_goods
+				}
+
+				disable_building = building_uma_tg_industrial_complex
+			}
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_custom_goods_disable = yes
+					}
+				}
+				switch = {
+					trigger = has_active_building
+
+					building_uma_tg_custom_goods_productor = {
+						disable_building = building_uma_tg_custom_goods_productor
+					}
+
+					building_uma_tg_custom_goods_productor_2 = {
+						disable_building = building_uma_tg_custom_goods_productor_2
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							owner = {
+								uma_check_factory_volatile_motes_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_molts
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_gas_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_gas
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_rare_crystal_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_crystal
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_living_materal_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_livingmat
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_dark_matter_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_darkm
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_nanites_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_nano
+						}
+					}
+				}
+
+				disable_building = building_uma_tg_industrial_complex
+
+			}
+
+
+		}
+	}
+}
