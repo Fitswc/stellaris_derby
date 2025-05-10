@@ -19,7 +19,6 @@ zone_uma_training = {
 		category = planet_zones
 		cost = {
 			minerals = @zone_cost
-
 		}
 
 		upkeep = {
@@ -28,13 +27,18 @@ zone_uma_training = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_housing_add = @zone_urban_housing_positive
+		planet_housing_add = 300
+		planet_uma_racing_umamusume_upkeep_mult = -0.2
+		job_uma_racing_umamusume_add = 200
+		job_uma_racing_ura_members_add = 300
+		job_uma_trainer_add = 100
 	}
 
 	max_buildings = 3
 
 	included_building_sets = {
 		uma_racing
+		uma_urban
 	}
 
 	excluded_building_sets = {

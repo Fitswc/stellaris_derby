@@ -61,6 +61,18 @@ decision_uma_hold_planet_racing = {
 				days = 30
 				random = 10
 			}
+
+			From = {
+				add_timeline_event = {
+					type = timeline_umamusume
+					override_tooltip = "uma_timeline_held_planet_racing_desc"
+					override_text = { "text:uma_timeline_held_planet_racing" }
+					override_texture = { "background_zoom1:GFX_uma_timeline_held_planet_racing" "background_zoom2:GFX_uma_timeline_held_planet_racing_zoom_2" }
+					override_types = { country planet }
+					override_id = uma_timeline_held_planet_racing
+					targets = { This Root }
+				}
+			}
 		}
 	}
 

@@ -536,6 +536,16 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
+
+			add_timeline_event = {
+				type = timeline_umamusume
+				override_tooltip = "uma_timeline_meet_leader_ad_desc"
+				override_text = { "text:uma_timeline_meet_leader_ad" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_ad" "background_zoom2:GFX_uma_timelines_meet_ad_zoom_2" }
+				override_types = { country leader }
+				override_id = uma_timeline_meet_leader_ad
+				targets = { Root event_target:uma_is_leader_mejro_ardan }
+			}
 		}
 	}
 
