@@ -2,22 +2,22 @@ namespace = uma_mejro_ardan
 
 
 country_event = {
-	id = uma_mejro_ardan.0
+	id = uma_mejro_ardan.999
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	immediate = {
-		log = UMA_ARDAN_RIFT_GENERATED
 		random_system = {
 			limit = {
 				distance = {
 					source = root.solar_system
-					min_jumps = 4
-					max_jumps = 2
+					min_jumps = 1
+					max_jumps = 3
 				}
 			}
 			set_star_flag = uma_ardan_system
+			save_global_event_target_as = uma_ad_sys
 			spawn_astral_rift = {
 				random_pos = yes
 				orbit_distance = 100
@@ -29,6 +29,7 @@ country_event = {
 					save_global_event_target_as = uma_ad_ar
 				}
 			}
+			log = "UMA_ARDAN_RIFT_GENERATED AT [This.GetName]"
 		}
 	}
 }

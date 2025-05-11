@@ -9,7 +9,6 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		log = UMA_CHEVAL_RIFT_GENERATED
 		random_system = {
 			limit = {
 				distance = {
@@ -27,6 +26,7 @@ country_event = {
 				id = uma_ar_cheval
 				spawn_sound = no
 			}
+			log = "UMA_CHEVAL_RIFT_GENERATED AT [This.GetName]"
 		}
 	}
 }
