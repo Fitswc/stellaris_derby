@@ -361,6 +361,10 @@ uma_curren_build_research_departure = {
 		has_authority = auth_trainingcenter
 
 		has_country_flag = uma_curren_build_research_departure_allow_edicts
+
+		NOT = {
+			has_country_flag = uma_curren_edict_not_available_at_all
+		}
 	}
 
 	allow = {
@@ -369,6 +373,7 @@ uma_curren_build_research_departure = {
 
 	effect = {
 		hidden_effect = {
+			set_country_flag = uma_curren_edict_not_available_at_all
 			enable_special_project = {
 				name = uma_curren_build_research_dep
 				owner = Root
