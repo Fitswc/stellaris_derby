@@ -1086,21 +1086,24 @@ country_event = {
 					set_aggro_range = 300
 
 
-					queue_actions = { #崩溃？
-						repeat = {
-							find_closest_system = {
-								trigger = {
-									id = uma_curren_trigger.1
-									owner = {
-										has_authority = auth_trainingcenter
-									}
+					add_modifier = {
+						modifier = uma_curren_ship_modifier
+					}
+
+					queue_actions = {
+						#崩溃？
+						find_closest_system = {
+							trigger = {
+								id = uma_curren_trigger.1
+								owner = {
+									has_authority = auth_trainingcenter
 								}
-								found_system = {
-									wait = {
-										duration = 50
-									}
-									move_to = This
+							}
+							found_system = {
+								wait = {
+									duration = 50
 								}
+								move_to = This
 							}
 						}
 					}
