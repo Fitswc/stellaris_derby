@@ -1080,27 +1080,29 @@ country_event = {
 							graphical_culture = "extra_dimensional_01"
 						}
 					}
+					add_modifier = {
+						modifier = uma_curren_ship_modifier
+					}
 
 					set_fleet_stance = aggressive
 					set_aggro_range_measure_from = self
 					set_aggro_range = 300
 
 
-					queue_actions = { #崩溃？
-						repeat = {
-							find_closest_system = {
-								trigger = {
-									id = uma_curren_trigger.1
-									owner = {
-										has_authority = auth_trainingcenter
-									}
+					queue_actions = {
+						#崩溃？
+						find_closest_system = {
+							trigger = {
+								id = uma_curren_trigger.1
+								owner = {
+									has_authority = auth_trainingcenter
 								}
-								found_system = {
-									wait = {
-										duration = 50
-									}
-									move_to = This
+							}
+							found_system = {
+								wait = {
+									duration = 50
 								}
+								move_to = This
 							}
 						}
 					}
