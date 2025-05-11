@@ -2629,7 +2629,7 @@ building_uma_tg_alloys_maker_Automatic = {
 			uma_crystal_carrot = 100
 		}
 		upkeep = {
-			minerals = 5
+			minerals = 2
 			uma_crystal_carrot = 0.3
 			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
 #			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
@@ -2637,7 +2637,7 @@ building_uma_tg_alloys_maker_Automatic = {
 		}
 
 		produces = {
-			alloys = 8
+			alloys = 4
 #			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
 			multiplier =value:uma_tg_alloys_maker_Automatic_upkeep_sv
 #			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
@@ -2721,7 +2721,7 @@ building_uma_tg_alloys_maker_Automatic_2 = {
 			uma_crystal_carrot = 100
 		}
 		upkeep = {
-			minerals = 8
+			minerals = 4
 			uma_crystal_carrot = 0.5
 			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
 #			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
@@ -2729,7 +2729,7 @@ building_uma_tg_alloys_maker_Automatic_2 = {
 		}
 
 		produces = {
-			alloys = 12
+			alloys = 8
 #			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
 			multiplier =value:uma_tg_alloys_maker_Automatic_upkeep_sv
 #			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
@@ -2811,13 +2811,13 @@ building_uma_tg_custom_goods_productor = {
 			uma_crystal_carrot = 100
 		}
 		upkeep = {
-			food = 5
+			food = 2
 			uma_crystal_carrot = 0.4
 			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
 			#Mark to add an adjustment of upkeep resource
 		}
 		produces = {
-			consumer_goods = 8
+			consumer_goods = 4
 			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
 		}
 	}
@@ -2899,13 +2899,13 @@ building_uma_tg_custom_goods_productor_2 = {
 			uma_crystal_carrot = 100
 		}
 		upkeep = {
-			food = 8
+			food = 4
 			uma_crystal_carrot = 0.6
 			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
 			#Mark to add an adjustment of upkeep resource
 		}
 		produces = {
-			consumer_goods = 14
+			consumer_goods = 8
 			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
 		}
 	}

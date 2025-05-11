@@ -1004,9 +1004,9 @@ country_event = {
 			rounded = yes
 		}
 
-		change_variable = {
+		divide_variable = {
 			which = uma_curren_num_ship_having
-			value = -5
+			value = 5
 		}
 
 		random_system_within_border = {
