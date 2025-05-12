@@ -449,6 +449,7 @@ building_uma_dormitary = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
+			has_authority = auth_trainingcenter
 		}
 		NOT = { has_building = building_low_tech_capital }
 	}
@@ -521,7 +522,7 @@ building_uma_paradise = {
 	}
 
 	potential = {
-		has_building = building_luxury_residence
+		has_building = building_uma_dormitary
 		OR = {
 			NOT = { is_planet_class = pc_habitat }
 			AND = {
