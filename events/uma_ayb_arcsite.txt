@@ -209,8 +209,8 @@ country_event = {
 
 		add_timeline_event = {
 			type = timeline_umamusume
-			override_tooltip = "uma_timeline_meet_leader_oguri_desc"
-			override_text = { "text:uma_timeline_meet_leader_oguri" }
+			override_tooltip = "uma_timeline_meet_leader_ayb_desc"
+			override_text = { "text:uma_timeline_meet_leader_ayb" }
 			override_texture = { "background_zoom1:GFX_uma_timelines_meet_ayb" "background_zoom2:GFX_uma_timelines_meet_ayb_zoom_2" }
 			override_types = { country leader }
 			override_id = uma_timeline_meet_leader_ayb
@@ -244,7 +244,7 @@ country_event = {
 	immediate = {
 		country_event = {
 			id = uma_ayb_arc.7
-			days = 740
+			days = 1740
 			random = 20
 		}
 		set_country_flag = uma_ayb_arc_happened
