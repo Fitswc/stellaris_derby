@@ -1337,7 +1337,7 @@ uma_trait_sp_curren_spark_soujio = {
 	inline_script = {
 		script = trait/icon
 		CLASS = offcical
-		ICON = "GFX_uma_scientists_trait_sp_sweep"
+		ICON = "GFX_uma_governor_trait_sp_curren"
 		RARITY = common
 		COUNCIL = no
 		TIER = 1
@@ -1362,3 +1362,32 @@ uma_trait_sp_curren_spark_soujio = {
 	initial = no
 	randomized = no
 }
+
+
+uma_scientist_trait_sp_Ardan_cap = {
+    inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = scientist                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_uma_governor_trait_sp_ad"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = none                                                            #等级
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.5
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.50
+		ship_anomaly_research_speed_mult = 0.50
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_excavation_speed_mult = 0.5
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.5
+		num_tech_alternatives_add = 1
+	}
+	leader_class = { scientist }
+	initial = no
+    randomized = no
+}
+

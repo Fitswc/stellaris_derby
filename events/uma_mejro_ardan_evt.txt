@@ -41,7 +41,7 @@ astral_rift_event = {
 	is_triggered_only = yes
 	astral_rift = yes
 	show_sound = event_wind_ruins #placeholder
-	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	picture =GFX_evt_astral_rift_crystal_3#placeholder
 	difficulty = @astral_rift_initial_difficulty
 
 	option = {
@@ -128,7 +128,7 @@ astral_rift_event = {
 	is_triggered_only = yes
 	astral_rift = yes
 	show_sound = event_wind_ruins #placeholder
-	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	picture = GFX_evt_intelligence_report#placeholder
 	difficulty = @astral_rift_initial_difficulty
 
 	option = {
@@ -160,7 +160,7 @@ astral_rift_event = {
 	is_triggered_only = yes
 	astral_rift = yes
 	show_sound = event_wind_ruins #placeholder
-	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	picture = GFX_evt_synth_fertility#placeholder
 	difficulty = @astral_rift_initial_difficulty
 
 	option = {
@@ -217,7 +217,7 @@ country_event = {
 		text = uma_mejro_ardan.6.desc_b
 	}
 	is_triggered_only = yes
-	picture = GFX_evt_uma_kobe
+	picture = GFX_evt_uma_ad_hospital
 
 	immediate = {
 
@@ -240,7 +240,7 @@ country_event = {
 	title = uma_mejro_ardan.7.title
 	desc = uma_mejro_ardan.7.desc
 	is_triggered_only = yes
-	picture = GFX_evt_uma_kobe
+	picture = GFX_evt_uma_ad_in_flowers
 
 	immediate = {
 
@@ -248,6 +248,12 @@ country_event = {
 
 	option = {
 		name = uma_mejro_ardan.7.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.8
+				days = 10
+			}
+		}
 
 	}
 }
@@ -404,7 +410,7 @@ country_event = {
 	title = uma_mejro_ardan.13.title
 	desc = uma_mejro_ardan.13.desc
 	is_triggered_only = yes
-	picture = GFX_evt_uma_kobe
+	picture = GFX_evt_uma_satono_school
 
 	immediate = {
 
@@ -434,7 +440,7 @@ country_event = {
 
 country_event = {
 	id = uma_mejro_ardan.14
-	title = CHEVAL
+	title = ARDAN
 	desc = uma_mejro_ardan.14.desc
 	is_triggered_only = yes
 	location = event_target:uma_is_the_first_capital
@@ -515,12 +521,13 @@ country_event = {
 		}
 		hidden_effect = {
 			last_created_leader = {
-				change_leader_portrait = "76c"
+				change_leader_portrait = "49c"
 				uma_initialize_leader_yaruki_effect = yes
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_mejro_ardan
 				save_global_event_target_as = uma_is_leader_mejro_ardan
 				set_leader_flag = legendary_leader
+				add_experience = 30000
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
@@ -577,7 +584,7 @@ country_event = {
 	title = uma_mejro_ardan.15.title
 	desc = uma_mejro_ardan.15.desc
 	is_triggered_only = yes
-	picture = GFX_evt_uma_kobe
+	picture = GFX_evt_uma_satono_school
 
 	immediate = {
 		random_system = {

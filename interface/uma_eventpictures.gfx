@@ -697,5 +697,18 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "GFX_evt_uma_ad_hospital"
+		textureFile = "gfx/event_pictures/uma_ad_hospital.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_ad_in_flowers"
+		textureFile = "gfx/event_pictures/uma_ad_inflowers.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 }

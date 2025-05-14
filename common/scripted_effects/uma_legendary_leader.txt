@@ -430,16 +430,18 @@ uma_create_leader_ardan = {
 		custom_description = uma_ardan_backstory
 
 		skip_background_generation = yes
-		skill = 4
+		skill = 2
 		set_age = 15
 		traits = {
-
+			0 = leader_trait_uma_generic
+			1 = uma_scientist_trait_sp_Ardan_cap
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_mejro_ardan
 			save_global_event_target_as = uma_is_leader_mejro_ardan
 			set_leader_flag = legendary_leader
+			change_leader_portrait = 49c
 		}
 	}
 }
@@ -462,7 +464,7 @@ uma_create_leader_curren = {
 		skill = 4
 		set_age = 15
 		traits = {
-			3 = leader_trait_uma_generic
+			0 = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
