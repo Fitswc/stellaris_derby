@@ -342,7 +342,10 @@ building_uma_top_racing_course = {
 building_uma_tree_holes = { #中庭的树洞
 	base_buildtime = 300
 	category = unity
-	base_cap_amount = 1
+#	base_cap_amount = 1
+	planet_limit {
+		base = 1
+	}
 
 	building_sets = {
 		uma_racing

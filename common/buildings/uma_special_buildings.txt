@@ -8,7 +8,10 @@
 building_uma_nice_nature_no_restaurant = {
 	base_buildtime = 300
 	category = unity
-	base_cap_amount = 1
+#	base_cap_amount = 1
+	planet_limit {
+		base = 1
+	}
 
 	building_sets = {
 		uma_urban
@@ -139,7 +142,10 @@ building_uma_nice_nature_no_restaurant = {
 
 building_realm_planetary_shield_generator = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+#	base_cap_amount = 1
+	planet_limit {
+		base = 1
+	}
 	position_priority = 100
 	can_be_ruined = no
 	category = army

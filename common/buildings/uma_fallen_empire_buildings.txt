@@ -30,7 +30,10 @@ building_capital_central = { #首都管理中枢
 	base_buildtime = @b2_time
 	can_build = no
 	category = unity
-	base_cap_amount = 1
+#	base_cap_amount = 1
+	planet_limit {
+		base = 1
+	}
 	icon = building_fortress
 
 	potential = {
@@ -58,7 +61,10 @@ building_virtual_real_central = { #拟真世界中枢
 	base_buildtime = @b2_time
 	can_build = no
 	category = unity
-	base_cap_amount = 1
+#	base_cap_amount = 1
+	planet_limit {
+		base = 1
+	}
 	icon = building_fortress
 
 	potential = {
@@ -88,7 +94,10 @@ building_automatic_central = { #自动化设备中枢
 	base_buildtime = @b2_time
 	can_build = no
 	category = unity
-	base_cap_amount = 1
+#	base_cap_amount = 1
+	planet_limit {
+		base = 1
+	}
 	icon = building_fortress
 
 	potential = {
