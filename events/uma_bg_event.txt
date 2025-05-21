@@ -789,3 +789,54 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = uma_bg.21
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			days_passed <= 3600
+			has_civic = civic_uma_win_variation
+			From = {
+				defender = {
+					is_country_type = default
+				}
+				attacker = {
+					has_authority = auth_trainingcenter
+				}
+				OR = {
+					is_war_participant = {
+						who = Root
+						side = attackers
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_variation_early_war_buff
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bg.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_civic = civic_uma_win_variation
+
+		has_modifier = uma_variation_early_war_buff
+	}
+
+	immediate = {
+		remove_modifier = uma_variation_early_war_buff
+	}
+}

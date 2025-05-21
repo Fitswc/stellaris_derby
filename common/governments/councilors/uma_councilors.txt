@@ -313,3 +313,111 @@ councilor_uma_aston_machan = {
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
+
+councilor_uma_vivlos_shopping = {
+	leader_class = { official }
+	civic = civic_uma_vivlos_shopping
+
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		planet_civilians_trade_produces_add = 2.0
+	}
+
+	icon = "GFX_icon_councilor_state"
+}
+
+councilor_uma_ayb_star_watcher = {
+	leader_class = { scientist }
+	civic = civic_uma_ayb_star_watcher
+
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+		}
+	}
+
+	modifier = {
+		ship_science_speed_mult = 0.3
+		planet_colony_development_speed_mult = 0.08
+	}
+
+	icon = "GFX_icon_councilor_state"
+}
+
+councilor_uma_cheval_civillian_workshop = {
+	leader_class = { scientist }
+	civic = civic_uma_cheval_civillian_workshop
+
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+		}
+	}
+
+	modifier = {
+		planet_civilians_trade_produces_add = 0.4
+	}
+
+
+	icon = "GFX_icon_councilor_research"
+}
+
+councilor_uma_matikanetannhauser_radio = {
+	leader_class = { official }
+	civic = civic_uma_matikanetannhauser_radio
+
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		pop_promotion_time_mult = -0.1
+		pop_demotion_time_mult = -0.1
+	}
+
+
+	icon = "GFX_icon_councilor_state"
+}
+
+councilor_uma_luckey_geo_training = {
+	leader_class = { official }
+	civic = civic_uma_luckey_geo_training
+
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		pop_housing_usage_mult = -0.05
+	}
+
+
+	icon = "GFX_icon_councilor_research"
+}
+
+councilor_uma_win_variation = {
+	leader_class = { commander }
+	civic = civic_uma_win_variation
+
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+		}
+	}
+
+	modifier = {
+		ship_military_speed_mult = 0.05
+	}
+
+
+	icon = "GFX_icon_councilor_research"
+}
