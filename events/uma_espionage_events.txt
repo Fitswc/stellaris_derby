@@ -1,0 +1,67 @@
+namespace = uma_espionage
+
+espionage_operation_event = {
+	id = uma_espionage.1
+	is_triggered_only = yes
+	title = uma_espionage.1.title
+	desc = uma_espionage.1.desc
+	espionage_operation = yes
+	show_sound = event_default
+	picture = GFX_evt_decryption
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+
+}
+
+
+espionage_operation_event = {
+	id = uma_espionage.2
+	is_triggered_only = yes
+	title = uma_espionage.2.title
+	desc = uma_espionage.2.desc
+	espionage_operation = yes
+	show_sound = event_default
+	picture = GFX_evt_decryption
+
+	option = {
+		name = uma_espionage.2.a
+
+		target = {
+			capital_scope = {
+				random_owned_pop_group = {
+					export_trigger_value_to_variable = {
+						trigger = pop_group_size
+						variable = uma_ep_op_target_pop_group_size
+					}
+
+					multiply_variable = {
+						which = uma_ep_op_target_pop_group_size
+						value = 0.4
+					}
+					kill_pop_group = {
+						pop_group = This
+						percentage = 0.4
+					}
+				}
+			}
+		}
+
+		owner = {
+			capital_scope = {
+
+				set_variable = {
+					which = uma_ep_op_target_pop_group_size_ee
+					value = Root.target.capital_scope.uma_ep_op_target_pop_group_size
+				}
+
+				create_pop_group = {
+					species = This.owner_main_species
+					category = civilian
+					size = uma_ep_op_target_pop_group_size_ee
+				}
+			}
+		}
+	}
+}

@@ -32,33 +32,41 @@
 # this = operation
 # from = operation target
 
-operation_gather_information = {
+operation_uma_pop_looting_and_transform = {
 	target = country
-	categories = { op_cat_subterfuge }
+	categories = { op_cat_uma_pop_looting_and_transform }
 	picture = GFX_evt_spymaster
 	desc = {
 		trigger = { has_nemesis = yes }
-		text = operation_gather_information_desc
+		text = operation_uma_pop_looting_and_transform_desc
 	}
 	desc = {
 		trigger = { has_nemesis = no }
-		text = operation_gather_information_no_dlc_desc
+		text = operation_uma_pop_looting_and_transform_no_dlc_desc
 	}
-	stages = 1
+	stages = 3
 
 	resources = {
 		category = operations
 		cost = {
-			influence = 20
+			alloys = 5
 		}
 		upkeep = {
 			energy = 4
 		}
 	}
 
-	spy_power_cost = 10
+	spy_power_cost = 15
 	potential = {
-		target = { is_country_type = default }
+		owner = {
+			num_communications > 3
+			#has_origin =
+		}
+		target = {
+			is_country_type = default
+			is_fallen_empire = no
+		}
+
 	}
 	allow = {
 		custom_tooltip = {
@@ -68,8 +76,14 @@ operation_gather_information = {
 	}
 	stage = {
 		difficulty = @diff_t0
-		icon = GFX_espionage_chapter_icon_document
-		event = operation.7000
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = uma_espionage.1
+	}
+
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_icon_motion
+		event = uma_espionage.2
 	}
 
 	on_roll_failed = {
@@ -84,5 +98,74 @@ operation_gather_information = {
 				days = @operationTargetedByTimer
 			}
 		}
+	}
+}
+
+operation_diplomatic_incident = {
+	target = none
+	categories = { op_cat_manipulation op_cat_diplomacy }
+	picture = GFX_evt_tradedeal
+	desc = operation_diplomatic_incident_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			influence = 30
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	spy_power_cost = 25
+	potential = {
+#		has_nemesis = yes
+
+		owner = {
+			num_communications > 3
+			#has_origin =
+		}
+		target = {
+			is_country_type = default
+			is_homicidal = no
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = saturated_with_scandals
+			NOT = { has_spynetwork_flag = operation_diplomatic_incident_timer }
+		}
+		target = {
+			num_communications > 3
+			custom_tooltip = {
+				fail_text = gestalts_are_boring
+				is_gestalt = no
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = operation.8200
+	}
+	stage = {
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_motion
+		event = operation.8205
+	}
+	stage = {
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_target
+		event = operation.8210
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+	}
+	on_create = {
 	}
 }
