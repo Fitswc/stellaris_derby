@@ -33,8 +33,8 @@
 # from = operation target
 
 operation_uma_pop_looting_and_transform = {
-	target = country
-	categories = { op_cat_uma_pop_looting_and_transform }
+	target = none
+	categories = { op_cat_uma_pop_looting_and_transform op_cat_government }
 	picture = GFX_evt_spymaster
 	desc = {
 		trigger = { has_nemesis = yes }
@@ -75,13 +75,13 @@ operation_uma_pop_looting_and_transform = {
 		}
 	}
 	stage = {
-		difficulty = @diff_t0
+		difficulty = 2
 		icon = GFX_espionage_chapter_icon_surveillance
 		event = uma_espionage.1
 	}
 
 	stage = {
-		difficulty = @diff_t2
+		difficulty = 2
 		icon = GFX_espionage_chapter_icon_motion
 		event = uma_espionage.2
 	}
@@ -101,71 +101,89 @@ operation_uma_pop_looting_and_transform = {
 	}
 }
 
-operation_diplomatic_incident = {
-	target = none
-	categories = { op_cat_manipulation op_cat_diplomacy }
-	picture = GFX_evt_tradedeal
-	desc = operation_diplomatic_incident_desc
-	stages = 3
 
-	resources = {
-		category = operations
-		cost = {
-			influence = 30
-		}
-		upkeep = {
-			energy = 5
-		}
-	}
-
-	spy_power_cost = 25
-	potential = {
-#		has_nemesis = yes
-
-		owner = {
-			num_communications > 3
-			#has_origin =
-		}
-		target = {
-			is_country_type = default
-			is_homicidal = no
-		}
-	}
-	allow = {
-		custom_tooltip = {
-			fail_text = saturated_with_scandals
-			NOT = { has_spynetwork_flag = operation_diplomatic_incident_timer }
-		}
-		target = {
-			num_communications > 3
-			custom_tooltip = {
-				fail_text = gestalts_are_boring
-				is_gestalt = no
-			}
-		}
-		custom_tooltip = {
-			is_running_espionage_operation = no
-			fail_text = operation_one_at_a_time
-		}
-	}
-	stage = {
-		difficulty = @diff_t1
-		icon = GFX_espionage_chapter_icon_surveillance
-		event = operation.8200
-	}
-	stage = {
-		difficulty = @diff_t1
-		icon = GFX_espionage_chapter_icon_motion
-		event = operation.8205
-	}
-	stage = {
-		difficulty = @diff_t1
-		icon = GFX_espionage_chapter_icon_target
-		event = operation.8210
-	}
-	on_roll_failed = {
-		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
-	}
-	on_create = {
-	}
-}
+#operation_smuggle_pops = {
+#	target = none
+#	categories = { op_cat_provocation op_cat_government }
+#	picture = GFX_evt_conclave
+#	desc = operation_smuggle_pops_desc
+#	stages = 3
+#
+#	resources = {
+#		category = operations
+#		cost = {
+#			influence = 120
+#		}
+#		upkeep = {
+#			energy = 10
+#		}
+#	}
+#
+#	spy_power_cost = 55
+#	potential = {
+#		has_biogenesis_dlc = yes
+#		target = {
+#			OR = {
+#				is_country_type = default
+#				is_country_type = primitive
+#			}
+#		}
+#	}
+#	allow = {
+#		custom_tooltip = {
+#			is_running_espionage_operation = no
+#			fail_text = operation_one_at_a_time
+#		}
+#
+#		custom_tooltip = {
+#			NAND = {
+#				owner = {
+#					has_ethic = ethic_fanatic_egalitarian
+#				}
+#				target = {
+#					has_ethic = ethic_fanatic_egalitarian
+#				}
+#			}
+#			fail_text = smuggle_pops_also_fanatic_egalitarians
+#		}
+#
+#		custom_tooltip = {
+#			target = {
+#				count_owned_pop_amount = {
+#					limit = {
+#						can_be_smuggled = yes
+#					}
+#					count > 500
+#				}
+#			}
+#			fail_text = smuggle_pops_not_enough_pops
+#		}
+#	}
+#
+#	stage = { #Install operatives
+#		difficulty = @diff_t3
+#		icon = GFX_espionage_chapter_icon_surveillance
+#		event = bio.900
+#	}
+#	stage = { #Hide dissidents
+#		difficulty = @diff_t3
+#		icon = GFX_espionage_chapter_icon_target
+#		event = bio.905
+#	}
+#	stage = { #Exfiltration
+#		difficulty = @diff_t5
+#		icon = GFX_espionage_chapter_icon_motion
+#		event = bio.910
+#	}
+#	on_roll_failed = {
+#		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+#	}
+#	on_create = {
+#		target = {
+#			set_timed_country_flag = {
+#				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+#				days = @operationTargetedByTimer
+#			}
+#		}
+#	}
+#}

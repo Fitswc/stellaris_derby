@@ -31,6 +31,9 @@ espionage_operation_event = {
 		target = {
 			capital_scope = {
 				random_owned_pop_group = {
+					limit = {
+						is_pop_category = civilian
+					}
 					export_trigger_value_to_variable = {
 						trigger = pop_group_size
 						variable = uma_ep_op_target_pop_group_size
@@ -44,6 +47,8 @@ espionage_operation_event = {
 						pop_group = This
 						percentage = 0.4
 					}
+
+					save_event_target_as = uma_pop_group_will_be_move
 				}
 			}
 		}
@@ -53,7 +58,7 @@ espionage_operation_event = {
 
 				set_variable = {
 					which = uma_ep_op_target_pop_group_size_ee
-					value = Root.target.capital_scope.uma_ep_op_target_pop_group_size
+					value = event_target:uma_pop_group_will_be_move.uma_ep_op_target_pop_group_size
 				}
 
 				create_pop_group = {
