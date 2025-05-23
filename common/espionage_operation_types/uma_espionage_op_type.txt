@@ -35,7 +35,7 @@
 operation_uma_pop_looting_and_transform = {
 	target = none
 	categories = { op_cat_uma_pop_looting_and_transform op_cat_government }
-	picture = GFX_evt_spymaster
+	picture = GFX_evt_uma_zf_glx_rob
 	desc = {
 		trigger = { has_nemesis = yes }
 		text = operation_uma_pop_looting_and_transform_desc
@@ -44,7 +44,7 @@ operation_uma_pop_looting_and_transform = {
 		trigger = { has_nemesis = no }
 		text = operation_uma_pop_looting_and_transform_no_dlc_desc
 	}
-	stages = 3
+	stages = 2
 
 	resources = {
 		category = operations

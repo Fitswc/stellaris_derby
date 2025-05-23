@@ -1,17 +1,26 @@
 ﻿l_simp_chinese:
 
-op_cat_uma_pop_looting: "人口掠夺与同化"
-op_cat_uma_pop_looting_desc: "不够人?抢!把他们变成马马!"
+op_cat_uma_pop_looting_and_transform: "人口掠夺与同化"
+op_cat_uma_pop_looting_and_transform_desc: "不够人?抢!把他们变成马马!"
 
 
 operation_uma_pop_looting_and_transform: "人口掠夺与同化"
-operation_uma_pop_looting_and_transform_desc: ""
-operation_uma_pop_looting_and_transform_no_dlc_desc: ""
-
+operation_uma_pop_looting_and_transform_desc: "我们的特工将会在这个国家的首都上随机挑选一些意志动摇的，没有工作的平民，然后在睡梦中将他们偷偷带走并在我们的秘密同化设施中让他们不得不自愿变成马娘！嘻嘻！\n这个行动可能有悖于线人的利益"
+operation_uma_pop_looting_and_transform_no_dlc_desc: "我们的特工将会在这个国家的首都上随机挑选一些意志动摇的，没有工作的平民，然后在睡梦中将他们偷偷带走并在我们的秘密同化设施中让他们不得不自愿变成马娘！嘻嘻！"
+operation_uma_pop_looting_and_transform_on_success: "对方帝国首都平民阶级人口的40%将会变成马娘加入我们的平民阶级"
 
 uma_espionage.1.title: "锁定人口"
 uma_espionage.1.desc: "我们的特工在[Root.Target]上确定了一批将被拐走的人员名单。这些外星人将会被我们无情转化为马娘！"
 
-uma_espionage.2.title: ""
-uma_espionage.2.desc: ""
-uma_espionage.2.a: ""
+uma_espionage.2.title: "成为我们中的一员"
+uma_espionage.2.desc: "这些外星平民被我们在睡梦中悄悄带走，并装上了送往我们秘密同化装置的运输船。当他们醒来后，他们就会惊喜的发现，自己已经成为了马娘，我们将其经过合理的洗脑教育后将他们融入到我们的平民阶级中。现在除了他们需要重新安家外似乎没有其他的问题"
+uma_espionage.2.a: "我们下次还来"
+
+
+mod_op_cat_uma_pop_looting_and_transform_speed_mult: "人口掠夺与同化速度"
+mod_op_cat_uma_pop_looting_and_transform_difficulty_add: "人口掠夺与同化难度"
+mod_op_cat_uma_pop_looting_and_transform_difficulty_mult: "人口掠夺与同化难度"
+mod_hostile_op_cat_uma_pop_looting_and_transform_difficulty_add: "敌方人口掠夺与同化难度"
+mod_hostile_op_cat_uma_pop_looting_and_transform_difficulty_mult: "敌方人口掠夺与同化难度"
+mod_op_cat_uma_pop_looting_and_transform_skill_add: "行动技能(人口掠夺与同化)"
+mod_op_cat_uma_pop_looting_and_transform_skill_mult: "行动技能(人口掠夺与同化)"
