@@ -59,8 +59,7 @@ operation_uma_pop_looting_and_transform = {
 	spy_power_cost = 15
 	potential = {
 		owner = {
-			num_communications > 3
-			#has_origin =
+			has_origin = origin_uma_after_factor_perk
 		}
 		target = {
 			is_country_type = default
