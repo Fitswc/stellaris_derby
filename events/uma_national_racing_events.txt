@@ -6,11 +6,11 @@ namespace = uma_national_racing
 #闪光系列赛举办！
 country_event = {
 	id = uma_national_racing.1
-    title = "uma_national_racing.1.name"
-    desc = "uma_national_racing.1.desc"
-    picture = GFX_evt_uma_racing #之后要换图！
+	title = "uma_national_racing.1.name"
+	desc = "uma_national_racing.1.desc"
+	picture = GFX_evt_uma_racing #之后要换图！
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
@@ -57,11 +57,11 @@ country_event = {
 				random_owned_planet = {
 					limit = {
 						has_building = building_uma_top_racing_course
-					}			
+					}
 
 					add_modifier = {
-					modifier = uma_nation_derby_held_here
-					days = 3650
+						modifier = uma_nation_derby_held_here
+						days = 3650
 					}
 				}
 
@@ -73,11 +73,11 @@ country_event = {
 					random_owned_planet = {
 						limit = {
 							has_building = building_uma_top_racing_course
-						}			
-							
+						}
+
 						add_modifier = {
-						modifier = uma_nation_derby_held_here
-						days = 3650
+							modifier = uma_nation_derby_held_here
+							days = 3650
 						}
 					}
 				}
@@ -89,11 +89,11 @@ country_event = {
 					random_owned_planet = {
 						limit = {
 							has_building = building_uma_top_racing_course
-						}			
-							
+						}
+
 						add_modifier = {
-						modifier = uma_nation_derby_held_here
-						days = 3650
+							modifier = uma_nation_derby_held_here
+							days = 3650
 						}
 					}
 				}
@@ -108,7 +108,7 @@ country_event = {
 
 				20 = {
 					if = {
-						limit = { owner = { has_authority = auth_trainingcenter }  }
+						limit = { owner = { has_authority = auth_trainingcenter } }
 						owner = {
 							country_event = {
 								id = uma_racing_winner_appears.2
@@ -122,7 +122,7 @@ country_event = {
 
 				10 = {
 					if = {
-						limit = { owner = { has_authority = auth_trainingcenter }  }
+						limit = { owner = { has_authority = auth_trainingcenter } }
 						owner = {
 							country_event = {
 								id = uma_racing_winner_appears.3
@@ -136,7 +136,7 @@ country_event = {
 
 				5 = {
 					if = {
-						limit = { owner = { has_authority = auth_trainingcenter }  }
+						limit = { owner = { has_authority = auth_trainingcenter } }
 						owner = {
 							country_event = {
 								id = uma_racing_winner_appears.4
@@ -150,7 +150,7 @@ country_event = {
 
 				1 = {
 					if = {
-						limit = { owner = { has_authority = auth_trainingcenter }  }
+						limit = { owner = { has_authority = auth_trainingcenter } }
 						owner = {
 							country_event = {
 								id = uma_racing_winner_appears.5
@@ -176,22 +176,16 @@ country_event = {
 				has_ascension_perk = ap_uma_fly_me_to_the_star
 			}
 
-			random_list = {
-				33 = {
-					hidden_effect = {
-						set_country_flag = uma_has_triggered_nice_nature_event_chain
-						set_country_flag = uma_nice_nature_event_chain_on_action
-						set_variable = {
-							which = uma_nature_event_number_of_race_gone
-							value = 1
-						}
-					}
-				}
-				67 = {
-
+			hidden_effect = {
+				set_country_flag = uma_has_triggered_nice_nature_event_chain
+				set_country_flag = uma_nice_nature_event_chain_on_action
+				set_variable = {
+					which = uma_nature_event_number_of_race_gone
+					value = 1
 				}
 			}
 		}
+
 
 		###触发后，比赛计数###
 		if = {
