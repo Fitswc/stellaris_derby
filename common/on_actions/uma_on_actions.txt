@@ -168,14 +168,13 @@ on_planet_surveyed = {
 	events = {
 		uma_satono.400
 		uma_fz.9998
-
 	}
 }
 
 on_system_survey = {
 	random_events = {
-		40 = uma_zephyr.1
-		60 = 0
+		50 = uma_zephyr.1
+		50 = 0
 	}
 }
 
@@ -501,12 +500,18 @@ on_destroy_planet_with_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL = {
 # From = Country which communications were established with
 on_post_communications_established = {
 	events = {
-
+		uma_zephyr.40
 	}
 }
 
 on_storm_encountered = {
 	events = {
+		uma_zephyr.30
+	}
+}
 
+on_building_observation_station = {
+	events = {
+		 uma_zephyr.10
 	}
 }
