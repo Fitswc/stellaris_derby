@@ -27,6 +27,14 @@ ap_uma_fly_me_to_the_star_ap_two = {
 			fail_text = "uma_requires_first_ascension_perks_1"
 			has_ascension_perk = ap_uma_fly_me_to_the_star
 		}
+
+		custom_tooltip = {
+			fail_text = origin_uma_after_factor_perk_already
+			NOT = {
+				has_origin = origin_uma_after_factor_perk
+			}
+		}
+
 		has_technology = tech_uma_complex_keisun_test
 	}
 

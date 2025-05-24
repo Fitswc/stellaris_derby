@@ -17,6 +17,7 @@ event = {
 						has_origin = origin_uma_below_threegodness
 						has_origin = origin_uma_candleoff
 						has_origin = origin_uma_business_MAN
+						has_origin = origin_uma_after_factor_perk
 					}
 				}
 				log = UMA_ORIGINS_LAUNCH
@@ -33,6 +34,7 @@ event = {
 							has_origin = origin_uma_below_threegodness
 							has_origin = origin_uma_candleoff
 							has_origin = origin_uma_business_MAN
+							has_origin = origin_uma_after_factor_perk
 						}
 					}
 				}
@@ -148,10 +150,15 @@ country_event = {
 
 				add_blocker = {
 					type = d_city_ruins
+					blocked_deposit = random
+				}
+				add_blocker = {
+					type = d_failing_infrastructure
+					blocked_deposit = random
 				}
 			}
 			owner = {
-				add_tech_progress = {tech = tech_uma_threegodness_knowledge_first_known  progress = 0.2} # 解锁建立三女神知识研究所科技
+				add_tech_progress = { tech = tech_uma_threegodness_knowledge_first_known progress = 0.2 } # 解锁建立三女神知识研究所科技
 			}
 		}
 		else = {
@@ -232,26 +239,19 @@ country_event = {
 
 				add_blocker = {
 					type = d_city_ruins
+					blocked_deposit = random
+				}
+				add_blocker = {
+					type = d_failing_infrastructure
+					blocked_deposit = random
 				}
 			}
-			if = {
-				limit = {
-					has_origin = origin_uma_candleoff
-				}
-				add_modifier = {
-					modifier = uma_candle_off_debuff
-				}
-				add_modifier = {
-					modifier = uma_candle_off_debuff_a
-				}
-				add_modifier = {
-					modifier = uma_candle_off_debuff_b
-				}
-			}
+
 			country_event = { id = umaarc.1008 days = 10 random = 30 }
 			#之后还要触发创造考古遗迹的事件
 		}
-    }
+
+	}
 	##Anolomy Generator
 	after = {
 		log = ANOLOMIES_GENERATED
@@ -285,6 +285,33 @@ country_event = {
 		##未知bug补偿
 		add_resource = {
 			food = 200
+		}
+
+		##
+		if = {
+			limit = {
+				has_origin = origin_uma_candleoff
+			}
+			add_modifier = {
+				modifier = uma_candle_off_debuff
+			}
+			add_modifier = {
+				modifier = uma_candle_off_debuff_a
+			}
+			add_modifier = {
+				modifier = uma_candle_off_debuff_b
+			}
+		}
+		if = {
+			limit = {
+				has_origin = origin_uma_after_factor_perk
+			}
+			country_event = {
+				id = uma_ap.201
+			}
+			country_event = {
+				id = uma_ap.200
+			}
 		}
 	}
 

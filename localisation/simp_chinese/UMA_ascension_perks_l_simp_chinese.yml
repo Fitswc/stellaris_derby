@@ -7,6 +7,8 @@ ap_uma_zenshizenren_desc:0 "£uma_sd£§Y赛马娘:星海德比§!\n以往，每
 uma_will_enable_zenshizenren_ap:0 "我们将开启一个§Y特殊项目§!，以帮助§Y所有§!马娘开启§Y领域§!"
 uma_requires_technology_uma_terriroty_in_use:0 "$TRIGGER_FAIL$需要科技§Y领域启发与应用§!"
 uma_must_be_toresen_auth:0 "$TRIGGER_FAIL$必须要是§Y特雷森学院§!政体"
+origin_uma_after_factor_perk_already: "我们已知晓因子的秘密并用于强化自身"
+
 ###摘星
 ap_uma_fly_me_to_the_star:0 "摘星"
 ap_uma_fly_me_to_the_star_desc:0 "£uma_sd£§Y赛马娘:星海德比§!\n曾经，因子如同夜空中的繁星，亲切却又遥远，不可触及，她指引着每只马娘的前路，却又腼腆地拒绝接触。一代又一代科学家的努力共同搭起一道星梯，以后当孩子们想要摘下天上的星星，母亲就可以温柔地指指女儿的胸膛，“星星已经在这里了哦？”"
@@ -165,6 +167,9 @@ uma_ap_system_factor_charm_t: "魅力因子"
 uma_ap_system_factor_stamina_t: "耐力因子"
 uma_ap_system_factor_power_t: "力量因子"
 uma_ap_system_factor_speed_t: "速度因子"
+
+uma_ap_system_factor_origins_depth_t: "剩余点数: "
+uma_ap_system_factor_origins_depth_num: "[owner.uma_ap2_factor_depth_rate] "
 
 
 uma_apsystem_done_tt: "点击这里将会保存更改，且此界面只会出现一次\n [uma_apsystem_done_tt_df] "

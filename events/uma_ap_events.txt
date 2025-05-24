@@ -2029,3 +2029,70 @@ situation_event  = {
 
 
 
+country_event = {
+	id = uma_ap.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = uma_ap2_factor_power_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_speed_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_stamina_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_wisdom_rate
+			value = 0
+		}
+		set_variable = {
+			which = uma_ap2_factor_charm_rate
+			value = 0
+		}
+
+		set_variable = {
+			which = uma_ap2_factor_depth_rate
+			value = 8
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.201
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = uma_aps_origins_windows
+
+	option = {
+		name = "uma_specimen_null" #TODO:0000
+		custom_gui = uma_hiding_button
+		default_hide_option = yes
+		hidden_effect = {
+#			uma_ap2_factor_summation = yes
+
+			country_event = {
+				id = uma_ap.202
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		uma_factor_speed_add_modifier = yes
+		uma_factor_power_add_modifier = yes
+		uma_factor_charm_add_modifier = yes
+		uma_factor_stamina_add_modifier = yes
+		uma_factor_wisdom_add_modifier = yes
+	}
+}
