@@ -80,6 +80,7 @@ country_event = {
 	title = uma_zephyr.2.title
 	desc = uma_zephyr.2.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	immediate = {
 
@@ -282,6 +283,7 @@ country_event = {
 	title = uma_zephyr.11.title
 	desc = uma_zephyr.11.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_normal_school
 
 	immediate = {
 		set_country_flag = uma_zephyr_events_observer_happened
@@ -605,6 +607,7 @@ country_event = {
 	title = uma_zephyr.30.title
 	desc = uma_zephyr.30.desc
 	is_triggered_only = yes
+	picture = GFX_evt_storm_formation
 
 
 	trigger = {
@@ -737,6 +740,7 @@ country_event = {
 	title = uma_zephyr.41.title
 	desc = uma_zephyr.41.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_two
 
 
 	option = {
@@ -833,6 +837,7 @@ country_event = {
 	title = uma_zephyr.50.title
 	desc = uma_zephyr.50.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	trigger = {
 		has_country_flag = uma_zephyr_events_gudian_happened
@@ -858,6 +863,7 @@ country_event = {
 	title = uma_zephyr.51.title
 	desc = uma_zephyr.51.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_cheval_little_house
 
 	trigger = {
 

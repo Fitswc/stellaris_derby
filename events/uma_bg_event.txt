@@ -492,6 +492,16 @@ country_event = {
 					set_name = ARDAN
 				}
 			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_zephyr
+				}
+				event_target:uma_is_leader_zephyr = {
+					change_leader_portrait = 84c
+					set_name = ZEPHYR
+				}
+			}
 			###SUB
 			if = {
 				limit = {
