@@ -31,7 +31,7 @@ building_capital_central = { #首都管理中枢
 	can_build = no
 	category = unity
 #	base_cap_amount = 1
-	planet_limit {
+	planet_limit ={
 		base = 1
 	}
 	icon = building_fortress
@@ -62,7 +62,7 @@ building_virtual_real_central = { #拟真世界中枢
 	can_build = no
 	category = unity
 #	base_cap_amount = 1
-	planet_limit {
+	planet_limit ={
 		base = 1
 	}
 	icon = building_fortress
@@ -95,7 +95,7 @@ building_automatic_central = { #自动化设备中枢
 	can_build = no
 	category = unity
 #	base_cap_amount = 1
-	planet_limit {
+	planet_limit= {
 		base = 1
 	}
 	icon = building_fortress

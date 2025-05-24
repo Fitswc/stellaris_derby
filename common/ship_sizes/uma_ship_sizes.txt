@@ -144,8 +144,11 @@ uma_zephyr_science = {
 	is_space_station = no
 	icon = ship_size_science
 	base_buildtime = @science_build_time
-
-	entity = science_entity
+	ship_roles = {
+		explosive
+		explosive_stealth
+	}
+	entity = "science_ship_entity"
 
 	combat_disengage_chance = 2.0
 
@@ -164,13 +167,38 @@ uma_zephyr_science = {
 	required_component_set = "science_cloaking_components"
 	valid_target_aggressive_stance = yes
 	auto_upgrade = yes
+	is_bio_ship = no
+	available_to_everyone = no
 
 
 
 	resources = {
 		category = ships
 		cost = {
-			alloys = 100
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @science_ship_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @science_ship_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @science_ship_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = @science_upkeep_energy
@@ -181,6 +209,7 @@ uma_zephyr_science = {
 	potential_country = {
 		AND = {
 			has_authority = auth_trainingcenter
+			has_country_flag = uma_zephyr_science_allowed
 		}
 	}
 

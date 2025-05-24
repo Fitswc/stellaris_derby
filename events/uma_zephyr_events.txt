@@ -9,6 +9,9 @@ country_event = {
 	trigger = {
 		Root = {
 			has_authority = auth_trainingcenter
+			NOT = {
+				has_country_flag = uma_zephyr_events_meet_zephyr
+			}
 		}
 		From = {
 			is_surveyed = {
@@ -20,6 +23,9 @@ country_event = {
 	}
 
 	immediate = {
+		Root = {
+			set_country_flag = uma_zephyr_events_meet_zephyr
+		}
 		From = {
 			log = "UMA_ZEPHY_SURVEY_HAPPENED_AT_SURVEY_WHICH_IN_[From]"
 			# Scope check
@@ -52,15 +58,7 @@ country_event = {
 									graphical_culture = Root
 								}
 
-								set_location = {
-									target = Prev.star
-									direction = out_system
-									distance = {
-										max = 20
-										min = 15
-									}
-									angle = random
-								}
+								set_location = Prev.star
 							}
 						}
 					}
@@ -261,14 +259,7 @@ ship_event = {
 									graphical_culture = Root.fleet.owner
 								}
 
-								set_location = {
-									target = Prev
-									distance = {
-										max = 20
-										min = 15
-									}
-									angle = random
-								}
+								set_location = Prev
 							}
 						}
 					}
@@ -448,15 +439,7 @@ ship_event = {
 						}
 					}
 
-					set_location = {
-						target = This
-						direction = out_system
-						distance = {
-							max = 20
-							min = 15
-						}
-						angle = random
-					}
+					set_location = This
 					set_cloaking_active = yes
 				}
 			}
@@ -739,8 +722,8 @@ country_event = {
 	id = uma_zephyr.41
 	title = uma_zephyr.41.title
 	desc = uma_zephyr.41.desc
-	is_triggered_only = yes
 	picture = GFX_evt_uma_satono_two
+	is_triggered_only = yes
 
 
 	option = {
@@ -871,6 +854,7 @@ country_event = {
 
 	option = {
 		name = GOOD
+		custom_tooltip = uma_zephyr.51.tt
 		hidden_effect = {
 			country_event = {
 				id = uma_zephyr.52
@@ -885,6 +869,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		set_country_flag = uma_zephyr_science_allowed
 		give_specimen = { key = uma_zephyr_journy_with_zephyr }
 		hidden_effect = {
 			uma_create_leader_zephyr = yes
@@ -911,6 +896,15 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
+
+			create_message = {
+				type = UMA_NOTICE_NEWSHIP
+				localization = UMA_NOTICE_NEWSHIP_DESC
+				days = 10
+				target = Root
+			}
 		}
+
+		add_ship_design = NAME_UMA_SHIP_ZEPHYR
 	}
 }

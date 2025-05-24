@@ -6,7 +6,7 @@ building_uma_commercial_zone = {
 	base_buildtime = 200
 	category = trade
 #	base_cap_amount = 1 #Restrict of trade pw
-	planet_limit {
+	planet_limit = {
 		base = 1
 	}
 
