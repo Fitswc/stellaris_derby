@@ -984,6 +984,9 @@ tech_uma_complex_keisun_test = {
 			has_authority = auth_trainingcenter
             #is_uma_fallen_empire = yes
 		}
+		NOT = {
+			has_origin = origin_uma_after_factor_perk
+		}
     }
 
     modifier = {

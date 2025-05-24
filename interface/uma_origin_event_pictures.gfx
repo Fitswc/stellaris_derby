@@ -58,4 +58,23 @@ spriteTypes = {
 		upper_left = { x = 57 y = 16 }
     	lower_right = { x = 167 y = 96 }
 	}
+
+	spriteType = {
+		name = "GFX_origin_uma_after_factor_perk"
+		textureFile = "gfx/event_pictures/origins/origin_uma_after_factor_perk.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		parent = "GFX_origin_uma_after_factor_perk"
+		name = "GFX_origin_uma_after_factor_perk_zoom_1"
+		upper_left = { x = 46 y = 11 }
+    	lower_right = { x = 189 y = 112 }
+	}
+	spriteType = {
+		parent = "GFX_origin_uma_after_factor_perk"
+		name = "GFX_origin_uma_after_factor_perk_zoom_2"
+		upper_left = { x = 57 y = 16 }
+    	lower_right = { x = 167 y = 96 }
+	}
 }

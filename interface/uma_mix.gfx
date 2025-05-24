@@ -11,7 +11,6 @@ spriteTypes = {
 	}
 
 
-
 	spriteType = {
 		name = GFX_planet_type_uma_ringworld
 		textureFile = "gfx/interface/icons/planet_type/pc_uma_ring_world.dds"
@@ -22,5 +21,15 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_council_room_uma
 		texturefile = "gfx/interface/council_view/council_rooms/council_room_uma.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_uma_pop_looting_and_transform"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_uma_pop_looting_and_transform_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_uma_pop_looting_and_transform_ui_icon"
+		texturefile = "gfx/interface/espionage/operations/op_cat_uma_pop_looting_and_transform_ui_icon.dds"
 	}
 }

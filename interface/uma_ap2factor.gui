@@ -840,3 +840,441 @@ guiTypes = {
 		}
 	}
 }
+
+guiTypes = {
+		containerWindowType = {
+		name = "uma_aps_origins_windows"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1780 height = 960 }
+#		scale = 0.5
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_uma_apsystem_bg"
+		}
+
+		buttonType = {
+			#关闭按钮
+			name = "close"
+			quadTextureSprite = "GFX_uma_apsystem_done"
+			position = { x = 1341 y = 736 }
+			Orientation = UPPER_LEFT
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = uma_apsystem_done_tt
+		}#关闭按钮
+
+
+
+		##Part 1 Speed
+		buttonType = {
+			name = "mark_1"
+			quadTextureSprite = "GFX_uma_apsystem_mark"
+			position = { x = 289 y = 83 }
+			orientation = "UPPER_LEFT"
+			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_origins_speed_t
+			buttonText = uma_ap_system_factor_speed_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 0 } #-94
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_speed_num
+			buttonText = uma_ap_system_factor_speed_num
+			buttonFont = "large_title_font"
+			position = { x = 455 y = 65 } #y-83 x+50
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			effect =uma_ap_system_factor_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_factor_speed_t_tt_t
+		}
+
+
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_speed_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 146 }
+			effect = uma_ap_system_factor_origins_speed_plus
+		}
+
+
+		#Part2
+		buttonType = {
+			name = "mark_2"
+			quadTextureSprite = "GFX_uma_apsystem_mark"
+			position = { x = 289 y = 202 }
+			orientation = "UPPER_LEFT"
+			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_origins_power_t
+			buttonText = uma_ap_system_factor_power_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 119 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_power_num
+			buttonText = uma_ap_system_factor_power_num
+			buttonFont = "large_title_font"
+			position = { x = 455 y = 182 }#y-83 x+50
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			effect =uma_ap_system_factor_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_factor_power_t_tt_t
+		}
+
+
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_power_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 265 }
+			effect = uma_ap_system_factor_origins_power_plus
+		}
+
+		#Part3
+		buttonType = {
+			name = "mark_3"
+			quadTextureSprite = "GFX_uma_apsystem_mark"
+			position = { x = 289 y = 321 }
+			orientation = "UPPER_LEFT"
+			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_origins_stamina_t
+			buttonText = uma_ap_system_factor_stamina_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 238 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_stamina_num
+			buttonText = uma_ap_system_factor_stamina_num
+			buttonFont = "large_title_font"
+			position = { x = 455 y = 296 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			effect =uma_ap_system_factor_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_factor_stamina_t_tt_t
+		}
+
+
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_stamina_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 379 }
+			effect = uma_ap_system_factor_origins_stamina_plus
+		}
+
+		#Part4
+		buttonType = {
+			name = "mark_4"
+			quadTextureSprite = "GFX_uma_apsystem_mark"
+			position = { x = 289 y = 439 }
+			orientation = "UPPER_LEFT"
+			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_origins_wisdom_t
+			buttonText = uma_ap_system_factor_wisdom_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 357 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_wisdom_num
+			buttonText = uma_ap_system_factor_wisdom_num
+			buttonFont = "large_title_font"
+			position = { x = 455 y = 421 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			effect =uma_ap_system_factor_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_factor_wisdom_t_tt_t
+		}
+
+
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_wisdom_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 502 }
+			effect = uma_ap_system_factor_origins_wisdom_plus
+		}
+
+		#Part5
+		buttonType = {
+			name = "mark_5"
+			quadTextureSprite = "GFX_uma_apsystem_mark"
+			position = { x = 289 y = 558 }
+			orientation = "UPPER_LEFT"
+			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_origins_charm_t
+			buttonText = uma_ap_system_factor_charm_t
+			buttonFont = "large_title_font"
+			position = { x = 338 y = 475 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_charm_num
+			buttonText = uma_ap_system_factor_charm_num
+			buttonFont = "large_title_font"
+			position = { x = 455 y = 543 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			effect =uma_ap_system_factor_general_numbershow_effect
+			pdx_tooltip = uma_ap_system_factor_charm_t_tt_t
+		}
+
+
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_charm_plus
+			quadTextureSprite = "GFX_uma_apsystem_plus"
+			orientation = "UPPER_LEFT"
+			position = { x = 742 y = 626 }
+			effect = uma_ap_system_factor_origins_charm_plus
+		}
+
+
+
+		#Part6
+		buttonType = {
+			name = "mark_6"
+			quadTextureSprite = "GFX_uma_apsystem_mark"
+			position = { x = 289 y = 676 }
+			orientation = "UPPER_LEFT"
+		}
+
+		buttonType = {
+			name = uma_ap_system_factor_origins_origins_depth_t
+			buttonText = uma_ap_system_factor_origins_depth_t
+			buttonFont = "large_title_font_28"
+			position = { x = 338 y = 593 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+		}
+
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_depth_num
+			buttonText = uma_ap_system_factor_origins_depth_num
+			buttonFont = "large_title_font_28"
+			position = { x = 350 y = 655 }
+			orientation = "UPPER_LEFT"
+#			text_color_code = "T"
+			effect = uma_ap_system_factor_general_numbershow_effect
+		}
+#
+#
+#
+#		effectButtonType = {
+#			name = uma_ap_system_factor_origins_depth_plus
+#			quadTextureSprite = "GFX_uma_apsystem_plus"
+#			orientation = "UPPER_LEFT"
+#			position = { x = 742 y = 738 }
+#			effect = uma_ap_system_factor_depth_plus
+#		}
+#
+		#Minus
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_charm_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 626 }
+			effect = uma_ap_system_factor_origins_charm_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_speed_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 146 }
+			effect = uma_ap_system_factor_origins_speed_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_power_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 265 }
+			effect = uma_ap_system_factor_origins_power_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_stamina_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 379 }
+			effect = uma_ap_system_factor_origins_stamina_minus
+		}
+		effectButtonType = {
+			name = uma_ap_system_factor_origins_wisdom_minus
+			quadTextureSprite = "GFX_uma_apsystem_minus"
+			orientation = "UPPER_LEFT"
+			position = { x = 338 y = 502 }
+			effect = uma_ap_system_factor_origins_wisdom_minus
+		}
+#		effectButtonType = {
+#			name = uma_ap_system_factor_origins_depth_minus
+#			quadTextureSprite = "GFX_uma_apsystem_minus"
+#			orientation = "UPPER_LEFT"
+#			position = { x = 338 y = 738 }
+#			effect = uma_ap_system_factor_depth_minus
+#		}
+
+
+
+
+
+
+
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		#窗口名（左上角的那个）
+		instantTextBoxType = {
+			name = "irm_some_header"
+			font = "malgun_goth_24"
+			text = "Shop"    # header text
+			position = { x = 20000 y = 5 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 }    # hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType = { name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1125 y = -1175 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1127 y = -11110 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+
+		### EVENT DIPLO ###
+
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 2 y = 50 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 20 y = 0 }
+				maxWidth = 200
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
+		}
+		# Description Section
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 100 }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+	}
+
+
+	containerWindowType = {
+		name = "uma_hiding_button"
+		position = { x = 0 y = 0 }
+		size = { width = 142 height = 34 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+#			quadTextureSprite = ""
+			alwaysTransparent = yes
+			position = { x = 0 y = 0 }
+			font = "malgun_goth_24"
+			text = "OPTION_TEXT"
+			no_clicksound = yes
+			oversound = no_sound
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0 y = 10 }
+			size = { x = 65 y = 28 }
+		}
+	}
+}
