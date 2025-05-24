@@ -312,6 +312,37 @@ country_event = {
 			country_event = {
 				id = uma_ap.200
 			}
+
+			add_resource = {
+				minerals = 1000
+				energy = 1000
+				consumer_goods = 1000
+				influence = 300
+				alloys = 500
+			}
+			capital_scope = {
+				create_pop_group = {
+					species = Root.owner_main_species
+					ethos = Root
+					category = civilian
+					size = 200
+				}
+			}
+
+#			random_neighbor_country = {
+#				limit = {
+#					is_country_type = default
+#					is_fallen_empire = no
+#					
+#				}
+#				Root = {
+#					add_intel = {
+#						who = from
+#						amount = 20
+#					}
+#				}
+#			}
+#
 		}
 	}
 
