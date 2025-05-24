@@ -207,8 +207,10 @@ uma_factor_adopt = {
 		uma_has_ap_two_factor = yes
 	}
 	modifier = {
+		planet_jobs_produces_mult = 0.1
 		UMA_species_trait_points_add = 2
 	}
+	custom_tooltip_with_modifiers = uma_factor_adopt_tt
 }
 
 #fin.
@@ -230,11 +232,24 @@ uma_factor_speed = {
 
 	}
 	modifier = {
-		army_damage_mult = 0.14
-		planet_jobs_produces_mult = 0.2
-		planet_building_build_speed_mult = 0.14
-		planet_jobs_food_upkeep_mult = 0.14
+#		army_damage_mult = 0.064
+#		planet_jobs_produces_mult = 0.02
+#		planet_building_build_speed_mult = 0.054
+#		planet_jobs_food_upkeep_mult = 0.054
+
 	}
+	triggered_modifier = {
+		potential = {
+			NOT = {
+				any_situation = {
+					has_situation_flag = uma_ap2_factor_had_happened
+				}
+			}
+		}
+		planet_pops_organics_upkeep_mult = -0.05
+
+	}
+	custom_tooltip = uma_tradition_factor_speed_tt
 }
 
 #运动因子强化Ⅱ 3
@@ -245,11 +260,13 @@ uma_factor_strength = {
 		has_tradition = uma_factor_speed
 	}
 	modifier = {
-		ship_weapon_damage = 0.14
-		ship_speed_mult = 0.14
-		ship_sensor_range_add = 2
-		ship_orbit_upkeep_mult = 0.1
+#		ship_weapon_damage = 0.08
+#		ship_speed_mult = 0.08
+#		ship_sensor_range_add = 2
+#		ship_orbit_upkeep_mult = -0.050
+		modify_species_cost_mult = -0.5
 	}
+	custom_tooltip_with_modifiers = uma_tradition_factor_strength_tt
 }
 
 #性格因子强化 2
@@ -259,11 +276,25 @@ uma_factor_wisdom = {
 
 	}
 	modifier = {
-		pop_happiness = 0.14
-		planet_stability_mult = 0.14
-		pop_housing_usage_mult = 0.14
-		planet_jobs_consumer_goods_upkeep_mult = 0.1
+#		pop_happiness = 0.08
+#		planet_stability_mult = 0.08
+#		pop_housing_usage_mult = -0.014
+#		planet_jobs_consumer_goods_upkeep_mult = -0.01
+
 	}
+	triggered_modifier = {
+		potential = {
+			NOT = {
+				any_situation = {
+					has_situation_flag = uma_ap2_factor_had_happened
+				}
+			}
+		}
+		UMA_bonus_pop_growth_mult = 0.05
+
+	}
+	custom_tooltip = uma_tradition_factor_wisdom_tt
+
 }
 
 #性格因子强化Ⅱ 5
@@ -274,10 +305,12 @@ uma_factor_willpower = {
 		has_tradition = uma_factor_wisdom
 	}
 	modifier = {
-		pop_growth_speed = 0.1
-		planet_crime_mult = -0.1
-		planet_jobs_produces_mult = 0.1
+#		pop_growth_speed = 0.06
+#		planet_crime_mult = -0.01
+#		planet_jobs_produces_mult = 0.06
+		UMA_bonus_pop_growth_mult = 0.05
 	}
+	custom_tooltip = uma_tradition_factor_willpower_tt
 }
 
 #摘星 4
@@ -289,12 +322,14 @@ uma_factor_star_picking = {
 		has_tradition = uma_factor_strength
 	}
 	modifier = {
-		shipclass_military_build_speed_mult = 0.14
-		megastructure_build_speed_mult = 0.14
-		pop_growth_speed = 0.1
-		UMA_species_trait_points_add = 4
+#		shipclass_military_build_speed_mult = 0.2
+#		megastructure_build_speed_mult = 0.2
+		bonus_pop_growth_mult = 0.05
+		UMA_species_trait_points_add = 2
 		UMA_species_trait_picks_add = 2
 	}
+	custom_tooltip_with_modifiers = uma_factor_star_picking_tt
+
 }
 
 
@@ -321,7 +356,9 @@ uma_realm_adopt = {
 	}
 	modifier = {
 		planet_jobs_produces_mult = 0.1
+
 	}
+	custom_tooltip_with_modifiers = uma_realm_adopt_tt
 }
 
 #fin.
@@ -344,10 +381,15 @@ uma_realm_strength = {
 
 	}
 	modifier = {
-		army_damage_mult = 0.1
-		planet_jobs_worker_produces_mult = 0.1
-		planet_jobs_food_upkeep_mult = 0.09
+#		army_damage_mult = 0.05
+#		planet_jobs_worker_produces_mult = 0.05
+#		planet_jobs_food_upkeep_mult = 0.09
 	}
+	triggered_modifier = {
+		planet_jobs_produces_mult = 0.05
+		army_damage_mult = 0.05
+	}
+	custom_tooltip_with_modifiers = uma_realm_strength_tt
 }
 
 #2 - 领域触发简化
@@ -357,11 +399,13 @@ uma_realm_trigger_be_simple = {
 
 	}
 	modifier = {
-		planet_jobs_specialist_produces_mult= 0.2
-		ship_anomaly_research_speed_mult = 0.3
-		all_technology_research_speed = 0.2
-		ship_archaeological_site_excavation_speed_mult = 0.2
+#		planet_jobs_specialist_produces_mult= 0.06
+#		ship_anomaly_research_speed_mult = 0.3
+		all_technology_research_speed = 0.02
+		ship_archaeological_site_excavation_speed_mult = 0.15
+
 	}
+	custom_tooltip_with_modifiers = uma_realm_trigger_be_simple_tt
 }
 
 #3 - 领域场泛用化
@@ -373,8 +417,8 @@ uma_realm_field_large_job_to_use = {
 	}
 
 	modifier = {
-		ship_ftl_jumpdrive_range_mult = 0.3
-		ship_speed_mult = 0.2
+		ship_ftl_jumpdrive_range_mult = 0.1
+		ship_speed_mult = 0.05
 	}
 	
 	custom_tooltip_with_modifiers = uma_realm_field_large_job_to_use_tp #解锁建筑：领域调幅器->每位马娘都能很好的适应工作 and 领域场行星护盾
@@ -401,9 +445,8 @@ uma_realm_full_body = {
 		has_tradition = uma_realm_field_large_job_to_use
 	}
 	modifier = {
-		army_damage_mult = 0.3
-		planet_jobs_produces_mult = 0.2
-		 army_health = 0.3
+		army_health = 0.2
 		UMA_species_trait_points_add = 2
 	}
+	custom_tooltip_with_modifiers = uma_realm_full_body_tt
 }

@@ -206,6 +206,16 @@ country_event = {
 			}
 		}
 		set_country_flag = uma_ss_1st_evt_happened
+
+		add_timeline_event = {
+			type = timeline_umamusume
+			override_tooltip = "uma_timeline_meet_leader_ayb_desc"
+			override_text = { "text:uma_timeline_meet_leader_ayb" }
+			override_texture = { "background_zoom1:GFX_uma_timelines_meet_ayb" "background_zoom2:GFX_uma_timelines_meet_ayb_zoom_2" }
+			override_types = { country leader }
+			override_id = uma_timeline_meet_leader_ayb
+			targets = { Root event_target:uma_is_leader_silent_suzuka }
+		}
 	}
 }
 
@@ -234,7 +244,7 @@ country_event = {
 	immediate = {
 		country_event = {
 			id = uma_ayb_arc.7
-			days = 740
+			days = 1740
 			random = 20
 		}
 		set_country_flag = uma_ayb_arc_happened
@@ -682,10 +692,12 @@ country_event = {
 			limit = {
 				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
 			}
-			uma_rs_difficult_set_up = { DIFFICULT_RATIO = 2 }
-			uma_rs_generate_random_number = yes
-			uma_rs_1dr = yes
-			uma_rs_judging = yes
+			owner = {
+				uma_rs_difficult_set_up = { DIFFICULT_RATIO = 2 }
+				uma_rs_generate_random_number = yes
+				uma_rs_1dr = yes
+				uma_rs_judging = yes
+			}
 		}
 	}
 
@@ -912,6 +924,7 @@ country_event = {
 country_event = {
 	id = uma_ayb_arc.2077
 	hide_window = yes
+	is_triggered_only = yes
 
 	trigger = {
 		from = {

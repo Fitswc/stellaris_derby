@@ -2,9 +2,16 @@
 
 uma_trainer = {
 	category = umamusume
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
+
 
 
 	possible_pre_triggers = {
@@ -72,7 +79,7 @@ uma_trainer = {
 
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_racing_umamusume }
+			NOT = { can_work_specific_job = uma_racing_umamusume }
 		}
 
 		modifier = {
@@ -85,9 +92,16 @@ uma_trainer = {
 ###赛马娘
 uma_racing_umamusume = {
 	category = umamusume
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
+
 
 
 	possible_pre_triggers = {
@@ -110,6 +124,7 @@ uma_racing_umamusume = {
 			society_research = 3
 			engineering_research = 3
 			physics_research = 3
+			trade = 6
 		}
 		upkeep = {
 			consumer_goods = 1
@@ -117,8 +132,8 @@ uma_racing_umamusume = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 4
-		trade_value_add = 8
+		planet_amenities_add = 400
+#		planet_jobs_trade_produces_mult = 8
 	}
 
 	weight = {
@@ -131,7 +146,7 @@ uma_racing_umamusume = {
 
 		modifier = {
 			factor = 1.5
-			NOT = { has_job = uma_racing_umamusume }
+			NOT = { can_work_specific_job = uma_racing_umamusume }
 		}
 
 		modifier = {
@@ -144,9 +159,13 @@ uma_racing_umamusume = {
 
 uma_racing_ura_members = {
 	category = umamusume
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_uma_modern_racing_course ##之后这里改成我们自己的建筑！
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_modern_racing_course ##之后这里改成我们自己的建筑！
+		}
+	}
 
 
 	possible_pre_triggers = {
@@ -165,16 +184,16 @@ uma_racing_ura_members = {
 	resources = {
 		category = planet_uma_racing_ura_members
 		produces = {
-			unity = 6
-			society_research = 6
+			unity = 4
+			society_research = 4
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 1
 		}
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 4
+		planet_amenities_add = 400
 		planet_uma_racing_umamusume_produces_mult = 0.05
 	}
 

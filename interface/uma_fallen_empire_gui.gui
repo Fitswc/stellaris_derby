@@ -181,7 +181,8 @@ guiTypes = {
 
 		buttonType = {
 			name = "option_button"
-			quadTextureSprite = ""
+#			quadTextureSprite = ""
+			alwaysTransparent = yes
 			position = { x = 0 y = 0 }
 			font = "malgun_goth_24"
 			text = "OPTION_TEXT"

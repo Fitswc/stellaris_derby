@@ -288,7 +288,7 @@ uma_fallen_empire_system_initializer_1 = {
 			#	}
 			#}
             while = {
-                count = 25
+                count = 10
                 add_district = district_uma_dormitory
             }
             while = {
@@ -349,7 +349,7 @@ uma_fallen_empire_system_initializer_2 = {
 	planet = {
         class = star
 		name = FALL_NOR #"诺亚"
-        size = { min = 25 max = 30 }
+        size = 30
         orbit_distance = 0
         orbit_angle = 1
     }
@@ -437,7 +437,7 @@ uma_fallen_empire_system_initializer_2 = {
                 add_district = district_uma_logistics_area
             }
             while = {
-                count = 60
+                count = 600
                 create_pop = {
                     species = owner_main_species
                 }

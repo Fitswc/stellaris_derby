@@ -44,7 +44,7 @@
 #	triggered_country_modifier = {
 #		mult = value:aesthetic_wonder_specimens_modifiers_mult
 #		potential = { is_gestalt = yes }
-#		planet_jobs_energy_produces_mult = 0.02
+#		planet_jobs_energy_produces_mults_mult = 0.02
 #	}
 #}
 
@@ -135,6 +135,7 @@ uma_clover = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
+		planet_jobs_energy_produces_mult = 0.02
 		planet_jobs_trade_produces_mult = 0.02
 	}
 }
@@ -200,7 +201,7 @@ uma_live_video = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 0.01
+		planet_amenities_add = 10
 		planet_uma_umaidol_produces_mult = 0.03
 	}
 }

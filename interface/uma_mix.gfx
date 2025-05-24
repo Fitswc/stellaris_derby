@@ -5,6 +5,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/planetview/uma_planet_colony_type_school.dds"
 	}
 
+	spriteType = {
+		name = GFX_uma_zone_type_racing
+		textureFile = "gfx/interface/planetview/uma_planet_zone_type_racing.dds"
+	}
 
 
 	spriteType = {
@@ -17,5 +21,40 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_council_room_uma
 		texturefile = "gfx/interface/council_view/council_rooms/council_room_uma.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_uma_pop_looting_and_transform"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_uma_pop_looting_and_transform_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_uma_pop_looting_and_transform_ui_icon"
+		texturefile = "gfx/interface/espionage/operations/op_cat_uma_pop_looting_and_transform_ui_icon.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_held_national_derby
+		textureFile = "gfx/interface/icons/text_icons/uma_held_national_derby.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_use_goods_in_shop
+		textureFile = "gfx/interface/icons/text_icons/uma_use_goods_in_shop.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_refresh_speical_leader_potrait
+		textureFile = "gfx/interface/icons/text_icons/uma_refresh_speical_leader_potrait.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_suspendfallen_empire_mission
+		textureFile = "gfx/interface/icons/text_icons/uma_suspendfallen_empire_mission.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_curren_build_research_departure
+		textureFile = "gfx/interface/icons/text_icons/uma_curren_build_research_departure.dds"
 	}
 }

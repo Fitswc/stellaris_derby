@@ -128,8 +128,8 @@ country_event = {
 				limit = {
 					leader = {
 						OR = {
-							has_trait = uma_admiral_trait_sp_seiun_sky_1
-							has_trait = uma_admiral_trait_sp_seiun_sky_2
+							has_trait = uma_commander_trait_sp_seiun_sky_1
+							has_trait = uma_commander_trait_sp_seiun_sky_2
 						}
 					}
 				}
@@ -143,8 +143,8 @@ country_event = {
 				limit = {
 					leader = {
 						OR = {
-							has_trait = uma_admiral_trait_sp_seiun_sky_1
-							has_trait = uma_admiral_trait_sp_seiun_sky_2
+							has_trait = uma_commander_trait_sp_seiun_sky_1
+							has_trait = uma_commander_trait_sp_seiun_sky_2
 						}
 					}
 				}
@@ -171,11 +171,11 @@ country_event = {
 			if = {
 				limit = {
 					AND = {
-						has_trait = uma_admiral_trait_sp_seiun_sky_1
+						has_trait = uma_commander_trait_sp_seiun_sky_1
 					}
 				}
-				remove_trait = uma_admiral_trait_sp_seiun_sky_1
-				add_trait = uma_admiral_trait_sp_seiun_sky_2
+				remove_trait = uma_commander_trait_sp_seiun_sky_1
+				add_trait = uma_commander_trait_sp_seiun_sky_2
 			}
 		}
 	}
@@ -193,9 +193,9 @@ country_event = {
 	immediate = {
 		event_target:uma_seiun_sky_admiral = {
 			if = {
-				limit = { has_trait = uma_admiral_trait_sp_seiun_sky_2 }
-				remove_trait = uma_admiral_trait_sp_seiun_sky_2
-				add_trait = uma_admiral_trait_sp_seiun_sky_1
+				limit = { has_trait = uma_commander_trait_sp_seiun_sky_2 }
+				remove_trait = uma_commander_trait_sp_seiun_sky_2
+				add_trait = uma_commander_trait_sp_seiun_sky_1
 			}
 		}
 	}
@@ -472,6 +472,26 @@ country_event = {
 					set_name = SWEEPY
 				}
 			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_curren_chan
+				}
+				event_target:uma_is_leader_curren_chan = {
+					change_leader_portrait = 34c
+					set_name = CURREN
+				}
+			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_mejro_ardan
+				}
+				event_target:uma_is_leader_mejro_ardan = {
+					change_leader_portrait = 49c
+					set_name = ARDAN
+				}
+			}
 			###SUB
 			if = {
 				limit = {
@@ -578,5 +598,245 @@ country_event = {
 			who = event_target:uma_it_is_corp_and_we_can_make_it_pay_tax
 			days = -1
 		}
+	}
+}
+
+
+
+planet_event = {
+	id = uma_bg.19
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		add_building = building_capital
+		remove_building = building_colony_shelter
+	}
+}
+
+
+country_event = {
+	id = uma_bg.20
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 5
+	}
+#	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			is_colony = yes
+
+			OR = {
+				has_active_building = building_uma_tg_alloys_maker_Automatic
+				has_active_building = building_uma_tg_alloys_maker_Automatic_2
+				has_active_building = building_uma_tg_custom_goods_productor
+				has_active_building = building_uma_tg_custom_goods_productor_2
+				has_active_building = building_uma_tg_industrial_complex
+			}
+
+			OR = {
+				has_resource = {
+					type = minerals
+					amount <= 400
+				}
+				has_resource = {
+					type = uma_crystal_carrot
+					amount <= 400
+				}
+				has_resource = {
+					type = food
+					amount <= 400
+				}
+				has_resource = {
+					type = energy
+					amount <= 400
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				is_colony = yes
+				OR = {
+					has_active_building = building_uma_tg_alloys_maker_Automatic
+					has_active_building = building_uma_tg_alloys_maker_Automatic_2
+					has_active_building = building_uma_tg_custom_goods_productor
+					has_active_building = building_uma_tg_custom_goods_productor_2
+					has_active_building = building_uma_tg_industrial_complex
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_alloy_disable = yes
+					}
+					has_planet_flag = uma_TGAC_produce_alloys
+				}
+
+				disable_building = building_uma_tg_industrial_complex
+
+				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
+			}
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_alloy_disable = yes
+					}
+				}
+				switch = {
+					trigger = has_active_building
+
+					building_uma_tg_alloys_maker_Automatic = {
+						disable_building = building_uma_tg_alloys_maker_Automatic
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
+					}
+
+					building_uma_tg_alloys_maker_Automatic_2 = {
+						disable_building = building_uma_tg_alloys_maker_Automatic_2
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_custom_goods_disable = yes
+					}
+					has_planet_flag = uma_TGAC_produce_goods
+				}
+
+				disable_building = building_uma_tg_industrial_complex
+				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
+			}
+			if = {
+				limit = {
+					owner = {
+						uma_check_factory_custom_goods_disable = yes
+					}
+				}
+				switch = {
+					trigger = has_active_building
+
+					building_uma_tg_custom_goods_productor = {
+						disable_building = building_uma_tg_custom_goods_productor
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
+					}
+
+					building_uma_tg_custom_goods_productor_2 = {
+						disable_building = building_uma_tg_custom_goods_productor_2
+						log = "UMA_DISABLE_AUTOMATIC_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							owner = {
+								uma_check_factory_volatile_motes_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_molts
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_gas_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_gas
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_rare_crystal_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_crystal
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_living_materal_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_livingmat
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_dark_matter_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_darkm
+						}
+
+						AND = {
+							owner = {
+								uma_check_factory_nanites_disable = yes
+							}
+							has_planet_flag = uma_TGAC_produce_nano
+						}
+					}
+				}
+
+				disable_building = building_uma_tg_industrial_complex
+				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_OTHER_RESOURCES_AT [This.GetName] IN [GetYear]"
+			}
+
+
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bg.21
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		AND = {
+			days_passed <= 3600
+			has_civic = civic_uma_win_variation
+			From = {
+				defender = {
+					is_country_type = default
+				}
+				attacker = {
+					has_authority = auth_trainingcenter
+				}
+				OR = {
+					is_war_participant = {
+						who = Root
+						side = attackers
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_variation_early_war_buff
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bg.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_civic = civic_uma_win_variation
+
+		has_modifier = uma_variation_early_war_buff
+	}
+
+	immediate = {
+		remove_modifier = uma_variation_early_war_buff
 	}
 }

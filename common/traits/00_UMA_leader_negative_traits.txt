@@ -468,7 +468,8 @@ leader_trait_greed_generic = {
 			is_ruler = no
 			leader_class = official
 		}
-		planet_administrators_upkeep_mult = 0.1
+		planet_districts_upkeep_mult = 0.1
+
 	}
 	triggered_army_modifier = {
 		potential = {
@@ -523,11 +524,11 @@ leader_trait_aiismylife_generic = {
 			is_ruler = no
 			leader_class = official
 		}
-		planet_administrators_produces_mult = -0.1
+		planet_districts_upkeep_mult  = -0.1
 	}
 
 	sector_modifier = {
-		planet_administrators_produces_mult = -0.1
+		planet_districts_upkeep_mult = -0.1
 	}
 
 	triggered_army_modifier = {

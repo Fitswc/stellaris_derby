@@ -410,6 +410,13 @@ ap_uma_fly_me_to_the_star = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"
 		}
+
+		custom_tooltip = {
+			fail_text = origin_uma_after_factor_perk_already
+			NOT = {
+				has_origin = origin_uma_after_factor_perk
+			}
+		}
 	}
 
 	modifier = {

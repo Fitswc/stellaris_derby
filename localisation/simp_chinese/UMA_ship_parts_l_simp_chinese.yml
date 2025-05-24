@@ -79,8 +79,8 @@ UMA_JUMP_DRIVE:0 "奇异隧穿引擎"
 UMA_JUMP_DRIVE_DESC:0 "奇异隧穿引擎在宏观尺度引发和控制粒子来进行奇异隧穿，因其来源于三女神，我们至今仍无法解释其本质"
 
 
-UMA_CC_SHIP_THRUSTER: "水晶胡萝卜推进器"
-UMA_CC_SHIP_THRUSTER_DESC: "利用水晶胡萝卜激发出极高的能量，并以其将飞船加速"
+UMA_CC_SHIP_THRUSTER: "['concept_uma_concept_crystal_carrot']推进器"
+UMA_CC_SHIP_THRUSTER_DESC: "利用['concept_uma_concept_crystal_carrot']激发出极高的能量，并以其将飞船加速"
 ###########################
 
 
@@ -90,8 +90,8 @@ CORVETTE_UMA_PIRATE_SECTOR: "抢夺区段"
 UMA_PLANET_KILLER_TRANSFORM: "马娘基因同调"
 UMA_PLANET_KILLER_TRANSFORM_DESC: "这个歼星级武器可以使目标行星上的转化为马娘。由于便携式技术的原因，我们只能转化大约一半人口，剩下的人口可能会因为排异而死亡"
 UMA_PLANET_KILLER_TRANSFORM_ACTION: "§P同化§!"
-UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL: "水晶胡萝卜结晶化光线"
-UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL_DESC: "这个歼星级武器可以使目标行星核心冷却，变成盛产水晶胡萝卜的矿物宝地"
+UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL: "['concept_uma_concept_crystal_carrot']结晶化光线"
+UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL_DESC: "这个歼星级武器可以使目标行星核心冷却，变成盛产['concept_uma_concept_crystal_carrot']的矿物宝地"
 UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL_ACTION: "§P结晶化§!"
 
 FLEETORDER_DESTROY_PLANET_WITH_UMA_PLANET_KILLER_TRANSFORM:0 "正在准备对$PLANET|Y$上的人口执行§P基因同调§!"

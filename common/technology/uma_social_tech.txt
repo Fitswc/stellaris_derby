@@ -737,7 +737,7 @@ tech_uma_genetics = { #马娘遗传学
     }
 
     modifier = {
-        pop_growth_speed = 0.05
+        bonus_pop_growth_mult = 0.05
     }
 
     weight_modifier = {
@@ -767,7 +767,7 @@ tech_uma_genetics = { #马娘遗传学
 #     }
 
 #     modifier = {
-#         pop_growth_speed = 0.05
+#         bonus_pop_growth_mult = 0.05
 #         UMA_species_trait_points_add = 1
 #     }
 
@@ -798,7 +798,7 @@ tech_uma_genetics = { #马娘遗传学
 #     }
 
 #     modifier = {
-#         pop_growth_speed = 0.05
+#         bonus_pop_growth_mult = 0.05
 #         leader_age = 10
 #     }
 
@@ -830,7 +830,7 @@ tech_uma_genetics = { #马娘遗传学
 #     }
 
 #     modifier = {
-#         pop_growth_speed = 0.05
+#         bonus_pop_growth_mult = 0.05
 #         UMA_species_trait_points_add = 1
 #     }
 
@@ -881,7 +881,7 @@ tech_uma_genetics = { #马娘遗传学
 #tech_uma_basic_keisun_map = {
 #	cost = 10000
 #	area = society
-#	tier = 3
+#	tier = 2
 #    is_rare = yes
 #	category = { biology }
 #    prerequisites = { "tech_uma_genetics" }
@@ -911,7 +911,7 @@ tech_uma_genetics = { #马娘遗传学
 #tech_uma_molecule_keisun_theory = {
 #	cost = 15000
 #	area = society
-#	tier = 4
+#	tier = 2
 #    is_rare = yes
 #	category = { biology }
 #    prerequisites = { "tech_uma_basic_keisun_map" }
@@ -941,7 +941,7 @@ tech_uma_genetics = { #马娘遗传学
 #tech_uma_keisun_genetic = {
 #	cost = 15000
 #	area = society
-#	tier = 4
+#	tier = 3
 #    is_rare = yes
 #	category = { biology }
 #    prerequisites = { "tech_uma_molecule_keisun_theory" }
@@ -977,23 +977,30 @@ tech_uma_complex_keisun_test = {
     is_dangerous = yes
 	category = { biology }
 #    prerequisites = { "tech_uma_keisun_genetic" }
-    weight = 200
+    weight = 50
 
 	potential = {
 		OR = {
 			has_authority = auth_trainingcenter
             #is_uma_fallen_empire = yes
 		}
+		NOT = {
+			has_origin = origin_uma_after_factor_perk
+		}
     }
 
     modifier = {
-		pop_growth_speed = 0.1
+		bonus_pop_growth_mult = 0.1
 		UMA_species_trait_points_add = 2
         planet_researchers_society_research_produces_mult = 0.2
     }
 
     weight_modifier = {
         factor = 1
+		modifier = {
+			multiply = 4
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
     }
 
     ai_weight ={
@@ -1103,7 +1110,7 @@ tech_uma_complex_keisun_test = {
 #    is_rare = yes
 #    cost = 10000
 #    area = society
-#    tier = 3
+#    tier = 2
 #    category = { psionics }
 #
 #    weight = 150
@@ -1135,7 +1142,7 @@ tech_uma_complex_keisun_test = {
 #    is_rare = yes
 #    cost = 15000
 #    area = society
-#    tier = 3
+#    tier = 2
 #    category = { statecraft }
 #    prerequisites = { "tech_uma_basic_territory_theory" }
 #    weight = 175
@@ -1202,7 +1209,7 @@ tech_uma_terriroty_in_use = {
     tier = 3
     category = { biology }
 #    prerequisites = { "tech_uma_basic_phycoterritory_theory" }
-    weight = 200
+    weight = 50
 
     potential = {
         OR = {
@@ -1220,6 +1227,10 @@ tech_uma_terriroty_in_use = {
 
     weight_modifier = {
         factor = 1
+		modifier = {
+			multiply = 4
+			has_ascension_perk = ap_uma_zenshizenren
+		}
     }
 
     ai_weight = {
@@ -1240,7 +1251,7 @@ tech_uma_explore_1 = { #特雷森外域探险部
     area = society
     tier = 1
     category = { new_worlds }
-    prerequisites = { tech_uma_basic_phycoterritory_theory }
+    prerequisites = {  }
     weight = 100
 
     potential = {
@@ -1729,6 +1740,7 @@ tech_uma_tranform = {
 		OR = {
 			has_authority = auth_trainingcenter
 		}
+		has_ascension_perk = ap_uma_fly_me_to_the_star
 	}
 
 	modifier = {
@@ -1736,7 +1748,7 @@ tech_uma_tranform = {
 	}
 
 	prerequisites = {
-		tech_uma_keisun_genetic
+
 	}
 
 	prereqfor_desc = {

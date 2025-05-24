@@ -626,7 +626,8 @@ leader_trait_zhufang_official_3 = {
 		script = trait/icon
 		CLASS = official
 		ICON = "GFX_leader_trait_zhufang_official"
-		RARITY = common
+#		RARITY = common
+		RARITY = veteran
 		COUNCIL = no
 		TIER = 3
 	}
@@ -992,11 +993,11 @@ leader_trait_ouxiang_official = {
 	}
 	planet_modifier = {
 		pop_happiness = 0.15
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 	sector_modifier = {
 		pop_happiness = 0.075
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 	leader_class = { official }
 	selectable_weight = {                                                   #权重
@@ -1021,11 +1022,11 @@ leader_trait_ouxiang_official_2 = {
 	}
 	planet_modifier = {
 		pop_happiness = 0.3
-		planet_amenities_add = 20
+		planet_amenities_add = 2000
 	}
 	sector_modifier = {
 		pop_happiness = 0.15
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 	leader_class = { official }
 	selectable_weight = {                                                   #权重

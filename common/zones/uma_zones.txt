@@ -1,0 +1,134 @@
+zone_uma_training = {
+	icon = GFX_uma_zone_type_racing
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			food = 5
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 300
+		planet_uma_racing_umamusume_upkeep_mult = -0.2
+		job_uma_racing_umamusume_add = 200
+		job_uma_racing_ura_members_add = 300
+		job_uma_trainer_add = 100
+	}
+
+	max_buildings = 3
+
+	included_building_sets = {
+		uma_racing
+		uma_urban
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+}
+
+
+zone_uma_teaching = {
+	icon = GFX_uma_colony_type_school
+	base_buildtime = @zone_buildtime
+	potential = {
+		# planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = {
+		# planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+		uses_district_set = uma_school_world
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			consumer_goods = 5
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_urban_housing_positive
+		planet_uma_researcher_produces_mult = 0.05
+		job_uma_researcher_add = 50
+		planet_building_uma_toresen_lab_build_speed_mult = 0.1
+		planet_building_uma_toresen_lab_center_build_speed_mult = 0.1
+		planet_building_uma_toresen_lab_top_build_speed_mult = 0.1
+	}
+
+	max_buildings = 3
+
+
+	excluded_building_sets = {
+		urban
+		generator
+		mining
+		farming
+		knights
+		betharian
+	}
+
+	included_building_sets = {
+		research
+		uma_research
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+}

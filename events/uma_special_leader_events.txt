@@ -239,7 +239,7 @@ country_event = {
 			country_event = {
 				id = uma_special_leader.9001
 			}
-			give_specimen = { key = uma_sky_flower}
+			give_specimen = { key = uma_sky_flower  origin = uma_specimen_null}
 		}
 	}
 }
@@ -277,7 +277,7 @@ country_event = {
 			country_event = {
 				id = uma_special_leader.9000
 			}
-			give_specimen = { key = uma_sky_flower}
+			give_specimen = { key = uma_sky_flower origin = uma_specimen_null}
 		}
 	}
 }
@@ -867,22 +867,23 @@ country_event = {
 ###悲伤的结果
 country_event = {
 	id = uma_special_leader.19
-    title = "uma_special_leader.19.name"
-    desc = "uma_special_leader.19.desc"
-    picture = GFX_evt_uma_racing
+	title = "uma_special_leader.19.name"
+	desc = "uma_special_leader.19.desc"
+	picture = GFX_evt_uma_racing
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	#该死的...
 	option = {
 		name = "uma_special_leader.19.a"
 		capital_scope = {
-			while = {
-				count = 3
-				random_owned_pop = {
-					kill_pop = yes
+			random_owned_pop_group = {
+				kill_pop_group = {
+					pop_group = This
+					percentage = 0.3
 				}
 			}
+
 			add_modifier = {
 				modifier = uma_kenshi_contamination
 				days = 7300
@@ -2610,7 +2611,7 @@ country_event = {
 	}
 
 	after = {
-		give_specimen = { key = nn_gift}
+		give_specimen = { key = nn_gift origin = uma_specimen_null}
 	}
 
 }

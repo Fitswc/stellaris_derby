@@ -4,7 +4,7 @@
 #举办国家德比
 uma_held_national_derby = {
 	length = 0
-
+	icon = GFX_uma_held_national_derby
 	resources = {
 		category = edicts
 		cost = {
@@ -65,7 +65,7 @@ uma_held_national_derby = {
 #使用道具
 uma_use_goods_in_shop = {
 	length = 0
-
+	icon = GFX_uma_use_goods_in_shop
 	resources = {
 		category = edicts
 		cost = {
@@ -102,7 +102,7 @@ uma_use_goods_in_shop = {
 #重置特殊领袖肖像
 uma_refresh_speical_leader_potrait = {
 	length = 0
-
+	icon = GFX_uma_refresh_speical_leader_potrait
 	resources = {
 		category = edicts
 		cost = {
@@ -135,7 +135,7 @@ uma_refresh_speical_leader_potrait = {
 
 uma_suspendfallen_empire_mission = {
 	length = 0
-
+	icon = GFX_uma_suspendfallen_empire_mission
 	resources = {
 		category = edicts
 		cost = {
@@ -276,6 +276,7 @@ uma_open_mmu = {
 
 uma_comm_with_fe = {
 	length = 0
+	icon = GFX_uma_suspendfallen_empire_mission
 	resources = {
 		category = edicts
 		cost = {
@@ -339,6 +340,47 @@ uma_fine_sth_in_wearhouse = {
 	effect = {
 		hidden_effect = {
 			uma_random_specimen = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+uma_curren_build_research_departure = {
+	length = 0
+	icon = GFX_uma_curren_build_research_departure
+	resources = {
+		category = edicts
+		cost = {
+			energy = 500
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+
+		has_country_flag = uma_curren_build_research_departure_allow_edicts
+
+		NOT = {
+			has_country_flag = uma_curren_edict_not_available_at_all
+		}
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		hidden_effect = {
+			set_country_flag = uma_curren_edict_not_available_at_all
+			enable_special_project = {
+				name = uma_curren_build_research_dep
+				owner = Root
+				location = Root.capital_scope
+			}
 		}
 	}
 

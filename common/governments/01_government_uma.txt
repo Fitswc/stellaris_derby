@@ -1,9 +1,10 @@
 ####玩家所拥有的政府类别####
 gov_uma_country = {
+	ruler_title = uma_gov_ruler_title
 	possible = {
-		
-			has_authority = auth_trainingcenter			
-		
+
+		has_authority = auth_trainingcenter
+
 	}
 
 
@@ -14,6 +15,7 @@ gov_uma_country = {
 
 
 gov_uma_country_spiritualist = {
+	ruler_title = uma_gov_ruler_title_spiritualist
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -28,6 +30,7 @@ gov_uma_country_spiritualist = {
 
 
 gov_uma_country_militarist = {
+	ruler_title = uma_gov_ruler_title_pacifist
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -40,6 +43,7 @@ gov_uma_country_militarist = {
 	}
 }
 gov_uma_country_authoritarian = {
+	ruler_title = uma_gov_ruler_title
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -53,6 +57,7 @@ gov_uma_country_authoritarian = {
 }
 
 gov_uma_country_xenophob = {
+	ruler_title = uma_gov_ruler_title_pacifist
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -66,6 +71,7 @@ gov_uma_country_xenophob = {
 }
 
 gov_uma_country_egalitarian = {
+	ruler_title = uma_gov_ruler_title
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -79,6 +85,7 @@ gov_uma_country_egalitarian = {
 }
 
 gov_uma_country_xenophile = {
+	ruler_title = uma_gov_ruler_title
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -92,6 +99,7 @@ gov_uma_country_xenophile = {
 }
 
 gov_uma_country_pacifist = {
+	ruler_title = uma_gov_ruler_title_pacifist
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {
@@ -105,6 +113,7 @@ gov_uma_country_pacifist = {
 }
 
 gov_uma_country_materialist = {
+	ruler_title = uma_gov_ruler_title_pacifist
 	possible = {
 		has_authority = auth_trainingcenter
 		OR = {

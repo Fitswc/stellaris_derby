@@ -1,0 +1,64 @@
+
+@category_mod = 4
+@asset_spy_network_max = 5
+
+## Subterfuge Assets
+asset_bureaucrat = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_uma_pop_looting_and_transform_skill_mult = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_uma_pop_looting_and_transform }
+}
+
+
+asset_junior_officer = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_uma_pop_looting_and_transform_skill_mult = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_uma_pop_looting_and_transform }
+}
+
+asset_laborer = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_uma_pop_looting_and_transform_skill_mult = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_uma_pop_looting_and_transform }
+}
+
+
+asset_arms_smuggler = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_sabotage_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_uma_pop_looting_and_transform op_cat_government }
+}
+

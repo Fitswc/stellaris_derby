@@ -69,13 +69,13 @@ event = {
 			}
 		}
 		##################################################
-		#创建领袖，ruler
+		#创建领袖，official
 		##################################################
         #大概，研究所类似于虚境，估计不需要领袖吧
 		last_created_country = {
 			create_leader = {
 				#生成领袖x1
-				class = ruler
+				class = official
 				species = this				#领袖种族
                 #portrait = "SW"
 				name = "特别周"			#领袖名字（当前为随机）
@@ -86,7 +86,7 @@ event = {
 			}
 			create_leader = {
 				#生成领袖x2
-				class = ruler
+				class = official
 				species = this				#领袖种族
                 #portrait = "SS"
 				name = "无声铃鹿"			#领袖名字（当前为随机）
@@ -97,14 +97,14 @@ event = {
 			}
 			create_leader = {
 				#生成领袖x3
-				class = ruler
+				class = official
 				species = this				#领袖种族
                 #portrait = "TT"
 				name = "东海帝王"			#领袖名字（当前为随机）
 				skill = 5
 			}
 			last_created_leader = {
-			change_leader_portrait = "TT"
+			change_leader_portrait = "TEIO_COMM"
 			}
 			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
 		}
@@ -264,7 +264,7 @@ country_event = {
 		allow = {
 			has_resource = {
 				type = uma_threegodness_knowledge #决定需要的三女神知识的价格
-				value >= 300
+				amount >= 300
 			}
 		}
 
@@ -341,7 +341,7 @@ country_event = {
 		allow = {
 			has_resource = {
 				type = uma_threegodness_knowledge #决定需要的三女神知识的价格
-				value >= 300
+				amount >= 300
 			}
 		}
 

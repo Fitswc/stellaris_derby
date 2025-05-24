@@ -141,3 +141,37 @@ origin_uma_business_MAN = {
 #	}
 #}
 
+
+
+origin_uma_after_factor_perk = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_uma_after_factor_perk.dds"
+	picture = "GFX_origin_uma_after_factor_perk"
+	description = origin_uma_after_factor_perk_effect
+	potential = {
+		country_type = {
+			NOT = {
+				value = primitive
+			}
+		}
+	}
+	possible = {
+		authority = {
+			value = auth_trainingcenter
+		}
+		species_archetype = { value = UMA }
+	}
+	playable = {
+		has_nemesis = yes
+	}
+	modifier = {
+		spy_network_daily_value_mult = 0.1
+		intel_decryption_add = 2
+		bonus_pop_growth_mult = -0.8
+	}
+
+	random_weight = {
+		base = 0.1
+	}
+}
+

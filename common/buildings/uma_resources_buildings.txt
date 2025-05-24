@@ -7,6 +7,11 @@ building_uma_field_powerplant = {
 	base_buildtime = 200
 	category = resource
 
+	building_sets = {
+		generator
+		uma_generator
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -51,7 +56,7 @@ building_uma_field_powerplant = {
 			}
 		}
 		modifier = {
-			job_uma_field_powering_technician_add = 2
+			job_uma_field_powering_technician_add = 200
 		}
 	}
 
@@ -92,6 +97,11 @@ building_uma_field_powering_complex = {
 	base_buildtime = 500
 	category = resource
 	can_build = no
+
+	building_sets = {
+		generator
+		uma_generator
+	}
 
 	potential = {
 		exists = owner
@@ -137,7 +147,7 @@ building_uma_field_powering_complex = {
 			}
 		}
 		modifier = {
-			job_uma_field_powering_technician_add = 4
+			job_uma_field_powering_technician_add = 400
 		}
 	}
 
@@ -182,6 +192,11 @@ building_uma_field_powering_complex_realm = {
 	base_buildtime = 100
 	category = resource
 	can_build = no
+
+	building_sets = {
+		generator
+		uma_generator
+	}
 
 	potential = {
 		exists = owner
@@ -232,7 +247,7 @@ building_uma_field_powering_complex_realm = {
 			}
 		}
 		modifier = {
-			job_uma_field_powering_technician_add = 4
+			job_uma_field_powering_technician_add = 400
 		}
 	}
 	planet_modifier = {
@@ -270,6 +285,12 @@ building_uma_field_powering_complex_realm = {
 building_uma_simple_carrot_farm = {
 	base_buildtime = 200
 	category = resource
+
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
 
 
 	potential = {
@@ -315,7 +336,7 @@ building_uma_simple_carrot_farm = {
 			}
 		}
 		modifier = {
-			job_uma_carrot_farmer_add = 2
+			job_uma_carrot_farmer_add = 200
 		}
 	}
 
@@ -344,7 +365,7 @@ building_uma_simple_carrot_farm = {
 			}
 		}
 		modifier = {
-			job_uma_bee_farmer_add = 1
+			job_uma_bee_farmer_add = 100
 		}
 	}
 
@@ -385,6 +406,12 @@ building_uma_modern_carrot_farm = {
 	base_buildtime = 500
 	category = resource
 	can_build = no #升级得来
+
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
 
 
 	potential = {
@@ -430,7 +457,7 @@ building_uma_modern_carrot_farm = {
 			}
 		}
 		modifier = {
-			job_uma_carrot_farmer_add = 4
+			job_uma_carrot_farmer_add = 400
 		}
 	}
 
@@ -460,7 +487,7 @@ building_uma_modern_carrot_farm = {
 
 		}
 		modifier = {
-			job_uma_bee_farmer_add = 1
+			job_uma_bee_farmer_add = 100
 		}
 	}
 
@@ -501,6 +528,12 @@ building_uma_advance_carrot_farm = {
 	base_buildtime = 900
 	category = resource
 	can_build = no #升级得来
+
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
 
 
 	potential = {
@@ -546,7 +579,7 @@ building_uma_advance_carrot_farm = {
 			}
 		}
 		modifier = {
-			job_uma_carrot_farmer_add = 7
+			job_uma_carrot_farmer_add = 700
 		}
 	}
 
@@ -576,7 +609,7 @@ building_uma_advance_carrot_farm = {
 			}
 		}
 		modifier = {
-			job_uma_bee_farmer_add = 1
+			job_uma_bee_farmer_add = 100
 		}
 	}
 
@@ -607,7 +640,7 @@ building_uma_advance_carrot_farm = {
 			}
 		}
 		modifier = {
-			planet_amenities_add = 5
+			planet_amenities_add = 500
 		}
 	}
 
@@ -634,6 +667,12 @@ building_uma_modern_carrot_farm_realm = {
 	base_buildtime = 100
 	category = resource
 	can_build = no #升级得来
+
+	building_sets = {
+		farming
+		hydroponics
+		uma_farming
+	}
 
 
 	potential = {
@@ -684,7 +723,7 @@ building_uma_modern_carrot_farm_realm = {
 			}
 		}
 		modifier = {
-			job_uma_carrot_farmer_add = 7
+			job_uma_carrot_farmer_add = 700
 		}
 	}
 	planet_modifier = {
@@ -718,7 +757,7 @@ building_uma_modern_carrot_farm_realm = {
 
 		}
 		modifier = {
-			job_uma_bee_farmer_add = 1
+			job_uma_bee_farmer_add = 100
 		}
 	}
 
@@ -755,6 +794,11 @@ building_uma_modern_carrot_farm_realm = {
 building_uma_core_mining_complex_1 = {
 	base_buildtime = 200
 	category = resource
+
+	building_sets = {
+		mining
+		uma_mining
+	}
 
 	potential = {
 		exists = owner
@@ -804,7 +848,7 @@ building_uma_core_mining_complex_1 = {
 			}
 		}
 		modifier = {
-			job_uma_core_miner_add = 2
+			job_uma_core_miner_add = 200
 		}
 	}
 
@@ -844,6 +888,11 @@ building_uma_core_mining_complex_2 = {
 	base_buildtime = 500
 	category = resource
 	can_build = no
+
+	building_sets = {
+		mining
+		uma_mining
+	}
 
 	potential = {
 		exists = owner
@@ -893,7 +942,7 @@ building_uma_core_mining_complex_2 = {
 			}
 		}
 		modifier = {
-			job_uma_core_miner_add = 4
+			job_uma_core_miner_add = 400
 		}
 	}
 
@@ -933,6 +982,11 @@ building_uma_core_mining_complex_3 = {
 	base_buildtime = 900
 	category = resource
 	can_build = no
+
+	building_sets = {
+		mining
+		uma_mining
+	}
 
 	potential = {
 		exists = owner
@@ -982,7 +1036,7 @@ building_uma_core_mining_complex_3 = {
 			}
 		}
 		modifier = {
-			job_uma_core_miner_add = 7
+			job_uma_core_miner_add = 700
 		}
 	}
 
@@ -1022,6 +1076,11 @@ building_uma_core_mining_complex_realm = {
 	base_buildtime = 100
 	category = resource
 	can_build = no
+
+	building_sets = {
+		mining
+		uma_mining
+	}
 
 	potential = {
 		exists = owner
@@ -1075,7 +1134,7 @@ building_uma_core_mining_complex_realm = {
 			}
 		}
 		modifier = {
-			job_uma_core_miner_add = 7
+			job_uma_core_miner_add = 700
 		}
 	}
 	planet_modifier = {

@@ -589,15 +589,12 @@ leader_trait_xianzhen_general_3 = {
 			is_species_class = umamusume
 			#			has_authority = auth_trainingcenter
 		}
+		has_paragon_dlc = yes
 	}
 	army_modifier = {
 		army_damage_mult = 0.3
 		army_morale_damage_mult = 0.3
 		army_health = 0.3
-	}
-	leader_potential_add = {
-
-		has_paragon_dlc = yes
 	}
 	leader_class = { commander }
 }
@@ -1823,8 +1820,12 @@ leader_trait_tianming5_general = {
 		army_morale = 0.6
 		army_collateral_damage_mult = 0.6
 		army_health = 1.0
+	}
+
+	self_modifier = {
 		planet_combat_width_add = 10
 	}
+
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
 		has_trait = subclass_jidongxueshuo_general

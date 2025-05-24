@@ -5,7 +5,7 @@ weapon_component_template = {
 	key = "UMA_PLANET_KILLER_TRANSFORM"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = no
+	use_ship_main_target = no
 
 	prerequisites = { "tech_uma_tranform" }
 
@@ -41,7 +41,7 @@ weapon_component_template = {
 	key = "UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = no
+	use_ship_main_target = no
 
 	prerequisites = {
 		"tech_uma_crystal_carrot_analyzing"

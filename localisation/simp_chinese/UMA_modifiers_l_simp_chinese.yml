@@ -136,6 +136,9 @@ uma_kenshi_ban_the_media_desc:0 "我们已经封禁了一些传播谣言的账�
 uma_kenshi_fear_of_this:0 "因子改造的恐惧"
 uma_kenshi_fear_of_this_desc:0 "果不其然，这个哲学问题引起了一些马娘对因子改造的恐惧。不过，这也使得我们的科学家能够进一步考虑因子改造所带来的一些副作用。"
 
+uma_ap2_factor_power_without_countrol: "未经控制的力量"
+uma_ap2_factor_power_without_countrol_desc: "Power!马娘们的力量似乎造成了一些额外花费......."
+
 ###特殊领袖事件修正
 uma_kenshi_contamination:0 "因子污染"
 uma_kenshi_contamination_desc:0 "由于我们的轻率，绿茵祈愿的因子污染了我们的因子库，并在星球上造成了严重的损失。"
@@ -238,3 +241,29 @@ mod_planet_district_uma_training_course_build_speed_mult: "训练区划建造速
 
 uma_add_treater: "马娘商人"
 uma_add_treater_desc: "因为商业建筑的存在，我们的星球产生了马娘商人"
+
+
+
+fake_uma_food_produces_mod: "£job£岗位生产的£food£食物"
+fake_uma_food_produces_mod_desc: ""
+
+fake_uma_mineral_produces_mod: "£mod_minerals_produces_mult£岗位产出的£minerals£矿物"
+fake_uma_mineral_produces_mod_desc: ""
+
+fake_uma_pop_housing_usage_mult_mod: "£mod_pop_housing_usage_mult£人口住房使用"
+fake_uma_pop_housing_usage_mult_mod_desc: ""
+
+fake_uma_planet_jobs_physics_research_produces_mult_mod: "£job£岗位产出的£physics_research£物理学研究"
+fake_uma_planet_jobs_physics_research_produces_mult_mod_desc: ""
+
+fake_uma_planet_jobs_society_research_produces_mult_mod: "£job£岗位产出的£society_research£社会学研究"
+fake_uma_planet_jobs_society_research_produces_mult_mod_desc: ""
+
+fake_uma_planet_jobs_engineering_research_produces_mult_mod: "£job£岗位产出的£engineering_research£工程学研究"
+fake_uma_planet_jobs_engineering_research_produces_mult_mod_desc: ""
+
+fake_uma_pop_environment_tolerance_mod: "£mod_pop_environment_tolerance£宜居度"
+fake_uma_pop_environment_tolerance_mod_desc: ""
+
+fake_uma_planet_pops_food_upkeep_mult_mod: "£pop£人口£food£食物消耗"
+fake_uma_planet_pops_food_upkeep_mult_mod_desc: ""

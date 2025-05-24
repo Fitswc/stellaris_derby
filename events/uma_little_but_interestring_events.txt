@@ -373,6 +373,17 @@ country_event = {
 					value = "GFX_border_legendary"
 				}
 			}
+
+			add_timeline_event = {
+				type = timeline_umamusume
+				override_tooltip = "uma_timeline_meet_leader_oguri_desc"
+				override_text = { "text:uma_timeline_meet_leader_oguri" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_oguri" "background_zoom2:GFX_uma_timelines_meet_oguri_zoom_2"}
+				override_types = { country leader }
+				override_id = uma_timeline_meet_leader_oguri
+				targets = { Root event_target:uma_is_leader_oguri_cap }
+			}
+
 		}
 	}
 

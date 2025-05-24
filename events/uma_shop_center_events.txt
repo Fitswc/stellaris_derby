@@ -1158,36 +1158,7 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = uma_shop_center.120.b #海军上将
-		#custom_tooltip = uma_special_leader_king_halo_will_join
-		hidden_effect = {
-			create_leader = {
-				name = KH
-				species = root
-				gender = female
-				class = commander
-				skill = 6
-				set_age = 18
-				custom_catch_phrase = uma_halo_catch_phrase
-				traits = {
-					trait = uma_admiral_trait_sp_king_halo
-					trait = leader_trait_qingbaoyouxian_admiral
-					trait = leader_trait_uma_generic
-				}
-				effect = {
-					set_leader_flag = uma_is_special_leader
-					set_leader_flag = uma_is_king_halo
-					save_global_event_target_as = uma_is_leader_king_halo
-				}
-			}
-			last_created_leader = {
-				change_leader_portrait = "47c"
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-#				add_trait = uma_ruler_trait_sp_king_halo
-			}
-		}
-	}
+
 
 	option = {
 		name = uma_shop_center.120.c #科学家
@@ -1294,36 +1265,6 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = uma_shop_center.121.b #海军上将
-		#custom_tooltip = uma_special_leader_al_condor_pasa_will_join
-		hidden_effect = {
-			create_leader = {
-				name = EI
-				species = root
-				gender = female
-				class = commander
-				skill = 6
-				set_age = 18
-				custom_catch_phrase = uma_ei_catch_phrase
-				traits = {
-					trait = uma_admiral_trait_sp_al_condor_pasa
-					trait = leader_trait_baofa_admiral
-					trait = leader_trait_uma_generic
-				}
-				effect = {
-					set_leader_flag = uma_is_special_leader
-					set_leader_flag = uma_is_al_condor_pasa
-					save_global_event_target_as = uma_is_leader_al_condor_pasa
-				}
-			}
-			last_created_leader = {
-				change_leader_portrait = "14c"
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-#				add_trait = uma_ruler_trait_sp_al_condor_pasa
-			}
-		}
-	}
 
 	option = {
 		name = uma_shop_center.121.c #科学家
@@ -1431,37 +1372,7 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = uma_shop_center.122.b #海军上将
-		#custom_tooltip = uma_special_leader_kitasan_black_will_join
-		hidden_effect = {
-			create_leader = {
-				name = KB
-				species = root
-				gender = female
-				class = commander
-				skill = 6
-				set_age = 18
-				custom_catch_phrase = uma_kb_catch_phrase
-				traits = {
-					trait = uma_admiral_trait_sp_kitasan_black
-#					trait = leader_trait_chuantongyineng_admiral
-					trait = leader_trait_qingbaoyouxian_admiral
-					trait = leader_trait_uma_generic
-				}
-				effect = {
-					set_leader_flag = uma_is_special_leader
-					set_leader_flag = uma_is_kitasan_black
-					save_global_event_target_as = uma_is_leader_kitasan_black
-				}
-			}
-			last_created_leader = {
-				change_leader_portrait = "67c"
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-#				add_trait = uma_ruler_trait_sp_kitasan_black
-			}
-		}
-	}
+
 
 	option = {
 		name = uma_shop_center.122.c #科学家

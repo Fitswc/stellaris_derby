@@ -1,0 +1,1802 @@
+##POWER 1
+##API 受限，只能用蠢办法了
+uma_trait_ap2_factor_power_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	#Species scope
+#	triggered_species_modifier = {
+#
+#	}
+#	Pop scope
+#	triggered_pop_modifier = {
+#		potential = {
+#
+#		}
+#
+#	}
+#	Leader scope
+#	triggered_leader_modifier = {
+#
+#	}
+#	planet scope | no tooltip generation
+#	triggered_planet_growth_habitability_modifier = {
+#		potential ={
+#
+#		}
+#		modifier = {
+#			army_damage_mult = 0.02
+#			planet_jobs_produces_mult = 0.02
+#		}
+#	}
+
+	modifier = {
+		army_damage_mult = 0.05
+		planet_jobs_produces_mult = 0.05
+		ship_weapon_damage = 0.05
+	}
+}
+
+uma_trait_ap2_factor_power_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.1
+		planet_jobs_produces_mult = 0.1
+		ship_weapon_damage = 0.1
+	}
+}
+
+uma_trait_ap2_factor_power_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.15
+		planet_jobs_produces_mult = 0.15
+		ship_weapon_damage = 0.15
+	}
+}
+
+uma_trait_ap2_factor_power_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.2
+		planet_jobs_produces_mult = 0.2
+		ship_weapon_damage = 0.2
+	}
+}
+
+uma_trait_ap2_factor_power_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.25
+		planet_jobs_produces_mult = 0.25
+		ship_weapon_damage = 0.25
+	}
+}
+
+uma_trait_ap2_factor_power_6={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.3
+		planet_jobs_produces_mult = 0.3
+		ship_weapon_damage = 0.3
+	}
+}
+
+uma_trait_ap2_factor_power_7={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.35
+		planet_jobs_produces_mult = 0.35
+		ship_weapon_damage = 0.35
+	}
+}
+
+uma_trait_ap2_factor_power_8={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.4
+		planet_jobs_produces_mult = 0.4
+		ship_weapon_damage = 0.4
+	}
+}
+
+uma_trait_ap2_factor_power_9={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		army_damage_mult = 0.5
+		planet_jobs_produces_mult = 0.5
+		ship_weapon_damage = 0.5
+	}
+}
+
+
+uma_trait_ap2_factor_speed_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+
+	modifier = {
+		empire_size_pops_mult = -0.05
+		ship_base_speed_mult = 0.05
+		ship_fire_rate_mult = 0.05
+	}
+}
+
+uma_trait_ap2_factor_speed_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.1
+		ship_base_speed_mult = 0.1
+		ship_fire_rate_mult = 0.1
+	}
+}
+
+uma_trait_ap2_factor_speed_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.15
+		ship_base_speed_mult = 0.15
+		ship_fire_rate_mult = 0.15
+	}
+}
+
+uma_trait_ap2_factor_speed_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.2
+		ship_base_speed_mult = 0.2
+		ship_fire_rate_mult = 0.2
+	}
+}
+
+uma_trait_ap2_factor_speed_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.25
+		ship_base_speed_mult = 0.25
+		ship_fire_rate_mult = 0.25
+	}
+}
+
+uma_trait_ap2_factor_speed_6={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.3
+		ship_base_speed_mult = 0.3
+		ship_fire_rate_mult = 0.3
+	}
+}
+
+uma_trait_ap2_factor_speed_7={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.35
+		ship_base_speed_mult = 0.35
+		ship_fire_rate_mult = 0.35
+	}
+}
+
+uma_trait_ap2_factor_speed_8={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.4
+		ship_base_speed_mult = 0.4
+		ship_fire_rate_mult = 0.4
+	}
+}
+
+uma_trait_ap2_factor_speed_9={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_speed.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = -0.5
+		ship_base_speed_mult = 0.5
+		ship_fire_rate_mult = 0.5
+	}
+}
+
+uma_trait_ap2_factor_wisdom_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+
+	modifier = {
+		ship_experience_gain_mult = 0.05
+		command_limit_mult = 0.05
+		all_technology_research_speed = 0.05
+	}
+}
+
+uma_trait_ap2_factor_wisdom_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.1
+		command_limit_mult = 0.1
+		all_technology_research_speed = 01
+	}
+}
+
+uma_trait_ap2_factor_wisdom_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.15
+		command_limit_mult = 0.15
+		all_technology_research_speed = 0.15
+	}
+}
+
+uma_trait_ap2_factor_wisdom_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.2
+		command_limit_mult = 0.2
+		all_technology_research_speed = 0.2
+	}
+}
+
+uma_trait_ap2_factor_wisdom_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.25
+		command_limit_mult = 0.25
+		all_technology_research_speed = 0.25
+	}
+}
+
+uma_trait_ap2_factor_wisdom_6={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.3
+		command_limit_mult = 0.3
+		all_technology_research_speed = 0.3
+	}
+}
+
+uma_trait_ap2_factor_wisdom_7={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.35
+		command_limit_mult = 0.35
+		all_technology_research_speed = 0.35
+	}
+}
+
+uma_trait_ap2_factor_wisdom_8={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.4
+		command_limit_mult = 0.4
+		all_technology_research_speed = 0.4
+	}
+}
+
+uma_trait_ap2_factor_wisdom_9={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_wisdom.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_experience_gain_mult = 0.5
+		command_limit_mult = 0.5
+		all_technology_research_speed = 0.5
+	}
+}
+
+
+uma_trait_ap2_factor_stamina_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+
+	modifier = {
+		ship_hull_mult = 0.05
+		command_limit_mult = 0.05
+		army_health = 0.05
+	}
+}
+
+uma_trait_ap2_factor_stamina_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.1
+		command_limit_mult = 0.1
+		army_health = 0.1
+	}
+}
+
+uma_trait_ap2_factor_stamina_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.15
+		command_limit_mult = 0.15
+		army_health = 0.15
+	}
+}
+
+uma_trait_ap2_factor_stamina_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.2
+		command_limit_mult = 0.2
+		army_health = 0.2
+	}
+}
+
+uma_trait_ap2_factor_stamina_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.25
+		command_limit_mult = 0.25
+		army_health = 0.25
+	}
+}
+
+uma_trait_ap2_factor_stamina_6={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.3
+		command_limit_mult = 0.3
+		army_health = 0.3
+	}
+}
+
+uma_trait_ap2_factor_stamina_7={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.35
+		command_limit_mult = 0.35
+		army_health = 0.35
+	}
+}
+
+uma_trait_ap2_factor_stamina_8={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.4
+		command_limit_mult = 0.4
+		army_health = 0.4
+	}
+}
+
+uma_trait_ap2_factor_stamina_9={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_stamina.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_hull_mult = 0.5
+		command_limit_mult = 0.5
+		army_health = 0.5
+	}
+}
+
+
+
+uma_trait_ap2_factor_charm_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+
+	modifier = {
+		planet_amenities_mult = 0.05
+		megastructures_cost_mult = -0.05
+		planet_structures_cost_mult = -0.05
+	}
+}
+
+uma_trait_ap2_factor_charm_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.1
+		megastructures_cost_mult = -0.1
+		planet_structures_cost_mult = -0.1
+	}
+}
+
+uma_trait_ap2_factor_charm_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.15
+		megastructures_cost_mult = -0.15
+		planet_structures_cost_mult = -0.15
+	}
+}
+
+uma_trait_ap2_factor_charm_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.2
+		megastructures_cost_mult = -0.2
+		planet_structures_cost_mult = -0.2
+	}
+}
+
+uma_trait_ap2_factor_charm_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.25
+		megastructures_cost_mult = -0.25
+		planet_structures_cost_mult = -0.25
+	}
+}
+
+uma_trait_ap2_factor_charm_6={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.3
+		megastructures_cost_mult = -0.3
+		planet_structures_cost_mult = -0.3
+	}
+}
+
+uma_trait_ap2_factor_charm_7={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.35
+		megastructures_cost_mult = -0.35
+		planet_structures_cost_mult = -0.35
+	}
+}
+
+uma_trait_ap2_factor_charm_8={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.4
+		megastructures_cost_mult = -0.4
+		planet_structures_cost_mult = -0.4
+	}
+}
+
+uma_trait_ap2_factor_charm_9={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_charm.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_amenities_mult = 0.5
+		megastructures_cost_mult = -0.5
+		planet_structures_cost_mult = -0.5
+	}
+}
+
+
+
+
+
+uma_trait_ap2_factor_fail_evt = {
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_fail.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		pop_happiness = -0.2
+		leader_upkeep_empire_size_mult = 0.05
+		planet_jobs_upkeep_mult = 0.05
+	}
+}
+
+uma_trait_ap2_factor_fail = {
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_fail.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		pop_happiness = -0.1
+		leader_upkeep_empire_size_mult = 0.05
+		planet_jobs_upkeep_mult = 0.05
+	}
+}
+
+
+uma_trait_ap2_factor_pain_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+
+	modifier = {
+		bonus_pop_growth_mult = -0.02
+	}
+}
+
+uma_trait_ap2_factor_pain_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.05
+	}
+}
+
+uma_trait_ap2_factor_pain_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.10
+	}
+}
+
+uma_trait_ap2_factor_pain_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.15
+	}
+}
+
+uma_trait_ap2_factor_pain_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult= -0.20
+	}
+}
+
+uma_trait_ap2_factor_pain_6={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.25
+	}
+}
+
+uma_trait_ap2_factor_pain_7={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.30
+	}
+}
+
+uma_trait_ap2_factor_pain_8={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.35
+	}
+}
+
+uma_trait_ap2_factor_pain_9={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_pain.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		bonus_pop_growth_mult = -0.45
+	}
+}
+
+
+
+
+#####Realm
+uma_trait_ap2_realm_power_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+	}
+}
+
+uma_trait_ap2_realm_power_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+	}
+}
+
+uma_trait_ap2_realm_power_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+}
+
+uma_trait_ap2_realm_power_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
+	}
+}
+
+uma_trait_ap2_realm_power_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_physics_research_produces_mult = 0.25
+	}
+}
+
+
+uma_trait_ap2_realm_speed_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_weapon_damage = 0.05
+		ship_orbital_bombardment_mult = 0.05
+		army_damage_mult = 0.05
+	}
+}
+
+uma_trait_ap2_realm_speed_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_weapon_damage = 0.1
+		ship_orbital_bombardment_mult = 0.1
+		army_damage_mult = 0.1
+	}
+}
+
+uma_trait_ap2_realm_speed_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_weapon_damage = 0.15
+		ship_orbital_bombardment_mult = 0.15
+		army_damage_mult = 0.15
+	}
+}
+
+uma_trait_ap2_realm_speed_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_weapon_damage = 0.2
+		ship_orbital_bombardment_mult = 0.2
+		army_damage_mult = 0.2
+	}
+}
+
+uma_trait_ap2_realm_speed_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_weapon_damage = 0.25
+		ship_orbital_bombardment_mult = 0.25
+		army_damage_mult = 0.25
+	}
+}
+
+
+
+uma_trait_ap2_realm_stamina_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		starbase_shipyard_build_time_mult = 0.05
+		country_cost_mult = 0.05
+	}
+}
+
+uma_trait_ap2_realm_stamina_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		starbase_shipyard_build_time_mult = 0.1
+		country_cost_mult = 0.1
+	}
+}
+
+uma_trait_ap2_realm_stamina_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_produces_mult = 0.15
+		starbase_shipyard_build_time_mult = 0.15
+		country_cost_mult = 0.15
+	}
+}
+
+uma_trait_ap2_realm_stamina_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_produces_mult = 0.2
+		starbase_shipyard_build_time_mult = 0.2
+		country_cost_mult = 0.2
+	}
+}
+
+uma_trait_ap2_realm_stamina_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		starbase_shipyard_build_time_mult = 0.25
+		country_cost_mult = 0.25
+	}
+}
+
+
+uma_trait_ap2_realm_wisdom_1={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_accuracy_mult = 0.05
+		ship_jumpdrive_cooldown_mult = 0.05
+		ship_military_upkeep_mult = 0.05
+	}
+}
+
+uma_trait_ap2_realm_wisdom_2={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_accuracy_mult = 0.1
+		ship_jumpdrive_cooldown_mult = 0.1
+		ship_military_upkeep_mult = 0.1
+	}
+}
+
+uma_trait_ap2_realm_wisdom_3={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_accuracy_mult = 0.15
+		ship_jumpdrive_cooldown_mult = 0.15
+		ship_military_upkeep_mult = 0.15
+	}
+}
+
+uma_trait_ap2_realm_wisdom_4={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_accuracy_mult = 0.2
+		ship_jumpdrive_cooldown_mult = 0.2
+		ship_military_upkeep_mult = 0.2
+	}
+}
+
+uma_trait_ap2_realm_wisdom_5={
+	icon="gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost= 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes={UMA}
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		ship_accuracy_mult = 0.25
+		ship_jumpdrive_cooldown_mult = 0.25
+		ship_military_upkeep_mult = 0.25
+	}
+}
+
+
+uma_trait_ap2_realm_fail = {
+	icon = "gfx/interface/icons/traits/uma_trait_ap2_factor_power.png"
+	cost = 0
+#	potential_crossbreeding_chance = 0
+	allowed_archetypes = { UMA }
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	initial = no
+
+	modifier = {
+		empire_size_pops_mult = 0.1
+	}
+}
+

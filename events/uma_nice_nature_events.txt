@@ -75,12 +75,12 @@ event = {
         #大概不需要领袖吧
 		last_created_country = {
 			create_leader = {
-				class = ruler
+				class = official
 				species = this				#领袖种族
 				name = NN			#领袖名字（当前为随机）
 				skill = 10
 			}
-			change_leader_portrait = "46c"
+#			change_leader_portrait = "46c"
 #			effect = {
 #				change_leader_portrait = "46c"
 #			}
@@ -311,62 +311,6 @@ country_event = {
 	}
 
 	#成为一位海军上将
-	option = {
-		name = uma_nice_nature.4.c
-		allow = {
-			custom_tooltip = {
-				fail_text = "uma_not_has_admiral_nature"
-				NOT = { exists = event_target:uma_is_leader_admiral_nature }
-				NOT = { uma_num_of_nature_equal_or_better_than_three = yes }  #一个封装好的trigger，判断领袖内恰少于三位
-			}
-		}
-		hidden_effect = {
-			create_leader = {
-				name = NN #NN
-				species = root
-				gender = female
-				class = commander
-				skill = 5
-				set_age = 18
-				custom_catch_phrase = uma_nn_catch_phrase
-				traits = {
-					trait = uma_admiral_trait_sp_nice_nature
-					trait = leader_trait_houqin_admiral
-					trait = leader_trait_aijianruqi_admiral
-					trait = leader_trait_uma_generic
-				}
-				effect = {
-					set_leader_flag = uma_is_special_leader
-					set_leader_flag = uma_is_nice_nature #内恰由于可以同时存在多个，所以用两个flag标注
-					set_leader_flag = uma_is_admiral_nice_nature
-					save_global_event_target_as = uma_is_leader_admiral_nature
-				}
-			}
-			last_created_leader = {
-				change_leader_portrait = "46c"
-#				add_trait = uma_ruler_trait_sp_nice_nature #选举为领袖的时候才会保留特质！
-				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质	
-			}
-			create_message = {
-				type = MESSAGE_RECRUITED_LEADER
-				localization = MESSAGE_RECRUITED_LEADER_DESC
-				days = @toast_message_days
-				target = event_target:uma_is_leader_admiral_nature
-				variable = {
-					type = name
-					localization = LEADER
-					scope = event_target:uma_is_leader_admiral_nature
-				}
-				variable = {
-					key = "border"
-					value = "GFX_border_legendary"
-				}
-			}
-			country_event = {
-				id = uma_nice_nature.4
-			}
-		}
-	}
 
 	#成为一位总督
 	option = {

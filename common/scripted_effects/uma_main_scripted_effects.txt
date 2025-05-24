@@ -13,26 +13,45 @@ uma_upgrade_kenshi_strength_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_strength_level_1
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_1
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_1 }
 		remove_country_flag = uma_kenshi_strength_level_1
 		set_country_flag = uma_kenshi_strength_level_2
+		remove_modifier = uma_kenshi_strength_level_1
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_2 }
 		remove_country_flag = uma_kenshi_strength_level_2
 		set_country_flag = uma_kenshi_strength_level_3
+		remove_modifier = uma_kenshi_strength_level_2
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_3
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_3 }
 		remove_country_flag = uma_kenshi_strength_level_3
 		set_country_flag = uma_kenshi_strength_level_4
+		remove_modifier = uma_kenshi_strength_level_3
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_4
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_4 }
 		remove_country_flag = uma_kenshi_strength_level_4
 		set_country_flag = uma_kenshi_strength_level_5
+		remove_modifier = uma_kenshi_strength_level_4
+		add_modifier = {
+			modifier = uma_kenshi_strength_level_5
+		}
 	}
 }
 
@@ -49,26 +68,45 @@ uma_upgrade_kenshi_intelligence_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_intelligence_level_1
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_1
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_1 }
 		remove_country_flag = uma_kenshi_intelligence_level_1
 		set_country_flag = uma_kenshi_intelligence_level_2
+		remove_modifier = uma_kenshi_intelligence_level_1
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_2 }
 		remove_country_flag = uma_kenshi_intelligence_level_2
 		set_country_flag = uma_kenshi_intelligence_level_3
+		remove_modifier = uma_kenshi_intelligence_level_2
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_3
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_3 }
 		remove_country_flag = uma_kenshi_intelligence_level_3
 		set_country_flag = uma_kenshi_intelligence_level_4
+		remove_modifier = uma_kenshi_intelligence_level_3
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_4
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_4 }
 		remove_country_flag = uma_kenshi_intelligence_level_4
 		set_country_flag = uma_kenshi_intelligence_level_5
+		remove_modifier = uma_kenshi_intelligence_level_4
+		add_modifier = {
+			modifier = uma_kenshi_intelligence_level_5
+		}
 	}
 }
 
@@ -85,26 +123,45 @@ uma_upgrade_kenshi_will_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_will_level_1
+		add_modifier = {
+			modifier = uma_kenshi_will_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_1 }
 		remove_country_flag = uma_kenshi_will_level_1
 		set_country_flag = uma_kenshi_will_level_2
+		remove_modifier = uma_kenshi_will_level_1
+		add_modifier = {
+			modifier = uma_kenshi_will_level_2
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_2 }
 		remove_country_flag = uma_kenshi_will_level_2
 		set_country_flag = uma_kenshi_will_level_3
+		remove_modifier = uma_kenshi_will_level_2
+		add_modifier = {
+			modifier = uma_kenshi_will_level_3
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_3 }
 		remove_country_flag = uma_kenshi_will_level_3
 		set_country_flag = uma_kenshi_will_level_4
+		remove_modifier = uma_kenshi_will_level_3
+		add_modifier = {
+			modifier = uma_kenshi_will_level_4
+		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_4 }
 		remove_country_flag = uma_kenshi_will_level_4
 		set_country_flag = uma_kenshi_will_level_5
+		remove_modifier = uma_kenshi_will_level_4
+		add_modifier = {
+			modifier = uma_kenshi_will_level_5
+		}
 	}
 }
 
@@ -3615,14 +3672,14 @@ uma_random_specimen = {
 				factor = 0
 				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clock  } }
 			}
-			give_specimen = { key = uma_clock  }
+			give_specimen = { key = uma_clock  origin = uma_specimen_null}
 		}
 		1 = {
 			modifier = {
 				factor = 0
 				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clover } }
 			}
-			give_specimen = { key = uma_clover}
+			give_specimen = { key = uma_clover origin = uma_specimen_null}
 		}
 		1 = {
 			modifier = {
@@ -3631,17 +3688,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_coin}
-		}
-
-		1 = {
-			modifier = {
-				factor = 0
-				NOR = {
-					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
-				}
-			}
-			give_specimen = { key = uma_live_video}
+			give_specimen = { key = uma_coin origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3651,7 +3698,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_shine_of_dream}
+			give_specimen = { key = uma_live_video origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3661,7 +3708,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_shoe_trophy}
+			give_specimen = { key = uma_shine_of_dream origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3671,7 +3718,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_strength_crystal}
+			give_specimen = { key = uma_shoe_trophy origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3681,7 +3728,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_tp}
+			give_specimen = { key = uma_strength_crystal origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3691,7 +3738,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_trophy_classic}
+			give_specimen = { key = uma_tp origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3701,7 +3748,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_twinkle_maz}
+			give_specimen = { key = uma_trophy_classic origin = uma_specimen_null}
 		}
 
 		1 = {
@@ -3711,7 +3758,17 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_trophy_classic}
+			give_specimen = { key = uma_twinkle_maz origin = uma_specimen_null}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_trophy_classic origin = uma_specimen_null}
 		}
 	}
 
@@ -3733,4 +3790,26 @@ uma_tgrd_clear_TGAC_flag = {
 	remove_planet_flag = uma_TGAC_produce_darkm
 	remove_planet_flag = uma_TGAC_produce_nano
 	remove_planet_flag = uma_TGAC_produce_uma_crystal
+}
+
+
+uma_season_give_random_season = {
+	random_list = {
+		25 = {
+			add_deposit = d_uma_season_spring
+		}
+		25 = {
+			add_deposit = d_uma_season_summer
+		}
+		25 = {
+			add_deposit = d_uma_season_autumn
+		}
+		25 = {
+			add_deposit = d_uma_season_winter
+		}
+	}
+	last_added_deposit = {
+		set_deposit_flag = uma_keep_deposit_on_terraform
+		set_deposit_flag = keep_deposit_on_terraform
+	}
 }

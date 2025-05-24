@@ -109,7 +109,7 @@ uma_gold_system_initializer = {
 			orbit_angle = random
 			size = 10
 			has_ring = yes
-			tile_blockers = none
+#			tile_blockers = none
 			modifiers = none
 			resource = minerals
 			anomaly = none
@@ -133,7 +133,7 @@ uma_gold_system_initializer = {
 	}
 
 	init_effect = {
-
+		save_global_event_target_as = uma_gold_invasion_system_here
 	}
 }
 
