@@ -136,6 +136,7 @@ uma_clover = {
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
 		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_trade_produces_mult = 0.02
 	}
 }
 
@@ -292,7 +293,7 @@ uma_sky_flower = {
 
 uma_strength_crystal = {
 	icon = "GFX_uma_specimen_uma_strength_crystal"
-	type = aesthetic_wonder
+	type = historical_item
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
@@ -325,7 +326,7 @@ uma_sweepy = {
 
 uma_tg_chess = {
 	icon = "GFX_uma_specimen_uma_tg_chess"
-	type = aesthetic_wonder
+	type = historical_item
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
@@ -391,7 +392,7 @@ uma_tt_shoes = {
 
 uma_twinkle_maz = {
 	icon = "GFX_uma_specimen_uma_twinkle_maz"
-	type = aesthetic_wonder
+	type = historical_item
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
@@ -426,4 +427,20 @@ uma_ty_medicine = {
 }
 
 
+uma_zephyr_journy_with_zephyr = {
+	icon = "GFX_uma_zephyr_journy_with_zephyr"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	resources = {
+		category = specimens
+		produces = {
+			unity = 60
+		}
+	}
+}
 

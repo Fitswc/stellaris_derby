@@ -30,3 +30,14 @@ message_type = {
 	message_setting_key = uma_message_randomsystem_setting
 	ping = "ping_notification_green"
 }
+
+message_type = {
+	key = "UMA_NOTICE_NEWSHIP"
+	name = "UMA_NOTICE_NEWSHIP"
+	icon = GFX_message_other_alert
+	sound = "notification"
+	default_toast = yes
+	category = other
+	message_setting_key = uma_message_notice_newship
+	ping = "ping_notification_green"
+}
