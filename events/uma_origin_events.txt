@@ -312,6 +312,10 @@ country_event = {
 			country_event = {
 				id = uma_ap.200
 			}
+			give_technology = {
+				tech =  tech_uma_tranform
+				message = yes
+			}
 
 			add_resource = {
 				minerals = 1000
