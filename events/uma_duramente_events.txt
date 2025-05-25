@@ -1,0 +1,44 @@
+namespace = uma_duramente
+
+
+country_event = {
+	id = uma_duramente.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		uma_spawn_system_around_solar_system = {
+			MIN_JUMPS = 2
+			MAX_JUMPS = 5
+			UMA_INITIALIZER = "uma_duramenta"
+			FLAG = uma_du_system_created
+			O_ANGLE_MIN = 0
+			O_ANGLE_MAX = 180
+			SAVE_GLOBAL_TARGET = uma_where_du_is
+		}
+
+		country_event = {
+			id = uma_duramente.3
+			days = 1
+		}
+	}
+}
+
+
+
+country_event = {
+	id = uma_duramente.3
+	title = uma_duramente.3.title
+	desc = uma_duramente.3.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_duramente.2.a
+	}
+}
+
+
