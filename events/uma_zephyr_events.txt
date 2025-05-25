@@ -230,42 +230,42 @@ ship_event = {
 				id = uma_zephyr.11
 			}
 		}
-		From = {
-			create_country = {
-				name = uma_zephyr_country_name
-				type = global_event
-				ignore_initial_colony_error = yes
-				authority = random
-				flag = random
-				species = random
-				name_list = random #?
-				origin = origin_default
-				effect = {
-					set_graphical_culture = Root.fleet.owner
-					save_global_event_target_as = uma_zephyr_fleet_country
-					create_ship_design = {
-						design = NAME_UMA_SHIP_ZEPHYR
-					}
-
-					Prev = {
-						create_fleet = {
-							name = NAME_UMA_SHIP_ZEPHYR
-							effect = {
-								set_owner = event_target:uma_zephyr_fleet_country
-								save_global_event_target_as = uma_zephyr_fleet
-								create_ship = {
-									name = NAME_UMA_SHIP_ZEPHYR
-									design = last_created_design
-									graphical_culture = Root.fleet.owner
-								}
-
-								set_location = Prev
-							}
-						}
-					}
-				}
-			}
-		}
+#		From = {
+#			create_country = {
+#				name = uma_zephyr_country_name
+#				type = global_event
+#				ignore_initial_colony_error = yes
+#				authority = random
+#				flag = random
+#				species = random
+#				name_list = random #?
+#				origin = origin_default
+#				effect = {
+#					set_graphical_culture = Root.fleet.owner
+#					save_global_event_target_as = uma_zephyr_fleet_country
+#					create_ship_design = {
+#						design = NAME_UMA_SHIP_ZEPHYR
+#					}
+#
+#					Prev = {
+#						create_fleet = {
+#							name = NAME_UMA_SHIP_ZEPHYR
+#							effect = {
+#								set_owner = event_target:uma_zephyr_fleet_country
+#								save_global_event_target_as = uma_zephyr_fleet
+#								create_ship = {
+#									name = NAME_UMA_SHIP_ZEPHYR
+#									design = last_created_design
+#									graphical_culture = Root.fleet.owner
+#								}
+#
+#								set_location = Prev
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
 	}
 }
 
@@ -378,17 +378,17 @@ country_event = {
 	}
 
 	after = {
-		hidden_effect = {
-			event_target:uma_zephyr_fleet_country = {
-				destroy_country = yes
-			}
-			event_target:uma_zephyr_fleet = {
-				destroy_fleet = This
-				clear_global_event_target = uma_zephyr_fleet
-			}
-
-
-		}
+#		hidden_effect = {
+#			event_target:uma_zephyr_fleet_country = {
+#				destroy_country = yes
+#			}
+#			event_target:uma_zephyr_fleet = {
+#				destroy_fleet = This
+#				clear_global_event_target = uma_zephyr_fleet
+#			}
+#
+#
+#		}
 		hidden_effect = {
 			country_event = {
 				id = uma_zephyr.50
