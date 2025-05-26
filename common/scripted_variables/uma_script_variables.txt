@@ -81,3 +81,8 @@
 @rw_maintenance = 5
 @rw_maintenance_sr = 2
 @rw_district_buildtime = 360
+
+
+#Compatibility for BPV
+@BPV_ZONE_SLOT = 3
+@BPV_CITY_SLOT = 6
