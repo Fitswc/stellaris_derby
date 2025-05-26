@@ -59,7 +59,7 @@ ship_event = {
 		log = "UMA_CREATED DURAMENTE ARCHAEOLOGICAL SITE AT [event_target:uma_duramenta_planet.GetName]"
 
 		event_target:uma_duramenta_planet = {
-
+			create_archaeological_site = uma_duramente_relic
 		}
 	}
 }
