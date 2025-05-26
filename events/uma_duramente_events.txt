@@ -203,7 +203,8 @@ fleet_event = {
 
 		owner = {
 			country_event = {
-
+				id = uma_duramente.10
+				days = 20
 			}
 		}
 	}
@@ -230,6 +231,152 @@ country_event = {
 			}
 		}
 		add_relic = uma_ancient_crystal_carrot_relics
+
+		hidden_effect = {
+			country_event = {
+				id = uma_duramente.11
+				days = 100
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_duramente.11
+	title = uma_duramente.11.title
+	desc = uma_duramente.11.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_duramente.11.a
+		hidden_effect = {
+			country_event = {
+				id= uma_duramente.12
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_duramente.12
+	title = uma_duramente.name.unknown
+	desc = uma_duramente.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+		portrait = 85c
+	}
+
+	option = {
+		name = uma_duramente.12.a
+		hidden_effect = {
+			country_event = {
+				id = uma_duramente.12
+			}
+		}
+	}
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id =
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_duramente.12
+	title = uma_duramente.name.unknown
+	desc = uma_duramente.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+		portrait = 85c
+	}
+
+	option = {
+		name = uma_duramente.12.a
+		hidden_effect = {
+			country_event = {
+				id = uma_duramente.13
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_duramente.13
+	title = uma_duramente.name.unknown
+	desc = uma_duramente.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+		portrait = 85c
+	}
+
+	option = {
+		name = uma_duramente.13.a
+		hidden_effect = {
+			create_leader = {
+				name = DURAMENTE
+				species = root
+				gender = female
+				class = commander
+				set_age = 19
+				skill = 2
+				immortal = no
+				background_job = uma_researcher
+				custom_catch_phrase = uma_dura_catch_phrase
+				custom_description = uma_dura_backstory
+				traits = {
+					trait = uma_commander_trait_sp_dura
+					trait = leader_trait_uma_generic
+				}
+				effect = {
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_duramente
+					save_global_event_target_as = uma_is_leader_duramente
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "85c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+				add_experience = 10000
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_duramente.13.b
+		set_country_flag = uma_duramente_not_join
+		custom_tooltip = uma_duramente.13.b.tt
+	}
+
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_silent_suzuka
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_silent_suzuka
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
 	}
 }
 

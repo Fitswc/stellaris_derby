@@ -33,11 +33,32 @@ uma_duramente.8.b: "给她注射葡萄糖，留一些吃的，然后离开"
 
 
 uma_duramente.10.title: "远古萝卜"
-uma_duramente.10.desc: "送出那位远古马娘以后我们的专家便可以大展拳脚了！将整个战舰遗址研究过后我们发现里面蕴含的科技比我们现阶段的要高深的多，而从中我们发现了一颗特殊的水晶萝卜，它能将同质的水晶萝卜能量放大！"
+uma_duramente.10.desc: "送出那位马娘以后我们的专家便可以大展拳脚了！将整个战舰遗址研究过后我们发现里面蕴含的科技比我们现阶段的要高深的多，而从中我们发现了一颗特殊的水晶萝卜，它能将同质的水晶萝卜能量放大！\n\n现在，那名马娘正在被我们精心照顾，过不了多久大概就能醒过来了吧"
 uma_duramente.10.a: "意义重大"
+
+uma_duramente.11.title: "旧日马娘"
+uma_duramente.11.desc: "那名马娘在我们的悉心照料下终于苏醒了过来。面对陌生的环境，她似乎很平静，待到太阳将落时分，她要求拜见[Ruler.GetTitle]"
+uma_duramente.11.a: "当然可以，虽然我想吃饭"
+
+uma_duramente.12.desc: "……你们是新生的马娘文明？信奉着什么？三女神……还是……"
+uma_duramente.12.a: "当然；另外，我们是在三女神遗址内标记的一个遗骸下发现了你"
+uma_duramente.13.desc: "三女神遗址…看来时间已经过去几万年了…既然你们是女神的后代，那么也便是我当年为之战斗的意义，虽然前文明已经消失，但火种遗留了下来。我在遗骸下生活的早已不知晓时间观念了……但现在，或许我能做些更有意义的事情。能让我留下来么？如果相信女神的话…就让我以舰队司令的身份留下吧。以及，我的名字叫做大鸣大放。"
+uma_duramente.13.a: "三女神让我们相遇，[This.GetName]欢迎你的加入"
+uma_duramente.13.b: "不，女士，特雷森可没有让老年人上场的规矩。"
+uma_duramente.13.b.tt: "获得帝国修整：危机思想论\n进入战争时获得加成: \n$mod_country_unity_produces_mult$+60\n$mod_planet_jobs_alloys_produces_mult$+20%\n$mod_planet_jobs_consumer_goods_produces_mult$+20%"
+
+uma_duramente.name.unknown: "???"
 
 mod_planet_jobs_uma_crystal_carrot_produces_add: "岗位生产的£uma_crystal_carrot£水晶萝卜"
 
-
-uma_duramente_relic: "有偿水晶萝卜"
+uma_duramente_buff: "危机思想论"
+uma_duramente_buff_desc: ""
+uma_duramente_relic: "'有偿'水晶萝卜"
 uma_duramente_relic_desc: ""
+
+
+uma_dura_catch_phrase: "胜利只是「前提」——在我体内所流淌的，就是这样的血脉"
+uma_dura_backstory: "……我是大鸣大放。\n目标不是胜利，而是在此之上的“最强”。\n…………以上"
+
+uma_commander_trait_sp_dura: "Red in Black"
+uma_commander_trait_sp_dura_desc: "~"
