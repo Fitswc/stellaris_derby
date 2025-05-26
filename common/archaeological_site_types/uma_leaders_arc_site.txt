@@ -643,3 +643,66 @@ uma_curren_arc = {
 	}
 
 }
+
+
+uma_duramente_relic = {
+	desc = uma_duramente_relic_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = {
+			max = 2
+			min = 3
+		}
+		event = uma_duramente.4
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_duramente.5
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_duramente.6
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 5
+			min = 4
+		}
+		event = uma_duramente.7
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 5
+			min = 4
+		}
+		event = uma_duramente.8
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

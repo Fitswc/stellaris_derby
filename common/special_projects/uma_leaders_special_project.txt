@@ -837,3 +837,29 @@ special_project = {
 		}
     }
 }
+
+###速茶特殊项目
+special_project = {
+	key = "uma_duramente.3.title"
+	days_to_research = 100
+
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_engineering_research
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = {
+			id = uma_duramente.3
+		}
+	}
+
+	on_fail = {
+	}
+}

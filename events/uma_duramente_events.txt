@@ -3,27 +3,47 @@ namespace = uma_duramente
 
 country_event = {
 	id = uma_duramente.1
-	hide_window = yes
+	title = uma_duramente.3.title
+	desc = uma_duramente_anomoly_desc
 	is_triggered_only = yes
 
 	immediate = {
 		random_system_within_border = {
 			limit = {
 				is_capital_system = no
+				uma_is_event_system = no
 			}
 
-		}
 
-		country_event = {
-			id = uma_duramente.3
-			days = 1
+
+			random_system_planet = {
+				limit = {
+					NOT = {
+						OR = {
+							is_star = no
+							uma_is_normal_habitat_planet = yes
+							uma_is_pd_habitat_planet = yes
+						}
+					}
+				}
+
+				save_event_target_as = uma_duramenta_planet
+
+				enable_special_project = {
+					name = uma_duramente.3.title
+					location = This
+					owner = Root
+				}
+			}
 		}
 	}
 }
 
 
 
-country_event = {
+
+
+ship_event = {
 	id = uma_duramente.3
 	title = uma_duramente.3.title
 	desc = uma_duramente.3.desc
@@ -35,6 +55,181 @@ country_event = {
 
 	option = {
 		name = uma_duramente.3.a
+
+		log = "UMA_CREATED DURAMENTE ARCHAEOLOGICAL SITE AT [event_target:uma_duramenta_planet.GetName]"
+
+		event_target:uma_duramenta_planet = {
+
+		}
+	}
+}
+
+
+
+fleet_event = {
+	id = uma_duramente.4
+	title = uma_duramente.4.name
+	desc = uma_duramente.4.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "uma_duramente.4.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_duramente.5
+	title = uma_duramente.5.name
+	desc = uma_duramente.5.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "uma_duramente.5.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+
+fleet_event = {
+	id = uma_duramente.6
+	title = uma_duramente.6.name
+	desc = uma_duramente.6.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "uma_duramente.6.a" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+
+fleet_event = {
+	id = uma_duramente.7
+	title = uma_duramente.7.name
+	desc = uma_duramente.7.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "uma_duramente.7.a" #占位符
+		small_artifact_reward = yes
+	}
+	option = {
+		name = "uma_duramente.7.b" #占位符
+		small_artifact_reward = yes
+	}
+}
+
+
+fleet_event = {
+	id = uma_duramente.8
+	title = uma_duramente.8.name
+	desc = uma_duramente.8.desc
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = "uma_duramente.8.a" #占位符
+		small_artifact_reward = yes
+
+		owner = {
+			country_event = {
+
+			}
+		}
+	}
+	option = {
+		name = "uma_duramente.8.b" #占位符
+	}
+}
+
+#获得珍遗（远古水晶萝卜）：帝国修正：水晶萝卜产量增加，水晶萝卜发电量增加。亚光速航行速度增加。启用费用：1500水晶萝卜。效果：能量武器伤害加成，护盾承受增加。
+# （战争遗骸星球添加修正）：20产量活性金属。
+
+
+country_event = {
+	id = uma_duramente.10
+	title = uma_duramente.10.title
+	desc = uma_duramente.10.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_duramente.10.a
+		owner = {
+			add_resource = {
+				sr_living_metal = 1000
+			}
+		}
+		add_relic = uma_ancient_crystal_carrot_relics
 	}
 }
 
