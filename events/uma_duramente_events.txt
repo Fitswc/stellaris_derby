@@ -1,6 +1,6 @@
 namespace = uma_duramente
 
-
+##TODO:Add pics
 country_event = {
 	id = uma_duramente.1
 	title = uma_duramente.3.title
@@ -283,7 +283,7 @@ country_event = {
 		custom_tooltip = uma_diplomatic_event.skip.tt
 		hidden_effect = {
 			country_event = {
-				id =
+				id = uma_duramente.13
 			}
 		}
 	}
@@ -313,7 +313,7 @@ country_event = {
 
 country_event = {
 	id = uma_duramente.13
-	title = uma_duramente.name.unknown
+	title = DURAMENTE
 	desc = uma_duramente.13.desc
 	is_triggered_only = yes
 	diplomatic = yes
