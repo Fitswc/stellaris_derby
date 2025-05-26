@@ -7,14 +7,11 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		uma_spawn_system_around_solar_system = {
-			MIN_JUMPS = 2
-			MAX_JUMPS = 5
-			UMA_INITIALIZER = "uma_duramenta"
-			FLAG = uma_du_system_created
-			O_ANGLE_MIN = 0
-			O_ANGLE_MAX = 180
-			SAVE_GLOBAL_TARGET = uma_where_du_is
+		random_system_within_border = {
+			limit = {
+				is_capital_system = no
+			}
+
 		}
 
 		country_event = {
@@ -37,7 +34,7 @@ country_event = {
 	}
 
 	option = {
-		name = uma_duramente.2.a
+		name = uma_duramente.3.a
 	}
 }
 
