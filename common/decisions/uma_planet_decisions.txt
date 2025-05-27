@@ -141,7 +141,7 @@ decision_uma_school_planet_transform = {
 			owner = {
 					if = {
 					limit = { is_ai = yes }
-					change_variable = { which = wg_modified_planet value = 1 }
+					change_variable = { which = uma_modified_planet value = 1 }
 				}
 			}
 			###城市区划的一半变为宿舍区划，农业区划一半变为后勤区划
@@ -153,16 +153,26 @@ decision_uma_school_planet_transform = {
 				DISTRICT = district_farming
 				VARIABLE = num_farming_districts
 			}
-			remove_all_districts = yes
+#			remove_all_districts = yes
 			uma_remove_deposits = yes
 #			clear_deposits = yes
-			while = {
-				count = num_housing_districts
-				add_district = district_uma_dormitory
-			}
+#			while = {
+#				count = num_housing_districts
+#				add_district = {
+#					district_type = district_uma_dormitory
+#					ignore_cap = yes
+#				}
+#	#			remove_district = district_city
+#			}
+			change_pc = pc_uma_school
+
 			while = {
 				count = num_farming_districts
 				add_district = district_uma_logistics_area
+			}
+			while = {
+				count = num_housing_districts
+				remove_district = district_uma_dormitory
 			}
 			clear_variable = num_farming_districts
 			clear_variable = num_housing_districts
@@ -170,29 +180,30 @@ decision_uma_school_planet_transform = {
 				entity = "gaia_planet"
 			}
 			########特判：如果有菲尼学院有关遗址，保留之#######
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
-				add_deposit = d_phoenix_school_relic
-			}
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
-				add_deposit = d_phoenix_school
-			}
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
-				add_deposit = d_phoenix_racing_course_relic
-			}
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
-				add_deposit = d_phoenix_racing_course
-			}
+#			if = {
+#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+#				add_deposit = d_phoenix_school_relic
+#			}
+#			if = {
+#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+#				add_deposit = d_phoenix_school
+#			}
+#			if = {
+#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+#				add_deposit = d_phoenix_racing_course_relic
+#			}
+#			if = {
+#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+#				add_deposit = d_phoenix_racing_course
+#			}
 
-			change_pc = pc_uma_school
 
-			planet_event = {
-				id = uma_bg.19
-			}
-			remove_district = district_city
+
+#			planet_event = {
+#				id = uma_bg.19
+#			}
+#			remove_district = district_city
+
 		}
 	}
 
@@ -650,9 +661,9 @@ decision_uma_industrial_planet_transform = {
 		hidden_effect = {
 			set_planet_flag = uma_has_change_pc_to_academic_planet
 			owner = {
-					if = {
+				if = {
 					limit = { is_ai = yes }
-					change_variable = { which = wg_modified_planet value = 1 }
+					change_variable = { which = uma_modified_planet value = 1 }
 				}
 			}
 
@@ -669,12 +680,13 @@ decision_uma_industrial_planet_transform = {
 				VARIABLE = num_mining_dis
 			}
 
-			remove_all_districts = yes
+			#			remove_all_districts = yes
 			uma_remove_deposits = yes
-#			clear_deposits = yes
+			change_pc = pc_uma_industrial
+			#			clear_deposits = yes
 			while = {
 				count = num_housing_districts
-				add_district = district_uma_dormitory_in_industrial
+				remove_district = district_uma_dormitory_in_industrial
 			}
 			while = {
 				count = num_industrial_districts
@@ -695,31 +707,31 @@ decision_uma_industrial_planet_transform = {
 				entity = "city_planet"
 			}
 			########特判：如果有菲尼学院有关遗址，保留之#######
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
-				add_deposit = d_phoenix_school_relic
-			}
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
-				add_deposit = d_phoenix_school
-			}
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
-				add_deposit = d_phoenix_racing_course_relic
-			}
-			if = {
-				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
-				add_deposit = d_phoenix_racing_course
-			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+			#				add_deposit = d_phoenix_school_relic
+			#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+			#				add_deposit = d_phoenix_school
+			#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+			#				add_deposit = d_phoenix_racing_course_relic
+			#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+			#				add_deposit = d_phoenix_racing_course
+			#			}
 
-			change_pc = pc_uma_industrial
+
 
 			planet_event = {
 				id = uma_bg.19
 				days = 1
 			}
 
-			remove_district = district_city
+			#			remove_district = district_city
 		}
 	}
 

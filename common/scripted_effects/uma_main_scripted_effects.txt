@@ -175,7 +175,10 @@ uma_school_planet_get_variable_effect = {
 		}
 		variable = $VARIABLE$
 	}
-	divide_variable = { which = $VARIABLE$ value = 2 }
+	divide_variable = {
+		which = $VARIABLE$
+		value = 2
+	}
 	floor_variable = $VARIABLE$
 }
 

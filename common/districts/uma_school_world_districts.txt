@@ -16,10 +16,16 @@ district_uma_dormitory = {
 		uses_district_set = uma_school_world
 	}
 
-	zone_slots = {
-		slot_city_government
-		slot_city_01
-		slot_city_02
+#	zone_slots = {
+#		slot_city_government
+#		slot_city_01
+#		slot_city_02
+#	}
+	inline_script = {
+		script = districts/BPV_district_slots2
+		GOVERNMENT = slot_city_government
+		SLOT1 = slot_city_01
+		SLOT_END = slot_city_02
 	}
 
 	conversion_ratio = 1
@@ -306,6 +312,7 @@ district_uma_logistics_area = {
 
 	zone_slots = {
 		slot_uma_logistic
+		slot_food
 	}
 
 	conversion_ratio = 1
@@ -591,10 +598,17 @@ district_uma_dormitory_in_industrial = {
 		district_mindlink
 	}
 
-	zone_slots = {
-		slot_city_government
-		slot_city_02
-		slot_city_01
+#	zone_slots = {
+#		slot_city_government
+#		slot_city_02
+#		slot_city_01
+#	}
+
+	inline_script = {
+		script = districts/BPV_district_slots2
+		GOVERNMENT = slot_city_government
+		SLOT1 = slot_city_01
+		SLOT_END = slot_city_02
 	}
 
 	resources = {

@@ -5,7 +5,7 @@ uma_gold_system_initializer = {
 	name = GO_M
 	class = "sc_g"
 
-	flags = { uma_gold_invasion_system }
+	flags = { uma_gold_invasion_system  community_can_enter_system_by_jump_false }
 
 	planet = {
 		class = star
