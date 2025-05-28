@@ -19,7 +19,7 @@
   
  uma_bourbon_anomaly: "§HIron Forest§!"
  uma_bourbon_anomaly_desc: "The research ship [From.GetName] found [This.GetName] to be an eerie, plant-covered planet. After repeated plant attacks above the atmosphere, the research ship [From.GetName] obtained enough samples.\nThe analysis revealed that these "plants" had no cellular structure, and it was clear that further study of the planet was necessary."
- uma_bourbon_anomaly_desc_event: "The research ship [Root.GetName] discovered that [event_target:uma_bourbon_arc_anomaly_here.GetName] was a strange planet covered with plants. After being attacked by plants many times in the atmosphere, the research ship [Root.GetName] obtained enough samples. \nAnalysis showed that these "plants" had no cell structure, and it was clear that further research on this planet was necessary."  #NT!
+ uma_bourbon_anomaly_desc_event: "The research ship [Root.GetName] discovered that [event_target:uma_bourbon_arc_anomaly_here.GetName] was a strange planet covered with plants. After being attacked by plants many times in the atmosphere, the research ship [Root.GetName] obtained enough samples. \nAnalysis showed that these "plants" had no cell structure, and it was clear that further research on this planet was necessary."
  uma_bourbon_anomaly_second: "§HPlant Heaven§!"
  uma_bourbon_anomaly_second_desc: "The abnormal large-scale growth of plants on a tropical planet [this.getname] in the galaxy, the density of vegetation far exceeds the estimated environmental capacity, almost covering the entire planet, and further research is needed to investigate this phenomenon."
   
@@ -257,7 +257,7 @@
  uma_bour.6.title: "Each performs his own duties"
  uma_bour.6.desc: "As a result of our tireless work, Bourbon has gradually reduced the time spent studying early machinery, devoted himself to engineering research, achieved a lot of research results, and joined the Terresen Academy of Engineering this year, but compared with other outstanding scientists, Bourbon seems to lack the ability to flash ideas.\nRice Shower determined her goal to join the civil activities, and founded the prestigious "Colonial Planet Mutual Aid Association" after graduation, which is committed to providing a good growth environment for the new Umamusume on the colonial planet and coordinating colonial relations.\nAlthough the two Umamusume still have a relationship, the relationship gradually fades as they spend less time together and meet new peers in their respective positions."
  uma_bour.6.a: "Wow..."
- #uma_bour.6.tooltip: "Gained Leader: Miura Bourbon"
+ uma_bour.6.tooltip: "获得领袖：美浦波旁"  <"Received Leader: Miura Bourbon">  #NT!
  uma_bour.7.title: "Each performs his own duties"
  uma_bour.7.desc: "The fact that applied physics lags far behind theoretical physics is often criticized by science commentators, and many advanced technologies are used in production or the military, but not in everyday life. However, this status quo seems to be about to change, Mihono Bourbon's research on modern electromechanical structures was initially regarded as ignorant, but one by one, the efficient structure has been improved to break her doubts, and these structures can even feed the progress of cutting-edge technology.\nOn the other hand, Rice Shower determined her goal to join the civil activities and founded the prestigious "Colonial Planet Mutual Aid Association" after graduation, which is committed to providing a good growth environment for the new Umamusume on the colonial planet and coordinating colonial relations.\nIn resource-poor colonies, there was often a need for more classic but practical mechanical structures, which greatly stretched the distance between Bourbon and Rice Shower, and the needs of various colonies were transferred to mutual aid societies, Bourbon developed suitable mechanical structures, and her inspiration seemed endless."
  uma_bour.7.a: "Wow……"
@@ -265,7 +265,7 @@
   
  ##Recil 
  uma_umamusume_datebase: "Umamusume Database"
- uma_umamusume_datebase_desc: "GLX asked me to make Relic, I don't know what the effect is - F"  #NT!
+ uma_umamusume_datebase_desc: "GLX asked me to make Relic, I don't know what the effect is - F"
   
  #Modifier 
  uma_big_bug: "Tropical roasted worms!"
@@ -311,7 +311,7 @@
  uma_bour_poi.3.desc: "Through the description of scientists, we learned that there is a different world under the plants. Rather than being formed naturally, this is more like a trace left by an ancient civilization. It's time to bring out our archaeologists."
  ###Counter 
  uma_bour_anolomy_finish: "Completed: Anomaly §KIron Forest§!"
- uma_bour_arc_finish: "Completed: Archaeological Site §KUnder the Iron Forest§!"  #NT!
+ uma_bour_arc_finish: "Completed: Archaeological Site §KUnder the Iron Forest§!"
  uma_bour_story_list: "Waiting for the story to develop...."
   
  uma_bour_poi.4: "New coordinates"

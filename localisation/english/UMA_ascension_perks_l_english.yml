@@ -7,29 +7,479 @@
  uma_will_enable_zenshizenren_ap: "We will initiate a §YSpecial Projects§! to help §YAll§! Umamusume§Yto open the 'Realm'§!"
  uma_requires_technology_uma_terriroty_in_use: "Need Technology §YThe Inspiration and Applications of the 'Realm'§!"
  uma_must_be_toresen_auth: "The Polity Must be §YTraincent College§!"
+ origin_uma_after_factor_perk_already: "We already know the secrets of factors and use them to strengthen ourselves"  #NT!
+  
  ###摘星 
  ap_uma_fly_me_to_the_star: "Fly me to the star"
  ap_uma_fly_me_to_the_star_desc: "Once, the "Factor" just like a star in the night sky, intimate but distant and untouchable, she guiding the way ahead for each Umamusume, Generations of scientists have worked together to build a star ladder, Later, When children want to pluck the stars from the sky, Their Mothers can point to their daughters' chests gently, and said "The star is already here.""
  uma_will_enable_keisun_ap: "We will initiate a §YSpecial Project§! to help §YAll§! Umamusume strengthen their §YCommon 'Factor' §!"
- #uma_requires_technology_uma_complex_keisun_test: "需要科技§Y综合遗传实验§!"  <"Requires technology §Y综合遗传实验§!">  #NT!
+ #uma_requires_technology_uma_complex_keisun_test: "Requires technology §YComprehensive genetic experiments§!"
   
  ap_uma_all_galaxy_full_umamusume: "Full Galaxy Full Umamusume"
- ap_uma_all_galaxy_full_umamusume_desc: "I don't care about species diversity! I want the whole galaxy to be filled with Umamusume! Change! Change!"  #NT!
+ ap_uma_all_galaxy_full_umamusume_desc: "I don't care about species diversity! I want the whole galaxy to be filled with Umamusume! Change! Change!"
  uma_requires_technology_uma_complex_keisun_test: "Need Technology §YIntegrated genetic experiments§!"
  uma_requires_first_ascension_perks_1: "$TRIGGER_FAIL$Need ascension perk §YFly me to the star§!"
  uma_requires_first_ascension_perks_2: "$TRIGGER_FAIL$Need to ascension perk §YWhole Body All Souls§!"
   
   
  ap_uma_fly_me_to_the_star_ap_two: "Casting Stars"
+ #ap_uma_fly_me_to_the_star_ap_two_desc: "£uma_sd£§Y赛Umamusume:星海德比§!\n我亦锻铸群星\n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_mixture_ap_2']不能同时选择§!"  <"£uma_sd£§Y赛Umamusume:星海德比§!\nI also forge the stars\n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_mixture_ap_2']不能同时选择§!">  #NT!
  ap_uma_fly_me_to_the_star_ap_two_desc: "£uma_sd£§YUmamusume:StellarDerby§!\nI also cast the stars\n§RThis ascension perks cannot coexist with['ascension_perk:ap_uma_zenshizenren_ap_2'] and ['ascension_perk:ap_uma_mixture_ap_2']§!"
+ #ap_uma_zenshizenren_ap_2: "心生万象"  <"All things come from the heart">  #NT!
  ap_uma_zenshizenren_ap_2: "Heart of everything"
+ #ap_uma_zenshizenren_ap_2_desc: "£uma_sd£§Y赛Umamusume:星海德比§!\n宇宙皆存我心\n§R此飞升与['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']和['ascension_perk:ap_uma_mixture_ap_2']不能同时选择§!"  <"£uma_sd£§Y赛Umamusume:星海德比§!\nThe universe is in my heart\n§R此飞升与['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']和['ascension_perk:ap_uma_mixture_ap_2']不能同时选择§!">  #NT!
  ap_uma_zenshizenren_ap_2_desc: "£uma_sd£§YUmamusume:StellarDerby§!\nThe universe is in my heart\n§RThis ascension perks cannot coexist with['ascension_perk:ap_uma_fly_me_to_the_star_ap_two'] and ['ascension_perk:ap_uma_mixture_ap_2']§!"
  uma_requires_first_ascension_perks_both: "$TRIGGER_FAIL$ Requires ['ascension_perk:ap_uma_zenshizenren'] and ['ascension_perk:ap_uma_fly_me_to_the_star']"
+ #ap_uma_mixture_ap_2: "因子-领域融合"  <"Factor-Domain Fusion">  #NT!
  ap_uma_mixture_ap_2: "Factor-Realm fusion"
+ #ap_uma_mixture_ap_2_desc: "£uma_sd£§Y赛Umamusume:星海德比§!\n我们贯彻中庸的路线，二者择其优而舍其劣，兼收并蓄，可以避免我们陷入被动的境地。\n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']不能同时选择§!"  <"£uma_sd£§Y赛Umamusume:星海德比§!\nWe implement the doctrine of the mean, choose the best and abandon the worst, and absorb both, which can prevent us from falling into a passive situation. \n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']不能同时选择§!">  #NT!
  ap_uma_mixture_ap_2_desc: "£uma_sd£§YUmamusume:StellarDerby§!\nWe follow the path of moderation, choosing the best from the two and discarding the worst, embracing both, and can avoid falling into a passive situation. \n§RThis ascension perks cannot coexist with['ascension_perk:ap_uma_zenshizenren_ap_2'] and ['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']§!"
+ #ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']"  <"\n§Y解锁建筑：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']">  #NT!
+  
  ap_uma_mixture_ap_2_tt: "\n§YUnlock building：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']"
   
  ap_uma_fly_me_to_the_star_ap_two_tt: "\n§YUnlock Traditions:§!['tradition_category:tradition_uma_tradition_factor']"
  ap_uma_zenshizenren_ap_two_tt: "\n§YUnlock Traditions:§!['tradition_category:tradition_uma_tradition_realm']"
-  
+ ap_uma_fly_me_to_the_star_ap_two_tt_will_event: "A situation will be opened to help the Umamusumes replace and upgrade their inherent factors"  #NT!
  mod_shipclass_military_damage_mult: "£shipclass_military£ Military Ship Damage:"
+  
+ aap_uma_zenshizenren_ap_2_tt_will_event: "A situation will be opened to help the Umamusumes upgrade their Realm"
+  
+  
+  
+  
+  
+ ##AP2 
+ uma_ap.40.title: "Star-Casting Project launched"
+ uma_ap.40.desc: "After a long period of research and verification, we now finally have the conditions and ability to replace every factor in our bodies and produce stronger offspring. Although we have heard from other Umamusume about the destruction of other old civilizations due to factors, we believe we can handle it well. \nNow we will start to gradually update the factors in the national body."
+ uma_ap.40.a: "Let see this power"
+  
+ uma_ap.140.title: "Heart of everything"
+ uma_ap.140.desc: "After completing the Full-Body and Full-Spirit plan, we pushed open the door left to us by the three goddesses. Now we hold the key to another door. Once we open this door, we will be able to inspire new horizons for Umamusumes. No matter what consequences the field has had on our old civilization, do we believe that our conservatism can control this technology"
+ uma_ap.140.a: "Let see this power"
+  
+  
+  
+ uma_ap_2_situation_system_25: "Ready"
+ uma_ap_2_situation_system_50: "Factor upgrade-StageⅠ"
+ uma_ap_2_situation_system_75: "Factor upgrade-StageⅡ"
+ uma_ap_2_situation_system_100: "Factor upgrade Done"
+ uma_ap_2_situation_factor_break_tt: "To prevent serious problems, it's best for us to stop now. "
+ uma_ap_2_situation_factor_default: "Careful"
+ uma_ap_2_situation_factor_careful: "Careful"
+ uma_ap_2_situation_factor_danage: "Push!"
+ uma_ap_2_situation_factor_break: "Stop Now"
+ uma_ap_2_situation_factor_tradition: "Traditions"
+ uma_ap_2_situation_factor_crisis: "Factor sick"
+  
+ situation_uma_ap_2_situation_system_factor: "Factor upgrade"
+ situation_uma_ap_2_situation_system_factor_type: "Ascension Situation"
+ situation_uma_ap_2_situation_system_factor_desc: "For better development in the future, we have decided to update and iterate the factors of Umamusumes."
+ uma_ap_2_situation_factor_default_tt: "Situation Speed §YNormal§!"
+ uma_ap_2_situation_factor_danage_tt: "Situation Speed §Y+30%§!"
+  
+ uma_ap.41.title: "Factor upgrade plan staring"
+ uma_ap.41.desc: ""
+ uma_ap.41.a: "Let's go"
+ uma_ap.42.title: "Further on"
+ uma_ap.42.desc: ""
+ uma_ap.42.a: "Step by step"
+  
+  
+  
+ UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: "."
+ UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+ UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+ UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+ UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+ UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+  
+ UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY_NM: "."
+ UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM: "$mod_planet_jobs_produces_mult$\n $mod_army_damage_mult$\n$mod_uma_ship_weapon_damage$"
+ UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM: "$mod_uma_empire_size_pops_mult$\n $mod_uma_ship_base_speed_mult$\n$mod_uma_ship_fire_rate_mult$"
+ UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM: "$mod_uma_ship_hull_mult$\n $mod_uma_army_health$\n $mod_uma_command_limit_mult$"
+ UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST_NM: "$mod_uma_ship_experience_gain_mult$\n$mod_uma_command_limit_mult$\n$mod_all_uma_technology_research_speed$"
+ UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM: "$mod_uma_planet_amenities_mult$\n$mod_uma_megastructure_milt$\n$mod_uma_country_cost_mult$"
+  
+  
+  
+ situation_uma_ap_2_situation_system_factor_fin_tt: "This species：\n[UMA_AP2_MODIFIER_FACTOR_SPEED][UMA_AP2_MODIFIER_FACTOR_POWER][UMA_AP2_MODIFIER_FACTOR_STAMINA][UMA_AP2_MODIFIER_FACTOR_WISDOM][UMA_AP2_MODIFIER_FACTOR_CHARM] \n \n§YSam time§!，This species：\n£mod_pop_growth_speed£ Pop growth speed: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+ mod_army_damage_mult: "£mod_army_damage_mult£ Army Harm"
+ mod_uma_empire_size_pops_mult: "£mod_empire_size_pops_mult£ Empire size create by pops"
+ mod_uma_ship_base_speed_mult: "£mod_ship_base_speed_mult£ Base ship speed"
+ mod_uma_ship_weapon_damage: "£mod_ship_weapon_damage£ Ship weapon damage"
+ mod_uma_ship_fire_rate_mult: "£mod_ship_fire_rate_mult£ Ship fire rate"
+ mod_pop_environment_tolerance: "£mod_pop_environment_tolerance£ Pop Tolerance"
+ mod_uma_ship_hull_mult: "£mod_ship_hull_mult£ Ship Hull"
+ mod_uma_army_health: "£mod_army_health£ Army health"
+ mod_uma_command_limit_mult: "£mod_command_limit_mult£ Command limit"
+ mod_uma_ship_experience_gain_mult: "£mod_ship_experience_gain_mult£ Ship exp. gain"
+ mod_all_uma_technology_research_speed: "£mod_country_all_tech_research_speed£ Research speed"
+ mod_uma_planet_amenities_mult: "£mod_planet_amenities_mult£ Amenities"
+ mod_uma_army_morale: "£mod_army_morale£ Army Morale"
+ mod_uma_country_cost_mult: "Building and district cost"
+ mod_uma_megastructure_milt: "Megastructure cost"
+  
+  
+  
+  
+ UMA_AP2_MODIFIER_FACTOR_NUM9: "§G+50%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM8: "§G+40%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM7: "§G+35%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM6: "§G+30%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM5: "§G+25%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM4: "§G+20%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM3: "§G+15%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM2: "§G+10%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM1: "§G+5%§!"
+  
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM9: "§R-45%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM8: "§R-35%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM7: "§R-30%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM6: "§R-25%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM5: "§R-20%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM4: "§R-15%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM3: "§R-10%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM2: "§R-5%§!"
+ UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM1: "§R-2%§!"
+  
+ uma_ap_system_factor_speed_num: "[owner.uma_ap2_factor_speed_rate] "
+ uma_ap_system_factor_power_num: "[owner.uma_ap2_factor_power_rate] "
+ uma_ap_system_factor_stamina_num: "[owner.uma_ap2_factor_stamina_rate] "
+ uma_ap_system_factor_charm_num: "[owner.uma_ap2_factor_charm_rate] "
+ uma_ap_system_factor_wisdom_num: "[owner.uma_ap2_factor_wisdom_rate] "
+ uma_ap_system_factor_depth_num: "£mod_pop_growth_speed£ Pop growth speed: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+  
+  
+ uma_ap_system_factor_speed_t_tt: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST$"
+ uma_ap_system_factor_power_t_tt: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_POWER_EXIST$"
+ uma_ap_system_factor_stamina_t_tt: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST$"
+ uma_ap_system_factor_charm_t_tt: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST$"
+ uma_ap_system_factor_wisdom_t_tt: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST$"
+  
+ uma_ap_system_factor_speed_t_tt_t: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM$"
+ uma_ap_system_factor_power_t_tt_t: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM$"
+ uma_ap_system_factor_stamina_t_tt_t: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM$"
+ uma_ap_system_factor_charm_t_tt_t: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM$"
+ uma_ap_system_factor_wisdom_t_tt_t: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST_NM$"
+  
+ uma_ap_system_factor_depth_t: "It will cause: "
+ uma_ap_system_factor_wisdom_t: "Wisdom"
+ uma_ap_system_factor_charm_t: "Charm"
+ uma_ap_system_factor_stamina_t: "Stamina"
+ uma_ap_system_factor_power_t: "Power"
+ uma_ap_system_factor_speed_t: "Speed"
+  
+ uma_ap_system_factor_origins_depth_t: "Point left: "
+ uma_ap_system_factor_origins_depth_num: "[owner.uma_ap2_factor_depth_rate] "
+  
+  
+ uma_apsystem_done_tt: "Click here will save the changes.\n [uma_apsystem_done_tt_df] "
+ uma_apsystem_done_tt_3o: "Caution, Now all the number are 0"
+  
+ uma_ap.51.title: "Ready"
+ uma_ap.51.desc: "After a long period of preparation, we are ready to enhance the inherent factors of Umamusumes. In the past, we struggled to pick that star with our own hands. Now, we will forge her with our own hands."
+ uma_ap.51.a: "Let see these power"
+ uma_ap.52.title: "Internal Factor improvement - Completed"
+ uma_ap.52.desc: "We have strengthened our inherent factors, and now it has become more powerful and controllable. The next step is to replace the unfavorable parts in the inherent factors of Umamusumes. Doing so is very risky, but it's worth taking a chance."
+ uma_ap.52.a: "Well Done"
+  
+ uma_ap.53.title: "Inherent factor addition - completed"
+ uma_ap.53.desc: "Now we have the ability to enhance our inherent factors. It is time to add some more powerful inherent factors on the basis of the original ones and pass them on to our descendants. If we can successfully break through, our dream of casting stars will undoubtedly become a reality"
+ uma_ap.53.a: "make persistent efforts"
+  
+ uma_ap.54.title: "Star-casting Dreams: Reality"
+ uma_ap.54.desc: "After long-term efforts and the correct handling of some unexpected situations, we finally pushed open the last door set for us by the three goddesses - the inherent factors. Now, the stars in our hearts are not only tightly held in our hands, but also cast into different shapes by our own hands, radiating unique and distinctive light."
+ uma_ap.54.a: "Yeah"
+  
+  
+  
+ uma_ap.60.title: "Infinite strength"
+ uma_ap.60.desc: "The enhanced inherent factors have brought about tremendous changes to Umamusumes' life, endowing him with more powerful abilities than ever before. However, more than half of the subjects indicated that they seemed to exhibit uncontrollable strength as they did last time: even a gentle pull could separate the door handle from the door carcass, which indirectly made the furniture daily shopping mall very popular. Although we have subsidized a considerable amount of funds for furniture replacement, we still believe that the force control training we have implemented for this purpose is still effective. It was not until a college student who was a test subject smashed the thick walls of the swimming pool directly with a volleyball during swimming training that the proposal for this issue and the matter of repair funds were placed together on the desk of [Owner.GetRulerName]. \n "If she hadn't eaten, I would have turned into Umamusume sauce.""
+ uma_ap.60.a: "Modify the inherent factors of Umamusumes to make their strength a little less"
+ uma_ap.60.b: "Perhaps let's ask them to pick up tofu with chopsticks again?"
+ uma_ap.60.c: "They will adapt."
+ uma_ap.61.title: "Advanced power Control"
+ uma_ap.61.desc: "After countless complaints from Umamusume about picking up tofu with chopsticks, it returns to the battlefield! With scientific methods of training, Umamusumes seems to have a more reasonable control over his strength. It's just that this time the tofu seems to have become much harder?"
+ uma_ap.61.a: "That is to say, did you use dried bean curd?"
+ uma_ap.70.title: "Alternating personality"
+ uma_ap.70.desc: "It seems that some situations have emerged. Our scientists reported observing MPD among the volunteers in the isolated subjects. Some of the volunteers experienced personality changes. From time to time, they exhibited behaviors completely different from before and failed to remember their important information. However, they can recall identity information that is completely different from it. The changes in personality are very dramatic. One minute a volunteer can clearly answer his or her name and address, but the next minute, the information is completely different. \n Our scientists suspect that multiple personality experiences are caused by additional external inherent factors, though this is not conclusive......"
+ uma_ap.70.a: "This might just be an accidental event"
+ uma_ap.70.b: "Key observation"
+ uma_ap.70.a.tt: "Tips: The situation can be stopped at any time, and the benefits depend on §G The progress of the situation §! (All progress + one DEBUFF)"
+  
+ uma_ap.80.title: "Alternating personality"
+ uma_ap.80.desc: "Something abnormal has occurred! The phenomenon of Umamusume going crazy has been reported in many places, and even the military has been affected. All these Umamusume have a common feature: severe MPD has been observed in them, and they are all Umamusume that have undergone factor replacement. They behave strangely and are highly disciplined. Even more strangely, they seem to be obsessed with imprisfying normal Umamusume and forcing factor replacement surgery. Although we don't know exactly where those potions came from either. This phenomenon seems to be spreading. As these crazy Umamusume are taking over all kinds of our infrastructure, our homeland has been damaged to varying degrees. Fortunately, the Minister of Defense issued a T0-level directive during the first report, enabling all military members to take reverse measures against this factor change. This has given us the means to counter it. Whether there is a direct connection or not, we must terminate this plan."
+ uma_ap.80.a: "How?"
+ uma_ap.80.a.tt: "We have to take back our colonies"
+  
+ uma_ap.71.title: "Personality disorder"
+ uma_ap.71.desc: "Something abnormal has occurred! The phenomenon of Umamusume going crazy has been reported in many places, and even the military has been affected. All these Umamusume have a common feature: severe MPD has been observed in them, and they are all Umamusume that have undergone factor replacement. They behave strangely and are highly disciplined. Even more strangely, they seem to be obsessed with imprisfying normal Umamusume and forcing factor replacement surgery. Although we don't know exactly where those potions came from either. This phenomenon seems to be spreading. As these crazy Umamusume are taking over all kinds of our infrastructure, our homeland has been damaged to varying degrees. Fortunately, the Minister of Defense issued a T0-level directive during the first report, enabling all military members to take reverse measures against this factor change. This has given us the means to counter it. Whether there is a direct connection or not, we must terminate this plan."
+ uma_ap.71.a: "How?"
+ uma_ap.71.a.tt: "We have to take back our colonies"
+  
+ uma_ap.81.title: "The planet has fallen"
+ uma_ap.81.desc: "This factor disease has spread like a plague. Now the planet [this.planet.getname] has fallen and we must reclaim it"
+ uma_ap.81.a: "Defend!"
+ uma_ap.84.title: "Quiet down"
+ uma_ap.84.desc: "We finally managed to control the factor disease before it spread. For those former companions, we have no way to save them."
+ uma_ap.84.a: "RIP"
+ uma_ap.85.title: "Who am I?"
+ uma_ap.85.desc: "As the crazy Umamusumes burst through the student council's door, [GetRulerTitle][GetRulerName] was soon pricked in the neck. She felt dizzy all of a sudden, and her mind and strength seemed to be growing stronger. But soon another voice rang out in her mind, and then.... She wouldn't be herself anymore. After an unknown period of time, when the real [GetRulerName] woke up, she found herself still sitting at that desk, with all kinds of documents neatly stacked on it. Apart from the fact that my pen breaks easily when pinched and I get dizzy from time to time, which makes me not myself, there seems to be no difference from before. Perhaps when everyone is crazy, crazy people will no longer be crazy?"
+ uma_ap.85.a: "So what should I do?"
+  
+  
+  
+  
+ uma_ap2_factor_hostile_event_country: "Crazy Umamusume"
+ uma_ap2_factor_crazy_guys: "Crazy Umamusume"
+  
+ uma_ap2_factor_bade: "Pain of factor improvement"
+  
+ uma_ap2_factor_25: "Prepare Stage"
+ uma_ap2_factor_50: "$uma_ap_2_situation_system_50$"
+ uma_ap2_factor_75: "$uma_ap_2_situation_system_75$"
+ uma_ap2_factor_100: "$uma_ap_2_situation_system_100$"
+  
+  
+ uma_romannum_1: "Ⅰ"
+ uma_romannum_2: "Ⅱ"
+ uma_romannum_3: "Ⅲ"
+ uma_romannum_4: "Ⅳ"
+ uma_romannum_5: "Ⅴ"
+ uma_romannum_6: "Ⅵ"
+ uma_romannum_7: "Ⅶ"
+ uma_romannum_8: "Ⅷ"
+ uma_romannum_9: "Ⅸ"
+  
+  
+ uma_trait_ap2_factor_fail_evt: "Unfinished Factor improvement"
+ uma_trait_ap2_factor_fail: "Unfinished Factor improvement"
+  
+  
+ uma_trait_ap2_factor_power_1: "Power Factor$uma_romannum_1$"
+ uma_trait_ap2_factor_power_2: "Power Factor$uma_romannum_2$"
+ uma_trait_ap2_factor_power_3: "Power Factor$uma_romannum_3$"
+ uma_trait_ap2_factor_power_4: "Power Factor$uma_romannum_4$"
+ uma_trait_ap2_factor_power_5: "Power Factor$uma_romannum_5$"
+ uma_trait_ap2_factor_power_6: "Power Factor$uma_romannum_6$"
+ uma_trait_ap2_factor_power_7: "Power Factor$uma_romannum_7$"
+ uma_trait_ap2_factor_power_8: "Power Factor$uma_romannum_8$"
+ uma_trait_ap2_factor_power_9: "Power Factor$uma_romannum_9$"
+  
+ uma_trait_ap2_factor_speed_1: "Speed Factor$uma_romannum_1$"
+ uma_trait_ap2_factor_speed_2: "Speed Factor$uma_romannum_2$"
+ uma_trait_ap2_factor_speed_3: "Speed Factor$uma_romannum_3$"
+ uma_trait_ap2_factor_speed_4: "Speed Factor$uma_romannum_4$"
+ uma_trait_ap2_factor_speed_5: "Speed Factor$uma_romannum_5$"
+ uma_trait_ap2_factor_speed_6: "Speed Factor$uma_romannum_6$"
+ uma_trait_ap2_factor_speed_7: "Speed Factor$uma_romannum_7$"
+ uma_trait_ap2_factor_speed_8: "Speed Factor$uma_romannum_8$"
+ uma_trait_ap2_factor_speed_9: "Speed Factor$uma_romannum_9$"
+  
+ uma_trait_ap2_factor_wisdom_1: "Wisdom Factor$uma_romannum_1$"
+ uma_trait_ap2_factor_wisdom_2: "Wisdom Factor$uma_romannum_2$"
+ uma_trait_ap2_factor_wisdom_3: "Wisdom Factor$uma_romannum_3$"
+ uma_trait_ap2_factor_wisdom_4: "Wisdom Factor$uma_romannum_4$"
+ uma_trait_ap2_factor_wisdom_5: "Wisdom Factor$uma_romannum_5$"
+ uma_trait_ap2_factor_wisdom_6: "Wisdom Factor$uma_romannum_6$"
+ uma_trait_ap2_factor_wisdom_7: "Wisdom Factor$uma_romannum_7$"
+ uma_trait_ap2_factor_wisdom_8: "Wisdom Factor$uma_romannum_8$"
+ uma_trait_ap2_factor_wisdom_9: "Wisdom Factor$uma_romannum_9$"
+  
+ uma_trait_ap2_factor_stamina_1: "Stamina Factor$uma_romannum_1$"
+ uma_trait_ap2_factor_stamina_2: "Stamina Factor$uma_romannum_2$"
+ uma_trait_ap2_factor_stamina_3: "Stamina Factor$uma_romannum_3$"
+ uma_trait_ap2_factor_stamina_4: "Stamina Factor$uma_romannum_4$"
+ uma_trait_ap2_factor_stamina_5: "Stamina Factor$uma_romannum_5$"
+ uma_trait_ap2_factor_stamina_6: "Stamina Factor$uma_romannum_6$"
+ uma_trait_ap2_factor_stamina_7: "Stamina Factor$uma_romannum_7$"
+ uma_trait_ap2_factor_stamina_8: "Stamina Factor$uma_romannum_8$"
+ uma_trait_ap2_factor_stamina_9: "Stamina Factor$uma_romannum_9$"
+  
+ uma_trait_ap2_factor_charm_1: "Charm Factor$uma_romannum_1$"
+ uma_trait_ap2_factor_charm_2: "Charm Factor$uma_romannum_2$"
+ uma_trait_ap2_factor_charm_3: "Charm Factor$uma_romannum_3$"
+ uma_trait_ap2_factor_charm_4: "Charm Factor$uma_romannum_4$"
+ uma_trait_ap2_factor_charm_5: "Charm Factor$uma_romannum_5$"
+ uma_trait_ap2_factor_charm_6: "Charm Factor$uma_romannum_6$"
+ uma_trait_ap2_factor_charm_7: "Charm Factor$uma_romannum_7$"
+ uma_trait_ap2_factor_charm_8: "Charm Factor$uma_romannum_8$"
+ uma_trait_ap2_factor_charm_9: "Charm Factor$uma_romannum_9$"
+  
+ uma_trait_ap2_factor_pain_1: "Pain of factor improvement$uma_romannum_1$"
+ uma_trait_ap2_factor_pain_2: "Pain of factor improvement$uma_romannum_2$"
+ uma_trait_ap2_factor_pain_3: "Pain of factor improvement$uma_romannum_3$"
+ uma_trait_ap2_factor_pain_4: "Pain of factor improvement$uma_romannum_4$"
+ uma_trait_ap2_factor_pain_5: "Pain of factor improvement$uma_romannum_5$"
+ uma_trait_ap2_factor_pain_6: "Pain of factor improvement$uma_romannum_6$"
+ uma_trait_ap2_factor_pain_7: "Pain of factor improvement$uma_romannum_7$"
+ uma_trait_ap2_factor_pain_8: "Pain of factor improvement$uma_romannum_8$"
+ uma_trait_ap2_factor_pain_9: "Pain of factor improvement$uma_romannum_9$"
+  
+  
+  
+ uma_ap_system_realm_speed_t: "Battle Realm"
+ uma_ap_system_realm_power_t: "Senses Realm"
+ uma_ap_system_realm_stamina_t: "Produce Realm"
+ uma_ap_system_realm_wisdom_t: "Reinforcement Realm"
+ uma_ap_system_realm_charm_t: "Realm Mixture"
+ uma_ap_system_realm_charm_t_tt: "This switch turns on the domain blend switch: This will result in: \n Other domain options except for the preset domain can be enhanced/activated. However, §R will increase the probability of negative events §!"
+  
+ UMA_AP2_MODIFIER_REALM_POWER_EMPTY_NM: "."
+ UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$\n$mod_uma_ship_orbital_bombardment_mult$:\n$mod_army_damage_mult$"
+ UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: "$mod_uma_country_society_research_produces_mult$\n $mod_country_uma_physics_research_produces_mult$\n $mod_country_uma_engineering_research_produces_mult$"
+ UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: "$mod_uma_planet_jobs_produces_mult$\n$mod_uma_starbase_shipyard_build_time_mult$\n$mod_country_cost_mult$"
+ UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: "$mod_uma_ship_accuracy_mult$\n$mod_uma_ship_jumpdrive_cooldown_mult$\n$mod_ship_military_upkeep_mult$"
+  
+ UMA_AP2_MODIFIER_REALM_POWER_EMPTY: "."
+ UMA_AP2_MODIFIER_REALM_SPEED_EXIST: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
+ UMA_AP2_MODIFIER_REALM_POWER_EXIST: "$mod_uma_country_society_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_physics_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_engineering_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
+ UMA_AP2_MODIFIER_REALM_STAMINA_EXIST: "$mod_uma_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_starbase_shipyard_build_time_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_country_cost_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
+ UMA_AP2_MODIFIER_REALM_WISDOM_EXIST: "$mod_uma_ship_accuracy_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_jumpdrive_cooldown_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_ship_military_upkeep_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
+ #UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
+  
+  
+ uma_ap_system_realm_speed_t_tt: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_SPEED_EXIST$"
+ uma_ap_system_realm_power_t_tt: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_POWER_EXIST$"
+ uma_ap_system_realm_stamina_t_tt: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST$"
+ uma_ap_system_realm_wisdom_t_tt: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST$"
+  
+ uma_ap_system_realm_speed_t_tt_t: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM$"
+ uma_ap_system_realm_power_t_tt_t: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM$"
+ uma_ap_system_realm_stamina_t_tt_t: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM$"
+ uma_ap_system_realm_wisdom_t_tt_t: "Add Trait to Species: \n$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM$"
+  
+  
+ mod_uma_planet_jobs_produces_mult: "£job£ Jobs Produces"
+ mod_uma_starbase_shipyard_build_time_mult: "£mod_starbase_shipyard_build_time_mult£ Ships Building time"
+ mod_uma_ship_accuracy_mult: "£mod_ship_accuracy_mult£ Accuracy"
+ mod_uma_ship_jumpdrive_cooldown_mult: "£mod_ship_speed_mult£ Ship Speed:"
+ mod_uma_ship_orbital_bombardment_mult: "Bombardment damage"
+ mod_uma_country_society_research_produces_mult: "£society_research£ Social research Produce"
+ mod_country_uma_physics_research_produces_mult: "£physics_research£ Physics Research Produce"
+ mod_country_uma_engineering_research_produces_mult: "£engineering_research£ Engineering Research Produce"
+  
+ #UMA_AP2_MODIFIER_REALM_NUM9: "§G+50%§!"
+ #UMA_AP2_MODIFIER_REALM_NUM8: "§G+40%§!"
+ #UMA_AP2_MODIFIER_REALM_NUM7: "§G+35%§!"
+ #UMA_AP2_MODIFIER_REALM_NUM6: "§G+30%§!"
+ UMA_AP2_MODIFIER_REALM_NUM5: "§G+25%§!"
+ UMA_AP2_MODIFIER_REALM_NUM4: "§G+20%§!"
+ UMA_AP2_MODIFIER_REALM_NUM3: "§G+15%§!"
+ UMA_AP2_MODIFIER_REALM_NUM2: "§G+10%§!"
+ UMA_AP2_MODIFIER_REALM_NUM1: "§G+5%§!"
+  
+ UMA_AP2_MODIFIER_REALM_NUM9_SP: "§G-17%§!"
+ UMA_AP2_MODIFIER_REALM_NUM8_SP: "§G-15%§!"
+ UMA_AP2_MODIFIER_REALM_NUM7_SP: "§G-13%§!"
+ UMA_AP2_MODIFIER_REALM_NUM6_SP: "§G-11%§!"
+ UMA_AP2_MODIFIER_REALM_NUM5_SP: "§G-9%§!"
+ UMA_AP2_MODIFIER_REALM_NUM4_SP: "§G-7%§!"
+ UMA_AP2_MODIFIER_REALM_NUM3_SP: "§G-5%§!"
+ UMA_AP2_MODIFIER_REALM_NUM2_SP: "§G-3%§!"
+ UMA_AP2_MODIFIER_REALM_NUM1_SP: "§G-1%§!"
+  
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM9: "§R-45%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM8: "§R-35%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM7: "§R-30%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM6: "§R-25%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM5: "§R-20%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM4: "§R-15%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM3: "§R-10%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM2: "§R-5%§!"
+ UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM1: "§R-2%§!"
+  
+  
+  
+ uma_ap_system_realm_speed_num: "[owner.uma_ap2_realm_speed_rate] "
+ uma_ap_system_realm_power_num: "[owner.uma_ap2_realm_power_rate] "
+ uma_ap_system_realm_stamina_num: "[owner.uma_ap2_realm_stamina_rate] "
+ uma_ap_system_realm_wisdom_num: "[owner.uma_ap2_realm_wisdom_rate] "
+ uma_ap_system_realm_charm_num: "[uma_apsystem_realm_mix_on_off] "
+  
+ uma_apsystem_realm_mix_on: "ON"
+ uma_apsystem_realm_mix_off: "OFF"
+  
+  
+  
+ situation_uma_ap_2_situation_system_realm_fin_tt: "This species：\n[UMA_AP2_MODIFIER_REALM_SPEED][UMA_AP2_MODIFIER_REALM_POWER][UMA_AP2_MODIFIER_REALM_STAMINA][UMA_AP2_MODIFIER_REALM_WISDOM]"
+  
+ situation_uma_ap_2_situation_system_realm: "Realm iteration"
+ situation_uma_ap_2_situation_system_realm_type: "Realm iteration"
+ situation_uma_ap_2_situation_system_realm_desc: "For better development in the future, we have decided to inspire the realm of Umamusumes."
+ uma_ap2_realm_25: "Preparation Stage"
+ uma_ap2_realm_50: "Realm enhancement"
+ uma_ap2_realm_75: "Realm Activation"
+ uma_ap2_realm_100: "Finish Stage"
+  
+ uma_ap_2_situation_system_50_realm: "Realm enhancement"
+ uma_ap_2_situation_system_75_realm: "Realm Activation"
+ uma_ap_2_situation_system_100_realm: "Finish Stage"
+  
+ uma_ap.151.title: "Ready"
+ uma_ap.151.desc: "After a long period of preparation, we are ready to enhance and stimulate the realm of Umamusumes. We have witnessed the powerful force in this field. Now, we are going to take it a step further."
+ uma_ap.151.a: "Let see these power"
+ uma_ap.152.title: "Realm enhancement-Completed"
+ uma_ap.152.desc: "We have enhanced our existing Realm, and now it has become more powerful and controllable. The next step is to stimulate the potential areas of Umamusumes. Doing so is very risky, but it's worth taking a chance."
+ uma_ap.152.a: "Well done"
+  
+ uma_ap.154.title: "Mental imagery"
+ uma_ap.154.desc: "After long-term efforts, we have finally been able to bring back the golden raindrops that appeared on the sports field thousands of years ago. The old rumor that only the Umamusume that was about to change history would activate its domain while running has become a thing of the past. Now, every Umamusume has been inspired to create its own domain, which will take our development one step further"
+ uma_ap.154.a: "Well Done"
+  
+  
+ uma_trait_ap2_realm_power_1: "Realm-Senses$uma_romannum_1$"
+ uma_trait_ap2_realm_power_1_desc: ""
+ uma_trait_ap2_realm_power_2: "Realm-Senses$uma_romannum_2$"
+ uma_trait_ap2_realm_power_2_desc: ""
+ uma_trait_ap2_realm_power_3: "Realm-Senses$uma_romannum_3$"
+ uma_trait_ap2_realm_power_3_desc: ""
+ uma_trait_ap2_realm_power_4: "Realm-Senses$uma_romannum_4$"
+ uma_trait_ap2_realm_power_4_desc: ""
+ uma_trait_ap2_realm_power_5: "Realm-Senses$uma_romannum_5$"
+ uma_trait_ap2_realm_power_5_desc: ""
+  
+ uma_trait_ap2_realm_speed_1: "Realm-Battle$uma_romannum_1$"
+ uma_trait_ap2_realm_speed_1_desc: ""
+ uma_trait_ap2_realm_speed_2: "Realm-Battle$uma_romannum_2$"
+ uma_trait_ap2_realm_speed_2_desc: ""
+ uma_trait_ap2_realm_speed_3: "Realm-Battle$uma_romannum_3$"
+ uma_trait_ap2_realm_speed_3_desc: ""
+ uma_trait_ap2_realm_speed_4: "Realm-Battle$uma_romannum_4$"
+ uma_trait_ap2_realm_speed_4_desc: ""
+ uma_trait_ap2_realm_speed_5: "Realm-Battle$uma_romannum_5$"
+ uma_trait_ap2_realm_speed_5_desc: ""
+  
+ uma_trait_ap2_realm_stamina_1: "Realm-Produce$uma_romannum_1$"
+ uma_trait_ap2_realm_stamina_1_desc: ""
+ uma_trait_ap2_realm_stamina_2: "Realm-Produce$uma_romannum_2$"
+ uma_trait_ap2_realm_stamina_2_desc: ""
+ uma_trait_ap2_realm_stamina_3: "Realm-Produce$uma_romannum_3$"
+ uma_trait_ap2_realm_stamina_3_desc: ""
+ uma_trait_ap2_realm_stamina_4: "Realm-Produce$uma_romannum_4$"
+ uma_trait_ap2_realm_stamina_4_desc: ""
+ uma_trait_ap2_realm_stamina_5: "Realm-Produce$uma_romannum_5$"
+ uma_trait_ap2_realm_stamina_5_desc: ""
+  
+ uma_trait_ap2_realm_wisdom_1: "Realm-Reinforcement$uma_romannum_1$"
+ uma_trait_ap2_realm_wisdom_1_desc: ""
+ uma_trait_ap2_realm_wisdom_2: "Realm-Reinforcement$uma_romannum_2$"
+ uma_trait_ap2_realm_wisdom_2_desc: ""
+ uma_trait_ap2_realm_wisdom_3: "Realm-Reinforcement$uma_romannum_3$"
+ uma_trait_ap2_realm_wisdom_3_desc: ""
+ uma_trait_ap2_realm_wisdom_4: "Realm-Reinforcement$uma_romannum_4$"
+ uma_trait_ap2_realm_wisdom_4_desc: ""
+ uma_trait_ap2_realm_wisdom_5: "Realm-Reinforcement$uma_romannum_5$"
+ uma_trait_ap2_realm_wisdom_5_desc: ""
+ uma_ap2_realm_charm_rate_have_to_greater_than_1: "To stimulate the domain, domain blending must be enabled first"
+  
+  
+ uma_ap.160.title: "Insomnia"
+ uma_ap.160.desc: "Contrary to the last time, large-scale insomnia symptoms emerged in the test group this time. The report shows that Umamusumes has difficulty falling asleep, with some cases having their eyes open continuously for a week. At first, Umamusumes were very happy and even began to celebrate having several times more time than usual to complete the things they wanted to do. Gradually, they began to feel something was amiss. Due to lack of rest, Umamusumes' health seemed to be getting worse and worse. Almost every morning, one could hear Umamusumes' howling because of her hair loss. After all, hair was Umamusume's life. \n Anyway, we must respond to this problem."
+ uma_ap.160.a: "Make adjustments based on the existing Realm activation"
+ uma_ap.160.b: "Sleeping pills can be distributed"
+ uma_ap.160.c: "I also want a long period of personal time"
+  
+ uma_ap2_realm_insomnia_pills: "Unsolved insomnia"
+ uma_ap2_realm_insomnia_pills_desc: "We have solved this problem temporarily"

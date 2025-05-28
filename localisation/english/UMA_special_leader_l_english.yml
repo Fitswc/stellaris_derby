@@ -1,12 +1,13 @@
 ﻿l_english:
- ##################################
+ ################################## 
+ l_simp_chinese: 
   
  AGT: "Agnes Tachyon"
  CAFE: "Manhattan Cafe"
- NN: "Nice Nature"
- OC: "Oguri Cap"
+ NN: "NiceNature"
+ OC: "OguriCap"
  EI: "El Condor Pasa"
- KB: "Kitasan Black"
+ KB: "KitasanBlack"
  HT: "Hayakawa Tazuna"
  KH: "KingHalo"
  SKY: "Seiun Sky"
@@ -26,11 +27,13 @@
  FINE: "Fine Motion"
  TAMA: "Tamano Cross"
  CHEVAL: "Cheval Grand"
-  
  HISHIM: "Hishi Miracle"
+ SWEEPY: "Sweepy Tonson"
+ ARDAN: "Mejro Ardan"
+ CURREN: "Curren Chan"
+ ZEPHYR: "Yamanin Zephyr"
   
  uma_satono_backstory: "Satono Diamond came from the prestigious Satono Group"
-  
  uma_special_leader_oguri_cap_catch_phrase: "I am Oguri Cap, in order to make my hometown support everyone can be happy, I will do my best, please care more."
  uma_special_leader_seiun_sky_catch_phrase: "At all times, a trustworthy Umamusume, Seiun Sky participates in ~"
  uma_special_leader_agnes_digital_catch_phrase: "Umamusume are really too respected. I really want to look at it like this!"
@@ -48,8 +51,12 @@
  uma_tama_catch_phrase: "I will not lose to poverty! I am the white lightning!"
  uma_cheval_catch_phrase: "...One day, it will come true. Even if I am like this..."
  uma_hishi_catch_phrase: "That… I’m just an ordinary Umamusume! It’s the kind of feeling you can see everywhere."
-  
  uma_hishi_bs: "那个，我是菱钻奇宝。怎么说呢？\n感觉还算不错，要是能继续努力下去就好了，\n我是这么想的，请多关照啦～"  <"Um, I'm Diamond Treasure. How should I put it? \nI feel pretty good, if I can continue to work hard, it would be great, \nThat's what I think, please take care of me~"
+ uma_sweepy_catch_phrase: "Brassavola☆Nodosa！Paphiopedilum☆Delenatii！"
+ uma_sweepy_backstory: "Sweepy Tonson只是变身前的名字罢了！\n我的真身为魔法少女Sweepy！\n这就是魔法哟！诶！（哐）"
+ uma_ardan_catch_phrase: "所谓历史，就是随后来人喜欢来评述的东西——但是只有现在这个瞬间，是属于我的人生。"
+ uma_ardan_backstory: "我的名字是Mejro Ardan。\n即使这双脚脆弱不堪，我也要骄傲地奔跑下去......\n哪怕只有一瞬也好，我也想在比赛中大放光彩"
+  
   
  uma_deep_backstory: ""
  uma_fallen_empire.10086.desc: "§HThe purple cloak of glory danced with the wind on the top of the mountain, her eyes narrowed slightly, her left hand pulled away the black hair blown by the wind, and her right hand held a retro oil lamp, looking out at the foot of the mountain this strange land that never sleeps.§!\n\nMy predecessors will not be satisfied with this, the vitality and challenge here are far more than my hometown, there is such an opportunity, I must seize.\n\n§HAs she looked into the distance, the light of the rising sun tore the ground and the sky, lighting up the sea of stars. The first light fell on her face, but the light in her eyes was no less than the light of the rising light.§!\n\nThe night is drawing to a close."
@@ -161,7 +168,8 @@
  uma_cheval.14.hire: "This is your home."
  uma_cheval_backstory: "...I am Cheval Grand. ...Yes, I know it sounds a bit exaggerated. But... There is always - great, great... Never mind, I will try my best."
   
- #edict_uma_change_cheval_clothes: "变更$CHEVAL$外观"  <"Changed $CHEVAL$ appearance"
+  
+ edict_uma_change_cheval_clothes: "变更$CHEVAL$外观"  <"Change$CHEVAL$ Appearance">  #NT!
   
   
   

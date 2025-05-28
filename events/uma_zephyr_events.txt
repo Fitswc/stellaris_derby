@@ -692,13 +692,13 @@ country_event = {
 }
 
 
-country_event = {
+ship_event = {
 	id = uma_zephyr.40
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		This = {
+		This.fleet.owner = {
 			has_authority = auth_trainingcenter
 			NOT = {
 				has_country_flag = uma_zephyr_events_gudian_happened
@@ -706,14 +706,17 @@ country_event = {
 			has_country_flag = uma_zephyr_events_chain_begin
 		}
 		From = {
-			is_guardian_country = yes
+			has_star_flag = guardian
+			has_star_flag = hostile_system
 		}
 	}
 
 	immediate = {
-		set_country_flag = uma_zephyr_events_gudian_happened
-		country_event = {
-			id = uma_zephyr.41
+		fleet.owner = {
+			set_country_flag = uma_zephyr_events_gudian_happened
+			country_event = {
+				id = uma_zephyr.41
+			}
 		}
 	}
 }

@@ -92,7 +92,7 @@
  trait_uma_i_love_my_home: "Home"
  trait_uma_i_love_my_home_desc: "Home is so comfortable! These horse girls are so homesick that they don't even want to leave the house."
  trait_uma_conservational: "Frugal"
- trait_uma_conservational_desc: "从古至今对资源危机的恐惧使这些马娘养成了勤劳俭朴的习惯"  <"The fear of resource crisis from ancient times to the present has made these horse girls develop the habit of hard work and thrift."
+ trait_uma_conservational_desc: "The fear of resource crisis from ancient times to the present has made these horse girls develop the habit of hard work and thrift."
  trait_uma_lot_of_money_so_i_wasteful: "Spend money like water"
  trait_uma_lot_of_money_so_i_wasteful_desc: "After industrialization, the quality of life of these horse girls has improved, making them spend money more lavishly."
  leader_trait_zhufang_official: "Garrison"
@@ -101,7 +101,7 @@
  leader_trait_zhengbingjihua_official_desc: "Prove to everyone that you have the strength and courage to pursue freedom! \nJoin... the Hell Divers!"
  leader_trait_feituqingli_official: "Wasteland Cleanup"
  leader_trait_feituqingli_official_desc: "The leader knew that the wasteland would only hinder the rapid development of the planet."
- leader_trait_yeyunongxuejia_official:"Amateur Agronomist"
+ leader_trait_yeyunongxuejia_official: "Amateur Agronomist"
  leader_trait_yeyunongxuejia_official_desc: "This leader is a graduate of agronomy."
  leader_trait_yeyugongchengshi_official: "Amateur Engineer"
  leader_trait_yeyugongchengshi_official_desc: "This leader seems to know something about engineering."
@@ -132,7 +132,7 @@
  leader_trait_whatisbuild_generic: "Neglect of infrastructure"
  leader_trait_whatisbuild_generic_desc: "This leader believes infrastructure is a complete waste of resources"
  leader_trait_ilosemytimeforsleep_generic: "Insomnia"
- leader_trait_ilosemytimeforsleep_generic_desc: "这位领袖饱受失眠症的折磨。当然，她不会把所有东西都忘掉"  <"The leader suffered from insomnia. Of course, she would not forget everything."
+ leader_trait_ilosemytimeforsleep_generic_desc: "The leader suffered from insomnia. Of course, she would not forget everything."
   
   
  #######################领袖特质########################## 
@@ -233,8 +233,8 @@
  uma_governor_trait_sp_nice_nature_desc: "Unlike the other Umamusumes, Nice Nature doesn't seem to be as "energetic". Like her three Arima commemorative third-place finishes, most things are just passable and that's about it. However, most people do not know that she has a small fire buried in her heart, for which she has traveled through time and space. Today, she also wiped that paper trophy, looking forward to another encounter with the man of destiny."
  uma_admiral_trait_sp_nice_nature: "RUN ＆WIN"
  uma_admiral_trait_sp_nice_nature_desc: ""
- #uma_general_trait_sp_nice_nature: "八方睥睨"  <"Looking down on everyone"
- #uma_general_trait_sp_nice_nature_desc: "不知为何，内恰小姐非常擅长“观察她人”。在她的管理下，星球上将没有任何一位罪犯能够从她的眼皮底下逃脱。"  <"Somehow, Miss Necha is very good at "observing others". Under her supervision, no criminal on the planet will be able to escape from her eyes."
+ #uma_general_trait_sp_nice_nature: "Looking down on everyone"
+ #uma_general_trait_sp_nice_nature_desc: "Somehow, Miss Nature is very good at "observing others". Under her supervision, no criminal on the planet will be able to escape from her eyes."
  uma_ruler_trait_sp_nice_nature: "RUN＆WIN"
  uma_ruler_trait_sp_nice_nature_desc: ""
  uma_governor_trait_charmleader: "Charismatic Governor"
@@ -248,7 +248,7 @@
  uma_admiral_trait_yaruki_three: "General Mood"
  uma_admiral_trait_yaruki_three_desc: "This leader is in average shape and has mediocre productivity."
  uma_admiral_trait_yaruki_two: "Bad mood"
- uma_admiral_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the house?"
+ uma_admiral_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the home?"
  uma_admiral_trait_yaruki_one: "Worst Mood"
  uma_admiral_trait_yaruki_one_desc: "This leader was in poor shape and working completely ineffectively."
  uma_general_trait_yaruki_five: "Best Mood"
@@ -258,7 +258,7 @@
  uma_general_trait_yaruki_three: "General Mood"
  uma_general_trait_yaruki_three_desc: "This leader is in average shape and has mediocre productivity."
  uma_general_trait_yaruki_two: "Bad mood"
- uma_general_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the house?"
+ uma_general_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the home?"
  uma_general_trait_yaruki_one: "Worst Mood"
  uma_general_trait_yaruki_one_desc: "This leader was in poor shape and working completely ineffectively."
  uma_scientist_trait_yaruki_five: "Best Mood"
@@ -268,7 +268,7 @@
  uma_scientist_trait_yaruki_three: "General Mood"
  uma_scientist_trait_yaruki_three_desc: "This leader is in average shape and has mediocre productivity."
  uma_scientist_trait_yaruki_two: "Bad mood"
- uma_scientist_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the house?"
+ uma_scientist_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the home?"
  uma_scientist_trait_yaruki_one: "Worst Mood"
  uma_scientist_trait_yaruki_one_desc: "This leader was in poor shape and working completely ineffectively."
  uma_governor_trait_yaruki_five: "Best Mood"
@@ -278,7 +278,7 @@
  uma_governor_trait_yaruki_three: "General Mood"
  uma_governor_trait_yaruki_three_desc: "This leader is in average shape and has mediocre productivity."
  uma_governor_trait_yaruki_two: "Bad mood"
- uma_governor_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the house?"
+ uma_governor_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the home?"
  uma_governor_trait_yaruki_one: "Worst Mood"
  uma_governor_trait_yaruki_one_desc: "This leader was in poor shape and working completely ineffectively."
  uma_ruler_trait_yaruki_5: "Perfect tune"
@@ -291,6 +291,18 @@
  uma_ruler_trait_yaruki_2_desc: "This leader isn't in a very good condition... maybe I should take her out?"
  uma_ruler_trait_yaruki_1: "Never adjust"
  uma_ruler_trait_yaruki_1_desc: "This leader was in very poor condition and was completely inefficient at work."
+ uma_trait_yaruki_five: "Best Mood"
+ uma_trait_yaruki_five_desc: "This leader has the full drive and is able to perform at her best in her position."
+ uma_trait_yaruki_four: "Best Mood"
+ uma_trait_yaruki_four_desc: "This leader is in good shape and works more efficiently than others."
+ uma_trait_yaruki_three: "Ordinary"
+ uma_trait_yaruki_three_desc: "This leader is in average shape and has mediocre productivity."
+ uma_trait_yaruki_two: "Bad mood"
+ uma_trait_yaruki_two_desc: "This leader is not in very good shape... Maybe take her out of the home?"
+ uma_trait_yaruki_one: "Worst Mood"
+ uma_trait_yaruki_one_desc: "This leader was in poor shape and working completely ineffectively."
+  
+  
   
  ###商城物品对应的特质 
  uma_ruler_trait_horse_shoes_ultra: "Shoe-Top"
@@ -317,6 +329,8 @@
  uma_general_trait_special_scholar_desc: "This leader became a highly capable learner, able to quickly acquire a variety of different skills."
  uma_governor_trait_special_scholar: "Learner"
  uma_governor_trait_special_scholar_desc: "This leader became a highly capable learner, able to quickly acquire a variety of different skills."
+ uma_scientist_trait_special_scholar: "切者"  <"Cutter">  #NT!
+ uma_scientist_trait_special_scholar_desc: "这位领袖变成了一个学习能力极强的学习者，能够迅速地掌握各种各样不同的技能。"  <"The leader became a very capable learner who was able to quickly master a variety of different skills.">  #NT!
  uma_ruler_trait_training_book: "Practice Hands-On"
  uma_ruler_trait_training_book_desc: "This leader is extremely good at various exercises that greatly enhance the speed at which she learns from her work."
  uma_governor_trait_training_book: "Practice Hands-On"
@@ -385,17 +399,17 @@
  uma_ruler_trait_sp_satono_desc: "$uma_scientist_trait_sp_satono_desc$"
   
   
- uma_governor_trait_yaruki: "普通"  <"ordinary"
- uma_governor_trait_yaruki_desc: "这个领袖的状态一般，工作效率平平。"  <"This leader is in average condition and has mediocre work efficiency."
+ uma_governor_trait_yaruki: "Ordinary"
+ uma_governor_trait_yaruki_desc: "This leader is in average condition and has mediocre work efficiency."
   
- uma_scientist_trait_yaruki: "普通"  <"ordinary"
- uma_scientist_trait_yaruki_desc: "这个领袖的状态一般，工作效率平平。"  <"This leader is in average condition and has mediocre work efficiency."
+ uma_scientist_trait_yaruki: "Ordinary"
+ uma_scientist_trait_yaruki_desc: "This leader is in average condition and has mediocre work efficiency."
   
- uma_admiral_trait_yaruki: "普通"  <"ordinary"
- uma_admiral_trait_yaruki_desc: "这个领袖的状态一般，工作效率平平。"  <"This leader is in average condition and has mediocre work efficiency."
+ uma_admiral_trait_yaruki: "Ordinary"
+ uma_admiral_trait_yaruki_desc: "This leader is in average condition and has mediocre work efficiency."
   
- uma_general_trait_yaruki: "普通"  <"ordinary"
- uma_general_trait_yaruki_desc: "这个领袖的状态一般，工作效率平平。"  <"This leader is in average condition and has mediocre work efficiency."
+ uma_general_trait_yaruki: "Ordinary"
+ uma_general_trait_yaruki_desc: "This leader is in average condition and has mediocre work efficiency."
   
   
  uma_governor_trait_sp_teio_hachimi: "Honey Frenzy"
@@ -421,3 +435,9 @@
   
  trait_uma_new_bottle_but_old_wine: "Old wine in new bottles"
  trait_uma_new_bottle_but_old_wine_desc: "But they don't have the soul of a horse girl after all."
+  
+  
+ uma_governor_trait_sp_king_halo_ii: "$uma_governor_trait_sp_king_halo$"
+ uma_governor_trait_sp_al_condor_pasa_ii: "$uma_governor_trait_sp_al_condor_pasa$"
+ uma_governor_trait_sp_tachyon_ii: "$uma_governor_trait_sp_tachyon$"
+ uma_governor_trait_sp_kitasan_black_ii: "$uma_governor_trait_sp_kitasan_black$"
