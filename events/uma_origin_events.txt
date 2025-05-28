@@ -25,6 +25,7 @@ event = {
 					id = uma_origin.2
 					days = 6 ##From Better UMA By ATR
 				}
+				set_country_flag = custom_start_screen
 			}
 			else_if = {
 				limit = {
@@ -43,6 +44,7 @@ event = {
 					id = uma_origin.4
 					days = 6 ##From Better UMA By ATR
 				}
+				set_country_flag = custom_start_screen
 			}
 		}
 		every_playable_country = {
