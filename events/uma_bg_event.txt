@@ -866,19 +866,35 @@ country_event = {
 		name = uma_bg.23.a
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_cheval
+
+			country_event = {
+				id = uma_bg.24
+			}
 		}
 	}
 	option = {
 		name = uma_bg.23.c
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_agnes
+
+			country_event = {
+				id = uma_bg.24
+			}
 		}
 	}
 	option = {
 		name = uma_bg.23.d
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_ayb
+
+			country_event = {
+				id = uma_bg.24
+			}
 		}
+	}
+
+	option = {
+		name = uma_bg.23.e
 	}
 }
 
