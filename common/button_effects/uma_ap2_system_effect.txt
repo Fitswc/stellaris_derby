@@ -8,6 +8,11 @@ uma_ap_system_factor_speed_minus = {
             which = uma_ap2_factor_speed_rate
             value > 0
         }
+
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         custom_tooltip = uma_ap_system_factor_speed_t_tt
@@ -32,6 +37,10 @@ uma_ap_system_factor_speed_plus = {
             which = uma_ap2_factor_speed_rate
             value < 9
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_speed_t_tt
@@ -56,6 +65,10 @@ uma_ap_system_factor_power_minus = {
             which = uma_ap2_factor_power_rate
             value > 0
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         custom_tooltip = uma_ap_system_factor_power_t_tt
@@ -80,6 +93,10 @@ uma_ap_system_factor_power_plus = {
             which = uma_ap2_factor_power_rate
             value < 9
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_power_t_tt
@@ -104,6 +121,10 @@ uma_ap_system_factor_stamina_minus = {
             which = uma_ap2_factor_stamina_rate
             value > 0
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         custom_tooltip = uma_ap_system_factor_stamina_t_tt
@@ -128,6 +149,10 @@ uma_ap_system_factor_stamina_plus = {
             which = uma_ap2_factor_stamina_rate
             value < 9
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_stamina_t_tt
@@ -151,6 +176,10 @@ uma_ap_system_factor_wisdom_minus = {
             which = uma_ap2_factor_wisdom_rate
             value > 0
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         custom_tooltip = uma_ap_system_factor_wisdom_t_tt
@@ -175,6 +204,10 @@ uma_ap_system_factor_wisdom_plus = {
             which = uma_ap2_factor_wisdom_rate
             value < 9
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_wisdom_t_tt
@@ -198,6 +231,10 @@ uma_ap_system_factor_charm_minus = {
             which = uma_ap2_factor_charm_rate
             value > 0
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         custom_tooltip = uma_ap_system_factor_charm_t_tt
@@ -221,6 +258,10 @@ uma_ap_system_factor_charm_plus = {
             which = uma_ap2_factor_charm_rate
             value < 9
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_charm_t_tt
@@ -245,6 +286,10 @@ uma_ap_system_factor_depth_minus = {
             which = uma_ap2_factor_depth_rate
             value > 0
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -265,6 +310,10 @@ uma_ap_system_factor_depth_plus = {
             which = uma_ap2_factor_depth_rate
             value < 9
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         uma_ap2_system_variable_handler = {
@@ -306,6 +355,10 @@ uma_ap_system_realm_speed_minus = {
                 value > 0
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
         if = {
             limit = {
                 check_variable = {
@@ -346,6 +399,10 @@ uma_ap_system_realm_speed_plus = {
                 value < 5
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
         if = {
             limit = {
                 check_variable = {
@@ -387,6 +444,10 @@ uma_ap_system_realm_power_minus = {
                 value > 0
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
         if = {
             limit = {
 
@@ -428,6 +489,10 @@ uma_ap_system_realm_power_plus = {
                 value < 5
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
         if = {
             limit = {
 
@@ -469,6 +534,10 @@ uma_ap_system_realm_stamina_minus = {
                 value > 0
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
         if = {
             limit = {
 
@@ -510,6 +579,10 @@ uma_ap_system_realm_stamina_plus = {
                 value < 5
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
         if = {
             limit = {
 
@@ -550,6 +623,10 @@ uma_ap_system_realm_wisdom_minus = {
                 value > 0
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
        if = {
            limit = {
 
@@ -591,6 +668,10 @@ uma_ap_system_realm_wisdom_plus = {
                 value < 5
             }
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
        if = {
             limit = {
 
@@ -630,6 +711,10 @@ uma_ap_system_realm_charm_minus = {
             which = uma_ap2_realm_charm_rate
             value > 0
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
 
     }
     effect = {
@@ -654,6 +739,10 @@ uma_ap_system_realm_charm_plus = {
             which = uma_ap2_realm_charm_rate
             value < 1
         }
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
 
     }
     effect = {
@@ -684,6 +773,10 @@ uma_ap_system_factor_origins_speed_minus = {
 		check_variable = {
 			which = uma_ap2_factor_depth_rate
 			value <= 8
+		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
 		}
     }
     effect = {
@@ -719,6 +812,10 @@ uma_ap_system_factor_origins_speed_plus = {
 			which = uma_ap2_factor_depth_rate
 			value > 0
 		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_speed_t_tt
@@ -752,6 +849,10 @@ uma_ap_system_factor_origins_power_minus = {
 		check_variable = {
 			which = uma_ap2_factor_depth_rate
 			value <= 8
+		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
 		}
     }
     effect = {
@@ -787,6 +888,10 @@ uma_ap_system_factor_origins_power_plus = {
 			which = uma_ap2_factor_depth_rate
 			value > 0
 		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_power_t_tt
@@ -820,6 +925,10 @@ uma_ap_system_factor_origins_stamina_minus = {
 		check_variable = {
 			which = uma_ap2_factor_depth_rate
 			value <= 8
+		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
 		}
     }
     effect = {
@@ -855,6 +964,10 @@ uma_ap_system_factor_origins_stamina_plus = {
 			which = uma_ap2_factor_depth_rate
 			value > 0
 		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_stamina_t_tt
@@ -887,6 +1000,10 @@ uma_ap_system_factor_origins_wisdom_minus = {
 		check_variable = {
 			which = uma_ap2_factor_depth_rate
 			value <= 8
+		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
 		}
     }
     effect = {
@@ -922,6 +1039,10 @@ uma_ap_system_factor_origins_wisdom_plus = {
 			which = uma_ap2_factor_depth_rate
 			value > 0
 		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
      effect = {
          custom_tooltip = uma_ap_system_factor_wisdom_t_tt
@@ -955,6 +1076,10 @@ uma_ap_system_factor_origins_charm_minus = {
 			which = uma_ap2_factor_depth_rate
 			value <= 8
 		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
+		}
     }
     effect = {
         custom_tooltip = uma_ap_system_factor_charm_t_tt
@@ -987,6 +1112,10 @@ uma_ap_system_factor_origins_charm_plus = {
 		check_variable = {
 			which = uma_ap2_factor_depth_rate
 			value > 0
+		}
+        custom_tooltip = {
+			fail_text = uma_tgrd_gui__ap2_scope_fail
+			is_scope_type = country
 		}
     }
      effect = {
