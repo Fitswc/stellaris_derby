@@ -864,6 +864,9 @@ country_event = {
 
 	option = {
 		name = uma_bg.23.a
+		allow = {
+			exists = event_target:uma_is_leader_cheval_grand
+		}
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_cheval
 
@@ -874,6 +877,9 @@ country_event = {
 	}
 	option = {
 		name = uma_bg.23.c
+		allow = {
+			exists = event_target:uma_is_leader_tachyon
+		}
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_agnes
 
@@ -883,6 +889,7 @@ country_event = {
 		}
 	}
 	option = {
+		allow = { exists = event_target:uma_is_leader_silent_suzuka }
 		name = uma_bg.23.d
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_ayb

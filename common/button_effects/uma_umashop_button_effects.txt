@@ -433,6 +433,32 @@ uma_slot_1_goods_16_passive_effect = {
         custom_tooltip = uma_you_have_bought_it
     }
 }
+#slot1-激活商品17按钮
+uma_slot_1_goods_17_active_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_17_refreshed
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_17_description
+    }
+}
+#slot1-暗的商品17按钮
+uma_slot_1_goods_17_passive_effect = {
+    potential = {
+        has_country_flag = uma_slot_1_goods_17_bought
+    }
+    allow = {
+        always = yes
+    }
+    effect = {
+        custom_tooltip = uma_goods_17_description
+        custom_tooltip = uma_you_have_bought_it
+    }
+}
+
 ####
 #购买slot1的商品
 uma_buy_effect_slot_1 = {
