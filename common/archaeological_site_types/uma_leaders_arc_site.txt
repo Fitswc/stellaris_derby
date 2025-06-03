@@ -421,7 +421,7 @@ uma_sweepy_arc_carrot = {
 #About K
 uma_bourbon_arc = {
 	desc = uma_bour_arc_desc
-	picture = GFX_evt_hidden_door #占位符
+	picture = GFX_evt_uma_trees_with_stone #占位符
 	stages = 6
 	max_instances = 1
 	weight = 0 #需要Trigger事件创建敌对舰船并生成坟
@@ -647,7 +647,7 @@ uma_curren_arc = {
 
 uma_duramente_relic = {
 	desc = uma_duramente_relic_desc
-	picture = GFX_evt_hidden_door #占位符
+	picture = GFX_evt_uma_suzuka_arc_star #占位符
 	stages = 5
 	max_instances = 1
 	weight = 0

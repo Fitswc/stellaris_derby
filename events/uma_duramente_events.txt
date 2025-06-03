@@ -1,11 +1,12 @@
 namespace = uma_duramente
 
-##TODO:Add pics
+
 country_event = {
 	id = uma_duramente.1
 	title = uma_duramente.3.title
 	desc = uma_duramente_anomoly_desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	immediate = {
 		random_system_within_border = {
@@ -48,6 +49,7 @@ ship_event = {
 	title = uma_duramente.3.title
 	desc = uma_duramente.3.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_suzuka_arc_star
 
 	immediate = {
 
@@ -96,7 +98,7 @@ fleet_event = {
 	id = uma_duramente.5
 	title = uma_duramente.5.name
 	desc = uma_duramente.5.desc
-	picture = GFX_evt_discovered_hidden_door #占位符
+	picture = GFX_evt_uma_ap2_mpd #占位符
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -123,7 +125,7 @@ fleet_event = {
 	id = uma_duramente.6
 	title = uma_duramente.6.name
 	desc = uma_duramente.6.desc
-	picture = GFX_evt_discovered_hidden_door #占位符
+	picture = GFX_evt_black_needle_base #占位符
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -150,7 +152,7 @@ fleet_event = {
 	id = uma_duramente.7
 	title = uma_duramente.7.name
 	desc = uma_duramente.7.desc
-	picture = GFX_evt_discovered_hidden_door #占位符
+	picture = GFX_evt_uma_sweepy_village #占位符
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -181,7 +183,7 @@ fleet_event = {
 	id = uma_duramente.8
 	title = uma_duramente.8.name
 	desc = uma_duramente.8.desc
-	picture = GFX_evt_discovered_hidden_door #占位符
+	picture = GFX_evt_uma_suzuka_discovered #占位符
 	show_sound = event_big_door_opening #占位符
 	location = from
 
@@ -210,6 +212,7 @@ fleet_event = {
 	}
 	option = {
 		name = "uma_duramente.8.b" #占位符
+		small_artifact_reward = yes
 	}
 }
 
@@ -222,6 +225,7 @@ country_event = {
 	title = uma_duramente.10.title
 	desc = uma_duramente.10.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	option = {
 		name = uma_duramente.10.a
@@ -247,6 +251,7 @@ country_event = {
 	title = uma_duramente.11.title
 	desc = uma_duramente.11.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	option = {
 		name = uma_duramente.11.a
@@ -254,36 +259,6 @@ country_event = {
 			country_event = {
 				id= uma_duramente.12
 				days = 2
-			}
-		}
-	}
-}
-
-country_event = {
-	id = uma_duramente.12
-	title = uma_duramente.name.unknown
-	desc = uma_duramente.12.desc
-	is_triggered_only = yes
-	diplomatic = yes
-	picture_event_data = {
-		room = traincenter_06_room
-		portrait = 85c
-	}
-
-	option = {
-		name = uma_duramente.12.a
-		hidden_effect = {
-			country_event = {
-				id = uma_duramente.12
-			}
-		}
-	}
-	option = {
-		name = uma_diplomatic_event.skip
-		custom_tooltip = uma_diplomatic_event.skip.tt
-		hidden_effect = {
-			country_event = {
-				id = uma_duramente.13
 			}
 		}
 	}
