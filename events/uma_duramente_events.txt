@@ -15,13 +15,11 @@ country_event = {
 				uma_is_event_system = no
 			}
 
-
-
 			random_system_planet = {
 				limit = {
+					is_star = no
 					NOT = {
 						OR = {
-							is_star = no
 							uma_is_normal_habitat_planet = yes
 							uma_is_pd_habitat_planet = yes
 						}
@@ -31,7 +29,7 @@ country_event = {
 				save_event_target_as = uma_duramenta_planet
 
 				enable_special_project = {
-					name = uma_duramente.3.title
+					name = uma_duramente_sp_everywhere
 					location = This
 					owner = Root
 				}
@@ -56,6 +54,11 @@ ship_event = {
 	}
 
 	option = {
+		name = uma_duramente.3.b
+
+	}
+
+	option = {
 		name = uma_duramente.3.a
 
 		log = "UMA_CREATED DURAMENTE ARCHAEOLOGICAL SITE AT [event_target:uma_duramenta_planet.GetName]"
@@ -64,6 +67,8 @@ ship_event = {
 			create_archaeological_site = uma_duramente_relic
 		}
 	}
+
+
 }
 
 
