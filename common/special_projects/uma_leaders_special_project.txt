@@ -838,14 +838,13 @@ special_project = {
     }
 }
 
-###速茶特殊项目
 special_project = {
 	key = "uma_duramente_sp_everywhere"
 	days_to_research = 100
 
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_engineering_research
+	picture = GFX_evt_sabotaged_ship
 
 	event_scope = ship_event
 
