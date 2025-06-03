@@ -55,7 +55,11 @@ ship_event = {
 
 	option = {
 		name = uma_duramente.3.b
-
+		owner = {
+			add_resource = {
+				engineering_research = 100
+			}
+		}
 	}
 
 	option = {
