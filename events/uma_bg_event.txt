@@ -502,6 +502,17 @@ country_event = {
 					set_name = ZEPHYR
 				}
 			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_duramente
+				}
+				event_target:uma_is_leader_duramente = {
+					change_leader_portrait = 85c
+					set_name = DURAMENTE
+				}
+			}
+
 			###SUB
 			if = {
 				limit = {
