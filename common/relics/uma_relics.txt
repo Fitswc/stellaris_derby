@@ -141,3 +141,53 @@ uma_intact_supervisor_relics = {
 #		}
 #	}
 #}
+
+uma_ancient_crystal_carrot_relics = {
+	activation_duration = 360
+	portrait = "GFX_uma_ancient_crystal_carrot_relics"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			uma_crystal_carrot = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_uma_crystal_carrot_produces_add = 8
+		planet_uma_field_powering_technician_produces_mult = 0.1
+		ship_speed_mult = 0.05
+		weapon_type_energy_weapon_damage_mult = 0.05
+		ship_shield_add = 40
+	}
+
+	score = 1000
+
+	active_effect = {
+
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

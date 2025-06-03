@@ -57,4 +57,37 @@ spriteTypes = {
 		name = GFX_uma_curren_build_research_departure
 		textureFile = "gfx/interface/icons/text_icons/uma_curren_build_research_departure.dds"
 	}
+
+
+	SpriteType = {
+		name = "GFX_uma_ancient_crystal_carrot_relics"
+		texturefile = "gfx/interface/icons/relics/uma_ancient_crystal_carrot_relics.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/uma_ancient_crystal_carrot_relics.dds"
+			animationtexturefile = "gfx/interface/icons/relics/uma_glow_overlay.dds" 	# <- the animated file
+			animationrotation = 180.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 8				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/uma_ancient_crystal_carrot_relics.dds"
+			animationtexturefile = "gfx/interface/icons/relics/uma_glow_overlay.dds" 	# <- the animated file
+			animationrotation = 180.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 15				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 }

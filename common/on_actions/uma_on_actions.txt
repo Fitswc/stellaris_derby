@@ -451,9 +451,16 @@ on_war_beginning = {
 	}
 }
 
+on_entering_war = {
+	events = {
+		uma_bg.23
+	}
+}
+
 on_war_ended = {
 	events = {
 		uma_bg.22
+		uma_bg.24
 	}
 }
 

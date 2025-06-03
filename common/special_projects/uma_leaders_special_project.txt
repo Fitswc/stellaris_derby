@@ -837,3 +837,28 @@ special_project = {
 		}
     }
 }
+
+special_project = {
+	key = "uma_duramente_sp_everywhere"
+	days_to_research = 100
+
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_sabotaged_ship
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		ship_event = {
+			id = uma_duramente.3
+		}
+	}
+
+	on_fail = {
+	}
+}
