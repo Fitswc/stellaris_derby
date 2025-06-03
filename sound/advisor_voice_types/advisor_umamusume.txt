@@ -17,7 +17,7 @@ advisor_umamusume_TokaiTeio = {
 
 advisor_2022_10_03_15_22_13 = {
 	name = "advisor_Tamamo_Cross"
-	icon = "gfx/interface/icons/2022_10_03_15_22_13.dds"
+	icon = "gfx/interface/icons/advisor/advisor_tomamo.dds"
 	playable = {
 		always = yes
 	}
@@ -52,5 +52,21 @@ advisor_2023_10_29_11_55_22 = {
 	}
 	weight = {
 		base = 0
+	}
+}
+
+advisor_umamusume_CurrenChan = {
+	name = "advisor_umamusume_CurrenChan"
+	icon = "gfx/interface/icons/advisor/advisor_CurrenChan.dds"
+	playable = {
+		always = yes
+	}
+	weight = {
+		base = 0
+
+		modifier = {
+			add = 5
+			has_valid_civic = civic_umacurrenchan
+		}
 	}
 }
