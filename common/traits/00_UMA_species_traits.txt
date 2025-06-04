@@ -491,8 +491,8 @@ uma_trait_naturelover={
 				num_districts = { type = district_farming value > 4 }
 			}
 		}
-		planet_jobs_unity_produces_mult = 0.1
-		pop_amenities_usage_mult = -0.05
+		planet_pops_unity_produces_mult = 0.05
+		pop_amenities_usage_mult = -0.1
 	}
 	#triggered_planet_pop_group_modifier_for_all = {   #研究马娘专属科技后解锁更强加成
 	#	potential = {
@@ -518,8 +518,8 @@ uma_trait_urbancitizens={
 
 			}
 		}
-		planet_jobs_unity_produces_mult = 0.1
-		pop_amenities_usage_mult = -0.05
+		planet_pops_unity_produces_mult = 0.05
+		pop_amenities_usage_mult = -0.1
 	}
 	#triggered_planet_pop_group_modifier_for_all = {   #研究马娘专属科技后解锁更强加成
 	#	potential = {
@@ -542,8 +542,8 @@ uma_trait_communal={
 
 		}
 		species_empire_size_mult = -0.05
-		planet_jobs_produces_mult = 0.05
-		planet_jobs_unity_produces_mult = 0.1
+		planet_pops_produces_mult = 0.05
+#		planet_pops_unity_produces_mult = 0.1
 	}
 }
 
@@ -560,8 +560,8 @@ uma_trait_tsundere={
 
 		}
 		species_empire_size_mult = 0.05
-		planet_jobs_produces_mult = -0.05
-		planet_jobs_unity_produces_mult = -0.1
+		planet_pops_produces_mult = -0.05
+#		planet_jobs_unity_produces_mult = -0.1
 	}
 }
 
@@ -612,7 +612,7 @@ uma_trait_houseworkpro={
 			exists = planet
 			planet = { pop_amount < 3000 }
 		}
-		planet_jobs_unity_produces_mult = 0.05
+		planet_pops_unity_produces_mult = 0.05
 	}
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
@@ -637,7 +637,7 @@ uma_trait_houseworkidiot={
 			exists = planet
 			planet = { pop_amount < 3000 }
 		}
-		planet_jobs_unity_produces_mult = -0.05
+		planet_pops_unity_produces_mult = -0.05
 	}
 	triggered_planet_pop_group_modifier_for_all = {
 		potential = {
@@ -673,9 +673,9 @@ uma_trait_desireforknowledge={
 				planet = { has_building = building_research_lab_3  }
 			}
 		}
-		planet_jobs_physics_research_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_society_research_produces_mult = 0.05
+		planet_pops_physics_research_produces_mult = 0.05
+		planet_pops_engineering_research_produces_mult = 0.05
+		planet_pops_society_research_produces_mult = 0.05
 	}
 	modifier={
 		planet_jobs_physics_research_produces_mult = 0.05

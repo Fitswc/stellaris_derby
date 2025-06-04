@@ -26,7 +26,7 @@ uma_situation_deficit_loot_planet = {
     owner = {
         add_resource = {
             $resource$ = $number$
-            mult = event_target:looted_planet.trigger:num_assigned_jobs
+            mult = event_target:looted_planet.trigger:pop_amount
         }
     }
     event_target:looted_planet = {

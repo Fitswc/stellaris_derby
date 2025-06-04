@@ -42,7 +42,7 @@ uma_umaidol = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_pleasure_seeker = yes }
+			owner = { is_pleasure_seeker_empire = yes }
 		}
 		modifier = {
 			bonus_pop_growth_mult = 0.01

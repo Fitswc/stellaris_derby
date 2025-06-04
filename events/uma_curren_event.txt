@@ -1194,7 +1194,11 @@ country_event = {
 				save_global_event_target_as = uma_is_leader_curren_chan
 				clear_global_event_target = uma_is_leader_curren_chan_inside
 				change_leader_portrait = 34c
-				add_trait_no_notify = uma_trait_sp_curren_spark_soujio
+
+				add_trait = {
+					trait = uma_trait_sp_curren_spark_soujio
+					show_message = no
+				}
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
