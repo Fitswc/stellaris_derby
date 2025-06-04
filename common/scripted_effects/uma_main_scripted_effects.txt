@@ -1160,6 +1160,10 @@ uma_refresh_slot_1_goods_effect = {
 		remove_country_flag = uma_slot_1_goods_16_refreshed
 	}
 	if = {
+		limit = { has_country_flag = uma_slot_1_goods_17_bought }
+		remove_country_flag = uma_slot_1_goods_17_bought
+	}
+	if = {
 		limit = { has_country_flag = uma_slot_1_goods_17_refreshed }
 		remove_country_flag = uma_slot_1_goods_17_refreshed
 	}
@@ -1605,6 +1609,14 @@ uma_refresh_slot_2_goods_effect = {
 		limit = { has_country_flag = uma_slot_2_goods_16_refreshed }
 		remove_country_flag = uma_slot_2_goods_16_refreshed
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_17_bought }
+		remove_country_flag = uma_slot_2_goods_17_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_17_refreshed }
+		remove_country_flag = uma_slot_2_goods_17_refreshed
+	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_2_goods_1_refreshed #这种货物刷出来了
@@ -1716,6 +1728,13 @@ uma_refresh_slot_2_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_2_multiply
 				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_2_goods_17_refreshed
+			set_variable = {
+				which = uma_price_of_goods_2_multiply
+				value = 400
 			}
 		}
 	}
@@ -1891,6 +1910,21 @@ uma_buy_slot_2_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_2_goods_17_refreshed }
+		remove_country_flag = uma_slot_2_goods_17_refreshed
+		set_country_flag = uma_slot_2_goods_17_bought
+		#change_variable = {
+		#	which = uma_num_of_good_16
+		#	value = 1
+		#}
+		custom_tooltip = uma_shop_use_dirc
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.25
+			}
+		}
+	}
 }
 
 ###刷新槽位3货物的枚举
@@ -2025,6 +2059,14 @@ uma_refresh_slot_3_goods_effect = {
 		limit = { has_country_flag = uma_slot_3_goods_16_refreshed }
 		remove_country_flag = uma_slot_3_goods_16_refreshed
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_17_bought }
+		remove_country_flag = uma_slot_3_goods_17_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_17_refreshed }
+		remove_country_flag = uma_slot_3_goods_17_refreshed
+	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_3_goods_1_refreshed #这种货物刷出来了
@@ -2136,6 +2178,13 @@ uma_refresh_slot_3_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_3_multiply
 				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_3_goods_17_refreshed
+			set_variable = {
+				which = uma_price_of_goods_3_multiply
+				value = 400
 			}
 		}
 	}
@@ -2311,6 +2360,21 @@ uma_buy_slot_3_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_3_goods_17_refreshed }
+		remove_country_flag = uma_slot_3_goods_17_refreshed
+		set_country_flag = uma_slot_3_goods_17_bought
+		#change_variable = {
+		#	which = uma_num_of_good_16
+		#	value = 1
+		#}
+		custom_tooltip = uma_shop_use_dirc
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.25
+			}
+		}
+	}
 }
 
 ###刷新槽位4货物的枚举
@@ -2445,6 +2509,14 @@ uma_refresh_slot_4_goods_effect = {
 		limit = { has_country_flag = uma_slot_4_goods_16_refreshed }
 		remove_country_flag = uma_slot_4_goods_16_refreshed
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_17_bought }
+		remove_country_flag = uma_slot_4_goods_17_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_17_refreshed }
+		remove_country_flag = uma_slot_4_goods_17_refreshed
+	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_4_goods_1_refreshed #这种货物刷出来了
@@ -2556,6 +2628,13 @@ uma_refresh_slot_4_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_4_multiply
 				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_4_goods_17_refreshed
+			set_variable = {
+				which = uma_price_of_goods_4_multiply
+				value = 400
 			}
 		}
 	}
@@ -2731,6 +2810,21 @@ uma_buy_slot_4_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_4_goods_17_refreshed }
+		remove_country_flag = uma_slot_4_goods_17_refreshed
+		set_country_flag = uma_slot_4_goods_17_bought
+		#change_variable = {
+		#	which = uma_num_of_good_16
+		#	value = 1
+		#}
+		custom_tooltip = uma_shop_use_dirc
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.25
+			}
+		}
+	}
 }
 
 ###刷新槽位5货物的枚举
@@ -2865,6 +2959,14 @@ uma_refresh_slot_5_goods_effect = {
 		limit = { has_country_flag = uma_slot_5_goods_16_refreshed }
 		remove_country_flag = uma_slot_5_goods_16_refreshed
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_17_bought }
+		remove_country_flag = uma_slot_5_goods_17_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_17_refreshed }
+		remove_country_flag = uma_slot_5_goods_17_refreshed
+	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_5_goods_1_refreshed #这种货物刷出来了
@@ -2976,6 +3078,13 @@ uma_refresh_slot_5_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_5_multiply
 				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_5_goods_17_refreshed
+			set_variable = {
+				which = uma_price_of_goods_5_multiply
+				value = 400
 			}
 		}
 	}
@@ -3151,6 +3260,21 @@ uma_buy_slot_5_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_5_goods_17_refreshed }
+		remove_country_flag = uma_slot_5_goods_17_refreshed
+		set_country_flag = uma_slot_5_goods_17_bought
+		#change_variable = {
+		#	which = uma_num_of_good_16
+		#	value = 1
+		#}
+		custom_tooltip = uma_shop_use_dirc
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.25
+			}
+		}
+	}
 }
 
 ###刷新槽位6货物的枚举
@@ -3285,6 +3409,14 @@ uma_refresh_slot_6_goods_effect = {
 		limit = { has_country_flag = uma_slot_6_goods_16_refreshed }
 		remove_country_flag = uma_slot_6_goods_16_refreshed
 	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_17_bought }
+		remove_country_flag = uma_slot_6_goods_17_bought
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_17_refreshed }
+		remove_country_flag = uma_slot_6_goods_17_refreshed
+	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_6_goods_1_refreshed #这种货物刷出来了
@@ -3396,6 +3528,13 @@ uma_refresh_slot_6_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_6_multiply
 				value = 50
+			}
+		}
+		1 = {
+			set_country_flag = uma_slot_6_goods_17_refreshed
+			set_variable = {
+				which = uma_price_of_goods_6_multiply
+				value = 400
 			}
 		}
 	}
@@ -3569,6 +3708,21 @@ uma_buy_slot_6_goods_effect = {
 		custom_tooltip = uma_shop_use_dirc
 		hidden_effect = {
 			uma_upgrade_speed_goods_effect = yes
+		}
+	}
+	if = {
+		limit = { has_country_flag = uma_slot_6_goods_17_refreshed }
+		remove_country_flag = uma_slot_6_goods_17_refreshed
+		set_country_flag = uma_slot_6_goods_17_bought
+		#change_variable = {
+		#	which = uma_num_of_good_16
+		#	value = 1
+		#}
+		custom_tooltip = uma_shop_use_dirc
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.25
+			}
 		}
 	}
 }
