@@ -911,6 +911,7 @@ country_event = {
 	title = uma_bg.24.title
 	desc = uma_bg.24.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 
 	option = {
@@ -1004,4 +1005,86 @@ country_event = {
 			}
 		}
 	}
+}
+
+country_event = {
+	id = uma_bg.25
+	title = uma_bg.25.title
+	desc = uma_bg.25.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	option = {
+		name = uma_bg.25.a
+
+	}
+	option = {
+		name = uma_bg.25.b
+
+	}
+	option = {
+		name = uma_bg.25.c
+
+	}
+}
+
+
+country_event = {
+	id = uma_bg.26
+	title = uma_bg.26.title
+	desc = uma_bg.26.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	option = {
+		name = uma_bg.26.a
+		custom_tooltip = uma_bg.26.a.tt
+	}
+
+	option = {
+		name = uma_bg.26.b
+		custom_tooltip = uma_bg.26.b.tt
+	}
+
+	option = {
+		name = uma_bg.26.c
+		custom_tooltip = uma_bg.26.c.tt
+	}
+
+	option = {
+		name = uma_bg.26.d
+		custom_tooltip = uma_bg.26.d.tt
+	}
+
+	option = {
+		name = uma_bg.26.e
+		custom_tooltip = uma_bg.26.e.tt
+	}
+
+	option = {
+		name = uma_bg.26.f
+		custom_tooltip = uma_bg.26.f.tt
+	}
+
+	option = {
+		name = uma_bg.26.g
+		custom_tooltip = uma_bg.26.g.tt
+	}
+
+	option = {
+		name = uma_bg.26.h
+		custom_tooltip = uma_bg.26.h.tt
+	}
+
+	option = {
+		name = uma_bg.26.i
+		custom_tooltip = uma_bg.26.i.tt
+	}
+
+	option = {
+		name = uma_bg.26.j
+		custom_tooltip = uma_bg.26.j.tt
+	}
+
+
 }
