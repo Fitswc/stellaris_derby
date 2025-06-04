@@ -30,7 +30,7 @@ uma_tachyon_supervisor_relics = {
 	active_effect = {
 		add_modifier = {
 			modifier = "tachyon_supervisor"
-			days = 3600
+			days = 2700
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
@@ -81,7 +81,7 @@ uma_intact_supervisor_relics = {
 	active_effect = {
 		add_modifier = {
 			modifier = "intact_supervisor"
-			days = 3600
+			days = 2700
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
@@ -163,17 +163,16 @@ uma_ancient_crystal_carrot_relics = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_uma_crystal_carrot_produces_add = 8
-		planet_uma_field_powering_technician_produces_mult = 0.1
-		ship_speed_mult = 0.05
-		weapon_type_energy_weapon_damage_mult = 0.05
-		ship_shield_add = 40
+		planet_jobs_uma_crystal_carrot_produces_add = 2
 	}
 
 	score = 1000
 
 	active_effect = {
-
+		add_modifier = {
+			modifier = uma_duramente_reilc_buff
+			days = 2400
+		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
 			add_modifier = {
