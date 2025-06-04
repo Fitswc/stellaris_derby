@@ -1038,6 +1038,12 @@ country_event = {
 			set_country_flag = uma_direct_recruit_commander
 		}
 	}
+
+	after = {
+		country_event = {
+			id = uma_bg.26
+		}
+	}
 }
 
 
