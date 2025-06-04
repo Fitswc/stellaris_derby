@@ -898,9 +898,10 @@ country_event = {
 		remove_modifier = uma_duramente_buff
 	}
 }
+
 ##
 country_event = {
-	id = uma_bg.23
+	id = uma_bg.25
 	title = uma_bg.23.title
 	desc = uma_bg.23.desc
 	is_triggered_only = yes
@@ -917,7 +918,7 @@ country_event = {
 			set_country_flag = uma_change_leader_portrait_cheval
 
 			country_event = {
-				id = uma_bg.24
+				id = uma_bg.26
 			}
 		}
 	}
@@ -930,7 +931,7 @@ country_event = {
 			set_country_flag = uma_change_leader_portrait_agnes
 
 			country_event = {
-				id = uma_bg.24
+				id = uma_bg.26
 			}
 		}
 	}
@@ -941,7 +942,7 @@ country_event = {
 			set_country_flag = uma_change_leader_portrait_ayb
 
 			country_event = {
-				id = uma_bg.24
+				id = uma_bg.26
 			}
 		}
 	}
@@ -953,7 +954,7 @@ country_event = {
 
 
 country_event = {
-	id = uma_bg.24
+	id = uma_bg.26
 	title = uma_bg.24.title
 	desc = uma_bg.24.desc
 	is_triggered_only = yes
@@ -1059,7 +1060,7 @@ country_event = {
 }
 
 country_event = {
-	id = uma_bg.25
+	id = uma_bg.27
 	title = uma_bg.25.title
 	desc = uma_bg.25.desc
 	is_triggered_only = yes
@@ -1087,14 +1088,14 @@ country_event = {
 
 	after = {
 		country_event = {
-			id = uma_bg.26
+			id = uma_bg.28
 		}
 	}
 }
 
 
 country_event = {
-	id = uma_bg.26
+	id = uma_bg.28
 	title = uma_bg.26.title
 	desc = uma_bg.26.desc
 	is_triggered_only = yes
