@@ -15,7 +15,11 @@ country_event = {
 
 	immediate = {
 		from = {
-			add_trait_no_notify = leader_trait_uma_generic
+
+			add_trait = {
+				trait = leader_trait_uma_generic
+				show_message = no
+			}
 		}
 	}
 }

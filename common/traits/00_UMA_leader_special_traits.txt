@@ -1404,15 +1404,42 @@ uma_official_trait_sp_zephyr = {
 	}
 
 	councilor_modifier = {
-		planet_building_build_speed_mult = -0.05
+		planet_building_build_speed_mult = 0.05
 		planet_building_capacity_add = 4
 		pop_bonus_workforce_mult = 0.05
 	}
 	modifier = {
-		planet_building_build_speed_mult = -0.2
+		planet_building_build_speed_mult = 0.2
 		planet_building_capacity_add = 4
 		pop_bonus_workforce_mult = 0.1
 
+	}
+
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
+
+uma_commander_trait_sp_dura = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_uma_commander_trait_sp_dura"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+
+
+	fleet_modifier = {
+		ship_speed_mult = 0.2
+		ship_windup_mult = 0.1
+		ship_accuracy_mult = 0.2
+		ship_weapon_range_mult = 0.1
 	}
 
 	leader_class = { official }

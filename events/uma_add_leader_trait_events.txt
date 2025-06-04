@@ -19,10 +19,14 @@ country_event = {
 				limit = { leader_class = commander }
 				random_list = {
 					1 = {
-						add_trait = uma_admiral_trait_symbolihonor
+						add_trait = {
+							trait = uma_admiral_trait_symbolihonor
+						}
 					}
 					1 = {
-						add_trait = uma_admiral_trait_mejirohonor
+						add_trait = {
+							trait = uma_admiral_trait_mejirohonor
+						}
 					}
 					8 = {
 	
@@ -69,7 +73,9 @@ country_event = {
 				limit = { leader_class = commander }
 				random_list = {
 					1 = {
-						add_trait = uma_admiral_trait_charmleader
+						add_trait = {
+							trait = uma_admiral_trait_charmleader
+						}
 					}
 					9 = {
 	
@@ -82,7 +88,9 @@ country_event = {
 				limit = { leader_class = official }
 				random_list = {
 					1 = {
-						add_trait = uma_governor_trait_charmleader
+						add_trait = {
+							trait = uma_governor_trait_charmleader
+						}
 					}
 					9 = {
 	
@@ -139,7 +147,9 @@ country_event = {
 				limit = { leader_class = official }
 				random_list = {
 					1 = {
-						add_trait = uma_governor_trait_kishouyasashii
+						add_trait = {
+							trait = uma_governor_trait_kishouyasashii
+						}
 					}
 					9 = {
 	
@@ -152,7 +162,9 @@ country_event = {
 				limit = { leader_class = scientist }
 				random_list = {
 					1 = {
-						add_trait = uma_scientist_trait_kishouyasashii
+						add_trait = {
+							trait = uma_scientist_trait_kishouyasashii
+						}
 					}
 					9 = {
 	
@@ -183,7 +195,9 @@ country_event = {
 				limit = { leader_class = commander }
 				random_list = {
 					1 = {
-						add_trait = uma_admiral_trait_kishouhageshii
+						add_trait = {
+							trait = uma_admiral_trait_kishouhageshii
+						}
 					}
 					9 = {
 	
@@ -225,7 +239,9 @@ country_event = {
 		from = {
 			if = {
 				limit = { leader_class = commander }
-				add_trait = uma_admiral_trait_terriroty_awake
+				add_trait = {
+					trait = uma_admiral_trait_terriroty_awake
+				}
 #				add_trait = uma_ruler_trait_terriroty_awake
 				break = yes
 			}
@@ -237,13 +253,17 @@ country_event = {
 #			}
 			if = {
 				limit = { leader_class = official }
-				add_trait = uma_governor_trait_terriroty_awake
+				add_trait = {
+					trait = uma_governor_trait_terriroty_awake
+				}
 #				add_trait = uma_ruler_trait_terriroty_awake
 				break = yes
 			}
 			if = {
 				limit = { leader_class = scientist }
-				add_trait = uma_scientist_trait_terriroty_awake
+				add_trait = {
+					trait = uma_scientist_trait_terriroty_awake
+				}
 #				add_trait = uma_ruler_trait_terriroty_awake
 				break = yes
 			}
@@ -435,7 +455,10 @@ country_event = {
 					is_same_species_class = root.owner_main_species
 				}
 				uma_delete_vallian_trait = yes
-				add_trait_no_notify = leader_trait_uma_generic
+				add_trait = {
+					trait = leader_trait_uma_generic
+					show_message = no
+				}
 			}
 		}
 		every_owned_leader = {
@@ -447,7 +470,11 @@ country_event = {
 					is_same_species_class = root.owner_main_species
 				}
 				uma_delete_vallian_trait = yes
-				add_trait_no_notify = leader_trait_uma_generic
+
+				add_trait = {
+					trait = leader_trait_uma_generic
+					show_message = no
+				}
 			}
 		}
 		if = {
@@ -455,7 +482,11 @@ country_event = {
 				has_authority = auth_imperial
 			}
 			ruler = {
-				add_trait_no_notify = leader_trait_uma_generic
+
+				add_trait = {
+					trait = leader_trait_uma_generic
+					show_message = no
+				}
 			}
 			every_owned_leader = {
 				if = {
@@ -466,7 +497,11 @@ country_event = {
 						is_same_species_class = root.owner_main_species
 					}
 					uma_delete_vallian_trait = yes
-					add_trait_no_notify = leader_trait_uma_generic
+
+					add_trait = {
+						trait = leader_trait_uma_generic
+						show_message = no
+					}
 				}
 			}
 		}
@@ -483,74 +518,138 @@ country_event = {
 						trigger = has_trait
 
 						leader_trait_principled = {
-							add_trait_no_notify = leader_uma_trait_principled
+
+							add_trait = {
+								trait = leader_uma_trait_principled
+								show_message = no
+							}
 							remove_trait = leader_trait_principled
 						}
 						leader_trait_principled_2 = {
-							add_trait_no_notify = leader_uma_trait_principled_2
+
+							add_trait = {
+								trait = leader_uma_trait_principled_2
+								show_message = no
+							}
 							remove_trait = leader_trait_principled_2
 						}
 
 						leader_trait_fleet_organizer = {
-							add_trait_no_notify = leader_uma_trait_fleet_organizer
+
+							add_trait = {
+								trait = leader_uma_trait_fleet_organizer
+								show_message = no
+							}
 							remove_trait = leader_trait_fleet_organizer
 						}
 						leader_trait_fleet_organizer_2 = {
-							add_trait_no_notify = leader_uma_trait_fleet_organizer_2
+
+							add_trait = {
+								trait = leader_uma_trait_fleet_organizer_2
+								show_message = no
+							}
 							remove_trait = leader_trait_fleet_organizer_2
 						}
 
 						leader_trait_spycraft = {
-							add_trait_no_notify = leader_uma_trait_spycraft
+
+							add_trait = {
+								trait = leader_uma_trait_spycraft
+								show_message = no
+							}
 							remove_trait = leader_trait_spycraft
 						}
 						leader_trait_spycraft_2 = {
-							add_trait_no_notify = leader_uma_trait_spycraft_2
+
+							add_trait = {
+								trait = leader_uma_trait_spycraft_2
+								show_message = no
+							}
 							remove_trait = leader_trait_spycraft_2
 						}
 
 						leader_trait_spark_of_genius = {
-							add_trait_no_notify = leader_uma_trait_spark_of_genius
+
+							add_trait = {
+								trait = leader_uma_trait_spark_of_genius
+								show_message = no
+							}
 							remove_trait = leader_trait_spark_of_genius
 						}
 						leader_trait_spark_of_genius_2 = {
-							add_trait_no_notify = leader_trait_spark_of_genius_2
+
+							add_trait = {
+								trait =leader_trait_spark_of_genius_2
+								show_message = no
+							}
 							remove_trait = leader_trait_spark_of_genius_2
 						}
 
 						trait_ruler_industrialist = {
-							add_trait_no_notify = trait_uma_ruler_industrialist
+
+							add_trait = {
+								trait =trait_uma_ruler_industrialist
+								show_message = no
+							}
 							remove_trait = trait_ruler_industrialist
 						}
 						trait_ruler_industrialist_2 = {
-							add_trait_no_notify = trait_uma_ruler_industrialist_2
+
+							add_trait = {
+								trait =trait_uma_ruler_industrialist_2
+								show_message = no
+							}
 							remove_trait = trait_ruler_industrialist_2
 						}
 
 						trait_ruler_warlike = {
-							add_trait_no_notify = trait_uma_ruler_warlike
+
+							add_trait = {
+								trait =trait_uma_ruler_warlike
+								show_message = no
+							}
 							remove_trait = trait_ruler_warlike
 						}
 						trait_ruler_warlike_2 = {
-							add_trait_no_notify = trait_uma_ruler_warlike_2
+
+							add_trait = {
+								trait =trait_uma_ruler_warlike_2
+								show_message = no
+							}
 							remove_trait = trait_ruler_warlike_2
 						}
 
 						trait_ruler_charismatic = {
-							add_trait_no_notify = trait_uma_ruler_charismatic
+
+							add_trait = {
+								trait =trait_uma_ruler_charismatic
+								show_message = no
+							}
 							remove_trait = trait_ruler_charismatic
 						}
 						trait_ruler_charismatic_2 = {
-							add_trait_no_notify = trait_uma_ruler_charismatic_2
+
+							add_trait = {
+								trait =trait_uma_ruler_charismatic_2
+								show_message = no
+							}
 							remove_trait = trait_ruler_charismatic_2
 						}
 
 						trait_ruler_logistic_understanding = {
-							add_trait_no_notify = trait_uma_ruler_logistic_understanding
+
+							add_trait = {
+								trait = trait_uma_ruler_logistic_understanding
+								show_message = no
+							}
 							remove_trait = trait_ruler_logistic_understanding
 						}
 						trait_ruler_logistic_understanding_2 = {
-							add_trait_no_notify = trait_uma_ruler_logistic_understanding_2
+
+							add_trait = {
+								trait = trait_uma_ruler_logistic_understanding_2
+								show_message = no
+							}
 							remove_trait = trait_ruler_logistic_understanding_2
 						}
 

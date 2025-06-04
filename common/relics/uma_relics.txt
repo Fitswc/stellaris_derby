@@ -30,7 +30,7 @@ uma_tachyon_supervisor_relics = {
 	active_effect = {
 		add_modifier = {
 			modifier = "tachyon_supervisor"
-			days = 3600
+			days = 2700
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
@@ -81,7 +81,7 @@ uma_intact_supervisor_relics = {
 	active_effect = {
 		add_modifier = {
 			modifier = "intact_supervisor"
-			days = 3600
+			days = 2700
 		}
 		custom_tooltip = relic_triumph_cooldown
 		hidden_effect = {
@@ -141,3 +141,52 @@ uma_intact_supervisor_relics = {
 #		}
 #	}
 #}
+
+uma_ancient_crystal_carrot_relics = {
+	activation_duration = 360
+	portrait = "GFX_uma_ancient_crystal_carrot_relics"
+	sound = "relic_activation_ether_drake_trophy"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			uma_crystal_carrot = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_uma_crystal_carrot_produces_add = 2
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = uma_duramente_reilc_buff
+			days = 2400
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

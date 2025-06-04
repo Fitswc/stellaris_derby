@@ -172,10 +172,10 @@ planet_event = {
 			}
 		}
 		change_pc = pc_frozen
-		export_trigger_value_to_variable = {
-			trigger = planet_size
-			variable = uma_planet_size_pk_uma_come_to_ccp
-		}
+#		export_trigger_value_to_variable = {
+#			trigger = planet_size
+#			variable = uma_planet_size_pk_uma_come_to_ccp
+#		}
 		add_deposit = d_uma_crystal_carrot_pk
 	}
 }

@@ -3,9 +3,31 @@
 
 uma_grand_archive.9010.d: "把她变成马娘！为我们效力！"
 uma_grand_archive.9010.d.tt: "这名俘虏将会被我们转化为马娘并成为我们的领袖"
+mod_UMA_bonus_pop_growth_mult: "马娘人口增长系数"
+mod_planet_uma_traders_trade_produces_add: "马娘商人产生的贸易"
+mod_planet_uma_umaidol_produces_mult: "马娘偶像产出"
+mod_shipclass_military_build_cost_mult: "军用船只建造花费"
+mod_planet_buildings_energy_cost_mult: "建筑£energy£能量花费"
+mod_leader_commanders_uma_crystal_carrot_produces_add: "指挥官£uma_crystal_carrot£水晶萝卜产出"
+mod_leader_scientists_uma_crystal_carrot_produces_add: "科学官£uma_crystal_carrot£水晶萝卜产出"
+mod_planet_jobs_uma_crystal_carrot_produces_mult: "£pop£人口£uma_crystal_carrot£水晶萝卜产出"
+mod_planet_jobs_uma_crystal_carrot_upkeep_mul: "£pop£人口£uma_crystal_carrot£水晶萝卜维护"
+mod_planet_pops_physics_research_produces_mult: "£pop£人口£physics_research£物理学研究产出"
+mod_planet_pops_society_research_produces_mult: "£pop£人口£society_research£社会学研究产出"
+mod_planet_pops_engineering_research_produces_mult: "£pop£人口£engineering_research£工程学研究产出"
+mod_planet_pops_unity_produces_mult: "£pop£人口£unity£凝聚力产出"
+mod_planet_pops_produces_mult: "£pop£人口产出"
 
+#d_uma_crystal_carrot_pk: "£uma_crystal_carrot£ +[This.uma_planet_size_pk_uma_come_to_ccp]"
+d_uma_crystal_carrot_pk: "£uma_crystal_carrot£ +30"
 
-d_uma_crystal_carrot_pk: "£uma_crystal_carrot£ +[This.uma_planet_size_pk_uma_come_to_ccp]"
+d_uma_crystal_carrot_3: "£uma_crystal_carrot£ +3"
+d_uma_crystal_carrot_3_desc: ""
+d_uma_crystal_carrot_2: "£uma_crystal_carrot£ +2"
+d_uma_crystal_carrot_1: "£uma_crystal_carrot£ +1"
+d_uma_crystal_carrot_2_desc: ""
+d_uma_crystal_carrot_1_desc: ""
+
 
 uma_bg.23.title: "选择领袖"
 uma_bg.23.desc: "选择一个领袖来变换她的服装吧(正常服装->愚人节服装),如果有的话"

@@ -175,7 +175,9 @@ country_event = {
 					}
 				}
 				remove_trait = uma_commander_trait_sp_seiun_sky_1
-				add_trait = uma_commander_trait_sp_seiun_sky_2
+				add_trait = {
+					trait = uma_commander_trait_sp_seiun_sky_2
+				}
 			}
 		}
 	}
@@ -195,7 +197,9 @@ country_event = {
 			if = {
 				limit = { has_trait = uma_commander_trait_sp_seiun_sky_2 }
 				remove_trait = uma_commander_trait_sp_seiun_sky_2
-				add_trait = uma_commander_trait_sp_seiun_sky_1
+				add_trait = {
+					trait = uma_commander_trait_sp_seiun_sky_1
+				}
 			}
 		}
 	}
@@ -502,6 +506,17 @@ country_event = {
 					set_name = ZEPHYR
 				}
 			}
+
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_duramente
+				}
+				event_target:uma_is_leader_duramente = {
+					change_leader_portrait = 85c
+					set_name = DURAMENTE
+				}
+			}
+
 			###SUB
 			if = {
 				limit = {
@@ -852,6 +867,37 @@ country_event = {
 }
 
 
+country_event = {
+	id = uma_bg.23
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		has_country_flag = uma_duramente_not_join
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = uma_duramente_buff
+		}
+	}
+}
+
+country_event = {
+	id = uma_bg.24
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		has_country_flag = uma_duramente_not_join
+	}
+
+	immediate = {
+		remove_modifier = uma_duramente_buff
+	}
+}
 ##
 country_event = {
 	id = uma_bg.23

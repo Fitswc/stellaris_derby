@@ -442,28 +442,36 @@ uma_upgrade_kanshi_one_level = {
 			limit = { has_trait = uma_trait_yaruki_four }
 			remove_trait = uma_trait_yaruki_four
 #			remove_trait = uma_ruler_trait_yaruki_4
-			add_trait = uma_trait_yaruki_five
+			add_trait = {
+				trait = uma_trait_yaruki_five
+			}
 #			add_trait= uma_ruler_trait_yaruki_5
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_three }
 			remove_trait = uma_trait_yaruki_three
 #			remove_trait = uma_ruler_trait_yaruki_3
-			add_trait = uma_trait_yaruki_four
+			add_trait = {
+				trait = uma_trait_yaruki_four
+			}
 #			add_trait= uma_ruler_trait_yaruki_4
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_two }
 			remove_trait = uma_trait_yaruki_two
 #			remove_trait = uma_ruler_trait_yaruki_2
-			add_trait = uma_trait_yaruki_three
+			add_trait = {
+				trait = uma_trait_yaruki_three
+			}
 #			add_trait= uma_ruler_trait_yaruki_3
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_one }
 			remove_trait = uma_trait_yaruki_one
 #			remove_trait = uma_ruler_trait_yaruki_1
-			add_trait = uma_trait_yaruki_two
+			add_trait = {
+				trait = uma_trait_yaruki_two
+			}
 #			add_trait= uma_ruler_trait_yaruki_2
 		}
 	}
@@ -553,28 +561,36 @@ uma_down_kanshi_one_level = {
 			limit = { has_trait = uma_trait_yaruki_five }
 			remove_trait = uma_trait_yaruki_five
 #			remove_trait = uma_ruler_trait_yaruki_5
-			add_trait = uma_trait_yaruki_four
+			add_trait = {
+				trait = uma_trait_yaruki_four
+			}
 #			add_trait= uma_ruler_trait_yaruki_4
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_four }
 			remove_trait = uma_trait_yaruki_four
 #			remove_trait = uma_ruler_trait_yaruki_4
-			add_trait = uma_trait_yaruki_three
+			add_trait = {
+				trait = uma_trait_yaruki_three
+			}
 #			add_trait= uma_ruler_trait_yaruki_3
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_three }
 			remove_trait = uma_trait_yaruki_three
 #			remove_trait = uma_ruler_trait_yaruki_3
-			add_trait = uma_trait_yaruki_two
+			add_trait = {
+				trait = uma_trait_yaruki_two
+			}
 #			add_trait= uma_ruler_trait_yaruki_2
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_two }
 			remove_trait = uma_trait_yaruki_two
 #			remove_trait = uma_ruler_trait_yaruki_2
-			add_trait = uma_trait_yaruki_one
+			add_trait = {
+				trait = uma_trait_yaruki_one
+			}
 #			add_trait= uma_ruler_trait_yaruki_1
 		}
 	}
@@ -628,28 +644,36 @@ uma_upgrade_kanshi_two_level = {
 			limit = { has_trait = uma_trait_yaruki_four }
 			remove_trait = uma_trait_yaruki_four
 #			remove_trait = uma_ruler_trait_yaruki_4
-			add_trait = uma_trait_yaruki_five
+			add_trait = {
+				trait = uma_trait_yaruki_five
+			}
 #			add_trait= uma_ruler_trait_yaruki_5
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_three }
 			remove_trait = uma_trait_yaruki_three
 #			remove_trait = uma_ruler_trait_yaruki_3
-			add_trait = uma_trait_yaruki_five
+			add_trait = {
+				trait = uma_trait_yaruki_five
+			}
 #			add_trait= uma_ruler_trait_yaruki_5
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_two }
 			remove_trait = uma_trait_yaruki_two
 #			remove_trait = uma_ruler_trait_yaruki_2
-			add_trait = uma_trait_yaruki_four
+			add_trait = {
+				trait = uma_trait_yaruki_four
+			}
 #			add_trait= uma_ruler_trait_yaruki_4
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_one }
 			remove_trait = uma_trait_yaruki_one
 #			remove_trait = uma_ruler_trait_yaruki_1
-			add_trait = uma_trait_yaruki_three
+			add_trait = {
+				trait = uma_trait_yaruki_three
+			}
 #			add_trait= uma_ruler_trait_yaruki_3
 		}
 	}
@@ -738,15 +762,21 @@ uma_add_school_hat_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = uma_ruler_trait_special_scholar
+		add_trait = {
+			trait = uma_ruler_trait_special_scholar
+		}
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = uma_governor_trait_special_scholar
+		add_trait = {
+			trait = uma_governor_trait_special_scholar
+		}
 	}
 	if = {
 		limit = { leader_class = scientist }
-		add_trait = uma_scientist_trait_special_scholar
+		add_trait = {
+			trait =uma_scientist_trait_special_scholar
+		}
 	}
 }
 
@@ -755,19 +785,27 @@ uma_add_training_book_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = uma_ruler_trait_training_book
+		add_trait = {
+			trait = uma_ruler_trait_training_book
+		}
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = uma_governor_trait_training_book
+		add_trait = {
+			trait = uma_ruler_trait_training_book
+		}
 	}
 	if = {
 		limit = { leader_class = scientist }
-		add_trait = uma_scientist_trait_training_book
+		add_trait = {
+			trait = uma_ruler_trait_training_book
+		}
 	}
 	if = {
 		limit = { leader_class = commander }
-		add_trait = uma_admiral_trait_training_book
+		add_trait = {
+			trait = uma_ruler_trait_training_book
+		}
 	}
 #	if = {
 #		limit = { leader_class = general }
@@ -780,19 +818,30 @@ uma_add_tomorrow_star_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = uma_ruler_trait_tomorrow_star
+		add_trait = {
+			trait = uma_admiral_trait_tomorrow_star
+		}
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = uma_governor_trait_tomorrow_star
+
+		add_trait = {
+			trait = uma_admiral_trait_tomorrow_star
+		}
 	}
 	if = {
 		limit = { leader_class = scientist }
-		add_trait = uma_scientist_trait_tomorrow_star
+
+		add_trait = {
+			trait = uma_admiral_trait_tomorrow_star
+		}
 	}
 	if = {
 		limit = { leader_class = commander }
-		add_trait = uma_admiral_trait_tomorrow_star
+
+		add_trait = {
+			trait = uma_admiral_trait_tomorrow_star
+		}
 	}
 #	if = {
 #		limit = { leader_class = general }
@@ -805,11 +854,15 @@ uma_add_lovely_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = uma_ruler_trait_lovely
+		add_trait = {
+			trait = uma_governor_trait_lovely
+		}
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = uma_governor_trait_lovely
+		add_trait = {
+			trait = uma_governor_trait_lovely
+		}
 	}
 }
 
@@ -911,7 +964,10 @@ uma_random_change_leader_yaruki_effect = {
 				}
 				3 = {
 					remove_trait = uma_trait_yaruki_five
-					add_trait_no_notify = uma_trait_yaruki_four
+					add_trait = {
+						trait = uma_trait_yaruki_four
+						show_message = no
+					}
 				}
 			}
 		}
@@ -920,14 +976,21 @@ uma_random_change_leader_yaruki_effect = {
 			random_list = {
 				8 = {
 					remove_trait = uma_trait_yaruki_four
-					add_trait_no_notify = uma_trait_yaruki_five
+
+					add_trait = {
+						trait = uma_trait_yaruki_five
+						show_message = no
+					}
 				}
 				16 = {
 
 				}
 				8 = {
 					remove_trait = uma_trait_yaruki_four
-					add_trait_no_notify = uma_trait_yaruki_three
+					add_trait = {
+						trait = uma_trait_yaruki_three
+						show_message = no
+					}
 
 				}
 			}
@@ -937,7 +1000,10 @@ uma_random_change_leader_yaruki_effect = {
 			random_list = {
 				8 = {
 					remove_trait = uma_trait_yaruki_three
-					add_trait_no_notify = uma_trait_yaruki_four
+					add_trait = {
+						trait = uma_trait_yaruki_four
+						show_message = no
+					}
 
 				}
 				16 = {
@@ -945,7 +1011,11 @@ uma_random_change_leader_yaruki_effect = {
 				}
 				8 = {
 					remove_trait = uma_trait_yaruki_three
-					add_trait_no_notify = uma_trait_yaruki_two
+
+					add_trait = {
+						trait = uma_trait_yaruki_two
+						show_message = no
+					}
 
 				}
 			}
@@ -955,14 +1025,20 @@ uma_random_change_leader_yaruki_effect = {
 			random_list = {
 				8 = {
 					remove_trait = uma_trait_yaruki_two
-					add_trait_no_notify = uma_trait_yaruki_three
+					add_trait = {
+						trait =uma_trait_yaruki_three
+						show_message = no
+					}
 				}
 				16 = {
 
 				}
 				8 = {
 					remove_trait = uma_trait_yaruki_two
-					add_trait_no_notify = uma_trait_yaruki_one
+					add_trait = {
+						trait =uma_trait_yaruki_one
+						show_message = no
+					}
 
 				}
 			}
@@ -975,7 +1051,10 @@ uma_random_change_leader_yaruki_effect = {
 				}
 				5 = {
 					remove_trait = uma_trait_yaruki_one
-					add_trait_no_notify = uma_trait_yaruki_two
+					add_trait = {
+						trait = uma_trait_yaruki_two
+						show_message = no
+					}
 				}
 			}
 		}
@@ -995,23 +1074,43 @@ uma_initialize_leader_yaruki_effect = {
 		}
 		random_list = {
 			6 = {
-				add_trait_no_notify = uma_trait_yaruki_five
+
+				add_trait = {
+					trait = uma_trait_yaruki_five
+					show_message = no
+				}
 				#				add_trait= uma_ruler_trait_yaruki_5
 			}
 			10 = {
-				add_trait_no_notify = uma_trait_yaruki_four
+
+				add_trait = {
+					trait = uma_trait_yaruki_four
+					show_message = no
+				}
 				#				add_trait= uma_ruler_trait_yaruki_4
 			}
 			12 = {
-				add_trait_no_notify = uma_trait_yaruki_three
+
+				add_trait = {
+					trait = uma_trait_yaruki_three
+					show_message = no
+				}
 				#				add_trait= uma_ruler_trait_yaruki_3
 			}
 			4 = {
-				add_trait_no_notify = uma_trait_yaruki_two
+
+				add_trait = {
+					trait = uma_trait_yaruki_two
+					show_message = no
+				}
 				#				add_trait= uma_ruler_trait_yaruki_2
 			}
 			3 = {
-				add_trait_no_notify = uma_trait_yaruki_one
+
+				add_trait = {
+					trait = uma_trait_yaruki_one
+					show_message = no
+				}
 				#				add_trait= uma_ruler_trait_yaruki_1
 			}
 		}

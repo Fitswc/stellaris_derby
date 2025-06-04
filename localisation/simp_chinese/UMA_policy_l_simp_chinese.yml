@@ -18,28 +18,28 @@ policy_uma_trade_policy_desc:0 "$uma$未来一段时间的贸易倾向\n§H将�
 
 trade_policy_uma_basic_resources_trading:0 "§G原料进口§!"
 trade_policy_uma_basic_resources_trading_name:0 "$trade_policy_uma_basic_resources_trading$"
-trade_policy_uma_basic_resources_trading_desc:0 "进口未经加工的原材料，对它们进行加工，然后再卖出去\n\n§E所获得的每点£trade_value£ §Y贸易值§!会为我们贡献£energy£ §Y0.5§!、£minerals£ §Y0.5§!和£food£ §Y0.5§!§!"
+trade_policy_uma_basic_resources_trading_desc:0 "进口未经加工的原材料，对它们进行加工，然后再卖出去\n\n§E收获的$r_trade$中的§Y45%§!将转化为$r_energy$ $r_minerals$以及$r_food$§!"
 
 trade_policy_uma_industry_trading:0 "§S成品进口§!"
 trade_policy_uma_industry_trading_name:0 "$trade_policy_uma_industry_trading$"
-trade_policy_uma_industry_trading_desc:0 "进口已经完成加工的成品，这自然比直接进口原料要贵上许多\n\n§E所获得的每点£trade_value£ §Y贸易值§!会为我们贡献£consumer_goods£ §Y0.25§!和£alloys£ §Y0.125§!§!"
+trade_policy_uma_industry_trading_desc:0 "进口已经完成加工的成品，这自然比直接进口原料要贵上许多\n\n§E收获的$r_trade$中的§Y40%§!将转化为$r_consumer_goods$和$r_alloys$§!"
 
 trade_policy_uma_strategic_resources_trading:0 "§H战略资源进口§!"
 trade_policy_uma_strategic_resources_trading_name:0 "$trade_policy_uma_strategic_resources_trading$"
-trade_policy_uma_strategic_resources_trading_desc:0 "花费更高的代价进口必不可少的战略资源\n\n§E所获得的每点£trade_value£ §Y贸易值§!会为我们贡献£volatile_motes£ §Y0.05§!、£rare_crystals£ §Y0.05§!和£exotic_gases£ §Y0.05§!§!"
+trade_policy_uma_strategic_resources_trading_desc:0 "花费更高的代价进口必不可少的战略资源\n\n§E收获的$r_trade$中的§Y30%§!将转化为$r_volatile_motes$ $r_rare_crystals$以及$r_exotic_gases$§!"
 requires_trade_policy_uma_strategic_resources_trading:0 "$TRIGGER_FAIL$§R需要拥有开采或冶炼相关资源的能力§!"
 
 trade_policy_uma_cultural_output:0 "§E文化输出§!"
 trade_policy_uma_cultural_output_name:0 "$trade_policy_uma_cultural_output$"
-trade_policy_uma_cultural_output_desc:0 "将我们的理念与形象传播至每一颗我们进行贸易的行星\n\n§E所获得的每点£trade_value£ §Y贸易值§!会为我们贡献£unity£ §Y0.25§!、和£influence£ §Y0.001§!§!"
+trade_policy_uma_cultural_output_desc:0 "将我们的理念与形象传播至每一颗我们进行贸易的行星\n\n§E收获的$r_trade$中的§Y50%§!将转化为$r_unity$以及$r_influence$§!"
 
 trade_policy_uma_research_support:0 "§B科研资助§!"
 trade_policy_uma_research_support_name:0 "$trade_policy_uma_research_support$"
-trade_policy_uma_research_support_desc:0 "赞助各大科研组织的研究，无论是官方的还是民间的\n\n§E所获得的每点£trade_value£ §Y贸易值§!会为我们贡献£physics£ §Y0.125§!、£society£ §Y0.125§!和£engineering£ §Y0.125§!§!"
+trade_policy_uma_research_support_desc:0 "赞助各大科研组织的研究，无论是官方的还是民间的\n\n§E收获的$r_trade$中的§Y45%§!将转化为$r_physics$ $r_society$以及$r_engineering$§!"
 
 trade_policy_uma_crystal_carrot_import:0"§M水晶萝卜开发§!"
 trade_policy_uma_crystal_carrot_import_name:0"§M水晶萝卜开发§!"
-trade_policy_uma_crystal_carrot_import_desc:0"投资各地的水晶萝卜矿业，以此来获取水晶萝卜资源\n\n§E所获得的每点£trade_value£ §Y贸易值§!会为我们贡献£uma_crystal_carrot£ §Y0.5§!§!"
+trade_policy_uma_crystal_carrot_import_desc:0"投资各地的水晶萝卜矿业，以此来获取水晶萝卜资源\n\n§E收获的$r_trade$中的§Y20%§!将转化为£uma_crystal_carrot£水晶萝卜§!"
 
 trade_policy_uma_vanilla:0"§R停用"
 trade_policy_uma_vanilla_name:0 "§R停用"

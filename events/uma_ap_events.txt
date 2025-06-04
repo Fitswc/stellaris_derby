@@ -236,17 +236,25 @@ country_event = {
 				}
 				if = {
 					limit = { leader_class = commander }
-					add_trait = uma_admiral_trait_terriroty_awake
+
+					add_trait = {
+						trait = uma_admiral_trait_terriroty_awake
+					}
 #					add_trait = uma_ruler_trait_terriroty_awake
 				}
 				if = {
 					limit = { leader_class = official }
-					add_trait = uma_governor_trait_terriroty_awake
+
+					add_trait = {
+						trait = uma_governor_trait_terriroty_awake
+					}
 #					add_trait = uma_ruler_trait_terriroty_awake
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = uma_scientist_trait_terriroty_awake
+					add_trait = {
+						trait = uma_scientist_trait_terriroty_awake
+					}
 #					add_trait = uma_ruler_trait_terriroty_awake
 				}
 #				if = {
@@ -271,7 +279,9 @@ country_event = {
 				}
 				if = {
 					limit = { leader_class = commander }
-					add_trait = uma_admiral_trait_terriroty_awake
+					add_trait = {
+						trait = uma_admiral_trait_terriroty_awake
+					}
 #					add_trait = uma_ruler_trait_terriroty_awake
 				}
 				#if = {
@@ -281,12 +291,18 @@ country_event = {
 				#}
 				if = {
 					limit = { leader_class = official }
-					add_trait = uma_governor_trait_terriroty_awake
+
+					add_trait = {
+						trait = uma_governor_trait_terriroty_awake
+					}
 #					add_trait = uma_ruler_trait_terriroty_awake
 				}
 				if = {
 					limit = { leader_class = scientist }
-					add_trait = uma_scientist_trait_terriroty_awake
+
+					add_trait = {
+						trait = uma_scientist_trait_terriroty_awake
+					}
 #					add_trait = uma_ruler_trait_terriroty_awake
 				}
 #				if = {

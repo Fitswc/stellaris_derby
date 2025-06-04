@@ -455,7 +455,9 @@ country_event = {
 	}
 	immediate = {
 		event_target:uma_is_leader_silent_suzuka = {
-			add_trait = uma_scientist_trait_sp_ayb_country
+			add_trait = {
+				trait = uma_scientist_trait_sp_ayb_country
+			}
 			remove_trait = uma_scientist_trait_sp_ayb
 		}
 	}

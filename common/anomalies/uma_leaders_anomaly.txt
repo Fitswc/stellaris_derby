@@ -160,3 +160,21 @@ uma_am_anomaly = {
         1 = { anomaly_event = uma_never_forget.9 }
     }
 }
+
+#帝宝特异点
+uma_duramente_anomoly = {
+	desc = "uma_duramente_anomoly_desc"
+    picture = "GFX_evt_gas_giant"
+	level = 3
+	should_ai_use = no
+	max_once_global = yes
+    spawn_chance = { base = 0 }
+
+	on_success = {
+		1 = {
+			max_once = yes
+			max_once_global = no
+			anomaly_event = uma_duramente.3
+		}
+	}
+}
