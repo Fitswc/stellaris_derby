@@ -1738,6 +1738,11 @@ country_event = {
 				}
 			}
 		}
+	}
 
+	after = {
+		remove_country_flag = uma_direct_recruit_official
+		remove_country_flag = uma_direct_recruit_scientist
+		remove_country_flag = uma_direct_recruit_commander
 	}
 }
