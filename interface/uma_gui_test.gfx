@@ -195,4 +195,15 @@ spriteTypes = {
         name = "GFX_uma_goods_16_passive"
         texturefile = "gfx/interface/uma_test_gui/uma_goods_16_passive.dds"
     }
+	#商品按钮17-亮
+	spriteType = {
+        name = "GFX_uma_goods_17_active"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_17_active.dds"
+    }
+    #商品按钮17-暗
+    spriteType = {
+        name = "GFX_uma_goods_17_passive"
+        texturefile = "gfx/interface/uma_test_gui/uma_goods_17_passive.dds"
+    }
+
 }

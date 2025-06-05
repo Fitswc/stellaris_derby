@@ -57,11 +57,12 @@ guiTypes = {
 		}
 
 		#招牌
-		effectButtonType = {
+		ButtonType = {
 			name = "uma_shop_brand"
 			quadTextureSprite = "GFX_uma_shop_brand"
 			position = { x = 75 y = 55 }
 			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
 		}
 		#显示拥有的货币
 		effectButtonType = {
@@ -77,11 +78,12 @@ guiTypes = {
 			#size = { width = 300 height = 300 } #字体大小
 		}	
 		#绿帽
-		effectButtonType = {
+		ButtonType = {
 			name = "uma_shop_people"
 			quadTextureSprite = "GFX_uma_shop_people"
 			position = { x = 100 y = 150 }
 			orientation = "UPPER_LEFT"
+			alwaysTransparent = yes
 		}
 		###############大窗口组件#############
 
@@ -329,6 +331,21 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
 			effect = "uma_slot_1_goods_16_passive_effect"
+		}
+
+		effectButtonType = {
+			name = "uma_slot_1_goods_17_active"
+			spriteType = "GFX_uma_goods_17_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_17_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_1_goods_17_passive"
+			spriteType = "GFX_uma_goods_17_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_1_x y = @uma_goods_slot_1_y }
+			effect = "uma_slot_1_goods_17_passive_effect"
 		}
 
 		#slot1的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
@@ -586,6 +603,20 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
 			effect = "uma_slot_2_goods_16_passive_effect"
+		}
+		effectButtonType = {
+			name = "uma_slot_2_goods_17_active"
+			spriteType = "GFX_uma_goods_17_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_17_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_2_goods_17_passive"
+			spriteType = "GFX_uma_goods_17_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_2_x y = @uma_goods_slot_2_y }
+			effect = "uma_slot_2_goods_17_passive_effect"
 		}
 
 		#slot2的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
@@ -846,6 +877,22 @@ guiTypes = {
 			effect = "uma_slot_3_goods_16_passive_effect"
 		}
 
+		effectButtonType = {
+			name = "uma_slot_3_goods_17_active"
+			spriteType = "GFX_uma_goods_17_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_17_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_3_goods_17_passive"
+			spriteType = "GFX_uma_goods_17_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_3_x y = @uma_goods_slot_3_y }
+			effect = "uma_slot_3_goods_17_passive_effect"
+		}
+
+
 		#slot3的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
 		effectButtonType = {
 			name = "uma_price_slot_3_icon"
@@ -1102,6 +1149,21 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
 			effect = "uma_slot_4_goods_16_passive_effect"
+		}
+
+		effectButtonType = {
+			name = "uma_slot_4_goods_17_active"
+			spriteType = "GFX_uma_goods_17_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_17_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_4_goods_17_passive"
+			spriteType = "GFX_uma_goods_17_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_4_x y = @uma_goods_slot_4_y }
+			effect = "uma_slot_4_goods_17_passive_effect"
 		}
 
 		#slot4的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
@@ -1362,6 +1424,21 @@ guiTypes = {
 			effect = "uma_slot_5_goods_16_passive_effect"
 		}
 
+		effectButtonType = {
+			name = "uma_slot_5_goods_17_active"
+			spriteType = "GFX_uma_goods_17_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_17_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_5_goods_17_passive"
+			spriteType = "GFX_uma_goods_17_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_5_x y = @uma_goods_slot_5_y }
+			effect = "uma_slot_5_goods_17_passive_effect"
+		}
+
 		#slot5的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
 		effectButtonType = {
 			name = "uma_price_slot_5_icon"
@@ -1618,6 +1695,21 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
 			effect = "uma_slot_6_goods_16_passive_effect"
+		}
+
+		effectButtonType = {
+			name = "uma_slot_6_goods_17_active"
+			spriteType = "GFX_uma_goods_17_active"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_17_active_effect"
+		}
+        effectButtonType = {
+			name = "uma_slot_6_goods_17_passive"
+			spriteType = "GFX_uma_goods_17_passive"
+			orientation = "UPPER_LEFT"
+			position = { x = @uma_goods_slot_6_x y = @uma_goods_slot_6_y }
+			effect = "uma_slot_6_goods_17_passive_effect"
 		}
 
 		#slot6的商品的价格按钮（并且用于显示价格） #以后显示变量就用这种伪按钮！
