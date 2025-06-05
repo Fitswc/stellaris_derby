@@ -86,9 +86,12 @@ portraits = {
     87a = { texturefile = "gfx/models/portraits/umamusume/87a Vi.DDS" } #
     88a = { texturefile = "gfx/models/portraits/umamusume/88a Ve.DDS" }#
     89a = { texturefile = "gfx/models/portraits/umamusume/89a DT.DDS" }
+    90a = { texturefile = "gfx/models/portraits/umamusume/90a FI.DDS" }
+    91a = { texturefile = "gfx/models/portraits/umamusume/91a EC.DDS" }
     92a = { textureFile = "gfx/models/portraits/umamusume/92a NF.DDS"}
     93a = { textureFile = "gfx/models/portraits/umamusume/93a DF.DDS"}
     94a = { textureFile = "gfx/models/portraits/umamusume/94a JP.DDS"}
+    95a = { texturefile = "gfx/models/portraits/umamusume/95a NR.DDS" }
     96a = { textureFile = "gfx/models/portraits/umamusume/96a SL.DDS"}
     97a = { textureFile = "gfx/models/portraits/umamusume/97a RR.DDS"}
     98a = { textureFile = "gfx/models/portraits/umamusume/98a HM.DDS"}
@@ -286,13 +289,16 @@ portraits = {
     47c = { texturefile = "gfx/models/portraits/umamusume/47c KH.DDS" }
     48c = { texturefile = "gfx/models/portraits/umamusume/48c SCO.DDS" }
     49c = { texturefile = "gfx/models/portraits/umamusume/49c MA.DDS" }
-
+    50c = { texturefile = "gfx/models/portraits/umamusume/50c YB.DDS" }
     51c = { texturefile = "gfx/models/portraits/umamusume/51c IO.DDS" }
-
+    52c = { texturefile = "gfx/models/portraits/umamusume/52c AS.DDS" }
     53c = { texturefile = "gfx/models/portraits/umamusume/53c IF.DDS" }
 
+    55c = { texturefile = "gfx/models/portraits/umamusume/55c ZR.DDS" }
     56c = { texturefile = "gfx/models/portraits/umamusume/56c ST.DDS" }
-
+    57c = { texturefile = "gfx/models/portraits/umamusume/57c SW.DDS" }
+    58c = { texturefile = "gfx/models/portraits/umamusume/58c NF.DDS" }
+    59c = { texturefile = "gfx/models/portraits/umamusume/59c BM.DDS" }
     60c = { texturefile = "gfx/models/portraits/umamusume/60c CB.DDS" }
 
     63c = { texturefile = "gfx/models/portraits/umamusume/63c MP.DDS" }
@@ -301,7 +307,6 @@ portraits = {
     66c = { texturefile = "gfx/models/portraits/umamusume/66c SD.DDS" }
     67c = { texturefile = "gfx/models/portraits/umamusume/67c KB.DDS" }
     68c = { texturefile = "gfx/models/portraits/umamusume/68c SS.DDS"}
-
     69c = { texturefile = "gfx/models/portraits/umamusume/69c YM.DDS" }
     70c = { texturefile = "gfx/models/portraits/umamusume/70c MB.DDS" }
     72c = { texturefile = "gfx/models/portraits/umamusume/72c NT.DDS"}
@@ -317,6 +322,12 @@ portraits = {
     87c = { texturefile = "gfx/models/portraits/umamusume/87c Vi.DDS"}
     88c = { texturefile = "gfx/models/portraits/umamusume/88c Ve.DDS"}
     89c = { texturefile = "gfx/models/portraits/umamusume/89c DT.DDS"}
+    90c = { texturefile = "gfx/models/portraits/umamusume/90c FI.DDS" }
+    91c = { texturefile = "gfx/models/portraits/umamusume/91c EC.DDS" }
+    92c = { texturefile = "gfx/models/portraits/umamusume/92c NF.DDS"}
+    93c = { texturefile = "gfx/models/portraits/umamusume/93c DF.DDS" }
+    94c = { texturefile = "gfx/models/portraits/umamusume/94c JP.DDS" }
+    95c = { texturefile = "gfx/models/portraits/umamusume/95c NR.DDS" }
     96c = { texturefile = "gfx/models/portraits/umamusume/96c SL.DDS"}
     97c = {textureFile = "gfx/models/portraits/umamusume/97c RR.DDS"}
     98c = {textureFile = "gfx/models/portraits/umamusume/98c HM.DDS"}
@@ -519,9 +530,12 @@ portrait_groups = {
                     87a
                     88a
                     89a
+                    90a
+                    91a
                     92a
                     93a
                     94a
+                    95a
                     96a
                     97a
                     98a
@@ -670,7 +684,7 @@ portrait_groups = {
             }
         }
         #pop scope
-        pop = {
+        pop_group = {
             #for a specific pop
             add = {
                 portraits = {
@@ -800,7 +814,7 @@ portrait_groups = {
             #scientists, generals, admirals, governor
             add = {
                 portraits = {
-                    01a
+                   01a
                     02a
                     03a
                     04a
@@ -886,9 +900,12 @@ portrait_groups = {
                     87a
                     88a
                     89a
+                    90a
+                    91a
                     92a
                     93a
                     94a
+                    95a
                     96a
                     97a
                     98a
@@ -998,9 +1015,12 @@ portrait_groups = {
                     87a
                     88a
                     89a
+                    90a
+                    91a
                     92a
                     93a
                     94a
+                    95a
                     96a
                     97a
                     98a
@@ -1080,9 +1100,15 @@ portrait_groups = {
                     47c
                     48c
                     49c
+                    50c
                     51c
+                    52c
                     53c
+                    55c
                     56c
+                    57c
+                    58c
+                    59c
                     60c
                     63c
                     64c
@@ -1104,6 +1130,12 @@ portrait_groups = {
                     87c
                     88c
                     89c
+                    90c
+                    91c
+                    92c
+                    93c
+                    94c
+                    95c
                     96c
                     97c
                     98c
@@ -1265,7 +1297,7 @@ portrait_groups = {
             }
         }
         #pop scope
-        pop = {
+        pop_group = {
             #for a specific pop
             add = {
                 portraits = {
@@ -1396,7 +1428,7 @@ portrait_groups = {
             #scientists, generals, admirals, governor
             add = {
                 portraits = {
-                    01c
+                     01c
                     02c
                     03c
                     04c
@@ -1445,9 +1477,15 @@ portrait_groups = {
                     47c
                     48c
                     49c
+                    50c
                     51c
+                    52c
                     53c
+                    55c
                     56c
+                    57c
+                    58c
+                    59c
                     60c
                     63c
                     64c
@@ -1469,6 +1507,12 @@ portrait_groups = {
                     87c
                     88c
                     89c
+                    90c
+                    91c
+                    92c
+                    93c
+                    94c
+                    95c
                     96c
                     97c
                     98c
@@ -1505,7 +1549,7 @@ portrait_groups = {
         ruler = {
             add = {
                 portraits = {
-                    01c
+                     01c
                     02c
                     03c
                     04c
@@ -1554,9 +1598,15 @@ portrait_groups = {
                     47c
                     48c
                     49c
+                    50c
                     51c
+                    52c
                     53c
+                    55c
                     56c
+                    57c
+                    58c
+                    59c
                     60c
                     63c
                     64c
@@ -1578,6 +1628,12 @@ portrait_groups = {
                     87c
                     88c
                     89c
+                    90c
+                    91c
+                    92c
+                    93c
+                    94c
+                    95c
                     96c
                     97c
                     98c
