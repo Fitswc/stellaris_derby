@@ -103,7 +103,7 @@ uma_create_late_pre_ftl_empire = {
 				"null"
 			}
 		}
-		origin = "origin_default"
+		origin = "origin_default_pre_ftl"
 		type = primitive
 	}
 	last_created_country = {
@@ -223,7 +223,7 @@ uma_create_very_early_pre_ftl_empire = {
 				"null"
 			}
 		}
-		origin = "origin_default"
+		origin = "origin_default_pre_ftl"
 		type = primitive
 		effect = {
 			set_graphical_culture = preindustrial_01
@@ -319,7 +319,7 @@ uma_create_early_pre_ftl_empire = {
 				"null"
 			}
 		}
-		origin = "origin_default"
+		origin = "origin_default_pre_ftl"
 		type = primitive
 	}
 	last_created_country = {
@@ -482,12 +482,11 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_crude_huts
 					add_building = building_uma_crude_racing_cause
 					remove_building = building_colony_shelter
-					while = {
-						count = @stone_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @stone_age_pops
 					}
+
 				}
 			}
 			bronze_age = {
@@ -496,11 +495,9 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_stone_palace
 					add_building = building_uma_primitive_racing_causes
 					remove_building = building_colony_shelter
-					while = {
-						count = @bronze_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @bronze_age_pops
 					}
 				}
 			}
@@ -510,11 +507,9 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_stone_palace
 					add_building = building_uma_primitive_racing_causes
 					remove_building = building_colony_shelter
-					while = {
-						count = @iron_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @iron_age_pops
 					}
 				}
 			}
@@ -525,11 +520,9 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_stone_palace
 					add_building = building_uma_primitive_racing_causes
 					remove_building = building_colony_shelter
-					while = {
-						count = @late_medieval_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @late_medieval_age_pops
 					}
 				}
 			}
@@ -540,11 +533,9 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_uma_primitive_racing_causes
 					add_building = building_stone_palace
 					remove_building = building_colony_shelter
-					while = {
-						count = @renaissance_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @renaissance_age_pops
 					}
 				}
 			}
@@ -556,11 +547,9 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_uma_primitive_racing_causes_steam_ages
 					add_building = building_stone_palace
 					remove_building = building_colony_shelter
-					while = {
-						count = @steam_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @steam_age_pops
 					}
 				}
 			}
@@ -574,12 +563,11 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_primitive_capital
 					add_building = building_urban_dwellings
 					remove_building = building_colony_shelter
-					while = {
-						count = @industrial_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @industrial_age_pops
 					}
+
 				}
 			}
 			machine_age = {
@@ -592,11 +580,9 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_primitive_capital
 					add_building = building_urban_dwellings
 					remove_building = building_colony_shelter
-					while = {
-						count = @machine_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @machine_age_pops
 					}
 				}
 			}
@@ -610,12 +596,11 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_primitive_capital
 					add_building = building_urban_dwellings
 					remove_building = building_colony_shelter
-					while = {
-						count = @atomic_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @atomic_age_pops
 					}
+
 				}
 			}
 			early_space_age = {
@@ -628,12 +613,11 @@ uma_setup_pre_ftl_planet = {
 					add_building = building_primitive_capital
 					add_building = building_urban_dwellings
 					remove_building = building_colony_shelter
-					while = {
-						count = @early_space_age_pops
-						create_pop = {
-							species = last_created_species
-						}
+					create_pop_group = {
+						species = last_created_species
+						size = @early_space_age_pops
 					}
+
 				}
 			}
 		}
