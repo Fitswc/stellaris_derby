@@ -88,11 +88,11 @@ uma_ap.42.a: "步步为营"
 
 
 UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: "."
-UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
-UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
-UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
-UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
-UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_NUM]"
+UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_POWER_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_POWER_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_POWER_NUM]"
+UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_SPEED_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_SPEED_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_SPEED_NUM]"
+UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_STAMINA_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_STAMINA_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_STAMINA_NUM]"
+UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_WISDOM_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_WISDOM_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_WISDOM_NUM]"
+UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_CHARM_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_CHARM_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_CHARM_NUM]"
 
 UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY_NM: "."
 UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM: "$mod_planet_jobs_produces_mult$\n $mod_army_damage_mult$\n$mod_uma_ship_weapon_damage$"
@@ -103,7 +103,7 @@ UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM: "$mod_uma_planet_amenities_mult$\n$mod_u
 
 
 
-situation_uma_ap_2_situation_system_factor_fin_tt: "这个种族：\n[UMA_AP2_MODIFIER_FACTOR_SPEED][UMA_AP2_MODIFIER_FACTOR_POWER][UMA_AP2_MODIFIER_FACTOR_STAMINA][UMA_AP2_MODIFIER_FACTOR_WISDOM][UMA_AP2_MODIFIER_FACTOR_CHARM] \n \n§Y同时§!，这个种族：\n£mod_pop_growth_speed£人口增长速度: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+situation_uma_ap_2_situation_system_factor_fin_tt: "这个种族：\n[UMA_AP2_MODIFIER_FACTOR_SPEED][UMA_AP2_MODIFIER_FACTOR_POWER][UMA_AP2_MODIFIER_FACTOR_STAMINA][UMA_AP2_MODIFIER_FACTOR_WISDOM][UMA_AP2_MODIFIER_FACTOR_CHARM] \n \n§Y同时§!，这个种族：\n£mod_bonus_pop_growth£人口增长速度: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
 mod_army_damage_mult: "£mod_army_damage_mult£军队伤害"
 mod_uma_empire_size_pops_mult: "£mod_empire_size_pops_mult£人口产生的帝国规模"
 mod_uma_ship_base_speed_mult: "£mod_ship_base_speed_mult£基础舰船速度"
@@ -148,7 +148,7 @@ uma_ap_system_factor_power_num: "[owner.uma_ap2_factor_power_rate] "
 uma_ap_system_factor_stamina_num: "[owner.uma_ap2_factor_stamina_rate] "
 uma_ap_system_factor_charm_num: "[owner.uma_ap2_factor_charm_rate] "
 uma_ap_system_factor_wisdom_num: "[owner.uma_ap2_factor_wisdom_rate] "
-uma_ap_system_factor_depth_num: "£mod_pop_growth_speed£人口增长速度: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+uma_ap_system_factor_depth_num: "£mod_bonus_pop_growth£人口增长速度:[UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
 
 
 uma_ap_system_factor_speed_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST$"
@@ -333,10 +333,10 @@ UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: "$mod_uma_planet_jobs_produces_mult$\n$
 UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: "$mod_uma_ship_accuracy_mult$\n$mod_uma_ship_jumpdrive_cooldown_mult$\n$mod_ship_military_upkeep_mult$"
 
 UMA_AP2_MODIFIER_REALM_POWER_EMPTY: "."
-UMA_AP2_MODIFIER_REALM_SPEED_EXIST: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
-UMA_AP2_MODIFIER_REALM_POWER_EXIST: "$mod_uma_country_society_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_physics_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n $mod_country_uma_engineering_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]"
-UMA_AP2_MODIFIER_REALM_STAMINA_EXIST: "$mod_uma_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_starbase_shipyard_build_time_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_country_cost_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
-UMA_AP2_MODIFIER_REALM_WISDOM_EXIST: "$mod_uma_ship_accuracy_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_uma_ship_jumpdrive_cooldown_mult$: [UMA_AP2_MODIFIER_REALM_NUM]\n$mod_ship_military_upkeep_mult$: [UMA_AP2_MODIFIER_REALM_NUM_SP]"
+UMA_AP2_MODIFIER_REALM_SPEED_EXIST: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_SPEED_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_SPEED_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_SPEED_NUM]"
+UMA_AP2_MODIFIER_REALM_POWER_EXIST: "$mod_uma_country_society_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_POWER_NUM]\n $mod_country_uma_physics_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_POWER_NUM]\n $mod_country_uma_engineering_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_POWER_NUM]"
+UMA_AP2_MODIFIER_REALM_STAMINA_EXIST: "$mod_uma_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_REALM_STAMINA_NUM]\n$mod_uma_starbase_shipyard_build_time_mult$: [UMA_AP2_MODIFIER_REALM_STAMINA_NUM]\n$mod_country_cost_mult$: [UMA_AP2_MODIFIER_REALM_STAMINA_NUM_SP]"
+UMA_AP2_MODIFIER_REALM_WISDOM_EXIST: "$mod_uma_ship_accuracy_mult$: [UMA_AP2_MODIFIER_REALM_WISDOM_NUM]\n$mod_uma_ship_jumpdrive_cooldown_mult$: [UMA_AP2_MODIFIER_REALM_WISDOM_NUM]\n$mod_ship_military_upkeep_mult$: [UMA_AP2_MODIFIER_REALM_WISDOM_NUM_SP]"
 #UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
 
 
@@ -360,10 +360,10 @@ mod_uma_country_society_research_produces_mult: "£society_research£社会研�
 mod_country_uma_physics_research_produces_mult: "£physics_research£社会研究产出"
 mod_country_uma_engineering_research_produces_mult: "£engineering_research£社会研究产出"
 
-#UMA_AP2_MODIFIER_REALM_NUM9: "§G+50%§!"
-#UMA_AP2_MODIFIER_REALM_NUM8: "§G+40%§!"
-#UMA_AP2_MODIFIER_REALM_NUM7: "§G+35%§!"
-#UMA_AP2_MODIFIER_REALM_NUM6: "§G+30%§!"
+UMA_AP2_MODIFIER_REALM_NUM9: "§G+50%§!"
+UMA_AP2_MODIFIER_REALM_NUM8: "§G+40%§!"
+UMA_AP2_MODIFIER_REALM_NUM7: "§G+35%§!"
+UMA_AP2_MODIFIER_REALM_NUM6: "§G+30%§!"
 UMA_AP2_MODIFIER_REALM_NUM5: "§G+25%§!"
 UMA_AP2_MODIFIER_REALM_NUM4: "§G+20%§!"
 UMA_AP2_MODIFIER_REALM_NUM3: "§G+15%§!"

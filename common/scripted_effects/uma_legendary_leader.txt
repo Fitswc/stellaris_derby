@@ -1,5 +1,5 @@
 uma_create_leader_deep = {
-
+	optimize_memory
 	create_leader = {
 		name = DEEP
 		species = root
@@ -35,6 +35,7 @@ uma_create_leader_deep = {
 
 
 uma_create_leader_oc = {
+	optimize_memory
 	create_leader = {
 		name = OC #"小栗帽"
 		species = root
@@ -68,6 +69,7 @@ uma_create_leader_oc = {
 }
 
 uma_create_leader_did = {
+	optimize_memory
 	create_leader = {
 		name = DID
 		species = root
@@ -103,6 +105,7 @@ uma_create_leader_did = {
 }
 
 uma_create_leader_ty = {
+	optimize_memory
 	create_leader = {
 		name = AGT #"爱丽速子"
 		species = root
@@ -137,6 +140,7 @@ uma_create_leader_ty = {
 
 
 uma_create_leader_sky_admiral = {
+	optimize_memory
 	create_leader = {
 		name = SKY
 		species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
@@ -171,6 +175,7 @@ uma_create_leader_sky_admiral = {
 
 
 uma_create_leader_sky_governor = {
+	optimize_memory
 	create_leader = {
 		name = SKY
 		#species = event_target:uma_leader_seiun_sky
@@ -206,6 +211,7 @@ uma_create_leader_sky_governor = {
 
 
 uma_create_leader_teio_governor = {
+	optimize_memory
 	create_leader = {
 		name = TET
 		species = root
@@ -243,6 +249,7 @@ uma_create_leader_teio_governor = {
 
 
 uma_create_leader_teio_admiral = {
+	optimize_memory
 	create_leader = {
 		name = TET
 		species = root
@@ -279,6 +286,7 @@ uma_create_leader_teio_admiral = {
 }
 
 uma_create_leader_teio_scientist = {
+	optimize_memory
 	create_leader = {
 		name = TET
 		species = root
@@ -315,6 +323,7 @@ uma_create_leader_teio_scientist = {
 }
 
 uma_create_leader_zf = {
+	optimize_memory
 	create_leader = {
 		name = ZF
 		species = root
@@ -352,6 +361,7 @@ uma_create_leader_zf = {
 
 
 uma_create_leader_cheval = {
+	optimize_memory
 	create_leader = {
 		name = CHEVAL
 		species = root
@@ -384,6 +394,7 @@ uma_create_leader_cheval = {
 
 
 uma_create_leader_sweepy = {
+	optimize_memory
 	create_leader = {
 		name = SWEEPY
 		species = root
@@ -417,6 +428,7 @@ uma_create_leader_sweepy = {
 
 
 uma_create_leader_ardan = {
+	optimize_memory
 	create_leader = {
 		name = ARDAN
 		species = root
@@ -448,6 +460,7 @@ uma_create_leader_ardan = {
 
 
 uma_create_leader_curren = {
+	optimize_memory
 	create_leader = {
 		name = CURREN
 		species = root
@@ -477,6 +490,7 @@ uma_create_leader_curren = {
 }
 
 uma_create_leader_zephyr = {
+	optimize_memory
 	create_leader = {
 		name = ZEPHYR
 		species = root
