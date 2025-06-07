@@ -1,17 +1,12 @@
 @base_cost = 300
 @city_cost = 500
-
+##
 district_city = {
-	base_buildtime = 480
+ 	base_buildtime = 480
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 	default_starting_district = yes
 
-	#	zone_slots = {
-	#		slot_city_government
-	#		slot_city_01
-	#		slot_city_02
-	#	}
 
 	inline_script = {
 		script = districts/BPV_district_slots
@@ -27,7 +22,6 @@ district_city = {
 		SLOT9 = slot_city_02
 		SLOT10 = slot_city_02
 	}
-
 
 	show_on_uncolonized = {
 		exists = from
@@ -189,4 +183,6 @@ district_city = {
 	inline_script = {
 		script = districts/ai_urban_district_extra_weighting
 	}
+	conversion_ratio = 1
+	inline_script = districts/PWMB_convert_to/district_city
 }

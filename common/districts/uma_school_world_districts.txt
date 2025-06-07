@@ -16,11 +16,12 @@ district_uma_dormitory = {
 		uses_district_set = uma_school_world
 	}
 
-#	zone_slots = {
-#		slot_city_government
-#		slot_city_01
-#		slot_city_02
-#	}
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
+
 	inline_script = {
 		script = districts/BPV_district_slots2
 		GOVERNMENT = slot_city_government
