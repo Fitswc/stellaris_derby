@@ -427,7 +427,7 @@ civic_uma_aston_machan = {
 	random_weight = { base = 0 }
 
 	modifier = {
-		planet_jobs_trade_produces_add = 1
+		planet_jobs_specialist_trade_produces_mult = 0.2
 		pop_happiness = 0.05
 	}
 }
