@@ -53,7 +53,7 @@ on_press_begin = {
 # From = Fleet
 on_fleet_detected = {
 	events = {
-		uma_shop_center.2 #绿帽商店检测
+#		uma_shop_center.2 #绿帽商店检测
 	}
 }
 
@@ -99,6 +99,8 @@ on_monthly_pulse_country = {
 		uma_sweepy.7
 #		uma_sweepy.1
 		uma_bour_arc.14
+
+		uma_shop_center.2
 
 #		uma_ap.85
 

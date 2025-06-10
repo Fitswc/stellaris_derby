@@ -160,17 +160,24 @@ country_event = {
 
 	is_triggered_only = yes	#在舰队被探测到的*触发器*触发，即on_fleet_detected，from即探测到的舰队
 	trigger = {
-		from = {
-			owner = {
-				has_country_flag = uma_is_shop_center	#判断探测到的舰队所属国家，通过之前设立的country_flag
-				NOT = {
-					has_communications = root	#尚未和我方建立联系
-				}
-			}
+		controlled_systems >=8
+		NOT = {
+			has_country_flag = uma_had_communication_with_uma_shop
+
+			has_communications = event_target:uma_shop
 		}
+#		from = {
+#			owner = {
+#				has_country_flag = uma_is_shop_center	#判断探测到的舰队所属国家，通过之前设立的country_flag
+#				NOT = {
+#					has_communications = root	#尚未和我方建立联系
+#				}
+#			}
+#		}
 	}
 	immediate = {
-		establish_communications_no_message = from.owner	#与探测到的舰队所有者建交
+		set_country_flag = uma_had_communication_with_uma_shop
+		establish_communications_no_message = event_target:uma_shop	#与探测到的舰队所有者建交
 	}
 	option = {
 		name = uma_shop_center.2.a	#选项
