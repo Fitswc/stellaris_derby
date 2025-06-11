@@ -311,7 +311,16 @@ country_event = {
 					exists = event_target:uma_is_leader_tachyon
 				}
 				event_target:uma_is_leader_tachyon = {
-					change_leader_portrait = "30c"
+					if = {
+						limit = {
+							has_leader_flag = uma_portrait_umastar
+						}
+						change_leader_portrait = 30e
+					}
+					else = {
+						change_leader_portrait = "30c"
+					}
+
 					set_name = AGT
 				}
 			}
@@ -329,7 +338,15 @@ country_event = {
 					exists = event_target:uma_is_leader_silent_suzuka
 				}
 				event_target:uma_is_leader_silent_suzuka = {
-					change_leader_portrait = "31c"
+					if = {
+						limit = {
+							has_leader_flag = uma_portrait_umastar
+						}
+						change_leader_portrait = 31e
+					}
+					else = {
+						change_leader_portrait = "31c"
+					}
 					set_name = AYB
 				}
 			}
@@ -462,7 +479,22 @@ country_event = {
 					exists = event_target:uma_is_leader_cheval_grand
 				}
 				event_target:uma_is_leader_cheval_grand = {
-					change_leader_portrait = 76c
+					if = {
+						limit = {
+							has_leader_flag = uma_portrait_bocz
+						}
+						change_leader_portrait = 76d
+					}
+					if = {
+						limit = {
+							has_leader_flag = uma_portrait_boczwen
+						}
+						change_leader_portrait = 76f
+					}
+					else = {
+						change_leader_portrait = 76c
+					}
+
 					set_name = CHEVAL
 				}
 			}
@@ -970,18 +1002,23 @@ country_event = {
 				uma_change_leader_portrait_cheval = {
 					event_target:uma_is_leader_cheval_grand = {
 						change_leader_portrait = 76c
+						remove_leader_flag = uma_portrait_umastar
+						remove_leader_flag = uma_portrait_boczwen
+						remove_leader_flag = uma_portrait_bocz
 					}
 				}
 
 				uma_change_leader_portrait_ayb = {
 					event_target:uma_is_leader_silent_suzuka = {
 						change_leader_portrait = 31c
+						remove_leader_flag = uma_portrait_umastar
 					}
 				}
 
 				uma_change_leader_portrait_agnes = {
 					event_target:uma_is_leader_tachyon = {
 						change_leader_portrait = 30c
+						remove_leader_flag = uma_portrait_umastar
 					}
 				}
 			}
@@ -1001,6 +1038,7 @@ country_event = {
 				uma_change_leader_portrait_cheval = {
 					event_target:uma_is_leader_cheval_grand = {
 						change_leader_portrait = 76d
+						set_leader_flag = uma_portrait_bocz
 					}
 				}
 
@@ -1021,6 +1059,7 @@ country_event = {
 				uma_change_leader_portrait_cheval = {
 					event_target:uma_is_leader_cheval_grand = {
 						change_leader_portrait = 76f
+						set_leader_flag = uma_portrait_boczwen
 					}
 				}
 			}
@@ -1041,12 +1080,14 @@ country_event = {
 				uma_change_leader_portrait_ayb = {
 					event_target:uma_is_leader_silent_suzuka = {
 						change_leader_portrait = 31e
+						set_leader_flag = uma_portrait_umastar
 					}
 				}
 
 				uma_change_leader_portrait_agnes = {
 					event_target:uma_is_leader_tachyon = {
 						change_leader_portrait = 30e
+						set_leader_flag = uma_portrait_umastar
 					}
 				}
 			}

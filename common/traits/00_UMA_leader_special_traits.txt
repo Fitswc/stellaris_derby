@@ -1423,7 +1423,7 @@ uma_official_trait_sp_zephyr = {
 uma_commander_trait_sp_dura = {
 	inline_script = {
 		script = trait/icon
-		CLASS = official
+		CLASS = commander
 		ICON = "GFX_uma_commander_trait_sp_dura"
 		RARITY = common
 		COUNCIL = no
@@ -1442,7 +1442,7 @@ uma_commander_trait_sp_dura = {
 		ship_weapon_range_mult = 0.1
 	}
 
-	leader_class = { official }
+	leader_class = { commander }
 	initial = no
 	randomized = no
 }

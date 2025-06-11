@@ -319,7 +319,7 @@ country_event = {
 				gender = female
 				class = commander
 				set_age = 19
-				skill = 2
+				skill = 1
 				immortal = no
 				background_job = uma_researcher
 				custom_catch_phrase = uma_dura_catch_phrase
@@ -337,7 +337,7 @@ country_event = {
 			last_created_leader = {
 				change_leader_portrait = "85c"
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
-				add_experience = 10000
+				add_experience = 15000
 			}
 		}
 	}
@@ -354,11 +354,11 @@ country_event = {
 			type = MESSAGE_RECRUITED_LEADER
 			localization = MESSAGE_RECRUITED_LEADER_DESC
 			days = @toast_message_days
-			target = event_target:uma_is_leader_silent_suzuka
+			target = event_target:uma_is_leader_duramente
 			variable = {
 				type = name
 				localization = LEADER
-				scope = event_target:uma_is_leader_silent_suzuka
+				scope = event_target:uma_is_leader_duramente
 			}
 			variable = {
 				key = "border"
