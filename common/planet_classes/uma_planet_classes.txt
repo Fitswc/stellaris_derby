@@ -160,6 +160,7 @@ pc_uma_ringworld_habitable = {
 	starting_planet = no
 	orbit_lines = no
 	has_colonization_influence_cost = no		# applies when within own borders
+	starting_district = district_uma_dormitory_ring
 
 	is_artificial_planet = yes
 	uses_alternative_skies_for_moons = yes

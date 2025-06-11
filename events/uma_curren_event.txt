@@ -432,17 +432,15 @@ country_event = {
 		random_system_within_border = {
 			limit = {
 				distance = {
-					max_jumps = 12
-					min_jumps = 4
+					max_jumps = 6
+					min_jumps = 2
 					source = Root.capital_scope.solar_system
 				}
 			}
 
 			random_system_planet = {
 				limit = {
-					NOT = {
-						is_star = yes
-					}
+					is_star = no
 				}
 				create_archaeological_site = uma_curren_arc
 			}
