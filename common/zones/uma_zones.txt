@@ -15,6 +15,12 @@ zone_uma_training = {
 		}
 	}
 
+	zone_sets = {
+		uma_urban
+		uma_teaching
+		urban
+	}
+
 	resources = {
 		category = planet_zones
 		cost = {
@@ -85,6 +91,12 @@ zone_uma_teaching = {
 			has_authority = auth_trainingcenter
 		}
 		uses_district_set = uma_school_world
+	}
+
+	zone_sets = {
+		uma_urban
+		uma_teaching
+		urban
 	}
 
 	resources = {
