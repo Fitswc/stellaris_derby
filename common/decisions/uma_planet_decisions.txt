@@ -696,6 +696,8 @@ decision_uma_industrial_planet_transform = {
 				count = num_industrial_districts
 				add_district = district_uma_heavy_industrial_area
 			}
+
+
 			while = {
 				count = num_mining_dis
 				add_district = district_uma_mining_area
