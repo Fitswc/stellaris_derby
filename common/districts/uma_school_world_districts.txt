@@ -599,11 +599,11 @@ district_uma_dormitory_in_industrial = {
 		district_mindlink
 	}
 
-#	zone_slots = {
-#		slot_city_government
-#		slot_city_02
-#		slot_city_01
-#	}
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
 
 	inline_script = {
 		script = districts/BPV_district_slots2
