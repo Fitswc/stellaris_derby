@@ -1,7 +1,8 @@
 slot_uma_training = {
-	include = {
-		zone_uma_training
-		zone_urban
+	included_zone_sets = {
+		uma_teaching
+		urban
+		uma_urban
 	}
 
 	exclude = {
@@ -41,11 +42,11 @@ slot_uma_training = {
 
 
 slot_uma_teaching = {
-	include = {
-		zone_research
-		zone_research_unity
-		zone_uma_teaching
-		zone_uma_training
+	included_zone_sets = {
+		uma_urban
+		research
+		urban
+		uma_teaching
 	}
 
 	exclude = {

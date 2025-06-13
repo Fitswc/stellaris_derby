@@ -339,7 +339,24 @@ country_event = {
 				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
 				add_experience = 15000
 			}
+
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_duramente
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_duramente
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
 		}
+
 	}
 
 
@@ -349,23 +366,6 @@ country_event = {
 		custom_tooltip = uma_duramente.13.b.tt
 	}
 
-	after = {
-		create_message = {
-			type = MESSAGE_RECRUITED_LEADER
-			localization = MESSAGE_RECRUITED_LEADER_DESC
-			days = @toast_message_days
-			target = event_target:uma_is_leader_duramente
-			variable = {
-				type = name
-				localization = LEADER
-				scope = event_target:uma_is_leader_duramente
-			}
-			variable = {
-				key = "border"
-				value = "GFX_border_legendary"
-			}
-		}
-	}
 }
 
 
