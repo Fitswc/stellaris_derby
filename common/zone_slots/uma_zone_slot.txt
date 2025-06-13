@@ -11,7 +11,7 @@ slot_uma_training = {
 		zone_food
 		zone_energy
 		zone_machine_replication
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_industrial
 		zone_foundry
 		zone_factory
@@ -51,7 +51,7 @@ slot_uma_teaching = {
 
 	exclude = {
 		zone_machine_replication
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_urban
 		zone_industrial
 		zone_foundry
@@ -90,7 +90,7 @@ slot_uma_teaching_and_training = {
 
 	exclude = {
 		zone_machine_replication
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_urban
 		zone_industrial
 		zone_foundry
@@ -130,7 +130,7 @@ slot_uma_logistic = {
 
 	exclude = {
 		zone_machine_replication
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_urban
 		zone_industrial
 		zone_foundry
@@ -168,7 +168,7 @@ slot_uma_light_industrial = {
 	}
 
 	exclude = {
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_urban
 		zone_foundry
 		zone_unity
@@ -204,7 +204,7 @@ slot_uma_heavy_industrial = {
 	}
 
 	exclude = {
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_urban
 		zone_unity
 		zone_unity_spiritualist
@@ -241,7 +241,7 @@ slot_uma_industrial_mixture = {
 	}
 
 	exclude = {
-		zone_hive_spawning
+		zone_spawning_hive
 		zone_urban
 		zone_unity
 		zone_unity_spiritualist
