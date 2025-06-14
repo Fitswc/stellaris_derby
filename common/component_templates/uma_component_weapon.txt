@@ -1158,7 +1158,7 @@ weapon_component_template = {
 		max = 26.0
 	}
 	range = 90
-	accuracy = 0.8
+	accuracy = 0.6
 	tracking = 0.3
 
 	missile_speed = 500
@@ -1207,10 +1207,10 @@ weapon_component_template = {
 		}
 	}
 
-	power = -18
+	power = -22
 	damage = {
-		min = 100
-		max = 140
+		min = 80
+		max = 120
 	}
 	hull_damage = 3.0
 	shield_damage = 2.0
@@ -1221,7 +1221,7 @@ weapon_component_template = {
 		min = 15.0
 		max = 30.0
 	}
-	range = 130
+	range = 100
 	accuracy = 1.0
 	tracking = 1.0
 

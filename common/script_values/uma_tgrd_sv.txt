@@ -1,109 +1,92 @@
 uma_tg_alloys_maker_Automatic_upkeep_sv = {
 	base = 1
 
-#	set = This.owner.uma_tgrd_energy_income
-#	mult = 0.02
-#	floor = yes
-
-
-
-	modifier = {
-		set = This.owner.uma_tgrd_energy_income
-
-		owner = {
-			check_variable = {
-				which = uma_tgrd_energy_income
-				value > 0
-			}
-		}
-
-	}
-	mult = 0.03
-	floor = yes
-
-	add = value:ten_percent_main_species
-	floor = yes
+	multiply = This.owner.uma_tgrd_alloys_maxiume
+	divide = This.owner.uma_tgrd_alloys_stockpile
 
 }
 
 uma_tg_custom_goods_productor_upkeep_and_produce_sv = {
-	base = 0
+	base = 1
 
-#	set = This.owner.uma_tgrd_foods_income
-	modifier = {
-		set = This.owner.uma_tgrd_foods_income
+	multiply = This.owner.uma_tgrd_consumer_goods_maxiume
 
-		owner = {
-			check_variable = {
-				which = uma_tgrd_foods_income
-				value > 0
-			}
-		}
+	divide = This.owner.uma_tgrd_consumer_goods_stockpile
+#	floor = yes
 
-	}
-	mult = 0.03
-	floor = yes
-
-
-	modifier = {
-		set = This.owner.uma_tgrd_uma_crystal_carrot_income
-
-		owner = {
-			check_variable = {
-				which = uma_tgrd_uma_crystal_carrot_income
-				value > 0
-			}
-		}
-
-	}
-#	add = This.owner.uma_tgrd_uma_crystal_carrot_income
-	mult = 0.03
-	floor = yes
-
-	add = value:ten_percent_main_species
-	floor = yes
 }
 
-uma_tg_TGAC_upkeep_and_produce_sv = {
+uma_tg_TGAC_upkeep_and_produce_sv_alloy = {
 	base = 1
 
 
-	modifier = {
-		set = This.owner.uma_tgrd_energy_income
+	multiply = This.owner.uma_tgrd_alloys_maxiume
+	divide = This.owner.uma_tgrd_alloys_stockpile
 
-		owner = {
-			check_variable = {
-				which = uma_tgrd_energy_income
-				value > 0
-			}
-		}
+}
 
-	}
-#	set = This.owner.uma_tgrd_energy_income
-	mult = 0.02
-	floor = yes
+uma_tg_TGAC_upkeep_and_produce_sv_goods = {
+	base = 1
 
 
-	modifier = {
-		set = This.owner.uma_tgrd_uma_crystal_carrot_income
+	multiply = This.owner.uma_tgrd_consumer_goods_maxiume
+	divide = This.owner.uma_tgrd_consumer_goods_stockpile
+}
 
-		owner = {
-			check_variable = {
-				which = uma_tgrd_uma_crystal_carrot_income
-				value > 0
-			}
-		}
+uma_tg_TGAC_upkeep_and_produce_sv_motes = {
+	base = 1
 
-	}
-#	add = This.owner.uma_tgrd_uma_crystal_carrot_income
-	mult = 0.03
-	floor = yes
 
-	add = value:ten_percent_main_species
-	floor = yes
+	multiply = This.owner.uma_tgrd_motes_maxiume
+	divide = This.owner.uma_tgrd_motes_stockpile
+
+}
+
+uma_tg_TGAC_upkeep_and_produce_sv_gas = {
+	base = 1
+
+
+	multiply = This.owner.uma_tgrd_gas_maxiume
+	divide = This.owner.uma_tgrd_gas_stockpile
+
+}
+
+uma_tg_TGAC_upkeep_and_produce_sv_r_crystal = {
+	base = 1
+
+
+	multiply = This.owner.uma_tgrd_r_crystal_maxiume
+	divide = This.owner.uma_tgrd_r_crystal_stockpile
+
 }
 
 
+uma_tg_TGAC_upkeep_and_produce_sv_living_metal = {
+	base = 1
+
+
+	multiply = This.owner.uma_tgrd_living_metal_maxiume
+	divide = This.owner.uma_tgrd_living_metal_stockpile
+
+}
+
+uma_tg_TGAC_upkeep_and_produce_sv_darkm = {
+	base = 1
+
+
+	multiply = This.owner.uma_tgrd_darkm_maxiume
+	divide = This.owner.uma_tgrd_darkm_stockpile
+
+}
+
+uma_tg_TGAC_upkeep_and_produce_sv_uma_crystal = {
+	base = 1
+
+
+	multiply = This.owner.uma_tgrd_uma_crystal_maxiume
+	divide = This.owner.uma_tgrd_uma_crystal_stockpile
+
+}
 
 uma_tg_plantry_energy_extr_sv = {
 	base = 1
@@ -115,6 +98,13 @@ uma_tg_plantry_energy_extr_sv = {
 		mode = set
 	}
 
-	multiply = 3.0
+	multiply = 0.5
+	floor = yes
+
+	multiply = This.owner.uma_tgrd_energy_maxiume
+
+	divide = This.owner.uma_tgrd_energy_stockpile
+#	floor = yes
+
 }
 
