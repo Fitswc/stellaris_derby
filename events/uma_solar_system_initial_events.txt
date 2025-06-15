@@ -33,12 +33,6 @@ planet_event = {
 				}
 			}
 
-			owner = {
-				country_event = {
-					id = uma_shop_center.1
-					#days = 10 为什么会有个延时？
-				}
-			}
 		}
 		else = {
 			owner = {
@@ -87,12 +81,6 @@ planet_event = {
 #				O_ANGLE_MIN = 200
 #			}
 
-			owner = {
-				country_event = {
-					id = uma_shop_center.1
-					days = 2
-				}
-			}
 		}
 				
     }	
@@ -159,10 +147,10 @@ country_event = {
 				is_ai = no
 				has_authority = auth_trainingcenter
 			}
-			country_event = {
-				id = uma_shop_center.1
-				days = 2
-			}
+#			country_event = {
+#				id = uma_shop_center.1
+#				days = 2
+#			}
 		}
 	}
 }

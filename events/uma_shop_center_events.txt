@@ -11,136 +11,42 @@ country_event = {
 	trigger = { NOT = { has_global_flag = uma_have_initialized_shop } }
 
 	immediate = {
+
 		set_global_flag = uma_have_initialized_shop
-		##################################################
-		#在创建国家前需要先创建种族
-		##################################################
-		create_species = {
-			name = "uma_species_name_shop_center"			#种族名字
-			plural = "uma_species_name_shop_center"		#种族复数
-			class = "umamusume"		#种族小类：即爬行，鸟类，软体...
-			portrait = "umamusume"		#肖像
-			name_list = "UMAname"
-			traits = {
-				#特质
-				ideal_planet_class = pc_habitat
-			}
-		}
-		##################################################
-		#创建国家
-		##################################################
 		create_country = {
-			name = "uma_shop_center"			#国家名称，很重要
-			type = uma_shop_center_enclave			#指定country_type，不会的就不要动了
-			authority = "auth_trainingcenter"			#政体
-			civics = {
-				#民政
-			}
-			origin = "origin_default"			#默认起源，这个不用管，玩家根本看不到飞地起源是啥
-			species = last_created_species			#设定种族，上面已经写好了，这一行不要动。
+			name = "uma_shop_center"
+			type = uma_satono_country
 			flag = {
-				#设定飞地旗帜，下边的自己搞吧
 				icon = {
 					category = "uiu_flags"
 					file = "uiu_flags01.dds"
 				}
 				background = {
+					#次背景
 					category = "backgrounds"
 					file = "double_hemispheres.dds"
 				}
 				colors = {
 					"green"
-					"green"
+					"dark_green"
 					"null"
 					"null"
 				}
 			}
 			ethos = {
-				#思潮
 				ethic = "ethic_xenophile"
 				ethic = "ethic_materialist"
 				ethic = "ethic_egalitarian"
 			}
 			ignore_initial_colony_error = yes
 			effect = {
-				save_global_event_target_as = uma_shop
-				############################################################################
-				#重要！！！！这个flag⭐国家标签⭐决定了你这个国家到底是谁，一定要改！
 				set_country_flag = uma_is_shop_center
-				############################################################################
-				set_graphical_culture = npf_01					#默认的graphical_culture，不太需要动
+				save_global_event_target_as = uma_shop
+				set_graphical_culture = npf_01
 			}
 		}
-		##################################################
-		#生成所有的空间站
-		##################################################
-		while = {
-			count = 1	#总生成的个数
-			event_target:uma_where_shop_center_is = {
-				set_star_flag = uma_speical_enclave_generated
-				random_system_planet = {
-					#星系内随机星球
-					set_planet_flag = uma_shop_center_planet				#一个标记，暂时没有实际作用，但别删
-					##################################################
-					#生成空间站
-					##################################################
-					last_created_country = {
-						#以下为生成空间站
-						create_fleet = {
-							name = "NAME_uma_shop_center_fleet"						#空间站舰队名称
-							settings = {
-								spawn_debris = no							#舰船是否生成残骸可供逆向
-							}
-							effect = {
-								set_owner = prev
-								create_ship = {
-									name = "NAME_uma_shop_center_station"
-									############################################################################
-									design = NAME_UMA_enclave_station #空间站舰船设计，这里为默认，如果你想添加新的，自己参考着写。
-									############################################################################
-									graphical_culture = npf_01
-								}
-								set_location = {
-									#设定空间站位置，不要改
-									target = prevprev
-									distance = 90
-								}
-								save_event_target_as = uma_shop_center_station
-								prev = {
-									set_custom_capital_location = event_target:uma_shop_center_station
-								}
-								set_fleet_flag = uma_enclave_station							#通用标记，不要改
-								############################################################################
-								set_fleet_flag = uma_shoping_center_enclave_station							#标记出这是你的策展人空间站，你可以更改标记来方便调用
-								############################################################################
-							}
-						}
-					}
-				}
-			}
-		}
-		##################################################
-		#创建领袖，ruler
-		##################################################
-		last_created_country = {
-			add_modifier = {
-				modifier = uma_shopping_center_protection 
-				days = -1
-			}
-			create_leader = {
-				#生成领袖
-				class = official
-				species = this				#领袖种族
-				name = HT				#领袖名字（当前为随机）
-				skill = 10
-			}
-			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
-			last_created_leader = {
-#			add_trait = leader_trait_ruler_chosen #确保不朽
-			change_leader_portrait = "C01"
-			}
-			
-		}
+
+		log = "UMASHOP ESTALISHED"
 	}
 }
 
@@ -164,7 +70,7 @@ country_event = {
 		NOT = {
 			has_country_flag = uma_had_communication_with_uma_shop
 
-#			has_communications = event_target:uma_shop
+			has_communications = event_target:uma_shop
 		}
 #		from = {
 #			owner = {
