@@ -57,6 +57,7 @@ event = {
 		every_playable_country = {
 			limit = {
 				is_ai = no
+				has_authority = auth_trainingcenter
 			}
 			country_event = {
 				id = uma_mmu.1
@@ -72,4 +73,25 @@ event = {
 		}
 	}
 }
+
+
+#event = {
+#	id = uma_marking.3
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				check_variable = {
+#					which = UMA_SD_VER
+#				}
+#			}
+#		}
+#	}
+#}
 
