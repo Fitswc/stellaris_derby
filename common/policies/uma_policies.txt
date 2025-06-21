@@ -73,12 +73,21 @@ uma_racing_umamusume_policy = {
 #赛马娘专属贸易政策
 uma_trade_policy = {
 	potential = {
-			
+		has_authority = auth_trainingcenter
 	}
 	option = {
 		name = trade_policy_uma_vanilla
 		on_enabled = {
-			set_trade_conversions = {  }
+			set_trade_conversions = {
+				trade = 0.5
+				energy = 0.5
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				set_trade_conversions = {}
+			}
 		}
 
 		AI_weight = {
