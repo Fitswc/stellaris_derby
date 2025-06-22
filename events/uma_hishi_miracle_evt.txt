@@ -12,6 +12,7 @@ country_event = {
 		log = HISHI_MIR_EVT_INITIALISED
 		random_system = {
 			limit = {
+				uma_is_event_system = no
 				distance = {
 					source = root.solar_system
 					min_jumps = 1
@@ -44,6 +45,9 @@ country_event = {
 						uma_is_pd_habitat_planet = no
 						is_primary_star = no
 						uma_is_event_planet = no
+						NOT = {
+							is_planet_class = pc_astral_scar
+						}
 					}
 					change_pc = pc_ocean
 					save_global_event_target_as = uma_hishi_evt_will_happen_here
