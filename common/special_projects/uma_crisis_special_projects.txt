@@ -83,7 +83,7 @@ special_project = {
     key="UMA_GOLD_FACTOR_INGREDIENT"
     cost = 3000
     event_chain = gold_counterattack
-#    days_to_research = 170
+    days_to_research = 170
     tech_department =society_technology
     picture =GFX_evt_alien_propaganda
 
@@ -93,7 +93,7 @@ special_project = {
 
         custom_tooltip = UMA_GOLD_FACTOR_INGREDIENT_TOOLTIP
         hidden_effect = {
-            every_owned_pop_group = {
+            every_owned_pop = {
                 limit = {
                     is_same_species = root
                     NOT = { species = { has_trait = uma_trait_gold_family } }
@@ -120,7 +120,7 @@ special_project = {
     key="UMA_GOLD_FACTOR_INGREDIENT_ADV"
     cost = 3000
     event_chain = gold_counterattack
-#    days_to_research = 170
+    days_to_research = 170
     tech_department =society_technology
     picture =GFX_evt_alien_propaganda
 
@@ -130,7 +130,7 @@ special_project = {
 
         custom_tooltip = UMA_GOLD_FACTOR_INGREDIENT_ADV_TOOLTIP
         hidden_effect = {
-            every_owned_pop_group = {
+            every_owned_pop = {
                 limit = {
                     is_same_species = root
                     NOT = { species = { has_trait = uma_trait_gold_family_advance } }

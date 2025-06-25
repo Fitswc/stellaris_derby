@@ -6,7 +6,7 @@ can_build_branch_offices = {
 	custom_tooltip = {
 		fail_text = BRANCH_OFFICE_NOT_MEGACORP
 		OR = {
-			is_megacorp = yes
+			has_authority = auth_corporate
 			has_civic = civic_galactic_sovereign_megacorp
 
 			##UMA
@@ -15,6 +15,7 @@ can_build_branch_offices = {
 		}
 	}
 }
+
 
 # This = planet
 # Root = country
@@ -72,7 +73,7 @@ can_build_branch_office_on_planet = {
 			root = {
 				is_subject = yes
 				OR = {
-					is_megacorp = yes
+					has_authority = auth_corporate
 					has_civic = civic_galactic_sovereign_megacorp
 				}
 				overlord = {
@@ -90,7 +91,7 @@ can_build_branch_office_on_planet = {
 						is_same_value = root.overlord
 					}
 					OR = {
-						is_megacorp = yes
+						has_authority = auth_corporate
 						has_civic = civic_galactic_sovereign_megacorp
 					}
 				}
@@ -122,7 +123,7 @@ can_build_branch_office_on_planet = {
 						is_subject = yes
 						overlord = {
 							NOR = {
-								is_megacorp = yes
+								has_authority = auth_corporate
 								has_civic = civic_galactic_sovereign_megacorp
 							}
 						}
@@ -137,7 +138,7 @@ can_build_branch_office_on_planet = {
 					is_subject = yes
 					overlord = {
 						OR = {
-							is_megacorp = yes
+							has_authority = auth_corporate
 							has_civic = civic_galactic_sovereign_megacorp
 						}
 					}
@@ -201,33 +202,5 @@ is_criminal_syndicate_rule = {
 		}
 
 		has_origin = origin_uma_business_MAN
-	}
-}
-
-
-# Root = country attempting to target system for movement
-# This = system being targeted
-can_enter_system_by_jump = {
-	custom_tooltip = {
-#		success_text = "debug: can jump"
-		fail_text = cannot_jump_to_system
-
-		# Sealed system
-		OR = {
-			NOT = { has_star_flag = sealed_system }
-			AND = {
-				root = { has_country_flag = entered_sealed_system }
-				has_star_flag = sealed_system
-			}
-		}
-
-		# L-Cluster
-		NOT = { has_star_flag = lcluster }
-
-		# Formless system
-		NOT = { has_star_flag = formless_system }
-
-		##UMA
-		NOT = {has_star_flag = uma_gold_invasion_system}
 	}
 }

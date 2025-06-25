@@ -1540,8 +1540,6 @@ country_event = {
 			MAX_JUMPS = 5
 			UMA_INITIALIZER = "uma_fine_initializer"
 			FLAG = uma_fine_system_created
-			O_ANGLE_MIN = 0
-			O_ANGLE_MAX = 180
 			SAVE_GLOBAL_TARGET = uma_where_fine_is
 		}
 
@@ -2154,16 +2152,6 @@ country_event = {
 					key = "border"
 					value = "GFX_border_legendary"
 				}
-			}
-
-			add_timeline_event = {
-				type = timeline_umamusume
-				override_tooltip = "uma_timeline_meet_leader_fine_desc"
-				override_text = { "text:uma_timeline_meet_leader_fine" }
-				override_texture = { "background_zoom1:GFX_uma_timelines_meet_fine" "background_zoom2:GFX_uma_timelines_meet_fine_zoom_2" }
-				override_types = { country leader }
-				override_id = uma_timeline_meet_leader_fine
-				targets = { Root event_target:uma_is_leader_fine }
 			}
 		}
 	}

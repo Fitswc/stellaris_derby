@@ -6,7 +6,6 @@ district_uma_dormitory = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
-#	default_starting_district = yes
 
 	show_on_uncolonized = {
 		uses_district_set = uma_school_world
@@ -14,19 +13,6 @@ district_uma_dormitory = {
 
 	potential = {
 		uses_district_set = uma_school_world
-	}
-
-	zone_slots = {
-		slot_city_government
-		slot_city_01
-		slot_city_02
-	}
-
-	inline_script = {
-		script = districts/BPV_district_slots2
-		GOVERNMENT = slot_city_government
-		SLOT1 = slot_city_01
-		SLOT_END = slot_city_02
 	}
 
 	conversion_ratio = 1
@@ -52,8 +38,8 @@ district_uma_dormitory = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2500
-		job_clerk_add = 100
+		planet_housing_add = 25
+		job_clerk_add = 6
 	}
 
 	triggered_planet_modifier = {
@@ -61,7 +47,7 @@ district_uma_dormitory = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_dormitory_administrator_add = 100
+		job_uma_dormitory_administrator_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -70,7 +56,7 @@ district_uma_dormitory = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 900
+			job_maintenance_drone_add = 9
 		}
 	}
 
@@ -80,7 +66,7 @@ district_uma_dormitory = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 300
+			planet_housing_add = 3
 		}
 	}
 
@@ -92,7 +78,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 300
+			planet_housing_add = 3
 		}
 	}
 
@@ -105,7 +91,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 300
+			planet_housing_add = 3
 		}
 	}
 
@@ -118,7 +104,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 300
+			job_maintenance_drone_add = 3
 		}
 	}
 
@@ -130,7 +116,7 @@ district_uma_dormitory = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 300
+			job_clerk_add = 3
 		}
 	}
 
@@ -140,7 +126,7 @@ district_uma_dormitory = {
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 300
+			job_clerk_add = 3
 		}
 	}
 
@@ -187,10 +173,6 @@ district_uma_training_course = {
 		uses_district_set = uma_school_world
 	}
 
-	zone_slots = {
-		slot_uma_training
-	}
-
 	conversion_ratio = 1
 	convert_to = {
 		district_arcology_organic_housing
@@ -217,8 +199,8 @@ district_uma_training_course = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_trainer_add = 100
-		job_uma_racing_umamusume_add = 500
+		job_uma_trainer_add = 1
+		job_uma_racing_umamusume_add = 5
 	}
 
 	triggered_desc = {
@@ -245,16 +227,13 @@ district_uma_training_course = {
 district_uma_teaching_area = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
+
 	show_on_uncolonized = {
 		uses_district_set = uma_school_world
 	}
 
 	potential = {
 		uses_district_set = uma_school_world
-	}
-
-	zone_slots = {
-		slot_uma_teaching
 	}
 
 	conversion_ratio = 1
@@ -283,7 +262,7 @@ district_uma_teaching_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_school_reseacher_add = 500
+		job_uma_school_reseacher_add = 5
 	}
 
 	triggered_desc = {
@@ -311,11 +290,6 @@ district_uma_logistics_area = {
 		uses_district_set = uma_school_world
 	}
 
-	zone_slots = {
-		slot_uma_logistic
-		slot_food
-	}
-
 	conversion_ratio = 1
 	convert_to = {
 		district_arcology_organic_housing
@@ -342,7 +316,7 @@ district_uma_logistics_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_carrot_farmer_add = 500
+		job_uma_carrot_farmer_add = 5
 	}
 
 	triggered_planet_modifier = {
@@ -351,7 +325,7 @@ district_uma_logistics_area = {
 			owner = { is_uma_country = yes }
 			owner = { has_technology = tech_uma_code_hachimi }
 		}
-		job_uma_bee_farmer_add = 100
+		job_uma_bee_farmer_add = 1
 	}
 
 	triggered_desc = {
@@ -582,7 +556,6 @@ district_uma_dormitory_in_industrial = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
-#	default_starting_district = yes
 
 	show_on_uncolonized = {
 		uses_district_set = uma_industrial_world
@@ -592,24 +565,13 @@ district_uma_dormitory_in_industrial = {
 		uses_district_set = uma_industrial_world
 	}
 
-	conversion_ratio = 0.5
+	conversion_ratio = 1
 	convert_to = {
-		district_rw_nexus
-		district_rw_hive
-		district_mindlink
-	}
-
-	zone_slots = {
-		slot_city_government
-		slot_city_01
-		slot_city_02
-	}
-
-	inline_script = {
-		script = districts/BPV_district_slots2
-		GOVERNMENT = slot_city_government
-		SLOT1 = slot_city_01
-		SLOT_END = slot_city_02
+		district_city
+		district_nexus
+		district_hive
+		district_arcology_housing
+		district_arcology_organic_housing
 	}
 
 	resources = {
@@ -625,8 +587,8 @@ district_uma_dormitory_in_industrial = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2500
-		job_clerk_add = 600
+		planet_housing_add = 25
+		job_clerk_add = 6
 	}
 
 	triggered_planet_modifier = {
@@ -634,7 +596,7 @@ district_uma_dormitory_in_industrial = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_dormitory_administrator_add = 100
+		job_uma_dormitory_administrator_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -643,7 +605,7 @@ district_uma_dormitory_in_industrial = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 900
+			job_maintenance_drone_add = 9
 		}
 	}
 
@@ -653,7 +615,7 @@ district_uma_dormitory_in_industrial = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 400
+			planet_housing_add = 4
 		}
 	}
 
@@ -665,7 +627,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 400
+			planet_housing_add = 4
 		}
 	}
 
@@ -678,7 +640,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 400
+			planet_housing_add = 4
 		}
 	}
 
@@ -691,7 +653,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 300
+			job_maintenance_drone_add = 3
 		}
 	}
 
@@ -703,7 +665,7 @@ district_uma_dormitory_in_industrial = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 300
+			job_clerk_add = 3
 		}
 	}
 
@@ -713,7 +675,7 @@ district_uma_dormitory_in_industrial = {
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 300
+			job_clerk_add = 3
 		}
 	}
 
@@ -765,10 +727,6 @@ district_uma_energy_area = {
 #		district_rw_generator
 	}
 
-	zone_slots = {
-		slot_energy
-	}
-
 	resources = {
 		category = planet_districts
 		cost = {
@@ -785,7 +743,7 @@ district_uma_energy_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_field_powering_technician_add = 400
+		job_uma_field_powering_technician_add = 4
 	}
 
 
@@ -815,12 +773,8 @@ district_uma_industrial_area = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_mining
+		district_industrial
 #		district_rw_generator
-	}
-
-	zone_slots = {
-		slot_uma_light_industrial
 	}
 
 	resources = {
@@ -840,7 +794,7 @@ district_uma_industrial_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_crystal_consumer_goods_crafter_add = 400
+		job_uma_crystal_consumer_goods_crafter_add = 4
 
 	}
 
@@ -874,10 +828,6 @@ district_uma_mining_area = {
 #		district_rw_generator
 	}
 
-	zone_slots = {
-		slot_minerals
-	}
-
 	resources = {
 		category = planet_districts
 		cost = {
@@ -893,7 +843,7 @@ district_uma_mining_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_core_miner_add = 400
+		job_uma_core_miner_add = 4
 	}
 
 
@@ -922,12 +872,8 @@ district_uma_heavy_industrial_area = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_mining
+		district_industrial
 #		district_rw_generator
-	}
-
-	zone_slots = {
-		slot_uma_heavy_industrial
 	}
 
 	resources = {
@@ -947,7 +893,7 @@ district_uma_heavy_industrial_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_crystal_alloy_crafter_add = 400
+		job_uma_crystal_alloy_crafter_add = 4
 	}
 
 

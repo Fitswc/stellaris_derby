@@ -106,17 +106,6 @@ country_event = {
 
 	option = {
 		name = uma_preftl.9997.a
-		hidden_effect = {
-			add_timeline_event = {
-				type = timeline_umamusume
-				override_tooltip = "uma_timeline_observe_uma_pre_ftl_desc"
-				override_text = { "text:uma_timeline_observe_uma_pre_ftl" }
-				override_texture = { "background_zoom1:GFX_uma_timeline_observe_uma_pre_ftl" "background_zoom2:GFX_uma_timeline_observe_uma_pre_ftl_zoom_2" }
-				override_types = { country planet }
-				override_id = uma_timeline_meet_leader_pre
-				targets = { Root event_target:uma_pre_ftl_planet_in_global }
-			}
-		}
 	}
 }
 

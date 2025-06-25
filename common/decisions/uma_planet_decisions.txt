@@ -3,9 +3,9 @@
 
 
 #举办星球级别比赛
-decision_uma_hold_planet_racing = {
+decision_uma_hold_planet_racing = { 
 	owned_planets_only = yes
-	enactment_time = 0
+	enactment_time = 0 
 	sound = event_administrative_work #当然，之后我们要用自己的声音
 	icon = decision_planet_derby_2
 
@@ -61,18 +61,6 @@ decision_uma_hold_planet_racing = {
 				days = 30
 				random = 10
 			}
-
-			From = {
-				add_timeline_event = {
-					type = timeline_umamusume
-					override_tooltip = "uma_timeline_held_planet_racing_desc"
-					override_text = { "text:uma_timeline_held_planet_racing" }
-					override_texture = { "background_zoom1:GFX_uma_timeline_held_planet_racing" "background_zoom2:GFX_uma_timeline_held_planet_racing_zoom_2" }
-					override_types = { country planet }
-					override_id = uma_timeline_held_planet_racing
-					targets = { This Root }
-				}
-			}
 		}
 	}
 
@@ -91,7 +79,7 @@ decision_uma_school_planet_transform = {
 
 	resources = {
 		category = decisions
-		cost = {
+		cost = {		
 			influence = 200
 			minerals = 9990
 			energy = 5000
@@ -102,7 +90,7 @@ decision_uma_school_planet_transform = {
 	potential = {
 		NOR = {
 			is_planet_class = pc_city
-			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_ringworld_habitable			
 			is_planet_class = pc_relic
 			is_planet_class = pc_uma_school #判定By F
 			has_modifier = resort_colony
@@ -138,41 +126,32 @@ decision_uma_school_planet_transform = {
 		custom_tooltip = decision_uma_school_planet_changed
 		hidden_effect = {
 			set_planet_flag = uma_has_change_pc_to_academic_planet
-			owner = {
+			owner = { 
 					if = {
 					limit = { is_ai = yes }
-					change_variable = { which = uma_modified_planet value = 1 }
+					change_variable = { which = wg_modified_planet value = 1 }
 				}
 			}
 			###城市区划的一半变为宿舍区划，农业区划一半变为后勤区划
 			uma_school_planet_get_variable_effect = {
-				DISTRICT = district_city
+				DISTRICT = district_city 
 				VARIABLE = num_housing_districts
 			}
 			uma_school_planet_get_variable_effect = {
 				DISTRICT = district_farming
 				VARIABLE = num_farming_districts
 			}
-#			remove_all_districts = yes
+			change_pc = pc_uma_school
+			remove_all_districts = yes
 			uma_remove_deposits = yes
 #			clear_deposits = yes
-#			while = {
-#				count = num_housing_districts
-#				add_district = {
-#					district_type = district_uma_dormitory
-#					ignore_cap = yes
-#				}
-#	#			remove_district = district_city
-#			}
-			change_pc = pc_uma_school
-
+			while = {
+				count = num_housing_districts
+				add_district = district_uma_dormitory
+			}
 			while = {
 				count = num_farming_districts
 				add_district = district_uma_logistics_area
-			}
-			while = {
-				count = num_housing_districts
-				remove_district = district_uma_dormitory
 			}
 			clear_variable = num_farming_districts
 			clear_variable = num_housing_districts
@@ -180,30 +159,22 @@ decision_uma_school_planet_transform = {
 				entity = "gaia_planet"
 			}
 			########特判：如果有菲尼学院有关遗址，保留之#######
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
-#				add_deposit = d_phoenix_school_relic
-#			}
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
-#				add_deposit = d_phoenix_school
-#			}
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
-#				add_deposit = d_phoenix_racing_course_relic
-#			}
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
-#				add_deposit = d_phoenix_racing_course
-#			}
-
-
-
-#			planet_event = {
-#				id = uma_bg.19
-#			}
-#			remove_district = district_city
-
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+				add_deposit = d_phoenix_school_relic
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+				add_deposit = d_phoenix_school
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+				add_deposit = d_phoenix_racing_course_relic
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+				add_deposit = d_phoenix_racing_course
+			}
 		}
 	}
 
@@ -225,7 +196,7 @@ decision_uma_school_planet_transform = {
 			factor = 2
 			OR = {
 				is_capital = yes
-				pop_amount >= 7000
+				num_pops >= 70
 			}
 		}
 	}
@@ -238,7 +209,7 @@ decision_uma_school_planet_transform = {
 
 #####特殊领袖事件相关
 #修复菲尼学院
-decision_uma_reconstrcut_phoenix_school = {
+decision_uma_reconstrcut_phoenix_school = { 
 	owned_planets_only = yes
 	enactment_time = 3650
 	sound = event_administrative_work #当然，之后我们要用自己的声音
@@ -285,7 +256,7 @@ decision_uma_reconstrcut_phoenix_school = {
 
 
 #修复菲尼学院大赛场
-decision_uma_reconstrcut_phoenix_racing_course = {
+decision_uma_reconstrcut_phoenix_racing_course = { 
 	owned_planets_only = yes
 	enactment_time = 3650
 	sound = event_administrative_work #当然，之后我们要用自己的声音
@@ -351,8 +322,7 @@ decision_uma_school_ring_transform = {
 	}
 
 	potential = {
-#		is_ringworld = yes
-		uma_is_ringworld = yes
+		is_ringworld = yes
 		NOR = {
 			is_planet_class = pc_uma_ringworld_habitable
 			is_planet_class = pc_uma_ringworld
@@ -452,7 +422,6 @@ decision_uma_school_ring_transform = {
 				}
 
 #				clear_deposits = yes
-				remove_all_districts = yes
 				while = {
 					count = uma_rw_city_to_city
 					add_district = district_uma_dormitory_ring
@@ -509,7 +478,7 @@ decision_uma_school_ring_transform = {
 			factor = 2
 			OR = {
 				is_capital = yes
-				pop_amount >= 7000
+				num_pops >= 70
 			}
 		}
 	}
@@ -538,7 +507,7 @@ decision_uma_change_to_uma = {
 				has_authority = auth_trainingcenter
 			}
 		}
-		any_owned_pop_group = {
+		any_owned_pop = {
 			AND = {
 				NOT = {
 					is_same_species_class = Root.owner
@@ -552,9 +521,9 @@ decision_uma_change_to_uma = {
 	}
 
 	allow = {
-		any_owned_pop_group = {
+		any_owned_pop = {
 			NOT = {
-				is_robot_pop_group = yes
+				is_robot_pop = yes
 				is_same_species_class = Root.owner
 			}
 		}
@@ -563,41 +532,28 @@ decision_uma_change_to_uma = {
 	effect = {
 		custom_tooltip = uma_transform_decision_tooltip
 		hidden_effect = {
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					AND = {
 						NOT = {
 							is_same_species_class = Root.owner
 							#							is_being_purged = yes
-							is_robot_pop_group = yes
+							is_robot_pop = yes
 							#							is_enslaved = yes
 						}
 					}
 				}
-				#				change_species = Root.owner_main_species
-				if = {
-					limit = {
-						From = {
-							has_tradition = uma_factor_star_picking
-						}
-					}
-					From = {
-						add_resource = {
-							influence = 5
-						}
+#				change_species = Root.owner_main_species
+				modify_species = {
+					species = Root.owner_main_species
+					add_trait = trait_uma_new_bottle_but_old_wine
+					change_scoped_species = yes
+					portrait = Root.owner_main_species
+					effect = {
+						##
 					}
 				}
-				else = {
-					modify_species = {
-						species = Root.owner_main_species
-						add_trait = trait_uma_new_bottle_but_old_wine
-						change_scoped_species = yes
-						portrait = Root.owner_main_species
-						effect = {
-							##
-						}
-					}
-				}
+
 			}
 		}
 	}
@@ -661,9 +617,9 @@ decision_uma_industrial_planet_transform = {
 		hidden_effect = {
 			set_planet_flag = uma_has_change_pc_to_academic_planet
 			owner = {
-				if = {
+					if = {
 					limit = { is_ai = yes }
-					change_variable = { which = uma_modified_planet value = 1 }
+					change_variable = { which = wg_modified_planet value = 1 }
 				}
 			}
 
@@ -672,21 +628,20 @@ decision_uma_industrial_planet_transform = {
 				VARIABLE = num_housing_districts
 			}
 			uma_school_planet_get_variable_effect = {
-				DISTRICT = district_generator
+				DISTRICT = district_industrial
 				VARIABLE = num_industrial_districts
 			}
 			uma_school_planet_get_variable_effect = {
 				DISTRICT = district_mining
 				VARIABLE = num_mining_dis
 			}
-
-			#			remove_all_districts = yes
-			uma_remove_deposits = yes
 			change_pc = pc_uma_industrial
-			#			clear_deposits = yes
+			remove_all_districts = yes
+			uma_remove_deposits = yes
+#			clear_deposits = yes
 			while = {
 				count = num_housing_districts
-				remove_district = district_uma_dormitory_in_industrial
+				add_district = district_uma_dormitory_in_industrial
 			}
 			while = {
 				count = num_industrial_districts
@@ -696,8 +651,6 @@ decision_uma_industrial_planet_transform = {
 				count = num_industrial_districts
 				add_district = district_uma_heavy_industrial_area
 			}
-
-
 			while = {
 				count = num_mining_dis
 				add_district = district_uma_mining_area
@@ -709,31 +662,22 @@ decision_uma_industrial_planet_transform = {
 				entity = "city_planet"
 			}
 			########特判：如果有菲尼学院有关遗址，保留之#######
-			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
-			#				add_deposit = d_phoenix_school_relic
-			#			}
-			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
-			#				add_deposit = d_phoenix_school
-			#			}
-			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
-			#				add_deposit = d_phoenix_racing_course_relic
-			#			}
-			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
-			#				add_deposit = d_phoenix_racing_course
-			#			}
-
-
-
-#			planet_event = {
-#				id = uma_bg.19
-#				days = 1
-#			}
-
-			#			remove_district = district_city
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+				add_deposit = d_phoenix_school_relic
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+				add_deposit = d_phoenix_school
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+				add_deposit = d_phoenix_racing_course_relic
+			}
+			if = {
+				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+				add_deposit = d_phoenix_racing_course
+			}
 		}
 	}
 
@@ -755,7 +699,7 @@ decision_uma_industrial_planet_transform = {
 			factor = 2
 			OR = {
 				is_capital = yes
-				pop_amount >= 7000
+				num_pops >= 70
 			}
 		}
 	}

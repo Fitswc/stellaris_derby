@@ -30,20 +30,4 @@ umamusume = {
 	}
 }
 
-PRE_UMA = {
-	species_class = PRE_UMA
-	uplifted_portraits = {
-		umamusume
-	}
-	portraits = {
-		"umamusume"
-		"umamusume_winning_suit"
-	}
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-		"umamusume"
-		"umamusume_winning_suit"
-	}
-}
-
 

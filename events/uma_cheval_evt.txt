@@ -9,12 +9,13 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		log = UMA_CHEVAL_RIFT_GENERATED
 		random_system = {
 			limit = {
 				distance = {
 					source = root.solar_system
-					min_jumps = 3
-					max_jumps = 6
+					min_jumps = 4
+					max_jumps = 9
 				}
 			}
 			set_star_flag = uma_cheval_system
@@ -26,7 +27,6 @@ country_event = {
 				id = uma_ar_cheval
 				spawn_sound = no
 			}
-			log = "UMA_CHEVAL_RIFT_GENERATED AT [This.GetName]"
 		}
 	}
 }
@@ -491,17 +491,7 @@ country_event = {
 				}
 			}
 		}
-		give_specimen = { key = uma_cheval_hat origin = uma_specimen_null }
-
-		add_timeline_event = {
-			type = timeline_umamusume
-			override_tooltip = "uma_timeline_meet_leader_cheval_desc"
-			override_text = { "text:uma_timeline_meet_leader_cheval" }
-			override_texture = { "background_zoom1:GFX_uma_timelines_meet_cheval" "background_zoom2:GFX_uma_timelines_meet_cheval_zoom_2" }
-			override_types = { country leader }
-			override_id = uma_timeline_meet_leader_cheval
-			targets = { Root event_target:uma_is_leader_cheval_grand }
-		}
+		give_specimen = { key = uma_cheval_hat }
 	}
 
 	option = {

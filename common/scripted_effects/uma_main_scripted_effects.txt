@@ -13,45 +13,26 @@ uma_upgrade_kenshi_strength_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_strength_level_1
-		add_modifier = {
-			modifier = uma_kenshi_strength_level_1
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_1 }
 		remove_country_flag = uma_kenshi_strength_level_1
 		set_country_flag = uma_kenshi_strength_level_2
-		remove_modifier = uma_kenshi_strength_level_1
-		add_modifier = {
-			modifier = uma_kenshi_strength_level_2
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_2 }
 		remove_country_flag = uma_kenshi_strength_level_2
 		set_country_flag = uma_kenshi_strength_level_3
-		remove_modifier = uma_kenshi_strength_level_2
-		add_modifier = {
-			modifier = uma_kenshi_strength_level_3
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_3 }
 		remove_country_flag = uma_kenshi_strength_level_3
 		set_country_flag = uma_kenshi_strength_level_4
-		remove_modifier = uma_kenshi_strength_level_3
-		add_modifier = {
-			modifier = uma_kenshi_strength_level_4
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_strength_level_4 }
 		remove_country_flag = uma_kenshi_strength_level_4
 		set_country_flag = uma_kenshi_strength_level_5
-		remove_modifier = uma_kenshi_strength_level_4
-		add_modifier = {
-			modifier = uma_kenshi_strength_level_5
-		}
 	}
 }
 
@@ -68,45 +49,26 @@ uma_upgrade_kenshi_intelligence_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_intelligence_level_1
-		add_modifier = {
-			modifier = uma_kenshi_intelligence_level_1
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_1 }
 		remove_country_flag = uma_kenshi_intelligence_level_1
 		set_country_flag = uma_kenshi_intelligence_level_2
-		remove_modifier = uma_kenshi_intelligence_level_1
-		add_modifier = {
-			modifier = uma_kenshi_intelligence_level_2
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_2 }
 		remove_country_flag = uma_kenshi_intelligence_level_2
 		set_country_flag = uma_kenshi_intelligence_level_3
-		remove_modifier = uma_kenshi_intelligence_level_2
-		add_modifier = {
-			modifier = uma_kenshi_intelligence_level_3
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_3 }
 		remove_country_flag = uma_kenshi_intelligence_level_3
 		set_country_flag = uma_kenshi_intelligence_level_4
-		remove_modifier = uma_kenshi_intelligence_level_3
-		add_modifier = {
-			modifier = uma_kenshi_intelligence_level_4
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_intelligence_level_4 }
 		remove_country_flag = uma_kenshi_intelligence_level_4
 		set_country_flag = uma_kenshi_intelligence_level_5
-		remove_modifier = uma_kenshi_intelligence_level_4
-		add_modifier = {
-			modifier = uma_kenshi_intelligence_level_5
-		}
 	}
 }
 
@@ -123,45 +85,26 @@ uma_upgrade_kenshi_will_level = {
 			}
 		}
 		set_country_flag = uma_kenshi_will_level_1
-		add_modifier = {
-			modifier = uma_kenshi_will_level_2
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_1 }
 		remove_country_flag = uma_kenshi_will_level_1
 		set_country_flag = uma_kenshi_will_level_2
-		remove_modifier = uma_kenshi_will_level_1
-		add_modifier = {
-			modifier = uma_kenshi_will_level_2
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_2 }
 		remove_country_flag = uma_kenshi_will_level_2
 		set_country_flag = uma_kenshi_will_level_3
-		remove_modifier = uma_kenshi_will_level_2
-		add_modifier = {
-			modifier = uma_kenshi_will_level_3
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_3 }
 		remove_country_flag = uma_kenshi_will_level_3
 		set_country_flag = uma_kenshi_will_level_4
-		remove_modifier = uma_kenshi_will_level_3
-		add_modifier = {
-			modifier = uma_kenshi_will_level_4
-		}
 	}
 	if = {
 		limit = { has_country_flag = uma_kenshi_will_level_4 }
 		remove_country_flag = uma_kenshi_will_level_4
 		set_country_flag = uma_kenshi_will_level_5
-		remove_modifier = uma_kenshi_will_level_4
-		add_modifier = {
-			modifier = uma_kenshi_will_level_5
-		}
 	}
 }
 
@@ -175,10 +118,7 @@ uma_school_planet_get_variable_effect = {
 		}
 		variable = $VARIABLE$
 	}
-	divide_variable = {
-		which = $VARIABLE$
-		value = 2
-	}
+	divide_variable = { which = $VARIABLE$ value = 2 }
 	floor_variable = $VARIABLE$
 }
 
@@ -442,36 +382,28 @@ uma_upgrade_kanshi_one_level = {
 			limit = { has_trait = uma_trait_yaruki_four }
 			remove_trait = uma_trait_yaruki_four
 #			remove_trait = uma_ruler_trait_yaruki_4
-			add_trait = {
-				trait = uma_trait_yaruki_five
-			}
+			add_trait = uma_trait_yaruki_five
 #			add_trait= uma_ruler_trait_yaruki_5
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_three }
 			remove_trait = uma_trait_yaruki_three
 #			remove_trait = uma_ruler_trait_yaruki_3
-			add_trait = {
-				trait = uma_trait_yaruki_four
-			}
+			add_trait = uma_trait_yaruki_four
 #			add_trait= uma_ruler_trait_yaruki_4
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_two }
 			remove_trait = uma_trait_yaruki_two
 #			remove_trait = uma_ruler_trait_yaruki_2
-			add_trait = {
-				trait = uma_trait_yaruki_three
-			}
+			add_trait = uma_trait_yaruki_three
 #			add_trait= uma_ruler_trait_yaruki_3
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_one }
 			remove_trait = uma_trait_yaruki_one
 #			remove_trait = uma_ruler_trait_yaruki_1
-			add_trait = {
-				trait = uma_trait_yaruki_two
-			}
+			add_trait = uma_trait_yaruki_two
 #			add_trait= uma_ruler_trait_yaruki_2
 		}
 	}
@@ -561,36 +493,28 @@ uma_down_kanshi_one_level = {
 			limit = { has_trait = uma_trait_yaruki_five }
 			remove_trait = uma_trait_yaruki_five
 #			remove_trait = uma_ruler_trait_yaruki_5
-			add_trait = {
-				trait = uma_trait_yaruki_four
-			}
+			add_trait = uma_trait_yaruki_four
 #			add_trait= uma_ruler_trait_yaruki_4
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_four }
 			remove_trait = uma_trait_yaruki_four
 #			remove_trait = uma_ruler_trait_yaruki_4
-			add_trait = {
-				trait = uma_trait_yaruki_three
-			}
+			add_trait = uma_trait_yaruki_three
 #			add_trait= uma_ruler_trait_yaruki_3
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_three }
 			remove_trait = uma_trait_yaruki_three
 #			remove_trait = uma_ruler_trait_yaruki_3
-			add_trait = {
-				trait = uma_trait_yaruki_two
-			}
+			add_trait = uma_trait_yaruki_two
 #			add_trait= uma_ruler_trait_yaruki_2
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_two }
 			remove_trait = uma_trait_yaruki_two
 #			remove_trait = uma_ruler_trait_yaruki_2
-			add_trait = {
-				trait = uma_trait_yaruki_one
-			}
+			add_trait = uma_trait_yaruki_one
 #			add_trait= uma_ruler_trait_yaruki_1
 		}
 	}
@@ -644,36 +568,28 @@ uma_upgrade_kanshi_two_level = {
 			limit = { has_trait = uma_trait_yaruki_four }
 			remove_trait = uma_trait_yaruki_four
 #			remove_trait = uma_ruler_trait_yaruki_4
-			add_trait = {
-				trait = uma_trait_yaruki_five
-			}
+			add_trait = uma_trait_yaruki_five
 #			add_trait= uma_ruler_trait_yaruki_5
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_three }
 			remove_trait = uma_trait_yaruki_three
 #			remove_trait = uma_ruler_trait_yaruki_3
-			add_trait = {
-				trait = uma_trait_yaruki_five
-			}
+			add_trait = uma_trait_yaruki_five
 #			add_trait= uma_ruler_trait_yaruki_5
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_two }
 			remove_trait = uma_trait_yaruki_two
 #			remove_trait = uma_ruler_trait_yaruki_2
-			add_trait = {
-				trait = uma_trait_yaruki_four
-			}
+			add_trait = uma_trait_yaruki_four
 #			add_trait= uma_ruler_trait_yaruki_4
 		}
 		if = {
 			limit = { has_trait = uma_trait_yaruki_one }
 			remove_trait = uma_trait_yaruki_one
 #			remove_trait = uma_ruler_trait_yaruki_1
-			add_trait = {
-				trait = uma_trait_yaruki_three
-			}
+			add_trait = uma_trait_yaruki_three
 #			add_trait= uma_ruler_trait_yaruki_3
 		}
 	}
@@ -762,21 +678,15 @@ uma_add_school_hat_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_ruler_trait_special_scholar
-		}
+		add_trait = uma_ruler_trait_special_scholar
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = {
-			trait = uma_governor_trait_special_scholar
-		}
+		add_trait = uma_governor_trait_special_scholar
 	}
 	if = {
 		limit = { leader_class = scientist }
-		add_trait = {
-			trait =uma_scientist_trait_special_scholar
-		}
+		add_trait = uma_scientist_trait_special_scholar
 	}
 }
 
@@ -785,27 +695,19 @@ uma_add_training_book_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_ruler_trait_training_book
-		}
+		add_trait = uma_ruler_trait_training_book
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = {
-			trait = uma_ruler_trait_training_book
-		}
+		add_trait = uma_governor_trait_training_book
 	}
 	if = {
 		limit = { leader_class = scientist }
-		add_trait = {
-			trait = uma_ruler_trait_training_book
-		}
+		add_trait = uma_scientist_trait_training_book
 	}
 	if = {
 		limit = { leader_class = commander }
-		add_trait = {
-			trait = uma_ruler_trait_training_book
-		}
+		add_trait = uma_admiral_trait_training_book
 	}
 #	if = {
 #		limit = { leader_class = general }
@@ -818,30 +720,19 @@ uma_add_tomorrow_star_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
-		}
+		add_trait = uma_ruler_trait_tomorrow_star
 	}
 	if = {
 		limit = { leader_class = official }
-
-		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
-		}
+		add_trait = uma_governor_trait_tomorrow_star
 	}
 	if = {
 		limit = { leader_class = scientist }
-
-		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
-		}
+		add_trait = uma_scientist_trait_tomorrow_star
 	}
 	if = {
 		limit = { leader_class = commander }
-
-		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
-		}
+		add_trait = uma_admiral_trait_tomorrow_star
 	}
 #	if = {
 #		limit = { leader_class = general }
@@ -854,15 +745,11 @@ uma_add_lovely_trait = {
 	optimize_memory
 	if = {
 		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_governor_trait_lovely
-		}
+		add_trait = uma_ruler_trait_lovely
 	}
 	if = {
 		limit = { leader_class = official }
-		add_trait = {
-			trait = uma_governor_trait_lovely
-		}
+		add_trait = uma_governor_trait_lovely
 	}
 }
 
@@ -964,10 +851,7 @@ uma_random_change_leader_yaruki_effect = {
 				}
 				3 = {
 					remove_trait = uma_trait_yaruki_five
-					add_trait = {
-						trait = uma_trait_yaruki_four
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_four
 				}
 			}
 		}
@@ -976,21 +860,14 @@ uma_random_change_leader_yaruki_effect = {
 			random_list = {
 				8 = {
 					remove_trait = uma_trait_yaruki_four
-
-					add_trait = {
-						trait = uma_trait_yaruki_five
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_five
 				}
 				16 = {
 
 				}
 				8 = {
 					remove_trait = uma_trait_yaruki_four
-					add_trait = {
-						trait = uma_trait_yaruki_three
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_three
 
 				}
 			}
@@ -1000,10 +877,7 @@ uma_random_change_leader_yaruki_effect = {
 			random_list = {
 				8 = {
 					remove_trait = uma_trait_yaruki_three
-					add_trait = {
-						trait = uma_trait_yaruki_four
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_four
 
 				}
 				16 = {
@@ -1011,11 +885,7 @@ uma_random_change_leader_yaruki_effect = {
 				}
 				8 = {
 					remove_trait = uma_trait_yaruki_three
-
-					add_trait = {
-						trait = uma_trait_yaruki_two
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_two
 
 				}
 			}
@@ -1025,20 +895,14 @@ uma_random_change_leader_yaruki_effect = {
 			random_list = {
 				8 = {
 					remove_trait = uma_trait_yaruki_two
-					add_trait = {
-						trait =uma_trait_yaruki_three
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_three
 				}
 				16 = {
 
 				}
 				8 = {
 					remove_trait = uma_trait_yaruki_two
-					add_trait = {
-						trait =uma_trait_yaruki_one
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_one
 
 				}
 			}
@@ -1051,10 +915,7 @@ uma_random_change_leader_yaruki_effect = {
 				}
 				5 = {
 					remove_trait = uma_trait_yaruki_one
-					add_trait = {
-						trait = uma_trait_yaruki_two
-						show_message = no
-					}
+					add_trait_no_notify = uma_trait_yaruki_two
 				}
 			}
 		}
@@ -1074,43 +935,23 @@ uma_initialize_leader_yaruki_effect = {
 		}
 		random_list = {
 			6 = {
-
-				add_trait = {
-					trait = uma_trait_yaruki_five
-					show_message = no
-				}
+				add_trait_no_notify = uma_trait_yaruki_five
 				#				add_trait= uma_ruler_trait_yaruki_5
 			}
 			10 = {
-
-				add_trait = {
-					trait = uma_trait_yaruki_four
-					show_message = no
-				}
+				add_trait_no_notify = uma_trait_yaruki_four
 				#				add_trait= uma_ruler_trait_yaruki_4
 			}
 			12 = {
-
-				add_trait = {
-					trait = uma_trait_yaruki_three
-					show_message = no
-				}
+				add_trait_no_notify = uma_trait_yaruki_three
 				#				add_trait= uma_ruler_trait_yaruki_3
 			}
 			4 = {
-
-				add_trait = {
-					trait = uma_trait_yaruki_two
-					show_message = no
-				}
+				add_trait_no_notify = uma_trait_yaruki_two
 				#				add_trait= uma_ruler_trait_yaruki_2
 			}
 			3 = {
-
-				add_trait = {
-					trait = uma_trait_yaruki_one
-					show_message = no
-				}
+				add_trait_no_notify = uma_trait_yaruki_one
 				#				add_trait= uma_ruler_trait_yaruki_1
 			}
 		}
@@ -1258,14 +1099,6 @@ uma_refresh_slot_1_goods_effect = {
 		limit = { has_country_flag = uma_slot_1_goods_16_refreshed }
 		remove_country_flag = uma_slot_1_goods_16_refreshed
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_1_goods_17_bought }
-		remove_country_flag = uma_slot_1_goods_17_bought
-	}
-	if = {
-		limit = { has_country_flag = uma_slot_1_goods_17_refreshed }
-		remove_country_flag = uma_slot_1_goods_17_refreshed
-	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_1_goods_1_refreshed #这种货物刷出来了
@@ -1377,13 +1210,6 @@ uma_refresh_slot_1_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_1_multiply
 				value = 50
-			}
-		}
-		1 = {
-			set_country_flag = uma_slot_1_goods_17_refreshed
-			set_variable = {
-				which = uma_price_of_goods_1_multiply
-				value = 70
 			}
 		}
 	}
@@ -1559,21 +1385,6 @@ uma_buy_slot_1_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_1_goods_17_refreshed }
-		remove_country_flag = uma_slot_1_goods_17_refreshed
-		set_country_flag = uma_slot_1_goods_17_bought
-		#change_variable = {
-		#	which = uma_num_of_good_16
-		#	value = 1
-		#}
-		custom_tooltip = uma_shop_use_dirc
-		hidden_effect = {
-			country_event = {
-				id = uma_bg.27
-			}
-		}
-	}
 }
 
 ###刷新槽位2货物的枚举
@@ -1708,14 +1519,6 @@ uma_refresh_slot_2_goods_effect = {
 		limit = { has_country_flag = uma_slot_2_goods_16_refreshed }
 		remove_country_flag = uma_slot_2_goods_16_refreshed
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_2_goods_17_bought }
-		remove_country_flag = uma_slot_2_goods_17_bought
-	}
-	if = {
-		limit = { has_country_flag = uma_slot_2_goods_17_refreshed }
-		remove_country_flag = uma_slot_2_goods_17_refreshed
-	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_2_goods_1_refreshed #这种货物刷出来了
@@ -1827,13 +1630,6 @@ uma_refresh_slot_2_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_2_multiply
 				value = 50
-			}
-		}
-		1 = {
-			set_country_flag = uma_slot_2_goods_17_refreshed
-			set_variable = {
-				which = uma_price_of_goods_2_multiply
-				value = 70
 			}
 		}
 	}
@@ -2009,21 +1805,6 @@ uma_buy_slot_2_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_2_goods_17_refreshed }
-		remove_country_flag = uma_slot_2_goods_17_refreshed
-		set_country_flag = uma_slot_2_goods_17_bought
-		#change_variable = {
-		#	which = uma_num_of_good_16
-		#	value = 1
-		#}
-		custom_tooltip = uma_shop_use_dirc
-		hidden_effect = {
-			country_event = {
-				id = uma_bg.27
-			}
-		}
-	}
 }
 
 ###刷新槽位3货物的枚举
@@ -2158,14 +1939,6 @@ uma_refresh_slot_3_goods_effect = {
 		limit = { has_country_flag = uma_slot_3_goods_16_refreshed }
 		remove_country_flag = uma_slot_3_goods_16_refreshed
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_3_goods_17_bought }
-		remove_country_flag = uma_slot_3_goods_17_bought
-	}
-	if = {
-		limit = { has_country_flag = uma_slot_3_goods_17_refreshed }
-		remove_country_flag = uma_slot_3_goods_17_refreshed
-	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_3_goods_1_refreshed #这种货物刷出来了
@@ -2277,13 +2050,6 @@ uma_refresh_slot_3_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_3_multiply
 				value = 50
-			}
-		}
-		1 = {
-			set_country_flag = uma_slot_3_goods_17_refreshed
-			set_variable = {
-				which = uma_price_of_goods_3_multiply
-				value = 70
 			}
 		}
 	}
@@ -2459,21 +2225,6 @@ uma_buy_slot_3_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_3_goods_17_refreshed }
-		remove_country_flag = uma_slot_3_goods_17_refreshed
-		set_country_flag = uma_slot_3_goods_17_bought
-		#change_variable = {
-		#	which = uma_num_of_good_16
-		#	value = 1
-		#}
-		custom_tooltip = uma_shop_use_dirc
-		hidden_effect = {
-			country_event = {
-				id = uma_bg.27
-			}
-		}
-	}
 }
 
 ###刷新槽位4货物的枚举
@@ -2608,14 +2359,6 @@ uma_refresh_slot_4_goods_effect = {
 		limit = { has_country_flag = uma_slot_4_goods_16_refreshed }
 		remove_country_flag = uma_slot_4_goods_16_refreshed
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_4_goods_17_bought }
-		remove_country_flag = uma_slot_4_goods_17_bought
-	}
-	if = {
-		limit = { has_country_flag = uma_slot_4_goods_17_refreshed }
-		remove_country_flag = uma_slot_4_goods_17_refreshed
-	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_4_goods_1_refreshed #这种货物刷出来了
@@ -2727,13 +2470,6 @@ uma_refresh_slot_4_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_4_multiply
 				value = 50
-			}
-		}
-		1 = {
-			set_country_flag = uma_slot_4_goods_17_refreshed
-			set_variable = {
-				which = uma_price_of_goods_4_multiply
-				value = 70
 			}
 		}
 	}
@@ -2909,21 +2645,6 @@ uma_buy_slot_4_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_4_goods_17_refreshed }
-		remove_country_flag = uma_slot_4_goods_17_refreshed
-		set_country_flag = uma_slot_4_goods_17_bought
-		#change_variable = {
-		#	which = uma_num_of_good_16
-		#	value = 1
-		#}
-		custom_tooltip = uma_shop_use_dirc
-		hidden_effect = {
-			country_event = {
-				id = uma_bg.27
-			}
-		}
-	}
 }
 
 ###刷新槽位5货物的枚举
@@ -3058,14 +2779,6 @@ uma_refresh_slot_5_goods_effect = {
 		limit = { has_country_flag = uma_slot_5_goods_16_refreshed }
 		remove_country_flag = uma_slot_5_goods_16_refreshed
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_5_goods_17_bought }
-		remove_country_flag = uma_slot_5_goods_17_bought
-	}
-	if = {
-		limit = { has_country_flag = uma_slot_5_goods_17_refreshed }
-		remove_country_flag = uma_slot_5_goods_17_refreshed
-	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_5_goods_1_refreshed #这种货物刷出来了
@@ -3177,13 +2890,6 @@ uma_refresh_slot_5_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_5_multiply
 				value = 50
-			}
-		}
-		1 = {
-			set_country_flag = uma_slot_5_goods_17_refreshed
-			set_variable = {
-				which = uma_price_of_goods_5_multiply
-				value = 70
 			}
 		}
 	}
@@ -3359,21 +3065,6 @@ uma_buy_slot_5_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_5_goods_17_refreshed }
-		remove_country_flag = uma_slot_5_goods_17_refreshed
-		set_country_flag = uma_slot_5_goods_17_bought
-		#change_variable = {
-		#	which = uma_num_of_good_16
-		#	value = 1
-		#}
-		custom_tooltip = uma_shop_use_dirc
-		hidden_effect = {
-			country_event = {
-				id = uma_bg.27
-			}
-		}
-	}
 }
 
 ###刷新槽位6货物的枚举
@@ -3508,14 +3199,6 @@ uma_refresh_slot_6_goods_effect = {
 		limit = { has_country_flag = uma_slot_6_goods_16_refreshed }
 		remove_country_flag = uma_slot_6_goods_16_refreshed
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_6_goods_17_bought }
-		remove_country_flag = uma_slot_6_goods_17_bought
-	}
-	if = {
-		limit = { has_country_flag = uma_slot_6_goods_17_refreshed }
-		remove_country_flag = uma_slot_6_goods_17_refreshed
-	}
 	random_list = {
 		1 = {
 			set_country_flag = uma_slot_6_goods_1_refreshed #这种货物刷出来了
@@ -3627,13 +3310,6 @@ uma_refresh_slot_6_goods_effect = {
 			set_variable = {
 				which = uma_price_of_goods_6_multiply
 				value = 50
-			}
-		}
-		1 = {
-			set_country_flag = uma_slot_6_goods_17_refreshed
-			set_variable = {
-				which = uma_price_of_goods_6_multiply
-				value = 70
 			}
 		}
 	}
@@ -3809,21 +3485,6 @@ uma_buy_slot_6_goods_effect = {
 			uma_upgrade_speed_goods_effect = yes
 		}
 	}
-	if = {
-		limit = { has_country_flag = uma_slot_6_goods_17_refreshed }
-		remove_country_flag = uma_slot_6_goods_17_refreshed
-		set_country_flag = uma_slot_6_goods_17_bought
-		#change_variable = {
-		#	which = uma_num_of_good_16
-		#	value = 1
-		#}
-		custom_tooltip = uma_shop_use_dirc
-		hidden_effect = {
-			country_event = {
-				id = uma_bg.27
-			}
-		}
-	}
 }
 
 
@@ -3954,14 +3615,14 @@ uma_random_specimen = {
 				factor = 0
 				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clock  } }
 			}
-			give_specimen = { key = uma_clock  origin = uma_specimen_null}
+			give_specimen = { key = uma_clock  }
 		}
 		1 = {
 			modifier = {
 				factor = 0
 				NOT = { can_artifact_analysis_give = { SPECIMEN = uma_clover } }
 			}
-			give_specimen = { key = uma_clover origin = uma_specimen_null}
+			give_specimen = { key = uma_clover}
 		}
 		1 = {
 			modifier = {
@@ -3970,17 +3631,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_coin origin = uma_specimen_null}
-		}
-
-		1 = {
-			modifier = {
-				factor = 0
-				NOR = {
-					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
-				}
-			}
-			give_specimen = { key = uma_live_video origin = uma_specimen_null}
+			give_specimen = { key = uma_coin}
 		}
 
 		1 = {
@@ -3990,7 +3641,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_shine_of_dream origin = uma_specimen_null}
+			give_specimen = { key = uma_live_video}
 		}
 
 		1 = {
@@ -4000,7 +3651,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_shoe_trophy origin = uma_specimen_null}
+			give_specimen = { key = uma_shine_of_dream}
 		}
 
 		1 = {
@@ -4010,7 +3661,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_strength_crystal origin = uma_specimen_null}
+			give_specimen = { key = uma_shoe_trophy}
 		}
 
 		1 = {
@@ -4020,7 +3671,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_tp origin = uma_specimen_null}
+			give_specimen = { key = uma_strength_crystal}
 		}
 
 		1 = {
@@ -4030,7 +3681,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_trophy_classic origin = uma_specimen_null}
+			give_specimen = { key = uma_tp}
 		}
 
 		1 = {
@@ -4040,7 +3691,7 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_twinkle_maz origin = uma_specimen_null}
+			give_specimen = { key = uma_trophy_classic}
 		}
 
 		1 = {
@@ -4050,7 +3701,17 @@ uma_random_specimen = {
 					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
 				}
 			}
-			give_specimen = { key = uma_trophy_classic origin = uma_specimen_null}
+			give_specimen = { key = uma_twinkle_maz}
+		}
+
+		1 = {
+			modifier = {
+				factor = 0
+				NOR = {
+					can_artifact_analysis_give = { SPECIMEN = fossilized_voidworm_tooth }
+				}
+			}
+			give_specimen = { key = uma_trophy_classic}
 		}
 	}
 
@@ -4072,26 +3733,4 @@ uma_tgrd_clear_TGAC_flag = {
 	remove_planet_flag = uma_TGAC_produce_darkm
 	remove_planet_flag = uma_TGAC_produce_nano
 	remove_planet_flag = uma_TGAC_produce_uma_crystal
-}
-
-
-uma_season_give_random_season = {
-	random_list = {
-		25 = {
-			add_deposit = d_uma_season_spring
-		}
-		25 = {
-			add_deposit = d_uma_season_summer
-		}
-		25 = {
-			add_deposit = d_uma_season_autumn
-		}
-		25 = {
-			add_deposit = d_uma_season_winter
-		}
-	}
-	last_added_deposit = {
-		set_deposit_flag = uma_keep_deposit_on_terraform
-		set_deposit_flag = keep_deposit_on_terraform
-	}
 }

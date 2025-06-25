@@ -25,7 +25,7 @@ d_uma_threegodness_relic = {
 			}
 		}
 		modifier = {
-			job_uma_threegodness_knowledge_scholar_add = 100
+			job_uma_threegodness_knowledge_scholar_add = 1
 		}
 	}
 
@@ -59,7 +59,7 @@ d_uma_threegodness_museum = {
 			}
 		}
 		modifier = {
-			job_uma_threegodness_knowledge_scholar_add = 150
+			job_uma_threegodness_knowledge_scholar_add = 2
 		}
 	}
 
@@ -87,7 +87,7 @@ d_uma_crystal_carrot_mine_planet = {
 			owner = { has_technology = tech_uma_crysal_carrot_mining }
 		}
 		modifier = {
-			job_uma_crystal_carrot_miner_add = 160
+			job_uma_crystal_carrot_miner_add = 2
 		}
 	}
 
@@ -142,7 +142,7 @@ d_phoenix_school_relic = {
 			planet_jobs_physics_research_produces_mult = 0.1
 			planet_jobs_engineering_research_produces_mult = 0.1
 			planet_jobs_society_research_produces_mult = 0.1
-			job_uma_threegodness_knowledge_scholar_add = 50
+			job_uma_threegodness_knowledge_scholar_add = 1
 		}
 	}
 
@@ -184,8 +184,9 @@ d_phoenix_school = {
 			planet_jobs_engineering_research_produces_mult = 0.2
 			planet_jobs_society_research_produces_mult = 0.2
 			planet_amenities_mult = 0.25
-			planet_housing_add = 1000
-			job_uma_threegodness_knowledge_scholar_add = 100
+			planet_housing_add = 100
+			planet_max_buildings_add = 8
+			job_uma_threegodness_knowledge_scholar_add = 2
 		}
 	}
 
@@ -210,10 +211,10 @@ d_phoenix_racing_course_relic = {
 			owner = { has_authority = auth_trainingcenter }
 		}
 		modifier = {
-			job_uma_racing_umamusume_add = 300
+			job_uma_racing_umamusume_add = 3
 			planet_uma_racing_umamusume_produces_mult = 0.1
-			job_uma_trainer_add = 100
-			job_uma_threegodness_knowledge_scholar_add = 50
+			job_uma_trainer_add = 1
+			job_uma_threegodness_knowledge_scholar_add = 1
 		}
 	}
 
@@ -254,7 +255,7 @@ d_phoenix_racing_course = {
 			job_uma_racing_umamusume_add = 15
 			planet_uma_racing_umamusume_produces_mult = 0.4
 			job_uma_trainer_add = 5
-			job_uma_threegodness_knowledge_scholar_add = 100
+			job_uma_threegodness_knowledge_scholar_add = 2
 			planet_amenities_mult = 0.25
 			planet_housing_add = 50
 		}
@@ -463,7 +464,7 @@ d_yinkate_place = {
 			owner = { has_authority = auth_trainingcenter }
 		}
 		modifier = {
-			planet_jobs_specialist_produces_mult = 0.2
+			planet_jobs_specialist_only_produces_mult = 0.2
 			planet_jobs_influence_produces_mult = 0.05
 		}
 	}
@@ -522,45 +523,3 @@ d_palai_plateau = {
 }
 
 
-
-
-#AD
-d_Ardan_crystal_core = {
-	is_for_colonizable = yes
-	icon = d_crystal_forest
-	category = deposit_cat_rare
-
-	potential = { always = no }
-
-	planet_modifier = {
-		planet_jobs_rare_crystals_produces_mult = 0.2
-		planet_pops_consumer_goods_upkeep_mult = -0.05
-	}
-
-}
-
-d_Ardan_crystal_Energy_Field = {
-	is_for_colonizable = yes
-	icon = d_uma_threegodness_relic_pic
-	category = deposit_cat_rare
-
-	potential = { always = no }
-
-	planet_modifier = {
-		planet_jobs_energy_produces_mult = 0.05
-		district_generator_max = 6
-	}
-}
-
-d_Ardan_crystal_Mine_Hole = {
-	is_for_colonizable = yes
-	icon = d_crystalline_caverns
-	category = deposit_cat_rare
-
-	potential = { always = no }
-
-	planet_modifier = {
-		planet_jobs_minerals_produces_mult = 0.05
-		district_mining_max = 6
-	}
-}

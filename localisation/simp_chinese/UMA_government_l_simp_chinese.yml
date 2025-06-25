@@ -21,7 +21,7 @@
  civic_umamayanotopgun:0 "重炮舰队学院"
  civic_umamayanotopgun_desc:0 "作为为数不多的拥有空军背景的马娘，重炮拥有许多舰队作战方面的独到见解。她的帮助，可以显著地提升我们的舰队的作战能力。"
  civic_umaagnesdigital:0 "马娘DD同好会"
- civic_umaagnesdigital_desc:0 "作为一位光荣的DD头子，数码对于所有的马娘们都有着无比热烈的感情。现在，她想通过筹建马娘同好会的形式，让更多的马娘们和她一样，认识到其她马娘身上的闪光点。\n\n wwww,这谁忍得住嘶"
+ civic_umaagnesdigital_desc:0 "作为一位光荣的DD头子，数码对于所有的马娘们都有着无比热烈的感情。现在，她想通过筹建马娘同好会的形式，让更多的马娘们和她一样，认识到其她马娘身上的闪光点。"
  civic_umabamboomemory:0 "青竹风纪委"
  civic_umabamboomemory_desc:0 "青竹回忆拥有着超乎常人的正义感，在她的感召下，一只以维护社会的积极风气为目标的风纪小队成立了。在她们的努力下，马娘们将过上安稳的生活。"
  civic_umafinemotion:0 "爱尔兰傻狍子外交部"
@@ -35,24 +35,6 @@ civic_tooltip_umaeishinflash_effects:0 "若我们选择了该国策，将允许�
  civic_umasatonodiamond_desc:0 "贵为里见财团的千金小姐，光钻将财团的分公司铺设到了每颗星球的每个角落。而这些管理有素且拥有强大竞争力的公司，正为我们的经济注入新的活力。"
  civic_umaairgroove:0 "气槽的政务辅助"
  civic_umaairgroove_desc:0 "不愧是马娘口中令人敬畏的“女帝”，气槽的政务处理能力在全国都是数一数二的（只要不对她说冷笑话的话）。通过邀请她加入我们的行政机构，我们处理国家内外各种繁杂事务的能力将得到成倍的提升。"
-
- civic_uma_vivlos_shopping: "强击的上~流购物观"
- civic_uma_vivlos_shopping_desc: "呼呼~超上流的说。该国的人民似乎更加喜欢消费，这大大提升了我们的群众消费力，促进经济的发展。"
-job_civilians_plural_with_icon: "£job_civilian£平民"
- civic_uma_ayb_star_watcher: "马娘观星者"
- civic_uma_ayb_star_watcher_desc: "作为一名特雷森学院的学生，爱慕织姬似乎对星星有着无限的追求以及拥有丰厚的知识。"
-
- civic_uma_cheval_civillian_workshop: "高尚骏逸的研究小作坊"
- civic_uma_cheval_civillian_workshop_desc: "虽然性格内向，但仍然向着自己心中的‘伟大’前进。虽然在特雷森的选拔中遗憾落败，但是她仍然坚持自己的梦想..."
-
- civic_uma_matikanetannhauser_radio: "待兼诗歌剧的小广播"
- civic_uma_matikanetannhauser_radio_desc: "可爱的声音？神奇的魔法！这个正点播放的访谈音乐节目似乎使马娘们工作的激情上升了？"
-
- civic_uma_luckey_geo_training: "小林历奇的风水课堂"
- civic_uma_luckey_geo_training_desc: "水火相克！通过简单的风水预测，便可知道太空风暴的信息。嗯...历奇似乎还说过风水还能把风暴叫出来什么的？"
-
- civic_uma_win_variation: "凯旋芭蕾的主角之心"
- civic_uma_win_variation_desc: "可恶！我不仅要证明谁是主角，还要把你搞得乱七八糟！ 可爱的外表下是不屈的内心，对命运的宣战。"
 
  auth_trainingcenter:0 "特雷森学院"
  auth_trainingcenter_desc:0 "为赛马娘们提供最顶级的环境，并为发展作出指引的学园。精英赛马娘们在学院代表大会上进行国事的商榷。"
@@ -86,7 +68,7 @@ job_civilians_plural_with_icon: "£job_civilian£平民"
  
  gov_uma_country_materialist:0 "特雷森科研学会"
  gov_uma_country_materialist_desc:0 "在追求知识与真理的道路上永不停蹄的赛马娘们主导的特雷森学会。"
-
+ 
 
 ###########################################################
 UMA_SPECIES_CAN_NOT_BE_HIVE_MIND:0 "马娘们作为独立而富有灵性的生灵，无法使用蜂巢类的政府结构。"
@@ -96,19 +78,3 @@ UMA_SPECIES_CAN_NOT_BE_CORPORATE:0 "马娘们热爱奔跑和自由的天性，�
 civic_uma_my_venus_park: "我推的卓芙"
 civic_uma_my_venus_park_desc: "卓芙酱真是太可爱了，我真的忍不住每天都看着她的脸！！"
 civic_uma_my_venus_park_effects: "国家领袖会变成卓芙，但后续无法获取事件链内的卓芙"
-
-
-
-civic_uma_win_variation_tt: "\n\n§Y在前10年内:\n在主动进攻其他国家时将获得以下增益§!\n-生物飞船每月生长: §G+90%§!\n-宣称影响力花费: §G-90%§!\n-军用飞船建造速度: §G-80%§!\n\n\n§R后续游戏过程中该理念仅能被移除§!"
-civic_uma_win_variation_tt_only_remove: "§R后续游戏过程中该理念仅能被移除§!"
- uma_variation_early_war_buff: "我才是主角嘶！"
-###
-uma_gov_ruler_title: "学生会长"
-uma_gov_ruler_title_pacifist: "会长"
-uma_gov_ruler_title_spiritualist: "枢机会长"
-
-
-mod_country_storms_uma_crystal_carrot_produces_add: "宇宙风暴产生的水晶胡萝卜"
-mod_science_ship_survey_speed: "科研船调查速度"
-mod_shipsize_science_anomaly_research_speed: "科研船异常研究速度"
-mod_shipsize_science_anomaly_generation_chance: "科研船异常发现概率"

@@ -224,12 +224,10 @@ country_event = {
 			limit = {
 				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
 			}
-			owner = {
-				uma_rs_difficult_set_up = { DIFFICULT_RATIO = 1 }
-				uma_rs_generate_random_number = yes
-				uma_rs_1dr = yes
-				uma_rs_judging = yes
-			}
+			uma_rs_difficult_set_up = { DIFFICULT_RATIO = 1 }
+			uma_rs_generate_random_number = yes
+			uma_rs_1dr = yes
+			uma_rs_judging = yes
 		}
 	}
 

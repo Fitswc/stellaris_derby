@@ -8,18 +8,7 @@
 building_uma_nice_nature_no_restaurant = {
 	base_buildtime = 300
 	category = unity
-#	base_cap_amount = 1
-	planet_limit = {
-		base = 1
-	}
-
-	building_sets = {
-		uma_urban
-		uma_racing
-		uma_research
-		urban
-		government
-	}
+	base_cap_amount = 1
 	
 	potential = {
 		exists = owner
@@ -72,7 +61,7 @@ building_uma_nice_nature_no_restaurant = {
 		modifier = {
 			pop_happiness = 0.2
 			country_consumer_goods_produces_mult = 0.33
-			planet_jobs_trade_produces_mult = 0.33
+			trade_value_mult = 0.33
 		}
 	}
 
@@ -89,72 +78,63 @@ building_uma_nice_nature_no_restaurant = {
 }
 
 #领域调幅器
-#building_uma_field_realm_enhence = {
-#	base_buildtime = 300
-#	category = resource
-#	base_cap_amount = 1
-#	can_be_ruined = no
-#	potential = {
-#		exists = owner
-#		owner = {
-#			OR = {
-#				has_tradition = uma_realm_field_large_job_to_use
-#				has_ascension_perk = ap_uma_mixture_ap_2
-#			}
-#			OR = {
-#				has_authority = auth_trainingcenter
-#				#is_uma_fallen_empire = yes
-#			}
-#		}
-#	}
-#
-#	destroy_trigger = {
-#		exists = owner
-#		OR = {
-#			owner = {
-#				NOR = {
-#					has_authority = auth_trainingcenter
-#					#is_uma_fallen_empire = yes
-#				}
-#			}
-#		}
-#	}
-#
-#	resources = {
-#		category = planet_buildings
-#		cost = {
-#			alloys = 3000
-#			uma_crystal_carrot = 500
-#		}
-#		upkeep = {
-#			uma_crystal_carrot = 16
-#			energy = 140
-#		}
-#	}
-#
-#	planet_modifier = {
-##		planet_jobs_produces_mult = 0.4
-#	}
-#
-#
-#}
+building_uma_field_realm_enhence = {
+	base_buildtime = 300
+	category = resource
+	base_cap_amount = 1
+	can_be_ruined = no
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_tradition = uma_realm_field_large_job_to_use
+				has_ascension_perk = ap_uma_mixture_ap_2
+			}
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 3000
+			uma_crystal_carrot = 500
+		}
+		upkeep = {
+			uma_crystal_carrot = 16
+			energy = 140
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.4
+	}
+
+
+}
 
 
 building_realm_planetary_shield_generator = {
 	base_buildtime = @b3_time
-#	base_cap_amount = 1
-	planet_limit = {
-		base = 1
-	}
+	base_cap_amount = 1
 	position_priority = 100
 	can_be_ruined = no
 	category = army
-
-	building_sets = {
-		government
-		fortress
-		uma_fortress
-	}
 
 	potential = {
 		exists = owner
@@ -199,7 +179,7 @@ building_realm_planetary_shield_generator = {
 	}
 
 	planet_modifier = {
-		planet_orbital_bombardment_damage = -0.85
+		planet_orbital_bombardment_damage = -0.9
 		army_defense_health_mult = 0.4
 	}
 

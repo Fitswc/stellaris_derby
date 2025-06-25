@@ -60,18 +60,6 @@
  uma_realm_full_body: "Whole body and soul"
  uma_realm_full_body_desc: "The realm is no longer owned by the "elite Umamusumes who can change the world". Now, every Umamusume has a domain, and we will make full use of this power in all walks of life. The universe is now in my heart"
   
- uma_factor_adopt_tt: "§HBefore finish Factor situation:§!\n$situation_speed_tt$: §G+20%§!\n\n§HAfter finish factor situation:§!\n "
- uma_tradition_factor_speed_tt: "§HBefore finish Factor situation:§!\n$situation_speed_tt$: §G+2%§! \n\n§HAfter finish factor situation:§!\n £mod_planet_pops_organics_upkeep_mult£$mod_planet_pops_organics_upkeep_mult$: §G-5%§!"
- uma_tradition_factor_wisdom_tt: "§HBefore finish Factor situation:§!\n$situation_speed_tt$: §G+2%§! \n\n§HAfter finish factor situation:§!\n£mod_pop_growth_speed£$mod_UMA_pop_growth_speed$: §G+5%§! §g(Used for offsetting corrections)§!"
- uma_tradition_factor_strength_tt: "§HBefore finish Factor situation:§!\n$situation_speed_tt$: §G+2%§!\n\n§HAfter finish factor situation:§!"
- uma_tradition_factor_willpower_tt: "§HBefore finish Factor situation:§!\n$situation_speed_tt$: §G+2%§! \n\n§HAfter finish factor situation:§!\n£mod_pop_growth_speed£$mod_UMA_pop_growth_speed$: §G+5%§! §g(Used for offsetting corrections)§!"
- uma_factor_star_picking_tt: "§HBefore finish Factor situation:§!\n$situation_speed_tt$: §G+2%§!\n\n§HAfter finish factor situation:§!\nNow, punishment will be abolished for Pop who transformed to Umamusume\n"
-  
-  
- uma_realm_adopt_tt: "§HBefore finish Realm situation:§!\n$situation_speed_tt$: §G+20%§!\n\n§HAfter finish Realm situation:§!\n "
- uma_realm_strength_tt: "§HBefore finish Realm situation:§!\n$situation_speed_tt$: §G+2%§!\n\n§HAfter finish Realm situation:§!\n"
- uma_realm_trigger_be_simple_tt: "§HBefore finish Realm situation:§!\n$situation_speed_tt$: §G+2%§!\n\n§HAfter finish Realm situation:§!\n"
- uma_realm_full_body_tt: "§HBefore finish Realm situation:§!\n$situation_speed_tt$: §G+2%§!\n\n§HAfter finish Realm situation:§!\n"
   
  ###################以上，为传统本地化 
   
@@ -79,20 +67,20 @@
  uma_tradition_FINAL: "Tradition: Agricultural inner cycle"
  uma_center_food_store_modifier: "Tradition: Central granary"
   
- uma_trad_pal_event.title: "我们的侧重"  <"Our focus">  #NT!
- uma_trad_pal_event.desc: "现在我们要确定宣传哪个领域的殿堂马，分为赛事，劳动，道德，艺术，科技，教育六大领域。现在我们只需要选择其中一个......"  <"Now we need to determine which field of publicity is divided into six major areas: events, labor, morality, art, science and technology, and education. Now we only need to choose one of them...">  #NT!
- uma_trad_pal_event.a: "赛事"  <"Events">  #NT!
- uma_trad_pal_event.b: "劳动"  <"labor">  #NT!
- uma_trad_pal_event.c: "道德"  <"Morality">  #NT!
- uma_trad_pal_event.d: "艺术"  <"Art">  #NT!
- uma_trad_pal_event.e: "科技"  <"science and technology">  #NT!
- uma_trad_pal_event.f: "教育"  <"educate">  #NT!
- uma_trad_pal_event.g: "放弃"  <"give up">  #NT!
- uma_labor: "殿堂: 劳动"  <"Hall: Labor">  #NT!
- uma_moral: "殿堂: 道德"  <"Palace: Moral">  #NT!
- uma_art: "殿堂: 艺术"  <"Hall: Art">  #NT!
- uma_tech: "殿堂: 科技"  <"Hall: Technology">  #NT!
- uma_edu: "殿堂: 教育"  <"Hall: Education">  #NT!
+ #uma_trad_pal_event.title: "Our Focus"
+ #uma_trad_pal_event.desc: "现在我们要确定宣传哪个领域的殿堂马，分为赛事，劳动，道德，艺术，科技，教育六大领域。现在我们只需要选择其中一个......"
+ #uma_trad_pal_event.a: "赛事"
+ #uma_trad_pal_event.b: "劳动"
+ #uma_trad_pal_event.c: "道德"
+ #uma_trad_pal_event.d: "艺术"
+ #uma_trad_pal_event.e: "科技"
+ #uma_trad_pal_event.f: "教育"
+ #uma_trad_pal_event.g: "放弃"
+ #uma_labor: "殿堂: 劳动"
+ #uma_moral: "殿堂: 道德"
+ #uma_art: "殿堂: 艺术"
+ #uma_tech: "殿堂: 科技"
+ #uma_edu: "殿堂: 教育"
   
  uma_nutritious_adopt: "Nutritious"
  uma_palace_adopt: "Palace"
@@ -106,7 +94,7 @@
   
  ## 
  #星球产业增幅器 
- uma_realm_field_large_job_to_use_tp: "['building:building_realm_planetary_shield_generator']"
+ uma_realm_field_large_job_to_use_tp: "Unlocked buildings: ['building:building_uma_field_realm_enhence'] 和 ['building:building_realm_planetary_shield_generator']"
  uma_realm_self_trigger_tp: "Unlocked buildings: ['building:building_uma_crystal_alloy_realm_complex']\n['building:building_uma_field_powering_complex_realm']\n['building:building_uma_modern_carrot_farm_realm']\n['building:building_uma_core_mining_complex_realm']\n['building:building_uma_crystal_carrot_producing_realm_complex']\n['building:building_uma_crystal_consumer_goods_realm_complex']"
   
   

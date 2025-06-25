@@ -1,6 +1,6 @@
 is_organic_species = {
 
-#	optimize_memory
+	optimize_memory
 	species = {
 		OR = {
 			is_archetype = BIOLOGICAL
@@ -236,34 +236,6 @@ uma_has_ap_two_factor = {
 	has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
 }
 
-
-
-uma_is_mild_planet = {
-	OR = {
-		is_planet_class = pc_continental
-		is_planet_class = pc_savannah
-		is_planet_class = pc_ocean
-		is_planet_class = pc_uma_school
-		is_planet_class = pc_uma_industrial
-	}
-}
-
-uma_is_hot_planet = {
-	OR = {
-		is_planet_class = pc_desert
-		is_planet_class = pc_arid
-		is_planet_class = pc_tropical
-	}
-}
-
-uma_is_cold_planet = {
-	OR = {
-		is_planet_class = pc_tundra
-		is_planet_class = pc_arctic
-		is_planet_class = pc_alpine
-	}
-}
-
 ###关于判定是否是马娘堕落帝国[scope:country]
 is_uma_fallen_empire = {
 	OR = {
@@ -454,30 +426,13 @@ uma_is_normal_habitat_planet = {
 
 
 uma_we_passed_ap1 = {
-	owner = {
-		has_ascension_perk = ap_uma_fly_me_to_the_star
-		has_ascension_perk = ap_uma_zenshizenren
-	}
+	has_ascension_perk = ap_uma_fly_me_to_the_star
+	has_ascension_perk = ap_uma_zenshizenren
 }
 
 uma_is_event_planet = {
 	has_planet_flag = uma_is_special_planet
 	has_planet_flag = tachyon_coffee_starbase
-}
-
-uma_is_event_system = {
-	has_star_flag = uma_bourbon_system
-	has_star_flag = uma_fallen_empire_system_initializer
-	has_star_flag = uma_fallen_empire_system_initializer_1
-	has_star_flag = uma_is_fallen_empire_school_star_1
-	has_star_flag = uma_fallen_empire_system_initializer_2
-	has_star_flag = uma_fallen_empire_system_initializer_3
-	has_star_flag = uma_fine_system
-	has_star_flag = uma_gold_invasion_system
-	has_star_flag = uma_grass_wonder_system
-	has_star_flag = uma_seiun_sky_system
-	has_star_flag = uma_shop_center_system
-	has_star_flag = uma_tachyon_coffee_system
 }
 
 can_artifact_analysis_give_uma_clock = {
@@ -486,226 +441,4 @@ can_artifact_analysis_give_uma_clock = {
 
 can_artifact_analysis_give_uma_clover = {
 
-}
-
-
-
-uma_check_factor_rate = {
-	check_variable = {
-		which = Root.uma_ap2_factor_$TYPE$_rate
-		value = $VAL$
-	}
-}
-
-uma_ap2_factor_0_fault = {
-	OR = {
-		OR = {
-			check_variable = {
-				which = uma_ap2_factor_charm_rate
-				value <= 5
-			}
-			check_variable = {
-				which = uma_ap2_factor_power_rate
-				value <= 5
-			}
-			check_variable = {
-				which = uma_ap2_factor_wisdom_rate
-				value <= 5
-			}
-			check_variable = {
-				which = uma_ap2_factor_speed_rate
-				value <= 5
-			}
-			check_variable = {
-				which = uma_ap2_factor_stamina_rate
-				value <= 5
-			}
-		}
-		check_variable = {
-			which = uma_ap2_factor_summation
-			value <= 8
-		}
-	}
-}
-
-uma_check_realm_factor_rate_wisdom_1 = {
-	optimize_memory
-	has_country_flag = uma_kenshi_intelligence_level_1
-	has_country_flag = uma_kenshi_intelligence_level_2
-}
-
-uma_check_realm_factor_rate_wisdom_2 = {
-	optimize_memory
-	has_country_flag = uma_kenshi_intelligence_level_3
-	has_country_flag = uma_kenshi_intelligence_level_4
-	has_country_flag = uma_kenshi_intelligence_level_5
-}
-
-uma_check_realm_factor_rate_stamina_1 = {
-	has_country_flag = uma_kenshi_will_level_1
-	has_country_flag = uma_kenshi_will_level_2
-	has_country_flag = uma_kenshi_will_level_3
-	has_country_flag = uma_kenshi_will_level_4
-	has_country_flag = uma_kenshi_will_level_5
-}
-
-uma_check_realm_factor_rate_power_1 = {
-	optimize_memory
-	has_country_flag = uma_kenshi_strength_level_1
-	has_country_flag = uma_kenshi_strength_level_2
-}
-
-uma_check_realm_factor_rate_power_2 = {
-	optimize_memory
-	has_country_flag = uma_kenshi_strength_level_3
-	has_country_flag = uma_kenshi_strength_level_4
-	has_country_flag = uma_kenshi_strength_level_5
-}
-
-
-uma_check_factory_alloy_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = minerals
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_custom_goods_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = food
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_volatile_motes_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = minerals
-			amount <= 400
-		}
-		has_resource = {
-			type = energy
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_gas_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = minerals
-			amount <= 400
-		}
-		has_resource = {
-			type = energy
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_rare_crystal_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = minerals
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_living_materal_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = minerals
-			amount <= 400
-		}
-		has_resource = {
-			type = energy
-			amount <= 400
-		}
-	}
-}
-
-
-uma_check_factory_dark_matter_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = energy
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_nanites_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = uma_crystal_carrot
-			amount <= 400
-		}
-		has_resource = {
-			type = rare_crystals
-			amount <= 400
-		}
-		has_resource = {
-			type = energy
-			amount <= 400
-		}
-		has_resource = {
-			type = alloys
-			amount <= 400
-		}
-	}
-}
-
-uma_check_factory_uma_crystal_disable = {
-	optimize_memory
-	OR = {
-		has_resource = {
-			type = minerals
-			amount <= 400
-		}
-		has_resource = {
-			type = energy
-			amount <= 400
-		}
-	}
 }

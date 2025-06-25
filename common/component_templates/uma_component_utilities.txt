@@ -1234,81 +1234,81 @@ utility_component_template = { #晶体反应堆-MK2
 }
 
 
-#utility_component_template = { #晶体反应堆-MK2
-#	key = "UMA_TG_REACTION_STARBASE_2"
-#	size = large
-#	icon = "GFX_ship_part_uma_tg_reaction"
-#	icon_frame = 1
-#	power = 1678
-#	resources = {
-#		category = ship_components
-#		cost = {
-#			alloys = 65
-#			uma_crystal_carrot = 3
-#			sr_dark_matter = 0.2
-#		}
-#		upkeep = {
-#			energy = 0.58
-#			alloys = 0.058
-#		}
-#	}
-#
-##	size_restriction = {frigate corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
-#
-#	class_restriction = { shipclass_military_station }
-#	size_restriction = {
-#		military_station_small
-#		military_station_medium
-#		military_station_large
-#		ion_cannon
-#	}
-#
-#	prerequisites = { tech_uma_tg_reaction }
-#	component_set = "power_core"
-#
-#	ai_weight = {
-#		factor = 0
-#	}
-#}
-#
+utility_component_template = { #晶体反应堆-MK2
+	key = "UMA_TG_REACTION_STARBASE"
+	size = large
+	icon = "GFX_ship_part_uma_tg_reaction"
+	icon_frame = 1
+	power = 1678
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 65
+			uma_crystal_carrot = 3
+			sr_dark_matter = 0.2
+		}
+		upkeep = {
+			energy = 0.58
+			alloys = 0.058
+		}
+	}
+
+#	size_restriction = {frigate corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+		ion_cannon
+	}
+
+	prerequisites = { tech_uma_tg_reaction }
+	component_set = "power_core"
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
 
 ### Gen 2
 
 
-#utility_component_template = { #晶体反应堆
-#	key = "UMA_TG_REACTION_2_STARBASE_2"
-#	size = large
-#	icon = "GFX_ship_part_uma_tg_reaction_2"
-#	icon_frame = 1
-#	power = 1677
-#	resources = {
-#		category = ship_components
-#		cost = {
-#			alloys = 200
-#			uma_crystal_carrot = 10
-#		}
-#		upkeep = {
-#			energy = 2.65
-#			alloys = 0.465
-#		}
-#	}
-#
-#	class_restriction = { shipclass_military_station }
-#	size_restriction = {
-#		military_station_small
-#		military_station_medium
-#		military_station_large
-#		ion_cannon
-#	}
-#
-#	prerequisites = { tech_uma_tg_reaction_2 }
-#	component_set = "power_core"
-#
-#	ai_weight = {
-#		factor = 0
-#	}
-#}
-#
+utility_component_template = { #晶体反应堆
+	key = "UMA_TG_REACTION_2_STARBASE"
+	size = large
+	icon = "GFX_ship_part_uma_tg_reaction_2"
+	icon_frame = 1
+	power = 1677
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 200
+			uma_crystal_carrot = 10
+		}
+		upkeep = {
+			energy = 2.65
+			alloys = 0.465
+		}
+	}
+
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+		ion_cannon
+	}
+
+	prerequisites = { tech_uma_tg_reaction_2 }
+	component_set = "power_core"
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
 
 
 utility_component_template = { #晶体反应堆-MK2
@@ -1691,42 +1691,42 @@ utility_component_template = { #晶体反应堆-MK2
 }
 
 
-#utility_component_template = { #晶体反应堆-MK2
-#	key = "UMA_TG_REACTION_3_STARBASE"
-#	size = large
-#	icon = "GFX_ship_part_uma_tg_reaction_3"
-#	icon_frame = 1
-#	power = 2478
-#	resources = {
-#		category = ship_components
-#		cost = {
-#			alloys = 65
-#			uma_crystal_carrot = 3
-#			sr_dark_matter = 0.2
-#		}
-#		upkeep = {
-#			energy = 0.58
-#			alloys = 0.058
-#		}
-#	}
-#
-##	size_restriction = {frigate corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
-#
-#	class_restriction = { shipclass_military_station }
-#	size_restriction = {
-#		military_station_small
-#		military_station_medium
-#		military_station_large
-#		ion_cannon
-#	}
-#
-#	prerequisites = { tech_uma_tg_reaction_3 }
-#	component_set = "power_core"
-#
-#	ai_weight = {
-#		factor = 0
-#	}
-#}
+utility_component_template = { #晶体反应堆-MK2
+	key = "UMA_TG_REACTION_3_STARBASE"
+	size = large
+	icon = "GFX_ship_part_uma_tg_reaction_3"
+	icon_frame = 1
+	power = 2478
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 65
+			uma_crystal_carrot = 3
+			sr_dark_matter = 0.2
+		}
+		upkeep = {
+			energy = 0.58
+			alloys = 0.058
+		}
+	}
+
+#	size_restriction = {frigate corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+		ion_cannon
+	}
+
+	prerequisites = { tech_uma_tg_reaction_3 }
+	component_set = "power_core"
+
+	ai_weight = {
+		factor = 0
+	}
+}
 
 
 ###TG TITAN ARNOR

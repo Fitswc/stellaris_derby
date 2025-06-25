@@ -20,7 +20,7 @@ uma_skill_yiwenzi = {
 uma_fallen_empire_enhancement_modifier = {
 	country_base_influence_produces_add = 3
 	all_technology_research_speed = 2
-	bonus_pop_growth_mult = -0.5
+	pop_growth_speed = -0.5
 	planet_pops_upkeep_mult = -0.5
 	ship_weapon_range_mult = 0.5
 	ship_fire_rate_mult = 1
@@ -80,7 +80,7 @@ uma_fallen_empire_knowledge_seiunsky = {
 #小栗的移动餐厅
 uma_fallen_empire_knowledge_oguricap = {
 	pop_happiness = 0.05
-	bonus_pop_growth_mult = 0.05
+	pop_growth_speed = 0.05
 }
 
 #数码的社会考察

@@ -1,5 +1,5 @@
 uma_create_leader_deep = {
-	optimize_memory
+
 	create_leader = {
 		name = DEEP
 		species = root
@@ -35,7 +35,6 @@ uma_create_leader_deep = {
 
 
 uma_create_leader_oc = {
-	optimize_memory
 	create_leader = {
 		name = OC #"小栗帽"
 		species = root
@@ -69,7 +68,6 @@ uma_create_leader_oc = {
 }
 
 uma_create_leader_did = {
-	optimize_memory
 	create_leader = {
 		name = DID
 		species = root
@@ -105,7 +103,6 @@ uma_create_leader_did = {
 }
 
 uma_create_leader_ty = {
-	optimize_memory
 	create_leader = {
 		name = AGT #"爱丽速子"
 		species = root
@@ -140,7 +137,6 @@ uma_create_leader_ty = {
 
 
 uma_create_leader_sky_admiral = {
-	optimize_memory
 	create_leader = {
 		name = SKY
 		species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
@@ -154,7 +150,7 @@ uma_create_leader_sky_admiral = {
 		background_planet = event_target:uma_seiun_sky_planet
 		background_job = primitive_farmer
 		traits = {
-			0 = uma_commander_trait_sp_seiun_sky_1
+			0 = uma_admiral_trait_sp_seiun_sky_1
 			1 = leader_trait_linghuowubu_admiral
 			2 = subclass_zhengfuzhe_general
 			3 = leader_trait_baofa_admiral
@@ -175,7 +171,6 @@ uma_create_leader_sky_admiral = {
 
 
 uma_create_leader_sky_governor = {
-	optimize_memory
 	create_leader = {
 		name = SKY
 		#species = event_target:uma_leader_seiun_sky
@@ -211,7 +206,6 @@ uma_create_leader_sky_governor = {
 
 
 uma_create_leader_teio_governor = {
-	optimize_memory
 	create_leader = {
 		name = TET
 		species = root
@@ -249,7 +243,6 @@ uma_create_leader_teio_governor = {
 
 
 uma_create_leader_teio_admiral = {
-	optimize_memory
 	create_leader = {
 		name = TET
 		species = root
@@ -286,7 +279,6 @@ uma_create_leader_teio_admiral = {
 }
 
 uma_create_leader_teio_scientist = {
-	optimize_memory
 	create_leader = {
 		name = TET
 		species = root
@@ -323,7 +315,6 @@ uma_create_leader_teio_scientist = {
 }
 
 uma_create_leader_zf = {
-	optimize_memory
 	create_leader = {
 		name = ZF
 		species = root
@@ -361,7 +352,6 @@ uma_create_leader_zf = {
 
 
 uma_create_leader_cheval = {
-	optimize_memory
 	create_leader = {
 		name = CHEVAL
 		species = root
@@ -394,7 +384,6 @@ uma_create_leader_cheval = {
 
 
 uma_create_leader_sweepy = {
-	optimize_memory
 	create_leader = {
 		name = SWEEPY
 		species = root
@@ -422,102 +411,6 @@ uma_create_leader_sweepy = {
 			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_sweepy_tonson
 			change_leader_portrait = 56c
-		}
-	}
-}
-
-
-uma_create_leader_ardan = {
-	optimize_memory
-	create_leader = {
-		name = ARDAN
-		species = root
-		event_leader = no
-		gender = female
-		immortal = yes
-		class = scientist
-		background_planet = event_target:uma_player_umamusume_planet
-		background_job = uma_researcher
-		custom_catch_phrase = uma_ardan_catch_phrase
-		custom_description = uma_ardan_backstory
-
-		skip_background_generation = yes
-		skill = 2
-		set_age = 15
-		traits = {
-			0 = leader_trait_uma_generic
-			1 = uma_scientist_trait_sp_Ardan_cap
-		}
-		effect = {
-			set_leader_flag = uma_is_special_leader
-			set_leader_flag = uma_is_mejro_ardan
-			save_global_event_target_as = uma_is_leader_mejro_ardan
-			set_leader_flag = legendary_leader
-			change_leader_portrait = 49c
-		}
-	}
-}
-
-
-uma_create_leader_curren = {
-	optimize_memory
-	create_leader = {
-		name = CURREN
-		species = root
-		event_leader = no
-		gender = female
-		immortal = yes
-		class = official
-		background_planet = event_target:uma_player_umamusume_planet
-		background_job = uma_unknown
-		custom_catch_phrase = uma_curren_catch_phrase
-		custom_description = uma_curren_backstory
-
-		skip_background_generation = yes
-		skill = 4
-		set_age = 15
-		traits = {
-			0 = leader_trait_uma_generic
-		}
-		effect = {
-			set_leader_flag = uma_is_special_leader
-			set_leader_flag = uma_is_curren_chan
-			set_leader_flag = legendary_leader
-			save_global_event_target_as = uma_is_leader_curren_chan
-			change_leader_portrait = 34c
-		}
-	}
-}
-
-uma_create_leader_zephyr = {
-	optimize_memory
-	create_leader = {
-		name = ZEPHYR
-		species = root
-		event_leader = no
-		gender = female
-		immortal = yes
-		class = official
-		background_planet = event_target:uma_player_umamusume_planet
-		background_job = uma_researcher
-		custom_catch_phrase = uma_zephyr_catch_phrase
-		custom_description = uma_zephyr_backstory
-
-		skip_background_generation = yes
-		skill = 5
-		set_age = 15
-		traits = {
-			0 = uma_official_trait_sp_zephyr
-			1 = uma_governor_trait_charmleader
-			2 = leader_trait_cloud_generic
-			3 = leader_trait_uma_generic
-		}
-		effect = {
-			set_leader_flag = uma_is_special_leader
-			set_leader_flag = uma_is_zephyr
-			set_leader_flag = legendary_leader
-			save_global_event_target_as = uma_is_leader_zephyr
-			change_leader_portrait = 84c
 		}
 	}
 }

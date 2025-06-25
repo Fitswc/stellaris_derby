@@ -5,17 +5,6 @@
 building_uma_commercial_zone = {
 	base_buildtime = 200
 	category = trade
-#	base_cap_amount = 1 #Restrict of trade pw
-	planet_limit = {
-		base = 1
-	}
-
-	building_sets = {
-		trade
-		uma_trade
-		urban
-		uma_urban
-	}
 
 	potential = {
 		exists = owner
@@ -54,8 +43,8 @@ building_uma_commercial_zone = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 100
-		job_uma_trader_add = 100
+		job_clerk_add = 2
+		job_uma_trader_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -66,8 +55,8 @@ building_uma_commercial_zone = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
-			job_uma_trader_add = 100
+			job_clerk_add = 2
+			job_uma_trader_add = 1
 		}
 	}
 
@@ -79,8 +68,8 @@ building_uma_commercial_zone = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
-			job_uma_trader_add = 100
+			job_clerk_add = 2
+			job_uma_trader_add = 1
 		}
 	}
 
@@ -89,8 +78,8 @@ building_uma_commercial_zone = {
 			has_building = building_capital
 		}
 		modifier = {
-			job_clerk_add = 100
-			job_uma_trader_add = 100
+			job_clerk_add = 2
+			job_uma_trader_add = 1
 		}
 	}
 
@@ -99,8 +88,8 @@ building_uma_commercial_zone = {
 			has_building = building_major_capital
 		}
 		modifier = {
-			job_clerk_add = 200
-			job_uma_trader_add = 200
+			job_clerk_add = 4
+			job_uma_trader_add = 2
 		}
 	}
 
@@ -109,8 +98,8 @@ building_uma_commercial_zone = {
 			has_building = building_system_capital
 		}
 		modifier = {
-			job_clerk_add = 300
-			job_uma_trader_add = 300
+			job_clerk_add = 6
+			job_uma_trader_add = 3
 		}
 	}
 

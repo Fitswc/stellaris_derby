@@ -7,8 +7,6 @@ ap_uma_zenshizenren_desc:0 "£uma_sd£§Y赛马娘:星海德比§!\n以往，每
 uma_will_enable_zenshizenren_ap:0 "我们将开启一个§Y特殊项目§!，以帮助§Y所有§!马娘开启§Y领域§!"
 uma_requires_technology_uma_terriroty_in_use:0 "$TRIGGER_FAIL$需要科技§Y领域启发与应用§!"
 uma_must_be_toresen_auth:0 "$TRIGGER_FAIL$必须要是§Y特雷森学院§!政体"
-origin_uma_after_factor_perk_already: "我们已知晓因子的秘密并用于强化自身"
-
 ###摘星
 ap_uma_fly_me_to_the_star:0 "摘星"
 ap_uma_fly_me_to_the_star_desc:0 "£uma_sd£§Y赛马娘:星海德比§!\n曾经，因子如同夜空中的繁星，亲切却又遥远，不可触及，她指引着每只马娘的前路，却又腼腆地拒绝接触。一代又一代科学家的努力共同搭起一道星梯，以后当孩子们想要摘下天上的星星，母亲就可以温柔地指指女儿的胸膛，“星星已经在这里了哦？”"
@@ -34,29 +32,50 @@ uma_requires_first_ascension_perks_both: "$TRIGGER_FAIL$需要['ascension_perk:a
 ap_uma_mixture_ap_2: "曲径通幽"
 #ap_uma_mixture_ap_2_desc: "£uma_sd£§Y赛马娘:星海德比§!\n我们贯彻中庸的路线，二者择其优而舍其劣，兼收并蓄，可以避免我们陷入被动的境地。\n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']不能同时选择§!"
 ap_uma_mixture_ap_2_desc: "£uma_sd£§Y赛马娘:星海德比§!\n因子与领域就如同两座横亘在面前的高山，无数马娘曾试图攀登，但或许，山间那条小道才是通往彼方的道路，当我们小心翼翼地从两座山之间穿过，豁然开朗的正是那桃源，说不定？\n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']不能同时选择§!"
-#ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']"
-
-ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_realm_planetary_shield_generator']"
+ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']"
 
 ap_uma_fly_me_to_the_star_ap_two_tt: "\n§Y解锁传统树:§!['tradition_category:tradition_uma_tradition_factor']"
 ap_uma_zenshizenren_ap_two_tt: "\n§Y解锁传统树:§!['tradition_category:tradition_uma_tradition_realm']"
-ap_uma_fly_me_to_the_star_ap_two_tt_will_event: "将开启一个局势，以帮助马娘们替换和升级自己的固有因子"
+
 mod_shipclass_military_damage_mult: "£shipclass_military£军用舰船伤害:"
 
-aap_uma_zenshizenren_ap_2_tt_will_event: "将开启一个局势，以帮助马娘们激发和提升自己的领域"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 ##AP2
+
+
 uma_ap.40.title: "铸星计划启动"
 uma_ap.40.desc: "经过漫长的研究和验证，我们现在终于有条件和能力将我们身体中的每一个因子进行替换，产生更加强健的后代。尽管我们从其他马娘嘴中听说过有关其他旧文明因为因子而毁灭这件事，但我们相信我们可以掌控得好\n现在我们将开始逐步更新国民体中的因子。"
 uma_ap.40.a: "让我们见证这份力量吧"
 
-uma_ap.140.title: "心象飞升"
-uma_ap.140.desc: "在完成全身全灵计划后，我们推开了这扇三女神给我们留下的大门。现在我们紧握另一扇大门的钥匙，只要我们打开了这一扇大门，我们就得以为马娘们激发新的领域。\n不管领域对我们的旧文明产生了什么后果，我们相信我们的保守可以掌控这项技术"
-uma_ap.140.a: "让我们见证这份力量吧"
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -65,421 +84,7 @@ uma_ap_2_situation_system_50: "因子更新-阶段Ⅰ"
 uma_ap_2_situation_system_75: "因子更新-阶段Ⅱ"
 uma_ap_2_situation_system_100: "因子迭代完成"
 uma_ap_2_situation_factor_break_tt: "为了防止出现严重的问题，我们最好现在停手\n仅有在因子更新开始后才能中断。"
-uma_ap_2_situation_factor_default: "小心谨慎"
+uma_ap_2_situation_factor_default: "流水线"
 uma_ap_2_situation_factor_careful: "小心谨慎"
 uma_ap_2_situation_factor_danage: "快速推进"
 uma_ap_2_situation_factor_break: "到此为止"
-uma_ap_2_situation_factor_tradition: "传统"
-uma_ap_2_situation_factor_crisis: "因子病"
-
-situation_uma_ap_2_situation_system_factor: "因子迭代"
-situation_uma_ap_2_situation_system_factor_type: "飞升局势"
-situation_uma_ap_2_situation_system_factor_desc: "为了未来更好的发展，我们决定对马娘们的因子进行更新迭代。"
-uma_ap_2_situation_factor_default_tt: "局势速度：§Y无影响§!"
-uma_ap_2_situation_factor_danage_tt: "局势速度：§Y+30%§!"
-
-uma_ap.41.title: "因子迭代计划开始"
-uma_ap.41.desc: ""
-uma_ap.41.a: "让我们开始吧"
-uma_ap.42.title: "更进一步"
-uma_ap.42.desc: ""
-uma_ap.42.a: "步步为营"
-
-
-
-UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY: "."
-UMA_AP2_MODIFIER_FACTOR_POWER_EXIST: "$mod_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_FACTOR_POWER_NUM]\n $mod_army_damage_mult$: [UMA_AP2_MODIFIER_FACTOR_POWER_NUM]\n$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_FACTOR_POWER_NUM]"
-UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST: "$mod_uma_empire_size_pops_mult$: [UMA_AP2_MODIFIER_FACTOR_SPEED_NUM]\n $mod_uma_ship_base_speed_mult$: [UMA_AP2_MODIFIER_FACTOR_SPEED_NUM]\n$mod_uma_ship_fire_rate_mult$: [UMA_AP2_MODIFIER_FACTOR_SPEED_NUM]"
-UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST: "$mod_uma_ship_hull_mult$: [UMA_AP2_MODIFIER_FACTOR_STAMINA_NUM]\n $mod_uma_army_health$: [UMA_AP2_MODIFIER_FACTOR_STAMINA_NUM]\n $mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_STAMINA_NUM]"
-UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST: "$mod_uma_ship_experience_gain_mult$: [UMA_AP2_MODIFIER_FACTOR_WISDOM_NUM]\n$mod_uma_command_limit_mult$: [UMA_AP2_MODIFIER_FACTOR_WISDOM_NUM]\n$mod_all_uma_technology_research_speed$: [UMA_AP2_MODIFIER_FACTOR_WISDOM_NUM]"
-UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST: "$mod_uma_planet_amenities_mult$: [UMA_AP2_MODIFIER_FACTOR_CHARM_NUM]\n$mod_uma_megastructure_milt$: [UMA_AP2_MODIFIER_FACTOR_CHARM_NUM]\n$mod_uma_country_cost_mult$: [UMA_AP2_MODIFIER_FACTOR_CHARM_NUM]"
-
-UMA_AP2_MODIFIER_FACTOR_POWER_EMPTY_NM: "."
-UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM: "$mod_planet_jobs_produces_mult$\n $mod_army_damage_mult$\n$mod_uma_ship_weapon_damage$"
-UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM: "$mod_uma_empire_size_pops_mult$\n $mod_uma_ship_base_speed_mult$\n$mod_uma_ship_fire_rate_mult$"
-UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM: "$mod_uma_ship_hull_mult$\n $mod_uma_army_health$\n $mod_uma_command_limit_mult$"
-UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST_NM: "$mod_uma_ship_experience_gain_mult$\n$mod_uma_command_limit_mult$\n$mod_all_uma_technology_research_speed$"
-UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM: "$mod_uma_planet_amenities_mult$\n$mod_uma_megastructure_milt$\n$mod_uma_country_cost_mult$"
-
-
-
-situation_uma_ap_2_situation_system_factor_fin_tt: "这个种族：\n[UMA_AP2_MODIFIER_FACTOR_SPEED][UMA_AP2_MODIFIER_FACTOR_POWER][UMA_AP2_MODIFIER_FACTOR_STAMINA][UMA_AP2_MODIFIER_FACTOR_WISDOM][UMA_AP2_MODIFIER_FACTOR_CHARM] \n \n§Y同时§!，这个种族：\n£mod_bonus_pop_growth£人口增长速度: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
-mod_army_damage_mult: "£mod_army_damage_mult£军队伤害"
-mod_uma_empire_size_pops_mult: "£mod_empire_size_pops_mult£人口产生的帝国规模"
-mod_uma_ship_base_speed_mult: "£mod_ship_base_speed_mult£基础舰船速度"
-mod_uma_ship_weapon_damage: "£mod_ship_weapon_damage£舰船伤害"
-mod_uma_ship_fire_rate_mult: "£mod_ship_fire_rate_mult£舰船武器射速"
-mod_pop_environment_tolerance: "£mod_pop_environment_tolerance£宜居度"
-mod_uma_ship_hull_mult: "£mod_ship_hull_mult£船体值"
-mod_uma_army_health: "£mod_army_health£军队生命值"
-mod_uma_command_limit_mult: "£mod_command_limit_mult£舰队指挥上限"
-mod_uma_ship_experience_gain_mult: "£mod_ship_experience_gain_mult£舰船经验获得"
-mod_all_uma_technology_research_speed: "£mod_country_all_tech_research_speed£研究速度"
-mod_uma_planet_amenities_mult: "£mod_planet_amenities_mult£舒适度"
-mod_uma_army_morale: "£mod_army_morale£陆军士气"
-mod_uma_country_cost_mult: "建筑与区划花费"
-mod_uma_megastructure_milt: "巨构花费"
-
-
-
-
-UMA_AP2_MODIFIER_FACTOR_NUM9: "§G+50%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM8: "§G+40%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM7: "§G+35%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM6: "§G+30%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM5: "§G+25%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM4: "§G+20%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM3: "§G+15%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM2: "§G+10%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM1: "§G+5%§!"
-
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM9: "§R-45%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM8: "§R-35%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM7: "§R-30%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM6: "§R-25%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM5: "§R-20%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM4: "§R-15%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM3: "§R-10%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM2: "§R-5%§!"
-UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE_NUM1: "§R-2%§!"
-
-uma_ap_system_factor_speed_num: "[owner.uma_ap2_factor_speed_rate] "
-uma_ap_system_factor_power_num: "[owner.uma_ap2_factor_power_rate] "
-uma_ap_system_factor_stamina_num: "[owner.uma_ap2_factor_stamina_rate] "
-uma_ap_system_factor_charm_num: "[owner.uma_ap2_factor_charm_rate] "
-uma_ap_system_factor_wisdom_num: "[owner.uma_ap2_factor_wisdom_rate] "
-uma_ap_system_factor_depth_num: "£mod_bonus_pop_growth£人口增长速度:[UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
-
-
-uma_ap_system_factor_speed_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST$"
-uma_ap_system_factor_power_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_POWER_EXIST$"
-uma_ap_system_factor_stamina_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST$"
-uma_ap_system_factor_charm_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST$"
-uma_ap_system_factor_wisdom_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST$"
-
-uma_ap_system_factor_speed_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST_NM$"
-uma_ap_system_factor_power_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_POWER_EXIST_NM$"
-uma_ap_system_factor_stamina_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_STAMINA_EXIST_NM$"
-uma_ap_system_factor_charm_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_CHARM_EXIST_NM$"
-uma_ap_system_factor_wisdom_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_FACTOR_WISDOM_EXIST_NM$"
-
-uma_ap_system_factor_depth_t: "当前结果将会导致: "
-uma_ap_system_factor_wisdom_t: "智力因子"
-uma_ap_system_factor_charm_t: "魅力因子"
-uma_ap_system_factor_stamina_t: "耐力因子"
-uma_ap_system_factor_power_t: "力量因子"
-uma_ap_system_factor_speed_t: "速度因子"
-
-uma_ap_system_factor_origins_depth_t: "剩余点数: "
-uma_ap_system_factor_origins_depth_num: "[owner.uma_ap2_factor_depth_rate] "
-
-
-uma_apsystem_done_tt: "点击这里将会保存更改，且此界面只会出现一次\n [uma_apsystem_done_tt_df] "
-uma_apsystem_done_tt_3o: "现在所有选项处于未选中状态(所有选项为0)，这样做会导致一个不能给你带来任何增益的飞升§R占用你的飞升槽§!"
-
-uma_ap.51.title: "准备完成"
-uma_ap.51.desc: "经过长时间的准备，我们已经准备好强化马娘们的固有因子；过去，我们靠我们的双手艰难地摘到了那颗星星，现在，我们将亲手铸造她。"
-uma_ap.51.a: "撒，让我们见证这份力量吧"
-uma_ap.52.title: "固有因子加强-完成"
-uma_ap.52.desc: "我们加强了我们的固有因子，现在它变得更加强大，可控。下一步便是替换掉马娘们固有因子中的不利部分。这样做的风险很大，但是值得我们放手一搏。"
-uma_ap.52.a: "做得不错"
-
-uma_ap.53.title: "固有因子附加-完成"
-uma_ap.53.desc: "现在我们已经有能力加强我们的的固有因子了，现在是时候在原有因子的基础上附加一些更加强大的固有因子，以遗传给我们的后代了。如果我们能成功突破，我们的铸星绮梦将会毫无疑问地成为现实"
-uma_ap.53.a: "再接再厉"
-
-uma_ap.54.title: "铸星绮梦:现实"
-uma_ap.54.desc: "经过长久的努力，以及对一些意外情况的正确处理，我们终于推开了三女神为我们设下的最后一道大门——固有因子；现在，心中的星星不仅紧握在我们手中，更被我们亲手铸造成不同的形状，散发着与众不同不同的光芒。"
-uma_ap.54.a: "好耶"
-
-
-
-uma_ap.60.title: "力大无穷"
-uma_ap.60.desc: "强化后的固有因子使马娘们的生活发生了极大的变化，马娘们拥有了比以往更加强大的能力。不过超过半数受试者表示她们似乎像上次一样出现了无法控制自己力气的行为: 即使轻轻一拉也能使门把手和门尸首分离，这变相使得家具日用商城变得火爆了起来。虽然更置家具补贴了不少的资金，但我们依然认为我们为此实行的力量控制训练还是有效的。直到一名受试的学院学生在游泳训练中用排球将游泳馆厚厚的墙壁直接击垮，这个问题的提案和修复经费事项才一起放到了[Owner.GetRulerName]的办公桌上\n“如果不是她没吃饭，我已经变成马娘酱了”"
-uma_ap.60.a: "修改马娘们的固有因子，使她们的力气小一点"
-uma_ap.60.b: "或许我们再让她们用筷子夹豆腐?"
-uma_ap.60.c: "马娘们会适应的"
-uma_ap.61.title: "高级力量控制"
-uma_ap.61.desc: "经过无数马娘抱怨的筷子夹豆腐重返战场！有科学的方法加以训练，马娘们对力气的掌控似乎变得更加合理了。只不过这次的豆腐似乎换成了硬了不少？"
-uma_ap.61.a: "也就是说你们用了豆干?"
-uma_ap.70.title: "多重人格"
-uma_ap.70.desc: "似乎出现了一些状况，我们的科学家报告称在隔离受试的志愿者中观察到MPD，某些志愿者出现了人格更替，她们不时表现出完全不同于以往的行为，并且不记得自己的重要信息；然而，她们却可以回忆起与之截然不同的身份信息。而人格间的变化又十分有戏剧性，前一分钟一名志愿者能清楚的回答自己的姓名住址，而后一分钟，这些信息却截然不同。\n我们的科学家怀疑是附加的外部固有因子导致的多重人格体验，不过这尚不能下定论......"
-uma_ap.70.a: "这或许只是偶然事件"
-uma_ap.70.b: "重点观测"
-uma_ap.70.a.tt: "Tips: 局势可以被随时停止，而收益根据§G局势的进度§!(全部进度+一个DEBUFF)给予"
-
-uma_ap.80.title: "多重人格"
-uma_ap.80.desc: "出现了异常！多个地方报告了马娘发疯的现象，甚至军队都受到了波及。这些马娘都有一个共同的特点，就是都观察到了重度的MPD，并且都是接受过因子更替的马娘，她们行为怪异又充满纪律性，更加异常的是，她们似乎热衷于将正常马娘囚禁并且强制进行因子更替手术，虽然我们也不知道那些药剂到底是从哪里来的。这一现象似乎正在蔓延。由于这些疯狂的马娘正在占领我们的各种基础设施，我们的家园受到了不同程度的破坏。幸好国防部长在首次报告时发布了T0级指令，让所有军队成员都对这次因子更迭做了逆向措施，这才使我们拥有反制的手段。不管是否有直接关联，我们都必须终止这一次计划了。"
-uma_ap.80.a: "怎么会这样"
-uma_ap.80.a.tt: "我们必须夺回我们的殖民地"
-
-uma_ap.71.title: "人格异常"
-uma_ap.71.desc: "出现了异常！多个地方报告了马娘发疯的现象，甚至军队都受到了波及。这些马娘都有一个共同的特点，就是都观察到了重度的MPD，并且都是接受过因子更替的马娘，她们行为怪异又充满纪律性，更加异常的是，她们似乎热衷于将正常马娘囚禁并且强制进行因子更替手术，虽然我们也不知道那些药剂到底是从哪里来的。这一现象似乎正在蔓延。由于这些疯狂的马娘正在占领我们的各种基础设施，我们的家园受到了不同程度的破坏。幸好国防部长在首次报告时发布了T0级指令，让所有军队成员都对这次因子更迭做了逆向措施，这才使我们拥有反制的手段。不管是否有直接关联，我们都必须终止这一次计划了。"
-uma_ap.71.a: "怎么会这样"
-uma_ap.71.a.tt: "我们必须夺回我们的殖民地"
-
-uma_ap.81.title: "星球沦陷"
-uma_ap.81.desc: "这场因子病如同瘟疫般蔓延开来，现在星球 [This.planet.GetName] 已经沦陷，我们必须夺回来"
-uma_ap.81.a: "防守！"
-uma_ap.84.title: "平息"
-uma_ap.84.desc: "我们终于在因子病扩散前将其控制住。对于那些曾经的同伴们，我们却没有办法拯救她们。"
-uma_ap.84.a: "愿她们安息"
-uma_ap.85.title: "我是...?"
-uma_ap.85.desc: "随着疯狂的马娘们冲开了学生会的大门，[GetRulerTitle][GetRulerName]的脖子上很快就被扎了一针，她感到顿时头晕目眩，自己的思维和力量似乎在变得更加强大。可很快，她的脑海里就响起了另一个声音，然后....她就不是她自己了。\n过了不知道多长时间，等到真正的[GetRulerName]醒来的时候，她发现自己仍然坐在那张办公桌前，各种文件也被整整齐齐地码放在桌子上。除了现在的笔一捏就碎和时不时眩晕过去让自己变得不是自己外，似乎和以前没有任何区别。\n可能当所有人都是疯子的时候，疯子便不再是疯子？"
-uma_ap.85.a: "所以我该怎么做"
-
-
-
-
-uma_ap2_factor_hostile_event_country: "发疯的马娘"
-uma_ap2_factor_crazy_guys: "疯狂的马娘"
-
-uma_ap2_factor_bade: "因子飞升的阵痛"
-
-uma_ap2_factor_25: "准备阶段"
-uma_ap2_factor_50: "$uma_ap_2_situation_system_50$"
-uma_ap2_factor_75: "$uma_ap_2_situation_system_75$"
-uma_ap2_factor_100: "$uma_ap_2_situation_system_100$"
-
-
-uma_romannum_1: "Ⅰ"
-uma_romannum_2: "Ⅱ"
-uma_romannum_3: "Ⅲ"
-uma_romannum_4: "Ⅳ"
-uma_romannum_5: "Ⅴ"
-uma_romannum_6: "Ⅵ"
-uma_romannum_7: "Ⅶ"
-uma_romannum_8: "Ⅷ"
-uma_romannum_9: "Ⅸ"
-
-
-uma_trait_ap2_factor_fail_evt: "未完成的因子更新"
-uma_trait_ap2_factor_fail: "未完成的因子更新"
-
-
-uma_trait_ap2_factor_power_1: "力量因子$uma_romannum_1$"
-uma_trait_ap2_factor_power_2: "力量因子$uma_romannum_2$"
-uma_trait_ap2_factor_power_3: "力量因子$uma_romannum_3$"
-uma_trait_ap2_factor_power_4: "力量因子$uma_romannum_4$"
-uma_trait_ap2_factor_power_5: "力量因子$uma_romannum_5$"
-uma_trait_ap2_factor_power_6: "力量因子$uma_romannum_6$"
-uma_trait_ap2_factor_power_7: "力量因子$uma_romannum_7$"
-uma_trait_ap2_factor_power_8: "力量因子$uma_romannum_8$"
-uma_trait_ap2_factor_power_9: "力量因子$uma_romannum_9$"
-
-uma_trait_ap2_factor_speed_1: "速度因子$uma_romannum_1$"
-uma_trait_ap2_factor_speed_2: "速度因子$uma_romannum_2$"
-uma_trait_ap2_factor_speed_3: "速度因子$uma_romannum_3$"
-uma_trait_ap2_factor_speed_4: "速度因子$uma_romannum_4$"
-uma_trait_ap2_factor_speed_5: "速度因子$uma_romannum_5$"
-uma_trait_ap2_factor_speed_6: "速度因子$uma_romannum_6$"
-uma_trait_ap2_factor_speed_7: "速度因子$uma_romannum_7$"
-uma_trait_ap2_factor_speed_8: "速度因子$uma_romannum_8$"
-uma_trait_ap2_factor_speed_9: "速度因子$uma_romannum_9$"
-
-uma_trait_ap2_factor_wisdom_1: "智力因子$uma_romannum_1$"
-uma_trait_ap2_factor_wisdom_2: "智力因子$uma_romannum_2$"
-uma_trait_ap2_factor_wisdom_3: "智力因子$uma_romannum_3$"
-uma_trait_ap2_factor_wisdom_4: "智力因子$uma_romannum_4$"
-uma_trait_ap2_factor_wisdom_5: "智力因子$uma_romannum_5$"
-uma_trait_ap2_factor_wisdom_6: "智力因子$uma_romannum_6$"
-uma_trait_ap2_factor_wisdom_7: "智力因子$uma_romannum_7$"
-uma_trait_ap2_factor_wisdom_8: "智力因子$uma_romannum_8$"
-uma_trait_ap2_factor_wisdom_9: "智力因子$uma_romannum_9$"
-
-uma_trait_ap2_factor_stamina_1: "耐力因子$uma_romannum_1$"
-uma_trait_ap2_factor_stamina_2: "耐力因子$uma_romannum_2$"
-uma_trait_ap2_factor_stamina_3: "耐力因子$uma_romannum_3$"
-uma_trait_ap2_factor_stamina_4: "耐力因子$uma_romannum_4$"
-uma_trait_ap2_factor_stamina_5: "耐力因子$uma_romannum_5$"
-uma_trait_ap2_factor_stamina_6: "耐力因子$uma_romannum_6$"
-uma_trait_ap2_factor_stamina_7: "耐力因子$uma_romannum_7$"
-uma_trait_ap2_factor_stamina_8: "耐力因子$uma_romannum_8$"
-uma_trait_ap2_factor_stamina_9: "耐力因子$uma_romannum_9$"
-
-uma_trait_ap2_factor_charm_1: "魅力因子$uma_romannum_1$"
-uma_trait_ap2_factor_charm_2: "魅力因子$uma_romannum_2$"
-uma_trait_ap2_factor_charm_3: "魅力因子$uma_romannum_3$"
-uma_trait_ap2_factor_charm_4: "魅力因子$uma_romannum_4$"
-uma_trait_ap2_factor_charm_5: "魅力因子$uma_romannum_5$"
-uma_trait_ap2_factor_charm_6: "魅力因子$uma_romannum_6$"
-uma_trait_ap2_factor_charm_7: "魅力因子$uma_romannum_7$"
-uma_trait_ap2_factor_charm_8: "魅力因子$uma_romannum_8$"
-uma_trait_ap2_factor_charm_9: "魅力因子$uma_romannum_9$"
-
-uma_trait_ap2_factor_pain_1: "因子改造阵痛$uma_romannum_1$"
-uma_trait_ap2_factor_pain_2: "因子改造阵痛$uma_romannum_2$"
-uma_trait_ap2_factor_pain_3: "因子改造阵痛$uma_romannum_3$"
-uma_trait_ap2_factor_pain_4: "因子改造阵痛$uma_romannum_4$"
-uma_trait_ap2_factor_pain_5: "因子改造阵痛$uma_romannum_5$"
-uma_trait_ap2_factor_pain_6: "因子改造阵痛$uma_romannum_6$"
-uma_trait_ap2_factor_pain_7: "因子改造阵痛$uma_romannum_7$"
-uma_trait_ap2_factor_pain_8: "因子改造阵痛$uma_romannum_8$"
-uma_trait_ap2_factor_pain_9: "因子改造阵痛$uma_romannum_9$"
-
-
-
-uma_ap_system_realm_speed_t: "战斗领域强化"
-uma_ap_system_realm_power_t: "感知领域强化"
-uma_ap_system_realm_stamina_t: "生产领域强化"
-uma_ap_system_realm_wisdom_t: "辅助领域强化"
-uma_ap_system_realm_charm_t: "领域混合开关"
-uma_ap_system_realm_charm_t_tt: "此开关打开领域混合开关：这将会导致：\n可以 强化/激活 除预设领域外的其他领域选项。但是，§R会增加出现负面事件的概率§!"
-
-UMA_AP2_MODIFIER_REALM_POWER_EMPTY_NM: "."
-UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM: "$mod_uma_ship_weapon_damage$\n$mod_uma_ship_orbital_bombardment_mult$:\n$mod_army_damage_mult$"
-UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM: "$mod_uma_country_society_research_produces_mult$\n $mod_country_uma_physics_research_produces_mult$\n $mod_country_uma_engineering_research_produces_mult$"
-UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM: "$mod_uma_planet_jobs_produces_mult$\n$mod_uma_starbase_shipyard_build_time_mult$\n$mod_country_cost_mult$"
-UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM: "$mod_uma_ship_accuracy_mult$\n$mod_uma_ship_jumpdrive_cooldown_mult$\n$mod_ship_military_upkeep_mult$"
-
-UMA_AP2_MODIFIER_REALM_POWER_EMPTY: "."
-UMA_AP2_MODIFIER_REALM_SPEED_EXIST: "$mod_uma_ship_weapon_damage$: [UMA_AP2_MODIFIER_REALM_SPEED_NUM]\n$mod_uma_ship_orbital_bombardment_mult$: [UMA_AP2_MODIFIER_REALM_SPEED_NUM]\n$mod_army_damage_mult$: [UMA_AP2_MODIFIER_REALM_SPEED_NUM]"
-UMA_AP2_MODIFIER_REALM_POWER_EXIST: "$mod_uma_country_society_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_POWER_NUM]\n $mod_country_uma_physics_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_POWER_NUM]\n $mod_country_uma_engineering_research_produces_mult$: [UMA_AP2_MODIFIER_REALM_POWER_NUM]"
-UMA_AP2_MODIFIER_REALM_STAMINA_EXIST: "$mod_uma_planet_jobs_produces_mult$: [UMA_AP2_MODIFIER_REALM_STAMINA_NUM]\n$mod_uma_starbase_shipyard_build_time_mult$: [UMA_AP2_MODIFIER_REALM_STAMINA_NUM]\n$mod_country_cost_mult$: [UMA_AP2_MODIFIER_REALM_STAMINA_NUM_SP]"
-UMA_AP2_MODIFIER_REALM_WISDOM_EXIST: "$mod_uma_ship_accuracy_mult$: [UMA_AP2_MODIFIER_REALM_WISDOM_NUM]\n$mod_uma_ship_jumpdrive_cooldown_mult$: [UMA_AP2_MODIFIER_REALM_WISDOM_NUM]\n$mod_ship_military_upkeep_mult$: [UMA_AP2_MODIFIER_REALM_WISDOM_NUM_SP]"
-#UMA_AP2_MODIFIER_REALM_CHARM_EXIST_NM: ""
-
-
-uma_ap_system_realm_speed_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_SPEED_EXIST$"
-uma_ap_system_realm_power_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_POWER_EXIST$"
-uma_ap_system_realm_stamina_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST$"
-uma_ap_system_realm_wisdom_t_tt: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST$"
-
-uma_ap_system_realm_speed_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_SPEED_EXIST_NM$"
-uma_ap_system_realm_power_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_POWER_EXIST_NM$"
-uma_ap_system_realm_stamina_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_STAMINA_EXIST_NM$"
-uma_ap_system_realm_wisdom_t_tt_t: "这将会为物种添加如下特性：\n$UMA_AP2_MODIFIER_REALM_WISDOM_EXIST_NM$"
-
-
-mod_uma_planet_jobs_produces_mult: "£job£岗位产出的资源"
-mod_uma_starbase_shipyard_build_time_mult: "£mod_starbase_shipyard_build_time_mult£造船时间"
-mod_uma_ship_accuracy_mult: "£mod_ship_accuracy_mult£命中"
-mod_uma_ship_jumpdrive_cooldown_mult: "£mod_ship_speed_mult£舰船速度："
-mod_uma_ship_orbital_bombardment_mult: "轨道轰炸伤害"
-mod_uma_country_society_research_produces_mult: "£society_research£社会研究产出"
-mod_country_uma_physics_research_produces_mult: "£physics_research£社会研究产出"
-mod_country_uma_engineering_research_produces_mult: "£engineering_research£社会研究产出"
-
-UMA_AP2_MODIFIER_REALM_NUM9: "§G+50%§!"
-UMA_AP2_MODIFIER_REALM_NUM8: "§G+40%§!"
-UMA_AP2_MODIFIER_REALM_NUM7: "§G+35%§!"
-UMA_AP2_MODIFIER_REALM_NUM6: "§G+30%§!"
-UMA_AP2_MODIFIER_REALM_NUM5: "§G+25%§!"
-UMA_AP2_MODIFIER_REALM_NUM4: "§G+20%§!"
-UMA_AP2_MODIFIER_REALM_NUM3: "§G+15%§!"
-UMA_AP2_MODIFIER_REALM_NUM2: "§G+10%§!"
-UMA_AP2_MODIFIER_REALM_NUM1: "§G+5%§!"
-
-UMA_AP2_MODIFIER_REALM_NUM9_SP: "§G-17%§!"
-UMA_AP2_MODIFIER_REALM_NUM8_SP: "§G-15%§!"
-UMA_AP2_MODIFIER_REALM_NUM7_SP: "§G-13%§!"
-UMA_AP2_MODIFIER_REALM_NUM6_SP: "§G-11%§!"
-UMA_AP2_MODIFIER_REALM_NUM5_SP: "§G-9%§!"
-UMA_AP2_MODIFIER_REALM_NUM4_SP: "§G-7%§!"
-UMA_AP2_MODIFIER_REALM_NUM3_SP: "§G-5%§!"
-UMA_AP2_MODIFIER_REALM_NUM2_SP: "§G-3%§!"
-UMA_AP2_MODIFIER_REALM_NUM1_SP: "§G-1%§!"
-
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM9: "§R-45%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM8: "§R-35%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM7: "§R-30%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM6: "§R-25%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM5: "§R-20%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM4: "§R-15%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM3: "§R-10%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM2: "§R-5%§!"
-UMA_AP2_MODIFIER_REALM_NUM_POP_DECREASE_NUM1: "§R-2%§!"
-
-
-
-uma_ap_system_realm_speed_num: "[owner.uma_ap2_realm_speed_rate] "
-uma_ap_system_realm_power_num: "[owner.uma_ap2_realm_power_rate] "
-uma_ap_system_realm_stamina_num: "[owner.uma_ap2_realm_stamina_rate] "
-uma_ap_system_realm_wisdom_num: "[owner.uma_ap2_realm_wisdom_rate] "
-uma_ap_system_realm_charm_num: "[uma_apsystem_realm_mix_on_off] "
-
-uma_apsystem_realm_mix_on: "开"
-uma_apsystem_realm_mix_off: "关"
-
-
-
-situation_uma_ap_2_situation_system_realm_fin_tt: "这个种族：\n[UMA_AP2_MODIFIER_REALM_SPEED][UMA_AP2_MODIFIER_REALM_POWER][UMA_AP2_MODIFIER_REALM_STAMINA][UMA_AP2_MODIFIER_REALM_WISDOM]"
-
-situation_uma_ap_2_situation_system_realm: "领域迭代"
-situation_uma_ap_2_situation_system_realm_type: "领域迭代"
-situation_uma_ap_2_situation_system_realm_desc: "为了未来更好的发展，我们决定激发马娘们的领域。"
-uma_ap2_realm_25: "准备阶段完成"
-uma_ap2_realm_50: "领域强化阶段完成"
-uma_ap2_realm_75: "领域激发阶段完成"
-uma_ap2_realm_100: "收尾 阶段"
-
-uma_ap_2_situation_system_50_realm: "领域强化 阶段"
-uma_ap_2_situation_system_75_realm: "领域激发 阶段"
-uma_ap_2_situation_system_100_realm: "收尾 阶段"
-
-uma_ap.151.title: "准备完成"
-uma_ap.151.desc: "经过长时间的准备，我们已经准备好强化和激发马娘们的领域。我们已经见证过领域的强大力量，现在，我们要更进一步。"
-uma_ap.151.a: "撒，让我们见证这份力量吧"
-uma_ap.152.title: "领域强化阶段-完成"
-uma_ap.152.desc: "我们加强了我们已有的领域，现在它变得更加强大，可控。下一步便是激发马娘们潜在的领域。这样做的风险很大，但是值得我们放手一搏。"
-uma_ap.152.a: "做得不错"
-
-uma_ap.154.title: "心象"
-uma_ap.154.desc: "经过长久的努力，我们终于能让数千年前那场在赛场上出现的金色雨滴再现。从前的传言——只有将要改变历史的马娘才会在奔跑中激活领域——已经成为过去式，现在每一位马娘都被激发了属于自己的领域，这将使我们的发展再进一步"
-uma_ap.154.a: "好耶"
-
-
-uma_trait_ap2_realm_power_1: "领域: 感知$uma_romannum_1$"
-uma_trait_ap2_realm_power_1_desc: ""
-uma_trait_ap2_realm_power_2: "领域: 感知$uma_romannum_2$"
-uma_trait_ap2_realm_power_2_desc: ""
-uma_trait_ap2_realm_power_3: "领域: 感知$uma_romannum_3$"
-uma_trait_ap2_realm_power_3_desc: ""
-uma_trait_ap2_realm_power_4: "领域: 感知$uma_romannum_4$"
-uma_trait_ap2_realm_power_4_desc: ""
-uma_trait_ap2_realm_power_5: "领域: 感知$uma_romannum_5$"
-uma_trait_ap2_realm_power_5_desc: ""
-
-uma_trait_ap2_realm_speed_1: "领域: 战斗$uma_romannum_1$"
-uma_trait_ap2_realm_speed_1_desc: ""
-uma_trait_ap2_realm_speed_2: "领域: 战斗$uma_romannum_2$"
-uma_trait_ap2_realm_speed_2_desc: ""
-uma_trait_ap2_realm_speed_3: "领域: 战斗$uma_romannum_3$"
-uma_trait_ap2_realm_speed_3_desc: ""
-uma_trait_ap2_realm_speed_4: "领域: 战斗$uma_romannum_4$"
-uma_trait_ap2_realm_speed_4_desc: ""
-uma_trait_ap2_realm_speed_5: "领域: 战斗$uma_romannum_5$"
-uma_trait_ap2_realm_speed_5_desc: ""
-
-uma_trait_ap2_realm_stamina_1: "领域: 生产$uma_romannum_1$"
-uma_trait_ap2_realm_stamina_1_desc: ""
-uma_trait_ap2_realm_stamina_2: "领域: 生产$uma_romannum_2$"
-uma_trait_ap2_realm_stamina_2_desc: ""
-uma_trait_ap2_realm_stamina_3: "领域: 生产$uma_romannum_3$"
-uma_trait_ap2_realm_stamina_3_desc: ""
-uma_trait_ap2_realm_stamina_4: "领域: 生产$uma_romannum_4$"
-uma_trait_ap2_realm_stamina_4_desc: ""
-uma_trait_ap2_realm_stamina_5: "领域: 生产$uma_romannum_5$"
-uma_trait_ap2_realm_stamina_5_desc: ""
-
-uma_trait_ap2_realm_wisdom_1: "领域: 辅助$uma_romannum_1$"
-uma_trait_ap2_realm_wisdom_1_desc: ""
-uma_trait_ap2_realm_wisdom_2: "领域: 辅助$uma_romannum_2$"
-uma_trait_ap2_realm_wisdom_2_desc: ""
-uma_trait_ap2_realm_wisdom_3: "领域: 辅助$uma_romannum_3$"
-uma_trait_ap2_realm_wisdom_3_desc: ""
-uma_trait_ap2_realm_wisdom_4: "领域: 辅助$uma_romannum_4$"
-uma_trait_ap2_realm_wisdom_4_desc: ""
-uma_trait_ap2_realm_wisdom_5: "领域: 辅助$uma_romannum_5$"
-uma_trait_ap2_realm_wisdom_5_desc: ""
-uma_ap2_realm_charm_rate_have_to_greater_than_1: "要激发领域，必须先启用领域混合"
-
-
-uma_ap.160.title: "失眠！"
-uma_ap.160.desc: "与上次相反，这次在受试群体中出现了大规模的失眠症状。报告显示马娘们入睡变得困难起来，其中不乏连续睁眼一个星期的案例。起初马娘们都很开心，甚至开始庆祝自己拥有比平时多好几倍的时间来完成自己想要做的事情。渐渐地，她们感到不对劲起来，因为缺乏休息，马娘们的身体好像越来越差起来，几乎每天早晨都能听到马娘们因为自己脱发而发出的嚎叫，毕竟，头发就是马娘的生命。\n不管怎么样，我们必须对这个问题做出响应。"
-uma_ap.160.a: "在现有领域激发基础上进行调整"
-uma_ap.160.b: "可以派发安眠药物"
-uma_ap.160.c: "我也想要很长个人的时间"
-
-uma_ap2_realm_insomnia_pills: "未被完全解决的失眠症"
-uma_ap2_realm_insomnia_pills_desc: "我们解决了这个问题，暂时的"

@@ -1,29 +1,12 @@
 #赛马娘净化岗位
 
-
 uma_fuel_purge_small = {
+	#文火
 	category = purge
-	first_come_first_served = yes
 	is_capped_by_modifier = no
-
-	tags = { }
-
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
-
-	ignores_sapience = yes
-
 	possible_pre_triggers = {
 		is_being_purged = yes
 	}
-
 	possible = {
 		owner = {
 			AND = {
@@ -32,12 +15,10 @@ uma_fuel_purge_small = {
 			}
 		}
 	}
-
-
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.02
 	}
-
+	condition_string = uma_fuel_purge_tr
 	resources = {
 		category = planet_jobs
 		produces = {
@@ -65,37 +46,21 @@ uma_fuel_purge_small = {
 uma_fuel_purge_medium = {
 	#武火
 	category = purge
-	first_come_first_served = yes
 	is_capped_by_modifier = no
-
-	tags = { }
-
 	possible_pre_triggers = {
 		is_being_purged = yes
-	}
-
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
 	}
 	possible = {
 		owner = {
 			AND = {
-				has_policy_flag = policy_uma_fuel_convertion_medium
-			}
+			    has_policy_flag = policy_uma_fuel_convertion_medium		
 		}
 	}
-
+}
+	condition_string = uma_fuel_purge_tr
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.1
 	}
-
-	ignores_sapience = yes
 	
 	resources = {
 		category = planet_jobs
@@ -124,15 +89,10 @@ uma_fuel_purge_medium = {
 uma_fuel_purge_big = {
 	#等离子态
 	category = purge
-	first_come_first_served = yes
 	is_capped_by_modifier = no
-
 	possible_pre_triggers = {
 		is_being_purged = yes
 	}
-
-	tags = { }
-
 	possible = {
 		owner = {
 			AND = {
@@ -141,19 +101,7 @@ uma_fuel_purge_big = {
 			}
 		}
 	}
-
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
-
-	ignores_sapience = yes
-
+	condition_string = uma_fuel_purge_tr
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.25
 	}
@@ -166,17 +114,13 @@ uma_fuel_purge_big = {
 		}
 		upkeep = {
 			trigger = {
-				species = {
-					is_robotic_species = yes
-				}
+				is_robotic_species = yes
 			}
 			energy = 3
 		}
 		upkeep = {
 			trigger = {
-				species = {
-					is_organic_species = yes
-				}
+				is_organic_species = yes
 			}
 			food = 1
 		}

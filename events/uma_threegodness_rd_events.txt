@@ -69,13 +69,13 @@ event = {
 			}
 		}
 		##################################################
-		#创建领袖，official
+		#创建领袖，ruler
 		##################################################
         #大概，研究所类似于虚境，估计不需要领袖吧
 		last_created_country = {
 			create_leader = {
 				#生成领袖x1
-				class = official
+				class = ruler
 				species = this				#领袖种族
                 #portrait = "SW"
 				name = "特别周"			#领袖名字（当前为随机）
@@ -86,7 +86,7 @@ event = {
 			}
 			create_leader = {
 				#生成领袖x2
-				class = official
+				class = ruler
 				species = this				#领袖种族
                 #portrait = "SS"
 				name = "无声铃鹿"			#领袖名字（当前为随机）
@@ -97,14 +97,14 @@ event = {
 			}
 			create_leader = {
 				#生成领袖x3
-				class = official
+				class = ruler
 				species = this				#领袖种族
                 #portrait = "TT"
 				name = "东海帝王"			#领袖名字（当前为随机）
 				skill = 5
 			}
 			last_created_leader = {
-			change_leader_portrait = "TEIO_COMM"
+			change_leader_portrait = "TT"
 			}
 			set_leader = last_created_leader			#使刚刚创建的领袖成为统治者
 		}
@@ -264,7 +264,7 @@ country_event = {
 		allow = {
 			has_resource = {
 				type = uma_threegodness_knowledge #决定需要的三女神知识的价格
-				amount >= 300
+				value >= 300
 			}
 		}
 
@@ -341,7 +341,7 @@ country_event = {
 		allow = {
 			has_resource = {
 				type = uma_threegodness_knowledge #决定需要的三女神知识的价格
-				amount >= 300
+				value >= 300
 			}
 		}
 
@@ -555,105 +555,34 @@ country_event = {
 			resource = minerals
 			variable = uma_tgrd_minerals_stockpile
 		}
+		export_resource_income_to_variable = {
+			resource = energy
+			variable = uma_tgrd_energy_income
+		}
+		export_resource_income_to_variable = {
+			resource = minerals
+			variable = uma_tgrd_minals_income
+		}
+		##帧检测？
+
+		export_resource_income_to_variable = {
+			resource = food
+			variable = uma_tgrd_foods_income
+		}
 		export_resource_stockpile_to_variable = {
 			resource = food
 			variable = uma_tgrd_foods_stockpile
 		}
 
+		export_resource_income_to_variable = {
+			resource = uma_crystal_carrot
+			variable = uma_tgrd_uma_crystal_carrot_income
+		}
 		export_resource_stockpile_to_variable = {
 			resource = uma_crystal_carrot
 			variable = uma_tgrd_uma_crystal_carrot_stockpile
 		}
 
-		export_resource_maximum_to_variable = {
-			resource = food
-			variable = uma_tgrd_foods_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = energy
-			variable = uma_tgrd_energy_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = minerals
-			variable = uma_tgrd_minals_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = uma_crystal_carrot
-			variable = uma_tgrd_uma_crystal_carrot_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = consumer_goods
-			variable = uma_tgrd_consumer_goods_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = consumer_goods
-			variable = uma_tgrd_consumer_goods_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = alloys
-			variable = uma_tgrd_alloys_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = alloys
-			variable = uma_tgrd_alloys_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = volatile_motes
-			variable = uma_tgrd_motes_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = volatile_motes
-			variable = uma_tgrd_motes_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = exotic_gases
-			variable = uma_tgrd_gas_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = exotic_gases
-			variable = uma_tgrd_gas_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = rare_crystals
-			variable = uma_tgrd_r_crystal_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = rare_crystals
-			variable = uma_tgrd_r_crystal_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = sr_living_metal
-			variable = uma_tgrd_living_metal_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = sr_living_metal
-			variable = uma_tgrd_living_metal_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = sr_dark_matter
-			variable = uma_tgrd_darkm_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = sr_dark_matter
-			variable = uma_tgrd_darkm_stockpile
-		}
 	}
 }
 
@@ -744,14 +673,14 @@ planet_event = {
 			set_planet_flag = uma_TGAC_produce_darkm
 		}
 	}
-#	#Nano bot
-#	option = {
-#		name = uma_threegodness_rd.10086.k
-#		hidden_effect = {
-#			uma_tgrd_clear_TGAC_flag = yes
-#			set_planet_flag = uma_TGAC_produce_nano
-#		}
-#	}
+	#Nano bot
+	option = {
+		name = uma_threegodness_rd.10086.k
+		hidden_effect = {
+			uma_tgrd_clear_TGAC_flag = yes
+			set_planet_flag = uma_TGAC_produce_nano
+		}
+	}
 	#Uma Crystal
 #	option = {
 #		name = uma_threegodness_rd.10086.l

@@ -5,7 +5,7 @@ uma_gold_system_initializer = {
 	name = GO_M
 	class = "sc_g"
 
-	flags = { uma_gold_invasion_system  community_can_enter_system_by_jump_false }
+	flags = { uma_gold_invasion_system }
 
 	planet = {
 		class = star
@@ -109,7 +109,7 @@ uma_gold_system_initializer = {
 			orbit_angle = random
 			size = 10
 			has_ring = yes
-#			tile_blockers = none
+			tile_blockers = none
 			modifiers = none
 			resource = minerals
 			anomaly = none

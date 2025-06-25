@@ -1,5 +1,6 @@
 ##Uma tech override
-#Gene Tailoring
+
+
 @tech_gene_tailoring_POINTS = 2
 tech_gene_tailoring = {
 	cost = @tier3cost1
@@ -11,13 +12,14 @@ tech_gene_tailoring = {
 
 	gateway = biological
 
+
 	modifier = {
 		description = tech_gene_tailoring_modifier_desc
 		description_parameters = {
 			POINTS = @tech_gene_tailoring_POINTS
 		}
-		UMA_species_trait_points_add = @tech_gene_tailoring_POINTS
 		BIOLOGICAL_species_trait_points_add = @tech_gene_tailoring_POINTS
+		UMA_species_trait_points_add = @tech_gene_tailoring_POINTS
 	}
 
 	feature_flags = {
@@ -25,19 +27,9 @@ tech_gene_tailoring = {
 		pop_self_modification
 	}
 
-	technology_swap = {
-		name = tech_gene_tailoring_overtuned
-		inherit_icon = yes
-		inherit_effects = no
-
-		trigger = {
-			has_origin = origin_overtuned
-		}
-	}
-
 	potential = {
 		OR = {
-			is_machine_empire = no
+			NOT = { has_authority = auth_machine_intelligence }
 			has_civic = civic_machine_assimilator
 			has_civic = civic_machine_servitor
 		}
@@ -48,7 +40,7 @@ tech_gene_tailoring = {
 		factor = 2.0	# genetech needs to be a bit more common
 		modifier = {
 			factor = 1.25
-			is_hive_empire = yes
+			has_authority = auth_hive_mind
 		}
 		modifier = {
 			factor = 1.25

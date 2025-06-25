@@ -365,35 +365,3 @@ ship_section_template = {
 		}
 	}
 }
-
-
-ship_section_template = {
-	key = "UMA_SCIENCESHIP_ZEPHYR_SECTION"
-	ship_size = uma_zephyr_science
-	fits_on_slot = mid
-	entity = "corvette_S3_entity"
-	icon = "GFX_ship_part_core_mid"
-
-
-	small_utility_slots = 3
-	aux_utility_slots = 1
-
-	component_slot = {
-		name = "SMALL_GUN_01"
-		template = "small_turret"
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_01"
-		template = "small_turret"
-		locatorname = "part1"
-	}
-
-	component_slot = {
-		name = "SMALL_GUN_01"
-		template = "small_turret"
-		locatorname = "part1"
-	}
-
-}

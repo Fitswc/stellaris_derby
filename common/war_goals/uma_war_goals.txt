@@ -10,11 +10,9 @@ wg_uma_candleoff = { #净化
 		imperial_authority >= 100
 	}
 
-#	allowed_peace_offers = {
-#		status_quo
-#	}
-
-	cede_claims = yes
+	allowed_peace_offers = {
+		status_quo
+	}
 
 
 	surrender_acceptance = -1000
@@ -63,13 +61,11 @@ wg_uma_business_war = {
 		imperial_authority >= 100
 	}
 
-#	allowed_peace_offers = {
+	allowed_peace_offers = {
 #		status_quo
-#		surrender
-#		demand_surrender
-#	}
-
-	cede_claims = yes
+		surrender
+		demand_surrender
+	}
 
 	surrender_acceptance = -100
 

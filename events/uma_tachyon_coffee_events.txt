@@ -1793,7 +1793,7 @@ country_event = {
 		tag = hire_leader
 		custom_tooltip = tachyon_coffee.21000.hire_tooltip
 		hidden_effect = {
-			give_specimen = { key = uma_ty_medicine origin = uma_specimen_null}
+			give_specimen = { key = uma_ty_medicine}
 			clone_leader = {
 				target = event_target:uma_is_leader_tachyon
 				gender = female

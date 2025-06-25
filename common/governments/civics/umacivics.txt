@@ -45,25 +45,25 @@ civic_umasymbolirudolf = {
 }
 
 civic_umaagnestachyon = {
-	icon = "gfx/interface/icons/governments/civics/at.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = { value = ethic_fanatic_materialist } }
-
-
-	random_weight = {
-		base = 0
+	icon="gfx/interface/icons/governments/civics/at.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_materialist } }
+	
+	
+	random_weight={
+		base=0
 		modifier = {
 			add = 100
 			is_ai = yes
 			has_authority = auth_trainingcenter
-			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_fanatic_materialist	
 		}
 	}
-
-	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.35
-		planet_jobs_physics_research_produces_mult = 0.35
-		planet_jobs_society_research_produces_mult = 0.35
+	
+	modifier={
+	planet_jobs_engineering_research_produces_mult = 0.4
+		planet_jobs_physics_research_produces_mult = 0.4
+		planet_jobs_society_research_produces_mult = 0.4
 		planet_pops_consumer_goods_upkeep_mult = 0.15
 		planet_stability_add = -10
 
@@ -71,13 +71,13 @@ civic_umaagnestachyon = {
 }
 
 civic_umacurrenchan = {
-	icon = "gfx/interface/icons/governments/civics/cc.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = { value = ethic_fanatic_xenophile } }
-
-
-	random_weight = {
-		base = 0
+	icon="gfx/interface/icons/governments/civics/cc.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_xenophile } }
+	
+	
+	random_weight={
+		base=0
 		modifier = {
 			add = 100
 			is_ai = yes
@@ -85,23 +85,23 @@ civic_umacurrenchan = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}
-
-	modifier = {
-		envoys_add = 2
-		country_trust_cap_add = 80
-		country_trust_growth = 0.75
-		planet_jobs_trade_produces_mult = 0.1
+	
+	modifier={
+	          envoys_add = 2
+			  country_trust_cap_add = 80
+		      country_trust_growth = 0.75
+		      trade_value_mult = 0.2
 	}
 }
 
 civic_umafujikiseki = {
-	icon = "gfx/interface/icons/governments/civics/fj.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = { value = ethic_fanatic_egalitarian } }
-
-
-	random_weight = {
-		base = 0
+	icon="gfx/interface/icons/governments/civics/fj.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_egalitarian } }
+	
+	
+	random_weight={
+		base=0
 		modifier = {
 			add = 100
 			is_ai = yes
@@ -109,10 +109,10 @@ civic_umafujikiseki = {
 			has_ethic = ethic_fanatic_egalitarian
 		}
 	}
-
-	modifier = {
-		planet_stability_add = 15
-		country_unity_produces_mult = 0.1
+	
+	modifier={
+	         planet_stability_add = 15
+			 country_unity_produces_mult = 0.1
 	}
 }
 
@@ -155,9 +155,9 @@ civic_umasupercreek = {
 		}
 	}
 	
-	modifier= {
-		pop_happiness = 0.1
-		leaders_upkeep_mult = -0.25
+	modifier={
+			pop_happiness = 0.1
+			leaders_upkeep_mult = -0.25
 	}
 }
 
@@ -177,12 +177,12 @@ civic_umanicenature = {
 		}
 	}
 	
-	modifier= {
-		envoys_add = 3
-		intel_decryption_add = 3
-		intel_encryption_add = 3
-		add_base_country_intel = 33
-		spy_network_levels_add = 33
+	modifier={
+	          envoys_add = 3
+			  intel_decryption_add = 3
+			  intel_encryption_add = 3
+			  add_base_country_intel = 33
+		      spy_network_levels_add = 33
 
 	}
 }
@@ -242,23 +242,22 @@ civic_umamayanotopgun = {
 }
 
 civic_umaagnesdigital = {
-	icon = "gfx/interface/icons/governments/civics/ad.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {}
-
-
-	random_weight = {
-		base = 10
+	icon="gfx/interface/icons/governments/civics/ad.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ }
+	
+	
+	random_weight={
+		base=10
 		modifier = {
-
+			
 		}
 	}
-
-	modifier = {
+	
+	modifier={
 		pop_happiness = 0.10
-		planet_jobs_society_research_produces_mult = 0.1
-		country_unity_produces_mult = 0.25
-		bonus_pop_growth_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.20
+		country_unity_produces_mult = 0.25       
 	}
 }
 
@@ -398,17 +397,18 @@ civic_umaairgroove = {
 }
 
 civic_uma_my_venus_park = {
-	icon = "gfx/interface/icons/governments/civics/zf.png"
+	icon="gfx/interface/icons/governments/civics/zf.png"
 	modification = no
-	potential = { authority = { value = auth_trainingcenter } }
+	potential={authority={value=auth_trainingcenter} }
 	description = civic_uma_my_venus_park_effects
-	possible = {
+	possible= {
 
 	}
 	random_weight = { base = 0 }
 
 
-	modifier = {
+
+	modifier={
 		country_government_civic_points_add = 1
 		pop_happiness = 0.25
 		diplo_action_acceptance_add = 40
@@ -421,13 +421,13 @@ civic_uma_my_venus_park = {
 civic_uma_aston_machan = {
 	icon = "gfx/interface/icons/governments/civics/mj.png"
 	potential = {
-		authority = { value = auth_trainingcenter }
+		authority = { value=auth_trainingcenter }
 	}
-	possible = {}
+	possible= {	}
 	random_weight = { base = 0 }
 
-	modifier = {
-		planet_jobs_specialist_trade_produces_mult = 0.2
+	modifier={
+		trade_value_add = 10
 		pop_happiness = 0.05
 	}
 }
@@ -460,156 +460,3 @@ civic_uma_aston_machan = {
 #		country_naval_cap_mult = 1
 #	}
 #}
-
-
-civic_uma_vivlos_shopping = {
-	icon = "gfx/interface/icons/governments/civics/vivl.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {
-
-	}
-
-
-	random_weight = {
-		base = 10
-		modifier = {
-
-		}
-	}
-
-	modifier = {
-		planet_civilians_trade_produces_add = 0.8
-		planet_civilians_consumer_goods_upkeep_add = -0.4
-	}
-}
-
-civic_uma_ayb_star_watcher = {
-	icon = "gfx/interface/icons/governments/civics/ayb.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {
-		ethics = {
-			NOR = {
-				value = ethic_fanatic_xenophobe
-			}
-		}
-	}
-
-
-	random_weight = {
-		base = 10
-		modifier = {
-
-		}
-	}
-
-	modifier = {
-		planet_sensor_range_add = 4
-		science_ship_survey_speed = 0.2
-		shipsize_science_anomaly_research_speed = 0.1
-		shipsize_science_anomaly_generation_chance = 0.1
-	}
-}
-
-civic_uma_cheval_civillian_workshop = {
-	icon = "gfx/interface/icons/governments/civics/cheval.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {
-
-	}
-
-
-	random_weight = {
-		base = 10
-		modifier = {
-
-		}
-	}
-
-	modifier = {
-		planet_civilians_trade_produces_add = -0.6
-		planet_civilians_physics_research_produces_add = 0.6
-		planet_civilians_society_research_produces_add = 0.6
-		planet_civilians_engineering_research_produces_add = 0.6
-	}
-}
-
-
-
-civic_uma_matikanetannhauser_radio  = {
-	icon = "gfx/interface/icons/governments/civics/mt.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {
-
-	}
-
-
-	random_weight = {
-		base = 10
-		modifier = {
-
-		}
-	}
-
-	modifier = {
-		pop_cat_worker_bonus_workforce_mult = 0.1
-		pop_cat_specialist_bonus_workforce_mult = 0.04
-	}
-}
-
-civic_uma_luckey_geo_training  = {
-	icon = "gfx/interface/icons/governments/civics/rickey.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {
-
-	}
-
-
-	random_weight = {
-		base = 10
-		modifier = {
-
-		}
-	}
-
-	modifier = {
-		planet_building_capacity_add = 3
-
-		##Comics
-		country_storm_location_intel_add = 3
-		country_storm_movement_intel_add = 3
-
-		country_storms_uma_crystal_carrot_produces_add = 1
-		##Story After
-	}
-}
-
-civic_uma_win_variation  = {
-	icon = "gfx/interface/icons/governments/civics/winv.png"
-	potential = { authority = { value = auth_trainingcenter } }
-	possible = {
-
-	}
-
-	modification = {
-		moddable_conditions_custom_tooltip =civic_uma_win_variation_tt_only_remove
-		add = {
-			always = no
-		}
-		remove = {
-			always = yes
-		}
-	}
-
-
-	random_weight = {
-		base = 0
-
-	}
-
-	modifier = {
-		country_war_exhaustion_mult = -0.4
-		fleet_mia_time_mult = -0.6
-		country_subject_acceptance_add = 20
-	}
-	custom_tooltip_with_modifiers = civic_uma_win_variation_tt
-}

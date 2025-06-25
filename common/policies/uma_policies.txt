@@ -73,64 +73,22 @@ uma_racing_umamusume_policy = {
 #赛马娘专属贸易政策
 uma_trade_policy = {
 	potential = {
-		has_authority = auth_trainingcenter
+			
 	}
 	option = {
-		name = trade_policy_uma_vanilla
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.5
-				energy = 0.5
-			}
-		}
-
-		on_disabled = {
-			hidden_effect = {
-				set_trade_conversions = {}
-			}
-		}
-
-		AI_weight = {
-			factor = 0
-		}
-	}
-	option = {
-		valid = {
-			days_passed >= 10
-		}
 		name = trade_policy_uma_basic_resources_trading
 		policy_flags = {
 			trade_policy_uma_basic_resources_trading
 		}
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.55
-				energy = 0.15
-				minerals = 0.15
-				food = 0.15
-			}
-		}
-
 		AI_weight = {
 			factor = 100
 		}
 	}
 	option = {
-		valid = {
-			days_passed >= 10
-		}
 		name = trade_policy_uma_industry_trading
 		policy_flags = {
 			trade_policy_uma_industry_trading
 		}
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.6
-				consumer_goods = 0.2
-				alloys = 0.2
-			}
-		}
-
 		AI_weight = {
 			factor = 0
 		}
@@ -158,15 +116,6 @@ uma_trade_policy = {
 		policy_flags = {
 			trade_policy_uma_strategic_resources_trading
 		}
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.7
-				volatile_motes = 0.1
-				rare_crystals = 0.1
-				exotic_gases = 0.1
-			}
-		}
-
 		AI_weight = {
 			factor = 0
 		}
@@ -176,17 +125,6 @@ uma_trade_policy = {
 		policy_flags = {
 			trade_policy_uma_cultural_output
 		}
-		valid = {
-			days_passed >= 10
-		}
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.5
-				unity = 0.35
-				influence = 0.15
-			}
-		}
-
 		AI_weight = {
 			factor = 0
 		}
@@ -196,18 +134,6 @@ uma_trade_policy = {
 		policy_flags = {
 			trade_policy_uma_research_support
 		}
-		valid = {
-			days_passed >= 10
-		}
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.55
-				physics_research = 0.15
-				society_research = 0.15
-				engineering_research = 0.15
-			}
-		}
-
 		AI_weight = {
 			factor = 0
 		}
@@ -220,18 +146,16 @@ uma_trade_policy = {
 		valid = {
 			has_technology = tech_uma_crysal_carrot_mining
 		}
-		on_enabled = {
-			set_trade_conversions = {
-				energy = 0.8
-				uma_crystal_carrot = 0.2
-			}
-		}
-
 		AI_weight = {
 			factor = 0
 		}
 	}
-
+	option = {
+		name = trade_policy_uma_vanilla
+		AI_weight = {
+			factor = 0
+		}
+	}
 }
 
 #燃料选择

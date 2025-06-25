@@ -12,19 +12,6 @@ district_uma_dormitory_ring = {
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 
-	zone_slots = {
-		slot_city_government
-		slot_city_01
-		slot_city_02
-	}
-
-	inline_script = {
-		script = districts/BPV_district_slots2
-		GOVERNMENT = slot_city_government
-		SLOT1 = slot_city_01
-		SLOT_END = slot_city_02
-	}
-
 	show_on_uncolonized = {
 		exists = from
 		from = { is_regular_empire = yes }
@@ -56,8 +43,8 @@ district_uma_dormitory_ring = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1000
-		job_clerk_add = 600
+		planet_housing_add = 10
+		job_clerk_add = 6
 	}
 
 	triggered_planet_modifier = {
@@ -65,7 +52,7 @@ district_uma_dormitory_ring = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_dormitory_administrator_add = 100
+		job_uma_dormitory_administrator_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -74,7 +61,7 @@ district_uma_dormitory_ring = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 900
+			job_maintenance_drone_add = 9
 		}
 	}
 
@@ -84,7 +71,7 @@ district_uma_dormitory_ring = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 3000
+			planet_housing_add = 3
 		}
 	}
 
@@ -96,7 +83,7 @@ district_uma_dormitory_ring = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3000
+			planet_housing_add = 3
 		}
 	}
 
@@ -109,7 +96,7 @@ district_uma_dormitory_ring = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3000
+			planet_housing_add = 3
 		}
 	}
 
@@ -122,7 +109,7 @@ district_uma_dormitory_ring = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 300
+			job_maintenance_drone_add = 3
 		}
 	}
 
@@ -134,7 +121,7 @@ district_uma_dormitory_ring = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 300
+			job_clerk_add = 3
 		}
 	}
 
@@ -144,7 +131,7 @@ district_uma_dormitory_ring = {
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 300
+			job_clerk_add = 3
 		}
 	}
 
@@ -190,10 +177,6 @@ district_uma_teaching_area_ring = {
 		uses_district_set = uma_ring_world
 	}
 
-	zone_slots = {
-		slot_uma_teaching_and_training
-	}
-
 	resources = {
 		category = planet_districts
 		cost = {
@@ -211,7 +194,7 @@ district_uma_teaching_area_ring = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_school_reseacher_add = 500
+		job_uma_school_reseacher_add = 5
 	}
 
 	triggered_desc = {
@@ -232,10 +215,6 @@ district_uma_ring_industrial = {
 
 	potential = {
 		uses_district_set = uma_ring_world
-	}
-
-	zone_slots = {
-		slot_uma_industrial_mixture
 	}
 
 	resources = {
@@ -260,13 +239,13 @@ district_uma_ring_industrial = {
 	}
 
 	triggered_planet_modifier = {
-		planet_housing_add = 1000
+		planet_housing_add = 10
 		potential = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_crystal_alloy_crafter_add = 500
-		job_uma_crystal_consumer_goods_crafter_add = 400
+		job_uma_crystal_alloy_crafter_add = 5
+		job_uma_crystal_consumer_goods_crafter_add = 4
 	}
 
 	triggered_desc = {
@@ -280,18 +259,6 @@ district_uma_ring_industrial = {
 			}
 		}
 		text = job_uma_crystal_alloy_crafter_effect_desc
-
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
 		text = job_uma_crystal_consumer_goods_crafter_effect_desc
 	}
 }
@@ -308,10 +275,6 @@ district_uma_ring_logistics_area = {
 
 	potential = {
 		uses_district_set = uma_ring_world
-	}
-
-	zone_slots = {
-		slot_uma_logistic
 	}
 
 
@@ -332,9 +295,9 @@ district_uma_ring_logistics_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_carrot_farmer_add = 500
-		job_uma_field_powering_technician_add = 300
-		job_uma_crystal_carrot_engineer_add = 400
+		job_uma_carrot_farmer_add = 5
+		job_uma_field_powering_technician_add = 3
+		job_uma_crystal_carrot_engineer_add = 4
 	}
 
 	triggered_planet_modifier = {
@@ -343,7 +306,7 @@ district_uma_ring_logistics_area = {
 			owner = { is_uma_country = yes }
 			owner = { has_technology = tech_uma_code_hachimi }
 		}
-		job_uma_bee_farmer_add = 100
+		job_uma_bee_farmer_add = 1
 	}
 
 	triggered_desc = {
@@ -370,10 +333,6 @@ district_uma_ring_commercial_area = {
 		uses_district_set = uma_ring_world
 	}
 
-	zone_slots = {
-		slot_city_01
-	}
-
 
 	resources = {
 		category = planet_districts
@@ -392,10 +351,10 @@ district_uma_ring_commercial_area = {
 			exists = owner
 			owner = { is_uma_country = yes }
 		}
-		job_uma_sweet_manager_add = 300
-		job_uma_sweet_master_add = 300
-		job_uma_horseshoe_crafter_add = 200
-		job_uma_live_clothes_crafter_add = 300
-		job_uma_trader_add = 200
+		job_uma_sweet_manager_add = 3
+		job_uma_sweet_master_add = 3
+		job_uma_horseshoe_crafter_add = 2
+		job_uma_live_clothes_crafter_add = 3
+		job_uma_trader_add = 2
 	}
 }

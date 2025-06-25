@@ -888,7 +888,7 @@ country_event = {
 		name = uma_sweepy.31.a
 		response_text = uma_sweepy.31.desc.repo
 		hidden_effect = {
-			give_specimen = { key = uma_sweepy origin = uma_specimen_null }
+			give_specimen = { key = uma_sweepy}
 			custom_tooltip = uma_sweepy.31.tt
 			hidden_effect = {
 				uma_create_leader_sweepy = yes
@@ -917,26 +917,6 @@ country_event = {
 					}
 				}
 			}
-
-			add_timeline_event = {
-				type = timeline_umamusume
-				override_tooltip = "uma_timeline_meet_leader_sweepy_desc"
-				override_text = { "text:uma_timeline_meet_leader_sweepy" }
-				override_types = { country leader }
-				override_texture = { "background_zoom1:GFX_uma_timelines_meet_sweepy" "background_zoom2:GFX_uma_timelines_meet_sweepy_zoom_2" }
-				override_id = uma_timeline_meet_leader_sweepy
-				targets = { Root event_target:uma_is_leader_sweepy_tonson }
-			}
-
-#			add_timeline_event = {
-#				type = timeline_empire
-#				override_id = timeline_war_lost
-#				override_tooltip = "TIMELINE_EVENT_WAR_LOST_TOOLTIP"
-#				override_types = { country country }
-#				override_text = { "text:TIMELINE_WAR_LOST" }
-#				override_texture = { "background:GFX_evt_surrender" }
-#				targets = { event_target:this_country event_target:this_winner_country }
-#			}
 		}
 	}
 }

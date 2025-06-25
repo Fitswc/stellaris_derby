@@ -33,6 +33,12 @@ planet_event = {
 				}
 			}
 
+			owner = {
+				country_event = {
+					id = uma_shop_center.1
+					#days = 10 为什么会有个延时？
+				}
+			}
 		}
 		else = {
 			owner = {
@@ -47,40 +53,38 @@ planet_event = {
 				UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
 				FLAG = uma_seiun_sky_system_created
 				SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
-				O_ANGLE_MAX = 200
-				O_ANGLE_MIN = 100
-			}
-
-			uma_spawn_system_around_solar_system = {
-				MIN_JUMPS = 2
-				MAX_JUMPS = 3
-				UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
-				FLAG = uma_grass_wonder_system_created
-				SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
-				O_ANGLE_MAX = 250
-				O_ANGLE_MIN = 50
 			}
 
 			uma_spawn_system_around_solar_system = {
 				MIN_JUMPS = 1
-				MAX_JUMPS = 4
+				MAX_JUMPS = 2
+				UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
+				FLAG = uma_grass_wonder_system_created
+				SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
+			}
+
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 2
 				UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
 				FLAG = uma_tachyon_coffee_system_created
 				SAVE_GLOBAL_TARGET = uma_where_coffee_is
-				O_ANGLE_MAX = 150
-				O_ANGLE_MIN = 10
 			}
 
-#			uma_spawn_system_around_solar_system = {
-#				MIN_JUMPS = 5
-#				MAX_JUMPS = 10
-#				UMA_INITIALIZER = "uma_shop_center_system_initializer"
-#				FLAG = uma_shop_center_system_created
-#				SAVE_GLOBAL_TARGET = uma_where_shop_center_is
-#				O_ANGLE_MAX = 300
-#				O_ANGLE_MIN = 200
-#			}
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 5
+				MAX_JUMPS = 10
+				UMA_INITIALIZER = "uma_shop_center_system_initializer"
+				FLAG = uma_shop_center_system_created
+				SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+			}
 
+			owner = {
+				country_event = {
+					id = uma_shop_center.1
+					days = 5
+				}
+			}
 		}
 				
     }	
@@ -103,54 +107,46 @@ country_event = {
 		###定位阶段
 		###确定sky的星系
 		uma_spawn_system_around_solar_system_multiplayer = {
-				MIN_JUMPS = 1
-				MAX_JUMPS = 4
-				UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
-				FLAG = uma_seiun_sky_system_created
-				SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
-				O_ANGLE_MAX = 200
-				O_ANGLE_MIN = 100
-			}
+			MIN_JUMPS = 1
+			MAX_JUMPS = 3
+			UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
+			FLAG = uma_seiun_sky_system_created
+			SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
+		}
 
-			uma_spawn_system_around_solar_system_multiplayer = {
-				MIN_JUMPS = 2
-				MAX_JUMPS = 5
-				UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
-				FLAG = uma_grass_wonder_system_created
-				SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
-				O_ANGLE_MAX = 250
-				O_ANGLE_MIN = 50
-			}
+		uma_spawn_system_around_solar_system = {
+			MIN_JUMPS = 1
+			MAX_JUMPS = 3
+			UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
+			FLAG = uma_grass_wonder_system_created
+			SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
+		}
 
-			uma_spawn_system_around_solar_system_multiplayer = {
-				MIN_JUMPS = 2
-				MAX_JUMPS = 6
-				UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
-				FLAG = uma_tachyon_coffee_system_created
-				SAVE_GLOBAL_TARGET = uma_where_coffee_is
-				O_ANGLE_MAX = 150
-				O_ANGLE_MIN = 10
-			}
+		uma_spawn_system_around_solar_system_multiplayer = {
+			MIN_JUMPS = 1
+			MAX_JUMPS = 3
+			UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
+			FLAG = uma_tachyon_coffee_system_created
+			SAVE_GLOBAL_TARGET = uma_where_coffee_is
+		}
 
-#			uma_spawn_system_around_solar_system_multiplayer = {
-#				MIN_JUMPS = 5
-#				MAX_JUMPS = 10
-#				UMA_INITIALIZER = "uma_shop_center_system_initializer"
-#				FLAG = uma_shop_center_system_created
-#				SAVE_GLOBAL_TARGET = uma_where_shop_center_is
-#				O_ANGLE_MAX = 300
-#				O_ANGLE_MIN = 200
-#			}
+		uma_spawn_system_around_solar_system_multiplayer = {
+			MIN_JUMPS = 5
+			MAX_JUMPS = 10
+			UMA_INITIALIZER = "uma_shop_center_system_initializer"
+			FLAG = uma_shop_center_system_created
+			SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+		}
 
 		random_country = {
 			limit = {
 				is_ai = no
 				has_authority = auth_trainingcenter
 			}
-#			country_event = {
-#				id = uma_shop_center.1
-#				days = 2
-#			}
+			country_event = {
+				id = uma_shop_center.1
+				days = 5
+			}
 		}
 	}
 }

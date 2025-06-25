@@ -272,12 +272,12 @@ subclass_renwenguanghui_governor = {
     custom_tooltip_with_modifiers = renwen_subclass
 
     planet_modifier = {
-        bonus_pop_growth_mult = 0.3
+        pop_growth_speed = 0.3
         planet_jobs_unity_produces_mult = 0.3
         species_empire_size_mult = -0.1
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.15
+        pop_growth_speed = 0.15
         planet_jobs_unity_produces_mult = 0.15
         species_empire_size_mult = -0.05
     }
@@ -307,10 +307,10 @@ leader_trait_maertiao_governor = {
         has_trait = subclass_renwenguanghui_governor
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.15
+        pop_growth_speed = 0.15
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.075
+        pop_growth_speed = 0.075
     }
     leader_class = { official }
     selectable_weight = {                                                   #权重
@@ -334,10 +334,10 @@ leader_trait_maertiao_governor_2 = {
 
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.3
+        pop_growth_speed = 0.3
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.15
+        pop_growth_speed = 0.15
     }
     leader_class = { official }
 }
@@ -358,10 +358,10 @@ leader_trait_maertiao_governor_3 = {
 
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.45
+        pop_growth_speed = 0.45
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.225
+        pop_growth_speed = 0.225
     }
     leader_class = { official }
 }
@@ -470,11 +470,11 @@ leader_trait_zhongzhichengcheng_governor = {
     }
 
     planet_modifier = {
-        bonus_pop_growth_mult = 0.05
+        pop_growth_speed = 0.05
         planet_jobs_produces_mult = 0.05
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.025
+        pop_growth_speed = 0.025
         planet_jobs_produces_mult = 0.025
     }
     modifier = {
@@ -502,11 +502,11 @@ leader_trait_zhongzhichengcheng_governor_2 = {
 
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.1
+        pop_growth_speed = 0.1
         planet_jobs_produces_mult = 0.1
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.05
+        pop_growth_speed = 0.05
         planet_jobs_produces_mult = 0.05
     }
     modifier = {
@@ -531,11 +531,11 @@ leader_trait_zhongzhichengcheng_governor_3 = {
 
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.15
+        pop_growth_speed = 0.15
         planet_jobs_produces_mult = 0.15
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.075
+        pop_growth_speed = 0.075
         planet_jobs_produces_mult = 0.075
     }
     modifier = {
@@ -595,7 +595,7 @@ leader_trait_diantang_governor = {
         AMOUNT = 50
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.1
+        trade_value_mult = 0.1
         country_councilor_influence_produces_add = 1.0
         species_leader_exp_gain = 0.1
     }
@@ -630,7 +630,7 @@ leader_trait_diantang_governor_2 = {
         AMOUNT = 100
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.2
+        trade_value_mult = 0.2
         country_councilor_influence_produces_add = 2.0
         species_leader_exp_gain = 0.2
     }
@@ -668,7 +668,7 @@ leader_trait_diantang_governor_3 = {
 
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.3
+        trade_value_mult = 0.3
         country_councilor_influence_produces_add = 3.0
         species_leader_exp_gain = 0.3
     }
@@ -763,7 +763,7 @@ leader_trait_saishishangyehua_governor = {
         TIER = 1
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.3
+        trade_value_mult = 0.3
     }
     leader_potential_add = {
         has_trait = subclass_jichiguodu_governor
@@ -793,7 +793,7 @@ leader_trait_saishishangyehua_governor_2 = {
 
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.6
+        trade_value_mult = 0.6
     }
     leader_class = { official }
 }
@@ -816,7 +816,7 @@ leader_trait_saishishangyehua_governor_3 = {
 
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.9
+        trade_value_mult = 0.9
     }
     leader_class = { official }
 }
@@ -875,12 +875,12 @@ leader_trait_tianming2_governor = {
         TIER = none
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.5
+        pop_growth_speed = 0.5
         planet_jobs_unity_produces_mult = 0.5
         species_empire_size_mult = -0.3
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.25
+        pop_growth_speed = 0.25
         planet_jobs_unity_produces_mult = 0.25
         species_empire_size_mult = -0.15
     }
@@ -907,7 +907,7 @@ leader_trait_tianming3_governor = {
         TIER = none
     }
     councilor_modifier = {
-        planet_jobs_trade_produces_mult = 0.5
+        trade_value_mult = 0.5
         country_councilor_influence_produces_add = 3.0
         planet_jobs_produces_mult = 0.3
     }

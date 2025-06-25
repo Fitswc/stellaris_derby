@@ -260,7 +260,8 @@ uma_governor_trait_tomorrow_star = {
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_produces_mult = 0.1
-##		planet_immigration_pull_mult = 1
+		planet_immigration_pull_mult = 1
+
 	}
 	self_modifier = {
 		species_leader_exp_gain = 0.25
@@ -272,7 +273,7 @@ uma_governor_trait_tomorrow_star = {
 
 		planet_jobs_unity_produces_mult = 0.15
 		planet_jobs_produces_mult = 0.1
-##		planet_immigration_pull_mult = 1
+		planet_immigration_pull_mult = 1
 	}
 
 	leader_class = { official }
@@ -288,14 +289,14 @@ uma_governor_trait_lovely = {
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.2
 		pop_happiness = 0.1
-#		planet_immigration_pull_mult = 1
+		planet_immigration_pull_mult = 1
 	}
 
 	triggered_councilor_modifier = {
 
 		planet_jobs_unity_produces_mult = 0.2
 		pop_happiness = 0.1
-#		planet_immigration_pull_mult = 1
+		planet_immigration_pull_mult = 1
 	}
 
 	leader_class = { official }

@@ -44,7 +44,7 @@
 #	triggered_country_modifier = {
 #		mult = value:aesthetic_wonder_specimens_modifiers_mult
 #		potential = { is_gestalt = yes }
-#		planet_jobs_energy_produces_mults_mult = 0.02
+#		planet_jobs_energy_produces_mult = 0.02
 #	}
 #}
 
@@ -90,7 +90,7 @@ uma_care_kit = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		bonus_pop_growth_mult = 0.03
+		pop_growth_speed = 0.03
 	}
 }
 
@@ -135,8 +135,7 @@ uma_clover = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		planet_jobs_energy_produces_mult = 0.02
-		planet_jobs_trade_produces_mult = 0.02
+		planet_jobs_energy_produce = 0.02
 	}
 }
 
@@ -186,7 +185,7 @@ uma_kasume_doll = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		planet_jobs_trade_produces_mult = 0.07
+		trade_value_add = 0.07
 	}
 }
 
@@ -201,7 +200,7 @@ uma_live_video = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 10
+		planet_amenities_add = 0.01
 		planet_uma_umaidol_produces_mult = 0.03
 	}
 }
@@ -293,7 +292,7 @@ uma_sky_flower = {
 
 uma_strength_crystal = {
 	icon = "GFX_uma_specimen_uma_strength_crystal"
-	type = historical_item
+	type = aesthetic_wonder
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
@@ -302,7 +301,7 @@ uma_strength_crystal = {
 
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
-		bonus_pop_growth_mult = 0.05
+		pop_growth_speed = 0.05
 	}
 }
 
@@ -326,7 +325,7 @@ uma_sweepy = {
 
 uma_tg_chess = {
 	icon = "GFX_uma_specimen_uma_tg_chess"
-	type = historical_item
+	type = aesthetic_wonder
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
@@ -392,7 +391,7 @@ uma_tt_shoes = {
 
 uma_twinkle_maz = {
 	icon = "GFX_uma_specimen_uma_twinkle_maz"
-	type = historical_item
+	type = aesthetic_wonder
 
 	inline_script = {
 		script = "grand_archive/set_specimen_rarity"
@@ -427,20 +426,4 @@ uma_ty_medicine = {
 }
 
 
-uma_zephyr_journy_with_zephyr = {
-	icon = "GFX_uma_zephyr_journy_with_zephyr"
-	type = historical_item
-
-	inline_script = {
-		script = "grand_archive/set_specimen_rarity"
-		RARITY = epic
-	}
-
-	resources = {
-		category = specimens
-		produces = {
-			unity = 60
-		}
-	}
-}
 

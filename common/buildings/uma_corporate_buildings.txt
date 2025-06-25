@@ -3,7 +3,6 @@ building_uma_model_market = { #换图
 	can_build = yes
 	category = trade
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -44,14 +43,10 @@ building_uma_model_market = { #换图
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
+			job_clerk_add = 1
 			pop_happiness = 0.15
 			planet_jobs_energy_produces_mult = -0.15
 		}
-	}
-
-	convert_to = {
-		building_uma_model_market
 	}
 }
 
@@ -60,7 +55,6 @@ building_uma_cos_suit_mareket = {
 	can_build = yes
 	category = trade
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -85,7 +79,7 @@ building_uma_cos_suit_mareket = {
 		}
 		produces = {
 			energy = 40
-			trade = 1
+
 		}
 	}
 
@@ -100,7 +94,8 @@ building_uma_cos_suit_mareket = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
+			job_clerk_add = 1
+			trade_value_add = 2
 		}
 	}
 }
@@ -109,9 +104,8 @@ building_uma_cos_suit_mareket = {
 building_uma_private_mining_station = {
 	base_buildtime = 200
 	can_build = yes
-	category = resource
+	category = manufacturing
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -136,7 +130,6 @@ building_uma_private_mining_station = {
 		}
 		produces = {
 			minerals = 21
-			trade = 1
 		}
 	}
 
@@ -151,7 +144,8 @@ building_uma_private_mining_station = {
 			}
 		}
 		modifier = {
-			job_miner_add = 100
+			job_miner_add = 1
+			trade_value_add = 2
 		}
 	}
 }
@@ -163,7 +157,6 @@ building_uma_private_racing_ticket_station = {
 	can_build = yes
 	category = trade
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -188,7 +181,6 @@ building_uma_private_racing_ticket_station = {
 		}
 		produces = {
 			energy = 25
-			trade = 1
 		}
 
 	}
@@ -204,8 +196,8 @@ building_uma_private_racing_ticket_station = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
-
+			job_clerk_add = 1
+			trade_value_add = 2
 		}
 	}
 }
@@ -216,7 +208,6 @@ building_uma_yellow_market = {
 	can_build = yes
 	category = trade
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -247,7 +238,6 @@ building_uma_yellow_market = {
 		}
 		produces = {
 			energy = 20
-			trade = 2
 		}
 	}
 
@@ -262,8 +252,8 @@ building_uma_yellow_market = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
-			pop_happiness = 0.1
+			job_clerk_add = 1
+			pop_happiness = 1
 			planet_crime_add = 30
 			planet_stability_add = -6
 		}
@@ -285,7 +275,6 @@ building_uma_crime_smuggle_bay = {
 	can_build = yes
 	category = trade
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -314,7 +303,6 @@ building_uma_crime_smuggle_bay = {
 		}
 		produces = {
 			energy = 10
-			trade = 2
 		}
 	}
 
@@ -329,7 +317,7 @@ building_uma_crime_smuggle_bay = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 100
+			job_clerk_add = 1
 			planet_crime_add = 30
 			planet_stability_add = -10
 		}
@@ -351,7 +339,6 @@ building_uma_crime_underground_club = {
 	can_build = yes
 	category = amenity
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -381,7 +368,6 @@ building_uma_crime_underground_club = {
 		}
 		produces = {
 			energy = 20
-			trade = 1
 		}
 	}
 
@@ -396,7 +382,7 @@ building_uma_crime_underground_club = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 200
+			job_clerk_add = 2
 			planet_crime_add = 40
 			planet_stability_add = -20
 		}
@@ -418,7 +404,6 @@ building_uma_crime_underground_weapon_maker = {
 	can_build = yes
 	category = trade
 	owner_type = corporate
-	planet_limit = 1
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -445,7 +430,6 @@ building_uma_crime_underground_weapon_maker = {
 		}
 		upkeep = {
 			alloys = 2
-			trade = 1
 		}
 	}
 

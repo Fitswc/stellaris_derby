@@ -16,7 +16,7 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				pop_amount >= 100
+				num_pops >= 1
 			}
 			if = {
 				limit = {

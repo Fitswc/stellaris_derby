@@ -343,18 +343,15 @@ planet_uma_racing_ura_members = {
 #	}
 #}
 
-planet_uma_traders = {
-	parent = planet_traders
-	modifier_category = pop_job
-	generate_add_modifiers = {
-		produces
-	}
+planet_uma_racing_umamusume = {
+	icon = "job_uma_racing_umamusume"
+	parent = planet_racing_related
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
-}
-
-
-uma_trade_policy = {
+	generate_add_modifiers = {
+		produces
+		#upkeep
+	}
 }

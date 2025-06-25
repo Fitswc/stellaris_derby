@@ -1262,7 +1262,7 @@ tech_uma_souls_matrix = { #马娘灵魂摹写矩阵
     area = physics
     tier = 5
     category = { computing }
-    prerequisites = {  "tech_uma_umapersonality_project" }
+    prerequisites = { "tech_uma_basic_territory_theory" "tech_uma_umapersonality_project" }
     weight = 100
 
     potential = {

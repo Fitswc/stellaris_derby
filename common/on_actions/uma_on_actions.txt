@@ -15,8 +15,6 @@ on_game_start = {
 #		uma_bour_arc.900
 		uma_marking.1
 
-		uma_timeline.1
-
 	}
 }
 
@@ -53,7 +51,7 @@ on_press_begin = {
 # From = Fleet
 on_fleet_detected = {
 	events = {
-#		uma_shop_center.2 #绿帽商店检测
+		uma_shop_center.2 #绿帽商店检测
 	}
 }
 
@@ -99,11 +97,6 @@ on_monthly_pulse_country = {
 		uma_sweepy.7
 #		uma_sweepy.1
 		uma_bour_arc.14
-
-		uma_shop_center.2
-
-#		uma_ap.85
-
 	}
 }
 
@@ -120,7 +113,6 @@ on_yearly_pulse_country = {
 		uma_satono.402
 		uma_fallen_empire.2077
 		uma_fallen_empire.40 #堕落定期触发（5年检测）
-		uma_curren.1
 	}
 
 	random_events = {
@@ -179,20 +171,6 @@ on_planet_surveyed = {
 	}
 }
 
-on_planet_attackers_win = {
-	events = {
-		uma_ap.83
-		uma_ap.855
-	}
-}
-
-on_system_survey = {
-	random_events = {
-		50 = uma_zephyr.1
-		50 = 0
-	}
-}
-
 
 
 ##舰队接战
@@ -231,8 +209,6 @@ on_fleet_destroyed_perp = {
 		uma_finemotion.70
 		#uma_fallen_empire.1151
 		uma_crisis.6668
-
-		uma_curren.50
 	}
 }
 
@@ -259,7 +235,6 @@ on_colonized = {
 		uma_satono.401
 		uma_fallen_empire.1141
 		uma_finemotion.888
-		uma_season.1
 #		uma_fallen_empire.1141
 	}
 
@@ -269,14 +244,12 @@ on_colonized = {
 on_entering_system_first_time = {
 	events = {
 		tachyon_coffee.1
-		uma_zephyr.20
 	}
 }
 
 on_entering_system = {
 	events = {
 		uma_crisis.6660
-		uma_zephyr.40
 	}
 }
 
@@ -371,7 +344,6 @@ on_mid_game_pulse_country = {
 on_leader_death = {
 	events = {
 		uma_finemotion.2077
-		uma_ayb_arc.2077
 	}
 }
 
@@ -394,7 +366,6 @@ on_monthly_pulse_pre_ftl_observation = {
 on_building_observation_station = {
 	events = {
 		uma_preftl.9998
-
 	}
 }
 
@@ -443,26 +414,6 @@ on_ground_combat_started = {
 	events = {
 #		uma_traits_leader.11
 		uma_traits_leader.12
-	}
-}
-
-
-on_war_beginning = {
-	events = {
-		uma_bg.21
-	}
-}
-
-on_entering_war = {
-	events = {
-		uma_bg.23
-	}
-}
-
-on_war_ended = {
-	events = {
-		uma_bg.22
-		uma_bg.24
 	}
 }
 
@@ -540,40 +491,6 @@ on_destroy_planet_with_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL = {
 # From = Country which communications were established with
 on_post_communications_established = {
 	events = {
-	}
-}
 
-on_storm_encountered = {
-	events = {
-		uma_zephyr.30
-	}
-}
-
-on_building_observation_station = {
-	events = {
-		 uma_zephyr.10
-	}
-}
-
-
-
-on_uma_ap2_factor_random_updown_event_list ={
-	random_events = {
-		3 = uma_ap.60 # Stage 2 Challenge
-		3 = uma_ap.70 # Stage 2 Challenge
-
-		3 = uma_ap.80 #Stage3
-		7 = 0
-	}
-}
-
-
-on_uma_ap2_realm_random_updown_event_list ={
-	random_events = {
-		3 = uma_ap.160 # Stage 2 Challenge
-#		3 = uma_ap.170 # Stage 2 Challenge
-
-#		3 = uma_ap.180 #Stage3
-		7 = 0
 	}
 }

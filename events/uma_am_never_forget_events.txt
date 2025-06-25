@@ -242,10 +242,6 @@ country_event = {
             }
         }
     }
-
-    option = {
-        name = OK
-    }
 }
 
 ship_event = {
@@ -422,16 +418,6 @@ country_event = {
                     value = "GFX_border_legendary"
                 }
             }
-        }
-
-        add_timeline_event = {
-            type = timeline_umamusume
-            override_tooltip = "uma_timeline_meet_leader_aston_desc"
-            override_text = { "text:uma_timeline_meet_leader_aston" }
-            override_texture = { "background_zoom1:GFX_uma_timelines_meet_aston" "background_zoom2:GFX_uma_timelines_meet_aston_zoom_2" }
-            override_types = { country leader }
-            override_id = uma_timeline_meet_leader_aston
-            targets = { Root event_target:uma_is_leader_am_2 }
         }
     }
 
