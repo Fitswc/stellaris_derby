@@ -170,7 +170,7 @@ country_event = {
 				gender = female
 				class = scientist
 				set_age = 19
-				skill = 2
+				skill = 1
 				immortal = no
 				custom_catch_phrase = uma_ayb_catch_phrase
 				traits = {
@@ -178,6 +178,7 @@ country_event = {
 					trait = leader_trait_uma_generic
 				}
 				effect = {
+					add_experience = 1600
 					set_leader_flag = uma_is_special_leader
 					set_leader_flag = uma_is_silent_suzuka
 					save_global_event_target_as = uma_is_leader_silent_suzuka

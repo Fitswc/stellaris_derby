@@ -536,6 +536,13 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_evt_uma_evtchain_zephyr"
+		textureFile = "gfx/event_pictures/event_chain/uma_zephyr.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "GFX_evt_uma_strange_forum"
 		textureFile = "gfx/event_pictures/uma_strange_forum.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"

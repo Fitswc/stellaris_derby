@@ -247,6 +247,7 @@ country_event = {
 	immediate = {
 		uma_create_leader_curren = yes
 		last_created_leader = {
+			add_experience = 3600
 			uma_initialize_leader_yaruki_effect = yes
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_curren_chan

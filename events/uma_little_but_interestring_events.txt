@@ -351,6 +351,7 @@ country_event = {
 		}
 		hidden_effect = {
 			last_created_leader = {
+				add_experience = 3700
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_oguri_cap
 				save_global_event_target_as = uma_is_leader_oguri_cap

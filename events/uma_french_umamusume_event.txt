@@ -1051,6 +1051,7 @@ country_event = {
 		}
 		hidden_effect = {
 			last_created_leader = {
+				add_experience = 12002
 				change_leader_portrait = "GLX_ZF"
 				uma_initialize_leader_yaruki_effect = yes
 				set_leader_flag = uma_is_special_leader

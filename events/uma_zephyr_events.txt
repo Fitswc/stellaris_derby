@@ -187,6 +187,19 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = uma_zephyr_events_chain_begin
 		}
+		begin_event_chain = {
+			event_chain = uma_zephyr
+			target = Root
+		}
+		hidden_effect = {
+			create_point_of_interest = {
+				id = uma_zy_1
+				name = uma_zy_1_name
+				desc = uma_zy_1_desc
+				event_chain = uma_zephyr
+				location = capital_scope
+			}
+		}
 	}
 	option = {
 		name = uma_zephyr.6.b
@@ -278,6 +291,11 @@ country_event = {
 
 	immediate = {
 		set_country_flag = uma_zephyr_events_observer_happened
+		add_event_chain_counter = {
+			event_chain = uma_zephyr
+			counter = uma_zy_pre
+			amount = 1
+		}
 	}
 
 	option = {
@@ -472,6 +490,11 @@ country_event = {
 	}
 
 	immediate = {
+		add_event_chain_counter = {
+			event_chain = uma_zephyr
+			counter = uma_zy_ty
+			amount = 1
+		}
 
 	}
 
@@ -601,6 +624,14 @@ country_event = {
 		has_country_flag = uma_zephyr_events_chain_begin
 	}
 
+	immediate = {
+		add_event_chain_counter = {
+			event_chain = uma_zephyr
+			counter = uma_zy_st
+			amount = 1
+		}
+	}
+
 	option = {
 		name = uma_zephyr.30.a
 
@@ -728,6 +759,13 @@ country_event = {
 	picture = GFX_evt_uma_satono_two
 	is_triggered_only = yes
 
+	immediate = {
+		add_event_chain_counter = {
+			event_chain = uma_zephyr
+			counter = uma_zy_gud
+			amount = 1
+		}
+	}
 
 	option = {
 		name = uma_zephyr.41.a
@@ -863,6 +901,7 @@ country_event = {
 				id = uma_zephyr.52
 			}
 		}
+		end_event_chain = uma_zephyr
 	}
 }
 
@@ -877,6 +916,7 @@ country_event = {
 		hidden_effect = {
 			uma_create_leader_zephyr = yes
 			last_created_leader = {
+				add_experience = 7000
 				uma_initialize_leader_yaruki_effect = yes
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_zephyr

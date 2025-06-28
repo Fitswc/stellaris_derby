@@ -938,7 +938,7 @@ country_event = {
 				gender = female
 				class = official
 				set_age = 18
-				skill = 5
+				skill = 1
 				immortal = yes
 				background_planet = event_target:uma_leviathan_planet_target
 				background_job = government_employee
@@ -951,6 +951,7 @@ country_event = {
 					trait = subclass_shengchanyuejin_governor
 				}
 				effect = {
+					add_experience = 8000
 					set_leader_flag = uma_is_special_leader
 					set_leader_flag = uma_is_tama
 					save_global_event_target_as = uma_is_leader_tama

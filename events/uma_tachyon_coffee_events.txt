@@ -1800,6 +1800,7 @@ country_event = {
 				species = prev.species
 			}
 			last_created_leader = {
+				add_experience = 21000
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_tachyon
 				save_global_event_target_as = uma_is_leader_tachyon

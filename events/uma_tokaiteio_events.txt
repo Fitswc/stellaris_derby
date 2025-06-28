@@ -1343,6 +1343,7 @@ country_event = {
 				gender = female
 			}
 			last_created_leader = {
+				add_experience = 410
 				copy_flags_and_variables_from = event_target:uma_is_leader_tokai_teio
 				save_global_event_target_as = uma_is_leader_tokai_teio
 				change_leader_portrait = TEIO_COMM

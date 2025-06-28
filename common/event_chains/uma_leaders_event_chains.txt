@@ -87,13 +87,29 @@ uma_fm_full = {
 	picture = GFX_evt_uma_evtchain_fine
 	counter = {
 		uma_fm_arc = {
-			max = 1
 		}
 		uma_fm_gc = {
 		}
 		uma_fm_ti = {
 		}
 
+		uma_bour_story_list = {
+		}
+	}
+}
+
+uma_zephyr = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_uma_evtchain_zephyr
+	counter = {
+		uma_zy_pre = {
+		}
+		uma_zy_ty = {
+		}
+		uma_zy_st = {
+		}
+		uma_zy_gud = {
+		}
 		uma_bour_story_list = {
 		}
 	}

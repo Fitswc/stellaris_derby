@@ -366,6 +366,7 @@ country_event = {
 			}
 #			uma_create_leader_sky_admiral = yes
 			last_created_leader = {
+				add_experience = 28000
 				save_global_event_target_as = uma_seiun_sky_admiral
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_seiun_sky
@@ -498,6 +499,7 @@ country_event = {
 				species = prev.species
 			}
 			last_created_leader = {
+				add_experience = 28000
 				save_global_event_target_as = uma_seiun_sky_governor
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_seiun_sky
@@ -2053,6 +2055,7 @@ country_event = {
 				species = prev.species
 			}
 			last_created_leader = {
+				add_experience = 11900
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_agnes_digital
 				save_global_event_target_as = uma_agnes_digital_governor

@@ -1,6 +1,6 @@
 is_organic_species = {
 
-#	optimize_memory
+#
 	species = {
 		OR = {
 			is_archetype = BIOLOGICAL
@@ -529,13 +529,11 @@ uma_ap2_factor_0_fault = {
 }
 
 uma_check_realm_factor_rate_wisdom_1 = {
-	optimize_memory
 	has_country_flag = uma_kenshi_intelligence_level_1
 	has_country_flag = uma_kenshi_intelligence_level_2
 }
 
 uma_check_realm_factor_rate_wisdom_2 = {
-	optimize_memory
 	has_country_flag = uma_kenshi_intelligence_level_3
 	has_country_flag = uma_kenshi_intelligence_level_4
 	has_country_flag = uma_kenshi_intelligence_level_5
@@ -550,13 +548,13 @@ uma_check_realm_factor_rate_stamina_1 = {
 }
 
 uma_check_realm_factor_rate_power_1 = {
-	optimize_memory
+
 	has_country_flag = uma_kenshi_strength_level_1
 	has_country_flag = uma_kenshi_strength_level_2
 }
 
 uma_check_realm_factor_rate_power_2 = {
-	optimize_memory
+
 	has_country_flag = uma_kenshi_strength_level_3
 	has_country_flag = uma_kenshi_strength_level_4
 	has_country_flag = uma_kenshi_strength_level_5
@@ -564,7 +562,7 @@ uma_check_realm_factor_rate_power_2 = {
 
 
 uma_check_factory_alloy_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -578,7 +576,7 @@ uma_check_factory_alloy_disable = {
 }
 
 uma_check_factory_custom_goods_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -592,7 +590,7 @@ uma_check_factory_custom_goods_disable = {
 }
 
 uma_check_factory_volatile_motes_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -610,7 +608,7 @@ uma_check_factory_volatile_motes_disable = {
 }
 
 uma_check_factory_gas_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -628,7 +626,7 @@ uma_check_factory_gas_disable = {
 }
 
 uma_check_factory_rare_crystal_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -642,7 +640,7 @@ uma_check_factory_rare_crystal_disable = {
 }
 
 uma_check_factory_living_materal_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -661,7 +659,7 @@ uma_check_factory_living_materal_disable = {
 
 
 uma_check_factory_dark_matter_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -675,7 +673,7 @@ uma_check_factory_dark_matter_disable = {
 }
 
 uma_check_factory_nanites_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = uma_crystal_carrot
@@ -697,7 +695,7 @@ uma_check_factory_nanites_disable = {
 }
 
 uma_check_factory_uma_crystal_disable = {
-	optimize_memory
+
 	OR = {
 		has_resource = {
 			type = minerals

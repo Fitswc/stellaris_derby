@@ -893,6 +893,7 @@ country_event = {
 			hidden_effect = {
 				uma_create_leader_sweepy = yes
 				last_created_leader = {
+					add_experience = 3600
 					change_leader_portrait = "56c"
 					uma_initialize_leader_yaruki_effect = yes
 					set_leader_flag = uma_is_special_leader

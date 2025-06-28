@@ -16,6 +16,7 @@ country_event = {
 					min_jumps = 3
 					max_jumps = 6
 				}
+				uma_is_event_system = no
 			}
 			set_star_flag = uma_cheval_system
 			spawn_astral_rift = {
@@ -468,6 +469,7 @@ country_event = {
 		}
 		hidden_effect = {
 			last_created_leader = {
+				add_experience = 8000
 				change_leader_portrait = "76c"
 				uma_initialize_leader_yaruki_effect = yes
 				set_leader_flag = uma_is_special_leader
