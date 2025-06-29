@@ -566,18 +566,8 @@ country_event = {
 		}
 
 		export_resource_maximum_to_variable = {
-			resource = food
-			variable = uma_tgrd_foods_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
 			resource = energy
 			variable = uma_tgrd_energy_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = minerals
-			variable = uma_tgrd_minals_maxiume
 		}
 
 		export_resource_maximum_to_variable = {
@@ -653,6 +643,94 @@ country_event = {
 		export_resource_stockpile_to_variable = {
 			resource = sr_dark_matter
 			variable = uma_tgrd_darkm_stockpile
+		}
+
+
+		if = {
+			limit = {
+				OR = {
+					is_variable_set = uma_tgrd_alloys_stockpile
+					is_variable_set = uma_tgrd_consumer_goods_stockpile
+					is_variable_set = uma_tgrd_motes_stockpile
+					is_variable_set = uma_tgrd_gas_stockpile_stockpile
+					is_variable_set = uma_tgrd_r_crystal_stockpile
+					is_variable_set = uma_tgrd_living_metal_stockpile
+					is_variable_set = uma_tgrd_darkm_stockpile
+				}
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = alloys
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = consumer_goods
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = motes
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = gas
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = r_crystal
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = living_metal
+			}
+			uma_calculate_tg_produce_num = {
+				RESOURCE = darkm
+			}
+
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+					OR = {
+						has_building = building_uma_tg_alloys_maker_Automatic_2
+						has_building = building_uma_tg_alloys_maker_Automatic
+						has_building = building_uma_tg_custom_goods_productor
+						has_building = building_uma_tg_custom_goods_productor_2
+						has_building = building_uma_tg_industrial_complex
+					}
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = alloys
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = consumer_goods
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = motes
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = gas
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = r_crystal
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = living_metal
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = darkm
+				}
+
+				uma_tg_produce_handling_capacities_approximate = yes
+			}
+		}
+
+	}
+}
+
+
+country_event = {
+	id = uma_threegodness_rd.6
+	hide_window = yes
+	is_triggered_only = yes
+
+
+
+	immediate = {
+		add_resource = {
+			alloys = -10000000
 		}
 	}
 }

@@ -1,3 +1,22 @@
+uma_handling_capacity_for_tg = {
+	base = 1
+
+	complex_trigger_modifier = {
+		trigger_scope = planet
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = {
+				is_pop_category = civilian
+			}
+		}
+		mode = multiply
+		mult = 0.5
+	}
+	round = yes
+
+}
+
+
 uma_tg_alloys_maker_Automatic_upkeep_sv = {
 	base = 1
 

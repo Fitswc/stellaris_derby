@@ -4095,3 +4095,75 @@ uma_season_give_random_season = {
 		set_deposit_flag = keep_deposit_on_terraform
 	}
 }
+
+
+uma_calculate_tg_produce_num = {
+	optimize_memory
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_tgrd_$RESOURCE$_stockpile
+				value = 0
+			}
+		}
+		set_variable = {
+			which = uma_tgrd_$RESOURCE$_maxiume_produces
+			value = uma_tgrd_$RESOURCE$_maxiume
+		}
+		divide_variable = {
+			which = uma_tgrd_$RESOURCE$_maxiume_produces
+			value = 100
+		}
+		multiply_variable = {
+			which = uma_tgrd_$RESOURCE$_maxiume_produces
+			value = 12
+		}
+	}
+
+	else = {
+		set_variable = {
+			which = uma_tgrd_$RESOURCE$_maxiume_produces
+			value = uma_tgrd_$RESOURCE$_maxiume
+		}
+		divide_variable = {
+			which = uma_tgrd_$RESOURCE$_maxiume_produces
+			value = uma_tgrd_$RESOURCE$_stockpile
+		}
+		multiply_variable = {
+			which = uma_tgrd_$RESOURCE$_maxiume_produces
+			value = 8
+		}
+	}
+
+}
+
+uma_trans_tg_produce_num_to_planet = {
+	optimize_memory
+	set_variable = {
+		which = uma_tgrd_$RESOURCE$_maxiume_produces
+		value = Root.uma_tgrd_$RESOURCE$_maxiume_produces
+	}
+
+}
+
+uma_tg_produce_handling_capacities_approximate = {
+	optimize_memory
+	set_variable = {
+		which = uma_tg_alloys_1_approximately_handling
+		value = 0.67
+	}
+	multiply_variable = {
+		which = uma_tg_alloys_1_approximately_handling
+		value = value:uma_handling_capacity_for_tg
+	}
+
+	set_variable = {
+		which = uma_tg_alloys_2_approximately_handling
+		value = 1
+	}
+	multiply_variable = {
+		which = uma_tg_alloys_2_approximately_handling
+		value = value:uma_handling_capacity_for_tg
+	}
+
+}
