@@ -1474,8 +1474,8 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 2000
-		max = 5500
+		min = 880
+		max = 1200
 	}
 	windup ={
 		min = 1
@@ -1530,7 +1530,7 @@ weapon_component_template = { #强等离子发射器
 		cost = {
 			alloys = 220
 			uma_crystal_carrot = 9
-			exotic_gases = 1.5
+			exotic_gases = 2.0
 		}
 		upkeep = {
 			energy = 1.2
@@ -1539,24 +1539,24 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 450
-		max = 750
+		min = 1300
+		max = 1600
 	}
 	windup ={
 		min = 1
 		max = 16
 	}
-	total_fire_time = 40
+	total_fire_time = 50
 	hull_damage = 1.8
 	shield_damage = 0.5
-	shield_penetration = 0
-	armor_damage = 5.5
-	armor_penetration = 0
+	shield_penetration = 0.2
+	armor_damage = 6.0
+	armor_penetration = 0.5
 
 	#cooldown = 40
-	range = 54
-	accuracy = 0.85
-	tracking = 0.1
+	range = 260
+	accuracy = 1
+	tracking = 0.5
 
     ai_weight ={
         factor = 0
