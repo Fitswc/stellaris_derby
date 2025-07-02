@@ -13,10 +13,11 @@ country_event = {
 			limit = {
 				distance = {
 					source = root.solar_system
-					min_jumps = 3
-					max_jumps = 6
+					min_jumps = 2
+					max_jumps = 7
 				}
 				uma_is_event_system = no
+				has_owner = no
 			}
 			set_star_flag = uma_cheval_system
 			spawn_astral_rift = {
