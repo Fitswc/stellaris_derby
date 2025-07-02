@@ -103,7 +103,7 @@
   
   
   
- situation_uma_ap_2_situation_system_factor_fin_tt: "This species：\n[UMA_AP2_MODIFIER_FACTOR_SPEED][UMA_AP2_MODIFIER_FACTOR_POWER][UMA_AP2_MODIFIER_FACTOR_STAMINA][UMA_AP2_MODIFIER_FACTOR_WISDOM][UMA_AP2_MODIFIER_FACTOR_CHARM] \n \n§YSam time§!，This species：\n£mod_pop_growth_speed£ Pop growth speed: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+ situation_uma_ap_2_situation_system_factor_fin_tt: "This species：\n[UMA_AP2_MODIFIER_FACTOR_SPEED][UMA_AP2_MODIFIER_FACTOR_POWER][UMA_AP2_MODIFIER_FACTOR_STAMINA][UMA_AP2_MODIFIER_FACTOR_WISDOM][UMA_AP2_MODIFIER_FACTOR_CHARM] \n \n§YSam time§!，This species：\n£mod_bonus_pop_growth£ Pop growth speed: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
  mod_army_damage_mult: "£mod_army_damage_mult£ Army Harm"
  mod_uma_empire_size_pops_mult: "£mod_empire_size_pops_mult£ Empire size create by pops"
  mod_uma_ship_base_speed_mult: "£mod_ship_base_speed_mult£ Base ship speed"
@@ -148,7 +148,7 @@
  uma_ap_system_factor_stamina_num: "[owner.uma_ap2_factor_stamina_rate] "
  uma_ap_system_factor_charm_num: "[owner.uma_ap2_factor_charm_rate] "
  uma_ap_system_factor_wisdom_num: "[owner.uma_ap2_factor_wisdom_rate] "
- uma_ap_system_factor_depth_num: "£mod_pop_growth_speed£ Pop growth speed: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
+ uma_ap_system_factor_depth_num: "£mod_bonus_pop_growth£ Pop growth speed: [UMA_AP2_MODIFIER_FACTOR_NUM_POP_DECREASE] "
   
   
  uma_ap_system_factor_speed_t_tt: "Add Trait to Species：\n$UMA_AP2_MODIFIER_FACTOR_SPEED_EXIST$"
