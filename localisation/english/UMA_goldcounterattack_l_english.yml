@@ -48,7 +48,7 @@
  NAME_goldship: "Gold Ship Fleet"
  Name_GP: "Gold Ship Fleet Portal"
  uma_crisis.1008.name: "Golden crack"
- uma_crisis.1008.desc: "A large number of armed ships from §H[uma_gold_invasion_spawn_system.GetName]§! The golden crack that appeared inside gushed out and attacked us! The ships had gold armor and weapons, and our attacks had little effect."
+ uma_crisis.1008.desc: "A large number of armed ships from §H[event_target:uma_gold_invasion_spawn_system.GetName]§! The golden crack that appeared inside gushed out and attacked us! The ships had gold armor and weapons, and our attacks had little effect."
  uma_crisis.1008.a: "What's going on? State of emergency!"
  uma_crisis.1008.a.tooltip: ""
   
@@ -86,13 +86,13 @@
  uma_crisis.112.c: "The battle of the fleet isn't gambling, is it?"
  uma_crisis.112.c.response: "Well, let's wait and see."
   
- uma_crisis.112.d: "庆典大人，是我们有眼不识泰山，饶了我吧。"
+ uma_crisis.112.d: "Nakayama-sama，It's our fault for failing to recognize the truth. Please spare me."
   
- uma_crisis.1123.desc: "......真没想到你会来求饶。这样吧，你上缴一些资源，我就说服她们撤退。听着，我们需要 £energy£10000 £minerals£5000 £food£10000 £alloys£ 5000 £uma_crystal_carrot£ 5000"
- uma_crisis.1123.a.tt: "我们负担不起"
- uma_crisis.1123.a: "我们接受这个条件"
- uma_crisis.1123.b: "这些条件有些离谱了，我们不接受"
- uma_crisis.1123.b.rp: "那就押上未来和所有舰队！"
+ uma_crisis.1123.desc: "......I really didn't expect you to come begging for mercy. Well, you hand over some resources and I'll persuade them to retreat. Listen, we need £energy£10000 £minerals£5000 £food£10000 £alloys£ 5000 £uma_crystal_carrot£ 5000"
+ uma_crisis.1123.a.tt: "We can't afford it"
+ uma_crisis.1123.a: "We accept"
+ uma_crisis.1123.b: "These conditions are a bit outrageous and we won't accept them"
+ uma_crisis.1123.b.rp: "Then bet on the future and all the fleets!"
   
  uma_crisis.1121.desc: "It wasn't my idea."
  uma_crisis.1121.a: "Is that the Gold Ship?"
@@ -108,7 +108,7 @@
   
   
   
- uma_crisis.2008.desc: "Detector found in §H[uma_naka_invasion_spawn_system.GetName]§! A second golden crevasse was created, and a great fleet poured out of it!"
+ uma_crisis.2008.desc: "Detector found in §H[event_target:uma_naka_invasion_spawn_system.GetName]§! A second golden crevasse was created, and a great fleet poured out of it!"
  uma_crisis.2008.a: "Damn it!"
   
  uma_crisis.20081.desc: "Gold Ship, you cheat again? !"
@@ -121,7 +121,7 @@
   
  uma_crisis.20082.desc: "You stay away until I'm done with her."
   
- uma_crisis.3008.desc: "Detector found in §H[uma_Orfevre_invasion_spawn_system.GetName]§! A third golden crevasse was created, and a great fleet poured out of the crevasse!"
+ uma_crisis.3008.desc: "Detector found in §H[event_target:uma_Orfevre_invasion_spawn_system.GetName]§! A third golden crevasse was created, and a great fleet poured out of the crevasse!"
  uma_crisis.3008.a: "How many more fleets are there?"
   
  uma_crisis.3009.desc: "Aha? You two fighting again? It's okay. I'm just looking."
@@ -158,13 +158,13 @@
  uma_crisis.1020.desc: "Noooo! My Gold fleet! Damn it! Strategy in!"
  uma_crisis.1020.a: "Ha, are you attacking backwards?"
  uma_crisis.1021.title: "Take out a portal"
- uma_crisis.1021.desc: "We successfully defeated the command at §H[uma_gold_invasion_spawn_system.GetName]§! With less infighting, however, fighting may be more troublesome."
+ uma_crisis.1021.desc: "We successfully defeated the command at §H[event_target:uma_gold_invasion_spawn_system.GetName]§! With less infighting, however, fighting may be more troublesome."
  uma_crisis.1021.a: "Seize the victory and pursue!"
   
  uma_crisis.2020.desc: "Well, if it wasn't for that Gold Ship..."
  uma_crisis.2020.a: "Even in a single fight, you're no match for us."
  uma_crisis.2021.title: "Take out a portal"
- uma_crisis.2021.desc: "We successfully defeated the command at §H[uma_Orfevre_invasion_spawn_system.GetName]§! With less infighting, however, fighting may be more troublesome."
+ uma_crisis.2021.desc: "We successfully defeated the command at §H[event_target:uma_Orfevre_invasion_spawn_system.GetName]§! With less infighting, however, fighting may be more troublesome."
  uma_crisis.2021.a: "Seize the victory and pursue!"
   
  uma_crisis.6000.title: "Take out two portals"
