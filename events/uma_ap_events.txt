@@ -1433,7 +1433,9 @@ country_event = {
 	option = {
 		name = uma_ap.71.a
 		custom_tooltip = uma_ap.71.a.tt
-
+		country_event = {
+			id = uma_ap.800
+		}
 		hidden_effect = {
 			country_event = {
 				id = uma_ap.811
@@ -1498,6 +1500,10 @@ situation_event = {
 
 		hidden_effect = {
 			owner = {
+				country_event = {
+					id = uma_ap.800
+				}
+
 				every_planet_within_border = {
 					limit = {
 						is_colony = yes
@@ -1512,6 +1518,19 @@ situation_event = {
 				}
 
 			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.800
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		begin_event_chain = {
+			event_chain = uma_ap2_factor_invator
+			target = This
 		}
 	}
 }
@@ -1612,13 +1631,13 @@ country_event = {
 		}
 
 		else = {
-
 			random_planet_within_border = {
 				limit = {
 					NOT = {
 						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
 					}
-					is_colony = yes
+#					is_colony = yes
+					is_under_colonization = yes
 					is_capital = no
 				}
 				planet_event = {
@@ -1632,7 +1651,7 @@ country_event = {
 	after = {
 		country_event = {
 			id = uma_ap.811
-			days = 150 #Test
+			days = 180 #Test
 		}
 	}
 }
@@ -1649,6 +1668,13 @@ planet_event = {
 	}
 
 	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = uma_ap2_factor_invator
+				counter = uma_ap2_factor_invator_counter
+				amount = 1
+			}
+		}
 		set_planet_flag = uma_ap2_factor_this_planet_has_been_infected
 		while = {
 			count = 10

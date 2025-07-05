@@ -186,6 +186,12 @@ on_planet_attackers_win = {
 	}
 }
 
+on_planet_defenders_win = {
+	events = {
+		uma_ap.83
+	}
+}
+
 on_system_survey = {
 	random_events = {
 		50 = uma_zephyr.1
