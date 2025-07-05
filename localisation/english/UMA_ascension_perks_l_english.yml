@@ -211,12 +211,12 @@
  uma_ap.80.title: "Alternating personality"
  uma_ap.80.desc: "Something abnormal has occurred! The phenomenon of Umamusume going crazy has been reported in many places, and even the military has been affected. All these Umamusume have a common feature: severe MPD has been observed in them, and they are all Umamusume that have undergone factor replacement. They behave strangely and are highly disciplined. Even more strangely, they seem to be obsessed with imprisfying normal Umamusume and forcing factor replacement surgery. Although we don't know exactly where those potions came from either. This phenomenon seems to be spreading. As these crazy Umamusume are taking over all kinds of our infrastructure, our homeland has been damaged to varying degrees. Fortunately, the Minister of Defense issued a T0-level directive during the first report, enabling all military members to take reverse measures against this factor change. This has given us the means to counter it. Whether there is a direct connection or not, we must terminate this plan."
  uma_ap.80.a: "How?"
- uma_ap.80.a.tt: "We have to take back our colonies"
+ uma_ap.80.a.tt: "We have to take back our colonies\nStart Event chain:$uma_ap2_factor_invator_title$"
   
  uma_ap.71.title: "Personality disorder"
  uma_ap.71.desc: "Something abnormal has occurred! The phenomenon of Umamusume going crazy has been reported in many places, and even the military has been affected. All these Umamusume have a common feature: severe MPD has been observed in them, and they are all Umamusume that have undergone factor replacement. They behave strangely and are highly disciplined. Even more strangely, they seem to be obsessed with imprisfying normal Umamusume and forcing factor replacement surgery. Although we don't know exactly where those potions came from either. This phenomenon seems to be spreading. As these crazy Umamusume are taking over all kinds of our infrastructure, our homeland has been damaged to varying degrees. Fortunately, the Minister of Defense issued a T0-level directive during the first report, enabling all military members to take reverse measures against this factor change. This has given us the means to counter it. Whether there is a direct connection or not, we must terminate this plan."
  uma_ap.71.a: "How?"
- uma_ap.71.a.tt: "We have to take back our colonies"
+ uma_ap.71.a.tt: "We have to take back our colonies\nStart Event chain:$uma_ap2_factor_invator_title$"
   
  uma_ap.81.title: "The planet has fallen"
  uma_ap.81.desc: "This factor disease has spread like a plague. Now the planet [this.planet.getname] has fallen and we must reclaim it"
@@ -483,3 +483,7 @@
   
  uma_ap2_realm_insomnia_pills: "Unsolved insomnia"
  uma_ap2_realm_insomnia_pills_desc: "We have solved this problem temporarily"
+
+uma_ap2_factor_invator_title: "Factor AP: MPD"
+uma_ap2_factor_invator_desc: "Due to the spread of unknown diseases caused by factors across various planets, we must dispatch our army to deal with these mad Umamusume to safeguard the safety of our planet.\n§RNote: The chain of events will not cease until all the rebellions are resolved; in other words, invasions will continue to occur§!。"
+uma_ap2_factor_invator_counter: "Planet need to take back"
