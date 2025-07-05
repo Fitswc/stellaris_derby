@@ -70,14 +70,14 @@ uma_black_army = {
 
 #特殊的军队
 uma_ap2_factor_crazy_guys = {
-	damage = 3
-	health = 3
-	morale = 3.00
-	morale_damage = 3.00
-	collateral_damage = 2.00
+	damage = 1
+	health = 1.5
+	morale = 2.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
 	war_exhaustion = 0
 	defensive = yes
-	time = 50
+	time = 60
 	icon = GFX_army_type_defensive
 	resources = {
 		category = armies
