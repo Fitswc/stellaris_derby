@@ -1621,7 +1621,8 @@ country_event = {
 					NOT = {
 						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
 					}
-					is_colony = yes
+#					is_colony = yes
+					is_under_colonization = yes
 					is_capital = yes
 				}
 				planet_event = {
@@ -1716,6 +1717,11 @@ country_event = {
 
 
 	immediate = {
+		add_event_chain_counter = {
+			event_chain = uma_ap2_factor_invator
+			counter = uma_ap2_factor_invator_counter
+			amount = -1
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -1743,6 +1749,10 @@ country_event = {
 	desc = uma_ap.84.desc
 	picture = GFX_evt_uma_ap2_gray
 	is_triggered_only = yes
+
+	immediate = {
+		end_event_chain = uma_ap2_factor_invator
+	}
 
 	option = {
 		name = uma_ap.84.a
