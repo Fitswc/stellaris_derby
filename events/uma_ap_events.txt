@@ -1506,7 +1506,7 @@ situation_event = {
 
 				every_planet_within_border = {
 					limit = {
-						is_colony = yes
+						is_under_colonization= yes
 					}
 					add_planet_devastation = 99
 
@@ -1621,8 +1621,8 @@ country_event = {
 					NOT = {
 						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
 					}
-#					is_colony = yes
-					is_under_colonization = yes
+					is_colony = yes
+					is_under_colonization = no
 					is_capital = yes
 				}
 				planet_event = {
@@ -1637,9 +1637,9 @@ country_event = {
 					NOT = {
 						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
 					}
-#					is_colony = yes
-					is_under_colonization = yes
-					is_capital = no
+					is_colony = yes
+					is_under_colonization = no
+					is_capital = yes
 				}
 				planet_event = {
 					id = uma_ap.81
