@@ -1507,6 +1507,7 @@ situation_event = {
 				every_planet_within_border = {
 					limit = {
 						is_under_colonization= yes
+						is_owned_by = Root.owner
 					}
 					add_planet_devastation = 99
 
@@ -1623,6 +1624,7 @@ country_event = {
 					}
 					is_colony = yes
 					is_under_colonization = no
+					is_owned_by = Root
 					is_capital = yes
 				}
 				planet_event = {
@@ -1639,6 +1641,7 @@ country_event = {
 					}
 					is_colony = yes
 					is_under_colonization = no
+					is_owned_by = Root
 					is_capital = yes
 				}
 				planet_event = {
