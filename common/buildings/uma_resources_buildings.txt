@@ -726,6 +726,21 @@ building_uma_modern_carrot_farm_realm = {
 			job_uma_carrot_farmer_add = 700
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+				has_technology = tech_uma_eco_friendly_farming
+			}
+		}
+		modifier = {
+			planet_amenities_add = 500
+		}
+	}
 	planet_modifier = {
 		planet_uma_carrot_farmer_produces_mult = 0.15
 		planet_uma_bee_farmer_produces_mult = 0.15
