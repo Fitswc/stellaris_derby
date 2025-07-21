@@ -168,6 +168,7 @@ pc_uma_ringworld_habitable = {
 	modifier = {
 		planet_max_buildings_add = 99
 		planet_resettlement_unemployed_destination_mult = 0.5
+		planet_building_capacity_add = 10
 	}
 
 	carry_cap_per_free_district = @carry_cap_high
