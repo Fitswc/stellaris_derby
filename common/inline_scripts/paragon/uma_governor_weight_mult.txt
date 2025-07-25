@@ -1,0 +1,41 @@
+modifier = {
+	exists =  planet
+	factor = @job_weight_mult
+}
+modifier = {
+	NOT = { exists =  planet }
+	factor = @job_weight_opp_mult
+}
+modifier = {
+	OR = {
+		has_trait = subclass_shengchanyuejin_governor
+		has_trait = subclass_renwenguanghui_governor
+		has_trait = subclass_jichiguodu_governor
+	}
+	factor = @subclass_weight_mult
+}
+modifier = {
+	AND = {
+		has_paragon_dlc = yes
+		has_total_skill > 3
+		NOT = {
+			OR = {
+				has_trait = subclass_shengchanyuejin_governor
+				has_trait = subclass_renwenguanghui_governor
+				has_trait = subclass_jichiguodu_governor
+			}
+		}
+	}
+	factor = @subclass_weight_opp_mult
+}
+modifier = {
+	has_leader_flag = block_governor_traits
+	NOT = {
+		OR = {
+			has_trait = subclass_shengchanyuejin_governor
+			has_trait = subclass_renwenguanghui_governor
+			has_trait = subclass_jichiguodu_governor
+		}
+	}
+	factor = 0
+}

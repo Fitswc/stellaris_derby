@@ -1,5 +1,5 @@
 uma_scientist_trait_kishouyasashii = {
-	cost = 1
+
 	icon = "gfx/interface/icons/traits/kishouyasashii.png"
 	councilor_modifier = {
 		all_technology_research_speed = 0.15
@@ -37,8 +37,8 @@ leader_trait_digu_scientists = {
 		all_technology_research_speed = 0.1
 	}
 	leader_class = { scientist }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 
@@ -88,8 +88,8 @@ leader_trait_jisiguangyi_scientists = {
 		leader_trait_duxingzhe_scientists
 		leader_trait_duxingzhe_scientists_2
 	}
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 ###集思广益2
@@ -143,8 +143,8 @@ leader_trait_duxingzhe_scientists = {
 		leader_trait_jisiguangyi_scientists
 		leader_trait_jisiguangyi_scientists_2
 	}
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 ###独行者2
@@ -192,8 +192,8 @@ leader_trait_haoqixin_scientists = {
 		ship_anomaly_generation_chance_mult = 0.15
 	}
 	leader_class = { scientist }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 ###好奇心2
@@ -235,8 +235,8 @@ leader_trait_xizhiruwei_scientists = {
 		ship_anomaly_research_speed_mult = 0.15
 	}
 	leader_class = { scientist }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 ###细致入微2
@@ -278,8 +278,8 @@ leader_trait_xianqu_scientists = {
 		science_ship_survey_speed = 0.15
 	}
 	leader_class = { scientist }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 ###先驱2
@@ -321,8 +321,8 @@ leader_trait_tansuozhe_scientists = {
 		ship_archaeological_site_excavation_speed_mult = 0.15
 	}
 	leader_class = { scientist }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = @subclass_trait_weight
 	}
 }
 ###探索者2

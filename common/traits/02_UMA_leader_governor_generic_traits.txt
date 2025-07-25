@@ -1,5 +1,4 @@
 uma_governor_trait_charmleader = {
-	cost = 1
 	icon = "gfx/interface/icons/traits/charmleader.png"
 	planet_modifier = {
 		planet_stability_add = 10
@@ -22,7 +21,6 @@ uma_governor_trait_charmleader = {
 
 
 uma_governor_trait_kishouyasashii = {
-	cost = 1
 	icon = "gfx/interface/icons/traits/kishouyasashii.png"
 	planet_modifier = {
 		planet_stability_add = 10
@@ -71,8 +69,9 @@ leader_trait_jijiankuangmo_governor = {
 		planet_jobs_energy_produces_mult = 0.05
 	}
 	leader_class = { official }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###基建狂魔2
@@ -127,8 +126,9 @@ leader_trait_guihuadaren_governor = {
 		planet_districts_upkeep_mult = -0.05
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###规划达人2
@@ -191,8 +191,9 @@ leader_trait_huanbaozhuyizhe_governor = {
 		leader_trait_zhanbeijia_governor
 		leader_trait_zhanbeijia_governor_2
 	}
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###环保主义者2
@@ -261,8 +262,9 @@ leader_trait_zhuzhongminsheng_governor = {
 		leader_trait_zhanbeijia_governor
 		leader_trait_zhanbeijia_governor_2
 	}
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###注重民生2
@@ -327,8 +329,9 @@ leader_trait_zhanbeijia_governor = {
 		leader_trait_zhuzhongminsheng_governor_2
 	}
 	leader_class = { official }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###战备家2
@@ -380,8 +383,9 @@ leader_trait_paozhe_governor = {
 		planet_jobs_unity_produces_mult = 0.075
 	}
 	leader_class = { official }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###跑者2
@@ -427,8 +431,9 @@ leader_trait_laiquwuzong_governor = {
 		planet_jobs_specialist_produces_mult = 0.025
 	}
 	leader_class = { official }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###来去无踪2
@@ -476,8 +481,9 @@ leader_trait_keji_governor = {
 		planet_researchers_upkeep_mult = -0.05
 	}
 	leader_class = { official }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###科技2
@@ -527,8 +533,9 @@ leader_trait_nongfu_governor = {
 		planet_jobs_unity_produces_mult = 0.05
 	}
 	leader_class = { official }                                            #特质分类
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 ###农夫2
@@ -584,8 +591,9 @@ leader_trait_zhufang_official = {
 		planet_defense_armies_add = 1
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -613,8 +621,9 @@ leader_trait_zhufang_official_2 = {
 		planet_defense_armies_add = 2
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -643,8 +652,9 @@ leader_trait_zhufang_official_3 = {
 		planet_defense_armies_add = 3
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -673,8 +683,9 @@ leader_trait_zhengbingjihua_official = {
 		starbase_shipyard_build_speed_mult = 0.075
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -702,8 +713,9 @@ leader_trait_zhengbingjihua_official_2 = {
 		starbase_shipyard_build_speed_mult = 0.15
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -731,8 +743,9 @@ leader_trait_zhengbingjihua_official_3 = {
 		starbase_shipyard_build_speed_mult = 0.225
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -760,8 +773,9 @@ leader_trait_feituqingli_official = {
 		planet_clear_blocker_speed_mult = 0.15
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -789,8 +803,9 @@ leader_trait_feituqingli_official_2 = {
 		planet_clear_blocker_speed_mult = 0.3
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -818,8 +833,9 @@ leader_trait_yeyunongxuejia_official = {
 		planet_jobs_society_research_produces_mult = 0.075
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -847,8 +863,9 @@ leader_trait_yeyunongxuejia_official_2 = {
 		planet_jobs_society_research_produces_mult = 0.15
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -878,8 +895,9 @@ leader_trait_yeyugongchengshi_official = {
 		planet_jobs_alloys_produces_mult = 0.075
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -909,8 +927,9 @@ leader_trait_yeyugongchengshi_official_2 = {
 		planet_jobs_alloys_produces_mult = 0.15
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -940,8 +959,9 @@ leader_trait_yeyukexuejia_official = {
 		planet_jobs_engineering_research_produces_mult = 0.075
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -971,8 +991,9 @@ leader_trait_yeyukexuejia_official_2 = {
 		planet_jobs_engineering_research_produces_mult = 0.15
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -1000,8 +1021,9 @@ leader_trait_ouxiang_official = {
 		planet_amenities_add = 500
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 
@@ -1029,8 +1051,9 @@ leader_trait_ouxiang_official_2 = {
 		planet_amenities_add = 1000
 	}
 	leader_class = { official }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	 selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/governor_weight_mult
 	}
 }
 

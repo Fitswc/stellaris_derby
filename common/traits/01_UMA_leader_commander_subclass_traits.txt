@@ -78,8 +78,8 @@ leader_trait_tupo_admiral = {
 		ship_tracking_add = 10
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_tupo_admiral_2 = {
@@ -138,8 +138,8 @@ leader_trait_duanbingxiangjie_admiral = {
 		ship_evasion_mult = 0.2
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_duanbingxiangjie_admiral_2 = {
@@ -202,8 +202,8 @@ leader_trait_langqun_admiral = {
 		m_slot_weapon_damage_mult = 0.20
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_langqun_admiral_2 = {
@@ -298,8 +298,8 @@ leader_trait_weiranbudong_admiral = {
 		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 
@@ -360,8 +360,8 @@ leader_trait_kuaisuhuopao_admiral = {
 		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 
@@ -422,8 +422,8 @@ leader_trait_qingbaoyouxian_admiral = {
 		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 
@@ -543,8 +543,8 @@ leader_trait_xianzhen_general = {
 		has_trait = subclass_jidongxueshuo_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_xianzhen_general_2 = {
@@ -617,8 +617,8 @@ leader_trait_xianzhen_general_3 = {
 #		has_trait = subclass_jidongxueshuo_general
 #	}
 #	leader_class = { commander }
-#	selectable_weight = {                                                   #权重
-#		weight = 1000
+#	selectable_weight = {
+#		weight = 200
 #	}
 #}
 #leader_trait_dashijishandianzhan_general_2 = {
@@ -682,8 +682,8 @@ leader_trait_kongtianyitihua_general = {
 		has_trait = subclass_jidongxueshuo_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_kongtianyitihua_general_2 = {
@@ -819,8 +819,8 @@ leader_trait_youjizhan_general = {
 		has_trait = subclass_cunhuzhe_governor
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_youjizhan_general_2 = {
@@ -898,8 +898,8 @@ leader_trait_yundongzhan_general = {
 		has_trait = subclass_cunhuzhe_governor
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_yundongzhan_general_2 = {
@@ -981,8 +981,8 @@ leader_trait_xingjixiangzhan_general = {
 		has_trait = subclass_cunhuzhe_governor
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_xingjixiangzhan_general_2 = {
@@ -1129,8 +1129,8 @@ trait_ruler_rongyaozhizhan_general = {
 		}
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 trait_ruler_rongyaozhizhan_general_2 = {
@@ -1227,8 +1227,8 @@ trait_ruler_jijie_general = {
 		}
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 trait_ruler_jijie_general_2 = {
@@ -1304,8 +1304,8 @@ trait_ruler_lujunjiaoguan_general = {
 
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 trait_ruler_lujunjiaoguan_general_2 = {
@@ -1400,8 +1400,8 @@ leader_trait_zhufangzhe_admiral = {
 		shipclass_starbase_hull_mult = 0.3
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_zhufangzhe_admiral_2 = {
@@ -1465,8 +1465,8 @@ leader_trait_aijianruqi_admiral = {
 		ship_shield_regen_add_perc = 0.02
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_aijianruqi_admiral_2 = {
@@ -1530,8 +1530,8 @@ leader_trait_dajiandui_admiral = {
 		ship_starting_experience_add = 100
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_dajiandui_admiral_2 = {
@@ -1605,8 +1605,8 @@ leader_trait_tianming1_admiral = {
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_youjizhe_effect
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1642,8 +1642,8 @@ leader_trait_tianming2_admiral = {
 		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1678,8 +1678,8 @@ leader_trait_tianming3_admiral = {
 		has_trait = subclass_zhanluezhihui_councilor
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1710,8 +1710,8 @@ leader_trait_tianming5_admiral = {
 		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1740,12 +1740,15 @@ leader_trait_tianming1_general = {
 	}
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
-		has_trait = subclass_jidongxueshuo_general
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_lueduozhe_effect
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_jidongxueshuo_general
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1768,11 +1771,14 @@ leader_trait_tianming2_general = {
 	}
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
-		has_trait = subclass_cunhuzhe_governor
 	}
 	leader_class = { commander }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_cunhuzhe_governor
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1795,12 +1801,16 @@ leader_trait_tianming4_general = {
 	}
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
-		has_trait = subclass_jidongxueshuo_general
+
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_zhanmaniang_effect
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_jidongxueshuo_general
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1828,11 +1838,15 @@ leader_trait_tianming5_general = {
 
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
-		has_trait = subclass_jidongxueshuo_general
+
 	}
 	leader_class = { commander }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_jidongxueshuo_general
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }

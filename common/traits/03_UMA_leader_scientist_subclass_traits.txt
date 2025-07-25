@@ -119,8 +119,8 @@ leader_trait_datushuguan_scientists = {
 	}
 	custom_tooltip_with_modifiers = "leader_trait_tushu_effect"
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_datushuguan_scientists_2 = {
@@ -189,8 +189,8 @@ leader_trait_yingyan_scientists = {
 	}
 	#custom_tooltip_with_modifiers = "leader_trait_yingyan_effect"
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_yingyan_scientists_2 = {
@@ -298,8 +298,8 @@ leader_trait_xiezhuzhe_scientists = {
 		has_trait = subclass_guigen_scientists
 	}
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 
@@ -371,8 +371,8 @@ leader_trait_zhujuezhixin_scientists = {
 		has_trait = subclass_guigen_scientists
 	}
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 
@@ -443,8 +443,8 @@ leader_trait_buzhikexue_scientists = {
 		has_trait = subclass_guigen_scientists
 	}
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 
@@ -549,8 +549,8 @@ leader_trait_ruyuanzhe_scientists = {
 		country_physics_tech_research_speed = 0.15
 	}
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_ruyuanzhe_scientists_2 = {
@@ -616,8 +616,8 @@ leader_trait_xunmengzhe_scientists = {
 		country_society_tech_research_speed = 0.15
 	}
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_xunmengzhe_scientists_2 = {
@@ -683,8 +683,8 @@ leader_trait_zhuzaozhe_scientists = {
 		country_engineering_tech_research_speed = 0.15
 	}
 	leader_class = { scientist }
-	selectable_weight = {                                                   #权重
-		weight = 1000
+	selectable_weight = {
+		weight = 200
 	}
 }
 leader_trait_zhuzaozhe_scientists_2 = {
@@ -755,13 +755,17 @@ leader_trait_tianming1_scientists = {
 		ship_anomaly_generation_chance_mult = 0.3
 	}
 	leader_potential_add = {
-		has_trait = subclass_xiantoudefengjing_scientists
+
 		from = { is_species_class = umamusume }
 	}
 	custom_tooltip_with_modifiers = "leader_trait_xunmizhe_effect"
 	leader_class = { scientist }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_xiantoudefengjing_scientists
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -788,12 +792,16 @@ leader_trait_tianming2_scientists = {
 		planet_jobs_engineering_research_produces_mult = 0.5
 	}
 	leader_potential_add = {
-		has_trait = subclass_guigen_scientists
+
 		from = { is_species_class = umamusume }
 	}
 	leader_class = { scientist }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_guigen_scientists
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -823,12 +831,16 @@ leader_trait_tianming3_scientists = {
 		all_technology_research_speed = 0.3
 	}
 	leader_potential_add = {
-		has_trait = subclass_zuozhou_scientists
+
 		from = { is_species_class = umamusume }
 	}
 	leader_class = { scientist }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_zuozhou_scientists
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -859,7 +871,7 @@ leader_trait_tianming4_scientists = {
 	}
 	leader_class = { scientist }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -881,12 +893,15 @@ leader_trait_tianming5_scientists = {
 		fleet_mia_time_mult = -1.0
 	}
 	leader_potential_add = {
-		has_trait = subclass_xiantoudefengjing_scientists
 		from = { is_species_class = umamusume }
 	}
 	leader_class = { scientist }
 	selectable_weight = {                                                   #权重
-		weight = 1000
+		weight = 200
+		modifier = {
+			has_trait = subclass_xiantoudefengjing_scientists
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
