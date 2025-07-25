@@ -1764,11 +1764,12 @@ leader_trait_tianming2_general = {
 		TIER = none
 	}
 	planet_modifier = {
-		planet_soldiers_energy_produces_add = 15
-		planet_soldiers_minerals_produces_add = 15
-		planet_soldiers_unity_produces_add = 10
+#		planet_soldiers_energy_produces_add = 15
+#		planet_soldiers_minerals_produces_add = 15
+#		planet_soldiers_unity_produces_add = 10
 		army_defense_morale_mult = 0.4
 	}
+	custom_tooltip_with_modifiers = leader_trait_tianming2_general_tt
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
 	}
