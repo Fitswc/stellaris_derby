@@ -69,3 +69,17 @@ auth_trainingcenter = {
 	
 	
 }
+
+auth_ancient_trainingcenter = {
+	has_heir = no
+	election_type = none
+	can_reform = no
+
+	valid_for_released_vassal = no
+
+	ruler_council_position = councilor_ruler_uma_studentuionp
+
+	icon= "gfx/interface/icons/governments/authorities/auth_trainingcenter.png"
+
+	potential = { country_type = { value = uma_ec3_empire } }
+}

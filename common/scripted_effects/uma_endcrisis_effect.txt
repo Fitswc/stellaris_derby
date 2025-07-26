@@ -1,0 +1,67 @@
+uma_ec_3_initialize_create_country_and_species = {
+	create_species = {
+		name = "NAME_UMA_FROM_OUTER"
+		class = "umamusume"
+		namelist = "UMAname"
+		portrait = "umamusume"
+		traits = {
+			trait = "uma_trait_musume1"
+		}
+		effect = { save_global_event_target_as = uma_ec3_uma_from_outer_world }
+	}
+
+	create_country = {
+		name = NAME_UMA_FROM_OUTER_SPACE_COUNTRY
+		species = event_target:uma_ec3_uma_from_outer_world # for pops
+		authority = auth_ancient_trainingcenter
+		ethos = {
+			ethic = ethic_fanatic_xenophobe
+			ethic = ethic_egalitarian
+		}
+		civics = {
+			civic = civic_umasymbolirudolf
+			civic = civic_umamayanotopgun
+		}
+		type = "uma_ec3_empire"
+		name_list = "UMAname"
+		flag = {
+			icon = {
+				category = "uiu_flags"
+				file = "uiu_fe_flags"
+			}
+			background = {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors = {
+				"shadow_steel"
+				"dark_orange"
+				"null"
+				"null"
+			}
+		}
+		graphical_culture = mammalian_01
+		effect = {
+			create_leader = {
+				class = commander
+				species = event_target:uma_ec3_uma_from_outer_world
+				name = random
+				effect = {
+					save_event_target_as = uma_ec3_uma_from_outer_world_ruler
+				}
+			}
+			set_leader = event_target:uma_ec3_uma_from_outer_world_ruler
+			create_ship_design = { design = "NAME_AI_Transport" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_AI_Constructor" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_AI_1" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_AI_2" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_AI_STARBASE" }
+			add_ship_design = last_created_design
+			save_event_target_as = uma_endcrisis03
+		}
+	}
+}
