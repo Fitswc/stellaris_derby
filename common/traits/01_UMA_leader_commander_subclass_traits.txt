@@ -1601,12 +1601,16 @@ leader_trait_tianming1_admiral = {
 			is_species_class = umamusume
 			#			has_authority = auth_trainingcenter
 		}
-		has_trait = subclass_zhengfuzhe_general
+
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_youjizhe_effect
 	selectable_weight = {
 		weight = 200
+		modifier = {
+			has_trait = subclass_zhengfuzhe_general
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1639,11 +1643,14 @@ leader_trait_tianming2_admiral = {
 			is_species_class = umamusume
 			#			has_authority = auth_trainingcenter
 		}
-		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 200
+		modifier = {
+			has_trait = subclass_zhengfuzhe_general
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1675,11 +1682,14 @@ leader_trait_tianming3_admiral = {
 			is_species_class = umamusume
 			#			has_authority = auth_trainingcenter
 		}
-		has_trait = subclass_zhanluezhihui_councilor
 	}
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 200
+		modifier = {
+			has_trait = subclass_zhanluezhihui_councilor
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1707,11 +1717,14 @@ leader_trait_tianming5_admiral = {
 			is_species_class = umamusume
 			#			has_authority = auth_trainingcenter
 		}
-		has_trait = subclass_zhengfuzhe_general
 	}
 	leader_class = { commander }
 	selectable_weight = {
 		weight = 200
+		modifier = {
+			has_trait = subclass_zhengfuzhe_general
+			mult = 2
+		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
 }
@@ -1764,11 +1777,12 @@ leader_trait_tianming2_general = {
 		TIER = none
 	}
 	planet_modifier = {
-		planet_soldiers_energy_produces_add = 15
-		planet_soldiers_minerals_produces_add = 15
-		planet_soldiers_unity_produces_add = 10
+#		planet_soldiers_energy_produces_add = 15
+#		planet_soldiers_minerals_produces_add = 15
+#		planet_soldiers_unity_produces_add = 10
 		army_defense_morale_mult = 0.4
 	}
+	custom_tooltip_with_modifiers = leader_trait_tianming2_general_tt
 	leader_potential_add = {
 		from = { is_species_class = umamusume }
 	}
@@ -1822,19 +1836,17 @@ leader_trait_tianming5_general = {
 		CLASS = commander
 		ICON = "GFX_leader_trait_tianming1_admiral"
 		RARITY = paragon
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = none
 	}
-	army_modifier = {
+	councilor_modifier = {
 		army_damage_mult = 0.6
 		army_morale = 0.6
 		army_collateral_damage_mult = 0.6
 		army_health = 1.0
-	}
-
-	self_modifier = {
 		planet_combat_width_add = 10
 	}
+
 
 	leader_potential_add = {
 		from = { is_species_class = umamusume }

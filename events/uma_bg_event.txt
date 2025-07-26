@@ -1787,3 +1787,38 @@ country_event = {
 		remove_country_flag = uma_direct_recruit_commander
 	}
 }
+
+
+planet_event = {
+	id = uma_bg.29
+	hide_window = yes
+	is_triggered_only = yes
+
+	pre_triggers = {
+		has_owner = yes
+	}
+
+	trigger = {
+		exists = leader
+		leader = {
+			has_trait = leader_trait_tianming2_general
+		}
+	}
+
+	immediate = {
+		export_trigger_value_to_variable = {
+			trigger = count_planet_army
+			variable = uma_army_count_on_this_planet
+		}
+		while = {
+			count = uma_army_count_on_this_planet
+			owner = {
+				add_resource = {
+					minerals = 15
+					energy = 15
+					unity = 10
+				}
+			}
+		}
+	}
+}

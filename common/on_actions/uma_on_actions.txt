@@ -107,6 +107,11 @@ on_monthly_pulse_country = {
 	}
 }
 
+on_colony_monthly_pulse = {
+	events = {
+		uma_bg.29
+	}
+}
 
 #年检测事件
 on_yearly_pulse_country = {
