@@ -51,15 +51,17 @@ uma_ec_3_initialize_create_country_and_species = {
 				}
 			}
 			set_leader = event_target:uma_ec3_uma_from_outer_world_ruler
-			create_ship_design = { design = "NAME_AI_Transport" }
+			create_ship_design = { design = "NAME_UMA_EC3_Transport" }
 			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_AI_Constructor" }
+			create_ship_design = { design = "NAME_UMA_EC3_STARBASE" } #Base
 			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_AI_1" }
+			create_ship_design = { design = "NAME_AI_1" } #BattleShip
 			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_AI_2" }
+			create_ship_design = { design = "NAME_AI_2" } #Cruiser
 			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_AI_STARBASE" }
+			create_ship_design = { design = "NAME_AI_2" } #Corvette
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_UMA_EC3_BASE" } #Starbase
 			add_ship_design = last_created_design
 			save_event_target_as = uma_endcrisis03
 		}
