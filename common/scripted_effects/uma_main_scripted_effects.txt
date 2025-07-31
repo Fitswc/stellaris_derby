@@ -3894,6 +3894,31 @@ uma_remove_deposits = {
 				is_deposit_type = d_virtual_power_medium    # Tranformation situation
 				is_deposit_type = d_virtual_power_small        # Tranformation situation
 				is_deposit_type = d_virtual_power_tiny        # Tranformation situation
+
+				##UMA
+				is_deposit_type = d_uma_threegodness_relic
+				is_deposit_type = d_phoenix_school_relic
+				is_deposit_type = d_uma_seiun_sky_house
+				is_deposit_type = d_phoenix_racing_course_relic
+				is_deposit_type = d_phoenix_racing_course
+				is_deposit_type = d_uma_threegodness_museum
+				is_deposit_type = d_uma_crystal_carrot_mine_planet
+				is_deposit_type = d_phoenix_school
+				is_deposit_type = d_newlisa_church
+				is_deposit_type = d_paseaoen_pass
+				is_deposit_type = d_paseaoenpass_museum
+				is_deposit_type = d_lake_fexiloso
+				is_deposit_type = d_river_tinos
+				is_deposit_type = d_channel_arsitla
+				is_deposit_type = d_eastern_ocean
+				is_deposit_type = d_coral_in_land
+				is_deposit_type = d_yinkate_place
+				is_deposit_type = d_pasaer_tg_racing_course
+				is_deposit_type = d_palai_plateau
+				is_deposit_type = d_Ardan_crystal_core
+				is_deposit_type = d_Ardan_crystal_Energy_Field
+				is_deposit_type = d_Ardan_crystal_Mine_Hole
+
 				has_deposit_flag = uma_keep_deposit_on_terraform
 			}
 		}
