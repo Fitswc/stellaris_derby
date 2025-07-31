@@ -262,6 +262,7 @@ ship_design = {
 	name = "NAME_UMA_EC3_BASE"
 	ship_size = starbase_citadel
 	country_type = uma_ec3_empire
+	is_event_design = yes
 	section = {
 		template = "CITADEL_STARBASE_SECTION"
 		slot = "core"
@@ -318,6 +319,8 @@ ship_design = {
 	name = "NAME_UMA_EC3_STARBASE"
 	ship_size = starbase_uma_ec3
 	country_type = uma_ec3_empire
+	is_event_design = yes
+
 	section = {
 		template = "starbase_uma_ec3_key"
 		slot = "core"
@@ -358,6 +361,8 @@ ship_design = {
 ship_design = {
 	name = "NAME_UMA_EC3_FRONT_SQUARD_BB"
 	ship_size = battleship
+	is_event_design = yes
+	country_type = uma_ec3_empire
 
 	section = {
 		template = BATTLESHIP_BOW_L1M1S2
@@ -448,7 +453,7 @@ ship_design = {
 	required_component = "HYPER_DRIVE_3"
 	required_component = "BATTLESHIP_SHIP_THRUSTER_3"
 	required_component = "SENSOR_3"
-	required_component = "UMA_CARROT_BATTERY_BATTLESHIP"
+	required_component = "UMA_CARROT_BATTERY_2_BATTLESHIP"
 	required_component = "UMA_COMBAT_FIRST_HAND"
 }
 
@@ -457,26 +462,27 @@ ship_design = {
 	name = "NAME_UMA_EC3_FRONT_SQUARD_CV"
 	ship_size = cruiser
 	is_event_design = yes
-	is_special_buildable = yes
+	country_type = uma_ec3_empire
+
 	section = {
 		template = "CRUISER_BOW_L1"
 		slot = "bow"
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_XRAY_LASER"
+			template = "UMA_LARGE_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_1"
-			template = "MEDIUM_SHIELD_4"
+			template = "UMA_SHIELD_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_2"
-			template = "MEDIUM_SHIELD_4"
+			template = "UMA_SHIELD_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_3"
-			template = "MEDIUM_SHIELD_4"
+			template = "UMA_SHIELD_M"
 		}
 	}
 	section = {
@@ -485,23 +491,23 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_XRAY_LASER"
+			template = "UMA_LARGE_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "MEDIUM_PLASMA_2"
+			template = "UMA_MASS_ACCELERATOR_MID"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_1"
-			template = "MEDIUM_ARMOR_4"
+			template = "UMA_ARMOR_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_2"
-			template = "MEDIUM_ARMOR_4"
+			template = "UMA_ARMOR_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_3"
-			template = "MEDIUM_ARMOR_4"
+			template = "UMA_ARMOR_M"
 		}
 	}
 	section = {
@@ -510,31 +516,45 @@ ship_design = {
 
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "MEDIUM_PLASMA_2"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
 		}
 	}
-	required_component="PSI_JUMP_DRIVE_1"
-	required_component="COMBAT_COMPUTER_LINE_ADVANCED"
+	required_component="HYPER_DRIVE_3"
+	required_component="UMA_COMBAT_FIRST_HAND"
 	required_component="SHIP_THRUSTER_3"
 	required_component="SENSOR_3"
-	required_component="CRUISER_ANTIMATTER_REACTOR"
+	required_component="UMA_CARROT_BATTERY_2_CRUISER"
 }
 
 
+ship_design = {
+	name = "NAME_UMA_EC3_SOC_Corvette_2"
+	ship_size = corvette
+	is_event_design = yes
+	country_type = uma_ec3_empire
 
+	section = {
+		template = "CORVETTE_MID_M1S1"
+		slot = "mid"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "UMA_ARMOR_S"
+		}
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "UMA_ARMOR_S"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "UMA_ARMOR_S"
+		}
+	}
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COMBAT_COMPUTER_SWARM_ADVANCED"
+	required_component = "SHIP_THRUSTER_4"
+	required_component = "SENSOR_4"
+	required_component = "CORVETTE_ZERO_POINT_REACTOR"
+}
 
 
