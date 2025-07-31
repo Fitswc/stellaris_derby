@@ -110,44 +110,39 @@ planet_event = {
 
 
 	immediate = {
-#		export_trigger_value_to_variable = {
-#			trigger = count_owned_pop_amount
-#			parameters = {
-#				limit = {
-#
-#				}
-#			}
-#			variable = uma_pk_planet_pop_will_not_be_transform
-#		}
-#
-#		divide_variable = {
-#			which = uma_pk_planet_pop_will_not_be_transform
-#			value = 2
-#		}
+		#		export_trigger_value_to_variable = {
+		#			trigger = count_owned_pop_amount
+		#			parameters = {
+		#				limit = {
+		#
+		#				}
+		#			}
+		#			variable = uma_pk_planet_pop_will_not_be_transform
+		#		}
+		#
+		#		divide_variable = {
+		#			which = uma_pk_planet_pop_will_not_be_transform
+		#			value = 2
+		#		}
 
 
-		every_owned_pop_group = {
-			modify_species = {
-				species = From.owner_main_species
-				add_trait = trait_uma_new_bottle_but_old_wine
-				change_scoped_species = yes
-				#					portrait = From.owner_main_species
-				effect = {
-					##
-				}
+		modify_species = {
+			species = From.owner_main_species
+			add_trait = trait_uma_new_bottle_but_old_wine
+			#					portrait = From.owner_main_species
+			change_scoped_species = yes
+			effect = {
+				##
 			}
 		}
 
 
-
-
-			random_owned_pop_group = {
-				kill_pop_group = {
-					percentage = 0.5
-					pop_group = This
-				}
+		random_owned_pop_group = {
+			kill_pop_group = {
+				percentage = 0.5
+				pop_group = This
 			}
-
+		}
 
 
 		set_owner = From.owner
