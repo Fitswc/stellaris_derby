@@ -1,56 +1,112 @@
 namespace = uma_ec_3
 
-#Crisis Trigger
+# Crisis Initiated
 country_event = {
 	id = uma_ec_3.1
 	hide_window = yes
+	fire_only_once = yes
 	is_triggered_only = yes
 
-	trigger = {
-		is_crises_allowed = yes
-		OR = {
-			AND = { # Super early start prereqs
-				end_game_years_passed >= 0
-				OR = {
-					has_global_flag = endgame_crisis_early_start #From Ultima Vigilis
-					AND = { #Both crisis summoning resolutions active
-						is_active_resolution = 	resolution_galacticstudies_extradimensional_experimentation
-						is_active_resolution = resolution_galactic_threats_committee
-					}
+	immediate = {
+		set_global_flag = uma_ec3_outeruma_happened
+		endgame_telemetry = uma_outer
+		set_crisis_stage_1 = yes
+		synth_queen_spawn = yes
+		random_system = {
+			limit = {
+				has_astral_rift = no
+				can_spawn_astral_rift = yes
+			}
+			save_global_event_target_as = uma_ec3_begining_astral_rift_system
+			set_star_flag = uma_ec3_begining_astral_rift_system
+			
+			spawn_astral_rift = {
+				random_pos = yes
+				id = uma_ar_ec3
+				graphics_entity_name = astral_rift_entity
+				init_effect = {
+
 				}
 			}
-			AND = { # Early start
-				end_game_years_passed >= 25
-				OR = {
-					default_endgame_early_start_triggers = yes
-					any_country = {
-						is_country_type = default
-						OR = {
-							has_technology = tech_jump_drive_1
-							has_technology = tech_psi_jump_drive_1
-						}
-					}
-					is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
-					is_active_resolution = resolution_galactic_threats_committee
-				}
-			}
-			end_game_years_passed >= 50 #Regular Start
+
 		}
-		OR = {
-			NOT = { has_global_flag = galactic_crisis_happened }
-			AND = {
-				allowed_crisis_type = all
-				NOR = {
-					has_global_flag = galactic_crisis_recently_fired #because some might take a while to arrive, we don't want two at once
-					any_country = {
-						is_crisis_faction = yes
-					}
-				}
+
+		#An event that notice all country about the beginning of the crisis
+		every_playable_country = {
+			limit = {
+				is_ai = no
 			}
+			country_event = { id = crisis.8035 days = 180 }
 		}
 	}
+}
 
-	immediate = {
 
+astral_rift_event = {
+	id  = uma_ec_3.2
+	title = uma_ec_3.2.title
+	desc =uma_ec_3.2.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	picture =GFX_evt_astral_rift_crystal_3#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.1.a
+		set_next_astral_rift_event = {
+			id = uma_ec_3.3
+		}
+
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id  = uma_ec_3.3
+	title = uma_ec_3.3.title
+	desc =uma_ec_3.3.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	picture =GFX_evt_astral_rift_crystal_3#placeholder
+	difficulty = 1
+
+	option = {
+		name = uma_mejro_ardan.1.a
+		set_next_astral_rift_event = {
+			id = uma_ec_3.4
+		}
+
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id  = uma_ec_3.4
+	title = uma_ec_3.4.title
+	desc =uma_ec_3.4.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	picture =GFX_evt_astral_rift_crystal_3#placeholder
+	difficulty = 1
+
+	option = {
+		name = uma_mejro_ardan.1.a
+		finish_astral_rift = yes
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
 	}
 }
