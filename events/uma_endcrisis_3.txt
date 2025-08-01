@@ -256,3 +256,25 @@ country_event = {
 	}
 }
 
+
+country_event = {
+	id = uma_ec_3.11
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	trigger = {
+		This = {
+			is_country_type = uma_ec3_empire
+		}
+	}
+
+	immediate = {
+		fromfrom.solar_system = {
+			set_star_flag = uma_ec3_front_clear
+		}
+		fromfrom = {
+		}
+	}
+
+}
