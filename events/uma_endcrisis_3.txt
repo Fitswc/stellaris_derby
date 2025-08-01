@@ -11,7 +11,6 @@ country_event = {
 		set_global_flag = uma_ec3_outeruma_happened
 		endgame_telemetry = uma_outer
 		set_crisis_stage_1 = yes
-		synth_queen_spawn = yes
 		random_system = {
 			limit = {
 				has_astral_rift = no
@@ -25,7 +24,7 @@ country_event = {
 				id = uma_ar_ec3
 				graphics_entity_name = astral_rift_entity
 				init_effect = {
-
+					save_event_target_as = uma_ec3_ar
 				}
 			}
 
@@ -37,6 +36,7 @@ country_event = {
 				is_ai = no
 			}
 			country_event = { id = uma_ec_3.2 days = 10 }
+			country_event = { id = uma_ec_3.6 days = 150 }
 		}
 	}
 }
@@ -114,23 +114,11 @@ astral_rift_event = {
 	difficulty = 1
 
 	option = {
-		name = uma_ec_3.5.a
-		finish_astral_rift = yes
-	}
-	option = {
 		name = uma_ec_3.5.b
 		finish_astral_rift = yes
 	}
 
 	after = {
-		every_playable_country = {
-			limit = {
-				is_ai = no
-			}
-			country_event = {
-				id = uma_ec_3.6
-			}
-		}
 		explorer = {
 			astral_thread_small_reward = yes
 		}
@@ -143,7 +131,128 @@ country_event = {
 	desc = uma_ec.3.6.desc
 	is_triggered_only = yes
 
+	immediate = {
+		destroy_astral_rift = event_target:uma_ec3_ar
+
+		event_target:uma_ec3_begining_astral_rift_system = {
+			system_event = {
+				id = uma_ec_3.7
+				days = 200
+			}
+		}
+
+	}
+
 	option = {
 		name = uma_ec.3.6.a
 	}
 }
+
+
+system_event = {
+	id = uma_ec_3.7
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_global_flag = uma_ec3_evts_begin
+
+		uma_ec_3_initialize_create_country_and_species = yes
+		every_system_planet = {
+			set_owner = event_target:uma_ec3_uma_from_outer_world_country
+			set_controller = event_target:uma_ec3_uma_from_outer_world_country
+		}
+		create_starbase = {
+			owner = event_target:uma_ec3_uma_from_outer_world_country
+			size = starbase_uma_ec3
+			design = NAME_UMA_EC3_BASE
+			module = shipyard
+			building = fleet_academy
+			effect = {
+
+			}
+		}
+
+		uma_ec3_create_puma_fleets = yes
+		uma_ec3_create_puma_soc_corvette = yes
+
+
+	}
+
+	after = {
+		every_playable_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = uma_ec_3.8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.8
+	title = uma_ec.3.8.title
+	desc = uma_ec.3.8.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ec.3.8.a
+		hidden_effect = {
+			if = {
+				limit = {
+					This = {
+						is_uma_country = yes
+					}
+				}
+				country_event = {
+					id = uma_ec_3.9
+				}
+			}
+			else = {
+				country_event = {
+					id = uma_ec_3.10
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.9
+	title = uma_ec.3.9.title
+	desc = uma_ec.3.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec3.9.a
+	}
+}
+
+country_event = {
+	id = uma_ec_3.10
+	title = uma_ec.3.10.title
+	desc = uma_ec.3.10.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec3.10.a
+	}
+}
+

@@ -259,6 +259,7 @@ starbase_uma_ec3 = {
 	components_add_to_cost = no
 	is_listed = no
 	can_disable = no
+	entity = "mammalian_01_starbases_entity"
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 	class = shipclass_starbase

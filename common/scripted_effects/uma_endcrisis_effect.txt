@@ -42,6 +42,7 @@ uma_ec_3_initialize_create_country_and_species = {
 		}
 		graphical_culture = mammalian_01
 		effect = {
+			save_global_event_target_as = uma_ec3_uma_from_outer_world_country
 			create_leader = {
 				class = commander
 				species = event_target:uma_ec3_uma_from_outer_world
@@ -75,7 +76,7 @@ uma_ec3_create_puma_fleets = {
 		effect = {
 			set_fleet_flag = uma_ec3_puma_front_fleet
 			while = {
-				count = 15
+				count = 30
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_BB
@@ -84,30 +85,23 @@ uma_ec3_create_puma_fleets = {
 			}
 
 			while = {
-				count = 30
+				count = 45
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_CV
 					graphical_culture = mammalian_01
 				}
 			}
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = uma_bs_soc
 		}
 	}
 }
 
-uma_ec3_create_puma_defendbase = {
-	create_fleet = {
-		name = NAME_UMA_EC3_PUMA_BASE
-		effect = {
-			set_fleet_flag = uma_ec3_puma_base
-			create_ship = {
-				name = NAME_UMA_EC3_PUMA_BASE_SHIP
-				design = NAME_UMA_EC3_BASE
-				graphical_culture = mammalian_01
-			}
-		}
-	}
-}
+
 
 uma_ec3_create_puma_starbase = {
 	create_fleet = {
@@ -137,5 +131,28 @@ uma_ec3_create_puma_soc_corvette= {
 				}
 			}
 		}
+	}
+}
+
+uma_ec3_create_puma_front_behaviour = {
+	queue_actions = {
+		repeat = {
+			find_closest_system = {
+				found_system = {
+					move_to = this
+					wait = 150
+					effect = {
+						id = uma_ec3_puma_front_fleet.1
+						set_star_flag = uma_front_fleet_here
+					}
+				}
+			}
+		}
+	}
+}
+
+uma_ec3_create_puma_soc_behaviour = {
+	queue_actions = {
+
 	}
 }
