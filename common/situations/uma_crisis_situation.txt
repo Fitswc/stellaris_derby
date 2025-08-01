@@ -1,0 +1,47 @@
+situation_uma_ec3_counting = {
+
+	picture = GFX_evt_timeworm_transcriptions
+	category = negative
+	complete_icon = GFX_situation_outcome_meh
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	start_value = 2
+	on_start = {
+		set_situation_flag = situation_uma_ec3_counting
+		owner = {
+			set_country_flag = situation_uma_ec3_counting
+		}
+	}
+	monthly_progress = {
+		base = 5
+	}
+	on_progress_complete = {
+		owner = {
+
+			remove_country_flag = situation_uma_ec3_counting
+		}
+	}
+	stages = {
+		uma_ec3_crisis_happened = {
+			icon = GFX_situation_stage_10
+			icon_background = GFX_situation_stage_frame_red
+			end = 0
+			custom_tooltip = uma_ec3_crisis_happened
+		}
+	}
+
+	approach = {
+		#什么都不做
+		name = top_food_default
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}
+
+

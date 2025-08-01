@@ -36,14 +36,29 @@ country_event = {
 			limit = {
 				is_ai = no
 			}
-			country_event = { id = crisis.8035 days = 180 }
+			country_event = { id = uma_ec_3.2 days = 10 }
 		}
 	}
 }
 
+#Notice
+country_event = {
+	id = uma_ec_3.2
+	title = uma_ec_3.2.title
+	desc = uma_ec_3.2.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.2.a
+	}
+
+	option = {
+		name = uma_ec_3.2.b
+	}
+}
 
 astral_rift_event = {
-	id  = uma_ec_3.2
+	id  = uma_ec_3.3
 	title = uma_ec_3.2.title
 	desc =uma_ec_3.2.desc
 	is_triggered_only = yes
@@ -52,35 +67,10 @@ astral_rift_event = {
 	difficulty = @astral_rift_initial_difficulty
 
 	option = {
-		name = uma_mejro_ardan.1.a
-		set_next_astral_rift_event = {
-			id = uma_ec_3.3
-		}
-
-	}
-
-	after = {
-		explorer = {
-			astral_thread_small_reward = yes
-		}
-	}
-}
-
-astral_rift_event = {
-	id  = uma_ec_3.3
-	title = uma_ec_3.3.title
-	desc =uma_ec_3.3.desc
-	is_triggered_only = yes
-	astral_rift = yes
-	picture =GFX_evt_astral_rift_crystal_3#placeholder
-	difficulty = 1
-
-	option = {
-		name = uma_mejro_ardan.1.a
+		name = uma_ec_3.3.a
 		set_next_astral_rift_event = {
 			id = uma_ec_3.4
 		}
-
 	}
 
 	after = {
@@ -92,6 +82,30 @@ astral_rift_event = {
 
 astral_rift_event = {
 	id  = uma_ec_3.4
+	title = uma_ec_3.3.title
+	desc =uma_ec_3.3.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	picture =GFX_evt_astral_rift_crystal_3#placeholder
+	difficulty = 1
+
+	option = {
+		name = uma_ec_3.4.a
+		set_next_astral_rift_event = {
+			id = uma_ec_3.5
+		}
+
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+}
+
+astral_rift_event = {
+	id  = uma_ec_3.5
 	title = uma_ec_3.4.title
 	desc =uma_ec_3.4.desc
 	is_triggered_only = yes
@@ -100,13 +114,36 @@ astral_rift_event = {
 	difficulty = 1
 
 	option = {
-		name = uma_mejro_ardan.1.a
+		name = uma_ec_3.5.a
+		finish_astral_rift = yes
+	}
+	option = {
+		name = uma_ec_3.5.b
 		finish_astral_rift = yes
 	}
 
 	after = {
+		every_playable_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = uma_ec_3.6
+			}
+		}
 		explorer = {
 			astral_thread_small_reward = yes
 		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.6
+	title = uma_ec.3.6.title
+	desc = uma_ec.3.6.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec.3.6.a
 	}
 }
