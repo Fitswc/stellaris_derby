@@ -140,8 +140,11 @@ uma_ec3_create_puma_front_behaviour = {
 			find_closest_system = {
 				trigger = {
 					id = uma_ec3_puma_front_fleet_trigger.1
-					NOT = {
+					NOR = {
 						is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
+						any_fleet_in_system = {
+							is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
+						}
 					}
 				}
 				found_system = {

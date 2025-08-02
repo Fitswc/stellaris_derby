@@ -331,25 +331,34 @@ ship_design = {
 		}
 
 		component = {
-			slot = "MEDIUM_GUN_01"
-			template = "SWARMER_MISSILE_2"
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_ARMOR_L"
 		}
 		component = {
-			slot = "MEDIUM_GUN_02"
-			template = "MEDIUM_PLASMA_3"
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_ARMOR_L"
 		}
 		component = {
-			slot = "MEDIUM_GUN_03"
-			template = "MEDIUM_PLASMA_3"
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_ARMOR_L"
 		}
 		component = {
-			slot = "MEDIUM_GUN_04"
-			template = "MEDIUM_PLASMA_3"
+			slot = "LARGE_UTILITY_4"
+			template = "UMA_ARMOR_L"
 		}
 		component = {
-			slot = "LARGE_GUN_01"
-			template = "LARGE_GAMMA_LASER"
+			slot = "LARGE_UTILITY_5"
+			template = "UMA_ARMOR_L"
 		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+
 
 	}
 	required_component="SENSOR_4"

@@ -181,33 +181,3 @@ planet_event = {
 }
 
 
-planet_event = {
-	id = probuma.6
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_orbital_bombardment_stance = uma_bs_soc
-		is_colony = yes
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				uma_is_ringworld = yes
-			}
-			set_planet_flag = cb_b_s_r
-		}
-
-		else_if = {
-			limit = {
-				uma_is_habitat = yes
-			}
-			set_planet_flag = cb_s_h
-		}
-		else = {
-			set_planet_flag = cb_s
-		}
-
-	}
-}

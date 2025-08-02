@@ -21,24 +21,3 @@ uma_bs_lightoff = {
 
 }
 
-
-uma_bs_soc = {
-	trigger = {
-		owner = {
-			is_country_type = uma_ec3_empire
-		}
-	}
-	default = yes
-	stop_when_armies_dead = no
-	abduct_pops = no
-	planet_damage = 50
-	army_damage = 100
-	kill_pop_chance = {
-		base = 5
-	}
-	min_pops_to_kill_pop = 0
-	ai_weight = {
-		base = 1
-	}
-
-}

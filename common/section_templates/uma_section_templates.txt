@@ -434,10 +434,11 @@ ship_section_template = {
 		locatorname = "root"
 	}
 	component_slot = {
-		name = "LARGE_GUN_01"
+		name = "LARGE_UN"
 		template = "large_turret"
 		locatorname = "root"
 	}
 
 	aux_utility_slots = 1
+	large_utility_slots = 6
 }

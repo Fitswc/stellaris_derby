@@ -257,24 +257,143 @@ country_event = {
 }
 
 
-country_event = {
+
+fleet_event = {
 	id = uma_ec_3.11
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				#Exist Hostile fleets in this system
+				From = {
+					count_fleet_in_system = {
+						limit = {
+							NOT = {
+								is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
+							}
+						}
+						count > 0
+					}
+				}
+			}
+
+			#DO NOTHING
+
+		}
+		else = {
+			From = {
+				system_event = {
+					id = uma_ec_3.12
+					days = 50
+				}
+			}
+		}
+	}
+}
+
+system_event = {
+	id = uma_ec_3.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_starbase = {
+			owner = event_target:uma_ec3_uma_from_outer_world_country
+			size = starbase_uma_ec3
+			design = NAME_UMA_EC3_STARBASE
+			effect = {
+
+			}
+		}
+
+		system_event = {
+			id = uma_ec_3.13
+			days = 160
+			random = 20
+		}
+	}
+}
+
+#Soc Progress
+system_event = {
+	id = uma_ec_3.13
+	hide_window = yes
+	is_triggered_only = yes
 
 	trigger = {
-		This = {
-			is_country_type = uma_ec3_empire
+		any_ship_in_system = {
+			is_ship_size = starbase_uma_ec3
 		}
 	}
 
 	immediate = {
-		fromfrom.solar_system = {
-			set_star_flag = uma_ec3_front_clear
+		star = {
+			change_pc = pc_black_hole
+			add_deposit = d_energy_5
 		}
-		fromfrom = {
+
+		every_system_planet = {
+			change_pc = pc_barren
+		}
+		random_list = {
+			5 = {
+				random_system_planet = {
+					random_list = {
+						5 = {
+							add_deposit = d_minerals_1
+						}
+						5 = {
+							add_deposit = d_minerals_2
+						}
+						5 = {
+
+						}
+					}
+				}
+			}
+			5 = {
+				while = {
+					count = 2
+					random_system_planet = {
+						random_list = {
+							5 = {
+								add_deposit = d_minerals_1
+							}
+							5 = {
+								add_deposit = d_minerals_2
+							}
+							5 = {
+
+							}
+						}
+					}
+				}
+			}
+			5 = {
+				while = {
+					count = 3
+					random_system_planet = {
+						random_list = {
+							5 = {
+								add_deposit = d_minerals_1
+							}
+							5 = {
+								add_deposit = d_minerals_2
+							}
+							5 = {
+
+							}
+						}
+					}
+				}
+			}
 		}
 	}
-
 }
+
