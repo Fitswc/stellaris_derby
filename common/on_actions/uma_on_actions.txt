@@ -596,3 +596,9 @@ on_entering_system_fleet = {
 
 	}
 }
+
+on_yearly_pulse = {
+	events = {
+		uma_ec_3.8065
+	}
+}
