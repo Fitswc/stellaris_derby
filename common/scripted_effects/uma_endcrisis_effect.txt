@@ -4,9 +4,9 @@ uma_ec3_create_puma_fleets = {
 	event_target:uma_ec3_country = {
 		create_leader = {
 			class = commander
-			species = owner_main_species
+			species = event_target:uma_ec3_umamusume_species
 			name = random
-			skill = 3
+			skill = 5
 			randomize_traits = yes
 			hide_age = yes
 		}
@@ -18,14 +18,13 @@ uma_ec3_create_puma_fleets = {
 		 settings = {
             can_upgrade = no
             uses_naval_capacity = no
-            can_change_leader = no
             can_change_composition = no
             can_disband = no
             spawn_debris = no
             ai_ignore_strength = yes
         }
 		effect = {
-			assign_leader = last_created_leader
+			set_owner = event_target:uma_ec3_country
 			set_fleet_flag = uma_ec3_puma_front_fleet
 			while = {
 				count = 40
@@ -35,6 +34,7 @@ uma_ec3_create_puma_fleets = {
 					graphical_culture = mammalian_01
 				}
 			}
+			assign_leader = last_created_leader
 
 			while = {
 				count = 80
@@ -45,13 +45,98 @@ uma_ec3_create_puma_fleets = {
 				}
 			}
 
+			while = {
+				count = 120
+				create_ship = {
+					name = UMA_EC3_CO
+					design = NAME_UMA_EC3_SOC_Corvette_2
+					graphical_culture = mammalian_01
+				}
+			}
+
 			set_location = {
 				target = Prev
 				distance = 5
 				angle = random
 			}
 
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = armageddon
+
+			last_created_fleet = {
+				fleet_event = {
+					id = uma
+				}
+			}
+		}
+	}
+}
+
+
+uma_ec3_create_puma_fleets_defend = {
+	event_target:uma_ec3_country = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_ec3_umamusume_species
+			name = random
+			skill = 5
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
+	create_fleet = {
+		name = NAME_UMA_EC3_SOC_Corvette_2
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+		effect = {
 			set_owner = event_target:uma_ec3_country
+			set_fleet_flag = uma_ec3_puma_defend_fleet
+			while = {
+				count = 40
+				create_ship = {
+					name = UMA_EC3_BB
+					design = NAME_UMA_EC3_FRONT_SQUARD_BB
+					graphical_culture = mammalian_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 80
+				create_ship = {
+					name = UMA_EC3_CV
+					design = NAME_UMA_EC3_FRONT_SQUARD_CV
+					graphical_culture = mammalian_01
+				}
+			}
+
+			while = {
+				count = 120
+				create_ship = {
+					name = UMA_EC3_CO
+					design = NAME_UMA_EC3_SOC_Corvette_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+
 			set_fleet_stance = aggressive
 			set_aggro_range_measure_from = self
 			set_aggro_range = 500
@@ -85,25 +170,9 @@ uma_ec3_create_puma_starbase = {
 uma_ec3_create_puma_front_behaviour = {
 	queue_actions = {
 		repeat = {
-			find_closest_system = {
-				trigger = {
-					id = uma_ec3_puma_front_fleet_trigger
-					NOR = {
-						is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
-						any_fleet_in_system = {
-							is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
-						}
-					}
-				}
-				found_system = {
-					move_to = this
-					wait = 150
-				}
-				failed = {
-					wait = 30
-				}
-			}
+			effect = {
 
+			}
 		}
 	}
 }

@@ -184,11 +184,18 @@ country_event = {
 							save_global_event_target_as = uma_ec3_main_base
 							set_fleet_flag = uma_ec3_main_base
 
+							#开局200日后解锁
 							set_event_locked = yes
 
+							#第一批攻击/防守舰队生成
 							fleet_event = {
 								id = uma_ec_3.2
-								days = 5
+								days = 50
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 100
 							}
 						}
 					}
@@ -220,3 +227,73 @@ fleet_event = {
 		set_update_modifiers_batch = end
 	}
 }
+
+fleet_event = {
+	id = uma_ec_3.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		uma_ec3_create_puma_fleets_defend = yes
+		set_update_modifiers_batch = end
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = uma_ec3_puma_front_fleet
+	}
+
+	immediate = {
+		queue_actions = {
+			repeat = {
+				#5跳内舰队力量过小->折跃
+				effect = {
+
+				}
+
+				find_closest_system = {
+					trigger = {
+						id = uma_ec_3.5.t1
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+								#NOR = {
+								#	#高难度下不再被星基吸引
+								#	has_global_flag = wg_crisis_hard
+								#	has_global_flag = wg_crisis_insane
+								#}
+							}
+						}
+						ROOT = { can_access_system = prev }
+
+					}
+					found_system = {
+						effect = {
+							id = uma_ec_3.5.e1
+							set_variable = { which = uf_fleet_id value = root.fleet_id }
+						}
+						move_to = this
+
+						repeat = {
+							while = {
+								id = uma_ec_3.5.t2
+								any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+							}
+							find_closest_planet = {
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -547,6 +547,16 @@ ship_design = {
 		slot = "mid"
 
 		component = {
+			slot = "SMALL_GUN_01"
+			template = "UMA_SMALL_HADRON_DISRUPTOR"
+		}
+
+		component = {
+			slot = "TORPEDO_01"
+			template = "UMA_TG_MAAM_MISSILE"
+		}
+
+		component = {
 			slot = "SMALL_UTILITY_1"
 			template = "UMA_ARMOR_S"
 		}
@@ -565,5 +575,6 @@ ship_design = {
 	required_component = "SENSOR_4"
 	required_component = "CORVETTE_ZERO_POINT_REACTOR"
 }
+
 
 
