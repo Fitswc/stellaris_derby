@@ -9,7 +9,7 @@ d_uma_season_spring = {
 				uma_is_mild_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = 0.1
+		logistic_growth_mult = 0.1
 		planet_jobs_food_produces_mult = 0.05
 
 	}
@@ -20,7 +20,7 @@ d_uma_season_spring = {
 				uma_is_hot_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = 0.1
+		logistic_growth_mult = 0.1
 		planet_jobs_food_produces_mult = 0.06
 		planet_jobs_energy_upkeep_mult = 0.005
 	}
@@ -31,7 +31,7 @@ d_uma_season_spring = {
 				uma_is_cold_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = 0.1
+		logistic_growth_mult = 0.1
 		planet_jobs_food_produces_mult = 0.03
 		planet_jobs_energy_upkeep_mult = 0.005
 	}
@@ -55,7 +55,7 @@ d_uma_season_summer = {
 				is_planet_class = pc_ocean
 			}
 		}
-		bonus_pop_growth_mult = 0.05
+		logistic_growth_mult = 0.05
 		planet_jobs_food_produces_mult = 0.08
 		planet_jobs_energy_upkeep_mult = 0.005
 	}
@@ -68,7 +68,7 @@ d_uma_season_summer = {
 				is_planet_class = pc_tropical
 			}
 		}
-		bonus_pop_growth_mult = 0.05
+		logistic_growth_mult = 0.05
 		planet_jobs_food_produces_mult = 0.06
 		planet_jobs_energy_upkeep_mult = 0.008
 	}
@@ -80,7 +80,7 @@ d_uma_season_summer = {
 				is_planet_class = pc_alpine
 			}
 		}
-		bonus_pop_growth_mult = 0.05
+		logistic_growth_mult = 0.05
 		planet_jobs_food_produces_mult = 0.04
 		planet_jobs_energy_upkeep_mult = 0.008
 	}
@@ -102,7 +102,7 @@ d_uma_season_autumn = {
 				uma_is_mild_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = -0.05
+		logistic_growth_mult = -0.05
 		planet_jobs_food_produces_mult = 0.1
 		planet_pops_food_upkeep_mult = 0.05
 		planet_jobs_energy_upkeep_mult = 0.01
@@ -115,7 +115,7 @@ d_uma_season_autumn = {
 				uma_is_hot_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = -0.05
+		logistic_growth_mult = -0.05
 		planet_jobs_food_produces_mult = 0.08
 		planet_pops_food_upkeep_mult = 0.03
 
@@ -127,7 +127,7 @@ d_uma_season_autumn = {
 				uma_is_cold_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = -0.05
+		logistic_growth_mult = -0.05
 		planet_jobs_food_produces_mult = 0.05
 		planet_jobs_energy_upkeep_mult = 0.02
 
@@ -150,7 +150,7 @@ d_uma_season_winter = {
 				uma_is_mild_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = -0.08
+		logistic_growth_mult = -0.08
 		planet_jobs_food_produces_mult = -0.05
 		planet_pops_food_upkeep_mult = 0.03
 		planet_jobs_energy_upkeep_mult = 0.005
@@ -163,7 +163,7 @@ d_uma_season_winter = {
 				uma_is_hot_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = -0.08
+		logistic_growth_mult = -0.08
 		planet_jobs_food_produces_mult = 0.03
 
 
@@ -175,7 +175,7 @@ d_uma_season_winter = {
 				uma_is_cold_planet = yes
 			}
 		}
-		bonus_pop_growth_mult = -0.08
+		logistic_growth_mult = -0.08
 		planet_jobs_food_produces_mult = -0.08
 		planet_pops_food_upkeep_mult = 0.02
 		planet_jobs_energy_upkeep_mult = 0.02
