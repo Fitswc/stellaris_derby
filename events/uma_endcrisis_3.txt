@@ -212,6 +212,35 @@ country_event = {
 			}
 		}
 
+		every_playable_country = {
+			capital_star = {
+				create_fleet = {
+					name = NAME_UMA_EC3_SOC_BASE
+					effect = {
+						set_owner = event_target:uma_ec3_country
+						create_ship = {
+							name = random
+							design = "NAME_UMA_EC3_STARBASE"
+							effect = {
+								set_ship_flag = uma_ec3_soc_fleet
+							}
+						}
+						set_location = {
+							target = Prev
+							distance = 6
+							angle = random
+						}
+
+						save_global_event_target_as = uma_ec3_soc_fleet
+						set_fleet_flag = uma_ec3_soc_fleet
+
+						#达到目标自动摧毁
+						set_event_locked = yes
+					}
+				}
+			}
+		}
+
 		set_update_modifiers_batch = end
 	}
 }
@@ -284,10 +313,74 @@ fleet_event = {
 						repeat = {
 							while = {
 								id = uma_ec_3.5.t2
-								any_system_planet = { OR = { is_colony = yes is_colonizable = yes } }
+
+								NOR = {
+									star = {
+										is_star_class = sc_black_hole
+									}
+								}
+
 							}
 							find_closest_planet = {
+								trigger = {
+									id = uma_ec_3.5.t3
+									is_star = yes
+									NOT = {
+										is_star_class = sc_black_hole
+									}
+								}
+								found_planet = {
+									orbit_planet = this
+									effect = {
+										id = uma_ec_3.5.e2
+										planet_event = {
+											id = uma_ec_3.6
+											days = 200
+										}
+									}
+								}
+								failed = {
+									effect = {
+										id = uma_ec_3.5.e3
+										create_fleet = {
+											effect = {
+												set_owner = event_target:uma_ec3_country
+												create_ship = {
+													name = random
+													design = "NAME_UMA_EC3_STARBASE"
+													effect = {
+														set_ship_flag = uma_ec3_soc_fleet_base
+													}
+												}
+												set_location = {
+													target = Prev
+													distance = 10
+													angle = random
+												}
 
+												save_global_event_target_as = uma_ec3_soc_fleet_base
+												set_fleet_flag = uma_ec3_soc_fleet_base
+											}
+										}
+									}
+								}
+							}
+							move_to = this
+							wait = {duration = 10 random = 10}
+						}
+						wait = { duration = 10 random = 10 }
+					}
+
+					failed = {
+						find_random_fleet = {
+							trigger = {
+								id = uma_ec_3.5.t4
+								owner = {
+									is_hostile = Root.owner
+								}
+							}
+							found_fleet = {
+								move_to = this
 							}
 						}
 					}
@@ -297,3 +390,39 @@ fleet_event = {
 	}
 }
 
+planet_event = {
+	id = uma_ec_3.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_star = yes
+		NOT = {
+			is_star_class = sc_black_hole
+		}
+	}
+
+	immediate = {
+		change_pc = pc_black_hole
+		create_fleet = {
+			effect = {
+				set_owner = event_target:uma_ec3_country
+				create_ship = {
+					name = random
+					design = "NAME_UMA_EC3_STARBASE"
+					effect = {
+						set_ship_flag = uma_ec3_soc_fleet_base
+					}
+				}
+				set_location = {
+					target = Prev
+					distance = 10
+					angle = random
+				}
+
+				save_global_event_target_as = uma_ec3_soc_fleet_base
+				set_fleet_flag = uma_ec3_soc_fleet_base
+			}
+		}
+	}
+}

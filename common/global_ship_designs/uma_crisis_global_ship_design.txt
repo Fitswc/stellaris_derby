@@ -325,10 +325,6 @@ ship_design = {
 		template = "starbase_uma_ec3_key"
 		slot = "core"
 
-		component = {
-			slot = "PD_01"
-			template = "POINT_DEFENCE_3"
-		}
 
 		component = {
 			slot = "LARGE_UTILITY_1"
@@ -340,18 +336,6 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_3"
-			template = "UMA_ARMOR_L"
-		}
-		component = {
-			slot = "LARGE_UTILITY_4"
-			template = "UMA_ARMOR_L"
-		}
-		component = {
-			slot = "LARGE_UTILITY_5"
-			template = "UMA_ARMOR_L"
-		}
-		component = {
-			slot = "LARGE_UTILITY_6"
 			template = "UMA_ARMOR_L"
 		}
 		component = {
