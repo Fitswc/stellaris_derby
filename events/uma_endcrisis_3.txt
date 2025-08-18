@@ -187,6 +187,11 @@ country_event = {
 							#开局200日后解锁
 							set_event_locked = yes
 
+							fleet_event = {
+								id = uma_ec_3.7
+								days = 200
+							}
+
 							#第一批攻击/防守舰队生成
 							fleet_event = {
 								id = uma_ec_3.2
@@ -239,6 +244,36 @@ country_event = {
 					}
 				}
 			}
+
+			every_system = {
+				limit = {
+					star = {
+						is_star_class = sc_black_hole
+					}
+				}
+				create_fleet = {
+					name = NAME_UMA_EC3_SOC_BASE
+					effect = {
+						set_owner = event_target:uma_ec3_country
+						create_ship = {
+							name = random
+							design = "NAME_UMA_EC3_STARBASE"
+							effect = {
+								set_ship_flag = uma_ec3_soc_fleet
+							}
+						}
+						set_location = {
+							target = Prev
+							distance = 10
+							angle = random
+						}
+
+						save_global_event_target_as = uma_ec3_soc_fleet
+						set_fleet_flag = uma_ec3_soc_fleet
+
+					}
+				}
+			}
 		}
 
 		set_update_modifiers_batch = end
@@ -281,11 +316,6 @@ fleet_event = {
 	immediate = {
 		queue_actions = {
 			repeat = {
-				#5跳内舰队力量过小->折跃
-				effect = {
-
-				}
-
 				find_closest_system = {
 					trigger = {
 						id = uma_ec_3.5.t1
@@ -293,11 +323,9 @@ fleet_event = {
 							AND = {
 								exists = starbase
 								starbase = { owner = { is_hostile = root.owner } }
-								#NOR = {
-								#	#高难度下不再被星基吸引
-								#	has_global_flag = wg_crisis_hard
-								#	has_global_flag = wg_crisis_insane
-								#}
+								NOT = {
+									has_star_flag = uma_soc_fleet_progress
+								}
 							}
 						}
 						ROOT = { can_access_system = prev }
@@ -324,7 +352,7 @@ fleet_event = {
 							find_closest_planet = {
 								trigger = {
 									id = uma_ec_3.5.t3
-									is_star = yes
+									is_primary_star = yes
 									NOT = {
 										is_star_class = sc_black_hole
 									}
@@ -333,6 +361,10 @@ fleet_event = {
 									orbit_planet = this
 									effect = {
 										id = uma_ec_3.5.e2
+
+										this.solar_system = {
+											set_star_flag = uma_soc_fleet_progress
+										}
 										planet_event = {
 											id = uma_ec_3.6
 											days = 200
@@ -396,7 +428,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_star = yes
+		is_primary_star = yes
 		NOT = {
 			is_star_class = sc_black_hole
 		}
@@ -423,6 +455,18 @@ planet_event = {
 				save_global_event_target_as = uma_ec3_soc_fleet_base
 				set_fleet_flag = uma_ec3_soc_fleet_base
 			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:uma_ec3_main_base = {
+			set_event_locked = no
 		}
 	}
 }

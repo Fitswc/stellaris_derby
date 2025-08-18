@@ -68,6 +68,13 @@ uma_ec3_create_puma_fleets = {
 
 		}
 	}
+
+	last_created_fleet = {
+		fleet_event = {
+			id = uma_ec_3.5
+			days = 2
+		}
+	}
 }
 
 
