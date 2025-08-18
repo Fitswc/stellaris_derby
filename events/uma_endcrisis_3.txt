@@ -97,7 +97,6 @@ event = {
 
 
 
-# Crisis Initiated
 country_event = {
 	id = uma_ec_3.1
 	hide_window = yes
@@ -105,392 +104,119 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		set_update_modifiers_batch = begin
+		endgame_telemetry = uma_end_crisis_3
 		set_global_flag = uma_ec3_outeruma_happened
-		endgame_telemetry = uma_outer
-		set_crisis_stage_1 = yes
+
+
 		random_system = {
 			limit = {
-				has_astral_rift = no
-				can_spawn_astral_rift = yes
+				is_star_class = sc_black_hole
 			}
-			save_global_event_target_as = uma_ec3_begining_astral_rift_system
-			set_star_flag = uma_ec3_begining_astral_rift_system
-			
-			spawn_astral_rift = {
-				random_pos = yes
-				id = uma_ar_ec3
-				graphics_entity_name = astral_rift_entity
-				init_effect = {
-					save_event_target_as = uma_ec3_ar
+
+			set_star_flag = uma_ec3_first_system
+			save_global_event_target_as = uma_ec3_first_system
+
+			random_system_planet = {
+				create_species = {
+					name = "NAME_goldship_species"
+					class = umamusume
+					portrait = umamusume
+					traits = random
+					immortal = yes
+					name_list = UMAname
+					effect = { save_global_event_target_as = uma_ec3_umamusume_species }
 				}
-			}
 
-		}
+				create_country = {
+					name = "NAME_UMA_EC3_country"
+					type = uma_ec3_empire
+					species = event_target:uma_ec3_umamusume_species
+					name_list = "UMAname"
+					flag = {
+						icon = {
+							category = "uiu_flags"
+							file = "uiu_flags02.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"indigo"
+							"blue"
+							"null"
+							"null"
+						}
+					}
 
-		#An event that notice all country about the beginning of the crisis
-		every_playable_country = {
-			limit = {
-				is_ai = no
-			}
-			country_event = { id = uma_ec_3.2 days = 10 }
-			country_event = { id = uma_ec_3.6 days = 150 }
-		}
-	}
-}
+					effect = {
 
-#Notice
-country_event = {
-	id = uma_ec_3.2
-	title = uma_ec_3.2.title
-	desc = uma_ec_3.2.desc
-	is_triggered_only = yes
+						set_country_flag = uma_ec3_country
+						save_global_event_target_as = uma_ec3_country
 
-	option = {
-		name = uma_ec_3.2.a
-	}
-
-	option = {
-		name = uma_ec_3.2.b
-	}
-}
-
-astral_rift_event = {
-	id  = uma_ec_3.3
-	title = uma_ec_3.2.title
-	desc =uma_ec_3.2.desc
-	is_triggered_only = yes
-	astral_rift = yes
-	picture =GFX_evt_astral_rift_crystal_3#placeholder
-	difficulty = @astral_rift_initial_difficulty
-
-	option = {
-		name = uma_ec_3.3.a
-		set_next_astral_rift_event = {
-			id = uma_ec_3.4
-		}
-	}
-
-	after = {
-		explorer = {
-			astral_thread_small_reward = yes
-		}
-	}
-}
-
-astral_rift_event = {
-	id  = uma_ec_3.4
-	title = uma_ec_3.3.title
-	desc =uma_ec_3.3.desc
-	is_triggered_only = yes
-	astral_rift = yes
-	picture =GFX_evt_astral_rift_crystal_3#placeholder
-	difficulty = 1
-
-	option = {
-		name = uma_ec_3.4.a
-		set_next_astral_rift_event = {
-			id = uma_ec_3.5
-		}
-
-	}
-
-	after = {
-		explorer = {
-			astral_thread_small_reward = yes
-		}
-	}
-}
-
-astral_rift_event = {
-	id  = uma_ec_3.5
-	title = uma_ec_3.4.title
-	desc =uma_ec_3.4.desc
-	is_triggered_only = yes
-	astral_rift = yes
-	picture =GFX_evt_astral_rift_crystal_3#placeholder
-	difficulty = 1
-
-	option = {
-		name = uma_ec_3.5.b
-		finish_astral_rift = yes
-	}
-
-	after = {
-		explorer = {
-			astral_thread_small_reward = yes
-		}
-	}
-}
-
-country_event = {
-	id = uma_ec_3.6
-	title = uma_ec.3.6.title
-	desc = uma_ec.3.6.desc
-	is_triggered_only = yes
-
-	immediate = {
-		destroy_astral_rift = event_target:uma_ec3_ar
-
-		event_target:uma_ec3_begining_astral_rift_system = {
-			system_event = {
-				id = uma_ec_3.7
-				days = 200
-			}
-		}
-
-	}
-
-	option = {
-		name = uma_ec.3.6.a
-	}
-}
-
-
-system_event = {
-	id = uma_ec_3.7
-	hide_window = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	immediate = {
-		set_global_flag = uma_ec3_evts_begin
-
-		uma_ec_3_initialize_create_country_and_species = yes
-		every_system_planet = {
-			set_owner = event_target:uma_ec3_uma_from_outer_world_country
-			set_controller = event_target:uma_ec3_uma_from_outer_world_country
-		}
-		create_starbase = {
-			owner = event_target:uma_ec3_uma_from_outer_world_country
-			size = starbase_uma_ec3
-			design = NAME_UMA_EC3_BASE
-			module = shipyard
-			building = fleet_academy
-			effect = {
-
-			}
-		}
-
-		uma_ec3_create_puma_fleets = yes
-		uma_ec3_create_puma_soc_corvette = yes
-
-
-	}
-
-	after = {
-		every_playable_country = {
-			limit = {
-				is_ai = no
-			}
-			country_event = {
-				id = uma_ec_3.8
-			}
-		}
-	}
-}
-
-country_event = {
-	id = uma_ec_3.8
-	title = uma_ec.3.8.title
-	desc = uma_ec.3.8.desc
-	is_triggered_only = yes
-
-	immediate = {
-
-	}
-
-	option = {
-		name = uma_ec.3.8.a
-		hidden_effect = {
-			if = {
-				limit = {
-					This = {
-						is_uma_country = yes
+						set_graphical_culture = mammalian_01
+						create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
+						add_ship_design = last_created_design
+						create_ship_design = { design = "NAME_Marauder_Starbase" }
+						add_ship_design = last_created_design
 					}
 				}
-				country_event = {
-					id = uma_ec_3.9
+
+				event_target:uma_ec3_country = {
+					create_fleet = {
+						name = NAME_UMA_EC3_MAIN_BASE
+						effect = {
+							set_owner = event_target:uma_ec3_country
+							create_ship = {
+								name = random
+								design = "NAME_UMA_EC3_BASE"
+								effect = {
+									set_ship_flag = uma_ec3_main_base
+								}
+							}
+							set_location = {
+								target = PREVPREV
+								distance = 45
+								angle = random
+							}
+
+							save_global_event_target_as = uma_ec3_main_base
+							set_fleet_flag = uma_ec3_main_base
+
+							set_event_locked = yes
+
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+						}
+					}
 				}
 			}
-			else = {
-				country_event = {
-					id = uma_ec_3.10
-				}
+
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			create_starbase = {
+				size = starbase_marauder
+				owner = event_target:uma_ec3_country
 			}
 		}
+
+		set_update_modifiers_batch = end
 	}
 }
-
-country_event = {
-	id = uma_ec_3.9
-	title = uma_ec.3.9.title
-	desc = uma_ec.3.9.desc
-	is_triggered_only = yes
-	diplomatic = yes
-
-	picture_event_data = {
-		room = no_video_feed_room
-	}
-
-	option = {
-		name = uma_ec3.9.a
-	}
-}
-
-country_event = {
-	id = uma_ec_3.10
-	title = uma_ec.3.10.title
-	desc = uma_ec.3.10.desc
-	is_triggered_only = yes
-	diplomatic = yes
-
-	picture_event_data = {
-		room = no_video_feed_room
-	}
-
-	option = {
-		name = uma_ec3.10.a
-	}
-}
-
-
 
 fleet_event = {
-	id = uma_ec_3.11
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				#Exist Hostile fleets in this system
-				From = {
-					count_fleet_in_system = {
-						limit = {
-							NOT = {
-								is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
-							}
-						}
-						count > 0
-					}
-				}
-			}
-
-			#DO NOTHING
-
-		}
-		else = {
-			From = {
-				system_event = {
-					id = uma_ec_3.12
-					days = 50
-				}
-			}
-		}
-	}
-}
-
-system_event = {
-	id = uma_ec_3.12
+	id = uma_ec_3.2
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		create_starbase = {
-			owner = event_target:uma_ec3_uma_from_outer_world_country
-			size = starbase_uma_ec3
-			design = NAME_UMA_EC3_STARBASE
-			effect = {
-
-			}
-		}
-
-		system_event = {
-			id = uma_ec_3.13
-			days = 160
-			random = 20
-		}
+		set_update_modifiers_batch = begin
+		uma_ec3_create_puma_fleets = yes
+		set_update_modifiers_batch = end
 	}
 }
-
-#Soc Progress
-system_event = {
-	id = uma_ec_3.13
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		any_ship_in_system = {
-			is_ship_size = starbase_uma_ec3
-		}
-	}
-
-	immediate = {
-		star = {
-			change_pc = pc_black_hole
-			add_deposit = d_energy_5
-		}
-
-		every_system_planet = {
-			change_pc = pc_barren
-		}
-		random_list = {
-			5 = {
-				random_system_planet = {
-					random_list = {
-						5 = {
-							add_deposit = d_minerals_1
-						}
-						5 = {
-							add_deposit = d_minerals_2
-						}
-						5 = {
-
-						}
-					}
-				}
-			}
-			5 = {
-				while = {
-					count = 2
-					random_system_planet = {
-						random_list = {
-							5 = {
-								add_deposit = d_minerals_1
-							}
-							5 = {
-								add_deposit = d_minerals_2
-							}
-							5 = {
-
-							}
-						}
-					}
-				}
-			}
-			5 = {
-				while = {
-					count = 3
-					random_system_planet = {
-						random_list = {
-							5 = {
-								add_deposit = d_minerals_1
-							}
-							5 = {
-								add_deposit = d_minerals_2
-							}
-							5 = {
-
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-

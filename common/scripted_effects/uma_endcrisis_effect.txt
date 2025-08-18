@@ -1,102 +1,65 @@
-uma_ec_3_initialize_create_country_and_species = {
-	create_species = {
-		name = "NAME_UMA_FROM_OUTER"
-		class = "umamusume"
-		namelist = "UMAname"
-		portrait = "umamusume"
-		traits = {
-			trait = "uma_trait_musume1"
-		}
-		effect = { save_global_event_target_as = uma_ec3_uma_from_outer_world }
-	}
-
-	create_country = {
-		name = NAME_UMA_FROM_OUTER_SPACE_COUNTRY
-		species = event_target:uma_ec3_uma_from_outer_world # for pops
-		authority = auth_ancient_trainingcenter
-		ethos = {
-			ethic = ethic_fanatic_xenophobe
-			ethic = ethic_egalitarian
-		}
-		civics = {
-			civic = civic_umasymbolirudolf
-			civic = civic_umamayanotopgun
-		}
-		type = "uma_ec3_empire"
-		name_list = "UMAname"
-		flag = {
-			icon = {
-				category = "uiu_flags"
-				file = "uiu_fe_flags"
-			}
-			background = {
-				category = "backgrounds"
-				file = "circle.dds"
-			}
-			colors = {
-				"shadow_steel"
-				"dark_orange"
-				"null"
-				"null"
-			}
-		}
-		graphical_culture = mammalian_01
-		effect = {
-			save_global_event_target_as = uma_ec3_uma_from_outer_world_country
-			create_leader = {
-				class = commander
-				species = event_target:uma_ec3_uma_from_outer_world
-				name = random
-				effect = {
-					save_event_target_as = uma_ec3_uma_from_outer_world_ruler
-				}
-			}
-			set_leader = event_target:uma_ec3_uma_from_outer_world_ruler
-			create_ship_design = { design = "NAME_UMA_EC3_Transport" }
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_UMA_EC3_STARBASE" } #Base
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_UMA_EC3_FRONT_SQUARD_BB" } #BattleShip
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_UMA_EC3_FRONT_SQUARD_CV" } #Cruiser
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_UMA_EC3_SOC_Corvette_2" } #Corvette - scorched
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_UMA_EC3_BASE" } #Starbase
-			add_ship_design = last_created_design
-			save_event_target_as = uma_endcrisis03
-		}
-	}
-}
 
 
 uma_ec3_create_puma_fleets = {
+	event_target:uma_ec3_country = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 3
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
 	create_fleet = {
-		name = "NAME_UMA_EC3_PUMA_FLEET"
+		name = NAME_UMA_EC3_SOC_Corvette_2
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_leader = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
 		effect = {
+			assign_leader = last_created_leader
 			set_fleet_flag = uma_ec3_puma_front_fleet
 			while = {
-				count = 30
+				count = 40
 				create_ship = {
-					name = random
+					name = UMA_EC3_BB
 					design = NAME_UMA_EC3_FRONT_SQUARD_BB
 					graphical_culture = mammalian_01
 				}
 			}
 
 			while = {
-				count = 45
+				count = 80
 				create_ship = {
-					name = random
+					name = UMA_EC3_CV
 					design = NAME_UMA_EC3_FRONT_SQUARD_CV
 					graphical_culture = mammalian_01
 				}
 			}
 
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+			set_owner = event_target:uma_ec3_country
 			set_fleet_stance = aggressive
 			set_aggro_range_measure_from = self
 			set_aggro_range = 500
-			set_fleet_bombardment_stance = uma_bs_soc
+			set_fleet_bombardment_stance = armageddon
+
+			last_created_fleet = {
+			#	uma_ec3_create_puma_front_behaviour = yes
+			}
 		}
 	}
 }
@@ -117,29 +80,14 @@ uma_ec3_create_puma_starbase = {
 	}
 }
 
-uma_ec3_create_puma_soc_corvette= {
-	create_fleet = {
-		name = "NAME_UMA_EC3_PUMA_FLEET"
-		effect = {
-			set_fleet_flag = uma_ec3_puma_front_fleet
-			while = {
-				count = 10
-				create_ship = {
-					name = random
-					design = NAME_UMA_EC3_SOC_Corvette_2
-					graphical_culture = mammalian_01
-				}
-			}
-		}
-	}
-}
+
 
 uma_ec3_create_puma_front_behaviour = {
 	queue_actions = {
 		repeat = {
 			find_closest_system = {
 				trigger = {
-					id = uma_ec3_puma_front_fleet_trigger.1
+					id = uma_ec3_puma_front_fleet_trigger
 					NOR = {
 						is_owned_by = event_target:uma_ec3_uma_from_outer_world_country
 						any_fleet_in_system = {
@@ -151,27 +99,12 @@ uma_ec3_create_puma_front_behaviour = {
 					move_to = this
 					wait = 150
 				}
-			}
-		}
-	}
-}
-
-uma_ec3_create_puma_soc_behaviour = {
-	queue_actions = {
-		repeat = {
-			find_closest_system = {
-				trigger = {
-					id = uma_ec3_puma_soc_fleet_trigger.1
-
-					has_star_flag = uma_front_fleet_here
-				}
-				found_system = {
-					move_to = this
-				}
 				failed = {
-
+					wait = 30
 				}
 			}
+
 		}
 	}
 }
+

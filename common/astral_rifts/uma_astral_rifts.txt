@@ -27,18 +27,3 @@ uma_ar_mejro_ardan = {
 		standard_astral_rift_on_roll_failed = yes
 	}
 }
-
-uma_ar_ec3 = {
-	name = uma_ar_ec3
-	event_weight = {
-		weight = 0
-	}
-	event = uma_ec_3.3
-	randomized = no
-	flags = {
-		uma_ar_ec3
-	}
-	on_roll_failed = {
-
-	}
-}
