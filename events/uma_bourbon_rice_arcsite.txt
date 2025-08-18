@@ -77,13 +77,12 @@ country_event = {
 				add_anomaly = {
 					category = uma_bourbon_anomaly
 				}
-				begin_event_chain = {
-					event_chain = uma_glx_full
-					target = owner
-				}
 
 				hidden_effect = {
 					owner = {
+						begin_event_chain = {
+							event_chain = uma_glx_full
+						}
 						create_point_of_interest = {
 							id = uma_bour_anolomy_poi_1
 							name = "uma_bour_poi"

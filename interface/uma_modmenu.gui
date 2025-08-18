@@ -119,6 +119,21 @@ guiTypes = {
 			effect = "uma_mmu_mid_game_difficult_easy_ds"
 		}
 
+		effectButtonType = {
+			name = uma_mmu_mmu_mid_diff_off
+			spriteType = "GFX_uma_mmu_off"
+			position = { x = 1161 y = 119 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_mid_game_difficult_off"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_mid_diff_off_ds
+			spriteType = "GFX_uma_mmu_off_disable"
+			position = { x = 1161 y = 119 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_mid_game_difficult_off_ds"
+		}
+
 		ButtonType = {
 			name = "uma_mmu_end_diff_title"
 			buttonText = uma_mmu_end_diff_title_t
