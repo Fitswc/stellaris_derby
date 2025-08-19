@@ -604,3 +604,14 @@ on_yearly_pulse = {
 		uma_ec_3.8065
 	}
 }
+
+on_country_destroyed = {
+	events = {
+		uma_ec_3.8
+	}
+}
+
+on_colony_yearly_pulse = {
+	events = {  }
+}
+
