@@ -575,27 +575,36 @@ decision_uma_change_to_uma = {
 					}
 				}
 				#				change_species = Root.owner_main_species
-				if = {
-					limit = {
-						From = {
-							has_tradition = uma_factor_star_picking
-						}
-					}
-					From = {
-						add_resource = {
-							influence = 5
-						}
-					}
-				}
-				else = {
-					modify_species = {
-						species = Root.owner_main_species
-						add_trait = trait_uma_new_bottle_but_old_wine
-						change_scoped_species = yes
-						portrait = Root.owner_main_species
-						effect = {
-							##
-						}
+				#				if = {
+				#					limit = {
+				#						From = {
+				#							has_tradition = uma_factor_star_picking
+				#						}
+				#					}
+				#					From = {
+				#						add_resource = {
+				#							influence = 5
+				#						}
+				#					}
+				#				}
+				#				else = {
+				#					modify_species = {
+				#						species = Root.owner_main_species
+				#						add_trait = trait_uma_new_bottle_but_old_wine
+				#						change_scoped_species = yes
+				#						portrait = Root.owner_main_species
+				#						effect = {
+				#							##
+				#						}
+				#					}
+				#				}
+				modify_species = {
+					species = Root.owner_main_species
+					add_trait = trait_uma_new_bottle_but_old_wine
+					change_scoped_species = yes
+					portrait = Root.owner_main_species
+					effect = {
+						##
 					}
 				}
 			}

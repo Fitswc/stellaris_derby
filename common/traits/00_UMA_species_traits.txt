@@ -294,7 +294,7 @@ uma_trait_spd1={
 	opposites = { "uma_trait_spd-1" "uma_trait_spd2" }
 	modifier={
 		army_damage_mult = 0.2
-		bonus_pop_growth_mult = 0.05
+		logistic_growth_mult = 0.05
 	}
 }
 
@@ -305,7 +305,7 @@ uma_trait_spd2={
 	opposites = { "uma_trait_spd-1" "uma_trait_spd1" }
 	modifier={
 		army_damage_mult = 0.4
-		bonus_pop_growth_mult = 0.1
+		logistic_growth_mult = 0.1
 		pop_environment_tolerance = 0.15
 	}
 	slave_cost = {
@@ -320,7 +320,7 @@ uma_trait_spd-1={
 	opposites = { "uma_trait_spd1" "uma_trait_spd2" }
 	modifier={
 		army_damage_mult = -0.2
-		bonus_pop_growth_mult = -0.05
+		logistic_growth_mult = -0.05
 	}
 }
 
@@ -331,7 +331,7 @@ uma_trait_sta1={
 	opposites = { "uma_trait_sta-1" "uma_trait_sta2" }
 	modifier={
 		pop_environment_tolerance = 0.05
-		bonus_pop_growth_mult = 0.05
+		logistic_growth_mult = 0.05
 		pop_housing_usage_mult = -0.05
 	}
 }
@@ -342,7 +342,7 @@ uma_trait_sta2={
 	opposites = { "uma_trait_sta1" "uma_trait_sta-1" }
 	icon="gfx/interface/icons/traits/sta2.png"
 	modifier={
-		bonus_pop_growth_mult = 0.10
+		logistic_growth_mult = 0.10
 		pop_environment_tolerance = 0.15
 		pop_housing_usage_mult = -0.1
 	}
@@ -357,7 +357,7 @@ uma_trait_sta-1={
 	allowed_archetypes={UMA}
 	icon="gfx/interface/icons/traits/sta-1.png"
 	modifier={
-		bonus_pop_growth_mult = -0.05
+		logistic_growth_mult = -0.05
 		pop_housing_usage_mult = 0.05
 	}
 }
@@ -710,7 +710,7 @@ uma_trait_thethesuki={
 	allowed_archetypes={UMA}
 	opposites = { "uma_trait_thethekirai"  }
 	modifier={
-		bonus_pop_growth_mult = 0.2
+		logistic_growth_mult = 0.2
 #		fake_pop_growth_mod = 0.2
 	}
 }
@@ -721,7 +721,7 @@ uma_trait_thethekirai={
 	allowed_archetypes={UMA}
 	opposites = { "uma_trait_thethesuki"  }
 	modifier={
-		bonus_pop_growth_mult = -0.1
+		logistic_growth_mult = -0.1
 		fake_pop_growth_mod = -0.1
 	}
 }
@@ -736,7 +736,7 @@ uma_trait_glass_feet = {
 		planet_uma_racing_umamusume_upkeep_mult = 0.1
 		planet_building_build_speed_mult = -0.1
 		planet_jobs_produces_mult = -0.05
-		bonus_pop_growth_mult = 0.1
+		logistic_growth_mult = 0.1
 	}
 }
 
@@ -965,7 +965,7 @@ trait_uma_new_bottle_but_old_wine = {
 	}
 
 	modifier = {
-		bonus_pop_growth_mult = -0.15
+		logistic_growth_mult = -0.15
 		pop_amenities_usage_mult = 0.1
 	}
 }
@@ -989,7 +989,7 @@ uma_trait_gold_family_basic={
 	}
 	initial = no
 	modifier= {
-		bonus_pop_growth_mult = -0.2
+		logistic_growth_mult = -0.2
 		planet_jobs_produces_mult = 0.05
 		pop_happiness = 0.1
 		planet_stability_add = -5
@@ -1012,7 +1012,7 @@ uma_trait_gold_family={
 	}
 	initial = no
 	modifier= {
-		bonus_pop_growth_mult = -0.1
+		logistic_growth_mult = -0.1
 		planet_jobs_produces_mult = 0.1
 		pop_happiness = 0.1
 		planet_stability_add = -5
@@ -1035,7 +1035,7 @@ uma_trait_gold_family_advance= {
 	}
 	initial = no
 	modifier = {
-		bonus_pop_growth_mult = -0.05
+		logistic_growth_mult = -0.05
 		planet_jobs_produces_mult = 0.2
 		pop_happiness = 0.1
 		planet_stability_add = -10

@@ -75,28 +75,10 @@ uma_trade_policy = {
 	potential = {
 		has_authority = auth_trainingcenter
 	}
-	option = {
-		name = trade_policy_uma_vanilla
-		on_enabled = {
-			set_trade_conversions = {
-				trade = 0.5
-				energy = 0.5
-			}
-		}
 
-		on_disabled = {
-			hidden_effect = {
-				set_trade_conversions = {}
-			}
-		}
-
-		AI_weight = {
-			factor = 0
-		}
-	}
 	option = {
 		valid = {
-			days_passed >= 10
+#			days_passed >= 10
 		}
 		name = trade_policy_uma_basic_resources_trading
 		policy_flags = {
@@ -117,7 +99,7 @@ uma_trade_policy = {
 	}
 	option = {
 		valid = {
-			days_passed >= 10
+#			days_passed >= 10
 		}
 		name = trade_policy_uma_industry_trading
 		policy_flags = {
@@ -224,6 +206,25 @@ uma_trade_policy = {
 			set_trade_conversions = {
 				energy = 0.8
 				uma_crystal_carrot = 0.2
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = trade_policy_uma_vanilla
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				energy = 0.5
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				set_trade_conversions = {}
 			}
 		}
 

@@ -34,6 +34,9 @@ country_event = {
 #	fire_only_once = yes
 	trigger = {
 		has_authority = auth_trainingcenter
+		NOT = {
+			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
+		}
 	}
 	immediate = {
 		log = "Uma-GoldShip Invasion Will Happened"

@@ -284,12 +284,12 @@ subclass_renwenguanghui_governor = {
     custom_tooltip_with_modifiers = renwen_subclass
 
     planet_modifier = {
-        bonus_pop_growth_mult = 0.3
+        logistic_growth_mult = 0.3
         planet_jobs_unity_produces_mult = 0.3
         species_empire_size_mult = -0.1
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.15
+        logistic_growth_mult = 0.15
         planet_jobs_unity_produces_mult = 0.15
         species_empire_size_mult = -0.05
     }
@@ -320,10 +320,10 @@ leader_trait_maertiao_governor = {
         has_trait = subclass_renwenguanghui_governor
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.3
+        logistic_growth_mult = 0.3
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.15
+        logistic_growth_mult = 0.15
     }
     leader_class = { official }
     selectable_weight = {
@@ -349,10 +349,10 @@ leader_trait_maertiao_governor_2 = {
 
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.45
+        logistic_growth_mult = 0.45
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.225
+        logistic_growth_mult = 0.225
     }
     leader_class = { official }
 }
@@ -374,10 +374,10 @@ leader_trait_maertiao_governor_2 = {
 #
 #    }
 #    planet_modifier = {
-#        bonus_pop_growth_mult = 0.45
+#        logistic_growth_mult = 0.45
 #    }
 #    sector_modifier = {
-#        bonus_pop_growth_mult = 0.225
+#        logistic_growth_mult = 0.225
 #    }
 #    leader_class = { official }
 #}
@@ -492,11 +492,11 @@ leader_trait_zhongzhichengcheng_governor = {
     }
 
      planet_modifier = {
-        bonus_pop_growth_mult = 0.1
+        logistic_growth_mult = 0.1
         planet_jobs_produces_mult = 0.1
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.05
+        logistic_growth_mult = 0.05
         planet_jobs_produces_mult = 0.05
     }
     modifier = {
@@ -526,11 +526,11 @@ leader_trait_zhongzhichengcheng_governor_2 = {
 
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.15
+        logistic_growth_mult = 0.15
         planet_jobs_produces_mult = 0.15
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.075
+        logistic_growth_mult = 0.075
         planet_jobs_produces_mult = 0.075
     }
     modifier = {
@@ -557,11 +557,11 @@ leader_trait_zhongzhichengcheng_governor_2 = {
 #
 #    }
 #    planet_modifier = {
-#        bonus_pop_growth_mult = 0.15
+#        logistic_growth_mult = 0.15
 #        planet_jobs_produces_mult = 0.15
 #    }
 #    sector_modifier = {
-#        bonus_pop_growth_mult = 0.075
+#        logistic_growth_mult = 0.075
 #        planet_jobs_produces_mult = 0.075
 #    }
 #    modifier = {
@@ -908,12 +908,12 @@ leader_trait_tianming2_governor = {
         TIER = none
     }
     planet_modifier = {
-        bonus_pop_growth_mult = 0.5
+        logistic_growth_mult = 0.5
         planet_jobs_unity_produces_mult = 0.5
         species_empire_size_mult = -0.3
     }
     sector_modifier = {
-        bonus_pop_growth_mult = 0.25
+        logistic_growth_mult = 0.25
         planet_jobs_unity_produces_mult = 0.25
         species_empire_size_mult = -0.15
     }
