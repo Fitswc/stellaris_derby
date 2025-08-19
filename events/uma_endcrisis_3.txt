@@ -100,10 +100,17 @@ event = {
 country_event = {
 	id = uma_ec_3.1
 	hide_window = yes
-	fire_only_once = yes
+#	fire_only_once = yes
 	is_triggered_only = yes
 
+	trigger = {
+		NOT = {
+			has_global_flag = uma_ec3_outeruma_happened
+		}
+	}
+
 	immediate = {
+
 		set_update_modifiers_batch = begin
 		endgame_telemetry = uma_end_crisis_3
 		set_global_flag = uma_ec3_outeruma_happened
@@ -112,8 +119,10 @@ country_event = {
 		random_system = {
 			limit = {
 				is_star_class = sc_black_hole
+				uma_is_event_system = no
 			}
 
+			log = "END CRISIS WILL BE SPAWN IN [THIS.GetName]"
 			set_star_flag = uma_ec3_first_system
 			save_global_event_target_as = uma_ec3_first_system
 
@@ -195,12 +204,12 @@ country_event = {
 							#第一批攻击/防守舰队生成
 							fleet_event = {
 								id = uma_ec_3.2
-								days = 50
+								days = 5
 							}
 							#防守
 							fleet_event = {
 								id = uma_ec_3.3
-								days = 100
+								days = 20
 							}
 						}
 					}
@@ -220,11 +229,15 @@ country_event = {
 		every_playable_country = {
 			capital_star = {
 				create_fleet = {
+					settings = {
+						is_boss = yes
+						ai_ignore_strength = yes
+					}
 					name = NAME_UMA_EC3_SOC_BASE
 					effect = {
 						set_owner = event_target:uma_ec3_country
 						create_ship = {
-							name = random
+							name = NAME_UMA_EC3_SOC_BASE
 							design = "NAME_UMA_EC3_STARBASE"
 							effect = {
 								set_ship_flag = uma_ec3_soc_fleet
@@ -245,7 +258,8 @@ country_event = {
 				}
 			}
 
-			every_system = {
+		}
+		every_system = {
 				limit = {
 					star = {
 						is_star_class = sc_black_hole
@@ -274,7 +288,6 @@ country_event = {
 					}
 				}
 			}
-		}
 
 		set_update_modifiers_batch = end
 	}
@@ -347,7 +360,13 @@ fleet_event = {
 										is_star_class = sc_black_hole
 									}
 								}
+								NOT = {
+									exists = starbase
+									starbase = {
+										is_owned_by = event_target:uma_ec3_country
+									}
 
+								}
 							}
 							find_closest_planet = {
 								trigger = {
