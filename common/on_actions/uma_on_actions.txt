@@ -611,7 +611,14 @@ on_country_destroyed = {
 	}
 }
 
-on_colony_yearly_pulse = {
-	events = {  }
+on_colony_monthly_pulse = {
+	events = {
+		uma_ec_3.9
+	}
 }
 
+on_entering_battle = {
+	events = {
+
+	}
+}

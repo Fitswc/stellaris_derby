@@ -29,7 +29,7 @@ uma_ec3_create_puma_fleets = {
 			while = {
 				count = 40
 				create_ship = {
-					name = UMA_EC3_BB
+					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_BB
 					graphical_culture = mammalian_01
 				}
@@ -39,7 +39,7 @@ uma_ec3_create_puma_fleets = {
 			while = {
 				count = 80
 				create_ship = {
-					name = UMA_EC3_CV
+					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_CV
 					graphical_culture = mammalian_01
 				}
@@ -48,7 +48,7 @@ uma_ec3_create_puma_fleets = {
 			while = {
 				count = 120
 				create_ship = {
-					name = UMA_EC3_CO
+					name = random
 					design = NAME_UMA_EC3_SOC_Corvette_2
 					graphical_culture = mammalian_01
 				}
@@ -92,7 +92,7 @@ uma_ec3_create_puma_fleets_defend = {
 
 
 	create_fleet = {
-		name = NAME_UMA_EC3_SOC_Corvette_2
+		name = NAME_UMA_EC3_SOC_Corvette_2_defend
 		 settings = {
             can_upgrade = no
             uses_naval_capacity = no
@@ -107,7 +107,7 @@ uma_ec3_create_puma_fleets_defend = {
 			while = {
 				count = 40
 				create_ship = {
-					name = UMA_EC3_BB
+					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_BB
 					graphical_culture = mammalian_01
 				}
@@ -117,7 +117,7 @@ uma_ec3_create_puma_fleets_defend = {
 			while = {
 				count = 80
 				create_ship = {
-					name = UMA_EC3_CV
+					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_CV
 					graphical_culture = mammalian_01
 				}
@@ -126,7 +126,7 @@ uma_ec3_create_puma_fleets_defend = {
 			while = {
 				count = 120
 				create_ship = {
-					name = UMA_EC3_CO
+					name = random
 					design = NAME_UMA_EC3_SOC_Corvette_2
 					graphical_culture = mammalian_01
 				}
