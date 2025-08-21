@@ -5,61 +5,24 @@ event = {
 	id = uma_ec_3.8065
 	hide_window = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
-		is_crises_allowed = yes
+		end_game_years_passed >= 3
 		NOT = {
-			has_global_flag = uma_ec3_outeruma_happened
+			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
+			has_global_flag = uma_ec_invasion_happened
+			has_global_flag = uma_ec_invasion_end
 		}
-
-		OR = {
-			AND = { # Super early start prereqs
-				end_game_years_passed >= 0
-				any_playable_country = {
-					has_authority = auth_trainingcenter
-				}
-				OR = {
-					AND = { #Both crisis summoning resolutions active
-						is_active_resolution = 	resolution_galacticstudies_extradimensional_experimentation
-						is_active_resolution = resolution_galactic_threats_committee
-					}
-				}
-			}
-			AND = { # Early start
-				end_game_years_passed >= 23
-				any_playable_country = {
-					has_authority = auth_trainingcenter
-				}
-				OR = {
-					default_endgame_early_start_triggers = yes
-					any_country = {
-						is_country_type = default
-						OR = {
-							has_technology = tech_jump_drive_1
-							has_technology = tech_psi_jump_drive_1
-						}
-					}
-					is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
-					is_active_resolution = resolution_galactic_threats_committee
-				}
-			}
-			end_game_years_passed >= 48 #Regular Start
-		}
-		OR = {
-			NOT = { has_global_flag = galactic_crisis_happened }
-			AND = {
-				allowed_crisis_type = all
-				NOR = {
-					has_global_flag = galactic_crisis_recently_fired #because some might take a while to arrive, we don't want two at once
-					any_country = {
-						is_crisis_faction = yes
-					}
-				}
-			}
+		any_country = {
+			has_uma_country = yes
 		}
 	}
 
 	immediate = {
+		set_global_flag = uma_endcrisis_triggered
+
+
 		random_country = {
 			limit = {
 				is_country_type = global_event
@@ -70,7 +33,7 @@ event = {
 					modifier = {
 						factor = 10000000
 						any_playable_country = {
-							has_authority = auth_trainingcenter
+							has_uma_country = yes
 							is_ai = no
 						}
 					}
@@ -89,6 +52,12 @@ event = {
 						}
 					}
 				}
+			}
+		}
+
+		every_playable_country = {
+			country_event = {
+				id = uma_ec_3.20
 			}
 		}
 	}
@@ -114,6 +83,7 @@ country_event = {
 		set_update_modifiers_batch = begin
 		endgame_telemetry = uma_end_crisis_3
 		set_global_flag = uma_ec3_outeruma_happened
+		set_global_flag = uma_ec_invasion_happened
 
 
 		random_system = {
@@ -567,7 +537,7 @@ planet_event = {
 	}
 
 	immediate = {
-		log = "The pops on [This.GetName] will be clear"
+		log = "The 25% of pops on [This.GetName] will be clear"
 
 		every_owned_pop_group = {
 			kill_pop_group = {
@@ -595,5 +565,20 @@ planet_event = {
 		change_pc = pc_black_hole
 	}
 
+}
+
+
+##下面是剧情内容
+
+#Notice
+country_event  = {
+	id = uma_ec_3.20
+	title = uma_ec_3.20.title
+	desc = uma_ec_3.20.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.20.a
+	}
 }
 

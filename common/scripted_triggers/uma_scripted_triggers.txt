@@ -62,6 +62,12 @@ is_uma_player_country = {
 	has_authority = auth_trainingcenter
 }
 
+has_uma_country = {
+	OR = {
+		has_authority = auth_trainingcenter
+	}
+}
+
 
 
 ###判断领袖内恰的个数（scope：country）
