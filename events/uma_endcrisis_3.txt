@@ -39,7 +39,7 @@ event = {
 					}
 					country_event = {
 						id = uma_ec_3.1
-						days = 2
+						days = 720
 					}
 				}
 				5 = {
@@ -79,6 +79,12 @@ country_event = {
 	}
 
 	immediate = {
+		every_playable_country = {
+			country_event = {
+				id = uma_ec_3.21
+				days = 6
+			}
+		}
 
 		set_update_modifiers_batch = begin
 		endgame_telemetry = uma_end_crisis_3
@@ -562,10 +568,77 @@ planet_event = {
 	}
 
 	immediate = {
-		change_pc = pc_black_hole
+		if = {
+			limit = {
+				solar_system = {
+					any_system_planet = {
+						OR = {
+							uma_is_habitat = no
+							uma_is_pd_habitat_planet = no
+						}
+					}
+				}
+			}
+			change_pc = pc_black_hole
+		}
+		else = {
+			solar_system = {
+				every_system_planet = {
+					limit = {
+						is_star = no
+						is_asteroid = yes
+					}
+					change_pc = pc_barren
+				}
+			}
+		}
+	}
+	
+	after = { 
+		every_playable_country = { 
+			country_event = { 
+				id = uma_ec_3.24
+				scopes = {
+					from = Root.solar_system
+				}
+			}
+		}
 	}
 
 }
+
+#What will done if all done
+starbase_event = {
+	id = uma_ec_3.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_flag = uma_ec3_soc_fleet_base
+
+		From = {
+			owner = {
+				any_situation = {
+					has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+				}
+			}
+		}
+	}
+
+	immediate = {
+		From = {
+			owner = {
+				random_situation = {
+					limit = {
+						has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+					}
+					add_situation_progress = -10
+				}
+			}
+		}
+	}
+}
+
 
 
 ##下面是剧情内容
@@ -581,4 +654,124 @@ country_event  = {
 		name = uma_ec_3.20.a
 	}
 }
+
+
+country_event = {
+	id = uma_ec_3.21
+	title = uma_ec_3.21.title
+	desc = uma_ec_3.21.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.21.a
+	}
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_uma_player_country = yes
+				}
+				country_event = {
+					id = uma_ec_3.22
+				}
+			}
+			else = {
+				country_event = {
+					id = uma_ec_3.23
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.22
+	title = uma_ec_3.22.title
+	desc = uma_ec_3.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_3.22.a
+	}
+
+	after = {
+		start_situation = {
+			type = situation_uma_endcrisis_ec3
+			target = Root
+			effect = {
+
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.23
+	title = uma_ec_3.23.title
+	desc = uma_ec_3.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_3.23.a
+	}
+
+	after = {
+		start_situation = {
+			type = situation_uma_endcrisis_ec3
+			target = Root
+			effect = {
+
+			}
+		}
+
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.24
+	title = uma_ec_3.24.title
+	desc = {
+		trigger = {
+			From = {
+				any_system_planet = {
+					OR = {
+						uma_is_habitat = no
+						uma_is_pd_habitat_planet = no
+					}
+				}
+			}
+		}
+		text = uma_ec_3.24.desc
+	}
+	desc = {
+		trigger = {
+			From = {
+				any_system_planet = {
+					NOR = {
+						uma_is_habitat = no
+						uma_is_pd_habitat_planet = no
+					}
+				}
+			}
+		}
+		text = uma_ec_3.24.desc.swap
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.24.a
+	}
+}
+
+
 

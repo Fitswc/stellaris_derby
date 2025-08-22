@@ -617,8 +617,8 @@ on_colony_monthly_pulse = {
 	}
 }
 
-on_entering_battle = {
+on_starbase_destroyed = {
 	events = {
-
+		uma_ec_3.11
 	}
 }
