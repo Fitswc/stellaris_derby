@@ -274,14 +274,9 @@ d_newlisa_church = {
 	icon = d_newlisa_church
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_trainingcenter }
-		}
-		modifier = {
-			planet_jobs_unity_produces_mult = 0.2
-		}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.2
 	}
 
 	drop_weight = {
@@ -291,19 +286,15 @@ d_newlisa_church = {
 
 d_paseaoen_pass = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_food
 	icon = d_paseaoen_pass
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_trainingcenter }
-		}
-		modifier = {
-				planet_jobs_society_research_produces_mult = 0.08
-			}
-		}
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.08
+		district_farming_max_add = 3
+	}
 
 	drop_weight = {
 		base = 0
@@ -316,15 +307,9 @@ d_paseaoenpass_museum = {
 	icon = d_paseaoenpass_museum
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_trainingcenter }
-		}
-		modifier = {
-			planet_jobs_society_research_produces_mult = 0.1
 
-		}
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.1
 	}
 
 	drop_weight = {
@@ -334,7 +319,7 @@ d_paseaoenpass_museum = {
 
 d_lake_fexiloso = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_food
 	icon = d_lake_fexiloso
 
 
@@ -344,9 +329,13 @@ d_lake_fexiloso = {
 			owner = { has_authority = auth_trainingcenter }
 		}
 		modifier = {
-			pop_happiness = 0.1
 			planet_buildings_uma_threegodness_knowledge_produces_mult = 0.1
 		}
+	}
+
+	planet_modifier = {
+		pop_happiness = 0.1
+		district_farming_max_add = 3
 	}
 
 	drop_weight = {
@@ -356,7 +345,7 @@ d_lake_fexiloso = {
 
 d_river_tinos = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_food
 	icon = d_river_tinos
 
 
@@ -370,7 +359,11 @@ d_river_tinos = {
 		}
 	}
 
-	custom_tooltip = d_river_tinos_tooltip
+	planet_modifier = {
+		district_farming_max_add = 2
+	}
+
+#	custom_tooltip = d_river_tinos_tooltip
 
 	drop_weight = {
 		base = 0
@@ -379,22 +372,17 @@ d_river_tinos = {
 
 d_channel_arsitla = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_energy
 	icon = d_channel_arsitla
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_trainingcenter }
-		}
-		modifier = {
-			planet_jobs_energy_produces_mult = 0.08
 
-		}
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.08
+		district_generator_max_add = 5
 	}
 
-	custom_tooltip = d_channel_arsitla_tooltip
+#	custom_tooltip = d_channel_arsitla_tooltip
 
 	drop_weight = {
 		base = 0
@@ -408,18 +396,14 @@ d_eastern_ocean = {
 	icon = d_eastern_ocean
 
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_trainingcenter }
-		}
-		modifier = {
-			planet_jobs_minerals_produces_mult = 0.08
-			planet_jobs_food_produces_mult = 0.04
-		}
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.08
+		planet_jobs_food_produces_mult = 0.04
+		district_mining_max_add = 3
+		district_farming_max_add = 1
 	}
 
-	custom_tooltip = d_eastern_ocean_tooltip
+#	custom_tooltip = d_eastern_ocean_tooltip
 
 	drop_weight = {
 		base = 0
@@ -428,7 +412,7 @@ d_eastern_ocean = {
 
 d_coral_in_land = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_minerals
 	icon = d_coral_in_land
 
 
@@ -443,7 +427,12 @@ d_coral_in_land = {
 		}
 	}
 
-	custom_tooltip = d_coral_in_land_tooltip
+	planet_modifier = {
+		district_mining_max_add = 2
+
+	}
+
+#	custom_tooltip = d_coral_in_land_tooltip
 
 	drop_weight = {
 		base = 0
@@ -488,7 +477,7 @@ d_pasaer_tg_racing_course = {
 			planet_uma_racing_umamusume_produces_mult = 0.15
 		}
 	}
-	custom_tooltip = d_pasaer_tg_racing_course_tooltip
+#	custom_tooltip = d_pasaer_tg_racing_course_tooltip
 
 	drop_weight = {
 		base = 0
@@ -509,12 +498,17 @@ d_palai_plateau = {
 		modifier = {
 			planet_jobs_consumer_goods_produces_mult = 0.05
 #			planet_max_districts_add = 4
-			district_farming_max = 16
-			district_generator_max = 16
-			district_mining_max = 16
+
 		}
 	}
-	custom_tooltip = d_palai_plateau_tooltip
+
+	planet_modifier = {
+		district_farming_max_add = 3
+		district_generator_max_add = 3
+		district_mining_max_add = 3
+	}
+
+#	custom_tooltip = d_palai_plateau_tooltip
 
 	drop_weight = {
 		base = 0
