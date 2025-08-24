@@ -14,30 +14,64 @@ situation_uma_endcrisis_ec3 = {
 	monthly_progress = {
 		base = 0
 		#max = 10
-		modifier = {
-			factor = 10
-			desc = situation_uma_endcrisis_ec3_progress_desc
-			owner.capital_star.solar_system = {
-				AND = {
-					NOT = {
-						is_owned_by = event_target:uma_ec3_country
-					}
 
-					closest_system = {
-						limit = {
-							exists = starbase
-							starbase = {
-								is_owned_by = event_target:uma_ec3_country
+		modifier = {
+			set = 0
+			NAND = {
+				any_system = {
+					starbase = {
+						has_starbase_flag = uma_ec3_soc_fleet_base
+					}
+					Root.owner = {
+						any_system_within_border = {
+							distance = {
+								source = PrevPrev
+								min_jumps = 0
+								max_jumps = 10
 							}
 						}
-						min_steps <= 10
-						use_bypasses = no
+					}
+				}
+
+
+				owner.capital_star.solar_system = {
+					owner = {
+						is_same_value = Root.owner
+					}
+				}
+			}
+		}
+
+		modifier = {
+			set = 5
+#			desc = situation_uma_endcrisis_ec3_progress_desc
+
+			AND = {
+				any_system = {
+					starbase = {
+						has_starbase_flag = uma_ec3_soc_fleet_base
+					}
+					Root.owner = {
+						any_system_within_border = {
+							distance = {
+								source = PrevPrev
+								min_jumps = 0
+								max_jumps = 10
+							}
+						}
+					}
+				}
+
+
+				owner.capital_star.solar_system = {
+					owner = {
+						is_same_value = Root.owner
 					}
 				}
 			}
 		}
 		modifier = {
-			factor = 20
+			set = 20
 			desc = situation_uma_endcrisis_ec3_progress_1_desc
 			owner.capital_star.solar_system = {
 				has_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
@@ -49,7 +83,7 @@ situation_uma_endcrisis_ec3 = {
 			}
 		}
 		modifier = {
-			factor = 15
+			set = 6
 			desc = situation_uma_endcrisis_ec3_progress_2_desc
 			owner.capital_star.solar_system = {
 				has_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
@@ -85,6 +119,8 @@ situation_uma_endcrisis_ec3 = {
 				}
 			}
 		}
+
+		add_situation_progress = -100
 	}
 	stages = {
 		country_explosion = {

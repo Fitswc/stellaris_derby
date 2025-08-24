@@ -347,9 +347,23 @@ fleet_event = {
 				id = uma_ec_3.2
 				days = 220
 			}
+			fleet_event = {
+				id = uma_ec_3.3
+				days = 200
+			}
 			break = yes
 		}
-		else = {
+		if = {
+			limit = {
+				event_target:uma_ec3_first_system = {
+					count_fleet_in_system = {
+						limit = {
+							has_fleet_flag = uma_ec3_puma_defend_fleet
+						}
+						count < 3
+					}
+				}
+			}
 			set_update_modifiers_batch = begin
 			uma_ec3_create_puma_fleets_defend = yes
 			set_update_modifiers_batch = end
@@ -394,6 +408,11 @@ fleet_event = {
 					found_system = {
 						move_to = this
 
+						effect = {
+							id = uma_ec_3.5.e1
+							set_star_flag = uma_soc_fleet_progress
+						}
+
 						repeat = {
 							while = {
 								id = uma_ec_3.5.t2
@@ -424,9 +443,6 @@ fleet_event = {
 									effect = {
 										id = uma_ec_3.5.e2
 
-										this.solar_system = {
-											set_star_flag = uma_soc_fleet_progress
-										}
 										planet_event = {
 											id = uma_ec_3.6
 											days = 200
@@ -636,7 +652,7 @@ starbase_event = {
 					limit = {
 						has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
 					}
-					add_situation_progress = 10
+					add_situation_progress = -10
 				}
 			}
 		}
