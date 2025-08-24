@@ -329,29 +329,34 @@ fleet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	trigger = {
-		event_target:uma_ec3_first_system = {
-			count_fleet_in_system = {
-				limit = {
-					has_fleet_flag = uma_ec3_puma_defend_fleet
-				}
-				count <= 3
-			}
-		}
-	}
-
-
 
 	immediate = {
-		set_update_modifiers_batch = begin
-		uma_ec3_create_puma_fleets_defend = yes
-		set_update_modifiers_batch = end
-	}
 
-	after = {
-		fleet_event = {
-			id = uma_ec_3.3
-			days = 200
+		if = {
+			limit = {
+				event_target:uma_ec3_first_system = {
+					count_fleet_in_system = {
+						limit = {
+							has_fleet_flag = uma_ec3_puma_defend_fleet
+						}
+						count > 3
+					}
+				}
+			}
+			fleet_event = {
+				id = uma_ec_3.2
+				days = 220
+			}
+			break = yes
+		}
+		else = {
+			set_update_modifiers_batch = begin
+			uma_ec3_create_puma_fleets_defend = yes
+			set_update_modifiers_batch = end
+			fleet_event = {
+				id = uma_ec_3.3
+				days = 200
+			}
 		}
 	}
 }
