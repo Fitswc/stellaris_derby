@@ -54,6 +54,17 @@ uma_ec3_create_puma_fleets = {
 				}
 			}
 
+
+			while = {
+				count = 10
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_SOC_Titan_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+
 			set_location = {
 				target = Prev
 				distance = 5

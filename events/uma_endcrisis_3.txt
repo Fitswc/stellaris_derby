@@ -41,6 +41,11 @@ event = {
 						id = uma_ec_3.1
 						days = 720
 					}
+					every_playable_country = {
+						country_event = {
+							id = uma_ec_3.20
+						}
+					}
 				}
 				5 = {
 					#NTH, to paradox crisis
@@ -55,11 +60,7 @@ event = {
 			}
 		}
 
-		every_playable_country = {
-			country_event = {
-				id = uma_ec_3.20
-			}
-		}
+
 	}
 }
 
@@ -310,15 +311,16 @@ fleet_event = {
 					}
 				}
 			}
-			clear_fleet_actions = this
-		}
-		else = {
-			fleet_event = {
-				id = uma_ec_3.2
-				days = 220
+			event_target:uma_ec3_first_system = {
+				random_fleet_in_system = {
+					clear_fleet_actions = this
+				}
 			}
 		}
-
+		fleet_event = {
+			id = uma_ec_3.2
+			days = 220
+		}
 	}
 }
 
@@ -347,13 +349,10 @@ fleet_event = {
 	}
 
 	after = {
-
 		fleet_event = {
 			id = uma_ec_3.3
 			days = 200
 		}
-
-
 	}
 }
 
@@ -632,7 +631,7 @@ starbase_event = {
 					limit = {
 						has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
 					}
-					add_situation_progress = -10
+					add_situation_progress = 10
 				}
 			}
 		}
@@ -774,4 +773,89 @@ country_event = {
 }
 
 
+#当堡垒被摧毁时
+country_event = {
+	id = uma_ec_3.25
+	title = uma_ec_3.25.title
+	desc = uma_ec_3.25.desc
+	is_triggered_only = yes
 
+	trigger = {
+		FromFromFrom = {
+			has_fleet_flag = uma_ec3_main_base
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_galaxy_fleet = {
+				limit = {
+					has_fleet_flag = uma_ec3_soc_fleet
+				}
+				destroy_fleet = this
+			}
+			event_target:uma_ec3_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
+			}
+
+			every_playable_country = {
+				country_event = {
+					id = uma_ec_3.27
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_ec_3.25.a
+		hidden_effect = {
+			if = {
+				limit = {
+					This = {
+						is_uma_player_country = yes
+					}
+				}
+				country_event = {
+					id = uma_ec_3.26
+				}
+			}
+		}
+	}
+
+
+}
+
+country_event = {
+	id = uma_ec_3.26
+	title = uma_ec_3.26.title
+	desc = uma_ec_3.26.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_3.26.a
+	}
+}
+
+
+
+
+#当堡垒被摧毁时
+country_event = {
+	id = uma_ec_3.27
+	title = uma_ec_3.25.title
+	desc = uma_ec_3.25.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.25.a
+	}
+
+
+}
