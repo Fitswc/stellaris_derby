@@ -655,6 +655,10 @@ country_event = {
 
 	option = {
 		name = uma_ec_3.21.a
+		hidden_effect = {
+			begin_event_chain = { event_chain = uma_endcrisis_ec3_main_chain }
+
+		}
 	}
 	after = {
 		hidden_effect = {
@@ -894,5 +898,69 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = uma_endcrisis_ec3_researched_special_project
 		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_system = {
+			starbase = {
+				has_starbase_flag = uma_ec3_soc_fleet_base
+			}
+			Root = {
+				any_system_within_border = {
+					distance = {
+						source = PrevPrev
+						min_jumps = 0
+						max_jumps = 10
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_system = {
+			limit = {
+				starbase = {
+					has_starbase_flag = uma_ec3_soc_fleet_base
+				}
+				Root = {
+					any_system_within_border = {
+						distance = {
+							source = PrevPrev
+							min_jumps = 0
+							max_jumps = 10
+						}
+					}
+				}
+			}
+			
+			Root = {
+				create_point_of_interest = {
+					id = uma_ec3_poi.1
+					name = uma_ec3_poi.1_desc
+					desc = uMA
+					event_chain = uma_endcrisis_ec3_main_chain
+					location = Prev
+					picture = GFX_evt_archaeology_camp_nm
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		begin_event_chain = { event_chain = uma_endcrisis_ec3_main_chain }
 	}
 }
