@@ -207,6 +207,10 @@ country_event = {
 		}
 
 		every_playable_country = {
+			country_event = {
+				id = uma_ec_3.28
+				days = 30
+			}
 			capital_star = {
 				create_fleet = {
 					settings = {
@@ -890,14 +894,14 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-
+		hidden_effect = {
+			set_country_flag = uma_endcrisis_ec3_researched_special_project
+		}
 	}
 
 	option = {
 		name = uma_ec_3.29.a
-		hidden_effect = {
-			set_country_flag = uma_endcrisis_ec3_researched_special_project
-		}
+
 	}
 }
 
@@ -908,6 +912,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_country_flag = uma_endcrisis_ec3_researched_special_project
+
 		any_system = {
 			starbase = {
 				has_starbase_flag = uma_ec3_soc_fleet_base
@@ -925,6 +931,10 @@ country_event = {
 	}
 
 	immediate = {
+		Root = {
+			reset_event_chain_counter = { event_chain = uma_endcrisis_ec3_main_chain counter = uma_endcrisis_ec3_main_chain_counter }
+			remove_point_of_interest = uma_ec3_poi.1
+		}
 		every_system = {
 			limit = {
 				starbase = {
@@ -945,10 +955,16 @@ country_event = {
 				create_point_of_interest = {
 					id = uma_ec3_poi.1
 					name = uma_ec3_poi.1_desc
-					desc = uMA
+					desc = uma_ec3_poi.1_desc_desc
 					event_chain = uma_endcrisis_ec3_main_chain
 					location = Prev
 					picture = GFX_evt_archaeology_camp_nm
+				}
+
+				add_event_chain_counter = {
+					event_chain = uma_endcrisis_ec3_main_chain
+					counter = uma_endcrisis_ec3_main_chain_counter
+					amount = 1
 				}
 			}
 		}
