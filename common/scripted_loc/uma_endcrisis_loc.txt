@@ -65,3 +65,31 @@ defined_text = {
 	}
 
 }
+
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_name
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_dynamic
+	}
+
+}
+
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_desc
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_desc_dynamic
+	}
+
+}
