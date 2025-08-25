@@ -854,6 +854,8 @@ country_event = {
 
 	option = {
 		name = uma_ec_3.25.a
+		end_event_chain = uma_endcrisis_ec3_main_chain
+		remove_point_of_interest = uma_ec3_poi.1
 		hidden_effect = {
 			if = {
 				limit = {
