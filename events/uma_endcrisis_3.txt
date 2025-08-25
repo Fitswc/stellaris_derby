@@ -183,10 +183,14 @@ country_event = {
 								id = uma_ec_3.2
 								days = 5
 							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
 							#防守
 							fleet_event = {
 								id = uma_ec_3.3
-								days = 20
+								days = 8
 							}
 							####
 
@@ -294,7 +298,7 @@ fleet_event = {
 		}
 		fleet_event = {
 			id = uma_ec_3.2
-			days = 220
+			days = 120
 		}
 	}
 }
@@ -320,11 +324,11 @@ fleet_event = {
 			}
 			fleet_event = {
 				id = uma_ec_3.2
-				days = 220
+				days = 120
 			}
 			fleet_event = {
 				id = uma_ec_3.3
-				days = 200
+				days = 120
 			}
 			break = yes
 		}
@@ -420,7 +424,7 @@ fleet_event = {
 
 										planet_event = {
 											id = uma_ec_3.6
-											days = 200
+											days = 10
 										}
 									}
 								}
@@ -585,6 +589,18 @@ planet_event = {
 					}
 					change_pc = pc_barren
 				}
+			}
+		}
+
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+				}
+				every_owned_pop_group = {
+					kill_all_pop = yes
+				}
+				destroy_colony = yes
 			}
 		}
 	}
@@ -968,15 +984,5 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = uma_ec_3.31
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		begin_event_chain = { event_chain = uma_endcrisis_ec3_main_chain }
 	}
 }

@@ -64,11 +64,11 @@ situation_uma_endcrisis_ec3 = {
 				}
 
 
-				owner.capital_star.solar_system = {
-					owner = {
-						is_same_value = Root.owner
-					}
-				}
+#				owner.capital_star.solar_system = {
+#					owner = {
+#						is_same_value = Root.owner
+#					}
+#				}
 			}
 		}
 		modifier = {
