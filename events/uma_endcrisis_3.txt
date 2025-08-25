@@ -254,35 +254,6 @@ country_event = {
 			}
 
 		}
-		every_system = {
-				limit = {
-					star = {
-						is_star_class = sc_black_hole
-					}
-				}
-				create_fleet = {
-					name = NAME_UMA_EC3_SOC_BASE
-					effect = {
-						set_owner = event_target:uma_ec3_country
-						create_ship = {
-							name = random
-							design = "NAME_UMA_EC3_STARBASE"
-							effect = {
-								set_ship_flag = uma_ec3_soc_fleet
-							}
-						}
-						set_location = {
-							target = Prev
-							distance = 10
-							angle = random
-						}
-
-						save_global_event_target_as = uma_ec3_soc_fleet
-						set_fleet_flag = uma_ec3_soc_fleet
-
-					}
-				}
-			}
 
 		set_update_modifiers_batch = end
 	}
@@ -797,8 +768,7 @@ country_event = {
 #当堡垒被摧毁时
 country_event = {
 	id = uma_ec_3.25
-	title = uma_ec_3.25.title
-	desc = uma_ec_3.25.desc
+	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
@@ -825,22 +795,6 @@ country_event = {
 			every_playable_country = {
 				country_event = {
 					id = uma_ec_3.27
-				}
-			}
-		}
-	}
-
-	option = {
-		name = uma_ec_3.25.a
-		hidden_effect = {
-			if = {
-				limit = {
-					This = {
-						is_uma_player_country = yes
-					}
-				}
-				country_event = {
-					id = uma_ec_3.26
 				}
 			}
 		}
@@ -876,7 +830,69 @@ country_event = {
 
 	option = {
 		name = uma_ec_3.25.a
+		hidden_effect = {
+			if = {
+				limit = {
+					This = {
+						is_uma_player_country = yes
+					}
+				}
+				country_event = {
+					id = uma_ec_3.26
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.28
+	title = uma_ec_3.28.title
+	desc = uma_ec_3.28.desc
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
 	}
 
+	option = {
+		name = uma_ec_3.28.a
+		hidden_effect = {
+			capital_star = {
+				solar_system = {
+					random_fleet_in_system = {
+						limit = {
+							has_fleet_flag = uma_ec3_soc_fleet
+						}
 
+						owner = {
+							enable_special_project = {
+								name = UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL
+								owner = Root
+								location = prev
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.29
+	title = uma_ec_3.29.title
+	desc = uma_ec_3.29.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ec_3.29.a
+		hidden_effect = {
+			set_country_flag = uma_endcrisis_ec3_researched_special_project
+		}
+	}
 }

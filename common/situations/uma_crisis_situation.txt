@@ -16,6 +16,7 @@ situation_uma_endcrisis_ec3 = {
 		#max = 10
 
 		modifier = {
+			desc = situation_uma_endcrisis_ec3_no_progress_desc_in_situation
 			set = 0
 			NAND = {
 				any_system = {
@@ -44,7 +45,7 @@ situation_uma_endcrisis_ec3 = {
 
 		modifier = {
 			set = 5
-#			desc = situation_uma_endcrisis_ec3_progress_desc
+			desc = situation_uma_endcrisis_ec3_progress_desc_in_situation
 
 			AND = {
 				any_system = {
@@ -72,7 +73,7 @@ situation_uma_endcrisis_ec3 = {
 		}
 		modifier = {
 			set = 20
-			desc = situation_uma_endcrisis_ec3_progress_1_desc
+			desc = situation_uma_endcrisis_ec3_progress_1_desc_in_situation
 			owner.capital_star.solar_system = {
 				has_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
 				NOT = {
@@ -84,7 +85,7 @@ situation_uma_endcrisis_ec3 = {
 		}
 		modifier = {
 			set = 6
-			desc = situation_uma_endcrisis_ec3_progress_2_desc
+			desc = situation_uma_endcrisis_ec3_progress_2_desc_in_situation
 			owner.capital_star.solar_system = {
 				has_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
 				owner = {
@@ -94,6 +95,7 @@ situation_uma_endcrisis_ec3 = {
 		}
 	}
 	on_progress_complete = {
+		custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
 		owner.capital_star.solar_system = {
 			set_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
 			every_starbase_in_system = {
@@ -124,10 +126,10 @@ situation_uma_endcrisis_ec3 = {
 	}
 	stages = {
 		country_explosion = {
-			icon = GFX_situation_stage_1
-			icon_background = GFX_situation_stage_frame_green
+			icon = GFX_situation_stage_eat
+			icon_background = GFX_situation_stage_frame_gray
 			end = 100
-			custom_tooltip = situation_uma_endcrisis_ec3_complet
+			custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
 		}
 	}
 

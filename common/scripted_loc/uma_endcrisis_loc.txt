@@ -1,0 +1,67 @@
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_no_progress
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_no_progress_desc
+	}
+
+}
+
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_progress
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_progress_desc
+	}
+}
+
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_progress_1
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_progress_1_desc
+	}
+
+}
+
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_progress_2
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_progress_2_desc
+	}
+}
+
+defined_text = {
+	name = UMA_EC3_SITUATION_DYNAMIC_DESC_complete
+	default = uma_ec_3.26.title
+	text = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_endcrisis_ec3_researched_special_project
+			}
+		}
+		localization_key = situation_uma_endcrisis_ec3_complet
+	}
+
+}

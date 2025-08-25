@@ -152,3 +152,25 @@ special_project = {
     }
 }
 
+
+special_project = {
+	key="UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL"
+    cost = 3000
+    event_chain = gold_counterattack
+    tech_department =society_technology
+    picture =GFX_evt_alien_propaganda
+
+    event_scope = ship_event
+
+    on_success = {
+		owner = {
+			country_event = {
+				id = uma_ec_3.29
+			}
+		}
+    }
+    on_fail = {
+
+    }
+}
+
