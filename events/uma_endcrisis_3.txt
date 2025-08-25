@@ -542,12 +542,12 @@ planet_event = {
 	}
 
 	immediate = {
-		log = "The 25% of pops on [This.GetName] will be clear"
+		log = "The 5% of pops on [This.GetName] will be killed"
 
 		every_owned_pop_group = {
 			kill_pop_group = {
 				pop_group = this
-				percentage = 0.25
+				percentage = 0.05
 			}
 		}
 	}
@@ -585,7 +585,7 @@ planet_event = {
 				every_system_planet = {
 					limit = {
 						is_star = no
-						is_asteroid = yes
+						is_asteroid = no
 					}
 					change_pc = pc_barren
 				}
