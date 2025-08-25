@@ -962,7 +962,7 @@ country_event = {
 					any_system_within_border = {
 						distance = {
 							source = PrevPrev
-							min_jumps = 0
+							min_jumps = 1
 							max_jumps = 10
 						}
 					}
@@ -976,7 +976,7 @@ country_event = {
 					desc = uma_ec3_poi.1_desc_desc
 					event_chain = uma_endcrisis_ec3_main_chain
 					location = Prev
-					picture = GFX_evt_archaeology_camp_nm
+					picture = GFX_evt_uma_endcrisis_ec3_situation_log_detected
 				}
 
 				add_event_chain_counter = {
