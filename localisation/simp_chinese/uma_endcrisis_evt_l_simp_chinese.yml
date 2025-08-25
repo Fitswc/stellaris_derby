@@ -12,6 +12,7 @@ NAME_UMA_EC3_FRONT_SQUARD_BB: "先遣部队-战列舰"
 NAME_UMA_EC3_FRONT_SQUARD_CV: "先遣部队-巡洋舰"
 NAME_UMA_EC3_SOC_Corvette_2: "焦土处理舰队"
 NAME_UMA_EC3_SOC_Corvette_2_defend: "防守舰队"
+NAME_UMA_EC3_SOC_Titan_2: "先遣部队-泰坦"
 ###Ship Size
 starbase_uma_ec3: "位面星系基地"
 starbase_uma_ec3_plural: "位面星系基地"
@@ -26,7 +27,7 @@ uma_ec_3.21.title: "警戒！"
 uma_ec_3.21.desc: "大量舰队从[event_target:uma_ec3_first_system.GetName]的黑洞中折跃出来，并迅速建造了指挥中心。\n令人惊奇的是，它们似乎并不需要工程船就能建造太空建筑而是从舰船上直接释放自组装构件在太空中自己拼装起来。"
 uma_ec_3.21.a: "进入警戒"
 uma_ec_3.22.title: "???"
-uma_ec_3.22.desc: "没想到这里也有马娘同胞，还是一个年轻的文明。很遗憾，严格意义上来说，我们终究不是同样一个种族，不过在我们击败你们后我们会给你们提供相应的优待.....\n\n......不过你们的星区，资源，殖民地，星球上的一草一木，都将会是我们的财产！这篇宇宙的恒星将会变为我们的发电厂，行星将会变为矿场！"
+uma_ec_3.22.desc: "没想到这里也有马娘同胞，还是一个年轻的文明。先介绍下自己：我们来自与你们同级的”另外一个宇宙“。虽然我们在外表和经历上十分相似，不过很遗憾，严格意义上来说，我们终究不是同样一个种族，不过在我们击败你们后我们会给你们提供相应的优待.....\n\n......不过你们的星区，资源，殖民地，星球上的一草一木，都将会是我们的财产！这篇宇宙的恒星将会变为我们的发电厂，行星将会变为矿场！"
 uma_ec_3.22.a: "必须阻止它们！"
 
 uma_ec_3.23.title: "???"
@@ -37,7 +38,7 @@ uma_ec_3.24.desc: "在一片耀眼的亮光之下，[From.GetName] 的所有星�
 uma_ec_3.24.desc.swap: "在一片耀眼的亮光之下，[From.GetName] 的所有殖民地都归于寂静，所有生命都被全部抹除。难道这就是它们的焦土计划？"
 uma_ec_3.24.a: "令人震惊"
 uma_ec_3.28.title: "突然出现的庞然大物"
-uma_ec_3.28.desc: "在这些从另一个维度来的马娘到达这个宇宙的瞬间，一个巨大的哨所就跃迁到我们的首都星系。它只是静静得呆在那里，我们暂时不知道这个凭空出现的庞然大物究竟是用来做什么的。但冥冥之中感觉这不是个好东西......"
+uma_ec_3.28.desc: "在这些从另一个维度来的马娘到达这个宇宙的瞬间，一个巨大的哨所就跃迁到我们的首都星系。它只是静静地呆在那里，我们暂时不知道这个凭空出现的庞然大物究竟是用来做什么的。但冥冥之中感觉这不是个好东西......"
 uma_ec_3.28.a: "必须立刻研究"
 uma_ec_3.29.title: "定时炸弹"
 uma_ec_3.29.desc: "经过对这个庞然大物的探索与技术逆向我们发现，这个驻足在我们星系的庞然大物其实是一颗定时炸弹！它从一定范围内的其他焦土锚获取电力，然后等到电量达到一定程度时将会释放一阵强大的能量将这颗星系的所有生命全部抹除，并且，如果在任何拥有焦土锚的星系拥有殖民地，那该殖民地上的人口将会瞬间大量流失。现在，我们可以通过每月一次的连接扫描，来定位为这个死亡兵器供能的其他焦土锚的位置。\n希望我们的速度够快"
@@ -65,9 +66,20 @@ situation_uma_endcrisis_ec3_progress_2_desc_in_situation: "[UMA_EC3_SITUATION_DY
 situation_uma_endcrisis_ec3_complet_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_complete]"
 situation_uma_endcrisis_ec3_no_progress_desc_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_no_progress]"
 country_explosion: " "
+situation_uma_endcrisis_ec3_dynamic: "焦土危机倒计时"
+
+situation_uma_endcrisis_ec3: "[UMA_EC3_SITUATION_DYNAMIC_DESC_name]"
+situation_uma_endcrisis_ec3_type: "危机局势"
+situation_uma_endcrisis_ec3_desc: "局势完成后似乎会发生什么事情......"
 
 
 ##Event Chain
 uma_endcrisis_ec3_main_chain_counter: "上次扫描中会导致局势条增长的星系数量(非即时)"
 uma_ec3_poi.1_desc: "[Prev.GetName]"
 uma_ec3_poi.1_desc_desc: "上次扫描发现该星系的恒星基地正在给在我们首都焦土锚供电，必须马上摧毁"
+uma_endcrisis_ec3_main_chain_title: "£uma_text_racing_umamusume£星海德比末期危机:焦土"
+uma_endcrisis_ec3_main_chain_desc: "当前天灾强度\n从平行位面来的马娘们，意图占领所有的土地，并将所有的星球的生命抹除作为殖民地以及矿场."
+
+
+UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL: "研究位于首都的庞然大物"
+UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL_DESC: "一个巨大的哨所跃迁到我们的首都星系。它只是静静得呆在那里，我们暂时不知道这个凭空出现的庞然大物究竟是用来做什么的。但冥冥之中感觉这不是个好东西......"
