@@ -999,6 +999,7 @@ country_event = {
 	id = uma_ec_3.31
 	hide_window = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		is_uma_player_country = yes
@@ -1030,7 +1031,50 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-
+		hidden_effect = {
+			create_fleet = {
+				name = UMA_ENDCRISIS_EC3_GOLD_REINSFORCEMENT
+				effect = {
+					set_owner = Root
+					create_ship = {
+						name = random
+						design = "NAME_uma_GOLDSHIP"
+						graphical_culture = "extra_dimensional_01"
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_uma_GOLDSHIP"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = "NAME_uma_GOLDSON"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_uma_Wraith"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					set_location = {
+						target = Root.capital_scope
+						distance = 5
+						angle = random
+					}
+					set_fleet_stance = aggressive
+					set_fleet_bombardment_stance = indiscriminate
+				}
+			}
+		}
 	}
 
 
