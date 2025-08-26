@@ -739,3 +739,10 @@ uma_check_factory_uma_crystal_disable = {
 		}
 	}
 }
+
+uma_the_uma_endcrisis_happened = {
+	has_global_flag = uma_ec_invasion_happened
+	NOT = {
+		has_global_flag = uma_ec_invasion_end
+	}
+}

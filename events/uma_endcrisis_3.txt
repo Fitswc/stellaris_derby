@@ -930,6 +930,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+#		has_global_flag = uma_ec3_outeruma_happened
+#		NOT = {
+#			has_global_flag = uma_ec_invasion_end
+#		}
 		has_country_flag = uma_endcrisis_ec3_researched_special_project
 
 		any_system = {
@@ -987,4 +991,51 @@ country_event = {
 			}
 		}
 	}
+}
+
+###海底小纵队机制
+
+country_event = {
+	id = uma_ec_3.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_uma_player_country = yes
+		uma_the_uma_endcrisis_happened = yes
+		has_global_flag = uma_ec3_outeruma_happened
+
+		event_target:uma_ec3_country = {
+			fleet_power >= 100000
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = uma_gold_family
+			}
+
+			country_event = {
+				id = uma_ec_3.32
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.32
+	title = uma_ec_3.32.title
+	desc = uma_ec_3.32.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+
+	option = {
+		name = uma_ec_3.32.a
+	}
+
 }
