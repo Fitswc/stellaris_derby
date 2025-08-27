@@ -1,6 +1,7 @@
 
 
 uma_ec3_create_puma_fleets = {
+	optimize_memory
 	event_target:uma_ec3_country = {
 		create_leader = {
 			class = commander
@@ -27,7 +28,7 @@ uma_ec3_create_puma_fleets = {
 			set_owner = event_target:uma_ec3_country
 			set_fleet_flag = uma_ec3_puma_front_fleet
 			while = {
-				count = 40
+				count = 30
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_BB
@@ -37,7 +38,7 @@ uma_ec3_create_puma_fleets = {
 			assign_leader = last_created_leader
 
 			while = {
-				count = 80
+				count = 60
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_CV
@@ -46,7 +47,7 @@ uma_ec3_create_puma_fleets = {
 			}
 
 			while = {
-				count = 120
+				count = 80
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_SOC_Corvette_2
@@ -56,7 +57,7 @@ uma_ec3_create_puma_fleets = {
 
 
 			while = {
-				count = 10
+				count = 5
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_SOC_Titan_2
@@ -83,13 +84,13 @@ uma_ec3_create_puma_fleets = {
 	last_created_fleet = {
 		fleet_event = {
 			id = uma_ec_3.5
-			days = 2
 		}
 	}
 }
 
 
 uma_ec3_create_puma_fleets_defend = {
+	optimize_memory
 	event_target:uma_ec3_country = {
 		create_leader = {
 			class = commander
@@ -116,7 +117,7 @@ uma_ec3_create_puma_fleets_defend = {
 			set_owner = event_target:uma_ec3_country
 			set_fleet_flag = uma_ec3_puma_defend_fleet
 			while = {
-				count = 40
+				count = 105
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_BB
@@ -126,7 +127,7 @@ uma_ec3_create_puma_fleets_defend = {
 			assign_leader = last_created_leader
 
 			while = {
-				count = 80
+				count = 35
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_FRONT_SQUARD_CV
@@ -135,7 +136,7 @@ uma_ec3_create_puma_fleets_defend = {
 			}
 
 			while = {
-				count = 120
+				count = 35
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC3_SOC_Corvette_2
@@ -150,7 +151,7 @@ uma_ec3_create_puma_fleets_defend = {
 			}
 
 
-			set_fleet_stance = aggressive
+			set_fleet_stance = passive
 			set_aggro_range_measure_from = self
 			set_aggro_range = 500
 			set_fleet_bombardment_stance = armageddon
@@ -165,6 +166,7 @@ uma_ec3_create_puma_fleets_defend = {
 
 
 uma_ec3_create_puma_starbase = {
+	optimize_memory
 	create_fleet = {
 		name = NAME_UMA_EC3_PUMA_STARBASE
 		effect = {
@@ -179,14 +181,111 @@ uma_ec3_create_puma_starbase = {
 }
 
 
+uma_ec3_create_puma_soc_at_capitial = {
+	optimize_memory
+	create_fleet = {
+		settings = {
+			is_boss = yes
+			ai_ignore_strength = yes
+		}
+		name = NAME_UMA_EC3_SOC_BASE
+		effect = {
+			set_owner = event_target:uma_ec3_country
+			create_ship = {
+				name = NAME_UMA_EC3_SOC_BASE
+				design = "NAME_UMA_EC3_STARBASE"
+				effect = {
+					set_ship_flag = uma_ec3_soc_fleet
+				}
+			}
+			set_location = {
+				target = Prev
+				distance = 6
+				angle = random
+			}
 
-uma_ec3_create_puma_front_behaviour = {
-	queue_actions = {
-		repeat = {
-			effect = {
+			save_global_event_target_as = uma_ec3_soc_fleet
+			set_fleet_flag = uma_ec3_soc_fleet
 
+			#达到目标自动摧毁
+			set_event_locked = yes
+
+
+			queue_actions = {
+				find_closest_planet = {
+					trigger = {
+						id = uma_ec_3.1.e1
+
+						is_star = yes
+					}
+
+					found_planet = {
+						orbit_planet = this
+					}
+				}
 			}
 		}
 	}
 }
 
+uma_ec3_puma_create_species_and_country = {
+	optimize_memory
+	create_species = {
+		name = "NAME_goldship_species"
+		class = umamusume
+		portrait = umamusume
+		traits = random
+		immortal = yes
+		name_list = UMAname
+		effect = { save_global_event_target_as = uma_ec3_umamusume_species }
+	}
+
+	create_country = {
+		name = "NAME_UMA_EC3_country"
+		type = uma_ec3_empire
+		species = event_target:uma_ec3_umamusume_species
+		name_list = "UMAname"
+		flag = {
+			icon = {
+				category = "uiu_flags"
+				file = "uiu_flags02.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors = {
+				"indigo"
+				"blue"
+				"null"
+				"null"
+			}
+		}
+
+		effect = {
+
+			set_country_flag = uma_ec3_country
+			save_global_event_target_as = uma_ec3_country
+
+			set_graphical_culture = mammalian_01
+			create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Marauder_Starbase" }
+			add_ship_design = last_created_design
+		}
+	}
+}
+
+
+create_wg_crisis_platform = {
+	if = {
+		limit = {
+			owner = { is_country_type = uma_ec3_empire}
+		}
+		create_ship = {
+			name = random
+			design = "NAME_UMA_EC3_ION_CANNON"
+			graphical_culture = mammalian_01
+		}
+	}
+}

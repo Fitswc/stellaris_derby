@@ -117,8 +117,14 @@ country_event = {
 
 	trigger = {
 		OR = {
-			THIS = { is_ai = no }
-			FROM = { is_ai = no }
+			THIS = {
+				is_ai = no
+				exists = event_target:uma_seiun_sky_admiral
+			}
+			FROM = {
+				is_ai = no
+				exists = event_target:uma_seiun_sky_admiral
+			}
 		}
 	}
 
@@ -190,6 +196,7 @@ country_event = {
 
 	trigger = {
 		is_ai = no
+		exists = event_target:uma_seiun_sky_admiral
 	}
 
 	immediate = {
@@ -212,6 +219,36 @@ country_event = {
 	id = uma_bg.14
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			exists = event_target:uma_is_leader_seiun_sky
+			exists = event_target:uma_is_leader_oguri_cap
+			exists = event_target:uma_is_leader_king_halo
+			exists = event_target:uma_is_leader_al_condor_pasa
+			exists = event_target:uma_agnes_digital_governor
+			exists = event_target:uma_is_leader_kitasan_black
+			exists = event_target:uma_is_leader_admiral_nature
+			exists = event_target:uma_is_leader_governor_nature
+			exists = event_target:uma_is_leader_scientist_nature
+			exists = event_target:uma_is_leader_general_nature
+			exists = event_target:uma_is_leader_tachyon
+			exists = event_target:uma_is_leader_satono
+			exists = event_target:uma_is_leader_silent_suzuka
+			exists = event_target:uma_is_leader_deep
+			exists = event_target:uma_is_leader_fine
+			exists = event_target:uma_is_leader_tama
+			exists = event_target:uma_is_leader_glx
+			exists = event_target:uma_is_leader_hishi_miracle
+			exists = event_target:uma_is_leader_cheval_grand
+			exists = event_target:uma_is_leader_sweepy_tonson
+			exists = event_target:uma_is_leader_curren_chan
+			exists = event_target:uma_is_leader_mejro_ardan
+			exists = event_target:uma_is_leader_zephyr
+			exists = event_target:uma_is_leader_duramente
+			exists = event_target:uma_is_leader_Jantis
+		}
+	}
 
 	immediate = {
 		hidden_effect = {

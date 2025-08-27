@@ -248,7 +248,6 @@ on_fleet_destroyed_perp = {
 
 		uma_curren.50
 
-		uma_ec_3.25
 	}
 }
 
@@ -617,12 +616,14 @@ on_country_destroyed = {
 
 on_colony_monthly_pulse = {
 	events = {
-		uma_ec_3.9
+#		uma_ec_3.9
 	}
 }
 
 on_starbase_destroyed = {
 	events = {
 		uma_ec_3.11
+
+		uma_ec_3.25
 	}
 }

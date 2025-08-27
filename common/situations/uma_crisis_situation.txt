@@ -20,6 +20,7 @@ situation_uma_endcrisis_ec3 = {
 			set = 0
 			NAND = {
 				any_system = {
+					exists = starbase
 					starbase = {
 						has_starbase_flag = uma_ec3_soc_fleet_base
 					}
@@ -49,6 +50,7 @@ situation_uma_endcrisis_ec3 = {
 
 			AND = {
 				any_system = {
+					exists = starbase
 					starbase = {
 						has_starbase_flag = uma_ec3_soc_fleet_base
 					}
@@ -160,8 +162,9 @@ situation_uma_endcrisis_ec3 = {
 					}
 				}
 			}
-
-			add_situation_progress = -100
+			Root = {
+				destroy_situation = this
+			}
 		}
 	}
 	stages = {

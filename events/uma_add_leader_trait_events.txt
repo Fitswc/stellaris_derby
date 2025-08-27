@@ -430,17 +430,13 @@ country_event = {
 country_event = {
 	id = uma_leader.9
 	hide_window = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	trigger = {
 #		has_authority = auth_trainingcenter
+		is_species_class = umamusume
 		from = {
-			owner = {
-				is_species_class = umamusume
-			}
+			is_same_species_class = prev
 		}
 	}
 

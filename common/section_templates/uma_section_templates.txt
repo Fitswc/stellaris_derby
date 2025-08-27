@@ -442,3 +442,11 @@ ship_section_template = {
 	aux_utility_slots = 1
 	large_utility_slots = 6
 }
+
+
+ship_section_template = {
+	key = "uma_ec3_mainbase_sections"
+	ship_size = starbase_citadel
+	fits_on_slot = mid
+	icon = "GFX_ship_part_core_mid"
+}

@@ -242,7 +242,7 @@ starbase_uma_ec3 = {
 	size_multiplier = 4
 	fleet_slot_size = 2
 	section_slots = {
-		"core" = { locator = "part1" }
+		"core" = { locator = "slot1" }
 	}
 	is_designable = no
 	num_target_locators = 0

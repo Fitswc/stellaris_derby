@@ -104,100 +104,50 @@ country_event = {
 			save_global_event_target_as = uma_ec3_first_system
 
 			random_system_planet = {
-				create_species = {
-					name = "NAME_goldship_species"
-					class = umamusume
-					portrait = umamusume
-					traits = random
-					immortal = yes
-					name_list = UMAname
-					effect = { save_global_event_target_as = uma_ec3_umamusume_species }
-				}
+				uma_ec3_puma_create_species_and_country = yes
 
-				create_country = {
-					name = "NAME_UMA_EC3_country"
-					type = uma_ec3_empire
-					species = event_target:uma_ec3_umamusume_species
-					name_list = "UMAname"
-					flag = {
-						icon = {
-							category = "uiu_flags"
-							file = "uiu_flags02.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "circle.dds"
-						}
-						colors = {
-							"indigo"
-							"blue"
-							"null"
-							"null"
-						}
-					}
-
-					effect = {
-
-						set_country_flag = uma_ec3_country
-						save_global_event_target_as = uma_ec3_country
-
-						set_graphical_culture = mammalian_01
-						create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
-						add_ship_design = last_created_design
-						create_ship_design = { design = "NAME_Marauder_Starbase" }
-						add_ship_design = last_created_design
-					}
-				}
-
-				event_target:uma_ec3_country = {
-					create_fleet = {
-						name = NAME_UMA_EC3_MAIN_BASE
-						effect = {
-							set_owner = event_target:uma_ec3_country
-							create_ship = {
-								name = random
-								design = "NAME_UMA_EC3_BASE"
-								effect = {
-									set_ship_flag = uma_ec3_main_base
-								}
-							}
-							set_location = {
-								target = PREVPREV
-								distance = 45
-								angle = random
-							}
-
-							save_global_event_target_as = uma_ec3_main_base
-							set_fleet_flag = uma_ec3_main_base
-
-							#开局200日后解锁
-							set_event_locked = yes
-
-							fleet_event = {
-								id = uma_ec_3.7
-								days = 200
-							}
-
-							#第一批攻击/防守舰队生成
-							fleet_event = {
-								id = uma_ec_3.2
-								days = 5
-							}
-							fleet_event = {
-								id = uma_ec_3.2
-								days = 7
-							}
-							#防守
-							fleet_event = {
-								id = uma_ec_3.3
-								days = 8
-							}
-							####
-
-
-						}
-					}
-				}
+#				event_target:uma_ec3_country = {
+#					create_fleet = {
+#						name = NAME_UMA_EC3_MAIN_BASE
+#						effect = {
+#							set_owner = event_target:uma_ec3_country
+#							create_ship = {
+#								name = random
+#								design = "NAME_UMA_EC3_BASE"
+#								effect = {
+#									set_ship_flag = uma_ec3_main_base
+#								}
+#							}
+#							set_location = {
+#								target = PREVPREV
+#								distance = 45
+#								angle = random
+#							}
+#
+#							save_global_event_target_as = uma_ec3_main_base
+#							set_fleet_flag = uma_ec3_main_base
+#
+#
+#							#第一批攻击/防守舰队生成
+#							fleet_event = {
+#								id = uma_ec_3.2
+#								days = 5
+#							}
+#							fleet_event = {
+#								id = uma_ec_3.2
+#								days = 7
+#							}
+#							#防守
+#							fleet_event = {
+#								id = uma_ec_3.3
+#								days = 8
+#							}
+#							####
+#
+#
+#						}
+#					}
+#				}
 			}
 
 			if = {
@@ -207,58 +157,49 @@ country_event = {
 			create_starbase = {
 				size = starbase_marauder
 				owner = event_target:uma_ec3_country
+				effect = {
+					set_starbase_flag = uma_ec3_main_base
+
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff
+					}
+
+
+
+					fleet = {
+
+						#第一批攻击/防守舰队生成
+						fleet_event = {
+							id = uma_ec_3.2
+							days = 5
+						}
+						fleet_event = {
+							id = uma_ec_3.2
+							days = 7
+						}
+						#防守
+						fleet_event = {
+							id = uma_ec_3.3
+							days = 8
+						}
+						####
+					}
+				}
 			}
 		}
 
 		every_playable_country = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_ec3_country
+				}
+			}
 			country_event = {
 				id = uma_ec_3.28
 				days = 30
 			}
 			capital_star = {
-				create_fleet = {
-					settings = {
-						is_boss = yes
-						ai_ignore_strength = yes
-					}
-					name = NAME_UMA_EC3_SOC_BASE
-					effect = {
-						set_owner = event_target:uma_ec3_country
-						create_ship = {
-							name = NAME_UMA_EC3_SOC_BASE
-							design = "NAME_UMA_EC3_STARBASE"
-							effect = {
-								set_ship_flag = uma_ec3_soc_fleet
-							}
-						}
-						set_location = {
-							target = Prev
-							distance = 6
-							angle = random
-						}
-
-						save_global_event_target_as = uma_ec3_soc_fleet
-						set_fleet_flag = uma_ec3_soc_fleet
-
-						#达到目标自动摧毁
-						set_event_locked = yes
-
-
-						queue_actions = {
-							find_closest_planet = {
-								trigger = {
-									id = uma_ec_3.1.e1
-
-									is_star = yes
-								}
-
-								found_planet = {
-									orbit_planet = this
-								}
-							}
-						}
-					}
-				}
+				uma_ec3_create_puma_soc_at_capitial = yes
 			}
 
 		}
@@ -279,26 +220,9 @@ fleet_event = {
 	}
 
 	after = {
-		if = {
-			limit = {
-				event_target:uma_ec3_first_system = {
-					count_fleet_in_system = {
-						limit = {
-							has_fleet_flag = uma_ec3_puma_defend_fleet
-						}
-						count <= 2
-					}
-				}
-			}
-			event_target:uma_ec3_first_system = {
-				random_fleet_in_system = {
-					clear_fleet_actions = this
-				}
-			}
-		}
 		fleet_event = {
 			id = uma_ec_3.2
-			days = 120
+			days = 200
 		}
 	}
 }
@@ -323,12 +247,8 @@ fleet_event = {
 				}
 			}
 			fleet_event = {
-				id = uma_ec_3.2
-				days = 120
-			}
-			fleet_event = {
 				id = uma_ec_3.3
-				days = 120
+				days = 200
 			}
 			break = yes
 		}
@@ -376,9 +296,7 @@ fleet_event = {
 							AND = {
 								exists = starbase
 								starbase = { owner = { is_hostile = root.owner } }
-								NOT = {
-									has_star_flag = uma_soc_fleet_progress
-								}
+
 							}
 						}
 						ROOT = { can_access_system = prev }
@@ -389,7 +307,6 @@ fleet_event = {
 
 						effect = {
 							id = uma_ec_3.5.e1
-							set_star_flag = uma_soc_fleet_progress
 						}
 
 						repeat = {
@@ -484,17 +401,6 @@ planet_event = {
 	}
 }
 
-fleet_event = {
-	id = uma_ec_3.7
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		event_target:uma_ec3_main_base = {
-			set_event_locked = no
-		}
-	}
-}
 
 
 country_event = {
@@ -503,6 +409,9 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_country_flag = uma_ec3_country
+		}
 		capital_star.solar_system = {
 			any_fleet_in_system = {
 				has_fleet_flag = uma_ec3_soc_fleet
@@ -631,6 +540,7 @@ starbase_event = {
 			owner = {
 				any_situation = {
 					has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+					situation_progress > 10
 				}
 			}
 		}
@@ -714,12 +624,8 @@ country_event = {
 	}
 
 	after = {
-		start_situation = {
-			type = situation_uma_endcrisis_ec3
-			target = Root
-			effect = {
-
-			}
+		country_event = {
+			id = uma_ec_3.233
 		}
 	}
 }
@@ -739,14 +645,26 @@ country_event = {
 	}
 
 	after = {
+		country_event = {
+			id = uma_ec_3.233
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.233
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
 		start_situation = {
 			type = situation_uma_endcrisis_ec3
 			target = Root
-			effect = {
-
-			}
 		}
-
 	}
 }
 
@@ -790,25 +708,17 @@ country_event = {
 
 
 #当堡垒被摧毁时
-country_event = {
+starbase_event = {
 	id = uma_ec_3.25
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		FromFromFrom = {
-			has_fleet_flag = uma_ec3_main_base
-		}
+		has_starbase_flag = uma_ec3_main_base
 	}
 
 	immediate = {
 		hidden_effect = {
-			every_galaxy_fleet = {
-				limit = {
-					has_fleet_flag = uma_ec3_soc_fleet
-				}
-				destroy_fleet = this
-			}
 			event_target:uma_ec3_country = {
 				every_owned_fleet = {
 					destroy_fleet = this
