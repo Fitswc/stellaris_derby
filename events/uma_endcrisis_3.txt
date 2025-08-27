@@ -74,8 +74,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = {
+		NOR = {
 			has_global_flag = uma_ec3_outeruma_happened
+			has_global_flag = uma_ec_invasion_ec3_end
+			has_global_flag = uma_ec_invasion_end
 		}
 	}
 
@@ -217,6 +219,14 @@ fleet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+	}
+
 	immediate = {
 		set_update_modifiers_batch = begin
 		uma_ec3_create_puma_fleets = yes
@@ -237,6 +247,12 @@ fleet_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
 		From.solar_system = {
 			exists = starbase
 			starbase = {
@@ -268,6 +284,14 @@ fleet_event = {
 	id = uma_ec_3.3
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+	}
 
 
 	immediate = {
@@ -414,6 +438,12 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
 		is_primary_star = yes
 		NOT = {
 			is_star_class = sc_black_hole
@@ -423,7 +453,7 @@ planet_event = {
 	immediate = {
 #		change_pc = pc_black_hole
 		planet_event = {
-			id = uma_ec_3.10
+			id = uma_ec_3.1010
 			days = 400
 		}
 		create_starbase = {
@@ -446,6 +476,12 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
 		NOT = {
 			has_country_flag = uma_ec3_country
 		}
@@ -500,6 +536,54 @@ planet_event = {
 }
 
 planet_event = {
+	id = uma_ec_3.1010
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		is_primary_star = yes
+		solar_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = uma_ec3_empire } }
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_ai = no
+
+				any_system_within_border = {
+					distance = {
+						source = PrevPrev.solar_system
+						min_jumps = 0
+						max_jumps = 10
+					}
+				}
+			}
+			country_event = {
+				id = uma_ec_3.2424
+				scopes = {
+					from = Root.solar_system
+				}
+			}
+		}
+
+		planet_event = {
+			id = uma_ec_3.10
+			days = 2
+		}
+	}
+}
+
+
+planet_event = {
 	id = uma_ec_3.10
 	hide_window = yes
 	is_triggered_only = yes
@@ -513,14 +597,6 @@ planet_event = {
 	}
 
 	immediate = {
-		owner = {
-			country_event = {
-				id = uma_ec_3.2424
-				scopes = {
-					from = Root.solar_system
-				}
-			}
-		}
 		if = {
 			limit = {
 				solar_system = {
@@ -579,6 +655,12 @@ starbase_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
 		has_starbase_flag = uma_ec3_soc_fleet_base
 
 		From = {
@@ -762,11 +844,6 @@ country_event = {
 			localization = UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC_DESC
 			days = @toast_message_days
 			target = From
-			variable = {
-				type = name
-				localization = SYSTEM
-				scope = From
-			}
 		}
 	}
 }
@@ -783,6 +860,9 @@ starbase_event = {
 	}
 
 	immediate = {
+		set_global_flag = uma_ec_invasion_end
+		set_global_flag = uma_ec_invasion_ec3_end
+
 		hidden_effect = {
 			event_target:uma_ec3_country = {
 				every_owned_fleet = {
@@ -795,6 +875,14 @@ starbase_event = {
 				country_event = {
 					id = uma_ec_3.27
 				}
+			}
+		}
+		every_playable_country = {
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+				}
+				destroy_situation = This
 			}
 		}
 	}
