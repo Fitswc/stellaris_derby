@@ -159,7 +159,11 @@ country_event = {
 				owner = event_target:uma_ec3_country
 				effect = {
 					set_starbase_flag = uma_ec3_main_base
+					while = {
+						count = 6
 
+						create_uma_ec3_crisis_platform = yes
+					}
 					add_modifier = {
 						modifier = uma_endcrisis_ec3_mainbase_buff
 					}
@@ -222,6 +226,39 @@ fleet_event = {
 	after = {
 		fleet_event = {
 			id = uma_ec_3.2
+			days = 200
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.2222
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From.solar_system = {
+			exists = starbase
+			starbase = {
+				owner = {
+					is_same_value = event_target:uma_ec3_country
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		while = {
+			count = 2
+			uma_ec3_create_puma_fleets = yes
+		}
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_3.2222
 			days = 200
 		}
 	}

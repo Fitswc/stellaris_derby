@@ -277,7 +277,7 @@ uma_ec3_puma_create_species_and_country = {
 }
 
 
-create_wg_crisis_platform = {
+create_uma_ec3_crisis_platform = {
 	if = {
 		limit = {
 			owner = { is_country_type = uma_ec3_empire}
