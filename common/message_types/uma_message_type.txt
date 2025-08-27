@@ -39,5 +39,17 @@ message_type = {
 	default_toast = yes
 	category = other
 	message_setting_key = uma_message_notice_newship
+	hidden_in_message_settings = yes
 	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC"
+	name = "UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC"
+	icon = GFX_message_planet_destroyed
+	sound = "notification"
+	default_toast = yes
+	category = planets
+	message_setting_key = uma_endcrisis_ec3_system_being_soc
+	ping = "ping_notification_red"
 }

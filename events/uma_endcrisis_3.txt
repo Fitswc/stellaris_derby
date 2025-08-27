@@ -513,6 +513,14 @@ planet_event = {
 	}
 
 	immediate = {
+		owner = {
+			country_event = {
+				id = uma_ec_3.2424
+				scopes = {
+					from = Root.solar_system
+				}
+			}
+		}
 		if = {
 			limit = {
 				solar_system = {
@@ -743,6 +751,26 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = uma_ec_3.2424
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_message = {
+			type = UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC
+			localization = UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC_DESC
+			days = @toast_message_days
+			target = From
+			variable = {
+				type = name
+				localization = SYSTEM
+				scope = From
+			}
+		}
+	}
+}
+
 
 #当堡垒被摧毁时
 starbase_event = {
@@ -892,7 +920,7 @@ country_event = {
 					distance = {
 						source = PrevPrev
 						min_jumps = 0
-						max_jumps = 10
+						max_jumps = 15
 					}
 				}
 			}
@@ -989,7 +1017,7 @@ country_event = {
 						graphical_culture = "extra_dimensional_01"
 					}
 					while = {
-						count = 8
+						count = 10
 						create_ship = {
 							name = random
 							design = "NAME_uma_GOLDSHIP"
@@ -997,7 +1025,7 @@ country_event = {
 						}
 					}
 					while = {
-						count = 12
+						count = 18
 						create_ship = {
 							name = random
 							design = "NAME_uma_GOLDSON"
@@ -1005,7 +1033,7 @@ country_event = {
 						}
 					}
 					while = {
-						count = 20
+						count = 24
 						create_ship = {
 							name = random
 							design = "NAME_uma_Wraith"
