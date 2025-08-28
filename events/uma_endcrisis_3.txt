@@ -696,6 +696,7 @@ country_event  = {
 	id = uma_ec_3.20
 	title = uma_ec_3.20.title
 	desc = uma_ec_3.20.desc
+	picture = GFX_evt_uma_endcrisis_sky
 	is_triggered_only = yes
 
 	option = {
@@ -708,6 +709,7 @@ country_event = {
 	id = uma_ec_3.21
 	title = uma_ec_3.21.title
 	desc = uma_ec_3.21.desc
+	picture = GFX_evt_communication_event
 	is_triggered_only = yes
 
 	option = {
@@ -825,6 +827,7 @@ country_event = {
 		}
 		text = uma_ec_3.24.desc.swap
 	}
+	picture = GFX_evt_relic_world_street
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -913,6 +916,7 @@ country_event = {
 	id = uma_ec_3.27
 	title = uma_ec_3.25.title
 	desc = uma_ec_3.25.desc
+	picture = GFX_evt_crisis_defeated
 	is_triggered_only = yes
 
 	option = {
@@ -938,6 +942,7 @@ country_event = {
 	id = uma_ec_3.28
 	title = uma_ec_3.28.title
 	desc = uma_ec_3.28.desc
+	picture = GFX_evt_rift_sphere
 	is_triggered_only = yes
 
 	trigger = {
@@ -972,6 +977,7 @@ country_event = {
 	id = uma_ec_3.29
 	title = uma_ec_3.29.title
 	desc = uma_ec_3.29.desc
+	picture = GFX_evt_rift_sphere
 	is_triggered_only = yes
 
 	immediate = {
@@ -1072,6 +1078,13 @@ country_event = {
 		event_target:uma_ec3_country = {
 			fleet_power >= 100000
 		}
+
+		has_authority = auth_trainingcenter
+		has_modifier = uma_gold_family
+
+		NOT= {
+			has_country_flag = uma_endcrisis_ec3_gold_family_had_supported
+		}
 	}
 
 	immediate = {
@@ -1091,10 +1104,12 @@ country_event = {
 	id = uma_ec_3.32
 	title = uma_ec_3.32.title
 	desc = uma_ec_3.32.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
+			set_country_flag = uma_endcrisis_ec3_gold_family_had_supported
 			create_fleet = {
 				name = UMA_ENDCRISIS_EC3_GOLD_REINSFORCEMENT
 				effect = {
