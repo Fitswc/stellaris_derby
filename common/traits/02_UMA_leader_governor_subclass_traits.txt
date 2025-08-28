@@ -890,7 +890,7 @@ leader_trait_tianming1_governor = {
 		inline_script = paragon/uma_governor_weight_mult
         modifier = {
             has_trait = subclass_shengchanyuejin_governor
-            mult = 2
+            factor = 5
         }
 	}
     background_icon = "GFX_leader_background_destiny_1"
@@ -954,7 +954,7 @@ leader_trait_tianming3_governor = {
 		inline_script = paragon/uma_governor_weight_mult
         modifier = {
             has_trait = subclass_jichiguodu_governor
-            mult = 2
+            factor = 5
         }
 	}
     background_icon = "GFX_leader_background_destiny_1"
@@ -992,7 +992,7 @@ leader_trait_tianming4_governor = {
                 has_trait = subclass_renwenguanghui_governor
                 has_trait = subclass_shengchanyuejin_governor
             }
-            mult = 2
+            factor = 5
         }
 	}
     background_icon = "GFX_leader_background_destiny_1"
