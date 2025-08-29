@@ -148,3 +148,231 @@ zone_uma_teaching = {
 		text = zone_urban_triggered_desc
 	}
 }
+
+zone_uma_industry = {
+	icon = GFX_uma_zone_type_industry
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		uma_urban
+		urban
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+
+#	max_buildings = 3
+
+	##Compatibility for BPV
+#	max_buildings = @BPV_ZONE_SLOT`
+
+	included_building_sets = {
+		uma_urban
+		uma_industrial
+		industrial
+		factory
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+
+	triggered_planet_modifier = {
+		planet_housing_add = @zone_urban_housing_negative
+
+		planet_uma_crystal_carrot_engineer_produces_mult = 0.15
+		planet_building_uma_crystal_carrot_producing_lab_build_speed_mult = 0.2
+		planet_building_uma_crystal_carrot_producing_center_build_speed_mult = 0.2
+		planet_building_uma_crystal_carrot_producing_complex_build_speed_mult = 0.2
+		planet_building_uma_crystal_carrot_producing_realm_complex_build_speed_mult = 0.2
+
+		planet_uma_crystal_alloy_crafter_produces_mult = 0.15
+		planet_building_uma_crystal_alloy_workhouse_build_speed_mult = 0.2
+		planet_building_uma_crystal_alloy_factory_build_speed_mult = 0.2
+		planet_building_uma_crystal_alloy_complex_build_speed_mult = 0.2
+		planet_building_uma_crystal_alloy_realm_complex_build_speed_mult = 0.2
+
+		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
+		planet_building_uma_crystal_consumer_goods_workhouse_build_speed_mult = 0.2
+		planet_building_uma_crystal_consumer_goods_factory_build_speed_mult = 0.2
+		planet_building_uma_crystal_consumer_goods_complex_build_speed_mult = 0.2
+		planet_building_uma_crystal_consumer_goods_realm_complex_build_speed_mult = 0.2
+
+		planet_building_uma_chemical_plant_build_speed_mult = 0.2
+		planet_building_uma_chemical_plant_2_build_speed_mult = 0.2
+		planet_building_uma_chemical_plant_realm_build_speed_mult = 0.2
+
+		planet_building_uma_crystal_plant_build_speed_mult = 0.2
+		planet_building_uma_crystal_plant_2_build_speed_mult = 0.2
+		planet_building_uma_crystal_plant_realm_build_speed_mult = 0.2
+
+		planet_building_uma_gas_plant_build_speed_mult = 0.2
+		planet_building_uma_gas_plant_2_build_speed_mult = 0.2
+		planet_building_uma_gas_plant_realm_build_speed_mult = 0.2
+
+		planet_building_uma_dark_matter_plant_build_speed_mult = 0.2
+
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+}
+
+zone_uma_basic_food = {
+	icon = GFX_uma_zone_type_food
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		food
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+
+#	max_buildings = 3
+
+	##Compatibility for BPV
+#	max_buildings = @BPV_ZONE_SLOT`
+
+	included_building_sets = {
+		farming
+		hydroponics
+		farming_automation
+		uma_farming
+	}
+
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_planet_modifier = {
+		job_uma_bee_farmer_add = 100
+		job_uma_carrot_farmer_add = 100
+
+		planet_uma_carrot_farmer_produces_mult = 0.3
+		planet_uma_bee_farmer_produces_mult = 0.3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+}
+
+zone_uma_basic_mineral = {
+	icon = GFX_uma_zone_type_mining
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		minerals
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+
+#	max_buildings = 3
+
+	##Compatibility for BPV
+#	max_buildings = @BPV_ZONE_SLOT`
+
+	included_building_sets = {
+		mining
+		urban
+		mining_automation
+		uma_mining
+	}
+
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_planet_modifier = {
+		job_uma_core_miner_add = 200
+
+		planet_uma_core_miner_produces_mult = 0.3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+}

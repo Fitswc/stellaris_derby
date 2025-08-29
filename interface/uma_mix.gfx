@@ -10,6 +10,23 @@ spriteTypes = {
 		textureFile = "gfx/interface/planetview/uma_planet_zone_type_racing.dds"
 	}
 
+	spriteType = {
+		name = GFX_uma_zone_type_industry
+		textureFile = "gfx/interface/planetview/uma_planet_zone_type_industry.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_zone_type_food
+		textureFile = "gfx/interface/planetview/uma_zone_type_food.dds"
+	}
+
+	spriteType = {
+		name = GFX_uma_zone_type_mining
+		textureFile = "gfx/interface/planetview/uma_zone_type_mineral.dds"
+	}
+
+
+
 
 	spriteType = {
 		name = GFX_planet_type_uma_ringworld
