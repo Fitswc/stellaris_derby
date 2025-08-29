@@ -156,19 +156,18 @@ guiTypes = {
 
 
 		effectButtonType = {
-			name = uma_mmu_unfinished
-			spriteType = "GFX_uma_mmu_unifinish"
-			position = { x = 816 y = 298 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_unfinished_effect"
-		}
-
-		effectButtonType = {
 			name = uma_mmu_mmu_end_diff_difficult
 			spriteType = "GFX_uma_mmu_mid_GI"
 			position = { x = 591 y = 392 }
 			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_change_end_game_ban"
+			effect = "uma_mmu_end_game_difficult_hard"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_end_diff_difficult_ds
+			spriteType = "GFX_uma_mmu_mid_GI_disable"
+			position = { x = 591 y = 392 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_hard_ds"
 		}
 
 		effectButtonType = {
@@ -176,7 +175,14 @@ guiTypes = {
 			spriteType = "GFX_uma_mmu_mid_GII"
 			position = { x = 783 y = 392 }
 			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_change_end_game_ban"
+			effect = "uma_mmu_end_game_difficult_normal"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_end_diff_normal_ds
+			spriteType = "GFX_uma_mmu_mid_GII_disable"
+			position = { x = 783 y = 392 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_normal_ds"
 		}
 
 		effectButtonType = {
@@ -184,7 +190,29 @@ guiTypes = {
 			spriteType = "GFX_uma_mmu_mid_GIII"
 			position = { x = 972 y = 392 }
 			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_change_end_game_ban"
+			effect = "uma_mmu_end_game_difficult_easy"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_end_diff_easy_ds
+			spriteType = "GFX_uma_mmu_mid_GIII_disable"
+			position = { x = 972 y = 392 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_easy_ds"
+		}
+
+		effectButtonType = {
+			name = uma_mmu_mmu_end_diff_off
+			spriteType = "GFX_uma_mmu_off"
+			position = { x = 1161 y = 392 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_off"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_end_diff_off_ds
+			spriteType = "GFX_uma_mmu_off_disable"
+			position = { x = 1161 y = 392 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_off_ds"
 		}
 
 		ButtonType = {

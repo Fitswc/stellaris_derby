@@ -117,6 +117,7 @@ uma_mmu_mid_game_difficult_easy_ds = {
 		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
 		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
 		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
 	}
 }
 
@@ -137,6 +138,7 @@ uma_mmu_mid_game_difficult_normal_ds = {
 		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
 		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
 		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
 	}
 }
 
@@ -156,6 +158,7 @@ uma_mmu_mid_game_difficult_hard_ds = {
 		custom_tooltip = uma_mmu_midgame_hard
 		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_hard
 		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
 		remove_global_flag = uma_global_game_setting_mid_game_crisis_diff_easy
 	}
 }
@@ -388,6 +391,169 @@ uma_mmu_gs_season_off_ds = {
 		custom_tooltip = uma_mmu_rs_season_on
 		set_global_flag = uma_global_game_setting_gamesystem_season_disable
 		remove_global_flag = uma_global_game_setting_gamesystem_season_enable
+	}
+}
+
+
+uma_mmu_end_game_difficult_easy = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_easy_on
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		#	}
+		#}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_easy
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+uma_mmu_end_game_difficult_normal = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_normal_on
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		#	}
+		#}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_normal
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+uma_mmu_end_game_difficult_hard = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_hard_on
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		#	}
+		#}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_hard
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+
+uma_mmu_end_game_difficult_off = {
+	potential = { always = yes }
+	allow = {
+		custom_tooltip = uma_mmu_midgame_off_on
+		#hidden_trigger = {
+		#	NOT = {
+		#		has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		#	}
+		#}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_off
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+
+uma_mmu_end_game_difficult_easy_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_easy_on
+		hidden_trigger = {
+
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_easy
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+uma_mmu_end_game_difficult_normal_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_normal_on
+		hidden_trigger = {
+
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_normal
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+uma_mmu_end_game_difficult_hard_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_hard_on
+		hidden_trigger = {
+
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_hard
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+	}
+}
+
+uma_mmu_end_game_difficult_off_ds = {
+	potential = {
+		NOT = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_endgame_off_on
+		hidden_trigger = {
+
+		}
+	}
+	effect = {
+		custom_tooltip = uma_mmu_endgame_off
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		remove_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_off
 	}
 }
 

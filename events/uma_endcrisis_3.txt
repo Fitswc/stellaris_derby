@@ -9,10 +9,11 @@ event = {
 
 	trigger = {
 		end_game_years_passed >= 3
-		NOT = {
-			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
+		NOR = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_off
 			has_global_flag = uma_ec_invasion_happened
 			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_endcrisis_triggered
 		}
 		any_country = {
 			has_uma_country = yes
@@ -166,29 +167,117 @@ country_event = {
 
 						create_uma_ec3_crisis_platform = yes
 					}
-					add_modifier = {
-						modifier = uma_endcrisis_ec3_mainbase_buff
+
+					if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+						}
+						add_modifier = {
+							modifier = uma_endcrisis_ec3_mainbase_buff_easy
+						}
+					}
+					if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+						}
+						add_modifier = {
+							modifier = uma_endcrisis_ec3_mainbase_buff_normal
+						}
+					}
+					if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+						}
+						add_modifier = {
+							modifier = uma_endcrisis_ec3_mainbase_buff_hard
+						}
 					}
 
 
 
 					fleet = {
 
-						#第一批攻击/防守舰队生成
-						fleet_event = {
-							id = uma_ec_3.2
-							days = 5
+						if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+							#简单难度：2F 1D with 削弱buff
+
+							#第一批攻击/防守舰队生成
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 8
+							}
+							####
 						}
-						fleet_event = {
-							id = uma_ec_3.2
-							days = 7
+
+						else_if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+							}
+							#默认难度：2F 2D
+
+							#第一批攻击/防守舰队生成
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 8
+							}
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 9
+							}
+							####
 						}
-						#防守
-						fleet_event = {
-							id = uma_ec_3.3
-							days = 8
+
+						else_if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+							}
+							#默认难度：3F 2D
+
+							#第一批攻击/防守舰队生成
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 9
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 8
+							}
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 9
+							}
+							####
 						}
-						####
+
 					}
 				}
 			}
