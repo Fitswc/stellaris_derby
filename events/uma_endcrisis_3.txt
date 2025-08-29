@@ -805,7 +805,14 @@ country_event = {
 		name = uma_ec_3.21.a
 		hidden_effect = {
 			begin_event_chain = { event_chain = uma_endcrisis_ec3_main_chain }
-
+			create_point_of_interest = {
+				id = uma_ec3_poi.2
+				name = uma_ec3_poi.2.name
+				desc = uma_ec3_poi.2.desc
+				event_chain =uma_endcrisis_ec3_main_chain
+				location = event_target:uma_ec3_first_system
+				picture = GFX_evt_black_hole
+			}
 		}
 	}
 	after = {
@@ -1012,6 +1019,7 @@ country_event = {
 		name = uma_ec_3.25.a
 		end_event_chain = uma_endcrisis_ec3_main_chain
 		remove_point_of_interest = uma_ec3_poi.1
+		remove_point_of_interest = uma_ec3_poi.2
 		hidden_effect = {
 			if = {
 				limit = {

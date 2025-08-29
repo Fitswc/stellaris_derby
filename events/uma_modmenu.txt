@@ -19,6 +19,7 @@ country_event = {
 		set_country_flag = uma_mmu_has_opened
 		#初始化游戏设置
 		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
 		set_global_flag = uma_global_game_setting_gamesystem_gdi_full
 		set_global_flag = uma_global_game_setting_gamesystem_rs_dnd
 		if = {
@@ -30,7 +31,7 @@ country_event = {
 	}
 
 	option = {
-		name = "uma_specimen_null" ##TODO:000
+		name = "uma_specimen_null"
 		custom_gui = "uma_hiding_button"
 		default_hide_option = yes
 #		remove_country_flag = uma_mmu_has_opened

@@ -86,6 +86,10 @@ uma_ec3_create_puma_fleets = {
 			id = uma_ec_3.5
 		}
 
+		add_modifier = {
+			modifier = uma_endcrisis_ec3_fleet_speedbuff_common
+		}
+
 		if = {
 			limit = {
 				has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
