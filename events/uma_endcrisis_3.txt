@@ -183,7 +183,7 @@ country_event = {
 							limit = {
 								has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
 							}
-							#默认难度：3F 2D
+							#困难难度：3F 2D
 
 							#第一批攻击/防守舰队生成
 							fleet_event = {
@@ -193,10 +193,6 @@ country_event = {
 							fleet_event = {
 								id = uma_ec_3.2
 								days = 7
-							}
-							fleet_event = {
-								id = uma_ec_3.2
-								days = 9
 							}
 							#防守
 							fleet_event = {
