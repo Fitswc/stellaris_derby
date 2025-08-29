@@ -324,6 +324,10 @@ fleet_event = {
 					}
 				}
 			}
+			set_update_modifiers_batch = begin
+			uma_ec3_create_puma_fleets = yes
+			set_update_modifiers_batch = end
+
 			fleet_event = {
 				id = uma_ec_3.3
 				days = 200
