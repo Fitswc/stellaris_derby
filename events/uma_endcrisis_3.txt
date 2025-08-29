@@ -163,7 +163,7 @@ country_event = {
 				effect = {
 					set_starbase_flag = uma_ec3_main_base
 					while = {
-						count = 6
+						count = 4
 
 						create_uma_ec3_crisis_platform = yes
 					}
@@ -547,9 +547,14 @@ planet_event = {
 		}
 		create_starbase = {
 			size = starbase_uma_ec3
+#			design = NAME_starbase_uma_ec3
 			owner = event_target:uma_ec3_country
 			effect = {
 				set_starbase_flag = uma_ec3_soc_fleet_base
+				while = {
+					count = 2
+					create_uma_ec3_crisis_platform = yes
+				}
 			}
 		}
 
