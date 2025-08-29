@@ -638,6 +638,8 @@ planet_event = {
 					limit = {
 						is_star = no
 						is_asteroid = no
+
+						is_colony = no
 					}
 					change_pc = pc_barren
 				}
