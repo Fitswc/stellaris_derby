@@ -1197,3 +1197,30 @@ country_event = {
 	}
 
 }
+
+#country_event = {
+#	id = uma_ec_3.40
+#	is_triggered_only = yes
+#	hide_window = yes
+#
+#	trigger = {
+#		from = {
+#			has_country_flag = uma_ec3_country
+#		}
+#	}
+#
+#	immediate = {
+#		country_event = {
+#			id = uma_ec_3.41
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = uma_ec_3.41
+#	title = uma_ec_3.41.title
+#	desc = uma_ec_3.41.desc
+#	is_triggered_only = yes
+#
+#
+#} TODO:补充对话剧情
