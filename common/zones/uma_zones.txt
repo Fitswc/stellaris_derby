@@ -19,6 +19,7 @@ zone_uma_training = {
 		uma_urban
 		uma_teaching
 		urban
+		habitat_urban
 	}
 
 	resources = {
@@ -97,6 +98,8 @@ zone_uma_teaching = {
 		uma_urban
 		uma_teaching
 		urban
+		habitat_urban
+		habitat_research
 	}
 
 	resources = {
@@ -169,6 +172,7 @@ zone_uma_industry = {
 	zone_sets = {
 		uma_urban
 		urban
+		habitat_urban
 	}
 
 	resources = {
@@ -331,6 +335,7 @@ zone_uma_basic_mineral = {
 
 	zone_sets = {
 		minerals
+		habitat_minerals
 	}
 
 	resources = {
