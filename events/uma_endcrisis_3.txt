@@ -34,6 +34,7 @@ country_event = {
 				uma_is_event_system = no
 			}
 
+			log = "UMA ENDCRISIS3 WILL HAPPENED"
 			log = "END CRISIS WILL BE SPAWN IN [THIS.GetName]"
 			set_star_flag = uma_ec3_first_system
 			save_global_event_target_as = uma_ec3_first_system
