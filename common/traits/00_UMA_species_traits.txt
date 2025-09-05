@@ -711,6 +711,7 @@ uma_trait_thethesuki={
 	opposites = { "uma_trait_thethekirai"  }
 	modifier={
 		logistic_growth_mult = 0.2
+		bonus_pop_growth_mult = 0.3
 #		fake_pop_growth_mod = 0.2
 	}
 }
@@ -721,8 +722,8 @@ uma_trait_thethekirai={
 	allowed_archetypes={UMA}
 	opposites = { "uma_trait_thethesuki"  }
 	modifier={
-		logistic_growth_mult = -0.1
-		fake_pop_growth_mod = -0.1
+		logistic_growth_mult = -0.2
+		bonus_pop_growth_mult = -0.3
 	}
 }
 

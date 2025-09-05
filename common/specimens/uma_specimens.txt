@@ -91,6 +91,7 @@ uma_care_kit = {
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
 		logistic_growth_mult = 0.03
+		bonus_pop_growth = 1.0
 	}
 }
 
@@ -303,6 +304,7 @@ uma_strength_crystal = {
 	triggered_country_modifier = {
 		mult = value:uma_aesthetic_wonder_specimens_modifiers_mult
 		logistic_growth_mult = 0.05
+		bonus_pop_growth = 0.5
 	}
 }
 
