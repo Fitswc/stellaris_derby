@@ -49,7 +49,7 @@ country_event = {
                 gender = female
                 class = official
                 set_age = 18
-                skill = 5
+                skill = 1
                 immortal = yes
                 background_planet = event_target:uma_leviathan_planet_target
                 background_job = government_employee
@@ -57,16 +57,14 @@ country_event = {
                 skip_background_generation = yes
                 traits = {
                     trait = uma_governor_trait_mini_flare
-                    # trait = uma_governor_trait_flare
-                    # trait = uma_governor_trait_never_forget
                     trait = leader_trait_uma_generic
-                    trait = subclass_shengchanyuejin_governor
                 }
                 effect = {
                     set_leader_flag = uma_is_special_leader
                     set_leader_flag = uma_is_am
                     save_global_event_target_as = uma_is_leader_am
                     change_leader_portrait = 74c
+					add_experience = 6500
                 }
             }
             last_created_leader = {
@@ -282,10 +280,10 @@ ship_event = {
                 }
             }
             effect = {
-                save_event_target_as = uma_oc_country
+                save_event_target_as = uma_am_country
             }
         }
-        event_target:uma_oc_country = {
+        event_target:uma_am_country = {
             create_species = {
                 name = "NAME_Unknown"
                 class = umamusume
