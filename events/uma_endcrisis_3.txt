@@ -34,7 +34,7 @@ country_event = {
 				uma_is_event_system = no
 			}
 
-			log = "UMA ENDCRISIS3 WILL HAPPENED"
+			log = "UMA ENDCRISIS3 WILL HAPPENED AT [GetDate]"
 			log = "END CRISIS WILL BE SPAWN IN [THIS.GetName]"
 			set_star_flag = uma_ec3_first_system
 			save_global_event_target_as = uma_ec3_first_system
@@ -380,6 +380,12 @@ fleet_event = {
 								exists = starbase
 								starbase = { owner = { is_hostile = root.owner } }
 
+							}
+
+							any_galaxy_fleet = {
+								owner = {
+									is_guardian_country = no
+								}
 							}
 						}
 						ROOT = { can_access_system = prev }

@@ -17,7 +17,7 @@ situation_uma_endcrisis_ec3 = {
 
 		modifier = {
 			desc = situation_uma_endcrisis_ec3_no_progress_desc_in_situation
-			set = 0
+			set = 0.1
 			NAND = {
 				any_system = {
 					exists = starbase
