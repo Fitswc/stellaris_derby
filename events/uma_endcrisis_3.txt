@@ -384,12 +384,17 @@ fleet_event = {
 						}
 						ROOT = { can_access_system = prev }
 
+						NOT = {
+							has_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
+						}
 					}
 					found_system = {
 						move_to = this
 
 						effect = {
 							id = uma_ec_3.5.e1
+
+							set_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
 						}
 
 						repeat = {
@@ -424,7 +429,7 @@ fleet_event = {
 
 										planet_event = {
 											id = uma_ec_3.6
-											days = 10
+											days = 8
 										}
 									}
 								}
@@ -473,6 +478,9 @@ planet_event = {
 	}
 
 	immediate = {
+		solar_system = {
+			remove_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
+		}
 #		change_pc = pc_black_hole
 		planet_event = {
 			id = uma_ec_3.1010
