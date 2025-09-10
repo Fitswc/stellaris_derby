@@ -53,3 +53,15 @@ message_type = {
 	message_setting_key = uma_endcrisis_ec3_system_being_soc
 	ping = "ping_notification_red"
 }
+
+
+message_type = {
+	key = "UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK"
+	name = "UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK"
+	icon = GFX_message_planet_destroyed
+	sound = "notification"
+	default_toast = yes
+	category = planets
+	message_setting_key = uma_endcrisis_ec3_system_being_soc
+	ping = "ping_notification_red"
+}

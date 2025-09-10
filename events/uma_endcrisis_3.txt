@@ -15,6 +15,13 @@ country_event = {
 	}
 
 	immediate = {
+		event_target:global_event_country = {
+			set_variable = {
+				which = uma_ec3_count_bh_soc_base
+				value = 0
+			}
+		}
+
 		every_playable_country = {
 			country_event = {
 				id = uma_ec_3.21
@@ -94,6 +101,7 @@ country_event = {
 				size = starbase_marauder
 				owner = event_target:uma_ec3_country
 				effect = {
+					save_global_event_target_as = uma_ec3_first_system_main_base
 					set_starbase_flag = uma_ec3_main_base
 					while = {
 						count = 4
@@ -101,30 +109,34 @@ country_event = {
 						create_uma_ec3_crisis_platform = yes
 					}
 
-					if = {
-						limit = {
-							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
-						}
-						add_modifier = {
-							modifier = uma_endcrisis_ec3_mainbase_buff_easy
-						}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_NOt_enough_ele_device_broken
 					}
-					if = {
-						limit = {
-							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
-						}
-						add_modifier = {
-							modifier = uma_endcrisis_ec3_mainbase_buff_normal
-						}
-					}
-					if = {
-						limit = {
-							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
-						}
-						add_modifier = {
-							modifier = uma_endcrisis_ec3_mainbase_buff_hard
-						}
-					}
+
+#					if = {
+#						limit = {
+#							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+#						}
+#						add_modifier = {
+#							modifier = uma_endcrisis_ec3_mainbase_buff_easy
+#						}
+#					}
+#					if = {
+#						limit = {
+#							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+#						}
+#						add_modifier = {
+#							modifier = uma_endcrisis_ec3_mainbase_buff_normal
+#						}
+#					}
+#					if = {
+#						limit = {
+#							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+#						}
+#						add_modifier = {
+#							modifier = uma_endcrisis_ec3_mainbase_buff_hard
+#						}
+#					}
 
 
 
@@ -228,6 +240,39 @@ country_event = {
 
 		}
 
+		every_galaxy_planet = {
+			limit = {
+				is_primary_star = yes
+				is_star_class = sc_black_hole
+			}
+			if = {
+				limit = {
+					exists = starbase
+				}
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			create_starbase = {
+				size = starbase_uma_ec3
+				#			design = NAME_starbase_uma_ec3
+				owner = event_target:uma_ec3_country
+				effect = {
+					fleet = {
+						set_fleet_flag = uma_ec3_soc_fleet_base_bh
+					}
+					set_starbase_flag = uma_ec3_soc_fleet_base_bh
+				}
+			}
+			solar_system = {
+				create_ambient_object = {
+					type = electric_storm
+					location = this
+					effect = {}
+				}
+			}
+			event_target:global_event_country = {
+				add_variable = { which = uma_ec2_count_bh_soc_base value = 1 }
+			}
+		}
 		set_update_modifiers_batch = end
 	}
 }
@@ -730,6 +775,106 @@ starbase_event = {
 	}
 }
 
+starbase_event = {
+	id = uma_ec_3.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		has_starbase_flag = uma_ec3_soc_fleet_base_bh
+
+		From = {
+			has_event_chain = uma_endcrisis_ec3_main_chain
+		}
+	}
+
+	immediate = {
+		event_target:global_event_country = {
+			add_variable = {
+				which = uma_ec3_count_bh_soc_base
+				value = -1
+			}
+		}
+		every_playable_country = {
+			limit = {
+				has_event_chain = uma_endcrisis_ec3_main_chain
+			}
+			#同步counter与variable
+			reset_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+			}
+			add_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+				amount = event_target:global_event_country.uma_ec3_count_bh_soc_base
+			}
+		}
+
+		solar_system = {
+			every_ambient_object = {
+				destroy_ambient_object = This
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				event_target:global_event_country = {
+					check_variable = {
+						which = uma_ec3_count_bh_soc_base
+						value <= 2
+					}
+				}
+			}
+			every_playable_country = {
+				create_message = {
+					type = UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK
+					localization = UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK_DESC
+					days = @toast_message_days
+					target = event_target:uma_ec3_first_system
+				}
+			}
+
+			event_target:uma_ec3_first_system_main_base = {
+				remove_modifier = uma_endcrisis_ec3_mainbase_NOt_enough_ele_device_broken
+
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff_easy
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff_normal
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff_hard
+					}
+				}
+			}
+		}
+	}
+}
+
 
 
 ##下面是剧情内容
@@ -763,7 +908,7 @@ country_event = {
 				id = uma_ec3_poi.2
 				name = uma_ec3_poi.2.name
 				desc = uma_ec3_poi.2.desc
-				event_chain =uma_endcrisis_ec3_main_chain
+				event_chain = uma_endcrisis_ec3_main_chain
 				location = event_target:uma_ec3_first_system
 				picture = GFX_evt_black_hole
 			}
@@ -771,6 +916,11 @@ country_event = {
 	}
 	after = {
 		hidden_effect = {
+			#同步counter与variable -> Evt
+			country_event = {
+				id = uma_ec_3.2111
+			}
+
 			if = {
 				limit = {
 					is_uma_player_country = yes
@@ -787,6 +937,32 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = uma_ec_3.2111
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_event_chain = uma_endcrisis_ec3_main_chain
+			}
+			#同步counter与variable
+			reset_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+			}
+			add_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+				amount = event_target:global_event_country.uma_ec3_count_bh_soc_base
+			}
+		}
+	}
+}
+
 
 country_event = {
 	id = uma_ec_3.22
@@ -1034,6 +1210,15 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = uma_endcrisis_ec3_researched_special_project
+
+			create_point_of_interest = {
+				id = uma_ec3_poi.3
+				name = uma_ec3_poi.3.name
+				desc = uma_ec3_poi.3.desc
+				event_chain = uma_endcrisis_ec3_main_chain
+				location = event_target:uma_ec3_first_system
+				picture = GFX_evt_black_hole
+			}
 		}
 	}
 
@@ -1107,6 +1292,50 @@ country_event = {
 					event_chain = uma_endcrisis_ec3_main_chain
 					counter = uma_endcrisis_ec3_main_chain_counter
 					amount = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.3000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+#		has_global_flag = uma_ec3_outeruma_happened
+#		NOT = {
+#			has_global_flag = uma_ec_invasion_end
+#		}
+		has_country_flag = uma_endcrisis_ec3_researched_special_project
+
+		any_system = {
+			starbase = {
+				has_starbase_flag = uma_ec3_soc_fleet_base_bh
+			}
+		}
+	}
+
+	immediate = {
+		Root = {
+			remove_point_of_interest = uma_ec3_poi.4
+		}
+		every_system = {
+			limit = {
+				starbase = {
+					has_starbase_flag = uma_ec3_soc_fleet_base_bh
+				}
+			}
+
+			Root = {
+				create_point_of_interest = {
+					id = uma_ec3_poi.1
+					name = uma_ec3_poi.1_desc
+					desc = uma_ec3_poi.4_desc_desc
+					event_chain = uma_endcrisis_ec3_main_chain
+					location = Prev
+					picture = GFX_evt_black_hole
 				}
 			}
 		}

@@ -611,12 +611,6 @@ on_entering_system_fleet = {
 	}
 }
 
-on_yearly_pulse = {
-	events = {
-		uma_ec_3.8065
-	}
-}
-
 on_country_destroyed = {
 	events = {
 		uma_ec_3.8
@@ -629,5 +623,7 @@ on_starbase_destroyed = {
 		uma_ec_3.11
 
 		uma_ec_3.25
+
+		uma_ec_3.12
 	}
 }
