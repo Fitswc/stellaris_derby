@@ -20,8 +20,8 @@ pc_uma_school = {
 		planet_max_buildings_add = 99
 		planet_uma_racing_umamusume_produces_mult = 0.3
 		planet_uma_trainer_produces_mult = 0.3
-		logistic_growth_mult = 0.80
-		bonus_pop_growth = 0.80
+		logistic_growth_mult = 0.50
+		bonus_pop_growth = 0.4
 		planet_building_capacity_add = 10
 	}
 
@@ -199,8 +199,8 @@ pc_uma_industrial = {
 		planet_jobs_energy_produces_mult = 0.3
 		planet_jobs_consumer_goods_produces_mult = 0.3
 		planet_jobs_unity_produces_mult = 0.06
-		logistic_growth_mult = 0.80
-		bonus_pop_growth = -0.6
+		logistic_growth_mult = 0.50
+		bonus_pop_growth = -0.2
 		planet_building_capacity_add = 10
 	}
 
