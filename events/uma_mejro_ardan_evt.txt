@@ -587,7 +587,14 @@ country_event = {
 	is_triggered_only = yes
 	picture = GFX_evt_uma_satono_school
 
+	trigger = {
+		NOT = {
+			has_country_flag = uma_mejro_ardan.15.happened
+		}
+	}
+
 	immediate = {
+		set_country_flag = uma_mejro_ardan.15.happened
 		random_system = {
 			limit = {
 				has_star_flag = uma_ardan_system
