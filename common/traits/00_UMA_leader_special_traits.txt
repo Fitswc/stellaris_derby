@@ -433,7 +433,7 @@ uma_governor_trait_sp_agnes_digital = {
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.1
 		planet_uma_racing_umamusume_produces_mult = 1
-		logistic_growth_mult = 0.2
+		logistic_growth_mult = 0.1
 		planet_stability_add = 10
 	}
 
@@ -497,7 +497,7 @@ uma_governor_trait_sp_kitasan_black = {
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.2
 		planet_pops_upkeep_mult = -0.15
-		logistic_growth_mult = 0.2
+		logistic_growth_mult = 0.1
 		planet_stability_add = 20
 	}
 	councilor_modifier = {
@@ -714,7 +714,7 @@ uma_governor_trait_sp_fine_er = {
 	}
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.1
-		logistic_growth_mult= 0.2
+		logistic_growth_mult= 0.1
 		starbase_shipyard_build_speed_mult = 0.3
 	}
 	councilor_modifier = {
@@ -1350,7 +1350,7 @@ uma_trait_sp_curren_spark_soujio = {
 		planet_jobs_unity_produces_mult = 0.3
 		pop_happiness = 0.2
 		planet_jobs_unity_upkeep_mult = -0.2
-		logistic_growth_mult= -0.3
+		logistic_growth_mult= -0.2
 	}
 
 
