@@ -126,6 +126,9 @@ slot_uma_logistic = {
 		zone_energy
 		zone_trade
 		zone_factory
+		zone_uma_basic_food
+		zone_uma_basic_mineral
+		zone_uma_industry
 	}
 
 	exclude = {
@@ -166,6 +169,7 @@ slot_uma_light_industrial = {
 		zone_factory
 		zone_machine_replication
 		zone_uma_industry
+		zone_uma_basic_mineral
 	}
 
 	exclude = {
@@ -203,6 +207,7 @@ slot_uma_heavy_industrial = {
 		zone_machine_replication
 		zone_foundry
 		zone_uma_industry
+		zone_uma_basic_mineral
 	}
 
 	exclude = {

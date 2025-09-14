@@ -22,6 +22,10 @@ zone_uma_training = {
 		habitat_urban
 	}
 
+	convert_to = {
+		zone_research
+	}
+
 	resources = {
 		category = planet_zones
 		cost = {
@@ -93,6 +97,8 @@ zone_uma_teaching = {
 		}
 #		uses_district_set = uma_school_world
 	}
+
+	convert_to = { zone_research }
 
 	zone_sets = {
 		uma_urban
@@ -186,6 +192,10 @@ zone_uma_industry = {
 		}
 	}
 
+	convert_to = {
+		zone_industrial
+	}
+
 
 #	max_buildings = 3
 
@@ -269,6 +279,9 @@ zone_uma_basic_food = {
 	zone_sets = {
 		food
 	}
+	convert_to = {
+		zone_food
+	}
 
 	resources = {
 		category = planet_zones
@@ -336,6 +349,10 @@ zone_uma_basic_mineral = {
 	zone_sets = {
 		minerals
 		habitat_minerals
+	}
+
+	convert_to = {
+		zone_minerals
 	}
 
 	resources = {
