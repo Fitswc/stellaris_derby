@@ -743,3 +743,341 @@ ship_design = {
 	}
 	required_component="SENSOR_2"
 }
+
+
+
+# Planet Destroyer
+ship_design = {
+	name = "NAME_Enforcer_Plus"
+	ship_size = colossus
+	is_event_design = yes
+	country_type = uma_ec2_empire
+	section = {
+		template = "SHIP_COLOSSUS_SECTION"
+		slot = "ship"
+
+		component = {
+			slot = "PLANET_KILLER_GUN_01"
+			template = "PLANET_KILLER_CRACKER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ARMOR_5"
+		}
+	}
+	required_component="SENSOR_4"
+	required_component="JUMP_DRIVE_1"
+	required_component="COLOSSUS_DARK_MATTER_REACTOR"
+	required_component="COLOSSUS_SHIP_THRUSTER_5"
+}
+
+
+
+ship_design = {
+	name = "NAME_UMA_EC2_BB"
+	ship_size = battleship
+	is_event_design = yes
+	country_type = uma_ec2_empire
+
+	section = {
+		template = BATTLESHIP_BOW_L1M1S2
+		slot = bow
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_MEDIUM_MJR_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "UMA_SMALL_MJR_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "UMA_SMALL_MJR_LASER"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_SHIELD_L"
+		}
+	}
+
+	section = {
+		template = BATTLESHIP_MID_L3
+		slot = mid
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_SHIELD_L"
+		}
+	}
+
+	section = {
+		template = BATTLESHIP_STERN_L1
+		slot = stern
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "UMA_TWIN_TURBO_BOOSTER"
+		}
+	}
+
+	required_component = "HYPER_DRIVE_3"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_3"
+	required_component = "SENSOR_3"
+	required_component = "UMA_CARROT_BATTERY_2_BATTLESHIP"
+	required_component = "UMA_COMBAT_FIRST_HAND"
+}
+
+
+ship_design = {
+	name = "NAME_UMA_EC2_CV"
+	ship_size = cruiser
+	is_event_design = yes
+	country_type = uma_ec2_empire
+
+	section = {
+		template = "CRUISER_BOW_L1"
+		slot = "bow"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "UMA_SHIELD_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "UMA_SHIELD_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "UMA_SHIELD_M"
+		}
+	}
+	section = {
+		template = "CRUISER_MID_L1M1"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_MID"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "UMA_ARMOR_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "UMA_ARMOR_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "UMA_ARMOR_M"
+		}
+	}
+	section = {
+		template = "CRUISER_STERN_M1"
+		slot = "stern"
+
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="UMA_COMBAT_FIRST_HAND"
+	required_component="SHIP_THRUSTER_3"
+	required_component="SENSOR_3"
+	required_component="UMA_CARROT_BATTERY_2_CRUISER"
+}
+
+
+ship_design = {
+	name = "NAME_UMA_EC2_Titan"
+	ship_size = titan
+	is_event_design = yes
+	country_type = uma_ec2_empire
+
+	section = {
+		template = "TITAN_BOW"
+		slot = "bow"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "UMA_TG_ARCH_WEAPON_T"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "UMA_ARMOR_L"
+		}
+
+	}
+	section = {
+		template = "TITAN_MID"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "UMA_ARMOR_L"
+		}
+
+	}
+	section = {
+		template = "TITAN_STERN"
+		slot = "stern"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_LARGE_STRONG_PLASMA"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "UMA_LARGE_STRONG_PLASMA"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_TWIN_TURBO_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_TWIN_TURBO_BOOSTER"
+		}
+	}
+	required_component = "HYPER_DRIVE_3"
+	required_component = "COMBAT_COMPUTER_SWARM_ADVANCED"
+	required_component = "SHIP_THRUSTER_4"
+	required_component = "SENSOR_4"
+	required_component = "CORVETTE_ZERO_POINT_REACTOR"
+}
