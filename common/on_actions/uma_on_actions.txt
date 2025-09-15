@@ -217,10 +217,15 @@ on_system_survey = {
 
 
 
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
 ##舰队接战
 on_entering_battle = {
 	events = {
 		uma_bg.10 #sky事件，更换buff
+		uma_ec_2.5
 	}
 }
 
@@ -625,5 +630,27 @@ on_starbase_destroyed = {
 		uma_ec_3.25
 
 		uma_ec_3.12
+	}
+}
+
+
+
+
+# THIS = System: system being occupied
+# FROM = Country: Conqueror of the system
+# FROMFROM = Country: Original owner of the system
+on_system_occupied = {
+	events = {
+		uma_ec_2.6
+
+		uma_ec_2.9
+	}
+}
+
+
+on_entering_system_fleet = {
+	events = {
+		uma_ec_2.11
+		uma_ec_2.12
 	}
 }
