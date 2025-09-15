@@ -328,3 +328,322 @@ create_uma_ec3_crisis_platform = {
 		}
 	}
 }
+
+
+
+
+
+uma_endcrisis_ec2_spawn_fleet_attack = {
+	event_target:uma_fallen_empire = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 6
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+	create_fleet = {
+		settings = {
+			spawn_debris = no
+			can_upgrade = no
+			uses_naval_capacity = no
+			ai_ignore_strength = yes
+		}
+		effect = {
+			set_owner = event_target:uma_fallen_empire
+			#Massive Ship
+			while = {
+				count = 5
+				create_ship = {
+					name = random
+					design = "NAME_UMA_Savant"
+					graphical_culture = owner
+				}
+			}
+			assign_leader = last_created_leader
+			#Large Ship
+			while = {
+				count = 15
+				create_ship = {
+					name = random
+					design = "NAME_UMA_Scholar"
+					graphical_culture = owner
+				}
+			}
+			#Small Ship
+			while = {
+				count = 20
+				create_ship = {
+					name = random
+					design = "NAME_UMA_Sage"
+					graphical_culture = owner
+				}
+			}
+
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = indiscriminate
+
+			fleet_event = {
+				id = uma_ec_2.2
+				days = 1
+			}
+		}
+	}
+	log = "111"
+}
+
+uma_endcrisis_ec2_spawn_fleet_planet_destroyer = {
+	event_target:uma_fallen_empire = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 6
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+	create_fleet = {
+		settings = {
+			spawn_debris = no
+			can_upgrade = no
+			uses_naval_capacity = no
+			ai_ignore_strength = yes
+		}
+		effect = {
+			set_owner = event_target:uma_fallen_empire
+			create_ship = {
+				name = random
+				design = "NAME_Enforcer_Plus"
+				graphical_culture = owner
+			}
+			assign_leader = last_created_leader
+
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+
+			fleet_event = {
+				id = uma_ec_2.4
+				days = 1
+			}
+
+
+			create_fleet = {
+				settings = {
+					spawn_debris = no
+					can_upgrade = no
+					uses_naval_capacity = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					assign_leader = last_created_leader
+
+					#Large Ship
+					while = {
+						count = 15
+						create_ship = {
+							name = random
+							design = "NAME_UMA_Scholar"
+							graphical_culture = owner
+						}
+					}
+					#Small Ship
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_UMA_Sage"
+							graphical_culture = owner
+						}
+					}
+
+					set_fleet_stance = aggressive
+					set_aggro_range = 500
+					set_aggro_range_measure_from = self
+					set_fleet_bombardment_stance = indiscriminate
+
+
+					auto_follow_fleet =Prev
+				}
+			}
+		}
+	}
+}
+
+
+uma_endcrisis_ec2_spawn_defend_platform = {
+	while = {
+		count = $COUNT$
+		create_ship = {
+			design = "NAME_Cloaker"
+			graphical_culture = owner
+		}
+	}
+}
+
+
+
+
+uma_endcrisis_ec2_spawn_fleet_attack = {
+	event_target:uma_fallen_empire = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 6
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+	create_fleet = {
+		settings = {
+			spawn_debris = no
+			can_upgrade = no
+			uses_naval_capacity = no
+			ai_ignore_strength = yes
+		}
+		effect = {
+			set_owner = event_target:uma_fallen_empire
+			#Massive Ship
+			while = {
+				count = 5
+				create_ship = {
+					name = random
+					design = "NAME_UMA_Savant"
+					graphical_culture = owner
+				}
+			}
+			assign_leader = last_created_leader
+			#Large Ship
+			while = {
+				count = 15
+				create_ship = {
+					name = random
+					design = "NAME_UMA_Scholar"
+					graphical_culture = owner
+				}
+			}
+			#Small Ship
+			while = {
+				count = 20
+				create_ship = {
+					name = random
+					design = "NAME_UMA_Sage"
+					graphical_culture = owner
+				}
+			}
+
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = indiscriminate
+
+			fleet_event = {
+				id = uma_ec_2.2
+				days = 1
+			}
+		}
+	}
+	log = "111"
+}
+
+uma_endcrisis_ec2_spawn_fleet_planet_destroyer = {
+	event_target:uma_fallen_empire = {
+		create_leader = {
+			class = commander
+			species = owner_main_species
+			name = random
+			skill = 6
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+	create_fleet = {
+		settings = {
+			spawn_debris = no
+			can_upgrade = no
+			uses_naval_capacity = no
+			ai_ignore_strength = yes
+		}
+		effect = {
+			set_owner = event_target:uma_fallen_empire
+			create_ship = {
+				name = random
+				design = "NAME_Enforcer_Plus"
+				graphical_culture = owner
+			}
+			assign_leader = last_created_leader
+
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+
+			fleet_event = {
+				id = uma_ec_2.4
+				days = 1
+			}
+
+
+			create_fleet = {
+				settings = {
+					spawn_debris = no
+					can_upgrade = no
+					uses_naval_capacity = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					assign_leader = last_created_leader
+
+					#Large Ship
+					while = {
+						count = 15
+						create_ship = {
+							name = random
+							design = "NAME_UMA_Scholar"
+							graphical_culture = owner
+						}
+					}
+					#Small Ship
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_UMA_Sage"
+							graphical_culture = owner
+						}
+					}
+
+					set_fleet_stance = aggressive
+					set_aggro_range = 500
+					set_aggro_range_measure_from = self
+					set_fleet_bombardment_stance = indiscriminate
+
+
+					auto_follow_fleet =Prev
+				}
+			}
+		}
+	}
+}
+
+
+uma_endcrisis_ec2_spawn_defend_platform = {
+	while = {
+		count = $COUNT$
+		create_ship = {
+			design = "NAME_Cloaker"
+			graphical_culture = owner
+		}
+	}
+}

@@ -172,3 +172,36 @@ special_project = {
     }
 }
 
+special_project = {
+	key = "UMA_EC_2_RESEARCH_STRANGE_FROM_UMA_FE"
+	days_to_research = 150
+	tech_department = society_technology
+	picture = GFX_evt_alien_propaganda
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	event_scope = ship_event
+	timelimit = 300
+
+	on_success = {
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = uma_ec_2.21
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = uma_ec_2.22
+				}
+			}
+		}
+	}
+}

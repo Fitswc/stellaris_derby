@@ -57,3 +57,60 @@ uma_endcrisis_ec3_fleet_buff_hard = {
 uma_endcrisis_ec3_fleet_speedbuff_common = {
 	ship_speed_mult = 0.4
 }
+
+
+
+##EC2
+
+uma_fallen_empire_crisis_2_modifier = {
+	ship_weapon_range_mult = 0.5
+	ship_fire_rate_mult = 0.5
+	ship_hull_mult = 0.5
+	ship_armor_mult = 0.5
+	ship_shield_mult = 0.5
+	ship_weapon_damage = 0.5
+}
+
+
+uma_fallen_empire_crisis_2_modifier_to_ai_fleet_battle_with_fe = {
+	ship_weapon_range_mult = -0.5
+	ship_hull_mult = -0.5
+	ship_armor_mult = -0.5
+	ship_shield_mult = -0.5
+	ship_weapon_damage = -0.5
+	fleet_mia_time_mult = 0.5
+}
+
+#Class1 Difficult
+uma_fallen_empire_crisis_2_modifier_class_1_speed = {
+	ship_base_speed_mult = 1
+}
+
+uma_fallen_empire_crisis_2_modifier_class_1_hull = {
+	ship_hull_mult = 0.75
+	ship_armor_mult = 0.75
+	ship_shield_mult = 0.75
+}
+
+#Class2 Difficult
+uma_fallen_empire_crisis_2_modifier_class_2_speed = {
+	ship_base_speed_mult = 0.75
+}
+
+uma_fallen_empire_crisis_2_modifier_class_2_hull = {
+	ship_hull_mult = 0.5
+	ship_armor_mult = 0.5
+	ship_shield_mult = 0.5
+}
+
+#Class3 Difficult
+
+uma_fallen_empire_crisis_2_modifier_class_3_hull = {
+	ship_hull_mult = 0.45
+	ship_armor_mult = 0.45
+	ship_shield_mult = 0.45
+}
+
+#Class4 Difficult
+uma_fallen_empire_crisis_2_modifier_class_4 = {
+}

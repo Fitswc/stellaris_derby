@@ -104,3 +104,20 @@ opinion_uma_fallen_empire_love_young_umamusume = {
 		}
 	}
 }
+
+
+opinion_uma_fallen_empire_they_should_be_wipe = {
+	trigger = {
+		FROM = {
+			has_authority = auth_trainingcenter
+			always = no
+		}
+	}
+
+	opinion = {
+		modifier = {
+			add = -1000
+			is_uma_fallen_empire = yes
+		}
+	}
+}
