@@ -370,26 +370,17 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 				count = 30
 				create_ship = {
 					name = random
-					design = NAME_UMA_EC3_FRONT_SQUARD_BB
+					design = NAME_UMA_EC2_BB
 					graphical_culture = mammalian_01
 				}
 			}
 			assign_leader = last_created_leader
 
 			while = {
-				count = 60
-				create_ship = {
-					name = random
-					design = NAME_UMA_EC3_FRONT_SQUARD_CV
-					graphical_culture = mammalian_01
-				}
-			}
-
-			while = {
 				count = 80
 				create_ship = {
 					name = random
-					design = NAME_UMA_EC3_SOC_Corvette_2
+					design = NAME_UMA_EC2_CV
 					graphical_culture = mammalian_01
 				}
 			}
@@ -399,7 +390,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 				count = 5
 				create_ship = {
 					name = random
-					design = NAME_UMA_EC3_SOC_Titan_2
+					design = NAME_UMA_EC2_Titan
 					graphical_culture = mammalian_01
 				}
 			}
