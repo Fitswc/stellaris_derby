@@ -746,6 +746,8 @@ ship_design = {
 
 
 
+##Ec2
+
 # Planet Destroyer
 ship_design = {
 	name = "NAME_Enforcer_Plus"
@@ -805,15 +807,15 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_LARGE_MJR_LASER"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "UMA_MEDIUM_MJR_LASER"
+			template = "UMA_MASS_ACCELERATOR_MID"
 		}
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "UMA_SMALL_MJR_LASER"
+			template = "UMA_MASS_ACCELERATOR_SMALL"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
@@ -822,11 +824,11 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_UTILITY_1"
-			template = "UMA_ARMOR_L"
+			template = "UMA_TG_ARMOR_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_2"
-			template = "UMA_ARMOR_L"
+			template = "UMA_TG_ARMOR_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_3"
@@ -840,15 +842,15 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_TG_ARCH_WEAPON_L"
 		}
 		component = {
 			slot = "LARGE_GUN_02"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_TG_ARCH_WEAPON_L"
 		}
 		component = {
 			slot = "LARGE_GUN_03"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_TG_ARCH_WEAPON_L"
 		}
 
 		component = {
@@ -861,7 +863,7 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_3"
-			template = "UMA_SHIELD_L"
+			template = "UMA_TG_SHIELD_L"
 		}
 	}
 
@@ -871,7 +873,7 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_LARGE_STRONG_PLASMA"
 		}
 
 
@@ -881,7 +883,7 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "UMA_TWIN_TURBO_BOOSTER"
+			template = "UMA_TG_REACTION_2_BATTLESHIP"
 		}
 	}
 
@@ -905,15 +907,15 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_LARGE_MJR_LASER"
+			template = "UMA_TG_ARCH_WEAPON_L"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_1"
-			template = "UMA_SHIELD_M"
+			template = "UMA_TG_ARMOR_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_2"
-			template = "UMA_SHIELD_M"
+			template = "UMA_TG_SHIELD_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_3"
@@ -926,7 +928,7 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_LARGE_MJR_LASER"
+			template = "UMA_TG_ARCH_WEAPON_L"
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
@@ -934,11 +936,11 @@ ship_design = {
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_1"
-			template = "UMA_ARMOR_M"
+			template = "UMA_TG_ARMOR_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_2"
-			template = "UMA_ARMOR_M"
+			template = "UMA_TG_SHIELD_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_3"
@@ -951,7 +953,7 @@ ship_design = {
 
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
 		}
 	}
 	required_component="HYPER_DRIVE_3"
@@ -979,15 +981,15 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_UTILITY_1"
-			template = "UMA_SHIELD_L"
+			template = "UMA_TG_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_2"
-			template = "UMA_SHIELD_L"
+			template = "UMA_TG_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_3"
-			template = "UMA_SHIELD_L"
+			template = "UMA_TG_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_4"
@@ -1009,15 +1011,15 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_LARGE_MJR_LASER"
+			template = "UMA_STRING_ENERGY_LANCE"
 		}
 		component = {
 			slot = "LARGE_GUN_02"
-			template = "UMA_LARGE_MJR_LASER"
+			template = "UMA_STRING_ENERGY_LANCE"
 		}
 		component = {
 			slot = "LARGE_GUN_03"
-			template = "UMA_LARGE_MJR_LASER"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
 		}
 		component = {
 			slot = "LARGE_GUN_04"
@@ -1025,7 +1027,7 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_1"
-			template = "UMA_SHIELD_L"
+			template = "UMA_TG_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_2"
@@ -1064,7 +1066,7 @@ ship_design = {
 
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "UMA_TWIN_TURBO_BOOSTER"
+			template = "UMA_TG_REACTION_2_TITAN"
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
@@ -1072,11 +1074,11 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "UMA_TWIN_TURBO_BOOSTER"
+			template = "UMA_TG_REACTION_2_TITAN"
 		}
 	}
 	required_component = "HYPER_DRIVE_3"
-	required_component = "COMBAT_COMPUTER_SWARM_ADVANCED"
+	required_component = "UMA_COMBAT_APPROACHING_SHADOW"
 	required_component = "SHIP_THRUSTER_4"
 	required_component = "SENSOR_4"
 	required_component = "CORVETTE_ZERO_POINT_REACTOR"
