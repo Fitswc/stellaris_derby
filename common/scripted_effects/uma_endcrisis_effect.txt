@@ -412,6 +412,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 	}
 
 	last_created_fleet = {
+		set_fleet_flag = uma_endcrisis_ec2_attack_fleet
 		fleet_event = {
 			id = uma_ec_2.2
 			days = 1

@@ -102,6 +102,18 @@ country_event = {
 						uma_endcrisis_ec2_spawn_defend_platform = {
 							COUNT = 1
 						}
+
+						fleet = {
+							fleet_event = {
+								id = uma_ec_2.7
+								days = 2
+							}
+
+							fleet_event = {
+								id = uma_ec_2.8
+								days = 2
+							}
+						}
 					}
 				}
 			}
@@ -127,18 +139,6 @@ country_event = {
 
 						uma_endcrisis_ec2_spawn_defend_platform = {
 							COUNT = 1
-						}
-
-						fleet = {
-							fleet_event = {
-								id = uma_ec_2.7
-								days = 2
-							}
-
-							fleet_event = {
-								id = uma_ec_2.8
-								days = 2
-							}
 						}
 					}
 				}
@@ -253,12 +253,12 @@ fleet_event = {
 
 					}
 					found_system = {
-						move_to = this
 						effect = {
 							id = uma_ec_2.2.e1
 
 							set_star_flag = uma_ec_2.2.e1.our_fleet_is_local_here
 						}
+						move_to = this
 
 						repeat = {
 							while = {
