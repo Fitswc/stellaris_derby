@@ -95,7 +95,7 @@ country_event = {
 			solar_system = {
 				create_starbase = {
 					size = starbase_fe_outpost
-	#				design = NAME_FE_Starbase
+					#				design = NAME_FE_Starbase
 					owner = event_target:uma_fallen_empire
 					effect = {
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire
@@ -120,7 +120,7 @@ country_event = {
 			solar_system = {
 				create_starbase = {
 					size = starbase_marauder
-	#				design = NAME_FE_Starbase
+					#				design = NAME_FE_Starbase
 					owner = event_target:uma_fallen_empire
 					effect = {
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire
@@ -517,6 +517,13 @@ fleet_event = {
 		}
 		set_update_modifiers_batch = end
 	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_2.13
+			days = 200
+		}
+	}
 }
 
 fleet_event = {
@@ -529,6 +536,13 @@ fleet_event = {
 		#PD Cracker Fleet Spawn
 		uma_endcrisis_ec2_spawn_fleet_planet_destroyer = yes
 		set_update_modifiers_batch = end
+	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_2.13
+			days = 200
+		}
 	}
 }
 
@@ -770,6 +784,46 @@ fleet_event = {
 		root.owner = {
 			country_event = {
 				id = uma_ec_2.29
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_2.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		random_system = {
+			limit = {
+				exists = starbase
+				has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
+				starbase = {
+					is_owned_by = event_target:uma_fallen_empire
+				}
+			}
+
+			log = "THIS TIME, UMA_FE FLEETS WILL SPAWN AT [THIS.GetName]"
+
+			starbase = {
+				fleet = {
+					fleet = {
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 2
+						}
+
+						fleet_event = {
+							id = uma_ec_2.8
+							days = 2
+						}
+					}
+				}
 			}
 		}
 	}
