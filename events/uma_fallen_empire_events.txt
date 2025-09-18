@@ -27,48 +27,48 @@ event = {
 
 ###创建马娘堕落帝国
 country_event = {
-    id = uma_fallen_empire.1
-    hide_window = yes
-    is_triggered_only = yes
-    fire_only_once = yes
+	id = uma_fallen_empire.1
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
 
-    trigger = {
-        is_country_type = global_event
-#        any_country = {
-#            is_ai = no
-#            has_authority = auth_trainingcenter
-#        }
-        any_country = {
-            NOT = { has_country_flag = uma_is_uma_fallen_empire }
-        }
-        NOT = { has_global_flag = uma_has_created_uma_fallen_empire } 
-    }
+	trigger = {
+		is_country_type = global_event
+		#        any_country = {
+		#            is_ai = no
+		#            has_authority = auth_trainingcenter
+		#        }
+		any_country = {
+			NOT = { has_country_flag = uma_is_uma_fallen_empire }
+		}
+		NOT = { has_global_flag = uma_has_created_uma_fallen_empire }
+	}
 
-    immediate = {
-        set_global_flag = uma_has_created_uma_fallen_empire
-        create_species = {
-            name = "NAME_uma_fallen_empire_species_name"
+	immediate = {
+		set_global_flag = uma_has_created_uma_fallen_empire
+		create_species = {
+			name = "NAME_uma_fallen_empire_species_name"
 			plural = "NAME_uma_fallen_empire_species_plural"
 			class = "umamusume"
 			portrait = "umamusume"
-            name_list = "UMAname"
+			name_list = "UMAname"
 			traits = {
 				trait = uma_trait_musume
 				trait = uma_trait_int2
 				trait = uma_trait_urbancitizens
 				trait = trait_uma_terriroty_awake
-				
+
 			}
-            immortal = yes
-            effect = {
-                save_global_event_target_as = uma_fallen_empire_species
+			immortal = yes
+			effect = {
+				save_global_event_target_as = uma_fallen_empire_species
 				change_species_characteristics = {
 					gender = female
 				}
-            }
-        }
+			}
+		}
 
-        create_country = {
+		create_country = {
 			name = "NAME_uma_fallen_empire_name"
 			type = uma_fallen_empire
 			ignore_initial_colony_error = yes
@@ -122,14 +122,9 @@ country_event = {
 					uma_crystal_carrot = 50000
 					influence = 500
 				}
-				add_global_ship_design = "NAME_Enforcer"
-				add_global_ship_design = "NAME_Savant"
-				add_global_ship_design = "NAME_Scholar"
-				add_global_ship_design = "NAME_Sage"
-				add_global_ship_design = "NAME_Cloaker"
-				add_global_ship_design = "NAME_Librarian"
-				add_global_ship_design = "NAME_Seeker"
-				add_global_ship_design = "NAME_FE_Starbase"
+
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+				add_ship_design = last_created_design
 
 				###因为未知原因，1里面无法更改领袖立绘。放到2里试试
 				create_leader = {
@@ -160,23 +155,16 @@ country_event = {
 					set_age = 185
 					immortal = yes
 				}
-
-
-
 			}
-
 		}
-
 		###这里才是最重要的！
 		last_created_country = {
 			save_global_event_target_as = uma_fallen_empire
-#			set_graphical_culture = fallen_empire_03
-#			uma_fallen_empire_create_ship_designs = yes
+			#			set_graphical_culture = fallen_empire_03
+			#			uma_fallen_empire_create_ship_designs = yes
 			country_event = { id = uma_fallen_empire.2 }  ##用刚产生的堕落触发事件，只有用堕落scope触发事件，产生星系，这个星系才能在设置主人的时候自动划给堕落
 		}
-
-    }
-
+	}
 }
 
 

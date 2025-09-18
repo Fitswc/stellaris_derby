@@ -100,7 +100,7 @@ country_event = {
 					effect = {
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire
 						uma_endcrisis_ec2_spawn_defend_platform = {
-							COUNT = 1
+							COUNT = 2
 						}
 
 						fleet = {
@@ -110,8 +110,8 @@ country_event = {
 							}
 
 							fleet_event = {
-								id = uma_ec_2.8
-								days = 2
+								id = uma_ec_2.7
+								days = 3
 							}
 						}
 					}
@@ -200,10 +200,6 @@ country_event = {
 						days = 2
 					}
 
-					fleet_event = {
-						id = uma_ec_2.8
-						days = 2
-					}
 				}
 			}
 		}
@@ -295,6 +291,26 @@ fleet_event = {
 											days = 8
 										}
 									}
+
+									find_closest_planet = {
+										trigger = {
+											id = uma_ec_2.2.t4
+											is_colonizable = yes
+											is_colony = yes
+										}
+										found_planet = {
+											orbit_planet = this
+
+											effect = {
+												id = uma_ec_2.2.e3
+
+												planet_event = {
+													id = uma_ec_2.4
+													days = 100
+												}
+											}
+										}
+									}
 								}
 							}
 							move_to = this
@@ -344,79 +360,16 @@ planet_event = {
 	}
 }
 
-#Planet_destroyer Actionss
-fleet_event = {
+#Planet_destroy Actionss
+planet_event = {
 	id = uma_ec_2.4
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		queue_actions = {
-			repeat = {
-				find_closest_system = {
-					trigger = {
-						id = uma_ec_2.4.t1
+		destroy_colony = yes
 
-						exists = starbase
-						starbase = {
-							is_owned_by = event_target:uma_fallen_empire
-						}
-						NOT = {
-							has_star_flag = uma_ec_2.2.e1.our_PD_fleet_is_local_here
-						}
-					}
-
-					found_system = {
-						move_to = this
-						effect = {
-							id = uma_ec_2.4.e1
-
-							set_star_flag = uma_ec_2.2.e1.our_PD_fleet_is_local_here
-						}
-
-						repeat = {
-							while = {
-								id = uma_ec_2.4.t2
-
-								any_system_planet = {
-									is_colony = no
-								}
-							}
-
-							find_closest_planet = {
-								trigger = {
-									id = uma_ec_2.4.t3
-
-									is_colony = yes
-
-								}
-
-								found_planet = {
-									destroy_planet = {
-										target = this
-										skip_rules = yes
-										skip_fire_phase = no
-										skip_windup_phase = no
-									}
-									effect = {
-										id = uma_ec_2.4.e2
-
-										solar_system = {
-											remove_star_flag = uma_ec_2.2.e1.our_PD_fleet_is_local_here
-										}
-									}
-								}
-							}
-						}
-					}
-					failed = {
-						wait = {
-							duration = 300
-						}
-					}
-				}
-			}
-		}
+		change_pc = pc_molten
 	}
 }
 
@@ -511,10 +464,9 @@ fleet_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		#生成进攻舰队
-		while = {
-			count = 2
-			uma_endcrisis_ec2_spawn_fleet_attack = yes
-		}
+
+		uma_endcrisis_ec2_spawn_fleet_attack = yes
+
 		set_update_modifiers_batch = end
 	}
 
@@ -526,25 +478,6 @@ fleet_event = {
 	}
 }
 
-fleet_event = {
-	id = uma_ec_2.8
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		set_update_modifiers_batch = begin
-		#PD Cracker Fleet Spawn
-		uma_endcrisis_ec2_spawn_fleet_planet_destroyer = yes
-		set_update_modifiers_batch = end
-	}
-
-	after = {
-		fleet_event = {
-			id = uma_ec_2.13
-			days = 200
-		}
-	}
-}
 
 #When Occupied Fe empire system
 system_event = {
@@ -815,11 +748,6 @@ fleet_event = {
 					fleet = {
 						fleet_event = {
 							id = uma_ec_2.7
-							days = 2
-						}
-
-						fleet_event = {
-							id = uma_ec_2.8
 							days = 2
 						}
 					}

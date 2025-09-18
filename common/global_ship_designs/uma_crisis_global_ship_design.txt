@@ -748,53 +748,6 @@ ship_design = {
 
 ##Ec2
 
-# Planet Destroyer
-ship_design = {
-	name = "NAME_Enforcer_Plus"
-	ship_size = colossus
-	is_event_design = yes
-	country_type = uma_ec2_empire
-	section = {
-		template = "SHIP_COLOSSUS_SECTION"
-		slot = "ship"
-
-		component = {
-			slot = "PLANET_KILLER_GUN_01"
-			template = "PLANET_KILLER_CRACKER"
-		}
-		component = {
-			slot = "LARGE_UTILITY_1"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
-		}
-		component = {
-			slot = "LARGE_UTILITY_2"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
-		}
-		component = {
-			slot = "LARGE_UTILITY_3"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
-		}
-		component = {
-			slot = "LARGE_UTILITY_4"
-			template = "LARGE_ARMOR_5"
-		}
-		component = {
-			slot = "LARGE_UTILITY_5"
-			template = "LARGE_ARMOR_5"
-		}
-		component = {
-			slot = "LARGE_UTILITY_6"
-			template = "LARGE_ARMOR_5"
-		}
-	}
-	required_component="SENSOR_4"
-	required_component="JUMP_DRIVE_1"
-	required_component="COLOSSUS_DARK_MATTER_REACTOR"
-	required_component="COLOSSUS_SHIP_THRUSTER_5"
-}
-
-
-
 ship_design = {
 	name = "NAME_UMA_EC2_BB"
 	ship_size = battleship
