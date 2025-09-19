@@ -20,6 +20,24 @@ uma_fallen_empire_system_initializer = {
         orbit_distance = 0
         orbit_angle = random
 		init_effect = {
+			if = {
+				limit = {
+					exists = starbase
+				}
+				starbase = {
+					fleet = {
+						delete_fleet = this
+					}
+				}
+			}
+			create_starbase = {
+				owner = event_target:uma_fallen_empire
+				size = starbase_marauder
+				effect = {
+				}
+			}
+
+
 			create_ambient_object = {
 				type = "abandoned_station_object"
 				location = this
@@ -91,6 +109,14 @@ uma_fallen_empire_system_initializer_1 = {
 		orbit_distance = 0
 		orbit_angle = 0
 		init_effect = {
+
+			create_starbase = {
+				size = starbase_marauder
+				owner = event_target:uma_fallen_empire
+				effect = {
+
+				}
+			}
 
 			create_fleet = {
 				effect = {
@@ -366,6 +392,12 @@ uma_fallen_empire_system_initializer_2 = {
 		flags = { uma_is_fallen_empire_school_star_2 }
 
 		init_effect = {
+			create_starbase = {
+				owner = event_target:uma_fallen_empire
+				size = starbase_marauder
+				effect = {
+				}
+			}
 			save_global_event_target_as = uma_fallen_empire_school_star_1
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -561,6 +593,16 @@ uma_fallen_empire_system_initializer_3 = {
 
 
 	init_effect = {
+		if = {
+			limit = {
+				exists = starbase
+			}
+			starbase = {
+				fleet = {
+					delete_fleet = this
+				}
+			}
+		}
 		#set_owner = event_target:uma_fallen_empire
 		#set_controller = event_target:uma_fallen_empire
         create_fe_citadel = yes

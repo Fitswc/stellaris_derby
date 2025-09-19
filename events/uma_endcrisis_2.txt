@@ -100,7 +100,7 @@ country_event = {
 					effect = {
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire
 						uma_endcrisis_ec2_spawn_defend_platform = {
-							COUNT = 2
+							COUNT = 3
 						}
 
 						fleet = {
@@ -138,7 +138,7 @@ country_event = {
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire
 
 						uma_endcrisis_ec2_spawn_defend_platform = {
-							COUNT = 1
+							COUNT = 2
 						}
 					}
 				}
@@ -291,30 +291,10 @@ fleet_event = {
 											days = 8
 										}
 									}
-
-									find_closest_planet = {
-										trigger = {
-											id = uma_ec_2.2.t4
-											is_colonizable = yes
-											is_colony = yes
-										}
-										found_planet = {
-											orbit_planet = this
-
-											effect = {
-												id = uma_ec_2.2.e3
-
-												planet_event = {
-													id = uma_ec_2.4
-													days = 100
-												}
-											}
-										}
-									}
 								}
 							}
 							move_to = this
-							wait = {duration = 10 random = 5}
+							wait = { duration = 10 random = 5 }
 						}
 						wait = { duration = 10 random = 5 }
 					}
@@ -349,10 +329,20 @@ planet_event = {
 		set_update_modifiers_batch = begin
 		solar_system = {
 			remove_star_flag = uma_ec_2.2.e1.our_fleet_is_local_here #走后移除
+
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+				}
+				planet_event = {
+					id = uma_ec_2.4
+					days = 20
+				}
+			}
 		}
 		create_starbase = {
 			owner = event_target:uma_fallen_empire
-			size = starbase_fe_outpost
+			size = starbase_marauder
 			effect = {
 			}
 		}
@@ -365,6 +355,12 @@ planet_event = {
 	id = uma_ec_2.4
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = uma_ec_2_disable_scan_andkill_from_fe_capitial
+		}
+	}
 
 	immediate = {
 		destroy_colony = yes
@@ -437,7 +433,10 @@ system_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_star_flag = uma_fallen_empire_system_initializer
+		OR = {
+			has_star_flag = uma_fallen_empire_system_initializer
+			has_star_flag = uma_fallen_empire_system_initializer_2
+		}
 		From = {
 			is_uma_player_country = yes
 		}
@@ -532,7 +531,7 @@ country_event = {
 				limit = {
 					check_variable = {
 						which = uma_ec2_num_fallen_empires_middle
-						value >= 0.75
+						value >= 0.99
 					}
 				}
 				event_target:uma_fallen_empire = {
@@ -556,11 +555,11 @@ country_event = {
 				limit = {
 					check_variable = {
 						which = uma_ec2_num_fallen_empires_middle
-						value >= 0.50
+						value >= 0.66
 					}
 					check_variable = {
 						which = uma_ec2_num_fallen_empires_middle
-						value < 0.75
+						value < 0.99
 					}
 				}
 
@@ -595,11 +594,11 @@ country_event = {
 				limit = {
 					check_variable = {
 						which = uma_ec2_num_fallen_empires_middle
-						value >= 0.25
+						value >= 0.33
 					}
 					check_variable = {
 						which = uma_ec2_num_fallen_empires_middle
-						value < 0.50
+						value < 0.66
 					}
 				}
 
@@ -667,20 +666,29 @@ fleet_event = {
 
 	trigger = {
 		owner = {
-			is_same_value = event_target:uma_fallen_empire
+			NOT = {
+				is_same_value = event_target:uma_fallen_empire
+			}
 		}
 		NOT = {
 			has_global_flag = uma_ec_2_disable_scan_andkill_from_fe_capitial
 		}
-		From = {
-			has_star_flag = uma_fallen_empire_system_initializer
+		From = { #system
+			OR = {
+				has_star_flag = uma_fallen_empire_system_initializer
+				has_star_flag = uma_fallen_empire_system_initializer_1
+				has_star_flag = uma_fallen_empire_system_initializer_2
+				has_star_flag = uma_fallen_empire_system_initializer_3
+			}
 		}
 	}
 
 	immediate = {
 		every_owned_ship = {
-			damage_ship = 1000
+			damage_ship = 4000
 		}
+
+		log = "000"
 	}
 
 	after = {
@@ -699,7 +707,9 @@ fleet_event = {
 
 	trigger = {
 		owner = {
-			is_same_value = event_target:uma_fallen_empire
+			NOT = {
+				is_same_value = event_target:uma_fallen_empire
+			}
 		}
 		NOT = {
 			has_global_flag = uma_ec_2_disable_scan_andkill_from_fe_capitial
@@ -711,6 +721,8 @@ fleet_event = {
 
 	immediate = {
 		destroy_fleet = This
+
+		log = "111"
 	}
 
 	after = {
