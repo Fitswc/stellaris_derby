@@ -98,6 +98,9 @@ country_event = {
 					#				design = NAME_FE_Starbase
 					owner = event_target:uma_fallen_empire
 					effect = {
+						fleet = {
+							set_fleet_flag = uma_ec2_base_at_every_fe_empire_capital
+						}
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
 						uma_endcrisis_ec2_spawn_defend_platform = {
 							COUNT = 3
@@ -189,9 +192,9 @@ country_event = {
 			limit = {
 				has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
 				exists = starbase
-				starbase = {
-					has_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
-				}
+#				starbase = {
+#					has_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
+#				}
 			}
 			starbase = {
 				fleet = {
@@ -501,7 +504,12 @@ starbase_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
+		OR= {
+			fleet = {
+				has_fleet_flag = uma_ec2_base_at_every_fe_empire_capital
+			}
+			has_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
+		}
 		solar_system = {
 			has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
 		}
