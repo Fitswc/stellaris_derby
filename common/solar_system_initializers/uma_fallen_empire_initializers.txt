@@ -84,7 +84,7 @@ uma_fallen_empire_system_initializer = {
 	# }
 
         init_effect = {
-            create_fe_home_citadel = yes
+#            create_fe_home_citadel = yes
             save_global_event_target_as = uma_fallen_empire_home_system
 			#set_owner = event_target:uma_fallen_empire
 			#set_controller = event_target:uma_fallen_empire
@@ -338,7 +338,7 @@ uma_fallen_empire_system_initializer_1 = {
 
 
 		
-        create_fe_home_citadel = yes
+#        create_fe_home_citadel = yes
 		save_global_event_target_as = uma_fallen_empire_the_guard_system
 
         ###安装矿物和科研站

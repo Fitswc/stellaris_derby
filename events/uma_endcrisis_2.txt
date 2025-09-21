@@ -94,11 +94,11 @@ country_event = {
 			}
 			solar_system = {
 				create_starbase = {
-					size = starbase_fe_outpost
+					size = starbase_marauder
 					#				design = NAME_FE_Starbase
 					owner = event_target:uma_fallen_empire
 					effect = {
-						set_starbase_flag = uma_ec2_base_at_every_fe_empire
+						set_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
 						uma_endcrisis_ec2_spawn_defend_platform = {
 							COUNT = 3
 						}
@@ -190,7 +190,7 @@ country_event = {
 				has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
 				exists = starbase
 				starbase = {
-					has_starbase_flag = uma_ec2_base_at_every_fe_empire
+					has_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
 				}
 			}
 			starbase = {
@@ -237,9 +237,25 @@ fleet_event = {
 						id = uma_ec_2.2.t1
 						OR = {
 							AND = {
-								exists = starbase
-								starbase = { owner = { is_hostile = root.owner } }
-
+								if = {
+									limit = {
+										owner = {
+											is_ai = yes
+										}
+									}
+									is_capital_system = no
+									exists = starbase
+									starbase = { owner = { is_hostile = root.owner } }
+								}
+								else_if = {
+									limit = {
+										owner = {
+											is_ai = no
+										}
+									}
+									exists = starbase
+									starbase = { owner = { is_hostile = root.owner } }
+								}
 							}
 						}
 						ROOT = { can_access_system = prev }
@@ -479,24 +495,20 @@ fleet_event = {
 
 
 #When Occupied Fe empire system
-system_event = {
+starbase_event = {
 	id = uma_ec_2.9
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		has_star_flag = uma_ec2_base_at_every_fe_empire_base_system
-		From = {
-			NOT = {
-				is_same_value = event_target:uma_fallen_empire
-			}
-		}
-		FromFrom = {
-			is_same_value = event_target:uma_fallen_empire
+		has_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
+		solar_system = {
+			has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
 		}
 	}
 
 	immediate = {
+		log = "DECREASED THE COUNTER CLASS EC.9"
 		event_target:global_event_country = {
 			add_variable = {
 				which = uma_ec2_num_fallen_empires_current_be_occupied
@@ -517,6 +529,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		log = "DECREASED THE COUNTER CLASS EC.10"
 		event_target:global_event_country = {
 			set_variable = {
 				which = uma_ec2_num_fallen_empires_middle
@@ -677,7 +690,6 @@ fleet_event = {
 			OR = {
 				has_star_flag = uma_fallen_empire_system_initializer
 				has_star_flag = uma_fallen_empire_system_initializer_1
-				has_star_flag = uma_fallen_empire_system_initializer_2
 				has_star_flag = uma_fallen_empire_system_initializer_3
 			}
 		}
@@ -685,10 +697,10 @@ fleet_event = {
 
 	immediate = {
 		every_owned_ship = {
-			damage_ship = 4000
+			damage_ship = 10000
 		}
 
-		log = "000"
+		log = "UMA-EC2 DAMAGE FLEET [ROOT.GetName]"
 	}
 
 	after = {
@@ -715,14 +727,18 @@ fleet_event = {
 			has_global_flag = uma_ec_2_disable_scan_andkill_from_fe_capitial
 		}
 		From = {
-			has_star_flag = uma_fallen_empire_system_initializer_2
+			OR = {
+				has_star_flag = uma_fallen_empire_system_initializer_2
+				has_star_flag = uma_fallen_empire_system_initializer
+			}
 		}
+
 	}
 
 	immediate = {
 		destroy_fleet = This
 
-		log = "111"
+		log = "UMA EC2 DESTROY FLEET"
 	}
 
 	after = {
