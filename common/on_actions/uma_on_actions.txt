@@ -643,12 +643,13 @@ on_system_occupied = {
 	events = {
 		uma_ec_2.6
 
-		uma_ec_2.9
 	}
 }
 
 on_starbase_destroyed = {
-
+	events = {
+		uma_ec_2.9
+	}
 }
 
 

@@ -207,6 +207,22 @@ country_event = {
 			}
 		}
 
+
+		every_system = {
+			limit = {
+				has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
+				exists = starbase
+
+				starbase = {
+					owner = {
+						is_country_type = uma_ec2_empire
+					}
+				}
+			}
+			starbase = {
+				set_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
+			}
+		}
 		set_update_modifiers_batch = end
 	}
 
