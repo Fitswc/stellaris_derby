@@ -634,20 +634,11 @@ on_starbase_destroyed = {
 }
 
 
-
-
-# THIS = System: system being occupied
-# FROM = Country: Conqueror of the system
-# FROMFROM = Country: Original owner of the system
-on_system_occupied = {
-	events = {
-		uma_ec_2.6
-
-	}
-}
-
+# This = starbase being destroyed (not ship!)
+# From = fleet that destroyed the starbase
 on_starbase_destroyed = {
 	events = {
+		uma_ec_2.6
 		uma_ec_2.9
 	}
 }
