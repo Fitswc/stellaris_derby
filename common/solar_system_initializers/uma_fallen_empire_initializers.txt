@@ -603,9 +603,15 @@ uma_fallen_empire_system_initializer_3 = {
 				}
 			}
 		}
+		create_starbase = {
+			owner = event_target:uma_fallen_empire
+			size = starbase_marauder
+			effect = {
+			}
+		}
 		#set_owner = event_target:uma_fallen_empire
 		#set_controller = event_target:uma_fallen_empire
-        create_fe_citadel = yes
+#        create_fe_citadel = yes
 		save_global_event_target_as = uma_fallen_empire_the_forgotten_system
         every_system_planet = {
             limit = {
