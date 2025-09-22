@@ -4,18 +4,118 @@
 #Override
 
 
+#defined_text = {
+#	name = LeaderTierName
+#	random = no
+#	text = {
+#		trigger = {
+#			has_leader_flag = renowned_leader
+#		}
+#		localization_key = CLASS_TIER_RENOWNED
+#	}
+#	text = {
+#		trigger = {
+#			has_leader_flag = legendary_leader
+#			NOT = {
+#				OR = {
+#					has_leader_flag = uma_is_deep
+#					has_leader_flag = uma_is_oguri_cap
+#					has_leader_flag = uma_is_agnes_digital
+#					has_leader_flag = uma_is_seiun_sky
+#					has_leader_flag = uma_is_tokai_teio
+#					has_leader_flag = uma_is_cheval_grand
+#					##DDOD-Sub
+#					has_leader_flag = Jantis_leader
+#				}
+#			}
+#		}
+#		localization_key = CLASS_TIER_LEGENDARY
+#	}
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_deep
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_DEEP
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_oguri_cap
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_OGURI
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_agnes_digital
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_DID
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_seiun_sky
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_SKY
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_tokai_teio
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_TET
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_cheval_grand
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_CHEVAL
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = Jantis_leader
+#			}
+#		}
+#		localization_key = UMA_CLASS_TIER_JANTIS
+#	}
+#
+#	default = LEADER_CLASS_TEXT
+#}
+
 defined_text = {
 	name = LeaderTierName
 	random = no
 	text = {
 		trigger = {
-			has_leader_flag = renowned_leader
+			is_leader_tier = leader_tier_renowned
 		}
 		localization_key = CLASS_TIER_RENOWNED
 	}
 	text = {
 		trigger = {
-			has_leader_flag = legendary_leader
+			is_leader_tier = leader_tier_legendary
 			NOT = {
 				OR = {
 					has_leader_flag = uma_is_deep
@@ -34,7 +134,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				his_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_deep
 			}
 		}
@@ -44,7 +144,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_oguri_cap
 			}
 		}
@@ -54,7 +154,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_agnes_digital
 			}
 		}
@@ -64,7 +164,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_seiun_sky
 			}
 		}
@@ -74,7 +174,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_tokai_teio
 			}
 		}
@@ -84,7 +184,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_cheval_grand
 			}
 		}
@@ -94,7 +194,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = Jantis_leader
 			}
 		}
@@ -104,18 +204,118 @@ defined_text = {
 	default = LEADER_CLASS_TEXT
 }
 
+#defined_text = {
+#	name = ClassPrefix
+#	random = no
+#	text = {
+#		trigger = {
+#			has_leader_flag = renowned_leader
+#		}
+#		localization_key = CLASS_PREFIX_RENOWNED
+#	}
+#	text = {
+#		trigger = {
+#			has_leader_flag = legendary_leader
+#			NOT = {
+#				OR = {
+#					has_leader_flag = uma_is_deep
+#					has_leader_flag = uma_is_oguri_cap
+#					has_leader_flag = uma_is_agnes_digital
+#					has_leader_flag = uma_is_seiun_sky
+#					has_leader_flag = uma_is_tokai_teio
+#					has_leader_flag = uma_is_cheval_grand
+#					has_leader_flag = Jantis_leader
+#				}
+#			}
+#		}
+#		localization_key = CLASS_PREFIX_LEGENDARY
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_deep
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_DEEP
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_oguri_cap
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_OGURI
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_agnes_digital
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_DID
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_seiun_sky
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_SKY
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_tokai_teio
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_TET
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = uma_is_cheval_grand
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_CHEVAL
+#	}
+#
+#	text = {
+#		trigger = {
+#			AND = {
+#				has_leader_flag = legendary_leader
+#				has_leader_flag = Jantis_leader
+#			}
+#		}
+#		localization_key = UMA_CLASSPrefix_TIER_JANTIS
+#	}
+#
+#	default = CLASS_PREFIX_NONE
+#}
+
 defined_text = {
 	name = ClassPrefix
 	random = no
 	text = {
 		trigger = {
-			has_leader_flag = renowned_leader
+			is_leader_tier = leader_tier_renowned
 		}
 		localization_key = CLASS_PREFIX_RENOWNED
 	}
 	text = {
 		trigger = {
-			has_leader_flag = legendary_leader
+			is_leader_tier = leader_tier_legendary
 			NOT = {
 				OR = {
 					has_leader_flag = uma_is_deep
@@ -130,11 +330,10 @@ defined_text = {
 		}
 		localization_key = CLASS_PREFIX_LEGENDARY
 	}
-
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				his_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_deep
 			}
 		}
@@ -144,7 +343,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_oguri_cap
 			}
 		}
@@ -154,7 +353,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				his_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_agnes_digital
 			}
 		}
@@ -164,7 +363,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_seiun_sky
 			}
 		}
@@ -174,7 +373,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_tokai_teio
 			}
 		}
@@ -184,7 +383,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_cheval_grand
 			}
 		}
@@ -194,7 +393,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				has_leader_flag = legendary_leader
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = Jantis_leader
 			}
 		}

@@ -1058,7 +1058,7 @@ country_event = {
 				set_leader_flag = uma_is_zf
 				save_global_event_target_as = uma_is_leader_zf
 				change_leader_portrait = GLX_ZF
-				set_leader_flag = legendary_leader
+				#set_leader_flag = legendary_leader
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER

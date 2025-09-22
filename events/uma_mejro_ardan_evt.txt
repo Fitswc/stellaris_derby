@@ -527,7 +527,7 @@ country_event = {
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_mejro_ardan
 				save_global_event_target_as = uma_is_leader_mejro_ardan
-				set_leader_flag = legendary_leader
+				#set_leader_flag = legendary_leader
 				add_experience = 30000
 			}
 			create_message = {
