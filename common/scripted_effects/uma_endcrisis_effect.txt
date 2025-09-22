@@ -387,7 +387,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 
 
 			while = {
-				count = 2
+				count = 1
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC2_Titan
