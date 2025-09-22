@@ -337,6 +337,9 @@ country_event = {
 				}
 			}
 			starbase = {
+				fleet = {
+					set_fleet_flag = uma_fallen_empire_system_starbase
+				}
 				set_starbase_flag = uma_fallen_empire_system_starbase
 			}
 		}
