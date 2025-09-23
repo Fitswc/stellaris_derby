@@ -920,7 +920,7 @@ country_event = {
 				uma_initialize_leader_yaruki_effect = yes
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_zephyr
-				set_leader_flag = legendary_leader
+				#set_leader_flag = legendary_leader
 				save_global_event_target_as = uma_is_leader_zephyr
 				change_leader_portrait = 84c
 			}

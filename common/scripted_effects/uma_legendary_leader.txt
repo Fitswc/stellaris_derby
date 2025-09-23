@@ -8,6 +8,7 @@ uma_create_leader_deep = {
 		class = official
 		set_age = 17
 		skill = 1
+		tier = leader_tier_legendary
 		immortal = yes
 		background_planet = event_target:uma_fallen_empire_school_star_1
 		background_job = government_employee
@@ -25,7 +26,7 @@ uma_create_leader_deep = {
 			set_leader_flag = uma_is_deep
 			save_global_event_target_as = uma_is_leader_deep
 			change_leader_portrait = DEEP_COMMUNICATION
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 #			exile_leader_as = uma_is_leader_deep
 #			set_leader_flag = leader_death_events_blocked
 		}
@@ -40,6 +41,7 @@ uma_create_leader_oc = {
 		species = root
 		event_leader = no
 		gender = female
+		tier = leader_tier_legendary
 		class = official
 		skill = 1
 		set_age = 18
@@ -59,7 +61,7 @@ uma_create_leader_oc = {
 			set_leader_flag = uma_is_oguri_cap
 			save_global_event_target_as = uma_is_leader_oguri_cap
 			change_leader_portrait = "06c"
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 		}
 	}
 }
@@ -74,6 +76,7 @@ uma_create_leader_did = {
 		class = official
 		set_age = 18
 		skill = 1
+		tier = leader_tier_legendary
 		immortal = yes
 		background_planet = event_target:uma_player_umamusume_planet
 		background_job = uma_trainer
@@ -92,7 +95,7 @@ uma_create_leader_did = {
 			set_leader_flag = uma_is_agnes_digital
 			save_global_event_target_as = uma_agnes_digital_governor
 			change_leader_portrait = "19c"
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 		}
 	}
 }
@@ -113,6 +116,7 @@ uma_create_leader_ty = {
 		custom_description = uma_ty_backstory
 		#background_ethic = ethic_pacifist
 		skip_background_generation = yes
+		tier = leader_tier_legendary
 		traits = {
 			0 = uma_scientist_trait_sp_tachyon
 			4 = leader_trait_uma_generic
@@ -123,7 +127,7 @@ uma_create_leader_ty = {
 			set_leader_flag = uma_is_tachyon
 			save_global_event_target_as = uma_is_leader_tachyon
 			change_leader_portrait = "30c"
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 		}
 	}
 }
@@ -137,6 +141,7 @@ uma_create_leader_sky_admiral = {
 		event_leader = no
 		gender = female
 		class = commander
+		tier = leader_tier_legendary
 		skill = 1
 		set_age = 18
 		custom_catch_phrase = uma_special_leader_seiun_sky_catch_phrase
@@ -156,7 +161,7 @@ uma_create_leader_sky_admiral = {
 			set_leader_flag = uma_is_seiun_sky
 			set_leader_flag = uma_is_ar_seiun_sky
 			save_global_event_target_as = uma_is_leader_seiun_sky
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 		}
 	}
 }
@@ -212,6 +217,7 @@ uma_create_leader_teio_governor = {
 		#background_ethic = ethic_pacifist
 		skip_background_generation = yes
 		skill = 1
+		tier = leader_tier_legendary
 		set_age = 17
 		traits = {
 			1 = uma_governor_trait_sp_teio_gov
@@ -222,7 +228,7 @@ uma_create_leader_teio_governor = {
 			save_global_event_target_as = uma_is_teio_governor
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tokai_teio
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			#########
 			set_leader_flag = uma_is_gov_tokai_teio
 			#########
@@ -251,6 +257,7 @@ uma_create_leader_teio_admiral = {
 		skip_background_generation = yes
 		skill = 1
 		set_age = 17
+		tier = leader_tier_legendary
 		traits = {
 			2 = uma_governor_trait_sp_teio_adr
 			1 = uma_governor_trait_sp_teio_heart_adr
@@ -260,7 +267,7 @@ uma_create_leader_teio_admiral = {
 			save_global_event_target_as = uma_is_teio_admiral
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tokai_teio
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			#########
 			set_leader_flag = uma_is_adr_teio
 			#########
@@ -286,6 +293,7 @@ uma_create_leader_teio_scientist = {
 		#custom_description = uma_deep_backstory
 		#background_ethic = ethic_pacifist
 		skip_background_generation = yes
+		tier = leader_tier_legendary
 		skill = 1
 		set_age = 17
 		traits = {
@@ -297,7 +305,7 @@ uma_create_leader_teio_scientist = {
 			save_global_event_target_as = uma_is_teio_scientist
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tokai_teio
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			#########
 			set_leader_flag = uma_is_sci_teio
 			#########
@@ -324,6 +332,7 @@ uma_create_leader_zf = {
 		custom_description = uma_zf_backstory
 		#background_ethic = ethic_pacifist
 		skip_background_generation = yes
+		tier = leader_tier_legendary
 		traits = {
 			1 = uma_scientists_trait_sp_zf_empire
 			3 = uma_scientists_trait_sp_zf_girl
@@ -336,7 +345,7 @@ uma_create_leader_zf = {
 			set_leader_flag = uma_is_zf
 			save_global_event_target_as = uma_is_leader_zf
 			change_leader_portrait = GLX_ZF
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 #			exile_leader_as = uma_is_leader_deep
 #			set_leader_flag = leader_death_events_blocked
 		}
@@ -360,6 +369,7 @@ uma_create_leader_cheval = {
 		skip_background_generation = yes
 		skill = 1
 		set_age = 16
+		tier = leader_tier_legendary
 		traits = {
 			2 = leader_trait_shekong_generic
 			1 = uma_governor_trait_sp_cheval
@@ -369,7 +379,7 @@ uma_create_leader_cheval = {
 
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_cheval_grand
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_cheval_grand
 			change_leader_portrait = 76c
 		}
@@ -393,6 +403,7 @@ uma_create_leader_sweepy = {
 		skip_background_generation = yes
 		skill = 1
 		set_age = 15
+		tier = leader_tier_legendary
 		traits = {
 			0 = uma_scientists_trait_sp_sweep
 			1 = leader_trait_uma_generic
@@ -400,7 +411,7 @@ uma_create_leader_sweepy = {
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_sweepy_tonson
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_sweepy_tonson
 			change_leader_portrait = 56c
 		}
@@ -425,6 +436,7 @@ uma_create_leader_ardan = {
 		skip_background_generation = yes
 		skill = 1
 		set_age = 15
+		tier = leader_tier_legendary
 		traits = {
 			0 = leader_trait_uma_generic
 			1 = uma_scientist_trait_sp_Ardan_cap
@@ -434,7 +446,7 @@ uma_create_leader_ardan = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_mejro_ardan
 			save_global_event_target_as = uma_is_leader_mejro_ardan
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			change_leader_portrait = 49c
 		}
 	}
@@ -457,6 +469,7 @@ uma_create_leader_curren = {
 
 		skip_background_generation = yes
 		skill = 1
+		tier = leader_tier_legendary
 		set_age = 15
 		traits = {
 			0 = leader_trait_uma_generic
@@ -465,7 +478,7 @@ uma_create_leader_curren = {
 
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_curren_chan
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_curren_chan
 			change_leader_portrait = 34c
 		}
@@ -489,6 +502,7 @@ uma_create_leader_zephyr = {
 		skip_background_generation = yes
 		skill = 1
 		set_age = 15
+		tier = leader_tier_legendary
 		traits = {
 			0 = uma_official_trait_sp_zephyr
 			1 = uma_governor_trait_charmleader
@@ -498,7 +512,7 @@ uma_create_leader_zephyr = {
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_zephyr
-			set_leader_flag = legendary_leader
+#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_zephyr
 			change_leader_portrait = 84c
 		}

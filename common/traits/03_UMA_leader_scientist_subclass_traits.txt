@@ -70,7 +70,7 @@ leader_trait_juechen_scientists_2 = {
 		ship_speed_mult = 1.0
 		ship_disengage_chance_mult = 1.0
 		ship_disengage_opportunities_add = 2
-		ship_hull_mult = 2
+		ship_hull_set = 1000
 	}
 	leader_class = { scientist }
 }
@@ -764,7 +764,7 @@ leader_trait_tianming1_scientists = {
 		weight = 200
 		modifier = {
 			has_trait = subclass_xiantoudefengjing_scientists
-			mult = 2
+			set = 1000
 		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
@@ -800,7 +800,7 @@ leader_trait_tianming2_scientists = {
 		weight = 200
 		modifier = {
 			has_trait = subclass_guigen_scientists
-			mult = 2
+			set = 1000
 		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
@@ -839,7 +839,7 @@ leader_trait_tianming3_scientists = {
 		weight = 200
 		modifier = {
 			has_trait = subclass_zuozhou_scientists
-			mult = 2
+			set = 1000
 		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"
@@ -900,7 +900,7 @@ leader_trait_tianming5_scientists = {
 		weight = 200
 		modifier = {
 			has_trait = subclass_xiantoudefengjing_scientists
-			mult = 2
+			set = 1000
 		}
 	}
 	background_icon = "GFX_leader_background_destiny_1"

@@ -30,24 +30,15 @@ uma_umaidol = {
 			society_research = 4
 		}
 		upkeep = {
-			consumer_goods = 3
+			consumer_goods = 4
 		}
 	}
 
 	planet_modifier = {
 		planet_amenities_add = 1000
+		bonus_pop_growth = 0.1
 	}
 
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_pleasure_seeker_empire = yes }
-		}
-		modifier = {
-			logistic_growth_mult = 0.01
-		}
-	}
 
 	weight = {
 		weight = @specialist_job_weight

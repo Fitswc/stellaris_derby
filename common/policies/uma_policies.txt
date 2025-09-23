@@ -204,7 +204,7 @@ uma_trade_policy = {
 		}
 		on_enabled = {
 			set_trade_conversions = {
-				energy = 0.8
+				trade = 0.8
 				uma_crystal_carrot = 0.2
 			}
 		}

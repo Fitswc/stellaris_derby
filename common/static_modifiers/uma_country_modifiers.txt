@@ -68,7 +68,7 @@ uma_six_crown_racing_umamusume = {
 uma_enough_sweets = {
 	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
 
-	logistic_growth_mult = 0.2
+	logistic_growth_mult = 0.15
 	pop_happiness = 0.2
 	country_energy_produces_mult = 0.25
 }
@@ -89,7 +89,7 @@ uma_become_too_fat = {
 
 	planet_jobs_produces_mult = -0.05
 	pop_happiness = -0.15
-	logistic_growth_mult = -0.15
+	logistic_growth_mult = -0.1
 }
 
 #合理营养供给
@@ -105,7 +105,7 @@ uma_subsidy_restaurant = {
 	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
 
 	pop_happiness = 0.05
-	logistic_growth_mult = 0.05
+#	logistic_growth_mult = 0.05
 	country_energy_produces_mult = -0.05
 }
 
@@ -299,7 +299,7 @@ uma_agnes_digital_in_toresen_school = {
 	planet_uma_racing_umamusume_produces_mult = 0.3
 	planet_uma_racing_umamusume_upkeep_mult = 0.1
 	pop_happiness = 0.1
-	logistic_growth_mult = 0.1
+	logistic_growth_mult = 0.05
 }
 
 ####内恰事件链
@@ -351,7 +351,7 @@ uma_gacha_cool_down = {
 ###开运道具
 uma_lucky_items = {
 	planet_jobs_produces_mult = 0.05
-	logistic_growth_mult = 0.05
+	logistic_growth_mult = 0.02
 	pop_happiness = 0.05
 }
 
@@ -397,7 +397,7 @@ uma_different_dimention_observer = {
 
 ###马娘观察日记
 uma_umamusume_diary = {
-	logistic_growth_mult = 0.1
+	logistic_growth_mult = 0.06
 	pop_happiness = 0.05
 	planet_stability_add = 3
 	planet_crime_add = -5
