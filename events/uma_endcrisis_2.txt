@@ -825,11 +825,11 @@ country_event = {
 
 				set_global_flag = uma_ec_2_disable_scan_andkill_from_fe_capitial
 
-				every_playable_country = {
-					limit = {
-						has_event_chain = uma_ec_2_main_evt_chain
-					}
-				}
+#				every_playable_country = {
+#					limit = {
+#						has_event_chain = uma_ec_2_main_evt_chain
+#					}
+#				}
 
 				remove_modifier = uma_fallen_empire_crisis_2_modifier_class_1_hull
 				remove_modifier = uma_fallen_empire_crisis_2_modifier_class_1_speed
@@ -1199,6 +1199,9 @@ country_event = {
 	after = {
 		hidden_effect = {
 			event_target:uma_fallen_empire = {
+				every_owned_fleet = {
+					delete_fleet = this
+				}
 				destroy_country = yes
 			}
 		}
@@ -1215,6 +1218,16 @@ country_event = {
 	option = {
 		name = uma_ec_2.27.a
 		custom_tooltip = uma_ec_2.27.a.tt
+	}
+	option = {
+		name = uma_ec_2.27.b
+		custom_tooltip = uma_ec_2.27.b.tt
+	}
+	option = {
+		name = uma_ec_2.27.c
+		custom_tooltip = uma_ec_2.27.c.tt
+	}
+	after = {
 		hidden_effect = {
 			every_system = {
 				limit = {
@@ -1228,21 +1241,13 @@ country_event = {
 
 				create_starbase = {
 					owner = Root
-					size = starbase_outpost
+					size = starbase_starport
 					effect = {
 
 					}
 				}
 			}
 		}
-	}
-	option = {
-		name = uma_ec_2.27.b
-		custom_tooltip = uma_ec_2.27.b.tt
-	}
-	option = {
-		name = uma_ec_2.27.c
-		custom_tooltip = uma_ec_2.27.c.tt
 	}
 }
 
@@ -1391,7 +1396,7 @@ country_event = {
 			targets = { Root }
 		}
 		add_modifier = {
-			modifier = uma_fallen_empire_enhancement_modifier
+			modifier = uma_fallen_empire_player_enhancement_modifier
 		}
 	}
 }
