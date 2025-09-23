@@ -261,7 +261,7 @@ country_event = {
 
 
 					create_fleet = {
-						name = NAME_UMA_EC2_fleet
+						name = NAME_UMA_EC2_fleet_DEFEND
 						settings = {
 							can_upgrade = no
 							uses_naval_capacity = no
@@ -294,7 +294,7 @@ country_event = {
 
 
 							while = {
-								count = 2
+								count = 1
 								create_ship = {
 									name = random
 									design = NAME_UMA_EC2_Titan
@@ -496,6 +496,9 @@ planet_event = {
 			owner = event_target:uma_fallen_empire
 			size = starbase_marauder
 			effect = {
+				uma_endcrisis_ec2_spawn_defend_platform = {
+					COUNT = 1
+				}
 			}
 		}
 		set_update_modifiers_batch = end
@@ -595,7 +598,7 @@ starbase_event = {
 	}
 
 	immediate = {
-		log = "uma_ec_2.6 HAPPENED"
+		log = "uma_ec_2.6 HAPPENED - THIS CRISIS WILL BE ENDED"
 		From = {
 			owner = {
 				country_event = {
@@ -636,7 +639,7 @@ starbase_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		OR= {
+		OR = {
 			fleet = {
 				has_fleet_flag = uma_ec2_base_at_every_fe_empire_capital
 			}
@@ -649,6 +652,9 @@ starbase_event = {
 
 	immediate = {
 		log = "DECREASED THE COUNTER CLASS EC.9"
+		solar_system = {
+			remove_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
+		}
 		event_target:global_event_country = {
 			add_variable = {
 				which = uma_ec2_num_fallen_empires_current_be_occupied
@@ -656,6 +662,31 @@ starbase_event = {
 			}
 			country_event = {
 				id = uma_ec_2.10
+			}
+		}
+
+		every_country = {
+			limit = {
+				has_event_chain = uma_ec_2_main_evt_chain
+			}
+
+			remove_point_of_interest = uma_ec_2_poi.1
+
+			every_system = {
+				limit = {
+					has_star_flag = uma_ec2_base_at_every_fe_empire_base_system_capital
+				}
+
+				Prev = {
+					create_point_of_interest = {
+						id = uma_ec_2_poi.1
+						name = uma_ec_2_poi.1.name
+						desc = uma_ec_2_poi.1.desc
+						event_chain = uma_ec_2_main_evt_chain
+						location = Prev
+						picture = GFX_evt_uma_endcrisis_ec3_situation_log_detected
+					}
+				}
 			}
 		}
 	}
@@ -1234,18 +1265,5 @@ country_event = {
 
 	option = {
 		name = uma_ec_2.29.a
-	}
-}
-
-
-
-country_event = {
-	id = uma_ec_2.30
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		set_global_flag =  uma_ec_2_disable_scan_andkill_from_fe_capitial
 	}
 }

@@ -51,7 +51,7 @@ country_event = {
 			plural = "NAME_uma_fallen_empire_species_plural"
 			class = "umamusume"
 			portrait = "umamusume"
-			name_list = "UMAname"
+			name_list = "UMAname_EC2"
 			traits = {
 				trait = uma_trait_musume
 				trait = uma_trait_int2
@@ -105,7 +105,7 @@ country_event = {
 					"null"
 				}
 			}
-			name_list = "UMAname"
+			name_list = "UMAname_EC2"
 			origin = "origin_fallen_empire" #要改
 			effect = {
 				set_graphical_culture = fallen_empire_03

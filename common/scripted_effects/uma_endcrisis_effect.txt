@@ -354,7 +354,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 
 
 	create_fleet = {
-		name = NAME_UMA_EC2_fleet
+#		name = NAME_UMA_EC2_fleet
 		 settings = {
             can_upgrade = no
             uses_naval_capacity = no
@@ -423,7 +423,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 			set_fleet_stance = aggressive
 			set_aggro_range_measure_from = self
 			set_aggro_range = 500
-			set_fleet_bombardment_stance = uma_bs_soc
+			set_fleet_bombardment_stance = armageddon
 
 		}
 	}
