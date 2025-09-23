@@ -231,7 +231,7 @@ country_event = {
 			starbase = {
 
 				uma_endcrisis_ec2_spawn_defend_platform = {
-				 	COUNT = 5
+				 	COUNT = 4
 				}
 			}
 		}
@@ -330,12 +330,15 @@ country_event = {
 				}
 			}
 			starbase = {
-				fleet = {
-					set_fleet_flag = uma_fallen_empire_system_starbase
-				}
 				set_starbase_flag = uma_fallen_empire_system_starbase
-				log = "Marked"
 			}
+		}
+
+		every_country = {
+			limit = {
+				has_communications = event_target:uma_is_fe_office
+			}
+			remove_communications = event_target:uma_is_fe_office
 		}
 		set_update_modifiers_batch = end
 	}
@@ -917,11 +920,9 @@ fleet_event = {
 
 			starbase = {
 				fleet = {
-					fleet = {
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 2
-						}
+					fleet_event = {
+						id = uma_ec_2.7
+						days = 2
 					}
 				}
 			}
@@ -1007,7 +1008,7 @@ country_event = {
 						desc = uma_ec_2_poi.1.desc
 						event_chain = uma_ec_2_main_evt_chain
 						location = Prev
-						picture = GFX_evt_uma_kobe
+						picture = GFX_evt_uma_endcrisis_ec3_situation_log_detected
 					}
 				}
 			}
@@ -1067,7 +1068,7 @@ country_event = {
 						desc = uma_ec_2_poi.1.desc
 						event_chain = uma_ec_2_main_evt_chain
 						location = Prev
-						picture = GFX_evt_uma_kobe
+						picture = GFX_evt_uma_endcrisis_ec3_situation_log_detected
 					}
 				}
 			}
@@ -1151,10 +1152,12 @@ country_event = {
 	option = {
 		name = uma_ec_2.26.a
 		response_text = uma_ec_2.26.a.resp
+		is_dialog_only = yes
 	}
 	option = {
 		name = uma_ec_2.26.a
 		response_text = uma_ec_2.26.a.resp
+		is_dialog_only = yes
 	}
 	option = {
 		name = uma_ec_2.26.a
@@ -1179,6 +1182,9 @@ country_event = {
 	#	event_target:uma_fallen_empire_school_star_1 = {
 	#		set_capital = yes
 	#	}
+		event_target:uma_fallen_empire = {
+			destroy_country = yes
+		}
 	}
 	option = {
 		name = uma_ec_2.27.b

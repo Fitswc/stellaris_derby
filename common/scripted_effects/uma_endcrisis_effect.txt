@@ -385,15 +385,32 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 				}
 			}
 
+			random_list = {
+				5 = {
+					while = {
+						count = 1
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC2_Titan
+							graphical_culture = mammalian_01
+						}
+					}
+				}
 
-			while = {
-				count = 1
-				create_ship = {
-					name = random
-					design = NAME_UMA_EC2_Titan
-					graphical_culture = mammalian_01
+				6 = {
+					while = {
+						count = 2
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC2_CV
+							graphical_culture = mammalian_01
+						}
+					}
 				}
 			}
+
+
+
 
 
 			set_location = {

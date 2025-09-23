@@ -392,12 +392,6 @@ uma_fallen_empire_system_initializer_2 = {
 		flags = { uma_is_fallen_empire_school_star_2 }
 
 		init_effect = {
-			create_starbase = {
-				owner = event_target:uma_fallen_empire
-				size = starbase_marauder
-				effect = {
-				}
-			}
 			save_global_event_target_as = uma_fallen_empire_school_star_1
 			prevent_anomaly = yes
 			clear_deposits = yes
