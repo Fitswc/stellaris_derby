@@ -3,6 +3,7 @@ umamusume = {
 	#archetype = BIOLOGICAL
 	portrait_modding = no #whether the portrait can be modified with e.g. genemodding or robomodding
 	archetype = UMA
+	use_climate_preference = no
 	possible = { 
 		authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE }}
 		authority = { NOT = { value = auth_hive_mind text = UMA_SPECIES_CAN_NOT_BE_HIVE_MIND }}
@@ -33,6 +34,7 @@ PRE_UMA = {
 	archetype = PRESAPIENT
 	playable = { always = no }
 	randomized = no
+	use_climate_preference = no
 
 #	portraits = {
 #		"umamusume"

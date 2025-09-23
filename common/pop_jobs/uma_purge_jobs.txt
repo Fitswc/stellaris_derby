@@ -166,7 +166,7 @@ uma_fuel_purge_big = {
 		}
 		upkeep = {
 			trigger = {
-				species = {
+				planet.controller = {
 					is_robotic_species = yes
 				}
 			}
@@ -174,7 +174,7 @@ uma_fuel_purge_big = {
 		}
 		upkeep = {
 			trigger = {
-				species = {
+				planet.controller = {
 					is_organic_species = yes
 				}
 			}

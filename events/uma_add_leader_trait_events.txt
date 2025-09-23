@@ -437,6 +437,7 @@ country_event = {
 
 	trigger = {
 #		has_authority = auth_trainingcenter
+		exists = from
 		from = {
 			owner = {
 				is_species_class = umamusume
