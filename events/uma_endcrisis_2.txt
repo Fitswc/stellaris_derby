@@ -968,6 +968,7 @@ country_event = {
 	id = uma_ec_2.20
 	title = uma_ec_2.20.title
 	desc = uma_ec_2.20.desc
+	picture = GFX_evt_gas_giant_station
 	is_triggered_only = yes
 
 	option = {
@@ -1119,12 +1120,7 @@ country_event = {
 	title = uma_ec_2.23.title
 	desc = uma_ec_2.23.desc
 	is_triggered_only = yes
-	diplomatic = yes
-
-	picture_event_data = {
-		room = traincenter_06_room
-		portrait = C02
-	}
+	picture = GFX_evt_decryption
 
 	option = {
 		name = uma_ec_2.23.a
@@ -1140,6 +1136,7 @@ country_event = {
 	title = uma_ec_2.24.title
 	desc = uma_ec_2.24.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 
 	option = {
@@ -1199,6 +1196,14 @@ country_event = {
 		}
 	}
 
+	after = {
+		hidden_effect = {
+			event_target:uma_fallen_empire = {
+				destroy_country = yes
+			}
+		}
+	}
+
 }
 
 country_event = {
@@ -1210,11 +1215,25 @@ country_event = {
 	option = {
 		name = uma_ec_2.27.a
 		custom_tooltip = uma_ec_2.27.a.tt
-	#	event_target:uma_fallen_empire_school_star_1 = {
-	#		set_capital = yes
-	#	}
-		event_target:uma_fallen_empire = {
-			destroy_country = yes
+		hidden_effect = {
+			every_system = {
+				limit = {
+					OR = {
+						has_star_flag = uma_fallen_empire_system_initializer
+						has_star_flag = uma_fallen_empire_system_initializer_1
+						has_star_flag = uma_fallen_empire_system_initializer_2
+						has_star_flag = uma_fallen_empire_system_initializer_3
+					}
+				}
+
+				create_starbase = {
+					owner = Root
+					size = starbase_outpost
+					effect = {
+
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -1223,6 +1242,7 @@ country_event = {
 	}
 	option = {
 		name = uma_ec_2.27.c
+		custom_tooltip = uma_ec_2.27.c.tt
 	}
 }
 
@@ -1265,5 +1285,113 @@ country_event = {
 
 	option = {
 		name = uma_ec_2.29.a
+	}
+}
+
+planet_event = {
+	id = uma_ec_2.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		 owner = {
+			 is_country_type = default
+		 }
+		 days_passed >= 1 # Prevents log errors upon game start
+		Root = {
+			has_planet_flag = uma_is_fallen_empire_school_star_2
+		}
+	}
+
+
+	immediate = {
+		owner = {
+			country_event = {
+				id = uma_ec_2.31
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_2.31
+	title = uma_ec_2.31.title
+	desc = uma_ec_2.31.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ec_2.31.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ec_2.32
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_2.32
+	title = uma_ec_2.32.title
+	desc = uma_ec_2.32.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_2.32.a
+		custom_tooltip = uma_ec_2.32.a.tt
+		country_event = {
+			id = uma_ec_2.33
+		}
+	}
+	option = {
+		name = uma_ec_2.32.b
+		custom_tooltip = uma_ec_2.32.b.tt
+		country_event = {
+			id = uma_ec_2.33
+		}
+	}
+	option = {
+		name = uma_ec_2.32.b
+		custom_tooltip = uma_ec_2.32.c.tt
+		country_event = {
+			id = uma_ec_2.33
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_2.33
+	title = uma_ec_2.33.title
+	desc = uma_ec_2.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_2.33.a
+		add_timeline_event = {
+			type = timeline_umamusume
+			override_tooltip = "uma_timeline_accept_tg_help_desc"
+			override_text = { "text:uma_timeline_accept_tg_help" }
+			override_texture = { "background_zoom1:GFX_uma_timeline_accept_tg_help" "background_zoom2:GFX_uma_timeline_accept_tg_help_zoom_2" }
+			override_types = { country }
+			override_id = uma_timeline_accept_tg_help
+			targets = { Root }
+		}
+		add_modifier = {
+			modifier = uma_fallen_empire_enhancement_modifier
+		}
 	}
 }
