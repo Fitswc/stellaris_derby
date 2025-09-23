@@ -328,19 +328,13 @@ country_event = {
 #					has_star_flag = uma_fallen_empire_system_initializer
 					has_star_flag = uma_fallen_empire_system_initializer_2
 				}
-				exists = starbase
-
-				starbase = {
-					owner = {
-						is_country_type = uma_ec2_empire
-					}
-				}
 			}
 			starbase = {
 				fleet = {
 					set_fleet_flag = uma_fallen_empire_system_starbase
 				}
 				set_starbase_flag = uma_fallen_empire_system_starbase
+				log = "Marked"
 			}
 		}
 		set_update_modifiers_batch = end
@@ -598,6 +592,7 @@ starbase_event = {
 	}
 
 	immediate = {
+		log = "uma_ec_2.6 HAPPENED"
 		From = {
 			owner = {
 				country_event = {
@@ -1245,6 +1240,6 @@ country_event = {
 
 	immediate = {
 
-		log = "[event_target:global_event_country.uma_ec2_num_fallen_empires_middle]"
+		set_global_flag =  uma_ec_2_disable_scan_andkill_from_fe_capitial
 	}
 }

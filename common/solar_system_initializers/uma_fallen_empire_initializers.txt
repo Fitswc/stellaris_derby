@@ -526,7 +526,25 @@ uma_fallen_empire_system_initializer_2 = {
 
 
 	init_effect = {
-        create_fe_citadel = yes
+		if = {
+			limit = {
+				exists = starbase
+			}
+			starbase = {
+				fleet = {
+					delete_fleet = this
+				}
+			}
+		}
+		create_starbase = {
+			owner = event_target:uma_fallen_empire
+			size = starbase_marauder
+			effect = {
+				uma_endcrisis_ec2_spawn_defend_platform = {
+					COUNT = 5
+				}
+			}
+		}
 		save_global_event_target_as = uma_fallen_empire_the_live_system
         every_system_planet = {
             limit = {
