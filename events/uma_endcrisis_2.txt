@@ -102,8 +102,10 @@ country_event = {
 							set_fleet_flag = uma_ec2_base_at_every_fe_empire_capital
 						}
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire_capital
-						uma_endcrisis_ec2_spawn_defend_platform = {
-							COUNT = 3
+
+						while = {
+							count = 3
+							uma_endcrisis_ec2_spawn_defend_platform = yes
 						}
 
 						fleet = {
@@ -140,8 +142,10 @@ country_event = {
 					effect = {
 						set_starbase_flag = uma_ec2_base_at_every_fe_empire
 
-						uma_endcrisis_ec2_spawn_defend_platform = {
-							COUNT = 2
+						while = {
+							count = 2
+
+							uma_endcrisis_ec2_spawn_defend_platform = yes
 						}
 					}
 				}
@@ -229,9 +233,10 @@ country_event = {
 				has_star_flag = uma_fallen_empire_system_initializer_2
 			}
 			starbase = {
+				while = {
+					count = 4
 
-				uma_endcrisis_ec2_spawn_defend_platform = {
-				 	COUNT = 4
+					uma_endcrisis_ec2_spawn_defend_platform = yes
 				}
 			}
 		}
@@ -241,9 +246,10 @@ country_event = {
 				has_star_flag = uma_fallen_empire_system_initializer
 			}
 			starbase = {
+				while = {
+					count = 4
 
-				uma_endcrisis_ec2_spawn_defend_platform = {
-				 	COUNT = 3
+					uma_endcrisis_ec2_spawn_defend_platform = yes
 				}
 
 				while = {

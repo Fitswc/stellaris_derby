@@ -330,12 +330,11 @@ create_uma_ec3_crisis_platform = {
 }
 
 uma_endcrisis_ec2_spawn_defend_platform = {
-	while = {
-		count = $COUNT$
-		create_ship = {
-			design = "NAME_Cloaker"
-			graphical_culture = owner
-		}
+	optimize_memory
+	create_ship = {
+		name = random
+		design = "NAME_UMA_EC2_ION_CANNON"
+		graphical_culture = fallen_empire_03
 	}
 }
 
@@ -437,14 +436,3 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 	}
 }
 
-
-
-uma_endcrisis_ec2_spawn_defend_platform = {
-	while = {
-		count = $COUNT$
-		create_ship = {
-			design = "NAME_Cloaker"
-			graphical_culture = owner
-		}
-	}
-}
