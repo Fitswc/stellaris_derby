@@ -334,7 +334,7 @@ uma_endcrisis_ec2_spawn_defend_platform = {
 	create_ship = {
 		name = random
 		design = "NAME_UMA_EC2_ION_CANNON"
-		graphical_culture = fallen_empire_03
+		graphical_culture = owner
 	}
 }
 
@@ -366,7 +366,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 			set_owner = event_target:uma_fallen_empire
 			set_fleet_flag = uma_fallen_empire_front_fleet
 			while = {
-				count = 32
+				count = 30
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC2_BB
@@ -376,7 +376,7 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 			assign_leader = last_created_leader
 
 			while = {
-				count = 83
+				count = 80
 				create_ship = {
 					name = random
 					design = NAME_UMA_EC2_CV
@@ -428,6 +428,25 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 	}
 
 	last_created_fleet = {
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+			}
+			add_modifier = { modifier = uma_endcrisis_ec2_fleet_buff_easy }
+		}
+		else_if	 = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+			}
+			add_modifier = {
+				modifier = uma_endcrisis_ec2_fleet_buff_hard
+			}
+		}
 		set_fleet_flag = uma_endcrisis_ec2_attack_fleet
 		fleet_event = {
 			id = uma_ec_2.2

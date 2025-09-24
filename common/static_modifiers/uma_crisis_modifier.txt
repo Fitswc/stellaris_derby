@@ -114,3 +114,32 @@ uma_fallen_empire_crisis_2_modifier_class_3_hull = {
 #Class4 Difficult
 uma_fallen_empire_crisis_2_modifier_class_4 = {
 }
+
+
+uma_starbase_modifier_platform = {
+	starbase_defense_platform_capacity_add = 10
+}
+
+uma_endcrisis_ec2_fleet_buff_easy = {
+	ship_hull_mult = -0.3
+	ship_shield_mult = -0.3
+	ship_weapon_range_mult = -0.2
+	ship_weapon_damage = -0.2
+}
+
+uma_endcrisis_ec2_fleet_buff_hard = {
+	ship_hull_mult = 0.3
+	ship_shield_mult = 0.3
+	ship_weapon_range_mult = 0.2
+	ship_weapon_damage = 0.2
+}
+
+uma_endcrisis_ec2_mainbase_buff_normal = {
+	shipclass_starbase_hull_mult = 0.6
+}
+uma_endcrisis_ec2_mainbase_buff_easy = {
+	shipclass_starbase_hull_mult = 0.4
+}
+uma_endcrisis_ec2_mainbase_buff_hard = {
+	shipclass_starbase_hull_mult = 0.8
+}
