@@ -12,11 +12,17 @@ country_event = {
 		trigger = {
 			exists = event_target:uma_is_leader_oguri_cap
 		}
+		event_target:uma_is_leader_oguri_cap = {
+			set_leader_flag = uma_leader_compound
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.b
 		trigger = {
 			exists = event_target:uma_is_leader_seiun_sky
+		}
+		event_target:uma_is_leader_seiun_sky = {
+			set_leader_flag = uma_leader_compound
 		}
 	}
 	option = {
@@ -24,11 +30,17 @@ country_event = {
 		trigger = {
 			exists = event_target:uma_is_leader_tachyon
 		}
+		event_target:uma_is_leader_tachyon = {
+			set_leader_flag = uma_leader_compound
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.d
 		trigger = {
 			exists = event_target:uma_agnes_digital_governor
+		}
+		event_target:uma_agnes_digital_governor = {
+			set_leader_flag = uma_leader_compound
 		}
 	}
 	option = {
@@ -36,13 +48,40 @@ country_event = {
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 		}
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.f
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 		}
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound
+		}
 	}
+
+	option = {
+		name = uma_leader_cp.1.next
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.2
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.exit
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.2
+	title = uma_leader_cp.1.title
+	desc = uma_leader_cp.1.desc
+	is_triggered_only = yes
+
 	option = {
 		name = uma_leader_cp.1.g
 		trigger = {
@@ -81,13 +120,45 @@ country_event = {
 	option = {
 		name = uma_leader_cp.1.l
 		trigger = {
-
+			OR = {
+				exists = event_target:uma_is_teio_admiral
+				exists = event_target:uma_is_teio_governor
+				exists = event_target:uma_is_teio_scientist
+			}
 		}
 	}
 	option = {
+		name = uma_leader_cp.1.next
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.3
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.previous
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.1
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.exit
+	}
+
+}
+
+country_event = {
+	id = uma_leader_cp.3
+	title = uma_leader_cp.1.title
+	desc = uma_leader_cp.1.desc
+	is_triggered_only = yes
+
+	option = {
 		name = uma_leader_cp.1.m
 		trigger = {
-
+			exists = event_target:uma_is_leader_zf
 		}
 	}
 	option = {
@@ -121,6 +192,35 @@ country_event = {
 		}
 	}
 	option = {
+		name = uma_leader_cp.1.next
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.4
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.previous
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.2
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.exit
+	}
+}
+
+
+country_event = {
+	id = uma_leader_cp.4
+	title = uma_leader_cp.1.title
+	desc = uma_leader_cp.1.desc
+	is_triggered_only = yes
+
+	option = {
 		name = uma_leader_cp.1.s
 		trigger = {
 			exists = event_target:uma_is_leader_mejro_ardan
@@ -150,6 +250,20 @@ country_event = {
 			exists = event_target:uma_is_leader_tachyon
 		}
 	}
+	option = {
+		name = uma_leader_cp.1.previous
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.3
+			}
+		}
+	}
 
+	option = {
+		name = uma_leader_cp.1.exit
+	}
 }
+
+
+##2
 
