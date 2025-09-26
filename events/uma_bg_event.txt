@@ -549,6 +549,27 @@ country_event = {
 				}
 			}
 
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_tokai_teio
+				}
+
+				event_target:uma_is_leader_tokai_teio = {
+					change_leader_portrait = TEIO_COMM
+					set_name = TET
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_zf
+				}
+
+				event_target:uma_is_leader_zf = {
+					change_leader_portrait = GLX_ZF
+					set_name = ZF
+				}
+			}
+
 			###SUB
 			if = {
 				limit = {

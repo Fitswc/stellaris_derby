@@ -9,69 +9,146 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.a
+		trigger = {
+			exists = event_target:uma_is_leader_oguri_cap
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.b
+		trigger = {
+			exists = event_target:uma_is_leader_seiun_sky
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.c
+		trigger = {
+			exists = event_target:uma_is_leader_tachyon
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.d
+		trigger = {
+			exists = event_target:uma_agnes_digital_governor
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.e
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.f
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.g
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.h
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_admiral_nature
+				exists = event_target:uma_is_leader_governor_nature
+				exists = event_target:uma_is_leader_scientist_nature
+				exists = event_target:uma_is_leader_general_nature
+			}
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.i
+		trigger = {
+			exists = event_target:uma_is_leader_silent_suzuka
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.j
+		trigger = {
+			exists = event_target:uma_is_leader_satono
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.k
+		trigger = {
+			exists = event_target:uma_is_leader_deep
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.l
+		trigger = {
+
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.m
+		trigger = {
+
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.n
+		trigger = {
+			exists = event_target:uma_is_leader_fine
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.o
+		trigger = {
+			exists = event_target:uma_is_leader_tama
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.p
+		trigger = {
+			exists = event_target:uma_is_leader_cheval_grand
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.q
+		trigger = {
+			exists = event_target:uma_is_leader_hishi_miracle
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.r
+		trigger = {
+			exists = event_target:uma_is_leader_sweepy_tonson
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.s
+		trigger = {
+			exists = event_target:uma_is_leader_mejro_ardan
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.t
+		trigger = {
+			exists = event_target:uma_is_leader_curren_chan
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.u
+		trigger = {
+			exists = event_target:uma_is_leader_zephyr
+		}
 	}
 	option = {
 		name = uma_leader_cp.1.v
+		trigger = {
+			exists = event_target:uma_is_leader_duramente
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.w
+		trigger = {
+			exists = event_target:uma_is_leader_tachyon
+		}
 	}
 
 }
