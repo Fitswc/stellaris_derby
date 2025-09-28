@@ -1464,8 +1464,46 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
+		name = uma_leader_cp.9.deep.trait.1
 		trigger = {
+			from = {
+				has_leader_flag = uma_leader_compound_father
 
+				has_leader_flag = uma_is_deep
+			}
 		}
+	}
+	option = {
+		name = uma_leader_cp.9.deep.trait.1.cancel
+		trigger = {
+			from = {
+				has_leader_flag = uma_leader_compound_father
+
+				has_leader_flag = uma_is_deep
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.9.deep.trait.2
+		trigger = {
+			from = {
+				has_leader_flag = uma_leader_compound_father
+
+				has_leader_flag = uma_is_deep
+			}
+		}
+
+	}
+	option = {
+		name = uma_leader_cp.9.deep.trait.2.cancel
+		trigger = {
+			from = {
+				has_leader_flag = uma_leader_compound_father
+
+				has_leader_flag = uma_is_deep
+			}
+		}
+
 	}
 }
