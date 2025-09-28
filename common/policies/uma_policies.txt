@@ -276,8 +276,40 @@ uma_fuel_convertion_mode = {
 			weight = 0
 		}
 	}
-	
+}
 
+#产物选择
+uma_fuel_convertion_produce_mode = {
+	potential = {
+		has_origin = origin_uma_candleoff
+	}
+	option = {
+		name = policy_uma_fuel_convertion_produce_unity
+		policy_flags = {
+			policy_uma_fuel_convertion_produce_unity
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_produce_food
+		policy_flags = {
+			policy_uma_fuel_convertion_produce_food
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_produce_tech
+		policy_flags = {
+			policy_uma_fuel_convertion_produce_tech
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
 }
 
 uma_auto_roll = {
