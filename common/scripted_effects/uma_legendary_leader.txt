@@ -335,8 +335,8 @@ uma_create_leader_zf = {
 		tier = leader_tier_legendary
 		traits = {
 			1 = uma_scientists_trait_sp_zf_empire
-			3 = uma_scientists_trait_sp_zf_girl
-			4 = uma_scientists_trait_sp_zf_top
+			2 = uma_scientists_trait_sp_zf_girl
+			3 = uma_scientists_trait_sp_zf_top
 			0 = leader_trait_uma_generic
 		}
 		effect = {
@@ -516,5 +516,60 @@ uma_create_leader_zephyr = {
 			save_global_event_target_as = uma_is_leader_zephyr
 			change_leader_portrait = 84c
 		}
+	}
+}
+
+
+##Leader Compound
+uma_leader_cp_cleanup_country_flag = {
+	optimize_memory
+	remove_country_flag = uma_leader_cp.9.dura.trait.1
+	remove_country_flag = uma_leader_cp.9.hishi.trait.1
+	remove_country_flag = uma_leader_cp.9.satdia.trait.1
+	remove_country_flag = uma_leader_cp.9.ayb.trait.1
+	remove_country_flag = uma_leader_cp.9.tama.trait.1
+	remove_country_flag = uma_leader_cp.9.fine.trait.2
+	remove_country_flag = uma_leader_cp.9.fine.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_sci.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_adr.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.halo.trait.1
+	remove_country_flag = uma_leader_cp.9.al.trait.1
+	remove_country_flag = uma_leader_cp.9.kita.trait.1
+	remove_country_flag = uma_leader_cp.9.zephyr.trait.1
+	remove_country_flag = uma_leader_cp.9.curren.trait.1
+	remove_country_flag = uma_leader_cp.9.ardan.trait.1
+	remove_country_flag = uma_leader_cp.9.sweepy.trait.1
+	remove_country_flag = uma_leader_cp.9.cheval.trait.1
+	remove_country_flag = uma_leader_cp.9.zf.trait.3
+	remove_country_flag = uma_leader_cp.9.zf.trait.2
+	remove_country_flag = uma_leader_cp.9.zf.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_sci.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_sci.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_adr.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_adr.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_gov.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.sky_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.ar_sky.trait.1
+	remove_country_flag = uma_leader_cp.9.agt.trait.1
+	remove_country_flag = uma_leader_cp.9.did.trait.1
+	remove_country_flag = uma_leader_cp.9.ougri.trait.1
+	remove_country_flag = uma_leader_cp.9.deep.trait.1
+}
+
+uma_leader_cp_cleanup_leader_gender_flag = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			has_leader_flag = uma_leader_compound_father
+		}
+		remove_leader_flag = uma_leader_compound_father
+	}
+	every_owned_leader = {
+		limit = {
+			has_leader_flag = uma_leader_compound_mother
+		}
+		remove_leader_flag = uma_leader_compound_mother
 	}
 }
