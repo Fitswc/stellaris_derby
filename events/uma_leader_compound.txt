@@ -3231,7 +3231,6 @@ country_event = {
 	desc = uma_leader_cp.10.desc
 	is_triggered_only = yes
 
-
 	###DEEP
 
 	option = {
@@ -3359,37 +3358,6 @@ country_event = {
 
 	####
 
-	###aky-admiral
-	option = {
-		name = uma_leader_cp.10.ar_sky.portrait.1
-		trigger = {
-			from = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_ar_seiun_sky
-			}
-			fromfrom = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_ar_seiun_sky
-			}
-			NOT = {
-				has_country_flag = uma_leader_cp.10.ar_sky.portrait.1
-			}
-		}
-		hidden_effect = {
-			set_country_flag = uma_leader_cp.10.ar_sky.portrait.1
-		}
-	}
-
-	####
-
 	###sky-governor
 	option = {
 		name = uma_leader_cp.10.sky_gov.portrait.1
@@ -3448,68 +3416,6 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = uma_leader_cp.10.teio_gov.portrait.1
-		}
-	}
-
-	####
-
-	###teio-admiral
-	option = {
-		name = uma_leader_cp.10.teio_adr.portrait.1
-		trigger = {
-			from = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_adr_teio
-			}
-			fromfrom = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_adr_teio
-			}
-			NOT = {
-				has_country_flag = uma_leader_cp.10.teio_adr.portrait.1
-			}
-		}
-		hidden_effect = {
-			set_country_flag = uma_leader_cp.10.teio_adr.portrait.1
-		}
-	}
-
-	####
-
-	###teio-scientist
-	option = {
-		name = uma_leader_cp.10.teio_sci.portrait.1
-		trigger = {
-			from = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_sci_teio
-			}
-			fromfrom = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_sci_teio
-			}
-			NOT = {
-				has_country_flag = uma_leader_cp.10.teio_sci.portrait.1
-			}
-		}
-		hidden_effect = {
-			set_country_flag = uma_leader_cp.10.teio_sci.portrait.1
 		}
 	}
 
@@ -3827,68 +3733,6 @@ country_event = {
 
 	####
 
-	###NN-admiral
-	option = {
-		name = uma_leader_cp.10.nn_adr.portrait.1
-		trigger = {
-			from = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_general_nice_nature
-			}
-			fromfrom = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_general_nice_nature
-			}
-			NOT = {
-				has_country_flag = uma_leader_cp.10.nn_adr.portrait.1
-			}
-		}
-		hidden_effect = {
-			set_country_flag = uma_leader_cp.10.nn_adr.portrait.1
-		}
-	}
-
-	####
-
-	###NN-scientist
-	option = {
-		name = uma_leader_cp.10.nn_sci.portrait.1
-		trigger = {
-			from = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_scientist_nice_nature
-			}
-			fromfrom = {
-				OR = {
-				    has_leader_flag = uma_leader_compound_father
-				    has_leader_flag = uma_leader_compound_mother
-				}
-
-				has_leader_flag = uma_is_scientist_nice_nature
-			}
-			NOT = {
-				has_country_flag = uma_leader_cp.10.nn_sci.portrait.1
-			}
-		}
-		hidden_effect = {
-			set_country_flag = uma_leader_cp.10.nn_sci.portrait.1
-		}
-	}
-
-	####
-
 	###Fine
 	option = {
 		name = uma_leader_cp.10.fine.portrait.1
@@ -4100,7 +3944,7 @@ country_event = {
 }
 
 
-
+#tatget class
 country_event = {
 	id = uma_leader_cp.11
 	title = uma_leader_cp.11.title
@@ -4226,7 +4070,6 @@ country_event = {
 					immortal = yes
 					background_planet = Root.capital_scope
 					background_job = uma_racing_umamusume
-
 					skill = 1
 					set_age = 16
 					tier = leader_tier_legendary
@@ -4241,6 +4084,7 @@ country_event = {
 				}
 				last_created_leader = {
 					uma_leader_cp_build_up_trait_official = yes
+					uma_leader_cp_build_up_portrait = yes
 				}
 			}
 			else_if = {
@@ -4258,7 +4102,6 @@ country_event = {
 					immortal = yes
 					background_planet = Root.capital_scope
 					background_job = uma_racing_umamusume
-
 					skill = 1
 					set_age = 16
 					tier = leader_tier_legendary
@@ -4270,6 +4113,10 @@ country_event = {
 						set_leader_flag = uma_is_compound
 						save_global_event_target_as = uma_is_compound_temporary
 					}
+				}
+				last_created_leader = {
+					uma_leader_cp_build_up_trait_scientist = yes
+					uma_leader_cp_build_up_portrait = yes
 				}
 			}
 			else_if = {
@@ -4287,7 +4134,6 @@ country_event = {
 					immortal = yes
 					background_planet = Root.capital_scope
 					background_job = uma_racing_umamusume
-
 					skill = 1
 					set_age = 16
 					tier = leader_tier_legendary
@@ -4301,7 +4147,8 @@ country_event = {
 					}
 				}
 				last_created_leader = {
-
+					uma_leader_cp_build_up_trait_commander = yes
+					uma_leader_cp_build_up_portrait = yes
 				}
 			}
 		}
@@ -4325,31 +4172,25 @@ country_event = {
 	option = {
 		name = uma_leader_cp.13.a
 		tag = hire_leader
-		clone_leader = {
-			target = event_target:uma_is_leader_mejro_ardan
-			species = root.species
-			gender = female
-		}
 		hidden_effect = {
 			last_created_leader = {
-				add_experience = 600
-				change_leader_portrait = "49c"
+#				add_experience = 600
+#				change_leader_portrait = "49c"
 				uma_initialize_leader_yaruki_effect = yes
 				set_leader_flag = uma_is_special_leader
-				set_leader_flag = uma_is_mejro_ardan
-				save_global_event_target_as = uma_is_leader_mejro_ardan
-				#set_leader_flag = legendary_leader
-				add_experience = 30000
+				set_leader_flag = uma_is_compound
+				save_global_event_target_as = uma_is_compound_temporary
+#				add_experience = 30000
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
 				localization = MESSAGE_RECRUITED_LEADER_DESC
 				days = @toast_message_days
-				target = event_target:uma_is_leader_mejro_ardan
+				target = event_target:uma_is_compound_temporary
 				variable = {
 					type = name
 					localization = LEADER
-					scope = event_target:uma_is_leader_mejro_ardan
+					scope = event_target:uma_is_compound_temporary
 				}
 				variable = {
 					key = "border"
@@ -4359,12 +4200,11 @@ country_event = {
 
 			add_timeline_event = {
 				type = timeline_umamusume
-				override_tooltip = "uma_timeline_meet_leader_ad_desc"
-				override_text = { "text:uma_timeline_meet_leader_ad" }
+				override_tooltip = "uma_timeline_leader_compound_desc"
+				override_text = { "text:uma_timeline_leader_compound" }
 				override_texture = { "background_zoom1:GFX_uma_timelines_meet_ad" "background_zoom2:GFX_uma_timelines_meet_ad_zoom_2" }
 				override_types = { country leader }
-				override_id = uma_timeline_meet_leader_ad
-				targets = { Root event_target:uma_is_leader_mejro_ardan }
+				override_id = uma_timeline_leader_compound
 			}
 		}
 	}
@@ -4373,20 +4213,37 @@ country_event = {
 		name = uma_leader_cp.13.b
 		tag = dismiss_leader
 		hidden_effect = {
-			event_target:uma_is_leader_mejro_ardan= {
+			event_target:uma_is_compound_temporary= {
 				kill_leader = { show_notification = no }
 			}
+			clear_global_event_target = uma_is_compound_temporary
 		}
 	}
 }
 
 country_event = {
-	id = uma_leader_cp.666
-	hide_window = yes
+	id = uma_leader_cp.13
+	title = uma_leader_cp.13.title
+	desc = uma_leader_cp.13.desc
 	is_triggered_only = yes
-	immediate = {
-		random_owned_leader = {
-			uma_leader_cp_build_up_trait_official = yes
-		}
+
+	option = {
+		name = uma_leader_cp.13.a #Back to .11 Choose target class
+		uma_leader_cp_cleanup_class = yes
+	}
+	option = {
+		name = uma_leader_cp.13.b #Back to .10 Choose portrait
+		uma_leader_cp_cleanup_country_flag_portrait = yes
+	}
+	option = {
+		name = uma_leader_cp.13.c #Back to .9 Choose traits
+		uma_leader_cp_cleanup_country_flag_trait = yes
+	}
+	option = {
+		name = uma_leader_cp.13.d #Back to .999 Choose parent
+		uma_leader_cp_cleanup_country_flag_trait = yes
+		uma_leader_cp_cleanup_class = yes
+		uma_leader_cp_cleanup_country_flag_portrait = yes
+		uma_leader_cp_cleanup_leader_gender_flag = yes
 	}
 }
