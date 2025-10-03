@@ -1167,133 +1167,177 @@ uma_leader_cp_build_up_portrait = {
 	optimize_memory
 	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.dura.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.dura.portrait.1
+			}
 		}
 		change_leader_portrait = 85c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.hishi.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.hishi.portrait.1
+			}
 		}
 		change_leader_portrait = 98c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.satdia.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.satdia.portrait.1
+			}
 		}
 		change_leader_portrait = 66c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.ayb.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.ayb.portrait.1
+			}
 		}
 		change_leader_portrait = 31c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.tama.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.tama.portrait.1
+			}
 		}
 		change_leader_portrait = 21c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.fine.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.fine.portrait.1
+			}
 		}
 		change_leader_portrait = 22c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+			}
 		}
 		change_leader_portrait = 46c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.halo.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.halo.portrait.1
+			}
 		}
 		change_leader_portrait = 47c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.al.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.al.portrait.1
+			}
 		}
 		change_leader_portrait = 14c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.kita.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.kita.portrait.1
+			}
 		}
 		change_leader_portrait = 67c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.zephyr.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.zephyr.portrait.1
+			}
 		}
 		change_leader_portrait = 84c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.curren.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.curren.portrait.1
+			}
 		}
 		change_leader_portrait = 34c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.ardan.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.ardan.portrait.1
+			}
 		}
 		change_leader_portrait = 49c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.sweepy.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.sweepy.portrait.1
+			}
 		}
 		change_leader_portrait = 56c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.cheval.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.cheval.portrait.1
+			}
 		}
 		change_leader_portrait = 76c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.zf.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.zf.portrait.1
+			}
 		}
 		change_leader_portrait = GLX_ZF
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+			}
 		}
 		change_leader_portrait = TEIO_COMM
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.sky_gov.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.sky_gov.portrait.1
+			}
 		}
 		change_leader_portrait = 20c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.agt.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.agt.portrait.1
+			}
 		}
 		change_leader_portrait = 30c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.did.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.did.portrait.1
+			}
 		}
 		change_leader_portrait = 19c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.ougri.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.ougri.portrait.1
+			}
 		}
 		change_leader_portrait = 06c
 	}
-	else_if = {
+	if = {
 		limit = {
-			has_country_flag = uma_leader_cp.9.deep.portrait.1
+			Root = {
+				has_country_flag = uma_leader_cp.10.deep.portrait.1
+			}
 		}
 		change_leader_portrait = DEEP_COMMUNICATION
 	}
