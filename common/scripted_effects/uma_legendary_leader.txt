@@ -1215,6 +1215,200 @@ uma_leader_cp_build_up_trait_scientist = {
 		}
 	}
 	##原生领袖
+
+	##
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.deep.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_deep_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ougri.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_oguri_cap_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.did.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_agnes_digital_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_seiun_sky_scientist
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_sci
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hint
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.cheval.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cheval_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.curren.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_trait_sp_curren_spark_soujio_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zephyr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_official_trait_sp_zephyr_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.kita.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_kitasan_black
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.al.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_al_condor_pasa
+			show_message = no
+		}
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.halo.trait.1
+			}
+		}
+
+		add_trait = {
+			trait = uma_scientist_trait_sp_king_halo
+			show_message = no
+		}
+	}
+
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_er_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.tama.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cross_scientist
+			show_message = no
+		}
+	}
 }
 
 uma_leader_cp_build_up_trait_commander = {

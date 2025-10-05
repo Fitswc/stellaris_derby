@@ -5043,6 +5043,12 @@ country_event = {
 	}
 
 	option = {
+		name = uma_leader_cp.13.c
+		response_text = uma_leader_cp.13.resp
+		is_dialog_only = yes
+	}
+
+	option = {
 		name = uma_leader_cp.13.a
 		tag = hire_leader
 		hidden_effect = {
