@@ -521,84 +521,6 @@ uma_create_leader_zephyr = {
 
 
 ##Leader Compound
-uma_leader_cp_cleanup_country_flag_trait = {
-	optimize_memory
-	remove_country_flag = uma_leader_cp.9.dura.trait.1
-	remove_country_flag = uma_leader_cp.9.hishi.trait.1
-	remove_country_flag = uma_leader_cp.9.satdia.trait.1
-	remove_country_flag = uma_leader_cp.9.ayb.trait.1
-	remove_country_flag = uma_leader_cp.9.tama.trait.1
-	remove_country_flag = uma_leader_cp.9.fine.trait.2
-	remove_country_flag = uma_leader_cp.9.fine.trait.1
-	remove_country_flag = uma_leader_cp.9.nn_sci.trait.1
-	remove_country_flag = uma_leader_cp.9.nn_adr.trait.1
-	remove_country_flag = uma_leader_cp.9.nn_gov.trait.1
-	remove_country_flag = uma_leader_cp.9.halo.trait.1
-	remove_country_flag = uma_leader_cp.9.al.trait.1
-	remove_country_flag = uma_leader_cp.9.kita.trait.1
-	remove_country_flag = uma_leader_cp.9.zephyr.trait.1
-	remove_country_flag = uma_leader_cp.9.curren.trait.1
-	remove_country_flag = uma_leader_cp.9.ardan.trait.1
-	remove_country_flag = uma_leader_cp.9.sweepy.trait.1
-	remove_country_flag = uma_leader_cp.9.cheval.trait.1
-	remove_country_flag = uma_leader_cp.9.zf.trait.3
-	remove_country_flag = uma_leader_cp.9.zf.trait.2
-	remove_country_flag = uma_leader_cp.9.zf.trait.1
-	remove_country_flag = uma_leader_cp.9.teio_sci.trait.2
-	remove_country_flag = uma_leader_cp.9.teio_sci.trait.1
-	remove_country_flag = uma_leader_cp.9.teio_adr.trait.2
-	remove_country_flag = uma_leader_cp.9.teio_adr.trait.1
-	remove_country_flag = uma_leader_cp.9.teio_gov.trait.2
-	remove_country_flag = uma_leader_cp.9.teio_gov.trait.1
-	remove_country_flag = uma_leader_cp.9.sky_gov.trait.1
-	remove_country_flag = uma_leader_cp.9.ar_sky.trait.1
-	remove_country_flag = uma_leader_cp.9.agt.trait.1
-	remove_country_flag = uma_leader_cp.9.did.trait.1
-	remove_country_flag = uma_leader_cp.9.ougri.trait.1
-	remove_country_flag = uma_leader_cp.9.deep.trait.1
-}
-
-uma_leader_cp_cleanup_country_flag_portrait = {
-	optimize_memory
-	remove_country_flag = uma_leader_cp.9.dura.portrait.1
-	remove_country_flag = uma_leader_cp.9.hishi.portrait.1
-	remove_country_flag = uma_leader_cp.9.satdia.portrait.1
-	remove_country_flag = uma_leader_cp.9.ayb.portrait.1
-	remove_country_flag = uma_leader_cp.9.tama.portrait.1
-	remove_country_flag = uma_leader_cp.9.fine.portrait.1
-	remove_country_flag = uma_leader_cp.10.nn_gov.portrait.1
-	remove_country_flag = uma_leader_cp.9.halo.portrait.1
-	remove_country_flag = uma_leader_cp.9.al.portrait.1
-	remove_country_flag = uma_leader_cp.9.kita.portrait.1
-	remove_country_flag = uma_leader_cp.9.zephyr.portrait.1
-	remove_country_flag = uma_leader_cp.9.curren.portrait.1
-	remove_country_flag = uma_leader_cp.9.ardan.portrait.1
-	remove_country_flag = uma_leader_cp.9.sweepy.portrait.1
-	remove_country_flag = uma_leader_cp.9.cheval.portrait.1
-	remove_country_flag = uma_leader_cp.9.zf.portrait.1
-	remove_country_flag = uma_leader_cp.10.teio_gov.portrait.1
-	remove_country_flag = uma_leader_cp.9.sky_gov.portrait.1
-	remove_country_flag = uma_leader_cp.9.agt.portrait.1
-	remove_country_flag = uma_leader_cp.9.did.portrait.1
-	remove_country_flag = uma_leader_cp.9.ougri.portrait.1
-	remove_country_flag = uma_leader_cp.9.deep.portrait.1
-}
-
-uma_leader_cp_cleanup_leader_gender_flag = {
-	optimize_memory
-	every_owned_leader = {
-		limit = {
-			has_leader_flag = uma_leader_compound_father
-		}
-		remove_leader_flag = uma_leader_compound_father
-	}
-	every_owned_leader = {
-		limit = {
-			has_leader_flag = uma_leader_compound_mother
-		}
-		remove_leader_flag = uma_leader_compound_mother
-	}
-}
 
 uma_leader_cp_build_up_trait_official = {
 	optimize_memory
@@ -820,21 +742,272 @@ uma_leader_cp_build_up_trait_official = {
 		}
 	}
 
+	##原生领袖
+
+	##变体
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.agt.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_tachyon_official
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_gov
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hint_official
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_empire_official
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_girl_official
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.3
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_top_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sweepy.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_sweep_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ardan.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_Ardan_cap_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.kita.trait.1
+			}
+		}
+		if = {
+			limit = {
+				event_target:uma_is_leader_kitasan_black = {
+					has_trait = uma_scientist_trait_sp_kitasan_black
+				}
+			}
+			add_trait = {
+				trait = uma_governor_trait_sp_kitasan_black
+				show_message = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.al.trait.1
+			}
+		}
+		if = {
+			limit = {
+				event_target:uma_is_leader_al_condor_pasa = {
+					has_trait = uma_scientist_trait_sp_al_condor_pasa
+				}
+			}
+			add_trait = {
+				trait = uma_governor_trait_sp_al_condor_pasa
+				show_message = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.halo.trait.1
+			}
+		}
+		if = {
+			limit = {
+				event_target:uma_is_leader_king_halo = {
+					has_trait = uma_scientist_trait_sp_king_halo
+				}
+			}
+			add_trait = {
+				trait = uma_governor_trait_sp_king_halo
+				show_message = no
+			}
+		}
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.satdia.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_satono_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.hishi.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_fz_official
+			show_message = no
+		}
+	}
+
+
 	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.ayb.trait.1
 			}
 			event_target:uma_is_leader_silent_suzuka = {
-				has_trait = uma_scientist_trait_sp_ayb_country
+				has_trait = uma_scientist_trait_sp_ayb
 			}
 		}
 		add_trait = {
-			trait = uma_scientist_trait_sp_ayb_country
+			trait = uma_scientist_trait_sp_ayb_official
 			show_message = no
 		}
 	}
-	##原生领袖
+
+	###
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_seiun_sky
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_gov
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_heart_adr_official
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_nice_nature
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.dura.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_dura_official
+			show_message = no
+		}
+
+	}
 }
 
 uma_leader_cp_build_up_trait_scientist = {
@@ -1345,6 +1518,7 @@ uma_leader_cp_build_up_portrait = {
 
 
 uma_leader_cp_cleanup_all = {
+	optimize_memory
 	clear_global_event_target = uma_is_compound_temporary
 	uma_leader_cp_cleanup_class = yes
 	uma_leader_cp_cleanup_country_flag_portrait = yes
@@ -1353,7 +1527,87 @@ uma_leader_cp_cleanup_all = {
 }
 
 uma_leader_cp_cleanup_class = {
+	optimize_memory
 	remove_country_flag = uma_leader_cp.11.class.official
 	remove_country_flag = uma_leader_cp.11.class.scientist
 	remove_country_flag = uma_leader_cp.11.class.commanders
+}
+
+uma_leader_cp_cleanup_country_flag_trait = {
+	optimize_memory
+	remove_country_flag = uma_leader_cp.9.dura.trait.1
+	remove_country_flag = uma_leader_cp.9.hishi.trait.1
+	remove_country_flag = uma_leader_cp.9.satdia.trait.1
+	remove_country_flag = uma_leader_cp.9.ayb.trait.1
+	remove_country_flag = uma_leader_cp.9.tama.trait.1
+	remove_country_flag = uma_leader_cp.9.fine.trait.2
+	remove_country_flag = uma_leader_cp.9.fine.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_sci.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_adr.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.halo.trait.1
+	remove_country_flag = uma_leader_cp.9.al.trait.1
+	remove_country_flag = uma_leader_cp.9.kita.trait.1
+	remove_country_flag = uma_leader_cp.9.zephyr.trait.1
+	remove_country_flag = uma_leader_cp.9.curren.trait.1
+	remove_country_flag = uma_leader_cp.9.ardan.trait.1
+	remove_country_flag = uma_leader_cp.9.sweepy.trait.1
+	remove_country_flag = uma_leader_cp.9.cheval.trait.1
+	remove_country_flag = uma_leader_cp.9.zf.trait.3
+	remove_country_flag = uma_leader_cp.9.zf.trait.2
+	remove_country_flag = uma_leader_cp.9.zf.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_sci.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_sci.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_adr.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_adr.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_gov.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.sky_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.ar_sky.trait.1
+	remove_country_flag = uma_leader_cp.9.agt.trait.1
+	remove_country_flag = uma_leader_cp.9.did.trait.1
+	remove_country_flag = uma_leader_cp.9.ougri.trait.1
+	remove_country_flag = uma_leader_cp.9.deep.trait.1
+}
+
+uma_leader_cp_cleanup_country_flag_portrait = {
+	optimize_memory
+	remove_country_flag = uma_leader_cp.9.dura.portrait.1
+	remove_country_flag = uma_leader_cp.9.hishi.portrait.1
+	remove_country_flag = uma_leader_cp.9.satdia.portrait.1
+	remove_country_flag = uma_leader_cp.9.ayb.portrait.1
+	remove_country_flag = uma_leader_cp.9.tama.portrait.1
+	remove_country_flag = uma_leader_cp.9.fine.portrait.1
+	remove_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+	remove_country_flag = uma_leader_cp.9.halo.portrait.1
+	remove_country_flag = uma_leader_cp.9.al.portrait.1
+	remove_country_flag = uma_leader_cp.9.kita.portrait.1
+	remove_country_flag = uma_leader_cp.9.zephyr.portrait.1
+	remove_country_flag = uma_leader_cp.9.curren.portrait.1
+	remove_country_flag = uma_leader_cp.9.ardan.portrait.1
+	remove_country_flag = uma_leader_cp.9.sweepy.portrait.1
+	remove_country_flag = uma_leader_cp.9.cheval.portrait.1
+	remove_country_flag = uma_leader_cp.9.zf.portrait.1
+	remove_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+	remove_country_flag = uma_leader_cp.9.sky_gov.portrait.1
+	remove_country_flag = uma_leader_cp.9.agt.portrait.1
+	remove_country_flag = uma_leader_cp.9.did.portrait.1
+	remove_country_flag = uma_leader_cp.9.ougri.portrait.1
+	remove_country_flag = uma_leader_cp.9.deep.portrait.1
+}
+
+uma_leader_cp_cleanup_leader_gender_flag = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			has_leader_flag = uma_leader_compound_father
+		}
+		remove_leader_flag = uma_leader_compound_father
+	}
+	every_owned_leader = {
+		limit = {
+			has_leader_flag = uma_leader_compound_mother
+		}
+		remove_leader_flag = uma_leader_compound_mother
+	}
 }
