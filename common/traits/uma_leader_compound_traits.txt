@@ -763,3 +763,573 @@ uma_commander_trait_sp_dura_scientist = {
 	initial = no
 	randomized = no
 }
+
+###Commander
+
+uma_governor_trait_sp_oguri_cap_commander = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_oguri_cap.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+
+	planet_modifier = {
+		
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+	leader_class = { commander }
+	inline_script = {script = trait/icon CLASS = commander RARITY = common COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/sp_oguri_cap.png"}
+	initial = no
+	randomized = no
+}
+
+#DD头子
+uma_governor_trait_sp_agnes_digital_commander = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_agnes_digital.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+	leader_class = { commander }
+	inline_script = {script = trait/icon CLASS = commander RARITY = common COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/sp_agnes_digital.png"}
+	initial = no
+	randomized = no
+}
+
+
+#速子/临时补充
+uma_scientist_trait_sp_tachyon_commander = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_sp_tach.png"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+	leader_class = { commander }
+	inline_script = {script = trait/icon CLASS = commander RARITY = common COUNCIL = yes TIER = 1 ICON = "gfx/interface/icons/traits/uma_sp_tach.png"}
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_sp_deep_commander = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/sp_deepl.png" #欸我临时用一波，记得改
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	planet_modifier = {
+		planet_stability_add = 10
+		planet_researchers_physics_research_produces_mult = 0.3
+		planet_researchers_society_research_produces_mult = 0.3
+		planet_researchers_engineering_research_produces_mult = 0.3
+	}
+
+	leader_class = { commander }
+	inline_script = {script = trait/icon CLASS = commander RARITY = paragon COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/sp_deepl.png"}
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_sp_fine_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_fine"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_governor_trait_sp_fine_er_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_fine"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+
+uma_governor_trait_sp_cheval_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_cheval"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.3
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+}
+
+uma_trait_sp_curren_spark_soujio_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_curren"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_official_trait_sp_zephyr_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_official_trait_sp_zephyr"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+
+uma_governor_trait_sp_cross_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS =commander
+		ICON = "GFX_uma_governor_trait_sp_tama"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = {commander }
+	initial = no
+	randomized = no
+}
+
+uma_scientists_trait_sp_zf_girl_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_zf_sci"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_scientists_trait_sp_zf_top_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_zf_sci"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_scientists_trait_sp_zf_empire_commander = {
+	inline_script = {
+		script = trait/icon_negative
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_zf_sci_icon"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_scientists_trait_sp_sweep_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_scientists_trait_sp_sweep"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_scientist_trait_sp_Ardan_cap_commander = {
+    inline_script = {
+		script = trait/icon                                                 #特性类别
+		CLASS = commander                                                   #技能会在哪种职业的领袖里刷出来
+		ICON = "GFX_uma_governor_trait_sp_ad"                                #图标
+		RARITY = common                                                     #品质
+		COUNCIL = no                                                       #是否是理事会（内阁）
+		TIER = none                                                            #等级
+	}
+
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+    randomized = no
+}
+
+uma_scientist_trait_sp_satono_commander = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_scientist_trait_sp_satono.dds"
+	leader_potential_add = {
+		always = no
+	}
+	#
+	immortal_leaders = yes
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	inline_script = {script = trait/icon CLASS = commander RARITY = paragon COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/uma_scientist_trait_sp_satono.dds"}
+	initial = no
+	randomized = no
+}
+
+uma_scientists_trait_sp_fz_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_governor_trait_sp_fz"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+uma_scientist_trait_sp_ayb_commander = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_scientist_trait_sp_ayb.dds"
+	leader_potential_add = {
+		always = no
+	}
+	immortal_leaders = yes
+	planet_modifier = {
+
+	}
+	army_modifier = {
+
+	}
+	fleet_modifier = {
+
+	}
+	sector_modifier = {
+
+	}
+	councilor_modifier = {
+
+	}
+
+	leader_class = { commander }
+	inline_script = {script = trait/icon CLASS = commander RARITY = paragon COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/uma_scientist_trait_sp_ayb.dds"}
+	initial = no
+	randomized = no
+}
