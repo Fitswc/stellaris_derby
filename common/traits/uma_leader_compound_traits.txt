@@ -774,20 +774,20 @@ uma_governor_trait_sp_oguri_cap_commander = {
 	}
 	immortal_leaders = yes
 
-	planet_modifier = {
-		
-	}
 	army_modifier = {
-
+		army_damage_mult = 0.1
+		army_experience_gain_mult = 0.1
 	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
+		fleet_capture_defeated_leader_chance = 0.3
+		ship_orbit_upkeep_mult = -0.2
+		ships_upkeep_mult = -0.1
 	}
 	councilor_modifier = {
-
+		planet_stability_mult = 0.2
+		planet_crime_mult = -0.2
+		planet_army_build_speed_mult = 0.2
+		ship_military_cost_mult = -0.2
 	}
 
 	leader_class = { commander }
@@ -806,19 +806,19 @@ uma_governor_trait_sp_agnes_digital_commander = {
 	immortal_leaders = yes
 
 	planet_modifier = {
-
-	}
-	army_modifier = {
-
+		planet_crime_mult = -0.2
+		pop_workforce_mult = 0.05
+		planet_stability_mult = 0.1
 	}
 	fleet_modifier = {
-
+		fleet_mia_time_mult = -0.2
+		ship_accuracy_mult = 0.2
+		ship_weapon_range_mult = 0.2
 	}
 	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
+		planet_crime_mult = -0.1
+		pop_workforce_mult = 0.025
+		planet_stability_mult = 0.05
 	}
 
 	leader_class = { commander }
@@ -837,20 +837,19 @@ uma_scientist_trait_sp_tachyon_commander = {
 	}
 	immortal_leaders = yes
 
-	planet_modifier = {
-
-	}
 	army_modifier = {
-
+		army_health = 0.2
+		army_morale = 0.1
 	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
+		ship_hull_regen_add_perc = 0.2
+		ship_armor_penetration_mult = 0.2
+		ship_fire_rate_mult = 0.15
 	}
 	councilor_modifier = {
-
+		shipclass_military_build_cost_mult = -0.2
+		shipclass_military_build_speed_mult = 0.15
+		ship_orbit_upkeep_mult = -0.1
 	}
 
 	leader_class = { commander }
@@ -866,11 +865,22 @@ uma_governor_trait_sp_deep_commander = {
 		always = no
 	}
 	immortal_leaders = yes
+
 	planet_modifier = {
-		planet_stability_add = 10
-		planet_researchers_physics_research_produces_mult = 0.3
-		planet_researchers_society_research_produces_mult = 0.3
-		planet_researchers_engineering_research_produces_mult = 0.3
+		planet_crime_mult = -0.2
+		planet_army_build_speed_mult = 0.2
+		army_defense_damage_mult = 0.15
+	}
+	fleet_modifier = {
+		ship_hull_damage_mult = 0.2
+		ship_armor_damage_mult = 0.2
+		ship_shield_damage_mult = 0.2
+		ship_speed_mult = 0.15
+	}
+	sector_modifier = {
+		planet_crime_mult = -0.1
+		planet_army_build_speed_mult = 0.1
+		army_defense_damage_mult = 0.075
 	}
 
 	leader_class = { commander }
@@ -892,19 +902,22 @@ uma_governor_trait_sp_fine_commander = {
 		always = no
 	}
 	planet_modifier = {
-
-	}
-	army_modifier = {
-
-	}
-	fleet_modifier = {
-
+		pop_bonus_workforce_mult = 0.2
+		pop_amenities_usage_mult = 0.1
+		planet_crime_mult = -0.1
+		army_defense_damage_mult = 0.1
 	}
 	sector_modifier = {
-
+		pop_bonus_workforce_mult = 0.1
+		pop_amenities_usage_mult = 0.05
+		planet_crime_mult = -0.05
+		army_defense_damage_mult = 0.05
 	}
 	councilor_modifier = {
-
+		pop_bonus_workforce_mult = 0.05
+		pop_amenities_usage_mult = 0.1
+		planet_crime_mult = -0.05
+		army_defense_damage_mult = 0.05
 	}
 	leader_class = { commander }
 	initial = no
@@ -923,21 +936,24 @@ uma_governor_trait_sp_fine_er_commander = {
 	leader_potential_add = {
 		always = no
 	}
-	planet_modifier = {
-
-	}
 	army_modifier = {
-
+		army_morale = 0.2
+		army_health = 0.2
 	}
 	fleet_modifier = {
-
+		ship_starting_experience_add = 2
+		ship_hull_regen_add_perc = 0.12
+		ship_armor_regen_add_perc = 0.12
+		ship_shield_regen_add_perc = 0.12
 	}
-	sector_modifier = {
 
-	}
 	councilor_modifier = {
-
+		ship_starting_experience_add = 0.5
+		ship_hull_mult = 0.2
+		ship_shield_mult = 0.2
+		ship_armor_mult = 0.2
 	}
+
 	leader_class = { commander }
 	initial = no
 	randomized = no
@@ -956,23 +972,32 @@ uma_governor_trait_sp_cheval_commander = {
 	leader_potential_add = {
 		always = no
 	}
-	self_modifier = {
-		species_leader_exp_gain = 0.3
-	}
 	planet_modifier = {
-
-	}
-	army_modifier = {
-
+		planet_stability_mult = 0.2
+		planet_army_build_speed_mult = 0.1
+		pop_workforce_mult = 0.2
+		pop_housing_usage_mult = -0.1
+		pop_amenities_usage_mult = 0.1
 	}
 	fleet_modifier = {
-
+		ship_fire_rate_mult = 0.2
+		ship_weapon_range_mult = 0.2
+		ship_engagement_range_mult = 0.3
+		ship_weapon_damage = 0.2
+		ship_starting_experience_add = 2
 	}
 	sector_modifier = {
-
+		planet_stability_mult = 0.1
+		planet_army_build_speed_mult = 0.05
+		pop_workforce_mult = 0.1
+		pop_housing_usage_mult = -0.05
+		pop_amenities_usage_mult = 0.05
 	}
 	councilor_modifier = {
-
+		shipclass_military_build_cost_mult = -0.2
+		shipclass_military_build_speed_mult = -0.1
+		starbase_building_build_speed_mult = 0.2
+		starbase_defense_platform_capacity_mult = 0.1
 	}
 	leader_class = { commander }
 	initial = no
@@ -994,22 +1019,20 @@ uma_trait_sp_curren_spark_soujio_commander = {
 		always = no
 	}
 	planet_modifier = {
-
+		army_morale = 0.3
+		army_starting_experience_add = 1
+		planet_stability_mult = 0.2
+		bonus_pop_growth = 0.2
 	}
 	army_modifier = {
-
+		army_morale = 0.3
+		army_collateral_damage_mult = 0.1
 	}
 	fleet_modifier = {
-
+		ship_engagement_range_mult = -0.1
+		ships_upkeep_mult = -0.2
+		command_limit_mult = 0.1
 	}
-	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
-	}
-
-
 
 	leader_class = { commander }
 	initial = no
