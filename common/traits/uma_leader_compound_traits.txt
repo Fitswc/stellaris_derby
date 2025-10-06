@@ -477,6 +477,11 @@ uma_governor_trait_sp_agnes_digital_scientist = {
 		planet_researchers_upkeep_mult = -0.2
 	}
 
+	planet_modifier = {
+		planet_buildings_upkeep_mult = -0.3
+		planet_researchers_upkeep_mult = -0.1
+	}
+
 
 	leader_class = { scientist }
 	inline_script = {script = trait/icon CLASS = scientist RARITY = common COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/sp_agnes_digital.png"}
@@ -604,6 +609,12 @@ uma_trait_sp_curren_spark_soujio_scientist = {
 		pop_cat_specialist_bonus_workforce_mult = 0.2
 		planet_researchers_produces_mult = 0.2
 	}
+	sector_modifier = {
+		pop_amenities_usage_mult = -0.1
+		planet_building_build_speed_mult = 0.2
+		pop_cat_specialist_bonus_workforce_mult = 0.1
+		planet_researchers_produces_mult = 0.1
+	}
 	modifier = {
 		ship_science_upkeep_mult = -0.4
 		ship_astral_rift_speed_mult = 0.2
@@ -619,7 +630,7 @@ uma_trait_sp_curren_spark_soujio_scientist = {
 	randomized = no
 }
 
-uma_scientist_trait_sp_zephyr_scientist = {
+uma_official_trait_sp_zephyr_scientist = {
 	inline_script = {
 		script = trait/icon
 		CLASS = scientist
@@ -631,6 +642,20 @@ uma_scientist_trait_sp_zephyr_scientist = {
 
 	leader_potential_add = {
 		always = no
+	}
+
+	planet_modifier = {
+		planet_sensor_range_add = 0.2
+		ship_sensor_range_add = 0.2
+		pop_amenities_usage_mult = 0.2
+		planet_researchers_produces_mult = 0.2
+	}
+
+	sector_modifier = {
+		planet_sensor_range_add = 0.1
+		ship_sensor_range_add = 0.1
+		pop_amenities_usage_mult = 0.1
+		planet_researchers_produces_mult = 0.1
 	}
 
 	modifier = {
@@ -645,8 +670,8 @@ uma_scientist_trait_sp_zephyr_scientist = {
 		shipsize_science_build_speed_mult = 0.2
 		ship_orbit_upkeep_mult = -0.2
 		shipclass_military_build_speed_mult = 0.2
-		planet_sensor_range_add = 0.2
-		ship_sensor_range_add = 0.2
+		planet_sensor_range_add = 0.1
+		ship_sensor_range_add = 0.1
 	}
 
 
@@ -682,6 +707,58 @@ uma_governor_trait_sp_cross_scientist={
 		planet_jobs_physics_research_produces_mult = 0.1
 		planet_jobs_society_research_produces_mult = 0.1
 	}
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+
+uma_commander_trait_sp_dura_scientist = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_uma_commander_trait_sp_dura"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+
+
+	planet_modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.1
+		pop_housing_usage_mult = 0.15
+		pop_uma_researcher_workforce_mult = 0.05
+		planet_uma_researcher_society_research_produces_mult = 0.1
+		planet_uma_researcher_engineering_research_produces_mult = 0.1
+		planet_uma_researcher_physics_research_produces_mult =  0.15
+	}
+
+	sector_modifier = {
+		pop_cat_ruler_bonus_workforce_mult = 0.1
+		pop_housing_usage_mult = 0.15
+		pop_uma_researcher_workforce_mult = 0.05
+		planet_uma_researcher_society_research_produces_mult = 0.1
+		planet_uma_researcher_engineering_research_produces_mult = 0.1
+		planet_uma_researcher_physics_research_produces_mult = 0.15
+	}
+
+	councilor_modifier = {
+		country_physics_tech_research_speed = 0.2
+		country_society_tech_research_speed = 0.1
+		country_engineering_tech_research_speed = 0.1
+	}
+
+	modifier = {
+		ship_speed_mult = 0.2
+		ship_windup_mult = 0.1
+		ship_anomaly_research_speed_mult = 0.2
+		ship_anomaly_fail_risk = -0.1
+	}
+
 	leader_class = { scientist }
 	initial = no
 	randomized = no
