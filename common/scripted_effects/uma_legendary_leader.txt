@@ -1588,7 +1588,7 @@ uma_leader_cp_build_up_trait_commander = {
 	}
 	##原生领袖
 
-		if = {
+	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.deep.trait.1
@@ -1596,10 +1596,6 @@ uma_leader_cp_build_up_trait_commander = {
 		}
 		add_trait = {
 			trait = uma_governor_trait_sp_deep
-			show_message = no
-		}
-		add_trait = {
-			trait = uma_governor_trait_sp_deep_conlic
 			show_message = no
 		}
 	}
@@ -1632,7 +1628,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_seiun_sky
+			trait = uma_commander_trait_sp_seiun_sky_1
 			show_message = no
 		}
 
@@ -1644,7 +1640,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_teio_gov
+			trait = uma_governor_trait_sp_teio_adr
 			show_message = no
 		}
 
@@ -1656,7 +1652,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_teio_hachimi
+			trait = uma_governor_trait_sp_teio_heart_adr
 			show_message = no
 		}
 	}
@@ -1703,17 +1699,12 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.kita.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_kitasan_black = {
-					has_trait = uma_governor_trait_sp_kitasan_black
-				}
-			}
-			add_trait = {
-				trait = uma_governor_trait_sp_kitasan_black
-				show_message = no
-			}
+
+		add_trait = {
+			trait = uma_general_trait_sp_kitasan_black
+			show_message = no
 		}
+
 	}
 
 	if = {
@@ -1722,17 +1713,12 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.al.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_al_condor_pasa = {
-					has_trait = uma_governor_trait_sp_al_condor_pasa
-				}
-			}
-			add_trait = {
-				trait = uma_governor_trait_sp_al_condor_pasa
-				show_message = no
-			}
+
+		add_trait = {
+			trait = uma_general_trait_sp_al_condor_pasa
+			show_message = no
 		}
+
 	}
 
 	if = {
@@ -1741,17 +1727,11 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.halo.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_king_halo = {
-					has_trait = uma_governor_trait_sp_king_halo
-				}
-			}
-			add_trait = {
-				trait = uma_governor_trait_sp_king_halo
-				show_message = no
-			}
+		add_trait = {
+			trait = uma_general_trait_sp_king_halo
+			show_message = no
 		}
+
 	}
 
 	if = {
@@ -1761,7 +1741,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_nice_nature
+			trait = uma_general_trait_sp_nice_nature
 			show_message = no
 		}
 	}
@@ -1826,7 +1806,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_teio_hint
+			trait = uma_governor_trait_sp_teio_heart_adr
 			show_message = no
 		}
 	}
@@ -1837,7 +1817,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_teio_sci
+			trait = uma_governor_trait_sp_teio_heart_adr
 			show_message = no
 		}
 	}
@@ -1908,7 +1888,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_scientist_trait_sp_nice_nature
+			trait = uma_general_trait_sp_nice_nature
 			show_message = no
 		}
 	}
@@ -1919,18 +1899,12 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.kita.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_kitasan_black = {
-					has_trait = uma_scientist_trait_sp_kitasan_black
-				}
-			}
-			add_trait = {
-				trait = uma_scientist_trait_sp_kitasan_black
-				show_message = no
-			}
+		add_trait = {
+			trait = uma_general_trait_sp_kitasan_black
+			show_message = no
 		}
 	}
+
 
 	if = {
 		limit = {
@@ -1938,17 +1912,11 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.al.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_al_condor_pasa = {
-					has_trait = uma_scientist_trait_sp_al_condor_pasa
-				}
-			}
-			add_trait = {
-				trait = uma_scientist_trait_sp_al_condor_pasa
-				show_message = no
-			}
+		add_trait = {
+			trait = uma_general_trait_sp_al_condor_pasa
+			show_message = no
 		}
+
 	}
 
 	if = {
@@ -1957,16 +1925,9 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.halo.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_king_halo = {
-					has_trait = uma_scientist_trait_sp_king_halo
-				}
-			}
-			add_trait = {
-				trait = uma_scientist_trait_sp_king_halo
-				show_message = no
-			}
+		add_trait = {
+			trait = uma_general_trait_sp_king_halo
+			show_message = no
 		}
 	}
 
