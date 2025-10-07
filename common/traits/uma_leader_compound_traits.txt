@@ -1053,20 +1053,16 @@ uma_official_trait_sp_zephyr_commander = {
 		always = no
 	}
 
-	planet_modifier = {
-
-	}
 	army_modifier = {
-
+		army_attack_health_mult = 0.2
+		army_attack_damage_mult = 0.15
 	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
+		fleet_mia_time_mult = 0.2
+		ship_weapon_damage = 0.2
+		ship_shield_mult = -0.05
+		ship_windup_mult = 0.2
+		ship_speed_mult = 0.1
 	}
 
 	leader_class = { commander }
@@ -1088,19 +1084,19 @@ uma_governor_trait_sp_cross_commander = {
 		always = no
 	}
 	planet_modifier = {
-
-	}
-	army_modifier = {
-
+		planet_defense_armies_add = 3
+		planet_army_build_speed_mult = 0.2
+		army_defense_health_mult = 0.2
 	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
+		ship_windup_mult = -0.1
+		ship_speed_mult = 0.1
 	}
 	councilor_modifier = {
-
+		planet_army_build_speed_mult = 0.1
+		fleet_mia_time_mult = -0.1
+		shipclass_military_build_speed_mult = 0.1
+		shipclass_military_build_cost_mult = -0.1
 	}
 	leader_class = {commander }
 	initial = no
@@ -1120,19 +1116,22 @@ uma_scientists_trait_sp_zf_girl_commander = {
 		always = no
 	}
 	planet_modifier = {
-
-	}
-	army_modifier = {
-
-	}
-	fleet_modifier = {
-
+		army_starting_experience_add = 1
+		planet_stability_mult = 0.1
+		army_defense_damage_mult = 0.2
+		planet_army_build_speed_mult = 0.2
 	}
 	sector_modifier = {
-
+		army_starting_experience_add = 1
+		planet_stability_mult = 0.05
+		army_defense_damage_mult = 0.1
+		planet_army_build_speed_mult = 0.1
 	}
 	councilor_modifier = {
-
+		shipclass_starbase_hull_mult = 0.2
+		shipclass_military_build_cost_mult = -0.1
+		starbase_defense_platform_capacity_add = 5
+		starbase_building_build_speed_mult = 0.2
 	}
 	leader_class = { commander }
 	initial = no
@@ -1151,20 +1150,13 @@ uma_scientists_trait_sp_zf_top_commander = {
 	leader_potential_add = {
 		always = no
 	}
-	planet_modifier = {
 
-	}
-	army_modifier = {
-
-	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
+		ship_fire_rate_mult = 0.2
+		ship_windup_mult = 0.2
+		ship_speed_mult = 0.1
+		ship_evasion_mult = 0.2
+		ship_weapon_range_mult = 0.2
 	}
 	leader_class = { commander }
 	initial = no
@@ -1183,20 +1175,12 @@ uma_scientists_trait_sp_zf_empire_commander = {
 	leader_potential_add = {
 		always = no
 	}
-	planet_modifier = {
-
-	}
-	army_modifier = {
-
-	}
 	fleet_modifier = {
-
+		ships_upkeep_mult = 0.12
+		ship_speed_mult = -0.1
 	}
-	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
+	self_modifier = {
+		species_leader_exp_gain = -0.9
 	}
 	leader_class = { commander }
 	initial = no
@@ -1216,22 +1200,11 @@ uma_scientists_trait_sp_sweep_commander = {
 	leader_potential_add = {
 		always = no
 	}
-	planet_modifier = {
-
-	}
-	army_modifier = {
-
-	}
 	fleet_modifier = {
-
+		ship_engagement_range_mult = 0.2
+		ship_hull_mult = 0.2
 	}
-	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
-	}
-
+	custom_tooltip_with_modifiers = uma_scientists_trait_sp_sweep_commander_tt
 	leader_class = { commander }
 	initial = no
 	randomized = no
@@ -1247,20 +1220,16 @@ uma_scientist_trait_sp_Ardan_cap_commander = {
 		TIER = none                                                            #等级
 	}
 
-	planet_modifier = {
-
-	}
-	army_modifier = {
-
-	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
+		ship_evasion_mult = 0.2
+		ships_upkeep_mult = -0.2
+		ship_weapon_range_mult = 0.1
+		ship_fire_rate_mult = 0.1
 	}
 	councilor_modifier = {
-
+		ship_starting_experience_add = 1
+		ships_upkeep_mult = -0.1
+		command_limit_add = 100
 	}
 	leader_class = { commander }
 	initial = no
@@ -1276,19 +1245,21 @@ uma_scientist_trait_sp_satono_commander = {
 	#
 	immortal_leaders = yes
 	planet_modifier = {
-
+		planet_crime_mult = -0.2
+		planet_stability_mult = 0.2
+		planet_army_build_speed_mult = 0.2
+		planet_defense_armies_add = 2
 	}
 	army_modifier = {
-
-	}
-	fleet_modifier = {
-
+		army_morale_damage_mult = 0.2
+		army_health = 0.2
+		army_collateral_damage_mult = 0.2
 	}
 	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
+		planet_crime_mult = -0.1
+		planet_stability_mult = 0.1
+		planet_army_build_speed_mult = 0.1
+		planet_defense_armies_add = 1
 	}
 	leader_class = { commander }
 	inline_script = {script = trait/icon CLASS = commander RARITY = paragon COUNCIL = no TIER = 1 ICON = "gfx/interface/icons/traits/uma_scientist_trait_sp_satono.dds"}
@@ -1308,21 +1279,14 @@ uma_scientists_trait_sp_fz_commander = {
 	leader_potential_add = {
 		always = no
 	}
-	planet_modifier = {
 
-	}
-	army_modifier = {
-
-	}
 	fleet_modifier = {
-
+		ship_hull_mult = 0.3
+		ship_shield_mult = 0.3
+		ship_armor_mult = 0.3
+		ship_starting_experience_add = 1
 	}
-	sector_modifier = {
 
-	}
-	councilor_modifier = {
-
-	}
 	leader_class = { commander }
 	initial = no
 	randomized = no
@@ -1335,20 +1299,12 @@ uma_scientist_trait_sp_ayb_commander = {
 		always = no
 	}
 	immortal_leaders = yes
-	planet_modifier = {
 
-	}
-	army_modifier = {
-
-	}
 	fleet_modifier = {
-
-	}
-	sector_modifier = {
-
-	}
-	councilor_modifier = {
-
+		ship_cloaking_detection_add = 30
+		ship_armor_mult = 0.3
+		ship_weapon_range_mult = 0.2
+		ship_speed_mult = 0.2
 	}
 
 	leader_class = { commander }

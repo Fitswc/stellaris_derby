@@ -477,3 +477,84 @@ planet_event = {
 #		}
 	}
 }
+
+country_event = {
+	id = uma_traits_leader.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			THIS = { is_ai = no }
+			FROM = { is_ai = no }
+		}
+		OR = {
+			FromFrom = {
+				leader = {
+					has_trait = uma_scientists_trait_sp_sweep_commander
+				}
+			}
+			FromFromFrom = {
+				leader = {
+					has_trait = uma_scientists_trait_sp_sweep_commander
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				FromFrom = {
+					leader = {
+						has_trait = uma_scientists_trait_sp_sweep_commander
+					}
+				}
+			}
+
+			random_list = {
+				5 = {
+					FromFromFrom = {
+						#fleet
+						every_owned_ship = {
+							damage_ship = 4000
+						}
+					}
+				}
+				5 = {
+					From = {
+						add_resource = {
+							influence = 1
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FromFromFrom = {
+					leader = {
+						has_trait = uma_scientists_trait_sp_sweep_commander
+					}
+				}
+			}
+
+			random_list = {
+				5 = {
+					FromFrom = {
+						every_owned_ship = {
+							damage_ship = 4000
+						}
+					}
+				}
+				5  = {
+					This = {
+						add_resource = {
+							influence = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}

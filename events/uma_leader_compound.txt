@@ -5,6 +5,7 @@ country_event = {
 	id = uma_leader_cp.999
 	title = uma_leader_cp.999.title
 	desc = uma_leader_cp.999.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	option = {
@@ -86,8 +87,6 @@ country_event = {
 		name = uma_leader_cp.1.e
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
-		}
-		allow = {
 			event_target:uma_is_leader_kitasan_black = {
 				has_trait = uma_governor_trait_sp_kitasan_black
 			}
@@ -104,12 +103,11 @@ country_event = {
 		name = uma_leader_cp.1.f
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
-		}
-		allow = {
 			event_target:uma_is_leader_king_halo = {
 				has_trait = uma_governor_trait_sp_king_halo
 			}
 		}
+
 		event_target:uma_is_leader_king_halo = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -122,12 +120,11 @@ country_event = {
 		name = uma_leader_cp.1.g
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
-		}
-		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
 				has_trait = uma_governor_trait_sp_al_condor_pasa
 			}
 		}
+
 		event_target:uma_is_leader_al_condor_pasa = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -430,12 +427,11 @@ country_event = {
 		name = uma_leader_cp.1.e
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
-		}
-		allow = {
 			event_target:uma_is_leader_kitasan_black = {
 				has_trait = uma_scientist_trait_sp_kitasan_black
 			}
 		}
+
 		event_target:uma_is_leader_kitasan_black = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -448,12 +444,11 @@ country_event = {
 		name = uma_leader_cp.1.f
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
-		}
-		allow = {
 			event_target:uma_is_leader_king_halo = {
 				has_trait = uma_scientist_trait_sp_king_halo
 			}
 		}
+
 		event_target:uma_is_leader_king_halo = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -466,12 +461,11 @@ country_event = {
 		name = uma_leader_cp.1.g
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
-		}
-		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
 				has_trait = uma_scientist_trait_sp_al_condor_pasa
 			}
 		}
+
 		event_target:uma_is_leader_al_condor_pasa = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -558,8 +552,6 @@ country_event = {
 		name = uma_leader_cp.1.e
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
-		}
-		allow = {
 			event_target:uma_is_leader_kitasan_black = {
 				has_trait = uma_commander_trait_sp_kitasan_black
 			}
@@ -576,12 +568,12 @@ country_event = {
 		name = uma_leader_cp.1.f
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
-		}
-		allow = {
 			event_target:uma_is_leader_king_halo = {
 				has_trait = uma_commander_trait_sp_king_halo
 			}
+
 		}
+
 		event_target:uma_is_leader_king_halo = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -594,12 +586,11 @@ country_event = {
 		name = uma_leader_cp.1.g
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
-		}
-		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
 				has_trait = uma_commander_trait_sp_al_condor_pasa
 			}
 		}
+
 		event_target:uma_is_leader_al_condor_pasa = {
 			set_leader_flag = uma_leader_compound_father
 		}
@@ -642,6 +633,7 @@ country_event = {
 	id = uma_leader_cp.5
 	title = uma_leader_cp.5.title
 	desc = uma_leader_cp.5.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	option = {
@@ -1460,6 +1452,7 @@ country_event = {
 	title = uma_leader_cp.9.title
 	desc = uma_leader_cp.9.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 
 	###DEEP
@@ -4014,6 +4007,7 @@ country_event = {
 	id = uma_leader_cp.10
 	title = uma_leader_cp.10.title
 	desc = uma_leader_cp.10.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	###DEEP
@@ -4829,6 +4823,7 @@ country_event = {
 	id = uma_leader_cp.11
 	title = uma_leader_cp.11.title
 	desc = uma_leader_cp.11.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	immediate = {
@@ -5053,13 +5048,7 @@ country_event = {
 		tag = hire_leader
 		hidden_effect = {
 			last_created_leader = {
-#				add_experience = 600
-#				change_leader_portrait = "49c"
-				uma_initialize_leader_yaruki_effect = yes
-				set_leader_flag = uma_is_special_leader
-				set_leader_flag = uma_is_compound
-				save_global_event_target_as = uma_is_compound_temporary
-#				add_experience = 30000
+				add_skill = 30000
 			}
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
@@ -5107,6 +5096,7 @@ country_event = {
 	id = uma_leader_cp.14
 	title = uma_leader_cp.14.title
 	desc = uma_leader_cp.14.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	option = {

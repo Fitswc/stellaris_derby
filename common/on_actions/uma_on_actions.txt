@@ -210,6 +210,8 @@ on_system_survey = {
 on_entering_battle = {
 	events = {
 		uma_bg.10 #sky事件，更换buff
+
+		uma_traits_leader.13
 	}
 }
 
