@@ -1520,17 +1520,10 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.kita.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_kitasan_black = {
-					has_trait = uma_general_trait_sp_kitasan_black
-				}
-			}
 			add_trait = {
 				trait = uma_general_trait_sp_kitasan_black
 				show_message = no
 			}
-		}
 	}
 
 	if = {
@@ -1539,17 +1532,11 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.al.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_al_condor_pasa = {
-					has_trait = uma_general_trait_sp_al_condor_pasa
-				}
-			}
 			add_trait = {
 				trait = uma_general_trait_sp_al_condor_pasa
 				show_message = no
 			}
-		}
+
 	}
 
 	if = {
@@ -1558,17 +1545,12 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.halo.trait.1
 			}
 		}
-		if = {
-			limit = {
-				event_target:uma_is_leader_king_halo = {
-					has_trait = uma_general_trait_sp_king_halo
-				}
-			}
-			add_trait = {
-				trait = uma_general_trait_sp_king_halo
-				show_message = no
-			}
+
+		add_trait = {
+			trait = uma_general_trait_sp_king_halo
+			show_message = no
 		}
+
 	}
 	##原生领袖
 

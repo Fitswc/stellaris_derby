@@ -228,14 +228,14 @@ uma_leader_cp.11.desc: "Select target leader class below. If parent's class is d
 uma_leader_cp.12.title: "[event_target:uma_is_compound_temporary.GetName]"
 uma_leader_cp.12.desc: "A Umamusume has inherited the will of her parent. What kind of stage will she present to us next?"
 uma_leader_cp.13.c: "Display inheritance information"
-uma_leader_cp.13.resp: "Inherited Umamusume：\n§BUmamusume1:§! [event_target:uma_leader_cp_father.GetClass] [event_target:uma_leader_cp_father.GetName] \nSkills: [event_target:uma_leader_cp_father.GetSkill] \n\n§UUmamusume2:§! [event_target:uma_leader_cp_mother.GetClass] [event_target:uma_leader_cp_mother.GetName] \nSkills: [event_target:uma_leader_cp_father.GetSkill]"
+uma_leader_cp.13.resp: "Inherited Umamusume：\n§BUmamusume1:§! [event_target:uma_leader_cp_father.GetClass] [event_target:uma_leader_cp_father.GetName] \nSkills: [event_target:uma_leader_cp_father.GetSkill] \n\n§UUmamusume2:§! [event_target:uma_leader_cp_mother.GetClass] [event_target:uma_leader_cp_mother.GetName] \nSkills: [event_target:uma_leader_cp_mother.GetSkill]"
 uma_leader_cp.14.title: "Back to re-select"
 uma_leader_cp.14.desc: "Select the step you want to back below"
 uma_leader_cp.14.a: "Target Leader Class"
 uma_leader_cp.14.b: "Portrait"
 uma_leader_cp.14.c: "Traits"
-uma_leader_cp.14.d: "Partent"
-  
+uma_leader_cp.14.d: "Parents"
+
 ##Traits
 uma_scientist_trait_sp_tachyon_official: "$uma_scientist_trait_sp_tachyon$-Suit to Official"
 uma_scientist_trait_sp_tachyon_official_desc: "$uma_scientist_trait_sp_tachyon$"

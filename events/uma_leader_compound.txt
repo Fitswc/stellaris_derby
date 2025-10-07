@@ -4942,6 +4942,16 @@ country_event = {
 			}
 		}
 		event_target:uma_leader_cp_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
 			if = {
 				limit = {
 					Root = {
@@ -5047,9 +5057,38 @@ country_event = {
 		name = uma_leader_cp.13.a
 		tag = hire_leader
 		hidden_effect = {
-			last_created_leader = {
-				add_skill = 30000
+			clone_leader = {
+				target = event_target:uma_is_compound_temporary
+				species = Root.owner_main_species
+				gender = female
 			}
+			last_created_leader = {
+				remove_all_traits = yes
+
+				add_trait = {
+					trait = leader_trait_uma_generic
+					show_message = no
+				}
+				if = {
+					limit = {
+						leader_class = official
+					}
+					uma_leader_cp_build_up_trait_official = yes
+				}
+				else_if = {
+					limit = {
+						leader_class = scientist
+					}
+					uma_leader_cp_build_up_trait_scientist = yes
+				}
+				else_if = {
+					limit = {
+						leader_class = commander
+					}
+					uma_leader_cp_build_up_trait_commander = yes
+				}
+			}
+
 			create_message = {
 				type = MESSAGE_RECRUITED_LEADER
 				localization = MESSAGE_RECRUITED_LEADER_DESC
