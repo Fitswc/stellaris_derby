@@ -4832,14 +4832,56 @@ country_event = {
 				has_leader_flag = uma_leader_compound_father
 			}
 			save_global_event_target_as = uma_leader_cp_father
-			log = "Father = [uma_leader_cp_father.GetName]"
+
+			export_trigger_value_to_variable = {
+				trigger = has_base_skill
+				variable = uma_leader_cp_father_skill_leader
+			}
+			Root = {
+				set_variable = {
+					which = uma_leader_cp_father_skill
+					value = Prev.uma_leader_cp_father_skill_leader
+				}
+			}
+			log = "Father = [uma_leader_cp_father.GetName] ; skill = [Root.uma_leader_cp_father_skill]"
 		}
 		random_owned_leader = {
 			limit = {
 				has_leader_flag = uma_leader_compound_mother
 			}
 			save_global_event_target_as = uma_leader_cp_mother
-			log = "Mother = [uma_leader_cp_mother.GetName]"
+
+			export_trigger_value_to_variable = {
+				trigger = has_base_skill
+				variable = uma_leader_cp_mother_skill_leader
+			}
+			Root = {
+				set_variable = {
+					which = uma_leader_cp_mother_skill
+					value = Prev.uma_leader_cp_mother_skill_leader
+				}
+			}
+			log = "Mother = [uma_leader_cp_mother.GetName] ; skill = [Root.uma_leader_cp_mother_skill]"
+		}
+		Root = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_leader_cp_mother_skill
+						value >= uma_leader_cp_father_skill
+					}
+				}
+				set_variable = {
+					which = uma_leader_cp_skill
+					value = uma_leader_cp_father_skill
+				}
+			}
+			else = {
+				set_variable = {
+					which = uma_leader_cp_skill
+					value = uma_leader_cp_mother_skill
+				}
+			}
 		}
 	}
 
@@ -5063,8 +5105,8 @@ country_event = {
 				gender = female
 			}
 			last_created_leader = {
-				add_experience = 3000
-
+				uma_leader_cp_build_up_skill = yes
+				uma_leader_cp_build_up_write_information = yes
 			}
 
 			create_message = {
@@ -5091,6 +5133,8 @@ country_event = {
 				override_types = { country leader }
 				override_id = uma_timeline_leader_compound
 			}
+
+			uma_leader_cp_cleanup_all = yes
 		}
 	}
 
