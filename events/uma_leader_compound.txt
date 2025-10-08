@@ -5063,33 +5063,8 @@ country_event = {
 				gender = female
 			}
 			last_created_leader = {
-				remove_all_traits = yes
+				add_experience = 3000
 
-				add_trait = {
-					trait = leader_trait_uma_generic
-					show_message = no
-				}
-				if = {
-					limit = {
-						leader_class = official
-					}
-					uma_leader_cp_build_up_trait_official = yes
-				}
-				else_if = {
-					limit = {
-						leader_class = scientist
-					}
-					uma_leader_cp_build_up_trait_scientist = yes
-				}
-				else_if = {
-					limit = {
-						leader_class = commander
-					}
-					uma_leader_cp_build_up_trait_commander = yes
-				}
-				###
-				add_skill = 30000 ##
-				###
 			}
 
 			create_message = {
