@@ -471,7 +471,7 @@ concept_uma_governor_trait_sp_kitasan_black_desc: "£planet£§Y行星总督§!�
 concept_uma_scientist_trait_sp_kitasan_black: "$uma_governor_trait_sp_kitasan_black$"
 concept_uma_scientist_trait_sp_kitasan_black_desc: "£science_ship£§Y科研船§!§0效果§!:\n-$mod_science_ship_survey_speed$: §G+30%§!\n-$MOD_SHIP_ANOMALY_GENERATION_CHANCE_MULT$: §G+50%§!\n\n £council£§Y内阁§!§0效果§!:\n-$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+30%§!"
 concept_uma_commander_trait_sp_kitasan_black: "$uma_governor_trait_sp_kitasan_black$"
-concept_uma_commander_trait_sp_kitasan_black_desc: "£shipclass_military£§Y军用舰船§!§0效果§!:\n-£mod_ship_shield_mult£$MOD_SHIP_SHIELD_MULT$: §G+30%§!\n - £mod_ship_armor_mult£$MOD_SHIP_ARMOR_MULT$: §G+30%§!\n -£mod_ship_hull_regen_add_perc£$MOD_SHIP_HULL_REGEN_ADD_PERC$: §G+10%§!\n -£mod_ship_shield_regen_add_perc£$MOD_SHIP_SHIELD_REGEN_ADD_PERC$: §G+10%§!\n\n £council£§Y内阁§!§0效果§!:\n-£mod_ship_shield_mult£$MOD_SHIP_SHIELD_MULT$: §G+30%§!\n - £mod_ship_armor_mult£$MOD_SHIP_ARMOR_MULT$: §G+30%§!\n -£mod_ship_hull_regen_add_perc£$MOD_SHIP_HULL_REGEN_ADD_PERC$: §G+10%§!\n -£mod_ship_shield_regen_add_perc£$MOD_SHIP_SHIELD_REGEN_ADD_PERC$: §G+10%§!"
+concept_uma_commander_trait_sp_kitasan_black_desc: "£shipclass_military£§Y军用舰船§!§0效果§!:\n-£mod_ship_shield_mult£$MOD_SHIP_SHIELD_MULT$: §G+30%§!\n - £mod_ship_armor_mult£$MOD_SHIP_ARMOR_MULT$: §G+30%§!\n -£mod_ship_hull_regen_add_perc£$MOD_SHIP_HULL_REGEN_ADD_PERC$: §G+10%§!\n -£mod_ship_shield_regen_add_perc£$MOD_SHIP_SHIELD_REGEN_ADD_PERC$: §G+10%§!\n\n £army_info_leader£§Y陆军§!§0效果§!:\n-$mod_uma_army_health$: +50%\n-$mod_uma_army_morale$: §G+50%§!\n-$mod_army_damage_mult$: §G+50%§!"
 
 
 uma_leader_cp.1.f.tt: "§l$KH$§! 将会根据 目标领袖的['concept_leader_class'] 添加如下特质: \n\n   £official£$official$ \n ['concept_uma_governor_trait_sp_king_halo']\n\n   £scientist£$scientist$ \n ['concept_uma_scientist_trait_sp_king_halo']\n\n   £commander£$commander$ \n ['concept_uma_commander_trait_sp_king_halo']"
@@ -480,7 +480,7 @@ concept_uma_governor_trait_sp_king_halo_desc: "£planet£§Y行星总督§!§0�
 concept_uma_scientist_trait_sp_king_halo: "$uma_scientist_trait_sp_king_halos$"
 concept_uma_scientist_trait_sp_king_halo_desc: "£science_ship£§Y科研船§!§0效果§!:\n-$mod_science_ship_survey_speed$: §G+30%§!\n-$MOD_SHIP_ANOMALY_GENERATION_CHANCE_MULT$: §G+20%§!\n-£mod_ship_speed_mult£$MOD_SHIP_SPEED_MULT$: §G+20%§!\n\n £council£§Y内阁§!§0效果§!:\n-$MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+20%§!\n-£mod_ship_speed_mult£$MOD_SHIP_SPEED_MULT$: §G+20%§!"
 concept_uma_commander_trait_sp_king_halo: "$uma_commander_trait_sp_king_halo$"
-concept_uma_commander_trait_sp_king_halo_desc: "£shipclass_military£§Y军用舰船§!§0效果§!:\n-£mod_ship_evasion_add£$MOD_SHIP_EVASION_ADD$: §G+10§!\n -£mod_ship_weapon_damage£$MOD_SHIP_WEAPON_DAMAGE$: §G+20%§!\n -£mod_ship_weapon_range_mult£$MOD_SHIP_WEAPON_RANGE_MULT$: §G+20%§!"
+concept_uma_commander_trait_sp_king_halo_desc: "£shipclass_military£§Y军用舰船§!§0效果§!:\n-£mod_ship_evasion_add£$MOD_SHIP_EVASION_ADD$: §G+10§!\n -£mod_ship_weapon_damage£$MOD_SHIP_WEAPON_DAMAGE$: §G+20%§!\n -£mod_ship_weapon_range_mult£$MOD_SHIP_WEAPON_RANGE_MULT$: §G+20%§!\n\n £army_info_leader£§Y陆军§!§0效果§!:\n-$mod_uma_army_morale$: §G+50%§!\n-$mod_army_damage_mult$: §G+50%§!"
 
 
 

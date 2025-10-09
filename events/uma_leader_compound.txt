@@ -560,7 +560,7 @@ country_event = {
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 			event_target:uma_is_leader_kitasan_black = {
-				has_trait = uma_commander_trait_sp_kitasan_black
+				has_trait = uma_general_trait_sp_kitasan_black
 			}
 		}
 		event_target:uma_is_leader_kitasan_black = {
@@ -576,7 +576,7 @@ country_event = {
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 			event_target:uma_is_leader_king_halo = {
-				has_trait = uma_commander_trait_sp_king_halo
+				has_trait = uma_general_trait_sp_king_halo
 			}
 
 		}
@@ -594,7 +594,7 @@ country_event = {
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 			event_target:uma_is_leader_al_condor_pasa = {
-				has_trait = uma_commander_trait_sp_al_condor_pasa
+				has_trait = uma_general_trait_sp_al_condor_pasa
 			}
 		}
 
@@ -1346,7 +1346,7 @@ country_event = {
 		}
 		allow = {
 			event_target:uma_is_leader_kitasan_black = {
-				has_trait = uma_commander_trait_sp_kitasan_black
+				has_trait = uma_general_trait_sp_kitasan_black
 			}
 			NOT = {
 				event_target:uma_is_leader_kitasan_black = {
@@ -1369,7 +1369,7 @@ country_event = {
 		}
 		allow = {
 			event_target:uma_is_leader_king_halo = {
-				has_trait = uma_commander_trait_sp_king_halo
+				has_trait = uma_general_trait_sp_king_halo
 			}
 			NOT = {
 				event_target:uma_is_leader_king_halo = {
@@ -1392,7 +1392,7 @@ country_event = {
 		}
 		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
-				has_trait = uma_commander_trait_sp_al_condor_pasa
+				has_trait = uma_general_trait_sp_al_condor_pasa
 			}
 			NOT = {
 				event_target:uma_is_leader_al_condor_pasa = {
