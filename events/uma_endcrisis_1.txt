@@ -1,1 +1,81 @@
 namespace = uma_ec_1
+
+#When crisis Begin
+country_event = {
+	id = uma_ec_1.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = uma_ec1_timemachine_happened
+			has_global_flag = uma_ec_invasion_ec1_end
+			has_global_flag = uma_ec_invasion_end
+		}
+	}
+
+	immediate = {
+		endgame_telemetry = uma_end_crisis_1
+		set_global_flag = uma_ec1_timemachine_happened
+		set_global_flag = uma_ec_invasion_happened
+
+		log = "UMA ENDCRISIS1 WILL HAPPENED AT [GetDate]"
+
+		create_species = {
+			name = "NAME_ec1_threegodness_species"
+			class = umamusume
+			portrait = umamusume
+			traits = random
+			immortal = yes
+			name_list = UMAname
+			effect = { save_global_event_target_as = uma_ec3_umamusume_species }
+		}
+		create_country = {
+			name = "NAME_UMA_EC3_country"
+			type = uma_ec3_empire
+			species = event_target:uma_ec3_umamusume_species
+			name_list = "UMAname"
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "flag_BG_39.dds"
+				}
+				colors = {
+					"light_blue"
+					"moss_green"
+					"null"
+					"null"
+				}
+			}
+
+			effect = {
+
+				set_country_flag = uma_ec1_country
+				save_global_event_target_as = uma_ec1_country
+
+				set_graphical_culture = humanoid_01
+			}
+		}
+
+		random_system = {
+			limit = {
+				is_star_class = sc_pulsar
+			}
+			spawn_megastructure = {
+				type = crisis_sphere_4
+				planet = solar_system.star
+				coords_from = this
+				orbit_angle = random
+				orbit_distance = 5
+				owner = event_target:uma_ec1_country
+				graphical_culture = mammalian_01
+				random_pos = 
+				init_effect = 
+			}
+		}
+	}
+}

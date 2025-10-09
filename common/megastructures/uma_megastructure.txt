@@ -342,3 +342,19 @@ uma_school_planet_ring_world_3_intermediate = {
 		}
 	}
 }
+
+
+uma_ec1_dyson_sphere = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 0
+	resources = {
+		category = megastructures
+
+	}
+
+	on_build_complete = {
+
+	}
+}
