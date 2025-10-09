@@ -791,8 +791,11 @@ country_event = {
 		}
 		allow = {
 			NOT = {
-				event_target:uma_is_leader_oguri_cap = {
-					has_leader_flag = uma_leader_compound_father
+				custom_tooltip_fail = {
+					text = uma_leader_cp.1.fail
+					event_target:uma_is_leader_oguri_cap = {
+						has_leader_flag = uma_leader_compound_father
+					}
 				}
 			}
 		}
@@ -808,9 +811,12 @@ country_event = {
 			exists = event_target:uma_agnes_digital_governor
 		}
 		allow = {
-			NOT = {
-				event_target:uma_agnes_digital_governor = {
-					has_leader_flag = uma_leader_compound_father
+			custom_tooltip_fail = {
+				text = uma_leader_cp.1.fail
+				NOT = {
+					event_target:uma_agnes_digital_governor = {
+						has_leader_flag = uma_leader_compound_father
+					}
 				}
 			}
 		}
@@ -829,10 +835,12 @@ country_event = {
 			}
 		}
 		allow = {
-
-			NOT = {
-				event_target:uma_is_leader_kitasan_black = {
-					has_leader_flag = uma_leader_compound_father
+			custom_tooltip_fail = {
+				text = uma_leader_cp.1.fail
+				NOT = {
+					event_target:uma_is_leader_kitasan_black = {
+						has_leader_flag = uma_leader_compound_father
+					}
 				}
 			}
 		}
@@ -854,10 +862,12 @@ country_event = {
 			}
 		}
 		allow = {
-
-			NOT = {
-				event_target:uma_is_leader_king_halo = {
-					has_leader_flag = uma_leader_compound_father
+			custom_tooltip_fail = {
+				text = uma_leader_cp.1.fail
+				NOT = {
+					event_target:uma_is_leader_king_halo = {
+						has_leader_flag = uma_leader_compound_father
+					}
 				}
 			}
 		}
@@ -5240,6 +5250,7 @@ country_event = {
 			last_created_leader = {
 				uma_leader_cp_build_up_skill = yes
 				uma_leader_cp_build_up_write_information = yes
+				uma_initialize_leader_yaruki_effect = yes
 
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_compound_leader
@@ -5271,9 +5282,23 @@ country_event = {
 				targets = { Root Root.leader }
 			}
 
-			uma_leader_cp_cleanup_all = yes
-			event_target:uma_leader_cp_empty_country = {
-				destroy_country = yes
+
+			event_target:uma_leader_cp_mother = {
+				kill_leader = {
+					show_notification = no
+					fire = yes
+				}
+			}
+
+			event_target:uma_leader_cp_father = {
+				kill_leader = {
+					show_notification = no
+					fire = yes
+				}
+			}
+
+			country_event = {
+				id = uma_leader_cp.15
 			}
 		}
 	}
@@ -5289,6 +5314,19 @@ country_event = {
 			country_event = {
 				id = uma_leader_cp.14
 			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		uma_leader_cp_cleanup_all = yes
+		event_target:uma_leader_cp_empty_country = {
+			destroy_country = yes
 		}
 	}
 }
