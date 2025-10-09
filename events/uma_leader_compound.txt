@@ -59,32 +59,39 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.a
+		custom_tooltip = uma_leader_cp.1.a.tt
 		trigger = {
 			exists = event_target:uma_is_leader_oguri_cap
 		}
 		event_target:uma_is_leader_oguri_cap = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.d
+		custom_tooltip = uma_leader_cp.1.d.tt
 		trigger = {
 			exists = event_target:uma_agnes_digital_governor
 		}
 		event_target:uma_agnes_digital_governor = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 			event_target:uma_is_leader_kitasan_black = {
@@ -5107,6 +5114,9 @@ country_event = {
 			last_created_leader = {
 				uma_leader_cp_build_up_skill = yes
 				uma_leader_cp_build_up_write_information = yes
+
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_compound_leader
 			}
 
 			create_message = {
@@ -5129,12 +5139,15 @@ country_event = {
 				type = timeline_umamusume
 				override_tooltip = "uma_timeline_leader_compound_desc"
 				override_text = { "text:uma_timeline_leader_compound" }
-				override_texture = { "background_zoom1:GFX_uma_timelines_meet_ad" "background_zoom2:GFX_uma_timelines_meet_ad_zoom_2" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_compound" "background_zoom2:GFX_uma_timelines_meet_compound_zoom_2" }
 				override_types = { country leader }
 				override_id = uma_timeline_leader_compound
 			}
 
 			uma_leader_cp_cleanup_all = yes
+			event_target:uma_leader_cp_empty_country = {
+				destroy_country = yes
+			}
 		}
 	}
 

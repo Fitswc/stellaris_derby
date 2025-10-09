@@ -1312,3 +1312,26 @@ uma_scientist_trait_sp_ayb_commander = {
 	initial = no
 	randomized = no
 }
+
+uma_governor_trait_sp_teio_hachimi_offcical = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = "GFX_uma_governor_trait_sp_teio_hachimi"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+	immortal_leaders = no
+	leader_potential_add = {
+		always = no
+	}
+	planet_modifier = {
+		planet_jobs_consumer_goods_upkeep_mult = 0.1
+		pop_housing_usage_mult = -0.1
+		pop_workforce_mult = 0.05
+	}
+	leader_class = { official }
+	initial = no
+	randomized = no
+}
