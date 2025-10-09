@@ -53,7 +53,7 @@ decision_uma_hold_planet_racing = {
 		custom_tooltip = uma_planet_race_will_be_held_by_us #星球德比将很快举行...
 		add_modifier = {
 			modifier = uma_has_held_the_planet_race
-				days = 7300
+				days = 3750
 		}
 		hidden_effect = {
 			planet_event = {

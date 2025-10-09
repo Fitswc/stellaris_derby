@@ -432,11 +432,17 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+
 	trigger = {
 #		has_authority = auth_trainingcenter
-		is_species_class = umamusume
+		exists = from
 		from = {
-			is_same_species_class = prev
+			owner = {
+				is_species_class = umamusume
+			}
 		}
 	}
 

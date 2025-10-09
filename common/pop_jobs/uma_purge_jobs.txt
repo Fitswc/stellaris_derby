@@ -41,17 +41,47 @@ uma_fuel_purge_small = {
 	resources = {
 		category = planet_jobs
 		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_unity
+				}
+			}
 			unity = 0.5
-			society_research = 1
+#			society_research = 1
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_food
+				}
+			}
+			food = 0.5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_tech
+				}
+			}
+			physics_research = 0.3
+			society_research = 0.3
+			engineering_research = 0.3
+		}
+
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
 			}
 			energy = 3
 		}
+
 		upkeep = {
 			trigger = {
+				owner = {
+					NOT = {
+						has_policy_flag = policy_uma_fuel_convertion_produce_food
+					}
+				}
 				is_organic_species = yes
 			}
 			food = 1
@@ -100,9 +130,33 @@ uma_fuel_purge_medium = {
 	resources = {
 		category = planet_jobs
 		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_unity
+				}
+			}
 			unity = 1
-			society_research = 3
+#			society_research = 1
 		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_food
+				}
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_tech
+				}
+			}
+			physics_research = 0.8
+			society_research = 0.8
+			engineering_research = 0.8
+		}
+
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
@@ -111,6 +165,11 @@ uma_fuel_purge_medium = {
 		}
 		upkeep = {
 			trigger = {
+				NOT = {
+					owner = {
+						has_policy_flag = policy_uma_fuel_convertion_produce_food
+					}
+				}
 				is_organic_species = yes
 			}
 			food = 1
@@ -161,8 +220,31 @@ uma_fuel_purge_big = {
 	resources = {
 		category = planet_jobs
 		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_unity
+				}
+			}
 			unity = 3
-			society_research = 5
+#			society_research = 5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_food
+				}
+			}
+			food = 3
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_tech
+				}
+			}
+			physics_research = 2.8
+			society_research = 2.8
+			engineering_research = 2.8
 		}
 		upkeep = {
 			trigger = {
@@ -174,6 +256,11 @@ uma_fuel_purge_big = {
 		}
 		upkeep = {
 			trigger = {
+				owner = {
+					NOT = {
+					 	has_policy_flag = policy_uma_fuel_convertion_produce_food
+					}
+				}
 				planet.controller = {
 					is_organic_species = yes
 				}
