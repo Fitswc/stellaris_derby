@@ -101,13 +101,16 @@ country_event = {
 		event_target:uma_is_leader_kitasan_black = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 			event_target:uma_is_leader_king_halo = {
@@ -118,13 +121,16 @@ country_event = {
 		event_target:uma_is_leader_king_halo = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 			event_target:uma_is_leader_al_condor_pasa = {
@@ -135,13 +141,16 @@ country_event = {
 		event_target:uma_is_leader_al_condor_pasa = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
 		trigger = {
 			exists = event_target:uma_seiun_sky_governor
 		}
@@ -155,6 +164,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.h.gov
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
 		trigger = {
 			OR = {
 				exists = event_target:uma_is_leader_governor_nature
@@ -164,13 +174,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.k
+		custom_tooltip = uma_leader_cp.1.k.tt
 		trigger = {
 			exists = event_target:uma_is_leader_deep
 		}
@@ -178,14 +191,17 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 
 	option = {
 		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt
 		trigger = {
 			exists = event_target:uma_is_teio_governor
 		}
@@ -193,13 +209,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.n
+		custom_tooltip = uma_leader_cp.1.n.tt
 		trigger = {
 			exists = event_target:uma_is_leader_fine
 		}
@@ -211,13 +230,16 @@ country_event = {
 		event_target:uma_is_leader_fine = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.o
+		custom_tooltip = uma_leader_cp.1.o.tt
 		trigger = {
 			exists = event_target:uma_is_leader_tama
 		}
@@ -225,13 +247,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.p
+		custom_tooltip = uma_leader_cp.1.p.tt
 		trigger = {
 			exists = event_target:uma_is_leader_cheval_grand
 		}
@@ -239,13 +264,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.t
+		custom_tooltip = uma_leader_cp.1.t.tt
 		trigger = {
 			exists = event_target:uma_is_leader_curren_chan
 		}
@@ -258,13 +286,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.u
+		custom_tooltip = uma_leader_cp.1.u.tt
 		trigger = {
 			exists = event_target:uma_is_leader_zephyr
 		}
@@ -272,8 +303,10 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
@@ -309,19 +342,23 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.c
+		custom_tooltip = uma_leader_cp.1.c.tt
 		trigger = {
 			exists = event_target:uma_is_leader_tachyon
 		}
 		event_target:uma_is_leader_tachyon = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.h.sci
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
 		trigger = {
 			OR = {
 				exists = event_target:uma_is_leader_scientist_nature
@@ -331,13 +368,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.i
+		custom_tooltip = uma_leader_cp.1.i.tt
 		trigger = {
 			exists = event_target:uma_is_leader_silent_suzuka
 		}
@@ -351,6 +391,7 @@ country_event = {
 	}
 	option = {
 		name = uma_leader_cp.1.j
+		custom_tooltip = uma_leader_cp.1.j.tt
 		trigger = {
 			exists = event_target:uma_is_leader_satono
 		}
@@ -365,6 +406,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt.sci
 		trigger = {
 			exists = event_target:uma_is_teio_scientist
 		}
@@ -372,13 +414,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.m
+		custom_tooltip = uma_leader_cp.1.m.tt
 		trigger = {
 			exists = event_target:uma_is_leader_zf
 		}
@@ -392,19 +437,22 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.q
+		custom_tooltip = uma_leader_cp.1.q.tt
 		trigger = {
 			exists = event_target:uma_is_leader_hishi_miracle
 		}
 		event_target:uma_is_leader_hishi_miracle = {
 			set_leader_flag = uma_leader_compound_father
-
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 	option = {
 		name = uma_leader_cp.1.r
+		custom_tooltip = uma_leader_cp.1.r.tt
 		trigger = {
 			exists = event_target:uma_is_leader_sweepy_tonson
 		}
@@ -412,26 +460,32 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.s
+		custom_tooltip = uma_leader_cp.1.s.tt
 		trigger = {
 			exists = event_target:uma_is_leader_mejro_ardan
 		}
 		event_target:uma_is_leader_mejro_ardan = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 			event_target:uma_is_leader_kitasan_black = {
@@ -442,13 +496,16 @@ country_event = {
 		event_target:uma_is_leader_kitasan_black = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 			event_target:uma_is_leader_king_halo = {
@@ -459,13 +516,16 @@ country_event = {
 		event_target:uma_is_leader_king_halo = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 			event_target:uma_is_leader_al_condor_pasa = {
@@ -476,8 +536,10 @@ country_event = {
 		event_target:uma_is_leader_al_condor_pasa = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
@@ -513,6 +575,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.h.com
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
 		trigger = {
 			OR = {
 				exists = event_target:uma_is_leader_general_nature
@@ -522,13 +585,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.l
+		custom_tooltip =  uma_leader_cp.1.l.tt.com
 		trigger = {
 			exists = event_target:uma_is_teio_admiral
 		}
@@ -536,13 +602,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.v
+		custom_tooltip = uma_leader_cp.1.v.tt
 		trigger = {
 			exists = event_target:uma_is_leader_duramente
 		}
@@ -550,13 +619,16 @@ country_event = {
 			set_leader_flag = uma_leader_compound_father
 
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 			event_target:uma_is_leader_kitasan_black = {
@@ -566,13 +638,16 @@ country_event = {
 		event_target:uma_is_leader_kitasan_black = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 			event_target:uma_is_leader_king_halo = {
@@ -584,13 +659,16 @@ country_event = {
 		event_target:uma_is_leader_king_halo = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 			event_target:uma_is_leader_al_condor_pasa = {
@@ -601,22 +679,27 @@ country_event = {
 		event_target:uma_is_leader_al_condor_pasa = {
 			set_leader_flag = uma_leader_compound_father
 		}
-		country_event = {
-			id = uma_leader_cp.5
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
 		}
 	}
 
 	option = {
 		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
 		trigger = {
 			exists = event_target:uma_seiun_sky_admiral
 		}
 		event_target:uma_seiun_sky_admiral = {
 			set_leader_flag = uma_leader_compound_father
 		}
+		hidden_effect = {
 		country_event = {
 			id = uma_leader_cp.5
 		}
+			}
 	}
 
 
@@ -702,6 +785,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.a
+		custom_tooltip = uma_leader_cp.1.a.tt
 		trigger = {
 			exists = event_target:uma_is_leader_oguri_cap
 		}
@@ -719,6 +803,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.d
+		custom_tooltip = uma_leader_cp.1.d.tt
 		trigger = {
 			exists = event_target:uma_agnes_digital_governor
 		}
@@ -736,6 +821,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 		}
@@ -759,6 +845,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 		}
@@ -782,6 +869,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 		}
@@ -805,6 +893,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
 		trigger = {
 			exists = event_target:uma_seiun_sky_governor
 		}
@@ -822,6 +911,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.h.gov
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
 		trigger = {
 			OR = {
 				exists = event_target:uma_is_leader_governor_nature
@@ -842,6 +932,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.k
+		custom_tooltip = uma_leader_cp.1.k.tt
 		trigger = {
 			exists = event_target:uma_is_leader_deep
 		}
@@ -861,6 +952,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt
 		trigger = {
 			exists = event_target:uma_is_teio_governor
 		}
@@ -879,6 +971,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.n
+		custom_tooltip = uma_leader_cp.1.n.tt
 		trigger = {
 			exists = event_target:uma_is_leader_fine
 		}
@@ -897,6 +990,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.o
+		custom_tooltip = uma_leader_cp.1.o.tt
 		trigger = {
 			exists = event_target:uma_is_leader_tama
 		}
@@ -915,6 +1009,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.p
+		custom_tooltip = uma_leader_cp.1.p.tt
 		trigger = {
 			exists = event_target:uma_is_leader_cheval_grand
 		}
@@ -933,6 +1028,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.t
+		custom_tooltip = uma_leader_cp.1.t.tt
 		trigger = {
 			exists = event_target:uma_is_leader_curren_chan
 		}
@@ -954,6 +1050,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.u
+		custom_tooltip = uma_leader_cp.1.u.tt
 		trigger = {
 			exists = event_target:uma_is_leader_zephyr
 		}
@@ -1015,6 +1112,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.c
+		custom_tooltip = uma_leader_cp.1.c.tt
 		trigger = {
 			exists = event_target:uma_is_leader_tachyon
 		}
@@ -1032,6 +1130,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.h.sci
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
 		trigger = {
 			OR = {
 				exists = event_target:uma_is_leader_scientist_nature
@@ -1052,6 +1151,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.i
+		custom_tooltip = uma_leader_cp.1.i.tt
 		trigger = {
 			exists = event_target:uma_is_leader_silent_suzuka
 		}
@@ -1069,6 +1169,7 @@ country_event = {
 	}
 	option = {
 		name = uma_leader_cp.1.j
+		custom_tooltip = uma_leader_cp.1.j.tt
 		trigger = {
 			exists = event_target:uma_is_leader_satono
 		}
@@ -1087,6 +1188,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt.sci
 		trigger = {
 			exists = event_target:uma_is_teio_scientist
 		}
@@ -1105,6 +1207,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.m
+		custom_tooltip = uma_leader_cp.1.m.tt
 		trigger = {
 			exists = event_target:uma_is_leader_zf
 		}
@@ -1122,6 +1225,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.q
+		custom_tooltip = uma_leader_cp.1.q.tt
 		trigger = {
 			exists = event_target:uma_is_leader_hishi_miracle
 		}
@@ -1139,6 +1243,7 @@ country_event = {
 	}
 	option = {
 		name = uma_leader_cp.1.r
+		custom_tooltip = uma_leader_cp.1.r.tt
 		trigger = {
 			exists = event_target:uma_is_leader_sweepy_tonson
 		}
@@ -1157,6 +1262,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.s
+		custom_tooltip = uma_leader_cp.1.s.tt
 		trigger = {
 			exists = event_target:uma_is_leader_mejro_ardan
 		}
@@ -1174,6 +1280,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 		}
@@ -1197,6 +1304,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 		}
@@ -1220,6 +1328,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 		}
@@ -1285,6 +1394,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.h.com
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
 		trigger = {
 			OR = {
 				exists = event_target:uma_is_leader_general_nature
@@ -1305,6 +1415,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.l
+		custom_tooltip =  uma_leader_cp.1.l.tt.com
 		trigger = {
 			exists = event_target:uma_is_teio_admiral
 		}
@@ -1323,6 +1434,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.v
+		custom_tooltip = uma_leader_cp.1.v.tt
 		trigger = {
 			exists = event_target:uma_is_leader_duramente
 		}
@@ -1341,6 +1453,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
 		}
@@ -1364,6 +1477,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
 		}
@@ -1387,6 +1501,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
 		}
@@ -1410,6 +1525,7 @@ country_event = {
 
 	option = {
 		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
 		trigger = {
 			exists = event_target:uma_seiun_sky_admiral
 		}
@@ -3575,7 +3691,6 @@ country_event = {
 
 	####
 
-	###Tama Have to bring negative trait
 	option = {
 		name = uma_leader_cp.9.tama.trait.1
 		trigger = {

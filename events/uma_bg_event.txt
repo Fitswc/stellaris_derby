@@ -167,12 +167,30 @@ country_event = {
 	}
 
 	immediate = {
-		event_target:uma_seiun_sky_admiral = {
-			if = {
-				limit = {
-					AND = {
-						has_trait = uma_commander_trait_sp_seiun_sky_1
+		if = {
+			limit = {
+				exists = event_target:uma_seiun_sky_admiral
+			}
+			event_target:uma_seiun_sky_admiral = {
+				if = {
+					limit = {
+						AND = {
+							has_trait = uma_commander_trait_sp_seiun_sky_1
+						}
 					}
+					remove_trait = uma_commander_trait_sp_seiun_sky_1
+					add_trait = {
+						trait = uma_commander_trait_sp_seiun_sky_2
+					}
+				}
+			}
+		}
+
+		else = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_is_compound_leader
+					has_trait = uma_commander_trait_sp_seiun_sky_1
 				}
 				remove_trait = uma_commander_trait_sp_seiun_sky_1
 				add_trait = {
@@ -193,9 +211,26 @@ country_event = {
 	}
 
 	immediate = {
-		event_target:uma_seiun_sky_admiral = {
-			if = {
-				limit = { has_trait = uma_commander_trait_sp_seiun_sky_2 }
+		if = {
+			limit = {
+				exists = event_target:uma_seiun_sky_admiral
+			}
+			event_target:uma_seiun_sky_admiral = {
+				if = {
+					limit = { has_trait = uma_commander_trait_sp_seiun_sky_2 }
+					remove_trait = uma_commander_trait_sp_seiun_sky_2
+					add_trait = {
+						trait = uma_commander_trait_sp_seiun_sky_1
+					}
+				}
+			}
+		}
+		else = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_is_compound_leader
+					has_trait = uma_commander_trait_sp_seiun_sky_2
+				}
 				remove_trait = uma_commander_trait_sp_seiun_sky_2
 				add_trait = {
 					trait = uma_commander_trait_sp_seiun_sky_1

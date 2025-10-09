@@ -736,10 +736,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_governor_trait_sp_cross
 			show_message = no
 		}
-		add_trait = {
-			trait = uma_governor_trait_sp_cross_help_to_cy
-			show_message = no
-		}
 	}
 
 	##原生领袖
@@ -1727,7 +1723,7 @@ uma_leader_cp_build_up_trait_commander = {
 			}
 		}
 		add_trait = {
-			trait = uma_governor_trait_sp_teio_heart_adr
+			trait = uma_governor_trait_sp_teio_adr
 			show_message = no
 		}
 	}
