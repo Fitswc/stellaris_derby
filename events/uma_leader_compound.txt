@@ -48,9 +48,9 @@ country_event = {
 	desc = uma_leader_cp.1.desc
 	is_triggered_only = yes
 	diplomatic = yes
-
+	diplomatic_title = uma_leader_cp.8.dpt
 	picture_event_data = {
-		room = no_video_feed_room
+		room = leader_cp_room
 	}
 
 	immediate = {
@@ -331,9 +331,9 @@ country_event = {
 	desc = uma_leader_cp.2.desc
 	is_triggered_only = yes
 	diplomatic = yes
-
+	diplomatic_title = uma_leader_cp.8.dpt
 	picture_event_data = {
-		room = no_video_feed_room
+		room = leader_cp_room
 	}
 
 	immediate = {
@@ -564,9 +564,9 @@ country_event = {
 	desc = uma_leader_cp.3.desc
 	is_triggered_only = yes
 	diplomatic = yes
-
+	diplomatic_title = uma_leader_cp.8.dpt
 	picture_event_data = {
-		room = no_video_feed_room
+		room = leader_cp_room
 	}
 
 	immediate = {
@@ -774,9 +774,9 @@ country_event = {
 	desc = uma_leader_cp.6.desc
 	is_triggered_only = yes
 	diplomatic = yes
-
+	diplomatic_title = uma_leader_cp.8.dpt
 	picture_event_data = {
-		room = no_video_feed_room
+		room = leader_cp_room
 	}
 
 	immediate = {
@@ -824,11 +824,12 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
-		}
-		allow = {
 			event_target:uma_is_leader_kitasan_black = {
 				has_trait = uma_governor_trait_sp_kitasan_black
 			}
+		}
+		allow = {
+
 			NOT = {
 				event_target:uma_is_leader_kitasan_black = {
 					has_leader_flag = uma_leader_compound_father
@@ -848,11 +849,12 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
-		}
-		allow = {
 			event_target:uma_is_leader_king_halo = {
 				has_trait = uma_governor_trait_sp_king_halo
 			}
+		}
+		allow = {
+
 			NOT = {
 				event_target:uma_is_leader_king_halo = {
 					has_leader_flag = uma_leader_compound_father
@@ -872,11 +874,12 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
-		}
-		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
 				has_trait = uma_governor_trait_sp_al_condor_pasa
 			}
+		}
+		allow = {
+
 			NOT = {
 				event_target:uma_is_leader_al_condor_pasa = {
 					has_leader_flag = uma_leader_compound_father
@@ -1101,9 +1104,9 @@ country_event = {
 	desc = uma_leader_cp.7.desc
 	is_triggered_only = yes
 	diplomatic = yes
-
+	diplomatic_title = uma_leader_cp.8.dpt
 	picture_event_data = {
-		room = no_video_feed_room
+		room = leader_cp_room
 	}
 
 	immediate = {
@@ -1283,11 +1286,12 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
-		}
-		allow = {
 			event_target:uma_is_leader_kitasan_black = {
 				has_trait = uma_scientist_trait_sp_kitasan_black
 			}
+		}
+		allow = {
+
 			NOT = {
 				event_target:uma_is_leader_kitasan_black = {
 					has_leader_flag = uma_leader_compound_father
@@ -1307,11 +1311,12 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
-		}
-		allow = {
 			event_target:uma_is_leader_king_halo = {
 				has_trait = uma_scientist_trait_sp_king_halo
 			}
+		}
+		allow = {
+
 			NOT = {
 				event_target:uma_is_leader_king_halo = {
 					has_leader_flag = uma_leader_compound_father
@@ -1331,11 +1336,11 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
-		}
-		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
 				has_trait = uma_scientist_trait_sp_al_condor_pasa
 			}
+		}
+		allow = {
 			NOT = {
 				event_target:uma_is_leader_al_condor_pasa = {
 					has_leader_flag = uma_leader_compound_father
@@ -1384,8 +1389,9 @@ country_event = {
 	desc = uma_leader_cp.8.desc
 	is_triggered_only = yes
 	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
 	picture_event_data = {
-		room = no_video_feed_room
+		room = leader_cp_room
 	}
 
 	immediate = {
@@ -1456,11 +1462,12 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.e.tt
 		trigger = {
 			exists = event_target:uma_is_leader_kitasan_black
-		}
-		allow = {
 			event_target:uma_is_leader_kitasan_black = {
 				has_trait = uma_general_trait_sp_kitasan_black
 			}
+		}
+		allow = {
+
 			NOT = {
 				event_target:uma_is_leader_kitasan_black = {
 					has_leader_flag = uma_leader_compound_father
@@ -1480,11 +1487,11 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.f.tt
 		trigger = {
 			exists = event_target:uma_is_leader_king_halo
-		}
-		allow = {
 			event_target:uma_is_leader_king_halo = {
 				has_trait = uma_general_trait_sp_king_halo
 			}
+		}
+		allow = {
 			NOT = {
 				event_target:uma_is_leader_king_halo = {
 					has_leader_flag = uma_leader_compound_father
@@ -1504,11 +1511,11 @@ country_event = {
 		custom_tooltip = uma_leader_cp.1.g.tt
 		trigger = {
 			exists = event_target:uma_is_leader_al_condor_pasa
-		}
-		allow = {
 			event_target:uma_is_leader_al_condor_pasa = {
 				has_trait = uma_general_trait_sp_al_condor_pasa
 			}
+		}
+		allow = {
 			NOT = {
 				event_target:uma_is_leader_al_condor_pasa = {
 					has_leader_flag = uma_leader_compound_father
@@ -5133,6 +5140,7 @@ country_event = {
 					background_job = uma_racing_umamusume
 					skill = 1
 					set_age = 16
+					custom_catch_phrase = uma_is_compound_temporary.cp
 					tier = leader_tier_legendary
 					traits = {
 						0 = leader_trait_uma_generic
@@ -5164,7 +5172,9 @@ country_event = {
 					background_job = uma_racing_umamusume
 					skill = 1
 					set_age = 16
+					custom_catch_phrase = uma_is_compound_temporary.cp
 					tier = leader_tier_legendary
+
 					traits = {
 						0 = leader_trait_uma_generic
 					}
@@ -5196,6 +5206,7 @@ country_event = {
 					skill = 1
 					set_age = 16
 					tier = leader_tier_legendary
+					custom_catch_phrase = uma_is_compound_temporary.cp
 					traits = {
 						0 = leader_trait_uma_generic
 					}
@@ -5257,6 +5268,7 @@ country_event = {
 				override_texture = { "background_zoom1:GFX_uma_timelines_meet_compound" "background_zoom2:GFX_uma_timelines_meet_compound_zoom_2" }
 				override_types = { country leader }
 				override_id = uma_timeline_leader_compound
+				targets = { Root Root.leader }
 			}
 
 			uma_leader_cp_cleanup_all = yes
