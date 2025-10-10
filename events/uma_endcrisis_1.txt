@@ -66,15 +66,17 @@ country_event = {
 				is_star_class = sc_pulsar
 			}
 			spawn_megastructure = {
-				type = crisis_sphere_4
+				type = uma_ec1_dyson_sphere
 				planet = solar_system.star
 				coords_from = this
 				orbit_angle = random
 				orbit_distance = 5
 				owner = event_target:uma_ec1_country
 				graphical_culture = mammalian_01
-				random_pos = 
-				init_effect = 
+				random_pos = yes
+				init_effect =  {
+
+				}
 			}
 		}
 	}
