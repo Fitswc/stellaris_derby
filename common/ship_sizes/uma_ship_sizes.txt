@@ -265,3 +265,48 @@ starbase_uma_ec3 = {
 	icon_frame = 5
 	icon = ship_size_military_station
 }
+
+
+starbase_uma_ec1 = {
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_mult = -1
+		ships_upkeep_mult = -1.0
+		ship_shield_add = 1500000
+		ship_armor_add = 1500000
+		ship_cloaking_detection_add = 1
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.8
+	}
+
+	max_hitpoints = 1500
+	combat_size_multiplier = 50
+	size_multiplier = 4
+	fleet_slot_size = 2
+	section_slots = {
+		"core" = { locator = "slot1" }
+	}
+	is_designable = no
+	num_target_locators = 0
+	is_space_station = no
+	can_have_federation_design = no
+	is_civilian = no
+	components_add_to_cost = no
+	is_listed = no
+	can_disable = no
+    entity = "mammalian_01_starbase_citadel_phase_05_entity"
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	class = shipclass_starbase
+
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	build_block_radius = 20
+	formation_priority = 1
+	icon_frame = 5
+	icon = ship_size_military_station
+}

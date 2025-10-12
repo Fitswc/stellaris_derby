@@ -1077,3 +1077,110 @@ ship_design = {
 	required_component = "COMBAT_COMPUTER_ARTILLERY_ADVANCED"
 
 }
+
+
+ship_design = {
+	name = "NAME_UMA_EC1_ION_CANNON"
+	ship_size = ion_cannon
+	is_event_design = yes
+	country_type = uma_ec1_empire
+
+	section = {
+		template = ION_CANNON_CORE
+
+		component = {
+			slot = "TITANIC_GUN_01"
+			template = UMA_TG_ARCH_WEAPON_2_T
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = UMA_TG_SHIELD_L
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = UMA_TG_ARMOR_L
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = UMA_TG_ARMOR_L
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = UMA_TG_ARMOR_L
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = UMA_TG_ARMOR_L
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = UMA_TG_ARMOR_L
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_TWIN_TURBO_BOOSTER"
+		}
+	}
+	required_component = "UMA_TG_REACTION_2_STARBASE"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+
+}
+
+ship_design = {
+	name = "NAME_starbase_uma_ec1"
+	ship_size = starbase_uma_ec1
+	section = {
+		template = "marauder_starbase_key"
+		slot = "mid"
+
+		component = {
+			slot = "TORPEDO_01"
+			template = "UMA_TG_QAAM_MISSILE"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "UMA_TG_QAAM_MISSILE"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "UMA_TG_QAAM_MISSILE"
+		}
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+
+		component = {
+			slot = "PD_01"
+			template = "FLAK_BATTERY_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component="SENSOR_2"
+}

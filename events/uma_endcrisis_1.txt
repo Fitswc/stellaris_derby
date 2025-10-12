@@ -53,7 +53,10 @@ country_event = {
 			}
 
 			effect = {
-
+				create_ship_design = {
+					design = NAME_starbase_uma_ec1
+				}
+				add_ship_design = last_created_design
 				set_country_flag = uma_ec1_country
 				save_global_event_target_as = uma_ec1_country
 
@@ -75,8 +78,28 @@ country_event = {
 				graphical_culture = mammalian_01
 				random_pos = yes
 				init_effect =  {
+					set_megastructure_flag = uma_ec1_dyson_sphere
+				}
+			}
+
+			every_neighbor_system = {
+				limit = {
 
 				}
+				if = {
+					limit = {
+						exists = starbase
+					}
+					starbase = {
+						fleet = {
+							destroy_fleet = this
+						}
+					}
+				}
+				create_starbase = {
+					size = starbase_uma_ec1
+				}
+				set_star_flag = uma_ec1_side_defend_system
 			}
 		}
 	}
