@@ -57,6 +57,7 @@ country_event = {
 					design = NAME_starbase_uma_ec1
 				}
 				add_ship_design = last_created_design
+
 				set_country_flag = uma_ec1_country
 				save_global_event_target_as = uma_ec1_country
 
@@ -67,6 +68,16 @@ country_event = {
 		random_system = {
 			limit = {
 				is_star_class = sc_pulsar
+			}
+			if = {
+				limit = {
+					exists = starbase
+				}
+				starbase = {
+					fleet = {
+						destroy_fleet = this
+					}
+				}
 			}
 			spawn_megastructure = {
 				type = uma_ec1_dyson_sphere
@@ -82,9 +93,30 @@ country_event = {
 				}
 			}
 
+			create_starbase = {
+				size = starbase_uma_ec1
+				module = shipyard
+				module = detection_array
+				effect = {
+					while = {
+						limit = {
+							fleet = {
+								fleet_power >= 12000
+							}
+						}
+						create_ship = {
+							design = NAME_UMA_EC1_ION_CANNON
+						}
+					}
+				}
+			}
+
 			every_neighbor_system = {
 				limit = {
-
+					distance = {
+						source = Prev
+						max_jumps = 1
+					}
 				}
 				if = {
 					limit = {
@@ -98,9 +130,45 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_uma_ec1
+					effect = {
+						create_ship = {
+							design = NAME_UMA_EC1_ION_CANNON
+						}
+					}
 				}
 				set_star_flag = uma_ec1_side_defend_system
 			}
+		}
+	}
+}
+
+
+##On Failed
+system_event = {
+	id = uma_ec_1.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_system_megastructure = { has_megastructure_flag = uma_ec1_dyson_sphere }
+	}
+
+	immediate = {
+		random_system_megastructure = {
+			limit = { has_megastructure_flag = uma_ec1_dyson_sphere }
+			prev = {
+				spawn_megastructure = {
+					type = uma_ec1_dyson_sphere_ruined
+					coords_from = prev
+					init_effect = {
+						if = {
+							limit = { exists = fromfrom }
+							set_megastructure_flag = uma_ruined_ec1_dyson_sphere@fromfrom
+						}
+					}
+				}
+			}
+			remove_megastructure = this
 		}
 	}
 }

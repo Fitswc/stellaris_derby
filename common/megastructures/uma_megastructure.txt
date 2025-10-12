@@ -352,3 +352,12 @@ uma_ec1_dyson_sphere = {
 		always = no
 	}
 }
+
+uma_ec1_dyson_sphere_ruined = {
+	entity = "dyson_sphere_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+
+	potential = {
+		always = no
+	}
+}
