@@ -28,12 +28,12 @@ country_event = {
 			traits = random
 			immortal = yes
 			name_list = UMAname
-			effect = { save_global_event_target_as = uma_ec3_umamusume_species }
+			effect = { save_global_event_target_as = uma_ec1_umamusume_species }
 		}
 		create_country = {
-			name = "NAME_UMA_EC3_country"
+			name = "NAME_UMA_EC1_country"
 			type = uma_ec3_empire
-			species = event_target:uma_ec3_umamusume_species
+			species = event_target:uma_ec1_umamusume_species
 			name_list = "UMAname"
 			flag = {
 				icon = {
@@ -143,7 +143,7 @@ country_event = {
 }
 
 
-##On Failed
+##On Win
 system_event = {
 	id = uma_ec_1.2
 	hide_window = yes
@@ -169,6 +169,55 @@ system_event = {
 				}
 			}
 			remove_megastructure = this
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		queue_actions = {
+			repeat = {
+				while = {
+					id = uma_ec_1.3.e1
+
+					any_system = {
+						has_star_flag = uma_ec1_side_defend_system
+						count_fleet_in_system = {
+							count < 2
+						}
+					}
+				}
+				find_closest_system = {
+					trigger = {
+						id = uma_ec_1.3.t1
+						count_fleet_in_system = {
+							count < 2
+						}
+					}
+					found_system = {
+						move_to = this
+						find_random_planet = {
+							trigger = {
+								id = uma_ec_1.3.t2
+
+								is_star = yes
+							}
+							found_planet = {
+								move_to = this
+							}
+						}
+					}
+					failed = {
+						wait = {
+							duration = 10
+						}
+					}
+				}
+			}
 		}
 	}
 }

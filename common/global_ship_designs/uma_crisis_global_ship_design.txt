@@ -1184,3 +1184,172 @@ ship_design = {
 	}
 	required_component="SENSOR_2"
 }
+
+
+ship_design = {
+	name = "NAME_UMA_EC1_Defend_SQUARD_BB"
+	ship_size = battleship
+	is_event_design = yes
+	country_type = uma_ec1_empire
+
+	section = {
+		template = BATTLESHIP_BOW_L1M1S2
+		slot = bow
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_L"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_TG_SHIELD_L"
+		}
+	}
+
+	section = {
+		template = BATTLESHIP_MID_L3
+		slot = mid
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_TG_SHIELD_L"
+		}
+	}
+
+	section = {
+		template = BATTLESHIP_STERN_L1
+		slot = stern
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_2_L"
+		}
+
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "UMA_TWIN_TURBO_BOOSTER"
+		}
+	}
+
+	required_component = "HYPER_DRIVE_3"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_3"
+	required_component = "SENSOR_3"
+	required_component = "UMA_TG_REACTION_2_BATTLESHIP"
+	required_component = "UMA_COMBAT_FIRST_HAND"
+}
+
+
+ship_design = {
+	name = "NAME_UMA_EC1_FRONT_SQUARD_CV"
+	ship_size = cruiser
+	is_event_design = yes
+	country_type = uma_ec1_empire
+
+	section = {
+		template = "CRUISER_BOW_L1"
+		slot = "bow"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_L"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "UMA_TG_SHIELD_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "UMA_TG_SHIELD_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "UMA_TG_SHIELD_M"
+		}
+	}
+	section = {
+		template = "CRUISER_MID_L1M1"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_L"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_MID"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "UMA_TG_ARMOR_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "UMA_TG_ARMOR_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "UMA_TG_ARMOR_M"
+		}
+	}
+	section = {
+		template = "CRUISER_STERN_M1"
+		slot = "stern"
+
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_MASS_ACCELERATOR_LARGE"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="UMA_COMBAT_FIRST_HAND"
+	required_component="SHIP_THRUSTER_3"
+	required_component="SENSOR_3"
+	required_component="UMA_CARROT_BATTERY_2_CRUISER"
+}

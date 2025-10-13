@@ -455,3 +455,67 @@ uma_endcrisis_ec2_spawn_fleet_attack = {
 	}
 }
 
+uma_ec1_create_def_fleets = {
+	optimize_memory
+	event_target:uma_ec1_country = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_ec1_umamusume_species
+			name = random
+			skill = 10
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
+	create_fleet = {
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+		effect = {
+			set_owner = event_target:uma_ec1_country
+			set_fleet_flag = uma_ec1_def_fleet
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC1_Defend_SQUARD_BB
+					graphical_culture = humanoid_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 70
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC1_FRONT_SQUARD_CV
+					graphical_culture = humanoid_01
+				}
+			}
+
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = selective
+
+		}
+	}
+
+	last_created_fleet = {
+
+	}
+}
