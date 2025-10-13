@@ -173,3 +173,50 @@ situation_uma_endcrisis_ec3 = {
 }
 
 
+situation_uma_endcrisis_ec1 = {
+
+	picture = GFX_evt_timeworm_transcriptions
+	category = negative
+	complete_icon = GFX_situation_exploding_planet
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	start_value = 0
+	on_start = {
+		set_situation_flag = uma_situation_uma_endcrisis_ec1_discount
+		owner = {
+			set_country_flag = uma_situation_uma_endcrisis_ec1_discount
+		}
+	}
+	monthly_progress = {
+		base = 0.1
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
+		hidden_effect = {
+			Root = {
+				destroy_situation = this
+			}
+		}
+	}
+	stages = {
+		time_backup = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
+		}
+	}
+
+	approach = {
+		#什么都不做
+		name = top_food_default
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}

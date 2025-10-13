@@ -184,10 +184,12 @@ fleet_event = {
 				while = {
 					id = uma_ec_1.3.e1
 
-					any_system = {
-						has_star_flag = uma_ec1_side_defend_system
-						count_fleet_in_system = {
-							count < 2
+					NOT = {
+						any_system = {
+							has_star_flag = uma_ec1_side_defend_system
+							count_fleet_in_system = {
+								count < 2
+							}
 						}
 					}
 				}
@@ -221,3 +223,5 @@ fleet_event = {
 		}
 	}
 }
+
+
