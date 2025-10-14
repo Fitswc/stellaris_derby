@@ -1353,3 +1353,164 @@ ship_design = {
 	required_component="SENSOR_3"
 	required_component="UMA_CARROT_BATTERY_2_CRUISER"
 }
+
+ship_design = {
+	name = "NAME_uma_ec1_guard_station"
+	ship_size = marauder_void_dwelling
+
+	section = {
+		template = "uma_fallen_empire_secondary_guard_station_key"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_L" #这里面是决定武器的，要用complnent_templates里面的武器的key对应，以识别武器
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "UMA_TG_ARCH_WEAPON_L"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "UMA_TG_ARCH_WEAPON_L"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "UMA_LARGE_MJR_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "UMA_MEDIUM_MJR_LASER"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "UMA_TG_ARCH_WEAPON_2_M"
+		}
+		component = {
+			slot = "PD_01"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_02"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_03"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_04"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "TORPEDO_01"
+			template = "UMA_TG_MAAM_MISSILE"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "UMA_TG_MAAM_MISSILE"
+		}
+		component = {
+			slot = "TORPEDO_03"
+			template = "UMA_TG_MAAM_MISSILE"
+		}
+		component = {
+			slot = "TORPEDO_04"
+			template = "UMA_TG_QAAM_MISSILE"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_05"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+		component = {
+			slot = "SMALL_GUN_06"
+			template = "UMA_TG_ARCH_WEAPON_2_S"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "UMA_TG_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "UMA_ARMOR_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "UMA_TG_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "UMA_TG_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_TWIN_TURBO_BOOSTER"
+		}
+	}
+	required_component="SENSOR_4"
+}

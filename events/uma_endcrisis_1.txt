@@ -111,6 +111,127 @@ country_event = {
 				}
 			}
 
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_I #"护卫者1号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 0
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_II # "护卫者2号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 40
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_III # "护卫者3号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 90
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_VI #"护卫者4号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 140
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_V #"护卫者5号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 200
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_VI #"护卫者6号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 250
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_VII #"护卫者7号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 280
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:uma_fallen_empire
+					create_ship = {
+						name = FALL_PRO_VIII #"护卫者8号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 165
+						angle = 330
+					}
+				}
+			}
+
 			every_neighbor_system = {
 				limit = {
 					distance = {

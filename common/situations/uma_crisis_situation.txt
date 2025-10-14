@@ -187,13 +187,57 @@ situation_uma_endcrisis_ec1 = {
 		}
 	}
 	monthly_progress = {
-		base = 0.1
+		base = 0.05
 	}
 	on_progress_complete = {
-		custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
+		custom_tooltip = situation_uma_endcrisis_ec1_complet_in_situation
 		hidden_effect = {
 			Root = {
 				destroy_situation = this
+			}
+			every_playable_country = {
+				every_system_within_border = {
+					limit = {
+						is_capital_system = no
+					}
+					if = {
+						limit = {
+							exists = starbase
+						}
+						starbase = {
+							fleet = {
+								destroy_fleet = this
+							}
+						}
+					}
+					every_system_colony = {
+						destroy_colony = yes
+					}
+				}
+				capital_star = {
+					solar_system = {
+						every_system_planet = {
+							limit = {
+								is_capital = no
+
+								is_colony = yes
+							}
+							kill_all_pop = yes
+							destroy_colony = yes
+						}
+					}
+				}
+				capital_scope = {
+					downgrade_all_buildings = yes
+					if = {
+						limit = {
+							is_planet_class = pc_uma_school
+							is_planet_class = pc_city
+							is_planet_class = pc_uma_industrial
+						}
+						change_pc = pc_continental
+					}
+				}
 			}
 		}
 	}
@@ -202,14 +246,14 @@ situation_uma_endcrisis_ec1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_red
 			end = 100
-			custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
+			custom_tooltip = situation_uma_endcrisis_ec1_complet_in_situation
 		}
 	}
 
 	approach = {
 		#什么都不做
 		name = top_food_default
-		icon = GFX_situation_approach_sword
+		icon = GFX_situation_approach_engineering
 		icon_background = GFX_situation_approach_bg_yellow
 		default = yes
 		on_select = {
