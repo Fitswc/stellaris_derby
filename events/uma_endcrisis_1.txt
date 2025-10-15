@@ -21,6 +21,7 @@ country_event = {
 
 		log = "UMA ENDCRISIS1 WILL HAPPENED AT [GetDate]"
 
+		set_update_modifiers_batch = begin
 		create_species = {
 			name = "NAME_ec1_threegodness_species"
 			class = umamusume
@@ -79,6 +80,7 @@ country_event = {
 					}
 				}
 			}
+			set_star_flag = uma_ec1_main_system
 			spawn_megastructure = {
 				type = uma_ec1_dyson_sphere
 				planet = solar_system.star
@@ -101,11 +103,24 @@ country_event = {
 					while = {
 						limit = {
 							fleet = {
-								fleet_power >= 12000
+								fleet_power <= 1200000
 							}
 						}
 						create_ship = {
 							design = NAME_UMA_EC1_ION_CANNON
+						}
+					}
+
+					fleet = {
+						while = {
+							count = 4
+							fleet_event = {
+								id = uma_ec_1.5
+							}
+						}
+
+						fleet_event = {
+							id = uma_ec_1.6
 						}
 					}
 				}
@@ -255,11 +270,21 @@ country_event = {
 						create_ship = {
 							design = NAME_UMA_EC1_ION_CANNON
 						}
+
+						fleet = {
+							while = {
+								count = 2
+								fleet_event = {
+									id = uma_ec_1.5
+								}
+							}
+						}
 					}
 				}
 				set_star_flag = uma_ec1_side_defend_system
 			}
 		}
+		set_update_modifiers_batch = end
 	}
 }
 
@@ -341,6 +366,93 @@ fleet_event = {
 					}
 				}
 			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+		owner = {
+			NOT = {
+				is_same_value = event_target:uma_ec1_country
+				is_hostile_to = event_target:uma_ec1_country
+			}
+		}
+
+		From = {
+			has_star_flag = uma_ec1_main_system
+		}
+
+	}
+
+	immediate = {
+		while = {
+			count = 2
+
+			random_galaxy_fleet = {
+				limit = {
+					has_fleet_flag = uma_ec1_def_fleet
+				}
+				clear_fleet_actions = this
+				queue_actions = {
+					find_closest_system = {
+						trigger = {
+							id = uma_ec_1.4
+
+							has_star_flag = uma_ec1_main_system
+						}
+						found_system = {
+							move_to = this
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		uma_ec1_create_def_fleets = yes
+		set_update_modifiers_batch = end
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:uma_ec1_country = {
+			fleet_power <= 15000000
+		}
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		uma_ec1_create_def_fleets = yes
+		last_created_fleet = {
+			fleet_event = {
+				id = uma_ec_1.3
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_1.6
 		}
 	}
 }
