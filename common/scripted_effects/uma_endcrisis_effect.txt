@@ -519,3 +519,51 @@ uma_ec1_create_def_fleets = {
 
 	}
 }
+
+
+uma_ec1_create_country_and_species = {
+	optimize_memory
+	create_species = {
+		name = "NAME_ec1_threegodness_species"
+		class = umamusume
+		portrait = umamusume
+		traits = random
+		immortal = yes
+		name_list = UMAname
+		effect = { save_global_event_target_as = uma_ec1_umamusume_species }
+	}
+	create_country = {
+		name = "NAME_UMA_EC1_country"
+		type = uma_ec1_empire
+		species = event_target:uma_ec1_umamusume_species
+		name_list = "UMAname"
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "flag_BG_39.dds"
+			}
+			colors = {
+				"light_blue"
+				"moss_green"
+				"null"
+				"null"
+			}
+		}
+
+		effect = {
+			set_country_flag = uma_ec1_country
+			save_global_event_target_as = uma_ec1_country
+
+			create_ship_design = { design = "NAME_UMA_EC1_STARBASE" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Marauder_Starbase" }
+
+
+			set_graphical_culture = humanoid_01
+		}
+	}
+}

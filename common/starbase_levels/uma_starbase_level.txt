@@ -4,3 +4,10 @@ starbase_level_uma_ec = {
 	level_weight = 5
 	ai_weight = { weight = 5 }
 }
+
+starbase_level_uma_ec1 = {
+	ship_size = starbase_uma_ec1
+	display_map_icon = yes
+	level_weight = 5
+	ai_weight = { weight = 5 }
+}

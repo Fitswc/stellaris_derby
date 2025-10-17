@@ -22,113 +22,76 @@ country_event = {
 		log = "UMA ENDCRISIS1 WILL HAPPENED AT [GetDate]"
 
 		set_update_modifiers_batch = begin
-		create_species = {
-			name = "NAME_ec1_threegodness_species"
-			class = umamusume
-			portrait = umamusume
-			traits = random
-			immortal = yes
-			name_list = UMAname
-			effect = { save_global_event_target_as = uma_ec1_umamusume_species }
-		}
-		create_country = {
-			name = "NAME_UMA_EC1_country"
-			type = uma_ec3_empire
-			species = event_target:uma_ec1_umamusume_species
-			name_list = "UMAname"
-			flag = {
-				icon = {
-					category = "special"
-					file = "unknown.dds"
-				}
-				background = {
-					category = "backgrounds"
-					file = "flag_BG_39.dds"
-				}
-				colors = {
-					"light_blue"
-					"moss_green"
-					"null"
-					"null"
-				}
-			}
-
-			effect = {
-				create_ship_design = {
-					design = NAME_starbase_uma_ec1
-				}
-				add_ship_design = last_created_design
-
-				set_country_flag = uma_ec1_country
-				save_global_event_target_as = uma_ec1_country
-
-				set_graphical_culture = humanoid_01
-			}
-		}
 
 		random_system = {
 			limit = {
 				is_star_class = sc_pulsar
 			}
-			if = {
-				limit = {
-					exists = starbase
-				}
-				starbase = {
-					fleet = {
-						destroy_fleet = this
-					}
-				}
-			}
+			uma_ec1_create_country_and_species = yes
+
+
+			save_event_target_as = uma_ec1_main_system
 			set_star_flag = uma_ec1_main_system
-			spawn_megastructure = {
-				type = uma_ec1_dyson_sphere
-				planet = solar_system.star
-				coords_from = this
-				orbit_angle = random
-				orbit_distance = 5
-				owner = event_target:uma_ec1_country
-				graphical_culture = mammalian_01
-				random_pos = yes
-				init_effect =  {
-					set_megastructure_flag = uma_ec1_dyson_sphere
-				}
-			}
 
+
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
 			create_starbase = {
-				size = starbase_uma_ec1
-				module = shipyard
-				module = detection_array
-				effect = {
-					while = {
-						limit = {
-							fleet = {
-								fleet_power <= 1200000
-							}
-						}
-						create_ship = {
-							design = NAME_UMA_EC1_ION_CANNON
-						}
-					}
-
-					fleet = {
+					size = starbase_uma_ec1
+					owner = event_target:uma_ec1_country
+					effect = {
 						while = {
-							count = 4
-							fleet_event = {
-								id = uma_ec_1.5
+							limit = {
+								fleet = {
+									fleet_power <= 1200000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
 							}
 						}
 
-						fleet_event = {
-							id = uma_ec_1.6
+						fleet = {
+							while = {
+								count = 2
+								fleet_event = {
+									id = uma_ec_1.5
+								}
+							}
 						}
 					}
 				}
-			}
+
+#			spawn_megastructure = {
+#				type = uma_ec1_dyson_sphere
+#				planet = solar_system.star
+#				coords_from = this
+#				#	orbit_angle = random
+#				orbit_distance = 5
+#				owner = event_target:uma_ec1_country
+#				graphical_culture = humanoid_01
+#				random_pos = yes
+#				init_effect = {
+#					set_megastructure_flag = uma_ec1_dyson_sphere
+#				}
+#			}
+
 
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_I #"护卫者1号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -136,14 +99,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 0
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_II # "护卫者2号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -151,14 +122,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 40
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_III # "护卫者3号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -166,14 +145,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 90
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_VI #"护卫者4号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -181,14 +168,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 140
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_V #"护卫者5号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -196,14 +191,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 200
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_VI #"护卫者6号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -211,14 +214,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 250
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_VII #"护卫者7号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -226,14 +237,22 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 280
 					}
 				}
 			}
 			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
 				effect = {
-					set_owner = event_target:uma_fallen_empire
+					set_owner = event_target:uma_ec1_country
 					create_ship = {
 						name = FALL_PRO_VIII #"护卫者8号要塞"
 						design = "NAME_uma_ec1_guard_station"
@@ -241,7 +260,7 @@ country_event = {
 					}
 					set_location = {
 						target = prev
-						distance = 165
+						distance = 80
 						angle = 330
 					}
 				}
@@ -266,9 +285,19 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_uma_ec1
+					owner = event_target:uma_ec1_country
 					effect = {
-						create_ship = {
-							design = NAME_UMA_EC1_ION_CANNON
+						while = {
+							limit = {
+								fleet = {
+									fleet_power <= 1200000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
+							}
 						}
 
 						fleet = {
@@ -285,6 +314,32 @@ country_event = {
 			}
 		}
 		set_update_modifiers_batch = end
+	}
+	after = {
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = yes
+			}
+			country_event = {
+				id = uma_ec_1.12
+			}
+			if = {
+				limit = {
+					has_modifier = uma_crisis_1_modifier_perk
+				}
+				remove_modifier = uma_crisis_1_modifier_perk
+			}
+		}
+
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = no
+			}
+			country_event = {
+				id = uma_ec_1.14
+			}
+		}
+
 	}
 }
 
@@ -315,6 +370,24 @@ system_event = {
 				}
 			}
 			remove_megastructure = this
+		}
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = yes
+			}
+			country_event = {
+				id = uma_ec_1.16
+				days = 2
+			}
+		}
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = no
+			}
+			country_event = {
+				id = uma_ec_1.17
+				days = 2
+			}
 		}
 	}
 }
@@ -376,6 +449,8 @@ fleet_event = {
 	is_triggered_only = yes
 
 	trigger = {
+
+		exists = event_target:uma_ec1_country
 
 		owner = {
 			NOT = {
@@ -453,7 +528,145 @@ fleet_event = {
 	after = {
 		fleet_event = {
 			id = uma_ec_1.6
+			days = 450
 		}
+	}
+}
+
+
+
+###剧情内容。
+
+country_event = {
+	id = uma_ec_1.10
+	title = uma_ec_1.10.title
+	desc = uma_ec_1.10.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.10.a
+		add_modifier = {
+			modifier = uma_crisis_1_modifier_perk
+		}
+
+		country_event = {
+			id = uma_ec_1.1
+			days = 600
+			random = 200
+		}
+	}
+}
+
+##Intro
+country_event = {
+	id = uma_ec_1.11
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		country_event = {
+			id = uma_ec_1.10
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_1.12
+	title = uma_ec_1.12.title
+	desc = uma_ec_1.12.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.12.a
+		start_situation = {
+			type = situation_uma_endcrisis_ec1
+			target = This
+			effect = {}
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_ec_1.13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_1.13
+	title = uma_ec_1.13.title
+	desc = uma_ec_1.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+
+	option = {
+		name = uma_ec_1.13.a
+	}
+}
+
+country_event = {
+	id = uma_ec_1.14
+	title = uma_ec_1.14.title
+	desc = uma_ec_1.14.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.14.a
+	}
+}
+
+#End
+country_event = {
+	id = uma_ec_1.15
+	title = uma_ec_1.15.title
+	desc = uma_ec_1.15.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.15.a
+	}
+}
+
+country_event = {
+	id = uma_ec_1.16
+	title = uma_ec_1.16.title
+	desc = uma_ec_1.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+
+	option = {
+		name = uma_ec_1.16.a
+	}
+}
+
+country_event = {
+	id = uma_ec_1.17
+	title = uma_ec_1.17.title
+	desc = uma_ec_1.17.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.17.a
 	}
 }
 
