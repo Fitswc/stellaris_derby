@@ -27,8 +27,9 @@ country_event = {
 			limit = {
 				is_star_class = sc_pulsar
 			}
-			uma_ec1_create_country_and_species = yes
-
+			random_system_planet = {
+				uma_ec1_create_country_and_species = yes
+			}
 
 			save_event_target_as = uma_ec1_main_system
 			set_star_flag = uma_ec1_main_system
@@ -39,32 +40,32 @@ country_event = {
 				starbase = { fleet = { destroy_fleet = this } }
 			}
 			create_starbase = {
-					size = starbase_uma_ec1
-					owner = event_target:uma_ec1_country
-					effect = {
-						while = {
-							limit = {
-								fleet = {
-									fleet_power <= 1200000
-								}
-							}
-							create_ship = {
-								name = random
-								design = NAME_UMA_EC1_ION_CANNON
-								graphical_culture = humanoid_01
+				size = starbase_uma_ec1
+				owner = event_target:uma_ec1_country
+				effect = {
+					while = {
+						limit = {
+							fleet = {
+								fleet_power <= 1200000
 							}
 						}
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC1_ION_CANNON
+							graphical_culture = humanoid_01
+						}
+					}
 
-						fleet = {
-							while = {
-								count = 2
-								fleet_event = {
-									id = uma_ec_1.5
-								}
+					fleet = {
+						while = {
+							count = 2
+							fleet_event = {
+								id = uma_ec_1.5
 							}
 						}
 					}
 				}
+			}
 
 #			spawn_megastructure = {
 #				type = uma_ec1_dyson_sphere
@@ -97,6 +98,9 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
+					}
 					set_location = {
 						target = prev
 						distance = 80
@@ -119,6 +123,9 @@ country_event = {
 						name = FALL_PRO_II # "护卫者2号要塞"
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
+					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
 					}
 					set_location = {
 						target = prev
@@ -143,6 +150,9 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
+					}
 					set_location = {
 						target = prev
 						distance = 80
@@ -165,6 +175,9 @@ country_event = {
 						name = FALL_PRO_VI #"护卫者4号要塞"
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
+					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
 					}
 					set_location = {
 						target = prev
@@ -189,6 +202,9 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
+					}
 					set_location = {
 						target = prev
 						distance = 80
@@ -211,6 +227,9 @@ country_event = {
 						name = FALL_PRO_VI #"护卫者6号要塞"
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
+					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
 					}
 					set_location = {
 						target = prev
@@ -235,6 +254,9 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
+					}
 					set_location = {
 						target = prev
 						distance = 80
@@ -257,6 +279,9 @@ country_event = {
 						name = FALL_PRO_VIII #"护卫者8号要塞"
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
+					}
+					add_modifier = {
+						modifier = uma_crisis_modifier_defender
 					}
 					set_location = {
 						target = prev

@@ -193,15 +193,12 @@ situation_uma_endcrisis_ec1 = {
 			desc = situation_uma_endcrisis_ec1_progress_desc_1
 			any_system = {
 				has_star_flag = uma_ec1_main_system
-				event_target:uma_ec1_main_system = {
-					is_owned_by = event_target:uma_ec1_country
-				}
 
 				Root.owner = {
 					any_system_within_border = {
 						distance = {
 							source = PrevPrev
-							min_jumps = 25
+							min_jumps = 15
 						}
 					}
 				}
