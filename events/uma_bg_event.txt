@@ -1880,3 +1880,42 @@ planet_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = uma_bg.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		every_owned_pop_group = {
+			limit = {
+				NOT = {
+					has_trait = trait_uma_new_bottle_but_old_wine
+				}
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = This.owner_main_species
+				base = This.species
+			}
+		}
+		every_owned_pop_group = {
+			limit = {
+				has_trait = trait_uma_new_bottle_but_old_wine
+				is_species_class = umamusume
+			}
+
+			modify_species = {
+				species = This.owner_main_species
+				base = This.species
+				add_trait = trait_uma_new_bottle_but_old_wine
+			}
+		}
+	}
+}
