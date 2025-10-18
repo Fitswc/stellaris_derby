@@ -187,9 +187,9 @@ situation_uma_endcrisis_ec1 = {
 		}
 	}
 	monthly_progress = {
-		base = 0.2
+		base = 0.8 #0.8
 		modifier = {
-			set = 0.1
+			set = 0.6
 			desc = situation_uma_endcrisis_ec1_progress_desc_1
 			any_system = {
 				has_star_flag = uma_ec1_main_system
@@ -198,7 +198,7 @@ situation_uma_endcrisis_ec1 = {
 					any_system_within_border = {
 						distance = {
 							source = PrevPrev
-							min_jumps = 15
+							min_jumps >=15
 						}
 					}
 				}
@@ -208,52 +208,8 @@ situation_uma_endcrisis_ec1 = {
 	on_progress_complete = {
 		custom_tooltip = situation_uma_endcrisis_ec1_complet_in_situation
 		hidden_effect = {
-			Root = {
-				destroy_situation = this
-			}
-			every_playable_country = {
-				every_system_within_border = {
-					limit = {
-						is_capital_system = no
-					}
-					if = {
-						limit = {
-							exists = starbase
-						}
-						starbase = {
-							fleet = {
-								destroy_fleet = this
-							}
-						}
-					}
-					every_system_colony = {
-						destroy_colony = yes
-					}
-				}
-				capital_star = {
-					solar_system = {
-						every_system_planet = {
-							limit = {
-								is_capital = no
-
-								is_colony = yes
-							}
-							kill_all_pop = yes
-							destroy_colony = yes
-						}
-					}
-				}
-				capital_scope = {
-					downgrade_all_buildings = yes
-					if = {
-						limit = {
-							is_planet_class = pc_uma_school
-							is_planet_class = pc_city
-							is_planet_class = pc_uma_industrial
-						}
-						change_pc = pc_continental
-					}
-				}
+			situation_event = {
+				id = uma_ec_1.18
 			}
 		}
 	}
