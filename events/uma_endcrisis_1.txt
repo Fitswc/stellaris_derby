@@ -26,12 +26,15 @@ country_event = {
 		random_system = {
 			limit = {
 				is_star_class = sc_pulsar
+
+				uma_is_event_system = no
 			}
 			random_system_planet = {
 				uma_ec1_create_country_and_species = yes
 			}
 
-			save_event_target_as = uma_ec1_main_system
+			log = "UMA ENDCRISIS1 WILL SPAWN AT [This.GetName]"
+			save_global_event_target_as = uma_ec1_main_system
 			set_star_flag = uma_ec1_main_system
 
 
@@ -57,6 +60,7 @@ country_event = {
 					}
 
 					fleet = {
+						set_fleet_flag = uma_ec1_starbase.1
 						while = {
 							count = 2
 							fleet_event = {
@@ -67,19 +71,19 @@ country_event = {
 				}
 			}
 
-#			spawn_megastructure = {
-#				type = uma_ec1_dyson_sphere
-#				planet = solar_system.star
-#				coords_from = this
-#				#	orbit_angle = random
-#				orbit_distance = 5
-#				owner = event_target:uma_ec1_country
-#				graphical_culture = humanoid_01
-#				random_pos = yes
-#				init_effect = {
-#					set_megastructure_flag = uma_ec1_dyson_sphere
-#				}
-#			}
+			spawn_megastructure = {
+				type = uma_ec1_dyson_sphere
+				planet = solar_system.star
+				coords_from = this
+				#	orbit_angle = random
+				orbit_distance = 5
+				owner = event_target:uma_ec1_country
+				graphical_culture = humanoid_01
+				random_pos = yes
+				init_effect = {
+					set_megastructure_flag = uma_ec1_dyson_sphere_flag
+				}
+			}
 
 
 			create_fleet = {
@@ -106,6 +110,7 @@ country_event = {
 						distance = 80
 						angle = 0
 					}
+					set_fleet_flag = uma_ec1_pro.1
 				}
 			}
 			create_fleet = {
@@ -132,6 +137,7 @@ country_event = {
 						distance = 80
 						angle = 40
 					}
+					set_fleet_flag = uma_ec1_pro.2
 				}
 			}
 			create_fleet = {
@@ -158,6 +164,7 @@ country_event = {
 						distance = 80
 						angle = 90
 					}
+					set_fleet_flag = uma_ec1_pro.3
 				}
 			}
 			create_fleet = {
@@ -184,6 +191,7 @@ country_event = {
 						distance = 80
 						angle = 140
 					}
+					set_fleet_flag = uma_ec1_pro.4
 				}
 			}
 			create_fleet = {
@@ -210,6 +218,7 @@ country_event = {
 						distance = 80
 						angle = 200
 					}
+					set_fleet_flag = uma_ec1_pro.5
 				}
 			}
 			create_fleet = {
@@ -236,6 +245,7 @@ country_event = {
 						distance = 80
 						angle = 250
 					}
+					set_fleet_flag = uma_ec1_pro.6
 				}
 			}
 			create_fleet = {
@@ -262,6 +272,7 @@ country_event = {
 						distance = 80
 						angle = 280
 					}
+					set_fleet_flag = uma_ec1_pro.7
 				}
 			}
 			create_fleet = {
@@ -288,6 +299,7 @@ country_event = {
 						distance = 80
 						angle = 330
 					}
+					set_fleet_flag = uma_ec1_pro.8
 				}
 			}
 
@@ -370,39 +382,67 @@ country_event = {
 
 
 ##On Win
-system_event = {
+country_event = {
 	id = uma_ec_1.2
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		any_system_megastructure = { has_megastructure_flag = uma_ec1_dyson_sphere }
+		exists = From
+
+		From = {
+			is_country_type = uma_ec1_empire
+		}
+
+		any_system = {
+			has_star_flag = uma_ec1_main_system
+
+			AND = {
+				any_system_megastructure = {
+					is_megastructure_type = uma_ec1_dyson_sphere
+				}
+
+				count_fleet_in_system = {
+					limit = {
+						is_owned_by = event_target:uma_ec1_country
+					}
+					count <= 1
+				}
+			}
+		}
+
 	}
 
 	immediate = {
-		random_system_megastructure = {
-			limit = { has_megastructure_flag = uma_ec1_dyson_sphere }
-			prev = {
-				spawn_megastructure = {
-					type = uma_ec1_dyson_sphere_ruined
-					coords_from = prev
-					init_effect = {
-						if = {
-							limit = { exists = fromfrom }
-							set_megastructure_flag = uma_ruined_ec1_dyson_sphere@fromfrom
-						}
+		log = "UMA We will winning"
+		every_system = {
+			limit = {
+				has_star_flag = uma_ec1_main_system
+			}
+			spawn_megastructure = {
+				type = uma_ec1_dyson_sphere_ruined
+				coords_from = this
+				init_effect = {
+					if = {
+						limit = { exists = fromfrom }
+						set_megastructure_flag = uma_ruined_ec1_dyson_sphere@fromfrom
 					}
 				}
 			}
-			remove_megastructure = this
+			every_system_megastructure = {
+				limit = { is_megastructure_type = uma_ec1_dyson_sphere }
+
+				remove_megastructure = this
+			}
 		}
+
 		every_playable_country = {
 			limit = {
 				is_uma_player_country = yes
 			}
 			country_event = {
 				id = uma_ec_1.16
-				days = 2
+				days = 5
 			}
 		}
 		every_playable_country = {
@@ -411,7 +451,7 @@ system_event = {
 			}
 			country_event = {
 				id = uma_ec_1.17
-				days = 2
+				days = 5
 			}
 		}
 	}
@@ -674,6 +714,15 @@ country_event = {
 
 	picture_event_data = {
 		room = no_video_feed_room
+	}
+
+	immediate = {
+		event_target:uma_ec1_country = {
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+			destroy_country = yes
+		}
 	}
 
 

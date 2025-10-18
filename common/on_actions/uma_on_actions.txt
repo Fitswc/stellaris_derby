@@ -262,6 +262,8 @@ on_fleet_destroyed_perp = {
 
 		uma_curren.50
 
+		uma_ec_1.2
+
 	}
 }
 
@@ -659,11 +661,5 @@ on_entering_system_fleet = {
 on_capital_changed = {
 	events = {
 		uma_ec_2.30
-	}
-}
-
-on_system_occupied = {
-	events = {
-		uma_ec_1.2
 	}
 }
