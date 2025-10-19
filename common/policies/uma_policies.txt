@@ -346,3 +346,27 @@ uma_auto_roll = {
 		}
 	}
 }
+
+uma_auto_species_merge = {
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+	option = {
+		name = uma_auto_species_merge_on
+		policy_flags = {
+			uma_auto_species_merge_on
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = uma_auto_species_merge_off
+		policy_flags = {
+			uma_auto_species_merge_off
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+}

@@ -422,3 +422,37 @@ uma_change_leader_portraits = {
 	}
 
 }
+
+
+uma_auto_species_merge = {
+	length = 0
+	icon =  GFX_uma_auto_species_merge
+	resources = {
+		category = edicts
+		cost = {
+
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_auto_species_merge_effect
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.30
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}

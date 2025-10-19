@@ -739,4 +739,12 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "GFX_evt_uma_f_bg"
+		textureFile = "gfx/event_pictures/uma_f_bg.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+
 }

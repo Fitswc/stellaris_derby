@@ -1923,10 +1923,14 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-
+		has_policy_flag = uma_auto_species_merge_on
+		NOT = {
+			has_policy_flag = uma_auto_species_merge_off
+		}
 	}
 
 	immediate = {
+		log = "UMA AUTO SUB-SPECIES MERGE TRIGGERED AT [GetDate]"
 		every_owned_pop_group = {
 			limit = {
 				NOT = {

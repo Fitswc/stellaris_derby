@@ -36,7 +36,7 @@ on_game_start_country = {
 on_press_begin = {
 	events = {
 		uma_mmu.1
-		uma_marking.1#立flag的事件
+#		uma_marking.1#立flag的事件
 	}
 }
 
@@ -131,6 +131,8 @@ on_yearly_pulse_country = {
 		uma_fallen_empire.2077
 		uma_fallen_empire.40 #堕落定期触发（5年检测）
 		uma_curren.1
+
+		uma_bg.30 #Sub-Species
 	}
 
 	random_events = {
@@ -666,3 +668,8 @@ on_capital_changed = {
 	}
 }
 
+on_single_player_save_game_load = {
+	events = {
+		 uma_marking.3
+	}
+}
