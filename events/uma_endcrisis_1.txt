@@ -16,7 +16,6 @@ country_event = {
 
 	immediate = {
 		endgame_telemetry = uma_end_crisis_1
-		set_global_flag = uma_ec1_timemachine_happened
 		set_global_flag = uma_ec_invasion_happened
 
 		log = "UMA ENDCRISIS1 WILL HAPPENED AT [GetDate]"
@@ -46,25 +45,82 @@ country_event = {
 				size = starbase_uma_ec1
 				owner = event_target:uma_ec1_country
 				effect = {
-					while = {
+					if = {
 						limit = {
-							fleet = {
-								fleet_power <= 1200000
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+						}
+						while = {
+							limit = {
+								fleet = {
+									fleet_power <= 1200000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
 							}
 						}
-						create_ship = {
-							name = random
-							design = NAME_UMA_EC1_ION_CANNON
-							graphical_culture = humanoid_01
+
+						fleet = {
+							set_fleet_flag = uma_ec1_starbase.1
+							while = {
+								count = 2
+								fleet_event = {
+									id = uma_ec_1.5
+								}
+							}
 						}
 					}
-
-					fleet = {
-						set_fleet_flag = uma_ec1_starbase.1
+					else_if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+						}
 						while = {
-							count = 2
+							limit = {
+								fleet = {
+									fleet_power <= 900000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
+							}
+						}
+
+						fleet = {
+							set_fleet_flag = uma_ec1_starbase.1
 							fleet_event = {
 								id = uma_ec_1.5
+							}
+
+						}
+					}
+					if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+						}
+						while = {
+							limit = {
+								fleet = {
+									fleet_power <= 1500000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
+							}
+						}
+
+						fleet = {
+							set_fleet_flag = uma_ec1_starbase.1
+							while = {
+								count = 3
+								fleet_event = {
+									id = uma_ec_1.5
+								}
 							}
 						}
 					}
@@ -102,8 +158,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -129,9 +192,17 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
+
 					set_location = {
 						target = prev
 						distance = 80
@@ -156,8 +227,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -183,8 +261,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -210,8 +295,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -237,8 +329,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -264,8 +363,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -291,8 +397,15 @@ country_event = {
 						design = "NAME_uma_ec1_guard_station"
 						graphical_culture = "pirate_01"
 					}
-					add_modifier = {
-						modifier = uma_crisis_modifier_defender
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
 					}
 					set_location = {
 						target = prev
@@ -324,25 +437,85 @@ country_event = {
 					size = starbase_uma_ec1
 					owner = event_target:uma_ec1_country
 					effect = {
-						while = {
+						if = {
 							limit = {
-								fleet = {
-									fleet_power <= 1200000
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+							}
+							while = {
+								limit = {
+									fleet = {
+										fleet_power <= 1200000
+									}
+								}
+								create_ship = {
+									name = random
+									design = NAME_UMA_EC1_ION_CANNON
+									graphical_culture = humanoid_01
 								}
 							}
-							create_ship = {
-								name = random
-								design = NAME_UMA_EC1_ION_CANNON
-								graphical_culture = humanoid_01
+
+							fleet = {
+								set_fleet_flag = uma_ec1_starbase.1
+								while = {
+									count = 2
+									fleet_event = {
+										id = uma_ec_1.5
+									}
+								}
+								fleet_event = { id = uma_ec_1.6 days = 450 }
 							}
 						}
-
-						fleet = {
+						else_if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
 							while = {
-								count = 2
+								limit = {
+									fleet = {
+										fleet_power <= 900000
+									}
+								}
+								create_ship = {
+									name = random
+									design = NAME_UMA_EC1_ION_CANNON
+									graphical_culture = humanoid_01
+								}
+							}
+
+							fleet = {
+								set_fleet_flag = uma_ec1_starbase.1
 								fleet_event = {
 									id = uma_ec_1.5
 								}
+
+							}
+						}
+						if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+							}
+							while = {
+								limit = {
+									fleet = {
+										fleet_power <= 1500000
+									}
+								}
+								create_ship = {
+									name = random
+									design = NAME_UMA_EC1_ION_CANNON
+									graphical_culture = humanoid_01
+								}
+							}
+
+							fleet = {
+								set_fleet_flag = uma_ec1_starbase.1
+								while = {
+									count = 3
+									fleet_event = {
+										id = uma_ec_1.5
+									}
+								}
+								fleet_event = { id = uma_ec_1.6 days = 450 }
 							}
 						}
 					}
@@ -420,7 +593,9 @@ country_event = {
 	}
 
 	immediate = {
-		log = "UMA We will winning"
+		log = "UMA EC1 CRISIS IS END"
+		set_global_flag = uma_ec_invasion_ec1_end
+		set_global_flag = uma_ec_invasion_end
 		every_system = {
 			limit = {
 				has_star_flag = uma_ec1_main_system
@@ -447,7 +622,7 @@ country_event = {
 				is_uma_player_country = yes
 			}
 			country_event = {
-				id = uma_ec_1.16
+				id = uma_ec_1.15
 				days = 5
 			}
 		}
@@ -576,6 +751,17 @@ fleet_event = {
 		set_update_modifiers_batch = begin
 		uma_ec1_create_def_fleets = yes
 		set_update_modifiers_batch = end
+
+		last_created_fleet = {
+			queue_actions = {
+				find_closest_planet = {
+
+					found_planet ={
+						move_to = this
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -592,7 +778,7 @@ fleet_event = {
 		}
 
 		event_target:uma_ec1_country = {
-			fleet_power <= 15000000
+			fleet_power <= 20000000
 		}
 	}
 
@@ -632,12 +818,6 @@ country_event = {
 		add_modifier = {
 			modifier = uma_crisis_1_modifier_perk
 		}
-
-		country_event = {
-			id = uma_ec_1.1
-			days = 600
-			random = 200
-		}
 	}
 }
 
@@ -649,8 +829,27 @@ country_event = {
 
 
 	immediate = {
+		set_global_flag = uma_ec1_timemachine_happened
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = yes
+
+				has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 35
+				}
+			}
+			country_event = {
+				id = uma_ec_1.10
+			}
+		}
+
 		country_event = {
-			id = uma_ec_1.10
+			id = uma_ec_1.1
+			days = 700
+			random = 100
 		}
 	}
 }
@@ -670,7 +869,34 @@ country_event = {
 			target = This
 			effect = {}
 		}
+		begin_event_chain = {
+			event_chain = uma_ec_1_main_evt_chain
+			target = this
+		}
 		hidden_effect = {
+			create_point_of_interest = {
+				id = uma_ec1_poi.1
+				name = uma_ec1_poi.1.name
+				desc = uma_ec1_poi.1.desc
+				event_chain = uma_ec_1_main_evt_chain
+				location = event_target:uma_ec1_main_system
+				picture = GFX_evt_uma_endcrisis_sky
+			}
+			every_system = {
+				limit = {
+					has_star_flag = uma_ec1_side_defend_system
+				}
+				Root = {
+					create_point_of_interest = {
+						id = uma_ec1_poi.2
+						name = uma_ec1_poi.2.name
+						desc = uma_ec1_poi.2.desc
+						event_chain = uma_ec_1_main_evt_chain
+						location = prev
+						picture = GFX_evt_uma_endcrisis_sky
+					}
+				}
+			}
 			country_event = {
 				id = uma_ec_1.13
 			}
@@ -699,7 +925,7 @@ country_event = {
 	id = uma_ec_1.14
 	title = uma_ec_1.14.title
 	desc = uma_ec_1.14.desc
-	picture = GFX_evt_uma_satono_school
+	picture = GFX_evt_dyson_sphere
 	is_triggered_only = yes
 
 
@@ -719,6 +945,11 @@ country_event = {
 
 	option = {
 		name = uma_ec_1.15.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ec_1.16
+			}
+		}
 	}
 }
 
@@ -758,7 +989,7 @@ country_event = {
 	id = uma_ec_1.17
 	title = uma_ec_1.17.title
 	desc = uma_ec_1.17.desc
-	picture = GFX_evt_uma_satono_school
+	picture = GFX_evt_crisis_defeated
 	is_triggered_only = yes
 
 
@@ -899,7 +1130,7 @@ country_event = {
 	id = uma_ec_1.19
 	title = uma_ec_1.19.title
 	desc = uma_ec_1.19.desc
-	picture = GFX_evt_uma_satono_school
+	picture = GFX_evt_uma_endcrisis_yurika
 	is_triggered_only = yes
 
 
