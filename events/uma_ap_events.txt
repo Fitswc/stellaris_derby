@@ -1134,15 +1134,25 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		#
-		uma_factor_speed_add_modifier = yes
-		uma_factor_power_add_modifier = yes
-		uma_factor_charm_add_modifier = yes
-		uma_factor_stamina_add_modifier = yes
-		uma_factor_wisdom_add_modifier = yes
 
-		uma_factor_pain_add_modifier = yes
-
+		every_owned_pop_group = {
+			limit = {
+				is_species_class = umamusume
+			}
+			uma_factor_speed_add_modifier = yes
+			uma_factor_power_add_modifier = yes
+			uma_factor_charm_add_modifier = yes
+			uma_factor_stamina_add_modifier = yes
+			uma_factor_wisdom_add_modifier = yes
+			#
+			uma_factor_pain_add_modifier = yes
+			#
+			species = {
+				Root = {
+					change_dominant_species = { species = Prev change_all = yes }
+				}
+			}
+		}
 	}
 }
 
@@ -1937,11 +1947,21 @@ country_event = {
 
 	immediate = {
 		#
-		uma_realm_speed_add_modifier = yes
-		uma_realm_power_add_modifier = yes
-		uma_realm_stamina_add_modifier = yes
-		uma_realm_wisdom_add_modifier = yes
+		every_owned_pop_group = {
+			limit = {
+				is_species_class = umamusume
+			}
+			uma_realm_speed_add_modifier = yes
+			uma_realm_power_add_modifier = yes
+			uma_realm_stamina_add_modifier = yes
+			uma_realm_wisdom_add_modifier = yes
 
+			species = {
+				Root = {
+					change_dominant_species = { species = Prev change_all = yes }
+				}
+			}
+		}
 	}
 }
 
@@ -2114,6 +2134,8 @@ country_event = {
 	}
 }
 
+##Origin
+
 country_event = {
 	id = uma_ap.201
 	is_triggered_only = yes
@@ -2140,10 +2162,21 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		uma_factor_speed_add_modifier = yes
-		uma_factor_power_add_modifier = yes
-		uma_factor_charm_add_modifier = yes
-		uma_factor_stamina_add_modifier = yes
-		uma_factor_wisdom_add_modifier = yes
+		every_owned_pop_group = {
+			limit = {
+				is_species_class = umamusume
+			}
+
+			uma_factor_speed_add_modifier = yes
+			uma_factor_power_add_modifier = yes
+			uma_factor_charm_add_modifier = yes
+			uma_factor_stamina_add_modifier = yes
+			uma_factor_wisdom_add_modifier = yes
+			species = {
+				Root = {
+					change_dominant_species = { species = Prev change_all = yes }
+				}
+			}
+		}
 	}
 }
