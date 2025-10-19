@@ -1565,8 +1565,8 @@ uma_trait_ap2_realm_stamina_1={
 
 	modifier = {
 		planet_jobs_produces_mult = 0.05
-		starbase_shipyard_build_time_mult = 0.05
-		country_cost_mult = 0.05
+		starbase_shipyard_build_time_mult = -0.05
+		country_cost_mult = -0.05
 	}
 }
 
@@ -1588,8 +1588,8 @@ uma_trait_ap2_realm_stamina_2={
 
 	modifier = {
 		planet_jobs_produces_mult = 0.1
-		starbase_shipyard_build_time_mult = 0.1
-		country_cost_mult = 0.1
+		starbase_shipyard_build_time_mult = -0.1
+		country_cost_mult = -0.1
 	}
 }
 
@@ -1611,8 +1611,8 @@ uma_trait_ap2_realm_stamina_3={
 
 	modifier = {
 		planet_jobs_produces_mult = 0.15
-		starbase_shipyard_build_time_mult = 0.15
-		country_cost_mult = 0.15
+		starbase_shipyard_build_time_mult = -0.15
+		country_cost_mult = -0.15
 	}
 }
 
@@ -1634,8 +1634,8 @@ uma_trait_ap2_realm_stamina_4={
 
 	modifier = {
 		planet_jobs_produces_mult = 0.2
-		starbase_shipyard_build_time_mult = 0.2
-		country_cost_mult = 0.2
+		starbase_shipyard_build_time_mult = -0.2
+		country_cost_mult = -0.2
 	}
 }
 
@@ -1657,8 +1657,8 @@ uma_trait_ap2_realm_stamina_5={
 
 	modifier = {
 		planet_jobs_produces_mult = 0.25
-		starbase_shipyard_build_time_mult = 0.25
-		country_cost_mult = 0.25
+		starbase_shipyard_build_time_mult = -0.25
+		country_cost_mult = -0.25
 	}
 }
 
@@ -1681,8 +1681,8 @@ uma_trait_ap2_realm_wisdom_1={
 
 	modifier = {
 		ship_accuracy_mult = 0.05
-		ship_jumpdrive_cooldown_mult = 0.05
-		ship_military_upkeep_mult = 0.05
+		ship_jumpdrive_cooldown_mult = -0.05
+		ship_military_upkeep_mult = -0.05
 	}
 }
 
@@ -1704,8 +1704,8 @@ uma_trait_ap2_realm_wisdom_2={
 
 	modifier = {
 		ship_accuracy_mult = 0.1
-		ship_jumpdrive_cooldown_mult = 0.1
-		ship_military_upkeep_mult = 0.1
+		ship_jumpdrive_cooldown_mult = -0.1
+		ship_military_upkeep_mult = -0.1
 	}
 }
 
@@ -1727,8 +1727,8 @@ uma_trait_ap2_realm_wisdom_3={
 
 	modifier = {
 		ship_accuracy_mult = 0.15
-		ship_jumpdrive_cooldown_mult = 0.15
-		ship_military_upkeep_mult = 0.15
+		ship_jumpdrive_cooldown_mult = -0.15
+		ship_military_upkeep_mult = -0.15
 	}
 }
 
@@ -1750,8 +1750,8 @@ uma_trait_ap2_realm_wisdom_4={
 
 	modifier = {
 		ship_accuracy_mult = 0.2
-		ship_jumpdrive_cooldown_mult = 0.2
-		ship_military_upkeep_mult = 0.2
+		ship_jumpdrive_cooldown_mult = -0.2
+		ship_military_upkeep_mult = -0.2
 	}
 }
 
@@ -1773,8 +1773,8 @@ uma_trait_ap2_realm_wisdom_5={
 
 	modifier = {
 		ship_accuracy_mult = 0.25
-		ship_jumpdrive_cooldown_mult = 0.25
-		ship_military_upkeep_mult = 0.25
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_military_upkeep_mult = -0.25
 	}
 }
 
