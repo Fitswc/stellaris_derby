@@ -335,8 +335,8 @@ uma_create_leader_zf = {
 		tier = leader_tier_legendary
 		traits = {
 			1 = uma_scientists_trait_sp_zf_empire
-			3 = uma_scientists_trait_sp_zf_girl
-			4 = uma_scientists_trait_sp_zf_top
+			2 = uma_scientists_trait_sp_zf_girl
+			3 = uma_scientists_trait_sp_zf_top
 			0 = leader_trait_uma_generic
 		}
 		effect = {
@@ -515,6 +515,2144 @@ uma_create_leader_zephyr = {
 #			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_zephyr
 			change_leader_portrait = 84c
+		}
+	}
+}
+
+
+##Leader Compound
+
+uma_leader_cp_build_up_trait_official = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.deep.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_deep
+			show_message = no
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_deep_conlic
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ougri.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_oguri_cap
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.did.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_agnes_digital
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_seiun_sky
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_gov
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hachimi_offcical
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.cheval.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cheval
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.curren.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_trait_sp_curren_spark_soujio
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zephyr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_official_trait_sp_zephyr
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.kita.trait.1
+			}
+		}
+		if = {
+			limit = {
+				event_target:uma_is_leader_kitasan_black = {
+					has_trait = uma_governor_trait_sp_kitasan_black
+				}
+			}
+			add_trait = {
+				trait = uma_governor_trait_sp_kitasan_black
+				show_message = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.al.trait.1
+			}
+		}
+		if = {
+			limit = {
+				event_target:uma_is_leader_al_condor_pasa = {
+					has_trait = uma_governor_trait_sp_al_condor_pasa
+				}
+			}
+			add_trait = {
+				trait = uma_governor_trait_sp_al_condor_pasa
+				show_message = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.halo.trait.1
+			}
+		}
+		if = {
+			limit = {
+				event_target:uma_is_leader_king_halo = {
+					has_trait = uma_governor_trait_sp_king_halo
+				}
+			}
+			add_trait = {
+				trait = uma_governor_trait_sp_king_halo
+				show_message = no
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_er
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.tama.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cross
+			show_message = no
+		}
+	}
+
+	##原生领袖
+
+	##变体
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.agt.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_tachyon_official
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_gov
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hint_official
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_empire_official
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_girl_official
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.3
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_top_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sweepy.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_sweep_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ardan.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_Ardan_cap_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+#	if = {
+#		limit = {
+#			Root = {
+#				has_country_flag = uma_leader_cp.9.kita.trait.1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				event_target:uma_is_leader_kitasan_black = {
+#					has_trait = uma_scientist_trait_sp_kitasan_black
+#				}
+#			}
+#			add_trait = {
+#				trait = uma_governor_trait_sp_kitasan_black
+#				show_message = no
+#			}
+#		}
+#	}
+#
+#	if = {
+#		limit = {
+#			Root = {
+#				has_country_flag = uma_leader_cp.9.al.trait.1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				event_target:uma_is_leader_al_condor_pasa = {
+#					has_trait = uma_scientist_trait_sp_al_condor_pasa
+#				}
+#			}
+#			add_trait = {
+#				trait = uma_governor_trait_sp_al_condor_pasa
+#				show_message = no
+#			}
+#		}
+#	}
+#
+#	if = {
+#		limit = {
+#			Root = {
+#				has_country_flag = uma_leader_cp.9.halo.trait.1
+#			}
+#		}
+#		if = {
+#			limit = {
+#				event_target:uma_is_leader_king_halo = {
+#					has_trait = uma_scientist_trait_sp_king_halo
+#				}
+#			}
+#			add_trait = {
+#				trait = uma_governor_trait_sp_king_halo
+#				show_message = no
+#			}
+#		}
+#	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.satdia.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_satono_official
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.hishi.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_fz_official
+			show_message = no
+		}
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ayb.trait.1
+			}
+			event_target:uma_is_leader_silent_suzuka = {
+				has_trait = uma_scientist_trait_sp_ayb
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_ayb_official
+			show_message = no
+		}
+	}
+
+	###
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_seiun_sky
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_gov
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_heart_adr_official
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_nice_nature
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.dura.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_dura_official
+			show_message = no
+		}
+
+	}
+}
+
+uma_leader_cp_build_up_trait_scientist = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.agt.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_tachyon
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hint
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_sci
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_empire
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_girl
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.3
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_top
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sweepy.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_sweep
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ardan.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_Ardan_cap
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.kita.trait.1
+			}
+		}
+
+			add_trait = {
+				trait = uma_scientist_trait_sp_kitasan_black
+				show_message = no
+			}
+
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.al.trait.1
+			}
+		}
+			add_trait = {
+				trait = uma_scientist_trait_sp_al_condor_pasa
+				show_message = no
+			}
+
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.halo.trait.1
+			}
+		}
+
+			add_trait = {
+				trait = uma_scientist_trait_sp_king_halo
+				show_message = no
+			}
+
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.satdia.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_satono
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.hishi.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_fz
+			show_message = no
+		}
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ayb.trait.1
+			}
+			event_target:uma_is_leader_silent_suzuka = {
+				has_trait = uma_scientist_trait_sp_ayb
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_ayb
+			show_message = no
+		}
+	}
+	##原生领袖
+
+	##
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.deep.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_deep_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ougri.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_oguri_cap_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.did.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_agnes_digital_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_seiun_sky_scientist
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_sci
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hint
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.cheval.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cheval_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.curren.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_trait_sp_curren_spark_soujio_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zephyr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_official_trait_sp_zephyr_scientist
+			show_message = no
+		}
+	}
+
+#	if = {
+#		limit = {
+#			Root = {
+#				has_country_flag = uma_leader_cp.9.kita.trait.1
+#			}
+#		}
+#		add_trait = {
+#			trait = uma_scientist_trait_sp_kitasan_black
+#			show_message = no
+#		}
+#	}
+#
+#	if = {
+#		limit = {
+#			Root = {
+#				has_country_flag = uma_leader_cp.9.al.trait.1
+#			}
+#		}
+#		add_trait = {
+#			trait = uma_scientist_trait_sp_al_condor_pasa
+#			show_message = no
+#		}
+#	}
+#
+#
+#	if = {
+#		limit = {
+#			Root = {
+#				has_country_flag = uma_leader_cp.9.halo.trait.1
+#			}
+#		}
+#
+#		add_trait = {
+#			trait = uma_scientist_trait_sp_king_halo
+#			show_message = no
+#		}
+#	}
+
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_er_scientist
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.tama.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cross_scientist
+			show_message = no
+		}
+	}
+
+	###
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_seiun_sky_scientist
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_sci
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_hint
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_nice_nature
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.dura.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_dura_scientist
+			show_message = no
+		}
+
+	}
+}
+
+uma_leader_cp_build_up_trait_commander = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_seiun_sky_1
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_adr
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_heart_adr
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_general_trait_sp_nice_nature
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.dura.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_dura
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.kita.trait.1
+			}
+		}
+			add_trait = {
+				trait = uma_general_trait_sp_kitasan_black
+				show_message = no
+			}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.al.trait.1
+			}
+		}
+			add_trait = {
+				trait = uma_general_trait_sp_al_condor_pasa
+				show_message = no
+			}
+
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.halo.trait.1
+			}
+		}
+
+		add_trait = {
+			trait = uma_general_trait_sp_king_halo
+			show_message = no
+		}
+
+	}
+	##原生领袖
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.deep.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_deep_commander
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ougri.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_oguri_cap_commander
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.did.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_agnes_digital_commander
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_seiun_sky_1
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_adr
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_heart_adr
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.cheval.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cheval_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.curren.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_trait_sp_curren_spark_soujio_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zephyr.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_official_trait_sp_zephyr_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_general_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.fine.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_fine_er_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.tama.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_cross_commander
+			show_message = no
+		}
+	}
+
+	##
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.agt.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_tachyon_commander
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_adr
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_governor_trait_sp_teio_heart_adr
+			show_message = no
+		}
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_empire_commander
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.2
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_girl_commander
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.zf.trait.3
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_zf_top_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.sweepy.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_sweep_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ardan.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_Ardan_cap_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_general_trait_sp_nice_nature
+			show_message = no
+		}
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.satdia.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_satono_commander
+			show_message = no
+		}
+	}
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.hishi.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientists_trait_sp_fz_commander
+			show_message = no
+		}
+	}
+
+
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ayb.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_scientist_trait_sp_ayb_commander
+			show_message = no
+		}
+	}
+}
+
+
+uma_leader_cp_build_up_portrait = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.dura.portrait.1
+			}
+		}
+		change_leader_portrait = 85c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.hishi.portrait.1
+			}
+		}
+		change_leader_portrait = 98c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.satdia.portrait.1
+			}
+		}
+		change_leader_portrait = 66c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.ayb.portrait.1
+			}
+		}
+		change_leader_portrait = 31c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.tama.portrait.1
+			}
+		}
+		change_leader_portrait = 21c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.fine.portrait.1
+			}
+		}
+		change_leader_portrait = 22c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+			}
+		}
+		change_leader_portrait = 46c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.halo.portrait.1
+			}
+		}
+		change_leader_portrait = 47c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.al.portrait.1
+			}
+		}
+		change_leader_portrait = 14c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.kita.portrait.1
+			}
+		}
+		change_leader_portrait = 67c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.zephyr.portrait.1
+			}
+		}
+		change_leader_portrait = 84c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.curren.portrait.1
+			}
+		}
+		change_leader_portrait = 34c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.ardan.portrait.1
+			}
+		}
+		change_leader_portrait = 49c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.sweepy.portrait.1
+			}
+		}
+		change_leader_portrait = 56c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.cheval.portrait.1
+			}
+		}
+		change_leader_portrait = 76c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.zf.portrait.1
+			}
+		}
+		change_leader_portrait = GLX_ZF
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+			}
+		}
+		change_leader_portrait = TEIO_COMM
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.sky_gov.portrait.1
+			}
+		}
+		change_leader_portrait = 20c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.agt.portrait.1
+			}
+		}
+		change_leader_portrait = 30c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.did.portrait.1
+			}
+		}
+		change_leader_portrait = 19c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.ougri.portrait.1
+			}
+		}
+		change_leader_portrait = 06c
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.deep.portrait.1
+			}
+		}
+		change_leader_portrait = DEEP_COMMUNICATION
+	}
+}
+
+
+uma_leader_cp_cleanup_all = {
+	optimize_memory
+	clear_global_event_target = uma_is_compound_temporary
+	uma_leader_cp_cleanup_class = yes
+	uma_leader_cp_cleanup_country_flag_portrait = yes
+	uma_leader_cp_cleanup_country_flag_trait = yes
+	uma_leader_cp_cleanup_leader_gender_flag = yes
+	clear_variable = uma_leader_cp_mother_skill_leader
+	clear_variable = uma_leader_cp_father_skill_leader
+	clear_variable = uma_leader_cp_mother_skill
+	clear_variable = uma_leader_cp_father_skill
+	clear_variable = uma_leader_cp_skill
+}
+
+uma_leader_cp_cleanup_class = {
+	optimize_memory
+	remove_country_flag = uma_leader_cp.11.class.official
+	remove_country_flag = uma_leader_cp.11.class.scientist
+	remove_country_flag = uma_leader_cp.11.class.commanders
+}
+
+uma_leader_cp_cleanup_country_flag_trait = {
+	optimize_memory
+	remove_country_flag = uma_leader_cp.9.dura.trait.1
+	remove_country_flag = uma_leader_cp.9.hishi.trait.1
+	remove_country_flag = uma_leader_cp.9.satdia.trait.1
+	remove_country_flag = uma_leader_cp.9.ayb.trait.1
+	remove_country_flag = uma_leader_cp.9.tama.trait.1
+	remove_country_flag = uma_leader_cp.9.fine.trait.2
+	remove_country_flag = uma_leader_cp.9.fine.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_sci.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_adr.trait.1
+	remove_country_flag = uma_leader_cp.9.nn_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.halo.trait.1
+	remove_country_flag = uma_leader_cp.9.al.trait.1
+	remove_country_flag = uma_leader_cp.9.kita.trait.1
+	remove_country_flag = uma_leader_cp.9.zephyr.trait.1
+	remove_country_flag = uma_leader_cp.9.curren.trait.1
+	remove_country_flag = uma_leader_cp.9.ardan.trait.1
+	remove_country_flag = uma_leader_cp.9.sweepy.trait.1
+	remove_country_flag = uma_leader_cp.9.cheval.trait.1
+	remove_country_flag = uma_leader_cp.9.zf.trait.3
+	remove_country_flag = uma_leader_cp.9.zf.trait.2
+	remove_country_flag = uma_leader_cp.9.zf.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_sci.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_sci.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_adr.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_adr.trait.1
+	remove_country_flag = uma_leader_cp.9.teio_gov.trait.2
+	remove_country_flag = uma_leader_cp.9.teio_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.sky_gov.trait.1
+	remove_country_flag = uma_leader_cp.9.ar_sky.trait.1
+	remove_country_flag = uma_leader_cp.9.agt.trait.1
+	remove_country_flag = uma_leader_cp.9.did.trait.1
+	remove_country_flag = uma_leader_cp.9.ougri.trait.1
+	remove_country_flag = uma_leader_cp.9.deep.trait.1
+}
+
+uma_leader_cp_cleanup_country_flag_portrait = {
+	optimize_memory
+	remove_country_flag = uma_leader_cp.10.dura.portrait.1
+	remove_country_flag = uma_leader_cp.10.hishi.portrait.1
+	remove_country_flag = uma_leader_cp.10.satdia.portrait.1
+	remove_country_flag = uma_leader_cp.10.ayb.portrait.1
+	remove_country_flag = uma_leader_cp.10.tama.portrait.1
+	remove_country_flag = uma_leader_cp.10.fine.portrait.1
+	remove_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+	remove_country_flag = uma_leader_cp.10.halo.portrait.1
+	remove_country_flag = uma_leader_cp.10.al.portrait.1
+	remove_country_flag = uma_leader_cp.10.kita.portrait.1
+	remove_country_flag = uma_leader_cp.10.zephyr.portrait.1
+	remove_country_flag = uma_leader_cp.10.curren.portrait.1
+	remove_country_flag = uma_leader_cp.10.ardan.portrait.1
+	remove_country_flag = uma_leader_cp.10.sweepy.portrait.1
+	remove_country_flag = uma_leader_cp.10.cheval.portrait.1
+	remove_country_flag = uma_leader_cp.10.zf.portrait.1
+	remove_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+	remove_country_flag = uma_leader_cp.10.sky_gov.portrait.1
+	remove_country_flag = uma_leader_cp.10.agt.portrait.1
+	remove_country_flag = uma_leader_cp.10.did.portrait.1
+	remove_country_flag = uma_leader_cp.10.ougri.portrait.1
+	remove_country_flag = uma_leader_cp.10.deep.portrait.1
+}
+
+uma_leader_cp_cleanup_leader_gender_flag = {
+	optimize_memory
+	every_owned_leader = {
+		limit = {
+			has_leader_flag = uma_leader_compound_father
+		}
+		remove_leader_flag = uma_leader_compound_father
+	}
+	every_owned_leader = {
+		limit = {
+			has_leader_flag = uma_leader_compound_mother
+		}
+		remove_leader_flag = uma_leader_compound_mother
+	}
+}
+
+uma_leader_cp_build_up_skill = {
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 1
+			}
+		}
+		add_experience = 5
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 2
+			}
+		}
+		add_experience = 405
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 3
+			}
+		}
+		add_experience = 1505
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 4
+			}
+		}
+		add_experience = 3605
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 5
+			}
+		}
+		add_experience = 7005
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 6
+			}
+		}
+		add_experience = 12005
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 7
+			}
+		}
+		add_experience = 18905
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 8
+			}
+		}
+		add_experience = 28005
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 9
+			}
+		}
+		add_experience = 39605
+	}
+
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_leader_cp_skill
+				value = 10
+			}
+		}
+		add_experience = 54000
+	}
+
+	else = {
+		add_experience = 7005
+
+	}
+}
+
+uma_leader_cp_build_up_write_information = {
+
+	event_target:uma_leader_cp_father = {
+		switch = {
+			trigger = has_leader_flag
+
+
+			uma_is_deep = {
+				Prev = {
+					set_leader_flag = uma_is_father_deep
+				}
+			}
+
+			uma_is_oguri_cap = {
+				Prev = {
+					set_leader_flag = uma_is_father_oguri_cap
+				}
+			}
+
+			uma_is_agnes_digital = {
+				Prev = {
+					set_leader_flag = uma_is_father_agnes_digital
+				}
+			}
+
+			uma_is_tachyon = {
+				Prev = {
+					set_leader_flag = uma_is_father_tachyon
+				}
+			}
+
+			uma_is_seiun_sky = {
+				Prev = {
+					set_leader_flag = uma_is_father_seiun_sky
+				}
+			}
+
+			uma_is_tokai_teio = {
+				Prev = {
+					set_leader_flag = uma_is_father_tokai_teio
+				}
+			}
+
+			uma_is_zf = {
+				Prev = {
+					set_leader_flag = uma_is_father_zf
+				}
+			}
+
+			uma_is_cheval_grand = {
+				Prev = {
+					set_leader_flag = uma_is_father_cheval_grand
+				}
+			}
+
+			uma_is_sweepy_tonson = {
+				Prev = {
+					set_leader_flag = uma_is_father_sweepy_tonson
+				}
+			}
+
+			uma_is_mejro_ardan = {
+				Prev = {
+					set_leader_flag = uma_is_father_mejro_ardan
+				}
+			}
+
+			uma_is_curren_chan = {
+				Prev = {
+					set_leader_flag = uma_is_father_curren_chan
+				}
+			}
+
+			uma_is_zephyr = {
+				Prev = {
+					set_leader_flag = uma_is_father_zephyr
+				}
+			}
+
+			uma_is_kitasan_black = {
+				Prev = {
+					set_leader_flag = uma_is_father_kitasan_black
+				}
+			}
+
+			uma_is_al_condor_pasa = {
+				Prev = {
+					set_leader_flag = uma_is_father_al_condor_pasa
+				}
+			}
+
+			uma_is_king_halo = {
+				Prev = {
+					set_leader_flag = uma_is_father_king_halo
+				}
+			}
+
+			uma_is_nice_nature = {
+				Prev = {
+					set_leader_flag = uma_is_father_nice_nature
+				}
+			}
+
+			uma_is_fine = {
+				Prev = {
+					set_leader_flag = uma_is_father_fine
+				}
+			}
+
+			uma_is_tama = {
+				Prev = {
+					set_leader_flag = uma_is_father_tama
+				}
+			}
+
+			uma_is_silent_suzuka = {
+				Prev = {
+					set_leader_flag = uma_is_father_silent_suzuka
+				}
+			}
+
+			uma_is_satono = {
+				Prev = {
+					set_leader_flag = uma_is_father_satono
+				}
+			}
+
+			uma_is_hishi_miracle = {
+				Prev = {
+					set_leader_flag = uma_is_father_hishi_miracle
+				}
+			}
+
+			uma_is_duramente = {
+				Prev = {
+					set_leader_flag = uma_is_father_duramente
+				}
+			}
+		}
+	}
+
+	event_target:uma_leader_cp_mother = {
+		switch = {
+			trigger = has_leader_flag
+
+
+			uma_is_deep = {
+				Prev = {
+					set_leader_flag = uma_is_mother_deep
+				}
+			}
+
+			uma_is_oguri_cap = {
+				Prev = {
+					set_leader_flag = uma_is_mother_oguri_cap
+				}
+			}
+
+			uma_is_agnes_digital = {
+				Prev = {
+					set_leader_flag = uma_is_mother_agnes_digital
+				}
+			}
+
+			uma_is_tachyon = {
+				Prev = {
+					set_leader_flag = uma_is_mother_tachyon
+				}
+			}
+
+			uma_is_seiun_sky = {
+				Prev = {
+					set_leader_flag = uma_is_mother_seiun_sky
+				}
+			}
+
+			uma_is_tokai_teio = {
+				Prev = {
+					set_leader_flag = uma_is_mother_tokai_teio
+				}
+			}
+
+			uma_is_zf = {
+				Prev = {
+					set_leader_flag = uma_is_mother_zf
+				}
+			}
+
+			uma_is_cheval_grand = {
+				Prev = {
+					set_leader_flag = uma_is_mother_cheval_grand
+				}
+			}
+
+			uma_is_sweepy_tonson = {
+				Prev = {
+					set_leader_flag = uma_is_mother_sweepy_tonson
+				}
+			}
+
+			uma_is_mejro_ardan = {
+				Prev = {
+					set_leader_flag = uma_is_mother_mejro_ardan
+				}
+			}
+
+			uma_is_curren_chan = {
+				Prev = {
+					set_leader_flag = uma_is_mother_curren_chan
+				}
+			}
+
+			uma_is_zephyr = {
+				Prev = {
+					set_leader_flag = uma_is_mother_zephyr
+				}
+			}
+
+			uma_is_kitasan_black = {
+				Prev = {
+					set_leader_flag = uma_is_mother_kitasan_black
+				}
+			}
+
+			uma_is_al_condor_pasa = {
+				Prev = {
+					set_leader_flag = uma_is_mother_al_condor_pasa
+				}
+			}
+
+			uma_is_king_halo = {
+				Prev = {
+					set_leader_flag = uma_is_mother_king_halo
+				}
+			}
+
+			uma_is_nice_nature = {
+				Prev = {
+					set_leader_flag = uma_is_mother_nice_nature
+				}
+			}
+
+			uma_is_fine = {
+				Prev = {
+					set_leader_flag = uma_is_mother_fine
+				}
+			}
+
+			uma_is_tama = {
+				Prev = {
+					set_leader_flag = uma_is_mother_tama
+				}
+			}
+
+			uma_is_silent_suzuka = {
+				Prev = {
+					set_leader_flag = uma_is_mother_silent_suzuka
+				}
+			}
+
+			uma_is_satono = {
+				Prev = {
+					set_leader_flag = uma_is_mother_satono
+				}
+			}
+
+			uma_is_hishi_miracle = {
+				Prev = {
+					set_leader_flag = uma_is_mother_hishi_miracle
+				}
+			}
+
+			uma_is_duramente = {
+				Prev = {
+					set_leader_flag = uma_is_mother_duramente
+				}
+			}
+		}
+	}
+
+
+	Root = {
+		switch = {
+			trigger = has_country_flag
+
+			uma_leader_cp.10.deep.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.deep.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.ougri.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.ougri.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.did.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.did.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.agt.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.agt.portrait.1
+				}
+			}
+			uma_leader_cp.10.sky_gov.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.sky_gov.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.teio_gov.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.teio_gov.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.zf.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.zf.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.cheval.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.cheval.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.sweepy.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.sweepy.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.ardan.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.ardan.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.curren.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.curren.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.zephyr.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.zephyr.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.kita.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.kita.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.al.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.al.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.halo.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.halo.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.nn_gov.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.nn_gov.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.fine.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.fine.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.tama.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.tama.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.ayb.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.ayb.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.satdia.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.satdia.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.hishi.portrait.1 = {
+				Prev = {
+					set_leader_flag =uma_leader_cp.10.hishi.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.dura.portrait.1 = {
+				Prev = {
+					set_leader_flag = uma_leader_cp.10.dura.portrait.1
+				}
+			}
 		}
 	}
 }

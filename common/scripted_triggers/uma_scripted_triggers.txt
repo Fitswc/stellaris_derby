@@ -740,6 +740,40 @@ uma_check_factory_uma_crystal_disable = {
 	}
 }
 
+
+uma_leader_cp_has_country_flag_portrait = {
+	optimize_memory
+	OR = {
+		has_country_flag = uma_leader_cp.9.dura.portrait.1
+		has_country_flag = uma_leader_cp.9.hishi.portrait.1
+		has_country_flag = uma_leader_cp.9.satdia.portrait.1
+		has_country_flag = uma_leader_cp.9.ayb.portrait.1
+		has_country_flag = uma_leader_cp.9.tama.portrait.1
+		has_country_flag = uma_leader_cp.9.fine.portrait.1
+		has_country_flag = uma_leader_cp.9.nn_sci.portrait.1
+		has_country_flag = uma_leader_cp.9.nn_adr.portrait.1
+		has_country_flag = uma_leader_cp.9.nn_gov.portrait.1
+		has_country_flag = uma_leader_cp.9.halo.portrait.1
+		has_country_flag = uma_leader_cp.9.al.portrait.1
+		has_country_flag = uma_leader_cp.9.kita.portrait.1
+		has_country_flag = uma_leader_cp.9.zephyr.portrait.1
+		has_country_flag = uma_leader_cp.9.curren.portrait.1
+		has_country_flag = uma_leader_cp.9.ardan.portrait.1
+		has_country_flag = uma_leader_cp.9.sweepy.portrait.1
+		has_country_flag = uma_leader_cp.9.cheval.portrait.1
+		has_country_flag = uma_leader_cp.9.zf.portrait.1
+		has_country_flag = uma_leader_cp.9.teio_sci.portrait.1
+		has_country_flag = uma_leader_cp.9.teio_adr.portrait.1
+		has_country_flag = uma_leader_cp.9.teio_gov.portrait.1
+		has_country_flag = uma_leader_cp.9.sky_gov.portrait.1
+		has_country_flag = uma_leader_cp.9.ar_sky.portrait.1
+		has_country_flag = uma_leader_cp.9.agt.portrait.1
+		has_country_flag = uma_leader_cp.9.did.portrait.1
+		has_country_flag = uma_leader_cp.9.ougri.portrait.1
+		has_country_flag = uma_leader_cp.9.deep.portrait.1
+	}
+}
+
 uma_the_uma_endcrisis_happened = {
 	has_global_flag = uma_ec_invasion_happened
 	NOT = {

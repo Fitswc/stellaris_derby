@@ -1,0 +1,5383 @@
+namespace = uma_leader_cp
+
+
+country_event = {
+	id = uma_leader_cp.999
+	title = uma_leader_cp.999.title
+	desc = uma_leader_cp.999.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	option = {
+		name = uma_leader_cp.999.a #Official
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.1
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.999.b #Scientists
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.2
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.999.c #Comanders
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.3
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+	}
+}
+
+#Father
+
+country_event = {
+	id = uma_leader_cp.1
+	title = uma_leader_cp.1.title
+	desc = uma_leader_cp.1.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
+	picture_event_data = {
+		room = leader_cp_room
+	}
+
+	immediate = {
+		set_country_flag = uma_leader_cp.1_open
+	}
+
+	option = {
+		name = uma_leader_cp.1.a
+		custom_tooltip = uma_leader_cp.1.a.tt
+		trigger = {
+			exists = event_target:uma_is_leader_oguri_cap
+		}
+		event_target:uma_is_leader_oguri_cap = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.d
+		custom_tooltip = uma_leader_cp.1.d.tt
+		trigger = {
+			exists = event_target:uma_agnes_digital_governor
+		}
+		event_target:uma_agnes_digital_governor = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+			event_target:uma_is_leader_kitasan_black = {
+				has_trait = uma_governor_trait_sp_kitasan_black
+			}
+		}
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+			event_target:uma_is_leader_king_halo = {
+				has_trait = uma_governor_trait_sp_king_halo
+			}
+		}
+
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+			event_target:uma_is_leader_al_condor_pasa = {
+				has_trait = uma_governor_trait_sp_al_condor_pasa
+			}
+		}
+
+		event_target:uma_is_leader_al_condor_pasa = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
+		trigger = {
+			exists = event_target:uma_seiun_sky_governor
+		}
+		event_target:uma_seiun_sky_governor = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.h.gov
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_governor_nature
+			}
+		}
+		event_target:uma_is_leader_governor_nature = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.k
+		custom_tooltip = uma_leader_cp.1.k.tt
+		trigger = {
+			exists = event_target:uma_is_leader_deep
+		}
+		event_target:uma_is_leader_deep = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt
+		trigger = {
+			exists = event_target:uma_is_teio_governor
+		}
+		event_target:uma_is_leader_tokai_teio = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.n
+		custom_tooltip = uma_leader_cp.1.n.tt
+		trigger = {
+			exists = event_target:uma_is_leader_fine
+		}
+		allow = {
+			event_target:uma_is_leader_fine = {
+				has_trait = uma_governor_trait_sp_fine_er
+			}
+		}
+		event_target:uma_is_leader_fine = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.o
+		custom_tooltip = uma_leader_cp.1.o.tt
+		trigger = {
+			exists = event_target:uma_is_leader_tama
+		}
+		event_target:uma_is_leader_tama = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.p
+		custom_tooltip = uma_leader_cp.1.p.tt
+		trigger = {
+			exists = event_target:uma_is_leader_cheval_grand
+		}
+		event_target:uma_is_leader_cheval_grand = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.t
+		custom_tooltip = uma_leader_cp.1.t.tt
+		trigger = {
+			exists = event_target:uma_is_leader_curren_chan
+		}
+		allow = {
+			event_target:uma_is_leader_curren_chan = {
+				has_trait = uma_trait_sp_curren_spark_soujio
+			}
+		}
+		event_target:uma_is_leader_curren_chan = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.u
+		custom_tooltip = uma_leader_cp.1.u.tt
+		trigger = {
+			exists = event_target:uma_is_leader_zephyr
+		}
+		event_target:uma_is_leader_zephyr = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_leader_compound_father
+				}
+				remove_leader_flag = uma_leader_compound_father
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.2 #scientist
+	title = uma_leader_cp.2.title
+	desc = uma_leader_cp.2.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
+	picture_event_data = {
+		room = leader_cp_room
+	}
+
+	immediate = {
+		set_country_flag = uma_leader_cp.2_open
+	}
+
+	option = {
+		name = uma_leader_cp.1.c
+		custom_tooltip = uma_leader_cp.1.c.tt
+		trigger = {
+			exists = event_target:uma_is_leader_tachyon
+		}
+		event_target:uma_is_leader_tachyon = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.h.sci
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_scientist_nature
+			}
+		}
+		event_target:uma_is_leader_scientist_nature = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.i
+		custom_tooltip = uma_leader_cp.1.i.tt
+		trigger = {
+			exists = event_target:uma_is_leader_silent_suzuka
+		}
+		event_target:uma_is_leader_silent_suzuka = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.j
+		custom_tooltip = uma_leader_cp.1.j.tt
+		trigger = {
+			exists = event_target:uma_is_leader_satono
+		}
+		event_target:uma_is_leader_satono = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt.sci
+		trigger = {
+			exists = event_target:uma_is_teio_scientist
+		}
+		event_target:uma_is_leader_tokai_teio = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.m
+		custom_tooltip = uma_leader_cp.1.m.tt
+		trigger = {
+			exists = event_target:uma_is_leader_zf
+		}
+		event_target:uma_is_leader_zf = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.q
+		custom_tooltip = uma_leader_cp.1.q.tt
+		trigger = {
+			exists = event_target:uma_is_leader_hishi_miracle
+		}
+		event_target:uma_is_leader_hishi_miracle = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.r
+		custom_tooltip = uma_leader_cp.1.r.tt
+		trigger = {
+			exists = event_target:uma_is_leader_sweepy_tonson
+		}
+		event_target:uma_is_leader_sweepy_tonson = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.s
+		custom_tooltip = uma_leader_cp.1.s.tt
+		trigger = {
+			exists = event_target:uma_is_leader_mejro_ardan
+		}
+		event_target:uma_is_leader_mejro_ardan = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+			event_target:uma_is_leader_kitasan_black = {
+				has_trait = uma_scientist_trait_sp_kitasan_black
+			}
+		}
+
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+			event_target:uma_is_leader_king_halo = {
+				has_trait = uma_scientist_trait_sp_king_halo
+			}
+		}
+
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+			event_target:uma_is_leader_al_condor_pasa = {
+				has_trait = uma_scientist_trait_sp_al_condor_pasa
+			}
+		}
+
+		event_target:uma_is_leader_al_condor_pasa = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_leader_compound_father
+				}
+				remove_leader_flag = uma_leader_compound_father
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.3
+	title = uma_leader_cp.3.title #Commander
+	desc = uma_leader_cp.3.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
+	picture_event_data = {
+		room = leader_cp_room
+	}
+
+	immediate = {
+		set_country_flag = uma_leader_cp.3_open
+	}
+
+	option = {
+		name = uma_leader_cp.1.h.com
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_general_nature
+			}
+		}
+		event_target:uma_is_leader_general_nature = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.l
+		custom_tooltip =  uma_leader_cp.1.l.tt.com
+		trigger = {
+			exists = event_target:uma_is_teio_admiral
+		}
+		event_target:uma_is_leader_tokai_teio = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.v
+		custom_tooltip = uma_leader_cp.1.v.tt
+		trigger = {
+			exists = event_target:uma_is_leader_duramente
+		}
+		event_target:uma_is_leader_duramente = {
+			set_leader_flag = uma_leader_compound_father
+
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+			event_target:uma_is_leader_kitasan_black = {
+				has_trait = uma_general_trait_sp_kitasan_black
+			}
+		}
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+			event_target:uma_is_leader_king_halo = {
+				has_trait = uma_general_trait_sp_king_halo
+			}
+
+		}
+
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+			event_target:uma_is_leader_al_condor_pasa = {
+				has_trait = uma_general_trait_sp_al_condor_pasa
+			}
+		}
+
+		event_target:uma_is_leader_al_condor_pasa = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
+		trigger = {
+			exists = event_target:uma_seiun_sky_admiral
+		}
+		event_target:uma_seiun_sky_admiral = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+		country_event = {
+			id = uma_leader_cp.5
+		}
+			}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_leader_compound_father
+				}
+				remove_leader_flag = uma_leader_compound_father
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = uma_leader_cp.5
+	title = uma_leader_cp.5.title
+	desc = uma_leader_cp.5.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	option = {
+		name = uma_leader_cp.999.a #Official
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.6
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.999.b #Scientists
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.7
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.999.c #Comanders
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.8
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_leader_compound_father
+				}
+				remove_leader_flag = uma_leader_compound_father
+			}
+		}
+	}
+}
+
+#Mother
+
+country_event = {
+	id = uma_leader_cp.6
+	title = uma_leader_cp.6.title
+	desc = uma_leader_cp.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
+	picture_event_data = {
+		room = leader_cp_room
+	}
+
+	immediate = {
+		set_country_flag = uma_leader_cp.6_open
+	}
+
+	option = {
+		name = uma_leader_cp.1.a
+		custom_tooltip = uma_leader_cp.1.a.tt
+		trigger = {
+			exists = event_target:uma_is_leader_oguri_cap
+		}
+		allow = {
+			NOT = {
+				custom_tooltip_fail = {
+					text = uma_leader_cp.1.fail
+					event_target:uma_is_leader_oguri_cap = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+		}
+		event_target:uma_is_leader_oguri_cap = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.d
+		custom_tooltip = uma_leader_cp.1.d.tt
+		trigger = {
+			exists = event_target:uma_agnes_digital_governor
+		}
+		allow = {
+			custom_tooltip_fail = {
+				text = uma_leader_cp.1.fail
+				NOT = {
+					event_target:uma_agnes_digital_governor = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+		}
+		event_target:uma_agnes_digital_governor = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+			event_target:uma_is_leader_kitasan_black = {
+				has_trait = uma_governor_trait_sp_kitasan_black
+			}
+		}
+		allow = {
+			custom_tooltip_fail = {
+				text = uma_leader_cp.1.fail
+				NOT = {
+					event_target:uma_is_leader_kitasan_black = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+		}
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+			event_target:uma_is_leader_king_halo = {
+				has_trait = uma_governor_trait_sp_king_halo
+			}
+		}
+		allow = {
+			custom_tooltip_fail = {
+				text = uma_leader_cp.1.fail
+				NOT = {
+					event_target:uma_is_leader_king_halo = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+		}
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+			event_target:uma_is_leader_al_condor_pasa = {
+				has_trait = uma_governor_trait_sp_al_condor_pasa
+			}
+		}
+		allow = {
+
+			NOT = {
+				event_target:uma_is_leader_al_condor_pasa = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_al_condor_pasa = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
+		trigger = {
+			exists = event_target:uma_seiun_sky_governor
+		}
+		allow = {
+			NOT = {
+				event_target:uma_seiun_sky_governor = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_seiun_sky_governor = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.h.gov
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_governor_nature
+			}
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_governor_nature = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_governor_nature = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.k
+		custom_tooltip = uma_leader_cp.1.k.tt
+		trigger = {
+			exists = event_target:uma_is_leader_deep
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_deep = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_deep = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt
+		trigger = {
+			exists = event_target:uma_is_teio_governor
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_teio_governor = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_teio_governor = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.n
+		custom_tooltip = uma_leader_cp.1.n.tt
+		trigger = {
+			exists = event_target:uma_is_leader_fine
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_fine = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_fine = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.o
+		custom_tooltip = uma_leader_cp.1.o.tt
+		trigger = {
+			exists = event_target:uma_is_leader_tama
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_tama = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_tama = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.p
+		custom_tooltip = uma_leader_cp.1.p.tt
+		trigger = {
+			exists = event_target:uma_is_leader_cheval_grand
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_cheval_grand = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_cheval_grand = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.t
+		custom_tooltip = uma_leader_cp.1.t.tt
+		trigger = {
+			exists = event_target:uma_is_leader_curren_chan
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_curren_chan = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+			event_target:uma_is_leader_curren_chan = {
+				has_trait = uma_trait_sp_curren_spark_soujio
+			}
+		}
+		event_target:uma_is_leader_curren_chan = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.u
+		custom_tooltip = uma_leader_cp.1.u.tt
+		trigger = {
+			exists = event_target:uma_is_leader_zephyr
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_zephyr = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_zephyr = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				AND = {
+					any_owned_leader = {
+						has_leader_flag = uma_leader_compound_mother
+					}
+					any_owned_leader = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+			country_event = {
+				id = uma_leader_cp.11
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.7 #scientist
+	title = uma_leader_cp.7.title
+	desc = uma_leader_cp.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
+	picture_event_data = {
+		room = leader_cp_room
+	}
+
+	immediate = {
+		set_country_flag = uma_leader_cp.7_open
+	}
+
+	option = {
+		name = uma_leader_cp.1.c
+		custom_tooltip = uma_leader_cp.1.c.tt
+		trigger = {
+			exists = event_target:uma_is_leader_tachyon
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_tachyon = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_tachyon = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.h.sci
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_scientist_nature
+			}
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_scientist_nature = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_scientist_nature = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.i
+		custom_tooltip = uma_leader_cp.1.i.tt
+		trigger = {
+			exists = event_target:uma_is_leader_silent_suzuka
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_silent_suzuka = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_silent_suzuka = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.j
+		custom_tooltip = uma_leader_cp.1.j.tt
+		trigger = {
+			exists = event_target:uma_is_leader_satono
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_satono = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_satono = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.l
+		custom_tooltip = uma_leader_cp.1.l.tt.sci
+		trigger = {
+			exists = event_target:uma_is_teio_scientist
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_teio_scientist = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_teio_scientist = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.m
+		custom_tooltip = uma_leader_cp.1.m.tt
+		trigger = {
+			exists = event_target:uma_is_leader_zf
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_zf = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_zf = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.q
+		custom_tooltip = uma_leader_cp.1.q.tt
+		trigger = {
+			exists = event_target:uma_is_leader_hishi_miracle
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_hishi_miracle = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_hishi_miracle = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+	option = {
+		name = uma_leader_cp.1.r
+		custom_tooltip = uma_leader_cp.1.r.tt
+		trigger = {
+			exists = event_target:uma_is_leader_sweepy_tonson
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_sweepy_tonson = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_sweepy_tonson = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.s
+		custom_tooltip = uma_leader_cp.1.s.tt
+		trigger = {
+			exists = event_target:uma_is_leader_mejro_ardan
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_mejro_ardan = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_mejro_ardan = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+			event_target:uma_is_leader_kitasan_black = {
+				has_trait = uma_scientist_trait_sp_kitasan_black
+			}
+		}
+		allow = {
+
+			NOT = {
+				event_target:uma_is_leader_kitasan_black = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+			event_target:uma_is_leader_king_halo = {
+				has_trait = uma_scientist_trait_sp_king_halo
+			}
+		}
+		allow = {
+
+			NOT = {
+				event_target:uma_is_leader_king_halo = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+			event_target:uma_is_leader_al_condor_pasa = {
+				has_trait = uma_scientist_trait_sp_al_condor_pasa
+			}
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_al_condor_pasa = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_al_condor_pasa = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				AND = {
+					any_owned_leader = {
+						has_leader_flag = uma_leader_compound_mother
+					}
+					any_owned_leader = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+			country_event = {
+				id = uma_leader_cp.11
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.8
+	title = uma_leader_cp.8.title #Commander
+	desc = uma_leader_cp.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	diplomatic_title = uma_leader_cp.8.dpt
+	picture_event_data = {
+		room = leader_cp_room
+	}
+
+	immediate = {
+		set_country_flag = uma_leader_cp.8_open
+	}
+
+	option = {
+		name = uma_leader_cp.1.h.com
+		custom_tooltip = uma_leader_cp.1.h.gov.tt
+		trigger = {
+			OR = {
+				exists = event_target:uma_is_leader_general_nature
+			}
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_general_nature = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_general_nature = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.l
+		custom_tooltip =  uma_leader_cp.1.l.tt.com
+		trigger = {
+			exists = event_target:uma_is_teio_admiral
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_teio_admiral = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_teio_admiral = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.v
+		custom_tooltip = uma_leader_cp.1.v.tt
+		trigger = {
+			exists = event_target:uma_is_leader_duramente
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_duramente = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_duramente = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.e
+		custom_tooltip = uma_leader_cp.1.e.tt
+		trigger = {
+			exists = event_target:uma_is_leader_kitasan_black
+			event_target:uma_is_leader_kitasan_black = {
+				has_trait = uma_general_trait_sp_kitasan_black
+			}
+		}
+		allow = {
+
+			NOT = {
+				event_target:uma_is_leader_kitasan_black = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_kitasan_black = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.f
+		custom_tooltip = uma_leader_cp.1.f.tt
+		trigger = {
+			exists = event_target:uma_is_leader_king_halo
+			event_target:uma_is_leader_king_halo = {
+				has_trait = uma_general_trait_sp_king_halo
+			}
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_king_halo = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_king_halo = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.g
+		custom_tooltip = uma_leader_cp.1.g.tt
+		trigger = {
+			exists = event_target:uma_is_leader_al_condor_pasa
+			event_target:uma_is_leader_al_condor_pasa = {
+				has_trait = uma_general_trait_sp_al_condor_pasa
+			}
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_al_condor_pasa = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_al_condor_pasa = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+		country_event = {
+			id = uma_leader_cp.5
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.b
+		custom_tooltip = uma_leader_cp.1.b.tt
+		trigger = {
+			exists = event_target:uma_seiun_sky_admiral
+		}
+		allow = {
+			NOT = {
+				event_target:uma_seiun_sky_admiral = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_seiun_sky_admiral = {
+			set_leader_flag = uma_leader_compound_mother
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				AND = {
+					any_owned_leader = {
+						has_leader_flag = uma_leader_compound_mother
+					}
+					any_owned_leader = {
+						has_leader_flag = uma_leader_compound_father
+					}
+				}
+			}
+			country_event = {
+				id = uma_leader_cp.11
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_leader_cp.9
+	title = uma_leader_cp.9.title
+	desc = uma_leader_cp.9.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+
+	###DEEP
+
+	option = {
+		name = uma_leader_cp.9.deep.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_deep
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_deep
+				}
+			}
+
+			NOT = {
+				has_country_flag = uma_leader_cp.9.deep.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.deep.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.deep.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_deep
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_deep
+				}
+			}
+
+			has_country_flag = uma_leader_cp.9.deep.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.deep.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Ougri
+
+	option = {
+		name = uma_leader_cp.9.ougri.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_oguri_cap
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_oguri_cap
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.ougri.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.ougri.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.ougri.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_oguri_cap
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_oguri_cap
+				}
+			}
+
+			has_country_flag = uma_leader_cp.9.ougri.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.ougri.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Digital
+	option = {
+		name = uma_leader_cp.9.did.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_agnes_digital
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_agnes_digital
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.did.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.did.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.did.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_agnes_digital
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_agnes_digital
+				}
+			}
+
+			has_country_flag = uma_leader_cp.9.did.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.did.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Tachyon
+	option = {
+		name = uma_leader_cp.9.agt.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tachyon
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tachyon
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.agt.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.agt.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.agt.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tachyon
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tachyon
+				}
+			}
+
+			has_country_flag = uma_leader_cp.9.agt.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.agt.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###aky-admiral
+	option = {
+		name = uma_leader_cp.9.ar_sky.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_ar_seiun_sky
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_ar_seiun_sky
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.ar_sky.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_ar_seiun_sky
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_ar_seiun_sky
+				}
+			}
+			has_country_flag = uma_leader_cp.9.ar_sky.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.ar_sky.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###sky-governor
+	option = {
+		name = uma_leader_cp.9.sky_gov.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_seiun_sky
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_seiun_sky
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.sky_gov.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_seiun_sky
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_seiun_sky
+				}
+			}
+
+			has_country_flag = uma_leader_cp.9.sky_gov.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.sky_gov.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###teio-governor
+	option = {
+		name = uma_leader_cp.9.teio_gov.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+			}
+
+			NOT = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.teio_gov.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+			}
+			has_country_flag = uma_leader_cp.9.teio_gov.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.teio_gov.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	##Trait2 Negative - Teio
+
+	option = {
+		name = uma_leader_cp.9.teio_gov.trait.2
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.teio_gov.trait.2.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_gov_tokai_teio
+				}
+			}
+			has_country_flag = uma_leader_cp.9.teio_gov.trait.2
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.teio_gov.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###teio-admiral
+	option = {
+		name = uma_leader_cp.9.teio_adr.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.teio_adr.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+			}
+			has_country_flag = uma_leader_cp.9.teio_adr.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.teio_adr.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	##Trait2 positive - Teio
+
+	option = {
+		name = uma_leader_cp.9.teio_adr.trait.2
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.teio_adr.trait.2.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_adr_teio
+				}
+			}
+			has_country_flag = uma_leader_cp.9.teio_adr.trait.2
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.teio_adr.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###teio-scientist
+	option = {
+		name = uma_leader_cp.9.teio_sci.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.teio_sci.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+			}
+			has_country_flag = uma_leader_cp.9.teio_sci.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.teio_sci.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	##Trait2 positive - Teio
+
+	option = {
+		name = uma_leader_cp.9.teio_sci.trait.2
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.teio_sci.trait.2.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sci_teio
+				}
+			}
+			has_country_flag = uma_leader_cp.9.teio_sci.trait.2
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.teio_sci.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###ZF
+	option = {
+		name = uma_leader_cp.9.zf.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.zf.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.zf.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.zf.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+			}
+			has_country_flag = uma_leader_cp.9.zf.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.zf.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	##Trait2 positive - zf
+
+	option = {
+		name = uma_leader_cp.9.zf.trait.2
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.zf.trait.2
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.zf.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.zf.trait.2.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+			}
+			has_country_flag = uma_leader_cp.9.zf.trait.2
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.zf.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	##Trait3 negative - zf
+
+	option = {
+		name = uma_leader_cp.9.zf.trait.3
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uuma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uuma_is_zf
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.zf.trait.3
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.zf.trait.3
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.zf.trait.3.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+			}
+			has_country_flag = uma_leader_cp.9.zf.trait.3
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.zf.trait.3
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###ChevalGrand
+	option = {
+		name = uma_leader_cp.9.cheval.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_cheval_grand
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_cheval_grand
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.cheval.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.cheval.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.cheval.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_cheval_grand
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_cheval_grand
+				}
+			}
+			has_country_flag = uma_leader_cp.9.cheval.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.cheval.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Sweepy
+	option = {
+		name = uma_leader_cp.9.sweepy.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sweepy_tonson
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sweepy_tonson
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.sweepy.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.sweepy.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.sweepy.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sweepy_tonson
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sweepy_tonson
+				}
+			}
+			has_country_flag = uma_leader_cp.9.sweepy.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.sweepy.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+
+	###Ardan
+	option = {
+		name = uma_leader_cp.9.ardan.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_mejro_ardan
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_mejro_ardan
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.ardan.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.ardan.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.ardan.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_mejro_ardan
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_mejro_ardan
+				}
+			}
+			has_country_flag = uma_leader_cp.9.ardan.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.ardan.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Curren
+	option = {
+		name = uma_leader_cp.9.curren.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_curren_chan
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_curren_chan
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.curren.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.curren.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.curren.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_curren_chan
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_curren_chan
+				}
+			}
+			has_country_flag = uma_leader_cp.9.curren.trait.1
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.curren.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Zephyr
+	option = {
+		name = uma_leader_cp.9.zephyr.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zephyr
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zephyr
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.zephyr.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.zephyr.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.zephyr.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zephyr
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zephyr
+				}
+			}
+			has_country_flag = uma_leader_cp.9.zephyr.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.zephyr.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Kitasan Attention: 3 class in 1
+	option = {
+		name = uma_leader_cp.9.kita.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_kitasan_black
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_kitasan_black
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.kita.trait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.kita.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.kita.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_kitasan_black
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_kitasan_black
+				}
+			}
+			has_country_flag = uma_leader_cp.9.kita.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.kita.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###EL Attention: 3 class in 1
+	option = {
+		name = uma_leader_cp.9.al.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_al_condor_pasa
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_al_condor_pasa
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.al.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.al.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.al.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_al_condor_pasa
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_al_condor_pasa
+				}
+			}
+			has_country_flag = uma_leader_cp.9.al.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.al.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Halo Attention: 3 class in 1
+	option = {
+		name = uma_leader_cp.9.halo.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_king_halo
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_king_halo
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.halo.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.halo.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.halo.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_king_halo
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_king_halo
+				}
+			}
+			has_country_flag = uma_leader_cp.9.halo.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.halo.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###NN-governor
+	option = {
+		name = uma_leader_cp.9.nn_gov.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_governor_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_governor_nice_nature
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.nn_gov.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_governor_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_governor_nice_nature
+				}
+			}
+			has_country_flag = uma_leader_cp.9.nn_gov.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.nn_gov.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###NN-admiral
+	option = {
+		name = uma_leader_cp.9.nn_adr.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_general_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_general_nice_nature
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.nn_adr.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_general_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_general_nice_nature
+				}
+			}
+			has_country_flag = uma_leader_cp.9.nn_adr.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.nn_adr.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###NN-scientist
+	option = {
+		name = uma_leader_cp.9.nn_sci.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_scientist_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_scientist_nice_nature
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.nn_sci.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_scientist_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_scientist_nice_nature
+				}
+			}
+			has_country_flag = uma_leader_cp.9.nn_sci.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.nn_sci.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Fine
+	option = {
+		name = uma_leader_cp.9.fine.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.fine.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.fine.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.fine.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+			}
+			has_country_flag = uma_leader_cp.9.fine.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.fine.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####Trait-2
+
+	option = {
+		name = uma_leader_cp.9.fine.trait.2
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.fine.trait.2
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.fine.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.fine.trait.2.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+			}
+			has_country_flag = uma_leader_cp.9.fine.trait.2
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.fine.trait.2
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	option = {
+		name = uma_leader_cp.9.tama.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tama
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tama
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.tama.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.tama.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.tama.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tama
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tama
+				}
+			}
+			has_country_flag = uma_leader_cp.9.tama.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.tama.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Ayb Attention: 2 traits in 1
+	option = {
+		name = uma_leader_cp.9.ayb.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_silent_suzuka
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_silent_suzuka
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.ayb.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.ayb.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.ayb.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_silent_suzuka
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_silent_suzuka
+				}
+			}
+			has_country_flag = uma_leader_cp.9.ayb.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.ayb.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Satono Diamond
+	option = {
+		name = uma_leader_cp.9.satdia.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_satono
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_satono
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.satdia.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.satdia.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.satdia.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_satono
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_satono
+				}
+			}
+			has_country_flag = uma_leader_cp.9.satdia.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.satdia.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Hishi Attention: sometime no special trait
+	option = {
+		name = uma_leader_cp.9.hishi.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_hishi_miracle
+
+					hidden_trigger = {
+						has_trait = uma_scientists_trait_sp_fz
+					}
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_hishi_miracle
+
+					hidden_trigger = {
+						has_trait = uma_scientists_trait_sp_fz
+					}
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.hishi.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.hishi.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.hishi.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_hishi_miracle
+
+					hidden_trigger = {
+						has_trait = uma_scientists_trait_sp_fz
+					}
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_hishi_miracle
+
+					hidden_trigger = {
+						has_trait = uma_scientists_trait_sp_fz
+					}
+				}
+			}
+			has_country_flag = uma_leader_cp.9.hishi.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.hishi.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	####
+
+	###Duramente
+	option = {
+		name = uma_leader_cp.9.dura.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_duramente
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_duramente
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.dura.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.dura.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.dura.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_duramente
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_duramente
+				}
+			}
+			has_country_flag = uma_leader_cp.9.dura.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.dura.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.9.next
+		hidden_effect = {
+			CLEAR_GLOBAL_EVENT_TARGET = uma_leader_cp_father
+			CLEAR_GLOBAL_EVENT_TARGET = uma_leader_cp_mother
+			#Override
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = uma_leader_compound_father
+				}
+				save_global_event_target_as = uma_leader_cp_father
+			}
+			random_owned_leader = {
+				limit = {
+					has_leader_flag = uma_leader_compound_mother
+				}
+				save_global_event_target_as = uma_leader_cp_mother
+			}
+
+			country_event = {
+				id = uma_leader_cp.10
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+			uma_leader_cp_cleanup_country_flag_trait = yes
+		}
+	}
+}
+
+#Portrait Choice
+
+country_event = {
+	id = uma_leader_cp.10
+	title = uma_leader_cp.10.title
+	desc = uma_leader_cp.10.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	###DEEP
+
+	option = {
+		name = uma_leader_cp.10.deep.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_deep
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_deep
+				}
+			}
+
+			NOT = {
+				has_country_flag = uma_leader_cp.10.deep.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.deep.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Ougri
+
+	option = {
+		name = uma_leader_cp.10.ougri.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_oguri_cap
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_oguri_cap
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.ougri.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.ougri.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Digital
+	option = {
+		name = uma_leader_cp.10.did.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_agnes_digital
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_agnes_digital
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.did.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.did.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Tachyon
+	option = {
+		name = uma_leader_cp.10.agt.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tachyon
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tachyon
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.agt.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.agt.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###sky-governor
+	option = {
+		name = uma_leader_cp.10.sky_gov.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_seiun_sky
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_seiun_sky
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.sky_gov.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.sky_gov.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###teio-governor
+	option = {
+		name = uma_leader_cp.10.teio_gov.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tokai_teio
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tokai_teio
+				}
+			}
+
+			NOT = {
+				has_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.teio_gov.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###ZF
+	option = {
+		name = uma_leader_cp.10.zf.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zf
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.zf.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.zf.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###ChevalGrand
+	option = {
+		name = uma_leader_cp.10.cheval.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_cheval_grand
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_cheval_grand
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.cheval.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.cheval.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Sweepy
+	option = {
+		name = uma_leader_cp.10.sweepy.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sweepy_tonson
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_sweepy_tonson
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.sweepy.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.sweepy.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+
+	###Ardan
+	option = {
+		name = uma_leader_cp.10.ardan.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_mejro_ardan
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_mejro_ardan
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.ardan.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.ardan.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Curren
+	option = {
+		name = uma_leader_cp.10.curren.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_curren_chan
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_curren_chan
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.curren.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.curren.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+
+	####
+
+	###Zephyr
+	option = {
+		name = uma_leader_cp.10.zephyr.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zephyr
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_zephyr
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.zephyr.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.zephyr.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Kitasan Attention: 3 class in 1
+	option = {
+		name = uma_leader_cp.10.kita.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_kitasan_black
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_kitasan_black
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.kita.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.kita.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###EL Attention: 3 class in 1
+	option = {
+		name = uma_leader_cp.10.al.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_al_condor_pasa
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_al_condor_pasa
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.al.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.al.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Halo Attention: 3 class in 1
+	option = {
+		name = uma_leader_cp.10.halo.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_king_halo
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_king_halo
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.halo.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.halo.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###NN-governor
+	option = {
+		name = uma_leader_cp.10.nn_gov.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_nice_nature
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_nice_nature
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.nn_gov.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Fine
+	option = {
+		name = uma_leader_cp.10.fine.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_fine
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.fine.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.fine.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Tama Have to bring negative trait
+	option = {
+		name = uma_leader_cp.10.tama.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tama
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_tama
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.tama.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.tama.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+
+	####
+
+	###Ayb Attention: 2 traits in 1
+	option = {
+		name = uma_leader_cp.10.ayb.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_silent_suzuka
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_silent_suzuka
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.ayb.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.ayb.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Satono Diamond
+	option = {
+		name = uma_leader_cp.10.satdia.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_satono
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_satono
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.satdia.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.satdia.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Hishi Attention: sometime no special trait
+	option = {
+		name = uma_leader_cp.10.hishi.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_hishi_miracle
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_hishi_miracle
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.hishi.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.hishi.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	####
+
+	###Duramente
+	option = {
+		name = uma_leader_cp.10.dura.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_duramente
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_duramente
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.dura.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.dura.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+		hidden_effect = {
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+			uma_leader_cp_cleanup_country_flag_trait = yes
+		}
+	}
+}
+
+
+#tatget class
+country_event = {
+	id = uma_leader_cp.11
+	title = uma_leader_cp.11.title
+	desc = uma_leader_cp.11.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = uma_leader_compound_father
+			}
+			save_global_event_target_as = uma_leader_cp_father
+
+			export_trigger_value_to_variable = {
+				trigger = has_base_skill
+				variable = uma_leader_cp_father_skill_leader
+			}
+			Root = {
+				set_variable = {
+					which = uma_leader_cp_father_skill
+					value = Prev.uma_leader_cp_father_skill_leader
+				}
+			}
+			log = "Father = [uma_leader_cp_father.GetName] ; skill = [Root.uma_leader_cp_father_skill]"
+		}
+		random_owned_leader = {
+			limit = {
+				has_leader_flag = uma_leader_compound_mother
+			}
+			save_global_event_target_as = uma_leader_cp_mother
+
+			export_trigger_value_to_variable = {
+				trigger = has_base_skill
+				variable = uma_leader_cp_mother_skill_leader
+			}
+			Root = {
+				set_variable = {
+					which = uma_leader_cp_mother_skill
+					value = Prev.uma_leader_cp_mother_skill_leader
+				}
+			}
+			log = "Mother = [uma_leader_cp_mother.GetName] ; skill = [Root.uma_leader_cp_mother_skill]"
+		}
+		Root = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_leader_cp_mother_skill
+						value >= uma_leader_cp_father_skill
+					}
+				}
+				set_variable = {
+					which = uma_leader_cp_skill
+					value = uma_leader_cp_father_skill
+				}
+			}
+			else = {
+				set_variable = {
+					which = uma_leader_cp_skill
+					value = uma_leader_cp_mother_skill
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.999.a #Official
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.11.class.official
+
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.999.b #Scientists
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.11.class.scientist
+
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.999.c #Comanders
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.11.class.commanders
+
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.exit
+		default_hide_option = yes
+
+		hidden_effect = {
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+			remove_country_flag = uma_leader_cp.11.class.official
+			remove_country_flag = uma_leader_cp.11.class.scientist
+			remove_country_flag = uma_leader_cp.11.class.commanders
+		}
+	}
+}
+
+
+
+country_event = {
+	id = uma_leader_cp.12
+	title = uma_leader_cp.12.title
+	desc = uma_leader_cp.12.desc
+	is_triggered_only = yes
+	location = capital_scope
+
+	picture = GFX_uma_leader_cheval
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_compound_temporary
+	}
+
+	immediate = {
+		create_country = {
+			name = "NAME_uma_empty_leader_cp"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = uma_leader_cp_empty_country
+			}
+		}
+		event_target:uma_leader_cp_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			if = {
+				limit = {
+					Root = {
+						has_country_flag = uma_leader_cp.11.class.official
+					}
+				}
+				create_leader = {
+					name = random
+					class = official
+					species = Root.owner_main_species
+					gender = female
+					event_leader = no
+					immortal = yes
+					background_planet = Root.capital_scope
+					background_job = uma_racing_umamusume
+					skill = 1
+					set_age = 16
+					custom_catch_phrase = uma_is_compound_temporary.cp
+					tier = leader_tier_legendary
+					traits = {
+						0 = leader_trait_uma_generic
+					}
+					effect = {
+						set_leader_flag = uma_is_special_leader
+						set_leader_flag = uma_is_compound
+						save_global_event_target_as = uma_is_compound_temporary
+
+						uma_leader_cp_build_up_trait_official = yes
+						uma_leader_cp_build_up_portrait = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					Root = {
+						has_country_flag = uma_leader_cp.11.class.scientist
+					}
+				}
+				create_leader = {
+					name = random
+					class = scientist
+					species = Root.owner_main_species
+					gender = female
+					event_leader = no
+					immortal = yes
+					background_planet = Root.capital_scope
+					background_job = uma_racing_umamusume
+					skill = 1
+					set_age = 16
+					custom_catch_phrase = uma_is_compound_temporary.cp
+					tier = leader_tier_legendary
+
+					traits = {
+						0 = leader_trait_uma_generic
+					}
+					effect = {
+						set_leader_flag = uma_is_special_leader
+						set_leader_flag = uma_is_compound
+						save_global_event_target_as = uma_is_compound_temporary
+
+						uma_leader_cp_build_up_trait_scientist = yes
+						uma_leader_cp_build_up_portrait = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					Root = {
+						has_country_flag = uma_leader_cp.11.class.commanders
+					}
+				}
+				create_leader = {
+					name = random
+					class = commander
+					species = Root.owner_main_species
+					gender = female
+					event_leader = no
+					immortal = yes
+					background_planet = Root.capital_scope
+					background_job = uma_racing_umamusume
+					skill = 1
+					set_age = 16
+					tier = leader_tier_legendary
+					custom_catch_phrase = uma_is_compound_temporary.cp
+					traits = {
+						0 = leader_trait_uma_generic
+					}
+					effect = {
+						set_leader_flag = uma_is_special_leader
+						set_leader_flag = uma_is_compound
+						save_global_event_target_as = uma_is_compound_temporary
+						uma_leader_cp_build_up_trait_commander = yes
+						uma_leader_cp_build_up_portrait = yes
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.13.c
+		response_text = uma_leader_cp.13.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_leader_cp.13.a
+		tag = hire_leader
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:uma_is_compound_temporary
+				species = Root.owner_main_species
+				gender = female
+			}
+			last_created_leader = {
+				uma_leader_cp_build_up_skill = yes
+				uma_leader_cp_build_up_write_information = yes
+				uma_initialize_leader_yaruki_effect = yes
+
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_compound_leader
+			}
+
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_compound_temporary
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_compound_temporary
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+
+			add_timeline_event = {
+				type = timeline_umamusume
+				override_tooltip = "uma_timeline_leader_compound_desc"
+				override_text = { "text:uma_timeline_leader_compound" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_compound" "background_zoom2:GFX_uma_timelines_meet_compound_zoom_2" }
+				override_types = { country leader }
+				override_id = uma_timeline_leader_compound
+				targets = { Root Root.leader }
+			}
+
+
+			event_target:uma_leader_cp_mother = {
+				kill_leader = {
+					show_notification = no
+					fire = yes
+				}
+			}
+
+			event_target:uma_leader_cp_father = {
+				kill_leader = {
+					show_notification = no
+					fire = yes
+				}
+			}
+
+			country_event = {
+				id = uma_leader_cp.15
+			}
+		}
+	}
+
+	option = {
+		name = uma_leader_cp.13.b
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_compound_temporary= {
+				kill_leader = { show_notification = no }
+			}
+			clear_global_event_target = uma_is_compound_temporary
+			country_event = {
+				id = uma_leader_cp.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		uma_leader_cp_cleanup_all = yes
+		event_target:uma_leader_cp_empty_country = {
+			destroy_country = yes
+		}
+	}
+}
+
+country_event = {
+	id = uma_leader_cp.14
+	title = uma_leader_cp.14.title
+	desc = uma_leader_cp.14.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	option = {
+		name = uma_leader_cp.14.a #Back to .11 Choose target class
+		hidden_effect = {
+			uma_leader_cp_cleanup_class = yes
+			uma_leader_cp_cleanup_country_flag_trait = yes
+			uma_leader_cp_cleanup_country_flag_portrait = yes
+		}
+			country_event = {
+			id = uma_leader_cp.11
+		}
+	}
+	option = {
+		name = uma_leader_cp.14.b #Back to .10 Choose portrait
+		hidden_effect = {
+			uma_leader_cp_cleanup_country_flag_portrait = yes
+		}
+		country_event = {
+			id = uma_leader_cp.10
+		}
+	}
+	option = {
+		name = uma_leader_cp.14.c #Back to .9 Choose traits
+		hidden_effect = {
+			uma_leader_cp_cleanup_country_flag_trait = yes
+			uma_leader_cp_cleanup_country_flag_portrait = yes
+		}
+		country_event = {
+			id = uma_leader_cp.9
+		}
+	}
+	option = {
+		name = uma_leader_cp.14.d #Back to .999 Choose parent
+		hidden_effect = {
+			uma_leader_cp_cleanup_country_flag_trait = yes
+			uma_leader_cp_cleanup_class = yes
+			uma_leader_cp_cleanup_country_flag_portrait = yes
+			uma_leader_cp_cleanup_leader_gender_flag = yes
+		}
+		country_event = {
+			id = uma_leader_cp.999
+		}
+	}
+}
