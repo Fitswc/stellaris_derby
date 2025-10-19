@@ -558,3 +558,28 @@ d_Ardan_crystal_Mine_Hole = {
 		district_mining_max = 6
 	}
 }
+
+
+d_uma_crystal_carrot_storm_1_engineering = {
+	is_for_colonizable = yes
+	icon = d_fractal_seed
+	category = deposit_cat_rare
+
+	country_modifier = {
+		category_materials_research_speed_mult = 0.15
+	}
+
+	potential = { always = no }
+}
+
+d_uma_crystal_carrot_storm_2 = {
+	is_for_colonizable = yes
+	icon = d_fractal_seed
+	category = deposit_cat_rare
+
+	country_modifier = {
+		job_uma_crystal_carrot_miner_add = 200
+	}
+
+	potential = { always = no }
+}

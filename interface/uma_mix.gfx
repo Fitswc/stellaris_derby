@@ -192,4 +192,14 @@ spriteTypes = {
 		name = GFX_uma_school_planet_ring_world_1_build_icon
 		textureFile = gfx/interface/icons/technologies/tech_uma_ring_world.dds
 	}
+
+	spriteType = {
+		name = "GFX_uma_crystal_carrot_storm"
+		texturefile = "gfx/event_pictures/uma_crystal_carrot_storm.dds"
+	}
+
+	spriteType = {
+		name = "GFX_planetview_uma_crystal_carrot_storm_modifier_frame"
+		textureFile = "gfx/interface/icons/planet_modifiers/pm_uma_crystal_carrot_storm.dds"
+	}
 }

@@ -1958,3 +1958,23 @@ country_event = {
 		}
 	}
 }
+
+##Debug only
+country_event = {
+	id = uma_bg.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_cosmic_storms_dlc = yes
+	}
+
+	immediate = {
+		random_system_within_border = {
+			create_cosmic_storm = {
+				type = uma_crystal_carrot_storm
+				cosmic_storm_start_position = this
+			}
+		}
+	}
+}

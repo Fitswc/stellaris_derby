@@ -65,3 +65,29 @@ message_type = {
 	message_setting_key = uma_endcrisis_ec3_system_being_soc
 	ping = "ping_notification_red"
 }
+
+message_type = {
+	key = "STORM_UMA_CRYSTAL_CARROT_STORM_VISIBLE"
+	icon = "GFX_message_storm_electric_visible"
+	icon_frame = 1
+
+	name = "MESSAGE_UMA_CRYSTAL_CARROT_STORM_SPOTTED_TITLE"
+	sound = "event_yellow_alert"
+	ping = "ping_notification_yellow"
+
+	category = cosmic_storm
+}
+
+# Aftermath toast notifications
+message_type = {
+	key = "UMA_CRYSTAL_CARROT_STORM_AFTERMATH"
+	icon = "GFX_toast_electric_storm_aftermath"
+
+	name = "UMA_CRYSTAL_CARROT_STORM_AFTERMATH_TITLE"
+	sound = "notification"
+	ping = "arrow_notification_yellow"
+
+	default_toast = yes
+
+	category = cosmic_storm
+}
