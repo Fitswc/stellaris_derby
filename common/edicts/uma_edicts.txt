@@ -456,3 +456,35 @@ uma_auto_species_merge = {
 	}
 
 }
+
+uma_leader_compound = {
+	length = 0
+	icon =  GFX_uma_auto_species_merge
+	resources = {
+		category = edicts
+		cost = {
+			unity = 10
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.999
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}

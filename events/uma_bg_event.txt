@@ -1978,3 +1978,53 @@ country_event = {
 		}
 	}
 }
+
+#debugonly
+country_event = {
+	id = uma_bg.32
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+		every_owned_pop_group = {
+			limit = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_power_1
+					has_trait = uma_trait_ap2_realm_power_2
+					has_trait = uma_trait_ap2_realm_power_3
+					has_trait = uma_trait_ap2_realm_power_4
+					has_trait = uma_trait_ap2_realm_power_5
+
+					has_trait = uma_trait_ap2_realm_speed_1
+					has_trait = uma_trait_ap2_realm_speed_2
+					has_trait = uma_trait_ap2_realm_speed_3
+					has_trait = uma_trait_ap2_realm_speed_4
+					has_trait = uma_trait_ap2_realm_speed_5
+
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+
+					has_trait = uma_trait_ap2_realm_wisdom_1
+					has_trait = uma_trait_ap2_realm_wisdom_2
+					has_trait = uma_trait_ap2_realm_wisdom_3
+					has_trait = uma_trait_ap2_realm_wisdom_4
+					has_trait = uma_trait_ap2_realm_wisdom_5
+				}
+			}
+
+			species = {
+				Root = {
+					change_dominant_species = { species = Prev change_all = yes }
+				}
+			}
+		}
+	}
+}

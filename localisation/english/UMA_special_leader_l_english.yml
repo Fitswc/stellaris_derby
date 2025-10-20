@@ -467,3 +467,7 @@ uma_leader_cp.1.i.tt: "§B$AYB$§! Will add traits below to the target leader on
 uma_leader_cp.1.j.tt: "§G$SATONO$§! Will add traits below to the target leader on the basis of ['concept_leader_class']: \n\n   £official£$official$ \n ['leader_trait:uma_scientist_trait_sp_satono_official']\n\n   £scientist£$scientist$ \n ['leader_trait:uma_scientist_trait_sp_satono']\n\n   £commander£$commander$ \n ['leader_trait:uma_scientist_trait_sp_satono_commander']"
 
 uma_leader_cp.1.m.tt: "§H$ZF$§! Will add traits below to the target leader on the basis of ['concept_leader_class']: \n\n   £official£$official$ \n ['leader_trait:uma_scientists_trait_sp_zf_girl_official']\n['leader_trait:uma_scientists_trait_sp_zf_empire_official']\n['leader_trait:uma_scientists_trait_sp_zf_top_official']\n\n   £scientist£$scientist$ \n ['leader_trait:uma_scientists_trait_sp_zf_girl']\n['leader_trait:uma_scientists_trait_sp_zf_empire']\n['leader_trait:uma_scientists_trait_sp_zf_top']\n\n   £commander£$commander$ \n ['leader_trait:uma_scientists_trait_sp_zf_girl_commander']\n['leader_trait:uma_scientists_trait_sp_zf_empire_commander']\n['leader_trait:uma_scientists_trait_sp_zf_top_commander']"
+
+
+edict_uma_leader_compound: "Begin Factor Inherit"
+edict_uma_leader_compound_desc: "Factor Inherit!"
