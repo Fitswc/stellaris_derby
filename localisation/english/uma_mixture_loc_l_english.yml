@@ -96,5 +96,10 @@ mod_UMA_logistic_growth_mult: "Umamusume pop growth speed"
 mod_UMA_logistic_growth_mult_DESC: ""
 
 uma_marking.4.title: "StellarDerby has Update"
-uma_marking.4.desc: "The £uma_sd£StellarDerby version you saves is [event_target:global_event_country.UMA_SD_VER]. Huh, it seems older than the current version. The update contents of this version are as follows: \n Added three final natural disasters \n Added the leader compound system. \n Added policy: Automatic subspecies merging \n Fixed several bugs, of course, a bunch of bugs were inevitably created! \n\nHowever, it seems to have no impact on the save data of the old version. Wish you a pleasant time playing. Thank you for your support (love)."
+uma_marking.4.desc: "The £uma_sd£StellarDerby version you saves is [event_target:global_event_country.UMA_SD_VER]. Huh, it seems older than the current version. The update contents of this version are as follows: \n Fix the critical bugs in End Crisis\n\nn[uma_marking_system_update_info]"
 uma_marking.4.a: "OK"
+
+uma_marking.4.b: "End the Crisis NOW"
+
+uma_marking_system_update_info_on: "It seems that you have already started playing this End-time catastrophe. However, the modifications caused by this update cannot be quickly fixed through this event. §Y If possible, please roll back to before the natural Crisis. §! If not, the button below can help you §Y immediately end the Crisis §! Of course, you can also choose to continue playing, but §Ryou might not be able to complete the event chain!§! .\nSorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!Sorry!"
+uma_marking_system_update_info_off: "However, it seems to have no impact on the save data of the old version. Wish you a pleasant time playing. Thank you for your support (love)."
