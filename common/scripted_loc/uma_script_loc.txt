@@ -758,3 +758,25 @@ define_text = {
 		localization_key = uma_apsystem_realm_mix_off
 	}
 }
+
+define_text = {
+	name = uma_marking_system_update_info
+	text = {
+		trigger = {
+			owner = {
+				has_global_flag = uma_ec3_outeruma_happened
+			}
+		}
+		localization_key = uma_marking_system_update_info_on
+	}
+	text = {
+		trigger = {
+			owner = {
+				NOT = {
+					has_global_flag = uma_ec3_outeruma_happened
+				}
+			}
+		}
+		localization_key = uma_marking_system_update_info_off
+	}
+}

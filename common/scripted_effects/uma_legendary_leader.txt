@@ -2132,6 +2132,7 @@ uma_leader_cp_cleanup_leader_gender_flag = {
 }
 
 uma_leader_cp_build_up_skill = {
+	optimize_memory
 	if = {
 		limit = {
 			check_variable = {
@@ -2239,7 +2240,7 @@ uma_leader_cp_build_up_skill = {
 }
 
 uma_leader_cp_build_up_write_information = {
-
+	optimize_memory
 	event_target:uma_leader_cp_father = {
 		switch = {
 			trigger = has_leader_flag

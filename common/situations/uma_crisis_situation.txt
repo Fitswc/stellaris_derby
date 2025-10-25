@@ -19,17 +19,38 @@ situation_uma_endcrisis_ec3 = {
 			desc = situation_uma_endcrisis_ec3_no_progress_desc_in_situation
 			set = 0.1
 			NAND = {
-				any_system = {
-					exists = starbase
-					starbase = {
-						has_starbase_flag = uma_ec3_soc_fleet_base
+				OR = {
+					any_system = {
+						exists = starbase
+						starbase = {
+							OR = {
+								has_starbase_flag = uma_ec3_soc_fleet_base
+							}
+						}
+						Root.owner = {
+							any_system_within_border = {
+								distance = {
+									source = PrevPrev
+									min_jumps = 0
+									max_jumps = 15
+								}
+							}
+						}
 					}
-					Root.owner = {
-						any_system_within_border = {
-							distance = {
-								source = PrevPrev
-								min_jumps = 0
-								max_jumps = 15
+					any_system = {
+						exists = starbase
+						starbase = {
+							OR = {
+								has_starbase_flag = uma_ec3_soc_fleet_base_bh
+							}
+						}
+						Root.owner = {
+							any_system_within_border = {
+								distance = {
+									source = PrevPrev
+									min_jumps = 0
+									max_jumps = 15
+								}
 							}
 						}
 					}
@@ -48,7 +69,7 @@ situation_uma_endcrisis_ec3 = {
 			set = 5
 			desc = situation_uma_endcrisis_ec3_progress_desc_in_situation
 
-			AND = {
+			OR = {
 				any_system = {
 					exists = starbase
 					starbase = {
@@ -64,13 +85,30 @@ situation_uma_endcrisis_ec3 = {
 						}
 					}
 				}
+				any_system = {
+					exists = starbase
+					starbase = {
+						OR = {
+							has_starbase_flag = uma_ec3_soc_fleet_base_bh
+						}
+					}
+					Root.owner = {
+						any_system_within_border = {
+							distance = {
+								source = PrevPrev
+								min_jumps = 0
+								max_jumps = 15
+							}
+						}
+					}
+				}
 
 
-#				owner.capital_star.solar_system = {
-#					owner = {
-#						is_same_value = Root.owner
-#					}
-#				}
+				#				owner.capital_star.solar_system = {
+				#					owner = {
+				#						is_same_value = Root.owner
+				#					}
+				#				}
 			}
 		}
 		modifier = {

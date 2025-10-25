@@ -472,18 +472,20 @@ uma_is_event_planet = {
 }
 
 uma_is_event_system = {
-	has_star_flag = uma_bourbon_system
-	has_star_flag = uma_fallen_empire_system_initializer
-	has_star_flag = uma_fallen_empire_system_initializer_1
-	has_star_flag = uma_is_fallen_empire_school_star_1
-	has_star_flag = uma_fallen_empire_system_initializer_2
-	has_star_flag = uma_fallen_empire_system_initializer_3
-	has_star_flag = uma_fine_system
-	has_star_flag = uma_gold_invasion_system
-	has_star_flag = uma_grass_wonder_system
-	has_star_flag = uma_seiun_sky_system
-	has_star_flag = uma_shop_center_system
-	has_star_flag = uma_tachyon_coffee_system
+	OR = {
+		has_star_flag = uma_bourbon_system
+		has_star_flag = uma_fallen_empire_system_initializer
+		has_star_flag = uma_fallen_empire_system_initializer_1
+		has_star_flag = uma_is_fallen_empire_school_star_1
+		has_star_flag = uma_fallen_empire_system_initializer_2
+		has_star_flag = uma_fallen_empire_system_initializer_3
+		has_star_flag = uma_fine_system
+		has_star_flag = uma_gold_invasion_system
+		has_star_flag = uma_grass_wonder_system
+		has_star_flag = uma_seiun_sky_system
+		has_star_flag = uma_shop_center_system
+		has_star_flag = uma_tachyon_coffee_system
+	}
 }
 
 can_artifact_analysis_give_uma_clock = {

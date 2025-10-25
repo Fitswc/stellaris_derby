@@ -4309,3 +4309,31 @@ uma_crystal_carrot_storm_apply_aftermath_modifier = {
 		}
 	}
 }
+
+
+uma_marking_bugs_fix = {
+	set_global_flag = uma_ec_invasion_end
+	set_global_flag = uma_ec_invasion_ec3_end
+
+	event_target:uma_ec3_country = {
+		every_owned_fleet = {
+			destroy_fleet = this
+		}
+		destroy_country = yes
+	}
+
+	every_playable_country = {
+		country_event = {
+			id = uma_ec_3.27
+		}
+	}
+
+	every_playable_country = {
+		every_situation = {
+			limit = {
+				has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+			}
+			destroy_situation = This
+		}
+	}
+}
