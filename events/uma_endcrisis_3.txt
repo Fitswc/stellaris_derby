@@ -720,7 +720,10 @@ starbase_event = {
 			has_global_flag = uma_ec_invasion_ec3_end
 		}
 
-		has_starbase_flag = uma_ec3_soc_fleet_base
+		OR = {
+			has_starbase_flag = uma_ec3_soc_fleet_base
+			has_starbase_flag = uma_ec3_soc_fleet_base_bh
+		}
 
 		From = {
 			owner = {
@@ -1077,7 +1080,7 @@ starbase_event = {
 				}
 				destroy_country = yes
 			}
-
+si
 			every_playable_country = {
 				country_event = {
 					id = uma_ec_3.27
