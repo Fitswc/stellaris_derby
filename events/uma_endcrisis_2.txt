@@ -122,58 +122,6 @@ country_event = {
 							count = 3
 							uma_endcrisis_ec2_spawn_defend_platform = yes
 						}
-
-						#fleet = {
-						#	if = {
-						#		limit = {
-						#			has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
-						#		}
-#
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 2
-						#		}
-#
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 3
-						#		}
-						#	}
-						#	else_if = {
-						#		limit = {
-						#			has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
-						#		}
-#
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 2
-						#		}
-#
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 3
-						#		}
-						#	}
-						#	else_if = {
-						#		limit = {
-						#			has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
-						#		}
-#
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 2
-						#		}
-#
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 3
-						#		}
-						#		fleet_event = {
-						#			id = uma_ec_2.7
-						#			days = 4
-						#		}
-						#	}
-						#}
 					}
 				}
 			}
