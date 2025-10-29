@@ -10,6 +10,9 @@ ship_event = {
 
 	trigger = {
 		FROM = { has_star_flag = uma_tachyon_coffee_system }
+		This.fleet.owner = {
+			is_uma_player_country = yes
+		}
 	}
 
 

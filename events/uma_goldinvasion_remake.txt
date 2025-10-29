@@ -33,6 +33,10 @@ country_event = {
 	is_triggered_only = yes
 #	fire_only_once = yes
 	trigger = {
+		any_country = {
+			is_uma_player_country = yes
+		}
+
 		has_authority = auth_trainingcenter
 		NOT = {
 			has_global_flag = uma_global_game_setting_mid_game_crisis_diff_off
@@ -117,77 +121,13 @@ country_event = {
 			}
 		}
 	}
-#		create_country = {
-#			name = "NAME_Gold_Ship_Fleet" #黄金家族
-#			species = root.species
-#			type = uma_faction
-#			name_list = UMAname
-#			auto_delete = no
-#			flag = {
-#				icon = {
-#					category = "uiu_flags"
-#					file = "uiu_flags02.dds"
-#				}
-#				background = {
-#					category = "backgrounds"
-#					file = "circle.dds"
-#				}
-#				colors = {
-#					"red_orange"
-#					"blue"
-#					"null"
-#					"null"
-#				}
-#			}
-#			effect = {
-#				set_country_flag = gold_ship
-#				establish_communications_no_message = root
-#				establish_contact = { who = root location = root.capital_scope }
-#				save_global_event_target_as = uma_gold_invasion_family_country
-#				create_ship_design = { design = "NAME_Void_Shaper" }
-#				add_ship_design = last_created_design
-#				create_ship_design = { design = "NAME_Unbidden_Anchor" }
-#				add_ship_design = last_created_design
-#				create_ship_design = { design = "NAME_Unbidden_Starbase"}
-#				add_ship_design = last_created_design
-#				create_fleet = {
-#					name = "goldi_ship_object" #神秘的船
-#					effect = {
-#						save_global_event_target_as = uma_glod_ship_titan
-#						set_owner = prev
-#						create_ship_design = {
-#							design = "NAME_Monadic_Qerr"
-#						}
-#						create_ship = {
-#							name = "NAME_Xiaojin"
-#							design = last_created_design
-#							effect = {
-#								set_ship_flag = Gin_ship
-#								set_disable_at_health = 0.05
-#								save_event_target_as = Gin_ship
-#							}
-#						}
-#						set_location = event_target:gold_ship_planet
-#						set_fleet_stance = passive
-#						queue_actions = {
-#							repeat = {
-#								wait = {
-#									duration = 100
-#								}
-#							}
-#						}
-#					}
-#				}
-#			}
-#		}
-#	}
 	option = {
 		name = "uma_crisis.00.a"
 		begin_event_chain = {
 			event_chain = "gold_counterattack"
 			target = ROOT
 		}
-			hidden_effect = {
+		hidden_effect = {
 			enable_special_project = {
 				name = "FIRST_TEMPTATION_OF_ENGINEER"
 				location = event_target:Gin_ship
@@ -2086,13 +2026,23 @@ country_event = {
 country_event = {
 	id = uma_crisis.6000
 	title = uma_crisis.6000.title
-	desc = uma_crisis.6000.desc
+	desc = {
+		trigger = {
+			is_uma_player_country = yes
+		}
+		text = uma_crisis.6000.desc
+	}
+	desc = {
+		trigger = {
+			is_uma_player_country = no
+		}
+		text = uma_crisis.6000.desc.a
+	}
 	is_triggered_only = yes
 	trigger = {
 		NOT = {
 			has_global_flag = uma_Orfevre_portal_still_here
 			has_global_flag = uma_gold_ships_portal_still_here
-
 		}
 	}
 
@@ -2101,14 +2051,86 @@ country_event = {
 	}
 	option = {
 		name = uma_crisis.6000.1.a
+		trigger = {
+			is_uma_player_country = yes
+		}
 		owner = {
 			country_event = { id = uma_crisis.6010 }
 		}
 	}
 	option = {
 		name = uma_crisis.6000.2.a
+		trigger = {
+			is_uma_player_country = yes
+		}
 		owner = {
 			country_event = { id = uma_crisis.6020 }
+		}
+	}
+	option = {
+		trigger = {
+			is_uma_player_country = no
+		}
+		name = uma_crisis.6000.2.c
+		hidden_effect = {
+			event_target:naka_portal = {
+				set_event_locked = no
+			}
+			random_country = {
+				limit = {
+					is_country_type = nakayamasentai
+				}
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
+			}
+			event_target:naka_portal_holder = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+
+			event_target:goldship_crisis_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+			event_target:gold_portal_holder = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+			event_target:Orfevre_portal_holder = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
+			event_target:Orfevre_crisis_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				every_owned_ship = {
+					destroy_ship = this
+				}
+				destroy_country = yes
+			}
 		}
 	}
 }
@@ -2121,7 +2143,6 @@ country_event = {
 	diplomatic = yes
 	trigger = {
 		owner = {
-#			has_authority = auth_trainingcenter
 			has_authority = auth_trainingcenter
 		}
 	}
@@ -3696,7 +3717,8 @@ country_event = {
 			}
 		}
 		This = {
-			has_authority = auth_trainingcenter
+#			has_authority = auth_trainingcenter
+			has_event_chain = gold_counterattack
 		}
 	}
 
@@ -3724,7 +3746,8 @@ country_event = {
 			}
 		}
 		This = {
-			has_authority = auth_trainingcenter
+#			has_authority = auth_trainingcenter
+			has_event_chain = gold_counterattack
 		}
 	}
 
@@ -3752,7 +3775,8 @@ country_event = {
 			}
 		}
 		This = {
-			has_authority = auth_trainingcenter
+#			has_authority = auth_trainingcenter
+			has_event_chain = gold_counterattack
 		}
 	}
 
