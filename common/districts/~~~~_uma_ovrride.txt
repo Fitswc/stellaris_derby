@@ -2,10 +2,11 @@
 @city_cost = 500
 ##
 district_city = {
- 	base_buildtime = 480
-	is_capped_by_modifier = no
+	base_buildtime = 480
+
 	exempt_from_ai_planet_specialization = yes
 	default_starting_district = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -174,6 +175,18 @@ district_city = {
 		}
 		modifier = {
 			planet_housing_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		modifier = {
+			job_production_overseer_add = 100
 		}
 	}
 
