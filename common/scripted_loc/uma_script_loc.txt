@@ -779,4 +779,14 @@ define_text = {
 		}
 		localization_key = uma_marking_system_update_info_off
 	}
+	text = {
+		trigger = {
+			owner = {
+				NOT = {
+					has_global_flag = uma_ec1_timemachine_happened
+				}
+			}
+		}
+		localization_key = uma_marking_system_update_info_1_on
+	}
 }

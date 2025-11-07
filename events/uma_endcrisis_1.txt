@@ -8,7 +8,7 @@ country_event = {
 
 	trigger = {
 		NOR = {
-			has_global_flag = uma_ec1_timemachine_happened
+#			has_global_flag = uma_ec1_timemachine_happened
 			has_global_flag = uma_ec_invasion_ec1_end
 			has_global_flag = uma_ec_invasion_end
 		}
@@ -846,10 +846,15 @@ country_event = {
 			}
 		}
 
-		country_event = {
-			id = uma_ec_1.1
-			days = 700
-			random = 100
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = uma_ec_1.1
+				days = 5
+				#			random = 100
+			}
 		}
 	}
 }
