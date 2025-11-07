@@ -3445,7 +3445,7 @@ building_uma_tg_industrial_complex = {
 				has_planet_flag = uma_TGAC_produce_livingmat
 				check_variable = {
 					which = uma_tgrd_living_metal_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
+					value <= value:uma_handling_capacity_for_tg
 				}
 			}
 		}
