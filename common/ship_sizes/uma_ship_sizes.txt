@@ -310,3 +310,30 @@ starbase_uma_ec1 = {
 	icon_frame = 5
 	icon = ship_size_military_station
 }
+
+# Marauder Void Dwelling
+uma_ec1_time_machine = {
+	graphical_culture = no
+	entity = "dyson_sphere_phase_05_entity"
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 400
+		ships_upkeep_mult = -1
+	}
+	max_hitpoints = 8000
+	size_multiplier = 8
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+
+	use_shipnames_from = military_station_small
+
+	class = shipclass_military_station
+	is_designable = no
+	icon = ship_size_military_station
+}

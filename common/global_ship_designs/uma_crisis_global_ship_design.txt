@@ -1982,3 +1982,30 @@ ship_design = {
 	required_component="SENSOR_4"
 	required_component="UMA_TG_REACTION_2_STARBASE"
 }
+
+
+ship_design = {
+	name = "NAME_uma_ec1_time_machine"
+	ship_size = uma_ec1_time_machine
+
+	section = {
+		template = "uma_fallen_empire_secondary_guard_station_key"
+		slot = "north"
+
+	}
+	section = {
+		template = "uma_fallen_empire_secondary_guard_station_key"
+		slot = "west"
+	}
+	section = {
+		template = "uma_fallen_empire_secondary_guard_station_key"
+		slot = "east"
+	}
+	section = {
+		template = "uma_fallen_empire_secondary_guard_station_key"
+		slot = "south"
+
+	}
+	required_component="SENSOR_4"
+	required_component="UMA_TG_REACTION_2_STARBASE"
+}
