@@ -9,7 +9,7 @@ guiTypes = {
 		origo = center
 		moveable = yes
 		size = { width = 1780 height = 960 }
-#		scale = 0.5
+		#		scale = 0.5
 
 
 		background = {
@@ -18,7 +18,8 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
-		buttonType = { #关闭按钮
+		buttonType = {
+			#关闭按钮
 			name = "close"
 			quadTextureSprite = "GFX_uma_mmu_save"
 			position = { x = 1672 y = 859 }
@@ -29,14 +30,14 @@ guiTypes = {
 
 
 		##控件
-#		effectButtonType = {
-#			name = "uma_mmu_continue"
-#			quadTextureSprite = "GFX_uma_mmu_save"
-#			position = { x = 1672 y = 859 }
-#			orientation = "UPPER_LEFT"
-#			clicksound = "back_click"
-#			effect = "uma_fgui_diaochazhinan_effect"
-#		}
+		#		effectButtonType = {
+		#			name = "uma_mmu_continue"
+		#			quadTextureSprite = "GFX_uma_mmu_save"
+		#			position = { x = 1672 y = 859 }
+		#			orientation = "UPPER_LEFT"
+		#			clicksound = "back_click"
+		#			effect = "uma_fgui_diaochazhinan_effect"
+		#		}
 
 		ButtonType = {
 			name = uma_mmu_team_button
@@ -61,7 +62,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = -65 }
 			orientation = "UPPER_LEFT"
-#			text_color_code = "V"
+			#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -71,7 +72,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = -15 }
 			orientation = "UPPER_LEFT"
-#			text_color_code = "S"
+			#			text_color_code = "S"
 		}
 
 		effectButtonType = {
@@ -141,7 +142,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = 207 }
 			orientation = "UPPER_LEFT"
-#			text_color_code = "V"
+			#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -151,7 +152,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = 260 }
 			orientation = "UPPER_LEFT"
-#			text_color_code = "S"
+			#			text_color_code = "S"
 		}
 
 
@@ -222,7 +223,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = 480 }
 			orientation = "UPPER_LEFT"
-#			text_color_code = "V"
+			#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -232,7 +233,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = 534 }
 			orientation = "UPPER_LEFT"
-#			text_color_code = "S"
+			#			text_color_code = "S"
 		}
 
 		effectButtonType = {
@@ -272,7 +273,7 @@ guiTypes = {
 			position = { x = 550 y = 660 }
 			alwaysTransparent = yes
 			orientation = "UPPER_LEFT"
-#			text_color_code = "S"
+			#			text_color_code = "S"
 		}
 
 
@@ -311,37 +312,37 @@ guiTypes = {
 			tooltip_mode_enabled = yes
 		}
 
-#		effectButtonType = {
-#			name = uma_mmu_mmu_gs_coc
-#			spriteType = "GFX_uma_mmu_coc"
-#			position = { x = 972 y = 661 }
-#			orientation = "UPPER_LEFT"
-#			effect = "uma_fgui_diaochazhinan_effect"
-#		}
+		#		effectButtonType = {
+		#			name = uma_mmu_mmu_gs_coc
+		#			spriteType = "GFX_uma_mmu_coc"
+		#			position = { x = 972 y = 661 }
+		#			orientation = "UPPER_LEFT"
+		#			effect = "uma_fgui_diaochazhinan_effect"
+		#		}
 
-#		effectButtonType = {
-#			name = uma_mmu_mmu_gs_gdi_weak
-#			spriteType = "GFX_uma_mmu_gs_weak"
-#			position = { x = 591 y = 782 }
-#			orientation = "UPPER_LEFT"
-#			effect = "uma_mmu_gs_gdi_weak"
-#		}
-#
-#		effectButtonType = {
-#			name = uma_mmu_mmu_gs_gdi_full
-#			spriteType = "GFX_uma_mmu_gs_full"
-#			position = { x = 591 y = 782 }
-#			orientation = "UPPER_LEFT"
-#			effect = "uma_mmu_gs_gdi_full"
-#		}
-#
-#		effectButtonType = {
-#			name = uma_mmu_mmu_gs_none
-#			spriteType = "GFX_uma_mmu_gs_none"
-#			position = { x = 783 y = 782 }
-#			orientation = "UPPER_LEFT"
-#			effect = "uma_mmu_gs_gdi_none"
-#		}
+		#		effectButtonType = {
+		#			name = uma_mmu_mmu_gs_gdi_weak
+		#			spriteType = "GFX_uma_mmu_gs_weak"
+		#			position = { x = 591 y = 782 }
+		#			orientation = "UPPER_LEFT"
+		#			effect = "uma_mmu_gs_gdi_weak"
+		#		}
+		#
+		#		effectButtonType = {
+		#			name = uma_mmu_mmu_gs_gdi_full
+		#			spriteType = "GFX_uma_mmu_gs_full"
+		#			position = { x = 591 y = 782 }
+		#			orientation = "UPPER_LEFT"
+		#			effect = "uma_mmu_gs_gdi_full"
+		#		}
+		#
+		#		effectButtonType = {
+		#			name = uma_mmu_mmu_gs_none
+		#			spriteType = "GFX_uma_mmu_gs_none"
+		#			position = { x = 783 y = 782 }
+		#			orientation = "UPPER_LEFT"
+		#			effect = "uma_mmu_gs_gdi_none"
+		#		}
 
 		instantTextBoxType = {
 			name = uma_mmu_mmu_changelog
@@ -365,7 +366,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "irm_some_header"
 			font = "malgun_goth_24"
-			text = "Shop" 	# header text
+			text = "Shop"    # header text
 			position = { x = 20000 y = 5 }
 			maxWidth = 543
 			maxHeight = 22
@@ -379,7 +380,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "portrait_background"
 			position = { x = -1117 y = -1145 }
-			size = { width = 0 height = 0 } 	# hide portrait window
+			size = { width = 0 height = 0 }    # hide portrait window
 			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
 			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
 		}
@@ -393,9 +394,9 @@ guiTypes = {
 			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
 		}
 		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
-		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
-		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
-		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType = { name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" } # hidden
 		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
 		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
 		containerWindowType = {
@@ -423,23 +424,23 @@ guiTypes = {
 			#size = { width=563 height=220 }
 			moveable = no
 
-			instantTextBoxType={
-			 name = "action_title"
-			 font = "malgun_goth_24"
-			 position = { x = 20 y = 0 }
-			 maxWidth = 200
-			 alwaysTransparent = yes
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 20 y = 0 }
+				maxWidth = 200
+				alwaysTransparent = yes
 			}
-			instantTextBoxType={
-			 name = "action_desc"
-			 font = "malgun_goth_24"
-			 position = { x = 490 y = 0 }
-			 maxWidth = 500
-			 maxHeight = 180
-			 orientation = "UPPER_LEFT"
-			 format = center
-			 alwaysTransparent = yes
-			 text_color_code = "H"
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
 			}
 			listboxType = { name = "option_list" position = { x = -11500 y = -1130 } } # hidden option list
 		}
@@ -464,7 +465,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "option_button"
-#			quadTextureSprite = ""
+			#			quadTextureSprite = ""
 			alwaysTransparent = yes
 			position = { x = 0 y = 0 }
 			font = "malgun_goth_24"
@@ -475,7 +476,8 @@ guiTypes = {
 
 		OverlappingElementsBoxType = {
 			name = "trigger_icons"
-			position = { x = 0  y = 10 }
-			size = { x=65 y= 28 }
+			position = { x = 0 y = 10 }
+			size = { x = 65 y = 28 }
 		}
+	}
 }
