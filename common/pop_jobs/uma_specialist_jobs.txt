@@ -422,12 +422,6 @@ uma_sweet_master = {
 		produces = {
 			trigger = {
 				exists = owner
-				NOT = {
-					OR = {
-						owner = { has_technology = tech_uma_sweet_chain_industry_brand_plan }
-						owner = { has_councilor = { COUNCILOR = "councilor_umasatonodiamond" } }
-					}
-				}
 			}
 			consumer_goods = 12
 			trade = 1
@@ -437,28 +431,22 @@ uma_sweet_master = {
 			trigger = {
 				exists = owner
 				owner = {
-
-					NOT = {
-						owner = { has_councilor = { COUNCILOR = "councilor_umasatonodiamond" } }
-					}
+					has_councilor = { COUNCILOR = "councilor_umasatonodiamond" }
 				}
 			}
-			consumer_goods = 12
+#			consumer_goods = 12
 			trade = 2
 		}
 
 		produces = {
 			trigger = {
 				exists = owner
-				NOT = {
-					owner = {
-						has_technology = tech_uma_sweet_chain_industry_brand_plan
-					}
+				owner = {
+					has_technology = tech_uma_sweet_chain_industry_brand_plan
 				}
-				owner = { has_councilor = { COUNCILOR = "councilor_umasatonodiamond" } }
 			}
-			consumer_goods = 12
-			trade = 4
+#			consumer_goods = 12
+			trade = 2
 		}
 
 		upkeep = {

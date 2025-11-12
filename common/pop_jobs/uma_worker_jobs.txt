@@ -140,7 +140,7 @@ uma_carrot_farmer = {
 	resources = {
 		category = planet_uma_carrot_farmer
 		produces = {
-			food = 20
+			food = 16
 			trade = 4
 		}
 		###转基因胡萝卜实验的额外产出
@@ -151,7 +151,7 @@ uma_carrot_farmer = {
 					owner = { has_technology = tech_uma_tran_gene_carrot }
 				}
 			}
-			food = 18
+			food = 10
 		}
 		upkeep = {
 			unity = 3

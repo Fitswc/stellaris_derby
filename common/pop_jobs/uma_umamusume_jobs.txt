@@ -31,11 +31,7 @@ uma_trainer = {
 		category = planet_uma_trainer
 		produces = {
 			trigger = {
-				owner = {
-					NOT = {
-						has_technology = tech_uma_training_aiding_algorithm
-					}
-				}
+				exists = owner
 			}
 			unity = 12
 			society_research = 12
@@ -46,8 +42,8 @@ uma_trainer = {
 					has_technology = tech_uma_training_aiding_algorithm
 				}
 			}
-			unity = 14
-			society_research = 12
+			unity = 2
+#			society_research = 12
 			engineering_research = 3
 		}
 		upkeep = {
