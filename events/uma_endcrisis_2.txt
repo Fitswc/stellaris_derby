@@ -1117,6 +1117,12 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			every_country = {
+				limit = {
+					has_communications = event_target:uma_is_fe_office
+				}
+				remove_communications = event_target:uma_is_fe_office
+			}
 			random_country = {
 				limit = {
 					is_country_type = global_event
