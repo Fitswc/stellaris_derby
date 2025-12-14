@@ -239,6 +239,8 @@ portraits = {
     124b = { textureFile = "gfx/models/portraits/umamusume/124b FNM.DDS"}
     125b = { textureFile = "gfx/models/portraits/umamusume/125b ALE.DDS"}
     126b = { textureFile = "gfx/models/portraits/umamusume/126b SCO.DDS"}
+    127b = { textureFile = "gfx/models/portraits/umamusume/126b SCO.DDS"}
+    128b = { textureFile = "gfx/models/portraits/umamusume/128b SGO.DDS"}
 
     01c = { texturefile = "gfx/models/portraits/umamusume/01c SW.DDS" }
     02c = { texturefile = "gfx/models/portraits/umamusume/02c SS.DDS" }
@@ -358,6 +360,9 @@ portraits = {
     124c = { texturefile = "gfx/models/portraits/umamusume/124c FNM.DDS"}
     125c = { texturefile = "gfx/models/portraits/umamusume/125c ALE.DDS"}
 
+    127c = { texturefile = "gfx/models/portraits/umamusume/127c RDE.DDS"}
+    128c = { texturefile = "gfx/models/portraits/umamusume/128c SGO.DDS"}
+
 
     #Boc'z
     29d = {textureFile = "gfx/models/portraits/umamusume/29d RS.DDS" }
@@ -375,12 +380,13 @@ portraits = {
 
     #BOcZ Wen
     29f = {textureFile = "gfx/models/portraits/umamusume/29f RS.DDS"}
+    58f = {textureFile = "gfx/models/portraits/umamusume/58f NF.DDS"}
     76f = {textureFile = "gfx/models/portraits/umamusume/76f CG.DDS"}
     87f = {textureFile = "gfx/models/portraits/umamusume/87f Vi.DDS"}
     88f = {textureFile = "gfx/models/portraits/umamusume/88f Ve.DDS"}
     92f = {textureFile = "gfx/models/portraits/umamusume/92f NF.DDS"}
     102f = {textureFile = "gfx/models/portraits/umamusume/102f LOY.DDS"}
-    127f = {textureFile = "gfx/models/portraits/umamusume/127f NAF.DDS"}
+
 
 
 
@@ -690,6 +696,8 @@ portrait_groups = {
                     124b
                     125b
                     126b
+                    127b
+                    128b
                 }
             }
         }
@@ -816,6 +824,8 @@ portrait_groups = {
                     124b
                     125b
                     126b
+                    127b
+                    128b
                 }
             }
         }
@@ -1175,8 +1185,8 @@ portrait_groups = {
                     123c
                     124c
                     125c
-
-
+                    127c
+                    128c
                 }
             }
         }
@@ -1303,6 +1313,8 @@ portrait_groups = {
                     124b
                     125b
                     126b
+                    127b
+                    128b
                 }
             }
         }
@@ -1429,7 +1441,8 @@ portrait_groups = {
                     124b
                     125b
                     126b
-
+                    127b
+                    128b
                 }
             }
         }
@@ -1438,7 +1451,7 @@ portrait_groups = {
             #scientists, generals, admirals, governor
             add = {
                 portraits = {
-                     01c
+                    01c
                     02c
                     03c
                     04c
@@ -1552,6 +1565,8 @@ portrait_groups = {
                     123c
                     124c
                     125c
+                    127c
+                    128c
                 }
             }
         }
@@ -1559,7 +1574,7 @@ portrait_groups = {
         ruler = {
             add = {
                 portraits = {
-                     01c
+                    01c
                     02c
                     03c
                     04c
@@ -1673,6 +1688,8 @@ portrait_groups = {
                     123c
                     124c
                     125c
+                    127c
+                    128c
                 }
             }
         }

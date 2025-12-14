@@ -2124,7 +2124,7 @@ country_event = {
 				immortal = yes
 				gender = female
 				class = official
-				skill = 2
+				skill = 1
 				set_age = 17
 				custom_catch_phrase = uma_special_leader_fine_catch_phrase
 				background_planet = this.home_planet
@@ -2141,6 +2141,7 @@ country_event = {
 					set_leader_flag = uma_is_special_leader
 					set_leader_flag = uma_is_fine
 					save_global_event_target_as = uma_is_leader_fine
+					add_experience = 420
 				}
 			}
 			create_message = {
