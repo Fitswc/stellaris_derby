@@ -1,6 +1,7 @@
 #水晶萝卜矿工
+@uma_worker_weight = 2
 
-uma_crystal_carrot_miner ={
+uma_crystal_carrot_miner = {
 	category = worker
 
 	swappable_data = {
@@ -9,9 +10,6 @@ uma_crystal_carrot_miner ={
 			building_icon = building_mineral_purification_plant
 		}
 	}
-
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -32,7 +30,7 @@ uma_crystal_carrot_miner ={
 		category = planet_miners
 		produces = {
 			minerals = 8
-			uma_crystal_carrot = 4	
+			uma_crystal_carrot = 4
 		}
 		upkeep = {
 			unity = 1
@@ -40,14 +38,16 @@ uma_crystal_carrot_miner ={
 	}
 
 	weight = {
-		weight = @worker_job_weight
+		weight = @uma_worker_weight
+		mult = value:job_weights_modifier|JOB|uma_crystal_carrot_miner|RESOURCE|uma_crystal_carrot|
 		modifier = {
 			factor = 10
 			is_enslaved = yes
 			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -65,46 +65,20 @@ uma_crystal_carrot_miner ={
 			owner = { NOT = { has_technology = tech_droid_workers } }
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 2
-			species = {
-				has_species_flag = racket_species_flag
-			}
-		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.1
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.9
-			has_trait = trait_weak
-		}
-		# low income modifier
-		modifier = {
-			factor = 2
-			exists = planet
-			planet = {
-				has_available_jobs = "uma_crystal_carrot_miner"
-			}
-			exists = owner
-			owner = {
-				is_ai = yes
-				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value < 0
-				}
-			}
-		}
-
 	}
 
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
 }
 
 ###第二版
@@ -118,9 +92,6 @@ uma_carrot_farmer = {
 			building_icon = building_uma_advance_carrot_farm
 		}
 	}
-
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -160,11 +131,17 @@ uma_carrot_farmer = {
 
 
 	weight = {
-		weight = @worker_job_weight
+		weight = @uma_worker_weight
+		mult = value:job_weights_modifier|JOB|uma_carrot_farmer|RESOURCE|food|
+		modifier = {
+			factor = 1.1
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
 		modifier = {
 			factor = 10
 			is_enslaved = yes
 			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
 		modifier = {
 			factor = 3
@@ -188,43 +165,32 @@ uma_carrot_farmer = {
 			factor = 0.25
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 2
-			species = {
-				has_species_flag = racket_species_flag
-			}
-		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.1
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.9
-			has_trait = trait_weak
-		}
 		# low income modifier
 		modifier = {
-			factor = 2
+			factor = 3
 			exists = planet
 			planet = {
-				has_available_jobs = "uma_carrot_farmer"
+				has_available_jobs = uma_carrot_farmer
 			}
 			exists = owner
 			owner = {
-				is_ai = yes
 				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value < 0
+					resource = food
+					value < 10
 				}
 			}
 		}
-
 	}
 
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
 }
 
 
@@ -273,11 +239,17 @@ uma_bee_farmer = {
 	}
 
 	weight = {
-		weight = @worker_job_weight
+		weight = @uma_worker_weight
+		mult = value:job_weights_modifier|JOB|uma_carrot_farmer|RESOURCE|food|
+		modifier = {
+			factor = 1.1
+			owner = { has_valid_civic = civic_agrarian_idyll }
+		}
 		modifier = {
 			factor = 10
 			is_enslaved = yes
 			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
 		modifier = {
 			factor = 3
@@ -301,43 +273,32 @@ uma_bee_farmer = {
 			factor = 0.25
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 2
-			species = {
-				has_species_flag = racket_species_flag
-			}
-		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.1
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.9
-			has_trait = trait_weak
-		}
 		# low income modifier
 		modifier = {
-			factor = 2
+			factor = 3
 			exists = planet
 			planet = {
-				has_available_jobs = "uma_bee_farmer"
+				has_available_jobs = uma_carrot_farmer
 			}
 			exists = owner
 			owner = {
-				is_ai = yes
 				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value < 0
+					resource = food
+					value < 10
 				}
 			}
 		}
-
 	}
 
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
 }
 
 
@@ -352,9 +313,6 @@ uma_field_powering_technician = {
 			building_icon = building_uma_field_powerplant
 		}
 	}
-
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -384,69 +342,64 @@ uma_field_powering_technician = {
 
 
 	weight = {
-		weight = @worker_job_weight
+		weight = @uma_worker_weight
+		mult = value:job_weights_modifier|JOB|uma_field_powering_technician|RESOURCE|energy|
 		modifier = {
-			factor = 10
+			factor = 100
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			can_fill_specialist_job_trigger = no
+		}
+		modifier = {
+			factor = 8
 			is_enslaved = yes
 			can_take_servant_job = no
+			OR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_robot_superconductive
+				has_trait = trait_ingenious
+			}
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
 			}
 			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
 		}
 		modifier = {
 			factor = 0.25
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 2
-			species = {
-				has_species_flag = racket_species_flag
-			}
-		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.1
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.9
-			has_trait = trait_weak
-		}
 		# low income modifier
 		modifier = {
-			factor = 2
+			factor = 3
 			exists = planet
 			planet = {
-				has_available_jobs = "uma_field_powering_technician"
+				has_available_jobs = uma_field_powering_technician
 			}
 			exists = owner
 			owner = {
-				is_ai = yes
 				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value < 0
+					resource = energy
+					value < 10
 				}
 			}
 		}
+	}
 
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
 	}
 
 }
@@ -463,9 +416,6 @@ uma_core_miner = {
 			building_icon = building_uma_core_mining_complex_1
 		}
 	}
-
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -494,10 +444,12 @@ uma_core_miner = {
 
 	weight = {
 		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|uma_core_miner|RESOURCE|minerals|
 		modifier = {
 			factor = 10
 			is_enslaved = yes
 			can_take_servant_job = no
+			NOT = { has_slavery_type = { type = slavery_indentured } }
 		}
 		modifier = {
 			factor = 3
@@ -521,23 +473,31 @@ uma_core_miner = {
 			factor = 0.25
 			can_take_servant_job = yes
 		}
+
+		# low income modifier
 		modifier = {
-			factor = 2
-			species = {
-				has_species_flag = racket_species_flag
+			factor = 3
+			exists = planet
+			planet = {
+				has_available_jobs = uma_core_miner
+			}
+			exists = owner
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 10
+				}
 			}
 		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.1
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.9
-			has_trait = trait_weak
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
 		}
 	}
 }

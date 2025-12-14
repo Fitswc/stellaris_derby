@@ -187,7 +187,12 @@ ap_the_flesh_is_weak = {
 		###禁止马娘文明使用这种飞升###
 		custom_tooltip = {
 			fail_text = uma_abandon_normal_ascension
-			NOT = { is_uma_country = yes }
+			NOT = {
+				is_uma_country = yes
+				NOT = {
+					has_ascension_perk = ap_uma_mixture_ap_2
+				}
+			}
 		}
 	}
 
@@ -528,8 +533,15 @@ ap_mind_over_matter = {
 		###禁止马娘文明使用这种飞升###
 		custom_tooltip = {
 			fail_text = uma_abandon_normal_ascension
-			NOT = { is_uma_country = yes }
+			NOT = {
+				is_uma_country = yes
+				NOT = {
+					has_ascension_perk = ap_uma_mixture_ap_2
+				}
+			}
 		}
+		####
+
 		if = {
 			limit = {
 				has_origin = origin_unplugged

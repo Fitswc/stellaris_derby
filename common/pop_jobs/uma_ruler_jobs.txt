@@ -10,7 +10,6 @@ uma_satonomerchant = {
 		}
 	}
 
-
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -48,25 +47,15 @@ uma_satonomerchant = {
 		}
 	}
 
-	
-
 	weight = {
-		weight = @ruler_job_weight                #假定后续更新有与贸易相关的特质，则增加权重
-		#modifier = {
-		#	factor = 2.0
-		#	has_trait =                      
-		#}
-	
+		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|uma_satonomerchant|RESOURCE|trade|
+
 		modifier = {
-			factor = 5
-			can_work_specific_job = uma_satonomerchant
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
 		}
-		modifier = {
-			factor = 5
-			owner = { has_civic = civic_umasatonodiamond	}
-		}
-		
-		
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -78,12 +67,15 @@ uma_satonomerchant = {
 					is_country_type = ai_empire
 				}
 			}
-			OR = { # contingency won't purge itself
-				NOT = { exists = event_target:custodian_bot }
-				AND = {
-					exists = event_target:custodian_bot
-					NOT = { species = { is_same_value = event_target:custodian_bot } }
-				}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
 			}
 		}
 	}
@@ -101,8 +93,6 @@ uma_head_researcher = {
 			building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
 		}
 	}
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -138,22 +128,34 @@ uma_head_researcher = {
 
 	weight = {
 		weight = @ruler_job_weight
+		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_head_researcher|RESOURCE1|engineering_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|physics_research|WEIGHT3|0.33|
+
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
-		
+		# crisis purge
 		modifier = {
-			factor = 1.5
-			NOT = {
-				can_work_specific_job = uma_head_researcher
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
 			}
 		}
-		
-		modifier = {
-			factor = 0.1
-			is_domestic_servant = yes
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
 		}
-	}	
+	}
 }

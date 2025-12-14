@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
 ###飞升有关本地化###
-uma_abandon_normal_ascension:0 "由于马娘的§Y身体§!和§Y灵魂§!§R非常特殊§!，她们并不能够采用一般有机体的飞升路径。"
+uma_abandon_normal_ascension:0 "由于马娘的§Y身体§!和§Y灵魂§!§R非常特殊§!，她们并不能够采用一般有机体的飞升路径。\n\n§Y除非解锁§!['ascension_perk:ap_uma_mixture_ap_2']"
 ###全身全灵
 ap_uma_zenshizenren:0 "全身全灵"
 ap_uma_zenshizenren_desc:0 "£uma_sd£§Y赛马娘:星海德比§!\n以往，每一代马娘中只有屈指可数的精英才能在比赛中觉醒“领域”。而如今，经过对领域漫长的统计、研究、实验，我们初步掌握了领域的秘密：当身与心的目标极端统一时，领域就有可能被激发。\n现在，我们的科学家可以通过心理学手段调整马娘的情绪，尽可能地实现身心同步并以此激发领域。这使得马娘们能不只在赛场中开启领域，还能在各行各业的工作中开启领域。"
@@ -36,7 +36,7 @@ ap_uma_mixture_ap_2: "曲径通幽"
 ap_uma_mixture_ap_2_desc: "£uma_sd£§Y赛马娘:星海德比§!\n因子与领域就如同两座横亘在面前的高山，无数马娘曾试图攀登，但或许，山间那条小道才是通往彼方的道路，当我们小心翼翼地从两座山之间穿过，豁然开朗的正是那桃源，说不定？\n§R此飞升与['ascension_perk:ap_uma_zenshizenren_ap_2']和['ascension_perk:ap_uma_fly_me_to_the_star_ap_two']不能同时选择§!"
 #ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_uma_field_realm_enhence'] \n['building:building_realm_planetary_shield_generator']"
 
-ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_realm_planetary_shield_generator']"
+ap_uma_mixture_ap_2_tt: "\n§Y解锁建筑：§!\n['building:building_realm_planetary_shield_generator']\n\n解锁['concept_ascension_perk']:\n['ascension_perk:ap_the_flesh_is_weak']和['ascension_perk:ap_mind_over_matter']"
 
 ap_uma_fly_me_to_the_star_ap_two_tt: "\n§Y解锁传统树:§!['tradition_category:tradition_uma_tradition_factor']"
 ap_uma_zenshizenren_ap_two_tt: "\n§Y解锁传统树:§!['tradition_category:tradition_uma_tradition_realm']"

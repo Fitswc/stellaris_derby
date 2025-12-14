@@ -1,4 +1,5 @@
 ###训练员
+@umamusumes_job_weight = 15
 
 uma_trainer = {
 	category = umamusume
@@ -9,10 +10,6 @@ uma_trainer = {
 			building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
 		}
 	}
-
-
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -66,21 +63,28 @@ uma_trainer = {
 	}
 
 	weight = {
-		weight = @specialist_job_weight
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#Umamusume has born enthusiastic to become athlete, if can't, they will try to become a trainer.
+		weight = @umamusumes_job_weight
 
 		modifier = {
 			factor = 1.5
-			NOT = { can_work_specific_job = uma_racing_umamusume }
+			NOT = {
+				can_work_specific_job = uma_racing_umamusume
+			}
 		}
-
 		modifier = {
 			factor = 0.1
-			is_domestic_servant = yes
+			can_take_servant_job = yes
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = umamusume
+				AMOUNT = local_pop_amount
+			}
 		}
 	}
 }
@@ -95,10 +99,6 @@ uma_racing_umamusume = {
 			building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
 		}
 	}
-
-
-
-
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -133,21 +133,25 @@ uma_racing_umamusume = {
 	}
 
 	weight = {
-		weight = @specialist_job_weight
+		#Umamusume has born enthusiastic to become athlete
+		weight = @umamusumes_job_weight
 		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
+			factor = 2
+			is_species_class = umamusume
 		}
-
-		modifier = {
-			factor = 1.5
-			NOT = { can_work_specific_job = uma_racing_umamusume }
-		}
-
 		modifier = {
 			factor = 0.1
-			is_domestic_servant = yes
+			can_take_servant_job = yes
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = umamusume
+				AMOUNT = local_pop_amount
+			}
 		}
 	}
 }
@@ -194,17 +198,27 @@ uma_racing_ura_members = {
 	}
 
 	weight = {
-		weight = @specialist_job_weight
+		weight = @umamusumes_job_weight
+
 		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
+			factor = 1.2
+			NOT = {
+				can_work_specific_job = uma_racing_umamusume
+			}
 		}
-
-
 		modifier = {
 			factor = 0.1
-			is_domestic_servant = yes
+			can_take_servant_job = yes
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = umamusume
+				AMOUNT = local_pop_amount
+			}
 		}
 	}
 }

@@ -899,14 +899,14 @@ planet_event = {
 			limit = {
 				has_active_building = building_uma_tg_planet_energy_extractor
 			}
-			add_planet_devastation = 1
+			add_planet_devastation = 0.4
 		}
 
 		if = {
 			limit = {
 				has_active_building = building_uma_tg_planet_energy_extractor_2
 			}
-			add_planet_devastation = 1.7
+			add_planet_devastation = 0.6
 		}
 	}
 }

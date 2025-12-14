@@ -2588,10 +2588,21 @@ building_uma_tg_alloys_maker_Automatic = {
 	category = resource
 
 	building_sets = {
-		industrial
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
 		foundry
 		factory
+		industrial
 		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	planet_limit = 2
@@ -2723,10 +2734,21 @@ building_uma_tg_alloys_maker_Automatic_2 = {
 	can_build = no
 
 	building_sets = {
-		industrial
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
 		foundry
 		factory
+		industrial
 		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	potential = {
@@ -2853,11 +2875,29 @@ building_uma_tg_custom_goods_productor = {
 	base_buildtime = 300
 	category = resource
 
+#	building_sets = {
+#		industrial
+#		foundry
+#		factory
+#		uma_industrial
+#	}
+
 	building_sets = {
-		industrial
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
 		foundry
 		factory
+		industrial
 		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	planet_limit = 2
@@ -2984,11 +3024,29 @@ building_uma_tg_custom_goods_productor_2 = {
 	category = resource
 	can_build = no
 
+#	building_sets = {
+#		industrial
+#		foundry
+#		factory
+#		uma_industrial
+#	}
+
 	building_sets = {
-		industrial
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
 		foundry
 		factory
+		industrial
 		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	potential = {
@@ -3108,11 +3166,28 @@ building_uma_tg_industrial_complex = {
 #	base_cap_amount = 2
 	planet_limit = 1
 
+#	building_sets = {
+#		industrial
+#		foundry
+#		factory
+#		uma_industrial
+#	}
 	building_sets = {
-		industrial
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
 		foundry
 		factory
+		industrial
 		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	potential = {
@@ -3562,9 +3637,26 @@ building_uma_tg_planet_energy_extractor = {
 	base_buildtime = 300
 	category = resource
 
-	building_sets = {
+#	building_sets = {
+#		generator
+#		uma_generator
+#	}
+		building_sets = {
+		research
+		unity
+		government
 		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
 		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	potential = {
@@ -3651,9 +3743,26 @@ building_uma_tg_planet_energy_extractor_2 = {
 	category = resource
 	can_build = no
 
-	building_sets = {
+#	building_sets = {
+#		generator
+#		uma_generator
+#	}
+		building_sets = {
+		research
+		unity
+		government
 		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
 		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
 	}
 
 	potential = {
@@ -3735,10 +3844,17 @@ building_uma_tg_resource_soil = {
 	category = resource
 
 	building_sets = {
+		research
+		unity
+		government
 		generator
 		mining
 		farming
 		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
 		uma_generator
 		uma_mining
 		uma_farming

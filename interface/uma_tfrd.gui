@@ -52,12 +52,12 @@ guiTypes = {
 			effect = "uma_tgrd_gui_tech_cat_milltary_butte"
 		}
 
-		ButtonType = {
-			name = uma_tgrd_gui_tech_technology
-			spriteType = "GFX_uma_tgrd_gui_tech_cat_technology_pd"
-			position = { x = 1127 y = 628 }
-			orientation = "UPPER_LEFT"
-		}
+#		ButtonType = {
+#			name = uma_tgrd_gui_tech_technology
+#			spriteType = "GFX_uma_tgrd_gui_tech_cat_technology_pd"
+#			position = { x = 1127 y = 628 }
+#			orientation = "UPPER_LEFT"
+#		}
 
 		effectButtonType = {
 			name = uma_tgrd_gui_tech_tree
