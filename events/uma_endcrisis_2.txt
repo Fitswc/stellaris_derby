@@ -255,6 +255,10 @@ country_event = {
 							id = uma_ec_2.7
 							days = 3
 						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 4
+						}
 					}
 					else_if = {
 						limit = {
@@ -273,6 +277,10 @@ country_event = {
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 4
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 5
 						}
 					}
 				}

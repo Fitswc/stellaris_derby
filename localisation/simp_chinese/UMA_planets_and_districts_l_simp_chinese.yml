@@ -41,10 +41,35 @@ pc_uma_industrial_desc: "这个星球被改造为一个超大的工业区域。�
 mod_pc_uma_school_habitability: "$pc_uma_school$宜居度"
 mod_pc_uma_school_habitability_desc: ""
 
-trait_pc_uma_school_preference: "马娘星球偏好"
+trait_pc_uma_school_preference: "马娘星球偏好:$pc_continental_adj$"
 trait_pc_uma_school_preference_desc: "$trait_pc_arctic_preference_desc$"
-trait_pc_uma_school_preference_short: "马娘"
+trait_pc_uma_school_preference_short: "马娘:$pc_continental_adj$"
+trait_pc_uma_school_preference_tropical: "马娘星球偏好:$pc_tropical_adj$"
+trait_pc_uma_school_preference_tropical_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_tropical_short: "马娘:$pc_tropical_adj$"
+trait_pc_uma_school_preference_ocean: "马娘星球偏好:$pc_ocean_adj$"
+trait_pc_uma_school_preference_ocean_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_ocean_short: "马娘:$pc_ocean_adj$"
 
+trait_pc_uma_school_preference_savannah: "马娘星球偏好:$pc_savannah_adj$"
+trait_pc_uma_school_preference_savannah_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_savannah_short: "马娘:$pc_savannah_adj$"
+trait_pc_uma_school_preference_desert: "马娘星球偏好:$pc_desert_adj$"
+trait_pc_uma_school_preference_desert_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_desert_short: "马娘:$pc_desert_adj$"
+trait_pc_uma_school_preference_arid: "马娘星球偏好:$pc_arid_adj$"
+trait_pc_uma_school_preference_arid_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_arid_short: "马娘:$pc_arid_adj$"
+
+trait_pc_uma_school_preference_alpine: "马娘星球偏好:$pc_alpine_adj$"
+trait_pc_uma_school_preference_alpine_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_alpine_short: "马娘:$pc_alpine_adj$"
+trait_pc_uma_school_preference_tundra: "马娘星球偏好:$pc_tundra_adj$"
+trait_pc_uma_school_preference_tundra_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_tundra_short: "马娘:$pc_tundra_adj$"
+trait_pc_uma_school_preference_arctic: "马娘星球偏好:$pc_arctic_adj$"
+trait_pc_uma_school_preference_arctic_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_arctic_short: "马娘:$pc_arctic_adj$"
 
 
 

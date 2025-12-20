@@ -40,9 +40,36 @@
 mod_pc_uma_school_habitability: "$pc_uma_school$ habitability"
 mod_pc_uma_school_habitability_desc: ""
   
-trait_pc_uma_school_preference: "Umamusums' Planet preference"
+trait_pc_uma_school_preference: "Umamusums' Planet preference:$pc_continental_adj$"
 trait_pc_uma_school_preference_desc: "$trait_pc_arctic_preference_desc$"
-  trait_pc_uma_school_preference_short: "Umamusume"
+trait_pc_uma_school_preference_short: "Umamusume:$pc_continental_adj$"
+trait_pc_uma_school_preference_tropical: "Umamusums' Planet preference:$pc_tropical_adj$"
+trait_pc_uma_school_preference_tropical_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_tropical_short: "Umamusume:$pc_tropical_adj$"
+trait_pc_uma_school_preference_ocean: "Umamusums' Planet preference:$pc_ocean_adj$"
+trait_pc_uma_school_preference_ocean_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_ocean_short: "Umamusume:$pc_ocean_adj$"
+
+trait_pc_uma_school_preference_savannah: "Umamusums' Planet preference:$pc_savannah_adj$"
+trait_pc_uma_school_preference_savannah_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_savannah_short: "Umamusume:$pc_savannah_adj$"
+trait_pc_uma_school_preference_desert: "Umamusums' Planet preference:$pc_desert_adj$"
+trait_pc_uma_school_preference_desert_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_desert_short: "Umamusume:$pc_desert_adj$"
+trait_pc_uma_school_preference_arid: "Umamusums' Planet preference:$pc_arid_adj$"
+trait_pc_uma_school_preference_arid_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_arid_short: "Umamusume:$pc_arid_adj$"
+
+trait_pc_uma_school_preference_alpine: "Umamusums' Planet preference:$pc_alpine_adj$"
+trait_pc_uma_school_preference_alpine_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_alpine_short: "Umamusume:$pc_alpine_adj$"
+trait_pc_uma_school_preference_tundra: "Umamusums' Planet preference:$pc_tundra_adj$"
+trait_pc_uma_school_preference_tundra_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_tundra_short: "Umamusume:$pc_tundra_adj$"
+trait_pc_uma_school_preference_arctic: "Umamusums' Planet preference:$pc_arctic_adj$"
+trait_pc_uma_school_preference_arctic_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_arctic_short: "Umamusume:$pc_arctic_adj$"
+
   
   
   

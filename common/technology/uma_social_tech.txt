@@ -1738,9 +1738,19 @@ tech_uma_tranform = {
 
 	potential = {
 		OR = {
-			has_authority = auth_trainingcenter
+			AND = {
+				has_authority = auth_trainingcenter
+				NOT = {
+					has_origin = origin_uma_after_factor_perk
+				}
+				has_ascension_perk = ap_uma_fly_me_to_the_star
+			}
+
+			AND = {
+				has_authority = auth_trainingcenter
+				has_origin = origin_uma_after_factor_perk
+			}
 		}
-		has_ascension_perk = ap_uma_fly_me_to_the_star
 	}
 
 	modifier = {

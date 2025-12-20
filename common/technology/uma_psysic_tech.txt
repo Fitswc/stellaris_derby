@@ -1256,41 +1256,41 @@ tech_string_energy_lance = { #弦光矛
 }
 
 
-tech_uma_souls_matrix = { #马娘灵魂摹写矩阵
-    is_dangerous = yes
-    cost = 50000
-    area = physics
-    tier = 5
-    category = { computing }
-    prerequisites = {  "tech_uma_umapersonality_project" }
-    weight = 100
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        all_technology_research_speed = 0.10
-    }
-
-    weight_modifier = {
-        modifier = {
-			factor = 0
-			OR = {
-				NOT = { has_ascension_perk = ap_uma_zenshizenren }
-                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
-			}
-		}
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-
+#tech_uma_souls_matrix = { #马娘灵魂摹写矩阵
+#    is_dangerous = yes
+#    cost = 50000
+#    area = physics
+#    tier = 5
+#    category = { computing }
+#    prerequisites = {  "tech_uma_umapersonality_project" }
+#    weight = 100
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#        all_technology_research_speed = 0.10
+#    }
+#
+#    weight_modifier = {
+#        modifier = {
+#			factor = 0
+#			OR = {
+#				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+#			}
+#		}
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+#
 
 tech_uma_carrot_building = { #水晶介质构筑
     cost = 20000
@@ -1441,150 +1441,150 @@ tech_uma_carrot_building_anomalous_wave_function = { #水晶介质特性：反�
 }
 
 
-tech_inverse_entropy = { #逆熵实验
-    is_dangerous = yes
-    cost = 50000
-    area = physics
-    tier = 5
-    category = { field_manipulation }
-    prerequisites = { tech_uma_carrot_building_time_inversion }
-    weight = 100
+#tech_inverse_entropy = { #逆熵实验
+#    is_dangerous = yes
+#    cost = 50000
+#    area = physics
+#    tier = 5
+#    category = { field_manipulation }
+#    prerequisites = { tech_uma_carrot_building_time_inversion }
+#    weight = 100
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#        planet_jobs_energy_produces_mult = 0.20
+#    }
+#
+#    weight_modifier = {
+#        modifier = {
+#			factor = 0
+#			OR = {
+#				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+#			}
+#		}
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+#
 
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
+#tech_stably_tunneling = { #奇异隧穿稳定化
+#    is_dangerous = yes
+#    cost = 50000
+#    area = physics
+#    tier = 5
+#    category = { particles }
+#    prerequisites = { tech_uma_carrot_building_particle_tunneling }
+#    weight = 100
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#        planet_jobs_physics_research_produces_mult = 0.20
+#    }
+#
+#    weight_modifier = {
+#        modifier = {
+#			factor = 0
+#			OR = {
+#				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+#			}
+#		}
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+#
 
-    modifier = {
-        planet_jobs_energy_produces_mult = 0.20
-    }
+#tech_macro_stably_tunneling = { #三女神秘密——宏尺度奇异隧穿
+#    is_dangerous = yes
+#    cost = 100000
+#    area = physics
+#    tier = 5
+#    category = { particles }
+#    prerequisites = { tech_stably_tunneling }
+#    weight = 0
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#        #解锁舰船部件 奇异隧穿引擎
+#    }
+#
+#    weight_modifier = {
+#        modifier = {
+#			factor = 0
+#			OR = {
+#				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+#			}
+#		}
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+#
 
-    weight_modifier = {
-        modifier = {
-			factor = 0
-			OR = {
-				NOT = { has_ascension_perk = ap_uma_zenshizenren }
-                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
-			}
-		}
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-
-
-tech_stably_tunneling = { #奇异隧穿稳定化
-    is_dangerous = yes
-    cost = 50000
-    area = physics
-    tier = 5
-    category = { particles }
-    prerequisites = { tech_uma_carrot_building_particle_tunneling }
-    weight = 100
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        planet_jobs_physics_research_produces_mult = 0.20
-    }
-
-    weight_modifier = {
-        modifier = {
-			factor = 0
-			OR = {
-				NOT = { has_ascension_perk = ap_uma_zenshizenren }
-                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
-			}
-		}
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-
-
-tech_macro_stably_tunneling = { #三女神秘密——宏尺度奇异隧穿
-    is_dangerous = yes
-    cost = 100000
-    area = physics
-    tier = 5
-    category = { particles }
-    prerequisites = { tech_stably_tunneling }
-    weight = 0
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        #解锁舰船部件 奇异隧穿引擎
-    }
-
-    weight_modifier = {
-        modifier = {
-			factor = 0
-			OR = {
-				NOT = { has_ascension_perk = ap_uma_zenshizenren }
-                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
-			}
-		}
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-
-
-tech_local_wave_function = { #局域波函数干涉
-    is_dangerous = yes
-    cost = 50000
-    area = physics
-    tier = 5
-    category = { particles }
-    prerequisites = { tech_uma_carrot_building_anomalous_wave_function }
-    weight = 100
-
-    potential = {
-        OR = {
-			has_authority = auth_trainingcenter
-            #is_uma_fallen_empire = yes
-		}
-    }
-
-    modifier = {
-        #解锁舰船部件 波函数干涉射线（因为找不到对应的位置而暂时消失）
-        planet_jobs_physics_research_produces_mult = 0.20
-    }
-
-    weight_modifier = {
-        modifier = {
-			factor = 0
-			OR = {
-				NOT = { has_ascension_perk = ap_uma_zenshizenren }
-                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
-			}
-		}
-    }
-
-    ai_weight ={
-        factor = 0
-    }
-}
-###
+#tech_local_wave_function = { #局域波函数干涉
+#    is_dangerous = yes
+#    cost = 50000
+#    area = physics
+#    tier = 5
+#    category = { particles }
+#    prerequisites = { tech_uma_carrot_building_anomalous_wave_function }
+#    weight = 100
+#
+#    potential = {
+#        OR = {
+#			has_authority = auth_trainingcenter
+#            #is_uma_fallen_empire = yes
+#		}
+#    }
+#
+#    modifier = {
+#        #解锁舰船部件 波函数干涉射线（因为找不到对应的位置而暂时消失）
+#        planet_jobs_physics_research_produces_mult = 0.20
+#    }
+#
+#    weight_modifier = {
+#        modifier = {
+#			factor = 0
+#			OR = {
+#				NOT = { has_ascension_perk = ap_uma_zenshizenren }
+#                NOT = { has_ascension_perk = ap_uma_fly_me_to_the_star }
+#			}
+#		}
+#    }
+#
+#    ai_weight ={
+#        factor = 0
+#    }
+#}
+####
 
 tech_uma_realm_stable = {
     is_rare = yes

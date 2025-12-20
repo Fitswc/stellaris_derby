@@ -2028,3 +2028,64 @@ country_event = {
 		}
 	}
 }
+
+# via on_entering_battle
+# this = owner of aggressor fleet | from = owner of attacked fleet | fromfrom = aggressor fleet | fromfromfrom = attacked fleet
+country_event = {
+	id = uma_bg.33
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FromFrom = {
+			any_owned_ship = {
+				has_component = UMA_REALM_STICKER
+			}
+			is_in_combat = yes
+		}
+	}
+
+	immediate = {
+		random_list = {
+			6 = {
+				FromFromFrom = {
+					export_trigger_value_to_variable = {
+						trigger = count_owned_ship
+						variable = uma_bg33_count_total_ship_num
+					}
+					multiply_variable = {
+						value = 0.6
+						which = uma_bg33_count_total_ship_num
+					}
+
+					while = {
+						count = uma_bg33_count_total_ship_num
+
+						random_owned_ship = {
+							reduce_shield = 100000 #All reduce
+						}
+					}
+				}
+			}
+
+			4 = {
+				Root = {
+					add_resource = {
+						influence = 0
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		FromFromFrom = {
+			clear_variable = uma_bg33_count_total_ship_num
+		}
+
+		country_event = {
+			id = uma_bg.33
+			days = 20
+		}
+	}
+}

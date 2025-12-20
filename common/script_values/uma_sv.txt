@@ -37,3 +37,32 @@ uma_job_weights_multiple_resources_modifier = {
 		mult = @\[ 10 * $WEIGHT3$ ]
 	}
 }
+
+uma_uma_tradition_FINAL_SV = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = planet
+		parameters = {
+			job = farmer
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = planet
+		parameters = {
+			job = uma_carrot_farmer
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = planet
+		parameters = {
+			job = uma_bee_farmer
+		}
+		mode = add
+	}
+	divide = 100
+}

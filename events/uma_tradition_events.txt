@@ -16,22 +16,22 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				pop_amount >= 100
+				pop_amount >= 1000
 			}
 			if = {
 				limit = {
 					OR = {
 						num_assigned_jobs = {
 							job = farmer
-							value <= 15
+							value <= 1500
 						}
 						num_assigned_jobs = {
 							job = uma_carrot_farmer
-							value <= 15
+							value <= 1500
 						}
 						num_assigned_jobs = {
 							job = uma_bee_farmer
-							value <= 15
+							value <= 1500
 						}
 					}
 					NOT = {
@@ -40,15 +40,27 @@ country_event = {
 				}
 				add_modifier = {
 					modifier = uma_tradition_FINAL
+					mult = value:uma_uma_tradition_FINAL_SV
+					clear_on_owner_change = yes
 				}
 			
 			}
 			else_if = {
 				limit = {
 					has_modifier = uma_tradition_FINAL
-					num_assigned_jobs = {
-						job = farmer
-						value > 15
+					OR = {
+						num_assigned_jobs = {
+							job = farmer
+							value > 1500
+						}
+						num_assigned_jobs = {
+							job = uma_carrot_farmer
+							value > 1500
+						}
+						num_assigned_jobs = {
+							job = uma_bee_farmer
+							value > 1500
+						}
 					}
 				}
 				remove_modifier = uma_tradition_FINAL
