@@ -477,7 +477,7 @@ uma_sweet_master = {
 				}
 			}
 #			consumer_goods = 12
-			trade = 2
+			trade = 1
 		}
 
 		produces = {
@@ -488,7 +488,7 @@ uma_sweet_master = {
 				}
 			}
 #			consumer_goods = 12
-			trade = 2
+			trade = 1
 		}
 
 		upkeep = {
@@ -569,7 +569,7 @@ uma_sweet_manager = {
 		category = planet_uma_sweet_manager #使得其可以单独得到修正
 		produces = {
 			consumer_goods = 6
-			trade = 7
+			trade = 2
 		}
 		upkeep = {
 			unity = 6
@@ -720,7 +720,7 @@ uma_live_clothes_crafter = {
 		category = planet_uma_live_clothes_crafter #使得其可以单独得到修正
 		produces = {
 			unity = 12
-			trade = 4
+			trade = 2
 		}
 		upkeep = {
 			consumer_goods = 4
@@ -1169,7 +1169,7 @@ uma_trader = {
 			consumer_goods = 2
 		}
 		produces = {
-			trade = 10
+			trade = 16
 		}
 	}
 

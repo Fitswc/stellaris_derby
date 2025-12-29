@@ -4,7 +4,13 @@ TG planet energy extractor 1/2:
     Planet devastation From 1.7 -> 0.6 (EC 2)
 
 TG Series buildings: Now can built in any zones
-Three godness research department: Removed "Technologies" button
+
+MegaCorp buildings:
+    Remove building_uma_cos_suit_market (Umamusume cosplay suit stores)
+           building_uma_crime_underground_weapon_maker (Underground weapon factory)
+    Adjust Buildings cost and produces, include dynamic value.
+
+ThreeGodness research department: Removed "Technologies" button
 
 Ascension Peak: Factor-Realm fusion:
                     Remove Modifiers:
@@ -15,6 +21,12 @@ Ascension Peak: Factor-Realm fusion:
                     Now can unlock ascension perk: Flesh is weak and Mind over matter
 
 Pop jobs: Umamusume, specialist, worker weight adjustment.
+          uma_satonomerchant: Produce trade 15 -> 10
+                              Upkeep custom_goods 2 -> 1
+          uma_sweet_master: triggered_produce: trade 2 -> 1
+          uma_sweet_manager: produce: trade 7 -> 2
+          uma_live_clothes_crafter: produce: trade 4 -> 2
+          uma_trader: produce: trade 10 ->16
 
 Fix AstonMachan's leader trait issues
 Fix FineMotion's leader skills issues
@@ -36,6 +48,10 @@ Trait: Habitability traits: Add corresponding trait to each habitability planet,
 
 End Crisis 1: Factor: fleet number hard 3 -> 4, normal 2 -> 3
 End Crisis 2: Realm: fleet number hard 3 -> 4, normal 2 -> 3
+
+Uma_shop: Add 100 shop coins when first time meeting
+          Adjust some description of items
+          Remove: Ruler's traits
 
 Add new Umamusumes portraits
 

@@ -84,6 +84,11 @@ country_event = {
 	immediate = {
 		set_country_flag = uma_had_communication_with_uma_shop
 		establish_communications_no_message = event_target:uma_shop	#与探测到的舰队所有者建交
+
+		change_variable = {
+			which = uma_num_of_coin
+			value = 100
+		}
 	}
 	option = {
 		name = uma_shop_center.2.a	#选项

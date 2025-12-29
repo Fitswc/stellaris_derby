@@ -683,13 +683,6 @@ uma_upgrade_kanshi_two_level = {
 uma_add_titie_trait = {
 	optimize_memory
 	if = {
-		limit = { is_ruler = yes }
-		add_timed_trait = {
-			trait = uma_ruler_trait_horse_shoes_ultra
-			days = 3650
-		}
-	}
-	if = {
 		limit = { leader_class = official }
 		add_timed_trait = {
 			trait = uma_governor_trait_horse_shoes_ultra
@@ -708,13 +701,6 @@ uma_add_amulet_trait = {
 			days = 3650
 		}
 	}
-#	if = {
-#		limit = { leader_class = general }
-#		add_timed_trait = {
-#			trait = uma_general_trait_amulet
-#			days = 3650
-#		}
-#	}
 }
 
 #大喇叭：添加特质
@@ -724,20 +710,6 @@ uma_add_horn_trait = {
 		limit = { leader_class = commander }
 		add_timed_trait = {
 			trait = uma_admiral_trait_horn
-			days = 1825
-		}
-	}
-#	if = {
-#		limit = { leader_class = general }
-#		add_timed_trait = {
-#			trait = uma_general_trait_horn
-#			days = 1825
-#		}
-#	}
-	if = {
-		limit = { is_ruler = yes }
-		add_timed_trait = {
-			trait = uma_ruler_trait_horn
 			days = 1825
 		}
 	}
@@ -761,12 +733,6 @@ uma_add_horn_trait = {
 uma_add_school_hat_trait = {
 	optimize_memory
 	if = {
-		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_ruler_trait_special_scholar
-		}
-	}
-	if = {
 		limit = { leader_class = official }
 		add_trait = {
 			trait = uma_governor_trait_special_scholar
@@ -784,56 +750,40 @@ uma_add_school_hat_trait = {
 uma_add_training_book_trait = {
 	optimize_memory
 	if = {
-		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_ruler_trait_training_book
-		}
-	}
-	if = {
 		limit = { leader_class = official }
 		add_trait = {
-			trait = uma_ruler_trait_training_book
+			trait = uma_governor_trait_training_book
 		}
 	}
 	if = {
 		limit = { leader_class = scientist }
 		add_trait = {
-			trait = uma_ruler_trait_training_book
+			trait = uma_scientist_trait_training_book
 		}
 	}
 	if = {
 		limit = { leader_class = commander }
 		add_trait = {
-			trait = uma_ruler_trait_training_book
+			trait = uma_admiral_trait_training_book
 		}
 	}
-#	if = {
-#		limit = { leader_class = general }
-#		add_trait = uma_general_trait_training_book
-#	}
 }
 
 #望远镜：增加特质
 uma_add_tomorrow_star_trait = {
 	optimize_memory
 	if = {
-		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
-		}
-	}
-	if = {
 		limit = { leader_class = official }
 
 		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
+			trait = uma_governor_trait_tomorrow_star
 		}
 	}
 	if = {
 		limit = { leader_class = scientist }
 
 		add_trait = {
-			trait = uma_admiral_trait_tomorrow_star
+			trait = uma_scientist_trait_tomorrow_star
 		}
 	}
 	if = {
@@ -843,21 +793,11 @@ uma_add_tomorrow_star_trait = {
 			trait = uma_admiral_trait_tomorrow_star
 		}
 	}
-#	if = {
-#		limit = { leader_class = general }
-#		add_trait = uma_general_trait_tomorrow_star
-#	}
 }
 
 #镜子：添加特质
 uma_add_lovely_trait = {
 	optimize_memory
-	if = {
-		limit = { is_ruler = yes }
-		add_trait = {
-			trait = uma_governor_trait_lovely
-		}
-	}
 	if = {
 		limit = { leader_class = official }
 		add_trait = {
@@ -869,13 +809,6 @@ uma_add_lovely_trait = {
 #青汁：增加特质
 uma_add_vegetable_drink_trait = {
 	optimize_memory
-	if = {
-		limit = { is_ruler = yes }
-		add_timed_trait = {
-			trait = uma_ruler_trait_vegetable_drink
-			days = 9125
-		}
-	}
 	if = {
 		limit = { leader_class = official }
 		add_timed_trait = {
@@ -909,13 +842,6 @@ uma_add_vegetable_drink_trait = {
 #体力65：增加特质
 uma_add_power_sf_trait  = {
 	optimize_memory
-	if = {
-		limit = { is_ruler = yes }
-		add_timed_trait = {
-			trait = uma_ruler_trait_power_sf
-			days = 7300
-		}
-	}
 	if = {
 		limit = { leader_class = official }
 		add_timed_trait = {
