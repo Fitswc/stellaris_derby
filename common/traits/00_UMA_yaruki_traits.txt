@@ -56,6 +56,10 @@ uma_trait_yaruki_five = {
 		}
 		all_technology_research_speed = 0.1
 	}
+	self_modifier = {
+		negative_traits_leader = -2
+		species_leader_exp_gain = 0.5
+	}
 
 	leader_class = { commander scientist official envoy }
 	initial = no
@@ -115,6 +119,11 @@ uma_trait_yaruki_four = {
 			leader_class = scientist
 		}
 		all_technology_research_speed = 0.05
+	}
+
+	self_modifier = {
+		negative_traits_leader = -1
+		species_leader_exp_gain = 0.25
 	}
 
 	leader_class = { commander scientist official envoy }
@@ -188,6 +197,11 @@ uma_trait_yaruki_two = {
 		all_technology_research_speed = -0.025
 	}
 
+	self_modifier = {
+		negative_traits_leader = 1
+		species_leader_exp_gain = -0.25
+	}
+
 	leader_class = { commander scientist official envoy }
 	initial = no
 	randomized = no
@@ -245,6 +259,11 @@ uma_trait_yaruki_one = {
 			leader_class = scientist
 		}
 		all_technology_research_speed = -0.05
+	}
+
+	self_modifier = {
+		negative_traits_leader = 2
+		species_leader_exp_gain = -0.5
 	}
 
 	leader_class = { commander scientist official envoy }
