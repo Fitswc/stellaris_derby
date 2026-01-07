@@ -3,7 +3,7 @@ councilor_ruler_uma_studentuionp = {
 	possible = { always = no }
 	is_leader_possible = { always = yes }
 	modifier = {
-		empire_size_pops_mult = -0.05
+		empire_size_pops_mult = -0.01
 		country_unity_produces_mult = 0.1
 	}
 	icon = "GFX_icon_councilor_ruler"

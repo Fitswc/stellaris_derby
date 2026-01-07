@@ -2,12 +2,9 @@
 #	真弓快车事件链
 #   Written by ATR
 #  	Programme by ATR
-#   Fix by Fitswc
 # 	In 2024/12/2
 ######################
 namespace = uma_never_forget
-
-#TODO: Test and verification
 
 #开局事件，选择麻酱作为初始国策的获得一个5级贸易领袖
 country_event = {
@@ -144,21 +141,14 @@ country_event = {
         hidden_effect = {
             random_country = {
                 limit = { is_country_type = global_event }
-                save_global_event_target_as = uma_leader_am_country
-            }
-            event_target:uma_leader_am_country = {
-                clone_leader = {
-                    target = event_target:uma_is_leader_am
-                }
+                save_global_event_target_as = uma_leader_am
             }
             every_owned_leader = {
                 limit = {
                     has_leader_flag = uma_is_am
-                    NOT = { has_leader_flag = renowned_leader }
+                    not = { has_leader_flag = renowned_leader }
                 }
-                kill_leader = {
-                    show_notification = no
-                }
+                set_owner = event_target:uma_leader_am
             }
         }
         hidden_effect = {
@@ -269,75 +259,70 @@ ship_event = {
         from = {
             save_event_target_as = uma_am_here
         }
-        if = {
-            limit = {
-                owner = { has_civic = civic_uma_aston_machan }
+        create_country = {
+            name = "NAME_uma_empty_oc"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
             }
-            create_country = {
-                name = "NAME_uma_empty_oc"
-                type = global_event
-                auto_delete = no
-                flag = {
-                    icon = {
-                        category = "special"
-                        file = "unknown.dds"
-                    }
-                    background = {
-                        category = "backgrounds"
-                        file = "00_solid.dds"
-                    }
-                    colors = {
-                        "red"
-                        "red"
-                        "null"
-                        "null"
-                    }
+            effect = {
+                save_event_target_as = uma_am_country
+            }
+        }
+        event_target:uma_am_country = {
+            create_species = {
+                name = "NAME_Unknown"
+                class = umamusume
+                portrait = umamusume
+                namelist = "UMAname"
+                traits = random
+                effect = {
+                    save_event_target_as = uma_species
+                }
+            }
+            create_leader = {
+                name = AM
+                species = root
+                event_leader = no
+                gender = female
+                class = official
+                set_age = 18
+                skill = 1
+                immortal = yes
+                background_planet = event_target:uma_am_here
+                background_job = government_employee
+                custom_catch_phrase = uma_am_catch_phrase
+                skip_background_generation = yes
+                traits = {
+                    trait = uma_governor_trait_flare
+                    trait = uma_governor_trait_never_forget
+                    trait = leader_trait_uma_generic
                 }
                 effect = {
-                    save_event_target_as = uma_am_country
+                    add_experience = 7000
+                    set_leader_flag = uma_is_special_leader
+                    set_leader_flag = uma_is_am
+                    set_leader_flag = renowned_leader
+                    save_global_event_target_as = uma_is_leader_am_2
+                    change_leader_portrait = 74c
                 }
             }
-            event_target:uma_am_country = {
-                create_species = {
-                    name = "NAME_Unknown"
-                    class = umamusume
-                    portrait = umamusume
-                    namelist = "UMAname"
-                    traits = random
-                    effect = {
-                        save_event_target_as = uma_species
-                    }
-                }
-                create_leader = {
-                    name = AM
-                    species = root
-                    event_leader = no
-                    gender = female
-                    class = official
-                    set_age = 18
-                    skill = 1
-                    immortal = yes
-                    background_planet = event_target:uma_am_here
-                    background_job = government_employee
-                    custom_catch_phrase = uma_am_catch_phrase
-                    skip_background_generation = yes
-                    traits = {
-                        trait = uma_governor_trait_flare
-                        trait = uma_governor_trait_never_forget
-                        trait = leader_trait_uma_generic
-                    }
-                    effect = {
-                        add_experience = 7000
-                        set_leader_flag = uma_is_special_leader
-                        set_leader_flag = uma_is_am
-                        set_leader_flag = renowned_leader
-                        save_global_event_target_as = uma_is_leader_am
-                        change_leader_portrait = 74c
-                    }
-                }
-                last_created_leader = {
-                    uma_initialize_leader_yaruki_effect = yes
-                }
+            last_created_leader = {
+                uma_initialize_leader_yaruki_effect = yes
             }
         }
     }
@@ -378,7 +363,7 @@ country_event = {
     event_window_type = leader_recruit
 
     picture_event_data = {
-        portrait = event_target:uma_is_leader_am
+        portrait = event_target:uma_is_leader_am_2
         room = galactic_custodian_room
     }
 
@@ -404,14 +389,11 @@ country_event = {
         name = uma_never_forget.10.HIRE
         tag = hire_leader
         clone_leader = {
-            target = event_target:uma_is_leader_am
+            target = event_target:uma_is_leader_am_2
             gender = female
             species = prev.species
         }
         hidden_effect = {
-            event_target:uma_leader_am_country = {
-                destroy_country = yes
-            }
             last_created_leader = {
                 set_leader_flag = uma_is_special_leader
                 set_leader_flag = uma_is_am

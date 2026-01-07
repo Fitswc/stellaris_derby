@@ -286,12 +286,12 @@ subclass_renwenguanghui_governor = {
     planet_modifier = {
         logistic_growth_mult = 0.15
         planet_jobs_unity_produces_mult = 0.3
-        species_empire_size_mult = -0.1
+        species_empire_size_mult = -0.05
     }
     sector_modifier = {
         logistic_growth_mult = 0.1
         planet_jobs_unity_produces_mult = 0.15
-        species_empire_size_mult = -0.05
+#        species_empire_size_mult = -0.05
     }
 
     leader_potential_add = {
