@@ -334,6 +334,191 @@ decision_uma_reconstrcut_phoenix_racing_course = {
 
 
 #将环改建为学院环
+#decision_uma_school_ring_transform = {
+#	owned_planets_only = yes
+#	enactment_time = 1825
+#	sound = event_administrative_work #当然，之后我们要用自己的声音
+#	icon = decision_change_to_academy_ring
+#
+#	resources = {
+#		category = decisions
+#		cost = {
+#			influence = 200
+#			minerals = 4400
+#			energy = 5000
+#			uma_crystal_carrot = 500
+#		}
+#	}
+#
+#	potential = {
+##		is_ringworld = yes
+#		uma_is_ringworld = yes
+#		NOR = {
+#			is_planet_class = pc_uma_ringworld_habitable
+#			is_planet_class = pc_uma_ringworld
+#			is_planet_class = pc_uma_ringworld_seam
+#		}
+#		exists = owner
+#		owner = { has_technology = tech_uma_ring_world }
+#		NOT = {
+#			has_planet_flag = uma_has_change_pc_to_academic_ring
+#		}
+#	}
+#
+#	allow = {
+#		has_owner = yes
+#		owner = {
+#			has_authority = auth_trainingcenter
+#		}
+#	}
+#
+#	effect = {
+#		custom_tooltip = decision_uma_school_planet_changed
+#		hidden_effect = {
+#			set_planet_flag = uma_has_change_pc_to_academic_ring
+#			change_pc = pc_uma_ringworld_habitable
+#			remove_all_districts = yes
+#
+#			#对城市区划进行断言
+#			This = {
+#				switch = {
+#					trigger = has_district
+#
+#					district_rw_city = {
+#						export_trigger_value_to_variable = {
+#							trigger = num_districts
+#							parameters = {
+#								type = district_rw_city
+#							}
+#							variable = uma_rw_city_to_city
+#						}
+#					}
+#
+#					district_rw_nexus = {
+#						export_trigger_value_to_variable = {
+#							trigger = num_districts
+#							parameters = {
+#								type = district_rw_nexus
+#							}
+#							variable = uma_rw_city_to_city
+#						}
+#					}
+#
+#					district_hive = {
+#						export_trigger_value_to_variable = {
+#							trigger = num_districts
+#							parameters = {
+#								type = district_rw_hive
+#							}
+#							variable = uma_rw_city_to_city
+#						}
+#					}
+#				}
+#
+#				export_trigger_value_to_variable = {
+#					trigger = num_districts
+#					parameters = {
+#						type = district_rw_generator
+#					}
+#					variable = uma_rw_generator_to_generator
+#				}
+#				export_trigger_value_to_variable = {
+#					trigger = num_districts
+#					parameters = {
+#						type = district_rw_commercial
+#					}
+#					variable = uma_rw_city_to_city
+#				}
+#				export_trigger_value_to_variable = {
+#					trigger = num_districts
+#					parameters = {
+#						type = district_ring_world_industrial
+#					}
+#					variable = uma_rw_industrial_to_industrial
+#				}
+#				export_trigger_value_to_variable = {
+#					trigger = num_districts
+#					parameters = {
+#						type = district_rw_science
+#					}
+#					variable = uma_rw_sciencr_to_science
+#				}
+#				export_trigger_value_to_variable = {
+#					trigger = num_districts
+#					parameters = {
+#						type = district_rw_farming
+#					}
+#					variable = uma_rw_farm_to_farm
+#				}
+#
+##				clear_deposits = yes
+#				remove_all_districts = yes
+#				while = {
+#					count = uma_rw_city_to_city
+#					add_district = district_uma_dormitory_ring
+#				}
+#				while = {
+#					count = uma_rw_farm_to_farm
+#					add_district = district_uma_ring_logistics_area
+#				}
+#				#运算
+#				divide_variable = {
+#					which = uma_rw_generator_to_generator
+#					value = 2
+#				}
+#				divide_variable = {
+#					which = uma_rw_farm_to_farm
+#					value = 2
+#				}
+#				change_variable = {
+#					which = uma_rw_generator_to_generator
+#					value = uma_rw_farm_to_farm
+#				}
+#				#
+#				while = {
+#					count = uma_rw_generator_to_generator
+#					add_district = district_uma_ring_logistics_area
+#				}
+#				while = {
+#					count = uma_rw_industrial_to_industrial
+#					add_district = district_uma_ring_industrial
+#				}
+#				while = {
+#					count  = uma_rw_sciencr_to_science
+#					add_district = district_uma_teaching_area_ring
+#				}
+#				add_district = district_uma_rw_urban_1
+#				add_district = district_uma_rw_urban_2
+#				add_district = district_uma_rw_urban_3
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 50
+#		modifier = {
+#			factor = 0.1
+#			planet_size < 15
+#		}
+#		modifier = {
+#			factor = 0.5
+#			planet_size < 18
+#		}
+#		modifier = {
+#			factor = 2
+#			planet_size >= 20
+#		}
+#		modifier = {
+#			factor = 2
+#			OR = {
+#				is_capital = yes
+#				pop_amount >= 7000
+#			}
+#		}
+#	}
+#
+#}
+#将环改建为学院环
 decision_uma_school_ring_transform = {
 	owned_planets_only = yes
 	enactment_time = 1825
@@ -415,78 +600,15 @@ decision_uma_school_ring_transform = {
 					}
 				}
 
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = {
-						type = district_rw_generator
-					}
-					variable = uma_rw_generator_to_generator
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = {
-						type = district_rw_commercial
-					}
-					variable = uma_rw_city_to_city
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = {
-						type = district_rw_industrial
-					}
-					variable = uma_rw_industrial_to_industrial
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = {
-						type = district_rw_science
-					}
-					variable = uma_rw_sciencr_to_science
-				}
-				export_trigger_value_to_variable = {
-					trigger = num_districts
-					parameters = {
-						type = district_rw_farming
-					}
-					variable = uma_rw_farm_to_farm
-				}
-
-#				clear_deposits = yes
 				remove_all_districts = yes
 				while = {
 					count = uma_rw_city_to_city
 					add_district = district_uma_dormitory_ring
 				}
-				while = {
-					count = uma_rw_farm_to_farm
-					add_district = district_uma_ring_logistics_area
-				}
-				#运算
-				divide_variable = {
-					which = uma_rw_generator_to_generator
-					value = 2
-				}
-				divide_variable = {
-					which = uma_rw_farm_to_farm
-					value = 2
-				}
-				change_variable = {
-					which = uma_rw_generator_to_generator
-					value = uma_rw_farm_to_farm
-				}
-				#
-				while = {
-					count = uma_rw_generator_to_generator
-					add_district = district_uma_ring_logistics_area
-				}
-				while = {
-					count = uma_rw_industrial_to_industrial
-					add_district = district_uma_ring_industrial
-				}
-				while = {
-					count  = uma_rw_sciencr_to_science
-					add_district = district_uma_teaching_area_ring
-				}
+
+				add_district = district_uma_rw_urban_1
+				add_district = district_uma_rw_urban_2
+				add_district = district_uma_rw_urban_3
 			}
 		}
 	}
@@ -515,7 +637,6 @@ decision_uma_school_ring_transform = {
 	}
 
 }
-
 #同化
 decision_uma_change_to_uma = {
 	owned_planets_only = yes

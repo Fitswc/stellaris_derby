@@ -275,3 +275,13 @@ slot_uma_industrial_mixture = {
 		always = yes
 	}
 }
+
+slot_uma_rw_urban_01 = {
+	included_zone_sets = {
+		umaring_world
+	}
+
+	unlock = { # planet scope
+		uses_district_set = uma_ring_world
+	}
+}

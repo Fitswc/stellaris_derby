@@ -1,0 +1,143 @@
+
+# Ring Worlds
+
+zone_uma_industrial_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_industrial_zone
+	}
+
+	swap_type = district_uma_ring_industrial
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_research_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_research_zone
+	}
+
+	swap_type = district_uma_ring_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_unity_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_unity_and_entertainment
+	}
+
+	swap_type = district_uma_ring_administrative
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_fortress_ring_world = {
+	inline_script = {
+		script = zones/shared_fortress_zone
+		AMOUNT = @doubled_scaling_district_1_job
+	}
+
+	swap_type = district_uma_ring_fortress
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_trade_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_trade_zone
+		AMOUNT = @doubled_scaling_district_1_job
+	}
+
+	swap_type = district_uma_ring_trade
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_food_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_food_zone
+	}
+
+	swap_type = district_uma_ring_food
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_energy_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_energy_zone
+	}
+
+	swap_type = district_uma_ring_energy
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_training_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_training_ring
+	}
+
+	swap_type = district_uma_ring_training
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}

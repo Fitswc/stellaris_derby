@@ -1,0 +1,52 @@
+icon = GFX_uma_zone_type_racing
+base_buildtime = @zone_buildtime
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+potential = {
+	hidden_trigger = { exists = owner }
+	owner = {
+		has_authority = auth_trainingcenter
+	}
+}
+
+unlock = {
+	hidden_trigger = { exists = owner }
+	owner = {
+		has_authority = auth_trainingcenter
+	}
+}
+
+included_building_sets = {
+	uma_racing
+	uma_urban
+}
+
+excluded_building_sets = {
+	generator
+	mining
+	farming
+	knights
+	betharian
+}
+
+convert_to = {
+	zone_research
+	zone_research_nexus
+	zone_research_hive
+}
+
+district_planet_modifier = {
+	job_uma_racing_umamusume_add = 200
+}
+
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+ai_priority = 5
