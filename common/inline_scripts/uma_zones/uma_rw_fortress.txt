@@ -1,4 +1,4 @@
-icon = GFX_district_specialization_uma_research
+icon = GFX_district_specialization_uma_fortress
 base_buildtime = @zone_buildtime
 potential = { # planet scope
 	hidden_trigger = {
@@ -26,29 +26,18 @@ resources = {
 }
 
 included_building_sets = {
-	research
-	uma_research
+	fortress
 	urban_automation
 	origin
 }
 
-district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.01
+inline_script = {
+	script = jobs/zone_soldiers_add
+	AMOUNT = $AMOUNT$
 }
 
 planet_modifier = {
 	zone_building_slots_add = 3
 }
 
-ai_resource_production = {
-	physics_research = 5
-	society_research = 5
-	engineering_research = 5
-
-	trigger = {
-		has_any_research_zone = yes
-	}
-}
-
-ai_weight_coefficient = 1.1
 ai_priority = 10

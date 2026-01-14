@@ -285,3 +285,42 @@ slot_uma_rw_urban_01 = {
 		uses_district_set = uma_ring_world
 	}
 }
+
+slot_uma_rw_city_01 = {
+	included_zone_sets = {
+		umaring_world
+	}
+
+	unlock = { # planet scope
+		custom_tooltip = {
+			fail_text = d_collapsed_spire_blocks_zone
+			NOT = {
+				has_deposit = d_collapsed_spire
+			}
+		}
+	}
+}
+
+slot_uma_rw_city_02 = {
+	included_zone_sets = {
+		umaring_world
+	}
+
+	unlock = { # planet scope
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			if = {
+				limit = {
+					exists = owner
+					owner = {
+						is_primitive = yes
+					}
+				}
+				always = yes
+			}
+			else = {
+				has_upgraded_capital = yes
+			}
+		}
+	}
+}

@@ -8,14 +8,15 @@
 
 district_uma_dormitory_ring = {
 	base_buildtime = 500
-	icon = "district_uma_dormitory"
+	icon = "district_uma_dormitory_ring"
+	overlay_icon = GFX_district_housing
 
 	exempt_from_ai_planet_specialization = yes
 
 	zone_slots = {
 		slot_city_government
-		slot_city_01
-		slot_city_02
+		slot_uma_rw_city_01
+		slot_uma_rw_city_02
 	}
 
 	inline_script = {
@@ -402,7 +403,7 @@ district_uma_dormitory_ring = {
 
 ##RW New districts
 district_uma_rw_urban_1 = {
-	icon = district_rw_city_secondary
+	icon = district_uma_rw_urban
 	base_buildtime = @rw_district_buildtime
 
 	exempt_from_ai_planet_specialization = yes
@@ -507,7 +508,7 @@ district_uma_rw_urban_1 = {
 }
 
 district_uma_rw_urban_2 = {
-	icon = district_rw_city_secondary
+	icon = district_uma_rw_urban
 	base_buildtime = @rw_district_buildtime
 
 	exempt_from_ai_planet_specialization = yes
@@ -612,7 +613,7 @@ district_uma_rw_urban_2 = {
 }
 
 district_uma_rw_urban_3 = {
-	icon = district_rw_city_secondary
+	icon = district_uma_rw_urban
 	base_buildtime = @rw_district_buildtime
 
 	exempt_from_ai_planet_specialization = yes
@@ -719,7 +720,7 @@ district_uma_rw_urban_3 = {
 
 ##SPAW
 district_uma_ring_industrial = {
-	icon = district_uma_industrial_area
+	icon = district_uma_ring_industrial
 	overlay_icon = GFX_district_mixed_industry
 	zone_slots = {
 		slot_empty
@@ -739,8 +740,8 @@ district_uma_ring_industrial = {
 }
 
 district_uma_ring_research = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_research
+	overlay_icon = GFX_district_research
 	zone_slots = {
 		slot_empty
 	}
@@ -759,8 +760,8 @@ district_uma_ring_research = {
 }
 
 district_uma_ring_administrative = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_administrative
+	overlay_icon = GFX_district_government
 	zone_slots = {
 		slot_empty
 	}
@@ -779,8 +780,8 @@ district_uma_ring_administrative = {
 }
 
 district_uma_ring_fortress = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_fortress
+	overlay_icon = GFX_district_fortress
 	zone_slots = {
 		slot_empty
 	}
@@ -799,8 +800,8 @@ district_uma_ring_fortress = {
 }
 
 district_uma_ring_trade = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_trade
+	overlay_icon = GFX_district_trade
 	zone_slots = {
 		slot_empty
 	}
@@ -819,8 +820,8 @@ district_uma_ring_trade = {
 }
 
 district_uma_ring_food = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_food
+	overlay_icon = GFX_district_food
 	zone_slots = {
 		slot_empty
 	}
@@ -883,8 +884,8 @@ district_uma_ring_food = {
 }
 
 district_uma_ring_energy = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_energy
+	overlay_icon = GFX_district_energy
 	zone_slots = {
 		slot_empty
 	}
@@ -947,8 +948,8 @@ district_uma_ring_energy = {
 }
 
 district_uma_ring_training = {
-	icon = district_uma_ring_industrial
-	overlay_icon = GFX_district_mixed_industry
+	icon = district_uma_ring_training
+	overlay_icon = GFX_district_uma_training
 	zone_slots = {
 		slot_empty
 	}
@@ -963,6 +964,26 @@ district_uma_ring_training = {
 
 	triggered_name = {
 		text = city_uma_training_1
+	}
+}
+
+district_uma_ring_housing = {
+	icon = district_uma_rw_urban
+	overlay_icon = GFX_district_housing
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_uma_housing_1
 	}
 }
 

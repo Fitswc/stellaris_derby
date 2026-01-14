@@ -1,6 +1,4 @@
 col_uma_academy = {
-
-
 	icon = GFX_uma_colony_type_school #换
 
 	potential = {
@@ -21,15 +19,8 @@ col_uma_academy = {
 
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.15
-		planet_district_uma_dormitory_build_speed_mult = 0.10
-		planet_district_uma_logistics_area_build_speed_mult = 0.10
-		planet_district_uma_teaching_area_build_speed_mult = 0.10
-		planet_district_uma_training_course_build_speed_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.09
-		planet_jobs_physics_research_produces_mult = 0.09
-		planet_jobs_society_research_produces_mult = 0.09
-		planet_jobs_unity_produces_mult = 0.04
-		planet_jobs_trade_produces_mult = 0.06 #可以交易cs箱子导致的交易额（BUFF？）
+		planet_building_capacity_add = 2
+		planet_jobs_trade_produces_mult = 0.06
 	}
 
 	triggered_planet_modifier = {
@@ -39,36 +30,21 @@ col_uma_academy = {
 		}
 		modifier = {
 			planet_jobs_trade_produces_mult = 0.05
-			planet_jobs_unity_produces_mult = 0.07
 		}
 	}
 
 	weight_modifier = {
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_uma_dormitory
-			}
-			mode = add
-		}
-		complex_trigger_modifier = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job = merchant
-			}
-			mode = add
-			mult = 2
-		}
-		complex_trigger_modifier = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job = trader
-			}
-			mode = add
+		modifier = {
+			add = 5
+			is_planet_class = pc_uma_school
 		}
 		modifier = {
-			add = 3
-			is_planet_class = pc_uma_school
+			add = 5
+			OR = {
+				is_planet_class = pc_uma_ringworld_habitable
+				is_planet_class = pc_uma_ringworld
+				is_planet_class = pc_uma_ringworld_seam
+			}
 		}
 	}
 }
