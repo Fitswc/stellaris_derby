@@ -341,6 +341,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_district_uma_rares"
+		alwaystransparent = yes
+		textureFile = "gfx/interface/icons/districts/icons/uma_rare_resources_icons.dds"
+	}
+
+	spriteType = {
 		name = "GFX_district_uma_rw_urban_bg"
 		texturefile = "gfx/interface/planetview/district_backgrounds/district_uma_rw_urban.dds"
 	}
@@ -390,6 +396,57 @@ spriteTypes = {
 		}
 	}
 
+	spriteType = {
+		name = "GFX_district_uma_usw_mineral_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_uma_usw_mineral.dds"
+	}
+
+	spriteType = {
+		name = "GFX_district_uma_usw_mineral_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_arcology_fortress_rectangle.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
+			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			#animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_district_uma_usw_strategy_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_uma_usw_strategy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_district_uma_usw_strategy_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_arcology_mixed_industry_rectangle.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
+			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			#animationframes = { 1 2 3 }
+		}
+	}
+
+
 
 	##Zone icons
 	spriteType = {
@@ -435,6 +492,16 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_district_specialization_uma_housing"
 		texturefile = "gfx/interface/icons/districts/district_specialization_icons/district_specialization_uma_housin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_district_specialization_uma_mining"
+		texturefile = "gfx/interface/icons/districts/district_specialization_icons/district_specialization_uma_mining.dds"
+	}
+
+	spriteType = {
+		name = "GFX_district_specialization_uma_strategy"
+		texturefile = "gfx/interface/icons/districts/district_specialization_icons/district_specialization_uma_strategy.dds"
 	}
 
 }

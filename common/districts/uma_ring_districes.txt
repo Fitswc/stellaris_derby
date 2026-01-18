@@ -22,8 +22,8 @@ district_uma_dormitory_ring = {
 	inline_script = {
 		script = districts/BPV_district_slots2
 		GOVERNMENT = slot_city_government
-		SLOT1 = slot_city_01
-		SLOT_END = slot_city_02
+		SLOT1 = slot_uma_rw_city_01
+		SLOT_END = slot_uma_rw_city_02
 	}
 
 	show_on_uncolonized = {

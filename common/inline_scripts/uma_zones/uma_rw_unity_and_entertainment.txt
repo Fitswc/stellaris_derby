@@ -1,21 +1,11 @@
 icon = GFX_district_specialization_uma_government
 base_buildtime = @zone_buildtime
 potential = { # planet scope
-	hidden_trigger = { exists = owner }
-	owner = {
-		is_wilderness_empire = no
-		is_spiritualist = no
-		NOT = {
-			has_valid_civic = civic_machine_servitor
-		}
-	}
-	OR = {
+	hidden_trigger = {
+		exists = owner
 		owner = {
-			is_ai = no
-		}
-		AND = {
-			has_any_research_zone = no
-			has_any_industrial_zone = no
+			is_uma_country = yes
+			is_wilderness_empire = no
 		}
 	}
 }
@@ -24,10 +14,8 @@ unlock = { # planet scope
 	hidden_trigger = {
 		exists = owner
 		owner = {
-			OR = {
-				is_wilderness_empire = no
-				NOT = { has_valid_civic = civic_machine_servitor }
-			}
+			is_uma_country = yes
+			is_wilderness_empire = no
 		}
 	}
 }

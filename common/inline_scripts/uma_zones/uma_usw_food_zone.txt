@@ -1,4 +1,4 @@
-icon = GFX_district_specialization_uma_research
+icon = GFX_district_specialization_uma_food
 base_buildtime = @zone_buildtime
 potential = { # planet scope
 	hidden_trigger = {
@@ -27,30 +27,28 @@ resources = {
 	}
 }
 
-included_building_sets = {
-	research
-	uma_research
-	urban_automation
-	origin
+district_planet_modifier = {
+	pop_bonus_workforce_mult = 0.05
+	planet_jobs_food_produces_mult = 0.2
+	job_uma_carrot_farmer_add = 100
 }
 
-district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.1
+included_building_sets = {
+	farming
+	hydroponics
+	uma_farming
+	farming_automation
+	fallen_empire_farming
+}
+
+convert_to = {
+	zone_food
+	zone_food_ring_world
+	zone_food_hive
 }
 
 planet_modifier = {
 	zone_building_slots_add = 3
 }
 
-ai_resource_production = {
-	physics_research = 5
-	society_research = 5
-	engineering_research = 5
-
-	trigger = {
-		has_any_research_zone = yes
-	}
-}
-
-ai_weight_coefficient = 1.1
-ai_priority = 10
+ai_priority = 5

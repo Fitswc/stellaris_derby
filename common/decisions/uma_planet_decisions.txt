@@ -122,16 +122,16 @@ decision_uma_school_planet_transform = {
 	}
 
 	allow = {
-		if = {
-			limit = { owner = { is_ai = no }}
-			custom_tooltip = {
-				fail_text = uma_school_planet_requirement
-				free_district_slots < 1
-				num_districts = { type = district_mining value < 1 }
-				num_districts = { type = district_generator value < 1 }
-			}
-		}
-		num_uncleared_blockers < 1
+		#s		if = {
+		#s			limit = { owner = { is_ai = no }}
+		#s			custom_tooltip = {
+		#s				fail_text = uma_school_planet_requirement
+		#s				free_district_slots < 1
+		#s				num_districts = { type = district_mining value < 1 }
+		#s				num_districts = { type = district_generator value < 1 }
+		#s			}
+		#s		}
+		#s		num_uncleared_blockers < 1
 	}
 
 	effect = {
@@ -139,70 +139,71 @@ decision_uma_school_planet_transform = {
 		hidden_effect = {
 			set_planet_flag = uma_has_change_pc_to_academic_planet
 			owner = {
-					if = {
+				if = {
 					limit = { is_ai = yes }
 					change_variable = { which = uma_modified_planet value = 1 }
 				}
 			}
-			###城市区划的一半变为宿舍区划，农业区划一半变为后勤区划
+			#			###城市区划的一半变为宿舍区划，农业区划一半变为后勤区划
 			uma_school_planet_get_variable_effect = {
 				DISTRICT = district_city
 				VARIABLE = num_housing_districts
 			}
-			uma_school_planet_get_variable_effect = {
-				DISTRICT = district_farming
-				VARIABLE = num_farming_districts
-			}
-#			remove_all_districts = yes
+			#			uma_school_planet_get_variable_effect = {
+			#				DISTRICT = district_farming
+			#				VARIABLE = num_farming_districts
+			#			remove_all_districts = yes
 			uma_remove_deposits = yes
-#			clear_deposits = yes
-#			while = {
-#				count = num_housing_districts
-#				add_district = {
-#					district_type = district_uma_dormitory
-#					ignore_cap = yes
-#				}
-#	#			remove_district = district_city
-#			}
+			#			clear_deposits = yes
+			#			while = {
+			#				count = num_housing_districts
+			#				add_district = {
+			#					district_type = district_uma_dormitory
+			#					ignore_cap = yes
+			#				}
+			#	#			remove_district = district_city
+			#			}
+			#			while = {
+			#				count = num_farming_districts
+			#				add_district = district_uma_logistics_area
+			#			}
 			change_pc = pc_uma_school
-
-			while = {
-				count = num_farming_districts
-				add_district = district_uma_logistics_area
-			}
 			while = {
 				count = num_housing_districts
 				remove_district = district_uma_dormitory
 			}
-			clear_variable = num_farming_districts
+			add_district = district_uma_usw_urban_1
+			add_district = district_uma_usw_urban_2
+			add_district = district_uma_usw_urban_3
+
 			clear_variable = num_housing_districts
 			set_planet_entity = {
 				entity = "gaia_planet"
 			}
 			########特判：如果有菲尼学院有关遗址，保留之#######
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
-#				add_deposit = d_phoenix_school_relic
-#			}
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
-#				add_deposit = d_phoenix_school
-#			}
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
-#				add_deposit = d_phoenix_racing_course_relic
-#			}
-#			if = {
-#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
-#				add_deposit = d_phoenix_racing_course
-#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+			#				add_deposit = d_phoenix_school_relic
+			#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+			#				add_deposit = d_phoenix_school
+			#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+			#				add_deposit = d_phoenix_racing_course_relic
+			#			}
+			#			if = {
+			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+			#				add_deposit = d_phoenix_racing_course
+			#			}
 
 
 
-#			planet_event = {
-#				id = uma_bg.19
-#			}
-#			remove_district = district_city
+			#			planet_event = {
+			#				id = uma_bg.19
+			#			}
+			#			remove_district = district_city
 
 		}
 	}
@@ -229,7 +230,6 @@ decision_uma_school_planet_transform = {
 			}
 		}
 	}
-
 }
 
 

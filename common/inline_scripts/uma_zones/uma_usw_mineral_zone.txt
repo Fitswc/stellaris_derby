@@ -1,4 +1,4 @@
-icon = GFX_district_specialization_uma_research
+icon = GFX_district_specialization_uma_mining
 base_buildtime = @zone_buildtime
 potential = { # planet scope
 	hidden_trigger = {
@@ -28,14 +28,22 @@ resources = {
 }
 
 included_building_sets = {
-	research
-	uma_research
-	urban_automation
-	origin
+	mining
+	uma_mining
+	fallen_empire_mining
+	mining_automation
 }
 
 district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.1
+	pop_bonus_workforce_mult = 0.05
+	planet_jobs_minerals_produces_mult = 0.3
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		has_deposit = d_uma_crystal_carrot_mine_planet
+	}
+	job_uma_crystal_carrot_miner_add = 300
 }
 
 planet_modifier = {
@@ -43,14 +51,13 @@ planet_modifier = {
 }
 
 ai_resource_production = {
-	physics_research = 5
-	society_research = 5
-	engineering_research = 5
+	alloys = 10
+	consumer_goods = 10
 
 	trigger = {
-		has_any_research_zone = yes
+		has_any_industrial_zone = yes
 	}
 }
 
 ai_weight_coefficient = 1.1
-ai_priority = 10
+ai_priority = 8

@@ -214,3 +214,181 @@ zone_uma_housing_ring_world = {
 	ai_priority = 2
 	ai_weight_coefficient = 0.5
 }
+
+
+##UmaSchool World
+zone_uma_industrial_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_industrial_zone
+	}
+
+	swap_type = district_uma_usw_industrial
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_research_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_research_zone
+	}
+
+	swap_type = district_uma_usw_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_unity_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_unity_and_entertainment
+	}
+
+	swap_type = district_uma_usw_administrative
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_fortress_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_fortress
+		AMOUNT = 300
+	}
+
+	swap_type = district_uma_usw_fortress
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_trade_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_trade_zone
+		AMOUNT = 300
+	}
+
+	swap_type = district_uma_usw_trade
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_food_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_food_zone
+	}
+
+	swap_type = district_uma_usw_food
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_energy_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_energy_zone
+	}
+
+	swap_type = district_uma_usw_energy
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_training_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_training_zone
+	}
+
+	swap_type = district_uma_usw_training
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_mineral_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_mineral_zone
+	}
+
+	swap_type = district_uma_usw_mineral
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_strategy_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_strategy_zone
+	}
+
+	swap_type = district_uma_usw_strategy
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}

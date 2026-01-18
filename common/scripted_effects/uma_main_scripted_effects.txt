@@ -3820,6 +3820,7 @@ uma_remove_deposits = {
 				is_deposit_type = d_virtual_power_medium    # Tranformation situation
 				is_deposit_type = d_virtual_power_small        # Tranformation situation
 				is_deposit_type = d_virtual_power_tiny        # Tranformation situation
+				has_deposit_flag = keep_deposit_on_terraform
 
 				##UMA
 				is_deposit_type = d_uma_threegodness_relic

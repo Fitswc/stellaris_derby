@@ -1,4 +1,4 @@
-icon = GFX_district_specialization_uma_energy
+icon = GFX_district_specialization_uma_training
 base_buildtime = @zone_buildtime
 
 resources = {
@@ -29,20 +29,28 @@ unlock = { # planet scope
 }
 
 included_building_sets = {
+	uma_racing
+	uma_urban
+}
+
+excluded_building_sets = {
 	generator
-	uma_generator
-	fallen_empire_generator
-	generator_automation
+	mining
+	farming
+	knights
+	betharian
 }
 
 convert_to = {
-	zone_energy
-	zone_energy_nexus
-	zone_energy_hive
+	zone_research
+	zone_research_nexus
+	zone_research_hive
 }
 
 district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.1
+	pop_bonus_workforce_mult = 0.05
+	planet_uma_racing_umamusume_produces_mult = 0.2
+	planet_uma_trainer_produces_mult = 0.2
 }
 
 planet_modifier = {
