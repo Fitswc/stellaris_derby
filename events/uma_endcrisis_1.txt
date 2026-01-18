@@ -754,7 +754,7 @@ fleet_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		uma_ec1_create_def_fleets = yes
-		set_update_modifiers_batch = end
+		set_update_modifiers_batch = end0
 
 		last_created_fleet = {
 			queue_actions = {
@@ -781,17 +781,21 @@ fleet_event = {
 			has_global_flag = uma_ec_invasion_ec1_end
 		}
 
-		event_target:uma_ec1_country = {
-			fleet_power <= 20000000
-		}
 	}
 
 	immediate = {
 		set_update_modifiers_batch = begin
-		uma_ec1_create_def_fleets = yes
-		last_created_fleet = {
-			fleet_event = {
-				id = uma_ec_1.3
+		if = {
+			limit = {
+				event_target:uma_ec1_country = {
+					fleet_power <= 30000000 #3M
+				}
+			}
+			uma_ec1_create_def_fleets = yes
+			last_created_fleet = {
+				fleet_event = {
+					id = uma_ec_1.3
+				}
 			}
 		}
 		set_update_modifiers_batch = end

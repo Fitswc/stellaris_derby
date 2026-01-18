@@ -299,9 +299,16 @@ fleet_event = {
 
 	immediate = {
 		set_update_modifiers_batch = begin
-		while = {
-			count = 2
-			uma_ec3_create_puma_fleets = yes
+		if = {
+			limit = {
+				event_target:uma_ec3_country = {
+					fleet_power <= 30000000
+				}
+			}
+			while = {
+				count = 2
+				uma_ec3_create_puma_fleets = yes
+			}
 		}
 		set_update_modifiers_batch = end
 	}
