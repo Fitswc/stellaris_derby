@@ -1,18 +1,82 @@
 ﻿l_english:
   
- zone_uma_training: "Training and Competition of Umamusume"  #NT!
- zone_uma_training_desc: "After all, athletes also need a special place to run"  #NT!
- mod_planet_zone_uma_training_build_speed_mult: "Umamusume's Training and Competition Zone Build Speed"  #NT!
-  
- zone_uma_teaching: "Advanced research on Umamusume"  #NT!
- zone_uma_teaching_desc: "Learn and constantly digest"  #NT!
- mod_planet_zone_uma_teaching_build_speed_mult: "Umamusume's Advanced Research Zone Build Speed"  #NT!
+ zone_uma_training: "Training and Competition of Umamusume"
+ zone_uma_training_desc: "After all, athletes also need a special place to run"
+ mod_planet_zone_uma_training_build_speed_mult: "Umamusume's Training and Competition Zone Build Speed"
 
-zone_uma_industry: "Umamusume special industry"
-zone_uma_industry_desc: "Here has lot of factory"
+ zone_uma_teaching: "Advanced research on Umamusume"
+ zone_uma_teaching_desc: "Learn and constantly digest"
+ mod_planet_zone_uma_teaching_build_speed_mult: "Umamusume's Advanced Research Zone Build Speed"
 
-zone_uma_basic_food: "Umamusume special food"
-zone_uma_basic_food_desc: "Why half of them are carrot?"
+ zone_uma_industry: "Umamusume special industry"
+ zone_uma_industry_desc: "Here has lot of factory"
 
-zone_uma_basic_mineral: "Umamusume Mining"
-zone_uma_basic_mineral_desc: "Super Miners"
+ zone_uma_basic_food: "Umamusume special food"
+ zone_uma_basic_food_desc: "Why half of them are carrot?"
+
+ zone_uma_basic_mineral: "Umamusume Mining"
+ zone_uma_basic_mineral_desc: "Super Miners"
+
+
+ ##ring world
+ zone_uma_industrial_ring_world: "Industrial Zone"
+ zone_uma_industrial_ring_world_desc: "Tens of thousands of factories are operating at full capacity in this section, manufacturing industrial products ranging from war machines to daily necessities."
+
+ zone_uma_research_ring_world: "Research Zone"
+ zone_uma_research_ring_world_desc: "Here, the wisdom of all Umamusumes is gathered, and many research results will be produced here. Tens of thousands of factories are operating at full capacity in this section, manufacturing industrial products ranging from war machines to daily necessities."
+
+ zone_uma_unity_ring_world: "Entertainment and Government District"
+ zone_uma_unity_ring_world_desc: "This area can host grand concerts, but it can also serve as the home base for bureaucrats and authorities."
+
+ zone_uma_fortress_ring_world: "Defense District"
+ zone_uma_fortress_ring_world_desc: "This area is filled with planetary defense facilities."
+
+ zone_uma_trade_ring_world: "Trade District"
+ zone_uma_trade_ring_world_desc: "This area is teeming with commercial buildings, where various business strategies and schemes are concentrated."
+
+ zone_uma_food_ring_world: "Food District"
+ zone_uma_food_ring_world_desc: "Endless fields cover this section, providing a continuous supply of food for the entire ring. Notably, the entire section functions as a giant greenhouse."
+
+ zone_uma_energy_ring_world: "Power District"
+ zone_uma_energy_ring_world_desc: "Various power generation facilities occupy this section, serving as the energy hub for the entire ring."
+
+ zone_uma_training_ring_world: "Training and Teaching District"
+ zone_uma_training_ring_world_desc: "Numerous schools and training grounds stand in this section; it is truly a paradise for students."
+
+ zone_uma_housing_ring_world: "Satellite City District"
+ zone_uma_housing_ring_world_desc: "This surrounding city effectively expands the urban functions of the ring world and can even help distribute urban responsibilities."
+
+ #School world
+ zone_uma_industrial_school_world: "Industrial Specialization"
+ zone_uma_industrial_school_world_desc: "Tens of thousands of factories are running at full speed in this area, producing industrial goods from war machines to daily necessities."
+ zone_uma_industrial_triggered_desc: "§YThis specialization provides §!§G200§! §Ycorresponding jobs based on existing ['trait:uma_trait_musume'] industrial category buildings. If none exist, it provides §!§G100§! §YArtisans and Metallurgists.§!\n\nExisting ['trait:uma_trait_musume'] industrial buildings include:\n-['building:building_uma_crystal_carrot_producing_lab']\n-['building:building_uma_crystal_alloy_workhouse']\n-['building:building_uma_crystal_consumer_goods_workhouse']\n-['building:building_uma_chemical_plant']\n-['building:building_uma_crystal_plant']\n-['building:building_uma_gas_plant']\n-['building:building_uma_dark_matter_plant']\nand their upgraded versions."
+
+ zone_uma_research_school_world: "Research Specialization"
+ zone_uma_research_school_world_desc: "The collective wisdom of all Umamusume is gathered here, where many research breakthroughs are produced."
+
+ zone_uma_unity_school_world: "Entertainment and Government Specialization"
+ zone_uma_unity_school_world_desc: "This area can host grand concerts, but it can also serve as the home base for bureaucrats and authorities."
+
+ zone_uma_fortress_school_world: "Defense Specialization"
+ zone_uma_fortress_school_world_desc: "This area is filled with planetary defense facilities."
+
+ zone_uma_trade_school_world: "Trade Specialization"
+ zone_uma_trade_school_world_desc: "This area is teeming with commercial buildings, where various business strategies and schemes are concentrated."
+
+ zone_uma_food_school_world: "Food Specialization"
+ zone_uma_food_school_world_desc: "Endless fields cover this area, providing a continuous supply of food for the entire ring."
+
+ zone_uma_energy_school_world: "Power Specialization"
+ zone_uma_energy_school_world_desc: "Various power generation facilities occupy this area, serving as the energy hub for the entire planet."
+
+ zone_uma_training_school_world: "Training and Teaching Specialization"
+ zone_uma_training_school_world_desc: "Numerous schools and training grounds stand in this area; it is truly a paradise for students."
+
+ zone_uma_housing_school_world: "Satellite City Specialization"
+ zone_uma_housing_school_world_desc: "This surrounding city effectively expands the urban functions of the region and can even help distribute urban responsibilities."
+
+ zone_uma_mineral_school_world: "Mineral Specialization"
+ zone_uma_mineral_school_world_desc: "Large-scale mining facilities exist in this area, providing a steady stream of raw materials for downstream production."
+
+ zone_uma_strategy_school_world: "Rare Resource Support"
+ zone_uma_strategy_school_world_desc: "This specialized area is primarily used to distribute the production needs of rare resources."

@@ -29,11 +29,11 @@
  pc_uma_ringworld_desc: "This giant ring structure is part of a ring world. Unlike planets, which have many restrictions, the inner ring has a lot of artificial habitable space."
  pc_uma_ringworld_seam: "$pc_uma_ringworld$"
  pc_uma_ringworld_seam_desc: "$pc_uma_ringworld_desc$"
-  
-  
+
+
  pc_uma_ringworld_habitable: "$pc_uma_ringworld$"
  pc_uma_ringworld_habitable_desc: "$pc_uma_ringworld_desc$"
-  
+
  district_uma_dormitory_ring: "$district_uma_dormitory$"
  district_uma_dormitory_ring_desc: "$district_uma_dormitory_desc$"
  district_uma_dormitory_ring_plural: "$district_uma_dormitory_plural$"
@@ -46,17 +46,55 @@
  district_uma_ring_logistics_area_desc: "$district_uma_logistics_area_desc$"
  district_uma_ring_logistics_area_plural: "$district_uma_logistics_area_plural$"
  mod_planet_district_uma_ring_logistics_area_build_speed_mult: "$mod_planet_district_uma_logistics_area_build_speed_mult$"
- district_uma_ring_industrial: "Mixed Industrial Zone"
- district_uma_ring_industrial_desc: "This is the Carrot Crystal Industrial System, where Ma Musume craftsmen produce alloys and consumer goods."
- district_uma_ring_industrial_plural: "Mixed Industrial Zone"
- mod_planet_district_uma_ring_industrial_build_speed_mult: "Mixed Industrial District Construction Speed:"
-  
-  
- district_uma_ring_commercial_area: "Commercial District"
- district_uma_ring_commercial_area_desc: "This is the commercial area, where Umamusumes will complete transactions and shopping."
- district_uma_ring_commercial_area_plural: "Commercial District"
- mod_planet_district_uma_ring_commercial_area_build_speed_mult: "Commercial zone construction speed:"
-  
-  
-  
-  
+
+ district_uma_rw_urban_1: "Unplanned Area"
+ district_uma_rw_urban_1_desc: "This is an unplanned area that will be used for residential purposes until further planning is implemented."
+ district_uma_rw_urban_1_plural: "Unplanned Areas"
+
+ district_uma_rw_urban_2: "Unplanned Area"
+ district_uma_rw_urban_2_desc: "$district_uma_rw_urban_1_desc$"
+ district_uma_rw_urban_2_plural: "Unplanned Areas"
+
+ district_uma_rw_urban_3: "Unplanned Area"
+ district_uma_rw_urban_3_desc: "$district_uma_rw_urban_1_desc$"
+ district_uma_rw_urban_3_plural: "Unplanned Areas"
+
+
+ district_uma_ring_industrial: "Industrial District"
+ district_uma_ring_industrial_desc: "$zone_uma_industrial_ring_world_desc$"
+ district_uma_ring_industrial_plural: "Industrial Districts"
+
+ district_uma_ring_research: "Research District"
+ district_uma_ring_research_desc: "$zone_uma_research_ring_world_desc$"
+ district_uma_ring_research_plural: "Research Districts"
+
+ district_uma_ring_administrative: "Entertainment and Government District"
+ district_uma_ring_administrative_desc: "$zone_uma_unity_ring_world_desc$"
+ district_uma_ring_administrative_plural: "Entertainment and Government Districts"
+ city_district_uma_ring_administrative_1: "Public Plaza"
+
+ district_uma_ring_fortress: "Defense District"
+ district_uma_ring_fortress_desc: "$zone_uma_fortress_ring_world_desc$"
+ district_uma_ring_fortress_plural: "Defense Districts"
+
+ district_uma_ring_trade: "Trade District"
+ district_uma_ring_trade_desc: "$zone_uma_trade_ring_world_desc$"
+ district_uma_ring_trade_plural: "Trade Districts"
+
+ district_uma_ring_food: "Food District"
+ district_uma_ring_food_desc: "$zone_uma_food_ring_world_desc$"
+ district_uma_ring_food_plural: "Food Districts"
+
+ district_uma_ring_energy: "Power District"
+ district_uma_ring_energy_desc: "$zone_uma_energy_ring_world_desc$"
+ district_uma_ring_energy_plural: "Power Districts"
+
+ district_uma_ring_training: "Training and Teaching District"
+ district_uma_ring_training_desc: "$zone_uma_training_ring_world_desc$"
+ district_uma_ring_training_plural: "Training and Teaching Districts"
+ city_uma_training_1: "Arena City"
+
+ district_uma_ring_housing: "Urban District"
+ district_uma_ring_housing_desc: "$zone_uma_housing_ring_world_desc$"
+ district_uma_ring_housing_plural: "Urban Districts"
+ city_uma_housing_1: "Satellite City Area"

@@ -131,7 +131,7 @@ decision_uma_school_planet_transform = {
 		#s				num_districts = { type = district_generator value < 1 }
 		#s			}
 		#s		}
-		#s		num_uncleared_blockers < 1
+		num_uncleared_blockers < 1
 	}
 
 	effect = {
