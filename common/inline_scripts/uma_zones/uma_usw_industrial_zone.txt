@@ -36,14 +36,21 @@ included_building_sets = {
 	origin
 }
 
-district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.05
-	planet_jobs_alloys_produces_mult = 0.2
-	planet_jobs_consumer_goods_produces_mult = 0.2
-}
-
 planet_modifier = {
 	zone_building_slots_add = 3
+}
+
+triggered_desc = {
+	trigger = {
+		always = yes
+	}
+	text = zone_uma_industrial_triggered_desc
+}
+
+inline_script = {
+	script = jobs/uma_zone_industrial_jobs_add
+	AMOUNT = 200
+	AMOUNT_ELSE = 100
 }
 
 ai_resource_production = {

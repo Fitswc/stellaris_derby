@@ -239,12 +239,12 @@ planet_uma_core_miner = {
 	parent = planet_miners
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 planet_uma_chemrist = {

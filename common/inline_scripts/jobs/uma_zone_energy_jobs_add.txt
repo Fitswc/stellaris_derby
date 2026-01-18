@@ -1,0 +1,49 @@
+### Regular Empires
+# Planets
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire_spiritualist = no
+
+			is_uma_player_country = yes
+			has_technology = tech_uma_tama_force_powering_use
+		}
+
+#		OR = {
+#			has_active_building = building_uma_field_powerplant
+#			has_active_building = building_uma_field_powering_complex
+#			has_active_building = building_uma_field_powering_complex_realm
+#		}
+	}
+
+	modifier = {
+		job_uma_field_powering_technician_add = $AMOUNT$
+	}
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire_spiritualist = no
+
+			is_uma_player_country = yes
+			NOT = {
+				has_technology = tech_uma_tama_force_powering_use
+			}
+		}
+
+#		NOR = {
+#			has_active_building = building_uma_field_powerplant
+#			has_active_building = building_uma_field_powering_complex
+#			has_active_building = building_uma_field_powering_complex_realm
+#		}
+	}
+
+	modifier = {
+		job_technician_add = $AMOUNT$
+	}
+}

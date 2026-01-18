@@ -28,9 +28,16 @@ resources = {
 }
 
 district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.05
-	planet_jobs_food_produces_mult = 0.2
-	job_uma_carrot_farmer_add = 100
+	job_uma_carrot_farmer_add = 200
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		owner = {
+			has_technology = tech_uma_code_hachimi
+		}
+	}
+	job_uma_bee_farmer_add = 100
 }
 
 included_building_sets = {

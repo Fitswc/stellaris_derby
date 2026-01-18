@@ -34,10 +34,8 @@ included_building_sets = {
 	origin
 }
 
-district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.05
-	planet_uma_researcher_produces_mult = 0.2
-	planet_uma_threegodness_knowledge_scholar_produces_mult = 0.2
+triggered_district_planet_modifier = {
+	job_uma_researcher_add = 200
 }
 
 planet_modifier = {

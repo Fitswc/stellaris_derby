@@ -41,8 +41,9 @@ convert_to = {
 	zone_energy_hive
 }
 
-district_planet_modifier = {
-	pop_bonus_workforce_mult = 0.1
+inline_script = {
+	script = jobs/uma_zone_energy_jobs_add
+	AMOUNT = 200
 }
 
 planet_modifier = {
