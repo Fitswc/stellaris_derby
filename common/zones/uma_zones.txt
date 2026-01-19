@@ -38,18 +38,14 @@ zone_uma_training = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_housing_add = 300
-		planet_uma_racing_umamusume_upkeep_mult = -0.2
-		job_uma_racing_umamusume_add = 200
-		job_uma_racing_ura_members_add = 300
+		job_uma_racing_umamusume_add = 100
+		job_uma_racing_ura_members_add = 100
 		job_uma_trainer_add = 100
 	}
 
-#	max_buildings = 3
-
-	##Compatibility for BPV
-#	max_buildings = @BPV_ZONE_SLOT
-	planet_modifier = {zone_building_slots_add = 3}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
 
 	included_building_sets = {
 		uma_racing
@@ -69,12 +65,6 @@ zone_uma_training = {
 		zone_building_slots_add = 3
 	}
 
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_urban_triggered_desc
-	}
 }
 
 
@@ -120,16 +110,13 @@ zone_uma_teaching = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_housing_add = @zone_urban_housing_positive
 		planet_uma_researcher_produces_mult = 0.05
-		job_uma_researcher_add = 50
-		planet_building_uma_toresen_lab_build_speed_mult = 0.1
-		planet_building_uma_toresen_lab_center_build_speed_mult = 0.1
-		planet_building_uma_toresen_lab_top_build_speed_mult = 0.1
+		job_uma_researcher_add = 200
 	}
 
-#	max_buildings = 3
-
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
 
 	excluded_building_sets = {
 		urban
@@ -148,13 +135,6 @@ zone_uma_teaching = {
 
 	planet_modifier = {
 		zone_building_slots_add = 3
-	}
-
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_urban_triggered_desc
 	}
 }
 
@@ -197,11 +177,6 @@ zone_uma_industry = {
 	}
 
 
-#	max_buildings = 3
-
-	##Compatibility for BPV
-#	max_buildings = @BPV_ZONE_SLOT`
-
 	included_building_sets = {
 		uma_urban
 		uma_industrial
@@ -213,49 +188,17 @@ zone_uma_industry = {
 		zone_building_slots_add = 3
 	}
 
-
-	triggered_planet_modifier = {
-		planet_housing_add = @zone_urban_housing_negative
-
-		planet_uma_crystal_carrot_engineer_produces_mult = 0.15
-		planet_building_uma_crystal_carrot_producing_lab_build_speed_mult = 0.2
-		planet_building_uma_crystal_carrot_producing_center_build_speed_mult = 0.2
-		planet_building_uma_crystal_carrot_producing_complex_build_speed_mult = 0.2
-		planet_building_uma_crystal_carrot_producing_realm_complex_build_speed_mult = 0.2
-
-		planet_uma_crystal_alloy_crafter_produces_mult = 0.15
-		planet_building_uma_crystal_alloy_workhouse_build_speed_mult = 0.2
-		planet_building_uma_crystal_alloy_factory_build_speed_mult = 0.2
-		planet_building_uma_crystal_alloy_complex_build_speed_mult = 0.2
-		planet_building_uma_crystal_alloy_realm_complex_build_speed_mult = 0.2
-
-		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
-		planet_building_uma_crystal_consumer_goods_workhouse_build_speed_mult = 0.2
-		planet_building_uma_crystal_consumer_goods_factory_build_speed_mult = 0.2
-		planet_building_uma_crystal_consumer_goods_complex_build_speed_mult = 0.2
-		planet_building_uma_crystal_consumer_goods_realm_complex_build_speed_mult = 0.2
-
-		planet_building_uma_chemical_plant_build_speed_mult = 0.2
-		planet_building_uma_chemical_plant_2_build_speed_mult = 0.2
-		planet_building_uma_chemical_plant_realm_build_speed_mult = 0.2
-
-		planet_building_uma_crystal_plant_build_speed_mult = 0.2
-		planet_building_uma_crystal_plant_2_build_speed_mult = 0.2
-		planet_building_uma_crystal_plant_realm_build_speed_mult = 0.2
-
-		planet_building_uma_gas_plant_build_speed_mult = 0.2
-		planet_building_uma_gas_plant_2_build_speed_mult = 0.2
-		planet_building_uma_gas_plant_realm_build_speed_mult = 0.2
-
-		planet_building_uma_dark_matter_plant_build_speed_mult = 0.2
-
+	inline_script = {
+		script = jobs/uma_zone_industrial_jobs_add
+		AMOUNT = 200
+		AMOUNT_ELSE = 100
 	}
 
 	triggered_desc = {
 		trigger = {
 			always = yes
 		}
-		text = zone_urban_triggered_desc
+		text = zone_uma_industrial_triggered_desc
 	}
 }
 
@@ -294,12 +237,6 @@ zone_uma_basic_food = {
 		}
 	}
 
-
-#	max_buildings = 3
-
-	##Compatibility for BPV
-#	max_buildings = @BPV_ZONE_SLOT`
-
 	included_building_sets = {
 		farming
 		hydroponics
@@ -313,20 +250,14 @@ zone_uma_basic_food = {
 		zone_building_slots_add = 3
 	}
 
-	triggered_planet_modifier = {
-		job_uma_bee_farmer_add = 100
-		job_uma_carrot_farmer_add = 100
+	triggered_district_planet_modifier = {
+		job_uma_bee_farmer_add = 200
+		job_uma_carrot_farmer_add = 200
 
 		planet_uma_carrot_farmer_produces_mult = 0.3
 		planet_uma_bee_farmer_produces_mult = 0.3
 	}
 
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_urban_triggered_desc
-	}
 }
 
 zone_uma_basic_mineral = {
@@ -385,16 +316,8 @@ zone_uma_basic_mineral = {
 		zone_building_slots_add = 3
 	}
 
-	triggered_planet_modifier = {
+	triggered_district_planet_modifier = {
 		job_uma_core_miner_add = 200
-
 		planet_uma_core_miner_produces_mult = 0.3
-	}
-
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_urban_triggered_desc
 	}
 }
