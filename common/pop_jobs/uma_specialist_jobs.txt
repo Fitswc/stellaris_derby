@@ -216,7 +216,7 @@ uma_threegodness_knowledge_scholar = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_researcher|RESOURCE1|physics_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|engineering_research|WEIGHT3|0.33|
+		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_threegodness_knowledge_scholar|RESOURCE1|physics_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|engineering_research|WEIGHT3|0.33|
 
 		modifier = {
 			factor = 0.2

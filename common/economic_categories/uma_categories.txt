@@ -3,7 +3,7 @@ planet_uma_umaidol = { #马娘偶像的buff单独拿出来，不受演艺人员b
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -34,7 +34,7 @@ planet_uma_racing_umamusume = { #作为赛事相关职业中的小类别，只�
 	}
 	generate_add_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 }
 
@@ -47,7 +47,7 @@ planet_uma_trainer = { #作为赛事相关职业中的小类别，只针对训�
 	}
 	generate_add_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 }
 
@@ -55,7 +55,7 @@ planet_uma_threegodness_knowledge_scholar = { #三女神知识研究者不受到
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -69,7 +69,7 @@ planet_uma_crystal_carrot_engineer = { #水晶萝卜工程师单独成类
 	parent = planet_artisans
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -81,7 +81,7 @@ planet_uma_research_related = { #马娘科学家和科学主管都属于马娘�
 	parent = planet_researchers
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -93,11 +93,11 @@ planet_uma_researcher = { #马娘科学家
 	parent = planet_researchers
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	generate_add_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}	
 }
 
@@ -105,11 +105,11 @@ planet_uma_head_researcher = { #马娘科学主管
 	parent = planet_researchers
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	generate_add_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}	
 }
 
@@ -120,7 +120,7 @@ planet_uma_carrot_farmer = {
 	parent = planet_farmers
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -133,7 +133,7 @@ planet_uma_bee_farmer = {
 	parent = planet_farmers
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	generate_add_modifiers = {
 		produces
@@ -146,7 +146,7 @@ planet_uma_sweet_master = {
 	parent = planet_artisans
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -159,7 +159,7 @@ planet_uma_sweet_manager = {
 	parent = planet_clerks
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -172,7 +172,7 @@ planet_uma_horseshoe_crafter = {
 	parent = planet_artisans
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -185,7 +185,7 @@ planet_uma_live_clothes_crafter = {
 	parent = planet_artisans
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -199,7 +199,7 @@ planet_uma_crystal_alloy_crafter = {
 	parent = planet_metallurgists
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -212,7 +212,7 @@ planet_uma_crystal_consumer_goods_crafter = {
 	parent = planet_artisans
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -225,7 +225,7 @@ planet_uma_field_powering_technician = {
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	#generate_add_modifiers = {
 	#	produces
@@ -296,11 +296,11 @@ planet_uma_school_reseacher = {
 	parent = planet_researchers
 	generate_mult_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 	generate_add_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 }
 
@@ -313,7 +313,7 @@ planet_uma_school_reseacher = {
 #	}
 #	generate_add_modifiers = {
 #		produces
-#		#upkeep
+#		upkeep
 #	}
 #}
 
@@ -326,7 +326,7 @@ planet_uma_racing_ura_members = {
 	}
 	generate_add_modifiers = {
 		produces
-		#upkeep
+		upkeep
 	}
 }
 
@@ -339,7 +339,7 @@ planet_uma_racing_ura_members = {
 #	}
 #	generate_add_modifiers = {
 #		produces
-#		#upkeep
+#		upkeep
 #	}
 #}
 
