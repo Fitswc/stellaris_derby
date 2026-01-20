@@ -40,7 +40,6 @@ uma_trainer = {
 				}
 			}
 			unity = 2
-#			society_research = 12
 			engineering_research = 3
 		}
 		upkeep = {
@@ -54,12 +53,12 @@ uma_trainer = {
 			owner = { has_technology = tech_uma_personality_training_assistant }
 		}
 		modifier = {
-			planet_uma_racing_umamusume_produces_mult = 0.2
+			planet_uma_racing_umamusume_produces_mult = 0.05
 		}
 	}
 
 	planet_modifier = {
-		planet_uma_racing_umamusume_produces_mult = 0.1
+		planet_uma_racing_umamusume_produces_mult = 0.05
 	}
 
 	weight = {
@@ -120,16 +119,14 @@ uma_racing_umamusume = {
 			society_research = 3
 			engineering_research = 3
 			physics_research = 3
-#			trade = 0.5
 		}
 		upkeep = {
-			consumer_goods = 1
+			consumer_goods = 2
 		}
 	}
 
 	planet_modifier = {
 		planet_amenities_add = 400
-#		planet_jobs_trade_produces_mult = 8
 	}
 
 	weight = {
@@ -194,7 +191,7 @@ uma_racing_ura_members = {
 
 	planet_modifier = {
 		planet_amenities_add = 400
-		planet_uma_racing_umamusume_produces_mult = 0.05
+		planet_uma_racing_umamusume_produces_mult = 0.01
 	}
 
 	weight = {

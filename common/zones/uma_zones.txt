@@ -39,7 +39,6 @@ zone_uma_training = {
 
 	triggered_district_planet_modifier = {
 		job_uma_racing_umamusume_add = 100
-		job_uma_racing_ura_members_add = 100
 		job_uma_trainer_add = 100
 	}
 
@@ -85,7 +84,6 @@ zone_uma_teaching = {
 		owner = {
 			has_authority = auth_trainingcenter
 		}
-#		uses_district_set = uma_school_world
 	}
 
 	convert_to = { zone_research }
@@ -110,7 +108,6 @@ zone_uma_teaching = {
 	}
 
 	triggered_district_planet_modifier = {
-		planet_uma_researcher_produces_mult = 0.05
 		job_uma_researcher_add = 200
 	}
 
@@ -253,24 +250,22 @@ zone_uma_basic_food = {
 	triggered_district_planet_modifier = {
 		job_uma_bee_farmer_add = 200
 		job_uma_carrot_farmer_add = 200
-
-		planet_uma_carrot_farmer_produces_mult = 0.3
-		planet_uma_bee_farmer_produces_mult = 0.3
 	}
-
 }
 
 zone_uma_basic_mineral = {
 	icon = GFX_uma_zone_type_mining
 	base_buildtime = @zone_buildtime
-	potential = { # planet scope
+	potential = {
+		# planet scope
 		hidden_trigger = { exists = owner }
 		owner = {
 			has_authority = auth_trainingcenter
 		}
 	}
 
-	unlock = { # planet scope
+	unlock = {
+		# planet scope
 		hidden_trigger = { exists = owner }
 		owner = {
 			has_authority = auth_trainingcenter
@@ -297,12 +292,6 @@ zone_uma_basic_mineral = {
 		}
 	}
 
-
-#	max_buildings = 3
-
-	##Compatibility for BPV
-#	max_buildings = @BPV_ZONE_SLOT`
-
 	included_building_sets = {
 		mining
 		urban
@@ -311,13 +300,18 @@ zone_uma_basic_mineral = {
 	}
 
 
-
 	planet_modifier = {
 		zone_building_slots_add = 3
 	}
 
 	triggered_district_planet_modifier = {
 		job_uma_core_miner_add = 200
-		planet_uma_core_miner_produces_mult = 0.3
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			has_deposit = d_uma_crystal_carrot_mine_planet
+		}
+		job_uma_crystal_carrot_miner_add = 150
 	}
 }

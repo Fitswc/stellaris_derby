@@ -122,10 +122,10 @@ planet_uma_carrot_farmer = {
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #养蜂人
@@ -137,7 +137,7 @@ planet_uma_bee_farmer = {
 	}
 	generate_add_modifiers = {
 		produces
-	#	upkeep
+		upkeep
 	}	
 }
 
@@ -148,10 +148,10 @@ planet_uma_sweet_master = {
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #甜点店铺经理
@@ -161,10 +161,10 @@ planet_uma_sweet_manager = {
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #蹄铁工匠
@@ -174,10 +174,10 @@ planet_uma_horseshoe_crafter = {
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #决胜服设计师
@@ -187,10 +187,10 @@ planet_uma_live_clothes_crafter = {
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #水晶合金工匠
@@ -201,10 +201,10 @@ planet_uma_crystal_alloy_crafter = {
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
 
 #日用品工匠
