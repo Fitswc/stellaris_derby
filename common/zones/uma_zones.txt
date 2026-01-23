@@ -197,6 +197,9 @@ zone_uma_industry = {
 		}
 		text = zone_uma_industrial_triggered_desc
 	}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
 }
 
 zone_uma_basic_food = {
@@ -250,6 +253,9 @@ zone_uma_basic_food = {
 	triggered_district_planet_modifier = {
 		job_uma_bee_farmer_add = 200
 		job_uma_carrot_farmer_add = 200
+	}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
 	}
 }
 
@@ -313,5 +319,79 @@ zone_uma_basic_mineral = {
 			has_deposit = d_uma_crystal_carrot_mine_planet
 		}
 		job_uma_crystal_carrot_miner_add = 150
+	}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+
+zone_uma_energy_venus = {
+	icon = GFX_district_specialization_uma_energy_venus
+	base_buildtime = @zone_buildtime
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	potential = {
+		# planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_uma_country = yes
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	unlock = {
+		# planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_uma_country = yes
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	zone_sets = {
+		energy
+		habitat_energy
+	}
+
+	included_building_sets = {
+		unity
+		uma_entertainment
+		government
+		urban
+		uma_urban
+	}
+
+	convert_to = {
+		zone_energy
+		zone_energy_nexus
+		zone_energy_hive
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	district_planet_modifier = {
+		planet_jobs_energy_produces_add = 0.4
+	}
+
+	triggered_planet_modifier = {
+		planet_uma_traders_trade_produces_mult = 0.1
+	}
+
+	ai_priority = 5
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
 	}
 }
