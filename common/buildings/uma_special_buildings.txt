@@ -218,6 +218,531 @@ building_realm_planetary_shield_generator = {
 }
 
 
+building_uma_symbolize_memorize_sculpture = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_eulogist_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_authoritarian_attraction_mult = 0.5
+		planet_jobs_worker_produces_mult = 0.15
+		planet_building_build_speed_mult = 0.25
+		pop_housing_usage_mult = -0.1
+	}
+}
+
+building_uma_balance_sculpture = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_egalitarian_attraction_mult = 0.5
+		planet_jobs_specialist_produces_mult = 0.15
+		planet_buildings_cost_mult = -0.1
+		planet_districts_upkeep_mult = -0.1
+		pop_amenities_usage_mult = -0.1
+	}
+}
+
+building_uma_philoso_temple = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.5
+		planet_jobs_unity_produces_mult = 0.25
+		pop_happiness = 0.25
+		edict_length_mult = 0.25
+		edicts_cost_mult = -0.25
+	}
+}
+
+building_uma_wisdom_palace = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_materialist
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_materialist_attraction_mult = 0.5
+		all_technology_research_speed = 0.15
+		planet_researchers_upkeep_mult = -0.2
+		planet_uma_researcher_upkeep_mult = -0.2
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
+	}
+}
+
+building_uma_diplomacy_place = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_xenophile
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.5
+		envoys_add = 5
+		DIPLO_ACTION_ACCEPTANCE_ADD = 200
+		diplo_weight_mult = 1
+		country_trust_growth = 1
+		country_trust_cap_add = 100
+	}
+}
+
+building_uma_slave_solving_place = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_xenophobe_attraction_mult = 0.5
+		pop_category_slave_upkeep_mult = -1
+		intel_decryption_add = 5
+		intel_encryption_add = 5
+		country_influence_produces_mult = 0.1
+	}
+}
+
+building_uma_military_school = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_militarist
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_militarist_attraction_mult = 0.5
+		army_damage_mult = 0.5
+		army_collateral_damage_mult = 0.5
+		planet_army_build_speed_mult = 0.5
+		planet_combat_width_add = 4
+	}
+}
+
+building_uma_peace_monument = {
+	base_buildtime = @b3_time
+
+	planet_limit = {
+		base = 1
+	}
+	position_priority = 100
+	can_be_ruined = no
+	category = government
+
+	building_sets = {
+		government
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+			}
+			has_ethic = ethic_fanatic_pacifist
+		}
+		is_capital = yes
+	}
+
+
+	allow = {
+		hidden_trigger = { owner = { is_ai = no } }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+			NOT = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+#	planet_modifier = {
+#		job_uma_judge_add = 500
+#	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			uma_crystal_carrot = 10000
+		}
+		upkeep = {
+			energy = 100
+		}
+	}
+
+	country_modifier = {
+		pop_ethic_pacifist_attraction_mult = 0.5
+		army_defense_damage_mult = 0.5
+		army_defense_health_mult = 0.5
+		army_defense_morale_mult = 0.5
+		planet_combat_width_add = -4
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -1
+	}
+}
+
 
 
 

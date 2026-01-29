@@ -37,7 +37,7 @@ included_building_sets = {
 }
 
 district_planet_modifier = {
-	job_uma_core_miner_add = 100
+	job_uma_core_miner_add = 1000
 	planet_uma_core_miner_volatile_motes_produces_add = 0.2
 	planet_uma_core_miner_rare_crystals_produces_add = 0.2
 	planet_uma_core_miner_exotic_gases_produces_add = 0.2
@@ -47,7 +47,7 @@ triggered_district_planet_modifier = {
 	potential = {
 		has_deposit = d_uma_crystal_carrot_mine_planet
 	}
-	job_uma_crystal_carrot_miner_add = 300
+	job_uma_crystal_carrot_miner_add = 1200
 }
 
 planet_modifier = {
