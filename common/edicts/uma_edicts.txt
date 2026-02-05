@@ -1,0 +1,490 @@
+#赛马娘专属特殊法案
+
+
+#举办国家德比
+uma_held_national_derby = {
+	length = 0
+	icon = GFX_uma_held_national_derby
+	resources = {
+		category = edicts
+		cost = {
+			trigger = {
+				NOT = {
+					has_country_flag = uma_race_upkeep_less
+				}
+			}
+			influence = 400
+			food = 2000
+			unity = 2000
+		}
+		cost = {
+			trigger = {
+				has_country_flag = uma_race_upkeep_less
+			}
+			influence = 200
+			food = 1000
+			unity = 1000
+		}
+	}
+
+	potential = {
+		has_technology = tech_uma_country_race_holding
+	}
+
+	allow = {
+		any_owned_planet = {
+			has_building = building_uma_top_racing_course
+		}
+		NOT = { has_modifier = uma_has_held_national_derby }
+	}
+
+	effect = {
+		custom_tooltip = uma_we_are_going_to_held_national_derby
+
+		add_modifier = {
+			modifier = uma_has_held_national_derby
+			days = 3650
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = uma_national_racing.1
+				days = 60
+				random = 20
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+
+#使用道具
+uma_use_goods_in_shop = {
+	length = 0
+	icon = GFX_uma_use_goods_in_shop
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_enter_goods_use_event
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.4
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+
+####功能法案
+#重置特殊领袖肖像
+uma_refresh_speical_leader_potrait = {
+	length = 0
+	icon = GFX_uma_refresh_speical_leader_potrait
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_refresh_speical_leader_potrait_effect
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.14
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+uma_suspendfallen_empire_mission = {
+	length = 0
+	icon = GFX_uma_suspendfallen_empire_mission
+	resources = {
+		category = edicts
+		cost = {
+			influence = 4
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+		OR = {
+			has_event_chain = uma_research_chain
+			has_event_chain = uma_building_chain
+			has_event_chain = uma_colonize_chain
+			has_event_chain = uma_ship_chain
+		}
+	}
+
+	allow = {
+		OR = {
+			has_event_chain = uma_research_chain
+			has_event_chain = uma_building_chain
+			has_event_chain = uma_colonize_chain
+			has_event_chain = uma_ship_chain
+		}
+	}
+
+	effect = {
+		custom_tooltip = uma_suspendfallen_empire_mission_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_event_chain = uma_research_chain
+				}
+				end_event_chain = uma_research_chain
+				country_event = {
+					id = uma_fallen_empire.2099
+				}
+			}
+			if = {
+				limit = {
+					has_event_chain = uma_building_chain
+				}
+				end_event_chain = uma_building_chain
+				country_event = {
+					id = uma_fallen_empire.2099
+				}
+			}
+			if = {
+				limit = {
+					has_event_chain = uma_ship_chain
+				}
+				end_event_chain = uma_ship_chain
+				country_event = {
+					id = uma_fallen_empire.2099
+				}
+			}
+			if = {
+				limit = {
+					has_event_chain = uma_colonize_chain
+				}
+				end_event_chain = uma_colonize_chain
+				country_event = {
+					id = uma_fallen_empire.2099
+				}
+			}
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+uma_open_mmu = {
+	length = 0
+	icon = GFX_mod_job_uma_racing_umamusume_produces_add
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = uma_mmu.2
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+#
+#uma_change_cheval_clothes = {
+#	length = 0
+#	resources = {
+#		category = edicts
+#		cost = {
+#			influence = 0
+#		}
+#	}
+#
+#	potential = {
+#		has_authority = auth_trainingcenter
+#	}
+#
+#	allow = {
+#		always = yes
+#	}
+#
+#	effect = {
+#		hidden_effect = {
+#			country_event = {
+#				id = uma_cheval.15
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 0
+#	}
+#
+#}
+
+
+
+uma_comm_with_fe = {
+	length = 0
+	icon = GFX_uma_suspendfallen_empire_mission
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+		years_passed >= 40
+		NOT = {
+			has_country_flag = uma_has_established_communication
+			has_communications = event_target:uma_is_fe_office
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = uma_fallen_empire.15
+			}
+			set_country_flag = uma_had_meet_with_fallenempie
+			set_country_flag = uma_has_established_communication
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+
+uma_fine_sth_in_wearhouse = {
+	length = 0
+	icon = GFX_mod_job_uma_racing_umamusume_produces_add
+	resources = {
+		category = edicts
+		cost = {
+			minor_artifacts = 22
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+		days_passed >= 1065
+	}
+
+	allow = {
+
+		check_variable = {
+			which = uma_count_specimen_counter
+			value <= 5
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			uma_random_specimen = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+uma_curren_build_research_departure = {
+	length = 0
+	icon = GFX_uma_curren_build_research_departure
+	resources = {
+		category = edicts
+		cost = {
+			energy = 500
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+
+		has_country_flag = uma_curren_build_research_departure_allow_edicts
+
+		NOT = {
+			has_country_flag = uma_curren_edict_not_available_at_all
+		}
+	}
+
+	allow = {
+
+	}
+
+	effect = {
+		hidden_effect = {
+			set_country_flag = uma_curren_edict_not_available_at_all
+			enable_special_project = {
+				name = uma_curren_build_research_dep
+				owner = Root
+				location = Root.capital_scope
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+uma_change_leader_portraits = {
+	length = 0
+	icon = GFX_uma_refresh_speical_leader_potrait
+	resources = {
+		category = edicts
+		cost = {
+			unity = 10
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_change_leader_portraits_effect
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.25
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+
+uma_auto_species_merge = {
+	length = 0
+	icon =  GFX_uma_auto_species_merge
+	resources = {
+		category = edicts
+		cost = {
+
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_auto_species_merge_effect
+		hidden_effect = {
+			country_event = {
+				id = uma_bg.30
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
+
+uma_leader_compound = {
+	length = 0
+	icon =  GFX_uma_auto_species_merge
+	resources = {
+		category = edicts
+		cost = {
+			unity = 10
+		}
+	}
+
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.999
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}

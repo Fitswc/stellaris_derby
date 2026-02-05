@@ -1,0 +1,27 @@
+#####蠢驴实在是太那啥了，现在注释掉这行就可以把原来的颜色露出来了
+
+inline_script = {
+	script = trait/subtitle/council_$COUNCIL$
+	RARITY = $RARITY$
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_trait_bg"
+		color = "trait_bg_default"
+	}
+	inline_script = trait/icon_element/rarity_$RARITY$
+	layer = {
+		icon = $ICON$
+#		color = "trait_icon_default"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	inline_script = trait/icon_element/tier_$TIER$
+}
+leader_trait_rarity = $RARITY$
+sorting_priority = @trait_sorting_priority_$RARITY$_$COUNCIL$_$TIER$
+
+

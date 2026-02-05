@@ -1,0 +1,229 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_zoom_level_1_umamusume_frame"
+		texturefile = "gfx/interface/timelines/frames/zoom_level_1_umamusume_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_zoom_level_2_umamusume_frame"
+		texturefile = "gfx/interface/timelines/frames/zoom_level_2_umamusume_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_zoom_level_3_umamusume_frame"
+		texturefile = "gfx/interface/timelines/frames/zoom_level_3_umamusume_frame.dds"
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_uma_timelines_meet_oguri"
+		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_uma_timelines_meet_oguri_nomask"
+		texturefile = "gfx/interface/timelines/uma_timeline_oguri.dds"
+		alwaystransparent = yes
+	}
+#	spriteType = {
+#		parent = "GFX_uma_timelines_meet_oguri_nomask"
+#		name = "GFX_uma_timelines_meet_oguri_zoom_1"
+#		upper_left = { x = 0 y = 0 }
+#    	lower_right = { x = 450 y = 150 }
+#	}
+	spriteType = {
+#		parent = "GFX_uma_timelines_meet_oguri_nomask"
+		name = "GFX_uma_timelines_meet_oguri_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_oguri_zoom_2.dds"
+		alwaysTransparent = yes
+#		upper_left = { x = 143 y = 40 }
+#    	lower_right = { x = 253 y = 106 }
+	}
+
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_sweepy"
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy.dds"
+		alwaystransparent = yes
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_sweepy_nomask"
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy.dds"
+		alwaystransparent = yes
+	}
+#	spriteType = {
+#		parent = "GFX_uma_timelines_meet_sweepy_nomask"
+#		name = "GFX_uma_timelines_meet_sweepy_zoom_1"
+#		upper_left = { x = 0 y = 0 }
+#   		lower_right = { x = 450 y = 150 }
+#	}
+	spriteType = {
+#		parent = "GFX_uma_timelines_meet_sweepy_nomask"
+		name = "GFX_uma_timelines_meet_sweepy_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_sweepy_zoom_2.dds"
+		alwaysTransparent = yes
+#		upper_left = { x = 143 y = 40 }
+#   	lower_right = { x = 253 y = 106 }
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_aston"
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_aston.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_aston_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_meet_aston_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_ayb"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_ayb.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_ayb_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_ayb_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_cheval"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_cheval.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_cheval_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_cheval_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_curren"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_curren.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_curren_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_curren_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_fine"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_fine.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_fine_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_fine_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_ad"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_ad.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_ad_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_ad_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_compound"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_compound.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timelines_meet_compound_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timelines_meet_compound_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+
+
+
+
+
+
+	spriteType = {
+		name = "GFX_uma_timeline_held_planet_racing"
+		texturefile = "gfx/interface/timelines/uma_timeline_held_planet_racing.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_held_planet_racing_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_held_planet_racing_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_observe_uma_pre_ftl"
+		texturefile = "gfx/interface/timelines/uma_timeline_observe_uma_pre_ftl.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_observe_uma_pre_ftl_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_observe_uma_pre_ftl_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_hold_national_racing"
+		texturefile = "gfx/interface/timelines/uma_timeline_held_planet_racing.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_hold_national_racing_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_held_planet_racing_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_accept_tg_help"
+		texturefile = "gfx/interface/timelines/uma_timeline_accept_tg_help.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_timeline_accept_tg_help_zoom_2"
+		texturefile = "gfx/interface/timelines/uma_timeline_accept_tg_help_zoom_2.dds"
+		alwaysTransparent = yes
+	}
+
+
+
+
+
+	spriteType = {
+		name = "GFX_evt_archaeology_camp_nm"
+		texturefile = "gfx/event_pictures/archaeology_camp.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_archaeology_camp_nm_zoom2"
+		texturefile = "gfx/interface/timelines/archaeology_camp_nm_zoom2.dds"
+		alwaystransparent = yes
+	}
+
+}

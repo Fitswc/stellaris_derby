@@ -1,0 +1,569 @@
+
+
+uma_ec3_create_puma_fleets = {
+	optimize_memory
+	event_target:uma_ec3_country = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_ec3_umamusume_species
+			name = random
+			skill = 5
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
+	create_fleet = {
+		name = NAME_UMA_EC3_SOC_Corvette_2
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+		effect = {
+			set_owner = event_target:uma_ec3_country
+			set_fleet_flag = uma_ec3_puma_front_fleet
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_FRONT_SQUARD_BB
+					graphical_culture = mammalian_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 60
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_FRONT_SQUARD_CV
+					graphical_culture = mammalian_01
+				}
+			}
+
+			while = {
+				count = 80
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_SOC_Corvette_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+
+			while = {
+				count = 5
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_SOC_Titan_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = uma_bs_soc
+
+		}
+	}
+
+	last_created_fleet = {
+		fleet_event = {
+			id = uma_ec_3.5
+		}
+
+		add_modifier = {
+			modifier = uma_endcrisis_ec3_fleet_speedbuff_common
+		}
+
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+			}
+			add_modifier = {
+				modifier = uma_endcrisis_ec3_fleet_buff_easy
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+			}
+			add_modifier = {
+				modifier = uma_endcrisis_ec3_fleet_buff_hard
+			}
+		}
+	}
+}
+
+
+uma_ec3_create_puma_fleets_defend = {
+	optimize_memory
+	event_target:uma_ec3_country = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_ec3_umamusume_species
+			name = random
+			skill = 5
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
+	create_fleet = {
+		name = NAME_UMA_EC3_SOC_Corvette_2_defend
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+		effect = {
+			set_owner = event_target:uma_ec3_country
+			set_fleet_flag = uma_ec3_puma_defend_fleet
+			while = {
+				count = 105
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_FRONT_SQUARD_BB
+					graphical_culture = mammalian_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 35
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_FRONT_SQUARD_CV
+					graphical_culture = mammalian_01
+				}
+			}
+
+			while = {
+				count = 35
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_SOC_Corvette_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+
+			set_fleet_stance = passive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = armageddon
+
+			last_created_fleet = {
+				#	uma_ec3_create_puma_front_behaviour = yes
+
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_fleet_buff_easy
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_fleet_buff_hard
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+uma_ec3_create_puma_starbase = {
+	optimize_memory
+	create_fleet = {
+		name = NAME_UMA_EC3_PUMA_STARBASE
+		effect = {
+			set_fleet_flag = uma_ec3_puma_starbase
+			create_ship = {
+				name = NAME_UMA_EC3_PUMA_STARBASE_SHIP
+				design = NAME_UMA_EC3_STARBASE
+				graphical_culture = mammalian_01
+			}
+		}
+	}
+}
+
+
+uma_ec3_create_puma_soc_at_capitial = {
+	optimize_memory
+	create_fleet = {
+		settings = {
+			is_boss = yes
+			ai_ignore_strength = yes
+		}
+		name = NAME_UMA_EC3_SOC_BASE
+		effect = {
+			set_owner = event_target:uma_ec3_country
+			create_ship = {
+				name = NAME_UMA_EC3_SOC_BASE
+				design = "NAME_UMA_EC3_STARBASE"
+				effect = {
+					set_ship_flag = uma_ec3_soc_fleet
+				}
+			}
+			set_location = {
+				target = Prev
+				distance = 6
+				angle = random
+			}
+
+			save_global_event_target_as = uma_ec3_soc_fleet
+			set_fleet_flag = uma_ec3_soc_fleet
+
+			#达到目标自动摧毁
+			set_event_locked = yes
+
+
+			queue_actions = {
+				find_closest_planet = {
+					trigger = {
+						id = uma_ec_3.1.e1
+
+						is_star = yes
+					}
+
+					found_planet = {
+						orbit_planet = this
+					}
+				}
+			}
+		}
+	}
+}
+
+uma_ec3_puma_create_species_and_country = {
+	optimize_memory
+	create_species = {
+		name = "NAME_goldship_species"
+		class = umamusume
+		portrait = umamusume
+		traits = random
+		immortal = yes
+		name_list = UMAname
+		effect = { save_global_event_target_as = uma_ec3_umamusume_species }
+	}
+
+	create_country = {
+		name = "NAME_UMA_EC3_country"
+		type = uma_ec3_empire
+		species = event_target:uma_ec3_umamusume_species
+		name_list = "UMAname"
+		flag = {
+			icon = {
+				category = "uiu_flags"
+				file = "uiu_flags02.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "circle.dds"
+			}
+			colors = {
+				"indigo"
+				"blue"
+				"null"
+				"null"
+			}
+		}
+
+		effect = {
+
+			set_country_flag = uma_ec3_country
+			save_global_event_target_as = uma_ec3_country
+
+			set_graphical_culture = mammalian_01
+			create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Marauder_Starbase" }
+			add_ship_design = last_created_design
+		}
+	}
+}
+
+
+create_uma_ec3_crisis_platform = {
+	optimize_memory
+	if = {
+		limit = {
+			owner = { is_country_type = uma_ec3_empire}
+		}
+		create_ship = {
+			name = random
+			design = "NAME_UMA_EC3_ION_CANNON"
+			graphical_culture = mammalian_01
+		}
+	}
+}
+
+uma_endcrisis_ec2_spawn_defend_platform = {
+	optimize_memory
+	create_ship = {
+		name = random
+		design = "NAME_UMA_EC2_ION_CANNON"
+		graphical_culture = owner
+	}
+}
+
+
+uma_endcrisis_ec2_spawn_fleet_attack = {
+	event_target:uma_fallen_empire = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_fallen_empire_species
+			name = random
+			skill = 5
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
+	create_fleet = {
+#		name = NAME_UMA_EC2_fleet
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+		effect = {
+			set_owner = event_target:uma_fallen_empire
+			set_fleet_flag = uma_fallen_empire_front_fleet
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC2_BB
+					graphical_culture = mammalian_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 80
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC2_CV
+					graphical_culture = mammalian_01
+				}
+			}
+
+			random_list = {
+				5 = {
+					while = {
+						count = 1
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC2_Titan
+							graphical_culture = mammalian_01
+						}
+					}
+				}
+
+				6 = {
+					while = {
+						count = 2
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC2_CV
+							graphical_culture = mammalian_01
+						}
+					}
+				}
+			}
+
+
+
+
+
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = armageddon
+
+		}
+	}
+
+	last_created_fleet = {
+		if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+			}
+			add_modifier = { modifier = uma_endcrisis_ec2_fleet_buff_easy }
+		}
+		else_if	 = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+			}
+			add_modifier = {
+				modifier = uma_endcrisis_ec2_fleet_buff_hard
+			}
+		}
+		set_fleet_flag = uma_endcrisis_ec2_attack_fleet
+		fleet_event = {
+			id = uma_ec_2.2
+			days = 1
+		}
+	}
+}
+
+uma_ec1_create_def_fleets = {
+	optimize_memory
+	event_target:uma_ec1_country = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_ec1_umamusume_species
+			name = random
+			skill = 10
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+
+
+	create_fleet = {
+		 settings = {
+            can_upgrade = no
+            uses_naval_capacity = no
+            can_change_composition = no
+            can_disband = no
+            spawn_debris = no
+            ai_ignore_strength = yes
+        }
+		effect = {
+			set_owner = event_target:uma_ec1_country
+			set_fleet_flag = uma_ec1_def_fleet
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC1_Defend_SQUARD_BB
+					graphical_culture = humanoid_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 70
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC1_FRONT_SQUARD_CV
+					graphical_culture = humanoid_01
+				}
+			}
+
+			set_location = {
+				target = Prev
+				distance = 5
+				angle = random
+			}
+
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = selective
+
+		}
+	}
+
+	last_created_fleet = {
+
+	}
+}
+
+
+uma_ec1_create_country_and_species = {
+	optimize_memory
+	create_species = {
+		name = "NAME_ec1_threegodness_species"
+		class = umamusume
+		portrait = umamusume
+		traits = random
+		immortal = yes
+		name_list = UMAname
+		effect = { save_global_event_target_as = uma_ec1_umamusume_species }
+	}
+	create_country = {
+		name = "NAME_UMA_EC1_country"
+		type = uma_ec1_empire
+		species = event_target:uma_ec1_umamusume_species
+		name_list = "UMAname"
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "flag_BG_39.dds"
+			}
+			colors = {
+				"blue"
+				"moss_green"
+				"null"
+				"null"
+			}
+		}
+
+		effect = {
+			set_country_flag = uma_ec1_country
+			save_global_event_target_as = uma_ec1_country
+
+			create_ship_design = { design = "NAME_UMA_EC1_STARBASE" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Marauder_Starbase" }
+
+
+			set_graphical_culture = humanoid_01
+		}
+	}
+}

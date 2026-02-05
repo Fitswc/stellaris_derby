@@ -1,0 +1,169 @@
+﻿l_simp_chinese:
+##################
+# UMA:0 "赛马娘"
+# umamusume:0 "赛马娘"
+# name_list_UMAname:0 "赛马娘"
+# umamusume_insult_01:0 "马批"
+# umamusume_insult_plural_01:0 "马批"
+# umamusume_insult_02:0 "奇蹄目"
+# umamusume_insult_plural_02:0 "奇蹄目"
+# umamusume_compliment_01:0 "天马"
+# umamusume_compliment_plural_01:0 "天马"
+# umamusume_compliment_02:0 "飞黄"
+# umamusume_compliment_plural_02:0 "飞黄"
+
+
+FALL_CIT_PRO: "城市守卫军团"
+uma_fall_ship: "Umamusume Fallen Empire "
+######通信办公室#####
+uma_fallen_empire_communication_office:0 "遗落特雷森通信办公室"
+#### By F
+
+######堕落帝国######
+uma_fallen_empire_enhancement_modifier:0 "日蚀的遗产"
+uma_fallen_empire_enhancement_modifier_desc:0 "作为伟大的领袖，日蚀给遗落特雷森带来了很多，但也带走了很多。不过，抛开后来帝国经历的灾难，她确实为我们带来了一段黄金时期。"
+gov_uma_fallen_empire:0 "帝国理事会"
+gov_uma_fallen_empire_desc:0 "作为遗落特雷森的最高行政机构，帝国理事会和其领袖——理事长，掌控着整个国家。"
+NAME_uma_fallen_empire_species_name:0 "遗落马娘"
+NAME_uma_fallen_empire_species_plural:0 "遗落马娘们"
+NAME_uma_fallen_empire_name:0 "遗落特雷森"
+auth_uma_fallen_empire:0 "马娘遗落帝国"
+auth_uma_fallen_empire_desc:0 "因为未知的原因，这个马娘国家陷入了长期的停滞。但她们依旧拥有着非凡的知识。"
+#UMAMUSUME_FALLEN_EMPIRE:0 ""
+PRESCRIPTED_ruler_title_uma_fallen_empire_leader:0 "帝国理事长"
+PRESCRIPTED_ruler_title_uma_fallen_empire_leader_female:0 "帝国理事长"
+personality_uma_fallen_empire_personality:0 "马娘守望者"
+personality_uma_fallen_empire_personality_desc:0 "这个马娘文明曾经有段光辉的历史，但因为某些原因，国家破碎。于是它选择就此封闭自己，并孤独地守望着这个银河的起起落落。不过，她们似乎对马娘文明有着特别的兴趣..."
+personality_uma_awaken_fallen_empire_personality:0 "马娘护卫者"
+personality_uma_awaken_fallen_empire_personality_desc:0 "为了保护年轻的马娘种群，这个帝国重新从过去的阴影中走出，再次为了全体马娘，全体银河系的生灵而战。"
+NAME_uma_fallen_empire_secondary_guard_station:0 "马娘护卫者级"
+uma_fallen_empire_governor:0 "帝国总督"
+
+###外交对话###
+01_UMA_FALLEN_NEUTRAL:0 "关！注！我们会持续且密切地观察着你们的成长。在你们之前诞生的数代马娘文明里，有的成为一方霸主；也有强行打开对方市场，倾销产品的寰宇企业。但她们大多只是转瞬即逝，生前是多璀璨，死后也亮堂不了多少，希望你们不要步她们后尘。在这群星时代，活下去才谈得上后续发展。"
+02_UMA_FALLEN_NEUTRAL:0 "有！趣！你们的娱乐产业......相当令人感兴趣。我们还未想过将高人气的赛马娘们的形象做成小玩偶这样的方式。我们如何表现赛马娘的高人气与高实力的？我们只是想着：‘为她竖立一座威严无比的雕像！’雕像会很庄严地摆在我们的重要场所，供人瞻仰，仅此而已。"
+03_UMA_FALLEN_NEUTRAL:0 "坦！白！细心看下去，总觉得我们是相当亲近的，理应如此。看着你们的时候就像照着镜子，回忆着年轻时候的自己一样，尽管我们当时所遭遇、面对的境况都不太相同，但大抵上还是相似的。这份回忆弥足珍贵。"
+04_UMA_FALLEN_NEUTRAL:0 "努！力！对于马娘来说，想要在这个宇宙里生存是很困难的。希望你们好好加油，再次让马娘的脚步遍及银河！"
+05_UMA_FALLEN_NEUTRAL:0 "感！叹！在这么多年之后，又见到了你们这样的马娘文明...你们要好好的，不要步了我们的后尘..."
+01_UMA_FALLEN_PATRONIZING:0 "惊！讶！瞧瞧，这不是[Root.GetName]的那群小家伙们吗？怎么，这会儿来找我们是有什么事情想要谈的吗？不管是你们在某处星域碰上的稀奇事也好，还是你们从什么遗迹里挖出了什么了不得的东西，都可以讲给我们听。我们乐意做你们的听众。"
+02_UMA_FALLEN_PATRONIZING:0 "疑！惑！发生了什么事儿吗？是我们赠送给你们的节日礼物出现了什么差池吗？还是抵达的数目出现了遗漏？没有？好吧.....这就好，我们可不想见着你们寒了心的小脸儿。那可会让我们难受的不得了！"
+03_UMA_FALLEN_PATRONIZING:0 "注！意！如果你们缺少建筑工人，我们或许可以派一批工人到你们那儿去，若是你们有什么需求，尽管同她们提就是了。不要怕我们的工人会觉得复杂难以理解，她们可是整个银河系里最优秀的工匠，现在我暂时将她们交到你们的手里。开心吗？开心的话，就回我们一句吧。"
+04_UMA_FALLEN_PATRONIZING:0 "疑！问！怎么了，小马驹们？怎么摆着一副闷闷不乐的样子？是吗，你们邻近的文明经常骚扰你们，惹得你们厌烦又无可奈何了吗？听着......我们一会儿就会派出外交使团到她们的首都去与她们交涉，若是她们不愿停止自己的行为，又不愿与你们赔礼道歉，那么它们知道后果的......"
+05_UMA_FALLEN_PATRONIZING:0 "关！心！我们的经典系列赛也正进行着呢，你们这次来的选手相当多呀......不过我们的选手也不是吃干饭的，小心着点吧。期待你们在这次系列赛中能取得优异的成绩，也让我们看看你们的潜力究竟能抵达什么程度。"
+01_UMA_FALLEN_DISMISSIVE:0 "怎么？你们特意来摆着张臭脸是要做什么？我们愿意在你们落后制度统治下的落后文明与落后星球上修建我们的产物，你们只需要低下头颅，对着我们感恩戴德就足够了！"
+02_UMA_FALLEN_DISMISSIVE:0 "不如下次你们就别送选手来了吧？你们在我们这儿进行的经典系列赛成绩都不怎么样呀......别什么时候把你们的公民自信心都输掉了。"
+01_UMA_FALLEN_ANGRY:0 "你们还来找我们是想要做什么？我们已经没有任何瓜葛，以前援助你们的物资与知识权当我们喂给了野生的利维坦算了！现在拿着你们从我们这儿赢得的奖杯离开！"
+02_UMA_FALLEN_ANGRY:0 "我们将你们当作亲生的骨肉，无私分享着我们的经验与知识，但你们却残忍对待我们的感情。试问，有哪位母亲抚养自己的孩子是为了得到回报的？"
+03_UMA_FALLEN_ANGRY:0 "三女神若是在场，定会唾弃你们的行径。哪怕你们也是祂们的造物。"
+01_UMA_FALLEN_WAR_GREEING:0 "马娘们的奔跑无非两种：要么以全力奔向赛道的终点；要么以向死而生之志气奔向敌阵！"
+02_UMA_FALLEN_WAR_GREEING:0 "请让我们见识一下，你们新生代马娘是否有能够取代我们的能力......"
+03_UMA_FALLEN_WAR_GREEING:0 "虽然我们厌恶手足相残的行径，但面对陷入歧途且拒绝返程的你们，我们并不介意清理门户。即便三女神不会希望这种事情发生......"
+
+###GUI###
+uma_only_one_special_visit:0 "每个特殊访问§Y只能进行一次§!"
+uma_has_special_leader:0 "必须要§Y拥有对应的特殊领袖§!才能进行访问"
+uma_main_visit_hint:0 "我们将对堕落帝国进行§Y一般访问§!，以增进我们对她们的了解。请注意，每次访问结束后，都有§Y5年§!的冷却期，冷却结束后，方可进行下次访问。"
+uma_sp_leader_visit_hint:0 "我们将让一位马娘领袖带队，进行§Y特别访问§!！"
+uma_all_fallen_visit_has_ended:0 "我们已经完成了所有的一般访问！"
+uma_fe_mission_hint:0 "我们将接取一个来自堕落帝国的§Y任务§!"
+uma_fe_no_more_mission:0 "在完成这个任务（或者任务失败）之前，我们不能接取新的任务！"
+uma_fe_no_mission_cooldown:0 "在每次领取任务后的§Y5年§!内不能领取新的任务！"
+uma_fe_no_same_window:0 "不能重复打开窗口！"
+uma_fe_resourece_trading_cooldown:0 "正在资源交换冷却期！"
+uma_must_be_wait_for_cooldown:0 "正在处于参观冷却期"
+
+###摧毁任务
+NAME_uma_mission_fleet:0 "不明舰队"
+NAME_uma_mission_ship:0 "不明舰船"
+NAME_Uma_Fallen_Empire_Amoeba_MKII:0 "大型太空变形虫"
+NAME_uma_mission_country:0 "不明势力"
+uma_fallen_mission_amoeba:0 "大型太空变形虫"
+
+#趋势
+uma_fallen_empire_connection_office_hint:0 "成立堕落通信署"
+
+#Mission System
+
+uma_fallen_empire.1112.title:0 "Mission Complete"
+uma_fallen_empire.1112.desc:0 "来自遗落特雷森的科研委托已完成"
+uma_fallen_empire.1112.a:0 "好的"
+
+uma_fallen_empire.1122.title:0 "Mission Complete"
+uma_fallen_empire.1122.desc:0 "来自遗落特雷森的建筑委托已完成"
+uma_fallen_empire.1122.a:0 "好的"
+
+uma_fallen_empire.1132.title:0 "Mission Complete"
+uma_fallen_empire.1132.desc:0 "来自遗落特雷森的舰船建造委托已完成"
+uma_fallen_empire.1132.a:0 "好的"
+
+uma_fallen_empire.1142.title:0 "Mission Complete"
+uma_fallen_empire.1142.desc:0 "来自遗落特雷森的殖民委托已完成"
+uma_fallen_empire.1142.a:0 "好的"
+
+uma_fallen_empire.1152.title:0 "Mission Complete"
+uma_fallen_empire.1152.desc:0 "来自遗落特雷森的委托已完成"
+uma_fallen_empire.1152.a:0 "好的"
+uma_fallen_empire.2099.desc: "不想完成我们给的任务吗？\n好吧,我们也不强求你们，小马驹"
+uma_fallen_empire.2099.a: "好的"
+
+
+uma_fallen_empire.mytitle: "[This.GetRulerName]"
+uma_fallen_empire_goodday: "祝你们看得愉快"
+uma_fallen_empire.2078.desc: "胡萝卜！新鲜美味的胡萝卜！"
+uma_fallen_empire.2078.a: "什么情况？串线了？"
+uma_fallen_empire.2079.desc: "这是一条通告，所有与遗落特雷森建立过联系的文明均可收到。"
+uma_fallen_empire.2079.a: "怪事，她们不是不与其他文明接触吗？去问问。"
+uma_fallen_empire.2080.desc: "呀，是可爱的后辈们啊，有什么事吗？"
+uma_fallen_empire.2080.a: "我们之前收到了兜售胡萝卜的广播……"
+uma_fallen_empire.2081.desc: "怎么？是来购买胡萝卜的吗？1000单位能量币换300单位胡萝卜。"
+uma_fallen_empire.2081.a: "什么？快给我来一单！" #你这___保熟吗
+uma_fallen_empire.2081.b: "你这胡萝卜也太贵了。"
+uma_fallen_empire.2082.desc: "虽然看起来很贵，但这可是我们少数传承下来的科技——超级萝卜！§Y口感极佳§!的同时§Y富含营养§!，具有改善疲劳，提振精神等等功能。"
+uma_fallen_empire.2082.a: "……为什么你们突然开始兜售胡萝卜了？"
+uma_fallen_empire.2083.desc: "这不是能量短缺嘛，而且我们的产品很受欢迎，诶，要不这样，我把这些作物的培育方法提供给你们，你们提供一些能量币就好了。"
+uma_fallen_empire.2083.a: "成交"
+uma_fallen_empire.2083.b: "我们还是习惯吃自己培育的胡萝卜……"
+uma_fallen_empire.2083_b.bey: "那好吧...."
+uma_fallen_empire.2081_a.thank: "谢谢惠顾！"
+uma_fallen_empire.2084.desc: "可爱的后辈们，咱有一事……"
+uma_fallen_empire.2084.a: "怎么了？"
+uma_fallen_empire.2085.desc: "理事会不是想多了解了解你们吗？有没有什么§Y有趣的§!,§Y文化产品§!让我们观摩观摩？放心，§Y报酬肯定少不了§!。"
+uma_fallen_empire.2085.a: "Koi Derby2"
+uma_fallen_empire.2085.b: "§YUmaPara Pyoi!§!" #????
+uma_fallen_empire.2085.c: "§R闪耀！优俊少女！§!"
+uma_fallen_empire.2086.desc: "这是最近由爱丽数码开发的赛马娘恋爱模拟+养成游戏，这款游戏以赛马娘为视点，更着重于描述赛马娘们的日常生活。\n想必对于赛跑文化没落的遗落特雷森来说，这一定是一款新奇的游戏吧。"
+uma_fallen_empire.2086.a: "就是它了！"
+uma_fallen_empire.2086.b: "我再想想...."
+uma_fallen_empire.2087.desc: "这是一款高人气的……第一人称射击游戏，尽管在星际时代，这类内容已经不再是难登大雅之堂的作品，但作为外交礼物使用还是有些太过先进了。\n§Y你说是吧....§!"
+uma_fallen_empire.2087.a: "就是这种效果！"
+uma_fallen_empire.2088.desc: "这是一款有两百多年历史的，古早的数值类赛跑养成游戏。尽管它在当年掀起了风潮，但其风评早已经被策划消耗殆尽，不管两百年间如何更换策划，玩家对策划的风评都始终如一的烂。\n没人知道为什么这个游戏能坚持两百年，可能是它精致的美术，动人的剧情或是其他什么，还在玩这个游戏的大概都是当时那些狂热粉丝的后代……吧？\n不管怎么说，它都落后于时代太久了，这显然不是什么好选择，确定要选它吗？"
+uma_fallen_empire.2088.a: "§R我现在就要玩《闪耀！优俊少女》！§!"
+uma_fallen_empire.2089.desc: "这可真是个好游戏啊，我们先去探索一下啦，对了，这是从数据库里翻出来的电影，感觉还挺不错的，就送给你们作为交换吧。"
+uma_fallen_empire.2089.a: "这是……"
+uma_fallen_empire.2090.desc: "这……可爱的后辈居然在这方面如此开放，真是出人意料啊，咳咳，不管怎么说，我们会好好品鉴的。对了，这是从数据库里翻出来的电影，感觉还挺不错的，就送给你们作为交换吧。"
+uma_fallen_empire.2090.a: "这是……"
+
+
+
+uma_fallen_empire.2092.title: "TopGun"
+uma_fallen_empire.2092.desc: "“《壮志凌云》\n一部描述古老飞行器：§Y飞机§!的电影。\n虽然对我们而言，飞机还能在博物馆里看见。\n但是对遗落特雷森而言，可能是非常久远的回忆了。”"
+uma_fallen_empire.2091.a: "哇哦!"
+uma_fallen_empire.2093.title: "Duckweed"
+uma_fallen_empire.2093.desc: "“《浮萍》\n一部改编自真实历史的灾难片。\n从§R遗落特雷森的灾难§!中一名普通马娘的视角中讲述了她离开家园，逃向宇宙的过程。\n这部影片满载着马文艺术色彩，但似乎并不适合公映。”"
+uma_fallen_empire.2093.a: "喔....."
+uma_fallen_empire.2091.desc: "这个游戏看起来很有意思，不知道大家会不会喜欢呢？对了，这是从数据库里翻出来的电影，感觉还挺不错的，就送给你们作为交换吧。"
+uma_fallen_empire.2094.title: "Secret Variables"
+uma_fallen_empire.2094.desc: "“《秘密变量》\n一部改编自真实历史的人物传记，描述了名为“秘密变量”的赛马的传奇生涯。\n这部影片有相当的年代了，那时遗落特雷森还活力满满，刚要向着太空进发。\n故事非常精彩，是能引起马娘们共鸣的佳作。”"
+
+
+uma_fallen_empire.238.title: "交流结束"
+uma_fallen_empire.238.desc: "五年时间一晃而过，来自遗落特雷森的马娘们结束了学习，即将返回她们的家园，重建往日的辉煌，当然，也有一些马娘打算留下来，更为深入地学习。\n其中正包含了夜色誓约，这位遗落特雷森新生代的结晶，决定在这继续她的征途，实际上，她在五年学习期间展现出的能力已与一位优秀总督无异，但她仍然坚持留在特雷森。"
+uma_fallen_empire.238.tooltip: "夜色誓约小姐将留在中央特雷森"
+uma_fallen_empire.238.a: "非常欢迎！"
+uma_fallen_empire.238.b: "不行，她应该回去建设自己的家乡"
+
+##DEEP
+uma_governor_trait_sp_deep: "暗夜新星"
+uma_governor_trait_sp_deep_desc: ""
+uma_governor_trait_sp_deep_conlic: "$uma_governor_trait_sp_deep$"
+uma_governor_trait_sp_deep_conlic_desc: ""

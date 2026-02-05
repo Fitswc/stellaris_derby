@@ -1,0 +1,780 @@
+###赛马娘mod专属的国家修正
+
+###比赛系列
+
+
+#已举办闪光系列比赛
+uma_has_held_national_derby = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+}
+
+#闪光系列赛举办
+uma_national_derby_held = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+
+	planet_stability_add = 5
+	#country_unity_produces_mult = 0.15
+	planet_jobs_produces_mult = 0.15
+	planet_uma_racing_umamusume_produces_mult = 0.45
+}
+
+#星球比赛制霸者
+uma_planet_hero_in_country = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+
+	country_unity_produces_mult = 0.05
+	planet_uma_racing_umamusume_produces_mult = 0.1
+}
+
+#两冠赛马娘
+uma_double_crown_racing_umamusume = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+
+	country_unity_produces_mult = 0.05
+	planet_uma_racing_umamusume_produces_mult = 0.15
+}
+
+#三冠赛马娘
+uma_triple_crown_racing_umamusume = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+
+	country_unity_produces_mult = 0.1
+	planet_uma_racing_umamusume_produces_mult = 0.20
+	planet_jobs_produces_mult = 0.05
+}
+
+#无败三冠赛马娘
+uma_no_fail_triple_crown_racing_umamusume = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+
+	country_unity_produces_mult = 0.15
+	planet_uma_racing_umamusume_produces_mult = 0.25
+	planet_jobs_produces_mult = 0.1
+}
+
+#古马制霸赛马娘
+uma_six_crown_racing_umamusume = {
+	icon = "gfx/interface/icons/modifiers/mod_resource_unity_mult.dds"
+
+	country_unity_produces_mult = 0.25
+	planet_uma_racing_umamusume_produces_mult = 0.5
+	planet_jobs_produces_mult = 0.15
+}
+
+
+
+####小型事件修正
+#加大甜品供应
+uma_enough_sweets = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
+
+	logistic_growth_mult = 0.15
+	pop_happiness = 0.2
+	country_energy_produces_mult = 0.25
+}
+
+#鼓励节食
+uma_encourage_reducing_food_consumption = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
+
+
+	planet_pops_consumer_goods_upkeep_mult = -0.1
+	logistic_growth_mult = -0.05
+	pop_happiness = -0.1
+}
+
+#有点发胖
+uma_become_too_fat = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
+
+	planet_jobs_produces_mult = -0.05
+	pop_happiness = -0.15
+	logistic_growth_mult = -0.1
+}
+
+#合理营养供给
+uma_scientific_nutrition_supply = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
+
+	pop_happiness = 0.1
+	logistic_growth_mult = 0.1
+}
+
+#补助自助餐厅
+uma_subsidy_restaurant = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
+
+	pop_happiness = 0.05
+#	logistic_growth_mult = 0.05
+	country_energy_produces_mult = -0.05
+}
+
+###商店货物动态修正（顺序：智根力耐速）
+
+#基础修正，需要乘以一个已经使用的计数
+
+#智力修正（基础）
+uma_intelligence_goods_basic_modifier = {
+	planet_jobs_physics_research_produces_mult = 0.01
+	planet_jobs_society_research_produces_mult = 0.01
+	planet_jobs_engineering_research_produces_mult = 0.01
+	species_leader_exp_gain = 0.01
+}
+#智力修正（每10层奖励）
+uma_intelligence_goods_special_modifier = {
+	all_technology_research_speed = 0.05
+}
+
+#根性修正（基础）
+uma_kenshi_goods_basic_modifier = {
+	pop_housing_usage_mult = -0.005
+	logistic_growth_mult = 0.005
+	army_health = 0.02
+	shipclass_military_hull_mult = 0.01
+}
+#根性修正（每10层奖励）
+uma_kenshi_goods_special_modifier = {
+	shipclass_military_hull_mult = 0.1
+}
+
+#力量修正（基础）
+uma_power_goods_basic_modifier = {
+	planet_jobs_food_produces_mult = 0.01
+	planet_jobs_minerals_produces_mult = 0.01
+	army_damage_mult = 0.02
+	ship_weapon_damage = 0.01
+}
+#力量修正（每10层奖励）
+uma_power_goods_special_modifier = {
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_jobs_consumer_goods_produces_mult = 0.1
+}
+
+#耐性修正（基础）
+uma_endurance_goods_basic_modifier = {
+	ship_armor_mult = 0.015
+	ship_shield_mult = 0.015
+	army_health = 0.02
+}
+#耐性修正（每10层奖励）
+uma_endurance_goods_special_modifier = {
+	ship_hull_regen_add_perc = 1 #每日恢复1%(这里已经是百分数了)
+	ship_shield_regen_add_perc = 1
+}
+
+#速度修正（基础）
+uma_speed_goods_basic_modifier = {
+	ship_interstellar_speed_mult = 0.01
+	ship_fire_rate_mult = 0.01
+	planet_jobs_produces_mult = 0.0025
+}
+#速度修正（每10层奖励）
+uma_speed_goods_special_modifier = {
+	planet_jobs_produces_mult = 0.025
+}
+
+###飞升有关buff
+
+##兴趣与领域
+uma_terrirory_knowledge_hobby = {
+	#icon = "gfx/interface/icons/modifiers/mod_pop_consumer_goods_mult.dds"
+	planet_jobs_produces_mult = 0.05
+	pop_happiness = 0.05	
+}
+
+#梦境研究
+uma_terrirory_knowledge_dream = {
+	pop_happiness = 0.05
+	all_technology_research_speed = 0.05
+	country_base_energy_produces_add = -10
+}
+
+#遏止的梦境
+uma_terrirory_dream_stopped = {
+	pop_happiness = 0.05
+}
+
+#肆无忌惮的梦
+uma_terrirory_dream_unstopped = {
+	planet_stability_add = -5
+	pop_happiness = -0.05
+}
+
+#检测进行中
+uma_kenshi_racing_umamusume_test = {
+	planet_uma_racing_umamusume_upkeep_mult = 0.1
+	planet_uma_racing_umamusume_produces_mult = 0.2
+}
+
+#被质疑的冠军
+uma_kenshi_champion_doubted = {
+	planet_uma_racing_umamusume_produces_mult = -0.1
+}
+
+#不受控制的力量
+uma_kenshi_uncontrolled_power = {
+	planet_stability_add = -5
+	pop_happiness = -0.05
+	planet_jobs_minerals_produces_mult = 0.1
+}
+
+#力量控制训练
+uma_kenshi_power_adaption_training = {
+	country_base_energy_produces_add = -10
+
+}
+
+uma_ap2_factor_power_without_countrol = {
+	planet_buildings_energy_cost_mult = 0.1
+	army_damage_mult = 0.05
+	ship_weapon_damage = 0.05
+}
+
+uma_ap2_factor_power_countroled = {
+	country_base_energy_produces_add = 100
+	army_damage_mult = 0.05
+	ship_weapon_damage = 0.05
+}
+
+#受到控制的力量
+uma_kenshi_power_adaption_training_good = {
+	planet_jobs_minerals_produces_mult = 0.05
+}
+
+#封禁媒体
+uma_kenshi_ban_the_media = {
+	pop_happiness = -0.05
+}
+
+#对因子改造的恐惧
+uma_kenshi_fear_of_this = {
+	planet_stability_add = -5
+	pop_happiness = -0.05
+	planet_jobs_minerals_produces_mult = -0.05
+}
+
+###特殊领袖有关buff
+
+###小草事件链
+##小草的因子库
+uma_grass_wonder_kenshi_library = {
+	planet_jobs_produces_mult = 0.25
+	logistic_growth_mult = 0.1
+	all_technology_research_speed = 0.2
+	ship_weapon_damage = 0.2
+	ship_fire_rate_mult = 0.1
+	ship_interstellar_speed_mult = 0.1
+	ship_weapon_range_mult = 0.1
+	country_society_research_produces_mult = 0.2
+}
+
+###数码事件链
+##Koi Derby
+uma_raze_in_mystery_galgame = {
+	pop_happiness = 0.05
+	logistic_growth_mult = 0.05
+}
+
+##续作！
+uma_koi_derby_ii = {
+	pop_happiness = 0.05
+	planet_uma_racing_umamusume_produces_mult = 0.2
+	country_unity_produces_mult = 0.1
+}
+
+##选拔赛成功举行
+uma_selecting_race_successfully_hold = {
+	planet_uma_racing_umamusume_produces_mult = 0.1
+}
+
+##受到监管的KD
+uma_controlled_kd = {
+	planet_uma_racing_umamusume_upkeep_mult = -0.1
+	pop_happiness = 0.05
+	logistic_growth_mult = 0.05
+}
+
+##我们的数码主任
+uma_agnes_digital_in_toresen_school = {
+	planet_uma_racing_umamusume_produces_mult = 0.3
+	planet_uma_racing_umamusume_upkeep_mult = 0.1
+	pop_happiness = 0.1
+	logistic_growth_mult = 0.05
+}
+
+####内恰事件链
+#内恰小姐的知识
+##穿梭于多个世界的经历，使得内恰懂得很多我们所不了解的知识...
+uma_nice_natures_knowledge = {
+	planet_jobs_produces_mult = 0.033
+	pop_happiness = 0.033
+	logistic_growth_mult = 0.033
+	ship_weapon_damage = 0.033
+	ship_fire_rate_mult = 0.033
+	ship_interstellar_speed_mult = 0.033
+	ship_weapon_range_mult = 0.033
+}
+
+uma_trainer_silent_suzuka = {
+	planet_uma_racing_umamusume_produces_mult = 0.1
+}
+
+uma_trainer_silent_suzuka_dream_break = {
+	planet_uma_racing_umamusume_produces_mult = 0.01
+}
+
+########################
+##########商城##########
+########################
+####绿帽商城专属加强buff
+uma_shopping_center_protection = {
+	#ship_armor_mult = 20
+	#ship_shield_mult = 20
+	#ship_shield_regen_add_perc = 2
+	#ship_hull_regen_add_perc = 2
+	#ship_weapon_damage = 20
+	#ship_fire_rate_mult = 0.5
+	ship_armor_mult = 1
+	ship_shield_mult = 1
+	ship_shield_regen_add_perc = 0.01
+	ship_hull_regen_add_perc = 0.01
+	ship_weapon_damage = 1
+	ship_fire_rate_mult = 0.02
+}
+
+###抽卡冷却
+uma_gacha_cool_down = {
+	hide_from_country_list = yes
+}
+
+#####
+###开运道具
+uma_lucky_items = {
+	planet_jobs_produces_mult = 0.05
+	logistic_growth_mult = 0.02
+	pop_happiness = 0.05
+}
+
+###赛事运营指南
+uma_racing_holding_tips = {
+	planet_uma_racing_umamusume_produces_mult = 0.2
+	planet_uma_trainer_produces_mult = 0.2
+}
+
+###古代百科全书
+# uma_old_encyclopaedia = {
+	
+# }
+
+###舰队战术手册
+uma_fleet_battle_tips = {
+	ship_weapon_damage = 0.2
+	ship_weapon_range_mult = 0.2
+}
+
+###高能能量块
+uma_high_power_energy_block = {
+	country_energy_produces_mult = 0.2
+}
+
+###奇迹工业设备
+uma_miracle_industry_machine = {
+	country_alloys_produces_mult = 0.15
+	country_consumer_goods_produces_mult = 0.15
+}
+
+###优良胡萝卜种
+uma_ancient_carrot_seed = {
+	planet_jobs_food_produces_mult = 0.2
+}
+
+###万花筒内的世界
+uma_different_dimention_observer = {
+	country_society_research_produces_mult = 0.1
+	country_engineering_research_produces_mult = 0.1
+	country_physics_research_produces_mult = 0.1
+}
+
+###马娘观察日记
+uma_umamusume_diary = {
+	logistic_growth_mult = 0.06
+	pop_happiness = 0.05
+	planet_stability_add = 3
+	planet_crime_add = -5
+}
+
+uma_possible_future_one = {
+	planet_jobs_produces_mult = 0.2
+}
+
+uma_possible_future_two = {
+	planet_jobs_produces_mult = 0.3
+	planet_crime_add = 15
+	pop_happiness = -0.1
+	planet_stability_add = -10
+}
+
+uma_possible_future_three = {
+	planet_jobs_produces_mult = 0.25
+	planet_stability_add = -10
+}
+
+uma_possible_future_four = {
+	planet_jobs_produces_mult = 0.2
+}
+
+uma_possible_future_five = {
+	planet_stability_add = -12
+	pop_happiness = -0.1
+	planet_crime_add = 10
+}
+
+uma_possible_future_six = {
+	planet_jobs_produces_mult = 0.12
+	planet_stability_add = -10
+}
+
+uma_possible_future_seven = {
+	planet_stability_add = -15
+	pop_ethic_authoritarian_attraction_mult = 0.5
+}
+
+
+uma_candle_off_debuff = {
+	planet_jobs_consumer_goods_produces_mult = -0.3
+	planet_jobs_energy_produces_mult = -0.3
+	starbase_shipyard_build_speed_mult = 0.2
+	planet_stability_add = -0.1
+}
+
+uma_candle_off_debuff_a = {
+	ship_hull_mult = 0.9
+	ship_fire_rate_mult = 0.8
+	ship_weapon_damage = 0.8
+	ship_hull_regen_add_perc = 0.8
+	ship_armor_regen_add_perc = 0.8
+}
+
+uma_candle_off_debuff_b = {
+	starbase_shipyard_build_speed_mult = 0.4
+	starbase_shipyard_build_cost_mult = -0.3
+	army_damage_mult = 0.65
+	country_war_exhaustion_mult = -0.4
+	country_naval_cap_mult = 0.5
+}
+
+
+uma_big_bug = {
+	pop_happiness = 0.06
+}
+
+uma_fly_tech = {
+	starbase_shipyard_build_speed_mult = 0.3
+	planet_building_build_speed_mult = 0.3
+
+}
+
+uma_colony_helping_association = {
+	planet_colony_development_speed_mult = 0.25
+	custom_tooltip = uma_colony_helping_association_tooltip
+}
+
+uma_talen_engineer = {
+	country_engineering_tech_research_speed = 0.1
+	planet_building_build_speed_mult = 0.09
+	starbase_shipyard_build_speed_mult = 0.09
+	ship_hull_mult = 0.1
+	ship_shield_mult = 0.1
+}
+
+uma_stepute_choice_one = {
+	hide_from_country_list = yes
+	pop_ethic_materialist_attraction_mult = 1
+}
+
+uma_stepute_choice_second = {
+	hide_from_country_list = yes
+	pop_ethic_spiritualist_attraction_mult = 1
+}
+
+uma_fr_uma = {
+	planet_jobs_society_research_produces_mult = 0.05
+}
+
+uma_fine = {
+	planet_jobs_produces_mult = 0.1
+}
+
+uma_fine_royal_star = {
+	all_technology_research_speed = 0.05
+	country_unity_produces_mult = 0.10
+}
+
+uma_fine_royal_sword = {
+	starbase_shipyard_build_speed_mult = 0.15
+}
+
+uma_fine_royal_noodle = {
+	planet_jobs_trade_produces_mult = 0.2
+}
+
+uma_fine_skyfall = {
+	planet_jobs_produces_mult = -0.3
+	starbase_shipyard_build_speed_mult = 1
+}
+
+uma_soe = {
+	pop_happiness = 0.09
+	country_unity_produces_mult = 0.10
+}
+
+uma_cydatabase = {
+	all_technology_research_speed = 0.2
+}
+
+uma_gold_family = {
+	logistic_growth_mult = 0.1
+	shipclass_military_build_speed_mult = 0.2
+	planet_jobs_trade_produces_mult = 0.2
+	army_damage_mult = 0.1
+}
+
+
+uma_satono_modifier_d = {
+	planet_jobs_energy_produces_mult = 0.05
+	pop_happiness = 0.03
+}
+
+#食物的辅助
+uma_satono_modifier_s = {
+	leader_lifespan_add = 10
+	planet_jobs_produces_mult = 0.04
+	planet_pops_food_upkeep_mult = 0.04
+}
+
+
+#似乎有点胖
+uma_satono_modifier_f = {
+	pop_housing_usage_mult = 0.05
+	planet_pops_food_upkeep_mult = 0.04
+	pop_happiness = 0.04
+	ship_speed_mult = -0.02
+}
+
+uma_satono_modifier_j = {
+	monthly_trades_energy_produces_add = 6
+}
+
+##空的修正，用于计时，现已被timed-countryflag取代
+#uma_satono_modifier_cooldown = {
+#
+#}
+
+uma_satono_modifier_tf_s = {
+	planet_jobs_produces_mult = 0.08
+	planet_pops_food_upkeep_mult = 0.06
+}
+
+
+
+welcome_tokaiteio = {
+	pop_happiness = 0.1
+	species_leader_exp_gain = 0.1
+
+}
+welcome_tokaiteio_1 = {
+	pop_happiness = -0.05
+	planet_jobs_energy_produces_mult = -0.05
+
+}
+welcome_tokaiteio_2 = {
+	pop_happiness = 0.1
+	species_leader_exp_gain = 0.1
+	planet_jobs_unity_produces_mult = 0.1
+}
+
+uma_curren_cute_only = {
+	country_unity_produces_mult = 0.05
+}
+
+uma_curren_tech_ailens = {
+	country_society_research_produces_mult = 0.2
+	country_physics_research_produces_mult = 0.2
+	country_engineering_research_produces_mult = 0.2
+}
+
+uma_leader_ardan = {
+	station_researchers_produces_mult = 0.1
+	planet_jobs_engineering_research_produces_mult = 0.05
+	planet_jobs_physics_research_produces_mult = 0.05
+	planet_jobs_society_research_produces_mult = 0.05
+}
+
+
+uma_ap2_factor_bade = {
+	pop_happiness = -0.2
+}
+
+uma_ap2_factor_bade_bad = {
+	leader_upkeep_empire_size_mult = 0.1
+	pop_happiness = -0.1
+	country_unity_produces_mult = -0.05
+}
+
+uma_ap2_realm_insomnia_pills = {
+	planet_jobs_consumer_goods_upkeep_mult = 0.1
+	logistic_growth_mult = -0.03
+}
+
+uma_ap2_realm_insomnia = {
+	species_leader_exp_gain = 0.02
+	leader_lifespan_add = -10
+	logistic_growth_mult = -0.04
+}
+
+
+uma_kenshi_strength_level_1 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.02
+	planet_jobs_minerals_produces_mult = 0.02
+	pop_housing_usage_mult = -0.025
+}
+
+uma_kenshi_strength_level_2 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.05
+	planet_jobs_minerals_produces_mult = 0.05
+	pop_housing_usage_mult = -0.05
+}
+
+uma_kenshi_strength_level_3 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.08
+	planet_jobs_minerals_produces_mult = 0.08
+	pop_housing_usage_mult = -0.075
+}
+
+uma_kenshi_strength_level_4 = {
+	hide_from_country_list = yes
+	planet_jobs_food_produces_mult = 0.11
+	planet_jobs_minerals_produces_mult = 0.11
+	pop_housing_usage_mult = -0.1
+}
+
+uma_kenshi_strength_level_5 = {
+	hide_from_country_list = yes
+
+	planet_jobs_food_produces_mult = 0.15
+	planet_jobs_minerals_produces_mult = 0.15
+	pop_housing_usage_mult = -0.125
+}
+
+uma_kenshi_intelligence_level_1 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.02
+	planet_jobs_engineering_research_produces_mult = 0.02
+	planet_jobs_society_research_produces_mult = 0.02
+}
+
+uma_kenshi_intelligence_level_2 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.05
+	planet_jobs_engineering_research_produces_mult = 0.05
+	planet_jobs_society_research_produces_mult = 0.05
+}
+
+uma_kenshi_intelligence_level_3 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.08
+	planet_jobs_engineering_research_produces_mult = 0.08
+	planet_jobs_society_research_produces_mult = 0.08
+}
+
+uma_kenshi_intelligence_level_4 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.11
+	planet_jobs_engineering_research_produces_mult = 0.11
+	planet_jobs_society_research_produces_mult = 0.11
+}
+
+uma_kenshi_intelligence_level_5 = {
+	hide_from_country_list = yes
+
+	planet_jobs_physics_research_produces_mult = 0.15
+	planet_jobs_engineering_research_produces_mult = 0.15
+	planet_jobs_society_research_produces_mult = 0.15
+}
+
+
+uma_kenshi_will_level_1 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.02
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.025
+}
+
+uma_kenshi_will_level_2 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.05
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.05
+}
+
+uma_kenshi_will_level_3 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.08
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.1
+}
+
+uma_kenshi_will_level_4 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.11
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.15
+}
+
+uma_kenshi_will_level_5 = {
+	hide_from_country_list = yes
+
+	planet_pops_food_upkeep_mult = -0.15
+	pop_housing_usage_mult = -0.025
+	pop_environment_tolerance = 0.2
+}
+
+
+uma_curren_ship_modifier = {
+	ship_weapon_damage = -0.7
+}
+
+
+uma_variation_early_war_buff = {
+	bioship_growth_progress_mult = 0.8
+	country_claim_influence_cost_mult = -0.9
+	shipclass_military_build_cost_mult = -0.8
+}
+
+uma_duramente_buff = {
+	country_unity_produces_mult = 60
+	planet_jobs_alloys_produces_mult = 0.2
+	planet_jobs_consumer_goods_produces_mult = 0.2
+}
+
+uma_duramente_reilc_buff = {
+	planet_jobs_uma_crystal_carrot_produces_add = 8
+	planet_uma_field_powering_technician_produces_mult = 0.1
+	ship_speed_mult = 0.05
+	weapon_type_energy_weapon_damage_mult = 0.05
+	ship_shield_add = 40
+}

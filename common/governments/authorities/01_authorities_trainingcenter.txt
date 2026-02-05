@@ -1,0 +1,85 @@
+auth_trainingcenter = {
+
+	has_heir = no
+	ruler_council_position = councilor_ruler_uma_studentuionp
+    icon="gfx/interface/icons/governments/authorities/auth_trainingcenter.png"
+	election_type = oligarchic
+	election_term_years = 400
+	election_term_variance = 0
+	can_have_emergency_elections = yes
+#	emergency_election_cost = 50
+	max_election_candidates = 6
+	can_reform = no
+	valid_for_released_vassal = no
+
+	has_agendas = yes
+	
+	random_weight = {
+		modifier = {
+			factor = 1
+		}
+	}
+	possible = {
+		ethics={
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		species_class = {
+			value = umamusume
+		}
+		#civics = {
+		#	NOR = {
+		#		value = civic_fanatic_purifiers
+		#	}
+		#}		
+	}
+	# traits = {
+	# 	trait = uma_trait_musume
+	# }
+	tags = {
+		UMAMUSUME_TRANIING_CENTER
+	}		
+	country_modifier = {
+#		empire_size_pops_mult = -0.10
+		country_unity_produces_mult = 0.1
+		country_leader_cap_add = 8
+		planet_jobs_trade_produces_add = 5
+	}
+
+
+#	ai_weight = {
+#		base = 10000
+#	}
+
+#	advanced_authority_swap = {
+#		name = "auth_trainingcenter_factor"
+#		description = "auth_trainingcenter_factor_desc"
+#		inherit_icon = yes
+#		inherit_effects = yes
+#		trigger = {
+#			is_scope_valid = yes
+#			has_country_flag = uma_ap2_factor_completed
+#		}
+#		modifier = {
+#
+#		}
+#	}
+	#Place holder
+	
+	
+}
+
+auth_ancient_trainingcenter = {
+	has_heir = no
+	election_type = none
+	can_reform = no
+
+	valid_for_released_vassal = no
+
+	ruler_council_position = councilor_ruler_uma_studentuionp
+
+	icon= "gfx/interface/icons/governments/authorities/auth_trainingcenter.png"
+
+	potential = { country_type = { value = uma_ec3_empire } }
+}

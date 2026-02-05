@@ -1,0 +1,19 @@
+#Use this format:
+#	text = {
+#		localization_key = GFX_leader_bg_official # Bg key goes here.
+# 		trigger = { <whatever > } # Scope is the leader.
+#	}
+# Note:
+# 1 The leader BGs must be defined separately, at root/interface/portraits/filename.gfx (dont have to replace/overwrite leaders.gfx)
+# 2 backgrounds should go in gfx/interface/portraits, with a resolution of 320 x 380 px, 32bpp DDS unsigned, no mipmaps.
+# 3 the bottom 1/3 of the image should be darkened/faded for the leader origin UI / text to overlay nicely.
+
+# NOTE: Paragon BGs defined before this inline is called, so they always superceede the below, and base class BGs defined after it's called - so they act as fallbacks
+
+
+text = {
+	localization_key = GFX_uma_leader_ruler_bg
+	trigger = {
+		uma_can_apply_ruler_bg = YES
+	}
+}

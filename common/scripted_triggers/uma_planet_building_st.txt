@@ -1,0 +1,58 @@
+uma_has_industrial_buildings_crystal_carrot = {
+	OR = {
+		has_active_building = building_uma_crystal_carrot_producing_lab
+		has_active_building = building_uma_crystal_carrot_producing_center
+		has_active_building = building_uma_crystal_carrot_producing_complex
+		has_active_building = building_uma_crystal_carrot_producing_realm_complex
+	}
+}
+
+
+uma_has_industrial_buildings_cc_alloy = {
+	OR = {
+		has_active_building = building_uma_crystal_alloy_workhouse
+		has_active_building = building_uma_crystal_alloy_factory
+		has_active_building = building_uma_crystal_alloy_complex
+		has_active_building = building_uma_crystal_alloy_realm_complex
+	}
+}
+
+uma_has_industrial_buildings_cc_custom_good = {
+	OR = {
+		has_active_building = building_uma_crystal_consumer_goods_workhouse
+		has_active_building = building_uma_crystal_consumer_goods_factory
+		has_active_building = building_uma_crystal_consumer_goods_complex
+		has_active_building = building_uma_crystal_consumer_goods_realm_complex
+	}
+}
+
+
+uma_has_industrial_buildings_chemical = {
+	OR = {
+		has_active_building = building_uma_chemical_plant
+		has_active_building = building_uma_chemical_plant_2
+		has_active_building = building_uma_chemical_plant_realm
+	}
+}
+
+uma_has_industrial_buildings_crystal = {
+	OR = {
+		has_active_building = building_uma_crystal_plant
+		has_active_building = building_uma_crystal_plant_2
+		has_active_building = building_uma_crystal_plant_realm
+	}
+}
+
+uma_has_industrial_buildings_gas = {
+	OR = {
+		has_active_building = building_uma_gas_plant
+		has_active_building = building_uma_gas_plant_2
+		has_active_building = building_uma_gas_plant_realm
+	}
+}
+
+uma_has_industrial_buildings_darkmatter = {
+	OR = {
+		has_active_building = building_uma_dark_matter_plant
+	}
+}

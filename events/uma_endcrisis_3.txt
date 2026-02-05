@@ -1,0 +1,1479 @@
+namespace = uma_ec_3
+
+country_event = {
+	id = uma_ec_3.1
+	hide_window = yes
+#	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = uma_ec3_outeruma_happened
+			has_global_flag = uma_ec_invasion_ec3_end
+			has_global_flag = uma_ec_invasion_end
+		}
+	}
+
+	immediate = {
+		create_country = {
+			name = UMA_EC3_EMPTY_COUNTRY
+			type = global_event
+			effect = {
+				save_global_event_target_as = uma_global_event_country
+			}
+		}
+		event_target:uma_global_event_country = {
+			set_variable = {
+				which = uma_ec3_count_bh_soc_base
+				value = 0
+			}
+		}
+
+		every_playable_country = {
+			country_event = {
+				id = uma_ec_3.21
+				days = 6
+			}
+		}
+
+		set_update_modifiers_batch = begin
+		endgame_telemetry = uma_end_crisis_3
+		set_global_flag = uma_ec3_outeruma_happened
+		set_global_flag = uma_ec_invasion_happened
+
+
+		random_system = {
+			limit = {
+				is_star_class = sc_black_hole
+				NOT = {
+					has_star_flag = uma_fallen_empire_system_initializer
+					has_star_flag = uma_fallen_empire_system_initializer_1
+					has_star_flag = uma_is_fallen_empire_school_star_1
+					has_star_flag = uma_fallen_empire_system_initializer_2
+					has_star_flag = uma_fallen_empire_system_initializer_3
+				}
+			}
+
+			log = "UMA ENDCRISIS3 WILL HAPPENED AT [GetDate]"
+			log = "END CRISIS WILL BE SPAWN IN [THIS.GetName]"
+			set_star_flag = uma_ec3_first_system
+			save_global_event_target_as = uma_ec3_first_system
+
+			random_system_planet = {
+				uma_ec3_puma_create_species_and_country = yes
+			}
+
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			if = {
+				limit = {
+					count_fleet_in_system = {
+						count > 0
+					}
+				}
+				every_fleet_in_system = {
+					destroy_fleet = this
+				}
+			}
+			create_starbase = {
+				size = starbase_marauder
+				owner = event_target:uma_ec3_country
+				effect = {
+					save_global_event_target_as = uma_ec3_first_system_main_base
+					set_starbase_flag = uma_ec3_main_base
+					while = {
+						count = 4
+
+						create_uma_ec3_crisis_platform = yes
+					}
+
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_NOt_enough_ele_device_broken
+					}
+
+					fleet = {
+						set_fleet_flag = uma_ec3_main_base
+						if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+							#简单难度：2F 1D with 削弱buff
+
+							#第一批攻击/防守舰队生成
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 8
+							}
+							####
+						}
+
+						else_if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+							}
+							#默认难度：2F 2D
+
+							#第一批攻击/防守舰队生成
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 8
+							}
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 9
+							}
+							####
+						}
+
+						else_if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+							}
+							#困难难度：3F 2D
+
+							#第一批攻击/防守舰队生成
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 5
+							}
+							fleet_event = {
+								id = uma_ec_3.2
+								days = 7
+							}
+							#防守
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 8
+							}
+							fleet_event = {
+								id = uma_ec_3.3
+								days = 9
+							}
+							####
+						}
+
+					}
+				}
+			}
+		}
+
+		every_playable_country = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_ec3_country
+				}
+			}
+			country_event = {
+				id = uma_ec_3.28
+				days = 30
+			}
+			capital_star = {
+				uma_ec3_create_puma_soc_at_capitial = yes
+			}
+
+		}
+
+		while = {
+			count = 5
+			random_galaxy_planet = {
+				limit = {
+					is_primary_star = yes
+					is_star_class = sc_black_hole
+					solar_system = {
+						NOT = {
+							has_star_flag = uma_fallen_empire_system_initializer
+							has_star_flag = uma_fallen_empire_system_initializer_1
+							has_star_flag = uma_is_fallen_empire_school_star_1
+							has_star_flag = uma_fallen_empire_system_initializer_2
+							has_star_flag = uma_fallen_empire_system_initializer_3
+
+							has_star_flag = uma_ec3_first_system
+						}
+					}
+				}
+
+				solar_system = {
+					set_star_flag = uma_ec3_side_soc_base
+				}
+				if = {
+					limit = {
+						exists = starbase
+					}
+					starbase = { fleet = { destroy_fleet = this } }
+				}
+				create_starbase = {
+					size = starbase_uma_ec3
+					#			design = NAME_starbase_uma_ec3
+					owner = event_target:uma_ec3_country
+					effect = {
+						fleet = {
+							set_fleet_flag = uma_ec3_soc_fleet_base_bh
+						}
+						set_starbase_flag = uma_ec3_soc_fleet_base_bh
+					}
+				}
+				solar_system = {
+					create_ambient_object = {
+						type = electric_storm
+						location = this
+						effect = {}
+					}
+				}
+				event_target:uma_global_event_country = {
+					add_variable = { which = uma_ec3_count_bh_soc_base value = 1 }
+				}
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		uma_ec3_create_puma_fleets = yes
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_3.2
+			days = 200
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.2222
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		From.solar_system = {
+			exists = starbase
+			starbase = {
+				owner = {
+					is_same_value = event_target:uma_ec3_country
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		if = {
+			limit = {
+				event_target:uma_ec3_country = {
+					fleet_power <= 30000000
+				}
+			}
+			while = {
+				count = 2
+				uma_ec3_create_puma_fleets = yes
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_3.2222
+			days = 200
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+	}
+
+
+	immediate = {
+
+		if = {
+			limit = {
+				event_target:uma_ec3_first_system = {
+					count_fleet_in_system = {
+						limit = {
+							has_fleet_flag = uma_ec3_puma_defend_fleet
+						}
+						count > 3
+					}
+				}
+			}
+			set_update_modifiers_batch = begin
+			uma_ec3_create_puma_fleets = yes
+			set_update_modifiers_batch = end
+
+			fleet_event = {
+				id = uma_ec_3.3
+				days = 200
+			}
+			break = yes
+		}
+		else_if = {
+			limit = {
+				event_target:uma_ec3_first_system = {
+					count_fleet_in_system = {
+						limit = {
+							has_fleet_flag = uma_ec3_puma_defend_fleet
+						}
+						count < 3
+					}
+				}
+			}
+			set_update_modifiers_batch = begin
+			uma_ec3_create_puma_fleets_defend = yes
+			set_update_modifiers_batch = end
+			fleet_event = {
+				id = uma_ec_3.3
+				days = 200
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_3.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_fleet_flag = uma_ec3_puma_front_fleet
+			has_fleet_flag = uma_ec3_puma_defend_fleet
+		}
+	}
+
+	immediate = {
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = uma_ec_3.5.t1
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+
+							}
+
+							any_galaxy_fleet = {
+								owner = {
+									is_guardian_country = no
+								}
+							}
+						}
+						ROOT = { can_access_system = prev }
+
+						NOT = {
+							has_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
+						}
+					}
+					found_system = {
+						move_to = this
+
+						effect = {
+							id = uma_ec_3.5.e1
+
+							set_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
+						}
+
+						repeat = {
+							while = {
+								id = uma_ec_3.5.t2
+
+								NOR = {
+									star = {
+										is_star_class = sc_black_hole
+									}
+								}
+								NOT = {
+									exists = starbase
+									starbase = {
+										is_owned_by = event_target:uma_ec3_country
+									}
+
+								}
+							}
+							find_closest_planet = {
+								trigger = {
+									id = uma_ec_3.5.t3
+									is_primary_star = yes
+									NOT = {
+										is_star_class = sc_black_hole
+									}
+								}
+								found_planet = {
+									orbit_planet = this
+									effect = {
+										id = uma_ec_3.5.e2
+
+										planet_event = {
+											id = uma_ec_3.6
+											days = 8
+										}
+									}
+								}
+							}
+							move_to = this
+							wait = {duration = 10 random = 10}
+						}
+						wait = { duration = 10 random = 10 }
+					}
+
+					failed = {
+						find_random_fleet = {
+							trigger = {
+								id = uma_ec_3.5.t4
+								owner = {
+									is_hostile = Root.owner
+								}
+							}
+							found_fleet = {
+								move_to = this
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = uma_ec_3.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		is_primary_star = yes
+		NOT = {
+			is_star_class = sc_black_hole
+		}
+	}
+
+	immediate = {
+		solar_system = {
+			remove_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
+		}
+#		change_pc = pc_black_hole
+		planet_event = {
+			id = uma_ec_3.1010
+			days = 400
+		}
+		create_starbase = {
+			size = starbase_uma_ec3
+#			design = NAME_starbase_uma_ec3
+			owner = event_target:uma_ec3_country
+			effect = {
+				set_starbase_flag = uma_ec3_soc_fleet_base
+				while = {
+					count = 2
+					create_uma_ec3_crisis_platform = yes
+				}
+			}
+		}
+
+
+	}
+}
+
+
+
+country_event = {
+	id = uma_ec_3.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		NOT = {
+			has_country_flag = uma_ec3_country
+		}
+		capital_star.solar_system = {
+			any_fleet_in_system = {
+				has_fleet_flag = uma_ec3_soc_fleet
+			}
+		}
+	}
+
+	immediate = {
+
+		capital_star.solar_system = {
+			every_fleet_in_system = {
+				limit = {
+					has_fleet_flag = uma_ec3_soc_fleet
+				}
+				delete_fleet = This
+			}
+		}
+	}
+}
+
+#月检测
+planet_event = {
+	id = uma_ec_3.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		 solar_system = {
+			 exists = starbase
+			 starbase = { owner = { is_country_type = uma_ec3_empire } }
+		 }
+		this = {
+			count_owned_pop_amount = {
+				count > 0
+			}
+		}
+	}
+
+	immediate = {
+		log = "The 5% of pops on [This.GetName] will be killed"
+
+		every_owned_pop_group = {
+			kill_pop_group = {
+				pop_group = this
+				percentage = 0.05
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = uma_ec_3.1010
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		is_primary_star = yes
+		solar_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = uma_ec3_empire } }
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_ai = no
+
+				any_system_within_border = {
+					distance = {
+						source = PrevPrev.solar_system
+						min_jumps = 0
+						max_jumps = 10
+					}
+				}
+			}
+			country_event = {
+				id = uma_ec_3.2424
+				scopes = {
+					from = Root.solar_system
+				}
+			}
+		}
+
+		planet_event = {
+			id = uma_ec_3.10
+			days = 2
+		}
+	}
+}
+
+
+planet_event = {
+	id = uma_ec_3.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_primary_star = yes
+		solar_system = {
+			exists = starbase
+			starbase = { owner = { is_country_type = uma_ec3_empire } }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				solar_system = {
+					any_system_planet = {
+						OR = {
+							uma_is_habitat = no
+							uma_is_pd_habitat_planet = no
+						}
+					}
+				}
+			}
+			change_pc = pc_black_hole
+		}
+		else = {
+			solar_system = {
+				every_system_planet = {
+					limit = {
+						is_star = no
+						is_asteroid = no
+
+						is_colony = no
+					}
+					change_pc = pc_barren
+				}
+			}
+		}
+
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					is_colony = yes
+				}
+				every_owned_pop_group = {
+					kill_all_pop = yes
+				}
+				destroy_colony = yes
+			}
+		}
+	}
+	
+	after = { 
+		every_playable_country = { 
+			country_event = { 
+				id = uma_ec_3.24
+				scopes = {
+					from = Root.solar_system
+				}
+			}
+		}
+	}
+
+}
+
+#What will done if all done
+starbase_event = {
+	id = uma_ec_3.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		OR = {
+			has_starbase_flag = uma_ec3_soc_fleet_base
+			has_starbase_flag = uma_ec3_soc_fleet_base_bh
+		}
+
+		From = {
+			owner = {
+				any_situation = {
+					has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+					situation_progress > 10
+				}
+			}
+		}
+	}
+
+	immediate = {
+		From = {
+			owner = {
+				random_situation = {
+					limit = {
+						has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+					}
+					add_situation_progress = -10
+				}
+			}
+		}
+	}
+}
+
+starbase_event = {
+	id = uma_ec_3.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		has_starbase_flag = uma_ec3_soc_fleet_base_bh
+
+		From.owner = {
+			has_event_chain = uma_endcrisis_ec3_main_chain
+		}
+	}
+
+	immediate = {
+		event_target:uma_global_event_country = {
+			add_variable = {
+				which = uma_ec3_count_bh_soc_base
+				value = -1
+			}
+		}
+		every_playable_country = {
+			limit = {
+				has_event_chain = uma_endcrisis_ec3_main_chain
+			}
+			#同步counter与variable
+			reset_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+			}
+			add_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+				amount = event_target:uma_global_event_country.uma_ec3_count_bh_soc_base
+			}
+		}
+
+		solar_system = {
+			every_ambient_object = {
+				destroy_ambient_object = This
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				event_target:uma_global_event_country = {
+					check_variable = {
+						which = uma_ec3_count_bh_soc_base
+						value <= 1
+					}
+				}
+			}
+			every_playable_country = {
+				create_message = {
+					type = UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK
+					localization = UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK_DESC
+					days = @toast_message_days
+					target = event_target:uma_ec3_first_system
+				}
+			}
+
+			event_target:uma_ec3_first_system_main_base = {
+				remove_modifier = uma_endcrisis_ec3_mainbase_NOt_enough_ele_device_broken
+
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff_easy
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff_normal
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+					}
+					add_modifier = {
+						modifier = uma_endcrisis_ec3_mainbase_buff_hard
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+##下面是剧情内容
+
+#Notice
+country_event  = {
+	id = uma_ec_3.20
+	title = uma_ec_3.20.title
+	desc = uma_ec_3.20.desc
+	picture = GFX_evt_uma_endcrisis_sky
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.20.a
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.21
+	title = uma_ec_3.21.title
+	desc = uma_ec_3.21.desc
+	picture = GFX_evt_communication_event
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.21.a
+		hidden_effect = {
+			begin_event_chain = { event_chain = uma_endcrisis_ec3_main_chain }
+			create_point_of_interest = {
+				id = uma_ec3_poi.2
+				name = uma_ec3_poi.2.name
+				desc = uma_ec3_poi.2.desc
+				event_chain = uma_endcrisis_ec3_main_chain
+				location = event_target:uma_ec3_first_system
+				picture = GFX_evt_black_hole
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			#同步counter与variable -> Evt
+			country_event = {
+				id = uma_ec_3.2111
+			}
+
+			if = {
+				limit = {
+					is_uma_player_country = yes
+				}
+				country_event = {
+					id = uma_ec_3.22
+				}
+			}
+			else = {
+				country_event = {
+					id = uma_ec_3.23
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.2111
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOR = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_event_chain = uma_endcrisis_ec3_main_chain
+			}
+			#同步counter与variable
+			reset_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+			}
+			add_event_chain_counter = {
+				event_chain = uma_endcrisis_ec3_main_chain
+				counter = uma_endcrisis_ec3_main_chain_counter_bh
+				amount = event_target:uma_global_event_country.uma_ec3_count_bh_soc_base
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.22
+	title = uma_ec_3.22.title
+	desc = uma_ec_3.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_3.22.a
+	}
+
+	after = {
+		country_event = {
+			id = uma_ec_3.233
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.23
+	title = uma_ec_3.23.title
+	desc = uma_ec_3.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_3.23.a
+	}
+
+	after = {
+		country_event = {
+			id = uma_ec_3.233
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.233
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		start_situation = {
+			type = situation_uma_endcrisis_ec3
+			target = Root
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.24
+	title = uma_ec_3.24.title
+	desc = {
+		trigger = {
+			From = {
+				any_system_planet = {
+					OR = {
+						uma_is_habitat = no
+						uma_is_pd_habitat_planet = no
+					}
+				}
+			}
+		}
+		text = uma_ec_3.24.desc
+	}
+	desc = {
+		trigger = {
+			From = {
+				any_system_planet = {
+					NOR = {
+						uma_is_habitat = no
+						uma_is_pd_habitat_planet = no
+					}
+				}
+			}
+		}
+		text = uma_ec_3.24.desc.swap
+	}
+	picture = GFX_evt_relic_world_street
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.24.a
+	}
+}
+
+country_event = {
+	id = uma_ec_3.2424
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_message = {
+			type = UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC
+			localization = UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC_DESC
+			days = @toast_message_days
+			target = From
+		}
+	}
+}
+
+
+#当堡垒被摧毁时
+starbase_event = {
+	id = uma_ec_3.25
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_starbase_flag = uma_ec3_main_base
+	}
+
+	immediate = {
+		set_global_flag = uma_ec_invasion_end
+		set_global_flag = uma_ec_invasion_ec3_end
+
+		hidden_effect = {
+			event_target:uma_ec3_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
+			}
+
+			every_playable_country = {
+				country_event = {
+					id = uma_ec_3.27
+				}
+			}
+		}
+		every_playable_country = {
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+				}
+				destroy_situation = This
+			}
+		}
+	}
+
+
+}
+
+country_event = {
+	id = uma_ec_3.26
+	title = uma_ec_3.26.title
+	desc = uma_ec_3.26.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_ec_3.26.a
+	}
+}
+
+
+
+
+#当堡垒被摧毁时
+country_event = {
+	id = uma_ec_3.27
+	title = uma_ec_3.25.title
+	desc = uma_ec_3.25.desc
+	picture = GFX_evt_crisis_defeated
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ec_3.25.a
+		end_event_chain = uma_endcrisis_ec3_main_chain
+		remove_point_of_interest = uma_ec3_poi.1
+		remove_point_of_interest = uma_ec3_poi.2
+		remove_point_of_interest = uma_ec3_poi.3
+		hidden_effect = {
+			if = {
+				limit = {
+					This = {
+						is_uma_player_country = yes
+					}
+				}
+				country_event = {
+					id = uma_ec_3.26
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.28
+	title = uma_ec_3.28.title
+	desc = uma_ec_3.28.desc
+	picture = GFX_evt_rift_sphere
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = uma_ec_3.28.a
+		hidden_effect = {
+			capital_star = {
+				solar_system = {
+					random_fleet_in_system = {
+						limit = {
+							has_fleet_flag = uma_ec3_soc_fleet
+						}
+
+						owner = {
+							enable_special_project = {
+								name = UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL
+								owner = Root
+								location = prev
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.29
+	title = uma_ec_3.29.title
+	desc = uma_ec_3.29.desc
+	picture = GFX_evt_rift_sphere
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = uma_endcrisis_ec3_researched_special_project
+
+			every_system = {
+				limit = {
+					exists = starbase
+					starbase = {
+						has_starbase_flag = uma_ec3_soc_fleet_base_bh
+					}
+				}
+				Root = {
+					create_point_of_interest = {
+						id = uma_ec3_poi.3
+						name = uma_ec3_poi.3.name
+						desc = uma_ec3_poi.3.desc
+						event_chain = uma_endcrisis_ec3_main_chain
+						location = Prev
+						picture = GFX_evt_black_hole
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_ec_3.29.a
+
+	}
+}
+
+
+country_event = {
+	id = uma_ec_3.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOT = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+		has_country_flag = uma_endcrisis_ec3_researched_special_project
+
+		any_system = {
+			starbase = {
+				OR = {
+					has_starbase_flag = uma_ec3_soc_fleet_base_bh
+					has_starbase_flag = uma_ec3_soc_fleet_base
+				}
+			}
+			Root = {
+				any_system_within_border = {
+					distance = {
+						source = PrevPrev
+						min_jumps = 0
+						max_jumps = 15
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		Root = {
+			reset_event_chain_counter = { event_chain = uma_endcrisis_ec3_main_chain counter = uma_endcrisis_ec3_main_chain_counter }
+			remove_point_of_interest = uma_ec3_poi.1
+		}
+		every_system = {
+			limit = {
+				exists = starbase
+				starbase = {
+					OR = {
+						has_starbase_flag = uma_ec3_soc_fleet_base
+						has_starbase_flag = uma_ec3_soc_fleet_base_bh
+					}
+				}
+				Root = {
+					any_system_within_border = {
+						distance = {
+							source = PrevPrev
+							min_jumps = 1
+							max_jumps = 15
+						}
+					}
+				}
+			}
+			
+			Root = {
+				create_point_of_interest = {
+					id = uma_ec3_poi.1
+					name = uma_ec3_poi.1_desc
+					desc = uma_ec3_poi.1_desc_desc
+					event_chain = uma_endcrisis_ec3_main_chain
+					location = Prev
+					picture = GFX_evt_uma_endcrisis_ec3_situation_log_detected
+				}
+
+				add_event_chain_counter = {
+					event_chain = uma_endcrisis_ec3_main_chain
+					counter = uma_endcrisis_ec3_main_chain_counter
+					amount = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.3000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec3_outeruma_happened
+		NOT = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec3_end
+		}
+
+		has_country_flag = uma_endcrisis_ec3_researched_special_project
+
+		any_system = {
+			starbase = {
+				has_starbase_flag = uma_ec3_soc_fleet_base_bh
+			}
+		}
+	}
+
+	immediate = {
+		Root = {
+			remove_point_of_interest = uma_ec3_poi.3
+		}
+		every_system = {
+			limit = {
+				exists = starbase
+				starbase = {
+					has_starbase_flag = uma_ec3_soc_fleet_base_bh
+				}
+			}
+			Root = {
+				create_point_of_interest = {
+					id = uma_ec3_poi.3
+					name = uma_ec3_poi.3.name
+					desc = uma_ec3_poi.3.desc
+					event_chain = uma_endcrisis_ec3_main_chain
+					location = Prev
+					picture = GFX_evt_black_hole
+				}
+			}
+		}
+	}
+}
+
+###海底小纵队机制
+
+country_event = {
+	id = uma_ec_3.31
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		is_uma_player_country = yes
+		uma_the_uma_endcrisis_happened = yes
+		has_global_flag = uma_ec3_outeruma_happened
+
+		event_target:uma_ec3_country = {
+			fleet_power >= 100000
+		}
+
+		has_authority = auth_trainingcenter
+		has_modifier = uma_gold_family
+
+		NOT= {
+			has_country_flag = uma_endcrisis_ec3_gold_family_had_supported
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = uma_gold_family
+			}
+
+			country_event = {
+				id = uma_ec_3.32
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_3.32
+	title = uma_ec_3.32.title
+	desc = uma_ec_3.32.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = uma_endcrisis_ec3_gold_family_had_supported
+			create_fleet = {
+				name = UMA_ENDCRISIS_EC3_GOLD_REINSFORCEMENT
+				effect = {
+					set_owner = Root
+					create_ship = {
+						name = random
+						design = "NAME_uma_GOLDSHIP"
+						graphical_culture = "extra_dimensional_01"
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_uma_GOLDSHIP"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 18
+						create_ship = {
+							name = random
+							design = "NAME_uma_GOLDSON"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_uma_Wraith"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+					set_location = {
+						target = Root.capital_scope
+						distance = 5
+						angle = random
+					}
+					set_fleet_stance = aggressive
+					set_fleet_bombardment_stance = indiscriminate
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_ec_3.32.a
+	}
+
+}
+
+#country_event = {
+#	id = uma_ec_3.40
+#	is_triggered_only = yes
+#	hide_window = yes
+#
+#	trigger = {
+#		from = {
+#			has_country_flag = uma_ec3_country
+#		}
+#	}
+#
+#	immediate = {
+#		country_event = {
+#			id = uma_ec_3.41
+#		}
+#	}
+#}
+#
+#country_event = {
+#	id = uma_ec_3.41
+#	title = uma_ec_3.41.title
+#	desc = uma_ec_3.41.desc
+#	is_triggered_only = yes
+#
+#
+#} TODO:补充对话剧情

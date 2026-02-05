@@ -1,0 +1,1418 @@
+#帝宝事件链
+#id:1-10初始事件
+#id：100-110帝宝交流
+#id:1000-1010帝宝考古
+
+
+namespace = uma_tokaiteio_event
+
+country_event = {
+	id = uma_tokaiteio_event.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+	immediate = {
+		random_system = {
+			limit = {
+				any_system_planet = {
+					is_planet_class = pc_gas_giant
+				}
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 5
+				}
+			}
+			random_system_planet = {
+				limit = {
+					is_planet_class = pc_gas_giant
+				}
+				set_planet_flag = tokaiteio_star
+				save_global_event_target_as = tokaiteio_star_target
+				add_anomaly = {
+					category = uma_tokaiteio_anomoly
+				}
+				log = TEIO_ANOLOMY_GENERATED
+			}
+		}
+	}
+}
+
+
+ship_event = {
+	id = uma_tokaiteio_event.2
+	title = uma_tokaiteio_event.2.name
+	desc = uma_tokaiteio_event.2.desc
+	picture = GFX_evt_gas_giant
+	is_triggered_only = yes
+	event_chain = uma_tt_full
+
+	immediate = {
+
+		begin_event_chain = {
+			event_chain = uma_tt_full
+		}
+		create_point_of_interest = {
+			id = uma_tt_poi_2
+			name = uma_tt_poi_2_name
+			desc = uma_tt_poi_2_desc
+			event_chain = uma_tt_full
+			location = event_target:tokaiteio_star_target
+		}
+
+	}
+
+	option = {
+		name = uma_tokaiteio_event.2.name.a
+		hidden_effect = {
+			owner = {
+				enable_special_project = {
+					name = "STUDY_SWEET"
+					location = event_target:tokaiteio_star_target
+					owner = this
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_tokaiteio_event.4
+	title = uma_tokaiteio_event.4.name
+	desc = uma_tokaiteio_event.4.desc
+	picture = GFX_evt_teio_hachimi
+	is_triggered_only = yes
+	event_chain = uma_tt_full
+	option = {
+		#甜甜的
+		name = uma_tokaiteio_event.4.name.a
+		add_resource = {
+			consumer_goods = 1820
+		}
+		country_event = {
+			id = uma_tokaiteio_event.5
+			days = 150
+			random = 25
+		}
+	}
+}
+
+country_event = {
+	id = uma_tokaiteio_event.5
+	title = uma_tokaiteio_event.5.name
+	desc = uma_tokaiteio_event.5.desc
+	picture = GFX_evt_gas_giant
+	is_triggered_only= yes
+	event_chain = uma_tt_full
+	option = {
+		name = uma_tokaiteio_event.5.name.a
+		enable_special_project = {
+			name = FOUND_WRONG_NUM
+			location = event_target:tokaiteio_star_target
+			owner = this
+		}
+	}
+}
+
+country_event = {
+	id = uma_tokaiteio_event.1000
+	title = uma_tokaiteio_event.1000.name
+	desc = uma_tokaiteio_event.1000.desc
+	picture = GFX_evt_ancient_alien_temple
+	is_triggered_only = yes
+	event_chain = uma_tt_full
+	option = {
+
+		create_point_of_interest = {
+			id = uma_tt_poi_1
+			name = uma_tt_poi_1_name
+			desc = uma_tt_poi_1_desc
+			event_chain = uma_tt_full
+			location = event_target:tokaiteio_star_target
+		}
+
+		name = uma_tokaiteio_event.1000.name.a
+		hidden_effect = {
+			event_target:tokaiteio_star_target = {
+				create_archaeological_site = uma_tokaiteio_digsite
+			}
+		}
+	}
+}
+
+
+
+
+fleet_event = {
+	id = uma_tokaiteio_event.1001
+    title = uma_tokaiteio_event.1001.name
+	desc = uma_tokaiteio_event.1001.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_gas_giant #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = uma_tokaiteio_event.1002
+    title = uma_tokaiteio_event.1002.name
+	desc = uma_tokaiteio_event.1002.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = uma_tokaiteio_event.1003
+    title = uma_tokaiteio_event.1003.name
+	desc = uma_tokaiteio_event.1003.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_discovered_hidden_door #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+		custom_tooltip = uma_tokaiteio_event.1003.name.a
+	}
+	option = {
+		name = REMARKABLE
+		custom_tooltip =uma_tokaiteio_event.1003.name.b
+		small_artifact_reward = yes
+
+	}
+}
+fleet_event = {
+	id = uma_tokaiteio_event.1004
+    title = uma_tokaiteio_event.1004.name
+	desc = uma_tokaiteio_event.1004.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_ancient_databank #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = uma_tokaiteio_event.1005
+    title = uma_tokaiteio_event.1005.name
+	desc = uma_tokaiteio_event.1005.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_ancient_databank #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = uma_tokaiteio_event.1006
+    title = uma_tokaiteio_event.1006.name
+	desc = uma_tokaiteio_event.1006.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_archaeological_dig #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+fleet_event = {
+	id = uma_tokaiteio_event.1007
+    title = uma_tokaiteio_event.1007.name
+	desc = uma_tokaiteio_event.1007.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_baol_datacrystals #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = uma_tokaiteio_event.1007.name.a #占位符
+		small_artifact_reward = yes
+		enable_special_project = {
+			name = "thawing"
+			owner = owner
+		}
+	}
+}
+
+
+
+
+
+country_event = {
+	id = uma_tokaiteio_event.100
+	title = uma_tokaiteio_event.100.name
+	desc = uma_tokaiteio_event.100.desc
+	is_triggered_only = yes
+	picture = GFx_evt_teio
+	event_chain = uma_tt_full
+
+	immediate = {
+
+		create_point_of_interest = {
+			id = uma_tt_poi_3
+			name = uma_tt_poi_3_name
+			desc = uma_tt_poi_3_desc
+			event_chain = uma_tt_full
+			location = capital_scope
+		}
+
+	}
+	option = {
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.101
+				days = 700
+			}
+		}
+		name = uma_tokaiteio_event.100.a.name
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.101
+	title = uma_tokaiteio_event.101.name
+	desc = uma_tokaiteio_event.101.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = bg_0019_0_room
+	}
+
+	immediate = {
+		end_event_chain = uma_tt_full
+	}
+	option = {
+		name = uma_tokaiteio_event.101.a.name
+		country_event = {
+			id = uma_tokaiteio_event.102
+		}
+	}
+	after = {
+		hidden_effect = {
+			hidden_effect = {
+				end_event_chain = uma_tt_full
+				remove_point_of_interest = uma_tt_poi_1
+				remove_point_of_interest = uma_tt_poi_2
+				remove_point_of_interest = uma_tt_poi_3
+				remove_point_of_interest = uma_tt_poi_4
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.102
+	title = uma_tokaiteio_event.102.name
+	desc = uma_tokaiteio_event.102.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = bg_0019_0_room
+		portrait = TEIO_HAPPY
+	}
+	option = {
+		name = uma_tokaiteio_event.102.a.name
+		country_event = {
+			id = uma_tokaiteio_event.103
+		}
+	}
+}
+
+country_event = {
+	id = uma_tokaiteio_event.103
+	title = uma_tokaiteio_event.103.name
+	desc = uma_tokaiteio_event.103.desc
+	is_triggered_only = yes
+#	diplomatic = yes
+	picture = GFx_evt_teio
+	option = {
+		name = uma_tokaiteio_event.103.a.name
+		add_modifier = {
+			modifier = welcome_tokaiteio 
+			days = 1825
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.104
+				days = 1825
+				random = 25
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.104
+	title = uma_tokaiteio_event.104.name
+	desc = uma_tokaiteio_event.104.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+	option = {
+		name = uma_tokaiteio_event.104.name.a
+		add_modifier = {
+			modifier = welcome_tokaiteio_1
+			days = 1825
+		}
+		remove_modifier = welcome_tokaiteio
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.105
+				days = 60
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.105
+	title = uma_tokaiteio_event.105.name
+	desc = uma_tokaiteio_event.105.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = teio_2_room
+		portrait = TEIO_SHOUT_IN_MARKET
+	}
+	option = {
+		name = uma_tokaiteio_event.105.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.106
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.106
+	title = uma_tokaiteio_event.106.name
+	desc = uma_tokaiteio_event.106.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = teio_2_room
+		portrait = TEIO_OK
+	}
+	option = {
+		name = uma_tokaiteio_event.106.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.107
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.107
+	title = uma_tokaiteio_event.107.name
+	desc = uma_tokaiteio_event.107.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = teio_2_room
+        portrait = TEIO_ANGRY_EYEOPEN
+	}
+	option = {
+		name = uma_tokaiteio_event.107.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.108
+				days = 360
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.108
+	title = uma_tokaiteio_event.108.name
+	desc = uma_tokaiteio_event.108.desc
+	is_triggered_only = yes
+	picture = GFX_evt_teio_hachimi
+	option = {
+		name = uma_tokaiteio_event.108.name.a
+		add_modifier = {
+			modifier = welcome_tokaiteio_2
+		}
+		remove_modifier = welcome_tokaiteio_1
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.200
+				days = 1200
+				random = 200
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_tokaiteio_event.200
+	title = uma_tokaiteio_event.200.name 
+	desc = uma_tokaiteio_event.200.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = TEIO_COMM
+	}
+	immediate = {
+		set_variable = {
+			which = tokaiteio_choice_one
+			value = 0
+		}
+		set_variable = {
+			which = tokaiteio_choice_two
+			value = 0
+		}
+		set_variable = {
+			which = tokaiteio_choice_three
+			value = 0
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.200.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.201
+				days = 500
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.200.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.201
+				days = 500
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.200.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.201
+				days = 500
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_three
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.201
+	title = uma_tokaiteio_event.201.name 
+	desc = uma_tokaiteio_event.201.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_teio_gooutside_room
+		portrait = TEIO_HAPPY
+	}
+	option = {
+		name =  uma_tokaiteio_event.201.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.202
+				days = 1100
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.201.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.202
+				days = 1100
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.201.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.202
+				days = 1100
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_three
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.202
+	title = uma_tokaiteio_event.202.name 
+	desc = uma_tokaiteio_event.202.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_teio_back_home_room
+		portrait = TEIO_ANGRY_EYECLOSE
+	}
+	option = {
+		name =  uma_tokaiteio_event.202.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.203
+				days = 400
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.202.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.203
+				days = 400
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.202.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.203
+				days = 400
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_three
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.203
+	title = uma_tokaiteio_event.203.name 
+	desc = uma_tokaiteio_event.203.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_teio_rest_room
+		portrait = TEIO_SURPRISE
+	}
+	option = {
+		name =  uma_tokaiteio_event.203.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.204
+				days = 300
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.203.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.204
+				days = 300
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.203.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.204
+				days = 300
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_three
+				value = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_tokaiteio_event.204
+	title = uma_tokaiteio_event.204.name 
+	desc = uma_tokaiteio_event.204.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+        portrait = TEIO_CURIOUS
+	}
+	option = {
+		name =  uma_tokaiteio_event.204.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.205
+				days = 30
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.204.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.205
+				days = 30
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.204.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.205
+				days = 30
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_three
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.205
+	title = uma_tokaiteio_event.205.name 
+	desc = uma_tokaiteio_event.205.desc
+	is_triggered_only = yes
+	picture = GFX_evt_teio_game
+	option = {
+		name =  uma_tokaiteio_event.205.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.206
+				days = 30
+				random = 15
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.205.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.206
+				days = 30
+				random = 15
+			}
+			multiply_variable = {
+				which = tokaiteio
+				value = 2
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.205.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.206
+				days = 30
+				random = 15
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.206
+	title = uma_tokaiteio_event.206.name 
+	desc = uma_tokaiteio_event.206.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+	option = {
+		name =  uma_tokaiteio_event.206.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.207
+				days = 700
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.206.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.207
+				days = 700
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+	option = {
+		name =  uma_tokaiteio_event.206.name.c
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.207
+				days = 700
+				random = 15
+			}
+			change_variable = {
+				which = tokaiteio_choice_three
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.207
+	title = uma_tokaiteio_event.207.name 
+	desc = uma_tokaiteio_event.207.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing_couse
+	option = {
+		name =  uma_tokaiteio_event.207.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.208
+				days = 100
+				random = 30
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.208
+	title = uma_tokaiteio_event.208.name 
+	desc = uma_tokaiteio_event.208.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture = GFX_evt_uma_racing
+	option = {
+		name =  uma_tokaiteio_event.208.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.209
+				days = 200
+				random = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.209
+	title = uma_tokaiteio_event.209.name 
+	desc = uma_tokaiteio_event.209.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing
+	option = {
+		name = uma_tokaiteio_event.209.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.210
+				days = 200
+				random = 50
+			}
+			change_variable = {
+				which = tokaiteio_choice_one
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = uma_tokaiteio_event.209.name.b
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.210
+				days = 200
+				random = 50
+			}
+			change_variable = {
+				which = tokaiteio_choice_two
+				value = 1
+			}
+		}
+	}
+}
+
+#结算！
+country_event = {
+	id = uma_tokaiteio_event.210
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					which = tokaiteio_choice_two
+					value >= 3
+				}
+			}
+			country_event = {
+				id = uma_tokaiteio_event.300
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					check_variable = {
+						which = tokaiteio_choice_two
+						value < 3
+					}
+					check_variable = {
+						which = tokaiteio_choice_two
+						value >= 1
+					}
+				}
+			}
+			country_event = {
+				id = uma_tokaiteio_event.301
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = tokaiteio_choice_two
+					value = 0
+				}
+			}
+			country_event = {
+				id = uma_tokaiteio_event.302
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				check_variable = {
+					which = tokaiteio_choice_one
+					value >= 4
+				}
+			}
+			set_country_flag = uma_teio_become_governor
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = tokaiteio_choice_two
+					value >= 4
+				}
+			}
+			set_country_flag = uma_teio_become_admiral
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = tokaiteio_choice_three
+					value >= 4
+				}
+			}
+			set_country_flag = uma_teio_become_scientist
+		}
+		else = {
+			random_list = {
+				33 = {
+					set_country_flag = uma_teio_become_governor
+					modifier = {
+						factor = 2
+						root = {
+							check_variable = {
+								which = tokaiteio_choice_one
+								value > 2
+							}
+						}
+					}
+				}
+				33 = {
+					set_country_flag = uma_teio_become_admiral
+					modifier = {
+						factor = 2
+						root = {
+							check_variable = {
+								which = tokaiteio_choice_two
+								value > 2
+							}
+						}
+					}
+				}
+				33 = {
+					set_country_flag = uma_teio_become_scientist
+					modifier = {
+						factor = 2
+						root = {
+							check_variable = {
+								which = tokaiteio_choice_three
+								value > 2
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_tokaiteio_event.300
+	title = uma_tokaiteio_event.300.name 
+	desc = uma_tokaiteio_event.300.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing
+	option = {
+		name = uma_tokaiteio_event.300.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.303
+				days = 730
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.301
+	title = uma_tokaiteio_event.301.name 
+	desc = uma_tokaiteio_event.301.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing
+	option = {
+		name = uma_tokaiteio_event.301.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.303
+				days = 730
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.302
+	title = uma_tokaiteio_event.302.name 
+	desc = uma_tokaiteio_event.302.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_teio_cry
+	option = {
+		name = uma_tokaiteio_event.302.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.303
+				days = 730
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.303
+	title = uma_tokaiteio_event.303.name 
+	desc = uma_tokaiteio_event.303.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+	option = {
+		name = uma_tokaiteio_event.303.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.304
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.304
+	title = uma_tokaiteio_event.304.name 
+	desc = uma_tokaiteio_event.304.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+        portrait = TEIO_COMM_STRONGWILL
+	}
+	option = {
+		name = uma_tokaiteio_event.304.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.305
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.305
+	title = uma_tokaiteio_event.305.name 
+	desc = uma_tokaiteio_event.305.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+        portrait = TEIO_COMM_STRONGWILL
+	}
+	option = {
+		name = uma_tokaiteio_event.305.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.306
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_tokaiteio_event.306
+	title = uma_tokaiteio_event.306.name
+	desc = {
+		trigger = {
+			has_country_flag = uma_teio_become_governor
+		}
+		text = uma_tokaiteio_event.306.name.desc.a
+	}
+	desc = {
+		trigger = {
+			has_country_flag = uma_teio_become_admiral
+		}
+		text = uma_tokaiteio_event.306.name.desc.b
+	}
+	desc = {
+		trigger = {
+			has_country_flag = uma_teio_become_scientist
+		}
+		text = uma_tokaiteio_event.306.name.desc.c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_06_room
+        portrait = TEIO_HAPPY
+	}
+	option = {
+		name = uma_tokaiteio_event.306.name.a
+		hidden_effect = {
+			country_event = {
+				id = uma_tokaiteio_event.307
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_tokaiteio_event.307
+	title = TET
+	desc = uma_tokaiteio_event.307.desc
+	is_triggered_only = yes
+
+	event_window_type = leader_recruit
+	picture = GFX_uma_leader_teio
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_tokai_teio
+	}
+
+	immediate = {
+		play_sound = uma_hire_Teio
+		create_country = {
+			name = "NAME_uma_empty"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = uma_empty_country
+			}
+		}
+		event_target:uma_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_legendary_leader_species
+				}
+			}
+			if = {
+				limit = {
+					root = {
+						has_country_flag = uma_teio_become_governor
+					}
+				}
+				uma_create_leader_teio_governor = yes
+			}
+			if = {
+				limit = {
+					root = {
+						has_country_flag = uma_teio_become_scientist
+					}
+				}
+				uma_create_leader_teio_scientist = yes
+			}
+			if = {
+				limit = {
+					root = {
+						has_country_flag = uma_teio_become_admiral
+					}
+				}
+				uma_create_leader_teio_admiral = yes
+			}
+		}
+	}
+
+	###1
+	option = {
+		trigger = {
+			has_country_flag = uma_teio_become_governor
+		}
+		name = uma_tokaiteio_event.307.a.a
+		response_text = uma_tokaiteio_event.307.a.a.resp
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			has_country_flag = uma_teio_become_admiral
+		}
+		name = uma_tokaiteio_event.307.a.b
+		response_text = uma_tokaiteio_event.307.a.b.resp
+		is_dialog_only = yes
+	}
+	option = {
+		trigger = {
+			has_country_flag = uma_teio_become_scientist
+		}
+		name = uma_tokaiteio_event.307.a.c
+		response_text = uma_tokaiteio_event.307.a.c.resp
+		is_dialog_only = yes
+	}
+
+	#####
+	option = {
+		name = uma_tokaiteio_event.307.b
+		response_text = uma_tokaiteio_event.307.b.resp
+		is_dialog_only = yes
+	}
+
+##########
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = uma_tokaiteio_event.307.hire_tooltip
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:uma_is_leader_tokai_teio
+				species = root.species
+				gender = female
+			}
+			last_created_leader = {
+				add_experience = 410
+				copy_flags_and_variables_from = event_target:uma_is_leader_tokai_teio
+				save_global_event_target_as = uma_is_leader_tokai_teio
+				change_leader_portrait = TEIO_COMM
+				uma_initialize_leader_yaruki_effect = yes
+				change_background_job = uma_racing_umamusume
+				save_global_event_target_as = uma_is_teio_governor
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_tokai_teio
+				#########
+				set_leader_flag = uma_is_gov_tokai_teio
+				#########
+				set_owner = root
+				if = {
+					limit = {
+						has_leader_flag = uma_is_gov_tokai_teio
+					}
+					save_global_event_target_as = uma_seiun_teio_governor
+				}
+				if = {
+					limit = {
+						has_leader_flag = uma_is_adr_teio
+					}
+					save_global_event_target_as = uma_seiun_teio_admiral
+				}
+				if = {
+					limit = {
+						has_leader_flag = uma_is_sci_teio
+					}
+					save_global_event_target_as = uma_seiun_teio_scientist
+				}
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_tokai_teio
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_tokai_teio
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_tokai_teio = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_empty_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+spriteTypes = {
+    ######
+    #这一个是规定总的陆军框，以下的所有子spritetype都是从这个大框架里引用的
+    spriteType = {
+        name = "GFX_uma_army_big_frame"
+        textureFile = "gfx/interface/planetview/uma_army_big_frame.dds"
+        noOfFrames = 1 #有几种新的军队，就有几个Frame，每个Frame的大小为
+    }
+    ######
+    #接下来是自行划分的军队接口，每一个在common/army里规定的新军队种类，都需要对应接下来的一个个接口。而这每一个接口都使用default_frame从上面的大框架里选择你想要的对应图标
+    spriteType = {
+        name = "GFX_uma_black_army"
+        sprite_sheet_sprite_type = "GFX_uma_army_big_frame" #来自于上面的那个大框架
+		default_frame = 1 #大框架中的第一个（蠢驴自己给你按照比例分割的）
+    }
+
+}

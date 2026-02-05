@@ -1,0 +1,908 @@
+###分类天赋树###
+##探索##
+###先头的风景
+subclass_xiantoudefengjing_scientists = {
+	custom_subtitle = scientist_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = scientist_scholar
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = xiantou_subclass
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_sensor_range_add = 1
+		science_ship_survey_speed = 0.3
+		ship_anomaly_generation_chance_mult = 0.3
+	}
+	custom_tooltip_with_modifiers = "subclass_scientist_xiantou_effect"
+	leader_class = { scientist }
+
+	background_icon = "GFX_leader_subclass_scientist_scholar_background"
+}
+###绝尘
+leader_trait_juechen_scientists = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_juechen_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+		has_trait = subclass_xiantoudefengjing_scientists
+	}
+	modifier = {
+		ship_speed_mult = 0.5
+		ship_disengage_chance_mult = 0.5
+		ship_disengage_opportunities_add = 1
+		ship_hull_mult = 1.0
+	}
+	leader_class = { scientist }
+	selectable_weight = {                                                   #权重
+		weight = 1000
+	}
+}
+leader_trait_juechen_scientists_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_juechen_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_juechen_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_speed_mult = 1.0
+		ship_disengage_chance_mult = 1.0
+		ship_disengage_opportunities_add = 2
+		ship_hull_set = 1000
+	}
+	leader_class = { scientist }
+}
+leader_trait_juechen_scientists_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_juechen_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_juechen_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_speed_mult = 1.5
+		ship_disengage_chance_mult = 1.5
+		ship_disengage_opportunities_add = 3
+		ship_hull_mult = 3
+	}
+	leader_class = { scientist }
+}
+###大图书馆
+leader_trait_datushuguan_scientists = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_datushuguan_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+		has_trait = subclass_xiantoudefengjing_scientists
+	}
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.2
+		ship_archaeological_site_clues_add = 1
+	}
+	custom_tooltip_with_modifiers = "leader_trait_tushu_effect"
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+leader_trait_datushuguan_scientists_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_datushuguan_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_datushuguan_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.4
+		ship_archaeological_site_clues_add = 2
+	}
+	custom_tooltip_with_modifiers = "leader_trait_tushu_2_effect"
+	leader_class = { scientist }
+}
+leader_trait_datushuguan_scientists_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_datushuguan_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_datushuguan_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.6
+		ship_archaeological_site_clues_add = 3
+	}
+	custom_tooltip_with_modifiers = "leader_trait_tushu_2_effect"
+	leader_class = { scientist }
+}
+###鹰眼
+leader_trait_yingyan_scientists = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_yingyan_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+		has_trait = subclass_xiantoudefengjing_scientists
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.3
+		ship_anomaly_research_speed_mult = 0.3
+	}
+	#custom_tooltip_with_modifiers = "leader_trait_yingyan_effect"
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+leader_trait_yingyan_scientists_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_yingyan_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_yingyan_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.6
+		ship_anomaly_research_speed_mult = 0.6
+	}
+	#custom_tooltip_with_modifiers = "leader_trait_yingyan_2_effect"
+	leader_class = { scientist }
+}
+
+leader_trait_yingyan_scientists_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_yingyan_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_yingyan_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.9
+		ship_anomaly_research_speed_mult = 0.9
+	}
+	#custom_tooltip_with_modifiers = "leader_trait_yingyan_2_effect"
+	leader_class = { scientist }
+}
+
+
+
+
+
+
+################################################################################################
+################################################################################################
+###分类天赋树###
+##协助研究##
+###归根
+subclass_guigen_scientists = {
+	custom_subtitle = scientist_subclass
+	leader_trait_type = subclass
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = scientist_governor
+		COUNCIL = no
+	}
+	custom_tooltip_with_modifiers = governor_subclass_tt
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.30
+		planet_jobs_society_research_produces_mult = 0.30
+		planet_jobs_engineering_research_produces_mult = 0.30
+	}
+	sector_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	leader_potential_add = {
+
+		from = { is_species_class = umamusume }
+	}
+	leader_class = { scientist }
+
+	background_icon = "GFX_leader_subclass_scientist_governor_background"
+}
+###协助者
+leader_trait_xiezhuzhe_scientists = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xiezhuzhe_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_researchers_upkeep_mult = -0.2
+	}
+	sector_modifier = {
+		planet_researchers_upkeep_mult = -0.1
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_guigen_scientists
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+
+leader_trait_xiezhuzhe_scientists_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_xiezhuzhe_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xiezhuzhe_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	planet_modifier = {
+		planet_researchers_upkeep_mult = -0.4
+	}
+	sector_modifier = {
+		planet_researchers_upkeep_mult = -0.2
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_xiezhuzhe_scientists_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_xiezhuzhe_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xiezhuzhe_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	planet_modifier = {
+		planet_researchers_upkeep_mult = -0.6
+	}
+	sector_modifier = {
+		planet_researchers_upkeep_mult = -0.3
+	}
+	leader_class = { scientist }
+}
+###主角之心
+leader_trait_zhujuezhixin_scientists = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_zhujuezhixin_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	self_modifier = {
+		leader_scientists_physics_research_produces_add = 100
+		leader_scientists_society_research_produces_add = 100
+		leader_scientists_engineering_research_produces_add = 100
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_guigen_scientists
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+
+leader_trait_zhujuezhixin_scientists_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_zhujuezhixin_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_zhujuezhixin_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	self_modifier = {
+		leader_scientists_physics_research_produces_add = 200
+		leader_scientists_society_research_produces_add = 200
+		leader_scientists_engineering_research_produces_add = 200
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_zhujuezhixin_scientists_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_zhujuezhixin_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_zhujuezhixin_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	self_modifier = {
+		leader_scientists_physics_research_produces_add = 300
+		leader_scientists_society_research_produces_add = 300
+		leader_scientists_engineering_research_produces_add = 300
+	}
+	leader_class = { scientist }
+}
+###不止科学
+leader_trait_buzhikexue_scientists = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_buzhikexue_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 1
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.15
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.075
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+		has_trait = subclass_guigen_scientists
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+
+leader_trait_buzhikexue_scientists_2 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_buzhikexue_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_buzhikexue_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.3
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.15
+	}
+	leader_class = { scientist }
+}
+
+leader_trait_buzhikexue_scientists_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_buzhikexue_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_buzhikexue_scientists"
+		RARITY = veteran
+		COUNCIL = no
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.45
+	}
+	sector_modifier = {
+		planet_jobs_produces_mult = 0.225
+	}
+	leader_class = { scientist }
+}
+
+
+
+
+
+
+################################################################################################
+################################################################################################
+###分类天赋树###
+##研究##
+###作舟
+subclass_zuozhou_scientists = {
+	custom_subtitle = councilor_subclass_scientist
+	leader_trait_type = subclass
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon_subclass
+		SUBCLASS = scientist_councilor
+		COUNCIL = yes
+	}
+	custom_tooltip_with_modifiers = councilor_subclass_tt
+	triggered_councilor_modifier = {
+		all_technology_research_speed = 0.15
+	}
+
+	leader_potential_add = {
+
+		from = { is_species_class = umamusume }
+	}
+	leader_class = { scientist }
+
+	background_icon = "GFX_leader_subclass_scientist_councilor_background"
+}
+###入渊者
+leader_trait_ruyuanzhe_scientists = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_ruyuanzhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+		has_trait = subclass_zuozhou_scientists
+	}
+	councilor_modifier = {
+		country_physics_tech_research_speed = 0.15
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+leader_trait_ruyuanzhe_scientists_2 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_ruyuanzhe_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_ruyuanzhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		country_physics_tech_research_speed = 0.3
+	}
+	leader_class = { scientist }
+}
+leader_trait_ruyuanzhe_scientists_3 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_ruyuanzhe_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_ruyuanzhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		country_physics_tech_research_speed = 0.45
+	}
+	leader_class = { scientist }
+}
+###寻梦者
+leader_trait_xunmengzhe_scientists = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xunmengzhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+		has_trait = subclass_zuozhou_scientists
+	}
+	councilor_modifier = {
+		country_society_tech_research_speed = 0.15
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+leader_trait_xunmengzhe_scientists_2 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_xunmengzhe_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xunmengzhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		country_society_tech_research_speed = 0.3
+	}
+	leader_class = { scientist }
+}
+leader_trait_xunmengzhe_scientists_3 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_xunmengzhe_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_xunmengzhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		country_society_tech_research_speed = 0.45
+	}
+	leader_class = { scientist }
+}
+###铸造者
+leader_trait_zhuzaozhe_scientists = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_zhuzaozhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+		has_trait = subclass_zuozhou_scientists
+	}
+	councilor_modifier = {
+		country_engineering_tech_research_speed = 0.15
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 200
+	}
+}
+leader_trait_zhuzaozhe_scientists_2 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_zhuzaozhe_scientists" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_zhuzaozhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		country_engineering_tech_research_speed = 0.3
+	}
+	leader_class = { scientist }
+}
+leader_trait_zhuzaozhe_scientists_3 = {
+	leader_trait_type = veteran
+	#	councilor_trait = yes
+	replace_traits = { "leader_trait_zhuzaozhe_scientists_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_zhuzaozhe_scientists"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	leader_potential_add = {
+		#判定范围
+		from = { is_species_class = umamusume }
+	}
+	councilor_modifier = {
+		country_engineering_tech_research_speed = 0.45
+	}
+	leader_class = { scientist }
+}
+
+
+###天命天赋树###
+###天命1
+leader_trait_tianming1_scientists = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = unity
+		AMOUNT = 50
+	}
+	modifier = {
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_excavation_speed_mult = 0.3
+		ship_speed_mult = 0.5
+		ship_anomaly_generation_chance_mult = 0.3
+	}
+	leader_potential_add = {
+
+		from = { is_species_class = umamusume }
+	}
+	custom_tooltip_with_modifiers = "leader_trait_xunmizhe_effect"
+	leader_class = { scientist }
+	selectable_weight = {                                                   #权重
+		weight = 200
+		modifier = {
+			has_trait = subclass_xiantoudefengjing_scientists
+			set = 1000
+		}
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+##天命2
+leader_trait_tianming2_scientists = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 1
+		planet_jobs_society_research_produces_mult = 1
+		planet_jobs_engineering_research_produces_mult = 1
+	}
+	sector_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.5
+		planet_jobs_society_research_produces_mult = 0.5
+		planet_jobs_engineering_research_produces_mult = 0.5
+	}
+	leader_potential_add = {
+
+		from = { is_species_class = umamusume }
+	}
+	leader_class = { scientist }
+	selectable_weight = {                                                   #权重
+		weight = 200
+		modifier = {
+			has_trait = subclass_guigen_scientists
+			set = 1000
+		}
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命3
+leader_trait_tianming3_scientists = {
+	leader_trait_type = destiny
+	#	councilor_trait = yes
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = unity
+		AMOUNT = 50
+	}
+	self_modifier = {
+		leader_scientists_physics_research_produces_add = 50
+		leader_scientists_society_research_produces_add = 50
+		leader_scientists_engineering_research_produces_add = 50
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.3
+	}
+	leader_potential_add = {
+
+		from = { is_species_class = umamusume }
+	}
+	leader_class = { scientist }
+	selectable_weight = {                                                   #权重
+		weight = 200
+		modifier = {
+			has_trait = subclass_zuozhou_scientists
+			set = 1000
+		}
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命4
+leader_trait_tianming4_scientists = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	inline_script = {
+		script = paragon/leader_resource_produces
+		RESOURCE = influence
+		AMOUNT = 5
+	}
+	modifier = {
+		species_leader_exp_gain = 0.5
+	}
+	councilor_modifier = {
+		species_leader_exp_gain = 0.5
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+	}
+	leader_class = { scientist }
+	selectable_weight = {                                                   #权重
+		weight = 200
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+###天命5
+leader_trait_tianming5_scientists = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_tianming1_admiral"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	modifier = {
+		ship_sensor_range_add = 10
+		ship_hyperlane_range_add = 15
+		ship_speed_mult = 0.5
+		fleet_mia_time_mult = -1.0
+	}
+	leader_potential_add = {
+		from = { is_species_class = umamusume }
+	}
+	leader_class = { scientist }
+	selectable_weight = {                                                   #权重
+		weight = 200
+		modifier = {
+			has_trait = subclass_xiantoudefengjing_scientists
+			set = 1000
+		}
+	}
+	background_icon = "GFX_leader_background_destiny_1"
+}
+

@@ -1,0 +1,784 @@
+is_organic_species = {
+
+#
+	species = {
+		OR = {
+			is_archetype = BIOLOGICAL
+			is_archetype = LITHOID
+
+			is_archetype = WARSHIPGIRL				#_wsg
+			is_archetype = SHENHAI
+			is_archetype = UNITED_FLEET
+			is_archetype = NANITES_CROP
+
+			is_archetype = LILY						# 莉莉
+			is_archetype = STARSHIPGIRLS			# swg
+			is_archetype = KANMUSU					# kc
+			is_archetype = DATEALIVE				# DAL
+
+			is_archetype = KANSEN					#_|azl|
+			is_archetype = Dolls					#_灰烬
+			is_archetype = POKEMON					#_[pkman]	[伊布帝国v1.22]=2398450274
+			is_archetype = HUMANOID					#_[ETCPM]
+			is_archetype = MAMMALIAN
+			is_archetype = REPTILIAN
+			is_archetype = AVIAN
+			is_archetype = ARTHROPOID
+			is_archetype = MOLUSCOID
+			is_archetype = FUNGOID
+			is_archetype = PLANTOID
+			is_archetype = NECROID
+			is_archetype = half_species
+			is_archetype = half_species_special
+			is_archetype = half_aberration
+			is_archetype = half_perfect
+			is_archetype = half_amalgamated
+			is_archetype = NYTO						#_|涅托|
+			is_KZ_VOY_organic_species = yes
+		#	is_archetype = ASCENDED					#_|EE|
+			is_archetype = Schale					#_|碧蓝档案|
+			is_archetype = ELF						#_|带刺|
+			is_archetype = Magical_Bitch
+			is_archetype = Magical_Girl
+
+			is_archetype = UMA
+			#新增
+		}
+	}
+}
+###PS：3.4版本蠢驴修改了job文件的逻辑，使得这个文件从之前的同名文件合并变成了文件覆盖。所以这里只能使用不同名字的scripted文件了。
+
+
+
+###关于判定是否是马娘帝国（特雷森政体或者堕落政体）[scope:country]
+is_uma_country = {
+	OR = {
+		has_authority = auth_trainingcenter
+		has_authority = auth_uma_fallen_empire
+	}
+}
+
+is_uma_player_country = {
+	has_authority = auth_trainingcenter
+}
+
+has_uma_country = {
+	OR = {
+		has_authority = auth_trainingcenter
+	}
+}
+
+
+
+###判断领袖内恰的个数（scope：country）
+uma_num_of_nature_equal_or_better_than_three = {
+	# calc_true_if = {
+
+	# }
+
+	####limit里写需要满足的要求
+	count_owned_leader = {
+		count = 3
+		limit = { has_leader_flag = uma_is_nice_nature }
+	}
+}
+
+
+
+
+####检测马娘领袖是否有干劲特质###
+uma_admiral_have_yaruki_trait = {
+	OR = {
+		has_trait = uma_trait_yaruki_five
+	}
+	}
+
+#####检测是否为最好干劲#####
+uma_not_has_highest_kanshi_trigger = {
+	NOT = {
+		OR = {
+			has_trait = uma_trait_yaruki_five
+		}
+	}
+}
+
+#####检测是否为最差干劲#####
+uma_is_not_lowest_kanshi = {
+	NOT = {
+		OR = {
+
+			has_trait = uma_trait_yaruki_one
+		}
+	}
+}
+
+####检测职业（统治者/总督）和特质####
+#蹄铁可用性
+uma_not_has_titie_trait = {
+	OR = {
+		is_ruler = yes
+		leader_class = official
+	}
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_horse_shoes_ultra
+			has_trait = uma_governor_trait_horse_shoes_ultra
+		} 
+	}
+}
+
+#护符可用性
+uma_not_has_amulet_trait = {
+	OR = {
+		leader_class = commander
+	}
+	NOT = {
+		OR = {
+			has_trait = uma_admiral_trait_amulet
+
+		} 
+	}
+}
+
+#喇叭可用性
+uma_not_has_horn_trait = {
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_horn
+			has_trait = uma_governor_trait_horn
+			has_trait = uma_admiral_trait_horn
+
+			has_trait = uma_scientist_trait_horn
+		}
+	}
+}
+
+#学者帽可用性
+uma_not_has_school_hat_trait = {
+	OR = {
+		is_ruler = yes
+		leader_class = scientist
+		leader_class = official
+	}
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_special_scholar
+			has_trait = uma_scientist_trait_special_scholar
+			has_trait = uma_governor_trait_special_scholar
+		}
+	}
+}
+
+#训练手册可用性
+uma_not_has_training_book_trait = {
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_training_book
+			has_trait = uma_governor_trait_training_book
+			has_trait = uma_admiral_trait_training_book
+
+			has_trait = uma_scientist_trait_training_book
+		}
+	}
+}
+
+#望远镜可用性
+uma_not_has_tomorrow_star_trait = {
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_tomorrow_star
+			has_trait = uma_governor_trait_tomorrow_star
+			has_trait = uma_admiral_trait_tomorrow_star
+
+			has_trait = uma_scientist_trait_tomorrow_star
+		}
+	}	
+}
+
+#小镜子可用性
+uma_not_has_lovely_trait = {
+	OR = {
+		is_ruler = yes
+		leader_class = official
+	}
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_lovely
+			has_trait = uma_governor_trait_lovely
+		}
+	}
+}
+
+#皇家青汁可用性
+uma_not_has_vegetable_drink_trait = {
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_vegetable_drink
+			has_trait = uma_governor_trait_vegetable_drink
+			has_trait = uma_admiral_trait_vegetable_drink
+			has_trait = uma_scientist_trait_vegetable_drink
+		}
+	}
+}
+
+#体力65可用性
+uma_not_has_power_sf_trait = {
+	NOT = {
+		OR = {
+#			has_trait = uma_ruler_trait_power_sf
+			has_trait = uma_governor_trait_power_sf
+			has_trait = uma_admiral_trait_power_sf
+			has_trait = uma_scientist_trait_power_sf
+		}
+	}
+}
+
+
+uma_has_ap_two_realm = {
+	has_ascension_perk = ap_uma_zenshizenren_ap_2
+}
+
+uma_has_ap_two_factor = {
+	has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+}
+
+
+
+uma_is_mild_planet = {
+	OR = {
+		is_planet_class = pc_continental
+		is_planet_class = pc_savannah
+		is_planet_class = pc_ocean
+		is_planet_class = pc_uma_school
+		is_planet_class = pc_uma_industrial
+	}
+}
+
+uma_is_hot_planet = {
+	OR = {
+		is_planet_class = pc_desert
+		is_planet_class = pc_arid
+		is_planet_class = pc_tropical
+	}
+}
+
+uma_is_cold_planet = {
+	OR = {
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_alpine
+	}
+}
+
+###关于判定是否是马娘堕落帝国[scope:country]
+is_uma_fallen_empire = {
+	OR = {
+		has_authority = auth_uma_fallen_empire
+		#has_authority = auth_awaken_uma_fallen_empire
+	}
+}
+
+
+##快速判断是否为环，方便又快捷
+uma_is_ringworld = {
+	OR = {
+		is_ringworld = yes
+		is_planet_class = pc_ringworld_habitable
+		# R
+		is_planet_class = pc_ringworld_habitable_uf
+		is_planet_class = pc_ringworld_habitable_sh
+		is_planet_class = pc_ringworld_habitable_wsg
+		is_planet_class = pc_ringworld_habitable_swim
+		is_planet_class = pc_dyson_ring
+		# gigastructure
+		is_planet_class = pc_ringworld_city
+		is_planet_class = pc_ringworld_machine
+		is_planet_class = pc_ringworld_hive
+		is_planet_class = pc_city_ringworld_habitable
+		is_planet_class = pc_gigaorbital_ring
+		is_planet_class = pc_giga_ringworld_habitable
+		# ascendancy_ringworlds
+		is_planet_class = pc_ringworld_eco_city
+		is_planet_class = pc_ringworld_energy_city
+		is_planet_class = pc_ringworld_shrouded_paradise
+		is_planet_class = pc_square_ringworld_city
+		is_planet_class = pc_square_ringworld_energy_city
+		is_planet_class = pc_square_ringworld_machine
+		is_planet_class = pc_square_ringworld_hive
+		is_planet_class = pc_ringworld_assimilated
+		is_planet_class = pc_ringworld_assimilated2
+		is_planet_class = pc_ringworld_assimilated3
+		is_planet_class = pc_ringworld_assimilated4
+		is_planet_class = pc_ringworld_machine_factory
+		is_planet_class = pc_ringworld_bioforge
+		is_planet_class = pc_ringworld_mining
+		is_planet_class = pc_ringworld_energy
+		is_planet_class = pc_ringworld_trade
+		is_planet_class = pc_ringworld_training
+		is_planet_class = pc_ringworld_training_shielded
+		is_planet_class = pc_ringworld_eco
+		is_planet_class = pc_ringworld_farming
+		is_planet_class = pc_ringworld_razed_city
+		is_planet_class = pc_ringworld_razed_energy
+		is_planet_class = pc_ringworld_razed_farming
+		is_planet_class = pc_ringworld_razed_mining
+		is_planet_class = pc_ringworld_razed_training
+		is_planet_class = pc_ringworld_razed_eco
+		# acot
+		is_planet_class = pc_omega_ringworld_seam
+		is_planet_class = pc_omega_ringworld_habitable
+		# AE
+		AND = {
+			has_global_flag = has_ancient_empire_mod
+			is_planet_class = pc_ag_ringworld_city
+		}
+		AND = {
+			has_global_flag = has_ancient_empire_mod
+			is_planet_class = pc_ag_ringworld_ocean
+		}
+		AND = {
+			has_global_flag = has_ancient_empire_mod
+			is_planet_class = pc_ag_ringworld_shrouded
+		}
+		AND = {
+			has_global_flag = has_ancient_empire_mod
+			is_planet_class = pc_ag_ringworld_machine
+		}
+		# 星舰少女
+		is_planet_class = pc_swgs_engineer_ringworld_habitable
+	}
+}
+
+##快速判断是否为居住站，方便又快捷
+uma_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		# gigastructure
+		is_planet_class = pc_flat_world
+		is_planet_class = pc_squareworld_habitable
+		is_planet_class = pc_interstellar_habitat
+		# Plentiful Traditions
+		is_planet_class = pc_mem_vazuran_habitat
+		is_planet_class = pc_habitat_robot
+		#PD - Planetary Habitats
+		is_planet_class = pc_gghab
+		is_planet_class = pc_tmhab
+		is_planet_class = pc_tmhab2
+		is_planet_class = pc_mmhab
+		is_planet_class = pc_mmhab2
+		is_planet_class = pc_bhab
+		is_planet_class = pc_bchab
+		is_planet_class = pc_mhab
+		is_planet_class = pc_fhab
+		is_planet_class = pc_fmhab
+		is_planet_class = pc_mehab
+	}
+}
+
+##PD适配
+uma_is_pd_habitat_planet = {
+	OR = {
+		is_planet_class = "pc_sandsea"
+		is_planet_class = "pc_oasis"
+		is_planet_class = "pc_mesa"
+		is_planet_class = "pc_outback"
+		is_planet_class = "pc_coastal"
+		is_planet_class = "pc_med"
+		is_planet_class = "pc_mangrove"
+		is_planet_class = "pc_wetswamp"
+		is_planet_class = "pc_fog"
+		is_planet_class = "pc_desertislands"
+		is_planet_class = "pc_hajungle"
+		is_planet_class = "pc_cenote"
+		is_planet_class = "pc_forest"
+		is_planet_class = "pc_lake"
+		is_planet_class = "pc_steppe"
+		is_planet_class = "pc_prairie"
+		is_planet_class = "pc_veld"
+		is_planet_class = "pc_semiarid"
+		is_planet_class = "pc_retinal"
+		is_planet_class = "pc_cascadian"
+		is_planet_class = "pc_hadesert"
+		is_planet_class = "pc_snow"
+		is_planet_class = "pc_highland"
+		is_planet_class = "pc_duneforest"
+		is_planet_class = "pc_mushroom"
+		is_planet_class = "pc_swamp"
+		is_planet_class = "pc_mud"
+		is_planet_class = "pc_basalt"
+		is_planet_class = "pc_subarctic"
+		is_planet_class = "pc_antarctic"
+		is_planet_class = "pc_aeolian"
+		is_planet_class = "pc_frozen_desert"
+		is_planet_class = "pc_boreal"
+		is_planet_class = "pc_glacial"
+		is_planet_class = "pc_geothermal"
+		is_planet_class = "pc_karst"
+		is_planet_class = "pc_pd_cold_cave"
+		is_planet_class = "pc_pd_dry_cave"
+		is_planet_class = "pc_reef"
+		is_planet_class = "pc_pd_archipelago"
+		is_planet_class = "pc_primal"
+		is_planet_class = "pc_salt"
+		is_planet_class = "pc_aquifer"
+		is_planet_class = "pc_coral"
+		is_planet_class = "pc_storm"
+		is_planet_class = "pc_pd_iceberg"
+		is_planet_class = "pc_cryoflora"
+		is_planet_class = "pc_lichen"
+		is_planet_class = "pc_eyeball"
+		is_planet_class = "pc_glacio"
+		is_planet_class = "pc_lanthanide"
+		is_planet_class = "pc_megaflora"
+		is_planet_class = "pc_pd_petrified"
+		is_planet_class = "pc_aquatic"
+		is_planet_class = "pc_biolumen"
+		is_planet_class = "pc_superhabitable"
+		is_planet_class = "pc_pd_dry_superhab"
+		is_planet_class = "pc_pd_cold_superhab"
+		is_planet_class = "pc_tidallylocked"
+		is_planet_class = "pc_wettidallylocked"
+		is_planet_class = "pc_supercon"
+		is_planet_class = "pc_pd_sinkhole"
+	}
+}
+
+uma_is_normal_habitat_planet = {
+	OR = {
+		is_planet_class = "pc_desert"
+		is_planet_class = "pc_tropical"
+		is_planet_class = "pc_arid"
+		is_planet_class = "pc_ocean"
+		is_planet_class = "pc_tundra"
+		is_planet_class = "pc_arctic"
+		is_planet_class = "pc_continental"
+		is_planet_class = "pc_alpine"
+		is_planet_class = "pc_savannah"
+		is_planet_class = pc_gaia
+	}
+}
+
+
+uma_we_passed_ap1 = {
+	owner = {
+		has_ascension_perk = ap_uma_fly_me_to_the_star
+		has_ascension_perk = ap_uma_zenshizenren
+	}
+}
+
+uma_is_event_planet = {
+	has_planet_flag = uma_is_special_planet
+	has_planet_flag = tachyon_coffee_starbase
+}
+
+uma_is_event_system = {
+	OR = {
+		has_star_flag = uma_bourbon_system
+		has_star_flag = uma_fallen_empire_system_initializer
+		has_star_flag = uma_fallen_empire_system_initializer_1
+		has_star_flag = uma_is_fallen_empire_school_star_1
+		has_star_flag = uma_fallen_empire_system_initializer_2
+		has_star_flag = uma_fallen_empire_system_initializer_3
+		has_star_flag = uma_fine_system
+		has_star_flag = uma_gold_invasion_system
+		has_star_flag = uma_grass_wonder_system
+		has_star_flag = uma_seiun_sky_system
+		has_star_flag = uma_shop_center_system
+		has_star_flag = uma_tachyon_coffee_system
+	}
+}
+
+can_artifact_analysis_give_uma_clock = {
+
+}
+
+can_artifact_analysis_give_uma_clover = {
+
+}
+
+can_artifact_analysis_give_uma_coin = {
+
+}
+
+can_artifact_analysis_give_uma_live_video = {
+
+}
+
+can_artifact_analysis_give_uma_shine_of_dream = {
+
+}
+can_artifact_analysis_give_uma_shoe_trophy = {
+
+}
+can_artifact_analysis_give_uma_strength_crystal = {
+
+}
+can_artifact_analysis_give_uma_tp = {
+
+}
+can_artifact_analysis_give_uma_trophy_classic = {
+
+}
+can_artifact_analysis_give_uma_twinkle_maz = {
+
+}
+
+
+uma_check_factor_rate = {
+	check_variable = {
+		which = Root.uma_ap2_factor_$TYPE$_rate
+		value = $VAL$
+	}
+}
+
+uma_ap2_factor_0_fault = {
+	OR = {
+		OR = {
+			check_variable = {
+				which = uma_ap2_factor_charm_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_power_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_wisdom_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_speed_rate
+				value <= 5
+			}
+			check_variable = {
+				which = uma_ap2_factor_stamina_rate
+				value <= 5
+			}
+		}
+		check_variable = {
+			which = uma_ap2_factor_summation
+			value <= 8
+		}
+	}
+}
+
+uma_check_realm_factor_rate_wisdom_1 = {
+	has_country_flag = uma_kenshi_intelligence_level_1
+	has_country_flag = uma_kenshi_intelligence_level_2
+}
+
+uma_check_realm_factor_rate_wisdom_2 = {
+	has_country_flag = uma_kenshi_intelligence_level_3
+	has_country_flag = uma_kenshi_intelligence_level_4
+	has_country_flag = uma_kenshi_intelligence_level_5
+}
+
+uma_check_realm_factor_rate_stamina_1 = {
+	has_country_flag = uma_kenshi_will_level_1
+	has_country_flag = uma_kenshi_will_level_2
+	has_country_flag = uma_kenshi_will_level_3
+	has_country_flag = uma_kenshi_will_level_4
+	has_country_flag = uma_kenshi_will_level_5
+}
+
+uma_check_realm_factor_rate_power_1 = {
+
+	has_country_flag = uma_kenshi_strength_level_1
+	has_country_flag = uma_kenshi_strength_level_2
+}
+
+uma_check_realm_factor_rate_power_2 = {
+
+	has_country_flag = uma_kenshi_strength_level_3
+	has_country_flag = uma_kenshi_strength_level_4
+	has_country_flag = uma_kenshi_strength_level_5
+}
+
+
+uma_check_factory_alloy_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = minerals
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_custom_goods_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = food
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_volatile_motes_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = minerals
+			amount <= 400
+		}
+		has_resource = {
+			type = energy
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_gas_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = minerals
+			amount <= 400
+		}
+		has_resource = {
+			type = energy
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_rare_crystal_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = minerals
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_living_materal_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = minerals
+			amount <= 400
+		}
+		has_resource = {
+			type = energy
+			amount <= 400
+		}
+	}
+}
+
+
+uma_check_factory_dark_matter_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = energy
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_nanites_disable = {
+
+	OR = {
+		has_resource = {
+			type = uma_crystal_carrot
+			amount <= 400
+		}
+		has_resource = {
+			type = rare_crystals
+			amount <= 400
+		}
+		has_resource = {
+			type = energy
+			amount <= 400
+		}
+		has_resource = {
+			type = alloys
+			amount <= 400
+		}
+	}
+}
+
+uma_check_factory_uma_crystal_disable = {
+
+	OR = {
+		has_resource = {
+			type = minerals
+			amount <= 400
+		}
+		has_resource = {
+			type = energy
+			amount <= 400
+		}
+	}
+}
+
+
+uma_leader_cp_has_country_flag_portrait = {
+	optimize_memory
+	OR = {
+		has_country_flag = uma_leader_cp.9.dura.portrait.1
+		has_country_flag = uma_leader_cp.9.hishi.portrait.1
+		has_country_flag = uma_leader_cp.9.satdia.portrait.1
+		has_country_flag = uma_leader_cp.9.ayb.portrait.1
+		has_country_flag = uma_leader_cp.9.tama.portrait.1
+		has_country_flag = uma_leader_cp.9.fine.portrait.1
+		has_country_flag = uma_leader_cp.9.nn_sci.portrait.1
+		has_country_flag = uma_leader_cp.9.nn_adr.portrait.1
+		has_country_flag = uma_leader_cp.9.nn_gov.portrait.1
+		has_country_flag = uma_leader_cp.9.halo.portrait.1
+		has_country_flag = uma_leader_cp.9.al.portrait.1
+		has_country_flag = uma_leader_cp.9.kita.portrait.1
+		has_country_flag = uma_leader_cp.9.zephyr.portrait.1
+		has_country_flag = uma_leader_cp.9.curren.portrait.1
+		has_country_flag = uma_leader_cp.9.ardan.portrait.1
+		has_country_flag = uma_leader_cp.9.sweepy.portrait.1
+		has_country_flag = uma_leader_cp.9.cheval.portrait.1
+		has_country_flag = uma_leader_cp.9.zf.portrait.1
+		has_country_flag = uma_leader_cp.9.teio_sci.portrait.1
+		has_country_flag = uma_leader_cp.9.teio_adr.portrait.1
+		has_country_flag = uma_leader_cp.9.teio_gov.portrait.1
+		has_country_flag = uma_leader_cp.9.sky_gov.portrait.1
+		has_country_flag = uma_leader_cp.9.ar_sky.portrait.1
+		has_country_flag = uma_leader_cp.9.agt.portrait.1
+		has_country_flag = uma_leader_cp.9.did.portrait.1
+		has_country_flag = uma_leader_cp.9.ougri.portrait.1
+		has_country_flag = uma_leader_cp.9.deep.portrait.1
+	}
+}
+
+uma_the_uma_endcrisis_happened = {
+	has_global_flag = uma_ec_invasion_happened
+	NOT = {
+		has_global_flag = uma_ec_invasion_end
+	}
+}

@@ -1,0 +1,157 @@
+﻿l_simp_chinese:
+
+uma_leviathan.3.title: "噬星者能量下降"
+uma_leviathan.3.desc: "怪异的事情发生了，噬星者巨大残骸内的能量正在不断下降，我们必须趁它完全消失前找出能量下降的原因。探测器显示，噬星者内的能量定向逸散至靠近恒星的一颗贫瘠星球内。"
+uma_leviathan.3.a: "什么玩意?"
+uma_leviathan.4.title: "科研船失踪"
+uma_leviathan.4.desc: "科研船[This.GetName]的信号在降落在[event_target:uma_leviathan_planet.GetName]上的一瞬间消失在了我们的通讯频道。随后，[event_target:uma_leviathan_planet.GetName]的公转速度突然下降。\n仅仅过去了几个小时，噬星者的残骸就完全消失了。\n但是这个星系中有大量古文明活动迹象，[This.GetLeaderName]建议我们进行勘探。"
+uma_leviathan.4.a: "我们的遗珍...."
+
+#Stage2
+uma_leviathan.10.title: "利维坦内的文明"
+uma_leviathan.10.desc: "起初，我们认为这只不过是一个古文明的遗迹，然而现在情况不同了，在利维坦内发现的文明仍在运转着，他们拥有强大的生物学科技，而被利维坦吞食的科学家此刻仍在其体内的某处。\n对于如何与这个文明展开进一步交流，学生会成员们争执不休。有人认为不应该打扰这个可能有强大实力的远古帝国；有人认为应该尝试与其展开外交；还有人认为可以派遣间谍进行渗透；而科学部门则是提出首先研究利维坦的生物组织。"
+uma_leviathan.10.a: "不要打扰他们，§R那可能很危险§!"
+uma_leviathan.10.b: "派出间谍"
+uma_leviathan.10.d: "先研究生物组织以获得情报"
+
+uma_leviathan.11.title: "利维坦内的文明Ⅱ"
+uma_leviathan.11.desc: "我们的间谍发来了第一封报告，她称利维坦内居住的物种是§Y另一批马娘§!。目前我们的间谍正在内部与对方进行情报交换\n而这个时候，那艘失踪的科研船居然接通了通信！科学家[event_target:uma_leviathan_fleet_locked.leader.GetName]安然无恙，她也声称利维坦内居住的物种是另一批马娘，并且自己受到了优待。"
+uma_leviathan.11.desc.a: "那艘失踪的科研船居然接通了通信！科学家[event_target:uma_leviathan_fleet_locked.leader.GetName]安然无恙，她也声称利维坦内居住的物种是另一批马娘，并且自己受到了优待。"
+uma_leviathan.11.a: "很好"
+uma_leviathan.11.b: "另一批马娘？派遣外交官。"
+uma_leviathan.12.title: "利维坦内的文明Ⅱ"
+uma_leviathan.12.desc: "科学家在利维坦生物组织中找到了微弱的马娘的因子反应，这说明该文明的生物科技中有马娘参与。\n与此同时那艘失踪的科研船居然接通了通信！科学家[event_target:uma_leviathan_fleet_locked.leader.GetName]安然无恙，她也声称利维坦内居住的物种是另一批马娘，并且自己受到了优待。"
+uma_leviathan.12.a: "是马娘同胞！快派出外交官！"
+uma_leviathan.13.title: "恢复通信?"
+uma_leviathan.13.desc: "一份信息文本出现在了利维坦上，其中提到由于利维坦的信息屏蔽，内部与外界联系需要开辟一条量子信息通道，里面的马娘文明乐意与我们建立联系。\n信息文本上有我们外交官的著名，并且附了量子信息通道的建立方法。"
+uma_leviathan.13.a: "她们到底为何要这样躲起来?"
+
+
+##Communication
+uma_leviathan_Unknown: "???"
+uma_leviathan_Tamano_yl: " "玉藻绮罗" "
+
+
+uma_leviathan.20.desc: "[this.GetName]的后辈们好哇，你们的基本情报我已经通过你们的外交官了解了，这里是§g锦野学院§!，我是学院长玉藻绮罗。"
+uma_leviathan.20.desc.a: "我们的文明在鼎盛时期与银河系外的其他马娘文明建立过联系，然而在某个时间点，她们中的一部分突然陷入了沉寂，观测表示，有一些马娘文明所在的星系整个消失了，我们的先祖害怕遭到波及，因此制造了这个利维坦，把整个锦野搬了进去。"
+uma_leviathan.20.desc.b: "有新的马娘出现在外界，说明危机应该已经过去了，因此可以与新的马娘文明联系。"
+uma_leviathan.20.desc.c: "我们研究了可以发现的所有利维坦，结合马娘本身的暴食因子制造了“栗斯拉”，它可以吞食恒星能量给腹中的我们提供能源。"
+uma_leviathan.20.desc.d: "我是玉藻家族的不知道多少代直系血脉，我的祖先是“玉藻栗”，正是她领导了栗斯拉的研究。"
+uma_leviathan.20.desc.e: "经历长久的时光，先祖们一定要躲藏在这个利维坦中的原因早已无从知晓，她们甚至不允许让任何马娘离开这里。未来我们将继续居住在栗斯拉中，但会允许想要出去的马娘自由离开。"
+uma_leviathan.20.desc.f: "多数科研已经成了单纯的数据，不少设备也需要资源重启，如果你们愿意帮助我们，我们的科研数据可供你们随意参观。\n我们只需要一点点的 £energy£能量2000 和 £food£食物2000 还有 £alloys£合金1000 \n怎么样，是不是很实惠"
+uma_leviathan.20.a: "你们为何要躲到利维坦内？"
+uma_leviathan.20.b: "躲了这么久为何又与外界联系了？"
+uma_leviathan.20.c: "这个利维坦是怎么产生的？"
+uma_leviathan.20.d: "关于你自己"
+uma_leviathan.20.e: "你们接下来有什么打算？"
+uma_leviathan.20.f: "你们的科研状况如何？"
+
+uma_leviathan.21.a: "当然，非常乐意"
+uma_leviathan.21.a.a: "虽然我们现在资源不足，但是我们会尽我们所能"
+uma_leviathan.21.b: "我们没有足够的资源……"
+uma_leviathan.21.resp: "那好吧...."
+
+uma_leviathan.22.desc: "先前的合作非常愉快，只是五年的条约已经到期，贵方是否愿意续约？"
+
+uma_leviathan.23.desc: "说起来，我之前曾提起允许愿意离开栗斯拉的马娘们离开，但她们如果独自离开，在宇宙里未免过于危险和孤独，所以……"
+uma_leviathan.23.a: "你是想让她们来我们国家？欢迎欢迎。"
+uma_leviathan.24.desc: "麻烦你们了，另外，过去十年间一直与贵方对接的那位总督也想离开栗斯拉，她可是咱们的宝啊，说是一个人维系整个锦野的资源体系也不为过，不过，既然说好了允许离开，也没有不放人的道理。"
+uma_leviathan.24.a: "呃，她叫什么来着？"
+uma_leviathan.24.a.resp: "§B玉藻十字§!"
+
+uma_leviathan.25.desc: "你们好呀，咱是玉藻十字！已经很熟悉了所以就不自我介绍了，未来请多关照啦！"
+uma_leviathan.26.desc: "嗨呀，为了维持资源充足，咱每天在办公室里想办法从ai算法里面再抠一点物资出来，人口也得严格控制，这个星系的资源迟早要用完的，比起一眼望得到头的栗斯拉，我必须走出去才能拯救锦野。"
+uma_leviathan.27.desc: "还有哇，如果真的是整个星系消失，躲在栗斯拉里也没用呀！不如加入一个冲劲十足的文明，一起把危机解决才对！"
+uma_leviathan.28.desc: "看什么！不要因为咱个子小就小看咱啊！"
+uma_leviathan.29.desc: "那不还是觉得我个子小？！"
+uma_leviathan.30.desc: "这个简单，我保证能让你们节省出一大批资源，这些节省出来的资源只要分出一点给锦野就好了。"
+uma_leviathan.31.desc: "放心交给咱吧，在这方面我可是自信满满。"
+
+uma_leviathan.25.a: "那个……就这么离开栗斯拉真的好吗？"
+uma_leviathan.26.a: "原来如此。"
+uma_leviathan.27.a: "(打量着玉藻十字)"
+uma_leviathan.28.a: "我只是感叹担起整个锦野资源分配的马娘居然是这样的小不点。"
+uma_leviathan.29.a: "好啦好啦，不开玩笑了，你离开栗斯拉以后锦野撑得住吗？"
+uma_leviathan.30.a: "我们的资源系统可比锦野复杂的多哦？"
+uma_leviathan.31.a: "那好哦，期待你的发挥。"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Digsite
+uma_leviathan_digsite: "狼藉……"
+uma_leviathan_digsite_desc: "该星球上的古文明遗迹显示出混乱的迹象，疑似曾遭遇暴动，有必要派出考古队进行进一步调查并收集相关情报。"
+uma_leviathan.5.name: "撤离?"
+uma_leviathan.5.desc: "初步的探索并没有找到任何有用的线索，无论是数据库，科研设施还是政府部门，大都只留下了一些无关紧要的信息。这似乎预示着该古文明并非产生了暴动，而是有序撤离此处。\n能作证这个猜测的是，这颗星球上的武器研究大部分没有被带走。\n他们到底要去往何处？如果不从有限的信息中推断出来，就无法揭开这里的秘密。"
+uma_leviathan.6.name: "生物实验室"
+uma_leviathan.6.desc: "经过搜索，考古队员们找到了一个废弃的生物实验室，同样的，这里的大部分文件资料都已经被摧毁或携带走，但剩下的零散内容对我们而言依然非常先进，整理后的资料被发送回终端。\n这个发现意味着这个古文明的生物科技极端强大，这显然是后续探索中需要注重的部分。"
+uma_leviathan.6.a: "生物技术吗......"
+uma_leviathan.7.name: "利维坦……"
+uma_leviathan.7.desc: "经过对有限资料的分析，科学家[this.GetLeaderName]认为这颗星球就是古文明制造出来的利维坦，后续的探测也表明，该星球的地表下§Y确实是一个生命体§!。\n这个利维坦的肚子里或许有一些吞食下去的残骸，并且它吞食噬星者的机制也值得研究，问题在于如何安全地探索这个星球利维坦……"
+uma_leviathan.7.a: "让我们想想办法"
+uma_leviathan.8.name: "一个简单的方法...."
+uma_leviathan.8.desc: "我们的科学家用了最简单粗暴的方法：在一个搭载ai的探测器上缠绕大量高强度的纤维绳索，另一端连接特制的推进器，随后让这个利维坦将其吞食下去。\n科研船时刻监测绳索强度，一旦发现绳索开始断裂，就把探测器拉上来，然后添加绳索。\n探测器在开始的数次探索中成功带回了大量生物组织，但并没有找到失踪的科研船残骸，科学家们只能延长绳索，让探测器抵达更深的位置。\n这需要大量时间来调整。"
+uma_leviathan.9.name: "地下城市...."
+uma_leviathan.9.desc: "探测器总算有了新的发现，在进入利维坦内数十公里后，探测器检测到了微弱的光线，沿着光线方向，探测器抵达了一个巨大的“洞穴”，下方竟是一座完整的，仍在运转的立体城市。\n探测器快速撤退，面对下一步行动，整个考古队陷入了分歧。显然，这样的情况已经不仅是考古，外交官已经来到这个星系中，学生会也在讨论如何进行下一步行动。"
+
+
+
+
+
+
+
+##Special_Project
+UMA_LEVIATHAN_STRANGE_THING: "进一步探索贫瘠星球"
+UMA_LEVIATHAN_STRANGE_THING_DESC: "怪异的事情发生了，噬星者巨大残骸内的能量正在不断下降，我们必须趁它完全消失前找出能量下降的原因。探测器显示，噬星者内的能量定向逸散至靠近恒星的一颗贫瘠星球内。\n这是为什么呢?"
+UMA_LEVIATHAN_ESTABLISH_QUATUMN_COMMUNICATION_CHANNEL: "建立量子通信隧道"
+UMA_LEVIATHAN_ESTABLISH_QUATUMN_COMMUNICATION_CHANNEL_DESC: "一份信息文本出现在了利维坦上，其中提到由于§Y利维坦的信息屏蔽§!，内部与外界联系需要开辟一条量子信息通道，里面的马娘文明乐意与我们建立联系。\n信息文本上有我们外交官的著名，并且附了量子信息通道的建立方法。"
+
+##Planet
+UMA_LE_PLANET: "锦野"
+
+
+##Ship/Fleet
+UMA_SHIP_FROM_LEVIATHAN: "从利维坦内部回来的科研船"
+
+
+#Modifier
+uma_cydatabase: "锦野数据库"
+
+
+##country
+uma_is_cy_tama_country: "锦野学院"
+
+#Tooltip
+uma_leviathan.21.tooltip: "现在我们可以和 锦野学院 签订科研协议了"
+
+#trait
+uma_governor_trait_sp_cross: "白色稻妻"
+uma_governor_trait_sp_cross_help_to_cy: "给锦野的援助"
+uma_governor_trait_sp_cross_desc: ""
+uma_governor_trait_sp_cross_help_to_cy_desc: ""

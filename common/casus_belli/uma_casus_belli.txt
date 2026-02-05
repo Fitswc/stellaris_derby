@@ -1,0 +1,34 @@
+#赛马娘战争借口
+cb_uma_candleoff = {
+	show_in_diplomacy = yes
+	show_notification = yes
+    potential = {
+		has_origin = origin_uma_candleoff
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}
+
+#商业主动权
+cb_uma_business_war = {
+	show_in_diplomacy = yes
+	show_notification = yes
+    potential = {
+		has_origin = origin_uma_business_MAN
+	}
+	is_valid = {
+		From = {
+			is_megacorp = yes
+		}
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

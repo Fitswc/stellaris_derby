@@ -1,0 +1,766 @@
+#居住模块(House)
+#学院模块(research)
+#重工业模块（Alloy）
+#轻工业模块(Consume Good)
+
+
+#农业模块(Food)
+
+district_uma_dormitory_ring = {
+	base_buildtime = 500
+	icon = "district_uma_dormitory_ring"
+	overlay_icon = GFX_district_housing
+
+	exempt_from_ai_planet_specialization = yes
+
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
+
+	inline_script = {
+		script = districts/BPV_district_slots2
+		GOVERNMENT = slot_city_government
+		SLOT1 = slot_city_01
+		SLOT2 = slot_city_02
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		from = { is_regular_empire = yes }
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		uses_district_set = uma_ring_world
+	}
+
+	conversion_ratio = 0.5
+	convert_to = {
+		district_rw_nexus
+		district_rw_hive
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+			uma_crystal_carrot = 30
+		}
+		upkeep = {
+			energy = 5
+			uma_crystal_carrot = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1000
+		job_clerk_add = 600
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		job_uma_dormitory_administrator_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 900
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 3000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 3000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 3000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+		}
+		modifier = {
+			job_clerk_add = 300
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_uma_country = yes }
+		}
+		text = job_uma_dormitory_administrator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+
+}
+
+##RW New districts
+district_uma_rw_urban_1 = {
+	icon = district_uma_rw_urban
+	base_buildtime = @rw_district_buildtime
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_uma_rw_urban_01
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = uma_ring_world
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_technician_automated_workforce_mult = 1.0
+		job_farmer_automated_workforce_mult = 1.0
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_uma_rw_urban_2 = {
+	icon = district_uma_rw_urban
+	base_buildtime = @rw_district_buildtime
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_uma_rw_urban_01
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = uma_ring_world
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_technician_automated_workforce_mult = 1.0
+		job_farmer_automated_workforce_mult = 1.0
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_uma_rw_urban_3 = {
+	icon = district_uma_rw_urban
+	base_buildtime = @rw_district_buildtime
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_uma_rw_urban_01
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = uma_ring_world
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = uma_ring_world
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_technician_automated_workforce_mult = 1.0
+		job_farmer_automated_workforce_mult = 1.0
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+
+##SPAW
+district_uma_ring_industrial = {
+	icon = district_uma_ring_industrial
+	overlay_icon = GFX_district_mixed_industry
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_industrial_1
+	}
+}
+
+district_uma_ring_research = {
+	icon = district_uma_ring_research
+	overlay_icon = GFX_district_research
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_research_1
+	}
+}
+
+district_uma_ring_administrative = {
+	icon = district_uma_ring_administrative
+	overlay_icon = GFX_district_government
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_district_uma_ring_administrative_1
+	}
+}
+
+district_uma_ring_fortress = {
+	icon = district_uma_ring_fortress
+	overlay_icon = GFX_district_fortress
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_fortress_1
+	}
+}
+
+district_uma_ring_trade = {
+	icon = district_uma_ring_trade
+	overlay_icon = GFX_district_trade
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_trade_1
+	}
+}
+
+district_uma_ring_food = {
+	icon = district_uma_ring_food
+	overlay_icon = GFX_district_food
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_agriculture_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_nano_vitality_crops
+			}
+		}
+		text = agriculture_4
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_agriculture_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_gene_crops
+			}
+		}
+		text = agriculture_3
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_agriculture_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_eco_simulation
+			}
+		}
+		text = agriculture_2
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_agriculture_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_eco_simulation
+			}
+		}
+		text = agriculture_1
+	}
+
+	triggered_name = {
+		text = agriculture_0
+	}
+}
+
+district_uma_ring_energy = {
+	icon = district_uma_ring_energy
+	overlay_icon = GFX_district_energy
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_generator_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_power_plant_4
+			}
+		}
+		text = generator_4
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_generator_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_power_plant_3
+			}
+		}
+		text = generator_3
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_generator_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_power_plant_2
+			}
+		}
+		text = generator_2
+	}
+
+	triggered_name = {
+		trigger = {
+			has_any_normal_generator_zone = yes
+			exists = owner
+			owner = {
+				has_technology = tech_power_plant_1
+			}
+		}
+		text = generator_1
+	}
+
+	triggered_name = {
+		text = generator_0
+	}
+}
+
+district_uma_ring_training = {
+	icon = district_uma_ring_training
+	overlay_icon = GFX_district_uma_training
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_uma_training_1
+	}
+}
+
+district_uma_ring_housing = {
+	icon = district_uma_rw_urban
+	overlay_icon = GFX_district_housing
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = city_uma_housing_1
+	}
+}
+
+

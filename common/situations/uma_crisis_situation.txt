@@ -1,0 +1,276 @@
+situation_uma_endcrisis_ec3 = {
+
+	picture = GFX_evt_shattered_planet
+	category = negative
+	complete_icon = GFX_situation_exploding_planet
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	start_value = 0
+	on_start = {
+		set_situation_flag = uma_endcrisis_ec3_country_bomb_discount
+		owner = {
+			set_country_flag = uma_endcrisis_ec3_country_bomb_discount
+		}
+	}
+	monthly_progress = {
+		base = 0
+		#max = 10
+
+		modifier = {
+			desc = situation_uma_endcrisis_ec3_no_progress_desc_in_situation
+			set = 0.1
+			NAND = {
+				OR = {
+					any_system = {
+						exists = starbase
+						starbase = {
+							OR = {
+								has_starbase_flag = uma_ec3_soc_fleet_base
+							}
+						}
+						Root.owner = {
+							any_system_within_border = {
+								distance = {
+									source = PrevPrev
+									min_jumps = 0
+									max_jumps = 15
+								}
+							}
+						}
+					}
+					any_system = {
+						exists = starbase
+						starbase = {
+							OR = {
+								has_starbase_flag = uma_ec3_soc_fleet_base_bh
+							}
+						}
+						Root.owner = {
+							any_system_within_border = {
+								distance = {
+									source = PrevPrev
+									min_jumps = 0
+									max_jumps = 15
+								}
+							}
+						}
+					}
+				}
+
+
+				owner.capital_star.solar_system = {
+					owner = {
+						is_same_value = Root.owner
+					}
+				}
+			}
+		}
+
+		modifier = {
+			set = 5
+			desc = situation_uma_endcrisis_ec3_progress_desc_in_situation
+
+			OR = {
+				any_system = {
+					exists = starbase
+					starbase = {
+						has_starbase_flag = uma_ec3_soc_fleet_base
+					}
+					Root.owner = {
+						any_system_within_border = {
+							distance = {
+								source = PrevPrev
+								min_jumps = 0
+								max_jumps = 15
+							}
+						}
+					}
+				}
+				any_system = {
+					exists = starbase
+					starbase = {
+						OR = {
+							has_starbase_flag = uma_ec3_soc_fleet_base_bh
+						}
+					}
+					Root.owner = {
+						any_system_within_border = {
+							distance = {
+								source = PrevPrev
+								min_jumps = 0
+								max_jumps = 15
+							}
+						}
+					}
+				}
+
+
+				#				owner.capital_star.solar_system = {
+				#					owner = {
+				#						is_same_value = Root.owner
+				#					}
+				#				}
+			}
+		}
+		modifier = {
+			set = 20
+			desc = situation_uma_endcrisis_ec3_progress_1_desc_in_situation
+			owner.capital_star.solar_system = {
+				has_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
+				NOT = {
+					owner = {
+						is_same_value = Root.owner
+					}
+				}
+			}
+		}
+		modifier = {
+			set = 6
+			desc = situation_uma_endcrisis_ec3_progress_2_desc_in_situation
+			owner.capital_star.solar_system = {
+				has_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
+				owner = {
+					is_same_value = Root.owner
+				}
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
+		hidden_effect = {
+
+			owner.capital_star.solar_system = {
+				set_star_flag = uma_end_crisis_ec3_capital_has_been_destroyed
+				every_starbase_in_system = {
+					limit = {
+						owner = {
+							is_same_value = Root.owner
+						}
+					}
+					fleet = { destroy_fleet = this }
+				}
+
+				create_starbase = {
+					size = starbase_marauder
+					owner = event_target:uma_ec3_country
+					effect = {
+						while = {
+							count = 6
+
+							create_uma_ec3_crisis_platform = yes
+						}
+						fleet = {
+							fleet_event = {
+								id = uma_ec_3.2222
+								days = 3
+								scopes = {
+									from = Prev
+								}
+							}
+						}
+					}
+				}
+
+				every_system_planet = {
+					limit = {
+						is_colony = yes
+					}
+					every_owned_pop_group = {
+						kill_all_pop = yes
+					}
+				}
+
+			}
+
+			Root = {
+				destroy_situation = this
+			}
+		}
+	}
+	stages = {
+		country_explosion = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			custom_tooltip = situation_uma_endcrisis_ec3_complet_in_situation
+		}
+	}
+
+	approach = {
+		#什么都不做
+		name = top_food_default
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}
+
+
+situation_uma_endcrisis_ec1 = {
+
+	picture = GFX_evt_timeworm_transcriptions
+	category = negative
+	complete_icon = GFX_situation_exploding_planet
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	start_value = 0
+	on_start = {
+		set_situation_flag = uma_situation_uma_endcrisis_ec1_discount
+		owner = {
+			set_country_flag = uma_situation_uma_endcrisis_ec1_discount
+		}
+	}
+	monthly_progress = {
+		base = 0.8 #0.8
+		modifier = {
+			set = 0.6
+			desc = situation_uma_endcrisis_ec1_progress_desc_1
+			any_system = {
+				has_star_flag = uma_ec1_main_system
+
+				Root.owner = {
+					any_system_within_border = {
+						distance = {
+							source = PrevPrev
+							min_jumps >=15
+						}
+					}
+				}
+			}
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_uma_endcrisis_ec1_complet_in_situation
+		hidden_effect = {
+			situation_event = {
+				id = uma_ec_1.18
+			}
+		}
+	}
+	stages = {
+		time_backup = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			custom_tooltip = situation_uma_endcrisis_ec1_complet_in_situation
+		}
+	}
+
+	approach = {
+		#什么都不做
+		name = top_food_default
+		icon = GFX_situation_approach_engineering
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+}

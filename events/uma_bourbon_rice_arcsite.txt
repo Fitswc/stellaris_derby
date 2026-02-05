@@ -1,0 +1,3184 @@
+namespace = uma_bour_arc
+
+
+#导！
+country_event = {
+	id = uma_bour_arc.900
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = uma_has_created_bourbon_country
+		}
+	}
+
+
+	immediate = {
+		#		random_country = {
+		#			limit = { is_country_type = global_event }
+		#			country_event = {
+		#				id = uma_bour_arc.9000
+		#			}
+		#		}
+		This = {
+			set_global_flag = uma_has_created_bourbon_country
+			create_country = {
+				name = "uma_bour_arc_acient_defender"
+				type = uma_bourbon_arc_country
+				ignore_initial_colony_error = yes
+				authority = random
+				flag = random
+				name_list = random #?
+				origin = origin_default
+				effect = {
+					set_graphical_culture = fallen_empire_01
+					save_global_event_target_as = uma_bourbon_arc_fleet_country
+					create_ship_design = {
+						design = NAME_Warder_of_the_Ruins
+					}
+					add_ship_design = last_created_design
+				}
+
+			}
+		}
+
+		random_system = {
+			limit = {
+				any_system_planet = {
+					OR = {
+						is_planet_class = pc_continental
+						is_planet_class = pc_gaia
+					}
+					NOT = {
+						OR = {
+							is_preventing_anomaly = yes
+						}
+					}
+				}
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 9
+				}
+				has_owner = no
+			}
+			set_star_flag = uma_bour_anolomy_here
+			random_system_planet = {
+				limit = {
+					OR = {
+						is_planet_class = pc_continental
+						is_planet_class = pc_gaia
+					}
+					uma_is_event_planet = no
+				}
+				save_global_event_target_as = uma_bourbon_arc_anomaly_here
+				add_anomaly = {
+					category = uma_bourbon_anomaly
+				}
+
+				hidden_effect = {
+					owner = {
+						begin_event_chain = {
+							event_chain = uma_glx_full
+						}
+						create_point_of_interest = {
+							id = uma_bour_anolomy_poi_1
+							name = "uma_bour_poi"
+							desc = uma_bourbon_anomaly_desc_event
+							event_chain = uma_glx_full
+							location = event_target:uma_bourbon_arc_anomaly_here
+						}
+					}
+					owner = {
+						set_country_flag = uma_bour_anolomy_generated
+					}
+					log = RICE_ANOLOMY_GENERATED
+					create_fleet = {
+						name = "uma_bour_arc_acient_defender" #远古智械守卫者
+						effect = {
+							set_owner = event_target:uma_bourbon_arc_fleet_country
+							while = {
+								count = 1
+								create_ship = {
+									name = random
+									design = NAME_Warder_of_the_Ruins
+									graphical_culture = fallen_empire_01
+									upgradable = no
+								}
+							}
+							set_location = {
+								target = event_target:uma_bourbon_arc_anomaly_here
+								distance = 15
+								angle = random
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#创建船专用的敌对国家
+#event = {
+#	id = uma_bour_arc.9000
+#	hide_window = yes
+#	is_triggered_only = yes
+#	trigger = {
+#		NOT = {
+#			has_global_flag = uma_has_created_bourbon_country
+#		}
+#	}
+#
+#	immediate = {
+#		set_global_flag = uma_has_created_bourbon_country
+#		create_country = {
+#			name = "uma_bour_arc_acient_defender"
+#			type = uma_bourbon_arc_country
+#			ignore_initial_colony_error = yes
+#			authority = random
+#			flag = random
+#			name_list = random #?
+#			origin = origin_default
+#			effect = {
+#				set_graphical_culture = fallen_empire_01
+#				save_global_event_target_as = uma_bourbon_arc_fleet_country
+#			}
+#
+#		}
+#	}
+#
+#}
+
+#创建船（30K（我感觉会有300K））
+planet_event = {
+	id = uma_bour_arc.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_fleet = {
+			name = "uma_bour_arc_acient_defender" #远古智械守卫者
+			effect = {
+				set_owner = event_target:uma_bourbon_arc_fleet_country
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = NAME_Warder_of_the_Ruins
+						upgradable = no
+						graphical_culture = fallen_empire_01
+					}
+				}
+				set_location = {
+					target = event_target:uma_bourbon_arc_anomaly_here
+					distance = 5
+					angle = random
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.9999
+	title = "uma_bourbon_anomaly"
+	desc = "uma_bourbon_anomaly_desc_event"
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	trigger = {
+		this = {
+			is_ship_class = shipclass_science_ship
+		}
+		from = {
+			has_star_flag = uma_bour_anolomy_here
+		}
+		owner = {
+			NOT = {
+				has_country_flag = uma_bour_anolomy_generated
+			}
+		}
+	}
+
+
+	option = {
+		name = uma_bour_start
+		event_target:uma_bourbon_arc_anomaly_here = {
+			add_anomaly = {
+				category = uma_bourbon_anomaly
+			}
+		}
+		begin_event_chain = {
+			event_chain = uma_glx_full
+			target = owner
+		}
+
+		hidden_effect = {
+			owner = {
+				create_point_of_interest = {
+					id = uma_bour_anolomy_poi_1
+					name = "uma_bour_poi"
+					desc = uma_bourbon_anomaly_desc_event
+					event_chain = uma_glx_full
+					location = event_target:uma_bourbon_arc_anomaly_here
+				}
+			}
+			owner = {
+				set_country_flag = uma_bour_anolomy_generated
+			}
+		}
+	}
+}
+
+
+
+
+ship_event = {
+	id = uma_bour_arc.2
+	title = uma_bour_arc.2.title
+	desc = uma_bour_arc.2.desc
+	picture = GFX_uma_ano_bour_forest
+	is_triggered_only = yes
+	location = from
+	event_chain = uma_glx_full
+
+	#from = planet
+
+	immediate = {
+		owner = {
+			#			remove_point_of_interest = uma_bour_anolomy_poi.1
+			#			add_event_chain_counter = {
+			#				event_chain = uma_glx_full
+			#				amount = 1
+			#				counter = uma_bour_story_list
+			#			}
+		}
+	}
+
+	option = {
+		name = uma_bour_arc.2.a #Alright,What we can do is only wait here
+		#这里是要用from吗?
+		root = {
+			save_event_target_as = uma_bou_ship
+			ship_event = {
+				id = uma_bour_arc.3
+				days = 10
+				random = 2
+			}
+			#锁
+			fleet = {
+				set_event_locked = yes
+				set_fleet_settings = {
+					can_change_leader = no
+				}
+			}
+			owner = {
+				create_point_of_interest = {
+					id = uma_bour_anolomy_poi_2
+					name = "uma_bour_poi.2"
+					desc = uma_bour_poi.2.desc
+					event_chain = uma_glx_full
+					location = event_target:uma_bourbon_arc_anomaly_here
+				}
+			}
+		}
+
+	}
+}
+
+ship_event = {
+	id = uma_bour_arc.3
+	title = uma_bour_arc.3.title
+	desc = uma_bour_arc.3.desc
+	is_triggered_only = yes
+	picture = GFX_uma_ano_bour_forest
+	location = event_target:uma_bou_ship
+	event_chain = uma_glx_full
+
+	option = {
+		name = uma_bour_arc.3.a #wait
+		hidden_effect = {
+			ship_event = {
+				id = uma_bour_arc.4
+				days = 30
+				random = 5
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.3.b #found
+		owner = {
+			hidden_effect = {
+				set_country_flag = uma_bou_arc_b
+			}
+			add_resource = {
+				energy = 400
+			}
+		}
+		hidden_effect = {
+			ship_event = {
+				id = uma_bour_arc.4
+				days = 30
+				random = 5
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.3.c #Destroy them!
+		owner = {
+			set_country_flag = uma_bou_arc_c
+		}
+		hidden_effect = {
+			ship_event = {
+				id = uma_bour_arc.4
+				days = 30
+				random = 5
+			}
+		}
+	}
+}
+
+#1
+ship_event = {
+	id = uma_bour_arc.4
+	title = uma_bour_arc.4.title
+	desc = uma_bour_arc.4.desc
+	is_triggered_only = yes
+	picture = GFX_uma_ano_bour_forest
+	location = event_target:uma_bou_ship
+	event_chain = uma_glx_full
+
+	immediate = {
+		fleet = {
+			set_event_locked = no
+			set_fleet_settings = {
+				can_change_leader = yes
+			}
+		}
+		owner = {
+			#			remove_point_of_interest = uma_bour_anolomy_poi.2
+			#			add_event_chain_counter = {
+			#				event_chain = uma_glx_full
+			#				amount = 1
+			#				counter = uma_bour_story_list
+			#			}
+			#		}
+		}
+	}
+
+	option = {
+		name = uma_bour_arc.4.a
+
+		event_target:uma_bourbon_arc_anomaly_here = {
+			change_pc = pc_machine
+			create_archaeological_site = uma_bourbon_arc
+		}
+		owner = {
+			create_point_of_interest = {
+				id = uma_bour_anolomy_poi_3
+				name = "uma_bour_poi.3"
+				desc = uma_bour_poi.3.desc
+				event_chain = uma_glx_full
+				location = event_target:uma_bourbon_arc_anomaly_here
+			}
+		}
+	}
+	#
+	option = {
+		allow = {
+			owner = {
+				custom_tooltip = {
+					has_country_flag = uma_bou_arc_b
+					fail_text = uma_no_arc_b
+				}
+			}
+		}
+		name = uma_bour_arc.4.b
+
+		event_target:uma_bourbon_arc_anomaly_here = {
+			change_pc = pc_machine
+			create_archaeological_site = uma_bourbon_arc
+		}
+		owner = {
+
+			create_point_of_interest = {
+				id = uma_bour_anolomy_poi_3
+				name = "uma_bour_poi.3"
+				desc = uma_bour_poi.3.desc
+				event_chain = uma_glx_full
+				location = event_target:uma_bourbon_arc_anomaly_here
+			}
+		}
+	}
+
+
+	#3炸球
+	option = {
+		name = uma_bour_arc.4.c
+		owner = {
+			enable_special_project = {
+				name = UMA_BOU_BOOM_PLANET
+				location = event_target:uma_bourbon_arc_anomaly_here
+				owner = this
+			}
+		}
+	}
+}
+
+##3后续
+country_event = {
+	id = uma_bour_arc.5
+	title = uma_bour_arc.5.title
+	desc = uma_bour_arc.5.desc
+	picture = GFX_evt_large_explosion
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	option = {
+		name = uma_bour_arc_damn
+		end_event_chain = uma_glx_full
+		hidden_effect = {
+			remove_point_of_interest = uma_bour_anolomy_poi_2
+			remove_point_of_interest = uma_bour_anolomy_poi_1
+		}
+	}
+}
+
+
+###########Arc_site
+
+fleet_event = {
+	id = uma_bour_arc.6
+	title = uma_bour_arc.6.title
+	desc = uma_bour_arc.6.desc
+	picture = GFX_evt_ground_combat  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.6.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.7
+	title = uma_bour_arc.7.title
+	desc = uma_bour_arc.7.desc
+	picture = GFX_evt_relic_world_building  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.7.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.8
+	title = uma_bour_arc.8.title
+	desc = uma_bour_arc.8.desc
+	picture = GFX_evt_sapient_AI  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.8.a
+		small_artifact_reward = yes
+		#感觉回不太好？
+		owner = {
+			add_tech_progress = {
+				tech = tech_psionic_theory
+				progress = 0.1
+			}
+
+#			add_modifier = {
+#				modifier =
+#			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.9
+	title = uma_bour_arc.9.title
+	desc = uma_bour_arc.9.desc
+	picture = GFX_evt_ground_combat  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.9.a
+		small_artifact_reward = yes
+		#好多buff！
+#		owner = {
+#			add_modifier = {
+#				modifier =
+#			}
+#		}
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.10
+	title = uma_bour_arc.10.title
+	desc = uma_bour_arc.10.desc
+	picture = GFX_evt_glitchy_matrix  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+			save_global_event_target_as = uma_bourbon_arc_site
+		}
+	}
+
+	after = {
+#		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.10.a
+		owner = {
+			enable_special_project = {
+				name = UMA_BOU_DECODE
+				owner = this
+				location = event_target:uma_bourbon_arc_anomaly_here
+			}
+		}
+
+	}
+	option = {
+		name = uma_bour_arc.10.b
+		owner = {
+			enable_special_project = {
+				name = UMA_BOU_DECODE_WHOLE_COUNTRY
+				owner = this
+				location = event_target:uma_bourbon_arc_anomaly_here
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.10.c
+		save_global_event_target_as = uma_bourbon_this_is_fleet
+		enable_special_project = {
+			name = UMA_BOU_BOOM_PLANET_ARC
+			owner = owner
+			location = event_target:uma_bourbon_arc_anomaly_here
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.11
+	title = uma_bour_arc.11.title
+	desc = uma_bour_arc.11.desc
+	picture = 	GFX_evt_ancient_databank  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	event_chain = uma_glx_full
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.11.a
+		large_artifact_reward = yes
+		enable_special_project = {
+			name = UMA_BOU_ANALYSE
+			owner = owner
+			location = event_target:uma_bourbon_arc_anomaly_here
+		}
+#		hidden_effect = {
+#			owner = {
+#				add_event_chain_counter = {
+#					event_chain = uma_glx_full
+#					amount = 1
+#					counter = uma_bour_story_list
+#				}
+#			}
+#		}
+	}
+}
+
+
+
+##后续
+
+country_event = {
+	id = uma_bour_arc.12
+	title = uma_bour_arc.12.title
+	desc = uma_bour_arc.12.desc
+	picture = GFX_evt_intelligence_report
+	event_chain = uma_glx_full
+	is_triggered_only = yes
+
+	option = {
+		name = uma_bour_arc.12.a
+		#		add_relic = uma_umamusume_datebase
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.13
+			}
+
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_full
+#				amount = 1
+#				counter = uma_bour_story_list
+#			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bour_arc.13
+	title = uma_bour_arc.13.title
+	desc = uma_bour_arc.13.desc
+	picture = GFX_evt_unity_symbol
+	event_chain = uma_glx_full
+	is_triggered_only = yes
+
+	option = {
+		name = uma_bour_arc.13.a
+		custom_tooltip = uma_bour_arc.13.a.tooltip
+		hidden_effect = {
+			add_modifier = {
+				modifier = uma_stepute_choice_one
+				days = 100
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.13.b
+		custom_tooltip = uma_bour_arc.13.b.tooltip
+		hidden_effect = {
+			add_modifier = {
+				modifier = uma_stepute_choice_one
+				days = 100
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.13.c
+	}
+	after = {
+		end_event_chain = uma_glx_full
+		remove_point_of_interest = uma_bour_anolomy_poi_1
+		remove_point_of_interest = uma_bour_anolomy_poi_2
+		remove_point_of_interest = uma_bour_anolomy_poi_3
+		hidden_effect = {
+			set_country_flag = uma_bour_partone_happened
+		}
+	}
+}
+
+
+##后面是一飞的事件
+
+country_event = {
+	id = uma_bour_arc.14
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_bour_partone_happened
+		OR = {
+#			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+		NOT = {
+			has_country_flag = uma_bour_fourteen_happened
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = uma_bour_fourteen_happened
+			country_event = {
+				id = uma_bour_arc.15
+				days = 500
+			}
+			country_event = {
+				id = uma_bour_arc.16
+				days = 500
+			}
+		}
+	}
+}
+
+##星系生成器！！
+
+country_event = {
+	id = uma_bour_arc.15
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	trigger = {
+		NOT = {
+#			has_global_flag = uma_bour_arc_system_had_been_spawned
+		}
+	}
+
+
+	immediate = {
+#		set_global_flag = uma_bour_arc_system_had_been_spawned
+		if = {
+			limit = { count_system = { count <= 250 } } #200
+			no_scope = {
+				spawn_system = {
+					min_distance >= 95
+					max_distance <= 205
+					min_orientation_angle = 20
+					max_orientation_angle = 300
+					initializer = "uma_bourbon_initializer"
+					hyperlane = no
+				}
+			}
+		}
+
+		else_if = {
+			limit = { count_system = { count <= 450 } }
+			no_scope = {
+				spawn_system = {
+					min_distance >= 315
+					max_distance <= 325
+					min_orientation_angle = 20
+					max_orientation_angle = 300
+					initializer = "uma_bourbon_initializer"
+					hyperlane = no
+				}
+			}
+		}
+
+		else_if = {
+			limit = { count_system = { count <= 650 } }
+			no_scope = {
+				spawn_system = {
+					min_distance >= 405
+					max_distance <= 415
+					min_orientation_angle = 20
+					max_orientation_angle = 300
+					initializer = "uma_bourbon_initializer"
+					hyperlane = no
+				}
+			}
+		}
+
+		else_if = {
+			limit = { count_system = { count <= 850 } }
+			no_scope = {
+				spawn_system = {
+					min_distance >= 435
+					max_distance <= 445
+					min_orientation_angle = 20
+					max_orientation_angle = 300
+					initializer = "uma_bourbon_initializer"
+					hyperlane = no
+				}
+			}
+		}
+
+		else = {
+			no_scope = {
+				spawn_system = {
+					min_distance >= 465
+					max_distance <= 475
+					min_orientation_angle = 20
+					max_orientation_angle = 300
+					initializer = "uma_bourbon_initializer"
+					hyperlane = no
+				}
+			}
+		}
+	}
+	after = {
+		random_system = {
+			limit = {
+				has_star_flag = uma_bourbon_system
+			}
+			save_global_event_target_as = uma_bourbon_system_here
+		}
+		random_galaxy_planet = {
+			limit = {
+				has_planet_flag = uma_bourbon_firstap_story_here
+			}
+			save_global_event_target_as = uma_bourbon_firstap_planet
+		}
+#		country_event = {
+#			id = uma_bour_arc.16
+#			days = 20
+#		}
+	}
+}
+country_event = {
+	id = uma_bour_arc.16
+	title = uma_bour_arc.16.title
+	desc = uma_bour_arc.16.desc
+	picture = GFX_evt_uma_normal_school
+	location = event_target:uma_bourbon_system_here
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+	option = {
+		name = uma_bour_arc.16.a
+		add_resource = {
+			alloys = -200
+		}
+		hidden_effect = {
+			set_visited = event_target:uma_bourbon_system_here
+		}
+	}
+	option = {
+		name = uma_bour_arc.16.b
+	}
+	after = {
+		begin_event_chain = {
+			event_chain = uma_glx_pt_full
+			target = this
+		}
+		create_point_of_interest = {
+			id = uma_bour_poi_part_1
+			event_chain = uma_glx_pt_full
+			name = uma_bour_poi.4
+			desc = "uma_bour_poi.4.desc"
+			location = event_target:uma_bourbon_arc_second_here
+		}
+	}
+
+}
+
+
+fleet_event = {
+	id = uma_bour_arc.17
+	title = uma_bour_arc.17.title
+	desc = uma_bour_arc.17.desc
+	event_chain = uma_glx_pt_full
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_star_flag = uma_bourbon_system
+		}
+		NOT = {
+			owner = {
+				has_country_flag = uma_seventeen_happened
+			}
+		}
+	}
+
+	option = {
+		name = uma_bour_arc.17.a
+		hidden_effect = {
+			owner = {
+				set_country_flag = uma_seventeen_happened
+			}
+		}
+	}
+#	after = {
+#		hidden_effect = {
+#			random_galaxy_planet = {
+#				limit = {
+#					has_planet_flag = uma_bourbon_firstap_story_here
+#				}
+#				add_anomaly = {
+#					category = uma_bourbon_anomaly_second
+#					target = event_target:uma_bourbon_firstap_planet
+#				}
+#			}
+#		}
+#	}
+}
+
+
+ship_event = {
+	id = uma_bour_arc.18
+	title = uma_bour_arc.18.title
+	desc = uma_bour_arc.18.desc
+	picture = GFX_uma_ano_bour_forest
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+
+	immediate = {
+		event_target:uma_bourbon_arc_second_here = {
+			create_archaeological_site = uma_bourbon_arc_second
+		}
+	}
+
+	option = {
+		name = uma_bour_arc.18.a
+		owner = {
+			if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_gamesystem_gdi_full
+				}
+				create_point_of_interest = {
+					id = uma_bour_poi_part_2
+					event_chain = uma_glx_pt_full
+					name = uma_bour_poi.5
+					desc = "uma_bour_poi.5.desc"
+					location = event_target:uma_bourbon_arc_second_here
+				}
+				#			add_event_chain_counter = {
+				#				event_chain = uma_glx_pt_full
+				#				counter = uma_bour_story_list
+				#				amount = 1
+				#			}
+			}
+		}
+	}
+}
+
+###考古二段
+#stage1
+fleet_event = {
+	id = uma_bour_arc.20
+	title = uma_bour_arc.20.title
+	desc = uma_bour_arc.20.desc
+	picture = GFX_evt_uma_satono_two  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.20.a
+		small_artifact_reward = yes
+		owner = {
+			add_modifier = {
+				modifier = uma_big_bug
+			}
+			add_resource = {
+				food = 4000
+			}
+		}
+	}
+}
+
+#stage2
+fleet_event = {
+	id = uma_bour_arc.21
+	title = uma_bour_arc.21.title
+	desc = uma_bour_arc.21.desc
+	picture = GFX_uma_ano_bour_forest  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.21.a
+		small_artifact_reward = yes
+	}
+}
+#stage3
+fleet_event = {
+	id = uma_bour_arc.22
+	title = uma_bour_arc.22.title
+	desc = uma_bour_arc.22.desc
+	picture = GFX_evt_discovered_hidden_door  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.22.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.23
+	title = uma_bour_arc.23.title
+	desc = uma_bour_arc.23.desc
+	picture = GFX_evt_open_revolt  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.23.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.24
+	title = uma_bour_arc.24.title
+	desc = uma_bour_arc.24.desc
+	picture = GFX_evt_relic_world  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.24.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.25
+	title = uma_bour_arc.25.title
+	desc = uma_bour_arc.25.desc
+	picture = GFX_evt_intelligence_report  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.25.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.26
+	title = uma_bour_arc.26.title
+	desc = uma_bour_arc.26.desc
+	picture = GFX_evt_uma_trees_with_stone  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.26.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_bour_arc.27
+	title = uma_bour_arc.27.title
+	desc = uma_bour_arc.27.desc
+	picture = GFX_evt_uma_trees_with_stone  #快速占位图
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_bour_arc.27.a
+		large_artifact_reward = yes
+		owner = {
+			country_event = {
+				id = uma_bour_arc.30
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.30
+	title = uma_bour_arc.30.title
+	desc = uma_bour_arc.30.desc
+	picture = GFX_evt_uma_trees_with_stone
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+
+	option = {
+		name = uma_bour_arc.30.a
+	}
+	option = {
+		name = uma_bour_arc.30.b
+		add_resource = {
+			energy = -4000
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.31
+				days = 300
+				random = 20
+			}
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.31
+	title = uma_bour_arc.31.title
+	desc = uma_bour_arc.31.desc
+	picture = GFX_evt_uma_lab
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.32
+			}
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.32
+	title = uma_bour_arc.32.title
+	desc = uma_bour_arc.32.desc
+	picture = GFX_evt_uma_satono_four
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+
+	option = {
+		name = uma_bour_arc.32.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.33
+				days = 730
+				random = 10
+			}
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.33
+	title = uma_bour_arc.33.title
+	desc = uma_bour_arc.33.desc
+	is_triggered_only = yes
+	picture = GFX_evt_baol_datacrystals
+	event_chain = uma_glx_pt_full
+
+	option = {
+		name = uma_bour_arc.33.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.34
+				days = 50
+			}
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+		}
+	}
+}
+
+
+
+##通信
+
+country_event = {
+	id = uma_bour_arc.34
+	title = uma_bour_arc.unknow
+	desc = uma_bour_arc.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_bour_arc.34.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.35
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.35
+	title = uma_bour_arc.unknow
+	desc = uma_bour_arc.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_bour_arc.35.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.36
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.36
+	title = uma_bour_arc.unknow
+	desc = uma_bour_arc.36.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_bour_arc.36.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.37
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.36.b
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.38
+				days = 50
+			}
+		}
+		add_resource = {
+			alloys = -400
+			energy = -200
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.37
+	title = uma_bour_arc.unknow
+	desc = uma_bour_arc.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_bour_arc.37.a
+	}
+	option = {
+		name = uma_bour_arc.37.b
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.38
+				days = 50
+			}
+		}
+		add_resource = {
+			alloys = -400
+			energy = -200
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.38
+	title = uma_bour_arc.unknow
+	desc = uma_bour_arc.38.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_bour_arc.38.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.39
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.39
+	title = uma_bour_arc.unknow
+	desc = uma_bour_arc.39.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.39.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.40
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.40
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.40.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.40.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.41
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.41
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.41.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.41.a
+		response_text = uma_bour_arc.41.respont
+	}
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.42
+				days = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.42
+	title = uma_bour_arc.42.title
+	desc = uma_bour_arc.42.desc
+	picture = GFX_evt_uma_suzuka_arc_star_report
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_bour_arc.42.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.43
+				days = 50
+				random = 5
+			}
+			set_country_flag = uma_bour_arc_ft_o
+		}
+	}
+	option = {
+		name = uma_bour_arc.42.b
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.43
+				days = 50
+				random = 5
+			}
+		}
+	}
+	after = {
+#		hidden_effect = {
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+#		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.43
+	title = uma_bour_arc.43.title
+	picture = GFX_evt_clocks
+
+	desc = {
+		text =uma_bour_arc.43.desc_a
+		trigger = {
+			has_country_flag = uma_bour_arc_ft_o
+		}
+	}
+	desc = {
+		text =uma_bour_arc.43.desc_b
+		trigger = {
+			NOT = {
+				has_country_flag = uma_bour_arc_ft_o
+			}
+		}
+	}
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_bour_arc.43.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.44
+			}
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.44
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.44.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.44.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.45
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.45
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.45.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.45.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.46
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.45.b
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.46
+			}
+			set_country_flag = uma_we_refused_bour
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bour_arc.46
+	title = uma_bour_arc.k
+	desc = {
+		text = uma_bour_arc.46.desc_a
+		trigger = {
+			NOT = {
+				has_country_flag = uma_we_refused_bour
+			}
+		}
+	}
+	desc = {
+		text = uma_bour_arc.46.desc_b
+		trigger = {
+			has_country_flag = uma_we_refused_bour
+		}
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = uma_we_refused_bour
+			}
+			remove_country_flag = uma_we_refused_bour
+		}
+	}
+
+	option = {
+		name = uma_bour_arc.46.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.47
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.46.b
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.48
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.46.c
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.49
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.46.d
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.47
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.47.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.47.a
+#		response_text = uma_bour_arc.47.a.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.80
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.47.b
+#		response_text = uma_bour_arc.47.b.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.81
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.47.c
+		trigger = {
+			has_country_flag = uma_bour_arc_ft_o
+		}
+#		response_text = uma_bour_arc.47.c.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.82
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.back
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.46
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.80
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.47.a.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.47
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.81
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.47.b.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.47
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.82
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.47.c.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.47
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.48
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.48.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.48.a
+#		response_text = uma_bour_arc.48.a.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.90
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.48.b
+#		response_text = uma_bour_arc.48.b.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.91
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.48.c
+#		response_text = uma_bour_arc.48.c.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.92
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.back
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.46
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.90
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.48.a.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.48
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.91
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.48.b.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.48
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.92
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.48.c.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.48
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.49
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.48.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.49.a
+#		response_text = uma_bour_arc.49.a.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.100
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.49.b
+#		response_text = uma_bour_arc.49.b.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.101
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.49.c
+#		response_text = uma_bour_arc.49.c.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.102
+			}
+		}
+	}
+	option = {
+		name = uma_bour_arc.back
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.46
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.100
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.49.a.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.49
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.101
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.49.b.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.49
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.102
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.49.c.resp
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = GOOD
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.49
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.50
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.50.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = shroudwalkers_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.50.a
+		response_text = uma_bour_arc.50.a.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.51
+				days = 50
+			}
+
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.51
+	title = uma_bour_arc.51.title
+	desc = uma_bour_arc.51.desc
+	picture = GFX_evt_engineering_research
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_bour_glx_makebody_had_happened
+		}
+	}
+
+
+	option = {
+		name = uma_bour_arc.51.a
+#		give_technology = {
+#			tech = tech_uma_nano_cell_body
+#		}
+		enable_special_project = {
+			name = "UMA_BUILD_NANO_MACHINE_FACTORY"
+		}
+	}
+	option = {
+		name = uma_bour_arc.51.b
+#		give_technology = {
+#			tech = tech_uma_nano_cell_body
+#		}
+		enable_special_project = {
+			name = "UMA_BUILD_K_A_NEWBODY"
+		}
+		hidden_effect = {
+			set_country_flag = uma_wemade_a_body
+		}
+	}
+	option = {
+		name = uma_bour_arc.51.c
+#		give_technology = {
+#			tech = tech_uma_nano_cell_body
+#		}
+		enable_special_project = {
+			name = "UMA_BUILD_K_A_NEWBODY"
+		}
+		hidden_effect = {
+			set_country_flag = uma_wemade_a_body
+			set_country_flag = uma_wemade_a_joke
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = uma_bour_glx_makebody_had_happened
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.52
+	title = uma_bour_arc.52.title
+
+	desc = {
+		text = uma_bour_arc.52.desc.a
+	}
+	desc = {
+		text = uma_bour_arc.52.desc.b
+		trigger = {
+			has_country_flag = uma_wemade_a_body
+		}
+	}
+	picture = GFX_evt_engineering_research
+	is_triggered_only = yes
+
+	option = {
+		name = GOOD
+
+		add_modifier = {
+			modifier = uma_fly_tech
+		}
+		hidden_effect = {
+#			add_event_chain_counter = {
+#				event_chain = uma_glx_pt_full
+#				counter = uma_bour_story_list
+#				amount = 1
+#			}
+			if = {
+				limit = {
+					has_country_flag = uma_wemade_a_joke
+				}
+				country_event = {
+					id = uma_bour_arc.53
+					days = 20
+					random = 2
+				}
+			}
+			else = {
+				country_event = {
+					id = uma_bour_arc.55
+					days = 20
+					random = 2
+				}
+			}
+
+		}
+		#Log?
+	}
+}
+
+#马娘立绘版
+country_event = {
+	id = uma_bour_arc.53
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.53.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.53.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.54
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.54
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.54.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.54.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.57
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.57
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.57.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.57.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.58
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.58
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.58.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.58.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.59
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.59
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.59.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+	option = {
+		name = uma_bour_arc.59.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.60
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.60
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.60.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+
+	option = {
+		name = uma_bour_arc.60.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.61
+			}
+			hidden_effect = {
+#				set_variable = {
+#					which = uma_glx_count
+#					value = 0
+#				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.61
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.61.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+
+	option = {
+		name = uma_bour_arc.61.a
+		response_text = uma_bour_arc.61.a.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_a
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.b
+		response_text = uma_bour_arc.61.b.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_b
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.c
+		response_text = uma_bour_arc.61.c.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_c
+		}
+	}
+	#######
+	option = {
+		name = uma_bour_arc.61.d
+#		response_text = uma_bour_arc.61.d.respo_one
+#		trigger = {
+#			check_variable = {
+#				which = uma_glx_count
+#				value = 0
+#			}
+#		}
+		hidden_effect = {
+			set_country_flag = uma_bour_glx_create_prohibit
+#			change_variable = {
+#				which = uma_glx_count
+#				value = 1
+#			}
+			country_event = {
+				id = uma_bour_arc.661
+			}
+		}
+	}
+####	##
+#	option = {
+#		name = uma_bour_arc.61.e
+#		response_text = uma_bour_arc.61.e.respo
+#	}
+
+	after = {
+		country_event = {
+			id = uma_bour_arc.62
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_bour_glx_create_prohibit
+				}
+			}
+			country_event = {
+				id = uma_bour_arc.70
+				days = 200
+				random = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.661
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.61.d.respo_one
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+
+	option = {
+		name = uma_bour_arc.61.a
+		response_text = uma_bour_arc.61.a.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_a
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.b
+		response_text = uma_bour_arc.61.b.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_b
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.c
+		response_text = uma_bour_arc.61.c.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_c
+		}
+	}
+	#######
+	option = {
+		name = uma_bour_arc.61.d
+#		response_text = uma_bour_arc.61.d.respo_two
+#		trigger = {
+#			check_variable = {
+#					which = uma_glx_count
+#					value = 1
+#				}
+#		}
+		hidden_effect = {
+#			change_variable = {
+#				which = uma_glx_count
+#				value = 1
+#			}
+			country_event = {
+				id = uma_bour_arc.662
+			}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_bour_arc.62
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_bour_glx_create_prohibit
+				}
+			}
+			country_event = {
+				id = uma_bour_arc.70
+				days = 200
+				random = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.662
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.61.d.respo_two
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_COMM
+	}
+
+
+	option = {
+		name = uma_bour_arc.61.a
+		response_text = uma_bour_arc.61.a.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_a
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.b
+		response_text = uma_bour_arc.61.b.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_b
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.c
+		response_text = uma_bour_arc.61.c.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_c
+		}
+	}
+	#######
+	option = {
+		name = uma_bour_arc.61.d
+#		response_text = uma_bour_arc.61.d.respo_three
+#		trigger = {
+#			check_variable = {
+#				which = uma_glx_count
+#				value = 2
+#			}
+#		}
+		hidden_effect = {
+			set_country_flag = uma_ks_name_d
+			remove_country_flag = uma_bour_glx_create_prohibit
+		}
+		response_text = uma_bour_arc.61.d.respo_three
+	}
+
+	after = {
+		country_event = {
+			id = uma_bour_arc.62
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_bour_glx_create_prohibit
+				}
+			}
+			country_event = {
+				id = uma_bour_arc.70
+				days = 200
+				random = 5
+			}
+		}
+	}
+}
+
+#hum版
+country_event = {
+	id = uma_bour_arc.55
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.55.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+	option = {
+		name = uma_bour_arc.54.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.63
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.63
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.57.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+	option = {
+		name = uma_bour_arc.57.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.64
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.64
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.58.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+	option = {
+		name = uma_bour_arc.58.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.65
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.65
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.59.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+	option = {
+		name = uma_bour_arc.59.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.66
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.66
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.60.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+
+	option = {
+		name = uma_bour_arc.60.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour_arc.67
+			}
+			hidden_effect = {
+				set_variable = {
+					which = uma_glx_count
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.67
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.61.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+
+	option = {
+		name = uma_bour_arc.61.a
+		response_text = uma_bour_arc.61.a.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_a
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.b
+		response_text = uma_bour_arc.61.b.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_b
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.c
+		response_text = uma_bour_arc.61.c.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_c
+		}
+	}
+	#######
+	option = {
+		name = uma_bour_arc.61.d
+#		response_text = uma_bour_arc.61.d.respo_one
+#		trigger = {
+#			check_variable = {
+#				which = uma_glx_count
+#				value = 0
+#			}
+#		}
+		hidden_effect = {
+			set_country_flag = uma_bour_glx_create_prohibit
+#			change_variable = {
+#				which = uma_glx_count
+#				value = 1
+#			}
+			country_event = {
+				id = uma_bour_arc.667
+			}
+		}
+	}
+####	##
+#	option = {
+#		name = uma_bour_arc.61.e
+#		response_text = uma_bour_arc.61.e.respo
+#	}
+
+	after = {
+		country_event = {
+			id = uma_bour_arc.62
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_bour_glx_create_prohibit
+				}
+			}
+			country_event = {
+				id = uma_bour_arc.70
+				days = 200
+				random = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.667
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.61.d.respo_one
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+
+	option = {
+		name = uma_bour_arc.61.a
+		response_text = uma_bour_arc.61.a.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_a
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.b
+		response_text = uma_bour_arc.61.b.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_b
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.c
+		response_text = uma_bour_arc.61.c.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_c
+		}
+	}
+	#######
+	option = {
+		name = uma_bour_arc.61.d
+#		response_text = uma_bour_arc.61.d.respo_two
+#		trigger = {
+#			check_variable = {
+#					which = uma_glx_count
+#					value = 1
+#				}
+#		}
+		hidden_effect = {
+#			change_variable = {
+#				which = uma_glx_count
+#				value = 1
+#			}
+			country_event = {
+				id = uma_bour_arc.6667
+			}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_bour_arc.62
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_bour_glx_create_prohibit
+				}
+			}
+			country_event = {
+				id = uma_bour_arc.70
+				days = 200
+				random = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bour_arc.6667
+	title = uma_bour_arc.k
+	desc = uma_bour_arc.61.d.respo_two
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = BOURBON_HUM
+	}
+
+
+	option = {
+		name = uma_bour_arc.61.a
+		response_text = uma_bour_arc.61.a.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_a
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.b
+		response_text = uma_bour_arc.61.b.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_b
+		}
+	}
+	option = {
+		name = uma_bour_arc.61.c
+		response_text = uma_bour_arc.61.c.respo
+		hidden_effect = {
+			set_country_flag = uma_ks_name_c
+		}
+	}
+	#######
+	option = {
+		name = uma_bour_arc.61.d
+#		response_text = uma_bour_arc.61.d.respo_three
+#		trigger = {
+#			check_variable = {
+#				which = uma_glx_count
+#				value = 2
+#			}
+#		}
+		hidden_effect = {
+			set_country_flag = uma_ks_name_d
+			remove_country_flag = uma_bour_glx_create_prohibit
+		}
+		response_text = uma_bour_arc.61.d.respo_three
+	}
+
+	after = {
+		country_event = {
+			id = uma_bour_arc.62
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = uma_bour_glx_create_prohibit
+				}
+			}
+			country_event = {
+				id = uma_bour_arc.70
+				days = 200
+				random = 5
+			}
+		}
+	}
+}
+
+
+#leader creator
+country_event = {
+	id = uma_bour_arc.62
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_bour_glx_create_prohibit
+		}
+	}
+
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = uma_ks_name_a
+			}
+			create_leader = {
+				name = QL
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = scientist
+				custom_catch_phrase = uma_glx_catch_phrase
+				immortal = yes
+				skill = 1
+				set_age = 7005
+				traits = {
+					trait = uma_scientist_trait_glx
+					trait = uma_scientist_trait_glx_acientman
+					trait = uma_scientist_trait_glx_inthecloud
+				}
+				effect = {
+					add_experience = 54000
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_glx
+					save_global_event_target_as = uma_is_leader_glx
+				}
+			}
+			last_created_leader = {
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = uma_wemade_a_joke
+						}
+					}
+					change_leader_portrait = "BOURBON_COMM"
+
+					add_trait = {
+						trait = leader_trait_uma_generic
+					}
+				}
+				else = {
+					change_leader_portrait = "BOURBON_HUM"
+				}
+				#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = uma_ks_name_b
+			}
+			create_leader = {
+				name = GLX
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = scientist
+				immortal = yes
+				custom_catch_phrase = uma_glx_catch_phrase
+				skill = 1
+				set_age = 7005
+				traits = {
+					trait = uma_scientist_trait_glx
+					trait = uma_scientist_trait_glx_acientman
+					trait = uma_scientist_trait_glx_inthecloud
+				}
+				effect = {
+					add_experience = 54000
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_glx
+					save_global_event_target_as = uma_is_leader_glx
+				}
+			}
+			last_created_leader = {
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = uma_wemade_a_joke
+						}
+					}
+					change_leader_portrait = "BOURBON_COMM"
+					add_trait = {
+						trait = leader_trait_uma_generic
+					}
+				}
+				else = {
+					change_leader_portrait = "BOURBON_HUM"
+				}
+				#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = uma_ks_name_c
+			}
+			create_leader = {
+				name = QLLZ
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = scientist
+				immortal = yes
+				custom_catch_phrase = uma_glx_catch_phrase
+				skill = 1
+				set_age = 7005
+				traits = {
+					trait = uma_scientist_trait_glx
+					trait = uma_scientist_trait_glx_acientman
+					trait = uma_scientist_trait_glx_inthecloud
+				}
+				effect = {
+					add_experience = 54000
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_glx
+					save_global_event_target_as = uma_is_leader_glx
+				}
+			}
+			last_created_leader = {
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = uma_wemade_a_joke
+						}
+					}
+					change_leader_portrait = "BOURBON_COMM"
+					add_trait = {
+						trait = leader_trait_uma_generic
+					}
+				}
+				else = {
+					change_leader_portrait = "BOURBON_HUM"
+				}
+				#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = uma_ks_name_d
+			}
+			create_leader = {
+				name = BOBO
+				#species = event_target:uma_leader_seiun_sky
+				species = root
+				gender = female
+				class = scientist
+				immortal = yes
+				custom_catch_phrase = uma_glx_catch_phrase
+				skill = 1
+				set_age = 7005
+				traits = {
+					trait = uma_scientist_trait_glx
+					trait = uma_scientist_trait_glx_acientman
+					trait = uma_scientist_trait_glx_inthecloud
+				}
+				effect = {
+					add_experience = 54000
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_glx
+					save_global_event_target_as = uma_is_leader_glx
+				}
+			}
+			last_created_leader = {
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = uma_wemade_a_joke
+						}
+					}
+					change_leader_portrait = "BOURBON_COMM"
+					add_trait = {
+						trait = leader_trait_uma_generic
+					}
+				}
+				else = {
+					change_leader_portrait = "BOURBON_HUM"
+				}
+				#			add_trait= uma_ruler_trait_sp_seiun_sky #选举为领袖的时候才会保留特质！
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}
+	}
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_glx
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_glx
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bour_arc.70
+	title = uma_bour_arc.70.title
+	desc = uma_bour_arc.70.desc
+	picture = GFX_evt_uma_rice
+	is_triggered_only = yes
+	event_chain = uma_glx_pt_full
+
+
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_bour_glx_create_prohibit
+		}
+	}
+
+	option = {
+		name = uma_bour_arc.70.a
+		hidden_effect = {
+			country_event = {
+				id = uma_bour.1
+				days = 400
+				random = 10
+			}
+			country_event = {
+				id = uma_fr_uma.1
+				days = 500
+				random = 300
+			}
+			remove_point_of_interest = uma_bour_poi_part_1
+			remove_point_of_interest = uma_bour_poi_part_2
+		}
+		end_event_chain = uma_glx_pt_full
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

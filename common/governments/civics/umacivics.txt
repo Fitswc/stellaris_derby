@@ -1,0 +1,616 @@
+civic_umamihonobourbon={
+	icon="gfx/interface/icons/governments/civics/mb.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_militarist } }
+	
+	
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	
+	modifier={
+		starbase_shipyard_build_speed_mult = 0.25
+		ship_weapon_damage = 0.25
+	}
+}
+
+
+civic_umasymbolirudolf = {
+	icon="gfx/interface/icons/governments/civics/sr.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_authoritarian } }
+	
+	
+	random_weight={
+		base=0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_authoritarian	
+		}
+	}
+	
+	modifier={
+		planet_jobs_produces_mult = 0.15
+		pop_citizen_happiness = 0.15
+		country_unity_produces_mult = 0.15
+	}
+}
+
+civic_umaagnestachyon = {
+	icon = "gfx/interface/icons/governments/civics/at.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = { ethics = { value = ethic_fanatic_materialist } }
+
+
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.35
+		planet_jobs_physics_research_produces_mult = 0.35
+		planet_jobs_society_research_produces_mult = 0.35
+		planet_pops_consumer_goods_upkeep_mult = 0.15
+		planet_stability_add = -10
+
+	}
+}
+
+civic_umacurrenchan = {
+	icon = "gfx/interface/icons/governments/civics/cc.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = { ethics = { value = ethic_fanatic_xenophile } }
+
+
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+
+	modifier = {
+		envoys_add = 2
+		country_trust_cap_add = 80
+		country_trust_growth = 0.75
+		planet_jobs_trade_produces_mult = 0.1
+	}
+}
+
+civic_umafujikiseki = {
+	icon = "gfx/interface/icons/governments/civics/fj.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = { ethics = { value = ethic_fanatic_egalitarian } }
+
+
+	random_weight = {
+		base = 0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+
+	modifier = {
+		planet_stability_add = 15
+		country_unity_produces_mult = 0.1
+	}
+}
+
+civic_umamatikanefukukitaru = {
+	icon="gfx/interface/icons/governments/civics/mf.png"
+	potential={authority={value=auth_trainingcenter}}
+    possible={ethics =  { value = ethic_fanatic_spiritualist } }
+	
+	
+	random_weight={
+		base=0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+	
+	modifier={
+		country_unity_produces_mult = 0.15
+		planet_stability_add = 5
+		pop_amenities_usage_mult = -0.10
+	}
+}
+
+civic_umasupercreek = {
+	icon="gfx/interface/icons/governments/civics/sc.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_pacifist } }
+	
+	
+	random_weight={
+		base=0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	
+	modifier= {
+		pop_happiness = 0.1
+		leaders_upkeep_mult = -0.25
+	}
+}
+
+civic_umanicenature = {
+	icon="gfx/interface/icons/governments/civics/nn.png"
+	potential={authority={value=auth_trainingcenter}}
+	possible={ethics =  { value = ethic_fanatic_xenophobe } }
+	
+	
+	random_weight={
+		base=0
+		modifier = {
+			add = 100
+			is_ai = yes
+			has_authority = auth_trainingcenter
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	modifier= {
+		envoys_add = 3
+		intel_decryption_add = 3
+		intel_encryption_add = 3
+		add_base_country_intel = 33
+		spy_network_levels_add = 33
+
+	}
+}
+
+civic_umazennorobroy = {
+	icon="gfx/interface/icons/governments/civics/zr.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ }
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+		}
+	}
+	
+	modifier={
+	#planet_jobs_produces_mult = 150
+	#pop_citizen_happiness = 1
+	#country_unity_produces_mult = 150
+	#envoys_add = 3
+	#intel_decryption_add = 30
+	#intel_encryption_add = 30
+	#add_base_country_intel = 60
+	#spy_network_levels_add = 60
+	#planet_stability_add = 20
+	planet_jobs_engineering_research_produces_mult = 0.1
+	planet_jobs_physics_research_produces_mult = 0.1
+	planet_jobs_society_research_produces_mult = 0.1
+	planet_jobs_uma_threegodness_knowledge_produces_mult = 0.2
+	#ship_weapon_damage = 15
+	#ship_fire_rate_mult = 10
+	#ship_speed_mult = 2
+	          
+
+	}
+}
+
+civic_umamayanotopgun = {
+	icon="gfx/interface/icons/governments/civics/mtg.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ }
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+			ship_fire_rate_mult = 0.15
+		    ship_speed_mult = 0.15
+			country_naval_cap_mult = 0.25
+	}
+}
+
+civic_umaagnesdigital = {
+	icon = "gfx/interface/icons/governments/civics/ad.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {}
+
+
+	random_weight = {
+		base = 10
+		modifier = {
+
+		}
+	}
+
+	modifier = {
+		pop_happiness = 0.10
+		planet_jobs_society_research_produces_mult = 0.1
+		country_unity_produces_mult = 0.25
+		logistic_growth_mult = 0.05
+		bonus_pop_growth = 0.1
+	}
+}
+
+civic_umabamboomemory = {
+	icon="gfx/interface/icons/governments/civics/bm.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ }
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+		planet_crime_mult = -0.5
+		job_uma_judgement_per_pop = 0.05     
+	}
+}
+
+civic_umafinemotion = {
+	icon="gfx/interface/icons/governments/civics/fm.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ 
+	                   
+		}
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+		envoys_add = 2
+		diplomacy_upkeep_mult = -0.5
+		diplo_weight_mult = 0.33
+		diplo_action_acceptance_add = 30
+	          
+
+	}
+}
+
+civic_umaeishinflash = {
+	icon="gfx/interface/icons/governments/civics/ef.png"
+	description = "civic_tooltip_umaeishinflash_effects"
+	potential={authority={value=auth_trainingcenter} }
+	possible = { 
+		ethics = {
+			NOR = {
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+		army_morale = 0.5
+		army_damage_mult = 0.5
+	}
+}
+
+civic_umasmartfalcon = {
+	icon="gfx/interface/icons/governments/civics/sf.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ 
+	                   
+		}
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+		job_uma_umaidol_per_pop = 0.05
+	    country_influence_produces_mult = 0.2   
+	}
+}
+
+civic_umasatonodiamond = {
+	icon="gfx/interface/icons/governments/civics/sd.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ 
+	                   
+		}
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+		pop_happiness  = 0.15
+        job_uma_satonomerchant_per_pop = 0.05
+	}
+}
+
+civic_umaairgroove = {
+	icon="gfx/interface/icons/governments/civics/ag.png"
+	potential={authority={value=auth_trainingcenter} }
+	possible={ 
+	                   
+		}
+	
+	
+	random_weight={
+		base=10
+		modifier = {
+			
+		}
+	}
+	
+	modifier={
+		country_edict_fund_add = 100
+		empire_size_systems_mult = -0.05
+		empire_size_colonies_mult = -0.05
+	}
+}
+
+civic_uma_my_venus_park = {
+	icon = "gfx/interface/icons/governments/civics/zf.png"
+	modification = no
+	potential = { authority = { value = auth_trainingcenter } }
+	description = civic_uma_my_venus_park_effects
+	possible = {
+
+	}
+	random_weight = { base = 0 }
+
+
+	modifier = {
+		country_government_civic_points_add = 1
+		pop_happiness = 0.25
+		diplo_action_acceptance_add = 40
+	}
+}
+
+
+#By ATR From StellarDerby Machan&trade extension
+
+civic_uma_aston_machan = {
+	icon = "gfx/interface/icons/governments/civics/mj.png"
+	potential = {
+		authority = { value = auth_trainingcenter }
+	}
+	possible = {}
+	random_weight = { base = 0 }
+
+	modifier = {
+		planet_jobs_specialist_trade_produces_mult = 0.2
+		pop_happiness = 0.05
+	}
+}
+
+#civic_uma_candleoff = {
+#	#烛尽光殇
+#	modification = no
+#	icon = "gfx/interface/icons/governments/civics/candleoff.png"
+#	description = civic_uma_candleoff_effects
+#	potential = {
+#		authority = {
+#			value = auth_trainingcenter
+#		}
+#	}
+#	possible = {
+#	ethics = {
+#			value = ethic_fanatic_xenophobe
+#		}
+#	}
+#	modifier = {
+#		ship_hull_mult = 1
+#		ship_fire_rate_mult = 1
+#		ship_weapon_damage = 1
+#		ship_hull_regen_add_perc = 1
+#		ship_armor_regen_add_perc = 1
+#		starbase_shipyard_build_speed_mult = 0.5
+#		starbase_shipyard_build_cost_mult = -0.5
+#		army_damage_mult = 0.75
+#		country_war_exhaustion_mult = -0.5
+#		country_naval_cap_mult = 1
+#	}
+#}
+
+
+civic_uma_vivlos_shopping = {
+	icon = "gfx/interface/icons/governments/civics/vivl.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {
+
+	}
+
+
+	random_weight = {
+		base = 10
+		modifier = {
+
+		}
+	}
+
+	modifier = {
+		planet_civilians_trade_produces_add = 0.8
+		planet_civilians_consumer_goods_upkeep_add = -0.4
+	}
+}
+
+civic_uma_ayb_star_watcher = {
+	icon = "gfx/interface/icons/governments/civics/ayb.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {
+		ethics = {
+			NOR = {
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+
+	random_weight = {
+		base = 10
+		modifier = {
+
+		}
+	}
+
+	modifier = {
+		planet_sensor_range_add = 4
+		science_ship_survey_speed = 0.2
+		shipsize_science_anomaly_research_speed = 0.1
+		shipsize_science_anomaly_generation_chance = 0.1
+	}
+}
+
+civic_uma_cheval_civillian_workshop = {
+	icon = "gfx/interface/icons/governments/civics/cheval.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {
+
+	}
+
+
+	random_weight = {
+		base = 10
+		modifier = {
+
+		}
+	}
+
+	modifier = {
+		planet_civilians_trade_produces_add = -0.6
+		planet_civilians_physics_research_produces_add = 0.6
+		planet_civilians_society_research_produces_add = 0.6
+		planet_civilians_engineering_research_produces_add = 0.6
+	}
+}
+
+
+
+civic_uma_matikanetannhauser_radio  = {
+	icon = "gfx/interface/icons/governments/civics/mt.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {
+
+	}
+
+
+	random_weight = {
+		base = 10
+		modifier = {
+
+		}
+	}
+
+	modifier = {
+		pop_cat_worker_bonus_workforce_mult = 0.1
+		pop_cat_specialist_bonus_workforce_mult = 0.04
+	}
+}
+
+civic_uma_luckey_geo_training  = {
+	icon = "gfx/interface/icons/governments/civics/rickey.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {
+
+	}
+
+
+	random_weight = {
+		base = 10
+		modifier = {
+
+		}
+	}
+
+	modifier = {
+		planet_building_capacity_add = 3
+
+		##Comics
+		country_storm_location_intel_add = 3
+		country_storm_movement_intel_add = 3
+
+		country_storms_uma_crystal_carrot_produces_add = 1
+		##Story After
+	}
+}
+
+civic_uma_win_variation  = {
+	icon = "gfx/interface/icons/governments/civics/winv.png"
+	potential = { authority = { value = auth_trainingcenter } }
+	possible = {
+
+	}
+
+	modification = {
+		moddable_conditions_custom_tooltip =civic_uma_win_variation_tt_only_remove
+		add = {
+			always = no
+		}
+		remove = {
+			always = yes
+		}
+	}
+
+
+	random_weight = {
+		base = 0
+
+	}
+
+	modifier = {
+		country_war_exhaustion_mult = -0.4
+		fleet_mia_time_mult = -0.6
+		country_subject_acceptance_add = 20
+	}
+	custom_tooltip_with_modifiers = civic_uma_win_variation_tt
+}

@@ -1,0 +1,60 @@
+icon = GFX_district_specialization_uma_training
+base_buildtime = @zone_buildtime
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+included_building_sets = {
+	uma_racing
+	uma_urban
+}
+
+excluded_building_sets = {
+	generator
+	mining
+	farming
+	knights
+	betharian
+}
+
+convert_to = {
+	zone_research
+	zone_research_nexus
+	zone_research_hive
+}
+
+triggered_district_planet_modifier = {
+	job_uma_racing_umamusume_add = 850
+	job_uma_racing_ura_members_add = 850
+	job_uma_trainer_add = 850
+}
+
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+ai_priority = 5

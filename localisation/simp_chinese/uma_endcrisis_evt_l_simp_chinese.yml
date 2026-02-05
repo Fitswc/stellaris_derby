@@ -1,0 +1,268 @@
+﻿l_simp_chinese:
+
+##EC3
+auth_ancient_trainingcenter: "天外特雷森学院"
+auth_ancient_trainingcenter_desc: "它们不来自这里"
+
+###Ship Design
+NAME_UMA_EC3_BASE: "位面指挥中心"
+NAME_UMA_EC3_Transport: "天外马娘运输船"
+NAME_UMA_EC3_STARBASE: "焦土锚"
+NAME_UMA_EC3_FRONT_SQUARD_BB: "先遣部队-战列舰"
+NAME_UMA_EC3_FRONT_SQUARD_CV: "先遣部队-巡洋舰"
+NAME_UMA_EC3_SOC_Corvette_2: "焦土处理舰队"
+NAME_UMA_EC3_SOC_Corvette_2_defend: "防守舰队"
+NAME_UMA_EC3_SOC_Titan_2: "先遣部队-泰坦"
+
+NAME_UMA_EC3_SOC_BASE: "焦土锚"
+NAME_UMA_EC3_MAIN_BASE: "位面指挥中心"
+NAME_UMA_EC3_ION_CANNON: "AAA加农炮批发"
+###Ship Size
+starbase_uma_ec3: "位面星系基地"
+starbase_uma_ec3_plural: "位面星系基地"
+
+#NAME_UMA_EC3_country: "AAA全银河天灾批发"
+NAME_UMA_EC3_country: "天外马娘"
+
+###EVT
+uma_ec_3.20.title: "空间异动"
+uma_ec_3.20.desc: "位于[event_target:uma_ec3_first_system.GetName]的黑洞出现了瞬时强大的亚空间波动。这次波动使得周边星系受到了强电磁暴的影响——所有的电子设备在一瞬间集体短暂罢工。这会是什么原因导致的？"
+uma_ec_3.20.a: "不安"
+uma_ec_3.21.title: "警戒！"
+uma_ec_3.21.desc: "大量舰队从[event_target:uma_ec3_first_system.GetName]的黑洞中折跃出来，并迅速建造了指挥中心。\n令人惊奇的是，它们似乎并不需要工程船就能建造太空建筑而是从舰船上直接释放自组装构件在太空中自己拼装起来。\n似乎所有的舰船指令都从[event_target:uma_ec3_first_system.GetName]中发出，毋庸置疑，我们需要进攻他们的指挥中心"
+uma_ec_3.21.a: "进入警戒"
+uma_ec_3.22.title: "???"
+uma_ec_3.22.desc: "没想到这里也有马娘同胞，还是一个年轻的文明。先介绍下自己：我们来自与你们同级的”另外一个宇宙“。虽然我们在外表和经历上十分相似，不过很遗憾，严格意义上来说，我们终究不是同样一个种族，不过在我们击败你们后我们会给你们提供相应的优待.....\n\n......不过你们的星区，资源，殖民地，星球上的一草一木，都将会是我们的财产！这篇宇宙的恒星将会变为我们的发电厂，行星将会变为矿场！"
+uma_ec_3.22.a: "必须阻止它们！"
+
+uma_ec_3.23.title: "???"
+uma_ec_3.23.desc: "你们坐拥着一片丰饶的领地，外星人......不过很快，你们的星区，资源，殖民地，星球上的一草一木，都将会是我们的财产！这篇宇宙的恒星将会变为我们的发电厂，行星将会变为矿场！"
+uma_ec_3.23.a: "必须阻止它们！"
+uma_ec_3.24.title: "焦土计划"
+uma_ec_3.24.desc: "在一片耀眼的亮光之下，[From.GetName] 的所有星球都变为荒芜，所有生命都被全部抹除，甚至恒星也变为黑洞。难道这就是它们的焦土计划？"
+uma_ec_3.24.desc.swap: "在一片耀眼的亮光之下，[From.GetName] 的所有殖民地都归于寂静，所有生命都被全部抹除。难道这就是它们的焦土计划？"
+uma_ec_3.24.a: "令人震惊"
+uma_ec_3.28.title: "突然出现的庞然大物"
+uma_ec_3.28.desc: "在这些从另一个维度来的马娘到达这个宇宙的瞬间，一个巨大的哨所就跃迁到我们的首都星系。它只是静静地呆在那里，我们暂时不知道这个凭空出现的庞然大物究竟是用来做什么的。但冥冥之中感觉这不是个好东西......"
+uma_ec_3.28.a: "必须立刻研究"
+uma_ec_3.29.title: "定时炸弹"
+uma_ec_3.29.desc: "经过对这个庞然大物的探索与技术逆向我们发现，这个驻足在我们星系的庞然大物其实是一颗定时炸弹！它从一定范围内的其他焦土锚获取电力，然后等到电量达到一定程度时将会释放一阵强大的能量将这颗星系的所有生命全部抹除，并且，如果在任何拥有焦土锚的星系拥有殖民地，那该殖民地上的人口将会瞬间大量流失。现在，我们可以通过每月一次的连接扫描，来定位为这个死亡兵器供能的其他焦土锚的位置。\n希望我们的速度够快"
+uma_ec_3.29.a: "好的"
+
+uma_ec_3.32.title: "黄金家的援助"
+uma_ec_3.32.desc: "“......既然我们体内都有相同的因子，那么作为一家人，我们理应给你们相应的援助。不过有个条件，这支舰队只能够用于攻击那些想摧毁我们家园的敌人，当战争结束.....请解散舰队，带她们回家......”"
+uma_ec_3.32.a: "当然......"
+
+uma_ec_3.25.title: "溃退"
+uma_ec_3.25.desc: "来自另一个宇宙的邪恶马娘们在这个宇宙建立的基地终于被一举拿下。一场浩劫终于结束了......"
+uma_ec_3.25.a: "万幸"
+
+uma_ec_3.26.title: "???"
+uma_ec_3.26.desc: "年轻的马娘们......你们听过三女神嘛？我们通过领域发现三女神似乎......是一个独立于我们所有宇宙之外的......监【通信被外部阻断】......她们正在看着你们"
+uma_ec_3.26.a: "什么？"
+
+###Situation
+situation_uma_endcrisis_ec3_progress_desc: "当距离领土星系15跳内存在焦土锚时，倒计时将"
+situation_uma_endcrisis_ec3_progress_1_desc: "当首都的焦土锚发动，首都不为[owner.GetName]所拥有时，倒计时速度"
+situation_uma_endcrisis_ec3_progress_2_desc: "当首都的焦土锚发动，首都为[owner.GetName]所拥有时，倒计时速度"
+situation_uma_endcrisis_ec3_complet: "首都星系将被抹除，并设置为敌方进攻舰队的复数出生点之一"
+situation_uma_endcrisis_ec3_no_progress_desc: "距离首都星系15跳内不存在焦土锚，倒计时将"
+
+situation_uma_endcrisis_ec3_progress_desc_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_progress]"
+situation_uma_endcrisis_ec3_progress_1_desc_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_progress_1]"
+situation_uma_endcrisis_ec3_progress_2_desc_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_progress_2]"
+situation_uma_endcrisis_ec3_complet_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_complete]"
+situation_uma_endcrisis_ec3_no_progress_desc_in_situation: "[UMA_EC3_SITUATION_DYNAMIC_DESC_no_progress]"
+country_explosion: " "
+situation_uma_endcrisis_ec3_dynamic: "焦土危机倒计时"
+situation_uma_endcrisis_ec3_desc_dynamic: "每摧毁一座哨站则-10局势进度"
+
+situation_uma_endcrisis_ec3: "[UMA_EC3_SITUATION_DYNAMIC_DESC_name]"
+situation_uma_endcrisis_ec3_type: "危机局势"
+situation_uma_endcrisis_ec3_desc: "局势完成后似乎会发生什么事情......\n§R[UMA_EC3_SITUATION_DYNAMIC_DESC_desc]§!"
+
+
+##Event Chain
+uma_endcrisis_ec3_main_chain_counter: "上次扫描中会导致局势条§Y快速§!增长的星系数量"
+uma_ec3_poi.1_desc: "[Prev.GetName]"
+uma_ec3_poi.1_desc_desc: "上次扫描发现该星系的恒星基地正在给在我们首都焦土锚供电，必须马上摧毁"
+uma_endcrisis_ec3_main_chain_title: "£uma_sd£星海德比末期危机:焦土"
+uma_endcrisis_ec3_main_chain_desc: "从平行位面来的马娘们，意图占领所有的土地，并将所有的星球的生命抹除作为殖民地以及矿场."
+uma_ec3_poi.2.name: "天灾起始位置"
+uma_ec3_poi.2.desc: "[event_target:uma_ec3_first_system.GetName] 是这些邪恶马娘们被第一次发现的地方"
+uma_endcrisis_ec3_main_chain_counter_bh: "她们占领黑洞的数量(只需要摧毁一次)"
+uma_ec3_poi.3.name: "[Prev.GetName]"
+uma_ec3_poi.3.desc: "......这些黑洞里的空间站似乎正在为她们的主恒星指挥中心供电，以此产生强大防御能力。如果我们能够将这些空间站的数量削减到一定程度，或许我们就能有机会把他们驱逐出去。"
+uma_ec3_poi.4_desc_desc: "上次扫描发现的黑洞供电装置的位置，如果我们想要摧毁他们的主恒星基地，请务必摧毁这些位置中的装置"
+
+UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL: "研究位于首都的庞然大物"
+UMA_ENDCRISIS_EC3_FIND_WAY_TO_DESTROY_SOC_BASE_IN_CAPITAL_DESC: "一个巨大的哨所跃迁到我们的首都星系。它只是静静得呆在那里，我们暂时不知道这个凭空出现的庞然大物究竟是用来做什么的。但冥冥之中感觉这不是个好东西......"
+
+
+UMA_ENDCRISIS_EC3_GOLD_REINSFORCEMENT: "黄金家支援舰队"
+
+#Notification
+UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC: "星系被焦土化"
+UMA_ENDCRISIS_EC3_SYSTEM_BEING_SOC_DESC: "[From.GetName] 被焦土化了，所有生命都被抹去"
+uma_endcrisis_ec3_system_being_soc: "终末天灾:焦土 星球焦土化提示"
+UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK: "进攻号角"
+ UMA_ENDCRISIS_EC3_SYSTEM_CAN_ATTACK_DESC: "检测显示位于[event_target:uma_ec3_first_system.GetName]的指挥站防御供能已大幅下降，正是进攻的时候！"
+
+
+##EC2
+
+uma_ec_2.20.title: "怪异的装置"
+uma_ec_2.20.desc: "我们注意到马娘堕落帝国似乎在某个星系建立了一个神秘装置，与此同时，所有的堕落帝国们似乎都集体合并到了马娘堕落帝国中。发生了什么？或许我们可以派一艘科研船进去研究一下。"
+uma_ec_2.20.a: "批准"
+uma_ec_2.21.title: "秋川理事长"
+uma_ec_2.21.desc: "这些领域增幅器被你们发现了嘛？听着，孩子们，你们触碰了禁忌，你们不应该将领域发展到这个地步......对于这点，我已经警告过你们了。现在，根据和§Y她们§!的契约，我们必须将你们和所有国家消灭，无论你们是否有看到过§Y那些景象§!，这是我们的使命，希望你们会理解......"
+uma_ec_2.21.a: "???什么回事"
+
+uma_ec_2.22.title: "秋川理事长"
+uma_ec_2.22.desc: "听着，孩子们，你们触碰了禁忌，你们不应该将领域发展到这个地步......对于这点，我已经警告过你们了。现在，根据和§Y她们§!的契约，我们必须将你们和所有国家消灭，无论你们是否有看到过§Y那些景象§!，这是我们的使命，希望你们会理解......"
+uma_ec_2.22.a: "???什么回事"
+uma_ec_2.23.title: "祸根"
+uma_ec_2.23.desc: "原本安静的马娘堕落帝国不知何时开始无条件进攻所有国家，通过我们的情报网得知，似乎是某个马娘帝国将她们自身的力量发展到了超越某个限制的程度。"
+uma_ec_2.23.a: "做好防御"
+uma_ec_2.24.title: "领域增幅"
+uma_ec_2.24.desc: "那些分散在以前堕落帝国首都的带领域增幅器的恒星基地似乎能有效增强马娘堕落帝国的战斗力。必须摧毁它们才能让我们的伤亡减轻。同时，我们需要攻入马娘堕落的首都 诺亚 以开启与她们的谈判。"
+uma_ec_2.24.a: "$OK$"
+uma_ec_2.25.title: "秋川理事长"
+uma_ec_2.25.desc: "§g把摄像头关掉————对，关掉了吗？好的§!\n啊.....已经攻打到这了吗......我们失败了，这一切所有§Y她们§!都看在眼里。"
+uma_ec_2.25.a: "她们是谁"
+uma_ec_2.26.desc: "§Y三女神§!\n我们在亿万年前就与她们签订契约：观察马娘文明的领域发展程度，并对越界者加以惩戒......你们是发展程度相当高的一代，恭喜你们。只是我们的旅途该结束了，一旦我们防守失败，三女神将会把我们连同整个宇宙一起抹除。只不过由于领【外部干扰】的关系，我们会先走一步；§Y除非你们有信心能够对抗‘神’§! 否则请将人口迁移到我们最后的方舟：§Y诺亚§! 的 §Y生机§! 上，这是我最后一个请求.......拜托了....... \n【噪声】\n【噪声】\n【死寂】"
+uma_ec_2.26.a.resp: "【死寂】【回声】"
+uma_ec_2.26.a: "理事长？"
+uma_ec_2.27.title: "诺亚和大洪水"
+uma_ec_2.27.desc: "无论我们后续如何联系，通信频道那头都是一片寂静。至于是否将首都迁移到诺亚，我们内部还存在许多争议，相信我们的[ruler.GetTitle]会像以往一样做出令人信服的决策。"
+uma_ec_2.27.a: "我们会迁移到诺亚"
+uma_ec_2.27.b: "我们不会屈服"
+uma_ec_2.27.c: "我...不知道"
+uma_ec_2.27.a.tt: "迁都到诺亚"
+uma_ec_2.27.b.tt: "不迁都到诺亚(后续内容：灾飞正在完成)"
+uma_ec_2.27.c.tt: "这需要一些时间来考虑......"
+uma_ec_2.28.title: "冲击波"
+uma_ec_2.28.desc: "当我们的舰船靠近马娘堕落的母星系 往事 时，一道巨大的冲击波突然发出，令我们的舰船受到了巨大的伤害。看来在削减她们的领域强度到一定程度之前，我们最好不要冒险进入"
+uma_ec_2.28.a: "可怕"
+
+uma_ec_2.29.title: "冲击波"
+uma_ec_2.29.desc: "当我们的舰船靠近马娘堕落的母星系 诺亚 时，一道巨大的冲击波突然发出，我们的舰船直接原地蒸发。看来在削减她们的领域强度到一定程度之前，我们最好不要冒险进入"
+uma_ec_2.29.a: "可怕"
+
+uma_ec_2.31.title: "登船"
+uma_ec_2.31.desc: "我们登上了诺亚，依照秋川理事长的嘱托将首都迁移至此。虽然不明白她为什么恳求我们这么做，但我相信她一定有这么做的理由......比如她提到的三女神?\n一切安顿下来后，一个自称为§Y三女神§!的无记录的国家突然要求与我们通信。"
+uma_ec_2.31.a: "接入通信"
+
+uma_ec_2.32.title: "三女神"
+uma_ec_2.32.desc: "§P是新的孩子们，很高兴见到你们。如你们所知，我们是三女神，就是创造了你们这个物种，你们信奉的三女神。§!\n§B直接和她们说重点吧，小羊§!\n§P好吧...看到她们还想打个招呼呢...如你们所见，生机是一个理想之城，我们想让你们继续上一任孩子们的工作——观察新生的孩子们，防止她们......和你们走上一样的道路。§!\n§H......领域很危险，很多孩子们都因此丧命......§!\n§P领域会让你们的宇宙被强行展开，最后消失在未知当中。§!\n§B不过还好你们控制得不错孩子们，我们也尽力在帮你们减少领域对你们宇宙的影响。好了，你们愿意接受这份工作吗? 观察新生的孩子们，引导她们；我们会尽可能为你提供帮助，确保你们的帝国永远繁荣。§!\n§H......当然，如果你们被击败的话......§!\n§P好啦好啦，我相信你们的能力。嘛，你们接受吗?§!"
+uma_ec_2.32.a: "接受"
+uma_ec_2.32.a.tt: ""
+uma_ec_2.32.b: "接受"
+uma_ec_2.32.b.tt: "为什么不能拒绝？"
+uma_ec_2.32.c.tt: "为什么不能拒绝啊？"
+
+uma_ec_2.33.title: "三女神"
+uma_ec_2.33.desc: "§P谢谢，孩子们。我们很快给你们提供资源，希望你们生活愉快......有什么需要帮助的地方可以随时联系我们。§!\n§P另外，我可以给你们透露一些...小预言：若干年后你们的国家将会产生一名伟大的理事长，并且你们的科技将会高度发达，一个天赋异禀的孩子将会诞生。好啦，我只能说这么多了，再见啦§!"
+uma_ec_2.33.a: "当然"
+
+##Event Chain
+uma_ec_2_main_evt_chain_title: "£uma_sd£星海德比末期危机:领域"
+uma_ec_2_main_evt_chain_desc: "占领领域增幅器以削弱马娘堕落的领域强度，以削弱她们的实力。\n\n目标：\n攻入首都前哨星系：往事"
+uma_ec2_fallen_empire_class: "马娘堕落领域强度"
+uma_ec_2_poi.1.name: "[Prev.GetName]"
+uma_ec_2_poi.1.desc: "我们发现马娘堕落帝国在此处建立了一个领域增幅器，占领此处以削弱马她们的战斗力"
+
+#SpecialProeject
+UMA_EC_2_RESEARCH_STRANGE_FROM_UMA_FE: "研究神秘装置"
+UMA_EC_2_RESEARCH_STRANGE_FROM_UMA_FE_DESC: "我们注意到马娘堕落帝国似乎在某个星系建立了一个神秘装置，与此同时，所有的堕落帝国们似乎都集体合并到了马娘堕落帝国中。发生了什么？或许我们可以派一艘科研船进去研究一下。"
+
+##Ship
+NAME_UMA_EC2_fleet_DEFEND: "防护舰队"
+NAME_UMA_EC2_BB: "Alpha"
+NAME_UMA_EC2_CV: "Beta"
+NAME_UMA_EC2_Titan: "Omega"
+NAME_UMA_EC2_ION_CANNON: "AAA加农炮批发"
+
+##Timeline
+uma_timeline_accept_tg_help_desc: "我们...最后成为了她们"
+uma_timeline_accept_tg_help: "我们与§Y三女神§!签订了契约\n[GetDate]"
+
+#Modifier
+uma_fallen_empire_player_enhancement_modifier: "三女神的馈赠"
+uma_fallen_empire_player_enhancement_modifier_desc: ""
+
+
+##EC1
+NAME_ec1_threegodness_species: "赛马娘?"
+uma_ec1_dyson_sphere: "时间机器"
+uma_ec1_dyson_sphere_DESC: ""
+NAME_UMA_EC1_ION_CANNON: "AAA加农炮批发"
+starbase_uma_ec1: "特种防御站"
+starbase_uma_ec1_plural: "特种防御站"
+NAME_starbase_uma_ec1: "特种防御站"
+uma_ec1_dyson_sphere_ruined: "损坏的时间机器"
+uma_ec1_dyson_sphere_ruined_DESC: "一个用来逆转该宙域的工具。如果完全发动会产生严重后果。"
+
+uma_crisis_1_modifier_perk: "因子工程"
+uma_crisis_1_modifier_perk_desc: ""
+
+uma_ec_1.10.title: "因子工程的更进一步"
+uma_ec_1.10.desc: "现在我们对因子的掌控程度可以让我们定义新生儿的因子！也就是说，现在可以自己定义新生儿的性格，能力等，甚至能让她和我们的一些楷模一样！，在因子层面上对我们的物种进行优选。这会使我们的发展水平更上一层楼。"
+uma_ec_1.10.a: "甚善"
+
+
+uma_ec_1.12.title: "未知来电"
+uma_ec_1.12.desc: "就在我们发现[event_target:uma_ec1_main_system.GetName]突然建立起的巨构以及周边建立的防御工事没几天，一个自称 §Y三女神§! 的陌生联系人唐突联系了我们。"
+uma_ec_1.12.a: "是谁？接入通讯！"
+
+uma_ec_1.13.title: "“三女神”"
+uma_ec_1.13.desc: "§P孩子们！距离上次联系过去多久——你们可能忘记了。§!\n\n§B这次是来谈正事的，看起来你们的因子发展水平已经远超我们的想象了。§!\n\n§P虽然很不情愿，但是已经干涉到【数据删除】循环了。我们必须将这个宇宙的时间倒转§!\n\n§H这意味着现在的你们将会不复存在，再次从一个细胞开始§!\n\n§P虽然对你们无益，但是请理解我们，如果你们注意得到的话，会发现你们这个物种的出生人口越来越少。而随着你们的因子越来越复杂，越来越完美，我们越难将对应的灵魂进行匹配。§!\n\n§B这意味着过多的灵魂堆积，会对【数据删除】世界造成影响，这违背了我们的使命。§!\n\n§H总之，孩子们，我们建议你们不要来干扰我们的倒转。虽然其他文明一定会全力进攻，但请不要....§!\n\n§B好了，就说这么多了，选择权在你们手中。希望你们能做出正确的选择§!"
+uma_ec_1.13.a: "这是......"
+
+uma_ec_1.14.title: "时间机器的灾厄"
+uma_ec_1.14.desc: "未知势力在[event_target:uma_ec1_main_system.GetName]建立了一个巨大的建筑，根据调查，它似乎向内吸收着很大的能量，而且周围的时间似乎正在扭曲?无论如何，这似乎是一个很危险的建筑，我们必须尝试摧毁它。"
+uma_ec_1.14.a: "$OK$"
+
+uma_ec_1.15.title: "时间逆转的失效"
+uma_ec_1.15.desc: "我们成功摧毁了三女神架设的时间机器，阻止了对这个宇宙的重置，我们的种族足以继续繁衍下去。"
+uma_ec_1.15.a: "$OK$"
+
+uma_ec_1.16.title: "“三女神”"
+uma_ec_1.16.desc: "§B孩子们，我们已经看到了你们的决心。你们的努力让这个宇宙成为独立的平行宇宙，用来隔离你们因子的污染，从此以后这个宇宙将不会有三女神和她们的委托人的存在。最后，祝你们安康§!\n\n§g那边已经封堵了这个漏洞，虽然消耗了不小的资源......§!"
+uma_ec_1.16.a: "再会"
+
+uma_ec_1.17.title: "时间逆转的失效"
+uma_ec_1.17.desc: "我们成功摧毁了未知势力架设的时间机器，阻止了对这个宇宙的重置，我们的种族足以继续繁衍生息。"
+uma_ec_1.17.a: "$OK$"
+
+uma_ec_1.19.title: "尤里卡！"
+uma_ec_1.19.desc: "我们从一瞬间回到了刚刚步入太空的时候。但是我们的知识似乎得到了保留。难道是土著与我们分享了许多尖端科技?"
+uma_ec_1.19.a: "$OK$"
+
+
+situation_uma_endcrisis_ec1: "时间逆转进度"
+situation_uma_endcrisis_ec1_desc: "位于[event_target:uma_ec1_main_system.GetName]的时间机器的启动进度。一旦启动完成，后果将不堪设想。"
+situation_uma_endcrisis_ec1_type: "危机局势"
+situation_uma_endcrisis_ec1_progress_desc_1: "距离过远导致的时间补偿"
+situation_uma_endcrisis_ec1_progress_tooltip: ""
+situation_uma_endcrisis_ec1_complet_in_situation: "§R时间被逆转。§!\n这会摧毁你的所有殖民地，舰队，首都建筑，并将你的资源设置为一定数额。但你的国家不会被终结，这意味着游戏不会因此失败。"
+
+NAME_UMA_EC1_STARBASE: "特种防御站"
+NAME_UMA_EC1_Defend_SQUARD_BB: "未知规格战列舰"
+NAME_UMA_EC1_FRONT_SQUARD_CV: "未知规格巡洋舰"
+NAME_uma_ec1_guard_station: "特种防御站"
+NAME_UMA_EC1_country: "三女神"
+NAME_uma_ec1_time_machine: "时间机器"
+
+uma_ec_1_main_evt_chain_title: "£uma_sd£星海德比末期危机:因子"
+uma_ec_1_main_evt_chain_desc: "目标：在时间逆转局势完成前占领§Y[event_target:uma_ec1_main_system.GetName]§!"
+uma_ec1_poi.1.name: "[event_target:uma_ec1_main_system.GetName]"
+uma_ec1_poi.1.desc: "我们必须占领这里来阻止三女神们的计划"
+uma_ec1_poi.2.name: "[Prev.GetName]"
+uma_ec1_poi.2.desc: "这些是时间机器的边缘防御星系，需要想办法通过这里。"
+
+
+
+
+
+

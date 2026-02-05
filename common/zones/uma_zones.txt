@@ -1,0 +1,397 @@
+zone_uma_training = {
+	icon = GFX_uma_zone_type_racing
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		uma_urban
+		uma_teaching
+		urban
+		habitat_urban
+	}
+
+	convert_to = {
+		zone_research
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			food = 5
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		job_uma_racing_umamusume_add = 100
+		job_uma_trainer_add = 100
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	included_building_sets = {
+		uma_racing
+		uma_urban
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+}
+
+
+zone_uma_teaching = {
+	icon = GFX_uma_colony_type_school
+	base_buildtime = @zone_buildtime
+	potential = {
+		# planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = {
+		# planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	convert_to = { zone_research }
+
+	zone_sets = {
+		uma_urban
+		uma_teaching
+		urban
+		habitat_urban
+		habitat_research
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			consumer_goods = 5
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		job_uma_researcher_add = 200
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	excluded_building_sets = {
+		urban
+		generator
+		mining
+		farming
+		knights
+		betharian
+	}
+
+	included_building_sets = {
+		research
+		uma_research
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+zone_uma_industry = {
+	icon = GFX_uma_zone_type_industry
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		uma_urban
+		urban
+		habitat_urban
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+	convert_to = {
+		zone_industrial
+	}
+
+
+	included_building_sets = {
+		uma_urban
+		uma_industrial
+		industrial
+		factory
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	inline_script = {
+		script = jobs/uma_zone_industrial_jobs_add
+		AMOUNT = 200
+		AMOUNT_ELSE = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_uma_industrial_triggered_desc
+	}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+
+zone_uma_basic_food = {
+	icon = GFX_uma_zone_type_food
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		food
+	}
+	convert_to = {
+		zone_food
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		farming_automation
+		uma_farming
+	}
+
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		job_uma_bee_farmer_add = 200
+		job_uma_carrot_farmer_add = 200
+	}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+
+zone_uma_basic_mineral = {
+	icon = GFX_uma_zone_type_mining
+	base_buildtime = @zone_buildtime
+	potential = {
+		# planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = {
+		# planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	zone_sets = {
+		minerals
+		habitat_minerals
+	}
+
+	convert_to = {
+		zone_minerals
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+	included_building_sets = {
+		mining
+		urban
+		mining_automation
+		uma_mining
+	}
+
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		job_uma_core_miner_add = 200
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			has_deposit = d_uma_crystal_carrot_mine_planet
+		}
+		job_uma_crystal_carrot_miner_add = 150
+	}
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+
+zone_uma_energy_venus = {
+	icon = GFX_district_specialization_uma_energy_venus
+	base_buildtime = @zone_buildtime
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	potential = {
+		# planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_uma_country = yes
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	unlock = {
+		# planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_uma_country = yes
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	zone_sets = {
+		energy
+		habitat_energy
+	}
+
+	included_building_sets = {
+		unity
+		uma_entertainment
+		government
+		urban
+		uma_urban
+	}
+
+	convert_to = {
+		zone_energy
+		zone_energy_nexus
+		zone_energy_hive
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	district_planet_modifier = {
+		planet_jobs_energy_produces_add = 10
+	}
+
+	triggered_planet_modifier = {
+		planet_uma_traders_trade_produces_mult = 0.1
+	}
+
+	ai_priority = 5
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}

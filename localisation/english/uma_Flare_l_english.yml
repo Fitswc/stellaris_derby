@@ -1,0 +1,67 @@
+﻿l_english:
+
+  # 国策 
+ civic_uma_aston_machan: "Souvenir shop for Aston Machan"  #NT!
+ civic_uma_aston_machan_desc: "Miss Aston Machan is very good at making Umamusume souvenirs. The cute and distinctive Umamusume souvenirs are deeply loved by the public. \n With her help, our trading system is full of wings."  #NT!
+  # 内阁 
+ councilor_uma_aston_machan: "Umamusume Business Consultant"  #NT!
+ councilor_uma_aston_machan_desc: ""
+  # 内阁特质，顺便给光钻的也加了描述 
+ councilor_uma_aston_machan_custom_modifier_desc: "—Trade:§G+10%§! \n—£job_uma_trader£$job_uma_trader_plural$ Produce £trade_value£Trade：§G+5§!" #NT!
+ councilor_umasatonodiamond_custom_modifier_desc: "—Energy pre month:§G+15%§! \n—£job_uma_trader£$job_uma_trader_plural$ Produce £trade_value£Trade：§G+2§!"\n—£job_uma_trader£$job_uma_trader_plural$Production £trade_value£ Trade: §G+2§!"  #NT!
+  # 建筑 
+ building_uma_commercial_zone: "Umamusume Trade Center"  #NT!
+ building_uma_commercial_zone_desc: "There are many tall office buildings and commercial buildings in the Umamusume Trade Center, which injects continuous impetus into our trade."  #NT!
+ mod_job_uma_trader_per_pop: "Each population generates Umamusume merchant positions"
+ mod_job_uma_trader_per_pop_short: "Every $VALUE$£pop£§G+1§!£mod_job_uma_trader_add£"  #NT!
+  
+ planet_uma_traders_trade_produces_add: "£job_uma_trader£$job_uma_trader_plural$ Output £trade_value£ Trade volume"  #NT!
+  # 麻酱的特质 
+ uma_governor_trait_mini_flare: "Fireworks"  #NT!
+ uma_governor_trait_mini_flare_desc: ""
+ uma_governor_trait_flare: "Flare"  #NT!
+ uma_governor_trait_flare_desc: ""
+ uma_governor_trait_never_forget: "Never forget"  #NT!
+ uma_governor_trait_never_forget_desc: ""
+  # 麻酱事件链 
+ uma_am_catch_phrase: "Hello, I am Aston Machan, you can also call me Machan, please give me some advice."  #NT!
+ uma_never_forget.2.name: "Sesame Machan's private money"  #NT!
+ uma_never_forget.2.desc: ""I heard that the national development budget has been insufficient recently. These are my private money. Please keep it! Although it is only a little bit, I hope it can help you...""  #NT!
+ uma_never_forget.2.a: "Thanks"  #NT!
+ uma_never_forget.3.name: "The tide is gradually rising"  #NT!
+ uma_never_forget.3.desc: "Recently, other Umamusume who have worked with Machan often report that they often see Machan in a daze alone and often cannot contact her when they have something to do. \n\nFaced with other Umamusume's concern, she just replied: "Don't worry, I just don't get along well with spring, I'll be fine until summer."\n\nThe examination results of the infirmary also prove that Miss Machan is very healthy, but you are still a little worried about her."  #NT!
+ uma_never_forget.3.a: "...Bad premonition"  #NT!
+ uma_never_forget.4.name: "...Forgotten"  #NT!
+ uma_never_forget.4.desc: "All the affairs of the empire are being handled in an orderly manner, but when you look through the documents related to the important project of the empire trade, you feel a strong sense of incongruity. \n\n"For such a huge amount of capital flow, only a few governors and staff are in charge? It is impossible for us not to set up a trade supervisor in this place."\n\n But after carefully checking the documents for nearly a year, you did not find any traces of "trade supervisor". Can we really handle our trade projects with just a few governors and their staff?"  #NT!
+ uma_never_forget.4.a: "This is not right, I must have forgotten something important"  #NT!
+ uma_never_forget.5.name: "What did we forget"  #NT!
+ uma_never_forget.5.desc: "As the Governors' report ended, you became more and more convinced of what had happened, causing everyone's memories to disappear collectively. \n\nThe records about someone or something have completely disappeared, which is something that has never happened before. We must figure out how this is done. More importantly: \n\n§YI must remember what i have forgot§!\n\nScientists have proposed an idea that we can use Umamusume's field to resonate, thus distorting time in a certain area, and using local time to reverse the current to get people in it back to the state before "forgotten"."  #NT!
+ uma_never_forget.5.a: "We need to act immediately"  #NT!
+ uma_never_forget.6.name: "Her name is...Machan!"  #NT!
+ uma_never_forget.6.desc: "Stagnation time is simple for us, but it is difficult to turn around. Finally, with the unremitting efforts of scientists, we first stopped the time of a small area and then reversed the time. \n\nAs the volunteers reappeared, he had not yet spoken, and a name appeared in everyone's hearts - "Zheng Bow Express". Yes, who else can it be except our dear Miss Machan? \n\nScientists have seized a mysterious field energy from the countercurrent experiment just now. Although we are not thorough in the field, there is reason to believe that the source of this energy is related to Miss Machan, and we may be able to position her position from this."  #NT!
+ uma_never_forget.6.a: "Position her position!"  #NT!
+ uma_never_forget.8.name: "An unknown galaxy"  #NT!
+ uma_never_forget.8.desc: "This is a galaxy that we have never found on the star chart, and we have only discovered its existence today. \n\nNo one knows how it actually hides itself, but since it has been discovered, we should send a Exploration team."  #NT!
+ uma_never_forget.8.a: "Send a Exploration team immediately"  #NT!
+ uma_never_forget.9.name: "The sea at the end of the story"  #NT!
+ uma_never_forget.9.desc: "As the researchers approached, the figure became clearer and clearer. It was obvious that she was a Ma girl \n\nWhy was she here? \n\nWhy is her figure so familiar?"  #NT!
+ uma_never_forget.9.a: "Let's talk to her"  #NT!
+ uma_never_forget.9.b: "Is it...she?"  #NT!
+ uma_never_forget.10.desc: "§HThe True Bow Express greeted us. She seemed very surprised.§!\n\n...Why are you here? ...No, but it doesn't matter anymore. \n\nAlthough it's a little early...but there is nothing we can do about it. Everyone will drift from upstream to downstream, which is destined...\n\nThis is the end of my drift... So, goodbye."  #NT!
+ uma_never_forget.10.a: "No, this is definitely not your end"  #NT!
+ uma_never_forget.10.a.resp: "Although I was a little unwilling to accept it, I had already sorted out my mood."  #NT!
+ uma_never_forget.10.b: "What about the dream of becoming a super invincible mascot"  #NT!
+ uma_never_forget.10.b.resp: "...... \nI believes it. As long as you are there, the True Bow Express will not disappear. \nSo, it doesn't matter. \n\n§HShe was smiling happily, but that smile seemed forced.§! \n\nYou have to tell everyone about myself."  #NT!
+ uma_never_forget.10.c: "No"  #NT!
+ uma_never_forget.10.c.resp: "No \n\n§B“I don't want you go”§! \n\n...! \n\n§B“Aston Machan has just set out. It's no one else - neither the president nor the governor. It's you who are striving hard. You have shown everyone your dreams countless times, countless times. You have shown everyone the brilliance, forever and ever. This is you”§! \n\n... Just now, I set off. \n\n§HIt seemed that Aston Machan didn't know what to do. Suddenly, he fell silent. After a long time§! \n\n...is it \n Is it \n Is that so, this - \n... makes me a little difficult \n\n§HAnd she back to the sea§! \n\nI wants to ignore that sound and treat the sound of the waves calling me as if it does not exist \nI really can't help, who told you to be a strange person \nWe are going to the estuary of the river, drifting from downstream to upstream \n...Although it may be washed away by the flood, taken away by the water flow, and finally back to the sea. Or you may encounter things like opening a hole at the bottom of the boat and blown up the sails. But—even so. \nThe legend of I, we must continue \n\n§HLet together§!"  #NT!
+ uma_never_forget.10.HIRE: "Welcome back"  #NT!
+ uma_never_forget.10.DISMISS: "Have a break"  #NT!
+  
+ FIND_WHAT_WE_LOST: "Looking for what we lost"  #NT!
+ FIND_WHAT_WE_LOST_DESC: "The best scientists in the field of Umamusume in the empire gathered together to try to develop a device that would distort time. \n\nIt can be expected that this is very difficult unless "We§Y完全激发§!§Y自身的领域能力§!" \n\nChoose the second stage of the mind ascension will help complete this project"  #NT!
+ FIND_AM_LOCATION: "Position the location of sesame Machan"  #NT!
+ FIND_AM_LOCATION_DESC: "We have reason to believe that the source of the energy of the domain is related to Miss Machan, and we may be able to position her position from this."  #NT!
+  
+ NAME_Flare: "Flare" #NT!
+ uma_am_anomaly: "§YThe sea that the story ending§!"  #NT!
+ uma_am_anomaly_desc: "At the beach, we found a vague figure"  #NT!

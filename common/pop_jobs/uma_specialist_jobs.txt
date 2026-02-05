@@ -1,0 +1,1508 @@
+###马娘偶像
+@uma_specialist_job_weight = 20
+
+uma_umaidol = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_holo_theatres
+		}
+	}
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_umaidol #这个接受planet_uma_umaidol(位于uma_categories)
+		produces = {
+			unity = 6
+			society_research = 4
+		}
+		upkeep = {
+			consumer_goods = 4
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 1000
+		bonus_pop_growth = 0.1
+	}
+
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_umaidol|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { has_valid_civic = civic_umasmartfalcon }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+###风纪委员
+uma_judgement = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = BATTLE_THRALL_JOB_TRIGGER
+			building_icon = building_precinct_house
+		}
+	}
+
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		battle_thrall_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_enforcers
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_domination_judgment_corps }
+			}
+			unity = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = planet
+				planet = { has_modifier = anticrime_campaign }
+			}
+			energy = 2
+		}
+	}
+
+
+	planet_modifier = {
+		planet_crime_add = -20
+		planet_stability_add = 3
+		planet_defense_armies_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = { has_modifier = anticrime_campaign }
+		}
+		modifier = {
+			planet_crime_add = -10
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+
+		modifier = {
+			factor = 2
+			planet = { planet_crime > 15}
+		}
+
+		modifier = {
+			factor = 5
+			exists = owner
+			owner = { has_valid_civic = civic_umabamboomemory }
+		}
+
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		
+		modifier = {
+			factor = 0.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+###三女神知识研究者
+uma_threegodness_knowledge_scholar = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_toresen_lab
+		}
+	}
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_threegodness_knowledge_scholar
+		produces = {
+			uma_threegodness_knowledge = 3
+			physics_research = 9
+			engineering_research = 9
+			society_research = 9
+		}
+		upkeep = {
+			consumer_goods = 3
+			unity = 3
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_threegodness_knowledge_scholar|RESOURCE1|physics_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|engineering_research|WEIGHT3|0.33|
+
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = {
+				has_valid_civic = civic_umazennorobroy
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+###水晶萝卜工程师
+uma_crystal_carrot_engineer = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_crystal_carrot_producing_center ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_crystal_carrot_engineer #单独一类
+		produces = {
+			# 5：6
+			uma_crystal_carrot = 6
+			physics_research = 9
+			engineering_research = 9
+		}
+		upkeep = {
+			energy = 10
+			minerals = 10
+			food = 10
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_crystal_carrot_engineer|RESOURCE|uma_crystal_carrot|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+
+		# low income modifier
+		modifier = {
+			factor = 1.4
+			exists = planet
+			planet = {
+				has_available_jobs = uma_crystal_carrot_engineer
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = uma_crystal_carrot
+					value < 5
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+
+
+#马娘科学家
+uma_researcher = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+#		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_researcher #马娘科学家和科学主管都属于马娘研究者大类，但还是写最小类！
+		produces = {
+			trigger = {
+				uma_we_passed_ap1 = no
+			}
+			engineering_research = 6
+			physics_research = 6
+			society_research = 6
+		}
+		#整点
+		produces = {
+			trigger = {
+				uma_we_passed_ap1 = yes
+			}
+			engineering_research = 9
+			physics_research = 9
+			society_research = 9
+		}
+		#1:2 Ori:2:3
+		upkeep = {
+			consumer_goods = 4
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_researcher|RESOURCE1|physics_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|engineering_research|WEIGHT3|0.33|
+
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = {
+				has_valid_civic = civic_umaagnestachyon
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+
+#######
+#甜点制作师
+uma_sweet_master = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sweet_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_sweet_master #使得其可以单独得到修正
+		produces = {
+			trigger = {
+				exists = owner
+			}
+			consumer_goods = 12
+			trade = 1
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_councilor = { COUNCILOR = "councilor_umasatonodiamond" }
+				}
+			}
+#			consumer_goods = 12
+			trade = 1
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_uma_sweet_chain_industry_brand_plan
+				}
+			}
+#			consumer_goods = 12
+			trade = 1
+		}
+
+		upkeep = {
+			food = 12
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 300
+	}
+
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_sweet_master|RESOURCE|consumer_goods|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+
+		# low income modifier
+		modifier = {
+			factor = 1.4
+			exists = planet
+			planet = {
+				has_available_jobs = uma_sweet_master
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+#甜点店铺经理
+uma_sweet_manager = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sweet_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_sweet_manager #使得其可以单独得到修正
+		produces = {
+			consumer_goods = 6
+			trade = 2
+		}
+		upkeep = {
+			unity = 6
+		}
+	}
+
+
+	planet_modifier = {
+		planet_uma_sweet_master_produces_mult = 0.2
+		planet_amenities_add = 400
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_sweet_manager|RESOURCE|consumer_goods|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+#蹄铁工匠
+uma_horseshoe_crafter = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sport_goods_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_horseshoe_crafter #使得其可以单独得到修正
+		produces = {
+			alloys = 6
+#			engineering_research = 2
+		}
+		upkeep = {
+			minerals = 12
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_uma_sporting_goods_for_umamusume }
+		}
+		modifier = {
+			planet_uma_racing_umamusume_produces_mult = 0.025
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_horseshoe_crafter|RESOURCE|alloys|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+
+		# low income modifier
+		modifier = {
+			factor = 1.4
+			exists = planet
+			planet = {
+				has_available_jobs = uma_horseshoe_crafter
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+#决胜服设计师
+uma_live_clothes_crafter = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_sport_goods_shop ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_live_clothes_crafter #使得其可以单独得到修正
+		produces = {
+			unity = 12
+			trade = 2
+		}
+		upkeep = {
+			consumer_goods = 4
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 500
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_uma_sporting_goods_for_umamusume }
+		}
+		modifier = {
+			planet_uma_racing_umamusume_produces_mult = 0.025
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_live_clothes_crafter|RESOURCE|unity|
+
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+		}
+		modifier = {
+			factor = 0.1
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+#水晶合金工匠
+uma_crystal_alloy_crafter = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_crystal_alloy_factory ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_crystal_alloy_crafter #使得其可以单独得到修正
+		produces = {
+			trigger = {
+				planet = {
+					is_ringworld = no
+				}
+			}
+			alloys = 12
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					is_ringworld = no
+				}
+			}
+			minerals = 12
+			uma_crystal_carrot = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					is_ringworld = yes
+				}
+			}
+			alloys = 15
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					is_ringworld = yes
+				}
+			}
+			minerals = 11
+			uma_crystal_carrot = 1.5
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_crystal_alloy_crafter|RESOURCE|alloys|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+
+		# low income modifier
+		modifier = {
+			factor = 1.4
+			exists = planet
+			planet = {
+				has_available_jobs = uma_crystal_alloy_crafter
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+				has_monthly_income = {
+					resource = uma_crystal_carrot
+					value > 8
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+#水晶消费品工匠
+uma_crystal_consumer_goods_crafter = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_crystal_consumer_goods_factory ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_crystal_consumer_goods_crafter #使得其可以单独得到修正
+		produces = {
+			consumer_goods = 24
+		}
+		upkeep = {
+			minerals = 12
+			uma_crystal_carrot = 2
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_crystal_consumer_goods_crafter|RESOURCE|consumer_goods|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+
+		# low income modifier
+		modifier = {
+			factor = 1.4
+			exists = planet
+			planet = {
+				has_available_jobs = uma_crystal_consumer_goods_crafter
+			}
+			exists = owner
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+				has_monthly_income = {
+					resource = uma_crystal_carrot
+					value > 8
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+###
+#宿舍管理员
+uma_dormitory_administrator = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_research_lab_1 ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_dormitory_administrator #使得其可以单独得到修正
+		produces = {
+			unity = 3
+		}
+		upkeep = {
+			consumer_goods = 3
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 800
+
+	}
+	country_modifier = {
+		country_admin_cap_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_stability_add = 2
+		}
+	}
+
+
+	weight = {
+		weight = @uma_specialist_job_weight
+
+		modifier = {
+			factor = 4
+			exists = owner
+			owner = { has_valid_civic = civic_umabamboomemory }
+		}
+
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+
+		modifier = {
+			factor = 0.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+#学院研究员
+uma_school_reseacher = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_school_reseacher #使得其可以单独得到修正
+		produces = {
+			trigger = {
+				planet = {
+					is_ringworld = no
+				}
+			}
+			physics_research = 12
+			engineering_research = 12
+			society_research = 12
+		}
+		upkeep = {
+			consumer_goods = 4
+			unity = 4			
+		}
+		produces = {
+			trigger = {
+				planet = {
+					is_ringworld = yes
+				}
+			}
+			physics_research = 15
+			engineering_research = 15
+			society_research = 15
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_school_reseacher|RESOURCE1|physics_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|engineering_research|WEIGHT3|0.33|
+
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = {
+				has_valid_civic = civic_umaagnestachyon
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+uma_trader = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange ###
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_traders
+		upkeep = {
+			consumer_goods = 2
+		}
+		produces = {
+			trade = 16
+		}
+	}
+
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_mercantile_commercial_enterprise }
+		}
+		planet_amenities_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_trader|RESOURCE|trade|
+
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_uma_vivlos_shopping
+					has_valid_civic = civic_umasatonodiamond
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+uma_darkmatter_collector = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_dark_matter_plant
+		}
+	}
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		#is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_darkmatter
+		produces = {
+			sr_dark_matter = 6
+			engineering_research = 9
+			physics_research = 9
+		}
+		upkeep = {
+			energy = 10
+			uma_crystal_carrot = 2
+			minerals = 10
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_darkmatter_collector|RESOURCE|sr_dark_matter|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+uma_chemrist = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_chemical_plant
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_uma_chemrist
+		produces = {
+			volatile_motes = 6
+			engineering_research = 9
+			physics_research = 9
+		}
+		upkeep = {
+			minerals = 10
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_chemrist|RESOURCE|volatile_motes|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+uma_translucer= {
+	category = specialist
+
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_crystal_plant
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_uma_translucer
+		produces = {
+			rare_crystals = 6
+			engineering_research = 9
+			physics_research = 9
+		}
+		upkeep = {
+
+			energy = 10
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_translucer|RESOURCE|rare_crystals|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+
+
+uma_gas_collector = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_uma_dark_matter_plant
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_uma_gas
+		produces = {
+			exotic_gases = 6
+			engineering_research = 9
+			physics_research = 9
+		}
+		upkeep = {
+
+			minerals = 10
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = @uma_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|uma_gas_collector|RESOURCE|exotic_gases|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}

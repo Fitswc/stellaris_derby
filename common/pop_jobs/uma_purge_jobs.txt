@@ -1,0 +1,274 @@
+#赛马娘净化岗位
+
+
+uma_fuel_purge_small = {
+	category = purge
+	first_come_first_served = yes
+	is_capped_by_modifier = no
+
+	tags = { }
+
+	demotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = purge
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+
+	ignores_sapience = yes
+
+	possible_pre_triggers = {
+		is_being_purged = yes
+	}
+
+	possible = {
+		owner = {
+			AND = {
+				#has_origin = origin_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_small
+			}
+		}
+	}
+
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.02
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_unity
+				}
+			}
+			unity = 0.5
+#			society_research = 1
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_food
+				}
+			}
+			food = 0.5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_tech
+				}
+			}
+			physics_research = 0.3
+			society_research = 0.3
+			engineering_research = 0.3
+		}
+
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			energy = 3
+		}
+
+		upkeep = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_policy_flag = policy_uma_fuel_convertion_produce_food
+					}
+				}
+				is_organic_species = yes
+			}
+			food = 1
+		}
+	}
+	weight = {
+		weight = 1000000
+	}
+}
+
+uma_fuel_purge_medium = {
+	#武火
+	category = purge
+	first_come_first_served = yes
+	is_capped_by_modifier = no
+
+	tags = { }
+
+	possible_pre_triggers = {
+		is_being_purged = yes
+	}
+
+	demotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = purge
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+	possible = {
+		owner = {
+			AND = {
+				has_policy_flag = policy_uma_fuel_convertion_medium
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+
+	ignores_sapience = yes
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_unity
+				}
+			}
+			unity = 1
+#			society_research = 1
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_food
+				}
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_tech
+				}
+			}
+			physics_research = 0.8
+			society_research = 0.8
+			engineering_research = 0.8
+		}
+
+		upkeep = {
+			trigger = {
+				is_robotic_species = yes
+			}
+			energy = 3
+		}
+		upkeep = {
+			trigger = {
+				NOT = {
+					owner = {
+						has_policy_flag = policy_uma_fuel_convertion_produce_food
+					}
+				}
+				is_organic_species = yes
+			}
+			food = 1
+		}
+	}
+	weight = {
+		weight = 1000001
+	}
+}
+
+uma_fuel_purge_big = {
+	#等离子态
+	category = purge
+	first_come_first_served = yes
+	is_capped_by_modifier = no
+
+	possible_pre_triggers = {
+		is_being_purged = yes
+	}
+
+	tags = { }
+
+	possible = {
+		owner = {
+			AND = {
+				has_origin = origin_uma_candleoff
+				has_policy_flag = policy_uma_fuel_convertion_big
+			}
+		}
+	}
+
+	demotion = {
+		time = 0
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = purge
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+
+	ignores_sapience = yes
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.25
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_unity
+				}
+			}
+			unity = 3
+#			society_research = 5
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_food
+				}
+			}
+			food = 3
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_policy_flag = policy_uma_fuel_convertion_produce_tech
+				}
+			}
+			physics_research = 2.8
+			society_research = 2.8
+			engineering_research = 2.8
+		}
+		upkeep = {
+			trigger = {
+				planet.controller = {
+					is_robotic_species = yes
+				}
+			}
+			energy = 3
+		}
+		upkeep = {
+			trigger = {
+				owner = {
+					NOT = {
+					 	has_policy_flag = policy_uma_fuel_convertion_produce_food
+					}
+				}
+				planet.controller = {
+					is_organic_species = yes
+				}
+			}
+			food = 1
+		}
+	}
+	weight = {
+		weight = 1000002
+	}
+}

@@ -1,0 +1,27 @@
+uma_gold_tunnel = {
+	name = Uma_gold_tunnel
+	is_pathfind = yes
+	uses_action = no #opt-in to risky Shroud transit
+	always_active = yes
+	windup_time = 20
+	winddown_time = 20
+	ftl_multiplier = 0
+	icon_frame = 25
+	galactic_map_tooltip_header = Uma_gold_tunnel
+	galactic_map_tooltip_desc = Uma_gold_tunnel_desc
+	connection_type = one_to_one
+	extends_sensors = yes
+	requires_exploration = no
+	remember_instances = no	# whether countries remember meeting a specific instance of that type, or if they just remember seeing the type in general
+	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+	animation_time = 3 # number of days to wait for the jump animation to be played
+
+	country_can_use = { # this = country; from = system owner | default = yes
+		has_country_flag = uma_we_can_use_gold_wormhole
+		NOT = {
+			has_global_flag = uma_gold_hole_time_out
+		}
+	}
+	on_action = "on_entering_gold_tunnel" # To be fired upon entering FTL into this bypass | this = fleet; from = system being jumped to; fromfrom = system being jumped from
+}

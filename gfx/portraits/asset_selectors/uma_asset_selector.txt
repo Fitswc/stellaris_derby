@@ -1,0 +1,55 @@
+room_selector = {
+
+	default = "default_room"
+
+	game_setup = {
+		"traincenter_05_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+
+		"traincenter_06_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+		"traincenter_07_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+		"uma_fallenempire_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_uma_fallen_empire
+			}
+		}
+	}
+
+	ruler = {
+		"default_room" = { always = no }
+		"traincenter_06_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+		"traincenter_07_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+		"uma_fallenempire_room" = {
+			exists = owner
+			owner = {
+				has_authority = auth_uma_fallen_empire
+			}
+		}
+	}
+
+}

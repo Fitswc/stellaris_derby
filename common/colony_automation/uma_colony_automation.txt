@@ -1,0 +1,33 @@
+automate_uma_school_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_uma_academy
+	}
+
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+		3 = {
+			building = building_uma_simple_carrot_farm
+		}
+		3 = {
+			building = building_uma_crystal_alloy_workhouse
+		}
+		2 = {
+			building = building_uma_crystal_consumer_goods_workhouse
+		}
+		2 = {
+			building = building_uma_toresen_lab
+		}
+
+	}
+
+}
+
+

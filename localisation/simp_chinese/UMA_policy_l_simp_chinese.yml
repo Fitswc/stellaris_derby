@@ -1,0 +1,67 @@
+﻿l_simp_chinese:
+######政策######
+policy_uma_racing_umamusume_policy:0 "赛事运营方针"
+policy_uma_racing_umamusume_policy_desc:0 "随着我们对国内所举办的比赛进行了规范化，我们需要为这些比赛制定一套合适的运营方针。"
+uma_racing_umamusume_policy_tradition:0 "保持传统"
+uma_racing_umamusume_policy_tradition_name:0 "保持传统"
+uma_racing_umamusume_policy_tradition_desc:0 "赛马比赛是马娘们从祖先就流传下来的传统，我们应该用这种传统方式来举办比赛。"
+uma_racing_umamusume_policy_business:0 "商业化运营"
+uma_racing_umamusume_policy_business_name:0 "商业化运营"
+uma_racing_umamusume_policy_business_desc:0 "通过允许企业对比赛进行赞助，并设立各种比赛奖金，我们能让赛马娘更加积极地参加比赛并展现她们的实力。"
+uma_racing_umamusume_policy_glory:0 "荣耀之战"
+uma_racing_umamusume_policy_glory_name:0 "荣耀之战"
+uma_racing_umamusume_policy_glory_desc:0 "赛跑一直都是用来决出最为强大的马娘的，冠军们不应该获得物质上的奖励，而应该得到无尽的荣耀。"
+
+
+policy_uma_trade_policy:0 "特雷森学园-贸易政策"
+policy_uma_trade_policy_desc:0 "$uma$未来一段时间的贸易倾向\n§H将比常规贸易政策优先生效§!"
+
+trade_policy_uma_basic_resources_trading:0 "§G原料进口§!"
+trade_policy_uma_basic_resources_trading_name:0 "$trade_policy_uma_basic_resources_trading$"
+trade_policy_uma_basic_resources_trading_desc:0 "进口未经加工的原材料，对它们进行加工，然后再卖出去\n\n§E收获的$r_trade$中的§Y45%§!将转化为$r_energy$ $r_minerals$以及$r_food$§!"
+
+trade_policy_uma_industry_trading:0 "§S成品进口§!"
+trade_policy_uma_industry_trading_name:0 "$trade_policy_uma_industry_trading$"
+trade_policy_uma_industry_trading_desc:0 "进口已经完成加工的成品，这自然比直接进口原料要贵上许多\n\n§E收获的$r_trade$中的§Y40%§!将转化为$r_consumer_goods$和$r_alloys$§!"
+
+trade_policy_uma_strategic_resources_trading:0 "§H战略资源进口§!"
+trade_policy_uma_strategic_resources_trading_name:0 "$trade_policy_uma_strategic_resources_trading$"
+trade_policy_uma_strategic_resources_trading_desc:0 "花费更高的代价进口必不可少的战略资源\n\n§E收获的$r_trade$中的§Y30%§!将转化为$r_volatile_motes$ $r_rare_crystals$以及$r_exotic_gases$§!"
+requires_trade_policy_uma_strategic_resources_trading:0 "$TRIGGER_FAIL$§R需要拥有开采或冶炼相关资源的能力§!"
+
+trade_policy_uma_cultural_output:0 "§E文化输出§!"
+trade_policy_uma_cultural_output_name:0 "$trade_policy_uma_cultural_output$"
+trade_policy_uma_cultural_output_desc:0 "将我们的理念与形象传播至每一颗我们进行贸易的行星\n\n§E收获的$r_trade$中的§Y50%§!将转化为$r_unity$以及$r_influence$§!"
+
+trade_policy_uma_research_support:0 "§B科研资助§!"
+trade_policy_uma_research_support_name:0 "$trade_policy_uma_research_support$"
+trade_policy_uma_research_support_desc:0 "赞助各大科研组织的研究，无论是官方的还是民间的\n\n§E收获的$r_trade$中的§Y45%§!将转化为$r_physics$ $r_society$以及$r_engineering$§!"
+
+trade_policy_uma_crystal_carrot_import:0"§M水晶萝卜开发§!"
+trade_policy_uma_crystal_carrot_import_name:0"§M水晶萝卜开发§!"
+trade_policy_uma_crystal_carrot_import_desc:0"投资各地的水晶萝卜矿业，以此来获取水晶萝卜资源\n\n§E收获的$r_trade$中的§Y20%§!将转化为£uma_crystal_carrot£水晶萝卜§!"
+
+trade_policy_uma_vanilla:0"§R停用"
+trade_policy_uma_vanilla_name:0 "§R停用"
+trade_policy_uma_vanilla_desc:0 "暂停使用特雷森学园的贸易政策"
+
+policy_uma_auto_roll:0 "UMA-Shop自动抽卡"
+policy_uma_auto_roll_desc:0 "UMA-Shop的自动抽卡设置"
+autoroll_off:0 "禁用"
+autoroll_off_name:0 "$autoroll_off$"
+autoroll_off_desc:0 "禁用自动抽卡"
+autoroll_sil_on:0 "静默模式-开"
+autoroll_sil_on_name:0 "$autoroll_sil_on"
+autoroll_sil_on_desc:0 "自动抽卡静默模式, §R这将不会弹窗显示普通奖励的结果§!"
+autoroll_win_on:0 "弹窗模式-开"
+autoroll_win_on_name:0 "$autoroll_win_on$"
+autoroll_win_on_desc:0 "自动抽卡弹窗模式, §R这会显示全部奖励的结果§!"
+
+uma_autoroll_off_name:0 "已关闭自动化抽卡"
+
+policy_uma_auto_species_merge: "£uma_sd£自动亚种合并"
+policy_uma_auto_species_merge_desc: "这是自动亚种合并的开关，以解决马娘亚种过多的问题，但这会稍微影响平衡。"
+uma_auto_species_merge_on: "开"
+uma_auto_species_merge_off: "关"
+uma_auto_species_merge_on_desc: ""
+uma_auto_species_merge_off_desc: ""

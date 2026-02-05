@@ -1,0 +1,372 @@
+###马娘专属政策
+
+
+#赛事运营方针
+uma_racing_umamusume_policy = {
+	potential = {
+		has_authority = auth_trainingcenter
+		has_technology = tech_uma_toresen_race_dept
+	}
+
+	allow = {
+		is_at_war = no
+	}
+
+	#保持传统
+	option = {
+		name = "uma_racing_umamusume_policy_tradition"
+
+		policy_flags = {
+			uma_racing_umamusume_policy_tradition
+		}
+
+		modifier = {
+
+		}
+
+		ai_weight = {
+			weight = 10
+		}
+	}
+
+	#商业化运营
+	option = {
+		name = "uma_racing_umamusume_policy_business"
+	
+
+		policy_flags = {
+			uma_racing_umamusume_policy_business
+		}
+
+		modifier = {
+			planet_uma_racing_umamusume_unity_produces_mult = -0.1
+			planet_uma_racing_umamusume_trade_produces_add = 0.5
+		}
+
+		ai_weight = {
+			weight = 0
+		}
+	}
+
+	#荣耀之战
+	option = {
+		name = "uma_racing_umamusume_policy_glory"
+	
+
+		policy_flags = {
+			uma_racing_umamusume_policy_glory
+		}
+
+		modifier = {
+			planet_uma_racing_umamusume_unity_produces_mult = 0.1
+			planet_uma_racing_umamusume_upkeep_mult = 0.1
+		}
+
+		ai_weight = {
+			weight = 0
+		}
+	}
+
+
+}
+
+#赛马娘专属贸易政策
+uma_trade_policy = {
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+
+	option = {
+		valid = {
+#			days_passed >= 10
+		}
+		name = trade_policy_uma_basic_resources_trading
+		policy_flags = {
+			trade_policy_uma_basic_resources_trading
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.55
+				energy = 0.15
+				minerals = 0.15
+				food = 0.15
+			}
+		}
+
+		AI_weight = {
+			factor = 100
+		}
+	}
+	option = {
+		valid = {
+#			days_passed >= 10
+		}
+		name = trade_policy_uma_industry_trading
+		policy_flags = {
+			trade_policy_uma_industry_trading
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.6
+				consumer_goods = 0.2
+				alloys = 0.2
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = trade_policy_uma_strategic_resources_trading
+		valid = {
+			custom_tooltip = {
+				fail_text = requires_trade_policy_uma_strategic_resources_trading
+				OR = {
+					has_technology = tech_mine_volatile_motes
+					has_technology = tech_volatile_motes
+				}
+				OR = {
+					has_technology = tech_mine_exotic_gases
+					has_technology = tech_exotic_gases
+				}
+				OR = {
+					has_technology = tech_mine_rare_crystals
+					has_technology = tech_rare_crystals
+				}
+			
+			}
+		}
+		policy_flags = {
+			trade_policy_uma_strategic_resources_trading
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.7
+				volatile_motes = 0.1
+				rare_crystals = 0.1
+				exotic_gases = 0.1
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = trade_policy_uma_cultural_output
+		policy_flags = {
+			trade_policy_uma_cultural_output
+		}
+		valid = {
+			days_passed >= 10
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				unity = 0.35
+				influence = 0.15
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = trade_policy_uma_research_support
+		policy_flags = {
+			trade_policy_uma_research_support
+		}
+		valid = {
+			days_passed >= 10
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.55
+				physics_research = 0.15
+				society_research = 0.15
+				engineering_research = 0.15
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = trade_policy_uma_crystal_carrot_import
+		policy_flags = {
+			trade_policy_uma_crystal_carrot_import
+		}
+		valid = {
+			has_technology = tech_uma_crysal_carrot_mining
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.8
+				uma_crystal_carrot = 0.2
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	option = {
+		name = trade_policy_uma_vanilla
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				energy = 0.5
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				set_trade_conversions = {}
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+}
+
+#燃料选择
+uma_fuel_convertion_mode = {
+	potential = {
+		has_origin = origin_uma_candleoff
+	}
+	option = {
+		name = policy_uma_fuel_convertion_small
+		policy_flags = {
+			policy_uma_fuel_convertion_small
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_medium
+		policy_flags = {
+			policy_uma_fuel_convertion_medium
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_big
+		policy_flags = {
+			policy_uma_fuel_convertion_big
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_stop
+		policy_flags = {
+			policy_uma_fuel_convertion_stop
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+}
+
+#产物选择
+uma_fuel_convertion_produce_mode = {
+	potential = {
+		has_origin = origin_uma_candleoff
+	}
+	option = {
+		name = policy_uma_fuel_convertion_produce_unity
+		policy_flags = {
+			policy_uma_fuel_convertion_produce_unity
+		}
+		AI_weight = {
+			weight = 1
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_produce_food
+		policy_flags = {
+			policy_uma_fuel_convertion_produce_food
+		}
+		AI_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = policy_uma_fuel_convertion_produce_tech
+		policy_flags = {
+			policy_uma_fuel_convertion_produce_tech
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+}
+
+uma_auto_roll = {
+	potential = {
+		has_authority = auth_trainingcenter
+		has_global_flag = uma_have_initialized_shop
+		has_communications = event_target:uma_shop
+	}
+	option = {
+		name = autoroll_off
+		policy_flags = {
+			uma_autoroll_off
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = autoroll_sil_on
+		policy_flags = {
+			uma_autoroll_sil_on
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = autoroll_win_on
+		policy_flags = {
+			uma_autoroll_win_on
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+}
+
+uma_auto_species_merge = {
+	potential = {
+		has_authority = auth_trainingcenter
+	}
+	option = {
+		name = uma_auto_species_merge_on
+		policy_flags = {
+			uma_auto_species_merge_on
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+	option = {
+		name = uma_auto_species_merge_off
+		policy_flags = {
+			uma_auto_species_merge_off
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+}

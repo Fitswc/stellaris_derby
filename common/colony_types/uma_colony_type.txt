@@ -1,0 +1,50 @@
+col_uma_academy = {
+	icon = GFX_uma_colony_type_school #换
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_trainingcenter
+		}
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.15
+		planet_building_capacity_add = 2
+		planet_jobs_trade_produces_mult = 0.06
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_finish }
+		}
+		modifier = {
+			planet_jobs_trade_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_uma_school
+		}
+		modifier = {
+			add = 5
+			OR = {
+				is_planet_class = pc_uma_ringworld_habitable
+				is_planet_class = pc_uma_ringworld
+				is_planet_class = pc_uma_ringworld_seam
+			}
+		}
+	}
+}

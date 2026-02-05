@@ -1,0 +1,533 @@
+﻿UMAname = {
+	randomized = no
+# ATT STT Error
+
+	ship_names = {
+
+		generic = {
+			SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		corvette = {
+
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		destroyer = {
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		cruiser = {
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		battleship = {
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		titan = {
+		  	T_1 T_2 T_3 T_4 T_5 T_6 T_7 T_8 T_9 T_10
+		}
+
+		colossus = {
+		  C_1 C_2 C_3 C_4
+		}
+
+		juggernaut = {
+			J_1
+		}
+
+		science = {
+			SC_1 SC_2 SC_3 SC_4 SC_5 SC_6 SC_7 SC_8 SC_9 SC_10 SC_11 SC_12 SC_13 SC_14 SC_15 SC_16 SC_17 SC_18 SC_19 SC_20 SC_21 SC_22 SC_23 SC_24 SC_25 SC_26 SC_27 SC_28
+		}
+
+		colonizer = {
+			CO_1 CO_2 CO_3 CO_4 CO_5
+		}
+
+		sponsored_colonizer = {
+			S_1 S_2 S_3 S_4 S_5
+		}
+
+		constructor = {
+			SC_1 SC_2 SC_3 SC_4 SC_5 SC_6 SC_7 SC_8 SC_9 SC_10 SC_11 SC_12 SC_13 SC_14 SC_15 SC_16 SC_17 SC_18 SC_19 SC_20 SC_21 SC_22 SC_23 SC_24 SC_25 SC_26 SC_27 SC_28
+		}
+
+		transport = {
+			TT_1 TT_2 TT_3 TT_4 TT_5
+		}
+
+		military_station_small = {
+			M_1 M_2 M_3
+		}
+
+		ion_cannon = {
+			I_1 I_2 I_3 I_4 I_5
+		}
+	}
+
+
+	fleet_names = {
+		random_names = {
+			RN_1 RN_2 RN_3 RN_4 RN_5
+		}
+		sequential_name = FE_SEQUEN_NAME
+	}
+
+	army_names = {
+		uma_black_army = {
+			sequential_name = UBA
+		}
+
+		machine_defense = {
+			sequential_name = UMA_GROUNDSHIELD
+		}
+
+		machine_assault_1 = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		machine_assault_2 = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		machine_assault_3 = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		defense_army = {
+			sequential_name = UMA_GROUNDSHIELD
+		}
+
+		assault_army = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		slave_army = {
+			sequential_name = UMA_WARPEONS
+		}
+
+		clone_army = {
+			sequential_name = UMA_FIGHTINGCLONES
+		}
+
+		undead_army = {
+			sequential_name = UMA_DREADPEONS
+		}
+
+		robotic_army = {
+			sequential_name = UMA_ROBOTICLANCERS
+		}
+
+		robotic_defense_army = {
+			sequential_name = UMA_ROBOTICPROTECTORS
+		}
+
+		psionic_army = {
+			sequential_name = UMA_WARLOCKCOMPANY
+		}
+
+		xenomorph_army = {
+			sequential_name = UMA_DEATHFLOCK
+		}
+
+		gene_warrior_army = {
+			sequential_name = UMA_STARKNIGHTS
+		}
+
+		occupation_army = {
+			sequential_name = UMA_OCCUPATIONSHIELD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = UMA_ROBOTICOCCUPIERS
+		}
+
+		primitive_army = {
+			sequential_name = UMA_PRIMITIVEARMY
+		}
+		industrial_army = {
+			sequential_name = UMA_INDUSTRIALARMY
+		}
+		postatomic_army = {
+			sequential_name = UMA_POSTATOMICARMY
+		}
+#		generic = {
+#			sequential_name = AY_NAME_01
+#		}
+#
+#		assault_army = {
+#			sequential_name = AY_NAME_01
+#		}
+#
+#		slave_army = {
+#			sequential_name = AY_NAME_02
+#		}
+#
+#		clone_army = {
+#			sequential_name = AY_NAME_03
+#		}
+#
+#		robotic_army = {
+#			sequential_name = AY_NAME_04
+#		}
+#
+#		robotic_defense_army = {
+#			sequential_name = AY_NAME_05
+#		}
+#
+#		psionic_army = {
+#			sequential_name = AY_NAME_06
+#		}
+#
+#		xenomorph_army = {
+#			sequential_name = AY_NAME_07
+#		}
+#
+#		gene_warrior_army = {
+#			sequential_name = AY_NAME_08
+#		}
+#
+#		occupation_army = {
+#			sequential_name = AY_NAME_09
+#		}
+#
+#		robotic_occupation_army = {
+#			sequential_name = AY_NAME_10
+#		}
+#
+#		primitive_army = {
+#			sequential_name = AY_NAME_11
+#		}
+#		industrial_army = {
+#			sequential_name = AY_NAME_12
+#		}
+#		postatomic_army = {
+#			sequential_name = AY_NAME_13
+#		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+                PN_1 PN_2 PN_3 PN_4 PN_5 PN_6 PN_7 PN_8 PN_9 PN_10 PN_11 PN_12 PN_13 PN_14 PN_15 PN_16 PN_17 PN_18 PN_19 PN_20 PN_21 PN_22 PN_23 PN_24 PN_25 PN_26 PN_27 PN_28
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			first_names_male = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			first_names_female = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			second_names = {
+				NN_1 NN_2 NN_3 NN_4 NN_5 NN_6 NN_7 NN_8 NN_9 NN_10 NN_11 NN_12 NN_13 NN_14 NN_15 NN_16 NN_17 NN_18 NN_19 NN_20 NN_21 NN_22 NN_23 NN_24 NN_25 NN_26 NN_27 NN_28 NN_29 NN_30 NN_31 NN_32 NN_33 NN_34 NN_35 NN_36 NN_37 NN_38 NN_39 NN_40 NN_41 NN_42 NN_43 NN_44 NN_45 NN_46 NN_47 NN_48 NN_49 NN_50 NN_51 NN_52 NN_53 NN_54 NN_55 NN_56 NN_57 NN_58 NN_59 NN_60 NN_61 NN_62 NN_63 NN_64 NN_65 NN_66 NN_67 NN_68 NN_69 NN_70 NN_71 NN_72 NN_73 NN_74 NN_75 NN_76 NN_77 NN_78 NN_79 NN_80 NN_81 NN_82
+			}
+			regnal_first_names_male = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			regnal_first_names_female = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			regnal_second_names = {
+				NN_1 NN_2 NN_3 NN_4 NN_5 NN_6 NN_7 NN_8 NN_9 NN_10 NN_11 NN_12 NN_13 NN_14 NN_15 NN_16 NN_17 NN_18 NN_19 NN_20 NN_21 NN_22 NN_23 NN_24 NN_25 NN_26 NN_27 NN_28 NN_29 NN_30 NN_31 NN_32 NN_33 NN_34 NN_35 NN_36 NN_37 NN_38 NN_39 NN_40 NN_41 NN_42 NN_43 NN_44 NN_45 NN_46 NN_47 NN_48 NN_49 NN_50 NN_51 NN_52 NN_53 NN_54 NN_55 NN_56 NN_57 NN_58 NN_59 NN_60 NN_61 NN_62 NN_63 NN_64 NN_65 NN_66 NN_67 NN_68 NN_69 NN_70 NN_71 NN_72 NN_73 NN_74 NN_75 NN_76 NN_77 NN_78 NN_79 NN_80 NN_81 NN_82
+			}
+		}
+
+	}
+}
+
+
+
+UMAname_EC2 = {
+	randomized = no
+	selectable = {
+		always = no
+	}
+# ATT STT Error
+
+	ship_names = {
+
+		generic = {
+			SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		corvette = {
+
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		destroyer = {
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		cruiser = {
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		battleship = {
+		  	SW SS TT MY FK OC GS VO DS TS GW HA MM EP TMO NB SR AG AD TC SY FM BH TG MC MB MR HAA UB RS IF ATT AV IO WT AS EF CH KP GC SBO SP SWW STT SC SF ZRR TJ NF NT NFT HU BM BP MS MA CB MD MED NN KH MT ID MP DH TWT SD KB MAA SCO SSL YM MBT NTR SLL YZ AM SCC CG XL FHH HTT LNN KA NU
+		}
+
+		titan = {
+		  	T_1 T_2 T_3 T_4 T_5 T_6 T_7 T_8 T_9 T_10
+		}
+
+		colossus = {
+		  C_1 C_2 C_3 C_4
+		}
+
+		juggernaut = {
+			J_1
+		}
+
+		science = {
+			SC_1 SC_2 SC_3 SC_4 SC_5 SC_6 SC_7 SC_8 SC_9 SC_10 SC_11 SC_12 SC_13 SC_14 SC_15 SC_16 SC_17 SC_18 SC_19 SC_20 SC_21 SC_22 SC_23 SC_24 SC_25 SC_26 SC_27 SC_28
+		}
+
+		colonizer = {
+			CO_1 CO_2 CO_3 CO_4 CO_5
+		}
+
+		sponsored_colonizer = {
+			S_1 S_2 S_3 S_4 S_5
+		}
+
+		constructor = {
+			SC_1 SC_2 SC_3 SC_4 SC_5 SC_6 SC_7 SC_8 SC_9 SC_10 SC_11 SC_12 SC_13 SC_14 SC_15 SC_16 SC_17 SC_18 SC_19 SC_20 SC_21 SC_22 SC_23 SC_24 SC_25 SC_26 SC_27 SC_28
+		}
+
+		transport = {
+			TT_1 TT_2 TT_3 TT_4 TT_5
+		}
+
+		military_station_small = {
+			M_1 M_2 M_3
+		}
+
+		ion_cannon = {
+			I_1 I_2 I_3 I_4 I_5
+		}
+	}
+
+
+	fleet_names = {
+		sequential_name = FE_SEQUEN_NAME
+	}
+
+	army_names = {
+		uma_black_army = {
+			sequential_name = UBA
+		}
+
+		machine_defense = {
+			sequential_name = UMA_GROUNDSHIELD
+		}
+
+		machine_assault_1 = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		machine_assault_2 = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		machine_assault_3 = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		defense_army = {
+			sequential_name = UMA_GROUNDSHIELD
+		}
+
+		assault_army = {
+			sequential_name = UMA_WARGUILD
+		}
+
+		slave_army = {
+			sequential_name = UMA_WARPEONS
+		}
+
+		clone_army = {
+			sequential_name = UMA_FIGHTINGCLONES
+		}
+
+		undead_army = {
+			sequential_name = UMA_DREADPEONS
+		}
+
+		robotic_army = {
+			sequential_name = UMA_ROBOTICLANCERS
+		}
+
+		robotic_defense_army = {
+			sequential_name = UMA_ROBOTICPROTECTORS
+		}
+
+		psionic_army = {
+			sequential_name = UMA_WARLOCKCOMPANY
+		}
+
+		xenomorph_army = {
+			sequential_name = UMA_DEATHFLOCK
+		}
+
+		gene_warrior_army = {
+			sequential_name = UMA_STARKNIGHTS
+		}
+
+		occupation_army = {
+			sequential_name = UMA_OCCUPATIONSHIELD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = UMA_ROBOTICOCCUPIERS
+		}
+
+		primitive_army = {
+			sequential_name = UMA_PRIMITIVEARMY
+		}
+		industrial_army = {
+			sequential_name = UMA_INDUSTRIALARMY
+		}
+		postatomic_army = {
+			sequential_name = UMA_POSTATOMICARMY
+		}
+
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+                PN_1 PN_2 PN_3 PN_4 PN_5 PN_6 PN_7 PN_8 PN_9 PN_10 PN_11 PN_12 PN_13 PN_14 PN_15 PN_16 PN_17 PN_18 PN_19 PN_20 PN_21 PN_22 PN_23 PN_24 PN_25 PN_26 PN_27 PN_28
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+	}
+
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			first_names_male = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			first_names_female = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			second_names = {
+				NN_1 NN_2 NN_3 NN_4 NN_5 NN_6 NN_7 NN_8 NN_9 NN_10 NN_11 NN_12 NN_13 NN_14 NN_15 NN_16 NN_17 NN_18 NN_19 NN_20 NN_21 NN_22 NN_23 NN_24 NN_25 NN_26 NN_27 NN_28 NN_29 NN_30 NN_31 NN_32 NN_33 NN_34 NN_35 NN_36 NN_37 NN_38 NN_39 NN_40 NN_41 NN_42 NN_43 NN_44 NN_45 NN_46 NN_47 NN_48 NN_49 NN_50 NN_51 NN_52 NN_53 NN_54 NN_55 NN_56 NN_57 NN_58 NN_59 NN_60 NN_61 NN_62 NN_63 NN_64 NN_65 NN_66 NN_67 NN_68 NN_69 NN_70 NN_71 NN_72 NN_73 NN_74 NN_75 NN_76 NN_77 NN_78 NN_79 NN_80 NN_81 NN_82
+			}
+			regnal_first_names_male = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			regnal_first_names_female = {
+				N_1 N_2 N_3 N_4 N_5 N_6 N_7 N_8 N_9 N_10 N_11 N_12 N_13 N_14 N_15 N_16 N_17 N_18 N_19 N_20 N_21 N_22 N_23 N_24 N_25 N_26 N_27 N_28 N_29 N_30 N_31 N_32 N_33 N_34 N_35 N_36 N_37 N_38 N_39 N_40 N_41 N_42 N_43 N_44 N_45 N_46 N_47 N_48 N_49 N_50 N_51 N_52 N_53 N_54 N_55 N_56 N_57
+			}
+			regnal_second_names = {
+				NN_1 NN_2 NN_3 NN_4 NN_5 NN_6 NN_7 NN_8 NN_9 NN_10 NN_11 NN_12 NN_13 NN_14 NN_15 NN_16 NN_17 NN_18 NN_19 NN_20 NN_21 NN_22 NN_23 NN_24 NN_25 NN_26 NN_27 NN_28 NN_29 NN_30 NN_31 NN_32 NN_33 NN_34 NN_35 NN_36 NN_37 NN_38 NN_39 NN_40 NN_41 NN_42 NN_43 NN_44 NN_45 NN_46 NN_47 NN_48 NN_49 NN_50 NN_51 NN_52 NN_53 NN_54 NN_55 NN_56 NN_57 NN_58 NN_59 NN_60 NN_61 NN_62 NN_63 NN_64 NN_65 NN_66 NN_67 NN_68 NN_69 NN_70 NN_71 NN_72 NN_73 NN_74 NN_75 NN_76 NN_77 NN_78 NN_79 NN_80 NN_81 NN_82
+			}
+		}
+
+	}
+}

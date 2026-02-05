@@ -1,0 +1,3930 @@
+###赛马娘专属 水晶萝卜合成 建筑
+###################制造业建筑
+###水晶萝卜合成系列（其它文明废弃）
+
+#水晶萝卜合成实验室
+building_uma_crystal_carrot_producing_lab = {
+	base_buildtime = 200
+	category = manufacturing
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			alloys = 100
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_carrot_engineer_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_carrot_engineer_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_crysal_carrot_producing"
+	}
+
+	upgrades = {
+		building_uma_crystal_carrot_producing_center
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#水晶萝卜合成中心
+building_uma_crystal_carrot_producing_center = {
+	base_buildtime = 500
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 300
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_carrot_engineer_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_carrot_engineer_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_crysal_carrot_producing_improved"
+	}
+
+	upgrades = {
+		building_uma_crystal_carrot_producing_complex
+		# building_uma_crystal_carrot_producing_realm_complex
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#水晶萝卜合成园区
+building_uma_crystal_carrot_producing_complex = {
+	base_buildtime = 900
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2000
+			alloys = 700
+		}
+		upkeep = {
+			energy = 15
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_carrot_engineer_add = 300
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_carrot_engineer_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_massive_crysal_carrot_producing"
+	}
+
+	upgrades = {
+		# building_uma_crystal_carrot_producing_complex
+		building_uma_crystal_carrot_producing_realm_complex
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#水晶萝卜合成园区
+building_uma_crystal_carrot_producing_realm_complex = {
+	icon = building_uma_crystal_carrot_producing_complex
+	base_buildtime = 100
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		uma_industrial
+	}
+
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_tradition = uma_realm_self_trigger
+#				has_ascension_perk = ap_uma_mixture_ap_2
+			}
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			alloys = 100
+		}
+		upkeep = {
+			energy = 15
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_carrot_engineer_add = 400
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
+		planet_uma_crystal_carrot_engineer_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_carrot_engineer_effect_desc
+	}
+
+
+
+}
+
+
+
+
+####甜品产业
+
+#甜点小店
+building_uma_sweet_shop = {
+	base_buildtime = 200
+	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_sweet_master_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_sweet_master_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_sweet_industry"
+	}
+
+	upgrades = {
+		building_uma_chain_sweet_shop
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#甜点连锁店
+building_uma_chain_sweet_shop = {
+	base_buildtime = 500
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_sweet_master_add = 400
+			job_uma_sweet_manager_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_sweet_master_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_sweet_manager_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_sweet_chain_industry"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+###马娘运动产品
+
+#运动品专卖店
+building_uma_sport_goods_shop = {
+	base_buildtime = 200
+	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_horseshoe_crafter_add = 100
+			job_uma_live_clothes_crafter_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_horseshoe_crafter_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_live_clothes_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_sport_related_production"
+	}
+
+	upgrades = {
+		building_uma_sport_goods_supermarket
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#大型运动用具商城
+building_uma_sport_goods_supermarket = {
+	base_buildtime = 500
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		urban
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_horseshoe_crafter_add = 200
+			job_uma_live_clothes_crafter_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_horseshoe_crafter_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_live_clothes_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_upgrade_sport_goods_industry"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+
+###水晶合金产业
+
+#水晶合金工坊
+building_uma_crystal_alloy_workhouse = {
+	base_buildtime = 200
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_alloy_crafter_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_alloy_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_crystal_alloy_production"
+	}
+
+	upgrades = {
+		building_uma_crystal_alloy_factory
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#水晶合金工厂
+building_uma_crystal_alloy_factory = {
+	base_buildtime = 500
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+			uma_crystal_carrot = 250
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_alloy_crafter_add = 400
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_alloy_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_crystal_alloy_massive_production"
+	}
+
+	upgrades = {
+		building_uma_crystal_alloy_complex
+		# building_uma_crystal_alloy_realm_complex
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+#水晶合金复合体
+building_uma_crystal_alloy_complex = {
+	base_buildtime = 1000
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1700
+			uma_crystal_carrot = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_alloy_crafter_add = 700
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_alloy_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_crystal_alloy_auto_production"
+	}
+
+	upgrades = {
+		# building_uma_crystal_alloy_complex
+		building_uma_crystal_alloy_realm_complex
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+#水晶合金复合体Realm
+building_uma_crystal_alloy_realm_complex = {
+	icon = building_uma_crystal_alloy_complex
+	base_buildtime = 100
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_tradition = uma_realm_self_trigger
+#				has_ascension_perk = ap_uma_mixture_ap_2
+			}
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		owner = {
+			has_technology = "tech_uma_crystal_alloy_auto_production"
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_alloy_crafter_add = 800
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
+		planet_uma_crystal_alloy_crafter_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_alloy_crafter_effect_desc
+	}
+
+	prerequisites = {
+
+	}
+
+
+}
+
+
+
+
+
+###水晶消费品产业
+
+#马娘消费品作坊
+building_uma_crystal_consumer_goods_workhouse = {
+	base_buildtime = 200
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_consumer_goods_crafter_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_crystal_consumer_goods_production"
+	}
+
+	upgrades = {
+		building_uma_crystal_consumer_goods_factory
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#马娘用品工厂
+building_uma_crystal_consumer_goods_factory = {
+	base_buildtime = 500
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+			uma_crystal_carrot = 250
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_consumer_goods_crafter_add = 400
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_upgraded_crystal_consumer_goods_production"
+	}
+
+	upgrades = {
+		building_uma_crystal_consumer_goods_complex
+		# building_uma_crystal_consumer_goods_realm_complex
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+
+#马娘用品复合体
+building_uma_crystal_consumer_goods_complex = {
+	base_buildtime = 1000
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1700
+			uma_crystal_carrot = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_consumer_goods_crafter_add = 700
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+	}
+
+	prerequisites = {
+		"tech_uma_advanced_crystal_consumer_goods_production"
+	}
+
+	upgrades = {
+		# building_uma_crystal_consumer_goods_complex
+		building_uma_crystal_consumer_goods_realm_complex
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+#马娘用品复合体
+building_uma_crystal_consumer_goods_realm_complex = {
+	icon = building_uma_crystal_consumer_goods_complex
+	base_buildtime = 100
+	can_build = no #升级得来
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = "tech_uma_advanced_crystal_consumer_goods_production"
+			OR = {
+				has_tradition = uma_realm_self_trigger
+				#				has_ascension_perk = ap_uma_mixture_ap_2
+			}
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_crystal_consumer_goods_crafter_add = 800
+		}
+	}
+	planet_modifier = {
+		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+	}
+
+	prerequisites = {
+
+	}
+
+}
+
+###稀有资源
+building_uma_chemical_plant = {
+	base_buildtime = 200
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_chemrist_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_chemrist_effect_desc
+	}
+
+	prerequisites = {
+		"tech_volatile_motes"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+	upgrades = {
+		building_uma_chemical_plant_2
+	}
+}
+
+
+building_uma_chemical_plant_2 = {
+	base_buildtime = 500
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		has_building = building_uma_chemical_plant
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 750
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_chemrist_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_chemrist_effect_desc
+	}
+
+	prerequisites = {
+		"tech_volatile_motes"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+	upgrades = {
+		building_uma_chemical_plant_realm
+	}
+}
+
+building_uma_chemical_plant_realm = {
+	base_buildtime = 100
+	icon = building_uma_chemical_plant_2
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	can_build = no
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = uma_realm_self_trigger ##
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		has_building = building_uma_chemical_plant_2
+	}
+
+	allow = {
+		owner = {
+			has_technology = "tech_volatile_motes"
+			has_technology = "tech_uma_crysal_carrot_mining"
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_chemrist_add = 300
+		}
+	}
+	planet_modifier = {
+		planet_uma_chemrist_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_chemrist_effect_desc
+	}
+
+
+}
+
+
+
+
+building_uma_crystal_plant = {
+	base_buildtime = 200
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_translucer_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_effect_desc
+	}
+
+
+	prerequisites = {
+		"tech_rare_crystals"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+	upgrades = {
+		building_uma_crystal_plant_2
+	}
+}
+
+building_uma_crystal_plant_2 = {
+	base_buildtime = 500
+	icon = building_uma_crystal_plant
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	can_build = no
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+			uma_crystal_carrot = 250
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_translucer_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_effect_desc
+	}
+
+
+	prerequisites = {
+		"tech_rare_crystals"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+	upgrades = {
+		building_uma_crystal_plant_realm
+	}
+}
+
+building_uma_crystal_plant_realm = {
+	base_buildtime = 100
+	icon = building_uma_crystal_plant
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	can_build = no
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = uma_realm_self_trigger
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		has_building = building_uma_crystal_plant_2
+	}
+
+	allow = {
+		owner = {
+			has_technology = "tech_rare_crystals"
+			has_technology = "tech_uma_crysal_carrot_mining"
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_translucer_add = 300
+		}
+	}
+	planet_modifier = {
+		planet_uma_translucer_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_crystal_effect_desc
+	}
+
+
+	prerequisites = {
+
+	}
+
+}
+
+
+building_uma_gas_plant = {
+	base_buildtime = 200
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_gas_collector_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_gas_effect_desc
+	}
+
+
+	prerequisites = {
+		"tech_exotic_gases"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+	upgrades = {
+		building_uma_gas_plant_2
+	}
+
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+building_uma_gas_plant_2 = {
+	base_buildtime = 500
+	icon = building_uma_gas_plant
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	can_build = no
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+			uma_crystal_carrot = 250
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_gas_collector_add = 200
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_gas_effect_desc
+	}
+
+
+	prerequisites = {
+		"tech_exotic_gases"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+	upgrades = {
+		building_uma_gas_plant_realm
+	}
+
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+
+}
+
+building_uma_gas_plant_realm = {
+	base_buildtime = 100
+	icon = building_uma_gas_plant
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	can_build = no
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+			OR = {
+				has_tradition = uma_realm_self_trigger
+#				has_ascension_perk = ap_uma_mixture_ap_2
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+	allow = {
+		owner = {
+			has_technology = "tech_exotic_gases"
+			has_technology = "tech_uma_crysal_carrot_mining"
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_gas_collector_add = 300
+		}
+	}
+	planet_modifier = {
+		planet_uma_gas_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_gas_effect_desc
+	}
+
+
+}
+
+building_uma_dark_matter_plant = {
+	base_buildtime = 500
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+		factory
+		uma_industrial
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+			uma_crystal_carrot = 250
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		modifier = {
+			job_uma_darkmatter_collector_add = 100
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			Root.owner_main_species = {
+				OR = {
+					has_trait = uma_trait_ap2_realm_stamina_1
+					has_trait = uma_trait_ap2_realm_stamina_2
+					has_trait = uma_trait_ap2_realm_stamina_3
+					has_trait = uma_trait_ap2_realm_stamina_4
+					has_trait = uma_trait_ap2_realm_stamina_5
+				}
+			}
+		}
+		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = job_uma_darkmatter_effect_desc
+	}
+
+
+	prerequisites = {
+		"tech_mine_dark_matter"
+		"tech_uma_crysal_carrot_mining"
+	}
+
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+
+##TGRD Dept
+building_uma_tg_alloys_maker_Automatic = {
+	base_buildtime = 300
+	category = resource
+
+	building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	planet_limit = 2
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 200
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.5
+			minerals = 4
+			uma_crystal_carrot = 0.4
+			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			alloys = 8
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			multiplier =value:uma_tg_alloys_maker_Automatic_upkeep_sv
+#			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+		}
+
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.06
+			minerals = 0.5
+			uma_crystal_carrot = 0.05
+			mult = value:uma_handling_capacity_for_tg
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			alloys = 0.67
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			mult =value:uma_handling_capacity_for_tg
+#			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_alloys_maker_Automatic_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_alloys_maker_Automatic"
+	}
+
+	upgrades = {
+		building_uma_tg_alloys_maker_Automatic_2
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+building_uma_tg_alloys_maker_Automatic_2 = {
+	base_buildtime = 300
+	category = resource
+	can_build = no
+
+	building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 200
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.6
+			minerals = 8
+			uma_crystal_carrot = 0.8
+			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			alloys = 12
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			multiplier =value:uma_tg_alloys_maker_Automatic_upkeep_sv
+#			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+		}
+
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.06
+			minerals = 0.5
+			uma_crystal_carrot = 0.05
+			mult = value:uma_handling_capacity_for_tg
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			alloys = 1
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			mult =value:uma_handling_capacity_for_tg
+#			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_alloys_maker_Automatic_2_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_alloys_maker_Automatic_2"
+	}
+
+	upgrades = {
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+building_uma_tg_custom_goods_productor = {
+	base_buildtime = 300
+	category = resource
+
+#	building_sets = {
+#		industrial
+#		foundry
+#		factory
+#		uma_industrial
+#	}
+
+	building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	planet_limit = 2
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 200
+			minerals = 100
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.5
+			food = 4
+			uma_crystal_carrot = 0.4
+			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			consumer_goods = 8
+			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
+		}
+
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.06
+			food = 0.5
+			uma_crystal_carrot = 0.05
+			mult = value:uma_handling_capacity_for_tg
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			consumer_goods = 0.67
+#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+			mult =value:uma_handling_capacity_for_tg
+#			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_custom_goods_productor_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_custom_goods_productor"
+	}
+
+	upgrades = {
+		building_uma_tg_custom_goods_productor_2
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+building_uma_tg_custom_goods_productor_2 = {
+	base_buildtime = 300
+	category = resource
+	can_build = no
+
+#	building_sets = {
+#		industrial
+#		foundry
+#		factory
+#		uma_industrial
+#	}
+
+	building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 200
+			minerals = 200
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.6
+			food = 8
+			uma_crystal_carrot = 0.8
+			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			consumer_goods = 12
+			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
+		}
+
+		upkeep = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			energy = 0.06
+			food = 0.5
+			uma_crystal_carrot = 0.05
+			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			trigger = {
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			consumer_goods = 1
+			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_custom_goods_productor_2_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_custom_goods_productor_2"
+	}
+
+	upgrades = {
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+building_uma_tg_industrial_complex = {
+	base_buildtime = 400
+	category = resource
+#	base_cap_amount = 2
+	planet_limit = 1
+
+#	building_sets = {
+#		industrial
+#		foundry
+#		factory
+#		uma_industrial
+#	}
+	building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 400
+			minerals = 300
+			uma_crystal_carrot = 300
+		}
+
+		##Alloy
+		upkeep = {
+			energy = 0.6
+			minerals = 6
+			uma_crystal_carrot = 0.5
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_alloy
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_alloys
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			alloys = 7
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_alloy
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_alloys
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		upkeep = {
+			energy = 0.08
+			minerals = 0.85
+			uma_crystal_carrot = 0.07
+			multiplier = value:uma_handling_capacity_for_tg
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_alloys
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			alloys = 1
+			multiplier = value:uma_handling_capacity_for_tg
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_alloys
+				check_variable = {
+					which = uma_tgrd_alloys_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+		###
+
+		##Cunsumer Goods
+		upkeep = {
+			energy = 0.6
+			food = 6
+			uma_crystal_carrot = 0.5
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_goods
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_goods
+				check_variable = {
+					which = uma_tgrd_consumer_goods_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			consumer_goods = 7
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_goods
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_goods
+				check_variable = {
+					which = uma_tgrd_consumer_goods_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		upkeep = {
+			energy = 0.08
+			food = 0.85
+			uma_crystal_carrot = 0.07
+			multiplier = value:uma_handling_capacity_for_tg
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_goods
+				check_variable = {
+					which = uma_tgrd_consumer_goods_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			consumer_goods = 1
+			multiplier = value:uma_handling_capacity_for_tg
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_goods
+				check_variable = {
+					which = uma_tgrd_consumer_goods_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+		###
+
+
+		##Volatile Motes
+		upkeep = {
+			energy = 0.6
+			minerals = 6
+			uma_crystal_carrot = 0.5
+			energy = 4
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_motes
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_molts
+				check_variable = {
+					which = uma_tgrd_motes_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			volatile_motes = 9
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_motes
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_molts
+				check_variable = {
+					which = uma_tgrd_motes_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		##Volatile Motes
+		upkeep = {
+			energy = 0.06
+			minerals = 0.6
+			uma_crystal_carrot = 0.05
+			energy = 0.4
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_motes
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_molts
+				check_variable = {
+					which = uma_tgrd_motes_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			volatile_motes = 1
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_motes
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_molts
+				check_variable = {
+					which = uma_tgrd_motes_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+		###
+
+		##Exotic Gas
+		upkeep = {
+			minerals = 6
+			uma_crystal_carrot = 0.5
+			energy = 4
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_gas
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_gas
+				check_variable = {
+					which = uma_tgrd_gas_maxiume_produces
+					value < value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			exotic_gases = 9
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_gas
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_gas
+				check_variable = {
+					which = uma_tgrd_gas_maxiume_produces
+					value < value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+		upkeep = {
+			energy = 0.06
+			minerals = 0.6
+			uma_crystal_carrot = 0.05
+			energy = 0.4
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_gas
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_gas
+				check_variable = {
+					which = uma_tgrd_gas_maxiume_produces
+					value >= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			exotic_gases = 1
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_gas
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_gas
+				check_variable = {
+					which = uma_tgrd_gas_maxiume_produces
+					value >= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		##Rare Crystal
+		upkeep = {
+			energy = 0.6
+			minerals = 6
+			uma_crystal_carrot = 0.5
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_r_crystal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_crystal
+				check_variable = {
+					which = uma_tgrd_r_crystal_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			rare_crystals = 7
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_r_crystal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_crystal
+				check_variable = {
+					which =uma_tgrd_r_crystal_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		upkeep = {
+			energy = 0.08
+			minerals = 0.85
+			uma_crystal_carrot = 0.07
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_r_crystal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_crystal
+				check_variable = {
+					which = uma_tgrd_r_crystal_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			rare_crystals = 1
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_r_crystal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_crystal
+				check_variable = {
+					which = uma_tgrd_r_crystal_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		##Sr Living Metal
+		upkeep = {
+			energy = 0.6
+			alloys = 6
+			uma_crystal_carrot = 0.5
+			energy = 7
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_living_metal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_livingmat
+				check_variable = {
+					which = uma_tgrd_living_metal_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			sr_living_metal = 8
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_living_metal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_livingmat
+				check_variable = {
+					which = uma_tgrd_living_metal_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+		upkeep = {
+			energy = 0.075
+			alloys = 0.75
+			uma_crystal_carrot = 0.0625
+			energy = 0.875
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_living_metal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_livingmat
+				check_variable = {
+					which = uma_tgrd_living_metal_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			sr_living_metal = 1
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_living_metal
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_livingmat
+				check_variable = {
+					which = uma_tgrd_living_metal_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+
+		##Sr Dark Matter
+		upkeep = {
+			energy = 0.6
+			uma_crystal_carrot = 1
+			alloys = 6
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_darkm
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_darkm
+				check_variable = {
+					which = uma_tgrd_darkm_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			sr_dark_matter = 7
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_darkm
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_darkm
+				check_variable = {
+					which = uma_tgrd_darkm_maxiume_produces
+					value <= value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+		upkeep = {
+			energy = 0.08
+			uma_crystal_carrot = 0.07
+			alloys = 0.85
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_darkm
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_darkm
+				check_variable = {
+					which = uma_tgrd_darkm_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			sr_dark_matter = 1
+			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_darkm
+			trigger = {
+				has_planet_flag = uma_TGAC_produce_darkm
+				check_variable = {
+					which = uma_tgrd_darkm_maxiume_produces
+					value > value:uma_handling_capacity_for_tg
+				}
+			}
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_industrial_complex_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_industrial_complex"
+	}
+
+	upgrades = {
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+building_uma_tg_planet_energy_extractor = {
+	base_buildtime = 300
+	category = resource
+
+#	building_sets = {
+#		generator
+#		uma_generator
+#	}
+		building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	allow = {
+		planet_devastation <= 10
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 200
+			minerals = 100
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			alloys = 2
+			uma_crystal_carrot = 0.6
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			energy = 1
+			multiplier = value:uma_tg_plantry_energy_extr_sv
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_planet_energy_extractor_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_planet_energy_extractor"
+	}
+
+	upgrades = {
+		building_uma_tg_planet_energy_extractor_2
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+building_uma_tg_planet_energy_extractor_2 = {
+	base_buildtime = 300
+	category = resource
+	can_build = no
+
+#	building_sets = {
+#		generator
+#		uma_generator
+#	}
+		building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 200
+			minerals = 100
+			uma_crystal_carrot = 100
+		}
+		upkeep = {
+			alloys = 10
+			uma_crystal_carrot = 2.0
+			#Mark to add an adjustment of upkeep resource
+		}
+		produces = {
+			energy = 1.5
+			multiplier = value:uma_tg_plantry_energy_extr_sv
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+		text = building_uma_tg_planet_energy_extractor_2_tt
+	}
+
+	prerequisites = {
+		"tech_uma_tg_planet_energy_extractor_2"
+	}
+
+	upgrades = {
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+building_uma_tg_resource_soil = {
+	base_buildtime = 300
+	category = resource
+
+	building_sets = {
+		research
+		unity
+		government
+		generator
+		mining
+		farming
+		urban
+		foundry
+		factory
+		industrial
+		uma_industrial
+		uma_generator
+		uma_mining
+		uma_farming
+		uma_urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_authority = auth_trainingcenter
+				#is_uma_fallen_empire = yes
+			}
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_cybrex
+			is_planet_class = pc_habitat
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					has_authority = auth_trainingcenter
+					#is_uma_fallen_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 50
+			minerals = 100
+			uma_crystal_carrot = 50
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+
+	country_modifier = {
+#		resource
+		country_resource_max_add = 80000
+	}
+
+	prerequisites = {
+		"tech_uma_tg_resource_soil"
+	}
+
+	upgrades = {
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			has_authority = auth_trainingcenter
+			#is_uma_fallen_empire = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+

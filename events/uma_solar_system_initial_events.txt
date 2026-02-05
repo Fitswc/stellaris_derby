@@ -1,0 +1,156 @@
+namespace = uma_system_ini
+
+
+#目前使用的星系生成事件，挂靠在母星初始化的onaction里
+planet_event = {
+    id = uma_system_ini.1
+    hide_window = yes
+    is_triggered_only = yes
+
+	#fire_only_once = yes
+	trigger = {
+		owner = {
+			is_ai = no
+			has_authority = auth_trainingcenter
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_multiplayer = yes
+			}
+#			owner = {
+#				save_event_target_as = uma_player_country
+#			}
+
+			random_country = {
+				limit = {
+					is_country_type = global_event
+				}
+				country_event = {
+					id = uma_system_ini.2
+				}
+			}
+
+		}
+		else = {
+			owner = {
+				save_event_target_as = uma_player_country
+			}
+
+			###定位阶段
+			###确定sky的星系
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 2
+				UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
+				FLAG = uma_seiun_sky_system_created
+				SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
+				O_ANGLE_MAX = 200
+				O_ANGLE_MIN = 100
+			}
+
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 2
+				MAX_JUMPS = 3
+				UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
+				FLAG = uma_grass_wonder_system_created
+				SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
+				O_ANGLE_MAX = 250
+				O_ANGLE_MIN = 50
+			}
+
+			uma_spawn_system_around_solar_system = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 4
+				UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
+				FLAG = uma_tachyon_coffee_system_created
+				SAVE_GLOBAL_TARGET = uma_where_coffee_is
+				O_ANGLE_MAX = 150
+				O_ANGLE_MIN = 10
+			}
+
+#			uma_spawn_system_around_solar_system = {
+#				MIN_JUMPS = 5
+#				MAX_JUMPS = 10
+#				UMA_INITIALIZER = "uma_shop_center_system_initializer"
+#				FLAG = uma_shop_center_system_created
+#				SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+#				O_ANGLE_MAX = 300
+#				O_ANGLE_MIN = 200
+#			}
+
+		}
+				
+    }	
+}
+
+
+country_event = {
+	id = uma_system_ini.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = uma_has_been_spawn_system_in_multiplayer
+		}
+	}
+
+	immediate = {
+		set_global_flag = uma_has_been_spawn_system_in_multiplayer
+		###定位阶段
+		###确定sky的星系
+		uma_spawn_system_around_solar_system_multiplayer = {
+				MIN_JUMPS = 1
+				MAX_JUMPS = 4
+				UMA_INITIALIZER = "uma_seiun_sky_system_initializer"
+				FLAG = uma_seiun_sky_system_created
+				SAVE_GLOBAL_TARGET = uma_where_seiun_sky_is
+				O_ANGLE_MAX = 200
+				O_ANGLE_MIN = 100
+			}
+
+			uma_spawn_system_around_solar_system_multiplayer = {
+				MIN_JUMPS = 2
+				MAX_JUMPS = 5
+				UMA_INITIALIZER = "uma_grass_wonder_system_initializer"
+				FLAG = uma_grass_wonder_system_created
+				SAVE_GLOBAL_TARGET = uma_where_grass_wonder_is
+				O_ANGLE_MAX = 250
+				O_ANGLE_MIN = 50
+			}
+
+			uma_spawn_system_around_solar_system_multiplayer = {
+				MIN_JUMPS = 2
+				MAX_JUMPS = 6
+				UMA_INITIALIZER = "uma_tachyon_coffee_system_initializer"
+				FLAG = uma_tachyon_coffee_system_created
+				SAVE_GLOBAL_TARGET = uma_where_coffee_is
+				O_ANGLE_MAX = 150
+				O_ANGLE_MIN = 10
+			}
+
+#			uma_spawn_system_around_solar_system_multiplayer = {
+#				MIN_JUMPS = 5
+#				MAX_JUMPS = 10
+#				UMA_INITIALIZER = "uma_shop_center_system_initializer"
+#				FLAG = uma_shop_center_system_created
+#				SAVE_GLOBAL_TARGET = uma_where_shop_center_is
+#				O_ANGLE_MAX = 300
+#				O_ANGLE_MIN = 200
+#			}
+
+		random_country = {
+			limit = {
+				is_ai = no
+				has_authority = auth_trainingcenter
+			}
+#			country_event = {
+#				id = uma_shop_center.1
+#				days = 2
+#			}
+		}
+	}
+}

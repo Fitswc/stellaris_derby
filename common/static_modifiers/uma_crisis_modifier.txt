@@ -1,0 +1,156 @@
+uma_crisis_modifier_easy = {
+	ship_weapon_damage = -0.02
+	starbase_building_build_speed_mult = 0.06
+
+}
+
+
+
+uma_crisis_modifier_normal = {
+	ship_weapon_damage = 0.02
+	starbase_building_build_speed_mult = 0.06
+
+}
+
+uma_crisis_modifier_difficult = {
+	ship_weapon_damage = 0.07
+	starbase_building_build_speed_mult = 0.06
+}
+
+
+uma_crisis_modifier_building_o = {
+	country_resource_max_add = 10000
+}
+
+
+uma_endcrisis_ec3_mainbase_buff_normal = {
+	shipclass_starbase_hull_mult = 1
+}
+uma_endcrisis_ec3_mainbase_buff_easy = {
+	shipclass_starbase_hull_mult = 0.7
+}
+uma_endcrisis_ec3_mainbase_buff_hard = {
+	shipclass_starbase_hull_mult = 1.5
+}
+uma_endcrisis_ec3_mainbase_NOt_enough_ele_device_broken = {
+	shipclass_starbase_hull_mult = 10
+	shipclass_starbase_armor_mult = 10
+}
+
+
+uma_endcrisis_ec3_fleet_buff_easy = {
+	ship_hull_mult = -0.3
+	ship_shield_mult = -0.3
+	ship_weapon_range_mult = -0.2
+	ship_weapon_damage = -0.2
+}
+
+
+
+uma_endcrisis_ec3_fleet_buff_hard = {
+	ship_hull_mult = 0.3
+	ship_shield_mult = 0.3
+	ship_weapon_range_mult = 0.2
+	ship_weapon_damage = 0.2
+}
+
+uma_endcrisis_ec3_fleet_speedbuff_common = {
+	ship_speed_mult = 0.4
+}
+
+
+
+##EC2
+
+uma_fallen_empire_crisis_2_modifier = {
+	ship_weapon_range_mult = 0.5
+	ship_fire_rate_mult = 0.5
+	ship_hull_mult = 0.5
+	ship_armor_mult = 0.5
+	ship_shield_mult = 0.5
+	ship_weapon_damage = 0.5
+}
+
+
+uma_fallen_empire_crisis_2_modifier_to_ai_fleet_battle_with_fe = {
+	ship_weapon_range_mult = -0.5
+	ship_hull_mult = -0.5
+	ship_armor_mult = -0.5
+	ship_shield_mult = -0.5
+	ship_weapon_damage = -0.5
+	fleet_mia_time_mult = 0.5
+}
+
+#Class1 Difficult
+uma_fallen_empire_crisis_2_modifier_class_1_speed = {
+	ship_base_speed_mult = 0.9
+}
+
+uma_fallen_empire_crisis_2_modifier_class_1_hull = {
+	ship_hull_mult = 0.75
+	ship_armor_mult = 0.75
+	ship_shield_mult = 0.75
+}
+
+#Class2 Difficult
+uma_fallen_empire_crisis_2_modifier_class_2_speed = {
+	ship_base_speed_mult = 0.7
+}
+
+uma_fallen_empire_crisis_2_modifier_class_2_hull = {
+	ship_hull_mult = 0.5
+	ship_armor_mult = 0.5
+	ship_shield_mult = 0.5
+}
+
+#Class3 Difficult
+
+uma_fallen_empire_crisis_2_modifier_class_3_hull = {
+	ship_hull_mult = 0.45
+	ship_armor_mult = 0.45
+	ship_shield_mult = 0.45
+}
+
+#Class4 Difficult
+uma_fallen_empire_crisis_2_modifier_class_4 = {
+}
+
+
+uma_starbase_modifier_platform = {
+	starbase_defense_platform_capacity_add = 10
+}
+
+uma_endcrisis_ec2_fleet_buff_easy = {
+	ship_hull_mult = -0.3
+	ship_shield_mult = -0.3
+	ship_weapon_range_mult = -0.2
+	ship_weapon_damage = -0.2
+}
+
+uma_endcrisis_ec2_fleet_buff_hard = {
+	ship_hull_mult = 0.3
+	ship_shield_mult = 0.3
+	ship_weapon_range_mult = 0.2
+	ship_weapon_damage = 0.2
+}
+
+uma_endcrisis_ec2_mainbase_buff_normal = {
+	shipclass_starbase_hull_mult = 0.6
+}
+uma_endcrisis_ec2_mainbase_buff_easy = {
+	shipclass_starbase_hull_mult = 0.4
+}
+uma_endcrisis_ec2_mainbase_buff_hard = {
+	shipclass_starbase_hull_mult = 0.8
+}
+
+
+uma_crisis_1_modifier_perk = {
+	shipclass_military_build_speed_mult = 0.3
+	species_leader_exp_gain = 0.3
+}
+
+uma_crisis_modifier_defender = {
+	ship_weapon_range_mult = 0.1
+	ship_weapon_damage = 0.2
+}

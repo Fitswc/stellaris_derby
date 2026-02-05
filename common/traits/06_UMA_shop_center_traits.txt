@@ -1,0 +1,603 @@
+# Commander
+##############
+###道具特质###
+##############
+#护符
+uma_admiral_trait_amulet = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_amulet.dds"
+	fleet_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.2
+		ship_disengage_chance_mult = 1
+		ship_evasion_add = 20
+	}
+	army_modifier = {
+		army_damage_mult = 0.5
+		army_collateral_damage_mult = 1
+		army_health = 0.5
+	}
+
+	councilor_modifier = {
+		army_health = 0.5
+		army_damage_mult = 0.5
+		ship_weapon_damage = 0.2
+		ship_disengage_chance_mult = 1
+	}
+
+
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#大喇叭（精力充沛）
+uma_admiral_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	fleet_modifier = {
+		ship_interstellar_speed_mult = 0.25
+		ship_weapon_damage = 0.25
+		ship_fire_rate_mult = 0.25
+	}
+	army_modifier = {
+		army_damage_mult = 0.5
+		army_collateral_damage_mult = 1
+		army_health = 0.5
+	}
+
+	councilor_modifier = {
+		ship_interstellar_speed_mult = 0.25
+		ship_weapon_damage = 0.25
+		army_damage_mult = 0.5
+		army_health = 0.5
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#望远镜（醒目株）
+uma_admiral_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	fleet_modifier = {
+		ship_weapon_damage = 0.15
+		ship_armor_mult = 0.2
+	}
+	army_modifier = {
+		army_damage_mult = 0.25
+		army_morale = 0.25
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	councilor_modifier = {
+		army_morale = 0.25
+		ship_weapon_damage = 0.15
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#训练手册（切者）
+uma_admiral_trait_training_book = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
+	self_modifier = {
+		leader_upkeep_empire_size_mult = -0.05
+		species_leader_exp_gain = 1.5
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#皇家青汁（青汁的力量）
+uma_admiral_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	fleet_modifier = {
+		ship_weapon_damage = 0.3
+		ship_armor_mult = 0.3
+		ship_shield_mult = 0.3
+		ship_interstellar_speed_mult = 0.2
+	}
+	army_modifier = {
+		army_damage_mult = 1
+		army_morale = 1
+		army_disengage_chance_mult = 0.5
+	}
+	councilor_modifier = {
+		army_morale = 1
+		army_disengage_chance_mult = 0.5
+		ship_shield_mult = 0.3
+		ship_interstellar_speed_mult = 0.2
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#体力65
+uma_admiral_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	fleet_modifier = {
+		ship_weapon_damage = 0.2
+		ship_armor_mult = 0.2
+		ship_shield_mult = 0.2
+	}
+	army_modifier = {
+		army_damage_mult = 0.5
+		army_morale = 0.5
+		army_disengage_chance_mult = 0.25
+	}
+
+	councilor_modifier = {
+		army_morale = 0.5
+		army_disengage_chance_mult = 0.25
+		ship_armor_mult = 0.2
+		ship_shield_mult = 0.2
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+
+#Official
+##############
+###道具特质###
+##############
+#蹄铁·极
+uma_governor_trait_horse_shoes_ultra = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horse_shoes_ultra.dds"
+	planet_modifier = {
+		planet_uma_racing_umamusume_produces_mult = 0.20
+		planet_uma_trainer_produces_mult = 0.35
+		planet_uma_racing_umamusume_physics_research_produces_add = 2
+		planet_uma_racing_umamusume_engineering_research_produces_add = 2
+		planet_uma_racing_umamusume_society_research_produces_add = 2
+		planet_uma_trainer_physics_research_produces_add = 2
+		planet_uma_trainer_engineering_research_produces_add = 2
+		planet_uma_trainer_society_research_produces_add = 2
+	}
+
+	triggered_councilor_modifier= {
+		all_technology_research_speed = 0.2
+	}
+
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_horse_shoes_ultra.dds"}
+	initial = no
+	randomized = no
+}
+
+#大喇叭（精力充沛）
+uma_governor_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.35
+		planet_stability_add = 10
+		planet_crime_add = -20
+	}
+
+	triggered_councilor_modifier = {
+
+		planet_jobs_produces_mult = 0.35
+		planet_stability_add = 10
+		planet_crime_add = -20
+	}
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_horn.dds"}
+	initial = no
+	randomized = no
+}
+
+#学者帽（马娘学者）
+uma_governor_trait_special_scholar = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_uma_researcher_physics_research_produces_add = 2
+		planet_uma_researcher_engineering_research_produces_add = 2
+		planet_uma_researcher_society_research_produces_add = 1
+	}
+
+	triggered_councilor_modifier= {
+
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_uma_researcher_physics_research_produces_add = 2
+		planet_uma_researcher_engineering_research_produces_add = 2
+		planet_uma_researcher_society_research_produces_add = 1
+	}
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"}
+	initial = no
+	randomized = no
+}
+
+#训练手册（切者）
+uma_governor_trait_training_book = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
+	self_modifier = {
+		#		leader_skill_levels =  5
+		leader_upkeep_empire_size_mult = -0.05
+		species_leader_exp_gain = 1.5
+	}
+
+
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_training_book.dds"}
+	initial = no
+	randomized = no
+}
+
+#望远镜（醒目株）
+uma_governor_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.1
+##		planet_immigration_pull_mult = 1
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+
+
+	triggered_councilor_modifier = {
+
+		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.1
+##		planet_immigration_pull_mult = 1
+	}
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"}
+	initial = no
+	randomized = no
+}
+
+#小镜子（爱娇）
+uma_governor_trait_lovely = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_lovely.dds"
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+		pop_happiness = 0.1
+		pop_amenities_usage_mult = -0.05
+
+		#planet_immigration_pull_mult = 1
+	}
+	councilor_modifier = {
+		country_unity_produces_mult = 0.1
+		pop_happiness = 0.05
+		pop_amenities_usage_mult = -0.05
+		diplo_weight_mult = 0.25
+	}
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_lovely.dds"}
+	initial = no
+	randomized = no
+}
+
+#皇家青汁（青汁的力量）
+uma_governor_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.4
+	}
+
+	triggered_councilor_modifier = {
+
+		planet_jobs_produces_mult = 0.4
+	}
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"}
+	initial = no
+	randomized = no
+}
+
+#体力65
+uma_governor_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.2
+	}
+
+	triggered_councilor_modifier = {
+
+		planet_jobs_produces_mult = 0.2
+	}
+
+	leader_class = { official }
+	#	inline_script = {script = trait/icon CLASS = official RARITY = common COUNCIL = no TIER = none ICON = "gfx/interface/icons/traits/uma_trait_power_sf.dds"}
+	initial = no
+	randomized = no
+}
+
+
+#Ruler
+###############
+####道具特质###
+###############
+##蹄铁·极
+
+uma_ruler_trait_horse_shoes_ultra = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horse_shoes_ultra.dds"
+	councilor_modifier = {
+		planet_uma_racing_umamusume_produces_mult = 0.10
+		planet_uma_trainer_produces_mult = 0.25
+		planet_uma_racing_umamusume_physics_research_produces_add = 1
+		planet_uma_racing_umamusume_engineering_research_produces_add = 1
+		planet_uma_racing_umamusume_society_research_produces_add = 1
+		planet_uma_trainer_physics_research_produces_add = 1
+		planet_uma_trainer_engineering_research_produces_add = 1
+		planet_uma_trainer_society_research_produces_add = 1
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+#大喇叭（精力充沛）
+uma_ruler_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.2
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+#学者帽（马娘学者）
+uma_ruler_trait_special_scholar = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"
+	councilor_modifier = {
+		all_technology_research_speed = 0.05
+		planet_uma_researcher_produces_mult = 0.15
+		planet_uma_head_researcher_produces_mult = 0.15
+		planet_uma_researcher_physics_research_produces_add = 1
+		planet_uma_researcher_engineering_research_produces_add = 1
+		planet_uma_researcher_society_research_produces_add = 1
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+
+#望远镜（醒目株）
+uma_ruler_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	councilor_modifier = {
+		country_ruler_influence_produces_add = 1
+		planet_jobs_produces_mult = 0.05
+		diplo_weight_mult = 0.25
+		species_leader_exp_gain = 0.25
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+#小镜子（爱娇）
+uma_ruler_trait_lovely = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_lovely.dds"
+	councilor_modifier = {
+		country_unity_produces_mult = 0.1
+		pop_happiness = 0.05
+		pop_amenities_usage_mult = -0.05
+		diplo_weight_mult = 0.25
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+#皇家青汁（青汁的力量）
+uma_ruler_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.2
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+#体力65
+uma_ruler_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.1
+	}
+	#	councilor_trait = yes
+	leader_potential_add = { is_ruler = yes }
+	#	leader_trait = { governor general scientist admiral }
+	leader_class = { official commander scientist envoy }
+	inline_script = {script = trait/icon RARITY = common COUNCIL = yes TIER = none}
+	initial = no
+	randomized = no
+}
+
+
+#Scientist
+##############
+###道具特质###
+##############
+#大喇叭（精力充沛）
+
+uma_scientist_trait_horn = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_horn.dds"
+	councilor_modifier = {
+		all_technology_research_speed = 0.25
+
+	}
+	modifier = {
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_clues_add = 3
+	}
+
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+}
+
+#学者帽（马娘学者）
+uma_scientist_trait_special_scholar = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_scholar_hat.dds"
+	councilor_modifier = {
+		all_technology_research_speed = 0.1
+
+	}
+	modifier = {
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_clues_add = 2
+	}
+
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+}
+
+#望远镜（醒目株）
+uma_scientist_trait_tomorrow_star = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_tomorrow_star.dds"
+	councilor_modifier = {
+		all_technology_research_speed = 0.05
+
+
+	}
+	modifier = {
+		science_ship_survey_speed = 0.2
+		ship_anomaly_generation_chance_mult = 0.5
+
+		ship_archaeological_site_clues_add = 1
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+}
+
+#训练手册（切者）
+uma_scientist_trait_training_book = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_training_book.dds"
+	self_modifier = {
+		#		leader_skill_levels =  5
+		leader_upkeep_empire_size_mult = -0.05
+		species_leader_exp_gain = 1.5
+	}
+
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+}
+
+#皇家青汁（青汁的力量）
+uma_scientist_trait_vegetable_drink = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_vegetable_drink.dds"
+	modifier = {
+
+		science_ship_survey_speed = 0.5
+		ship_archaeological_site_clues_add = 3
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.3
+	}
+
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+}
+
+#体力65
+uma_scientist_trait_power_sf = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/uma_trait_power_sf.dds"
+	modifier = {
+
+		science_ship_survey_speed = 0.25
+		ship_archaeological_site_clues_add = 2
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.15
+	}
+	leader_class = { scientist }
+	#	inline_script = {script = trait CLASS = scientist RARITY = common COUNCIL = no TIER = none}
+	initial = no
+	randomized = no
+}
+

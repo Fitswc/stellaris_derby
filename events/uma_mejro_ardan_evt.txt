@@ -1,0 +1,633 @@
+namespace = uma_mejro_ardan
+
+
+country_event = {
+	id = uma_mejro_ardan.999
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_system = {
+			limit = {
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 3
+				}
+			}
+			set_star_flag = uma_ardan_system
+			save_global_event_target_as = uma_ad_sys
+			spawn_astral_rift = {
+				random_pos = yes
+				orbit_distance = 100
+				orbit_angle = 150
+				tolerance = 360
+				id = uma_ar_mejro_ardan
+				spawn_sound = no
+				init_effect = {
+					save_global_event_target_as = uma_ad_ar
+				}
+			}
+			log = "UMA_ARDAN_RIFT_GENERATED AT [This.GetName]"
+		}
+	}
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.1
+	title = uma_mejro_ardan.1.title
+	desc = uma_mejro_ardan.1.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture =GFX_evt_astral_rift_crystal_3#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.1.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.2
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.2
+	title = uma_mejro_ardan.2.title
+	desc = uma_mejro_ardan.2.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.2.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.3
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.3
+	title = uma_mejro_ardan.3.title
+	desc = uma_mejro_ardan.3.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_uma_cheval_outher_world#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.3.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.4
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.4
+	title = uma_mejro_ardan.4.title
+	desc = uma_mejro_ardan.4.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_intelligence_report#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.4.a
+		set_next_astral_rift_event = {
+			id = uma_mejro_ardan.5
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			ADD_RESOURCE = {
+				unity = 40
+				society_research = 40
+			}
+		}
+	}
+
+}
+
+astral_rift_event = {
+	id = uma_mejro_ardan.5
+	title = uma_mejro_ardan.5.title
+	desc = uma_mejro_ardan.5.desc
+	is_triggered_only = yes
+	astral_rift = yes
+	show_sound = event_wind_ruins #placeholder
+	picture = GFX_evt_synth_fertility#placeholder
+	difficulty = @astral_rift_initial_difficulty
+
+	option = {
+		name = uma_mejro_ardan.5.a
+		finish_astral_rift = yes
+		hidden_effect = {
+			explorer = {
+				enable_special_project = {
+					name = UMA_MEJRO_ARDAN_SAVE_AD
+					owner = This
+					location = This.capital_scope
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		explorer = {
+			astral_thread_small_reward = yes
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_mejro_ardan.6
+	title = uma_mejro_ardan.6.title
+	desc = {
+		trigger = {
+			any_owned_leader = {
+				OR = {
+					exists = event_target:uma_is_leader_tachyon
+					has_leader_flag = uma_is_tachyon
+				}
+			}
+
+		}
+		text = uma_mejro_ardan.6.desc_a
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				any_owned_leader = {
+					OR = {
+						exists = event_target:uma_is_leader_tachyon
+						has_leader_flag = uma_is_tachyon
+					}
+				}
+			}
+		}
+		text = uma_mejro_ardan.6.desc_b
+	}
+	is_triggered_only = yes
+	picture = GFX_evt_uma_ad_hospital
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.6.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.7
+				days = 300
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_mejro_ardan.7
+	title = uma_mejro_ardan.7.title
+	desc = uma_mejro_ardan.7.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_ad_in_flowers
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.7.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.8
+				days = 10
+			}
+		}
+
+	}
+}
+
+
+
+country_event = {
+	id = uma_mejro_ardan.8
+	title = uma_mejro_ardan.adname
+	desc = uma_mejro_ardan.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 49c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.8.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.9
+			}
+		}
+
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_mejro_ardan.9
+	title = uma_mejro_ardan.adname
+	desc = uma_mejro_ardan.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 49c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.9.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.10
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_mejro_ardan.10
+	title = uma_mejro_ardan.adname
+	desc = uma_mejro_ardan.10.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 49c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.10.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.11
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_mejro_ardan.11
+	title = uma_mejro_ardan.adname
+	desc = uma_mejro_ardan.11.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 49c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.11.a
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.12
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_mejro_ardan.12
+	title = uma_mejro_ardan.adname
+	desc = uma_mejro_ardan.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 49c
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.12.a
+		response_text = uma_mejro_ardan.12.a.repo
+
+	}
+
+	after = {
+		country_event = {
+			id = uma_mejro_ardan.13
+			days = 200
+			random = 100
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_mejro_ardan.13
+	title = uma_mejro_ardan.13.title
+	desc = uma_mejro_ardan.13.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_mejro_ardan.13.a
+
+		hidden_effect = {
+			country_event = {
+				id = uma_mejro_ardan.14
+				days = 10
+			}
+
+			country_event = {
+				id = uma_mejro_ardan.15
+				days = 365
+				random = 60
+			}
+		}
+
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_mejro_ardan.14
+	title = ARDAN
+	desc = uma_mejro_ardan.14.desc
+	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
+
+	picture = GFX_uma_leader_cheval
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_mejro_ardan
+	}
+
+	immediate = {
+		play_sound = uma_hire_Ardan
+		create_country = {
+            name = "NAME_uma_empty_ad"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = uma_ad_country
+            }
+        }
+        event_target:uma_ad_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			uma_create_leader_ardan = yes
+		}
+	}
+
+	option = {
+		name = uma_mejro_ardan.14.a
+		response_text = uma_mejro_ardan.14.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_mejro_ardan.14.b
+		response_text = uma_mejro_ardan.14.b.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_mejro_ardan.14.c
+		response_text = uma_mejro_ardan.14.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_mejro_ardan.14.hire
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_mejro_ardan
+			species = root.species
+			gender = female
+		}
+		hidden_effect = {
+			last_created_leader = {
+				add_experience = 600
+				change_leader_portrait = "49c"
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_mejro_ardan
+				save_global_event_target_as = uma_is_leader_mejro_ardan
+				#set_leader_flag = legendary_leader
+				add_experience = 30000
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_mejro_ardan
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_mejro_ardan
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+
+			add_timeline_event = {
+				type = timeline_umamusume
+				override_tooltip = "uma_timeline_meet_leader_ad_desc"
+				override_text = { "text:uma_timeline_meet_leader_ad" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_ad" "background_zoom2:GFX_uma_timelines_meet_ad_zoom_2" }
+				override_types = { country leader }
+				override_id = uma_timeline_meet_leader_ad
+				targets = { Root event_target:uma_is_leader_mejro_ardan }
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_mejro_ardan= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_ad_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_mejro_ardan.15
+	title = uma_mejro_ardan.15.title
+	desc = uma_mejro_ardan.15.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_mejro_ardan.15.happened
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_mejro_ardan.15.happened
+		random_system = {
+			limit = {
+				has_star_flag = uma_ardan_system
+			}
+
+			spawn_planet = {
+				class = pc_gaia
+				name = uma_pc_ardan_planet
+				location = event_target:uma_ad_ar
+				orbit_location = yes
+				orbit_distance = 200
+				size = 30
+				modifiers = none
+				spawn_beyond_gravity_well = yes
+				orbit_angle_offset = 300
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+					add_deposit = d_Ardan_crystal_core
+					add_deposit = d_Ardan_crystal_Energy_Field
+					add_deposit = d_Ardan_crystal_Mine_Hole
+					add_deposit = d_uma_crystal_carrot_mine_planet
+					add_deposit = d_rushing_waterfalls
+					add_deposit = d_hot_springs
+					add_deposit = d_bountiful_plains
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_mejro_ardan.15.a
+	}
+
+}
+

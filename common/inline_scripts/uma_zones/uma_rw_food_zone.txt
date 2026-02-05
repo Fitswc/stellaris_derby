@@ -1,0 +1,66 @@
+icon = GFX_district_specialization_uma_food
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+triggered_district_planet_modifier = {
+	job_uma_carrot_farmer_add = 900
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		owner = {
+			has_technology = tech_uma_code_hachimi
+		}
+	}
+	job_uma_bee_farmer_add = 900
+}
+
+triggered_planet_modifier = {
+	planet_uma_carrot_farmer_produces_mult = 0.2
+	planet_uma_bee_farmer_produces_mult = 0.2
+}
+
+included_building_sets = {
+	farming
+	hydroponics
+	uma_farming
+	farming_automation
+	fallen_empire_farming
+}
+
+convert_to = {
+	zone_food
+	zone_food_ring_world
+	zone_food_hive
+}
+
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+ai_priority = 5

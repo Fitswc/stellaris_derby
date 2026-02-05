@@ -1,0 +1,1249 @@
+namespace = uma_curren
+
+#TODO:Test and Verification
+
+country_event = {
+	id = uma_curren.1
+	is_triggered_only = yes
+	title = uma_curren.1.title
+	desc = uma_curren.1.desc
+	picture = GFX_evt_uma_tales_and_story
+
+
+	trigger = {
+		empire_size > 100
+		NOT = {
+			has_country_flag = uma_curren_event_1_happened
+		}
+		has_authority = auth_trainingcenter
+
+	}
+
+
+	immediate = {
+		set_country_flag = uma_curren_event_1_happened
+	}
+
+	option = {
+		name = uma_curren.1.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.2
+				days = 30
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_curren.2
+	is_triggered_only = yes
+	title = uma_curren.2.title
+	desc = uma_curren.2.desc
+	picture = GFX_evt_uma_satono_school
+
+	trigger = {
+
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.2.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.3
+			}
+		}
+	}
+
+	option = {
+		name = uma_curren.2.b
+	}
+}
+
+
+country_event = {
+	id = uma_curren.3
+	title = uma_curren_name
+	desc = uma_curren.3.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.3.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.4
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.4
+	title = uma_curren_name
+	desc = uma_curren.4.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.4.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.5
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_curren.5
+	title = uma_curren_name
+	desc = uma_curren.5.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.5.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.6
+			}
+		}
+	}
+	option = {
+		name = uma_curren.5.b
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.8
+			}
+		}
+	}
+	option = {
+		name = uma_curren.5.c
+		#End Events
+	}
+}
+
+
+country_event = {
+	id = uma_curren.6
+	title = uma_curren_name
+	desc = uma_curren.6.desc
+	diplomatic = yes
+	is_triggered_only = yes
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 34c
+	}
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.6.a
+		response_text = uma_curren.6.a.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.8
+			}
+		}
+	}
+
+	option = {
+		name = uma_curren.6.b
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.7
+	title = uma_curren.7.title
+	desc = uma_curren.7.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.7.a
+		#End
+	}
+}
+
+country_event = {
+	id = uma_curren.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		uma_create_leader_curren = yes
+		last_created_leader = {
+			add_experience = 3600
+			uma_initialize_leader_yaruki_effect = yes
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_curren_chan
+			#set_leader_flag = legendary_leader
+			save_global_event_target_as = uma_is_leader_curren_chan
+			change_leader_portrait = 34c
+
+		}
+	}
+	after = {
+		Root = {
+			country_event = {
+				id = uma_curren.10
+				days = 365
+			}
+		}
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_curren_chan
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_curren_chan
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+	}
+}
+
+
+
+
+country_event = {
+	id = uma_curren.10
+	title = uma_curren.10.title
+	desc = uma_curren.10.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing_legion
+
+	immediate = {
+
+
+	}
+
+	option = {
+		name = uma_curren.10.a
+		hidden_effect = {
+			enable_special_project = {
+				name = uma_curren_whatislove
+				location = Root.capital_scope
+				owner = Root
+			}
+		}
+	}
+
+	option = {
+		name = uma_curren.10.b
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.12
+				days = 350
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_curren.11
+	title = uma_curren.11.title
+	desc = uma_curren.11.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_racing_legion
+
+	immediate = {
+
+
+	}
+
+	option = {
+		name = uma_curren.11.a
+		add_modifier = {
+			modifier = uma_curren_cute_only
+			days = 1080
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.12
+				days = 100
+			}
+		}
+	}
+}
+
+
+##
+country_event = {
+	id = uma_curren.12
+	title = uma_curren_name
+	desc = uma_curren.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 34b
+	}
+
+	option = {
+		name = uma_curren.12.a
+		response_text = uma_curren.12.a.repo
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_curren.12.b
+		response_text = uma_curren.12.b.repo
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_curren.12.c
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.13
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.13
+	title = uma_curren_name
+	desc = uma_curren.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 34b
+	}
+
+	option = {
+		name = uma_curren.13.a
+	}
+
+	after = {
+		#
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.14
+	hide_window = yes
+	is_triggered_only = yes
+
+
+
+	immediate = {
+		random_system_within_border = {
+			limit = {
+				distance = {
+					max_jumps = 6
+					min_jumps = 2
+					source = Root.capital_scope.solar_system
+				}
+			}
+
+			random_system_planet = {
+				limit = {
+					is_star = no
+				}
+				create_archaeological_site = uma_curren_arc
+			}
+		}
+	}
+}
+
+
+#stage1
+fleet_event = {
+	id = uma_curren.20
+	title = uma_curren.20.title
+	desc = uma_curren.20.desc
+	picture = GFX_evt_archaeology_camp
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.20.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage2
+fleet_event = {
+	id = uma_curren.21
+	title = uma_curren.21.title
+	desc = uma_curren.21.desc
+	picture = GFX_evt_uma_dig_hightech
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.21.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage3
+fleet_event = {
+	id = uma_curren.22
+	title = uma_curren.22.title
+	desc = uma_curren.22.desc
+	picture = GFX_evt_uma_dig_hightech
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.22.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage4
+fleet_event = {
+	id = uma_curren.23
+	title = uma_curren.23.title
+	desc = uma_curren.23.desc
+	picture = GFX_evt_uma_camp
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.23.a
+		small_artifact_reward = yes
+	}
+}
+
+#stage4
+fleet_event = {
+	id = uma_curren.24
+	title = uma_curren.24.title
+	desc = uma_curren.24.desc
+	picture = GFX_evt_uma_camp
+	show_sound = archeology_log_entry_positive
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_curren.24.a
+		small_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				set_country_flag = uma_curren_build_research_departure_allow_edicts
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = uma_curren.30
+	title = uma_curren.30.title
+	desc = uma_curren.30.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_data
+
+	trigger = {
+
+	}
+
+	immediate = {
+		create_country = {
+			name = "NAME_uma_empty_curren"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_global_event_target_as = uma_curren_capture3_leader_store_country
+
+				clone_leader = {
+					target = event_target:uma_is_leader_curren_chan
+					species = root.species
+					gender = female
+					effect = {
+#						clear_global_event_target = uma_is_leader_curren_chan
+						save_global_event_target_as = uma_is_leader_curren_chan_inside
+					}
+				}
+			}
+		}
+
+		event_target:uma_is_leader_curren_chan = {
+			kill_leader = {
+				show_notification = no
+			}
+		}
+
+	}
+
+
+	option = {
+		name = uma_curren.30.a
+
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.31
+				days = 10
+			}
+		}
+
+	}
+
+}
+
+
+
+country_event = {
+	id = uma_curren.31
+	title = uma_curren_name
+	desc = uma_curren.31.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.31.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.32
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.42
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.32
+	title = uma_curren_name
+	desc = uma_curren.32.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.32.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.33
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.33
+	title = uma_curren_name
+	desc = uma_curren.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.33.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.34
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.34
+	title = uma_curren_name
+	desc = uma_curren.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.34.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.35
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.35
+	title = uma_curren_name
+	desc = uma_curren.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.35.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.36
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.36
+	title = uma_curren_name
+	desc = uma_curren.36.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.36.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.37
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.37
+	title = uma_curren_name
+	desc = uma_curren.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.37.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.38
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.38
+	title = uma_curren_name
+	desc = uma_curren.38.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.38.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.39
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.39
+	title = uma_curren_name
+	desc = uma_curren.39.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.39.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.40
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.40
+	title = uma_curren_name
+	desc = uma_curren.40.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.40.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.41
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.41
+	title = uma_curren_name
+	desc = uma_curren.41.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.41.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.42
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = uma_curren.42
+	title = uma_curren_name
+	desc = uma_curren.42.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		name = uma_curren.42.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.43
+			}
+		}
+	}
+	option = {
+		name = uma_curren.42.b
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.44
+			}
+		}
+	}
+
+}
+
+
+country_event = {
+	id = uma_curren.43
+	is_triggered_only = yes
+	title = uma_curren.43.title
+	desc = uma_curren.43.desc
+	picture = GFX_evt_uma_misty
+
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.43.a
+		hidden_effect = {
+			remove_modifier = uma_curren_cute_only
+			remove_modifier = uma_curren_tech_ailens
+			event_target:uma_curren_capture3_leader_store_country = {
+				every_owned_leader = {
+					kill_leader = {
+						show_notification = no
+					}
+				}
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.44
+	is_triggered_only = yes
+	title = uma_curren.44.title
+	desc = uma_curren.44.desc
+	picture = GFX_evt_uma_data_tunnel
+
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_curren.44.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.45
+				days = 3
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_curren.45
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+#		export_trigger_value_to_variable = {
+#			trigger = num_ships
+#			variable = uma_curren_num_ship_having
+#			rounded = yes
+#		}
+#
+#		divide_variable = {
+#			which = uma_curren_num_ship_having
+#			value = 5
+#		}
+
+		random_system_within_border = {
+			limit = {
+				distance_to_capital > 5
+			}
+			save_event_target_as = uma_curren_hostile_system
+
+
+			create_species = {
+				name = "NAME_goldship_species"
+				class = umamusume
+				namelist = UMAname
+				portrait = umamusume
+				traits = random
+				effect = { save_event_target_as = uma_curren_species }
+			}
+
+			create_country = {
+				name = UNKNOWN
+				type = uma_curren
+				name_list = random
+				flag = {
+					icon = {
+						category = "uiu_flags"
+						file = "uiu_flags01.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "circle.dds"
+					}
+					colors = {
+						"red_orange"
+						"blue"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					set_hostile = Root
+					set_country_flag = uma_curren_hostile_fleet
+					save_global_event_target_as = uma_curren_hostile_fleet
+					create_ship_design = { design = "NAME_Void_Shaper" }
+					add_ship_design = last_created_design
+					create_ship_design = { design = "NAME_Unbidden_Anchor" }
+					add_ship_design = last_created_design
+					create_ship_design = { design = "NAME_Unbidden_Starbase" }
+					add_ship_design = last_created_design
+				}
+			}
+
+			create_fleet = {
+				name = NAME_uma_curren_hostile_fleet_cc
+				effect = {
+					set_fleet_flag = uma_curren_hostile_fleet_cc
+					set_owner = event_target:uma_curren_hostile_fleet
+					save_global_event_target_as = uma_curren_hostile_fleet_cc
+					set_global_flag = uma_curren_hostile_fleet_cc_still_here
+
+					set_location = {
+						target = event_target:uma_curren_hostile_system.star
+						distance = 50
+						angle = random
+					}
+
+					while = {
+#						count = Root.uma_curren_num_ship_having
+						count = 5
+						create_ship = {
+							name = random
+							design = "NAME_uma_GOLDSON"
+							graphical_culture = "extra_dimensional_01"
+						}
+					}
+
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 300
+
+
+#					add_modifier = {
+#						modifier = uma_curren_ship_modifier
+#					}
+
+					queue_actions = {
+						#崩溃？
+						find_closest_system = {
+							trigger = {
+								id = uma_curren_trigger.1
+								owner = {
+									has_authority = auth_trainingcenter
+								}
+							}
+							found_system = {
+								wait = {
+									duration = 50
+								}
+								move_to = This
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_curren.50
+	title = uma_curren.50.title
+	desc = uma_curren.50.desc
+	picture = GFX_evt_crisis_defeated
+	is_triggered_only = yes
+
+	trigger = {
+		This = {
+			has_authority = auth_trainingcenter
+		}
+		fromfromfrom = {
+			has_fleet_flag = uma_curren_hostile_fleet_cc
+		}
+	}
+
+	immediate = {
+		event_target:uma_curren_hostile_fleet = {
+			destroy_country = yes
+		}
+	}
+	option = {
+		name = uma_curren.50.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.51
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_curren.51
+	title = CURREN
+	desc = uma_curren.8.desc
+	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
+
+	picture = GFX_uma_leader_zf
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_curren_chan_inside
+	}
+
+	immediate = {
+		play_sound = uma_hire_Curren
+	}
+
+	option = {
+		name = uma_curren.8.a
+		response_text = uma_curren.8.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_curren.8.b
+		response_text = uma_curren.8.b.resp
+		is_dialog_only = yes
+	}
+
+
+	option = {
+		name = uma_curren.8.hire
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_curren_chan_inside
+			species = root.species
+			gender = female
+		}
+		hidden_effect = {
+			last_created_leader = {
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_curren_chan
+				#set_leader_flag = legendary_leader
+				save_global_event_target_as = uma_is_leader_curren_chan
+				clear_global_event_target = uma_is_leader_curren_chan_inside
+				change_leader_portrait = 34c
+
+				add_trait = {
+					trait = uma_trait_sp_curren_spark_soujio
+					show_message = no
+				}
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_curren_chan
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_curren_chan
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+
+			add_timeline_event = {
+				type = timeline_umamusume
+				override_tooltip = "uma_timeline_meet_leader_curren_desc"
+				override_text = { "text:uma_timeline_meet_leader_curren" }
+				override_texture = { "background_zoom1:GFX_uma_timelines_meet_curren" "background_zoom2:GFX_uma_timelines_meet_curren_zoom_2" }
+				override_types = { country leader }
+				override_id = uma_timeline_meet_leader_curren
+				targets = { Root event_target:uma_is_leader_curren_chan }
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_curren_chan= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_curren_capture3_leader_store_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}

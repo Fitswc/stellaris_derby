@@ -1,0 +1,121 @@
+#Pre ftl buildings set
+
+building_uma_crude_racing_cause = {
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	position_priority = 0
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_primitive = yes
+			is_hive_empire = no
+			has_country_flag = stone_age
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_primitive = no
+				is_hive_empire = yes
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 400
+	}
+
+	upgrades = {
+	}
+}
+
+
+
+
+
+building_uma_primitive_racing_causes = {
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_primitive = yes
+			is_hive_empire = no
+			OR = {
+				has_country_flag = bronze_age
+				has_country_flag = iron_age
+				has_country_flag = late_medieval_age
+				has_country_flag = renaissance_age
+				has_country_flag = steam_age
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_primitive = no
+				is_hive_empire = yes
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 600
+	}
+
+	upgrades = {
+	}
+}
+
+building_uma_primitive_racing_causes_steam_ages = {
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_primitive = yes
+			is_hive_empire = no
+			OR = {
+				has_country_flag = bronze_age
+				has_country_flag = iron_age
+				has_country_flag = late_medieval_age
+				has_country_flag = renaissance_age
+				has_country_flag = steam_age
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_primitive = no
+				is_hive_empire = yes
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 700
+	}
+
+	upgrades = {
+	}
+}

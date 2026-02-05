@@ -1,0 +1,1103 @@
+#能让咕噜持续发电的是什么物种？
+##########################
+#     2023/8/30			#
+#     Written By F		#
+#########################
+
+
+namespace = uma_fr_uma
+
+country_event = {
+	id = uma_fr_uma.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+#		NOT = {
+#			has_country_flag = uma_uma_fr_happened
+#		}
+#		exists = event_target:uma_is_leader_glx
+		NOT = {
+			has_country_flag = uma_uma_fr_happened
+		}
+	}
+
+
+	immediate = {
+		set_country_flag = uma_uma_fr_happened
+		country_event = {
+			id = uma_fr_uma.2
+			days = 365
+			random = 100
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.2
+	title = uma_fr_uma.2.title
+	desc = uma_fr_uma.2.desc
+	picture = GFX_evt_uma_suzuka_arc_star_report
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.2.a
+	}
+	option = {
+		name = uma_fr_uma.2.b
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.3
+				days = 100
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fr_uma.3
+	title = uma_fr_uma.3.title
+	desc = uma_fr_uma.3.desc
+	picture = GFX_evt_uma_zf_glx_rob
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.3.a
+		country_event = {
+			id = uma_fr_uma.4
+			days = 10
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fr_uma.4
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.4.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.4.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.5
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.5.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.5.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.6
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.6.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.7
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.7.a
+		response_text = uma_fr_uma.7.desc.respo
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.8
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.8
+	title = uma_fr_uma.8.title
+	desc = uma_fr_uma.8.desc
+	picture = GFX_evt_uma_suzuka_arc_star_report
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_fr_uma.8.a
+		add_modifier = {
+			modifier = uma_fr_uma
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.9
+				days = 1855
+				random = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.9
+	title = uma_fr_uma.9.title
+	desc = uma_fr_uma.9.desc
+	picture = GFX_evt_atmospheric_entry
+	is_triggered_only = yes
+
+	immediate = {
+		This.capital_scope = {
+			create_ambient_object = {
+				type = uma_ambient_object_zf_ship_object
+				entity_offset_height = { min = 0 max = 7 }
+				location = this
+				duration = 60
+				effect = {
+					save_global_event_target_as = uma_fr_uma_ambient_ship
+				}
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 5
+					angle = random
+				}
+			}
+			enable_special_project = {
+				name = UMA_LAND_IN_FR_UMA_SHIP
+				location = this
+				owner = root
+			}
+		}
+	}
+
+	option = {
+		name = WORRYING
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.10
+	title = uma_fr_uma.10.title
+	desc = uma_fr_uma.10.desc
+	picture = GFX_evt_uma_zf_room_mess
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.10.a
+	}
+
+	after = {
+		country_event = {
+			id = uma_fr_uma.11
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.11
+	title = uma_fr_uma.11.title
+	desc = uma_fr_uma.11.desc
+	picture = GFX_evt_ghost_ship
+	is_triggered_only = yes
+
+	immediate = {
+		destroy_ambient_object = event_target:uma_fr_uma_ambient_ship
+		clear_global_event_target = uma_fr_uma_ambient_ship
+	}
+
+	option = {
+		name = uma_fr_uma.11.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.12
+				days = 20
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fr_uma.12
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.12.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.12.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.13
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.13.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.14
+	title = uma_fr_uma_glx_name
+	desc = uma_fr_uma.14.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = event_target:uma_is_leader_glx
+	}
+
+	option = {
+		name = uma_fr_uma.14.a
+		response_text = uma_fr_uma_14.a.resp
+		country_event = {
+			id = uma_fr_uma.15
+			days = 20
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.15
+	title = uma_fr_uma.15.title
+	desc = uma_fr_uma.15.desc
+	picture = GFX_evt_uma_zf_listen
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.15.a
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = uma_fr_uma.16
+						days = 200
+					}
+				}
+				50 = {
+					country_event = {
+						id = uma_fr_uma.17
+						days = 200
+					}
+				}
+				50 = {
+					country_event = {
+						id = uma_fr_uma.18
+						days = 200
+					}
+				}
+			}
+		}
+	}
+}
+
+#触发器
+#country_event = {
+#	id = uma_fr_uma.660
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		hidden_effect = {
+#			random_list = {
+#				40 = {
+#					country_event = {
+#						id = uma_fr_uma.16
+#						days = 200
+#					}
+#					set_country_flag = uma_sixteen_happened
+#				}
+#				40 = {
+#					country_event = {
+#						id = uma_fr_uma.17
+#						days = 200
+#					}
+#					set_country_flag = uma_seventeen_happened
+#				}
+#				40 = {
+#					country_event = {
+#						id = uma_fr_uma.18
+#						days = 200
+#					}
+#					set_country_flag = uma_eighteen_happened
+#				}
+#			}
+#		}
+#	}
+#
+#	after = {
+#		country_event = {
+#			id = uma_fr_uma.661
+#			days = 140
+#		}
+#	}
+#}
+#
+##C3-1 Possible choice
+#country_event = {
+#	id = uma_fr_uma.661
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		hidden_effect = {
+#			if = {
+#				limit = {
+#					has_country_flag = uma_sixteen_happened
+#				}
+#				random_list = {
+#					50 = {
+#						country_event = {
+#							id = uma_fr_uma.17
+#							days = 100
+#						}
+#						set_country_flag = uma_seventeen_happened
+#					}
+#					50 = {
+#						country_event = {
+#							id = uma_fr_uma.18
+#							days = 100
+#						}
+#						set_country_flag = uma_eighteen_happened
+#					}
+#				}
+#			}
+#			if = {
+#				limit = {
+#					has_country_flag = uma_seventeen_happened
+#				}
+#				random_list = {
+#					50 = {
+#						country_event = {
+#							id = uma_fr_uma.16
+#							days = 100
+#						}
+#						set_country_flag = uma_seventeen_happened
+#					}
+#					50 = {
+#						country_event = {
+#							id = uma_fr_uma.18
+#							days = 100
+#						}
+#						set_country_flag = uma_eighteen_happened
+#					}
+#				}
+#			}
+#			if = {
+#				limit = {
+#					has_country_flag = uma_eighteen_happened
+#				}
+#				random_list = {
+#					50 = {
+#						country_event = {
+#							id = uma_fr_uma.16
+#							days = 100
+#						}
+#						set_country_flag = uma_seventeen_happened
+#					}
+#					50 = {
+#						country_event = {
+#							id = uma_fr_uma.17
+#							days = 100
+#						}
+#						set_country_flag = uma_eighteen_happened
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	after = {
+#		country_event = {
+#			id = uma_fr_uma.662
+#			days = 140
+#		}
+#	}
+#}
+#
+##C3-2 Possible choice
+#country_event = {
+#	id = uma_fr_uma.662
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		hidden_effect = {
+#			if = {
+#				limit = {
+#					has_country_flag = uma_sixteen_happened
+#					has_country_flag = uma_seventeen_happened
+#				}
+#				country_event = {
+#					id = uma_fr_uma.18
+#					days = 100
+#				}
+#				set_country_flag = uma_eighteen_happened
+#
+#			}
+#
+#			if = {
+#				limit = {
+#					has_country_flag = uma_sixteen_happened
+#					has_country_flag = uma_eighteen_happened
+#				}
+#				country_event = {
+#					id = uma_fr_uma.17
+#					days = 100
+#				}
+#				set_country_flag = uma_seventeen_happened
+#			}
+#			if = {
+#				limit = {
+#					has_country_flag = uma_seventeen_happened
+#					has_country_flag = uma_eighteen_happened
+#				}
+#				country_event = {
+#					id = uma_fr_uma.16
+#					days = 100
+#				}
+#				set_country_flag = uma_sixteen_happened
+#			}
+#		}
+#	}
+#
+#	after = {
+#		country_event = {
+#			id = uma_fr_uma.663
+#			days = 140
+#		}
+#		country_event = {
+#			id = uma_fr_uma.19
+#			days = 200
+#		}
+#	}
+#}
+#
+##触发器清理
+#country_event = {
+#	id = uma_fr_uma.663
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		remove_country_flag = uma_seventeen_happened
+#		remove_country_flag = uma_sixteen_happened
+#		remove_country_flag = uma_eighteen_happened
+#	}
+#}
+
+country_event = {
+	id = uma_fr_uma.16
+	title = uma_fr_uma.16.title
+	desc = uma_fr_uma.16.desc
+	picture = GFX_evt_uma_zf_shop
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.16.a
+		hidden_effect = {
+			set_country_flag = uma_sixteen_happened
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = uma_eighteen_happened
+						has_country_flag = uma_seventeen_happened
+						has_country_flag = uma_sixteen_happened
+					}
+				}
+				country_event = {
+					id = uma_fr_uma.19
+					days = 200
+				}
+			}
+			else = {
+				random_list = {
+					50 = {
+						modifier = {
+							has_country_flag = uma_sixteen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.16
+							days = 200
+						}
+					}
+					50 = {
+						modifier = {
+							has_country_flag = uma_seventeen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.17
+							days = 200
+						}
+					}
+					50 = {
+						modifier = {
+							has_country_flag = uma_eighteen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.18
+							days = 200
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.17
+	title = uma_fr_uma.17.title
+	desc = uma_fr_uma.17.desc
+	picture = GFX_evt_uma_zf_rubbish
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.17.a
+		hidden_effect = {
+			set_country_flag = uma_seventeen_happened
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = uma_eighteen_happened
+						has_country_flag = uma_seventeen_happened
+						has_country_flag = uma_sixteen_happened
+					}
+				}
+				country_event = {
+					id = uma_fr_uma.19
+					days = 200
+				}
+			}
+			else = {
+				random_list = {
+					50 = {
+						modifier = {
+							has_country_flag = uma_sixteen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.16
+							days = 200
+						}
+					}
+					50 = {
+						modifier = {
+							has_country_flag = uma_seventeen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.17
+							days = 200
+						}
+					}
+					50 = {
+						modifier = {
+							has_country_flag = uma_eighteen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.18
+							days = 200
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.18
+	title = uma_fr_uma.18.title
+	desc = uma_fr_uma.18.desc
+	picture = GFX_evt_uma_zf_bed
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.18.a
+		hidden_effect = {
+			set_country_flag = uma_eighteen_happened
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = uma_eighteen_happened
+						has_country_flag = uma_seventeen_happened
+						has_country_flag = uma_sixteen_happened
+					}
+				}
+				country_event = {
+					id = uma_fr_uma.19
+					days = 200
+				}
+			}
+			else = {
+				random_list = {
+					50 = {
+						modifier = {
+							has_country_flag = uma_sixteen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.16
+							days = 200
+						}
+					}
+					50 = {
+						modifier = {
+							has_country_flag = uma_seventeen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.17
+							days = 200
+						}
+					}
+					50 = {
+						modifier = {
+							has_country_flag = uma_eighteen_happened
+							set = 0
+						}
+						country_event = {
+							id = uma_fr_uma.18
+							days = 200
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.19
+	title = uma_fr_uma.19.title
+	desc = uma_fr_uma.19.desc
+	picture = GFX_evt_guardians
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.19.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.20
+				days = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.20
+	title = uma_fr_uma.20.title
+	desc = uma_fr_uma.20.desc
+	picture = GFX_evt_uma_zf_glx_rob
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.20.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.21
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fr_uma.21
+	title = uma_fr_uma_zf_unknow_name
+	desc = uma_fr_uma.21.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.21.a
+		country_event = {
+			id = uma_fr_uma.22
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.22
+	title =uma_fr_uma_zf_name
+	desc = uma_fr_uma.22.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.22.a
+		country_event = {
+			id = uma_fr_uma.23
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.23
+	title = uma_fr_uma_zf_name
+	desc = uma_fr_uma.23.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.23.a
+		country_event = {
+			id = uma_fr_uma.24
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.24
+	title = uma_fr_uma_zf_name
+	desc = uma_fr_uma.24.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.24.a
+		country_event = {
+			id = uma_fr_uma.25
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.25
+	title = uma_fr_uma_zf_name
+	desc = uma_fr_uma.25.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.25.a
+		country_event = {
+			id = uma_fr_uma.26
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.26
+	title = uma_fr_uma_zf_name
+	desc = uma_fr_uma.26.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.26.a
+		country_event = {
+			id = uma_fr_uma.27
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.27
+	title = uma_fr_uma_zf_name
+	desc = uma_fr_uma.27.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fr_uma_glxs_room
+		portrait = GLX_ZF
+	}
+
+	option = {
+		name = uma_fr_uma.27.a
+		country_event = {
+			id = uma_fr_uma.28
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.28
+	title = uma_fr_uma.28.title
+	desc = uma_fr_uma.28.desc
+	picture = GFX_evt_uma_zf_ele
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.28.a
+		add_resource = {
+			society_research = 3
+			energy = 500
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.29
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fr_uma.29
+	title = uma_fr_uma.29.title
+	desc = uma_fr_uma.29.desc
+	picture = GFX_evt_uma_satono_five
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fr_uma.29.a
+	}
+	option = {
+		name = uma_fr_uma.29.b
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = uma_fr_uma.30
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fr_uma.30
+	title = ZF
+	desc = uma_fr_uma.30.desc
+	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
+
+	picture = GFX_uma_leader_zf
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_zf
+	}
+
+	immediate = {
+		play_sound = uma_hire_ZF
+		create_country = {
+            name = "NAME_uma_empty_zf"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = uma_zf_country
+            }
+        }
+        event_target:uma_zf_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			uma_create_leader_zf = yes
+		}
+	}
+
+	option = {
+		name = uma_fr_uma.30.a
+		response_text = uma_fr_uma.30.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_fr_uma.30.b
+		response_text = uma_fr_uma.30.b.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_fr_uma.30.c
+		response_text = uma_fr_uma.30.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_fr_uma.30.hire
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_zf
+			species = root.species
+			gender = female
+		}
+		hidden_effect = {
+			last_created_leader = {
+				add_experience = 12002
+				change_leader_portrait = "GLX_ZF"
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_zf
+				save_global_event_target_as = uma_is_leader_zf
+				change_leader_portrait = GLX_ZF
+				#set_leader_flag = legendary_leader
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_zf
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_zf
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_zf_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+
+
+
+

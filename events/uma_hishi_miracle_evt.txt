@@ -1,0 +1,635 @@
+namespace = uma_fz
+
+
+
+#OGS
+country_event = {
+	id = uma_fz.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = HISHI_MIR_EVT_INITIALISED
+		random_system = {
+			limit = {
+				uma_is_event_system = no
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 5
+				}
+				has_owner = no
+			}
+			if = {
+				limit = {
+					has_planet_class = pc_ocean
+				}
+				set_star_flag = uma_hishi_evt_system
+				random_system_planet = {
+					limit = {
+						is_planet_class = pc_ocean
+					}
+					save_global_event_target_as = uma_hishi_evt_will_happen_here
+					set_planet_flag = uma_hishi_evt_planet
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_planet_class = pc_ocean
+					}
+				}
+				set_star_flag = uma_hishi_evt_system
+				random_system_planet = {
+					limit = {
+						uma_is_normal_habitat_planet = no
+						uma_is_pd_habitat_planet = no
+						is_primary_star = no
+						uma_is_event_planet = no
+						NOT = {
+							is_planet_class = pc_astral_scar
+						}
+					}
+					change_pc = pc_ocean
+					save_global_event_target_as = uma_hishi_evt_will_happen_here
+					set_planet_flag = uma_hishi_evt_planet
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = uma_fz.9998
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		Root = {
+			has_planet_flag = uma_hishi_evt_planet
+		}
+		FromFrom = {
+			owner = {
+				has_authority = auth_trainingcenter
+			}
+		}
+	}
+
+	immediate = {
+		FromFrom = {
+			owner = {
+				country_event = {
+					id = uma_fz.2
+				}
+			}
+		}
+	}
+}
+
+#Survey
+country_event = {
+	id = uma_fz.2
+	title = uma_fz.2.title
+	desc = uma_fz.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_ocean
+	location = event_target:uma_hishi_evt_will_happen_here
+
+	immediate = {
+		log = UMA_HISHI_EVT_HAPPENED
+	}
+
+	option = {
+		name = uma_fz.2.a
+		Root = {
+			add_resource = {
+				energy = -1000
+			}
+			enable_special_project = {
+				name = UMA_SURVEY_THE_OCEAN_PLANET
+				location = event_target:uma_hishi_evt_will_happen_here
+				owner = Root
+			}
+		}
+	}
+	option = {
+		name = uma_fz.2.b
+		Root = {
+			add_resource = {
+				influence = 20
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fz.3
+	title = uma_fz.3.title
+	desc = uma_fz.3.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_fz_double_island
+	location = event_target:uma_hishi_evt_will_happen_here
+
+	option = {
+		name = uma_fz.3.a
+		From = {
+			add_resource = {
+				energy = -1000
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.4
+				days = 15
+			}
+		}
+	}
+	option = {
+		name = uma_fz.3.b
+		From = {
+			add_resource = {
+				influence = 20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.4
+	title = uma_fz.4.title
+	desc = uma_fz.4.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_fz_double_island
+	location = event_target:uma_hishi_evt_will_happen_here
+
+
+	option = {
+		name = uma_fz.4.a
+		From = {
+			enable_special_project = {
+				name = UMA_SAVE_THE_PIG_FROM_WATER
+				location = event_target:uma_hishi_evt_will_happen_here
+				owner = This
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fz.5
+	title = uma_fz.5.title
+	desc = uma_fz.5.desc
+	picture = GFX_evt_uma_fz_beach
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fz.5.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.6
+			}
+		}
+	}
+	option = {
+		name = uma_fz.5.b
+		custom_tooltip = uma_fz.5.b.tt
+		hidden_effect = {
+			capital_scope = {
+				create_pop = {
+					species = Root.owner_main_species
+					ethos = Root
+					size = 1
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fz.6
+	title = TRANSMISSION
+	desc = uma_fz.6.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fz_beach_room
+		portrait = 98b
+	}
+
+	option = {
+		name = uma_fz.6.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.7
+	title = HISHIM
+	desc = uma_fz.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fz_beach_room
+		portrait = 98b
+	}
+
+	option = {
+		name = uma_fz.7.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.8
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.8
+	title = HISHIM
+	desc = uma_fz.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fz_beach_room
+		portrait = 98b
+	}
+
+	option = {
+		name = uma_fz.8.a
+		custom_tooltip = uma_fz.8.a.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.9
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.9
+	title = HISHIM
+	desc = uma_fz.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fz_beach_room
+		portrait = 98b
+	}
+
+	option = {
+		name = uma_fz.9.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.10
+	title = HISHIM
+	desc = uma_fz.10.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fz_beach_room
+		portrait = 98b
+	}
+
+	option = {
+		name = uma_fz.10.a
+		custom_tooltip = uma_fz.10.a.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.11
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.11
+	title = HISHIM
+	desc = uma_fz.11.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = uma_fz_beach_room
+		portrait = 98b
+	}
+
+	option = {
+		name = uma_fz.11.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.12
+			}
+		}
+	}
+	option = {
+		name = uma_fz.11.b
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.13
+				days = 1080
+				random = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_leader = {
+			name = HISHIM
+			species = root
+			gender = female
+			class = scientist
+			set_age = 17
+			skill = 1
+			immortal = no
+			custom_catch_phrase = uma_hishi_catch_phrase
+			traits = {
+				trait = leader_trait_moyu_generic
+				trait = leader_trait_uma_generic
+			}
+			effect = {
+				add_experience = 500
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_hishi_miracle
+				save_global_event_target_as = uma_is_leader_hishi_miracle
+			}
+		}
+		last_created_leader = {
+			change_leader_portrait = "98c"
+			uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_fz.13
+	title = uma_fz.13.title
+	desc = uma_fz.13.desc
+	picture = GFX_evt_uma_fz_intro
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fz.13.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.14
+	title = HISHIM
+	desc = uma_fz.14.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 98c
+	}
+
+	option = {
+		name = uma_fz.14.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.15
+	title = HISHIM
+	desc = uma_fz.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 98c
+	}
+
+	option = {
+		name = uma_fz.15.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.16
+	title = HISHIM
+	desc = uma_fz.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 98c
+	}
+
+	option = {
+		name = uma_fz.16.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.17
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.17
+	title = HISHIM
+	desc = uma_fz.17.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 98c
+	}
+
+	option = {
+		name = uma_fz.17.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.18
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.18
+	title = HISHIM
+	desc = uma_fz.18.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = Root
+		portrait = 98c
+	}
+
+	option = {
+		name = uma_fz.18.a
+		hidden_effect = {
+			create_leader = {
+				name = HISHIM
+				species = root
+				gender = female
+				class = scientist
+				set_age = 17
+				skill = 1
+				immortal = yes
+				custom_catch_phrase = uma_hishi_catch_phrase
+				custom_description = uma_hishi_bs
+				traits = {
+					trait = leader_trait_moyu_generic
+					trait = leader_trait_uma_generic
+					trait = uma_scientists_trait_sp_fz
+				}
+				effect = {
+					add_experience = 600
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_hishi_miracle
+					set_leader_flag = renowned_leader
+					save_global_event_target_as = uma_is_leader_hishi_miracle
+				}
+			}
+			last_created_leader = {
+				change_leader_portrait = "98c"
+				uma_initialize_leader_yaruki_effect = yes #随机添加心情特质
+			}
+		}
+	}
+	after = {
+		create_message = {
+			type = MESSAGE_RECRUITED_LEADER
+			localization = MESSAGE_RECRUITED_LEADER_DESC
+			days = @toast_message_days
+			target = event_target:uma_is_leader_hishi_miracle
+			variable = {
+				type = name
+				localization = LEADER
+				scope = event_target:uma_is_leader_hishi_miracle
+			}
+			variable = {
+				key = "border"
+				value = "GFX_border_legendary"
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.19
+				days = 1440
+				random = 520
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.19
+	title = uma_fz.19.title
+	desc = uma_fz.19.desc
+	picture = GFX_evt_uma_fz_sio
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fz.19.a
+		hidden_effect = {
+			country_event = {
+				id = uma_fz.20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_fz.20
+	title = uma_fz.20.title
+	desc = uma_fz.20.desc
+	picture = GFX_evt_uma_fz_sio
+	is_triggered_only = yes
+
+	option = {
+		name = uma_fz.20.a
+		hidden_effect = {
+
+		}
+	}
+
+	option = {
+		name = uma_fz.20.b
+		hidden_effect = {
+			event_target:uma_is_leader_hishi_miracle = {
+				kill_leader = {
+					fire = yes
+					show_notification = yes
+				}
+			}
+		}
+	}
+}
+
+#country_event = {
+#	id = uma_fz.21
+#	title = uma_fz.21.title
+#	desc = uma_fz.21.desc
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = uma_fz.21.a
+#
+#	}
+#
+#	option = {
+#		name = uma_fz.21.b
+#		add_resource = {
+#			influence = 300
+#		}
+#	}
+#}
+
+
+
+
+
+
+
+
+
+

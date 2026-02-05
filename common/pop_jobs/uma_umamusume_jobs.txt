@@ -1,0 +1,226 @@
+###训练员
+@umamusumes_job_weight = 15
+
+uma_trainer = {
+	category = umamusume
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_trainer
+		produces = {
+			trigger = {
+				exists = owner
+			}
+			unity = 12
+			society_research = 12
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_technology = tech_uma_training_aiding_algorithm
+				}
+			}
+			unity = 2
+			engineering_research = 3
+		}
+		upkeep = {
+			consumer_goods = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_uma_personality_training_assistant }
+		}
+		modifier = {
+			planet_uma_racing_umamusume_produces_mult = 0.05
+		}
+	}
+
+	planet_modifier = {
+		planet_uma_racing_umamusume_produces_mult = 0.05
+	}
+
+	weight = {
+		#Umamusume has born enthusiastic to become athlete, if can't, they will try to become a trainer.
+		weight = @umamusumes_job_weight
+
+		modifier = {
+			factor = 1.5
+			NOT = {
+				can_work_specific_job = uma_racing_umamusume
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = umamusume
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+###赛马娘
+uma_racing_umamusume = {
+	category = umamusume
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_basic_racing_course ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_racing_umamusume
+		produces = {
+			unity = 6
+			society_research = 3
+			engineering_research = 3
+			physics_research = 3
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 400
+	}
+
+	weight = {
+		#Umamusume has born enthusiastic to become athlete
+		weight = @umamusumes_job_weight
+		modifier = {
+			factor = 2
+			is_species_class = umamusume
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = umamusume
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+uma_racing_ura_members = {
+	category = umamusume
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_uma_modern_racing_course ##之后这里改成我们自己的建筑！
+		}
+	}
+
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_racing_ura_members
+		produces = {
+			unity = 4
+			society_research = 4
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 400
+		planet_uma_racing_umamusume_produces_mult = 0.01
+	}
+
+	weight = {
+		weight = @umamusumes_job_weight
+
+		modifier = {
+			factor = 1.2
+			NOT = {
+				can_work_specific_job = uma_racing_umamusume
+			}
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = umamusume
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+
+

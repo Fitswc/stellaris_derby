@@ -1,0 +1,992 @@
+###########
+#	噬星者-栗斯拉事件链
+#   Written by 咕噜
+#  	Programme by F
+# 	In 2023/12/9
+######################
+
+namespace = uma_leviathan
+
+#检测噬星者是否被击败 Trigger
+country_event = {
+	id = uma_leviathan.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+#		is_country_type = default
+		has_authority = auth_trainingcenter
+		from = { is_country_type = guardian_stellarite }
+		fromfromfrom = {
+			has_ship_flag = stellarite_ship
+		#	solar_system = {
+#		#		has_star_flag = stellarite_present
+		#		NOT = {
+		#			has_star_flag = stellarite_slain
+		#		}
+		#	}
+		}
+	}
+
+	immediate = {
+		log = uma_leviathan_HAPPENED
+		set_country_flag = uma_leviathan_happened
+		country_event = {
+			id = uma_leviathan.2
+			days = 10
+		}
+	}
+}
+
+country_event = {
+	id = uma_leviathan.2
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		#这里指定原版中的利维坦生成的system
+		event_target:stellarite_system = {
+			#spawn_planet = {
+			#	class = pc_relic
+			#	name = UMA_LE_PLANET
+			#	location = this
+			#	orbit_location = yes
+			#	orbit_distance = 40
+			#	orbit_distance_offset = 2
+			#	deposit_blockers = none
+			#	modifiers = none
+			#	size = 10
+			#	has_ring = no
+			#	orbit_angle = random
+			#	orbit_angle_offset = 2
+			#	init_effect = {
+			#		save_global_event_target_as = uma_leviathan_arc_planet_target
+			#	}
+			#}
+			if = {
+				limit = {
+					any_system_planet = {
+						NOT = {
+							OR = {
+								is_planet_class = pc_barren
+								is_planet_class = pc_barren_cold
+							}
+						}
+					}
+				}
+				random_system_planet = {
+					limit = {
+						is_primary_star = no
+						OR = {
+							uma_is_normal_habitat_planet = no
+							uma_is_pd_habitat_planet = no
+						}
+					}
+					change_pc = pc_barren
+					set_planet_flag = uma_leviathan_planet
+					save_global_event_target_as = uma_leviathan_planet_target
+				}
+			}
+			else = {
+				random_system_planet = {
+					limit = {
+						OR = {
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+						}
+					}
+					set_planet_flag = uma_leviathan_planet
+					save_global_event_target_as = uma_leviathan_planet_target
+				}
+
+			}
+		}
+	}
+	after = {
+		root = {
+			country_event = {
+				id = uma_leviathan.3
+			}
+		}
+	}
+}
+
+#这里建situation log
+country_event = {
+	id = uma_leviathan.3
+	title = uma_leviathan.3.title
+	desc = uma_leviathan.3.desc
+	is_triggered_only = yes
+	picture = GFX_evt_stellarites
+	location = event_target:uma_leviathan_planet_target
+	trackable = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_leviathan.3.a
+		enable_special_project = {
+			name = UMA_LEVIATHAN_STRANGE_THING
+			location = event_target:uma_leviathan_planet_target
+			owner = this
+		}
+	}
+}
+
+
+##侵入性故事修改，原版直接ban掉
+ship_event = {
+	id = uma_leviathan.4
+	title = uma_leviathan.4.title
+	desc = uma_leviathan.4.desc
+	picture = GFX_evt_alien_planet
+	is_triggered_only = yes
+	immediate = {
+		owner = {
+			if = {
+				limit = {
+					has_special_project = STELLARITE_DEAD_PROJECT
+				}
+				abort_special_project = {
+					type = STELLARITE_DEAD_PROJECT
+				}
+			}
+#			if = {
+#				limit = {
+#					any_situation = {
+#						is_situation_type = leviathan_celebration_opportunity
+#					}
+#				}
+#				random_situation = {
+#					limit = {
+#						is_situation_type = leviathan_celebration_opportunity
+#					}
+#					destroy_situation = this
+#				}
+#			}
+		}
+		random_ambient_object = {
+			limit = {
+				is_ambient_object_type = stellarite_object
+			}
+			destroy_ambient_object = this
+		}
+	}
+
+	option = {
+		name = uma_leviathan.4.a
+		event_target:uma_leviathan_planet_target = {
+			create_archaeological_site = uma_leviathan_digsite
+		}
+	}
+	after = {
+		##玩家不可调度
+		fleet = {
+			save_global_event_target_as = uma_leviathan_fleet_locked
+			set_event_locked = yes
+			set_fleet_settings = {
+				can_change_leader = no
+			}
+		}
+	}
+}
+
+
+##ARC Events
+fleet_event = {
+	id = uma_leviathan.5
+	title = uma_leviathan.5.name
+	desc = uma_leviathan.5.desc
+	picture = GFX_evt_city_ruins #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_leviathan.6
+	title = uma_leviathan.6.name
+	desc = uma_leviathan.6.desc
+	picture = GFX_evt_alien_ruins #占位符
+	show_sound = event_airlock #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_leviathan.6.a #占位符
+		owner = {
+			add_resource = {
+				society_research = 1000
+			}
+		}
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_leviathan.7
+	title = uma_leviathan.7.name
+	desc = uma_leviathan.7.desc
+	picture = GFX_evt_astral_rift_bleached_planet_2 #占位符
+	#占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_leviathan.7.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_leviathan.8
+	title = uma_leviathan.8.name
+	desc = uma_leviathan.8.desc
+	picture = GFX_evt_astral_rift_whiteout_1 #占位符
+	show_sound = event_default #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_leviathan.9
+	title = uma_leviathan.9.name
+	desc = uma_leviathan.9.desc
+	picture = GFX_evt_alpine_city #占位符
+	show_sound = event_big_door_opening #占位符
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		owner = {
+			country_event = {
+				id = uma_leviathan.10
+				days = 10
+			}
+		}
+	}
+
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+###ARC End
+
+country_event = {
+	id = uma_leviathan.10
+	title = uma_leviathan.10.title
+	desc = uma_leviathan.10.desc
+	picture = GFX_evt_alpine_city
+	is_triggered_only = yes
+
+	option = {
+		name = uma_leviathan.10.a
+		hidden_effect = {
+			set_country_flag = uma_leviathan_event_ten_choice_one
+			country_event = {
+				id = uma_leviathan.11
+				days = 200
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.10.b
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.11
+				days = 200
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.10.d
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.12
+				days = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leviathan.11
+	title = uma_leviathan.11.title
+	desc = uma_leviathan.11.desc
+	desc = {
+		text = uma_leviathan.11.desc.a
+		trigger = {
+			has_country_flag = uma_leviathan_event_ten_choice_one
+		}
+	}
+	picture = GFX_evt_intelligence_report
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:uma_leviathan_fleet_locked = {
+			set_event_locked = no
+			set_fleet_settings = {
+				can_change_leader = yes
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			has_country_flag = uma_leviathan_event_ten_choice_one
+		}
+		name = uma_leviathan.11.b
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.13
+				days = 300
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.11.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.13
+				days = 300
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leviathan.12
+	title = uma_leviathan.12.title
+	desc = uma_leviathan.12.desc
+	picture = GFX_evt_circuitry_modification
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:uma_leviathan_fleet_locked = {
+			set_event_locked = no
+			set_fleet_settings = {
+				can_change_leader = yes
+			}
+		}
+	}
+
+	option = {
+		name = uma_leviathan.12.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.13
+				days = 300
+			}
+		}
+	}
+}
+
+
+##Special Project
+
+country_event = {
+	id = uma_leviathan.13
+	title = uma_leviathan.13.title
+	desc = uma_leviathan.13.desc
+	picture = GFX_evt_intelligence_report
+	is_triggered_only = yes
+
+	option = {
+		name = uma_leviathan.13.a
+		enable_special_project = {
+			name = UMA_LEVIATHAN_ESTABLISH_QUATUMN_COMMUNICATION_CHANNEL
+			owner = root
+			location = event_target:uma_leviathan_planet_target
+		}
+	}
+}
+
+ship_event = {
+	id = uma_leviathan.14
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			country_event = {
+				id = uma_leviathan.20
+				days = 100
+				random = 20
+			}
+		}
+	}
+
+}
+
+
+##Communication
+country_event = {
+	id = uma_leviathan.20
+	title = uma_leviathan_Tamano_yl
+	desc = uma_leviathan.20.desc
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.20.a
+		is_dialog_only = yes
+		response_text = uma_leviathan.20.desc.a
+	}
+	option = {
+		name = uma_leviathan.20.b
+		is_dialog_only = yes
+		response_text = uma_leviathan.20.desc.b
+	}
+	option = {
+		name = uma_leviathan.20.c
+		is_dialog_only = yes
+		response_text = uma_leviathan.20.desc.c
+	}
+	option = {
+		name = uma_leviathan.20.d
+		is_dialog_only = yes
+		response_text = uma_leviathan.20.desc.d
+	}
+	option = {
+		name = uma_leviathan.20.e
+		is_dialog_only = yes
+		response_text = uma_leviathan.20.desc.e
+	}
+	option = {
+		name = uma_leviathan.20.f
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.21
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leviathan.21
+	title = uma_leviathan_Tamano_yl
+	desc = uma_leviathan.20.desc.f
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+#	immediate = {
+#		hidden_effect = {
+#			create_country = {
+#				name = "uma_is_cy_tama_country"            ###国家名称，很重要！！！
+#				type = uma_fallen_empire_communication_enclave        #指定country_type，不会的就不要动了
+#				flag = {
+#					icon = {
+#						category = "uiu_flags"
+#						file = "uiu_flags01.dds"
+#					}
+#					background = {
+#						category = "backgrounds"
+#						file = "00_solid.dds"
+#					}
+#					colors = {
+#						"green"
+#						"blue"
+#						"grey"
+#						"null"
+#					}
+#				}
+#				ignore_initial_colony_error = yes
+#				effect = {
+#					############################################################################
+#					#重要！！！！这个flag⭐国家标签⭐决定了你这个国家到底是谁，一定要改！
+#					set_country_flag = uma_is_cy_tama_country
+#					############################################################################
+#					set_graphical_culture = npf_01#默认的graphical_culture，不太需要动
+#					save_global_event_target_as = uma_is_cy_tama_country_target
+#				}
+#			}
+#		}
+#		hidden_effect = {
+#			set_variable = {
+#				which = uma_cydatabase_buff_count
+#				value = 0
+#			}
+#		}
+#	}
+
+	option = {
+		name = uma_leviathan.21.a
+		trigger = {
+			has_country_resource = {
+				type = food
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 1000
+			}
+		}
+		add_resource = {
+			food = -2000
+			energy = -2000
+			alloys = -1000
+		}
+		add_modifier = {
+			modifier = uma_cydatabase
+			years = 5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = uma_cydatabase_buff_count
+				value = 1
+			}
+			country_event = {
+				id = uma_leviathan.22
+				days = 2000
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.21.a.a
+		trigger = {
+			has_country_resource = {
+				type = food
+				amount < 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount < 2000
+			}
+			has_country_resource = {
+				type = alloys
+				amount < 1000
+			}
+		}
+		add_resource = {
+			food = -2000
+			energy = -2000
+			alloys = -1000
+		}
+		add_modifier = {
+			modifier = uma_cydatabase
+			years = 5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = uma_cydatabase_buff_count
+				value = 1
+			}
+			country_event = {
+				id = uma_leviathan.22
+				days = 2000
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.21.b
+		response_text = uma_leviathan.21.resp
+	}
+#	after = {
+#		custom_tooltip = uma_leviathan.21.tooltip
+#		establish_communications = event_target:uma_is_cy_tama_country_target
+#	}
+}
+
+
+country_event = {
+	id = uma_leviathan.22
+	title = uma_leviathan_Tamano_yl
+	desc = uma_leviathan.22.desc
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.21.a
+		trigger = {
+			has_country_resource = {
+				type = food
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount >= 2000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 1000
+			}
+		}
+		add_resource = {
+			food = -2000
+			energy = -2000
+			alloys = -1000
+		}
+		add_modifier = {
+			modifier = uma_cydatabase
+			years = 5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = uma_cydatabase_buff_count
+				value = 1
+			}
+			country_event = {
+				id = uma_leviathan.23
+				days = 2000
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.21.a.a
+		trigger = {
+			has_country_resource = {
+				type = food
+				amount < 2000
+			}
+			has_country_resource = {
+				type = energy
+				amount < 2000
+			}
+			has_country_resource = {
+				type = alloys
+				amount < 1000
+			}
+		}
+		add_resource = {
+			food = -2000
+			energy = -2000
+			alloys = -1000
+		}
+		add_modifier = {
+			modifier = uma_cydatabase
+			years = 5
+		}
+		hidden_effect = {
+			change_variable = {
+				which = uma_cydatabase_buff_count
+				value = 1
+			}
+			country_event = {
+				id = uma_leviathan.23
+				days = 1000
+			}
+		}
+	}
+	option = {
+		name = uma_leviathan.21.b
+		response_text = uma_leviathan.21.resp
+	}
+}
+
+country_event = {
+	id = uma_leviathan.23
+	title = uma_leviathan_Tamano_yl
+	desc = uma_leviathan.23.desc
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.23.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.24
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_leviathan.24
+	title = uma_leviathan_Tamano_yl
+	desc = uma_leviathan.24.desc
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.24.a
+#		response_text = uma_leviathan.24.a.resp
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.25
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_leviathan.25
+	title = TAMA
+	desc = uma_leviathan.25.desc
+	picture_event_data = {
+		room = traincenter_06_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.25.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.26
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = uma_leviathan.26
+	title = TAMA
+	desc = uma_leviathan.26.desc
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.26.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.27
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_leviathan.27
+	title = TAMA
+	desc = uma_leviathan.27.desc
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.27.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.28
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_leviathan.28
+	title = TAMA
+	desc = uma_leviathan.28.desc
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.28.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.29
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_leviathan.29
+	title = TAMA
+	desc = uma_leviathan.29.desc
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.29.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.30
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_leviathan.30
+	title = TAMA
+	desc = uma_leviathan.30.desc
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.30.a
+		hidden_effect = {
+			country_event = {
+				id = uma_leviathan.31
+			}
+		}
+	}
+}
+country_event = {
+	id = uma_leviathan.31
+	title = TAMA
+	desc = uma_leviathan.31.desc
+	picture_event_data = {
+		room = traincenter_05_room
+		portrait = 21c
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	option = {
+		name = uma_leviathan.31.a
+		hidden_effect = {
+			create_leader = {
+				name = TAMA
+				species = root
+				event_leader = no
+				gender = female
+				class = official
+				set_age = 18
+				skill = 1
+				immortal = yes
+				background_planet = event_target:uma_leviathan_planet_target
+				background_job = government_employee
+				custom_catch_phrase = uma_tama_catch_phrase
+				skip_background_generation = yes
+				traits = {
+					trait = uma_governor_trait_sp_cross
+					trait = uma_governor_trait_sp_cross_help_to_cy
+					trait = leader_trait_uma_generic
+					trait = subclass_shengchanyuejin_governor
+				}
+				effect = {
+					add_experience = 8000
+					set_leader_flag = uma_is_special_leader
+					set_leader_flag = uma_is_tama
+					save_global_event_target_as = uma_is_leader_tama
+					change_leader_portrait = 21c
+					set_leader_flag = renowned_leader
+				}
+			}
+			last_created_leader = {
+#				set_leader_flag = uma_is_special_leader
+#				set_leader_flag = uma_is_tama
+#				save_global_event_target_as = uma_is_leader_tama
+#				change_leader_portrait = 21c
+#				set_leader_flag = renowned_leader
+				uma_initialize_leader_yaruki_effect = yes
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_tama
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_tama
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

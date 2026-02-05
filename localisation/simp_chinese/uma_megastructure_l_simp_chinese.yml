@@ -1,0 +1,100 @@
+﻿l_simp_chinese:
+
+uma_school_planet_ring_world_1: "学院环世界基座"
+uma_school_planet_ring_world_1_DESC: "马娘们建造学院环世界的起点"
+uma_school_planet_ring_world_1_MEGASTRUCTURE_DETAILS: "马娘们建造学院环世界的起点"
+
+uma_school_planet_ring_world_2_intermediate: "学院环世界框架"
+uma_school_planet_ring_world_2_intermediate_DESC: "点连成线！学院环世界的框架"
+
+NAME_uma_Ring_Section_A: "环世界区段A"
+NAME_uma_Ring_Section_B: "环世界区段B"
+NAME_uma_Ring_Section_C: "环世界区段C"
+NAME_uma_Ring_Section_D: "环世界区段D"
+NAME_uma_Habitable_Section_A: "学院环世界区段A"
+NAME_uma_Habitable_Section_B: "学院环世界区段B"
+NAME_uma_Habitable_Section_C: "学院环世界区段C"
+NAME_uma_Habitable_Section_D: "学院环世界区段D"
+
+uma_ring_world_2: "学院环世界区段框架"
+uma_ring_world_2_DESC: "学院环世界区段的基座"
+
+uma_school_planet_ring_world_3_intermediate: "已完成的学院环世界区段"
+uma_school_planet_ring_world_3_intermediate_DESC: "这个学院环世界区段已经完成，并且拥有一套完整的居住系统以及生产系统"
+
+UMA_RING_WORLD_SHOW_NAME: "学院环世界"
+
+
+pc_uma_ringworld: "学院环世界"
+pc_uma_ringworld_desc: "这个巨型环状结构是环世界的一部分。 不像行星那样拥有诸多限制，内圈有大量人造宜居空间"
+pc_uma_ringworld_seam: "$pc_uma_ringworld$"
+pc_uma_ringworld_seam_desc: "$pc_uma_ringworld_desc$"
+
+
+pc_uma_ringworld_habitable: "$pc_uma_ringworld$"
+pc_uma_ringworld_habitable_desc: "$pc_uma_ringworld_desc$"
+
+district_uma_dormitory_ring: "$district_uma_dormitory$"
+district_uma_dormitory_ring_desc: "$district_uma_dormitory_desc$"
+district_uma_dormitory_ring_plural: "$district_uma_dormitory_plural$"
+mod_planet_district_uma_dormitory_ring_build_speed_mult: "$mod_planet_district_uma_dormitory_build_speed_mult$"
+district_uma_teaching_area_ring: "$district_uma_teaching_area$"
+district_uma_teaching_area_ring_desc: "$district_uma_teaching_area_desc$"
+district_uma_teaching_area_ring_plural: "$district_uma_teaching_area_plural$"
+mod_planet_district_uma_teaching_area_ring_build_speed_mult: "$mod_planet_district_uma_teaching_area_build_speed_mult$"
+district_uma_ring_logistics_area: "$district_uma_logistics_area$"
+district_uma_ring_logistics_area_desc: "$district_uma_logistics_area_desc$"
+district_uma_ring_logistics_area_plural: "$district_uma_logistics_area_plural$"
+mod_planet_district_uma_ring_logistics_area_build_speed_mult: "$mod_planet_district_uma_logistics_area_build_speed_mult$"
+
+district_uma_rw_urban_1: "待规划区域"
+district_uma_rw_urban_1_desc: "这是待规划区域，在被进一步规划之前这里将被用作居住区域"
+district_uma_rw_urban_1_plural: "待规划区域"
+
+district_uma_rw_urban_2: "待规划区域"
+district_uma_rw_urban_2_desc: "$district_uma_rw_urban_1_desc$"
+district_uma_rw_urban_2_plural: "待规划区域"
+
+district_uma_rw_urban_3: "待规划区域"
+district_uma_rw_urban_3_desc: "$district_uma_rw_urban_1_desc$"
+district_uma_rw_urban_3_plural: "待规划区域"
+
+
+district_uma_ring_industrial: "工业区域"
+district_uma_ring_industrial_desc: "$zone_uma_industrial_ring_world_desc$"
+district_uma_ring_industrial_plural: "工业区域"
+
+district_uma_ring_research: "研究区域"
+district_uma_ring_research_desc: "$zone_uma_research_ring_world_desc$"
+district_uma_ring_research_plural: "研究区域"
+
+district_uma_ring_administrative: "文娱与政府区域"
+district_uma_ring_administrative_desc: "$zone_uma_unity_ring_world_desc$"
+district_uma_ring_administrative_plural: "文娱与政府区域"
+city_district_uma_ring_administrative_1: "公共广场"
+
+district_uma_ring_fortress: "防御区域"
+district_uma_ring_fortress_desc: "$zone_uma_fortress_ring_world_desc$"
+district_uma_ring_fortress_plural: "防御区域"
+
+district_uma_ring_trade: "贸易区域"
+district_uma_ring_trade_desc: "$zone_uma_trade_ring_world_desc$"
+district_uma_ring_trade_plural: "贸易区域"
+
+district_uma_ring_food: "食品区域"
+district_uma_ring_food_desc: "$zone_uma_food_ring_world_desc$"
+district_uma_ring_food_plural: "食品区域"
+
+district_uma_ring_energy: "发电区域"
+district_uma_ring_energy_desc: "$zone_uma_energy_ring_world_desc$"
+district_uma_ring_energy_plural: "发电区域"
+
+district_uma_ring_training: "训练与教学区域"
+district_uma_ring_training_desc: "$zone_uma_training_ring_world_desc$"
+district_uma_ring_training_plural: "训练与教学区域"
+city_uma_training_1: "赛场城市"
+
+district_uma_ring_housing: "城市区域"
+district_uma_ring_housing_desc: "$zone_uma_housing_ring_world_desc$"
+district_uma_ring_housing_plural: "城市区域"
+city_uma_housing_1: "卫星城区"

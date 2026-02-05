@@ -1,0 +1,57 @@
+icon = GFX_district_specialization_uma_research
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+included_building_sets = {
+	research
+	uma_research
+	urban_automation
+	origin
+}
+
+triggered_district_planet_modifier = {
+	job_uma_researcher_add = 900
+}
+
+planet_modifier = {
+	planet_uma_researcher_produces_mult = 0.2
+	zone_building_slots_add = 3
+}
+
+ai_resource_production = {
+	physics_research = 5
+	society_research = 5
+	engineering_research = 5
+
+	trigger = {
+		has_any_research_zone = yes
+	}
+}
+
+ai_weight_coefficient = 1.1
+ai_priority = 10

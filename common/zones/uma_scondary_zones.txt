@@ -1,0 +1,392 @@
+
+# Ring Worlds
+
+zone_uma_industrial_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_industrial_zone
+	}
+
+	swap_type = district_uma_ring_industrial
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_research_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_research_zone
+	}
+
+	swap_type = district_uma_ring_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_unity_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_unity_and_entertainment
+	}
+
+	swap_type = district_uma_ring_administrative
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_fortress_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_fortress
+		AMOUNT = @doubled_scaling_district_1_job
+	}
+
+	swap_type = district_uma_ring_fortress
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_trade_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_trade_zone
+	}
+
+	swap_type = district_uma_ring_trade
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_food_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_food_zone
+	}
+
+	swap_type = district_uma_ring_food
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_energy_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_energy_zone
+	}
+
+	swap_type = district_uma_ring_energy
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_training_ring_world = {
+	inline_script = {
+		script = uma_zones/uma_rw_training_ring
+	}
+
+	swap_type = district_uma_ring_training
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_housing_ring_world = {
+	icon = GFX_district_specialization_uma_housing
+	base_buildtime = @zone_buildtime
+	potential = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	unlock = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_authority = auth_trainingcenter
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 300
+	}
+
+	max_buildings = 3
+
+	include = {
+		all
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+		generator_automation
+		mining_automation
+		farming_automation
+		urban_automation_arcology
+		urban_automation
+
+		uma_farming
+		uma_generator
+		uma_mining
+	}
+
+	swap_type = district_uma_ring_housing
+	swap_type_weight = 5
+
+	zone_sets = {
+		umaring_world
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 2
+	ai_weight_coefficient = 0.5
+}
+
+
+##UmaSchool World
+zone_uma_industrial_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_industrial_zone
+	}
+
+	swap_type = district_uma_usw_industrial
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_research_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_research_zone
+	}
+
+	swap_type = district_uma_usw_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_unity_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_unity_and_entertainment
+	}
+
+	swap_type = district_uma_usw_administrative
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_fortress_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_fortress
+		AMOUNT = 300
+	}
+
+	swap_type = district_uma_usw_fortress
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_trade_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_trade_zone
+	}
+
+	swap_type = district_uma_usw_trade
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_food_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_food_zone
+	}
+
+	swap_type = district_uma_usw_food
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_energy_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_energy_zone
+	}
+
+	swap_type = district_uma_usw_energy
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_training_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_training_zone
+	}
+
+	swap_type = district_uma_usw_training
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+
+zone_uma_mineral_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_mineral_zone
+	}
+
+	swap_type = district_uma_usw_mineral
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+zone_uma_strategy_school_world = {
+	inline_script = {
+		script = uma_zones/uma_usw_strategy_zone
+	}
+
+	swap_type = district_uma_usw_strategy
+	swap_type_weight = 5
+
+	zone_sets = {
+		uma_school_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}

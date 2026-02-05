@@ -1,0 +1,59 @@
+TG planet energy extractor 1/2:
+    Planet devastation add pre month -> per year
+    Planet devastation From 1 -> 0.4 (EC 1)
+    Planet devastation From 1.7 -> 0.6 (EC 2)
+
+TG Series buildings: Now can built in any zones
+
+MegaCorp buildings:
+    Remove building_uma_cos_suit_market (Umamusume cosplay suit stores)
+           building_uma_crime_underground_weapon_maker (Underground weapon factory)
+    Adjust Buildings cost and produces, include dynamic value.
+
+ThreeGodness research department: Removed "Technologies" button
+
+Ascension Peak: Factor-Realm fusion:
+                    Remove Modifiers:
+                                     army_attack_damage_mult
+		                             shipclass_military_damage_mult
+		            Adjust modifiers:
+		                             logistic_growth_mult From 0.01 -> 0.05
+                    Now can unlock ascension perk: Flesh is weak and Mind over matter
+
+Pop jobs: Umamusume, specialist, worker weight adjustment.
+          uma_satonomerchant: Produce trade 15 -> 10
+                              Upkeep custom_goods 2 -> 1
+          uma sweet master: triggered_produce: trade 2 -> 1
+          uma sweet manager: produce: trade 7 -> 2
+          uma live clothes crafter: produce: trade 4 -> 2
+          uma trader: produce: trade 10 ->16
+          athlete: produce: trade 6 -> 0.5
+
+Fix AstonMachan's leader trait issues
+Fix FineMotion's leader skills issues
+
+Disable vanilla trade policy when using Umamusume authority.
+
+Traditions: Agricultural inner cycle: Fix the bugs of the modifier.
+
+Ship Components:
+    Adjusted the power of twin turbo booster: 220 -> 0.6%
+    Realm Sticker: Add new mechanic: When entering the battle, it has 60% chance to make damage to random 60% of enemy's ship each 20 days.
+    Realm Realm Sticker Matrix: ship_accuracy_mult:-20(add) -> -0.4(Mult)
+                                ship_evasion_mult = -0.2 -> -0.7
+                                ship_speed_reduction = None -> 0.8
+
+                                Damage per day: min=1, max=3
+
+Trait: Habitability traits: Add corresponding trait to each habitability planet, and add new icons.
+
+End Crisis 1: Factor: fleet number hard 3 -> 4, normal 2 -> 3
+End Crisis 2: Realm: fleet number hard 3 -> 4, normal 2 -> 3
+
+Uma_shop: Add 100 shop coins when first time meeting
+          Adjust some description of items
+          Remove: Ruler's traits
+
+Add new Umamusumes portraits
+
+Localization Fix and Additions

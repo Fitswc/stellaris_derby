@@ -1,0 +1,67 @@
+icon = GFX_district_specialization_uma_mining
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+included_building_sets = {
+	mining
+	uma_mining
+	fallen_empire_mining
+	mining_automation
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		has_deposit = d_uma_crystal_carrot_mine_planet
+	}
+	job_uma_crystal_carrot_miner_add = 300
+}
+
+triggered_planet_modifier = {
+	planet_uma_core_miner_produces_mult = 0.2
+}
+
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+inline_script ={
+	script = jobs/uma_zone_mineral_jobs_add
+	AMOUNT = 900
+}
+
+ai_resource_production = {
+	alloys = 10
+	consumer_goods = 10
+
+	trigger = {
+		has_any_industrial_zone = yes
+	}
+}
+
+ai_weight_coefficient = 1.1
+ai_priority = 8

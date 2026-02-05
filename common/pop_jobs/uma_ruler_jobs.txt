@@ -1,0 +1,161 @@
+#里见商事经理
+
+uma_satonomerchant = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		entertainer_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	planet_modifier = {                             #贸易额+20 星球贸易额+10%
+#		planet_jobs_trade_produces_mult = 0.1
+	}
+
+	resources = {
+		category = planet_merchants
+		upkeep = {
+			consumer_goods = 1
+		}
+		produces = {
+			trade = 10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			
+		}
+		modifier = {
+			
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|uma_satonomerchant|RESOURCE|trade|
+
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+
+#马娘科学主管
+uma_head_researcher = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_uma_toresen_lab ##之后这里改成我们自己的建筑！
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		is_species_class = umamusume
+	}
+
+	resources = {
+		category = planet_uma_head_researcher #马娘科学家和科学主管都属于马娘研究者大类
+		produces = {
+			engineering_research = 30
+			physics_research = 30
+			society_research = 30
+		}
+		upkeep = {
+			consumer_goods = 10
+			unity = 10
+			uma_crystal_carrot = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_uma_researcher_produces_mult = 0.1
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:uma_job_weights_multiple_resources_modifier|JOB|uma_head_researcher|RESOURCE1|engineering_research|WEIGHT1|0.33|RESOURCE2|society_research|WEIGHT2|0.33|RESOURCE3|physics_research|WEIGHT3|0.33|
+
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = ruler
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}

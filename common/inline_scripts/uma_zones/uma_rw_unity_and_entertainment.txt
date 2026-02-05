@@ -1,0 +1,57 @@
+icon = GFX_district_specialization_uma_government
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_uma_country = yes
+			is_wilderness_empire = no
+		}
+	}
+}
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+included_building_sets = {
+	unity
+	uma_entertainment
+	government
+	urban
+	uma_urban
+	urban_automation
+	origin
+}
+
+triggered_district_planet_modifier = {
+	pop_bonus_workforce_mult = 0.01
+	planet_jobs_unity_produces_add = 0.2
+	job_uma_umaidol_add = 600
+}
+
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+ai_resource_production = {
+	unity = 15
+
+	trigger = {
+		has_any_unity_zone = yes
+	}
+}
+ai_priority = 10

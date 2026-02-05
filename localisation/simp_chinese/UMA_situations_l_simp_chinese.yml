@@ -1,0 +1,17 @@
+﻿#局势
+l_simp_chinese:
+string_expenditures_greater_than_income_uma_crystal_carrot:0 "$uma_crystal_carrot$赤字"
+string_not_in_deficit_uma_crystal_carrot:0 "$uma_crystal_carrot$月度结余为正"
+string_resource_reserves_uma_crystal_carrot:0 "$uma_crystal_carrot$储备"
+
+situation_uma_crystal_carrot_deficit:0 "$uma_crystal_carrot$短缺"
+situation_uma_crystal_carrot_deficit_type:0 "$situation_uma_crystal_carrot_deficit$"
+situation_uma_crystal_carrot_deficit_desc:0 "我们的$uma_crystal_carrot$赤字已经失控了！$situation_deficit_desc_base$"
+situation_uma_crystal_carrot_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
+deficit_approach_invest_in_uma_crystal_carrot_producers:0 "投资$uma_crystal_carrot$产出"
+
+uma_situation_deficit.100.name:0 "严峻$uma_crystal_carrot$赤字"
+uma_situation_deficit.100.desc:0 "我们的$uma_crystal_carrot$已经陷入严重短缺，作为一种重要的工业原料，这一事态对我们的基础设施建设和维护造成了严重影响，相关机构纷纷恳请§Y[Root.Owner.GetRulerTitle]§!§H[Root.Owner.GetRulerName]§!尽快采取有效措施控制事态，否则很快就会有大量建设项目被迫停摆"
+uma_situation_deficit.100.A:0 "拆除§B[looted_planet.GetName]§!上的一些基础设施，回收$uma_crystal_carrot$"
+uma_NO_PANIC:0 "不要慌，问题不大"
+uma_situation_deficit.101.desc:0 "§H[Root.Owner.GetName]§!已经无力应对$uma_crystal_carrot$短缺对基础设施建设带来的严重影响，我们被迫宣布破产并违约债务，新的紧缩经济计划正在起草以削减开支，以便我们逐步重建资源储备和受影响的建设项目"

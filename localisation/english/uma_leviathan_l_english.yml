@@ -1,0 +1,157 @@
+﻿l_english:
+  
+ uma_leviathan.3.title: "Star Eater power down"
+ uma_leviathan.3.desc: "Something strange has happened. The energy in the giant debris of the Star Eater is decreasing. We must find out the reason for the energy decrease before it disappears completely. The detector shows that the energy in the Star Eater is dissipating in a direction to a barren planet close to the star."
+ uma_leviathan.3.a: ""What the hell?"
+ uma_leviathan.4.title: "Research vessel missing"
+ uma_leviathan.4.desc: ""The signal of the research ship [This.GetName] disappeared from our communication channel the moment it landed on [event_target:uma_leviathan_planet.GetName]. Then, the orbital speed of [event_target:uma_leviathan_planet.GetName] suddenly dropped. \nJust a few hours later, the remains of the Star Eater completely disappeared. \nBut there are a lot of signs of ancient civilization activities in this galaxy, and [This.GetLeaderName] suggested that we conduct exploration."
+ uma_leviathan.4.a: "Our Relic..."
+  
+ #Stage2 
+ uma_leviathan.10.title: "Civilization within Leviathan"
+ uma_leviathan.10.desc: "At first, we thought it was just the remains of an ancient civilization, but now the situation is different. The civilization found in Leviathan is still functioning, they have powerful biological technology, and the scientist swallowed by Leviathan is still somewhere in its body. \nThe members of the student union are arguing about how to further communicate with this civilization. Some people think that this ancient empire with potentially powerful strength should not be disturbed; some people think that they should try to engage in diplomacy with it; others think that spies can be sent to infiltrate; and the scientific department proposes to first study the biological tissue of Leviathan."
+ uma_leviathan.10.a: "Don't bother them, §RThat might be danger§!"
+ uma_leviathan.10.b: "Send out spies"
+ uma_leviathan.10.d: "Study biological tissues first to gain intelligence"
+  
+ uma_leviathan.11.title: "Civilization in Leviathan II"
+ uma_leviathan.11.desc: "Our spy sent the first report, she said the species living in Leviathan is §YAnother Umamusume§!. At present, our spy is exchanging information with the other party internally. At this time, the missing research ship actually connected the communication! Scientist [event_target:uma_leviathan_fleet_locked.leader.GetName] is safe and sound, and she also claimed that the species living in Leviathan is another group of Umamusume, and she has been treated well."
+ uma_leviathan.11.desc.a: "The missing research ship actually connected to the communication! Scientist [event_target:uma_leviathan_fleet_locked.leader.GetName] was safe and sound. She also claimed that the species living in Leviathan was another group of Umamusume, and she was treated well."
+ uma_leviathan.11.a: "very good"
+ uma_leviathan.11.b: "Another batch of Umamusume? Send diplomats."
+ uma_leviathan.12.title: "Civilization in Leviathan II"
+ uma_leviathan.12.desc: ""Scientists found a weak reaction of Umamusume factors in the biological tissues of Leviathan, which shows that Umamusume are involved in the biotechnology of this civilization. \nAt the same time, the missing research ship actually connected to the communication! Scientist [event_target:uma_leviathan_fleet_locked.leader.GetName] is safe and sound, and she also claims that the species living in Leviathan is another group of Umamusume, and she has been treated well."
+ uma_leviathan.12.a: "It's our fellow Umamusume! Send out diplomats!"
+ uma_leviathan.13.title: "Restore communications?"
+ uma_leviathan.13.desc: "A message text appeared on Leviathan, which mentioned that due to Leviathan's information shielding, a quantum information channel needs to be opened to connect with the outside world, and the Ma Niang civilization inside is willing to establish contact with us. \nThe message text has the name of our diplomat and the method of establishing a quantum information channel attached."
+ uma_leviathan.13.a: "Why on earth would they hide like this?"
+  
+  
+ ##Communication 
+ uma_leviathan_Unknown: "???"
+ uma_leviathan_Tamano_yl: "Tamano Kirara"
+  
+  
+ uma_leviathan.20.desc: "Hello, juniors of [this.GetName]. I have learned your basic information through your diplomats. This is §gKinino Academy§! I am the dean Tamano Kirara."
+ uma_leviathan.20.desc.a: "During its heyday, our civilization established connections with other horse-girl civilizations outside the Milky Way. However, at a certain point in time, some of them suddenly fell silent. Observations show that some star systems where horse-girl civilizations were located disappeared entirely. Our ancestors were afraid of being affected, so they created this Leviathan and moved the entire Kinno into it."
+ uma_leviathan.20.desc.b: "The appearance of new Umamusume in the outside world means that the crisis should have passed, so we can contact the new Umamusume civilization."
+ uma_leviathan.20.desc.c: "We studied all the Leviathans we could find, and combined them with the horse girl's own gluttony factor to create "Kirisla", which can devour stellar energy to provide energy for us in its belly."
+ uma_leviathan.20.desc.d: "I am a direct descendant of the Tamano family for many generations. My ancestor is "Tamano Kuri", and it was she who led the research on Kuri."
+ uma_leviathan.20.desc.e: "After a long time, the reason why the ancestors had to hide in this Leviathan is no longer known, and they don't even allow any Umamusume to leave here. In the future, we will continue to live in Lizla, but we will allow Umamusume who want to leave to leave freely."
+ uma_leviathan.20.desc.f: "Most scientific research has become pure data, and many equipment also need resources to restart. If you are willing to help us, our scientific research data is available for you to browse at will. \nWe only need a little bit of £energy£ Energy 2000 and £food£ Food 2000 and £alloys£ Alloy 1000 \nHow about it, isn't it very affordable?"
+ uma_leviathan.20.a: "Why are you hiding in Leviathan?"
+ uma_leviathan.20.b: "Why did he contact the outside world again after hiding for so long?"
+ uma_leviathan.20.c: "How did this Leviathan come about?"
+ uma_leviathan.20.d: "About Yourself"
+ uma_leviathan.20.e: "What are your plans next?"
+ uma_leviathan.20.f: "How is your scientific research going?"
+  
+ uma_leviathan.21.a: "Of course, I'd love to"
+ uma_leviathan.21.a.a: "Although we are short of resources now, we will do our best."
+ uma_leviathan.21.b: "We don’t have enough resources…"
+ uma_leviathan.21.resp: "Oh well...."
+  
+ uma_leviathan.22.desc: "Our previous cooperation was very pleasant, but the five-year contract has expired. Are you willing to renew it?"
+  
+ uma_leviathan.23.desc: "Speaking of which, I mentioned before that the Umamusume who are willing to leave Lizla will be allowed to leave, but if they leave alone, it will be too dangerous and lonely in the universe, so..."
+ uma_leviathan.23.a: "Do you want them to come to our country? Welcome, welcome."
+ uma_leviathan.24.desc: "Sorry to trouble you. In addition, the governor who has been in contact with you for the past ten years also wants to leave Lisila. She is our treasure. It is not an exaggeration to say that she is the only one who maintains the resource system of the entire Kinino. However, since it has been agreed that she is allowed to leave, there is no reason not to let her go."
+ uma_leviathan.24.a: "Uh, what's her name?"
+ uma_leviathan.24.a.resp: "§BTamano Cross§!"
+  
+ uma_leviathan.25.desc: "Hello, I'm Tamano Cross! We're already familiar with each other, so I won't introduce myself. Please take care of me in the future!"
+ uma_leviathan.26.desc: "Hey, in order to maintain sufficient resources, we have to think of ways to squeeze a little more supplies out of the AI algorithm in the office every day, and the population must also be strictly controlled. The resources of this galaxy will run out sooner or later. Compared to Lisla, whose end is in sight, I must go out to save Kinino."
+ uma_leviathan.27.desc: "And wow, if the entire galaxy really disappears, hiding in Lisla is useless! It’s better to join a motivated civilization and solve the crisis together!"
+ uma_leviathan.28.desc: "What are you looking at! Don't look down on me just because I'm small!"
+ uma_leviathan.29.desc: "Don't you still think I'm small?!"
+ uma_leviathan.30.desc: "This is easy. I guarantee that you can save a lot of resources. Just allocate some of these saved resources to Jinye."
+ uma_leviathan.31.desc: "Just leave it to me, I am very confident in this area."
+  
+ uma_leviathan.25.a: "Um...is it really okay to just leave Lisila like this?"
+ uma_leviathan.26.a: "I see."
+ uma_leviathan.27.a: "(Looking at the Tamano Cross)"
+ uma_leviathan.28.a: "I just lament that the horse girl who is responsible for the allocation of all the resources in Jinye is such a small thing."
+ uma_leviathan.29.a: "Okay, okay, no more jokes. Can Jinye hold on after you leave Lisila?"
+ uma_leviathan.30.a: "Our resource system is much more complicated than Jinye's?"
+ uma_leviathan.31.a: "That’s great. I look forward to your performance."
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ ##Digsite 
+ uma_leviathan_digsite: "Disgraceful..."
+ uma_leviathan_digsite_desc: "The remains of the ancient civilization on the planet showed signs of chaos and suspected to have encountered a riot. It is necessary to send an archaeological team to conduct further investigation and collect relevant intelligence."
+ uma_leviathan.5.name: "Evacuate?"
+ uma_leviathan.5.desc: "The initial exploration did not find any useful clues. Whether it was databases, scientific research facilities or government departments, most of them only left some irrelevant information. This seems to indicate that the ancient civilization did not riot, but evacuated here in an orderly manner. \nWhat can prove this speculation is that most of the weapons research on this planet was not taken away. \nWhere are they going? If you don't infer from the limited information, you can't uncover the secrets here."
+ uma_leviathan.6.name: "Biological Laboratory"
+ uma_leviathan.6.desc: "After searching, the archaeological team found an abandoned biological laboratory. Similarly, most of the documents and materials here have been destroyed or taken away, but the remaining scattered contents are still very advanced for us. The sorted data was sent back to the terminal. \nThis discovery means that the biotechnology of this ancient civilization is extremely powerful, which is obviously a part that needs to be paid attention to in subsequent exploration."
+ uma_leviathan.6.a: "Biotechnology?"
+ uma_leviathan.7.name: "Leviathan..."
+ uma_leviathan.7.desc: "After analyzing limited data, scientists [this.GetLeaderName] believe that this planet is Leviathan created by ancient civilization. Subsequent exploration also shows that under the surface of the planet §Y确实是一个生命体§!. \nThis Leviathan may have some swallowed debris in its stomach, and its mechanism of swallowing star eaters is also worth studying. The problem is how to safely explore this planet Leviathan..."
+ uma_leviathan.7.a: "Let's think about it"
+ uma_leviathan.8.name: "A simple method...."
+ uma_leviathan.8.desc: "Our scientists used the simplest and crudest method: wrapping a large number of high-strength fiber ropes around an AI-equipped probe, connecting the other end to a special thruster, and then letting the Leviathan swallow it. \nThe research ship constantly monitors the rope strength. Once the rope begins to break, the probe is pulled up and then the rope is added. \nThe probe successfully brought back a large amount of biological tissue in the first few explorations, but did not find the missing wreckage of the research ship. Scientists can only extend the rope to allow the probe to reach a deeper position. \nThis requires a lot of time to adjust."
+ uma_leviathan.9.name: "Underground city...."
+ uma_leviathan.9.desc: "The detector finally made a new discovery. After entering Leviathan for dozens of kilometers, the detector detected a faint light. Following the direction of the light, the detector arrived at a huge "cave". Underneath was a complete, still functioning three-dimensional city. \nThe detector quickly retreated. Facing the next move, the entire archaeological team fell into disagreement. Obviously, this situation is not just about archaeology. Diplomats have come to this galaxy, and the student union is also discussing how to proceed."
+  
+  
+  
+  
+  
+  
+  
+ ##Special_Project 
+ UMA_LEVIATHAN_STRANGE_THING: "Further exploration of barren planets"
+ UMA_LEVIATHAN_STRANGE_THING_DESC: "Something strange has happened. The energy in the giant debris of the Star Eater is decreasing. We must find out the reason for the energy decrease before it disappears completely. The detector shows that the energy in the Star Eater is dissipating in a direction to a barren planet close to the star. \nWhy is this?"
+ UMA_LEVIATHAN_ESTABLISH_QUATUMN_COMMUNICATION_CHANNEL: "Building a quantum communication tunnel"
+ UMA_LEVIATHAN_ESTABLISH_QUATUMN_COMMUNICATION_CHANNEL_DESC: "A message text appeared on Leviathan, which mentioned that due to §YLeviathan's message blocking§!, a quantum information channel needs to be opened up to connect with the outside world, and the horse girl civilization inside is willing to establish contact with us. \nThe message text has the name of our diplomat and the method of establishing the quantum information channel attached."
+  
+ ##Planet 
+ UMA_LE_PLANET: "Kinino"
+  
+  
+ ##Ship/Fleet 
+ UMA_SHIP_FROM_LEVIATHAN: "The research ship returned from inside the Leviathan"
+  
+  
+ #Modifier 
+ uma_cydatabase: "Kinino Database"
+  
+  
+ ##country 
+ uma_is_cy_tama_country: "Kinino Academy"
+  
+ #Tooltip 
+ uma_leviathan.21.tooltip: "Now we can sign a research agreement with Kinino Academy"
+  
+ #trait 
+ uma_governor_trait_sp_cross: "White Lightning"
+ uma_governor_trait_sp_cross_help_to_cy: "Aid to Kinino"
+ uma_governor_trait_sp_cross_desc: ""
+ uma_governor_trait_sp_cross_help_to_cy_desc: ""

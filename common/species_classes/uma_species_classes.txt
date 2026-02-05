@@ -1,0 +1,50 @@
+umamusume = {
+#	randomized = no
+	#archetype = BIOLOGICAL
+	portrait_modding = no #whether the portrait can be modified with e.g. genemodding or robomodding
+	archetype = UMA
+	use_climate_preference = no
+	possible = { 
+		authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE }}
+		authority = { NOT = { value = auth_hive_mind text = UMA_SPECIES_CAN_NOT_BE_HIVE_MIND }}
+		authority = { NOT = { value = auth_corporate text = UMA_SPECIES_CAN_NOT_BE_CORPORATE }}
+		origin = { NOT = { value = origin_machine } }
+#		civics = { NOT = { value = civic_synthetic_evolution } }
+		authority = {
+			value = auth_trainingcenter
+		}
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			food = 0.96
+			consumer_goods = 0.3
+		}
+	}
+
+    graphical_culture = humanoid_01
+    move_pop_sound_effect = "moving_pop_confirmation"
+
+	trait = uma_trait_musume
+
+}
+
+
+PRE_UMA = {
+	archetype = PRESAPIENT
+	playable = { always = no }
+	randomized = no
+	use_climate_preference = no
+
+#	portraits = {
+#		"umamusume"
+#	}
+
+	graphical_culture = mammalian_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	uplifted_into = "umamusume"
+#	uplifted_portraits =
+#	{
+#		"umamusume"
+#	}
+}

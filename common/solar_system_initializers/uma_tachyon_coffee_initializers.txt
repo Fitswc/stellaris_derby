@@ -1,0 +1,96 @@
+@base_moon_distance = 10
+
+
+uma_tachyon_coffee_system_initializer = {
+	name = V_AG #"艾格尼丝" 
+	class = "sc_pulsar"
+
+	flags = { uma_tachyon_coffee_system }
+
+	planet = {
+        class = star
+        size = { min = 60 max = 70 }
+        orbit_distance = 0
+        orbit_angle = 1
+		flags = { tachyon_coffee_star uma_is_special_planet }
+		
+		init_effect = {
+			save_global_event_target_as = uma_tachyon_coffee_star
+		}
+    }
+
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 95
+	}
+
+	planet = {
+		class = pc_continental
+		orbit_distance = 60
+		orbit_angle = 80
+		name = V_LK #"莱卡" 徕卡镜头，照亮你的美(错乱)
+		size = 17 #26格的超大遗落星球（后面或许可以改成“学院星球”？）
+		modifiers = none
+
+		#anomaly = uma_grass_wonder_anomoly  #必定刷出“人去楼空”
+
+		flags = { tachyon_coffee_planet uma_is_special_planet } #这样的话以后可以用这个flag改进为学院星球
+
+		init_effect = {
+			save_global_event_target_as = uma_tachyon_coffee_planet
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+		moon = {
+			class = pc_starbase
+			name = V_SPA #"未知空间站"
+			orbit_distance = 10
+			orbit_angle = 80
+			size = 17
+			modifiers = none
+
+			flags = { tachyon_coffee_starbase }
+
+			init_effect = {
+				prevent_anomaly = yes
+				save_global_event_target_as = uma_tachyon_coffee_starbase
+			}
+		}
+	}
+
+	asteroid_belt = {
+		type = debris_asteroid_belt
+		radius = {
+			min = 90
+			max = 110
+		}
+	}
+
+	planet = {
+		name = V_SS #宁静
+		class = pc_gas_giant
+		has_ring = yes
+		orbit_distance = { min = 100 max = 150 }
+		orbit_angle = 60
+		size = 45
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+
+
+	}
+
+	planet = {
+		name = V_SUN #加勒比
+		class = pc_barren_cold
+		has_ring = no
+		orbit_distance = {min = 70 max = 100}
+		orbit_angle = {min = 20 max = 100}
+		size = 20
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+	}
+}

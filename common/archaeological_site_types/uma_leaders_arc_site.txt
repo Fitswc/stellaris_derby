@@ -1,0 +1,708 @@
+##Leader Archaeological site Set
+#
+#
+uma_tachyon_coffee_relic = {
+	desc = uma_tachyon_coffee_relic_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 4
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马ayb
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = tachyon_coffee.2041
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = tachyon_coffee.2042
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = tachyon_coffee.2043
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = tachyon_coffee.2044
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+uma_tachyon_coffee_pre_civils_relic = {
+	desc = uma_tachyon_coffee_pre_civils_relic_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = tachyon_coffee.2071
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = tachyon_coffee.2072
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = tachyon_coffee.2073
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = tachyon_coffee.2074
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = tachyon_coffee.2075
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+
+
+uma_silent_suzuka_relic = {
+	desc = uma_ayb_arc_relic_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 4
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 1
+		event = uma_ayb_arc.2071
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_ayb_arc.2072
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = uma_ayb_arc.2073
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 4
+		event = uma_ayb_arc.2074
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# 帝宝考古
+uma_tokaiteio_digsite = {
+	desc = uma_tokaiteio_digsite_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 7
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = uma_tokaiteio_event.1001
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_tokaiteio_event.1002
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = uma_tokaiteio_event.1003
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = uma_tokaiteio_event.1004
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = 5
+		event = uma_tokaiteio_event.1005
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A6
+		event = uma_tokaiteio_event.1006
+	}
+	stage = {
+		difficulty = 5
+		event = uma_tokaiteio_event.1007
+		icon = GFX_archaeology_runes_A6 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+#Tama
+uma_leviathan_digsite = {
+	desc = uma_leviathan_digsite_desc
+	picture = GFX_evt_uma_trees_with_stone #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = uma_leviathan.5
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_leviathan.6
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = uma_leviathan.7
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 4
+		event = uma_leviathan.8
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = 4
+		event = uma_leviathan.9
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+#Fine
+uma_fine_digsite = {
+	desc = fine_digsite_desc
+	picture = GFX_evt_uma_trees_with_stone #占位符
+	stages = 6
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = uma_finemotion.1001
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_finemotion.1002
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 3
+		event = uma_finemotion.1003
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 4
+		event = uma_finemotion.1004
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = 4
+		event = uma_finemotion.1005
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_finemotion.1006
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+##Sweepy
+uma_sweepy_arc_heat_building = {
+	desc = uma_sweepy_arc_heat_building_desc
+	picture = GFX_evt_uma_zf_rubbish #占位符
+	stages = 3
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.10
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.11
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.12
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+
+	on_create = {
+		set_archaeology_flag = uma_sweepy_arc_heat_building_flag
+	}
+
+	on_roll_failed = {
+		from = { uma_archaeological_site_on_roll_failed = yes }
+	}
+}
+
+
+uma_sweepy_arc_ice_from_sky = {
+	desc = uma_sweepy_arc_ice_from_sky_desc
+	picture = GFX_evt_uma_sweepy_village #占位符
+	stages = 4
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.13
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.14
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.15
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.16
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+
+	on_create = {
+		set_archaeology_flag = uma_sweepy_arc_ice_building_flag
+	}
+
+	on_roll_failed = {
+		from = { uma_archaeological_site_on_roll_failed = yes }
+	}
+}
+
+uma_sweepy_arc_carrot = {
+	desc = uma_sweepy_arc_carrot_desc
+	picture = GFX_evt_uma_sweepy_village #占位符
+	stages = 2
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.17
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = 2
+		event = uma_sweepy.18
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+
+	on_create = {
+		set_archaeology_flag = uma_sweepy_arc_carrot_building_flag
+	}
+
+
+	on_roll_failed = {
+		from = { uma_archaeological_site_on_roll_failed = yes }
+	}
+}
+
+#About K
+uma_bourbon_arc = {
+	desc = uma_bour_arc_desc
+	picture = GFX_evt_uma_trees_with_stone #占位符
+	stages = 6
+	max_instances = 1
+	weight = 0 #需要Trigger事件创建敌对舰船并生成坟
+	on_create = {
+		save_global_event_target_as = uma_bourbon_arc_site_here
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_bour_arc.6
+		icon = GFX_icon_archaeology #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_bour_arc.7
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_bour_arc.8
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_bour_arc.9
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_bour_arc.10
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_bour_arc.11
+		icon = GFX_archaeology_runes_A6
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+
+}
+
+uma_bourbon_arc_second = {
+	desc = uma_bour_arc_second_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 8
+	max_instances = 1
+	weight = 0 #需要Trigger事件创建敌对舰船并生成坟
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.20
+		icon = GFX_icon_archaeology #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.21
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.22
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.23
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.24
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.25
+		icon = GFX_archaeology_runes_A6
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.26
+		icon = GFX_archaeology_runes_A1
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_bour_arc.27
+		icon = GFX_archaeology_runes_A2
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+
+}
+
+uma_curren_arc = {
+	desc = uma_curren_arc_desc
+	picture = GFX_evt_hidden_door #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0 #需要Trigger事件创建敌对舰船并生成坟
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_curren.20
+		icon = GFX_icon_archaeology #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.21
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.22
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.23
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_curren.24
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+
+}
+
+
+uma_duramente_relic = {
+	desc = uma_duramente_relic_desc
+	picture = GFX_evt_uma_suzuka_arc_star #占位符
+	stages = 5
+	max_instances = 1
+	weight = 0
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		owner = {
+			is_ai = no #AI勿刨我马娘坟
+		}
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	stage = {
+		difficulty = {
+			max = 2
+			min = 3
+		}
+		event = uma_duramente.4
+		icon = GFX_archaeology_runes_A1 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 3
+			min = 2
+		}
+		event = uma_duramente.5
+		icon = GFX_archaeology_runes_A2 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 4
+			min = 3
+		}
+		event = uma_duramente.6
+		icon = GFX_archaeology_runes_A3 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 5
+			min = 4
+		}
+		event = uma_duramente.7
+		icon = GFX_archaeology_runes_A4 #占位符
+	}
+	stage = {
+		difficulty = {
+			max = 5
+			min = 4
+		}
+		event = uma_duramente.8
+		icon = GFX_archaeology_runes_A5 #占位符
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

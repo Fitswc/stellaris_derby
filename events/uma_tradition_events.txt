@@ -1,0 +1,205 @@
+namespace = uma_tradition
+
+
+country_event = {
+	id = uma_tradition.1
+	hide_window = yes
+#	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 10
+	}
+	trigger = {
+		#has_traditions = uma_farm_self_cycle_final
+		has_country_flag = uma_finish_tradition_self_cycle
+	
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				pop_amount >= 1000
+			}
+			if = {
+				limit = {
+					OR = {
+						num_assigned_jobs = {
+							job = farmer
+							value <= 1500
+						}
+						num_assigned_jobs = {
+							job = uma_carrot_farmer
+							value <= 1500
+						}
+						num_assigned_jobs = {
+							job = uma_bee_farmer
+							value <= 1500
+						}
+					}
+					NOT = {
+						has_modifier = uma_tradition_FINAL
+					}
+				}
+				add_modifier = {
+					modifier = uma_tradition_FINAL
+					mult = value:uma_uma_tradition_FINAL_SV
+					clear_on_owner_change = yes
+				}
+			
+			}
+			else_if = {
+				limit = {
+					has_modifier = uma_tradition_FINAL
+					OR = {
+						num_assigned_jobs = {
+							job = farmer
+							value > 1500
+						}
+						num_assigned_jobs = {
+							job = uma_carrot_farmer
+							value > 1500
+						}
+						num_assigned_jobs = {
+							job = uma_bee_farmer
+							value > 1500
+						}
+					}
+				}
+				remove_modifier = uma_tradition_FINAL
+			}
+		}
+	}
+}
+
+
+##改用agenda
+
+#country_event = {
+#	id = uma_tradition.2
+#	title = uma_trad_pal_event.title
+#	desc = uma_trad_pal_event.desc
+#	picture = GFX_evt_uma_palace
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		NOT = {
+#			has_country_flag = uma_giveup_choice
+#		}
+#	}
+#	#赛事
+#	option = {
+#		name = uma_trad_pal_event.a
+#		hidden_effect = {
+#			every_owned_planet = {
+#				limit = {
+#					is_under_colonization = yes
+#				}
+#				set_timed_planet_flag = {
+#					flag = uma_race_upkeep_less
+#					days = 1800
+#				}
+#			}
+#			set_timed_country_flag = {
+#				flag = uma_race_upkeep_less
+#				days = 1800
+#			}
+#		}
+#
+#	}
+#	#劳动
+#	option = {
+#		name = uma_trad_pal_event.b
+#		add_modifier = {
+#			modifier = uma_labor
+#			days = 3650
+#		}
+#	}
+#	#道德
+#	option = {
+#		name = uma_trad_pal_event.c
+#		add_modifier = {
+#			modifier = uma_moral
+#			days = 3650
+#		}
+#	}
+#	#Art
+#	option = {
+#		name = uma_trad_pal_event.d
+#		add_modifier = {
+#			modifier = uma_art
+#			days = 3650
+#		}
+#	}
+#	#Technology
+#	option = {
+#		name = uma_trad_pal_event.e
+#		add_modifier = {
+#			modifier = uma_tech
+#			days = 3650
+#		}
+#	}
+#	#Education
+#	option = {
+#		name = uma_trad_pal_event.f
+#		add_modifier = {
+#			modifier = uma_edu
+#			days = 3650
+#		}
+#	}
+#	#放弃
+#	option = {
+#		name = uma_trad_pal_event.g
+#		hidden_effect = {
+#			set_country_flag = uma_giveup_choice
+#		}
+#	}
+#
+#	after = {
+#		country_event = {
+#			id = uma_tradition.2
+#			days = 3850
+#			random = 40
+#		}
+#	}
+#}
+
+#<20k
+country_event = {
+	id = uma_tradition.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_finish_tradition_fs
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = uma_center_food_store_modifier
+				}
+				has_country_resource = {
+					type = food
+					amount >= 20000
+				}
+			}
+			add_modifier = {
+				modifier = uma_center_food_store_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = uma_center_food_store_modifier
+				has_country_resource = {
+					type = food
+					amount < 20000
+				}
+			}
+			remove_modifier = uma_center_food_store_modifier
+		}
+		else = {
+			#Do nothings
+		}
+		
+	}
+	
+}

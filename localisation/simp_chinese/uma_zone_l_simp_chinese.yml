@@ -1,0 +1,84 @@
+﻿l_simp_chinese:
+
+zone_uma_training: "赛马娘训练与竞赛"
+zone_uma_training_desc: "毕竟马马们也需要一个专门的地方跑步呢"
+mod_planet_zone_uma_training_build_speed_mult: "赛马娘训练与竞赛特化建造速度"
+
+zone_uma_teaching: "马娘高级研究"
+zone_uma_teaching_desc: "学而时习之"
+mod_planet_zone_uma_teaching_build_speed_mult: "赛马娘高级研究特化建造速度"
+
+zone_uma_industry: "马娘特色工业"
+zone_uma_industry_desc: "这里承载着庞大的工业体系"
+
+zone_uma_basic_food: "马娘特色食物生产"
+zone_uma_basic_food_desc: "为什么一半以上都是胡萝卜？"
+
+zone_uma_basic_mineral: "马娘矿业"
+zone_uma_basic_mineral_desc: "矿业狂潮"
+
+zone_uma_energy_venus: "卓芙电网"
+zone_uma_energy_venus_desc: "卓芙来啦！全部发电工人都不允许在这个区域工作！全——部，靠爱发电！"
+
+##ring world
+zone_uma_industrial_ring_world: "工业区段"
+zone_uma_industrial_ring_world_desc: "数以万计的工厂正在这个区段马力全开，生产着上至战争机器下至生活用品的工业产品。"
+
+zone_uma_research_ring_world: "研究区段"
+zone_uma_research_ring_world_desc: "这里聚集了所有马娘的智慧结晶，许多研究成果将在这里产生。"
+
+zone_uma_unity_ring_world: "文娱与政府区段"
+zone_uma_unity_ring_world_desc: "这里不仅可以召开盛大的演唱会，也可以变为官僚和权力机构的主场。"
+
+zone_uma_fortress_ring_world: "防御区段"
+zone_uma_fortress_ring_world_desc: "这里充满着星球防御设施。"
+
+zone_uma_trade_ring_world: "贸易区段"
+zone_uma_trade_ring_world_desc: "这里充斥着商业建筑，各种商战手段和心机在这里的得到了集中体现。"
+
+zone_uma_food_ring_world: "食品区段"
+zone_uma_food_ring_world_desc: "无尽的原野铺满了这一个区段，为整个环带提供源源不断地食物产出。值得一提的是，整个区段本身就是个巨大的温室。"
+
+zone_uma_energy_ring_world: "发电区段"
+zone_uma_energy_ring_world_desc: "各种发电设施占据了这个区段，这里将成为整个环带的能量中枢。"
+
+zone_uma_training_ring_world: "训练与教学区域"
+zone_uma_training_ring_world_desc: "这个区段耸立着众多学校和训练场所，简直是学生们的福地。"
+
+zone_uma_housing_ring_world: "卫星城区段"
+zone_uma_housing_ring_world_desc: "这个周边城市可以有效拓展这个环带的城市功能，甚至可以起到分担城市职能的作用。"
+
+#School world
+zone_uma_industrial_school_world: "工业特化"
+zone_uma_industrial_school_world_desc: "数以万计的工厂正在这个区域马力全开，生产着上至战争机器下至生活用品的工业产品。"
+zone_uma_industrial_triggered_desc: "§Y本特化会根据已有的['trait:uma_trait_musume']工业类别建筑给予§!§G800§!§Y对应的岗位§!,如果没有，则给予§G500§!工匠和冶金工\n\n已有的['trait:uma_trait_musume']工业类别建筑有:\n-['building:building_uma_crystal_carrot_producing_lab']\n-['building:building_uma_crystal_alloy_workhouse']\n-['building:building_uma_crystal_consumer_goods_workhouse']\n-['building:building_uma_chemical_plant']\n-['building:building_uma_crystal_plant']\n-['building:building_uma_gas_plant']\n-['building:building_uma_dark_matter_plant']\n以及它们的升级建筑"
+
+zone_uma_research_school_world: "研究特化"
+zone_uma_research_school_world_desc: "这里聚集了所有马娘的智慧结晶，许多研究成果将在这里产生。"
+
+zone_uma_unity_school_world: "文娱与政府特化"
+zone_uma_unity_school_world_desc: "这里不仅可以召开盛大的演唱会，也可以变为官僚和权力机构的主场。"
+
+zone_uma_fortress_school_world: "防御特化"
+zone_uma_fortress_school_world_desc: "这里充满着星球防御设施。"
+
+zone_uma_trade_school_world: "贸易特化"
+zone_uma_trade_school_world_desc: "这里充斥着商业建筑，各种商战手段和心机在这里的得到了集中体现。"
+
+zone_uma_food_school_world: "食品特化"
+zone_uma_food_school_world_desc: "无尽的原野铺满了这一个区域，为整个环带提供源源不断地食物产出。"
+
+zone_uma_energy_school_world: "发电特化"
+zone_uma_energy_school_world_desc: "各种发电设施占据了这个区域，这里将成为整个星球的能量中枢。"
+
+zone_uma_training_school_world: "训练与教学特化"
+zone_uma_training_school_world_desc: "这个区域耸立着众多学校和训练场所，简直是学生们的福地。"
+
+zone_uma_housing_school_world: "卫星城特化"
+zone_uma_housing_school_world_desc: "这个周边城市可以有效拓展这个地区的城市功能，甚至可以起到分担城市职能的作用。"
+
+zone_uma_mineral_school_world: "矿物特化"
+zone_uma_mineral_school_world_desc: "这个区域存在了大量的采矿设施，为下游的生产提供了源源不断地原料来源。"
+
+zone_uma_strategy_school_world: "稀有资源支持"
+zone_uma_strategy_school_world_desc: "这个特化区域主要用于分散稀有资源的生产需求。"

@@ -1,0 +1,158 @@
+namespace = uma_mmu
+
+
+
+country_event = {
+	id = uma_mmu.1
+	is_triggered_only = yes
+	diplomatic = yes
+ 	custom_gui = uma_modmenu_main_windows
+
+	trigger = {
+		has_authority = auth_trainingcenter
+		NOT = {
+			has_country_flag = uma_mmu_has_opened
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_mmu_has_opened
+		#初始化游戏设置
+		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
+		set_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+		set_global_flag = uma_global_game_setting_gamesystem_gdi_full
+		set_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+		if = {
+			limit = {
+				has_authority = auth_trainingcenter
+			}
+			set_global_flag = uma_global_game_setting_gamesystem_season_enable
+		}
+	}
+
+	option = {
+		name = "uma_specimen_null"
+		custom_gui = "uma_hiding_button"
+		default_hide_option = yes
+#		remove_country_flag = uma_mmu_has_opened
+	}
+
+	after = {
+		country_event = {
+			id = uma_season.0
+		}
+	}
+}
+
+country_event = {
+	id = uma_mmu.2
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = uma_modmenu_main_windows
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_mmu_opening
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_mmu_opening
+	}
+
+	option = {
+		name = "uma_specimen_null" ##TODO:000
+		custom_gui = "uma_hiding_button"
+		default_hide_option = yes
+	}
+
+	after = {
+		remove_country_flag = uma_mmu_opening
+	}
+}
+
+
+
+#######TGRD
+
+country_event = {
+	id = uma_mmu.3
+	is_triggered_only = yes
+	diplomatic = yes
+ 	custom_gui = uma_tgrd_main_windows
+
+	trigger = {
+	}
+
+	immediate = {
+		set_variable = {
+			which = uma_tgrd_cat_show
+			value = 0
+		}
+	}
+
+	option = {
+		name = "uma_specimen_null" ##TODO:000
+		custom_gui = "uma_hiding_button"
+		default_hide_option = yes
+#		remove_country_flag = uma_mmu_has_opened
+	}
+}
+
+
+
+###Debug
+country_event = {
+	id = uma_mmu.4
+	is_triggered_only = yes
+	title = TITLE
+	desc = DESC
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = "Trigger Endcrisis 1"
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = uma_ec_1.11
+				days = 20
+			}
+		}
+	}
+	option = {
+		name = "Trigger Endcrisis 2"
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = uma_ec_2.9999
+				days = 20
+			}
+		}
+	}
+	option = {
+		name = "Trigger Endcrisis 3"
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = uma_ec_3.1
+				days = 20
+			}
+			every_playable_country = {
+				country_event = {
+					id = uma_ec_3.20
+				}
+			}
+		}
+	}
+}

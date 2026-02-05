@@ -1,0 +1,284 @@
+﻿l_simp_chinese:
+mod_planet_pops_food_upkeep_mult:0 "$planet_pops_organics_food_upkeep_mult$"
+mod_UMA_pop_growth_speed:0 "马娘人口增长速度"
+mod_UMA_species_trait_points_add:0 "马娘物种修饰点数§G$VALUE$§!"
+mod_UMAMUSUME_species_trait_points_add:0 "马娘物种修饰点数§G$VALUE$§!"
+mod_UMA_pop_happiness_desc: "马娘人口的幸福度变化会受此数值影响"
+mod_UMA_pop_happiness: "马娘人口幸福度"
+mod_UMA_species_trait_picks_add: "马娘物种特质选择"
+
+###岗位产出修正
+mod_planet_jobs_uma_threegodness_knowledge_produces_mult:0 "£job_uma_threegodness_knowledge_scholar£ 三女神知识研究者岗位产出§G$VALUE$§!"
+mod_planet_uma_head_researcher_produces_mult:0 "£job_uma_head_researcher£ 马娘科研研究主管岗位产出§G$VALUE$§!"
+mod_planet_uma_racing_umamusume_produces_mult:0 "£job_uma_racing_umamusume£ 赛马娘岗位产出§G$VALUE$§!"
+mod_planet_uma_researcher_produces_mult:0 "£job_uma_researcher£马娘科学家岗位产出§G$VALUE$§!"
+
+mod_planet_uma_racing_umamusume_energy_produces_add:0 "£job_uma_racing_umamusume£ 赛马娘岗位产出£energy£ §Y能量币§!§G$VALUE$§!"
+mod_planet_uma_racing_umamusume_unity_produces_mult:0 "£job_uma_racing_umamusume£ 赛马娘岗位产出£unity£ §Y凝聚力§!§G$VALUE$§!"
+mod_planet_uma_racing_umamusume_physics_research_produces_add:0 "£job_uma_racing_umamusume£ 赛马娘岗位产出£physics£ §Y物理学研究§!§G$VALUE$§!"
+mod_planet_uma_racing_umamusume_engineering_research_produces_add:0 "£job_uma_racing_umamusume£ 赛马娘岗位产出£engineering£ §Y工程学研究§!§G$VALUE$§!"
+mod_planet_uma_racing_umamusume_society_research_produces_add:0 "£job_uma_racing_umamusume£ 赛马娘岗位产出£society£ §Y社会学研究§!§G$VALUE$§!"
+
+mod_planet_uma_researcher_physics_research_produces_add:0 "£job_uma_researcher£ 马娘研究者岗位产出£physics£ §Y物理学研究§!§G$VALUE$§!"
+mod_planet_uma_researcher_engineering_research_produces_add:0 "£job_uma_researcher£ 马娘研究者岗位产出£engineering£ §Y工程学研究§!§G$VALUE$§!"
+mod_planet_uma_researcher_society_research_produces_add:0 "£job_uma_researcher£ 马娘研究者岗位产出£society£ §Y社会学研究§!§G$VALUE$§!"
+
+mod_planet_uma_trainer_produces_mult:0 "£job_uma_trainer£ 训练员岗位产出§G$VALUE$§!"
+mod_planet_uma_trainer_physics_research_produces_add:0 "£job_uma_trainer£ 训练员岗位产出£physics£ §Y物理学研究§!§G$VALUE$§!"
+mod_planet_uma_trainer_engineering_research_produces_add:0 "£job_uma_trainer£ 训练员岗位产出£engineering£ §Y工程学研究§!§G$VALUE$§!"
+mod_planet_uma_trainer_society_research_produces_add:0 "£job_uma_trainer£ 训练员岗位产出£society£ §Y社会学研究§!§G$VALUE$§!"
+
+
+###第二版
+mod_planet_uma_sweet_master_produces_mult:0 "£job_uma_sweet_master£ $job_uma_sweet_master$ 岗位产出§G$VALUE$§!"
+mod_planet_uma_horseshoe_crafter_produces_mult:0 "£job_uma_horseshoe_crafter£ $job_uma_horseshoe_crafter$ 岗位产出§G$VALUE$§!"
+mod_planet_uma_live_clothes_crafter_produces_mult:0 "£job_uma_live_clothes_crafter£ $job_uma_live_clothes_crafter$ 岗位产出§G$VALUE$§!"
+mod_planet_uma_carrot_farmer_produces_mult:0 "£job_uma_carrot_farmer£ $job_uma_carrot_farmer$ 岗位产出§G$VALUE$§!"
+
+###第三版
+mod_planet_uma_core_miner_produces_mult:0 "£job_uma_core_miner£ $job_uma_core_miner$ 岗位产出§G$VALUE$§!"
+
+###岗位维护修正
+mod_planet_uma_racing_umamusume_upkeep_mult:0 "£job_uma_racing_umamusume£ 赛马娘岗位维护费§G$VALUE$§!"
+
+###岗位数目增加修正
+mod_job_uma_racing_umamusume_add:0 "£job_uma_racing_umamusume£ 赛马娘岗位§G$VALUE$§!"
+mod_job_uma_trainer:0 "£job_uma_trainer£ 训练员岗位§G$VALUE$§!"
+mod_job_uma_crystal_carrot_engineer_add:0 "£job_uma_crystal_carrot_engineer£ 水晶萝卜工程师岗位§G$VALUE$§!"
+mod_job_uma_researcher_add:0 "£job_uma_researcher£ 马娘科学家岗位§G$VALUE$§!"
+mod_job_uma_head_researcher_add:0 "£job_uma_head_researcher£ 马娘科学主管岗位§G$VALUE$§!"
+
+###9.2 tom新增
+mod_planet_jobs_worker_uma_crystal_carrot_produces_mult:0 "£job£岗位产出£uma_crystal_carrot£水晶萝卜§G$VALUE$§!"
+mod_planet_jobs_worker_energy_produces_mult:0 "£job£岗位产出£energy£能量币§G$VALUE$§!"
+mod_planet_uma_research_related_produces_mult:0 "£uma_researcher£马娘科学家和£uma_head_researcher£科学主管岗位产出§G$VALUE$§!"
+###关于比赛buff的修正
+
+#星球的修正
+uma_has_held_the_planet_race:0 "已举办星球德比"
+uma_planet_derby_held:0 "星球德比举办地"
+uma_planet_derby_held_desc:0 "这颗星球上正举办星球级别的盛大赛事"
+uma_nation_derby_held_here:0 "闪光系列赛举办地"
+uma_nation_derby_held_here_desc:0 "这颗星球被选为举办国家级赛事——闪光系列赛的地点，这使得这颗星球变得无比热闹。"
+uma_planet_hero_racing_umamusume:0 "强大的赛马娘"
+uma_planet_hero_racing_umamusume_desc:0 "在这颗星球上诞生的一位的强大的赛马娘正激励着上面的所有人。"
+
+
+#国家的修正
+uma_has_held_national_derby:0 "已举办闪光系列比赛"
+uma_national_derby_held:0 "闪光系列赛举办"
+uma_national_derby_held_desc:0 "我们国家正举办闪光系列赛，这让我们的国家进入了一段非常热闹的时期。"
+uma_planet_hero_in_country:0 "星球比赛制霸者"
+uma_planet_hero_in_country_desc:0 "一位制霸了星球比赛的马娘，正在国家比赛中大放异彩。"
+uma_double_crown_racing_umamusume:0 "两冠赛马娘"
+uma_double_crown_racing_umamusume_desc:0 "一位两冠马娘为国家带来了一股比赛热潮。"
+uma_triple_crown_racing_umamusume:0 "三冠赛马娘"
+uma_triple_crown_racing_umamusume_desc:0 "三冠马娘的诞生，大大激励了整个国家的民众们。"
+uma_no_fail_triple_crown_racing_umamusume:0 "无败三冠赛马娘"
+uma_no_fail_triple_crown_racing_umamusume_desc:0 "传说的无败三冠赛马娘正在国家内引领空前的比赛和生产热潮。"
+uma_six_crown_racing_umamusume:0 "古马王道完全制霸赛马娘"
+uma_six_crown_racing_umamusume_desc:0 "一位制霸了古马赛季的传奇赛马娘正在赛场上奔驰，她的故事将会一直鼓励我们。"
+uma_gacha_cool_down:0 "商城抽奖冷却"
+
+
+#######科技带来的buff修正
+uma_prosperity_colony_1:0 "繁荣发展的殖民地"
+uma_prosperity_colony_1_desc:0 "由于良好的治理，这个殖民地正经历一段高速发展的时期。"
+uma_prosperity_colony_2:0 "繁荣发展的殖民地"
+uma_prosperity_colony_2_desc:0 "由于良好的治理，这个殖民地正经历一段高速发展的时期。"
+
+
+
+###小事件buff
+
+#星球修正
+uma_nation_suppoted_gambling:0 "不受控制的名次竞猜"
+uma_nation_suppoted_gambling_desc:0 "这个星球上，非法的赛马名次竞猜行为正不受控制地野蛮生长，严重干扰了这颗星球的比赛和经济秩序。"
+uma_nation_ban_gambling:0 "被禁止的名次竞猜"
+uma_nation_ban_gambling_desc:0 "虽然官方已经禁止了这颗星球上的名次竞猜互动，但仍然有一些地下竞猜场所正悄悄运营。"
+uma_national_guessing_game:0 "国立竞猜机构"
+uma_national_guessing_game_desc:0 "这颗星球上的名次竞猜活动已经被国立的竞猜机构进行统一管理。"
+
+#国家修正
+uma_enough_sweets:0 "加大甜品供应"
+uma_enough_sweets_desc:0 "为了解决马娘节食的问题，我们已经研发了新的甜品并将其投入到市场。"
+uma_encourage_reducing_food_consumption:0 "鼓励节食"
+uma_encourage_reducing_food_consumption_desc:0 "我们正在鼓励马娘们节食，这大大减少了她们的物资消耗，但也使得她们变得瘦弱"
+uma_become_too_fat:0 "有点发胖"
+uma_become_too_fat_desc:0 "由于我们提供了太多甜品，马娘们普遍出现了发胖的现象，这影响了她们的健康"
+uma_scientific_nutrition_supply:0 "合理的节食教育"
+uma_scientific_nutrition_supply_desc:0 "通过对马娘们进行正确的节食教育，马娘们的健康水平显著改善。"
+uma_subsidy_restaurant:0 "补贴自助餐厅"
+uma_subsidy_restaurant_desc:0 "考虑到一些食量巨大的马娘，我们将为国内的自助餐厅提供补贴，以让这些自助餐厅接待这些马娘。"
+
+
+###飞升修正
+uma_terrirory_knowledge_hobby:0 "兴趣与领域"
+uma_terrirory_knowledge_hobby_desc:0 "马娘们的领域似乎会在感兴趣的领域更强烈地激活，通过运用这个特性，我们可以让领域为我们的生产生活带来更大益处。"
+uma_terrirory_knowledge_dream:0 "梦境研究"
+uma_terrirory_knowledge_dream_desc:0 "我们对这些马娘的梦境进行了深入的研究。我们发现，这些梦境似乎是马娘们“§Y潜意识§!”的一种折射。虽然我们很难弄清楚里面的原理，但初步的结果已经够我们研究很久了。"
+uma_terrirory_dream_stopped:0 "遏止的梦境"
+uma_terrirory_dream_stopped_desc:0 "在药物的帮助下，马娘们至少能够做一个好梦了"
+uma_terrirory_dream_unstopped:0 "肆无忌惮的梦"
+uma_terrirory_dream_unstopped_desc:0 "噩梦正困扰着一些激活了领域的马娘们"
+uma_kenshi_racing_umamusume_test:0 "比赛中的因子检测"
+uma_kenshi_racing_umamusume_test_desc:0 "我们正在比赛中推行因子检测，以防止没有因子改造的马娘和因子改造马娘们同台竞技而导致不公平的结果"
+uma_kenshi_champion_doubted:0 "受到质疑的冠军"
+uma_kenshi_champion_doubted_desc:0 "有谣言正在质疑冠军的公平性"
+uma_kenshi_uncontrolled_power:0 "不受控制的力量"
+uma_kenshi_uncontrolled_power_desc:0 "一些进行了因子改造的马娘显然不能很好地控制自己的力量，而这造成了...额...一些麻烦"
+uma_kenshi_power_adaption_training:0 "力量控制训练计划"
+uma_kenshi_power_adaption_training_desc:0 "我们正在进行一项旨在教授马娘控制自己的力量的训练计划"
+uma_kenshi_power_adaption_training_good:0 "得到控制的力量"
+uma_kenshi_power_adaption_training_good_desc:0 "经过训练后，我们的马娘们已经学会了如何控制和运用自己的力量。"
+uma_kenshi_ban_the_media:0 "规制网络账号"
+uma_kenshi_ban_the_media_desc:0 "我们已经封禁了一些传播谣言的账号，不过，这个事件仍然造成了一些消极影响。"
+uma_kenshi_fear_of_this:0 "因子改造的恐惧"
+uma_kenshi_fear_of_this_desc:0 "果不其然，这个哲学问题引起了一些马娘对因子改造的恐惧。不过，这也使得我们的科学家能够进一步考虑因子改造所带来的一些副作用。"
+
+uma_ap2_factor_power_without_countrol: "未经控制的力量"
+uma_ap2_factor_power_without_countrol_desc: "Power!马娘们的力量似乎造成了一些额外花费......."
+
+###特殊领袖事件修正
+uma_kenshi_contamination:0 "因子污染"
+uma_kenshi_contamination_desc:0 "由于我们的轻率，绿茵祈愿的因子污染了我们的因子库，并在星球上造成了严重的损失。"
+uma_grass_wonder_kenshi_library:0 "草上飞的因子库"
+uma_grass_wonder_kenshi_library_desc:0 "我们的科学家从绿茵祈愿...啊不，草上飞的身上分离出了数量惊人的固有因子，在将其稳定化处理后加入了我们的因子库中。这些固有因子涵盖了几乎所有常见的种类，使得我们可以轻易地将其用于马娘们的生产生活之中。同时，草上飞的因子库也极大地促进了我们在因子学甚至整个生物学方面的研究。\n\n§R我们要怎样才不会重蹈覆辙？§!"
+uma_raze_in_mystery_galgame:0 "Koi Derby"
+uma_raze_in_mystery_galgame_desc:0 "一款名为“Koi Derby”的游戏最近在国家内爆火，这使得很多年轻马娘开始对赛马娘这个职业产生了憧憬。"
+uma_koi_derby_ii:0 "续作！"
+uma_koi_derby_ii_desc:0 "人气游戏“Koi Derby”最近推出了续作。和很多续作拉跨的游戏不同，“Koi Derby”的续作的质量甚至比第一作还要高。这使得国内再次掀起了一股游戏热潮。"
+uma_selecting_race_successfully_hold:0 "选拔赛成功举行"
+uma_selecting_race_successfully_hold_desc:0 "这届备受瞩目的选拔赛成功举行"
+uma_controlled_kd:0 "受到监管的KD"
+uma_controlled_kd_desc:0 "为了降低我们赛马娘选拔部门的压力，并引导公众对赛马娘这个职业有更好的认识，我们将对KD的内容进行监管。"
+uma_agnes_digital_in_toresen_school:0 "我们的数码主任"
+uma_agnes_digital_in_toresen_school_desc:0 "爱丽数码成为了我们的招生办主任后，她对我们的招生体系进行了深度的改革。这使得我们的招生体系以前所未有的高效率运转起来。同时，数码本人也因其对马娘们无私的爱而获得了崇高的声望，得到了“我们的数码主任”的爱称。"
+uma_nice_natures_knowledge:0 "内恰的知识"
+uma_nice_natures_knowledge_desc:0 "作为一个穿梭于无数世界之间的穿越者，内恰‘们’拥有极为丰富的阅历。而这些阅历必然能够从各个方面指导我们的国家。"
+##################
+###商店有关修正###
+##################
+#基础修正
+uma_intelligence_goods_basic_modifier:0 "智力增强"
+uma_intelligence_goods_special_modifier:0 "智力增强（每10层奖励）"
+uma_kenshi_goods_basic_modifier:0 "根性增强"
+uma_kenshi_goods_special_modifier:0 "根性增强（每10层奖励）"
+uma_power_goods_basic_modifier:0 "力量增强"
+uma_power_goods_special_modifier:0 "力量增强（每10层奖励）"
+uma_endurance_goods_basic_modifier:0 "耐力增强"
+uma_endurance_goods_special_modifier:0 "耐力增强（每10层奖励）"
+uma_speed_goods_basic_modifier:0 "速度增强"
+uma_speed_goods_special_modifier:0 "速度增强（每10层奖励）"
+#商城抽奖buff
+uma_lucky_items:0 "开运道具"
+uma_lucky_items_desc:0 "开运道具的魔力正庇护着国家"
+uma_racing_holding_tips:0 "赛事运营指南"
+uma_racing_holding_tips_desc:0 "我们从赛事运营指南中得到了许多举办赛马比赛的小窍门"
+uma_fleet_battle_tips:0 "舰队战术手册"
+uma_fleet_battle_tips_desc:0 "这本舰队战术手册记载了许多关于舰队阵型和战斗的知识，对我们的舰队战斗有着极大的启发作用、"
+uma_high_power_energy_block:0 "高能能量块"
+uma_high_power_energy_block_desc:0 "这块高能能量块散发着奇异的能量场，虽然我们搞不清楚这个能量块到底是怎么来的，但至少我们可以用这个能量块给我们提供大量能量。"
+uma_miracle_industry_machine:0 "奇迹工业设备"
+uma_miracle_industry_machine_desc:0 "通过将获得的古代工业设备进行修复、逆向工程和升级改装，我们大大地提高了我们工业的产出。"
+uma_ancient_carrot_seed:0 "优良胡萝卜种"
+uma_ancient_carrot_seed_desc:0 "由这粒胡萝卜种培养的新胡萝卜品种凭借其极高的产出和可口的味道，迅速取代了之前的品种。"
+uma_different_dimention_observer:0 "万花筒内的世界"
+uma_different_dimention_observer_desc:0 "通过这个万花筒一般的设备，我们得以观测§R一个完全不同的世界§!。在这个世界，§Y“我们”依旧存在§!，并生活在一个名叫§Y日本§!的国家的中央特雷森学院里。过着完全不同却同样五彩斑斓的生活。通过对她们的观测，我们能够从她们身上学到很多东西..."
+uma_umamusume_diary:0 "马娘观察日记"
+uma_umamusume_diary_desc:0 "似乎是由以前的马娘文明的一位资深训练员所著，上面记载了很多马娘的生活习性等资料，是一本全方位对马娘种群进行观察和记录的宝贵文献。"
+
+
+####堕落帝国修正####
+#uma_fallen_empire_enhancement_modifier:0 "遗落特雷森的作弊buff"
+#uma_fallen_empire_enhancement_modifier_desc:0 "拜托，堂堂马娘堕落帝国，还能这么轻易被干趴下？肯定会有加强buff啊！"
+
+uma_skill_haozhuanyixi:0 "好转一息"
+uma_skill_haozhuanyixi_desc:0 "堕落帝国教给我们的这个特殊的技能，加强了我们舰船的护盾和护甲。"
+uma_skill_yiwenzi:0 "一文字"
+uma_skill_yiwenzi_desc:0 "由于理事长的恩赐，我们获得了这个传说的金技能。这让我们的舰船转进如风，一日之内就能在英伦三岛重建拜尔兰。"
+uma_fallen_empire_civil_racing:0 "遗落特雷森的竞走比赛"
+uma_fallen_empire_civil_racing_desc:0 "我们参观了遗落特雷森的比赛，虽然她们的选手的身体素质出乎意料的差，但她们的比赛组织方式却异常先进。通过学习她们的组织方式，我们能够显著提升国内的比赛质量。"
+uma_fallen_empire_administeration_experience:0 "遗落特雷森的管理经验"
+uma_fallen_empire_administeration_experience_desc:0 "虽然遗落特雷森的绝大多数国民已经在VR中沉迷了很久，但想要管理如此之大的一个国家同样也很困难。我们可以学习她们在这方面的经验，为我所用。" 
+uma_new_umamusume_from_fallen_empire:0 "希望的继承者"
+uma_new_umamusume_from_fallen_empire_desc:0 "夜色誓约的访问团，为我们带来了很多来自遗落特雷森的尖端技术和最新科研成果，极大促进了我们国家的科技发展。"
+uma_fallen_empire_visit_cooldown:0 "遗落特雷森参观冷却"
+uma_fallen_empire_visit_cooldown_desc:0 "最近我们已经参观过了遗落特雷森，组织新的代表团需要一些时间。"
+uma_fallen_empire_knowledge_seiunsky:0 "VR训练法"
+uma_fallen_empire_knowledge_seiunsky_desc:0 "星云天空在考察中学习到了遗落特雷森所使用的VR技术，经过开发后，她将其改进为所谓的VR训练法，并广泛地在我们的军队士兵和普通百姓中使用。"
+uma_fallen_empire_knowledge_oguricap:0 "小栗的移动餐厅"
+uma_fallen_empire_knowledge_oguricap_desc:0 "在考察中，小栗帽学习到了很多有关食品运输和供给的有关知识，这将为我们的国民建立起一个更加稳定高效的食品供应体系。"
+uma_fallen_empire_knowledge_agnesdigital:0 "数码的社会考察"
+uma_fallen_empire_knowledge_agnesdigital_desc:0 "通过对遗落特雷森的居民进行考察，爱丽数码总结出了一份详尽的报告，这为我们的社会学研究和星球治理带来了不小的助益。"
+
+###其它
+shipclass_military_hull_mult:0 "全舰船船体值增加"
+mod_UMA_pop_growth_speed_DESC:0 "我们帝国内马娘人口的增长速度"
+
+##这是茶座
+uma_diplo_modi:0 "曼城茶座领导的外交部"
+uma_deep_impact_gift:0 "夜色誓约的礼物"
+tachyon_coffee_conspiracy:0 "针对政府的阴谋集团"
+
+
+
+mod_shipclass_military_hull_mult: "£mod_ship_hull_mult£军用舰船船体值:"
+mod_planet_structures_uma_crystal_carrot_upkeep_mult: "£uma_crystal_carrot£水晶萝卜维护费:"
+mod_planet_entertainers_unity_produces_add: "£job_entertainer£艺人£unity£凝聚力产出:"
+
+uma_candle_off_debuff: "战争经济"
+uma_candle_off_debuff_a: "光殇: 军用舰船"
+uma_candle_off_debuff_b: "光殇: 军用工厂"
+
+mod_leader_officials_uma_crystal_carrot_produces_add: "£official£行政官£uma_crystal_carrot£水晶萝卜产出:"
+mod_planet_district_uma_dormitory_build_speed_mult: "宿舍区划建造速度:"
+mod_planet_district_uma_logistics_area_build_speed_mult: "后勤区划建造速度:"
+mod_planet_district_uma_teaching_area_build_speed_mult: "教学区划建造速度:"
+mod_planet_district_uma_training_course_build_speed_mult: "训练区划建造速度:"
+
+
+
+uma_add_treater: "马娘商人"
+uma_add_treater_desc: "因为商业建筑的存在，我们的星球产生了马娘商人"
+
+
+
+fake_uma_food_produces_mod: "£job£岗位生产的£food£食物"
+fake_uma_food_produces_mod_desc: ""
+
+fake_uma_mineral_produces_mod: "£mod_minerals_produces_mult£岗位产出的£minerals£矿物"
+fake_uma_mineral_produces_mod_desc: ""
+
+fake_uma_pop_housing_usage_mult_mod: "£mod_pop_housing_usage_mult£人口住房使用"
+fake_uma_pop_housing_usage_mult_mod_desc: ""
+
+fake_uma_planet_jobs_physics_research_produces_mult_mod: "£job£岗位产出的£physics_research£物理学研究"
+fake_uma_planet_jobs_physics_research_produces_mult_mod_desc: ""
+
+fake_uma_planet_jobs_society_research_produces_mult_mod: "£job£岗位产出的£society_research£社会学研究"
+fake_uma_planet_jobs_society_research_produces_mult_mod_desc: ""
+
+fake_uma_planet_jobs_engineering_research_produces_mult_mod: "£job£岗位产出的£engineering_research£工程学研究"
+fake_uma_planet_jobs_engineering_research_produces_mult_mod_desc: ""
+
+fake_uma_pop_environment_tolerance_mod: "£mod_pop_environment_tolerance£宜居度"
+fake_uma_pop_environment_tolerance_mod_desc: ""
+
+fake_uma_planet_pops_food_upkeep_mult_mod: "£pop£人口£food£食物消耗"
+fake_uma_planet_pops_food_upkeep_mult_mod_desc: ""
+
+mod_planet_building_uma_toresen_lab_build_speed_mult: "['building:building_uma_toresen_lab']建造速度"
+mod_planet_building_uma_toresen_lab_center_build_speed_mult: "['building:building_uma_toresen_lab_center']建造速度"
+mod_planet_building_uma_toresen_lab_top_build_speed_mult: "['building:building_uma_toresen_lab_top']建造速度"
+mod_planet_uma_traders_produces_mult: "马娘商人产出的£trade£贸易"
+
+mod_planet_jobs_specialist_trade_produces_mult: "£pop_cat_specialist£专家产出的£trade£贸易"
+
+mod_planet_uma_threegodness_knowledge_scholar_produces_mult: " £job_uma_threegodness_knowledge_scholar£$job_uma_threegodness_knowledge_scholar$产出"
+
+mod_planet_uma_core_miner_volatile_motes_produces_add: "£job_uma_core_miner£$planet_uma_core_miner$的£volatile_motes£$volatile_motes$产出"
+mod_planet_uma_core_miner_exotic_gases_produces_add: "£job_uma_core_miner£$planet_uma_core_miner$的£exotic_gases£$exotic_gases$产出"
+mod_planet_uma_core_miner_rare_crystals_produces_add: "£job_uma_core_miner£$planet_uma_core_miner$的£rare_crystals£$rare_crystals$产出"
+mod_planet_uma_racing_umamusume_trade_produces_add: "£job_uma_racing_umamusume£$planet_uma_racing_umamusume$的£trade£$trade$产出"
+mod_planet_uma_traders_trade_produces_mult: "£job_uma_trader£$job_uma_trader$产出的£trade£$trade$"

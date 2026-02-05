@@ -1,0 +1,16 @@
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "UMA_TG_MAAM_missiles"
+	color = { 0.6 0.9 0.1 1.0 }
+	hit_entity = "swarmer_missiles_hit_entity"
+	shield_hit_entity = "swarmer_missiles_shield_hit_entity"
+	muzzle_flash_entity = "swarmer_missiles_muzzle_flash_entity"
+
+	#missile specific data
+	entity = "swarmer_missiles_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

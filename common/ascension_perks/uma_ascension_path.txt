@@ -1,0 +1,198 @@
+##AP2
+
+
+
+##摘星（因子飞升二阶段）
+ap_uma_fly_me_to_the_star_ap_two = {
+	on_enabled = {
+		#		custom_tooltip =
+		#Event Require
+		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt
+		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt_will_event
+		country_event = {
+			id = uma_ap.40
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_1"
+			num_ascension_perks > 0
+		}
+		custom_tooltip = {
+			fail_text = "uma_must_be_toresen_auth"
+			has_authority = "auth_trainingcenter"
+		}
+		custom_tooltip = {
+			fail_text = "uma_requires_first_ascension_perks_1"
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+
+		custom_tooltip = {
+			fail_text = origin_uma_after_factor_perk_already
+			NOT = {
+				has_origin = origin_uma_after_factor_perk
+			}
+		}
+
+		has_technology = tech_uma_complex_keisun_test
+	}
+
+	modifier = {
+		#将会改变
+#		UMA_species_trait_points_add = 3
+#		planet_jobs_produces_mult = 0.1
+#		pop_growth_speed = 0.05
+
+#		empire_size_pops_mult = 0.3
+#		empire_size_colonies_mult = 0.3
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOT = {
+			has_ascension_perk = ap_uma_zenshizenren_ap_2
+			has_ascension_perk = ap_uma_mixture_ap_2
+			has_authority = "auth_machine_intelligence"
+		}
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+	}
+
+	ai_weight = {
+		factor = 300
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 6
+		}
+	}
+}
+
+##全身全灵（领域飞升二阶段）
+ap_uma_zenshizenren_ap_2 = {
+	on_enabled = {
+		#Event Require
+		custom_tooltip = ap_uma_zenshizenren_ap_two_tt
+		custom_tooltip = ap_uma_zenshizenren_ap_2_tt_will_event
+		country_event = {
+			id = uma_ap.140
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_1"
+			num_ascension_perks > 0
+		}
+		custom_tooltip = {
+			fail_text = "uma_must_be_toresen_auth"
+			has_authority = "auth_trainingcenter"
+		}
+		custom_tooltip = {
+			fail_text = "uma_requires_first_ascension_perks_2"
+			has_ascension_perk = ap_uma_zenshizenren
+		}
+		has_technology = tech_uma_terriroty_in_use
+	}
+
+
+	modifier = {
+#		pop_happiness = 0.13
+#		planet_jobs_produces_mult = 0.09
+#		army_attack_damage_mult = 0.08
+#		shipclass_military_damage_mult = 0.10
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOT = {
+			has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+			has_ascension_perk = ap_uma_mixture_ap_2
+			has_authority = "auth_machine_intelligence"
+		}
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+	}
+
+	ai_weight = {
+		factor = 300
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 6
+		}
+	}
+
+}
+
+##融合（领域飞升二阶段）
+ap_uma_mixture_ap_2 = {
+	on_enabled = {
+		#Event Require
+		custom_tooltip = ap_uma_mixture_ap_2_tt
+
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_1"
+			num_ascension_perks > 0
+		}
+		custom_tooltip = {
+			fail_text = "uma_must_be_toresen_auth"
+			has_authority = "auth_trainingcenter"
+		}
+		custom_tooltip = {
+			fail_text = "uma_requires_first_ascension_perks_both"
+			has_ascension_perk = ap_uma_zenshizenren
+			has_ascension_perk = ap_uma_fly_me_to_the_star
+		}
+	}
+
+
+	modifier = {
+		pop_happiness = 0.1
+		UMA_species_trait_points_add = 3
+		logistic_growth_mult = 0.05
+		bonus_pop_growth = 2
+	}
+
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOT = {
+			has_ascension_perk = ap_uma_zenshizenren_ap_2
+			has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+			has_authority = "auth_machine_intelligence"
+		}
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+	}
+
+	ai_weight = {
+		factor = 300
+		modifier = {
+			factor = 0.8
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0
+			num_owned_planets < 6
+		}
+	}
+
+}

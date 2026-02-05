@@ -1,0 +1,1164 @@
+namespace = uma_ec_1
+
+#When crisis Begin
+country_event = {
+	id = uma_ec_1.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+#			has_global_flag = uma_ec1_timemachine_happened
+			has_global_flag = uma_ec_invasion_ec1_end
+			has_global_flag = uma_ec_invasion_end
+		}
+	}
+
+	immediate = {
+		endgame_telemetry = uma_end_crisis_1
+		set_global_flag = uma_ec_invasion_happened
+
+		log = "UMA ENDCRISIS1 WILL HAPPENED AT [GetDate]"
+
+		set_update_modifiers_batch = begin
+
+		random_system = {
+			limit = {
+				is_star_class = sc_pulsar
+
+				uma_is_event_system = no
+			}
+			random_system_planet = {
+				uma_ec1_create_country_and_species = yes
+			}
+
+			log = "UMA ENDCRISIS1 WILL SPAWN AT [This.GetName]"
+			save_global_event_target_as = uma_ec1_main_system
+			set_star_flag = uma_ec1_main_system
+
+
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			create_starbase = {
+				size = starbase_uma_ec1
+				owner = event_target:uma_ec1_country
+				effect = {
+					if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+						}
+						while = {
+							limit = {
+								fleet = {
+									fleet_power <= 1200000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
+							}
+						}
+
+						fleet = {
+							set_fleet_flag = uma_ec1_starbase.1
+							while = {
+								count = 3
+								fleet_event = {
+									id = uma_ec_1.5
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+						}
+						while = {
+							limit = {
+								fleet = {
+									fleet_power <= 900000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
+							}
+						}
+
+						fleet = {
+							set_fleet_flag = uma_ec1_starbase.1
+							fleet_event = {
+								id = uma_ec_1.5
+							}
+
+						}
+					}
+					if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+						}
+						while = {
+							limit = {
+								fleet = {
+									fleet_power <= 1500000
+								}
+							}
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC1_ION_CANNON
+								graphical_culture = humanoid_01
+							}
+						}
+
+						fleet = {
+							set_fleet_flag = uma_ec1_starbase.1
+							while = {
+								count = 4
+								fleet_event = {
+									id = uma_ec_1.5
+								}
+							}
+						}
+					}
+				}
+			}
+
+			spawn_megastructure = {
+				type = uma_ec1_dyson_sphere
+				planet = solar_system.star
+				coords_from = this
+				#	orbit_angle = random
+				orbit_distance = 5
+				owner = event_target:uma_ec1_country
+				graphical_culture = humanoid_01
+				random_pos = yes
+				init_effect = {
+					set_megastructure_flag = uma_ec1_dyson_sphere_flag
+				}
+			}
+
+
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_I #"护卫者1号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 0
+					}
+					set_fleet_flag = uma_ec1_pro.1
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_II # "护卫者2号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 40
+					}
+					set_fleet_flag = uma_ec1_pro.2
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_III # "护卫者3号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 90
+					}
+					set_fleet_flag = uma_ec1_pro.3
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_VI #"护卫者4号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 140
+					}
+					set_fleet_flag = uma_ec1_pro.4
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_V #"护卫者5号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 200
+					}
+					set_fleet_flag = uma_ec1_pro.5
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_VI #"护卫者6号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 250
+					}
+					set_fleet_flag = uma_ec1_pro.6
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_VII #"护卫者7号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 280
+					}
+					set_fleet_flag = uma_ec1_pro.7
+				}
+			}
+			create_fleet = {
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = event_target:uma_ec1_country
+					create_ship = {
+						name = FALL_PRO_VIII #"护卫者8号要塞"
+						design = "NAME_uma_ec1_guard_station"
+						graphical_culture = "pirate_01"
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+						}
+						add_modifier = {
+							modifier = uma_crisis_modifier_defender
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 80
+						angle = 330
+					}
+					set_fleet_flag = uma_ec1_pro.8
+				}
+			}
+
+			every_neighbor_system = {
+				limit = {
+					distance = {
+						source = Prev
+						max_jumps = 1
+					}
+				}
+				if = {
+					limit = {
+						exists = starbase
+					}
+					starbase = {
+						fleet = {
+							destroy_fleet = this
+						}
+					}
+				}
+				create_starbase = {
+					size = starbase_uma_ec1
+					owner = event_target:uma_ec1_country
+					effect = {
+						if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+							}
+							while = {
+								limit = {
+									fleet = {
+										fleet_power <= 1200000
+									}
+								}
+								create_ship = {
+									name = random
+									design = NAME_UMA_EC1_ION_CANNON
+									graphical_culture = humanoid_01
+								}
+							}
+
+							fleet = {
+								set_fleet_flag = uma_ec1_starbase.1
+								while = {
+									count = 3
+									fleet_event = {
+										id = uma_ec_1.5
+									}
+								}
+								fleet_event = { id = uma_ec_1.6 days = 450 }
+							}
+						}
+						else_if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+							}
+							while = {
+								limit = {
+									fleet = {
+										fleet_power <= 900000
+									}
+								}
+								create_ship = {
+									name = random
+									design = NAME_UMA_EC1_ION_CANNON
+									graphical_culture = humanoid_01
+								}
+							}
+
+							fleet = {
+								set_fleet_flag = uma_ec1_starbase.1
+								fleet_event = {
+									id = uma_ec_1.5
+								}
+
+							}
+						}
+						if = {
+							limit = {
+								has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+							}
+							while = {
+								limit = {
+									fleet = {
+										fleet_power <= 1500000
+									}
+								}
+								create_ship = {
+									name = random
+									design = NAME_UMA_EC1_ION_CANNON
+									graphical_culture = humanoid_01
+								}
+							}
+
+							fleet = {
+								set_fleet_flag = uma_ec1_starbase.1
+								while = {
+									count = 4
+									fleet_event = {
+										id = uma_ec_1.5
+									}
+								}
+								fleet_event = { id = uma_ec_1.6 days = 450 }
+							}
+						}
+					}
+				}
+				set_star_flag = uma_ec1_side_defend_system
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+	after = {
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = yes
+			}
+			country_event = {
+				id = uma_ec_1.12
+			}
+			if = {
+				limit = {
+					has_modifier = uma_crisis_1_modifier_perk
+				}
+				remove_modifier = uma_crisis_1_modifier_perk
+			}
+		}
+
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = no
+			}
+			country_event = {
+				id = uma_ec_1.14
+			}
+		}
+
+	}
+}
+
+
+##On Win
+country_event = {
+	id = uma_ec_1.2
+	hide_window = yes
+#	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 10
+	}
+#	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = uma_ec1_timemachine_happened
+		NOT = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec1_end
+		}
+
+#		exists = From
+#
+#		From = {
+#			is_country_type = uma_ec1_empire
+#		}
+
+		any_system = {
+			has_star_flag = uma_ec1_main_system
+
+			AND = {
+				any_system_megastructure = {
+					is_megastructure_type = uma_ec1_dyson_sphere
+				}
+
+				count_fleet_in_system = {
+					limit = {
+						is_owned_by = event_target:uma_ec1_country
+					}
+					count <= 1
+				}
+			}
+		}
+
+	}
+
+	immediate = {
+		log = "UMA EC1 CRISIS IS END"
+		set_global_flag = uma_ec_invasion_ec1_end
+		set_global_flag = uma_ec_invasion_end
+		every_system = {
+			limit = {
+				has_star_flag = uma_ec1_main_system
+			}
+			spawn_megastructure = {
+				type = uma_ec1_dyson_sphere_ruined
+				coords_from = this
+				init_effect = {
+					if = {
+						limit = { exists = fromfrom }
+						set_megastructure_flag = uma_ruined_ec1_dyson_sphere@fromfrom
+					}
+				}
+			}
+			every_system_megastructure = {
+				limit = { is_megastructure_type = uma_ec1_dyson_sphere }
+
+				remove_megastructure = this
+			}
+		}
+
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = yes
+			}
+			country_event = {
+				id = uma_ec_1.15
+				days = 5
+			}
+		}
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = no
+			}
+			country_event = {
+				id = uma_ec_1.17
+				days = 5
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		queue_actions = {
+			repeat = {
+				while = {
+					id = uma_ec_1.3.e1
+
+					NOT = {
+						any_system = {
+							has_star_flag = uma_ec1_side_defend_system
+							count_fleet_in_system = {
+								count < 2
+							}
+						}
+					}
+				}
+				find_closest_system = {
+					trigger = {
+						id = uma_ec_1.3.t1
+						count_fleet_in_system = {
+							count < 2
+						}
+					}
+					found_system = {
+						move_to = this
+						find_random_planet = {
+							trigger = {
+								id = uma_ec_1.3.t2
+
+								is_star = yes
+							}
+							found_planet = {
+								move_to = this
+							}
+						}
+					}
+					failed = {
+						wait = {
+							duration = 10
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec1_timemachine_happened
+		NOT = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec1_end
+		}
+
+		exists = event_target:uma_ec1_country
+
+		owner = {
+			NOT = {
+				is_same_value = event_target:uma_ec1_country
+				is_hostile_to = event_target:uma_ec1_country
+			}
+		}
+
+		From = {
+			has_star_flag = uma_ec1_main_system
+		}
+
+	}
+
+	immediate = {
+		while = {
+			count = 2
+
+			random_galaxy_fleet = {
+				limit = {
+					has_fleet_flag = uma_ec1_def_fleet
+				}
+				clear_fleet_actions = this
+				queue_actions = {
+					find_closest_system = {
+						trigger = {
+							id = uma_ec_1.4
+
+							has_star_flag = uma_ec1_main_system
+						}
+						found_system = {
+							move_to = this
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		uma_ec1_create_def_fleets = yes
+		set_update_modifiers_batch = end0
+
+		last_created_fleet = {
+			queue_actions = {
+				find_closest_planet = {
+
+					found_planet ={
+						move_to = this
+					}
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ec_1.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = uma_ec1_timemachine_happened
+		NOT = {
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_ec_invasion_ec1_end
+		}
+
+	}
+
+	immediate = {
+		set_update_modifiers_batch = begin
+		if = {
+			limit = {
+				event_target:uma_ec1_country = {
+					fleet_power <= 30000000 #3M
+				}
+			}
+			uma_ec1_create_def_fleets = yes
+			last_created_fleet = {
+				fleet_event = {
+					id = uma_ec_1.3
+				}
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		fleet_event = {
+			id = uma_ec_1.6
+			days = 450
+		}
+	}
+}
+
+
+
+###剧情内容。
+
+country_event = {
+	id = uma_ec_1.10
+	title = uma_ec_1.10.title
+	desc = uma_ec_1.10.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.10.a
+		add_modifier = {
+			modifier = uma_crisis_1_modifier_perk
+		}
+	}
+}
+
+##Intro
+country_event = {
+	id = uma_ec_1.11
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		set_global_flag = uma_ec1_timemachine_happened
+		every_playable_country = {
+			limit = {
+				is_uma_player_country = yes
+
+				has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 35
+				}
+			}
+			country_event = {
+				id = uma_ec_1.10
+			}
+		}
+
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = {
+				id = uma_ec_1.1
+				days = 700
+				random = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_1.12
+	title = uma_ec_1.12.title
+	desc = uma_ec_1.12.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.12.a
+		start_situation = {
+			type = situation_uma_endcrisis_ec1
+			target = This
+			effect = {}
+		}
+		begin_event_chain = {
+			event_chain = uma_ec_1_main_evt_chain
+			target = this
+		}
+		hidden_effect = {
+			create_point_of_interest = {
+				id = uma_ec1_poi.1
+				name = uma_ec1_poi.1.name
+				desc = uma_ec1_poi.1.desc
+				event_chain = uma_ec_1_main_evt_chain
+				location = event_target:uma_ec1_main_system
+				picture = GFX_evt_uma_endcrisis_sky
+			}
+			every_system = {
+				limit = {
+					has_star_flag = uma_ec1_side_defend_system
+				}
+				Root = {
+					create_point_of_interest = {
+						id = uma_ec1_poi.2
+						name = uma_ec1_poi.2.name
+						desc = uma_ec1_poi.2.desc
+						event_chain = uma_ec_1_main_evt_chain
+						location = prev
+						picture = GFX_evt_uma_endcrisis_sky
+					}
+				}
+			}
+			country_event = {
+				id = uma_ec_1.13
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_1.13
+	title = uma_ec_1.13.title
+	desc = uma_ec_1.13.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+
+	option = {
+		name = uma_ec_1.13.a
+	}
+}
+
+country_event = {
+	id = uma_ec_1.14
+	title = uma_ec_1.14.title
+	desc = uma_ec_1.14.desc
+	picture = GFX_evt_dyson_sphere
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.14.a
+	}
+}
+
+#End
+country_event = {
+	id = uma_ec_1.15
+	title = uma_ec_1.15.title
+	desc = uma_ec_1.15.desc
+	picture = GFX_evt_uma_satono_school
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = uma_ec_1.15.happened
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_ec_1.15.happened
+	}
+
+
+	option = {
+		name = uma_ec_1.15.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ec_1.16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ec_1.16
+	title = uma_ec_1.16.title
+	desc = uma_ec_1.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	immediate = {
+		event_target:uma_ec1_country = {
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+			destroy_country = yes
+		}
+		event_target:uma_fallen_empire = {
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+			destroy_country = yes
+		}
+	}
+
+
+	option = {
+		name = uma_ec_1.16.a
+	}
+}
+
+country_event = {
+	id = uma_ec_1.17
+	title = uma_ec_1.17.title
+	desc = uma_ec_1.17.desc
+	picture = GFX_evt_crisis_defeated
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.17.a
+	}
+}
+
+situation_event = {
+	id = uma_ec_1.18
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					is_country_type = uma_ec1_empire
+					is_country_type = uma_fallen_empire
+
+				}
+				exists = capital_star
+				exists = capital_scope
+				is_country_type = default
+			}
+			every_system_within_border = {
+				limit = {
+					is_capital_system = no
+				}
+				if = {
+					limit = {
+						exists = starbase
+					}
+					starbase = {
+						fleet = {
+							destroy_fleet = this
+						}
+					}
+				}
+				every_system_colony = {
+					destroy_colony = yes
+				}
+			}
+			every_owned_fleet = {
+				destroy_fleet = this
+			}
+			capital_star = {
+				solar_system = {
+					every_system_planet = {
+						limit = {
+							is_capital = no
+
+							is_colony = yes
+						}
+						kill_all_pop = yes
+						destroy_colony = yes
+					}
+				}
+			}
+			capital_scope = {
+				downgrade_all_buildings = yes
+
+				remove_all_buildings = yes
+
+				every_owned_pop_group = {
+					kill_pop_group = {
+						pop_group = this
+						percentage = 0.9
+					}
+				}
+
+				Root.owner = {
+					if = {
+						limit = {
+							is_uma_player_country = yes
+						}
+						every_owned_leader = {
+							remove_all_traits = yes
+							add_trait = {
+								trait = leader_trait_uma_generic
+								show_message = no
+							}
+						}
+
+						create_species = {
+							name = Root.owner.owner_main_species
+							class = umamusume
+							portrait = umamusume
+							traits = {
+								trait = uma_trait_musume
+							}
+							name_list = UMAname
+						}
+						every_owned_pop_group = {
+							change_species = last_created_species
+						}
+
+						clear_resources = yes
+						add_resource = {
+							energy = 1000
+							minerals = 1500
+							food = 1500
+						}
+
+						date_distortion = yes
+						country_event = {
+							id = uma_ec_1.19
+							days = 1
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						is_planet_class = pc_uma_school
+						is_planet_class = pc_city
+						is_planet_class = pc_uma_industrial
+					}
+					change_pc = pc_continental
+				}
+			}
+			Root = {
+				destroy_situation = this
+			}
+
+			event_target:uma_ec1_country = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
+
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_1.19
+	title = uma_ec_1.19.title
+	desc = uma_ec_1.19.desc
+	picture = GFX_evt_uma_endcrisis_yurika
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ec_1.19.a
+	}
+}

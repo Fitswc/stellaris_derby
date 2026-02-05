@@ -1,0 +1,116 @@
+namespace = uma_ec_trigger
+
+
+#Yearly Pulse
+event = {
+	id = uma_ec_trigger.8065
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		end_game_years_passed >= 3
+		NOR = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_off
+			has_global_flag = uma_ec_invasion_happened
+			has_global_flag = uma_ec_invasion_end
+			has_global_flag = uma_endcrisis_triggered
+		}
+		any_country = {
+			has_uma_country = yes
+			is_ai = no
+		}
+	}
+
+	immediate = {
+		set_global_flag = uma_endcrisis_triggered
+
+		if = {
+			limit = {
+				any_country = {
+					AND = {
+						is_uma_player_country = yes
+						is_ai = no
+
+						has_ascension_perk = ap_uma_zenshizenren_ap_2
+					}
+					check_variable = {
+						which = uma_ap2_realm_summation
+						value >= 15
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = global_event
+				}
+				country_event = {
+					id = uma_ec_2.9999
+					days = 720
+				}
+			}
+		}
+		else_if	 = {
+			limit = {
+				any_country = {
+					AND = {
+						is_uma_player_country = yes
+						is_ai = no
+
+						has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 35
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = global_event
+				}
+				country_event = {
+					id = uma_ec_1.11
+					days = 20
+				}
+			}
+		}
+		else = {
+			random_country = {
+				limit = {
+					is_country_type = global_event
+				}
+				##
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 10000000
+							any_playable_country = {
+								has_uma_country = yes
+								is_ai = no
+							}
+						}
+						country_event = {
+							id = uma_ec_3.1
+							days = 720
+						}
+						every_playable_country = {
+							country_event = {
+								id = uma_ec_3.20
+							}
+						}
+					}
+					5 = {
+						#NTH, to paradox crisis
+						modifier = {
+							subtract = 5
+							any_playable_country = {
+								has_authority = auth_trainingcenter
+								is_ai = no
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

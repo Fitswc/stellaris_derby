@@ -1,0 +1,122 @@
+
+
+namespace = grand_archive
+
+# Captured Leader perpetrator - Negative answer
+# this = country
+# from = country victim
+# fromfrom = captured leader
+country_event = {
+	id = grand_archive.9010
+	title = grand_archive.9010.name
+	desc = grand_archive.9010.desc
+	show_sound = par_notification_ethics_generic
+	picture = GFX_evt_acquire_asset
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			clone_leader = {
+				target = fromfrom
+				effect = {
+					save_event_target_as = executed_commander_by@root
+				}
+			}
+		}
+		event_target:executed_commander_by@root = {
+			kill_leader = {
+				show_notification = yes
+				executed = yes
+			}
+		}
+	}
+
+	option = {
+		name = grand_archive.9010.a
+		allow = {
+			NOR = {
+				is_xenophile = yes
+				is_pacifist = yes
+			}
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier3unityreward
+			min = @tier3unitymin
+			max = @tier3unitymax
+		}
+	}
+
+	option = {
+		name = grand_archive.9010.b
+		allow = {
+			NOR = {
+				is_xenophobe = yes
+				is_militarist = yes
+			}
+		}
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier1influencereward
+			min = @tier1influencemin
+			max = @tier1influencemax
+		}
+	}
+
+	#########
+	option = {
+		name = uma_grand_archive.9010.d
+		trigger = {
+			FromFrom = {
+				NOT = {
+					is_species_class = umamusume
+				}
+			}
+			OR = {
+				has_authority = auth_trainingcenter
+				is_species_class = umamusume
+			}
+		}
+		custom_tooltip = uma_grand_archive.9010.d.tt
+		clone_leader = {
+			target = FromFrom
+			effect = {
+				save_global_event_target_as = uma_executed_leader_from@from
+			}
+		}
+		event_target:uma_executed_leader_from@from = {
+			modify_species = {
+				species = Root.owner_main_species
+				add_trait = trait_uma_new_bottle_but_old_wine
+				change_scoped_species = yes
+				portrait = Root.owner_main_species
+				effect = {
+					##
+				}
+			}
+		}
+	}
+##########
+
+	option = {
+		name = grand_archive.9010.c
+		add_intel = {
+			amount = 100
+			who = from
+		}
+	}
+
+
+
+	after = {
+		hidden_effect = {
+			fromfrom = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}
+
+
+

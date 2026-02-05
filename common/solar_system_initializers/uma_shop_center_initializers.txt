@@ -1,0 +1,85 @@
+@base_moon_distance = 10
+
+
+uma_shop_center_system_initializer = {
+	name = IV_GH #"时之实" #绿帽的星系，对应的自然是绿帽的真名——时之实（丰收时刻/傲视一切）
+	class = "sc_a"
+
+	flags = { uma_shop_center_system }
+
+	asteroid_belt = { type = rocky_asteroid_belt radius = 100 }
+
+	planet = {
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+	planet = {
+		name = "Theft" #父 theft  Grand Theft Auto!!!!!!!!
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 48 #1948
+		size = 15
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = "Tyrants Queen" #母 3TH Tyrants Queen
+		class = "pc_frozen"
+		orbit_distance = 85
+		orbit_angle = 152 #5.2
+		size = 25
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = IV_GUIT #"吉他" #毕竟是“贸易中心”
+		class = "pc_gas_giant"
+		orbit_distance = 120
+		orbit_angle = 275
+		size = 40
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+
+	planet = {
+		name = IV_H #梦幻
+		class = "pc_gas_giant"
+		orbit_distance = 180
+		orbit_angle = 160
+		size = 40
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = no
+			clear_deposits = yes
+		}
+
+		moon = {
+			name = IV_GG #绿草
+			class = "pc_ice_asteroid"
+			orbit_distance = 10
+			orbit_angle = 130
+			size = 9
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+	}
+
+}

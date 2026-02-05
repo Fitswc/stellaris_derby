@@ -1,0 +1,1597 @@
+##
+uma_factor_speed_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 1
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_1
+
+		}
+
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 2
+				}
+			}
+		}
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_2
+
+		}
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 3
+				}
+			}
+		}
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 4
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 5
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_5
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 6
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_6
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 7
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_7
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 8
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_8
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_speed_rate
+					value = 9
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_speed_9#
+
+		}
+
+	}
+	else = {
+		Root = {
+			add_resource = {
+				influence = 0
+			}
+		}
+	}
+}
+
+
+uma_factor_power_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 1
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_1
+
+		}
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 3
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_3
+
+		}
+	}
+
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 4
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 5
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_5
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 6
+				}
+			}
+		}
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_6
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 7
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_7
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 8
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_8
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_power_rate
+					value = 9
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_power_9
+
+		}
+
+	}
+	else = {
+		Root = {
+			add_resource = {
+				influence = 0
+			}
+		}
+	}
+
+}
+
+uma_factor_stamina_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 1
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_1
+
+		}
+
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 3
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 4
+				}
+			}
+		}
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 5
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_5
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 6
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_6
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 7
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_7
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 8
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_8
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_stamina_rate
+					value = 9
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_stamina_9
+
+		}
+
+	}
+	else = {
+		Root = {
+			add_resource = {
+				influence = 0
+			}
+		}
+	}
+
+}
+
+uma_factor_wisdom_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 1
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = Root.owner_species
+			add_trait = uma_trait_ap2_factor_wisdom_1
+
+
+		}
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 3
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 4
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 5
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_5
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 6
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_6
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 7
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_7
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 8
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_8
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_wisdom_rate
+					value = 9
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_wisdom_9
+		}
+
+	}
+	else = {
+		Root = {
+			add_resource = {
+				influence = 0
+			}
+		}
+	}
+}
+
+uma_factor_charm_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 1
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_1
+
+		}
+
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 3
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 4
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 5
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_5
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 6
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_6
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 7
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_7
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 8
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_8
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_charm_rate
+					value = 9
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_charm_9
+
+		}
+
+	}
+	else = {
+		Root = {
+			add_resource = {
+				influence = 0
+			}
+		}
+	}
+
+}
+
+uma_factor_pain_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 1
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 5
+					}
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_1
+
+		}
+
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 5
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 10
+					}
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 10
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 15
+					}
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 15
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 20
+					}
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 20
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 25
+					}
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_5
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 25
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 30
+					}
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_6
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 30
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 35
+					}
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_7
+
+		}
+	}
+
+	else_if = {
+		limit = {
+			Root = {
+				AND = {
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value >= 35
+					}
+					check_variable = {
+						which = uma_ap2_factor_summation
+						value < 45
+					}
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_8
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_factor_summation
+					value >= 40
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_factor_pain_9
+
+		}
+
+	}
+	else = {
+		Root = {
+			add_resource = {
+				influence = 0
+			}
+		}
+	}
+
+}
+
+
+
+uma_ap2_system_variable_handler = {
+	optimize_memory
+	owner = {
+		$METHOD$_variable = {
+			which = uma_ap2_$AREA_TYPE$_rate
+			value = 1
+		}
+	}
+}
+
+
+uma_ap2_factor_summation = {
+	optimize_memory
+	set_variable = {
+		which = uma_ap2_factor_summation
+		value = 0
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_charm_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_wisdom_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_power_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_speed_rate
+	}
+	change_variable = {
+		which = uma_ap2_factor_summation
+		value = owner.uma_ap2_factor_stamina_rate
+	}
+}
+
+
+
+uma_ap2_realm_summation = {
+	optimize_memory
+	set_variable = {
+		which = uma_ap2_realm_summation
+		value = 0
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_wisdom_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_power_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_speed_rate
+	}
+	change_variable = {
+		which = uma_ap2_realm_summation
+		value = owner.uma_ap2_realm_stamina_rate
+	}
+}
+
+
+uma_realm_speed_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_speed_rate
+					value = 1
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_speed_1
+		}
+
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_speed_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_speed_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_speed_rate
+					value = 3
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_speed_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_speed_rate
+					value = 4
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_speed_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_speed_rate
+					value = 5
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_speed_5
+
+		}
+
+	}
+
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+}
+
+
+uma_realm_power_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_power_rate
+					value = 1
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_power_1
+		}
+
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_power_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_power_2
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_power_rate
+					value = 3
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_power_3
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_power_rate
+					value = 4
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_power_4
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_power_rate
+					value = 5
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_power_5
+		}
+
+	}
+
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+
+}
+
+uma_realm_stamina_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_stamina_rate
+					value = 1
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_stamina_1
+
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_stamina_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_stamina_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_stamina_rate
+					value = 3
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_stamina_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_stamina_rate
+					value = 4
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_stamina_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_stamina_rate
+					value = 5
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_stamina_5
+
+		}
+
+	}
+
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+
+}
+
+uma_realm_wisdom_add_modifier = {
+	optimize_memory
+	if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_wisdom_rate
+					value = 1
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = Root.owner_species
+			add_trait = uma_trait_ap2_realm_wisdom_1
+
+
+		}
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_wisdom_rate
+					value = 2
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_wisdom_2
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_wisdom_rate
+					value = 3
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_wisdom_3
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_wisdom_rate
+					value = 4
+				}
+			}
+		}
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_wisdom_4
+
+		}
+
+	}
+	else_if = {
+		limit = {
+			Root = {
+				check_variable = {
+					which = uma_ap2_realm_wisdom_rate
+					value = 5
+				}
+			}
+		}
+
+
+		modify_species = {
+			species = this
+			add_trait = uma_trait_ap2_realm_wisdom_5
+
+		}
+
+	}
+	else = {
+		add_resource = {
+			influence = 0
+		}
+	}
+
+}
+
+
+uma_ap2_realm_check_give_initial = {
+	optimize_memory
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_wisdom_1 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_power_rate
+			value = 1
+		}
+
+	}
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_wisdom_2 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_power_rate
+			value = 2
+		}
+
+	}
+
+
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_stamina_1 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_wisdom_rate
+			value = 1
+		}
+
+	}
+
+
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_power_1 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_stamina_rate
+			value = 1
+		}
+
+	}
+	if = {
+		limit = {
+			OR = {
+				uma_check_realm_factor_rate_power_2 = yes
+			}
+		}
+		set_variable = {
+			which = uma_ap2_realm_stamina_rate
+			value = 2
+		}
+
+	}
+}

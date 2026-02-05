@@ -1,0 +1,134 @@
+﻿l_simp_chinese:
+#########特殊星球和对应的区划#########
+###学院星球
+pc_uma_school:0 "学院星球"
+pc_uma_school_desc:0 "这个星球已经被改建成了一个超大的学院。在这个学院中，无数的赛马娘和普通的马娘们尽情地奔跑着。"
+district_uma_dormitory:0 "宿舍区划"
+district_uma_dormitory_plural:0 "宿舍区划"
+district_uma_dormitory_desc:0 "鳞次栉比的现代化宿舍群，能够为居住在其中的马娘们提供最优质的生活环境。"
+district_uma_training_course:0 "训练区划"
+district_uma_training_course_plural:0 "训练区划"
+district_uma_training_course_desc:0 "无论是平地还是坂道，无论是草地还是泥地，无论是肌肉训练用的200kg哑铃还是双腿训练的跑步机，这里悉数配备。"
+district_uma_teaching_area:0 "教学区划"
+district_uma_teaching_area_plural:0 "教学区划"
+district_uma_teaching_area_desc:0 "在进行赛跑训练的同时，文化课的学习也不能落下。学院星球上配备了堪比研究机构的尖端实验室，以方便学员和教师使用。"
+district_uma_logistics_area:0 "后勤区划"
+district_uma_logistics_area_plural:0 "后勤区划"
+district_uma_logistics_area_desc:0 "为了给整个星球提供足够的食物，这里有着一望无际的农田，并配备了全自动的农业设备。此外，还有配套的食品加工企业，从而提供马娘们所喜欢的各种食物。"
+
+job_uma_id_dis_effect_desc: "$job_uma_crystal_consumer_goods_crafter_effect_desc$"
+
+district_uma_dormitory_in_industrial_desc: "这里是专门提供给我们的技师马娘们居住的地方。这里能为她们提供优质的生活环境，为她们在工作之余提供心灵的慰籍"
+district_uma_dormitory_in_industrial: "居住区划"
+district_uma_dormitory_in_industrial_plural: "居住区划"
+district_uma_energy_area_desc: "一台台发电机在这里轰鸣，输出无穷无尽的能源"
+district_uma_energy_area: "电网区划"
+district_uma_energy_area_plural: "电网区划"
+district_uma_industrial_area: "轻工业区划"
+district_uma_industrial_area_plural: "轻工业区划"
+district_uma_industrial_area_desc: "民用工厂充斥着这一片区域，源源不断地产出消费品"
+district_uma_mining_area_desc: "地心采矿机在这个位置精确的选址部署，在开采出大量的矿物时还不至于使地面坍塌"
+district_uma_mining_area: "地心采矿区划"
+district_uma_mining_area_plural: "地心采矿区划"
+district_uma_heavy_industrial_area_desc: "金属提炼厂充斥着这一块区域，源源不断地产出合金"
+district_uma_heavy_industrial_area: "重工业区划"
+district_uma_heavy_industrial_area_plural: "重工业区划"
+pc_uma_industrial: "学院工业星球"
+pc_uma_industrial_desc: "这个星球被改造为一个超大的工业区域。在这个区域中，马娘们都能被平等的对待，并且为自己做的工作而感到自豪和骄傲。"
+
+
+
+mod_pc_uma_school_habitability: "$pc_uma_school$宜居度"
+mod_pc_uma_school_habitability_desc: ""
+
+trait_pc_uma_school_preference: "马娘星球偏好:$pc_continental_adj$"
+trait_pc_uma_school_preference_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_short: "马娘:$pc_continental_adj$"
+trait_pc_uma_school_preference_tropical: "马娘星球偏好:$pc_tropical_adj$"
+trait_pc_uma_school_preference_tropical_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_tropical_short: "马娘:$pc_tropical_adj$"
+trait_pc_uma_school_preference_ocean: "马娘星球偏好:$pc_ocean_adj$"
+trait_pc_uma_school_preference_ocean_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_ocean_short: "马娘:$pc_ocean_adj$"
+
+trait_pc_uma_school_preference_savannah: "马娘星球偏好:$pc_savannah_adj$"
+trait_pc_uma_school_preference_savannah_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_savannah_short: "马娘:$pc_savannah_adj$"
+trait_pc_uma_school_preference_desert: "马娘星球偏好:$pc_desert_adj$"
+trait_pc_uma_school_preference_desert_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_desert_short: "马娘:$pc_desert_adj$"
+trait_pc_uma_school_preference_arid: "马娘星球偏好:$pc_arid_adj$"
+trait_pc_uma_school_preference_arid_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_arid_short: "马娘:$pc_arid_adj$"
+
+trait_pc_uma_school_preference_alpine: "马娘星球偏好:$pc_alpine_adj$"
+trait_pc_uma_school_preference_alpine_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_alpine_short: "马娘:$pc_alpine_adj$"
+trait_pc_uma_school_preference_tundra: "马娘星球偏好:$pc_tundra_adj$"
+trait_pc_uma_school_preference_tundra_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_tundra_short: "马娘:$pc_tundra_adj$"
+trait_pc_uma_school_preference_arctic: "马娘星球偏好:$pc_arctic_adj$"
+trait_pc_uma_school_preference_arctic_desc: "$trait_pc_arctic_preference_desc$"
+trait_pc_uma_school_preference_arctic_short: "马娘:$pc_arctic_adj$"
+
+
+
+district_uma_usw_urban_1: "$district_uma_rw_urban_1$"
+district_uma_usw_urban_1_desc: "$district_uma_rw_urban_1_desc$"
+district_uma_usw_urban_1_plural: "$district_uma_rw_urban_1_plural$"
+
+district_uma_usw_urban_2: "$district_uma_rw_urban_2$"
+district_uma_usw_urban_2_desc: "$district_uma_rw_urban_2_desc$"
+district_uma_usw_urban_2_plural: "$district_uma_rw_urban_2_plural$"
+
+district_uma_usw_urban_3: "$district_uma_rw_urban_3$"
+district_uma_usw_urban_3_desc: "$district_uma_rw_urban_3_desc$"
+district_uma_usw_urban_3_plural: "$district_uma_rw_urban_3_plural$"
+
+
+district_uma_usw_industrial: "$district_uma_ring_industrial$"
+district_uma_usw_industrial_desc: "$zone_uma_industrial_school_world_desc$"
+district_uma_usw_industrial_plural: "$district_uma_ring_industrial_plural$"
+
+district_uma_usw_research: "$district_uma_ring_research$"
+district_uma_usw_research_desc: "$zone_uma_research_school_world_desc$"
+district_uma_usw_research_plural: "$district_uma_ring_research_plural$"
+
+district_uma_usw_administrative: "$district_uma_ring_administrative$"
+district_uma_usw_administrative_desc: "$zone_uma_unity_school_world_desc$"
+district_uma_usw_administrative_plural: "$district_uma_ring_administrative_plural$"
+
+district_uma_usw_fortress: "$district_uma_ring_fortress$"
+district_uma_usw_fortress_desc: "$zone_uma_fortress_school_world_desc$"
+district_uma_usw_fortress_plural: "$district_uma_ring_fortress_plural$"
+
+district_uma_usw_trade: "$district_uma_ring_trade$"
+district_uma_usw_trade_desc: "$zone_uma_trade_school_world_desc$"
+district_uma_usw_trade_plural: "$district_uma_ring_trade_plural$"
+
+district_uma_usw_food: "$district_uma_ring_food$"
+district_uma_usw_food_desc: "$zone_uma_food_school_world_desc$"
+district_uma_usw_food_plural: "$district_uma_ring_food_plural$"
+
+district_uma_usw_energy: "$district_uma_ring_energy$"
+district_uma_usw_energy_desc: "$zone_uma_energy_school_world_desc$"
+district_uma_usw_energy_plural: "$district_uma_ring_energy_plural$"
+
+district_uma_usw_training: "$district_uma_ring_training$"
+district_uma_usw_training_desc: "$zone_uma_training_school_world_desc$"
+district_uma_usw_training_plural: "$district_uma_ring_training_plural$"
+
+district_uma_usw_housing: "$district_uma_ring_housing$"
+district_uma_usw_housing_desc: "$zone_uma_housing_school_world_desc$"
+district_uma_usw_housing_plural: "$district_uma_ring_housing_plural$"
+
+district_uma_usw_mineral: "采矿区域"
+district_uma_usw_mineral_desc: "$zone_uma_mineral_school_world_desc$"
+district_uma_usw_mineral_plural: "采矿区域"
+
+district_uma_usw_strategy: "稀有矿产园区"
+district_uma_usw_strategy_desc: "$zone_uma_strategy_school_world_desc$"
+district_uma_usw_strategy_plural: "稀有矿产园区"
+
+uma_usw_mineral_1: "地心钻探区"
+

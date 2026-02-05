@@ -1,0 +1,724 @@
+###实验！堕落帝国country type###
+
+uma_fallen_empire = {
+	scaled_difficulty_bonuses = 1.0	# scales to setting
+	counts_for_victory = yes
+	sub_title = "COUNTRY_FALLEN_EMPIRE"
+	sub_title_desc = "COUNTRY_FALLEN_EMPIRE_DESC"
+
+	share_survey_data = no
+	relations = yes
+	fallen_empire = yes
+	needs_survey = no
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	uses_special_buildables = yes
+	observable = yes
+
+	faction = {
+		needs_border_access = no
+	}
+
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.0
+		min_assault_armies_for_wars = @armies_for_declaring_war
+		colonizer = no
+		internal_policies = no
+		modification = no
+		construction = no
+		starbase_upgrade = no
+		limited_construction = yes
+		tech = no
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+	}
+	modules = {
+		all_technology_module = {}
+		standard_event_module = {}
+		standard_leader_module = {}
+		standard_economy_module = {}
+		standard_species_rights_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = on_action_only
+			can_receive = {
+				action_declare_war
+				action_offer_peace
+				action_make_rival
+				action_end_rivalry
+				action_offer_trade_deal
+				action_cancel_trade_deal
+				action_insult
+			}
+			can_send = {
+				action_declare_war
+				action_make_rival
+				action_end_rivalry
+				action_offer_peace
+				action_offer_trade_deal
+				action_cancel_trade_deal
+				action_open_borders
+				action_close_borders
+			}
+		}
+	}
+
+	resources = {
+		category = country_base
+		produces = {
+			energy = 1000
+			minerals = 250
+			food = 100
+			alloys = 100
+			consumer_goods = 200
+			rare_crystals = 10
+			exotic_gases = 10
+			volatile_motes = 10
+			sr_dark_matter = 2
+			sr_living_metal = 2
+			sr_zro = 2
+			influence = 3
+			uma_crystal_carrot = 150
+		}
+	}
+}
+
+uma_awakened_fallen_empire = {
+	scaled_difficulty_bonuses = 1.0	# scales to setting
+	counts_for_victory = yes
+	sub_title = "COUNTRY_AWAKENED_FALLEN_EMPIRE"
+	sub_title_desc = "COUNTRY_AWAKENED_FALLEN_EMPIRE_DESC"
+
+	share_survey_data = no
+	relations = yes
+	fallen_empire = yes
+	awakened_fallen_empire = yes
+	needs_survey = no
+	diplomatic_wars = yes
+	ship_disengagement = yes
+	army_disengagement = yes
+	pop_growth = yes
+	uses_special_buildables = yes
+	observable = yes
+
+	faction = {
+		needs_border_access = no
+	}
+
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.2
+		min_assault_armies_for_wars = @armies_for_declaring_war
+		colonizer = yes
+		internal_policies = yes
+		starbase_upgrade = no
+		modification = no
+		government = no
+		construction = yes
+		tech = yes
+		traditions = yes #but no ascension perks!
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+	}
+	modules = {
+		all_technology_module = {}
+		standard_event_module = {}
+		standard_leader_module = {}
+		standard_economy_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+			can_receive = {
+				action_declare_war
+				action_offer_peace
+				action_make_rival
+				action_end_rivalry
+				action_offer_trade_deal
+				action_cancel_trade_deal
+				action_insult
+				action_ask_to_become_thrall
+				action_ask_to_become_dominion
+				action_ask_to_become_satellite
+				action_ask_to_become_signatory
+				action_ask_to_be_released_subject
+				action_ask_to_join_federation
+				action_invite_to_federation
+				action_leave_federation
+				action_kick_from_federation
+			}
+			can_send = {
+				action_declare_war
+				action_make_rival
+				action_end_rivalry
+				action_offer_peace
+				action_offer_trade_deal
+				action_cancel_trade_deal
+				action_demand_thrall
+				action_demand_dominion
+				action_demand_satellite
+				action_demand_signatory
+				action_release_subject
+				action_invite_to_federation
+				action_leave_federation
+				action_kick_from_federation
+				action_open_borders
+				action_close_borders
+			}
+		}
+	}
+
+	resources = {
+		category = country_base
+		produces = {
+			energy = 1000
+			minerals = 250
+			food = 100
+			alloys = 100
+			consumer_goods = 100
+			rare_crystals = 10
+			exotic_gases = 10
+			volatile_motes = 10
+			sr_dark_matter = 2
+			sr_living_metal = 2
+			sr_zro = 2
+			influence = 3
+			uma_crystal_carrot = 150
+		}
+	}
+}
+
+
+
+
+
+###三女神知识研究所专属country_type
+uma_threegodness_knowledge_research_dept_enclave = {
+	show_in_contacts_list = yes
+	minimalist_contacts_list_profile = yes
+	share_communications = no
+	default_ships = no
+	government = no
+	observable = no
+	uses_origins = no
+    has_capital = no
+    orbital_bombardment = no
+    relations = no
+    #custom_opinion = yes
+
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		auto_delete = no
+	}
+	custom_diplomacy = yes
+	modules = {
+		basic_technology_module = {}
+        standard_event_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = on_action_only
+		}
+	}    
+}
+
+###内恰专属country_type
+uma_nice_nature_enclave = {
+	show_in_contacts_list = yes
+	minimalist_contacts_list_profile = yes
+	share_communications = no
+	default_ships = no
+	government = no
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		auto_delete = no
+	}
+	custom_diplomacy = yes
+	modules = {
+		basic_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = on_action_only
+		}
+	}
+}
+
+###绿帽商城country_type
+#uma_shop_center_enclave = {
+#	blocks_piracy = yes
+#	show_in_contacts_list = yes
+#	minimalist_contacts_list_profile = yes
+#	can_have_their_comms_shared = yes
+#	government = yes
+#	is_enclave = yes	#是飞地吗？
+#	observable = no
+#	ai = {	#飞地不需要AI
+#		enabled = no
+#	}
+#	faction = {
+#		neutral = yes #不会被主动攻击，也不会主动攻击他人
+#		hostile = no
+#		needs_border_access = no
+#		generate_borders = no
+#		needs_colony = no
+#		auto_delete = no
+#	}
+#	custom_diplomacy = yes	#自定义外交，用于触发外交事件
+#	custom_opinion = yes	#自定义好感，用于事件调整国家好感
+#	modules = {
+#		basic_technology_module = {}
+#		standard_event_module = {}
+#		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
+#		#basic_technology_module = {}
+#	}
+#}
+
+uma_shop_center_enclave = {
+	blocks_piracy = yes
+	show_in_contacts_list = yes
+	can_have_their_comms_shared = yes
+	government = yes
+	is_enclave = yes
+	observable = no
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+	}
+	custom_diplomacy = yes
+	custom_opinion = yes
+	modules = {
+		basic_technology_module = {}
+		standard_event_module = {}
+		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
+		#basic_technology_module = {}
+	}
+}
+
+
+#虚境模板
+#shroud = {
+#	is_the_shroud = yes
+#	show_in_contacts_list = yes
+#	minimalist_contacts_list_profile = yes
+#	share_communications = no
+#	default_ships = no
+#	government = no
+#	observable = no
+#	uses_origins = no
+#	ai = {
+#		enabled = no
+#	}
+#	faction = {
+#		hostile = no
+#		needs_border_access = no
+#		generate_borders = no
+#		needs_colony = no
+#		auto_delete = no
+#	}
+#	custom_diplomacy = yes
+#	modules = {
+#		basic_technology_module = {}
+#		exclusive_diplomacy_module = {
+#			contact_rule = on_action_only
+#		}
+#	}
+#}
+
+
+####
+##堕落联络属专属country_type
+uma_fallen_empire_communication_enclave = {
+	show_in_contacts_list = yes
+	minimalist_contacts_list_profile = yes
+	share_communications = no
+	default_ships = no
+	government = no
+	observable = no
+	uses_origins = no
+    has_capital = no
+    orbital_bombardment = no
+    relations = no
+    #custom_opinion = yes
+
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		auto_delete = no
+	}
+	custom_diplomacy = yes
+	modules = {
+		basic_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = on_action_only
+		}
+	}    
+}
+
+uma_resurgence_country = {
+	blocks_piracy = yes
+	show_in_contacts_list = no
+	can_have_their_comms_shared = no
+	government = no
+	is_enclave = no	#是飞地吗？
+	observable = no
+	ai = {	#飞地不需要AI
+		enabled = no
+	}
+	faction = {
+		neutral = yes #不会被主动攻击，也不会主动攻击他人
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+		auto_delete = no
+	}
+	custom_diplomacy = yes	#自定义外交，用于触发外交事件
+	custom_opinion = yes	#自定义好感，用于事件调整国家好感
+	modules = {
+		basic_technology_module = {}
+		standard_event_module = {}
+		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
+		#basic_technology_module = {}
+	}
+}
+
+
+uma_bourbon_arc_country = {
+	attack_unarmed_orbital_stations = no
+	has_difficulty_bonuses = no
+	show_in_contacts_list = no
+	destroys_starbases = no
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	observable = yes
+	government = no
+	orbital_bombardment = no
+	can_use_invalid_technology = yes
+	ai = {
+		enabled = no
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+		generate_borders = no
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+
+uma_fine = {
+	attack_unarmed_orbital_stations = yes
+	has_difficulty_bonuses = no
+	show_in_contacts_list = no
+	destroys_starbases = no
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	observable = yes
+	government = no
+	orbital_bombardment = yes
+	can_use_invalid_technology = yes
+	ai = {
+		enabled = no
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+		generate_borders = no
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+uma_fine_friend = {
+	attack_unarmed_orbital_stations = yes
+	has_difficulty_bonuses = no
+	show_in_contacts_list = no
+	destroys_starbases = no
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	observable = yes
+	government = no
+	orbital_bombardment = yes
+	can_use_invalid_technology = yes
+	targets = {
+		uma_fine
+	}
+	ai = {
+		enabled = yes
+	}
+	faction = {
+		needs_colony = no
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+uma_curren = {
+	minimalist_contacts_list_profile = yes
+	attack_unarmed_orbital_stations = yes
+	scaled_difficulty_bonuses = 3.0	# scales to setting
+	end_game_crisis = no
+	mid_game_crisis = no
+	destroys_starbases = yes
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	observable = yes
+	uses_origins = no
+	government = no
+	ai = {
+		enabled = yes
+		colonizer = no
+		construction = yes
+		modules = {
+			invaders_military_minister_module
+			invaders_interior_minister_module
+		}
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+uma_ap2_hostile_event_country = {
+	attack_unarmed_orbital_stations = yes
+	has_difficulty_bonuses = no
+	show_in_contacts_list = no
+	destroys_starbases = no
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	observable = yes
+	government = no
+	orbital_bombardment = no
+	can_use_invalid_technology = yes
+	ai = {
+		enabled = no
+	}
+	faction = {
+		needs_colony = yes
+		hostile = yes
+		needs_border_access = no
+		generate_borders = no
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+uma_ec3_empire = {
+	attack_unarmed_orbital_stations = yes
+	has_difficulty_bonuses = no
+	end_game_crisis = yes
+	destroys_starbases = yes
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	home_system = "d_port_system"
+	custom_starbase = starbase_uma_ec3
+	observable = yes
+	government = no
+	orbital_bombardment = yes
+	can_use_invalid_technology = yes
+	ai = {
+		enabled = no
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+		generate_borders = yes
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+
+uma_ec2_empire = {
+	attack_unarmed_orbital_stations = yes
+	has_difficulty_bonuses = no
+	end_game_crisis = yes
+	destroys_starbases = yes
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	home_system = "d_port_system"
+	custom_starbase = starbase_fe_outpost
+	observable = yes
+	government = no
+	orbital_bombardment = yes
+	can_use_invalid_technology = yes
+	ai = {
+		enabled = no
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+		generate_borders = yes
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
+
+
+uma_ec1_empire = {
+	attack_unarmed_orbital_stations = yes
+	has_difficulty_bonuses = no
+	end_game_crisis = yes
+	destroys_starbases = yes
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = no
+	has_capital = no
+	enforces_borders = no
+	home_system = "d_port_system"
+	custom_starbase = starbase_uma_ec1
+	observable = yes
+	government = no
+	orbital_bombardment = yes
+	can_use_invalid_technology = yes
+	ai = {
+		enabled = no
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+		generate_borders = yes
+		auto_delete = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}
