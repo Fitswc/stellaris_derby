@@ -58,7 +58,7 @@ zone_uma_unity_ring_world = {
 zone_uma_fortress_ring_world = {
 	inline_script = {
 		script = uma_zones/uma_rw_fortress
-		AMOUNT = @doubled_scaling_district_1_job
+		AMOUNT = 1200
 	}
 
 	swap_type = district_uma_ring_fortress
@@ -273,7 +273,7 @@ zone_uma_unity_school_world = {
 zone_uma_fortress_school_world = {
 	inline_script = {
 		script = uma_zones/uma_usw_fortress
-		AMOUNT = 300
+		AMOUNT = 800
 	}
 
 	swap_type = district_uma_usw_fortress

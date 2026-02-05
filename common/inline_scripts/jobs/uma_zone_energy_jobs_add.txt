@@ -20,6 +20,7 @@ triggered_district_planet_modifier = {
 
 	modifier = {
 		job_uma_field_powering_technician_add = $AMOUNT$
+		planet_uma_field_powering_technician_produces_mult = 0.2
 	}
 }
 
@@ -45,5 +46,7 @@ triggered_district_planet_modifier = {
 
 	modifier = {
 		job_technician_add = $AMOUNT$
+		planet_technician_energy_produces_add = 10
+		planet_technician_produces_mult = 0.2
 	}
 }

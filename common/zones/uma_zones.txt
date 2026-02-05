@@ -31,10 +31,6 @@ zone_uma_training = {
 		cost = {
 			minerals = @zone_cost
 		}
-
-		upkeep = {
-			food = 5
-		}
 	}
 
 	triggered_district_planet_modifier = {
@@ -101,10 +97,6 @@ zone_uma_teaching = {
 		cost = {
 			minerals = @zone_cost
 		}
-
-		upkeep = {
-			consumer_goods = 5
-		}
 	}
 
 	triggered_district_planet_modifier = {
@@ -163,10 +155,6 @@ zone_uma_industry = {
 		cost = {
 			minerals = @zone_cost
 		}
-
-		upkeep = {
-			minerals = 5
-		}
 	}
 
 	convert_to = {
@@ -195,7 +183,7 @@ zone_uma_industry = {
 		trigger = {
 			always = yes
 		}
-		text = zone_uma_industrial_triggered_desc
+		text = zone_uma_industry_desc
 	}
 	inline_script = {
 		script = zones/shared_city_non_urban_zone_modifiers
@@ -229,11 +217,11 @@ zone_uma_basic_food = {
 	resources = {
 		category = planet_zones
 		cost = {
-			minerals = @zone_cost
+			minerals = 500
 		}
 
 		upkeep = {
-			minerals = 5
+			energy = 2
 		}
 	}
 
@@ -251,8 +239,15 @@ zone_uma_basic_food = {
 	}
 
 	triggered_district_planet_modifier = {
-		job_uma_bee_farmer_add = 200
 		job_uma_carrot_farmer_add = 200
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			owner = {
+				has_technology = tech_uma_code_hachimi
+			}
+		}
+		job_uma_bee_farmer_add = 100
 	}
 	inline_script = {
 		script = zones/shared_city_non_urban_zone_modifiers
@@ -290,11 +285,11 @@ zone_uma_basic_mineral = {
 	resources = {
 		category = planet_zones
 		cost = {
-			minerals = @zone_cost
+			minerals = 500
 		}
 
 		upkeep = {
-			minerals = 5
+			energy = 2
 		}
 	}
 
@@ -318,7 +313,7 @@ zone_uma_basic_mineral = {
 		potential = {
 			has_deposit = d_uma_crystal_carrot_mine_planet
 		}
-		job_uma_crystal_carrot_miner_add = 150
+		job_uma_crystal_carrot_miner_add = 100
 	}
 	inline_script = {
 		script = zones/shared_city_non_urban_zone_modifiers
@@ -332,7 +327,10 @@ zone_uma_energy_venus = {
 	resources = {
 		category = planet_zones
 		cost = {
-			minerals = @zone_cost
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
 		}
 	}
 
@@ -382,7 +380,8 @@ zone_uma_energy_venus = {
 	}
 
 	district_planet_modifier = {
-		planet_jobs_energy_produces_add = 10
+		job_technician_add = 200
+		planet_technician_energy_produces_add = 10
 	}
 
 	triggered_planet_modifier = {
