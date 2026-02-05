@@ -631,24 +631,19 @@ on_country_destroyed = {
 	}
 }
 
-
-on_starbase_destroyed = {
-	events = {
-		uma_ec_3.11
-
-		uma_ec_3.25
-
-		uma_ec_3.12
-	}
-}
-
-
 # This = starbase being destroyed (not ship!)
 # From = fleet that destroyed the starbase
 on_starbase_destroyed = {
 	events = {
 		uma_ec_2.6
+
 		uma_ec_2.9
+
+		uma_ec_3.11
+
+		uma_ec_3.25
+
+		uma_ec_3.12
 	}
 }
 
@@ -674,5 +669,13 @@ on_capital_changed = {
 on_single_player_save_game_load = {
 	events = {
 		 uma_marking.3
+	}
+}
+
+#This = ship (starbase)
+#From = owner country
+on_building_starbase_outpost  = {
+	events = {
+
 	}
 }

@@ -1,0 +1,372 @@
+namespace = uma_ale
+
+country_event = {
+	id = uma_ale.1
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		random_system = {
+			limit = {
+				NOT = {
+					uma_is_event_system = yes
+				}
+				is_star_class = sc_black_hole
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 15
+				}
+			}
+			set_star_flag = is_uma_event_system
+			set_star_flag = uma_ale_system
+			save_global_event_target_as = uma_ale_star_bh
+			log = "ALMOND EYE ANOMALY GENERATED. LOCATION:[This.GetName]"
+
+			add_anomaly = {
+				category = uma_ale_anomoly
+				target = This.star
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = uma_ale.2
+	title = uma_ale.2.title
+	desc = uma_ale.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_black_hole
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ale.2.a
+		owner = {
+			add_resource = {
+				alloys = 2000
+			}
+			set_country_flag = uma_ale.2.a_actived
+		}
+		enable_special_project = {
+			name = UMA_ALE_SP_1
+			owner = This.owner
+			location = event_target:uma_ale_star_bh.star
+		}
+	}
+
+	option = {
+		name = uma_ale.2.b
+		owner = {
+			set_country_flag = uma_ale.2.b_actived
+		}
+		enable_special_project = {
+			name = UMA_ALE_SP_2
+			owner = This.owner
+			location = event_target:uma_ale_star_bh.star
+		}
+	}
+}
+
+ship_event = {
+	id = uma_ale.3
+	title = uma_ale.3.title
+	desc = {
+		trigger = {
+			owner = {
+				has_country_flag = uma_ale.2.a_actived
+			}
+			text = uma_ale.3.desc.a
+		}
+	}
+	desc = {
+		trigger = {
+			owner = {
+				owner = {
+					has_country_flag = uma_ale.2.b_actived
+				}
+				text = uma_ale.3.desc.b
+			}
+		}
+	}
+	is_triggered_only = yes
+	picture = GFX_evt_black_hole
+
+	immediate = {
+		event_target:uma_ale_star_bh = {
+			star = {
+				change_pc = pc_b_star
+			}
+		}
+	}
+
+	option = {
+		name = uma_ale.3.a
+		owner = {
+			add_resource = {
+				minerals = 100
+				alloys = 100
+				food = 100
+				rare_crystals = 100
+				exotic_gases = 100
+				uma_crystal_carrot = 100
+
+			}
+		}
+	}
+	
+	after = { 
+		event_target:uma_ale_star_bh = {
+			create_cosmic_storm = {
+				cosmic_storm_start_position = This
+				type = uma_evt_time_storm
+				immediate = yes
+			}
+		}
+		owner = {
+			country_event = {
+				id = uma_ale.4
+			}
+		}
+	}
+}
+##Part1 end now
+country_event = {
+	id = uma_ale.4
+	title = uma_ale.4.title
+	desc = uma_ale.4.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ale.4.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.5
+				days = 100
+				random = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.5
+	title = uma_ale.5.title
+	desc = uma_ale.5desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ale.5.a
+		add_resource = {
+			influence = 300
+		}
+	}
+	option = {
+		name = uma_ale.5.b
+		enable_special_project = {
+
+		}
+	}
+}
+
+ship_event = {
+	id = uma_ale.6
+	title = uma_ale.6.title
+	desc = uma_ale.6.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ale.6.a
+		owner = {
+			country_event = {
+				id = uma_ale.7
+				scopes = {
+					from = Root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.7
+	title = uma_ale.7.title
+	desc = uma_ale.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = From.fleet.leader
+		room = ship_room
+	}
+
+
+	option = {
+		name = uma_ale.7.a
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = { id = uma_ale.9 }
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.8
+	title = uma_ale.8.title
+	desc = uma_ale.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = From.fleet.leader
+		room = ship_room
+	}
+
+
+	option = {
+		name = uma_ale.8.a
+	}
+}
+
+country_event = {
+	id = uma_ale.9
+	title = uma_ale.9.title
+	desc = uma_ale.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = From.fleet.leader
+		room = ship_room
+	}
+
+
+	option = {
+		name = uma_ale.9.a
+		hidden_effect = {
+			event_target:uma_ale_star_bh = {
+				spawn_system = {
+					initializer = uma_ale_system
+					max_orientation_angle = 1
+					min_orientation_angle = 340
+					effect = {
+						save_event_target_as = uma_ale_star_bh_future
+						set_star_flag = uma_ale_star_bh_future_flag
+						add_hyperlane = {
+							from = this
+							to = event_target:uma_ale_star_bh
+						}
+					}
+				}
+			}
+			event_target:uma_ale_star_bh_future.star = {
+				add_anomaly = { category = uma_ale_2_anomoly target = this }
+			}
+		}
+	}
+}
+
+
+ship_event = {
+	id = uma_ale.10
+	title = uma_ale.10.title
+	desc = uma_ale.10.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ale.10.a
+	}
+}
+
+ship_event = {
+	id = uma_ale.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		This.solar_system = {
+			has_star_flag = uma_ale_star_bh_future_flag
+
+			NOT = {
+				has_star_flag = uma_ale_star_bh_future_flag_has_built
+			}
+		}
+		owner = {
+			is_uma_player_country = yes
+		}
+	}
+
+	immediate = {
+		solar_system = {
+			set_star_flag = uma_ale_star_bh_future_flag_has_built
+		}
+		owner = {
+			country_event = {
+				id = uma_ale.12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.12
+	title = uma_ale.12.title
+	desc = uma_ale.12.desc
+	is_triggered_only = yes
+
+
+	option = {
+		name = uma_ale.12.a
+		hidden_effect = {
+			event_target:uma_ale_star_bh = {
+
+			}
+		}
+	}
+}
+
+##Step3, material tackling station
+country_event = {
+	id = uma_ale.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_country = {
+			name = "uma_ale_mts"
+			type = uma_shop_center_enclave
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags01.dds"
+				}
+				background = {
+					#次背景
+					category = "backgrounds"
+					file = "double_hemispheres.dds"
+				}
+				colors = {
+					"green"
+					"dark_green"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = "ethic_xenophile"
+				ethic = "ethic_materialist"
+				ethic = "ethic_egalitarian"
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = uma_is_shop_center
+				save_global_event_target_as = uma_shop
+				set_graphical_culture = npf_01
+			}
+		}
+	}
+}

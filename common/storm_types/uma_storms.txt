@@ -103,3 +103,113 @@ uma_crystal_carrot_storm = {
 	cosmic_storm_galaxy_lightning_time = 5.0
 	cosmic_storm_galaxy_max_opacity = 0.4
 }
+
+uma_evt_time_storm = {
+	inline_script = "cosmic_storms/BaseModifier"
+
+	inline_script = {
+		script = "cosmic_storms/StormConfig"
+		MIN_RADIUS = 25
+		MAX_RADIUS = 30
+		MIN_RANGE = value:storm_range_min
+		MAX_RANGE = value:storm_range_max
+		STORM_SPEED = 0
+		ACTIVATION_PERIOD_IN_MONTHS = 12
+		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+	}
+
+
+	spawn_weight = {
+		base = 0
+	}
+
+	description = uma_evt_time_storm_lore_description
+
+	### positive effects ###
+
+	triggered_planet_modifier = {
+		potential = {
+			is_colony = yes
+		}
+		planet_building_build_speed_mult = 0.5
+	}
+
+	triggered_system_modifier = {
+		potential = {
+			exists = starbase
+		}
+		starbase_shipyard_build_speed_mult =0.5
+	}
+
+	### negative effects ###
+	triggered_fleet_modifier = {
+		potential = {
+			always = yes
+		}
+		modifier = {
+			ship_interstellar_speed_mult = -0.99
+		}
+	}
+
+	###
+
+	on_start = {
+		every_system_within_storm = {
+			added_to_storm_base_effect = yes
+
+			set_star_flag = storm_system
+			set_global_flag = cosmic_storm_has_occurred
+
+			inline_script = {
+				script = cosmic_storms/StormVisuals
+				STORM_NAME = "electric_storm"
+			}
+		}
+	}
+
+	on_moved = {
+		every_system_added_to_storm = {
+			added_to_storm_base_effect = yes
+
+			set_star_flag = storm_system
+			set_global_flag = cosmic_storm_has_occurred
+
+			inline_script = {
+				script = cosmic_storms/StormVisuals
+				STORM_NAME = "electric_storm"
+			}
+		}
+
+		every_system_removed_from_storm = {
+			removed_from_storm_base_effect = yes
+
+			remove_storm_visuals_effect = yes
+			remove_star_flag = storm_system
+		}
+	}
+
+	on_finished = {
+		every_system_within_storm = {
+			removed_from_storm_base_effect = yes
+
+			remove_storm_visuals_effect = yes
+			remove_star_flag = storm_system
+		}
+	}
+
+	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
+	cosmic_storm_texture_color_path = "gfx/map/storms/electric_storm_color.dds"
+	cosmic_storm_event_sprite = "GFX_uma_crystal_carrot_storm" #TODO
+	icon = GFX_planetview_uma_crystal_carrot_storm_modifier_frame
+
+	cosmic_storm_texture_lightning_paths = {
+		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_mid_storm_02.dds"
+		"gfx/map/storms/lightning/lightning_small_storm_01.dds"
+		"gfx/map/storms/lightning/lightning_small_storm_02.dds"
+	}
+
+	cosmic_storm_galaxy_lightning_time = 2.0
+	cosmic_storm_galaxy_max_opacity = 0.3
+}
+
