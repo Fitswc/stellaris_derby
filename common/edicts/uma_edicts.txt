@@ -240,40 +240,6 @@ uma_open_mmu = {
 
 }
 
-#
-#uma_change_cheval_clothes = {
-#	length = 0
-#	resources = {
-#		category = edicts
-#		cost = {
-#			influence = 0
-#		}
-#	}
-#
-#	potential = {
-#		has_authority = auth_trainingcenter
-#	}
-#
-#	allow = {
-#		always = yes
-#	}
-#
-#	effect = {
-#		hidden_effect = {
-#			country_event = {
-#				id = uma_cheval.15
-#			}
-#		}
-#	}
-#
-#	ai_weight = {
-#		weight = 0
-#	}
-#
-#}
-
-
-
 uma_comm_with_fe = {
 	length = 0
 	icon = GFX_uma_suspendfallen_empire_mission

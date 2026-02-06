@@ -336,37 +336,23 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		create_country = {
-			name = "uma_ale_mts"
-			type = uma_shop_center_enclave
-			flag = {
-				icon = {
-					category = "uiu_flags"
-					file = "uiu_flags01.dds"
-				}
-				background = {
-					#次背景
-					category = "backgrounds"
-					file = "double_hemispheres.dds"
-				}
-				colors = {
-					"green"
-					"dark_green"
-					"null"
-					"null"
+		event_target:uma_ale_star_bh.star = {
+			create_ambient_object = {
+				type = "uma_ale_market_recycle_station"
+				entity_offset_height = { min = 0 max = 10 }
+				location = this
+				effect = {
+					save_event_target_as = uma_ale_market_recycle_station_target
 				}
 			}
-			ethos = {
-				ethic = "ethic_xenophile"
-				ethic = "ethic_materialist"
-				ethic = "ethic_egalitarian"
-			}
-			ignore_initial_colony_error = yes
-			effect = {
-				set_country_flag = uma_is_shop_center
-				save_global_event_target_as = uma_shop
-				set_graphical_culture = npf_01
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 8
+					angle = random
+				}
 			}
 		}
+		set_country_flag = uma_ale_market_recycle_station_exist
 	}
 }
