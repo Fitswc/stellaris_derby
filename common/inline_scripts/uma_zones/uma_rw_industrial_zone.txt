@@ -40,13 +40,13 @@ triggered_desc = {
 	trigger = {
 		always = yes
 	}
-	text = zone_uma_industrial_triggered_desc
+	text = zone_uma_industrial_ring_triggered_desc
 }
 
 inline_script = {
 	script = jobs/uma_zone_industrial_jobs_add
-	AMOUNT = 800
-	AMOUNT_ELSE = 500
+	AMOUNT = 1200
+	AMOUNT_ELSE = 800
 }
 
 planet_modifier = {

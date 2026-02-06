@@ -9,7 +9,7 @@ zone_uma_teaching_desc: "学而时习之"
 mod_planet_zone_uma_teaching_build_speed_mult: "赛马娘高级研究特化建造速度"
 
 zone_uma_industry: "马娘特色工业"
-zone_uma_industry_desc: "这里承载着庞大的工业体系"
+zone_uma_industry_desc: "这里承载着庞大的工业体系 \n§Y本特化会根据已有的['trait:uma_trait_musume']工业类别建筑给予§!§G200§!§Y对应的岗位§!,如果没有，则给予§G100§!工匠和冶金工\n\n已有的['trait:uma_trait_musume']工业类别建筑有:\n-['building:building_uma_crystal_carrot_producing_lab']\n-['building:building_uma_crystal_alloy_workhouse']\n-['building:building_uma_crystal_consumer_goods_workhouse']\n-['building:building_uma_chemical_plant']\n-['building:building_uma_crystal_plant']\n-['building:building_uma_gas_plant']\n-['building:building_uma_dark_matter_plant']\n以及它们的升级建筑"
 
 zone_uma_basic_food: "马娘特色食物生产"
 zone_uma_basic_food_desc: "为什么一半以上都是胡萝卜？"
@@ -52,6 +52,7 @@ zone_uma_housing_ring_world_desc: "这个周边城市可以有效拓展这个环
 zone_uma_industrial_school_world: "工业特化"
 zone_uma_industrial_school_world_desc: "数以万计的工厂正在这个区域马力全开，生产着上至战争机器下至生活用品的工业产品。"
 zone_uma_industrial_triggered_desc: "§Y本特化会根据已有的['trait:uma_trait_musume']工业类别建筑给予§!§G800§!§Y对应的岗位§!,如果没有，则给予§G500§!工匠和冶金工\n\n已有的['trait:uma_trait_musume']工业类别建筑有:\n-['building:building_uma_crystal_carrot_producing_lab']\n-['building:building_uma_crystal_alloy_workhouse']\n-['building:building_uma_crystal_consumer_goods_workhouse']\n-['building:building_uma_chemical_plant']\n-['building:building_uma_crystal_plant']\n-['building:building_uma_gas_plant']\n-['building:building_uma_dark_matter_plant']\n以及它们的升级建筑"
+zone_uma_industrial_ring_triggered_desc: "§Y本特化会根据已有的['trait:uma_trait_musume']工业类别建筑给予§!§G1200§!§Y对应的岗位§!,如果没有，则给予§G800§!工匠和冶金工\n\n已有的['trait:uma_trait_musume']工业类别建筑有:\n-['building:building_uma_crystal_carrot_producing_lab']\n-['building:building_uma_crystal_alloy_workhouse']\n-['building:building_uma_crystal_consumer_goods_workhouse']\n-['building:building_uma_chemical_plant']\n-['building:building_uma_crystal_plant']\n-['building:building_uma_gas_plant']\n-['building:building_uma_dark_matter_plant']\n以及它们的升级建筑"
 
 zone_uma_research_school_world: "研究特化"
 zone_uma_research_school_world_desc: "这里聚集了所有马娘的智慧结晶，许多研究成果将在这里产生。"
