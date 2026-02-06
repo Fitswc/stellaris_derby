@@ -308,20 +308,19 @@ ship_event = {
                 custom_catch_phrase = uma_am_catch_phrase
                 skip_background_generation = yes
                 traits = {
-                    trait = uma_governor_trait_flare
-                    trait = uma_governor_trait_never_forget
-                    trait = leader_trait_uma_generic
+                    0 = uma_governor_trait_flare
+                    1 = uma_governor_trait_never_forget
+                    2 = leader_trait_uma_generic
                 }
                 effect = {
-                    add_experience = 7000
-                    set_leader_flag = uma_is_special_leader
-                    set_leader_flag = uma_is_am
-                    set_leader_flag = renowned_leader
-                    save_global_event_target_as = uma_is_leader_am_2
                     change_leader_portrait = 74c
                 }
             }
             last_created_leader = {
+                set_leader_flag = uma_is_special_leader
+                set_leader_flag = uma_is_am
+                set_leader_flag = renowned_leader
+                save_global_event_target_as = uma_is_leader_am_2
                 uma_initialize_leader_yaruki_effect = yes
             }
         }
@@ -402,7 +401,7 @@ country_event = {
 #                set_leader_flag = legendary_leader
                 change_leader_portrait = "74c"
                 uma_initialize_leader_yaruki_effect = yes
-                add_experience = 20000
+                add_experience = 99999
             }
             create_message = {
                 type = MESSAGE_RECRUITED_LEADER

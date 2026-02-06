@@ -59,7 +59,7 @@ weapon_component_template = { #MJR激光器
 
 	# cooldown = 35
 	###########  PS:只有large槽的武器才会使用cool down
-	range = 100
+	range = 60
 	accuracy = 0.95
 	tracking = 0.6
 
@@ -200,7 +200,7 @@ weapon_component_template = { #MJR激光器
 	armor_penetration = 0
 
 	#cooldown = 35
-	range = 100
+	range = 150
 	accuracy = 0.95
 	tracking = 0.2
 
@@ -275,7 +275,7 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	armor_penetration = 0
 
 	#cooldown = 80
-	range = 190
+	range = 80
 	accuracy = 0.85
 	tracking = 0
 
@@ -344,7 +344,7 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	armor_penetration = 0
 
 	#cooldown = 80
-	range = 190
+	range = 120
 	accuracy = 0.85
 	tracking = 0
 
@@ -413,7 +413,7 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	armor_penetration = 0
 
 	#cooldown = 80
-	range = 190
+	range = 180
 	accuracy = 0.85
 	tracking = 0
 
@@ -483,7 +483,7 @@ weapon_component_template = { #色线圈加农炮（千兆级加农炮为前置�
 	armor_penetration = 0
 
 	#cooldown = 80
-	range = 150
+	range = 200
 	accuracy = 0.85
 	tracking = 0
 
@@ -550,7 +550,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 40
+	range = 60
 	accuracy = 0.85
 	tracking = 0.45
 
@@ -616,7 +616,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 40
+	range = 100
 	accuracy = 0.85
 	tracking = 0.2
 
@@ -682,7 +682,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 40
+	range = 150
 	accuracy = 0.85
 	tracking = 0.1
 
@@ -751,7 +751,7 @@ weapon_component_template = { #高能强子裂解炮
 	armor_penetration = 1
 
 	#cooldown = 50
-	range = 35
+	range = 50
 	accuracy = 1
 	tracking = 0.7
 
@@ -817,7 +817,7 @@ weapon_component_template = {
 	armor_penetration = 1
 
 	#cooldown = 50
-	range = 35
+	range = 80
 	accuracy = 1
 	tracking = 0.45
 
@@ -960,7 +960,7 @@ weapon_component_template = { #弦光矛
 	armor_penetration = 0
 
 	#cooldown = 72
-	range = 150
+	range = 160
 	accuracy = 0.95
 	tracking = 0
 
@@ -1134,7 +1134,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 35
-			volatile_motes = 18
+			volatile_motes = 20
 		}
 		upkeep = {
 			energy = 0.35
@@ -1148,25 +1148,25 @@ weapon_component_template = {
 		min = 60
 		max = 100
 	}
-	hull_damage = 2.0
-	shield_damage = 1.8
-	shield_penetration = 1.0
+	hull_damage = 1.0
+	shield_damage = 2.0
+	# shield_penetration = 1.0
 	armor_damage = 2.0
-	armor_penetration = 1.0
+	# armor_penetration = 1.0
 	windup = {
-		min = 10.0
-		max = 26.0
+		min = 1.0
+		max = 9.0
 	}
 	range = 90
-	accuracy = 0.6
-	tracking = 0.3
+	accuracy = 1.0
+	tracking = 0.5
 
-	missile_speed = 500
+	missile_speed = 50
 	missile_evasion = 0.0
 	missile_shield = 0.0
-	missile_armor = 17.0
-	missile_health = 33.0
-	missile_retarget_range = 140
+	missile_armor = 20.0
+	missile_health = 30.0
+	missile_retarget_range = 150
 }
 
 weapon_component_template = {
@@ -1198,12 +1198,12 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = 35
-			volatile_motes = 18
+			volatile_motes = 20
 		}
 		upkeep = {
 			energy = 0.35
-			alloys = 0.6
-			volatile_motes = 0.4
+			alloys = 0.1
+			volatile_motes = 0.1
 		}
 	}
 
@@ -1213,23 +1213,23 @@ weapon_component_template = {
 		max = 120
 	}
 	hull_damage = 3.0
-	shield_damage = 2.0
-	shield_penetration = 1.7
-	armor_damage = 2.5
-	armor_penetration = 1.7
+	shield_damage = 1.0
+	shield_penetration = 2.0
+	armor_damage = 1.0
+	armor_penetration = 2.0
 	windup = {
-		min = 15.0
+		min = 10.0
 		max = 30.0
 	}
 	range = 100
-	accuracy = 1.0
+	accuracy = 2.0
 	tracking = 1.0
 
-	missile_speed = 300
+	missile_speed = 50
 	missile_evasion = 1.0
 	missile_shield = 0.0
-	missile_armor = 18.0
-	missile_health = 29.0
+	missile_armor = 20.0
+	missile_health = 30.0
 	missile_retarget_range = 200
 }
 
@@ -1292,7 +1292,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 50
+	range = 60
 	accuracy = 0.85
 	tracking = 0.50
 
@@ -1358,7 +1358,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 50
+	range = 100
 	accuracy = 0.85
 	tracking = 0.46
 
@@ -1424,7 +1424,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 50
+	range = 150
 	accuracy = 0.85
 	tracking = 0.3
 
@@ -1621,7 +1621,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 50
+	range = 60
 	accuracy = 0.85
 	tracking = 0.50
 
@@ -1687,7 +1687,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 50
+	range = 100
 	accuracy = 0.85
 	tracking = 0.46
 
@@ -1753,7 +1753,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 50
+	range = 150
 	accuracy = 0.85
 	tracking = 0.3
 
@@ -1818,7 +1818,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 270
+	range = 200
 	accuracy = 1
 	tracking = 0.45
 
@@ -1883,7 +1883,7 @@ weapon_component_template = { #强等离子发射器
 	armor_penetration = 0
 
 	#cooldown = 40
-	range = 54
+	range = 300
 	accuracy = 0.85
 	tracking = 0.1
 

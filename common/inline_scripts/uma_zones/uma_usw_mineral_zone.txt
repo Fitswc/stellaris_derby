@@ -34,24 +34,24 @@ included_building_sets = {
 	mining_automation
 }
 
-triggered_district_planet_modifier = {
-	potential = {
-		has_deposit = d_uma_crystal_carrot_mine_planet
-	}
-	job_uma_crystal_carrot_miner_add = 300
-}
-
-triggered_planet_modifier = {
-	planet_uma_core_miner_produces_mult = 0.2
-}
-
 planet_modifier = {
 	zone_building_slots_add = 3
 }
 
 inline_script ={
 	script = jobs/uma_zone_mineral_jobs_add
-	AMOUNT = 900
+	AMOUNT = 800
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		has_deposit = d_uma_crystal_carrot_mine_planet
+	}
+	job_uma_crystal_carrot_miner_add = 400
+}
+
+triggered_planet_modifier = {
+	planet_uma_core_miner_produces_mult = 0.2
 }
 
 ai_resource_production = {
