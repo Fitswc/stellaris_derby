@@ -20,9 +20,33 @@ triggered_district_planet_modifier = {
 
 	modifier = {
 		job_uma_field_powering_technician_add = $AMOUNT$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire_spiritualist = no
+
+			is_uma_player_country = yes
+			has_technology = tech_uma_tama_force_powering_use
+		}
+
+#		OR = {
+#			has_active_building = building_uma_field_powerplant
+#			has_active_building = building_uma_field_powering_complex
+#			has_active_building = building_uma_field_powering_complex_realm
+#		}
+	}
+
+	modifier = {
 		planet_uma_field_powering_technician_produces_mult = 0.2
 	}
 }
+
+##N0
 
 triggered_district_planet_modifier = {
 	potential = {
@@ -46,7 +70,28 @@ triggered_district_planet_modifier = {
 
 	modifier = {
 		job_technician_add = $AMOUNT$
-		planet_technician_energy_produces_add = 10
-		planet_technician_produces_mult = 0.2
 	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire_spiritualist = no
+
+			is_uma_player_country = yes
+			NOT = {
+				has_technology = tech_uma_tama_force_powering_use
+			}
+		}
+
+		#		NOR = {
+		#			has_active_building = building_uma_field_powerplant
+		#			has_active_building = building_uma_field_powering_complex
+		#			has_active_building = building_uma_field_powering_complex_realm
+		#		}
+	}
+	planet_technician_energy_produces_add = 10
+	planet_technician_produces_mult = 0.2
 }
