@@ -114,13 +114,13 @@ building_uma_commercial_zone = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_clerk_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_uma_trader_effect_desc
-	}
+#	triggered_desc = {
+#		text = job_clerk_effect_desc
+#	}
+#
+#	triggered_desc = {
+#		text = job_uma_trader_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_interplanetary_commerce"

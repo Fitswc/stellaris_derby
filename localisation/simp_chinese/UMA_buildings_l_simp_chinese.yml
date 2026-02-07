@@ -196,14 +196,17 @@ planet_uma_gas_collector_produces_mult: "£job_uma_gas_collector£异星天然�
 
 building_uma_live_ground: "马娘Live会场"
 building_uma_live_ground_desc: "‘谢谢大家.....’这里是马娘的Live会场，每当一场比赛的结束这里往往人声鼎沸；当然，在没有比赛的平日，也有不少的偶像团体在这里举行巡演"
-job_uma_umaidol_effect_desc_2:0 "£job_uma_umaidol£ $job_uma_umaidol_plural$ 消耗 £consumer_goods£ §Y消费品§!，产出 £unity£ §Y凝聚力§!、 £society£ §Y社会学研究§! 和£amenities£ §Y舒适度§!。\n还能增加人口增长速度，我推的马娘偶像？\n\n值得注意的是:§Y$job_uma_umaidol$岗位不能被自动化建筑填充§!,毕竟在一些技术被发明前,我们的马娘不可能对着空气打call(笑)"
+#job_uma_umaidol_effect_desc_2:0 "£job_uma_umaidol£ $job_uma_umaidol_plural$ 消耗 £consumer_goods£ §Y消费品§!，产出 £unity£ §Y凝聚力§!、 £society£ §Y社会学研究§! 和£amenities£ §Y舒适度§!。\n还能增加人口增长速度，我推的马娘偶像？\n\n值得注意的是:§Y$job_uma_umaidol$岗位不能被自动化建筑填充§!,毕竟在一些技术被发明前,我们的马娘不可能对着空气打call(笑)"
+ job_uma_umaidol_effect_desc_2:"\n还能增加人口增长速度，我推的马娘偶像？\n\n值得注意的是:§Y$job_uma_umaidol$岗位不能被自动化建筑填充§!,毕竟在一些技术被发明前,我们的马娘不可能对着空气打call(笑)"
 
-mod_job_uma_umaidol_add: "£uma_text_umaidol£马娘偶像岗位:"
+mod_job_uma_umaidol_add: "£job_uma_umaidol£马娘偶像岗位"
 
 ##Realm
 building_uma_crystal_alloy_realm_complex_desc: "一座具有完整生产链的大型水晶合金生产园区，所有的工作人员都经以严加挑选，以完成对尖端大型器械的操控与维修。全自动的机械化钢铁巨兽们伴随着轰鸣咆哮，以极快的生产效率为我们带来了数不尽的财富。而针对领域的专门改造可以使我们的生产效率更上一层楼"
 building_uma_crystal_alloy_realm_complex: "水晶合金工厂复合体-领域适配ver."
-job_uma_crystal_alloy_crafter_effect_desc_ttr: "£job_uma_crystal_alloy_crafter£ $job_uma_crystal_alloy_crafter$ 消耗 £minerals£ §Y矿物§! 和 £uma_crystal_carrot£ §Y水晶萝卜§!，产出 数量可观的 £alloys£ §Y合金§!\n当拥有 领域:生产时:\n $mod_planet_uma_crystal_alloy_crafter_produces_mult$ +15%"
+#job_uma_crystal_alloy_crafter_effect_desc_ttr: "£job_uma_crystal_alloy_crafter£ $job_uma_crystal_alloy_crafter$ 消耗 £minerals£ §Y矿物§! 和 £uma_crystal_carrot£ §Y水晶萝卜§!，产出 数量可观的 £alloys£ §Y合金§!\n当拥有 领域:生产时:\n $mod_planet_uma_crystal_alloy_crafter_produces_mult$ +15%"
+ job_uma_crystal_alloy_crafter_effect_desc_ttr: "\n当拥有 领域:生产时:\n $mod_planet_uma_crystal_alloy_crafter_produces_mult$ +15%"
+
 building_uma_crystal_carrot_producing_realm_complex_desc: "水晶萝卜在多个领域都拥有良好的应用前景，不同产业则需要不同基本形状、大小等产品要求。我们将开始对生产区域进行细致划分，而后整合为园区进行统一管理。这将有助于简化后续工作步骤，并减少了不符合产业要求的额外产品消耗。而针对领域的专门改造可以使我们的生产效率更上一层楼"
 building_uma_crystal_carrot_producing_realm_complex: "水晶萝卜合成园区-领域适配ver."
 building_uma_crystal_consumer_goods_realm_complex_desc: "基于对马娘用品的重视程度，中小型工厂也被整合如体制内，以统一品牌、统一生产为标准，并规划出各类日用品的专门生产区域以方便管理与调控。若是最大程度上发挥它的生产极限，在理论上它能够满足一个星球的每日消费品需求"

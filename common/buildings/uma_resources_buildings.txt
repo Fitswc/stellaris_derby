@@ -60,18 +60,18 @@ building_uma_field_powerplant = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_field_powering_technician_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_field_powering_technician_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_tama_force_powering_use"
@@ -151,18 +151,18 @@ building_uma_field_powering_complex = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_field_powering_technician_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_field_powering_technician_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_tama_force_powering_advance_use"
@@ -254,18 +254,18 @@ building_uma_field_powering_complex_realm = {
 		planet_uma_field_powering_technician_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_field_powering_technician_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_field_powering_technician_effect_desc
+#	}
 
 	prerequisites = {
 
@@ -340,18 +340,18 @@ building_uma_simple_carrot_farm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_carrot_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_carrot_farmer_effect_desc
+#	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -369,19 +369,19 @@ building_uma_simple_carrot_farm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-				has_technology = tech_uma_code_hachimi
-			}
-		}
-		text = job_uma_bee_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#				has_technology = tech_uma_code_hachimi
+#			}
+#		}
+#		text = job_uma_bee_farmer_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_arguculture"
@@ -461,18 +461,18 @@ building_uma_modern_carrot_farm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_carrot_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_carrot_farmer_effect_desc
+#	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -491,19 +491,19 @@ building_uma_modern_carrot_farm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-				has_technology = tech_uma_code_hachimi
-			}
-		}
-		text = job_uma_bee_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#				has_technology = tech_uma_code_hachimi
+#			}
+#		}
+#		text = job_uma_bee_farmer_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_modern_carrot_farm"
@@ -583,18 +583,18 @@ building_uma_advance_carrot_farm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_carrot_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_carrot_farmer_effect_desc
+#	}
 
 	###提供养蜂人岗位
 	triggered_planet_modifier = {
@@ -613,19 +613,19 @@ building_uma_advance_carrot_farm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-				has_technology = tech_uma_code_hachimi
-			}
-		}
-		text = job_uma_bee_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#				has_technology = tech_uma_code_hachimi
+#			}
+#		}
+#		text = job_uma_bee_farmer_effect_desc
+#	}
 
 	###提供额外舒适度
 	triggered_planet_modifier = {
@@ -746,18 +746,18 @@ building_uma_modern_carrot_farm_realm = {
 		planet_uma_bee_farmer_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_carrot_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_carrot_farmer_effect_desc
+#	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -776,19 +776,19 @@ building_uma_modern_carrot_farm_realm = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-				has_technology = tech_uma_code_hachimi
-			}
-		}
-		text = job_uma_bee_farmer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#				has_technology = tech_uma_code_hachimi
+#			}
+#		}
+#		text = job_uma_bee_farmer_effect_desc
+#	}
 
 	prerequisites = {
 
@@ -867,18 +867,18 @@ building_uma_core_mining_complex_1 = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_core_miner_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_core_miner_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_core_mining"
@@ -961,18 +961,18 @@ building_uma_core_mining_complex_2 = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_core_miner_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_core_miner_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_massive_core_mining"
@@ -1055,18 +1055,18 @@ building_uma_core_mining_complex_3 = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_core_miner_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_core_miner_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crystal_core_mining"
@@ -1156,18 +1156,18 @@ building_uma_core_mining_complex_realm = {
 		planet_uma_core_miner_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_core_miner_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_core_miner_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crystal_core_mining"

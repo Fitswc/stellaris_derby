@@ -68,18 +68,18 @@ building_uma_crystal_carrot_producing_lab = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_carrot_engineer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_carrot_engineer_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crysal_carrot_producing"
@@ -166,18 +166,18 @@ building_uma_crystal_carrot_producing_center = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_carrot_engineer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_carrot_engineer_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crysal_carrot_producing_improved"
@@ -265,18 +265,18 @@ building_uma_crystal_carrot_producing_complex = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_carrot_engineer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_carrot_engineer_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_massive_crysal_carrot_producing"
@@ -384,18 +384,18 @@ building_uma_crystal_carrot_producing_realm_complex = {
 		planet_uma_crystal_carrot_engineer_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_carrot_engineer_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_carrot_engineer_effect_desc
+#	}
 
 
 
@@ -467,18 +467,18 @@ building_uma_sweet_shop = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_sweet_master_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_sweet_master_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_sweet_industry"
@@ -560,31 +560,31 @@ building_uma_chain_sweet_shop = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_sweet_master_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_sweet_manager_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_sweet_master_effect_desc
+#	}
+#
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_sweet_manager_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_sweet_chain_industry"
@@ -664,31 +664,31 @@ building_uma_sport_goods_shop = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_horseshoe_crafter_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_live_clothes_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_horseshoe_crafter_effect_desc
+#	}
+#
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_live_clothes_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_sport_related_production"
@@ -770,31 +770,31 @@ building_uma_sport_goods_supermarket = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_horseshoe_crafter_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_live_clothes_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_horseshoe_crafter_effect_desc
+#	}
+#
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_live_clothes_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_upgrade_sport_goods_industry"
@@ -877,18 +877,18 @@ building_uma_crystal_alloy_workhouse = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_alloy_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_alloy_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crystal_alloy_production"
@@ -972,18 +972,18 @@ building_uma_crystal_alloy_factory = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_alloy_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_alloy_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crystal_alloy_massive_production"
@@ -1069,18 +1069,18 @@ building_uma_crystal_alloy_complex = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_alloy_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_alloy_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crystal_alloy_auto_production"
@@ -1192,18 +1192,18 @@ building_uma_crystal_alloy_realm_complex = {
 		planet_uma_crystal_alloy_crafter_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_alloy_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_alloy_crafter_effect_desc
+#	}
 
 	prerequisites = {
 
@@ -1282,18 +1282,18 @@ building_uma_crystal_consumer_goods_workhouse = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_consumer_goods_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_crystal_consumer_goods_production"
@@ -1377,18 +1377,18 @@ building_uma_crystal_consumer_goods_factory = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_consumer_goods_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_upgraded_crystal_consumer_goods_production"
@@ -1474,18 +1474,18 @@ building_uma_crystal_consumer_goods_complex = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_consumer_goods_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_advanced_crystal_consumer_goods_production"
@@ -1579,18 +1579,18 @@ building_uma_crystal_consumer_goods_realm_complex = {
 		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_consumer_goods_crafter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_consumer_goods_crafter_effect_desc
+#	}
 
 	prerequisites = {
 
@@ -1664,18 +1664,18 @@ building_uma_chemical_plant = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_chemrist_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_chemrist_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_volatile_motes"
@@ -1761,18 +1761,18 @@ building_uma_chemical_plant_2 = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_chemrist_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_chemrist_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_volatile_motes"
@@ -1864,18 +1864,18 @@ building_uma_chemical_plant_realm = {
 		planet_uma_chemrist_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_chemrist_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_chemrist_effect_desc
+#	}
 
 
 }
@@ -1949,18 +1949,18 @@ building_uma_crystal_plant = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_effect_desc
+#	}
 
 
 	prerequisites = {
@@ -2046,18 +2046,18 @@ building_uma_crystal_plant_2 = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_effect_desc
+#	}
 
 
 	prerequisites = {
@@ -2155,18 +2155,18 @@ building_uma_crystal_plant_realm = {
 		planet_uma_translucer_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_crystal_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_crystal_effect_desc
+#	}
 
 
 	prerequisites = {
@@ -2242,18 +2242,18 @@ building_uma_gas_plant = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_gas_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_gas_effect_desc
+#	}
 
 
 	prerequisites = {
@@ -2342,18 +2342,18 @@ building_uma_gas_plant_2 = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_gas_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_gas_effect_desc
+#	}
 
 
 	prerequisites = {
@@ -2457,18 +2457,18 @@ building_uma_gas_plant_realm = {
 		planet_uma_gas_produces_mult = 0.15
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_gas_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_gas_effect_desc
+#	}
 
 
 }
@@ -2552,18 +2552,18 @@ building_uma_dark_matter_plant = {
 		}
 		planet_uma_crystal_consumer_goods_crafter_produces_mult = 0.15
 	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_darkmatter_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_darkmatter_effect_desc
+#	}
 
 
 	prerequisites = {

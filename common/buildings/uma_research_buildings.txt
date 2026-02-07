@@ -86,18 +86,18 @@ building_uma_toresen_lab = {
 #		job_uma_threegodness_knowledge_scholar_add = 1
 #	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_researcher_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_researcher_effect_desc
+#	}
 
 	upgrades = {
 		"building_uma_toresen_lab_center"
@@ -203,18 +203,18 @@ building_uma_toresen_lab_center = {
 		job_uma_threegodness_knowledge_scholar_add = 100
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_researcher_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_researcher_effect_desc
+#	}
 
 	upgrades = {
 		"building_uma_toresen_lab_top"
@@ -320,31 +320,31 @@ building_uma_toresen_lab_top = {
 		job_uma_threegodness_knowledge_scholar_add = 100
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_researcher_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_researcher_effect_desc
+#	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				OR = {
-					has_authority = auth_trainingcenter
-					#is_uma_fallen_empire = yes
-				}
-			}
-		}
-		text = job_uma_head_researcher_effect_desc
-	}
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				OR = {
+#					has_authority = auth_trainingcenter
+#					#is_uma_fallen_empire = yes
+#				}
+#			}
+#		}
+#		text = job_uma_head_researcher_effect_desc
+#	}
 
 	prerequisites = {
 		"tech_uma_torensen_lab_building_3"
