@@ -24,10 +24,13 @@ country_event = {
 			save_global_event_target_as = uma_ale_star_bh
 			log = "ALMOND EYE ANOMALY GENERATED. LOCATION:[This.GetName]"
 
-			add_anomaly = {
-				category = uma_ale_anomoly
-				target = This.star
+			Star = {
+				add_anomaly = {
+					category = uma_ale_anomoly
+				}
 			}
+
+			set_name = UMA_ALE_PAST_EYE
 		}
 	}
 }
@@ -47,9 +50,8 @@ ship_event = {
 		name = uma_ale.2.a
 		owner = {
 			add_resource = {
-				alloys = 2000
+				alloys = -2000
 			}
-			set_country_flag = uma_ale.2.a_actived
 		}
 		enable_special_project = {
 			name = UMA_ALE_SP_1
@@ -61,12 +63,9 @@ ship_event = {
 	option = {
 		name = uma_ale.2.b
 		owner = {
-			set_country_flag = uma_ale.2.b_actived
-		}
-		enable_special_project = {
-			name = UMA_ALE_SP_2
-			owner = This.owner
-			location = event_target:uma_ale_star_bh.star
+			add_resource = {
+				influence = 300
+			}
 		}
 	}
 }
@@ -74,24 +73,7 @@ ship_event = {
 ship_event = {
 	id = uma_ale.3
 	title = uma_ale.3.title
-	desc = {
-		trigger = {
-			owner = {
-				has_country_flag = uma_ale.2.a_actived
-			}
-			text = uma_ale.3.desc.a
-		}
-	}
-	desc = {
-		trigger = {
-			owner = {
-				owner = {
-					has_country_flag = uma_ale.2.b_actived
-				}
-				text = uma_ale.3.desc.b
-			}
-		}
-	}
+	desc = uma_ale.3.desc.a
 	is_triggered_only = yes
 	picture = GFX_evt_black_hole
 
@@ -118,7 +100,24 @@ ship_event = {
 		}
 	}
 	
-	after = { 
+	after = {
+		owner = {
+			country_event = {
+				id = uma_ale.4
+				days = 30
+			}
+		}
+	}
+}
+##Part1 end now
+
+country_event = {
+	id = uma_ale.4
+	title = uma_ale.4.title
+	desc = uma_ale.4.desc
+	is_triggered_only = yes
+
+	immediate = {
 		event_target:uma_ale_star_bh = {
 			create_cosmic_storm = {
 				cosmic_storm_start_position = This
@@ -126,19 +125,7 @@ ship_event = {
 				immediate = yes
 			}
 		}
-		owner = {
-			country_event = {
-				id = uma_ale.4
-			}
-		}
 	}
-}
-##Part1 end now
-country_event = {
-	id = uma_ale.4
-	title = uma_ale.4.title
-	desc = uma_ale.4.desc
-	is_triggered_only = yes
 
 	option = {
 		name = uma_ale.4.a
@@ -155,7 +142,7 @@ country_event = {
 country_event = {
 	id = uma_ale.5
 	title = uma_ale.5.title
-	desc = uma_ale.5desc
+	desc = uma_ale.5.desc
 	is_triggered_only = yes
 
 	option = {
@@ -167,7 +154,9 @@ country_event = {
 	option = {
 		name = uma_ale.5.b
 		enable_special_project = {
-
+			name = UMA_ALE_SP_2
+			location = event_target:uma_ale_star_bh.star
+			owner = Root.owner
 		}
 	}
 }
@@ -205,6 +194,14 @@ country_event = {
 
 	option = {
 		name = uma_ale.7.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.8
+				scopes = {
+					from = From
+				}
+			}
+		}
 	}
 
 	option = {
@@ -230,6 +227,12 @@ country_event = {
 
 	option = {
 		name = uma_ale.8.a
+		country_event = {
+			id = uma_ale.9
+			scopes = {
+				from = From
+			}
+		}
 	}
 }
 
@@ -264,7 +267,13 @@ country_event = {
 				}
 			}
 			event_target:uma_ale_star_bh_future.star = {
-				add_anomaly = { category = uma_ale_2_anomoly target = this }
+				add_anomaly = { category = uma_ale_2_anomoly }
+			}
+			From = {
+				auto_move_to_planet = {
+					target = event_target:uma_ale_star_bh_future.star
+					clear_auto_move_on_arrival = yes
+				}
 			}
 		}
 	}
@@ -295,7 +304,7 @@ ship_event = {
 				has_star_flag = uma_ale_star_bh_future_flag_has_built
 			}
 		}
-		owner = {
+		From = {
 			is_uma_player_country = yes
 		}
 	}
@@ -304,7 +313,7 @@ ship_event = {
 		solar_system = {
 			set_star_flag = uma_ale_star_bh_future_flag_has_built
 		}
-		owner = {
+		From = {
 			country_event = {
 				id = uma_ale.12
 			}
@@ -322,8 +331,8 @@ country_event = {
 	option = {
 		name = uma_ale.12.a
 		hidden_effect = {
-			event_target:uma_ale_star_bh = {
-
+			country_event = {
+				id = uma_ale.13
 			}
 		}
 	}
@@ -354,5 +363,348 @@ country_event = {
 			}
 		}
 		set_country_flag = uma_ale_market_recycle_station_exist
+
+		set_variable = {
+			which = uma_ale_resource_overflow_energy
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_minerals
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_food
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_custom_goods
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_alloys
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_volatile_motes
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_exotic_gases
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_rare_crystals
+			value = 0
+		}
+	}
+}
+
+###Monthly pulse
+country_event = {
+	id = uma_ale.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_ale_market_recycle_station_exist
+		OR = {
+			resource_income_to_expenditure_balance_ratio = {
+				category = basic
+				value > 1
+			}
+			resource_income_to_expenditure_balance_ratio = {
+				category = advanced
+				value > 1
+			}
+			resource_income_to_expenditure_balance_ratio = {
+				category = strategic
+				value > 1
+			}
+		}
+	}
+
+	immediate = {
+		##basic
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = energy
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = energy
+				variable = uma_ale_resource_overflow_energy_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_energy
+				value = uma_ale_resource_overflow_energy_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = minerals
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = minerals
+				variable = uma_ale_resource_overflow_minerals_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_minerals
+				value = uma_ale_resource_overflow_minerals_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = food
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = food
+				variable = uma_ale_resource_overflow_food_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_food
+				value = uma_ale_resource_overflow_food_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = alloys
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = alloys
+				variable = uma_ale_resource_overflow_alloys_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_alloys
+				value = uma_ale_resource_overflow_alloys_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = consumer_goods
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = consumer_goods
+				variable = uma_ale_resource_overflow_custom_goods_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_custom_goods
+				value = uma_ale_resource_overflow_custom_goods_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = volatile_motes
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = volatile_motes
+				variable = uma_ale_resource_overflow_volatile_motes_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_volatile_motes
+				value = uma_ale_resource_overflow_volatile_motes_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = exotic_gases
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = exotic_gases
+				variable = uma_ale_resource_overflow_exotic_gases_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_exotic_gases
+				value = uma_ale_resource_overflow_exotic_gases_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_income_to_expenditure_balance_ratio = {
+					resource = rare_crystals
+					value > 1
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = rare_crystals
+				variable = uma_ale_resource_overflow_rare_crystals_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_rare_crystals
+				value = uma_ale_resource_overflow_rare_crystals_middleground
+			}
+		}
+
+	}
+
+	after = {
+		switch = {
+			trigger = is_variable_set
+
+			uma_ale_resource_overflow_energy_middleground = {
+				clear_variable = uma_ale_resource_overflow_energy_middleground
+			}
+
+			uma_ale_resource_overflow_minerals_middleground = {
+				clear_variable = uma_ale_resource_overflow_minerals_middleground
+			}
+
+			uma_ale_resource_overflow_food_middleground = {
+				clear_variable = uma_ale_resource_overflow_food_middleground
+			}
+
+			uma_ale_resource_overflow_alloys_middleground = {
+				clear_variable = uma_ale_resource_overflow_alloys_middleground
+			}
+
+			uma_ale_resource_overflow_custom_goods_middleground = {
+				clear_variable = uma_ale_resource_overflow_custom_goods_middleground
+			}
+
+			uma_ale_resource_overflow_volatile_motes_middleground = {
+				clear_variable = uma_ale_resource_overflow_volatile_motes_middleground
+			}
+
+			uma_ale_resource_overflow_exotic_gases_middleground = {
+				clear_variable = uma_ale_resource_overflow_exotic_gases_middleground
+			}
+
+			uma_ale_resource_overflow_rare_crystals_middleground = {
+				clear_variable = uma_ale_resource_overflow_rare_crystals_middleground
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.21
+	title = uma_ale.21.title
+	desc = uma_ale.21.desc
+	diplomatic = yes
+	diplomatic_title = uma_ale.21.dptitle
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_energy
+				value > 0
+			}
+		}
+		name = uma_ale.21.a
+		hidden_effect = {
+			export_resource_maximum_to_variable = {
+				resource = energy
+				variable = uma_ale_resource_overflow_energy_output_middleground
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_energy
+						value >= uma_ale_resource_overflow_energy_output_middleground
+					}
+				}
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_energy_output_middleground
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_energy
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_minerals
+				value > 0
+			}
+		}
+		name = uma_ale.21.b
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_food
+				value > 0
+			}
+		}
+		name = uma_ale.21.c
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_alloys
+				value > 0
+			}
+		}
+		name = uma_ale.21.d
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_custom_goods
+				value > 0
+			}
+		}
+		name = uma_ale.21.e
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_volatile_motes
+				value > 0
+			}
+		}
+		name = uma_ale.21.f
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_exotic_gases
+				value > 0
+			}
+		}
+		name = uma_ale.21.g
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_rare_crystals
+				value > 0
+			}
+		}
+		name = uma_ale.21.h
 	}
 }

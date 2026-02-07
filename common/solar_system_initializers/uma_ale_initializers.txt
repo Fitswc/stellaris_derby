@@ -1,11 +1,23 @@
 uma_ale_system = {
 
     class = "sc_black_hole"
-    name = "NAME_ALE"
+    name = "UMA_ALE_FUTURE_EYE"
 
-    usage = misc_system_init
+    planet = {
+		class = star
+		size = {
+			min = 25
+			max = 35
+		}
+		orbit_distance = 0
+		orbit_angle = 1
+	}
 
     init_effect = {
+        star = {
+            add_deposit = d_physics_10
+        }
+
         every_system_planet = {
             prevent_anomaly = yes
         }
@@ -27,7 +39,10 @@ uma_ale_system = {
         size = 12
         has_ring = no
         init_effect = {
-
+            add_deposit = d_uma_crystal_carrot_3
+            add_deposit = d_engineering_4
+            add_deposit = d_rare_crystals_3
+            add_deposit = d_minerals_7
         }
     }
 
@@ -37,6 +52,10 @@ uma_ale_system = {
         orbit_angle = -230
         size = 5
         has_ring = no
+        init_effect = {
+            add_deposit = d_exotic_gases_5
+            add_deposit = d_uma_crystal_carrot_3
+        }
     }
 
     planet = {
@@ -45,6 +64,9 @@ uma_ale_system = {
         orbit_angle = -80
         size = 5
         has_ring = no
+         init_effect = {
+            add_deposit = d_uma_crystal_carrot_1
+        }
     }
 
     planet = {
@@ -71,14 +93,14 @@ uma_ale_system = {
         size = 20
         has_ring = no
         init_effect = {
-
+            add_deposit = d_minerals_3
         }
     }
 
     planet = {
         class = "pc_asteroid"
         orbit_distance = 30
-        orbit_angle = 170
+        orbit_angle = random
         size = 5
         has_ring = no
     }
@@ -86,7 +108,7 @@ uma_ale_system = {
     planet = {
         class = "pc_ice_asteroid"
         orbit_distance = 0
-        orbit_angle = -40
+        orbit_angle = random
         size = 5
         has_ring = no
     }
@@ -94,7 +116,7 @@ uma_ale_system = {
     planet = {
         class = "pc_ice_asteroid"
         orbit_distance = 0
-        orbit_angle = 10
+        orbit_angle = random
         size = 5
         has_ring = no
     }
@@ -102,7 +124,7 @@ uma_ale_system = {
     planet = {
         class = "pc_ice_asteroid"
         orbit_distance = 0
-        orbit_angle = -30
+        orbit_angle = random
         size = 5
         has_ring = no
     }
