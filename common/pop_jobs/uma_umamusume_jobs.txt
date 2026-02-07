@@ -3,6 +3,7 @@
 
 uma_trainer = {
 	category = umamusume
+	can_be_automated = no
 
 	swappable_data = {
 		default = {
@@ -91,6 +92,7 @@ uma_trainer = {
 ###赛马娘
 uma_racing_umamusume = {
 	category = umamusume
+	can_be_automated = no
 
 	swappable_data = {
 		default = {
