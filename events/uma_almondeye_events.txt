@@ -399,6 +399,57 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = uma_ale.19
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#		has_country_flag = uma_ale_market_recycle_station_exist
+	}
+
+	immediate = {
+		export_resource_maximum_to_variable = {
+			resource = energy
+			variable = uma_ale_resource_overflow_energy_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = minerals
+			variable = uma_ale_resource_overflow_minerals_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = food
+			variable = uma_ale_resource_overflow_food_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = alloys
+			variable = uma_ale_resource_overflow_alloys_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = consumer_goods
+			variable = uma_ale_resource_overflow_custom_goods_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = volatile_motes
+			variable = uma_ale_resource_overflow_volatile_motes_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = exotic_gases
+			variable = uma_ale_resource_overflow_exotic_gases_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = rare_crystals
+			variable = uma_ale_resource_overflow_rare_crystals_maximum_middleground
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_ale.20
+		}
+	}
+}
+
 ###Monthly pulse
 country_event = {
 	id = uma_ale.20
@@ -406,19 +457,38 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_country_flag = uma_ale_market_recycle_station_exist
 		OR = {
-			resource_income_to_expenditure_balance_ratio = {
-				category = basic
-				value > 1
+			resource_stockpile_compare = {
+				resource = energy
+				value >= uma_ale_resource_overflow_energy_maximum_middleground
 			}
-			resource_income_to_expenditure_balance_ratio = {
-				category = advanced
-				value > 1
+			resource_stockpile_compare = {
+				resource = food
+				value >= uma_ale_resource_overflow_food_maximum_middleground
 			}
-			resource_income_to_expenditure_balance_ratio = {
-				category = strategic
-				value > 1
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= uma_ale_resource_overflow_minerals_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = alloys
+				value >= uma_ale_resource_overflow_alloys_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = consumer_goods
+				value >= uma_ale_resource_overflow_custom_goods_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value >= uma_ale_resource_overflow_volatile_motes_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value >= uma_ale_resource_overflow_exotic_gases_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value >= uma_ale_resource_overflow_rare_crystals_maximum_middleground
 			}
 		}
 	}
@@ -427,9 +497,13 @@ country_event = {
 		##basic
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = energy
-					value > 1
+					value >= uma_ale_resource_overflow_energy_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_energy
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -444,9 +518,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = minerals
-					value > 1
+					value >= uma_ale_resource_overflow_minerals_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_minerals
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -461,9 +539,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = food
-					value > 1
+					value >= uma_ale_resource_overflow_food_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_food
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -478,9 +560,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = alloys
-					value > 1
+					value >= uma_ale_resource_overflow_alloys_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_alloys
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -495,9 +581,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = consumer_goods
-					value > 1
+					value >= uma_ale_resource_overflow_custom_goods_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_custom_goods
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -512,9 +602,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = volatile_motes
-					value > 1
+					value >= uma_ale_resource_overflow_volatile_motes_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_volatile_motes
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -529,9 +623,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = exotic_gases
-					value > 1
+					value >= uma_ale_resource_overflow_exotic_gases_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_exotic_gases
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -546,9 +644,13 @@ country_event = {
 
 		if = {
 			limit = {
-				resource_income_to_expenditure_balance_ratio = {
+				resource_stockpile_compare = {
 					resource = rare_crystals
-					value > 1
+					value >= uma_ale_resource_overflow_rare_crystals_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_rare_crystals
+					value < 50000
 				}
 			}
 			export_resource_income_to_variable = {
@@ -619,27 +721,29 @@ country_event = {
 		}
 		name = uma_ale.21.a
 		hidden_effect = {
-			export_resource_maximum_to_variable = {
-				resource = energy
-				variable = uma_ale_resource_overflow_energy_output_middleground
-			}
-
 			if = {
 				limit = {
 					check_variable = {
 						which = uma_ale_resource_overflow_energy
-						value >= uma_ale_resource_overflow_energy_output_middleground
+						value >= 1000
 					}
 				}
 				add_resource = {
-					energy = 1
-					multiplier = uma_ale_resource_overflow_energy_output_middleground
+					energy = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_energy
+					value = 1000
 				}
 			}
 			else = {
 				add_resource = {
 					energy = 1
 					multiplier = uma_ale_resource_overflow_energy
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_energy
+					value = 0
 				}
 			}
 		}
