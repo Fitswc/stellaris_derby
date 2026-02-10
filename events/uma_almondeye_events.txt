@@ -297,23 +297,25 @@ ship_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		This.solar_system = {
+		exists = solar_system
+		solar_system = {
 			has_star_flag = uma_ale_star_bh_future_flag
 
 			NOT = {
 				has_star_flag = uma_ale_star_bh_future_flag_has_built
 			}
 		}
-		From = {
+		owner = {
 			is_uma_player_country = yes
 		}
 	}
 
 	immediate = {
+		log = "UMA_ALE.11 IS HAPPENED"
 		solar_system = {
 			set_star_flag = uma_ale_star_bh_future_flag_has_built
 		}
-		From = {
+		owner = {
 			country_event = {
 				id = uma_ale.12
 			}
@@ -357,7 +359,7 @@ country_event = {
 			last_created_ambient_object = {
 				set_location = {
 					target = prev
-					distance = 8
+					distance = 20
 					angle = random
 				}
 			}
