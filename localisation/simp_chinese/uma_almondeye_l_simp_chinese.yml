@@ -44,8 +44,16 @@ uma_ale.12.a: "$OK$"
 
 
 uma_ale.21.title: "溢出资源索回"
-uma_ale.21.desc: "目前$UMA_ALE_PAST_EYE$储存的资源:\n"
+uma_ale.21.desc: "目前$UMA_ALE_PAST_EYE$储存的资源:\n[UMA_ALE_GET_RESOURCE_TYPE]"
 uma_ale.21.dptitle: "便携终端Ver.1.10"
+uma_ale_resource_overflow_energy_able: "£text_energy£$energy$: [Root.uma_ale_resource_overflow_energy]\n"
+uma_ale_resource_overflow_minerals_able: "£text_minerals£$minerals$: [Root.uma_ale_resource_overflow_minerals]\n"
+uma_ale_resource_overflow_foood_able: "£food£$food$: [Root.uma_ale_resource_overflow_food]\n"
+uma_ale_resource_overflow_alloys_able: "£alloys£$alloys$: [Root.uma_ale_resource_overflow_alloys]\n"
+uma_ale_resource_overflow_consumer_goods_able: "£consumer_goods£$consumer_goods$: [Root.uma_ale_resource_overflow_custom_goods]\n"
+uma_ale_resource_overflow_volatile_motes_able: "£volatile_motes£$volatile_motes$: [Root.uma_ale_resource_overflow_volatile_motes]\n"
+uma_ale_resource_overflow_exotic_gases_able: "£exotic_gases£$exotic_gases$: [Root.uma_ale_resource_overflow_exotic_gases]\n"
+uma_ale_resource_overflow_rare_crystals_able: "£rare_crystals£$rare_crystals$: [Root.uma_ale_resource_overflow_rare_crystals]\n"
 
 ##SP
 UMA_ALE_SP_1: "投放量子信标"
