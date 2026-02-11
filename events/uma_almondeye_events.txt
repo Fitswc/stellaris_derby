@@ -758,6 +758,33 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.b
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_minerals
+						value >= 1000
+					}
+				}
+				add_resource = {
+					minerals = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_minerals
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_minerals
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_minerals
+					value = 0
+				}
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -767,6 +794,33 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.c
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_food
+						value >= 1000
+					}
+				}
+				add_resource = {
+					food = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_food
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_food
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_food
+					value = 0
+				}
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -776,6 +830,33 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.d
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_ealloys
+						value >= 1000
+					}
+				}
+				add_resource = {
+					alloys = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_alloys
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_alloys
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_alloys
+					value = 0
+				}
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -785,6 +866,33 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.e
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_custom_goods
+						value >= 1000
+					}
+				}
+				add_resource = {
+					consumer_goods = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_custom_goods
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					consumer_goods = 1
+					multiplier = uma_ale_resource_overflow_custom_goods
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_custom_goods
+					value = 0
+				}
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -794,6 +902,33 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.f
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_evolatile_motes
+						value >= 1000
+					}
+				}
+				add_resource = {
+					volatile_motes = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_volatile_motes
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_volatile_motes
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_volatile_motes
+					value = 0
+				}
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -803,6 +938,33 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.g
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_eexotic_gases
+						value >= 1000
+					}
+				}
+				add_resource = {
+					exotic_gases = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_eexotic_gases
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_exotic_gases
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_exotic_gases
+					value = 0
+				}
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -812,5 +974,32 @@ country_event = {
 			}
 		}
 		name = uma_ale.21.h
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_erare_crystals
+						value >= 1000
+					}
+				}
+				add_resource = {
+					rare_crystals = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_rare_crystals
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_rare_crystals
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_rare_crystals
+					value = 0
+				}
+			}
+		}
 	}
 }
