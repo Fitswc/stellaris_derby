@@ -199,8 +199,8 @@ uma_evt_time_storm = {
 
 	cosmic_storm_texture_path = "gfx/map/storms/NebulaOpacity.dds"
 	cosmic_storm_texture_color_path = "gfx/map/storms/electric_storm_color.dds"
-	cosmic_storm_event_sprite = "GFX_uma_crystal_carrot_storm" #TODO
-	icon = GFX_planetview_uma_crystal_carrot_storm_modifier_frame
+	cosmic_storm_event_sprite = "GFX_electric_storm"
+	icon = GFX_planetview_storm_electric_modifier_frame
 
 	cosmic_storm_texture_lightning_paths = {
 		"gfx/map/storms/lightning/lightning_mid_storm_01.dds"

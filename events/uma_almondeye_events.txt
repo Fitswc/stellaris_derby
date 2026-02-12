@@ -75,13 +75,14 @@ ship_event = {
 	title = uma_ale.3.title
 	desc = uma_ale.3.desc.a
 	is_triggered_only = yes
-	picture = GFX_evt_black_hole
+	picture = GFX_evt_star_white
 
 	immediate = {
 		event_target:uma_ale_star_bh = {
-			star = {
-				change_pc = pc_b_star
-			}
+			#star = {
+			#	change_pc = pc_b_star
+			#}
+			set_star_class = sc_b
 		}
 	}
 
@@ -116,6 +117,7 @@ country_event = {
 	title = uma_ale.4.title
 	desc = uma_ale.4.desc
 	is_triggered_only = yes
+	picture = GFX_evt_black_hole
 
 	immediate = {
 		event_target:uma_ale_star_bh = {
@@ -123,6 +125,9 @@ country_event = {
 				cosmic_storm_start_position = This
 				type = uma_evt_time_storm
 				immediate = yes
+			}
+			last_created_cosmic_storm = {
+				set_storm_flag = uma_ale_time_storm
 			}
 		}
 	}
@@ -144,6 +149,7 @@ country_event = {
 	title = uma_ale.5.title
 	desc = uma_ale.5.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	option = {
 		name = uma_ale.5.a
@@ -166,6 +172,7 @@ ship_event = {
 	title = uma_ale.6.title
 	desc = uma_ale.6.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
 
 	option = {
 		name = uma_ale.6.a
@@ -208,7 +215,12 @@ country_event = {
 		name = uma_diplomatic_event.skip
 		custom_tooltip = uma_diplomatic_event.skip.tt
 		hidden_effect = {
-			country_event = { id = uma_ale.9 }
+			country_event = {
+				id = uma_ale.9
+				scopes = {
+					from = From
+				}
+			}
 		}
 	}
 }
@@ -266,9 +278,9 @@ country_event = {
 					}
 				}
 			}
-			event_target:uma_ale_star_bh_future.star = {
-				add_anomaly = { category = uma_ale_2_anomoly }
-			}
+#			event_target:uma_ale_star_bh_future.star = {
+#				add_anomaly = { category = uma_ale_2_anomoly }
+#			}
 			From = {
 				auto_move_to_planet = {
 					target = event_target:uma_ale_star_bh_future.star
@@ -280,16 +292,16 @@ country_event = {
 }
 
 
-ship_event = {
-	id = uma_ale.10
-	title = uma_ale.10.title
-	desc = uma_ale.10.desc
-	is_triggered_only = yes
-
-	option = {
-		name = uma_ale.10.a
-	}
-}
+#ship_event = {
+#	id = uma_ale.10
+#	title = uma_ale.10.title
+#	desc = uma_ale.10.desc
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = uma_ale.10.a
+#	}
+#}
 
 ship_event = {
 	id = uma_ale.11
@@ -328,6 +340,13 @@ country_event = {
 	title = uma_ale.12.title
 	desc = uma_ale.12.desc
 	is_triggered_only = yes
+	picture = GFX_evt_timeworm_transcriptions
+
+	immediate = {
+		country_event = {
+			id = uma_ale.22
+		}
+	}
 
 
 	option = {
@@ -714,6 +733,10 @@ country_event = {
 	diplomatic_title = uma_ale.21.dptitle
 	is_triggered_only = yes
 
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
 	option = {
 		trigger = {
 			check_variable = {
@@ -776,7 +799,7 @@ country_event = {
 			}
 			else = {
 				add_resource = {
-					energy = 1
+					minerals = 1
 					multiplier = uma_ale_resource_overflow_minerals
 				}
 				set_variable = {
@@ -812,7 +835,7 @@ country_event = {
 			}
 			else = {
 				add_resource = {
-					energy = 1
+					food = 1
 					multiplier = uma_ale_resource_overflow_food
 				}
 				set_variable = {
@@ -848,7 +871,7 @@ country_event = {
 			}
 			else = {
 				add_resource = {
-					energy = 1
+					alloys = 1
 					multiplier = uma_ale_resource_overflow_alloys
 				}
 				set_variable = {
@@ -920,7 +943,7 @@ country_event = {
 			}
 			else = {
 				add_resource = {
-					energy = 1
+					volatile_motes = 1
 					multiplier = uma_ale_resource_overflow_volatile_motes
 				}
 				set_variable = {
@@ -956,7 +979,7 @@ country_event = {
 			}
 			else = {
 				add_resource = {
-					energy = 1
+					exotic_gases = 1
 					multiplier = uma_ale_resource_overflow_exotic_gases
 				}
 				set_variable = {
@@ -992,7 +1015,7 @@ country_event = {
 			}
 			else = {
 				add_resource = {
-					energy = 1
+					rare_crystals = 1
 					multiplier = uma_ale_resource_overflow_rare_crystals
 				}
 				set_variable = {
@@ -1001,5 +1024,67 @@ country_event = {
 				}
 			}
 		}
+	}
+	option = {
+		name = uma_exit
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = uma_ale.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_cosmic_storm = {
+			limit = {
+				has_storm_flag = uma_ale_time_storm
+			}
+
+			destroy_cosmic_storm = yes
+		}
+	}
+}
+
+
+##ALE
+country_event = {
+	id = uma_ale.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		check_variable = {
+			which = uma_ale_resource_overflow_food
+			value >= 45000
+		}
+		NOT= {
+			has_country_flag = uma_ale.30_has_happened
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_ale.31
+			days = 20
+			random = 10
+		}
+		set_country_flag = uma_ale.30_has_happened
+	}
+}
+
+country_event = {
+	id = uma_ale.31
+	title = uma_ale.31.title
+	desc = uma_ale.31.desc
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ale.31.a
 	}
 }

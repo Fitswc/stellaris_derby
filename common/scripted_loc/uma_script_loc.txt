@@ -792,7 +792,8 @@ define_text = {
 }
 
 define_text = {
-	name = UMA_ALE_GET_RESOURCE_TYPE
+	name = UMA_ALE_GET_RESOURCE_TYPE_ENERGY
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -802,24 +803,11 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_energy_able
 	}
-	text = {
-		trigger = {
-			check_variable = {
-				which = uma_ale_resource_overflow_energy
-				value > 0
-			}
-		}
-		localization_key = uma_ale_resource_overflow_energy_able
-	}
-	text = {
-		trigger = {
-			check_variable = {
-				which = uma_ale_resource_overflow_energy
-				value > 0
-			}
-		}
-		localization_key = uma_ale_resource_overflow_energy_able
-	}
+}
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_MINERALS
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -829,6 +817,12 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_minerals_able
 	}
+}
+
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_FOOD
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -838,6 +832,12 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_foood_able
 	}
+}
+
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_ALLOYS
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -847,6 +847,12 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_alloys_able
 	}
+}
+
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_CG
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -856,6 +862,12 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_consumer_goods_able
 	}
+}
+
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_MOTE
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -865,6 +877,12 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_volatile_motes_able
 	}
+}
+
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_GAS
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -874,6 +892,12 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_exotic_gases_able
 	}
+}
+
+
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_CRYSTAL
+	default = uma_ale_resource_overflow_empty
 	text = {
 		trigger = {
 			check_variable = {
@@ -883,5 +907,152 @@ define_text = {
 		}
 		localization_key = uma_ale_resource_overflow_rare_crystals_able
 	}
+}
 
+define_text = {
+	name = UMA_ALE_GET_RESOURCE_TYPE_EMPTY
+	default = uma_ale_resource_overflow_empty
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_energy
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_minerals
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_food
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_alloys
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_custom_goods
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_rare_crystals
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_volatile_motes
+				value <= 0
+			}
+			check_variable = {
+				which = uma_ale_resource_overflow_exotic_gases
+				value <= 0
+			}
+		}
+		localization_key = uma_ale_resource_overflow_empty_able
+	}
+}
+
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_ENERGY
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_energy
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_energy
+	}
+}
+
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_MINERALS
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_minerals
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_minerals
+	}
+}
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_FOOD
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_food
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_food
+	}
+}
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_ALLOYS
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_alloys
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_alloys
+	}
+}
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_CG
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_custom_goods
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_cg
+	}
+}
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_VOLATILE
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_volatile_motes
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_volatile
+	}
+}
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_EXOTIC
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_exotic_gases
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_exotic
+	}
+}
+define_text = {
+	name = UMA_ALE_RCB_GET_RESOURCE_AMOUNT_RARE
+	default = uma_ale_1k
+	text = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_rare_crystals
+				value < 1000
+			}
+		}
+		localization_key = uma_ale_resource_overflow_energy_amount_able_rare
+	}
 }

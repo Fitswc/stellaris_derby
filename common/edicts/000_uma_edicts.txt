@@ -61,41 +61,6 @@ uma_held_national_derby = {
 
 }
 
-#使用道具
-uma_use_goods_in_shop = {
-	length = 0
-	icon = GFX_uma_use_goods_in_shop
-	resources = {
-		category = edicts
-		cost = {
-			influence = 0
-		}
-	}
-
-	potential = {
-		has_authority = auth_trainingcenter
-		#和商店建立联系
-	}
-
-	allow = {
-		always = yes
-	}
-
-	effect = {
-		custom_tooltip = uma_enter_goods_use_event
-		hidden_effect = {
-			country_event = {
-				id = uma_gui_test.4
-			}
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-
-}
-
 
 uma_comm_with_fe = {
 	length = 0
@@ -229,7 +194,18 @@ uma_resource_recycle_system = {
 	}
 
 	allow = {
-		always = yes
+		custom_tooltip_fail = {
+		event_target:uma_ale_star_bh = {
+			exists = starbase
+			starbase = {
+				exists = owner
+				owner = {
+					is_same_value = Root
+				}
+			}
+		}
+			text = uma_resource_recycle_system_fail_system
+		}
 	}
 
 	effect = {
@@ -246,7 +222,40 @@ uma_resource_recycle_system = {
 
 }
 
+#使用道具
+uma_use_goods_in_shop = {
+	length = 0
+	icon = GFX_uma_use_goods_in_shop
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
 
+	potential = {
+		has_authority = auth_trainingcenter
+		#和商店建立联系
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = uma_enter_goods_use_event
+		hidden_effect = {
+			country_event = {
+				id = uma_gui_test.4
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+}
 
 #uma_auto_species_merge = {
 #	length = 0
