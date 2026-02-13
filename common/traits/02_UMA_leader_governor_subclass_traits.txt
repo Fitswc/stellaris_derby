@@ -321,8 +321,11 @@ leader_trait_maertiao_governor = {
     }
     planet_modifier = {
         logistic_growth_mult = 0.1
-		bonus_pop_growth = 0.1
     }
+    triggered_planet_pop_group_modifier_for_all = {
+        bonus_pop_growth = 2
+    }
+
     sector_modifier = {
         logistic_growth_mult = 0.05
     }
@@ -351,8 +354,12 @@ leader_trait_maertiao_governor_2 = {
     }
     planet_modifier = {
         logistic_growth_mult = 0.2
-		bonus_pop_growth = 0.1
     }
+
+    triggered_planet_pop_group_modifier_for_all = {
+        bonus_pop_growth = 4
+    }
+
     sector_modifier = {
         logistic_growth_mult = 0.1
     }
@@ -911,10 +918,14 @@ leader_trait_tianming2_governor = {
     }
     planet_modifier = {
         logistic_growth_mult = 0.25
-		bonus_pop_growth = 0.25
         planet_jobs_unity_produces_mult = 0.5
         species_empire_size_mult = -0.3
     }
+
+    triggered_planet_pop_group_modifier_for_all = {
+        bonus_pop_growth = 4
+    }
+
     sector_modifier = {
         logistic_growth_mult = 0.125
         planet_jobs_unity_produces_mult = 0.25
