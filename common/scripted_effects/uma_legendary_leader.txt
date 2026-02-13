@@ -3,7 +3,7 @@ uma_create_leader_deep = {
 	create_leader = {
 		name = DEEP
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		class = official
 		set_age = 17
@@ -39,7 +39,7 @@ uma_create_leader_oc = {
 	create_leader = {
 		name = OC #"小栗帽"
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		tier = leader_tier_legendary
 		class = official
@@ -71,7 +71,7 @@ uma_create_leader_did = {
 	create_leader = {
 		name = DID
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		class = official
 		set_age = 18
@@ -105,7 +105,7 @@ uma_create_leader_ty = {
 	create_leader = {
 		name = AGT #"爱丽速子"
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		class = scientist
 		skill = 1
@@ -138,7 +138,7 @@ uma_create_leader_sky_admiral = {
 	create_leader = {
 		name = SKY
 		species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
-		event_leader = no
+		event_leader = yes
 		gender = female
 		class = commander
 		tier = leader_tier_legendary
@@ -174,7 +174,7 @@ uma_create_leader_sky_governor = {
 		#species = event_target:uma_leader_seiun_sky
 		species = root
 		gender = female
-		event_leader = no
+		event_leader = yes
 		class = official
 		custom_catch_phrase = uma_special_leader_seiun_sky_catch_phrase
 		custom_description = uma_sky_backstory
@@ -207,7 +207,7 @@ uma_create_leader_teio_governor = {
 		name = TET
 		species = root
 		gender = female
-		event_leader = no
+		event_leader = yes
 		immortal = yes
 		class = official
 		background_planet = event_target:uma_player_umamusume_planet
@@ -244,7 +244,7 @@ uma_create_leader_teio_admiral = {
 	create_leader = {
 		name = TET
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		immortal = yes
 		class = commander
@@ -282,7 +282,7 @@ uma_create_leader_teio_scientist = {
 	create_leader = {
 		name = TET
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		immortal = yes
 		class = scientist
@@ -320,7 +320,7 @@ uma_create_leader_zf = {
 	create_leader = {
 		name = ZF
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		class = scientist
 		set_age = 16
@@ -358,7 +358,7 @@ uma_create_leader_cheval = {
 	create_leader = {
 		name = CHEVAL
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		class = official
 		background_planet = event_target:uma_player_umamusume_planet
@@ -392,7 +392,7 @@ uma_create_leader_sweepy = {
 	create_leader = {
 		name = SWEEPY
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		immortal = yes
 		class = scientist
@@ -424,7 +424,7 @@ uma_create_leader_ardan = {
 	create_leader = {
 		name = ARDAN
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		immortal = yes
 		class = scientist
@@ -458,7 +458,7 @@ uma_create_leader_curren = {
 	create_leader = {
 		name = CURREN
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		immortal = yes
 		class = official
@@ -490,7 +490,7 @@ uma_create_leader_zephyr = {
 	create_leader = {
 		name = ZEPHYR
 		species = root
-		event_leader = no
+		event_leader = yes
 		gender = female
 		immortal = yes
 		class = official
@@ -515,6 +515,37 @@ uma_create_leader_zephyr = {
 #			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_zephyr
 			change_leader_portrait = 84c
+		}
+	}
+}
+
+uma_create_leader_ale = {
+	optimize_memory
+	create_leader = {
+		name = ALEYE
+		species = root
+		event_leader = yes
+		gender = female
+		immortal = yes
+		class = commander
+		background_planet = event_target:uma_player_umamusume_planet
+		background_job = commanding_officer
+		custom_catch_phrase = uma_ale_catch_phrase
+		custom_description = uma_ale_backstory
+
+		skip_background_generation = yes
+		skill = 1
+		set_age = 16
+		tier = leader_tier_legendary
+		traits = {
+			0 = uma_commander_trait_sp_ale
+			1 = leader_trait_uma_generic
+		}
+		effect = {
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_almondeye
+			save_global_event_target_as = uma_is_leader_almondeye
+			change_leader_portrait = 125c
 		}
 	}
 }
@@ -1004,6 +1035,18 @@ uma_leader_cp_build_up_trait_official = {
 		}
 
 	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ale.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_ale_official
+			show_message = no
+		}
+
+	}
 }
 
 uma_leader_cp_build_up_trait_scientist = {
@@ -1449,6 +1492,18 @@ uma_leader_cp_build_up_trait_scientist = {
 		}
 
 	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ale.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_ale_scientist
+			show_message = no
+		}
+
+	}
 }
 
 uma_leader_cp_build_up_trait_commander = {
@@ -1506,6 +1561,18 @@ uma_leader_cp_build_up_trait_commander = {
 		}
 		add_trait = {
 			trait = uma_commander_trait_sp_dura
+			show_message = no
+		}
+
+	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.9.ale.trait.1
+			}
+		}
+		add_trait = {
+			trait = uma_commander_trait_sp_ale
 			show_message = no
 		}
 
@@ -2028,6 +2095,14 @@ uma_leader_cp_build_up_portrait = {
 		}
 		change_leader_portrait = DEEP_COMMUNICATION
 	}
+	if = {
+		limit = {
+			Root = {
+				has_country_flag = uma_leader_cp.10.ale.portrait.1
+			}
+		}
+		change_leader_portrait = 125c
+	}
 }
 
 
@@ -2087,6 +2162,7 @@ uma_leader_cp_cleanup_country_flag_trait = {
 	remove_country_flag = uma_leader_cp.9.did.trait.1
 	remove_country_flag = uma_leader_cp.9.ougri.trait.1
 	remove_country_flag = uma_leader_cp.9.deep.trait.1
+	remove_country_flag = uma_leader_cp.9.ale.trait.1
 }
 
 uma_leader_cp_cleanup_country_flag_portrait = {
@@ -2113,6 +2189,7 @@ uma_leader_cp_cleanup_country_flag_portrait = {
 	remove_country_flag = uma_leader_cp.10.did.portrait.1
 	remove_country_flag = uma_leader_cp.10.ougri.portrait.1
 	remove_country_flag = uma_leader_cp.10.deep.portrait.1
+	remove_country_flag = uma_leader_cp.10.ale.portrait.1
 }
 
 uma_leader_cp_cleanup_leader_gender_flag = {

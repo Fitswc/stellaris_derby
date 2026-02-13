@@ -108,9 +108,10 @@ on_monthly_pulse_country = {
 
 		uma_ec_3.31
 
-		#		uma_ap.85
+#		uma_ap.85
 
 		uma_ale.19
+		uma_ale.30
 
 	}
 }
@@ -679,5 +680,11 @@ on_single_player_save_game_load = {
 on_building_starbase_outpost  = {
 	events = {
 		uma_ale.11
+	}
+}
+
+on_uma_ale_extract_resource = {
+	events = {
+		uma_ale.90
 	}
 }

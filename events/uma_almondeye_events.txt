@@ -426,7 +426,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		#		has_country_flag = uma_ale_market_recycle_station_exist
+		has_country_flag = uma_ale_market_recycle_station_exist
 	}
 
 	immediate = {
@@ -512,6 +512,7 @@ country_event = {
 				value >= uma_ale_resource_overflow_rare_crystals_maximum_middleground
 			}
 		}
+		has_country_flag = uma_ale_market_recycle_station_exist
 	}
 
 	immediate = {
@@ -771,6 +772,9 @@ country_event = {
 					value = 0
 				}
 			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
 		}
 	}
 	option = {
@@ -806,6 +810,9 @@ country_event = {
 					which = uma_ale_resource_overflow_minerals
 					value = 0
 				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
 			}
 		}
 	}
@@ -843,6 +850,9 @@ country_event = {
 					value = 0
 				}
 			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
 		}
 	}
 	option = {
@@ -878,6 +888,9 @@ country_event = {
 					which = uma_ale_resource_overflow_alloys
 					value = 0
 				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
 			}
 		}
 	}
@@ -915,6 +928,9 @@ country_event = {
 					value = 0
 				}
 			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
 		}
 	}
 	option = {
@@ -950,6 +966,9 @@ country_event = {
 					which = uma_ale_resource_overflow_volatile_motes
 					value = 0
 				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
 			}
 		}
 	}
@@ -987,6 +1006,9 @@ country_event = {
 					value = 0
 				}
 			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
 		}
 	}
 	option = {
@@ -1023,6 +1045,9 @@ country_event = {
 					value = 0
 				}
 			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
 		}
 	}
 	option = {
@@ -1055,9 +1080,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		has_country_flag = uma_ale_market_recycle_station_exist
 		check_variable = {
 			which = uma_ale_resource_overflow_food
-			value >= 45000
+			value >= 40000
 		}
 		NOT= {
 			has_country_flag = uma_ale.30_has_happened
@@ -1079,6 +1105,7 @@ country_event = {
 	title = uma_ale.31.title
 	desc = uma_ale.31.desc
 	is_triggered_only = yes
+	picture = GFX_evt_uma_zf_listen
 
 	immediate = {
 
@@ -1086,5 +1113,292 @@ country_event = {
 
 	option = {
 		name = uma_ale.31.a
+		hidden_effect = {
+			set_country_flag = uma_ale_masterevt_marked
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.90
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = uma_ale_masterevt_marked
+	}
+	immediate = {
+		remove_country_flag = uma_ale_masterevt_marked
+
+		country_event = {
+			id = uma_ale.32
+			days = 60
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.32
+	title = uma_ale.32.title
+	desc = uma_ale.32.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_f_bg
+
+
+	option = {
+		name = uma_ale.32.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.33
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.33
+	title = uma_ale.33.title
+	desc = uma_ale.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.33.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.34
+			}
+		}
+	}
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.37
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.34
+	title = uma_ale.34.title
+	desc = uma_ale.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.34.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.35
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.35
+	title = uma_ale.34.title
+	desc = uma_ale.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.35.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.36
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.36
+	title = uma_ale.34.title
+	desc = uma_ale.36.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.36.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.37
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.37
+	title = uma_ale.34.title
+	desc = uma_ale.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.37.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.38
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.38
+	title = ALEYE
+	desc = uma_ale.38.desc
+	is_triggered_only = yes
+
+	event_window_type = leader_recruit
+	picture = GFX_uma_leader_cheval
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_almondeye
+	}
+
+	immediate = {
+		play_sound = uma_hire_Ale
+		create_country = {
+			name = "NAME_uma_empty"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = uma_empty_country
+			}
+		}
+		event_target:uma_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_legendary_leader_species
+				}
+			}
+			uma_create_leader_ale = yes
+		}
+	}
+
+	###1
+	option = {
+		name = uma_ale.38.a.a
+		response_text = uma_ale.38.a.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_ale.38.b
+		response_text = uma_ale.38.b.resp
+		is_dialog_only = yes
+	}
+
+	##########
+	option = {
+		name = HIRE
+		tag = hire_leader
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:uma_is_leader_almondeye
+				species = root.species
+				gender = female
+			}
+			last_created_leader = {
+				add_experience = 1550
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_almondeye
+				save_global_event_target_as = uma_is_leader_almondeye
+				change_leader_portrait = 125c
+				uma_initialize_leader_yaruki_effect = yes
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_almondeye
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_almondeye
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_almondeye = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_empty_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+##Debug evt
+country_event = {
+	id = uma_ale.40
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = uma_ale_resource_overflow_food
+			value = 45100
+		}
 	}
 }
