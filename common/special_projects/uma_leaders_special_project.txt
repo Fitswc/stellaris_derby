@@ -862,3 +862,57 @@ special_project = {
 	on_fail = {
 	}
 }
+
+special_project = {
+	key = "UMA_ALE_SP_1"
+	days_to_research = 360
+
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_black_hole
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 4
+	}
+
+	on_success = {
+		ship_event = {
+			id = uma_ale.3
+		}
+	}
+
+	on_fail = {
+
+	}
+}
+
+special_project = {
+	key = "UMA_ALE_SP_2"
+	days_to_research = 360
+
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_sabotaged_ship
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 6
+	}
+
+	on_success = {
+		ship_event = {
+			id = uma_ale.6
+		}
+	}
+
+	on_fail = {
+
+	}
+}

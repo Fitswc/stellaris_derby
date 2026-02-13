@@ -1447,3 +1447,36 @@ uma_commander_trait_sp_dura = {
 	randomized = no
 }
 
+uma_commander_trait_sp_ale = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = "GFX_uma_commander_trait_sp_ale"
+		RARITY = common
+		COUNCIL = no
+		TIER = 1
+	}
+
+	leader_potential_add = {
+		always = no
+	}
+
+	fleet_modifier = {
+		ship_base_speed_mult = 0.3
+		command_limit_mult = 0.4
+		fleet_mia_time_mult = 0.1
+		ship_weapon_range_mult = 0.05
+		ship_outside_friendly_territory_fire_rate_mult = 0.2
+	}
+
+	councilor_modifier = {
+		ship_military_upkeep_mult = -0.2
+		command_limit_mult = 0.1
+		starbase_shipyard_capacity_add = 3
+	}
+
+	leader_class = { commander }
+	initial = no
+	randomized = no
+}
+

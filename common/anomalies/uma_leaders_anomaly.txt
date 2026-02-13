@@ -147,7 +147,6 @@ uma_soe_anolomy = {
 	}
 }
 
-
 #By ATR From StellarDerby Machan&trade extension
 
 uma_am_anomaly = {
@@ -161,7 +160,6 @@ uma_am_anomaly = {
     }
 }
 
-#帝宝特异点
 uma_duramente_anomoly = {
 	desc = "uma_duramente_anomoly_desc"
     picture = "GFX_evt_gas_giant"
@@ -175,6 +173,40 @@ uma_duramente_anomoly = {
 			max_once = yes
 			max_once_global = no
 			anomaly_event = uma_duramente.3
+		}
+	}
+}
+
+uma_ale_anomoly = {
+	desc = "uma_ale_anomoly_desc"
+    picture = "GFX_evt_black_hole"
+	level = 2
+	should_ai_use = no
+	max_once_global = yes
+    spawn_chance = { base = 0 }
+
+	on_success = {
+		1 = {
+			max_once = yes
+			max_once_global = no
+			anomaly_event = uma_ale.2
+		}
+	}
+}
+
+uma_ale_2_anomoly = {
+	desc = "uma_ale_2_anomoly_desc"
+    picture = "GFX_evt_black_hole"
+	level = 2
+	should_ai_use = no
+	max_once_global = yes
+    spawn_chance = { base = 0 }
+
+	on_success = {
+		1 = {
+			max_once = yes
+			max_once_global = no
+			anomaly_event = uma_ale.10
 		}
 	}
 }

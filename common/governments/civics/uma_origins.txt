@@ -68,7 +68,7 @@ origin_uma_candleoff = {
 	modifier = {
 	}
 	random_weight = {
-		base = 0.1
+		base = 0
 	}
 }
 
@@ -103,45 +103,9 @@ origin_uma_business_MAN = {
 	}
 
 	random_weight = {
-		base = 0.1
+		base = 500
 	}
 }
-
-###初兴之邦
-#origin_uma_total_war_end = {
-#	is_origin = yes
-#	icon = "gfx/interface/icons/origins/origin_uma_business_MAN.dds"
-#	picture = "GFX_origin_uma_business_MAN"
-#	description = origin_uma_business_MAN_effect
-#	potential = {
-#		country_type = {
-#			NOT = {
-#				value = primitive
-#			}
-#		}
-#	}
-#	possible = {
-#		authority = {
-#			value = auth_trainingcenter
-#		}
-#		species_archetype = { value = UMA }
-#	}
-#	playable = {
-#		has_megacorp = yes
-#	}
-#	modifier = {
-#		commercial_pact_mult = 0.4
-#		empire_size_colonies_mult = 0.25
-#		spy_network_daily_value_mult = 0.30
-#		intel_decryption_add = 2
-#	}
-#
-#	random_weight = {
-#		base = 0.1
-#	}
-#}
-
-
 
 origin_uma_after_factor_perk = {
 	is_origin = yes
@@ -172,7 +136,7 @@ origin_uma_after_factor_perk = {
 	}
 
 	random_weight = {
-		base = 0.1
+		base = 0
 	}
 }
 

@@ -1,0 +1,1404 @@
+namespace = uma_ale
+
+country_event = {
+	id = uma_ale.1
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		random_system = {
+			limit = {
+				NOT = {
+					uma_is_event_system = yes
+				}
+				is_star_class = sc_black_hole
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 15
+				}
+			}
+			set_star_flag = is_uma_event_system
+			set_star_flag = uma_ale_system
+			save_global_event_target_as = uma_ale_star_bh
+			log = "ALMOND EYE ANOMALY GENERATED. LOCATION:[This.GetName]"
+
+			Star = {
+				add_anomaly = {
+					category = uma_ale_anomoly
+				}
+			}
+
+			set_name = UMA_ALE_PAST_EYE
+		}
+	}
+}
+
+ship_event = {
+	id = uma_ale.2
+	title = uma_ale.2.title
+	desc = uma_ale.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_black_hole
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ale.2.a
+		owner = {
+			add_resource = {
+				alloys = -2000
+			}
+		}
+		enable_special_project = {
+			name = UMA_ALE_SP_1
+			owner = This.owner
+			location = event_target:uma_ale_star_bh.star
+		}
+	}
+
+	option = {
+		name = uma_ale.2.b
+		owner = {
+			add_resource = {
+				influence = 300
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = uma_ale.3
+	title = uma_ale.3.title
+	desc = uma_ale.3.desc.a
+	is_triggered_only = yes
+	picture = GFX_evt_star_white
+
+	immediate = {
+		event_target:uma_ale_star_bh = {
+			#star = {
+			#	change_pc = pc_b_star
+			#}
+			set_star_class = sc_b
+		}
+	}
+
+	option = {
+		name = uma_ale.3.a
+		owner = {
+			add_resource = {
+				minerals = 100
+				alloys = 100
+				food = 100
+				rare_crystals = 100
+				exotic_gases = 100
+				uma_crystal_carrot = 100
+
+			}
+		}
+	}
+	
+	after = {
+		owner = {
+			country_event = {
+				id = uma_ale.4
+				days = 30
+			}
+		}
+	}
+}
+##Part1 end now
+
+country_event = {
+	id = uma_ale.4
+	title = uma_ale.4.title
+	desc = uma_ale.4.desc
+	is_triggered_only = yes
+	picture = GFX_evt_black_hole
+
+	immediate = {
+		event_target:uma_ale_star_bh = {
+			create_cosmic_storm = {
+				cosmic_storm_start_position = This
+				type = uma_evt_time_storm
+				immediate = yes
+			}
+			last_created_cosmic_storm = {
+				set_storm_flag = uma_ale_time_storm
+			}
+		}
+	}
+
+	option = {
+		name = uma_ale.4.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.5
+				days = 100
+				random = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.5
+	title = uma_ale.5.title
+	desc = uma_ale.5.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	option = {
+		name = uma_ale.5.a
+		add_resource = {
+			influence = 300
+		}
+	}
+	option = {
+		name = uma_ale.5.b
+		enable_special_project = {
+			name = UMA_ALE_SP_2
+			location = event_target:uma_ale_star_bh.star
+			owner = Root.owner
+		}
+	}
+}
+
+ship_event = {
+	id = uma_ale.6
+	title = uma_ale.6.title
+	desc = uma_ale.6.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_satono_school
+
+	option = {
+		name = uma_ale.6.a
+		owner = {
+			country_event = {
+				id = uma_ale.7
+				scopes = {
+					from = Root
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.7
+	title = uma_ale.7.title
+	desc = uma_ale.7.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = From.fleet.leader
+		room = ship_room
+	}
+
+
+	option = {
+		name = uma_ale.7.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.8
+				scopes = {
+					from = From
+				}
+			}
+		}
+	}
+
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.9
+				scopes = {
+					from = From
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.8
+	title = uma_ale.8.title
+	desc = uma_ale.8.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = From.fleet.leader
+		room = ship_room
+	}
+
+
+	option = {
+		name = uma_ale.8.a
+		country_event = {
+			id = uma_ale.9
+			scopes = {
+				from = From
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.9
+	title = uma_ale.9.title
+	desc = uma_ale.9.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = From.fleet.leader
+		room = ship_room
+	}
+
+
+	option = {
+		name = uma_ale.9.a
+		hidden_effect = {
+			event_target:uma_ale_star_bh = {
+				spawn_system = {
+					initializer = uma_ale_system
+					max_orientation_angle = 1
+					min_orientation_angle = 340
+					effect = {
+						save_event_target_as = uma_ale_star_bh_future
+						set_star_flag = uma_ale_star_bh_future_flag
+						add_hyperlane = {
+							from = this
+							to = event_target:uma_ale_star_bh
+						}
+					}
+				}
+			}
+#			event_target:uma_ale_star_bh_future.star = {
+#				add_anomaly = { category = uma_ale_2_anomoly }
+#			}
+			From = {
+				auto_move_to_planet = {
+					target = event_target:uma_ale_star_bh_future.star
+					clear_auto_move_on_arrival = yes
+				}
+			}
+		}
+	}
+}
+
+
+#ship_event = {
+#	id = uma_ale.10
+#	title = uma_ale.10.title
+#	desc = uma_ale.10.desc
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = uma_ale.10.a
+#	}
+#}
+
+ship_event = {
+	id = uma_ale.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = solar_system
+		solar_system = {
+			has_star_flag = uma_ale_star_bh_future_flag
+
+			NOT = {
+				has_star_flag = uma_ale_star_bh_future_flag_has_built
+			}
+		}
+		owner = {
+			is_uma_player_country = yes
+		}
+	}
+
+	immediate = {
+		log = "UMA_ALE.11 IS HAPPENED"
+		solar_system = {
+			set_star_flag = uma_ale_star_bh_future_flag_has_built
+		}
+		owner = {
+			country_event = {
+				id = uma_ale.12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.12
+	title = uma_ale.12.title
+	desc = uma_ale.12.desc
+	is_triggered_only = yes
+	picture = GFX_evt_timeworm_transcriptions
+
+	immediate = {
+		country_event = {
+			id = uma_ale.22
+		}
+	}
+
+
+	option = {
+		name = uma_ale.12.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.13
+			}
+		}
+	}
+}
+
+##Step3, material tackling station
+country_event = {
+	id = uma_ale.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:uma_ale_star_bh.star = {
+			create_ambient_object = {
+				type = "uma_ale_market_recycle_station"
+				entity_offset_height = { min = 0 max = 10 }
+				location = this
+				effect = {
+					save_event_target_as = uma_ale_market_recycle_station_target
+				}
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 20
+					angle = random
+				}
+			}
+		}
+		set_country_flag = uma_ale_market_recycle_station_exist
+
+		set_variable = {
+			which = uma_ale_resource_overflow_energy
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_minerals
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_food
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_custom_goods
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_alloys
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_volatile_motes
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_exotic_gases
+			value = 0
+		}
+		set_variable = {
+			which = uma_ale_resource_overflow_rare_crystals
+			value = 0
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.19
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_ale_market_recycle_station_exist
+	}
+
+	immediate = {
+		export_resource_maximum_to_variable = {
+			resource = energy
+			variable = uma_ale_resource_overflow_energy_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = minerals
+			variable = uma_ale_resource_overflow_minerals_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = food
+			variable = uma_ale_resource_overflow_food_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = alloys
+			variable = uma_ale_resource_overflow_alloys_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = consumer_goods
+			variable = uma_ale_resource_overflow_custom_goods_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = volatile_motes
+			variable = uma_ale_resource_overflow_volatile_motes_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = exotic_gases
+			variable = uma_ale_resource_overflow_exotic_gases_maximum_middleground
+		}
+		export_resource_maximum_to_variable = {
+			resource = rare_crystals
+			variable = uma_ale_resource_overflow_rare_crystals_maximum_middleground
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_ale.20
+		}
+	}
+}
+
+###Monthly pulse
+country_event = {
+	id = uma_ale.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= uma_ale_resource_overflow_energy_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = food
+				value >= uma_ale_resource_overflow_food_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= uma_ale_resource_overflow_minerals_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = alloys
+				value >= uma_ale_resource_overflow_alloys_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = consumer_goods
+				value >= uma_ale_resource_overflow_custom_goods_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value >= uma_ale_resource_overflow_volatile_motes_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value >= uma_ale_resource_overflow_exotic_gases_maximum_middleground
+			}
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value >= uma_ale_resource_overflow_rare_crystals_maximum_middleground
+			}
+		}
+		has_country_flag = uma_ale_market_recycle_station_exist
+	}
+
+	immediate = {
+		##basic
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= uma_ale_resource_overflow_energy_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_energy
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = energy
+				variable = uma_ale_resource_overflow_energy_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_energy
+				value = uma_ale_resource_overflow_energy_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= uma_ale_resource_overflow_minerals_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_minerals
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = minerals
+				variable = uma_ale_resource_overflow_minerals_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_minerals
+				value = uma_ale_resource_overflow_minerals_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = food
+					value >= uma_ale_resource_overflow_food_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_food
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = food
+				variable = uma_ale_resource_overflow_food_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_food
+				value = uma_ale_resource_overflow_food_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = alloys
+					value >= uma_ale_resource_overflow_alloys_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_alloys
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = alloys
+				variable = uma_ale_resource_overflow_alloys_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_alloys
+				value = uma_ale_resource_overflow_alloys_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = consumer_goods
+					value >= uma_ale_resource_overflow_custom_goods_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_custom_goods
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = consumer_goods
+				variable = uma_ale_resource_overflow_custom_goods_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_custom_goods
+				value = uma_ale_resource_overflow_custom_goods_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = volatile_motes
+					value >= uma_ale_resource_overflow_volatile_motes_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_volatile_motes
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = volatile_motes
+				variable = uma_ale_resource_overflow_volatile_motes_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_volatile_motes
+				value = uma_ale_resource_overflow_volatile_motes_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = exotic_gases
+					value >= uma_ale_resource_overflow_exotic_gases_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_exotic_gases
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = exotic_gases
+				variable = uma_ale_resource_overflow_exotic_gases_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_exotic_gases
+				value = uma_ale_resource_overflow_exotic_gases_middleground
+			}
+		}
+
+		if = {
+			limit = {
+				resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= uma_ale_resource_overflow_rare_crystals_maximum_middleground
+				}
+				check_variable = {
+					which = uma_ale_resource_overflow_rare_crystals
+					value < 50000
+				}
+			}
+			export_resource_income_to_variable = {
+				resource = rare_crystals
+				variable = uma_ale_resource_overflow_rare_crystals_middleground
+			}
+			change_variable = {
+				which = uma_ale_resource_overflow_rare_crystals
+				value = uma_ale_resource_overflow_rare_crystals_middleground
+			}
+		}
+
+	}
+
+	after = {
+		switch = {
+			trigger = is_variable_set
+
+			uma_ale_resource_overflow_energy_middleground = {
+				clear_variable = uma_ale_resource_overflow_energy_middleground
+			}
+
+			uma_ale_resource_overflow_minerals_middleground = {
+				clear_variable = uma_ale_resource_overflow_minerals_middleground
+			}
+
+			uma_ale_resource_overflow_food_middleground = {
+				clear_variable = uma_ale_resource_overflow_food_middleground
+			}
+
+			uma_ale_resource_overflow_alloys_middleground = {
+				clear_variable = uma_ale_resource_overflow_alloys_middleground
+			}
+
+			uma_ale_resource_overflow_custom_goods_middleground = {
+				clear_variable = uma_ale_resource_overflow_custom_goods_middleground
+			}
+
+			uma_ale_resource_overflow_volatile_motes_middleground = {
+				clear_variable = uma_ale_resource_overflow_volatile_motes_middleground
+			}
+
+			uma_ale_resource_overflow_exotic_gases_middleground = {
+				clear_variable = uma_ale_resource_overflow_exotic_gases_middleground
+			}
+
+			uma_ale_resource_overflow_rare_crystals_middleground = {
+				clear_variable = uma_ale_resource_overflow_rare_crystals_middleground
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.21
+	title = uma_ale.21.title
+	desc = uma_ale.21.desc
+	diplomatic = yes
+	diplomatic_title = uma_ale.21.dptitle
+	is_triggered_only = yes
+
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_energy
+				value > 0
+			}
+		}
+		name = uma_ale.21.a
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_energy
+						value >= 1000
+					}
+				}
+				add_resource = {
+					energy = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_energy
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					energy = 1
+					multiplier = uma_ale_resource_overflow_energy
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_energy
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_minerals
+				value > 0
+			}
+		}
+		name = uma_ale.21.b
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_minerals
+						value >= 1000
+					}
+				}
+				add_resource = {
+					minerals = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_minerals
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					minerals = 1
+					multiplier = uma_ale_resource_overflow_minerals
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_minerals
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_food
+				value > 0
+			}
+		}
+		name = uma_ale.21.c
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_food
+						value >= 1000
+					}
+				}
+				add_resource = {
+					food = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_food
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					food = 1
+					multiplier = uma_ale_resource_overflow_food
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_food
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_alloys
+				value > 0
+			}
+		}
+		name = uma_ale.21.d
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_ealloys
+						value >= 1000
+					}
+				}
+				add_resource = {
+					alloys = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_alloys
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					alloys = 1
+					multiplier = uma_ale_resource_overflow_alloys
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_alloys
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_custom_goods
+				value > 0
+			}
+		}
+		name = uma_ale.21.e
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_custom_goods
+						value >= 1000
+					}
+				}
+				add_resource = {
+					consumer_goods = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_custom_goods
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					consumer_goods = 1
+					multiplier = uma_ale_resource_overflow_custom_goods
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_custom_goods
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_volatile_motes
+				value > 0
+			}
+		}
+		name = uma_ale.21.f
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_evolatile_motes
+						value >= 1000
+					}
+				}
+				add_resource = {
+					volatile_motes = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_volatile_motes
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					volatile_motes = 1
+					multiplier = uma_ale_resource_overflow_volatile_motes
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_volatile_motes
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_exotic_gases
+				value > 0
+			}
+		}
+		name = uma_ale.21.g
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_eexotic_gases
+						value >= 1000
+					}
+				}
+				add_resource = {
+					exotic_gases = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_eexotic_gases
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					exotic_gases = 1
+					multiplier = uma_ale_resource_overflow_exotic_gases
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_exotic_gases
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				which = uma_ale_resource_overflow_rare_crystals
+				value > 0
+			}
+		}
+		name = uma_ale.21.h
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						which = uma_ale_resource_overflow_erare_crystals
+						value >= 1000
+					}
+				}
+				add_resource = {
+					rare_crystals = 1000
+				}
+				subtract_variable = {
+					which = uma_ale_resource_overflow_rare_crystals
+					value = 1000
+				}
+			}
+			else = {
+				add_resource = {
+					rare_crystals = 1
+					multiplier = uma_ale_resource_overflow_rare_crystals
+				}
+				set_variable = {
+					which = uma_ale_resource_overflow_rare_crystals
+					value = 0
+				}
+			}
+			fire_on_action = {
+				on_action = on_uma_ale_extract_resource
+			}
+		}
+	}
+	option = {
+		name = uma_exit
+		default_hide_option = yes
+	}
+}
+
+country_event = {
+	id = uma_ale.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_cosmic_storm = {
+			limit = {
+				has_storm_flag = uma_ale_time_storm
+			}
+
+			destroy_cosmic_storm = yes
+		}
+	}
+}
+
+
+##ALE
+country_event = {
+	id = uma_ale.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_ale_market_recycle_station_exist
+		check_variable = {
+			which = uma_ale_resource_overflow_food
+			value >= 40000
+		}
+		NOT= {
+			has_country_flag = uma_ale.30_has_happened
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_ale.31
+			days = 20
+			random = 10
+		}
+		set_country_flag = uma_ale.30_has_happened
+	}
+}
+
+country_event = {
+	id = uma_ale.31
+	title = uma_ale.31.title
+	desc = uma_ale.31.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_zf_listen
+
+	immediate = {
+
+	}
+
+	option = {
+		name = uma_ale.31.a
+		hidden_effect = {
+			set_country_flag = uma_ale_masterevt_marked
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.90
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = uma_ale_masterevt_marked
+	}
+	immediate = {
+		remove_country_flag = uma_ale_masterevt_marked
+
+		country_event = {
+			id = uma_ale.32
+			days = 60
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.32
+	title = uma_ale.32.title
+	desc = uma_ale.32.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_f_bg
+
+
+	option = {
+		name = uma_ale.32.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.33
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.33
+	title = uma_ale.33.title
+	desc = uma_ale.33.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.33.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.34
+			}
+		}
+	}
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.37
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.34
+	title = uma_ale.34.title
+	desc = uma_ale.34.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.34.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.35
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.35
+	title = uma_ale.34.title
+	desc = uma_ale.35.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.35.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.36
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.36
+	title = uma_ale.34.title
+	desc = uma_ale.36.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.36.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.37
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.37
+	title = uma_ale.34.title
+	desc = uma_ale.37.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = 125c
+		room = uma_hospital_room
+	}
+
+	option = {
+		name = uma_ale.37.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ale.38
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ale.38
+	title = ALEYE
+	desc = uma_ale.38.desc
+	is_triggered_only = yes
+
+	event_window_type = leader_recruit
+	picture = GFX_uma_leader_cheval
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_almondeye
+	}
+
+	immediate = {
+		play_sound = uma_hire_Ale
+		create_country = {
+			name = "NAME_uma_empty"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = uma_empty_country
+			}
+		}
+		event_target:uma_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_legendary_leader_species
+				}
+			}
+			uma_create_leader_ale = yes
+		}
+	}
+
+	###1
+	option = {
+		name = uma_ale.38.a.a
+		response_text = uma_ale.38.a.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_ale.38.b
+		response_text = uma_ale.38.b.resp
+		is_dialog_only = yes
+	}
+
+	##########
+	option = {
+		name = HIRE
+		tag = hire_leader
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:uma_is_leader_almondeye
+				species = root.species
+				gender = female
+			}
+			last_created_leader = {
+				add_experience = 1550
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_almondeye
+				save_global_event_target_as = uma_is_leader_almondeye
+				change_leader_portrait = 125c
+				uma_initialize_leader_yaruki_effect = yes
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_almondeye
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_almondeye
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_almondeye = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_empty_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+##Debug evt
+country_event = {
+	id = uma_ale.40
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = uma_ale_resource_overflow_food
+			value = 45100
+		}
+	}
+}

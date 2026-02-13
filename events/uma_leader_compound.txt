@@ -626,6 +626,23 @@ country_event = {
 		}
 	}
 
+
+	option = {
+		name = uma_leader_cp.1.x
+		custom_tooltip = uma_leader_cp.1.x.tt
+		trigger = {
+			exists = event_target:uma_is_leader_almondeye
+		}
+		event_target:uma_is_leader_almondeye = {
+			set_leader_flag = uma_leader_compound_father
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_leader_cp.5
+			}
+		}
+	}
+
 	option = {
 		name = uma_leader_cp.1.e
 		custom_tooltip = uma_leader_cp.1.e.tt
@@ -1462,6 +1479,26 @@ country_event = {
 			}
 		}
 		event_target:uma_is_leader_duramente = {
+			set_leader_flag = uma_leader_compound_mother
+
+		}
+	}
+
+
+	option = {
+		name = uma_leader_cp.1.x
+		custom_tooltip = uma_leader_cp.1.x.tt
+		trigger = {
+			exists = event_target:uma_is_leader_almondeye
+		}
+		allow = {
+			NOT = {
+				event_target:uma_is_leader_almondeye = {
+					has_leader_flag = uma_leader_compound_father
+				}
+			}
+		}
+		event_target:uma_is_leader_almondeye = {
 			set_leader_flag = uma_leader_compound_mother
 
 		}
@@ -4101,6 +4138,80 @@ country_event = {
 		}
 	}
 
+	###Almond Eye
+	option = {
+		name = uma_leader_cp.9.ale.trait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_almondeye
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_almondeye
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.9.ale.trait.1
+			}
+
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.9.ale.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+	option = {
+		name = uma_leader_cp.9.ale.trait.1.cancel
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_almondeye
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_almondeye
+				}
+			}
+			has_country_flag = uma_leader_cp.9.ale.trait.1
+
+		}
+		hidden_effect = {
+			remove_country_flag = uma_leader_cp.9.ale.trait.1
+			country_event = {
+				id = uma_leader_cp.9
+				scopes = {
+					from = event_target:uma_leader_cp_father
+					fromfrom = event_target:uma_leader_cp_mother
+				}
+			}
+		}
+	}
+
 	option = {
 		name = uma_leader_cp.9.next
 		hidden_effect = {
@@ -4940,6 +5051,40 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = uma_leader_cp.10.dura.portrait.1
+			country_event = {
+				id = uma_leader_cp.12
+			}
+		}
+	}
+
+	###Almond eye
+	option = {
+		name = uma_leader_cp.10.ale.portrait.1
+		trigger = {
+			OR = {
+				from = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_almondeye
+				}
+				fromfrom = {
+					OR = {
+						has_leader_flag = uma_leader_compound_father
+						has_leader_flag = uma_leader_compound_mother
+					}
+
+					has_leader_flag = uma_is_almondeye
+				}
+			}
+			NOT = {
+				has_country_flag = uma_leader_cp.10.ale.portrait.1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = uma_leader_cp.10.ale.portrait.1
 			country_event = {
 				id = uma_leader_cp.12
 			}

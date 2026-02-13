@@ -124,6 +124,7 @@ defined_text = {
 					has_leader_flag = uma_is_seiun_sky
 					has_leader_flag = uma_is_tokai_teio
 					has_leader_flag = uma_is_cheval_grand
+					has_leader_flag = uma_is_almondeye
 					##DDOD-Sub
 					has_leader_flag = Jantis_leader
 				}
@@ -134,7 +135,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				his_leader_tier = leader_tier_legendary
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_deep
 			}
 		}
@@ -189,6 +190,16 @@ defined_text = {
 			}
 		}
 		localization_key = UMA_CLASS_TIER_CHEVAL
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				is_leader_tier = leader_tier_legendary
+				has_leader_flag = uma_is_almondeye
+			}
+		}
+		localization_key = UMA_CLASS_TIER_ALE
 	}
 
 	text = {
@@ -324,6 +335,7 @@ defined_text = {
 					has_leader_flag = uma_is_seiun_sky
 					has_leader_flag = uma_is_tokai_teio
 					has_leader_flag = uma_is_cheval_grand
+					has_leader_flag = uma_is_almondeye
 					has_leader_flag = Jantis_leader
 				}
 			}
@@ -333,7 +345,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				his_leader_tier = leader_tier_legendary
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_deep
 			}
 		}
@@ -353,7 +365,7 @@ defined_text = {
 	text = {
 		trigger = {
 			AND = {
-				his_leader_tier = leader_tier_legendary
+				is_leader_tier = leader_tier_legendary
 				has_leader_flag = uma_is_agnes_digital
 			}
 		}
@@ -388,6 +400,16 @@ defined_text = {
 			}
 		}
 		localization_key = UMA_CLASSPrefix_TIER_CHEVAL
+	}
+
+	text = {
+		trigger = {
+			AND = {
+				is_leader_tier = leader_tier_legendary
+				has_leader_flag = uma_is_almondeye
+			}
+		}
+		localization_key = UMA_CLASSPrefix_TIER_ALE
 	}
 
 	text = {
