@@ -2,7 +2,7 @@ namespace = uma_marking
 
 #版本号标注以及开局机制事件
 
-@UMA_SD_VER = 250720 #内部版本号：格式：<年份><公开版本><子版本>
+@UMA_SD_VER = 250725 #内部版本号：格式：<年份><公开版本><子版本>
 
 
 
@@ -263,9 +263,9 @@ event = {
 				id = uma_marking.4
 			}
 
-			country_event = {
-				id = uma_marking.5
-			}
+#			country_event = {
+#				id = uma_marking.5
+#			}
 		}
 	}
 }
@@ -291,30 +291,30 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = uma_marking.5
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_galaxy_planet = {
-			limit = {
-				is_planet_class = pc_uma_industrial
-			}
-			add_zone = {
-				district = district_uma_usw_urban_1
-				zone = zone_uma_industrial_school_world
-			}
-			add_zone = {
-				district = district_uma_usw_urban_2
-				zone = zone_uma_industrial_school_world
-			}
-			remove_all_buildings = yes
-			change_pc = pc_uma_school
-			add_modifier = {
-				modifier = uma_autobug
-				days = 400
-			}
-		}
-	}
-}
+#country_event = {
+#	id = uma_marking.5
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		every_galaxy_planet = {
+#			limit = {
+#				is_planet_class = pc_uma_industrial
+#			}
+#			add_zone = {
+#				district = district_uma_usw_urban_1
+#				zone = zone_uma_industrial_school_world
+#			}
+#			add_zone = {
+#				district = district_uma_usw_urban_2
+#				zone = zone_uma_industrial_school_world
+#			}
+#			remove_all_buildings = yes
+#			change_pc = pc_uma_school
+#			add_modifier = {
+#				modifier = uma_autobug
+#				days = 400
+#			}
+#		}
+#	}
+#}

@@ -1,4 +1,4 @@
-version="0.7.21"
+version="0.7.25"
 tags={
 	"Species"
 	"Technologies"
