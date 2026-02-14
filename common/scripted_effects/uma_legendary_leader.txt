@@ -2454,6 +2454,12 @@ uma_leader_cp_build_up_write_information = {
 					set_leader_flag = uma_is_father_duramente
 				}
 			}
+
+			uma_is_almondeye = {
+				Prev = {
+					set_leader_flag = uma_is_father_almondeye
+				}
+			}
 		}
 	}
 
@@ -2593,6 +2599,12 @@ uma_leader_cp_build_up_write_information = {
 					set_leader_flag = uma_is_mother_duramente
 				}
 			}
+
+			uma_is_almondeye = {
+				Prev = {
+					set_leader_flag = uma_is_mother_almondeye
+				}
+			}
 		}
 	}
 
@@ -2729,6 +2741,12 @@ uma_leader_cp_build_up_write_information = {
 			uma_leader_cp.10.dura.portrait.1 = {
 				Prev = {
 					set_leader_flag = uma_leader_cp.10.dura.portrait.1
+				}
+			}
+
+			uma_leader_cp.10.ale.portrait.1 = {
+				Prev = {
+					set_leader_flag = uma_leader_cp.10.ale.portrait.1
 				}
 			}
 		}
