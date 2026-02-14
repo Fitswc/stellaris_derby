@@ -1585,7 +1585,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon_2" }
-	component_set = "UMA_TG_ARCH_WEAPON"
+	component_set = "UMA_TG_ARCH_WEAPON_2"
 	projectile_gfx = "plasma_accelerator_s"
 	tags = { weapon_type_energy}
 	ai_tags = { weapon_role_anti_armor }
@@ -1651,7 +1651,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON"
+	component_set = "UMA_TG_ARCH_WEAPON_2"
 	projectile_gfx = "plasma_accelerator_m"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1717,7 +1717,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON"
+	component_set = "UMA_TG_ARCH_WEAPON_2"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1782,7 +1782,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON_BIG"
+	component_set = "UMA_TG_ARCH_WEAPON_BIG_2"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1847,7 +1847,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON_TITAN"
+	component_set = "UMA_TG_ARCH_WEAPON_TITAN_2"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }

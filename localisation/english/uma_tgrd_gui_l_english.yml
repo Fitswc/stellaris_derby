@@ -323,8 +323,16 @@ building_uma_tg_alloys_maker_Automatic_tt: "This building calculate produce by: 
  UMA_TG_QAAM_MISSILE_DESC: "Large fire missiles with high guidance accuracy"  #NT!
  UMA_TG_ARCH_WEAPON:  "TG-Arc Weapon"  #NT!
  UMA_TG_ARCH_WEAPON_DESC: "A magic weapon that uses the energy of photons and electrons to penetrate the target ship"  #NT!
- UMA_TG_ARCH_WEAPON_BIG: "$UMA_TG_ARCH_WEAPON$" #NT!
- UMA_TG_ARCH_WEAPON_BIG_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"   #NT!
+UMA_TG_ARCH_WEAPON_BIG: "$UMA_TG_ARCH_WEAPON$"
+UMA_TG_ARCH_WEAPON_BIG_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
+UMA_TG_ARCH_WEAPON_TITAN: "$UMA_TG_ARCH_WEAPON$"
+UMA_TG_ARCH_WEAPON_TITAN_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
+UMA_TG_ARCH_WEAPON_2: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
+UMA_TG_ARCH_WEAPON_2_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
+UMA_TG_ARCH_WEAPON_BIG_2_DESC: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
+UMA_TG_ARCH_WEAPON_BIG_2: "$UMA_TG_ARCH_WEAPON_DESC$"
+UMA_TG_ARCH_WEAPON_TITAN_2_DESC: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
+UMA_TG_ARCH_WEAPON_TITAN_2: "$UMA_TG_ARCH_WEAPON_DESC$"
  UMA_TG_SHIELD: "TG-City Wall Shield"  #NT!
  UMA_TG_SHIELD_DESC: "Shields that absorb external damage obtained by amplifying the decay of molecules"  #NT!
  UMA_TG_ARMOR: "TG-City Wall Armor"  #NT!
