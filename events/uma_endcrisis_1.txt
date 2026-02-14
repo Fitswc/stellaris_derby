@@ -642,6 +642,16 @@ country_event = {
 				days = 5
 			}
 		}
+
+		every_situation = {
+			limit = {
+				has_situation_flag = uma_situation_uma_endcrisis_ec1_discount
+			}
+			destroy_situation = this
+		}
+		event_target:uma_ec1_country = {
+			destroy_country = yes
+		}
 	}
 }
 
@@ -1054,7 +1064,10 @@ situation_event = {
 		every_country = {
 			limit = {
 				NOT = {
-					is_country_type = uma_ec1_empire
+					OR = {
+						is_country_type = uma_ec1_empire
+						is_country_type = uma_ec1_empire_ez
+					}
 					is_country_type = uma_fallen_empire
 
 				}

@@ -321,7 +321,10 @@ country_event = {
 
 				starbase = {
 					owner = {
-						is_country_type = uma_ec2_empire
+						OR = {
+							is_country_type = uma_ec2_empire
+							is_country_type = uma_ec2_empire_ez
+						}
 					}
 				}
 			}

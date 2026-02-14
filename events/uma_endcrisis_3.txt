@@ -631,7 +631,14 @@ planet_event = {
 	trigger = {
 		 solar_system = {
 			 exists = starbase
-			 starbase = { owner = { is_country_type = uma_ec3_empire } }
+			 starbase = {
+				 owner = {
+					 OR = {
+						 is_country_type = uma_ec3_empire_ez
+						 is_country_type = uma_ec3_empire
+					 }
+				 }
+			 }
 		 }
 		this = {
 			count_owned_pop_amount = {
@@ -667,7 +674,14 @@ planet_event = {
 		is_primary_star = yes
 		solar_system = {
 			exists = starbase
-			starbase = { owner = { is_country_type = uma_ec3_empire } }
+			starbase = {
+				owner = {
+					OR = {
+						is_country_type = uma_ec3_empire_ez
+						is_country_type = uma_ec3_empire
+					}
+				}
+			}
 		}
 	}
 
@@ -709,7 +723,14 @@ planet_event = {
 		is_primary_star = yes
 		solar_system = {
 			exists = starbase
-			starbase = { owner = { is_country_type = uma_ec3_empire } }
+			starbase = {
+				owner = {
+					OR = {
+						is_country_type = uma_ec3_empire_ez
+						is_country_type = uma_ec3_empire
+					}
+				}
+			}
 		}
 	}
 
