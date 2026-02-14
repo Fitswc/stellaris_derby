@@ -172,8 +172,15 @@ country_event = {
 
 		event_target:uma_fallen_empire = {
 			remove_modifier = uma_fallen_empire_enhancement_modifier
-			set_country_type = uma_ec2_empire
-
+			if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+				}
+				set_country_type = uma_ec2_empire_ez
+			}
+			else = {
+				set_country_type = uma_ec2_empire
+			}
 			add_modifier = {
 				modifier = uma_fallen_empire_crisis_2_modifier_class_1_speed
 			}
@@ -235,9 +242,14 @@ country_event = {
 							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
 						}
 
+						#2F
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 2
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 3
 						}
 
 					}
@@ -246,30 +258,12 @@ country_event = {
 							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
 						}
 
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 2
-						}
-
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 3
-						}
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 4
-						}
-					}
-					else_if = {
-						limit = {
-							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
-						}
+						#4F
 
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 2
 						}
-
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 3
@@ -281,6 +275,38 @@ country_event = {
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 5
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+						}
+
+						#6F
+
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 2
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 3
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 4
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 5
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 6
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 7
 						}
 					}
 				}
@@ -721,7 +747,7 @@ fleet_event = {
 		if = {
 			limit = {
 				event_target:uma_fallen_empire = {
-					fleet_power <= 30000000 #3M
+					fleet_power <= 30000000 #30M
 				}
 			}
 

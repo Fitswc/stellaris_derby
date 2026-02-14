@@ -278,38 +278,79 @@ uma_ec3_puma_create_species_and_country = {
 		effect = { save_global_event_target_as = uma_ec3_umamusume_species }
 	}
 
-	create_country = {
-		name = "NAME_UMA_EC3_country"
-		type = uma_ec3_empire
-		species = event_target:uma_ec3_umamusume_species
-		name_list = "UMAname"
-		flag = {
-			icon = {
-				category = "uiu_flags"
-				file = "uiu_flags02.dds"
+	if = {
+		limit = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		}
+		create_country = {
+			name = "NAME_UMA_EC3_country"
+			type = uma_ec3_empire_ez
+			species = event_target:uma_ec3_umamusume_species
+			name_list = "UMAname"
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags02.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"indigo"
+					"blue"
+					"null"
+					"null"
+				}
 			}
-			background = {
-				category = "backgrounds"
-				file = "circle.dds"
-			}
-			colors = {
-				"indigo"
-				"blue"
-				"null"
-				"null"
+
+			effect = {
+
+				set_country_flag = uma_ec3_country
+				save_global_event_target_as = uma_ec3_country
+
+				set_graphical_culture = mammalian_01
+				create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+				add_ship_design = last_created_design
 			}
 		}
+	}
+	else = {
+		create_country = {
+			name = "NAME_UMA_EC3_country"
+			type = uma_ec3_empire
+			species = event_target:uma_ec3_umamusume_species
+			name_list = "UMAname"
+			flag = {
+				icon = {
+					category = "uiu_flags"
+					file = "uiu_flags02.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "circle.dds"
+				}
+				colors = {
+					"indigo"
+					"blue"
+					"null"
+					"null"
+				}
+			}
 
-		effect = {
+			effect = {
 
-			set_country_flag = uma_ec3_country
-			save_global_event_target_as = uma_ec3_country
+				set_country_flag = uma_ec3_country
+				save_global_event_target_as = uma_ec3_country
 
-			set_graphical_culture = mammalian_01
-			create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_Marauder_Starbase" }
-			add_ship_design = last_created_design
+				set_graphical_culture = mammalian_01
+				create_ship_design = { design = "NAME_UMA_EC3_STARBASE" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+				add_ship_design = last_created_design
+			}
 		}
 	}
 }
@@ -532,38 +573,79 @@ uma_ec1_create_country_and_species = {
 		name_list = UMAname
 		effect = { save_global_event_target_as = uma_ec1_umamusume_species }
 	}
-	create_country = {
-		name = "NAME_UMA_EC1_country"
-		type = uma_ec1_empire
-		species = event_target:uma_ec1_umamusume_species
-		name_list = "UMAname"
-		flag = {
-			icon = {
-				category = "special"
-				file = "unknown.dds"
+	if = {
+		limit = {
+			has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+		}
+		create_country = {
+			name = "NAME_UMA_EC1_country"
+			type = uma_ec1_empire_ez
+			species = event_target:uma_ec1_umamusume_species
+			name_list = "UMAname"
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "flag_BG_39.dds"
+				}
+				colors = {
+					"blue"
+					"moss_green"
+					"null"
+					"null"
+				}
 			}
-			background = {
-				category = "backgrounds"
-				file = "flag_BG_39.dds"
-			}
-			colors = {
-				"blue"
-				"moss_green"
-				"null"
-				"null"
+
+			effect = {
+				set_country_flag = uma_ec1_country
+				save_global_event_target_as = uma_ec1_country
+
+				create_ship_design = { design = "NAME_UMA_EC1_STARBASE" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+
+
+				set_graphical_culture = humanoid_01
 			}
 		}
+	}
+	else = {
+		create_country = {
+			name = "NAME_UMA_EC1_country"
+			type = uma_ec1_empire
+			species = event_target:uma_ec1_umamusume_species
+			name_list = "UMAname"
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "flag_BG_39.dds"
+				}
+				colors = {
+					"blue"
+					"moss_green"
+					"null"
+					"null"
+				}
+			}
 
-		effect = {
-			set_country_flag = uma_ec1_country
-			save_global_event_target_as = uma_ec1_country
+			effect = {
+				set_country_flag = uma_ec1_country
+				save_global_event_target_as = uma_ec1_country
 
-			create_ship_design = { design = "NAME_UMA_EC1_STARBASE" }
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_Marauder_Starbase" }
+				create_ship_design = { design = "NAME_UMA_EC1_STARBASE" }
+				add_ship_design = last_created_design
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
 
 
-			set_graphical_culture = humanoid_01
+				set_graphical_culture = humanoid_01
+			}
 		}
 	}
 }

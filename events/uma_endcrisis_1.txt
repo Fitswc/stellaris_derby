@@ -457,7 +457,7 @@ country_event = {
 							fleet = {
 								set_fleet_flag = uma_ec1_starbase.1
 								while = {
-									count = 3
+									count = 4
 									fleet_event = {
 										id = uma_ec_1.5
 									}
@@ -484,8 +484,11 @@ country_event = {
 
 							fleet = {
 								set_fleet_flag = uma_ec1_starbase.1
-								fleet_event = {
-									id = uma_ec_1.5
+								while = {
+									count = 2
+									fleet_event = {
+										id = uma_ec_1.5
+									}
 								}
 
 							}
@@ -510,7 +513,7 @@ country_event = {
 							fleet = {
 								set_fleet_flag = uma_ec1_starbase.1
 								while = {
-									count = 4
+									count = 6
 									fleet_event = {
 										id = uma_ec_1.5
 									}
@@ -754,7 +757,7 @@ fleet_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		uma_ec1_create_def_fleets = yes
-		set_update_modifiers_batch = end0
+		set_update_modifiers_batch = end
 
 		last_created_fleet = {
 			queue_actions = {
@@ -788,10 +791,31 @@ fleet_event = {
 		if = {
 			limit = {
 				event_target:uma_ec1_country = {
-					fleet_power <= 30000000 #3M
+					fleet_power <= 30000000 #30M
 				}
 			}
-			uma_ec1_create_def_fleets = yes
+			if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
+				}
+				uma_ec1_create_def_fleets = yes
+				uma_ec1_create_def_fleets = yes
+			}
+			else_if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+				}
+				uma_ec1_create_def_fleets = yes
+			}
+			else_if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+				}
+				uma_ec1_create_def_fleets = yes
+				uma_ec1_create_def_fleets = yes
+				uma_ec1_create_def_fleets = yes
+			}
+
 			last_created_fleet = {
 				fleet_event = {
 					id = uma_ec_1.3
