@@ -369,7 +369,7 @@ uma_trait_str1={
 	icon="gfx/interface/icons/traits/str1.png"
 	modifier={
 		army_damage_mult = 0.1
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 	}
 }
 
@@ -380,7 +380,7 @@ uma_trait_str2={
 	icon="gfx/interface/icons/traits/str2.png"
 	modifier={
 		army_damage_mult = 0.2
-		planet_jobs_produces_mult = 0.10
+		pop_bonus_workforce_mult = 0.10
 	}
 	slave_cost = {
 		energy = 100
@@ -394,7 +394,7 @@ uma_trait_str-1={
 	icon="gfx/interface/icons/traits/str-1.png"
 	modifier={
 		army_damage_mult = -0.05
-		planet_jobs_produces_mult = -0.05
+		pop_bonus_workforce_mult = -0.05
 	}
 }
 
@@ -572,7 +572,7 @@ uma_trait_genki={
 	allowed_archetypes={UMA}
 	modifier={
 		planet_pops_food_upkeep_mult = 0.15
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 
 	}
 }
@@ -584,7 +584,7 @@ uma_trait_moyu={
 	allowed_archetypes={UMA}
 	modifier={
 		planet_pops_food_upkeep_mult = -0.15
-		planet_jobs_produces_mult = -0.05
+		pop_bonus_workforce_mult = -0.05
 	}
 }
 
@@ -736,7 +736,7 @@ uma_trait_glass_feet = {
 	modifier = {
 		planet_uma_racing_umamusume_upkeep_mult = 0.1
 		planet_building_build_speed_mult = -0.1
-		planet_jobs_produces_mult = -0.05
+		pop_bonus_workforce_mult = -0.05
 		logistic_growth_mult = 0.1
 	}
 }
@@ -937,7 +937,7 @@ trait_uma_terriroty_awake = {
 	}
 
 	modifier = {
-		planet_jobs_produces_mult = 0.10
+		pop_bonus_workforce_mult = 0.10
 		army_damage_mult = 0.25
 		army_health = 0.25
 	}
@@ -965,8 +965,11 @@ trait_uma_new_bottle_but_old_wine = {
 		always = no
 	}
 
+
+	triggered_planet_pop_group_modifier_for_species = {
+		bonus_pop_growth_mult = -0.15
+	}
 	modifier = {
-		logistic_growth_mult = -0.15
 		pop_amenities_usage_mult = 0.1
 	}
 }
@@ -991,7 +994,7 @@ uma_trait_gold_family_basic={
 	initial = no
 	modifier= {
 		logistic_growth_mult = -0.2
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 		pop_happiness = 0.1
 		planet_stability_add = -5
 	}
@@ -1014,7 +1017,7 @@ uma_trait_gold_family={
 	initial = no
 	modifier= {
 		logistic_growth_mult = -0.1
-		planet_jobs_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.1
 		pop_happiness = 0.1
 		planet_stability_add = -5
 	}
@@ -1037,9 +1040,9 @@ uma_trait_gold_family_advance= {
 	initial = no
 	modifier = {
 		logistic_growth_mult = -0.05
-		planet_jobs_produces_mult = 0.2
+		pop_bonus_workforce_mult = 0.2
 		pop_happiness = 0.1
-		planet_stability_add = -10
+		planet_stability_add = -15
 	}
 }
 
