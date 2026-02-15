@@ -949,7 +949,7 @@ trait_uma_terriroty_awake = {
 
 ###转化特质
 trait_uma_new_bottle_but_old_wine = {
-	cost = 0
+	cost = -1
 	icon = "gfx/interface/icons/traits/trait_uma_new_bottle_but_old_wine.dds"
 #	potential_crossbreeding_chance = 0
 	allowed_archetypes = { UMA }
@@ -959,7 +959,11 @@ trait_uma_new_bottle_but_old_wine = {
 		always = no
 	}
 	species_possible_remove = {
-		always = no
+		#always = no
+		hidden_trigger = { exists = from }
+		From = {
+			has_tradition = uma_factor_star_picking
+		}
 	}
 	species_possible_merge_add = {
 		always = no
@@ -970,6 +974,7 @@ trait_uma_new_bottle_but_old_wine = {
 		bonus_pop_growth_mult = -0.15
 	}
 	modifier = {
+		fake_pop_growth_mod = -0.15
 		pop_amenities_usage_mult = 0.1
 	}
 }

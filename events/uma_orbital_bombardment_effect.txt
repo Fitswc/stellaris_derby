@@ -125,14 +125,29 @@ planet_event = {
 		#			value = 2
 		#		}
 
-
-		modify_species = {
-			species = From.owner_main_species
-			add_trait = trait_uma_new_bottle_but_old_wine
-			#					portrait = From.owner_main_species
-			change_scoped_species = yes
-			effect = {
-				##
+		if = {
+			limit = {
+				From.owner = {
+					has_tradition = uma_factor_star_picking
+				}
+			}
+			modify_species = {
+				species = From.owner_main_species
+	#			add_trait = trait_uma_new_bottle_but_old_wine
+				change_scoped_species = yes
+				effect = {
+					##
+				}
+			}
+		}
+		else = {
+			modify_species = {
+				species = From.owner_main_species
+				add_trait = trait_uma_new_bottle_but_old_wine
+				change_scoped_species = yes
+				effect = {
+					##
+				}
 			}
 		}
 
