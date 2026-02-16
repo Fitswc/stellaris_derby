@@ -12,13 +12,22 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        is_ai = no
-        has_authority = auth_trainingcenter
-        NOT = { has_country_flag = uma_has_refresh_seiun_sky_system }
-        any_system = {
-            has_star_flag = uma_seiun_sky_system
-            exists = owner ###非常重要！否则在切换到owner的时候会出错！
-            #is_owned_by = root
+        OR = {
+            AND = {
+                is_multiplayer = no
+                is_ai = no
+                has_authority = auth_trainingcenter
+                NOT = { has_country_flag = uma_has_refresh_seiun_sky_system }
+                any_system = {
+                    has_star_flag = uma_seiun_sky_system
+                    exists = owner ###非常重要！否则在切换到owner的时候会出错！
+                    #is_owned_by = root
+                }
+            }
+            AND = {
+                is_multiplayer = yes
+                has_country_flag = uma_mulityplayer_owner_of_the_system_SKY
+            }
         }
     }
 
@@ -64,13 +73,22 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-        is_ai = no
-        has_authority = auth_trainingcenter
-        NOT = { has_country_flag = uma_has_refresh_grass_wonder_system }
-        any_system = {
-            has_star_flag = uma_grass_wonder_system
-            exists = owner
-            #is_owned_by = root
+        OR = {
+            AND = {
+                is_multiplayer = no
+                is_ai = no
+                has_authority = auth_trainingcenter
+                NOT = { has_country_flag = uma_has_refresh_grass_wonder_system }
+                any_system = {
+                    has_star_flag = uma_grass_wonder_system
+                    exists = owner
+                    #is_owned_by = root
+                }
+            }
+            AND = {
+                is_multiplayer = yes
+                has_country_flag = uma_mulityplayer_owner_of_the_system_GRASS
+            }
         }
     }
 

@@ -9,9 +9,20 @@ ship_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		FROM = { has_star_flag = uma_tachyon_coffee_system }
-		This.fleet.owner = {
-			is_uma_player_country = yes
+		OR = {
+			AND = {
+				is_multiplayer = no
+				FROM = { has_star_flag = uma_tachyon_coffee_system }
+				This.fleet.owner = {
+					is_uma_player_country = yes
+				}
+			}
+			AND = {
+				is_multiplayer = yes
+				This.fleet.owner = {
+					has_country_flag = uma_mulityplayer_owner_of_the_system_COFFEE
+				}
+			}
 		}
 	}
 
