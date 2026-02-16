@@ -72,6 +72,7 @@ col_uma_academy_industrial = {
 		planet_structures_upkeep_mult = -0.15
 		planet_building_capacity_add = 2
 	}
+	custom_tooltip = colyt_uma_industrial_ring_triggered_desc
 
 	inline_script = {
 		script = jobs/uma_colony_type_indu_job_add
