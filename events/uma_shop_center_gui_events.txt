@@ -181,6 +181,7 @@ country_event = {
 	#退出选项
 	option = {
 		name = "uma_gui_test.4.exit"
+		default_hide_option = yes
 	}
 
 	option = {
@@ -200,7 +201,7 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		allow = {
 			custom_tooltip = {
@@ -335,7 +336,6 @@ country_event = {
 			}
 		}
 	}
-
 }
 
 #第二页8道具
