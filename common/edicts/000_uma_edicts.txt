@@ -3,7 +3,7 @@
 
 #举办国家德比
 uma_held_national_derby = {
-	length = 0
+	length = 1
 	icon = GFX_uma_held_national_derby
 	resources = {
 		category = edicts
@@ -63,14 +63,8 @@ uma_held_national_derby = {
 
 
 uma_comm_with_fe = {
-	length = 0
+	length = 1
 	icon = GFX_uma_suspendfallen_empire_mission
-	resources = {
-		category = edicts
-		cost = {
-			influence = 0
-		}
-	}
 
 	potential = {
 		has_authority = auth_trainingcenter
@@ -103,7 +97,7 @@ uma_comm_with_fe = {
 
 
 uma_fine_sth_in_wearhouse = {
-	length = 0
+	length = 1
 	icon = GFX_mod_job_uma_racing_umamusume_produces_add
 	resources = {
 		category = edicts
@@ -144,7 +138,7 @@ uma_fine_sth_in_wearhouse = {
 }
 
 uma_curren_build_research_departure = {
-	length = 0
+	length = 1
 	icon = GFX_uma_curren_build_research_departure
 	resources = {
 		category = edicts
@@ -185,7 +179,7 @@ uma_curren_build_research_departure = {
 }
 
 uma_resource_recycle_system = {
-	length = 0
+	length = 1
 	icon =  GFX_uma_auto_species_merge
 
 	potential = {
@@ -224,14 +218,8 @@ uma_resource_recycle_system = {
 
 #使用道具
 uma_use_goods_in_shop = {
-	length = 0
+	length = 1
 	icon = GFX_uma_use_goods_in_shop
-	resources = {
-		category = edicts
-		cost = {
-			influence = 0
-		}
-	}
 
 	potential = {
 		has_authority = auth_trainingcenter
@@ -258,7 +246,7 @@ uma_use_goods_in_shop = {
 }
 
 #uma_auto_species_merge = {
-#	length = 0
+#	length = 1
 #	icon =  GFX_uma_auto_species_merge
 #
 #	potential = {
@@ -285,7 +273,7 @@ uma_use_goods_in_shop = {
 #}
 
 uma_leader_compound = {
-	length = 0
+	length = 1
 	icon =  GFX_uma_auto_species_merge
 	resources = {
 		category = edicts
@@ -317,7 +305,7 @@ uma_leader_compound = {
 }
 
 uma_suspendfallen_empire_mission = {
-	length = 0
+	length = 1
 	icon = GFX_uma_suspendfallen_empire_mission
 	resources = {
 		category = edicts
@@ -395,7 +383,7 @@ uma_suspendfallen_empire_mission = {
 #重置特殊领袖肖像
 
 uma_change_leader_portraits = {
-	length = 0
+	length = 1
 	icon = GFX_uma_refresh_speical_leader_potrait
 	resources = {
 		category = edicts
@@ -428,14 +416,8 @@ uma_change_leader_portraits = {
 }
 
 uma_refresh_speical_leader_potrait = {
-	length = 0
+	length = 1
 	icon = GFX_uma_refresh_speical_leader_potrait
-	resources = {
-		category = edicts
-		cost = {
-			influence = 0
-		}
-	}
 
 	potential = {
 		has_authority = auth_trainingcenter
@@ -461,14 +443,8 @@ uma_refresh_speical_leader_potrait = {
 }
 
 uma_open_mmu = {
-	length = 0
+	length = 1
 	icon = GFX_mod_job_uma_racing_umamusume_produces_add
-	resources = {
-		category = edicts
-		cost = {
-			influence = 0
-		}
-	}
 
 	potential = {
 		has_authority = auth_trainingcenter
