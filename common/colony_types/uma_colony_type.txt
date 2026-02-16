@@ -20,7 +20,7 @@ col_uma_academy = {
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.15
 		planet_building_capacity_add = 2
-		planet_jobs_trade_produces_mult = 0.06
+		pop_cat_umamusume_bonus_workforce_mult = 0.1
 	}
 
 	triggered_planet_modifier = {
@@ -29,8 +29,193 @@ col_uma_academy = {
 			owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
-			planet_jobs_trade_produces_mult = 0.05
+			pop_cat_umamusume_bonus_workforce_mult = 0.12
 		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_uma_school
+		}
+		modifier = {
+			add = 5
+			OR = {
+				is_planet_class = pc_uma_ringworld_habitable
+				is_planet_class = pc_uma_ringworld
+				is_planet_class = pc_uma_ringworld_seam
+			}
+		}
+	}
+}
+
+col_uma_academy_industrial = {
+	icon = GFX_uma_colony_type_school_industrial
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_trainingcenter
+		}
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.15
+		planet_building_capacity_add = 2
+	}
+
+	inline_script = {
+		script = jobs/uma_colony_type_indu_job_add
+		AMOUNT_ELSE = 100
+		AMOUNT = 150
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_uma_school
+		}
+		modifier = {
+			add = 5
+			OR = {
+				is_planet_class = pc_uma_ringworld_habitable
+				is_planet_class = pc_uma_ringworld
+				is_planet_class = pc_uma_ringworld_seam
+			}
+		}
+	}
+}
+
+col_uma_academy_trade = {
+	icon = GFX_uma_colony_type_school_trade
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_trainingcenter
+		}
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.15
+		planet_building_capacity_add = 2
+		planet_uma_traders_produces_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_finish }
+		}
+		modifier = {
+			planet_uma_traders_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_uma_school
+		}
+		modifier = {
+			add = 5
+			OR = {
+				is_planet_class = pc_uma_ringworld_habitable
+				is_planet_class = pc_uma_ringworld
+				is_planet_class = pc_uma_ringworld_seam
+			}
+		}
+	}
+}
+
+col_uma_academy_funny = {
+	icon = GFX_uma_colony_type_school_funny
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_trainingcenter
+		}
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.15
+		planet_building_capacity_add = 2
+		pop_uma_umaidol_workforce_mult = 0.05
+	}
+
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_uma_school
+		}
+		modifier = {
+			add = 5
+			OR = {
+				is_planet_class = pc_uma_ringworld_habitable
+				is_planet_class = pc_uma_ringworld
+				is_planet_class = pc_uma_ringworld_seam
+			}
+		}
+	}
+}
+
+col_uma_academy_research = {
+	icon = GFX_uma_colony_type_school_industrial
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_authority = auth_trainingcenter
+		}
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.15
+		planet_building_capacity_add = 2
+		pop_uma_researcher_bonus_workforce_mult = 0.05
+	}
+
+	inline_script = {
+		script = jobs/uma_colony_type_indu_job_add
+		AMOUNT_ELSE = 100
+		AMOUNT = 150
 	}
 
 	weight_modifier = {
