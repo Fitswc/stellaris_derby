@@ -2831,3 +2831,286 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 	}
 }
 
+
+
+##
+uma_mmu_vc_m85_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m85_effect_tt
+	}
+}
+uma_mmu_vc_m75_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m75_effect_tt
+	}
+}
+uma_mmu_vc_m65_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m65_effect_tt
+	}
+}
+uma_mmu_vc_m55_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m55_effect_tt
+	}
+}
+uma_mmu_vc_m45_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m45_effect_tt
+	}
+}
+uma_mmu_vc_m25_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m25_effect_tt
+	}
+}
+uma_mmu_vc_mp0_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_mp0_effect_tt
+	}
+}
+uma_mmu_vc_p150_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_mp85
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_p150_effect_tt
+	}
+}
+uma_mmu_vc_p200_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_p200
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_m85
+		custom_tooltip = uma_mmu_vc_p200_effect_tt
+	}
+}
+##
+uma_mmu_vc_m85_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m85
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m75_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m75
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m65_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m65
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m55_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m55
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m45_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m45
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m25_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m25
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_mp0_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_mp0
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p150_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_p150
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p200_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_p200
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}

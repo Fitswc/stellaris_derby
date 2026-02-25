@@ -801,7 +801,7 @@ fleet_event = {
 		if = {
 			limit = {
 				event_target:uma_ec1_country = {
-					fleet_power <= 30000000 #30M
+					fleet_power <= 3000000000 #30M
 				}
 			}
 			if = {

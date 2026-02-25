@@ -7,6 +7,7 @@
 building_uma_basic_racing_course = {
 	base_buildtime = 200
 	category = unity
+	district_limit = 2
 
 	building_sets = {
 		uma_racing
@@ -63,7 +64,7 @@ building_uma_basic_racing_course = {
 		modifier = {
 			job_uma_racing_umamusume_add = 100
 
-			job_uma_racing_ura_members_add = 200
+			job_uma_racing_ura_members_add = 50
 
 
 		}
@@ -106,6 +107,7 @@ building_uma_modern_racing_course = {
 	base_buildtime = 500
 	category = unity
 	can_build = no #升级得来
+	district_limit = 2
 
 	building_sets = {
 		uma_racing
@@ -166,7 +168,7 @@ building_uma_modern_racing_course = {
 		modifier = {
 			job_uma_racing_umamusume_add = 200
 
-			job_uma_racing_ura_members_add = 300
+			job_uma_racing_ura_members_add = 100
 
 		}
 	}
@@ -238,6 +240,7 @@ building_uma_top_racing_course = {
 	base_buildtime = 1000
 	category = unity
 	can_build = no #升级得来
+	district_limit = 2
 
 	building_sets = {
 		uma_racing
@@ -318,7 +321,7 @@ building_uma_top_racing_course = {
 		modifier = {
 			job_uma_racing_umamusume_add = 400
 
-			job_uma_racing_ura_members_add = 500
+			job_uma_racing_ura_members_add = 200
 
 		}
 	}
@@ -457,6 +460,7 @@ building_uma_dormitary = {
 		entertainment
 		resort
 		uma_urban
+		uma_entertainment
 	}
 
 	potential = {
@@ -547,6 +551,7 @@ building_uma_paradise = {
 		entertainment
 		resort
 		uma_urban
+		uma_entertainment
 	}
 
 	potential = {

@@ -251,7 +251,7 @@ building_uma_tg_alloys_maker_Automatic_tt: "This building calculate produce by: 
  building_uma_tg_industrial_complex_tt: ""
  building_uma_tg_planet_energy_extractor: "TG-Planetary Energy Extractor"  #NT!
  building_uma_tg_planet_energy_extractor_desc: "This building can extract the energy of the planet's nucleus and produce a large amount of £energy£energy \nThe damage of the planet will increase when this building is enable"  #NT!
- building_uma_tg_planet_energy_extractor_tt: ""
+ building_uma_tg_planet_energy_extractor_tt: "This building will output :1 * planet size*0.5*(£energy£'s Maximum / £energy£ stockpile), Produces exceeding the maximum throughput will not be counted as actual output.Maximum throughput is positive correlation to £job_civilian£"
  building_uma_tg_planet_energy_extractor_2: "TG-Planetary Energy Extractor GenⅡ"  #NT!
  building_uma_tg_planet_energy_extractor_2_desc: "This building can extract the energy of the planet's nucleus and produce a large amount of £energy£energy \nThe damage of the planet will increase when this building is enable"  #NT!
  building_uma_tg_planet_energy_extractor_2_tt: ""
@@ -329,10 +329,10 @@ UMA_TG_ARCH_WEAPON_TITAN: "$UMA_TG_ARCH_WEAPON$"
 UMA_TG_ARCH_WEAPON_TITAN_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
 UMA_TG_ARCH_WEAPON_2: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
 UMA_TG_ARCH_WEAPON_2_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
-UMA_TG_ARCH_WEAPON_BIG_2_DESC: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
-UMA_TG_ARCH_WEAPON_BIG_2: "$UMA_TG_ARCH_WEAPON_DESC$"
-UMA_TG_ARCH_WEAPON_TITAN_2_DESC: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
-UMA_TG_ARCH_WEAPON_TITAN_2: "$UMA_TG_ARCH_WEAPON_DESC$"
+UMA_TG_ARCH_WEAPON_BIG_2: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
+UMA_TG_ARCH_WEAPON_BIG_2_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
+UMA_TG_ARCH_WEAPON_TITAN_2: "$UMA_TG_ARCH_WEAPON$ GenⅡ"
+UMA_TG_ARCH_WEAPON_TITAN_2_DESC: "$UMA_TG_ARCH_WEAPON_DESC$"
  UMA_TG_SHIELD: "TG-City Wall Shield"  #NT!
  UMA_TG_SHIELD_DESC: "Shields that absorb external damage obtained by amplifying the decay of molecules"  #NT!
  UMA_TG_ARMOR: "TG-City Wall Armor"  #NT!

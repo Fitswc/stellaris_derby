@@ -689,7 +689,12 @@ country_event = {
 						has_building = building_uma_tg_custom_goods_productor
 						has_building = building_uma_tg_custom_goods_productor_2
 						has_building = building_uma_tg_industrial_complex
+						has_building = building_uma_tg_planet_energy_extractor
+						has_building = building_uma_tg_planet_energy_extractor_2
 					}
+				}
+				uma_trans_tg_produce_num_to_planet = {
+					RESOURCE = energy
 				}
 				uma_trans_tg_produce_num_to_planet = {
 					RESOURCE = alloys
