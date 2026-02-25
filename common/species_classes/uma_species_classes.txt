@@ -32,19 +32,13 @@ umamusume = {
 
 PRE_UMA = {
 	archetype = PRESAPIENT
-	playable = { always = no }
+
+	playable = {
+		always = no
+	}
 	randomized = no
-	use_climate_preference = no
-
-#	portraits = {
-#		"umamusume"
-#	}
-
-	graphical_culture = mammalian_01
+	trait = "uma_trait_musume"
+	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 	uplifted_into = "umamusume"
-#	uplifted_portraits =
-#	{
-#		"umamusume"
-#	}
 }

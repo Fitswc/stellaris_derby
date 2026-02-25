@@ -285,10 +285,22 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_UTILITY_1"
-			template = "UMA_ARMOR_L"
+			template = "UMA_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_2"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "UMA_SHIELD_L"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
 			template = "UMA_ARMOR_L"
 		}
 		component = {
@@ -341,7 +353,7 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_2"
-			template = "UMA_ARMOR_L"
+			template = "UMA_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_3"
@@ -372,7 +384,7 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_2"
-			template = "UMA_ARMOR_L"
+			template = "UMA_SHIELD_L"
 		}
 		component = {
 			slot = "LARGE_UTILITY_3"
@@ -386,7 +398,7 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_LARGE_MJR_LASER"
 		}
 
 
@@ -434,6 +446,10 @@ ship_design = {
 			slot = "MEDIUM_UTILITY_3"
 			template = "UMA_SHIELD_M"
 		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "UMA_ARMOR_M"
+		}
 	}
 	section = {
 		template = "CRUISER_MID_L1M1"
@@ -445,15 +461,19 @@ ship_design = {
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "UMA_MASS_ACCELERATOR_MID"
+			template = "UMA_MEDIUM_MJR_LASER"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_1"
-			template = "UMA_ARMOR_M"
+			template = "UMA_SHIELD_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_2"
-			template = "UMA_ARMOR_M"
+			template = "UMA_SHIELD_M"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "UMA_SHIELD_M"
 		}
 		component = {
 			slot = "MEDIUM_UTILITY_3"
@@ -466,7 +486,16 @@ ship_design = {
 
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "UMA_MASS_ACCELERATOR_LARGE"
+			template = "UMA_MASS_ACCELERATOR_MID"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "UMA_BIG_EATER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "UMA_TWIN_TURBO_BOOSTER"
 		}
 	}
 	required_component="HYPER_DRIVE_3"
@@ -666,11 +695,11 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_4"
-			template = UMA_ARMOR_L
+			template = UMA_SHIELD_L
 		}
 		component = {
 			slot = "LARGE_UTILITY_5"
-			template = UMA_ARMOR_L
+			template = UMA_SHIELD_L
 		}
 		component = {
 			slot = "LARGE_UTILITY_6"
@@ -1111,11 +1140,11 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_5"
-			template = UMA_TG_ARMOR_L
+			template = UMA_TG_SHIELD_L
 		}
 		component = {
 			slot = "LARGE_UTILITY_6"
-			template = UMA_TG_ARMOR_L
+			template = UMA_TG_SHIELD_L
 		}
 		component = {
 			slot = "AUX_UTILITY_1"

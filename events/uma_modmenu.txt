@@ -28,6 +28,7 @@ country_event = {
 			}
 			set_global_flag = uma_global_game_setting_gamesystem_season_enable
 		}
+		set_country_flag = uma_mmu_vc_mp0
 	}
 
 	option = {
@@ -40,6 +41,9 @@ country_event = {
 	after = {
 		country_event = {
 			id = uma_season.0
+		}
+		country_event = {
+			id = uma_bg.34
 		}
 	}
 }
@@ -61,13 +65,16 @@ country_event = {
 	}
 
 	option = {
-		name = "uma_specimen_null" ##TODO:000
+		name = "uma_specimen_null"
 		custom_gui = "uma_hiding_button"
 		default_hide_option = yes
 	}
 
 	after = {
 		remove_country_flag = uma_mmu_opening
+		country_event = {
+			id = uma_bg.34
+		}
 	}
 }
 

@@ -2839,7 +2839,10 @@ uma_mmu_vc_m85_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_m85
@@ -2859,7 +2862,10 @@ uma_mmu_vc_m75_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_m75
@@ -2879,7 +2885,10 @@ uma_mmu_vc_m65_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_m65
@@ -2899,7 +2908,10 @@ uma_mmu_vc_m55_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_m55
@@ -2919,7 +2931,10 @@ uma_mmu_vc_m45_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_m45
@@ -2939,7 +2954,10 @@ uma_mmu_vc_m25_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_m25
@@ -2959,7 +2977,10 @@ uma_mmu_vc_mp0_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_mp0
@@ -2979,7 +3000,10 @@ uma_mmu_vc_p150_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_p150
@@ -2999,7 +3023,10 @@ uma_mmu_vc_p200_effect = {
 		always = yes
 	}
 	allow = {
-		always = yes
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_p200

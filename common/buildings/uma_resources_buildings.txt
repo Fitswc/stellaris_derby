@@ -4,7 +4,7 @@
 
 #“玉藻”马娘场发电工厂
 building_uma_field_powerplant = {
-	base_buildtime = 200
+	base_buildtime = 240
 	category = resource
 
 	building_sets = {
@@ -37,7 +37,7 @@ building_uma_field_powerplant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 200
+			minerals = 360
 			uma_crystal_carrot = 100
 		}
 		upkeep = {
@@ -283,7 +283,7 @@ building_uma_field_powering_complex_realm = {
 
 #胡萝卜农场
 building_uma_simple_carrot_farm = {
-	base_buildtime = 200
+	base_buildtime = 240
 	category = resource
 
 	building_sets = {
@@ -318,10 +318,10 @@ building_uma_simple_carrot_farm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 200
+			minerals = 360
 		}
 		upkeep = {
-			energy = 1
+			energy = 1.5
 		}
 	}
 
@@ -439,7 +439,7 @@ building_uma_modern_carrot_farm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 500
+			minerals = 720
 		}
 		upkeep = {
 			energy = 3
@@ -807,7 +807,7 @@ building_uma_modern_carrot_farm_realm = {
 
 #小型地心钻探设施
 building_uma_core_mining_complex_1 = {
-	base_buildtime = 200
+	base_buildtime = 240
 	category = resource
 
 	building_sets = {
@@ -845,10 +845,10 @@ building_uma_core_mining_complex_1 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 200
+			minerals = 360
 		}
 		upkeep = {
-			energy = 1
+			energy = 1.5
 		}
 	}
 
@@ -939,7 +939,7 @@ building_uma_core_mining_complex_2 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 500
+			minerals = 720
 		}
 		upkeep = {
 			energy = 3

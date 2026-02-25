@@ -3,7 +3,7 @@
 # #By ATR From StellarDerby Machan&trade extension
 #############
 building_uma_commercial_zone = {
-	base_buildtime = 200
+	base_buildtime = 240
 	category = trade
 #	base_cap_amount = 1 #Restrict of trade pw
 	planet_limit = {
@@ -46,7 +46,7 @@ building_uma_commercial_zone = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 200
+			minerals = 360
 		}
 		upkeep = {
 			energy = 1

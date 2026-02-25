@@ -2089,3 +2089,112 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = uma_bg.34
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		switch = {
+			trigger = has_country_flag
+
+			uma_mmu_vc_m85 = {
+				add_modifier = {
+					modifier = uma_vc_m85_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m75 = {
+				add_modifier = {
+					modifier = uma_vc_m75_modifier
+				}
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m65 = {
+				add_modifier = {
+					modifier = uma_vc_m65_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m55 = {
+				add_modifier = {
+					modifier = uma_vc_m55_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m45 = {
+				add_modifier = {
+					modifier = uma_vc_m45_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m25 = {
+				add_modifier = {
+					modifier = uma_vc_m25_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_p150 = {
+				add_modifier = {
+					modifier = uma_vc_p150_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_p200 = {
+				add_modifier = {
+					modifier = uma_vc_p200_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_m85_modifier
+			}
+		}
+	}
+}
