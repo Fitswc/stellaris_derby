@@ -213,11 +213,6 @@ col_uma_academy_research = {
 		pop_uma_researcher_bonus_workforce_mult = 0.05
 	}
 
-	inline_script = {
-		script = jobs/uma_colony_type_indu_job_add
-		AMOUNT_ELSE = 100
-		AMOUNT = 150
-	}
 
 	weight_modifier = {
 		modifier = {
