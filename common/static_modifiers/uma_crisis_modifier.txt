@@ -24,13 +24,13 @@ uma_crisis_modifier_building_o = {
 
 
 uma_endcrisis_ec3_mainbase_buff_normal = {
-	shipclass_starbase_hull_mult = 1
+	shipclass_starbase_hull_mult = 1.5
 }
 uma_endcrisis_ec3_mainbase_buff_easy = {
-	shipclass_starbase_hull_mult = 0.7
+	shipclass_starbase_hull_mult = 1
 }
 uma_endcrisis_ec3_mainbase_buff_hard = {
-	shipclass_starbase_hull_mult = 1.5
+	shipclass_starbase_hull_mult = 2
 }
 uma_endcrisis_ec3_mainbase_NOt_enough_ele_device_broken = {
 	shipclass_starbase_hull_mult = 10
@@ -90,6 +90,7 @@ uma_fallen_empire_crisis_2_modifier_class_1_hull = {
 	ship_hull_mult = 0.75
 	ship_armor_mult = 0.75
 	ship_shield_mult = 0.75
+	shipclass_starbase_hull_mult = 1.5
 }
 
 #Class2 Difficult
@@ -101,6 +102,7 @@ uma_fallen_empire_crisis_2_modifier_class_2_hull = {
 	ship_hull_mult = 0.5
 	ship_armor_mult = 0.5
 	ship_shield_mult = 0.5
+	shipclass_starbase_hull_mult = 1.5
 }
 
 #Class3 Difficult
@@ -109,15 +111,18 @@ uma_fallen_empire_crisis_2_modifier_class_3_hull = {
 	ship_hull_mult = 0.45
 	ship_armor_mult = 0.45
 	ship_shield_mult = 0.45
+	shipclass_starbase_hull_mult = 1.5
 }
 
 #Class4 Difficult
 uma_fallen_empire_crisis_2_modifier_class_4 = {
+	shipclass_starbase_hull_mult = 1
 }
 
 
 uma_starbase_modifier_platform = {
 	starbase_defense_platform_capacity_add = 10
+	shipclass_starbase_hull_mult = 1
 }
 
 uma_endcrisis_ec2_fleet_buff_easy = {
@@ -135,13 +140,13 @@ uma_endcrisis_ec2_fleet_buff_hard = {
 }
 
 uma_endcrisis_ec2_mainbase_buff_normal = {
-	shipclass_starbase_hull_mult = 0.6
+	shipclass_starbase_hull_mult = 1.5
 }
 uma_endcrisis_ec2_mainbase_buff_easy = {
-	shipclass_starbase_hull_mult = 0.4
+	shipclass_starbase_hull_mult = 1
 }
 uma_endcrisis_ec2_mainbase_buff_hard = {
-	shipclass_starbase_hull_mult = 0.8
+	shipclass_starbase_hull_mult = 2
 }
 
 
