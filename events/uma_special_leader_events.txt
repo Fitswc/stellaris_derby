@@ -410,6 +410,10 @@ country_event = {
 			event_target:uma_empty_country = {
 				destroy_country = yes
 			}
+
+			Root = {
+				end_event_chain = uma_sky_full
+			}
 		}
 	}
 }
@@ -543,6 +547,10 @@ country_event = {
 		hidden_effect = {
 			event_target:uma_empty_country = {
 				destroy_country = yes
+			}
+
+			Root = {
+				end_event_chain = uma_sky_full
 			}
 		}
 	}
