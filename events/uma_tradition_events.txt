@@ -4,67 +4,86 @@ namespace = uma_tradition
 country_event = {
 	id = uma_tradition.1
 	hide_window = yes
-#	is_triggered_only = yes
-	mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
 	trigger = {
 		#has_traditions = uma_farm_self_cycle_final
 		has_country_flag = uma_finish_tradition_self_cycle
-	
 	}
 	immediate = {
-		every_owned_planet = {
+#		every_owned_planet = {
+#			limit = {
+#				pop_amount >= 1000
+#			}
+#			if = {
+#				limit = {
+#					OR = {
+#						num_assigned_jobs = {
+#							job = farmer
+#							value <= 1500
+#						}
+#						num_assigned_jobs = {
+#							job = uma_carrot_farmer
+#							value <= 1500
+#						}
+#						num_assigned_jobs = {
+#							job = uma_bee_farmer
+#							value <= 1500
+#						}
+#					}
+#					NOT = {
+#						has_modifier = uma_tradition_FINAL
+#					}
+#				}
+#				add_modifier = {
+#					modifier = uma_tradition_FINAL
+#					mult = value:uma_uma_tradition_FINAL_SV
+#					clear_on_owner_change = yes
+#				}
+#
+#			}
+#			else_if = {
+#				limit = {
+#					has_modifier = uma_tradition_FINAL
+#					OR = {
+#						num_assigned_jobs = {
+#							job = farmer
+#							value > 1500
+#						}
+#						num_assigned_jobs = {
+#							job = uma_carrot_farmer
+#							value > 1500
+#						}
+#						num_assigned_jobs = {
+#							job = uma_bee_farmer
+#							value > 1500
+#						}
+#					}
+#				}
+#				remove_modifier = uma_tradition_FINAL
+#			}
+#		}
+		export_resource_maximum_to_variable = {
+			resource = food
+			variable = uma_food_maximum
+		}
+		export_resource_stockpile_to_variable = {
+			resource = food
+			variable = uma_food_sp
+		}
+
+		if = {
 			limit = {
-				pop_amount >= 1000
-			}
-			if = {
-				limit = {
-					OR = {
-						num_assigned_jobs = {
-							job = farmer
-							value <= 1500
-						}
-						num_assigned_jobs = {
-							job = uma_carrot_farmer
-							value <= 1500
-						}
-						num_assigned_jobs = {
-							job = uma_bee_farmer
-							value <= 1500
-						}
-					}
-					NOT = {
-						has_modifier = uma_tradition_FINAL
-					}
+				check_variable = {
+					which = uma_food_sp
+					value >= uma_food_maximum
 				}
-				add_modifier = {
-					modifier = uma_tradition_FINAL
-					mult = value:uma_uma_tradition_FINAL_SV
-					clear_on_owner_change = yes
-				}
-			
 			}
-			else_if = {
-				limit = {
-					has_modifier = uma_tradition_FINAL
-					OR = {
-						num_assigned_jobs = {
-							job = farmer
-							value > 1500
-						}
-						num_assigned_jobs = {
-							job = uma_carrot_farmer
-							value > 1500
-						}
-						num_assigned_jobs = {
-							job = uma_bee_farmer
-							value > 1500
-						}
-					}
-				}
-				remove_modifier = uma_tradition_FINAL
+			add_modifier = {
+				modifier = uma_tradition_FINAL
 			}
+		}
+		else = {
+			remove_modifier = uma_tradition_FINAL
 		}
 	}
 }
@@ -162,44 +181,44 @@ country_event = {
 #}
 
 #<20k
-country_event = {
-	id = uma_tradition.3
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		has_country_flag = uma_finish_tradition_fs
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				NOT = {
-					has_modifier = uma_center_food_store_modifier
-				}
-				has_country_resource = {
-					type = food
-					amount >= 20000
-				}
-			}
-			add_modifier = {
-				modifier = uma_center_food_store_modifier
-			}
-		}
-		else_if = {
-			limit = {
-				has_modifier = uma_center_food_store_modifier
-				has_country_resource = {
-					type = food
-					amount < 20000
-				}
-			}
-			remove_modifier = uma_center_food_store_modifier
-		}
-		else = {
-			#Do nothings
-		}
-		
-	}
-	
-}
+#country_event = {
+#	id = uma_tradition.3
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		has_country_flag = uma_finish_tradition_fs
+#	}
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_modifier = uma_center_food_store_modifier
+#				}
+#				has_country_resource = {
+#					type = food
+#					amount >= 20000
+#				}
+#			}
+#			add_modifier = {
+#				modifier = uma_center_food_store_modifier
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				has_modifier = uma_center_food_store_modifier
+#				has_country_resource = {
+#					type = food
+#					amount < 20000
+#				}
+#			}
+#			remove_modifier = uma_center_food_store_modifier
+#		}
+#		else = {
+#			#Do nothings
+#		}
+#
+#	}
+#
+#}

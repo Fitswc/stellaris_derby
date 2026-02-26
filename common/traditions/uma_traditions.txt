@@ -28,7 +28,7 @@ uma_nutritious_jobs_rationing_system = {
 	}
 	modifier = {
 		planet_jobs_food_produces_mult = 0.05
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 	}
  }
 
@@ -40,9 +40,7 @@ uma_special_event_offer = {
 	}
 	modifier = {
 		planet_jobs_food_produces_mult = 0.05
-		planet_uma_racing_umamusume_consumer_goods_upkeep_mult = 0.1
-		planet_uma_racing_umamusume_food_upkeep_mult = 0.1
-		planet_uma_racing_umamusume_unity_produces_mult = 0.1
+		planet_uma_racing_umamusume_produces_mult = 0.1
 		leader_initial_skill = 1
 	}
 }
@@ -53,12 +51,13 @@ uma_center_food_store = {
 		has_authority = auth_trainingcenter
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = 0.05
+#		planet_jobs_food_produces_mult = 0.05
+		bonus_pop_growth = 0.5
 	}
 	on_enabled = {
 		set_country_flag = uma_finish_tradition_fs
 	}
-	custom_tooltip = uma_center_food_store_tooltip
+#	custom_tooltip = uma_center_food_store_tooltip
 }
 
 ## R2 中央协调运输
@@ -68,8 +67,9 @@ uma_center_transport = {
 		has_tradition = uma_center_food_store
 	}
 	modifier = {
-		planet_jobs_food_produces_mult = 0.05
-		planet_jobs_upkeep_mult = -0.05
+#		planet_jobs_food_produces_mult = 0.05
+#		planet_jobs_upkeep_mult = -0.05
+		logistic_growth_mult = 0.2
 	}
 }
 
