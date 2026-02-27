@@ -209,13 +209,12 @@ uma_threegodness_knowledge_scholar = {
 	resources = {
 		category = planet_uma_threegodness_knowledge_scholar
 		produces = {
-			uma_threegodness_knowledge = 3
-			physics_research = 9
-			engineering_research = 9
-			society_research = 9
+			uma_threegodness_knowledge = 6
+#			physics_research = 9
+#			engineering_research = 9
+#			society_research = 9
 		}
 		upkeep = {
-			consumer_goods = 3
 			unity = 3
 		}
 	}
