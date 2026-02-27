@@ -321,14 +321,13 @@ country_event = {
 		}
 		set_global_flag = uma_gold_invasion_happened
 
-		random_system_within_border = {
+		random_system = {
 			limit = {
-				owner = {
-					has_authority = auth_trainingcenter
-				}
+#				owner = {
+#					has_authority = auth_trainingcenter
+#				}
 				distance = {
-#					source = event_target:uma_player_umamusume_empire_system
-					source = root.solar_system
+					source = root.capital_star.solar_system
 					min_jumps = 1
 					max_jumps = 10
 				}
