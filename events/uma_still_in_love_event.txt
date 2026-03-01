@@ -68,7 +68,6 @@ country_event = {
 	show_sound = event_electronic_term
 	fire_only_once = yes
 	is_triggered_only = yes
-	location = this
 	option = {
 		name = uma_still_in_love.3.a
 		custom_tooltip = uma_still_in_love.3.a.tooltip
@@ -78,9 +77,14 @@ country_event = {
 				days = -1
 			}
 		}
-		create_archaeological_site = {
-			type = uma_megadream_beta_relic
-			force = yes
+		hidden_effect = {
+			random_owned_planet = {
+				limit = {
+					has_deposit = d_uma_threegodness_relic
+				}
+				create_archaeological_site = uma_megadream_beta_relic
+				save_event_target_as = uma_megadream_beta_relic
+			}
 		}
 	}
 }
@@ -91,7 +95,8 @@ fleet_event = {
 	desc = uma_still_in_love.4.desc
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	fire_only_once = yes
+	is_triggered_only = yes
+	location = from
 	archaeology = yes
 	immediate = {
 		from = {
@@ -113,9 +118,10 @@ fleet_event = {
 	id = uma_still_in_love.5
 	title = uma_still_in_love.5.name
 	desc = uma_still_in_love.5.desc
+	is_triggered_only = yes
+	location = from
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	fire_only_once = yes
 	archaeology = yes
 	immediate = {
 		from = {
@@ -137,32 +143,9 @@ fleet_event = {
 	id = uma_still_in_love.6
 	title = uma_still_in_love.6.name
 	desc = uma_still_in_love.6.desc
+	is_triggered_only = yes
+	location = from
 	picture = GFX_evt_laboratory
-	fire_only_once = yes
-	show_sound = event_electronic_term
-	archaeology = yes
-	immediate = {
-		from = {
-			set_site_progress_locked = yes
-		}
-	}
-	after = {
-		from = {
-			set_site_progress_locked = no
-		}
-	}
-	option = {
-		name = uma_still_in_love.6.a
-		small_artifact_reward = yes
-	}
-}
-
-fleet_event = {
-	id = uma_still_in_love.6
-	title = uma_still_in_love.6.name
-	desc = uma_still_in_love.6.desc
-	picture = GFX_evt_laboratory
-	fire_only_once = yes
 	show_sound = event_electronic_term
 	archaeology = yes
 	immediate = {
@@ -189,7 +172,8 @@ fleet_event = {
 	id = uma_still_in_love.7
 	title = uma_still_in_love.7.name
 	desc = uma_still_in_love.7.desc
-	fire_only_once = yes
+	is_triggered_only = yes
+	location = from
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	archaeology = yes
@@ -213,7 +197,8 @@ fleet_event = {
 	id = uma_still_in_love.8
 	title = uma_still_in_love.8.name
 	desc = uma_still_in_love.8.desc
-	fire_only_once = yes
+	is_triggered_only = yes
+	location = from
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	archaeology = yes
@@ -237,7 +222,8 @@ fleet_event = {
 	id = uma_still_in_love.9
 	title = uma_still_in_love.9.name
 	desc = uma_still_in_love.9.desc
-	fire_only_once = yes
+	is_triggered_only = yes
+	location = from
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	archaeology = yes
@@ -261,7 +247,7 @@ fleet_event = {
 	id = uma_still_in_love.10
 	title = uma_still_in_love.10.name
 	desc = uma_still_in_love.10.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	archaeology = yes
@@ -279,20 +265,19 @@ fleet_event = {
 		name = uma_still_in_love.10.a
 		hidden_effect = {
 			country_event = {
-				id = uma_still_in_love.11
+				id = uma_still_in_love.18
 			}
 		}
 	}
 }
 
-fleet_event = {
+country_event = {
 	id = uma_still_in_love.11
 	title = uma_still_in_love.11.name
 	desc = uma_still_in_love.11.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	archaeology = yes
 	immediate = {
 		from = {
 			set_site_progress_locked = yes
@@ -313,14 +298,13 @@ fleet_event = {
 	}
 }
 
-fleet_event = {
+country_event = {
 	id = uma_still_in_love.12
 	title = uma_still_in_love.12.name
 	desc = uma_still_in_love.12.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	archaeology = yes
 	immediate = {
 		from = {
 			set_site_progress_locked = yes
@@ -341,14 +325,13 @@ fleet_event = {
 	}
 }
 
-fleet_event = {
+country_event = {
 	id = uma_still_in_love.13
 	title = uma_still_in_love.13.name
 	desc = uma_still_in_love.13.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	archaeology = yes
 	immediate = {
 		from = {
 			set_site_progress_locked = yes
@@ -369,14 +352,13 @@ fleet_event = {
 	}
 }
 
-fleet_event = {
+country_event = {
 	id = uma_still_in_love.14
 	title = uma_still_in_love.14.name
 	desc = uma_still_in_love.14.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	archaeology = yes
 	immediate = {
 		from = {
 			set_site_progress_locked = yes
@@ -397,14 +379,13 @@ fleet_event = {
 	}
 }
 
-fleet_event = {
+country_event = {
 	id = uma_still_in_love.15
 	title = uma_still_in_love.15.name
 	desc = uma_still_in_love.15.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
-	archaeology = yes
 	immediate = {
 		from = {
 			set_site_progress_locked = yes
@@ -427,7 +408,7 @@ country_event = {
 	id = uma_still_in_love.16
 	title = uma_still_in_love.16.name
 	desc = uma_still_in_love.16.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	trigger = {
@@ -457,7 +438,7 @@ country_event = {
 	id = uma_still_in_love.17
 	title = uma_still_in_love.17.name
 	desc = uma_still_in_love.17.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	trigger = {
@@ -480,18 +461,19 @@ country_event = {
 	id = uma_still_in_love.18
 	title = uma_still_in_love.18.name
 	desc = uma_still_in_love.18.desc
-	fire_only_once = yes
+	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	trigger = {
 		is_ai = no
-		has_country_flag = uma_still_in_love_16_a
-	}
-	mean_time_to_happen = {
-		months = 24
 	}
 	option = {
 		name = uma_still_in_love.18.a
 		custom_tooltip = uma_still_in_love.18.a.tooltip
+		hidden_effect = {
+			country_event = {
+				id = uma_still_in_love.11
+			}
+		}
 	}
 }
