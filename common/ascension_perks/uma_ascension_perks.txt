@@ -5,9 +5,6 @@
 # 	  NOT = {
 # 		has_ascension_perk = ap_inherit_silver }
 # 	  }
-
-
-
 # 	  possible = {
 # 		custom_tooltip = {
 # 			fail_text = "requires_ascension_perks_1"
@@ -26,17 +23,13 @@
 # 		NOT = { has_ascension_perk = ap_the_flesh_is_weak }
 # 	}
 # 	}
-
 # }
-
 # 	ap_inherit_gold = {
 # 		potential ={
 # 			has_authority="auth_trainingcenter"
 # 		NOT = {
 # 		  has_ascension_perk = ap_inherit_gold }
 # 	  }
-
-
 # 		possible = {
 # 			custom_tooltip = {
 # 				fail_text = "requires_ascension_perks_2"
@@ -47,17 +40,13 @@
 # 				has_ascension_perk = ap_inherit_silver
 # 			}
 # 		}
-
 # 	  }
-
 # 	  ap_zone_potential = {
 # 		potential ={
 # 			has_authority="auth_trainingcenter"
 # 		NOT = {
 # 		  has_ascension_perk = ap_zone_potential }
 # 	  }
-
-
 # 		possible = {
 # 		  custom_tooltip = {
 # 			  fail_text = "requires_ascension_perks_1"
@@ -77,15 +66,12 @@
 # 	  }
 # 	  }
 # 	}
-
 # 	  ap_zone_awaken = {
 # 		potential ={
 # 	        has_authority="auth_trainingcenter"
 # 		NOT = {
 # 		  has_ascension_perk = ap_zone_awaken }
 # 	  }
-
-
 # 		possible = {
 # 			custom_tooltip = {
 # 				fail_text = "requires_ascension_perks_2"
@@ -96,9 +82,7 @@
 # 				has_ascension_perk = ap_zone_potential
 # 			}
 # 		}
-
 # 	  }
-
 # ###禁止马娘种族使用原版的三大飞升
 # ap_engineered_evolution = {
 # 	on_enabled = {
@@ -149,12 +133,9 @@
 # 			POINTS = @ap_engineered_evolution_POINTS
 # 			COST_MULT = @ap_engineered_evolution_COST_MULT
 # 		}
-
 # 		BIOLOGICAL_species_trait_points_add = @ap_engineered_evolution_POINTS
-
 # 		modify_species_cost_mult = @ap_engineered_evolution_COST_MULT
 # 	}
-
 # 	potential = {
 # 		NOT = { has_authority = "auth_trainingcenter" }
 # 		host_has_dlc = "Utopia"
@@ -165,7 +146,6 @@
 # 		is_mechanical_empire = no
 # 		is_cyborg_empire = no
 # 	}
-
 # 	ai_weight = {
 # 		factor = 15
 # 		modifier = {
@@ -178,9 +158,6 @@
 # 		}
 # 	}
 # }
-
-
-
 # ap_the_flesh_is_weak = {
 # 	on_enabled = {
 # 		custom_tooltip = "flesh_is_weak_tooltip"
@@ -222,7 +199,6 @@
 # 			NOT = { has_origin = origin_shroudwalker_apprentice }
 # 		}
 # 	}
-
 # 	potential = {
 # 		NOT = { has_authority = "auth_trainingcenter" }
 # 		host_has_dlc = "Utopia"
@@ -232,7 +208,6 @@
 # 		}
 # 		is_mechanical_empire = no
 # 	}
-
 # 	ai_weight = {
 # 		factor = 20
 # 		modifier = {
@@ -252,9 +227,6 @@
 # 		}
 # 	}
 # }
-
-
-
 # ap_mind_over_matter = {
 # 	on_enabled = {
 # 		custom_tooltip = "mind_over_matter_tooltip"
@@ -289,7 +261,6 @@
 # 			NOT = { has_ascension_perk = ap_the_flesh_is_weak }
 # 		}
 # 	}
-
 # 	potential = {
 # 		NOT = { has_authority = "auth_trainingcenter" }
 # 		host_has_dlc = "Utopia"
@@ -301,7 +272,6 @@
 # 		is_mechanical_empire = no
 # 		is_cyborg_empire = no
 # 	}
-
 # 	ai_weight = {
 # 		factor = 100
 # 		modifier = {
@@ -321,20 +291,22 @@
 # 		}
 # 	}
 # }
-
 ###新飞升
-
 ##全身全灵（领域飞升一阶段）
 ap_uma_zenshizenren = {
 	on_enabled = {
 		custom_tooltip = "uma_will_enable_zenshizenren_ap"
-#		custom_tooltip = ap_uma_zenshizenren_ap_two_tt
+		#		custom_tooltip = ap_uma_zenshizenren_ap_two_tt
 		hidden_effect = {
-			country_event = { id = uma_ap.2 }
+			country_event = {
+				id = uma_ap.2
+			}
 		}
 		###小草的对话
 		if = {
-			limit = { has_country_flag = uma_have_communicated_with_grass_wonder }
+			limit = {
+				has_country_flag = uma_have_communicated_with_grass_wonder
+			}
 			country_event = {
 				id = uma_special_leader.23
 			}
@@ -345,13 +317,12 @@ ap_uma_zenshizenren = {
 			fail_text = "requires_ascension_perks_1"
 			num_ascension_perks > 0
 		}
-#		has_technology = tech_uma_terriroty_in_use
+		#		has_technology = tech_uma_terriroty_in_use
 		custom_tooltip = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"
 		}
 	}
-
 	potential = {
 		host_has_dlc = "Utopia"
 		NOT = {
@@ -361,7 +332,6 @@ ap_uma_zenshizenren = {
 		is_mechanical_empire = no
 		is_cyborg_empire = no
 	}
-
 	ai_weight = {
 		factor = 300
 		modifier = {
@@ -376,20 +346,22 @@ ap_uma_zenshizenren = {
 			num_owned_planets < 6
 		}
 	}
-
 }
-
 
 ##摘星（因子飞升一阶段）
 ap_uma_fly_me_to_the_star = {
 	on_enabled = {
 		custom_tooltip = "uma_will_enable_keisun_ap"
-#		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt
+		#		custom_tooltip = ap_uma_fly_me_to_the_star_ap_two_tt
 		hidden_effect = {
-			country_event = { id = uma_ap.22 }
+			country_event = {
+				id = uma_ap.22
+			}
 			###小草的对话
 			if = {
-				limit = { has_country_flag = uma_have_communicated_with_grass_wonder }
+				limit = {
+					has_country_flag = uma_have_communicated_with_grass_wonder
+				}
 				country_event = {
 					id = uma_special_leader.22
 				}
@@ -405,12 +377,11 @@ ap_uma_fly_me_to_the_star = {
 		# 	fail_text = "uma_requires_technology_uma_complex_keisun_test"
 		# 	has_technology = tech_uma_complex_keisun_test
 		# }
-#		has_technology = tech_uma_complex_keisun_test
+		#		has_technology = tech_uma_complex_keisun_test
 		custom_tooltip = {
 			fail_text = "uma_must_be_toresen_auth"
 			has_authority = "auth_trainingcenter"
 		}
-
 		custom_tooltip = {
 			fail_text = origin_uma_after_factor_perk_already
 			NOT = {
@@ -418,12 +389,10 @@ ap_uma_fly_me_to_the_star = {
 			}
 		}
 	}
-
 	modifier = {
 		UMA_species_trait_points_add = 3
 		country_government_civic_points_add = 1
 	}
-
 	potential = {
 		host_has_dlc = "Utopia"
 		NOT = {
@@ -433,7 +402,6 @@ ap_uma_fly_me_to_the_star = {
 		is_mechanical_empire = no
 		is_cyborg_empire = no
 	}
-
 	ai_weight = {
 		factor = 300
 		modifier = {
@@ -448,10 +416,7 @@ ap_uma_fly_me_to_the_star = {
 			num_owned_planets < 6
 		}
 	}
-
 }
-
-
 
 #
 #ap_uma_all_galaxy_full_umamusume = {

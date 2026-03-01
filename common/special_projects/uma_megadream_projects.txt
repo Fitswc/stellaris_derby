@@ -1,0 +1,14 @@
+uma_megadream_main_project = {
+	cost = 10000
+	tech_department = society_technology
+	days_to_research = 180
+	event_scope = country
+	on_success = {
+		country_event = {
+			id = uma_still_in_love.3
+		}
+		hidden_effect = {
+			set_country_flag = uma_megadream_main_project_completed
+		}
+	}
+}
