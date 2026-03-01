@@ -733,8 +733,8 @@ uma_duramente_relic = {
 # Mega Dream公测 数据检测
 uma_megadream_beta_relic = {
 	desc = uma_megadream_beta_relic_desc
-	picture = GFX_evt_laboratory
-	stages = 7
+	picture = GFX_evt_uma_lab
+	stages = 8
 	max_instances = 1
 	weight = 0
 	allow = {
@@ -768,19 +768,24 @@ uma_megadream_beta_relic = {
 		icon = GFX_archaeology_runes_A4
 	}
 	stage = {
-		difficulty = 6
+		difficulty = 5
 		event = uma_still_in_love.8
 		icon = GFX_archaeology_runes_A5
 	}
 	stage = {
-		difficulty = 6
+		difficulty = 5
 		event = uma_still_in_love.9
 		icon = GFX_archaeology_runes_A6
 	}
 	stage = {
-		difficulty = 6
+		difficulty = 5
 		event = uma_still_in_love.10
-		icon = GFX_archaeology_runes_A7
+		icon = GFX_archaeology_runes_A1
+	}
+	stage = {
+		difficulty = 2
+		event = uma_still_in_love.11
+		icon = GFX_archaeology_runes_A1
 	}
 	on_roll_failed = {
 		from = {

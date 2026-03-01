@@ -788,11 +788,11 @@ special_project = {
 }
 
 special_project = {
-	key = "uma_megadream_main_project"
+	key = "UMA_MEGADREAM_MAIN_PROJECT"
 	tech_department = society_technology
 	picture = GFX_evt_sabotaged_ship
 	days_to_research = 180
-	event_scope = country
+	event_scope = country_event
 	on_success = {
 		country_event = {
 			id = uma_still_in_love.3
