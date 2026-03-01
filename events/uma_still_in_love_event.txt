@@ -264,6 +264,7 @@ fleet_event = {
 	option = {
 		name = uma_still_in_love.10.a
 		hidden_effect = {
+			set_country_flag = uma_still_in_love_relic_finish
 			country_event = {
 				id = uma_still_in_love.18
 			}
@@ -452,7 +453,7 @@ country_event = {
 		name = uma_still_in_love.17.a
 		custom_tooltip = uma_still_in_love.17.a.tooltip
 		country_event = {
-			id = uma_still_in_love.18
+			# id = uma_still_in_love.19
 		}
 	}
 }
@@ -461,11 +462,13 @@ country_event = {
 	id = uma_still_in_love.18
 	title = uma_still_in_love.18.name
 	desc = uma_still_in_love.18.desc
+	fire_only_once = yes
 	is_triggered_only = yes
 	picture = GFX_evt_laboratory
 	show_sound = event_electronic_term
 	trigger = {
 		is_ai = no
+		has_country_flag = uma_still_in_love_relic_finish
 	}
 	option = {
 		name = uma_still_in_love.18.a
