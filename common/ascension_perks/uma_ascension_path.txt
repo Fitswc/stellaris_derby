@@ -200,6 +200,7 @@ ap_uma_mixture_ap_2 = {
 ap_uma_become_the_crisis = {
 	potential = {
 		has_nemesis = yes
+		is_uma_country = yes
 		NOR = {
 			is_player_crisis = yes
 			has_ascension_perk = ap_defender_of_the_galaxy
@@ -265,7 +266,7 @@ ap_uma_become_the_crisis = {
 			set_ai_personality = became_the_crisis
 			country_event = { id = timeline.69 } # Timeline Become the crisis
 		}
-		activate_crisis_progression = nemesis_path
+		activate_crisis_progression = uma_realm_break_to_realworld_path
 	}
 
 	ai_weight = {

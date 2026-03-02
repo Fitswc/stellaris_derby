@@ -1,0 +1,95 @@
+
+###Become the Crisis
+menp_uma_objectives = {
+	portrait = "GFX_crisis_icon_objectives"
+
+	on_unlock = {
+		custom_tooltip = unlocks_menace_objectives
+	}
+}
+
+menp_uma_undertaker = {
+	portrait = "GFX_crisis_icon_undertaker"
+
+	on_unlock = {
+		custom_tooltip = unlocks_purge
+	}
+}
+
+
+menp_uma_base_breaker = {
+	portrait = "GFX_crisis_icon_basebreaker"
+
+	modifier = {
+		ship_damage_against_starbases_mult = 0.3
+	}
+}
+
+menp_uma_relentless_aggression = {
+	portrait = "GFX_crisis_icon_relentlessaggression"
+
+	modifier = {
+		country_war_exhaustion_mult = -0.85
+	}
+}
+
+menp_uma_easily_replaced = {
+	portrait = "GFX_crisis_icon_easilyreplaced"
+
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.5
+	}
+}
+
+menp_uma_death_from_above = {
+	portrait = "GFX_crisis_icon_deathfromabove"
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.4
+	}
+
+	on_unlock = {
+		custom_tooltip = unlocks_armageddon_bombardment
+	}
+}
+
+
+menp_uma_ship_chipper = {
+	portrait = "GFX_crisis_icon_shipchipper"
+
+	modifier = {
+		ship_weapon_damage = 0.50
+	}
+}
+
+menp_uma_mobile_bulwark = {
+	portrait = "GFX_crisis_icon_mobilebulwark"
+
+	modifier = {
+		shipclass_military_hull_mult = 0.15
+	}
+}
+
+menp_uma_paid_in_ambition = {
+	portrait = "GFX_crisis_icon_paidinambition"
+
+	modifier = {
+		ships_upkeep_mult = -0.30
+	}
+}
+
+menp_uma_star_eater = {
+	portrait = "GFX_crisis_icon_stareater"
+
+	on_unlock = {
+		custom_tooltip = unlocks_star_eater
+	}
+}
+
+menp_uma_megastructure = {
+	portrait = "GFX_crisis_icon_megastructure"
+
+	on_unlock = {
+		custom_tooltip = unlocks_crisis_sphere
+	}
+}

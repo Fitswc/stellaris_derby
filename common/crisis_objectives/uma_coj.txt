@@ -1,0 +1,34 @@
+
+crisobj_uma_research = {
+	reward = {
+		base = 150000
+		divide = trigger:num_galaxy_systems 	#on huge, this is 150. On smallest, it is 750
+		complex_trigger_modifier = { 			#fewer worlds => more menace from taking one
+			trigger = check_galaxy_setup_value
+			parameters = { setting = habitable_worlds_scale }
+			mode = divide
+		}
+		round_to = 50 								#we don't want 127.5 menace
+		min = 150									#just in case
+	}
+	recurring = yes
+}
+
+crisobj_uma_realm_power = {
+	reward = {
+		base = 0.1
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job =
+			}
+		}
+	}
+	recurring =
+}
+
+crisobj_uma_terraform_planet = {
+	reward = {
+		base = 10
+	}
+}

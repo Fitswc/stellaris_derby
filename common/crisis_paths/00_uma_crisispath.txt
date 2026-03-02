@@ -2,23 +2,15 @@ uma_realm_break_to_realworld_path = {
 	crisis_currency = "uma_menace"
 
 	levels = {
-		crisis_level_1
-		crisis_level_2
-		crisis_level_3
-		crisis_level_4
-		crisis_level_5
+		uma_crisis_level_1
+		uma_crisis_level_2
+		uma_crisis_level_3
+		uma_crisis_level_4
 	}
 
 	objectives = {
 		crisobj_destroy_empires
-		crisobj_destroy_enemy_ships
-		crisobj_destroy_starbases
-		crisobj_purge_pops
-		crisobj_destroy_worlds
-		crisobj_conquer_worlds
-		crisobj_vassalise_empires
-		crisobj_have_vassals
-		crisobj_perform_upsetting_operations
-		crisobj_be_in_breach_of_galcom_law
+		crisobj_uma_terraform_planet
+		crisobj_uma_realm_power
 	}
 }
