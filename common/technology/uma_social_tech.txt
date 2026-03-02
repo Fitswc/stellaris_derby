@@ -1635,14 +1635,14 @@ tech_uma_tranform = {
 
 tech_uma_megadream_framework = {
 	#Mega Dream框架
-	is_rare = yes	# 标记为稀有科技
-	cost = 0	# 0点科技点，通过事件获得
-	area = society	# 科技领域
-	tier = 3	# 科技等级
+	is_rare = yes	# 稀有科技
+	cost = 0
+	area = society
+	tier = 3
 	category = {
-		biology		# 科技分类
+		biology
 	}
-	weight = 0	# 不参与随机科技抽取
+	weight = 0
 	potential = {
 		OR = {
 			has_authority = auth_trainingcenter			# 只有特雷森才能获得
