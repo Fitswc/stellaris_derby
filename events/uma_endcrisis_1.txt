@@ -457,7 +457,7 @@ country_event = {
 							fleet = {
 								set_fleet_flag = uma_ec1_starbase.1
 								while = {
-									count = 4
+									count = 3
 									fleet_event = {
 										id = uma_ec_1.5
 									}
@@ -484,11 +484,8 @@ country_event = {
 
 							fleet = {
 								set_fleet_flag = uma_ec1_starbase.1
-								while = {
-									count = 2
-									fleet_event = {
-										id = uma_ec_1.5
-									}
+								fleet_event = {
+									id = uma_ec_1.5
 								}
 
 							}
@@ -513,7 +510,7 @@ country_event = {
 							fleet = {
 								set_fleet_flag = uma_ec1_starbase.1
 								while = {
-									count = 6
+									count = 4
 									fleet_event = {
 										id = uma_ec_1.5
 									}
@@ -641,16 +638,6 @@ country_event = {
 				id = uma_ec_1.17
 				days = 5
 			}
-		}
-
-		every_situation = {
-			limit = {
-				has_situation_flag = uma_situation_uma_endcrisis_ec1_discount
-			}
-			destroy_situation = this
-		}
-		event_target:uma_ec1_country = {
-			destroy_country = yes
 		}
 	}
 }
@@ -801,31 +788,10 @@ fleet_event = {
 		if = {
 			limit = {
 				event_target:uma_ec1_country = {
-					fleet_power <= 3000000000 #30M
+					fleet_power <= 30000000 #3M
 				}
 			}
-			if = {
-				limit = {
-					has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
-				}
-				uma_ec1_create_def_fleets = yes
-				uma_ec1_create_def_fleets = yes
-			}
-			else_if = {
-				limit = {
-					has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
-				}
-				uma_ec1_create_def_fleets = yes
-			}
-			else_if = {
-				limit = {
-					has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
-				}
-				uma_ec1_create_def_fleets = yes
-				uma_ec1_create_def_fleets = yes
-				uma_ec1_create_def_fleets = yes
-			}
-
+			uma_ec1_create_def_fleets = yes
 			last_created_fleet = {
 				fleet_event = {
 					id = uma_ec_1.3
@@ -1064,10 +1030,7 @@ situation_event = {
 		every_country = {
 			limit = {
 				NOT = {
-					OR = {
-						is_country_type = uma_ec1_empire
-						is_country_type = uma_ec1_empire_ez
-					}
+					is_country_type = uma_ec1_empire
 					is_country_type = uma_fallen_empire
 
 				}
@@ -1164,9 +1127,11 @@ situation_event = {
 
 				if = {
 					limit = {
-						is_planet_class = pc_uma_school
-						is_planet_class = pc_city
-						is_planet_class = pc_uma_industrial
+						OR = {
+							is_planet_class = pc_uma_school
+							is_planet_class = pc_city
+							#						is_planet_class = pc_uma_industrial
+						}
 					}
 					change_pc = pc_continental
 				}
