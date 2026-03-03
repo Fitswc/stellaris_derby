@@ -6,7 +6,6 @@ country_event = {
 	desc = uma_still_in_love.1.desc
 	picture = GFX_evt_uma_lab	# 暂随便一个图
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 		has_technology = tech_uma_true_pasture
@@ -14,7 +13,6 @@ country_event = {
 			has_country_flag = uma_still_in_love_1_approved
 		}
 	}
-
 	# 选项1：批准。开启后续事件链
 	option = {
 		name = uma_still_in_love.1.a
@@ -36,12 +34,10 @@ country_event = {
 	id = uma_still_in_love.22222
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_flag = uma_still_in_love_1_approved
 		has_ascension_perk = ap_uma_zenshizenren
 	}
-
 	immediate = {
 		country_event = {
 			id = uma_still_in_love.2
@@ -57,7 +53,6 @@ country_event = {
 	desc = uma_still_in_love.2.desc
 	picture = GFX_evt_uma_lab
 	is_triggered_only = yes
-
 	option = {
 		name = uma_still_in_love.2.a
 		custom_tooltip = uma_still_in_love.2.a.tooltip
@@ -78,7 +73,6 @@ country_event = {
 	desc = uma_still_in_love.3.desc
 	picture = GFX_evt_uma_lab
 	is_triggered_only = yes
-
 	option = {
 		name = uma_still_in_love.3.a
 		custom_tooltip = uma_still_in_love.3.a.tooltip
@@ -303,13 +297,12 @@ country_event = {
 	desc = uma_still_in_love.16.desc
 	is_triggered_only = yes
 	picture = GFX_evt_uma_lab
-
 	option = {
 		name = uma_still_in_love.16.a
 		custom_tooltip = uma_still_in_love.16.a.tooltip
 		hidden_effect = {
 			country_event = {
-				id  = uma_still_in_love.17
+				id = uma_still_in_love.17
 				days = 360
 				random = 360
 			}
@@ -330,7 +323,6 @@ country_event = {
 	desc = uma_still_in_love.17.desc
 	is_triggered_only = yes
 	picture = GFX_evt_uma_lab
-
 	option = {
 		name = uma_still_in_love.17.a
 		custom_tooltip = uma_still_in_love.17.a.tooltip
@@ -339,4 +331,3 @@ country_event = {
 		}
 	}
 }
-
