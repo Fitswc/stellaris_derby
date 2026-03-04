@@ -39,7 +39,7 @@ country_event = {
 				max_jumps = 15
 			}
 			any_system_planet = {
-				is_ideal_planet_class = { who = Root.owner_main_species status = yes }
+				uma_is_normal_habitat_planet = yes
 				is_under_colonization = no
 			}
 		}
@@ -55,7 +55,9 @@ country_event = {
 					max_jumps = 15
 				}
 				any_system_planet = { 
-					is_ideal_planet_class = { who = Root.owner_main_species status = yes }
+					OR = {
+						uma_is_normal_habitat_planet = yes
+					}
 					is_under_colonization = no
 				}
 			}
@@ -63,7 +65,7 @@ country_event = {
 			log = "UMA_FAIRY_TRAIL_SYSTEM_FOUND,NAME = [event_target:uma_fairy_trail_system_here.GetName]"
 			random_system_planet = {
 				limit = {
-					is_ideal_planet_class = { who = Root.owner_main_species status = yes }
+					uma_is_normal_habitat_planet = yes
 					is_under_colonization = no
 				}
 				save_global_event_target_as = uma_fairy_trail_planet_here
@@ -371,6 +373,15 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = uma_diplomatic_event.skip
+		custom_tooltip = uma_diplomatic_event.skip.tt
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.15
+			}
+		}
+	}
 }
 
 country_event = {
@@ -476,12 +487,28 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = uma_f_t.19.b
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.20
+			}
+			set_country_flag = uma_f_t.19.b
+		}
+	}
 }
 
 country_event = {
 	id = uma_f_t.20
 	title = FT
-	desc = uma_f_t.20.desc
+	desc = {
+		trigger = {NOT = {has_country_flag = uma_f_t.19.b}}
+		text = uma_f_t.20.desc
+	}
+	desc = {
+		trigger = {has_country_flag = uma_f_t.19.b}
+		text =uma_f_t.20.desc.a
+	}
 	is_triggered_only = yes
 	diplomatic = yes
 	picture_event_data = {

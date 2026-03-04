@@ -934,7 +934,10 @@ special_project = {
 	}
 
 	on_success = {
-
+		ship_event = {
+			id = uma_f_t.12
+			days = 10
+		}
 	}
 
 	on_fail = {
@@ -948,7 +951,7 @@ special_project = {
 	energy = 50000
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_hidden_door
+	picture = GFX_evt_engineering_research
 
 	event_scope = country_event
 
