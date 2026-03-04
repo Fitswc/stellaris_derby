@@ -311,8 +311,15 @@ country_event = {
 	option = {
 		name = uma_still_in_love.16.b
 		custom_tooltip = uma_still_in_love.16.b.tooltip
+		# hidden_effect = {
+		# 	set_country_flag = uma_still_in_love_16_b
+		# }
 		hidden_effect = {
-			set_country_flag = uma_still_in_love_16_b
+			country_event = {
+				id = uma_still_in_love.17
+				days = 360
+				random = 360
+			}
 		}
 	}
 }
@@ -383,24 +390,24 @@ country_event = {
 		}
 	}
 	option = {
-		name = uma_special_leader.99.a
-		response_text = uma_special_leader.99.a.resp
+		name = uma_still_in_love.99.a
+		response_text = uma_still_in_love.99.a.resp
 		is_dialog_only = yes
 	}
 	option = {
-		name = uma_special_leader.99.b
-		response_text = uma_special_leader.99.b.resp
+		name = uma_still_in_love.99.b
+		response_text = uma_still_in_love.99.b.resp
 		is_dialog_only = yes
 	}
 	option = {
-		name = uma_special_leader.99.c
-		response_text = uma_special_leader.99.c.resp
+		name = uma_still_in_love.99.c
+		response_text = uma_still_in_love.99.c.resp
 		is_dialog_only = yes
 	}
 	option = {
 		name = HIRE
 		tag = hire_leader
-		custom_tooltip = uma_special_leader.99.hire_tooltip
+		custom_tooltip = uma_still_in_love.99.hire_tooltip
 		hidden_effect = {
 			clone_leader = {
 				target = event_target:uma_still_in_love_admiral
@@ -412,8 +419,6 @@ country_event = {
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_still_in_love
 				save_global_event_target_as = uma_still_in_love_admiral
-				#set_leader_flag = legendary_leader
-				#				change_leader_portrait = DEEP_COMM
 				change_leader_portrait = "19c"
 				uma_initialize_leader_yaruki_effect = yes
 			}
@@ -438,7 +443,7 @@ country_event = {
 		name = DISMISS
 		tag = dismiss_leader
 		hidden_effect = {
-			event_target:uma_agnes_digital_governor = {
+			event_target:uma_still_in_love_admiral = {
 				kill_leader = {
 					show_notification = no
 				}
