@@ -550,6 +550,35 @@ uma_create_leader_ale = {
 	}
 }
 
+uma_create_leader_fairy = {
+	optimize_memory
+	create_leader = {
+		name = FT
+		species = root
+		event_leader = yes
+		gender = female
+		class = commander
+		background_planet = event_target:uma_fairy_trail_planet_here
+		background_job = commanding_officer
+		custom_catch_phrase = uma_fairy_catch_phrase
+		custom_description = uma_fairy_backstory
+		skip_background_generation = yes
+		skill = 1
+		set_age = 16
+		tier = leader_tier_legendary
+		traits = {
+			1 = uma_commander_trait_sp_ft
+			0 = leader_trait_uma_generic
+		}
+		effect = {
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_fairy_trail
+			save_global_event_target_as = uma_is_leader_fairy_trail
+			change_leader_portrait = F_Trail
+		}
+	}
+}
+
 
 ##Leader Compound
 

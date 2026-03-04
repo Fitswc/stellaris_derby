@@ -896,7 +896,7 @@ special_project = {
 
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_sabotaged_ship
+	picture = GFX_evt_hyper_relay
 
 	event_scope = ship_event
 
@@ -909,6 +909,55 @@ special_project = {
 	on_success = {
 		ship_event = {
 			id = uma_ale.6
+		}
+	}
+
+	on_fail = {
+
+	}
+}
+
+
+special_project = {
+	key = "UMA_FT_SP"
+	cost = 30000
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_hidden_door
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 4
+	}
+
+	on_success = {
+
+	}
+
+	on_fail = {
+
+	}
+}
+
+special_project = {
+	key = "UMA_FT_SP_2"
+	cost = 30000
+	energy = 50000
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_hidden_door
+
+	event_scope = country_event
+
+	requirements = {
+	}
+
+	on_success = {
+		country_event = {
+			id = uma_f_t.13
 		}
 	}
 

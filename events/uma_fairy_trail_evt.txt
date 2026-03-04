@@ -1,0 +1,629 @@
+namespace = uma_f_t
+
+country_event = {
+	id = uma_f_t.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		has_ascension_perk = ap_uma_fly_me_to_the_star
+		has_ascension_perk = ap_uma_zenshizenren
+		num_ascension_perks >= 4
+		NOT = {
+			has_country_flag = uma_fairy_trail_intro_event_happened
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_f_t.2
+			days = 200
+			random = 150
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.2
+	title = uma_f_t.2.title
+	desc = uma_f_t.2.desc
+	picture = GFX_evt_bone_building
+	is_triggered_only = yes
+
+	trigger = {
+		any_system_within_border = {
+			distance = {
+				source = root.solar_system
+				min_jumps = 1
+				max_jumps = 15
+			}
+			any_system_planet = {
+				is_ideal_planet_class = { who = Root.owner_main_species status = yes }
+				is_under_colonization = no
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = uma_fairy_trail_intro_event_happened
+		random_system_within_border = {
+			limit = {
+				distance = {
+					source = root.solar_system
+					min_jumps = 1
+					max_jumps = 15
+				}
+				any_system_planet = { 
+					is_ideal_planet_class = { who = Root.owner_main_species status = yes }
+					is_under_colonization = no
+				}
+			}
+			save_event_target_as = uma_fairy_trail_system_here
+			log = "UMA_FAIRY_TRAIL_SYSTEM_FOUND,NAME = [event_target:uma_fairy_trail_system_here.GetName]"
+			random_system_planet = {
+				limit = {
+					is_ideal_planet_class = { who = Root.owner_main_species status = yes }
+					is_under_colonization = no
+				}
+				save_global_event_target_as = uma_fairy_trail_planet_here
+				log = "UMA_FAIRY_TRAIL_SYSTEM_FOUND,NAME = [event_target:uma_fairy_trail_planet_here.GetName]"
+			}
+		}
+	}
+
+	option = {
+		name = uma_f_t.2.a
+		hidden_effect = {
+			event_target:uma_fairy_trail_planet_here = {
+				create_archaeological_site = uma_fairy_trail_arch
+			}
+		}
+	}
+
+	option = {
+		name = uma_f_t.2.b
+		hidden_effect = {
+			add_resource = {
+				influence = 100
+			}
+		}
+		default_hide_option = yes
+	}
+}
+
+
+fleet_event = {
+	id = uma_f_t.3
+    title = uma_f_t.3.name
+	desc = uma_f_t.3.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_bone_building
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.4
+    title = uma_f_t.4.name
+	desc = uma_f_t.4.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_suzuka_hospital_before_door #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = uma_f_t.4.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.5
+    title = uma_f_t.5.name
+	desc = uma_f_t.5.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_f_arch_running
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.6
+    title = uma_f_t.6.name
+	desc = uma_f_t.6.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_suzuka_onplanet_dead #占位符
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = uma_f_t.6.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.7
+    title = uma_f_t.7.name
+	desc = uma_f_t.7.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_f_arch_bed
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = uma_f_t.7.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.8
+    title = uma_f_t.8.name
+	desc = uma_f_t.8.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_what_is_that
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = uma_f_t.4.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.9
+    title = uma_f_t.9.name
+	desc = uma_f_t.9.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_f_arch_hall
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = CURIOUS #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.10
+    title = uma_f_t.10.name
+	desc = uma_f_t.10.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_f_arch_hall
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+	option = {
+		name = uma_f_t.10.a #占位符
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_f_t.11
+    title = uma_f_t.11.name
+	desc = uma_f_t.11.desc
+	is_triggered_only = yes
+
+	picture = GFX_evt_uma_factor_undersea
+	location = from
+
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = uma_f_t.11.a #占位符
+		small_artifact_reward = yes
+		enable_special_project = {
+			name = UMA_FT_SP
+			location = event_target:uma_fairy_trail_planet_here
+			owner = Root.owner
+		}
+	}
+
+	option = {
+		name = uma_f_t.11.b #占位符
+		large_artifact_reward = yes
+		default_hide_option = yes
+	}
+}
+
+ship_event = {
+	id = uma_f_t.12
+	title = uma_f_t.12.title
+	desc = uma_f_t.12.desc
+	picture = GFX_evt_engineering_research
+	is_triggered_only = yes
+
+	option = {
+		name = uma_f_t.12.a
+		hidden_effect = {
+			enable_special_project = {
+				name = UMA_FT_SP_2
+				owner = Root.Fleet.owner
+				location = Root.Fleet.owner.capital_scope
+			}
+		}
+	}
+
+	option = {
+		name = uma_f_t.12.b
+	}
+}
+
+country_event = {
+	id = uma_f_t.13
+	title = uma_f_t.13.title
+	desc = uma_f_t.13.desc
+	picture = GFX_evt_uma_ad_hospital
+	is_triggered_only = yes
+
+	option = {
+		name = uma_f_t.13.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.14
+	title = uma_f_t.14.title
+	desc = uma_f_t.14.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.14.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.15
+	title = uma_f_t.14.title
+	desc = uma_f_t.15.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.15.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.16
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.16
+	title = uma_f_t.14.title
+	desc = uma_f_t.16.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.16.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.17
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.17
+	title = uma_f_t.14.title
+	desc = uma_f_t.17.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.17.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.18
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.18
+	title = uma_f_t.14.title
+	desc = uma_f_t.18.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.18.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.19
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.19
+	title = FT
+	desc = uma_f_t.19.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.19.a
+		hidden_effect = {
+			country_event = {
+				id = uma_f_t.20
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.20
+	title = FT
+	desc = uma_f_t.20.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_hospital_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_f_t.20.a
+		response_text = uma_f_t.20.a.repo
+	}
+
+	after = {
+		country_event = {
+			id = uma_f_t.21
+			days = 5
+		}
+	}
+}
+
+country_event = {
+	id = uma_f_t.21
+	title = FT
+	desc = uma_f_t.21.desc
+	is_triggered_only = yes
+	location = event_target:uma_is_the_first_capital
+
+	picture = GFX_uma_leader_ty
+	event_window_type = leader_recruit
+
+	picture_event_data = {
+		portrait = event_target:uma_is_leader_fairy_trail
+	}
+
+	immediate = {
+		create_country = {
+            name = "NAME_uma_empty"
+            type = global_event
+            auto_delete = no
+            flag = {
+                icon = {
+                    category = "special"
+                    file = "unknown.dds"
+                }
+                background = {
+                    category = "backgrounds"
+                    file = "00_solid.dds"
+                }
+                colors = {
+                    "red"
+                    "red"
+                    "null"
+                    "null"
+                }
+            }
+            effect = {
+                save_event_target_as = uma_ft_country
+            }
+        }
+        event_target:uma_ft_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_species
+				}
+			}
+			uma_create_leader_fairy = yes
+		}
+	}
+
+	option = {
+		name = uma_f_t.21.a
+		response_text = uma_f_t.21.a.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_f_t.21.b
+		response_text = uma_f_t.21.b.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = uma_f_t.21.c
+		response_text = uma_f_t.21.c.resp
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = HIRE
+		tag = hire_leader
+		clone_leader = {
+			target = event_target:uma_is_leader_fairy_trail
+			species = root.species
+			gender = female
+		}
+		hidden_effect = {
+			last_created_leader = {
+				add_experience = 13000
+				change_leader_portrait = "F_Trail"
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_fairy_trail
+				save_global_event_target_as = uma_is_leader_fairy_trail
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_is_leader_fairy_trail
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_is_leader_fairy_trail
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_is_leader_fairy_trail= {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:uma_ft_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
