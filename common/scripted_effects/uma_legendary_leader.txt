@@ -77,7 +77,7 @@ uma_create_leader_did = {
 		set_age = 18
 		skill = 1
 		tier = leader_tier_legendary
-		immortal = yes
+		immortal = yes 
 		background_planet = event_target:uma_player_umamusume_planet
 		background_job = uma_trainer
 		custom_catch_phrase = uma_special_leader_agnes_digital_catch_phrase
@@ -99,6 +99,24 @@ uma_create_leader_did = {
 		}
 	}
 }
+
+uma_create_leader_love = {
+	optimize_memory
+	create_leader = {
+		name = SIL #"唯独爱你"
+		event_leader = yes
+		gender = female
+		class = official
+		set_age = 18
+		skill = 1
+		tier = leader_tier_legendary
+		immortal = yes #不死
+		background_planet = event_target:uma_player_umamusume_planet
+		background_job = uma_racing_umamusume
+		skip_background_generation = yes
+	}
+}
+
 
 uma_create_leader_ty = {
 	optimize_memory
