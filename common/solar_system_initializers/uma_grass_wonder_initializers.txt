@@ -35,7 +35,11 @@ uma_grass_wonder_system_initializer = {
 		init_effect = {
 			save_global_event_target_as = uma_grass_wonder_planet
 			prevent_anomaly = yes
-			clear_deposits = yes
+#			clear_deposits = yes
+			while = {
+				count = 13
+				reroll_deposits = yes
+			}
 			add_deposit = d_phoenix_school_relic
 			add_deposit = d_phoenix_racing_course_relic
 		}
