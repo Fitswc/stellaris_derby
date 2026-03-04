@@ -524,7 +524,7 @@ country_event = {
 	after = {
 		country_event = {
 			id = uma_f_t.21
-			days = 5
+			days = 2
 		}
 	}
 }
@@ -534,7 +534,7 @@ country_event = {
 	title = FT
 	desc = uma_f_t.21.desc
 	is_triggered_only = yes
-	location = event_target:uma_is_the_first_capital
+	location = Root.capital_scope
 
 	picture = GFX_uma_leader_ty
 	event_window_type = leader_recruit
