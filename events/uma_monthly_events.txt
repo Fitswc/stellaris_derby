@@ -27,6 +27,7 @@ country_event = {
             AND = {
                 is_multiplayer = yes
                 has_country_flag = uma_mulityplayer_owner_of_the_system_SKY
+                NOT = { has_country_flag = uma_has_refresh_seiun_sky_system }
             }
         }
     }
@@ -87,7 +88,9 @@ country_event = {
             }
             AND = {
                 is_multiplayer = yes
+                is_ai = no
                 has_country_flag = uma_mulityplayer_owner_of_the_system_GRASS
+                NOT = { has_country_flag = uma_has_refresh_grass_wonder_system }
             }
         }
     }
