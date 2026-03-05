@@ -213,3 +213,9 @@ uma_megadream_public_beta = {
 	planet_amenities_add = 10
 	pop_happiness = 0.1
 }
+
+uma_still_in_love_capital_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	planet_stability_add = -15
+	logistic_growth_mult = 0.2
+}

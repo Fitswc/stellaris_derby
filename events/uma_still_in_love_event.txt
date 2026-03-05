@@ -311,14 +311,14 @@ country_event = {
 	option = {
 		name = uma_still_in_love.16.b
 		custom_tooltip = uma_still_in_love.16.b.tooltip
-		# hidden_effect = {
-		# 	set_country_flag = uma_still_in_love_16_b
-		# }
+		hidden_effect = {
+			set_country_flag = uma_still_in_love_16_b
+		}
 		hidden_effect = {
 			country_event = {
-				id = uma_still_in_love.17
-				days = 360
-				random = 360
+				id = uma_still_in_love.18
+				days = 90
+				random = 90
 			}
 		}
 	}
@@ -334,15 +334,15 @@ country_event = {
 		name = uma_still_in_love.17.a
 		custom_tooltip = uma_still_in_love.17.a.tooltip
 		country_event = {
-			id = uma_still_in_love.999
+			id = uma_still_in_love.99
 		}
 	}
 }
 
 country_event = {
-	id = uma_still_in_love.999
+	id = uma_still_in_love.99
 	title = SIL
-	desc = uma_special_leader.999.desc
+	desc = uma_still_in_love.99.desc
 	is_triggered_only = yes
 	picture = GFX_uma_leader_love
 	event_window_type = leader_recruit
@@ -419,7 +419,7 @@ country_event = {
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_still_in_love
 				save_global_event_target_as = uma_still_in_love_admiral
-				change_leader_portrait = "19c"
+				change_leader_portrait = "137c"
 				uma_initialize_leader_yaruki_effect = yes
 			}
 			create_message = {
@@ -454,6 +454,26 @@ country_event = {
 		hidden_effect = {
 			event_target:uma_empty_country = {
 				destroy_country = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.18
+	title = uma_still_in_love.18.name
+	desc = uma_still_in_love.18.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_lab
+	option = {
+		name = uma_still_in_love.18.a
+		custom_tooltip = uma_still_in_love.18.a.tooltip
+		hidden_effect = {
+			capital_scope = {
+				add_modifier = {
+					modifier = uma_still_in_love_capital_modifier
+					days = -1
+				}
 			}
 		}
 	}

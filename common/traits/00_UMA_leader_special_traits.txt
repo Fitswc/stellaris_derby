@@ -1745,6 +1745,7 @@ uma_commander_trait_sp_still_in_love_2 = {
 		ship_weapon_damage = 0.99		#伤害+99%
 		hip_fire_rate_mult = 0.99		#射速+99%
 		ship_evasion_add = 99		#闪避+99
+		ship_disengage_chance_mult = -1		#脱离-100%
 	}
 	leader_class = {
 		commander
