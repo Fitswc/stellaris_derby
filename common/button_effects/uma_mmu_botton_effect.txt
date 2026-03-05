@@ -3004,6 +3004,11 @@ uma_mmu_vc_p150_effect = {
 			fail_text = uma_tgrd_gui_scope_fail
 			is_scope_type = country
 		}
+		hidden_trigger = {
+			NOT = {
+				has_country_flag = uma_game_setting_vc_sel_cost
+			}
+		}
 	}
 	effect = {
 		set_country_flag = uma_mmu_vc_p150
@@ -3026,6 +3031,11 @@ uma_mmu_vc_p200_effect = {
 		custom_tooltip = {
 			fail_text = uma_tgrd_gui_scope_fail
 			is_scope_type = country
+		}
+		hidden_trigger = {
+			NOT = {
+				has_country_flag = uma_game_setting_vc_sel_cost
+			}
 		}
 	}
 	effect = {
@@ -3124,7 +3134,9 @@ uma_mmu_vc_p150_arrow_effect = {
 		has_country_flag = uma_mmu_vc_p150
 	}
 	allow = {
-		always = yes
+		NOT = {
+			has_country_flag = uma_game_setting_vc_sel_cost
+		}
 	}
 	effect = {
 
@@ -3135,9 +3147,71 @@ uma_mmu_vc_p200_arrow_effect = {
 		has_country_flag = uma_mmu_vc_p200
 	}
 	allow = {
-		always = yes
+		NOT = {
+			has_country_flag = uma_game_setting_vc_sel_cost
+		}
 	}
 	effect = {
 
+	}
+}
+
+uma_mmu_end_game_difficult_pro = {
+	potential = {
+		has_country_flag = uma_game_setting_vc_sel_pro
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_pro_on
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_pro
+		remove_country_flag = uma_game_setting_vc_sel_cost
+		set_country_flag = uma_game_setting_vc_sel_pro
+	}
+}
+
+uma_mmu_end_game_difficult_pro_ds = {
+	potential = {
+		NOT = {
+			has_country_flag = uma_game_setting_vc_sel_pro
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_pro_on
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_pro
+		remove_country_flag = uma_game_setting_vc_sel_cost
+		set_country_flag = uma_game_setting_vc_sel_pro
+	}
+}
+
+uma_mmu_end_game_difficult_cost = {
+	potential = {
+		has_country_flag = uma_game_setting_vc_sel_cost
+	}
+	allow = {
+		custom_tooltip = uma_mmu_midgame_cost_on
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_cost
+		remove_country_flag = uma_game_setting_vc_sel_pro
+		set_country_flag = uma_game_setting_vc_sel_cost
+	}
+}
+
+uma_mmu_end_game_difficult_cost_ds = {
+	potential = {
+		NOT = {
+			has_country_flag = uma_game_setting_vc_sel_cost
+		}
+	}
+	allow = {
+		custom_tooltip = uma_mmu_endgame_cost_on
+	}
+	effect = {
+		custom_tooltip = uma_mmu_midgame_cost
+		remove_country_flag = uma_game_setting_vc_sel_pro
+		set_country_flag = uma_game_setting_vc_sel_cost
 	}
 }

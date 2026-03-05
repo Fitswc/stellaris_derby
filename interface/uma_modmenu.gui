@@ -469,6 +469,36 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
+		effectButtonType = {
+			name = uma_mmu_mmu_pro
+			spriteType = "GFX_uma_mmu_pro"
+			position = { x = 792 y = 743 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_pro"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_pro_ds
+			spriteType = "GFX_uma_mmu_pro_disable"
+			position = { x = 792 y = 743 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_pro_ds"
+		}
+
+		effectButtonType = {
+			name = uma_mmu_mmu_cost
+			spriteType = "GFX_uma_mmu_cost"
+			position = { x = 918 y = 743 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_cost"
+		}
+		effectButtonType = {
+			name = uma_mmu_mmu_cost_ds
+			spriteType = "GFX_uma_mmu_cost_disable"
+			position = { x = 918 y = 743 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_end_game_difficult_cost_ds"
+		}
+
 
 
 		instantTextBoxType = {

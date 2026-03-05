@@ -36,17 +36,17 @@
  uma_mmu_gs_rs_diff_title_desc: "§SRandom Method§!"
  uma_mmu_gs_rs_season_title_desc: "§SOutput value control§!"
 
- uma_mmu_vc_m85_effect_tt: "This will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-85%§!\n\n§RNote: This option may lead to very low initial output (Vanilla or Umamusume)§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce approximately 2.4 £food£$food$"
+ uma_mmu_vc_m85_effect_tt: "§SIf you choose PRODUCE modifier:§!\n\nThis will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-85%§!\n\n§RNote: This option may lead to very low initial output (Vanilla or Umamusume)§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce approximately 2.4 £food£$food$\n\n§SIf you choose COST modifier:§!\n£mod_cost_mult£$mod_country_cost_mult$: §R+85%§!"
 
- uma_mmu_vc_m75_effect_tt: "This will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-75%§!\n\n§RNote: This option may lead to low initial output (Vanilla or Umamusume)§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce approximately 4 £food£$food$"
+ uma_mmu_vc_m75_effect_tt: "§SIf you choose PRODUCE modifier:§!\n\nThis will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-75%§!\n\n§RNote: This option may lead to low initial output (Vanilla or Umamusume)§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce approximately 4 £food£$food$\n\n§SIf you choose COST modifier:§!\n£mod_cost_mult£$mod_country_cost_mult$: §R+75%§!"
 
- uma_mmu_vc_m65_effect_tt: "This will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-65%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is close to Vanilla§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce approximately 5.6 £food£$food$"
+ uma_mmu_vc_m65_effect_tt: "§SIf you choose PRODUCE modifier:§!\n\nThis will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-65%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is close to Vanilla§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce approximately 5.6 £food£$food$\n\n§SIf you choose COST modifier:§!\n£mod_cost_mult£$mod_country_cost_mult$: §R+65%§!"
 
- uma_mmu_vc_m55_effect_tt: "This will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-55%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is slightly higher than Vanilla§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 7.2 £food£$food$"
+ uma_mmu_vc_m55_effect_tt: "§SIf you choose PRODUCE modifier:§!\n\nThis will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-55%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is slightly higher than Vanilla§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 7.2 £food£$food$\n\n§SIf you choose COST modifier:§!\n£mod_cost_mult£$mod_country_cost_mult$: §R+55%§!"
 
- uma_mmu_vc_m45_effect_tt: "This will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-45%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is higher than Vanilla§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 8.8 £food£$food$"
+ uma_mmu_vc_m45_effect_tt: "§SIf you choose PRODUCE modifier:§!\n\nThis will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-45%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is higher than Vanilla§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 8.8 £food£$food$\n\n§SIf you choose COST modifier:§!\n£mod_cost_mult£$mod_country_cost_mult$: §R+45%§!"
 
- uma_mmu_vc_m25_effect_tt: "This will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-25%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is close to the Mod's original values§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 12 £food£$food$"
+ uma_mmu_vc_m25_effect_tt: "§SIf you choose PRODUCE modifier:§!\n\nThis will result in:\n£mod_produces_mult£$mod_country_produces_mult$: §R-25%§!\n\n§YNote: In ideal conditions, (Umamusume) initial output is close to the Mod's original values§!\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 12 £food£$food$\n\n§SIf you choose COST modifier:§!\n£mod_cost_mult£$mod_country_cost_mult$: §R+25%§!"
 
  uma_mmu_vc_mp0_effect_tt: "These are the original values for this Mod\nReference Value: 100 £job_uma_carrot_farmer£$job_uma_carrot_farmer$ will produce 16 £food£$food$"
 
@@ -61,6 +61,12 @@
  uma_vc_m55_modifier: "$uma_vc_m85_modifier$"
  uma_vc_m45_modifier: "$uma_vc_m85_modifier$"
  uma_vc_m25_modifier: "$uma_vc_m85_modifier$"
+ uma_vc_m85_modifier_cost: "$uma_vc_m85_modifier$"
+uma_vc_m75_modifier_cost: "$uma_vc_m85_modifier$"
+uma_vc_m65_modifier_cost: "$uma_vc_m85_modifier$"
+uma_vc_m55_modifier_cost: "$uma_vc_m85_modifier$"
+uma_vc_m45_modifier_cost: "$uma_vc_m85_modifier$"
+uma_vc_m25_modifier_cost: "$uma_vc_m85_modifier$"
 
  uma_vc_p150_modifier: "$uma_vc_m85_modifier$"
  uma_vc_p200_modifier: "$uma_vc_m85_modifier$"
@@ -70,6 +76,17 @@
  uma_vc_m55_modifier_desc: "$uma_vc_m85_modifier_desc$"
  uma_vc_m45_modifier_desc: "$uma_vc_m85_modifier_desc$"
  uma_vc_m25_modifier_desc: "$uma_vc_m85_modifier_desc$"
+ uma_vc_m85_modifier_cost_desc: "$uma_vc_m85_modifier_desc$"
+uma_vc_m75_modifier_cost_desc: "$uma_vc_m85_modifier_desc$"
+uma_vc_m65_modifier_cost_desc: "$uma_vc_m85_modifier_desc$"
+uma_vc_m55_modifier_cost_desc: "$uma_vc_m85_modifier_desc$"
+uma_vc_m45_modifier_cost_desc: "$uma_vc_m85_modifier_desc$"
+uma_vc_m25_modifier_cost_desc: "$uma_vc_m85_modifier_desc$"
 
  uma_vc_p150_modifier_desc: "$uma_vc_m85_modifier_desc$"
  uma_vc_p200_modifier_desc: "$uma_vc_m85_modifier_desc$"
+
+uma_mmu_midgame_pro_on: "It will switch to §KPRODUCE§! modifier"
+uma_mmu_midgame_pro: "$uma_mmu_midgame_pro_on$"
+uma_mmu_midgame_cost_on: "It will switch to §KCOST§! modifier"
+uma_mmu_midgame_cost: "$uma_mmu_midgame_cost_on$"

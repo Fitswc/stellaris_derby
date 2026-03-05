@@ -170,4 +170,23 @@ spriteTypes = {
 		name = GFX_uma_mmu_vc_arrow_under_num
 		textureFile = "gfx/interface/uma_modmenu/uma_arrow_under_num.DDS"
 	}
+
+	spriteType = {
+		name = GFX_uma_mmu_pro
+		textureFile = "gfx/interface/uma_modmenu/pro.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_pro_disable
+		textureFile = "gfx/interface/uma_modmenu/pro_disable.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_cost
+		textureFile = "gfx/interface/uma_modmenu/cost.DDS"
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_cost_disable
+		textureFile = "gfx/interface/uma_modmenu/cost_disable.DDS"
+	}
 }
