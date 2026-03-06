@@ -37,8 +37,12 @@ country_event = {
 	trigger = {
 		has_country_flag = uma_still_in_love_1_approved
 		has_ascension_perk = ap_uma_zenshizenren
+		NOT = {
+			has_country_flag = uma_still_in_love_2_approved
+		}
 	}
 	immediate = {
+		set_country_flag = uma_still_in_love_2_approved
 		country_event = {
 			id = uma_still_in_love.2
 			days = 100
