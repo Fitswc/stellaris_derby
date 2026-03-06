@@ -1649,7 +1649,7 @@ tech_uma_megadream_framework = {
 		}
 	}
 	modifier = {
-		society_research_produces_mult = 0.1		# 提供10%的社会学研究产出加成
+		planet_jobs_society_research_produces_mult = 0.1		# 提供10%的社会学研究产出加成
 	}
 	weight_modifier = {
 		factor = 0		# 不参与随机科技抽取
