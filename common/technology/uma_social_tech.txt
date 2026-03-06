@@ -1633,28 +1633,29 @@ tech_uma_tranform = {
 	}
 }
 
-tech_uma_megadream_framework = {
-	#Mega Dream框架
-	is_rare = yes	# 稀有科技
-	cost = 0
-	area = society
-	tier = 3
-	category = {
-		biology
-	}
-	weight = 0
-	potential = {
-		OR = {
-			has_authority = auth_trainingcenter			# 只有特雷森才能获得
-		}
-	}
-	modifier = {
-		planet_jobs_society_research_produces_mult = 0.1		# 提供10%的社会学研究产出加成
-	}
-	weight_modifier = {
-		factor = 0		# 不参与随机科技抽取
-	}
-	ai_weight = {
-		factor = 0		# 不参与随机科技抽取
-	}
-}
+#tech_uma_megadream_framework = {
+#	#Mega Dream框架
+#	is_rare = yes	# 稀有科技
+#	cost = 0
+#	area = society
+#	tier = 3
+#	category = {
+#		biology
+#	}
+#	weight = 0
+#	potential = {
+#		OR = {
+#			has_authority = auth_trainingcenter			# 只有特雷森才能获得
+#		}
+#	}
+#	modifier = {
+#		planet_jobs_society_research_produces_mult = 0.1		# 提供10%的社会学研究产出加成
+#	}
+#	weight_modifier = {
+#		factor = 0		# 不参与随机科技抽取
+#	}
+#	ai_weight = {
+#		factor = 0		# 不参与随机科技抽取
+#	}
+#}
+#
