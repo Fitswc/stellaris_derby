@@ -71,91 +71,95 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/concepts/uma_f_bg.dds"
 	}
 	spriteType = {
-		name = GFX_concept_uma_564
-		textureFile = "gfx/interface/icons/concepts/uma_concept_564.dds"
+		name = GFX_concept_uma_member
+		textureFile = "gfx/interface/icons/concepts/uma_members.dds"
 	}
-	spriteType = {
-		name = GFX_concept_uma_564_bg
-		textureFile = "gfx/interface/icons/concepts/uma_564_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_tamatsuru
-		textureFile = "gfx/interface/icons/concepts/uma_concept_tamatsuru.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_tamatsuru_bg
-		textureFile = "gfx/interface/icons/concepts/uma_tamatsuru_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_kagami
-		textureFile = "gfx/interface/icons/concepts/uma_concept_kagami.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_kagami_bg
-		textureFile = "gfx/interface/icons/concepts/uma_kagami_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_rabbit
-		textureFile = "gfx/interface/icons/concepts/uma_concept_rabbit.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_rabbit_bg
-		textureFile = "gfx/interface/icons/concepts/uma_rabbit_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_ling
-		textureFile = "gfx/interface/icons/concepts/uma_concept_ling.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_ling_bg
-		textureFile = "gfx/interface/icons/concepts/uma_ling_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_nrs
-		textureFile = "gfx/interface/icons/concepts/uma_concept_nrs.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_nrs_bg
-		textureFile = "gfx/interface/icons/concepts/uma_nrs_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_tom
-		textureFile = "gfx/interface/icons/concepts/uma_concept_tom.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_tom_bg
-		textureFile = "gfx/interface/icons/concepts/uma_tom_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_luo
-		textureFile = "gfx/interface/icons/concepts/uma_concept_luo.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_luo_bg
-		textureFile = "gfx/interface/icons/concepts/uma_luo_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_doc
-		textureFile = "gfx/interface/icons/concepts/uma_concept_doc.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_doc_bg
-		textureFile = "gfx/interface/icons/concepts/uma_doc_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_digtal
-		textureFile = "gfx/interface/icons/concepts/uma_concept_digtal.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_digtal_bg
-		textureFile = "gfx/interface/icons/concepts/uma_digtal_bg.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_white
-		textureFile = "gfx/interface/icons/concepts/uma_concept_white.dds"
-	}
-	spriteType = {
-		name = GFX_concept_uma_white_bg
-		textureFile = "gfx/interface/icons/concepts/uma_white_bg.dds"
-	}
+#	spriteType = {
+#		name = GFX_concept_uma_564
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_564.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_564_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_564_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_tamatsuru
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_tamatsuru.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_tamatsuru_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_tamatsuru_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_kagami
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_kagami.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_kagami_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_kagami_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_rabbit
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_rabbit.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_rabbit_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_rabbit_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_ling
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_ling.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_ling_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_ling_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_nrs
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_nrs.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_nrs_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_nrs_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_tom
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_tom.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_tom_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_tom_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_luo
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_luo.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_luo_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_luo_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_doc
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_doc.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_doc_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_doc_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_digtal
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_digtal.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_digtal_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_digtal_bg.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_white
+#		textureFile = "gfx/interface/icons/concepts/uma_concept_white.dds"
+#	}
+#	spriteType = {
+#		name = GFX_concept_uma_white_bg
+#		textureFile = "gfx/interface/icons/concepts/uma_white_bg.dds"
+#	}
 }
