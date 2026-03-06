@@ -299,7 +299,6 @@ country_event = {
 	picture = GFX_evt_uma_lab
 	option = {
 		name = uma_still_in_love.16.a
-		custom_tooltip = uma_still_in_love.16.a.tooltip
 		hidden_effect = {
 			country_event = {
 				id = uma_still_in_love.17
@@ -332,7 +331,6 @@ country_event = {
 	picture = GFX_evt_uma_lab
 	option = {
 		name = uma_still_in_love.17.a
-		custom_tooltip = uma_still_in_love.17.a.tooltip
 		country_event = {
 			id = uma_still_in_love.99
 		}
@@ -344,13 +342,13 @@ country_event = {
 	title = SIL
 	desc = uma_still_in_love.99.desc
 	is_triggered_only = yes
-	picture = GFX_uma_leader_love
+	picture = GFX_uma_leader_cheval
 	event_window_type = leader_recruit
 	picture_event_data = {
 		portrait = event_target:uma_still_in_love_admiral
 	}
 	immediate = {
-		play_sound = uma_hire_Love
+		play_sound = uma_hire_SIL
 		create_country = {
 			name = "NAME_uma_empty"
 			type = global_event
@@ -415,11 +413,11 @@ country_event = {
 				species = prev.species
 			}
 			last_created_leader = {
-				add_experience = 11900
+				add_experience = 3600
 				set_leader_flag = uma_is_special_leader
 				set_leader_flag = uma_is_still_in_love
 				save_global_event_target_as = uma_still_in_love_admiral
-				change_leader_portrait = "137c"
+				change_leader_portrait = "96c"
 				uma_initialize_leader_yaruki_effect = yes
 			}
 			create_message = {
