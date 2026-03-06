@@ -21,7 +21,7 @@ country_event = {
 		set_global_flag = uma_global_game_setting_mid_game_crisis_diff_normal
 		set_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
 		set_global_flag = uma_global_game_setting_gamesystem_gdi_full
-		set_global_flag = uma_global_game_setting_gamesystem_rs_dnd
+		set_global_flag = uma_global_game_setting_gamesystem_rs_vill
 		if = {
 			limit = {
 				has_authority = auth_trainingcenter
@@ -29,7 +29,7 @@ country_event = {
 			set_global_flag = uma_global_game_setting_gamesystem_season_enable
 		}
 		set_country_flag = uma_mmu_vc_mp0
-		set_country_flag = uma_game_setting_vc_sel_pro
+		set_country_flag = uma_mmu_vc_mp0_cost
 	}
 
 	option = {

@@ -141,52 +141,17 @@ country_event = {
 			}
 		}
 		name = uma_soe.3.b
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
-			}
-			random_list = {
-				70 = {
-					country_event = {
-						id = uma_soe.4
-						days = 100
-					}
-				}
-				30 = {
-					country_event = {
-						id = uma_soe.6
-						days = 100
-					}
+		random_list = {
+			70 = {
+				country_event = {
+					id = uma_soe.4
+					days = 100
 				}
 			}
-		}
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-			}
-			if = {
-				custom_tooltip = uma_crisis.7010.a.tp
-				limit = {
-					has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-				}
-				if = {
-					limit = {
-						has_country_flag = uma_rs_fail
-					}
-					hidden_effect = {
-						country_event = {
-							id = uma_soe.4
-							days = 100
-						}
-
-					}
-				}
-				else = {
-					country_event = {
-						id = uma_soe.6
-						days = 100
-					}
-
+			30 = {
+				country_event = {
+					id = uma_soe.6
+					days = 100
 				}
 			}
 		}
@@ -202,18 +167,7 @@ country_event = {
 	}
 
 	after = {
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-			}
-			create_message = {
-				type = UMA_RANDOM_SYSTEM_RESULT
-				localization = UMA_RANDOM_SYSTEM_RESULT_DESC
-				days = 3
-				target = Root
-			}
-			uma_rs_cleanup = yes
-		}
+
 	}
 
 }

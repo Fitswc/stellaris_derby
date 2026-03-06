@@ -641,6 +641,26 @@ country_event = {
 					set_name = ZF
 				}
 			}
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_almondeye
+				}
+
+				event_target:uma_is_leader_zf = {
+					change_leader_portrait = 125c
+					set_name = ALEYE
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_fairy_trail
+				}
+
+				event_target:uma_is_leader_zf = {
+					change_leader_portrait = F_Trail
+					set_name = FT
+				}
+			}
 
 			###SUB
 			if = {
@@ -2100,164 +2120,74 @@ country_event = {
 			trigger = has_country_flag
 
 			uma_mmu_vc_m85 = {
-				if = {
-					limit = {
-						has_country_flag = uma_game_setting_vc_sel_pro
-					}
-					add_modifier = {
-						modifier = uma_vc_m85_modifier
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = uma_vc_m85_modifier_cost
-					}
+				add_modifier = {
+					modifier = uma_vc_m85_modifier
 				}
 				remove_modifier = uma_vc_m75_modifier
 				remove_modifier = uma_vc_m65_modifier
 				remove_modifier = uma_vc_m55_modifier
 				remove_modifier = uma_vc_m45_modifier
 				remove_modifier = uma_vc_m25_modifier
-				remove_modifier = uma_vc_m25_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_p200_modifier
 			}
 			uma_mmu_vc_m75 = {
-				if = {
-					limit = {
-						has_country_flag = uma_game_setting_vc_sel_pro
-					}
-					add_modifier = {
-						modifier = uma_vc_m75_modifier
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = uma_vc_m75_modifier_cost
-					}
+				add_modifier = {
+					modifier = uma_vc_m75_modifier
 				}
 				remove_modifier = uma_vc_m85_modifier
 				remove_modifier = uma_vc_m65_modifier
 				remove_modifier = uma_vc_m55_modifier
 				remove_modifier = uma_vc_m45_modifier
 				remove_modifier = uma_vc_m25_modifier
-				remove_modifier = uma_vc_m85_modifier_cost
-				remove_modifier = uma_vc_m65_modifier_cost
-				remove_modifier = uma_vc_m55_modifier_cost
-				remove_modifier = uma_vc_m45_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_p200_modifier
 			}
 			uma_mmu_vc_m65 = {
-				if = {
-					limit = {
-						has_country_flag = uma_game_setting_vc_sel_pro
-					}
-					add_modifier = {
-						modifier = uma_vc_m65_modifier
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = uma_vc_m65_modifier_cost
-					}
+				add_modifier = {
+					modifier = uma_vc_m65_modifier
 				}
 				remove_modifier = uma_vc_m75_modifier
 				remove_modifier = uma_vc_m85_modifier
 				remove_modifier = uma_vc_m55_modifier
 				remove_modifier = uma_vc_m45_modifier
 				remove_modifier = uma_vc_m25_modifier
-				remove_modifier = uma_vc_m75_modifier_cost
-				remove_modifier = uma_vc_m85_modifier_cost
-				remove_modifier = uma_vc_m55_modifier_cost
-				remove_modifier = uma_vc_m45_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_p200_modifier
 			}
 			uma_mmu_vc_m55 = {
-				if = {
-					limit = {
-						has_country_flag = uma_game_setting_vc_sel_pro
-					}
-					add_modifier = {
-						modifier = uma_vc_m55_modifier
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = uma_vc_m55_modifier_cost
-					}
+				add_modifier = {
+					modifier = uma_vc_m55_modifier
 				}
 				remove_modifier = uma_vc_m75_modifier
 				remove_modifier = uma_vc_m65_modifier
 				remove_modifier = uma_vc_m85_modifier
 				remove_modifier = uma_vc_m45_modifier
 				remove_modifier = uma_vc_m25_modifier
-				remove_modifier = uma_vc_m75_modifier_cost
-				remove_modifier = uma_vc_m65_modifier_cost
-				remove_modifier = uma_vc_m85_modifier_cost
-				remove_modifier = uma_vc_m45_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_p200_modifier
 			}
 			uma_mmu_vc_m45 = {
-				if = {
-					limit = {
-						has_country_flag = uma_game_setting_vc_sel_pro
-					}
-					add_modifier = {
-						modifier = uma_vc_m45_modifier
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = uma_vc_m45_modifier_cost
-					}
+				add_modifier = {
+					modifier = uma_vc_m45_modifier
 				}
 				remove_modifier = uma_vc_m75_modifier
 				remove_modifier = uma_vc_m65_modifier
 				remove_modifier = uma_vc_m55_modifier
 				remove_modifier = uma_vc_m85_modifier
 				remove_modifier = uma_vc_m25_modifier
-				remove_modifier = uma_vc_m75_modifier_cost
-				remove_modifier = uma_vc_m65_modifier_cost
-				remove_modifier = uma_vc_m55_modifier_cost
-				remove_modifier = uma_vc_m85_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_p200_modifier
 			}
 			uma_mmu_vc_m25 = {
-				if = {
-					limit = {
-						has_country_flag = uma_game_setting_vc_sel_pro
-					}
-					add_modifier = {
-						modifier = uma_vc_m25_modifier
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = uma_vc_m25_modifier_cost
-					}
+				add_modifier = {
+					modifier = uma_vc_m25_modifier
 				}
 				remove_modifier = uma_vc_m75_modifier
 				remove_modifier = uma_vc_m65_modifier
 				remove_modifier = uma_vc_m55_modifier
 				remove_modifier = uma_vc_m25_modifier
 				remove_modifier = uma_vc_m25_modifier
-				remove_modifier = uma_vc_m75_modifier_cost
-				remove_modifier = uma_vc_m65_modifier_cost
-				remove_modifier = uma_vc_m55_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
-				remove_modifier = uma_vc_m25_modifier_cost
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_p200_modifier
 			}
@@ -2284,6 +2214,99 @@ country_event = {
 				remove_modifier = uma_vc_m25_modifier
 				remove_modifier = uma_vc_p150_modifier
 				remove_modifier = uma_vc_m85_modifier
+			}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_bg.35
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bg.35
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_country_flag = uma_mmu_vc_m85_cost
+			has_country_flag = uma_mmu_vc_m75_cost
+			has_country_flag = uma_mmu_vc_m65_cost
+			has_country_flag = uma_mmu_vc_m55_cost
+			has_country_flag = uma_mmu_vc_m45_cost
+			has_country_flag = uma_mmu_vc_m25_cost
+			has_country_flag = uma_mmu_vc_mp0_cost
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_country_flag
+
+			uma_mmu_vc_m85_cost = {
+				add_modifier = {
+					modifier = uma_vc_m85_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m75_cost = {
+				add_modifier = {
+					modifier = uma_vc_m75_modifier_cost
+				}
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m65_cost = {
+				add_modifier = {
+					modifier = uma_vc_m65_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m55_cost = {
+				add_modifier = {
+					modifier = uma_vc_m55_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+
+			}
+			uma_mmu_vc_m45_cost = {
+				add_modifier = {
+					modifier = uma_vc_m45_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m25_cost = {
+				add_modifier = {
+					modifier = uma_vc_m25_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
 			}
 		}
 	}

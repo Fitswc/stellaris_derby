@@ -3279,12 +3279,12 @@ country_event = {
 
 	option = {
 		name = uma_crisis.7000.e
-		allow = {
-			custom_tooltip_fail = {
-				text = uma_crisis.7000.e.tp
-			}
-			has_country_flag = uma_global_game_setting_gamesystem_rs_dnd
-		}
+		#allow = {
+		#	custom_tooltip_fail = {
+		#		text = uma_crisis.7000.e.tp
+		#	}
+		#	has_country_flag = uma_global_game_setting_gamesystem_rs_dnd
+		#}
 		hidden_effect = {
 			country_event = {
 				id = uma_crisis.7010

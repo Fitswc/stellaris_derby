@@ -223,7 +223,7 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 570 y = 480 }
 			orientation = "UPPER_LEFT"
-			#			text_color_code = "V"
+#			text_color_code = "V"
 		}
 
 		ButtonType = {
@@ -233,48 +233,197 @@ guiTypes = {
 			alwaysTransparent = yes
 			position = { x = 550 y = 534 }
 			orientation = "UPPER_LEFT"
-			#			text_color_code = "S"
+#			text_color_code = "S"
 		}
 
-		effectButtonType = {
-			name = uma_mmu_mmu_gs_vill
-			spriteType = "GFX_uma_mmu_vill"
-			position = { x = 591 y = 661 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_gs_vill"
-		}
-		effectButtonType = {
-			name = uma_mmu_mmu_gs_vill_ds
-			spriteType = "GFX_uma_mmu_vill_disable"
-			position = { x = 591 y = 661 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_gs_vill_ds"
-		}
 
-		effectButtonType = {
-			name = uma_mmu_mmu_gs_dnd
-			spriteType = "GFX_uma_mmu_dnd"
-			position = { x = 783 y = 661 }
+		buttonType = {
+			name = uma_mmu_gs_value_control_slide_base_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_slide_base"
+			position = { x = 597 y = 680 }
 			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_gs_dnd"
-		}
-		effectButtonType = {
-			name = uma_mmu_mmu_gs_dnd_ds
-			spriteType = "GFX_uma_mmu_dnd_disable"
-			position = { x = 783 y = 661 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_gs_dnd_ds"
-		}
-
-		ButtonType = {
-			name = "uma_mmu_gs_rs_season_title_desc"
-			buttonText = uma_mmu_gs_rs_season_title_desc
-			buttonFont = "large_title_font"
-			position = { x = 550 y = 660 }
 			alwaysTransparent = yes
-			orientation = "UPPER_LEFT"
-			#			text_color_code = "S"
 		}
+
+		effectButtonType = {
+			name = uma_mmu_vc_m85_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_m85"
+			position = { x = 598 y = 667 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m85_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+
+		effectButtonType = {
+			name = uma_mmu_vc_m75_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_m75"
+			position = { x = 708 y = 666 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m75_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m65_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_m65"
+			position = { x = 820 y = 667 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m65_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m55_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_m55"
+			position = { x = 936 y = 665 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m55_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m45_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_m45"
+			position = { x = 1052 y = 666 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m45_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m25_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_m25"
+			position = { x = 1166 y = 667 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m25_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_mp0_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_mp0"
+			position = { x = 1285 y = 666 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_mp0_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_p150_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_p150"
+			position = { x = 1399 y = 665 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_p150_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_p200_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_p200"
+			position = { x = 1617 y = 664 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_p200_cost_effect"
+			tooltip_mode_enabled = yes
+		}
+		##ARROW
+		effectButtonType = {
+			name = uma_mmu_vc_m85_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 592 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m85_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = uma_mmu_vc_m75_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 706 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m75_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m65_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 820 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m65_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m55_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 934 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m55_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m45_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 1050 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m45_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_m25_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 1168 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_m25_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_mp0_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 1284 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_mp0_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_p150_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 1404 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_p150_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+		effectButtonType = {
+			name = uma_mmu_vc_p200_arrow_cost
+			quadTextureSprite = "GFX_uma_mmu_vc_arrow_under_num"
+			position = { x = 1617 y = 706 }
+			orientation = "UPPER_LEFT"
+			effect = "uma_mmu_vc_p200_cost_arrow_effect"
+			alwaysTransparent = yes
+		}
+
+#		effectButtonType = {
+#			name = uma_mmu_mmu_gs_vill
+#			spriteType = "GFX_uma_mmu_vill"
+#			position = { x = 591 y = 661 }
+#			orientation = "UPPER_LEFT"
+#			effect = "uma_mmu_gs_vill"
+#		}
+#		effectButtonType = {
+#			name = uma_mmu_mmu_gs_vill_ds
+#			spriteType = "GFX_uma_mmu_vill_disable"
+#			position = { x = 591 y = 661 }
+#			orientation = "UPPER_LEFT"
+#			effect = "uma_mmu_gs_vill_ds"
+#		}
+#
+#		effectButtonType = {
+#			name = uma_mmu_mmu_gs_dnd
+#			spriteType = "GFX_uma_mmu_dnd"
+#			position = { x = 783 y = 661 }
+#			orientation = "UPPER_LEFT"
+#			effect = "uma_mmu_gs_dnd"
+#		}
+#		effectButtonType = {
+#			name = uma_mmu_mmu_gs_dnd_ds
+#			spriteType = "GFX_uma_mmu_dnd_disable"
+#			position = { x = 783 y = 661 }
+#			orientation = "UPPER_LEFT"
+#			effect = "uma_mmu_gs_dnd_ds"
+#		}
+#
+
 
 
 #		effectButtonType = {
@@ -311,7 +460,15 @@ guiTypes = {
 #			tooltip_mode_enabled = yes
 #		}
 
-
+		ButtonType = {
+			name = "uma_mmu_gs_rs_season_title_desc"
+			buttonText = uma_mmu_gs_rs_season_title_desc
+			buttonFont = "large_title_font"
+			position = { x = 550 y = 660 }
+			alwaysTransparent = yes
+			orientation = "UPPER_LEFT"
+#			text_color_code = "S"
+		}
 
 		buttonType = {
 			name = uma_mmu_gs_value_control_slide_base
@@ -468,37 +625,6 @@ guiTypes = {
 			effect = "uma_mmu_vc_p200_arrow_effect"
 			alwaysTransparent = yes
 		}
-
-		effectButtonType = {
-			name = uma_mmu_mmu_pro
-			spriteType = "GFX_uma_mmu_pro"
-			position = { x = 792 y = 743 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_end_game_difficult_pro"
-		}
-		effectButtonType = {
-			name = uma_mmu_mmu_pro_ds
-			spriteType = "GFX_uma_mmu_pro_disable"
-			position = { x = 792 y = 743 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_end_game_difficult_pro_ds"
-		}
-
-		effectButtonType = {
-			name = uma_mmu_mmu_cost
-			spriteType = "GFX_uma_mmu_cost"
-			position = { x = 918 y = 743 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_end_game_difficult_cost"
-		}
-		effectButtonType = {
-			name = uma_mmu_mmu_cost_ds
-			spriteType = "GFX_uma_mmu_cost_disable"
-			position = { x = 918 y = 743 }
-			orientation = "UPPER_LEFT"
-			effect = "uma_mmu_end_game_difficult_cost_ds"
-		}
-
 
 
 		instantTextBoxType = {
