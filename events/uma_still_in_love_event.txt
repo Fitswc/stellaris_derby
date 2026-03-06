@@ -1,0 +1,478 @@
+namespace = uma_still_in_love
+# 推进全真模拟实验？
+country_event = {
+	id = uma_still_in_love.1
+	title = uma_still_in_love.1.name
+	desc = uma_still_in_love.1.desc
+	picture = GFX_evt_uma_lab	# 暂随便一个图
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		has_technology = tech_uma_true_pasture
+		NOT = {
+			has_country_flag = uma_still_in_love_1_approved
+		}
+	}
+	# 选项1：批准。开启后续事件链
+	option = {
+		name = uma_still_in_love.1.a
+		hidden_effect = {
+			set_country_flag = uma_still_in_love_1_approved
+		}
+	}
+	# 选项2：我们要把精力放在经济上。获得150影响力，结束后续事件
+	option = {
+		name = uma_still_in_love.1.b
+		custom_tooltip = uma_still_in_love.1.b.tooltip
+		add_resource = {
+			influence = 150
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.22222
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = uma_still_in_love_1_approved
+		has_ascension_perk = ap_uma_zenshizenren
+	}
+	immediate = {
+		country_event = {
+			id = uma_still_in_love.2
+			days = 100
+			random = 200
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.2
+	title = uma_still_in_love.2.name
+	desc = uma_still_in_love.2.desc
+	picture = GFX_evt_uma_lab
+	is_triggered_only = yes
+	option = {
+		name = uma_still_in_love.2.a
+		custom_tooltip = uma_still_in_love.2.a.tooltip
+		give_technology = {
+			tech = tech_uma_megadream_framework
+		}
+		enable_special_project = {
+			name = UMA_MEGADREAM_MAIN_PROJECT
+			location = capital_scope
+			owner = root
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.3
+	title = uma_still_in_love.3.name
+	desc = uma_still_in_love.3.desc
+	picture = GFX_evt_uma_lab
+	is_triggered_only = yes
+	option = {
+		name = uma_still_in_love.3.a
+		custom_tooltip = uma_still_in_love.3.a.tooltip
+		capital_scope = {
+			add_modifier = {
+				modifier = uma_megadream_public_beta
+				days = -1
+			}
+		}
+		hidden_effect = {
+			capital_scope = {
+				create_archaeological_site = uma_megadream_beta_relic
+				save_event_target_as = uma_megadream_beta_relic
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.4
+	title = uma_still_in_love.4.name
+	desc = uma_still_in_love.4.desc
+	picture = GFX_evt_uma_lab
+	is_triggered_only = yes
+	location = from
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.4.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.5
+	title = uma_still_in_love.5.name
+	desc = uma_still_in_love.5.desc
+	is_triggered_only = yes
+	location = from
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.5.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.6
+	title = uma_still_in_love.6.name
+	desc = uma_still_in_love.6.desc
+	is_triggered_only = yes
+	location = from
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.6.a
+		small_artifact_reward = yes
+	}
+	option = {
+		name = uma_still_in_love.6.b
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.7
+	title = uma_still_in_love.7.name
+	desc = uma_still_in_love.7.desc
+	is_triggered_only = yes
+	location = from
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.7.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.8
+	title = uma_still_in_love.8.name
+	desc = uma_still_in_love.8.desc
+	is_triggered_only = yes
+	location = from
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.8.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.9
+	title = uma_still_in_love.9.name
+	desc = uma_still_in_love.9.desc
+	is_triggered_only = yes
+	location = from
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.9.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.10
+	title = uma_still_in_love.10.name
+	desc = uma_still_in_love.10.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.10.a
+	}
+}
+
+fleet_event = {
+	id = uma_still_in_love.11
+	title = uma_still_in_love.11.name
+	desc = uma_still_in_love.11.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_lab
+	archaeology = yes
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+		}
+	}
+	after = {
+		from = {
+			set_site_progress_locked = no
+		}
+	}
+	option = {
+		name = uma_still_in_love.11.a
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = uma_still_in_love.16
+					days = 50
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.16
+	title = uma_still_in_love.16.name
+	desc = uma_still_in_love.16.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_lab
+	option = {
+		name = uma_still_in_love.16.a
+		hidden_effect = {
+			country_event = {
+				id = uma_still_in_love.17
+				days = 360
+				random = 360
+			}
+		}
+	}
+	option = {
+		name = uma_still_in_love.16.b
+		custom_tooltip = uma_still_in_love.16.b.tooltip
+		hidden_effect = {
+			set_country_flag = uma_still_in_love_16_b
+		}
+		hidden_effect = {
+			country_event = {
+				id = uma_still_in_love.18
+				days = 90
+				random = 90
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.17
+	title = uma_still_in_love.17.name
+	desc = uma_still_in_love.17.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_lab
+	option = {
+		name = uma_still_in_love.17.a
+		country_event = {
+			id = uma_still_in_love.99
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.99
+	title = SIL
+	desc = uma_still_in_love.99.desc
+	is_triggered_only = yes
+	picture = GFX_uma_leader_cheval
+	event_window_type = leader_recruit
+	picture_event_data = {
+		portrait = event_target:uma_still_in_love_admiral
+	}
+	immediate = {
+		play_sound = uma_hire_SIL
+		create_country = {
+			name = "NAME_uma_empty"
+			type = global_event
+			auto_delete = no
+			flag = {
+				icon = {
+					category = "special"
+					file = "unknown.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"red"
+					"red"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				save_event_target_as = uma_empty_country
+			}
+		}
+		event_target:uma_empty_country = {
+			create_species = {
+				name = "NAME_Unknown"
+				class = umamusume
+				portrait = umamusume
+				namelist = "UMAname"
+				traits = random
+				effect = {
+					save_event_target_as = uma_legendary_leader_species
+				}
+			}
+			uma_create_leader_love = yes
+		}
+	}
+	option = {
+		name = uma_still_in_love.99.a
+		response_text = uma_still_in_love.99.a.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_still_in_love.99.b
+		response_text = uma_still_in_love.99.b.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = uma_still_in_love.99.c
+		response_text = uma_still_in_love.99.c.resp
+		is_dialog_only = yes
+	}
+	option = {
+		name = HIRE
+		tag = hire_leader
+		custom_tooltip = uma_still_in_love.99.hire_tooltip
+		hidden_effect = {
+			clone_leader = {
+				target = event_target:uma_still_in_love_admiral
+				gender = female
+				species = prev.species
+			}
+			last_created_leader = {
+				add_experience = 3600
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_still_in_love
+				save_global_event_target_as = uma_still_in_love_admiral
+				change_leader_portrait = "96c"
+				uma_initialize_leader_yaruki_effect = yes
+			}
+			create_message = {
+				type = MESSAGE_RECRUITED_LEADER
+				localization = MESSAGE_RECRUITED_LEADER_DESC
+				days = @toast_message_days
+				target = event_target:uma_still_in_love_admiral
+				variable = {
+					type = name
+					localization = LEADER
+					scope = event_target:uma_still_in_love_admiral
+				}
+				variable = {
+					key = "border"
+					value = "GFX_border_legendary"
+				}
+			}
+		}
+	}
+	option = {
+		name = DISMISS
+		tag = dismiss_leader
+		hidden_effect = {
+			event_target:uma_still_in_love_admiral = {
+				kill_leader = {
+					show_notification = no
+				}
+			}
+		}
+	}
+	after = {
+		hidden_effect = {
+			event_target:uma_empty_country = {
+				destroy_country = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_still_in_love.18
+	title = uma_still_in_love.18.name
+	desc = uma_still_in_love.18.desc
+	is_triggered_only = yes
+	picture = GFX_evt_uma_lab
+	option = {
+		name = uma_still_in_love.18.a
+		custom_tooltip = uma_still_in_love.18.a.tooltip
+		hidden_effect = {
+			capital_scope = {
+				add_modifier = {
+					modifier = uma_still_in_love_capital_modifier
+					days = -1
+				}
+			}
+		}
+	}
+}

@@ -7,7 +7,6 @@ concept_uma_three_godnesses_concept = {
 	}
 }
 
-
 concept_uma_three_godnesses_deposit = {
 	icon = gfx/interface/icons/deposits/d_uma_threegodness_relic_pic.dds
 	databank = {
@@ -20,7 +19,6 @@ concept_uma_three_godnesses_deposit = {
 concept_uma_cystal_carrot_mine = {
 	icon = "gfx/interface/icons/deposits/d_uma_crystal_carrot_mine_planet_pic.dds"
 }
-
 
 concept_uma_concept_crystal_carrot = {
 	icon = "gfx/interface/icons/concepts/uma_crystal_carrot.dds"
@@ -40,7 +38,6 @@ concept_uma_race_course_concept = {
 	}
 }
 
-
 concept_uma_member_f_concept = {
 	icon = "gfx/interface/icons/concepts/uma_concept_f.dds"
 	databank = {
@@ -50,8 +47,104 @@ concept_uma_member_f_concept = {
 	}
 }
 
+concept_uma_member_564_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_564"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
 
+concept_uma_member_tamatsuru_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_tamatsuru"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
 
+concept_uma_member_kagami_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_kagami"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_rabbit_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_rabbit"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_ling_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_ling"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_nrs_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_nrs"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_tom_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_tom"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_luo_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_luo"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_doc_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_doc"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_digtal_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_digtal"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
+
+concept_uma_member_white_concept = {
+	icon = "gfx/interface/icons/concepts/uma_f_bg.dds"
+	databank = {
+		category = db_umamusume
+		icon = "GFX_concept_uma_white"
+		picture = "GFX_concept_uma_f_bg"
+	}
+}
 
 concept_uma_industrial_district = {
 	icon = "gfx/interface/icons/districts/district_industrial.dds"
@@ -61,11 +154,10 @@ concept_uma_concept_artisan = {
 	icon = "gfx/interface/icons/jobs/job_artisan.dds"
 }
 
-
 concept_utility_component_template_UMA_REALM_STICKER = {
-	icon = "gfx/interface/icons/concepts/uma_three_godness_jump_drive.dds"##TODO:Replace the icon
+	icon = "gfx/interface/icons/concepts/uma_three_godness_jump_drive.dds"	##TODO:Replace the icon
 }
 
 concept_utility_component_template_UMA_REALM_STICKER_MATRIX = {
-	icon = "gfx/interface/icons/concepts/uma_three_godness_jump_drive.dds" ##TODO:Replace the icon
+	icon = "gfx/interface/icons/concepts/uma_three_godness_jump_drive.dds"	##TODO:Replace the icon
 }

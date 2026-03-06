@@ -1,0 +1,108 @@
+﻿l_english:
+  # Event 1
+  uma_still_in_love.1.name: "Promote Full-Simulation Experiments?"
+  uma_still_in_love.1.desc: "Following the promotion of VR-based turf training facilities to the general public, we have gathered a vast amount of related data.\n The research department recently proposed a major project codenamed \"EVERLASTING BEATS,\"\n aiming to improve the \"Mega Dream\" full-simulation system to deeply analyze Umamusume perception and assist in Domain research."
+  uma_still_in_love.1.a: "Approve."
+  uma_still_in_love.1.a.tooltip: "Starts a follow-up event chain."
+  uma_still_in_love.1.b: "We should focus our energy on the economy."
+  uma_still_in_love.1.b.tooltip: "Gain 150 Influence."
+
+  # Event 2 & Tech
+  uma_still_in_love.2.name: "\"Mega Dream\" Framework Complete"
+  uma_still_in_love.2.desc: "Progress in Domain research has inspired the stalled full-simulation experiments. Our scientists have finally constructed the basic framework; all that remains is to refine it."
+  uma_still_in_love.2.a: "Excellent."
+  uma_still_in_love.2.a.tooltip: "Gain related technology and unlock a Special Project."
+
+  tech_uma_megadream_framework: "Mega Dream Framework"
+  tech_uma_megadream_framework_desc: "The basic framework for full-simulation experiments, constructed with inspiration from breakthroughs in Domain research."
+  tech_uma_megadream_framework_custom_desc: "Society Research output: +10%"
+  tech_uma_megadream_framework_alter: "$tech_uma_megadream_framework$"
+  tech_uma_megadream_framework_alter_desc: "$tech_uma_megadream_framework_desc$"
+
+  UMA_MEGADREAM_MAIN_PROJECT: "Complete Mega Dream Core"
+  UMA_MEGADREAM_MAIN_PROJECT_DESC: "Refinement of the system is all that remains."
+
+  # Event 3
+  uma_still_in_love.3.name: "Special Project Complete: Mega Dream Content Ready"
+  uma_still_in_love.3.desc: "Our scientists have completed the vast majority of Mega Dream and passed internal testing; public beta preparations are in full swing.\nAs an upgrade to existing simulation systems, the new version utilizes principles from the Domain to cleverly simulate Umamusume senses, shedding the constraints of electrode-based sensory stimulation through clothing.\nPublic discussion regarding this latest device is soaring. However, given the project's cutting-edge nature and despite numerous protective protocols, unknown risks remain. The beta test will be restricted to the Academy district in the capital."
+  uma_still_in_love.3.a: "Wonderful! Let us see the results."
+  uma_still_in_love.3.a.tooltip: "Gather test feedback."
+
+  uma_megadream_public_beta: "Mega Dream Public Beta"
+  uma_megadream_public_beta_desc: "The public is highly enthusiastic about this latest piece of equipment."
+
+  uma_still_in_love_capital_modifier: "Impact of Still in Love"
+  uma_still_in_love_capital_modifier_desc: "We have lost track of Still in Love."
+
+  # Logs & Event 4
+  uma_megadream_beta_relic: "Mega Dream Beta - Data Detection"
+  uma_megadream_beta_relic_desc: "=== EVERLASTING BEATS PROJECT - PRIMARY SERVER LOG ====== \n Extraction Date: (Current Time) |"
+  # Note: The context continues into source 2
+  uma_still_in_love.4.name: "Mega Dream Beta - Data Detection"
+  uma_still_in_love.4.desc: "[[Timestamp] [[INFO] [[USER ACCESS LAYER] Connection request #502 entering queue. \n [[Timestamp] [[INFO] [[AUTHENTICATION] Verifying user: StrawberryCake (Registered Name: Still in Love)… \n [[Timestamp] [[WARN] [[CONSCIOUSNESS SCAN] Abnormal consciousness topology detected. \n >> [[ADMIN] The logical topology is an absolute mess. How does she function normally? \n [[Timestamp] [[INFO] [[ADMIN] Executing pointer alignment. \n [[Timestamp] [[INFO] [[CONSCIOUSNESS LOAD] Constructing virtual container for 'Still in Love'… \n [[Timestamp] [[ERROR] [[CONSCIOUSNESS MAPPING] Container construction failed. Error Code: 0xE110N (Unanchored consciousness stream). Isolation protocol invalid. \n [[Timestamp] [[SYSTEM NOTICE] \n *** NOTICE: Non-standard consciousness entity detected. Marked as \n [[Unbound-Undefined] *** \n [[Timestamp] [[WARN] [[USER MANAGEMENT] Primary consciousness load partially successful. \n   > User: StrawberryCake (Registered Name: Still in Love) Load Status: 503 Service Unavailable (Unstable Connection). \n   > Generating anomaly entries: \n     Identity Tag: [[ERROR: 0x571L_10V3] \n     Registered Name: [[ERROR: 0x571L_10V3] \n     Entity Codename: 'SiLhouette' (System Assigned)"
+  uma_still_in_love.4.a: "Create an autonomous repair sandbox for the misloaded guest."
+
+  # Event 5 & 6
+  uma_still_in_love.5.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.5.desc: "[[Timestamp] [[INFO] [[MEETING_MINUTES] Meeting minutes generated. Decision Summary: Veto operation type [[FORCED_REINTEGRATION]. Approve operation type [[AUTONOMOUS_RECOVERY]. \n [[Timestamp] [[INFO] [[ADMIN:] Executing commit. Command stream:\n   - COMMAND: CREATE_SAFE_MODE_PROFILE  - TARGET_UID: StrawberryCake \n   - PARAMS: {ISOLATION_LEVEL: HIGH, WORLD_ACCESS: SELF_AFFECTED_ZONES_ONLY, RECOVERY_TARGET: [[FRAGMENTS: ALL], INTERACTION_WHITELIST: [[ENTITY: Silhouette]} \n [[Timestamp] [[INFO] [[USER_STATE_MGR] User state update complete. Current Status: \n   - UID: StrawberryCake \n   - Run Mode: SAFE_MODE (AUTONOMOUS_RECOVERY) \n   - Associated Container: SBX_Repair_StrawberryCake_0502 \n >> [[PROTOCOL: ANCESTOR]: Autonomous repair sandbox [[SBX_Repair_StrawberryCake_0502] initialized."
+  uma_still_in_love.5.a: "Excellent."
+
+  uma_still_in_love.6.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.6.desc: "Status Report: \n Around noon, a guest entering the system test experienced a unique situation where her consciousness split into two parts. The system only applied restrictions to one part, while the other became an unrestricted data stream—we initially thought it was a virus. \n We have contained the primary data stream in an isolation zone, but many fragments are still loose. Normally, these would be caught by self-check routines eventually, but the committee demands we resume operations quickly without public disclosure. Since many of these fragments are hard to locate manually, we must dispatch personnel into the system to search the anomaly zones. \n The Tech Department believes this guest may have a degree of dissociative identity disorder, and these two personalities might possess different Domains within the same body, causing the system to erroneously separate them. This poses a massive challenge to current Domain theories; the researchers are thrilled at the prospect of how many top-tier papers this will yield."
+  uma_still_in_love.6.a: "We should strive to ensure her consciousness remains whole."
+  uma_still_in_love.6.b: "Understood. Inform the PR department to coordinate."
+
+  # Event 7, 8, 9
+  uma_still_in_love.7.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.7.desc: "Personnel dispatch is tricky. Unlike conventional searches, this feels more like completing quests in a game world, and our staff are facing various obstructions. Conversely, unsuspecting guests are more effective at finding anomalies—after all, bug hunting has been a traditional pastime since the first game was released in the 20th century. \n Therefore, we have adjusted our strategy, masking this event as a special test activity. When guests gather at anomalies, administrators can take notice. By setting up conditions and rewards, and fixing anomalies at the right moment, we can conduct repairs alongside the beta test."
+  uma_still_in_love.7.a: "Very good."
+
+  uma_still_in_love.8.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.8.desc: "Progress is steady. We have recovered a large number of fragments, and anomalies are decreasing. The guests remain unaware. The Tech Department has even had to start creating artificial 'anomalies' to keep the activity going, much to their annoyance.\n Latest update: the student involved in the accident is named 'Still in Love,' an outstanding student at the Central Tracen Academy. According to her teacher (not her trainer), she usually exists in a 'fragile, low-presence' state, but transforms into a state of 'combative desire and extreme love' when stimulated.\n Combined with system feedback, her 'daily personality' is currently self-repairing in the sandbox, while the 'stress personality' (for lack of a better term) generated fragments during the transit to the isolation zone. These fragments manifest as anomaly zones strongly related to struggle and love.\n Her trainer has pleaded with us to save her. That is, of course, our goal, but no one can offer guarantees when it comes to the level of consciousness."
+  uma_still_in_love.8.a: "Excellent."
+
+  uma_still_in_love.9.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.9.desc: "We are tracking a special fragment. This should be the final cleanup. Unlike others, it seems to be stably following a guest who isn't a Tracen student. Relevant departments have raised doubts about certain parts of this guest's identity profile, though no proof has been found.\n Just then, that Umamusume disappeared without any system report. The fragment was obediently collected and merged back with the 'stress personality.' \n We believe this might be a unique property of that specific fragment, but since it has returned, further research is impossible. All fragments have now been recovered. If there's anything else, it's that the Tech Department is still manufacturing 'anomaly zones' for the guests to play in."
+  uma_still_in_love.9.a: "Good."
+
+  # Event 10 & 11
+  uma_still_in_love.10.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.10.desc: "[[Timestamp] [[INFO] [[SANDBOX_MONITOR] SBX_Repair_StrawberryCake_0502 Status Report: Self-repair progress: 100% \n [[Timestamp] [[INFO] [[CONSCIOUSNESS_ENGINE] Data integrity check complete. Result: No data corruption or loss.\n[[Timestamp] [[INFO] [[NEURAL_TOPOLOGY] Rebuilding mapping with physical neural interface. Sync rate: 100%.\n[[Timestamp] [[INFO] [[CONSCIOUSNESS_LOAD] Reloading user UID: StrawberryCake... Reload complete. Status Code: 200 OK\n[[Timestamp] [[INFO] [[USER_METRICS] User UID: StrawberryCake is online.\n[[Timestamp] [[INFO] [[SYSTEM_STATUS] All services running normally.\n>>>  \n *Communication incoming*"
+  uma_still_in_love.10.a: "*Communication incoming*"
+
+  uma_still_in_love.11.name: "Mega Dream Repair Sandbox"
+  uma_still_in_love.11.desc: ">[[Timestamp] [[INFO] [[SANDBOX_MONITOR] ... (Data identical to previous log) ...\n\n*Communication incoming*\nHello, this is the Mega Dream project team. Due to your unique constitution, an error occurred during the device connection.\n\n>>>... \nWe apologize for the inconvenience. Personnel will consult with you shortly regarding follow-up matters.\n\n>>>I feel like I had a sweet dream...\nHow do you feel now? Do you notice anything unusual?\n\n>>>No, I'm okay. But Little Red's state seems a bit different. I can feel it, though—it's not a bad thing.\nYou may log out of the device and return to the Academy.\n\n>>>Okay.\nIf you have other needs, please let us know.\n\n>>>Not for now."
+  uma_still_in_love.11.a: "Alright."
+
+  # Event 16, 17, 18
+  uma_still_in_love.16.name: "Instinctive Love"
+  uma_still_in_love.16.desc: "After her recovery, Still in Love seemed to be in a daze. Staff did not disturb her much, and after a brief check-up, she was escorted from the care center back to her dormitory.\nResearch into her unique Domain is underway. Some scientists believe her ability is too special and warrants more invasive research. However, most Domain researchers do not wish to disrupt her environment, as the Domain is intrinsically linked to one's surroundings. They suggest waiting until she graduates before making further contact."
+  uma_still_in_love.16.a: "Maintain limited communication and provide simple help; do not interfere with her life."
+  uma_still_in_love.16.b: "This is our chance to understand the Domain deeply!"
+  uma_still_in_love.16.b.tooltip: "§RThis will have unpredictable consequences!§!"
+
+  uma_still_in_love.17.name: "Journey of Instinct"
+  uma_still_in_love.17.desc: "The Umamusume known as 'Still in Love' has graduated. Before recruiting her, we should report on her performance in recent years. During her time at Tracen, she did not choose a dedicated Trainer, instead requesting a proxy trainer who would not interfere with her life.\nConsequently, her life, training, and races were largely her own choices. This may have affected her racing results, but for some reason, her Domain strength has been in a state of violent growth—even our testers are somewhat 'afraid' of her. Perhaps you should speak with her personally."
+  uma_still_in_love.17.a: "Interesting."
+
+  uma_still_in_love.18.name: "Impact!"
+  uma_still_in_love.18.desc: "A powerful torrent of Domain energy swept across the planet. Residents everywhere became 'wild,' falling into chaos. By the time we completed emergency measures, Still in Love had vanished without a trace."
+  uma_still_in_love.18.a: "My God!"
+  uma_still_in_love.18.a.tooltip: "§RCapital gains +20% Population Growth, -15 Stability.§!"
+
+  # Event 99 & Traits
+  uma_still_in_love.99.desc: "§YRoses bloom under the full moon, as a silhouette dances among the flowers. ———— I am the Instinct of Red. \n Crimson mists shimmer like a wedding veil under the moonlight. The scarlet in her eyes is more vivid than any rose, the fragrance in her hair more intoxicating than any briar, yet the moist breath clearly belongs to a man-eating beast.§!\n \"Love has brought us together here, until the end of space and time.\"\n§YThe flamboyant performance ends, the all-consuming Domain recedes. As clear moonlight falls upon her, she appears somewhat uneasy and restless.§! \n \"I-I'm sorry, Little Red got a bit excited...\""
+  uma_still_in_love.99.a: "Little Red? Is that what you call your other personality?"
+  uma_still_in_love.99.a.resp: "Yes. Before, she would come out if I wasn't careful, so... everyone else was afraid of me. But since then, I feel like I'm gradually gaining control. It's just when I get too excited... *She looks somewhat guilt-ridden.*"
+  uma_still_in_love.99.b: "You rarely signed up for races during school. Why?"
+  uma_still_in_love.99.b.resp: "Because my Domain strength is too high, and Little Red gets out of control easily during races. I was afraid of hurting my classmates... Anyway, I will study hard."
+  uma_still_in_love.99.c: "How strong is your Domain?"
+  uma_still_in_love.99.c.resp: "\"It's been a long time since I used my Domain with full strength... and compared to me, Little Red's Domain is even more...\"\n §YA flash of rainbow light passes, and Still in Love's somewhat dull eyes ignite like a candle—you are certain that 'Little Red' is now standing before you. Her burning gaze looks ready to devour you.§!\n §RIf you want to know, just press the 'Recruit' button in the bottom right.§!"
+  uma_still_in_love.99.hire_tooltip: ""
+
+  uma_commander_trait_sp_still_in_love: "§RLove Only for You§!"
+  uma_commander_trait_sp_still_in_love_desc: "§RShe loves only one person, and that person is you.§!"
+  uma_commander_trait_sp_still_in_love_1: "§RClear and Clever§!"
+  uma_commander_trait_sp_still_in_love_1_desc: "§RLittle Red...§!"
+  uma_commander_trait_sp_still_in_love_2: "§RInstinct Unleashed§!"
+  uma_commander_trait_sp_still_in_love_2_desc: "§RLook at me.§!"

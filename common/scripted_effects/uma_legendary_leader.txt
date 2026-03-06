@@ -26,18 +26,17 @@ uma_create_leader_deep = {
 			set_leader_flag = uma_is_deep
 			save_global_event_target_as = uma_is_leader_deep
 			change_leader_portrait = DEEP_COMMUNICATION
-#			set_leader_flag = legendary_leader
-#			exile_leader_as = uma_is_leader_deep
-#			set_leader_flag = leader_death_events_blocked
+			#			set_leader_flag = legendary_leader
+			#			exile_leader_as = uma_is_leader_deep
+			#			set_leader_flag = leader_death_events_blocked
 		}
 	}
 }
 
-
 uma_create_leader_oc = {
 	optimize_memory
 	create_leader = {
-		name = OC #"小栗帽"
+		name = OC		#"小栗帽"
 		species = root
 		event_leader = yes
 		gender = female
@@ -61,7 +60,7 @@ uma_create_leader_oc = {
 			set_leader_flag = uma_is_oguri_cap
 			save_global_event_target_as = uma_is_leader_oguri_cap
 			change_leader_portrait = "06c"
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 		}
 	}
 }
@@ -88,14 +87,44 @@ uma_create_leader_did = {
 		traits = {
 			0 = uma_governor_trait_sp_agnes_digital
 			1 = leader_trait_uma_generic
-
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_agnes_digital
-			save_global_event_target_as = uma_agnes_digital_governor
-			change_leader_portrait = "19c"
-#			set_leader_flag = legendary_leader
+			save_global_event_target_as = uma_leader_still_in_love
+			change_leader_portrait = ""
+		}
+	}
+}
+
+uma_create_leader_love = {
+	optimize_memory
+	create_leader = {
+		name = SIL		#"爱如往昔"
+		event_leader = yes
+		gender = female
+		class = commander
+		set_age = 18
+		skill = 1
+		tier = leader_tier_legendary
+		immortal = yes		#不死
+		background_planet = event_target:uma_player_umamusume_planet
+		background_job = uma_racing_umamusume
+		custom_catch_phrase = uma_special_leader_still_in_love_catch_phrase
+		custom_description = uma_sil_backstory
+		skip_background_generation = yes
+		traits = {
+			0 = uma_commander_trait_sp_still_in_love
+			1 = leader_trait_uma_generic
+		}
+		effect = {
+			add_trait = {
+				trait = uma_commander_trait_sp_still_in_love_1
+			}
+			save_global_event_target_as = uma_still_in_love_admiral
+			set_leader_flag = uma_is_special_leader
+			set_leader_flag = uma_is_still_in_love
+			change_leader_portrait = "96c"
 		}
 	}
 }
@@ -103,7 +132,7 @@ uma_create_leader_did = {
 uma_create_leader_ty = {
 	optimize_memory
 	create_leader = {
-		name = AGT #"爱丽速子"
+		name = AGT		#"爱丽速子"
 		species = root
 		event_leader = yes
 		gender = female
@@ -120,24 +149,22 @@ uma_create_leader_ty = {
 		traits = {
 			0 = uma_scientist_trait_sp_tachyon
 			4 = leader_trait_uma_generic
-
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tachyon
 			save_global_event_target_as = uma_is_leader_tachyon
 			change_leader_portrait = "30c"
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 		}
 	}
 }
-
 
 uma_create_leader_sky_admiral = {
 	optimize_memory
 	create_leader = {
 		name = SKY
-		species = root #一个eventtarget，或者一个scope（调用scope的主体种族）
+		species = root		#一个eventtarget，或者一个scope（调用scope的主体种族）
 		event_leader = yes
 		gender = female
 		class = commander
@@ -151,21 +178,18 @@ uma_create_leader_sky_admiral = {
 		traits = {
 			0 = uma_commander_trait_sp_seiun_sky_1
 			1 = leader_trait_uma_generic
-
 		}
 		effect = {
-
 			change_leader_portrait = "20c"
 			save_global_event_target_as = uma_seiun_sky_admiral
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_seiun_sky
 			set_leader_flag = uma_is_ar_seiun_sky
 			save_global_event_target_as = uma_is_leader_seiun_sky
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 		}
 	}
 }
-
 
 uma_create_leader_sky_governor = {
 	optimize_memory
@@ -187,7 +211,6 @@ uma_create_leader_sky_governor = {
 			0 = leader_trait_uma_generic
 		}
 		effect = {
-
 			change_leader_portrait = "20c"
 			save_global_event_target_as = uma_seiun_sky_governor
 			set_leader_flag = uma_is_special_leader
@@ -199,7 +222,6 @@ uma_create_leader_sky_governor = {
 		}
 	}
 }
-
 
 uma_create_leader_teio_governor = {
 	optimize_memory
@@ -228,7 +250,7 @@ uma_create_leader_teio_governor = {
 			save_global_event_target_as = uma_is_teio_governor
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tokai_teio
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			#########
 			set_leader_flag = uma_is_gov_tokai_teio
 			#########
@@ -237,7 +259,6 @@ uma_create_leader_teio_governor = {
 		}
 	}
 }
-
 
 uma_create_leader_teio_admiral = {
 	optimize_memory
@@ -267,7 +288,7 @@ uma_create_leader_teio_admiral = {
 			save_global_event_target_as = uma_is_teio_admiral
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tokai_teio
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			#########
 			set_leader_flag = uma_is_adr_teio
 			#########
@@ -305,7 +326,7 @@ uma_create_leader_teio_scientist = {
 			save_global_event_target_as = uma_is_teio_scientist
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_tokai_teio
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			#########
 			set_leader_flag = uma_is_sci_teio
 			#########
@@ -340,18 +361,16 @@ uma_create_leader_zf = {
 			0 = leader_trait_uma_generic
 		}
 		effect = {
-
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_zf
 			save_global_event_target_as = uma_is_leader_zf
 			change_leader_portrait = GLX_ZF
-#			set_leader_flag = legendary_leader
-#			exile_leader_as = uma_is_leader_deep
-#			set_leader_flag = leader_death_events_blocked
+			#			set_leader_flag = legendary_leader
+			#			exile_leader_as = uma_is_leader_deep
+			#			set_leader_flag = leader_death_events_blocked
 		}
 	}
 }
-
 
 uma_create_leader_cheval = {
 	optimize_memory
@@ -376,16 +395,14 @@ uma_create_leader_cheval = {
 			0 = leader_trait_uma_generic
 		}
 		effect = {
-
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_cheval_grand
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_cheval_grand
 			change_leader_portrait = 76c
 		}
 	}
 }
-
 
 uma_create_leader_sweepy = {
 	optimize_memory
@@ -411,13 +428,12 @@ uma_create_leader_sweepy = {
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_sweepy_tonson
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_sweepy_tonson
 			change_leader_portrait = 56c
 		}
 	}
 }
-
 
 uma_create_leader_ardan = {
 	optimize_memory
@@ -432,7 +448,6 @@ uma_create_leader_ardan = {
 		background_job = uma_researcher
 		custom_catch_phrase = uma_ardan_catch_phrase
 		custom_description = uma_ardan_backstory
-
 		skip_background_generation = yes
 		skill = 1
 		set_age = 15
@@ -442,16 +457,14 @@ uma_create_leader_ardan = {
 			1 = uma_scientist_trait_sp_Ardan_cap
 		}
 		effect = {
-
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_mejro_ardan
 			save_global_event_target_as = uma_is_leader_mejro_ardan
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			change_leader_portrait = 49c
 		}
 	}
 }
-
 
 uma_create_leader_curren = {
 	optimize_memory
@@ -466,7 +479,6 @@ uma_create_leader_curren = {
 		background_job = uma_unknown
 		custom_catch_phrase = uma_curren_catch_phrase
 		custom_description = uma_curren_backstory
-
 		skip_background_generation = yes
 		skill = 1
 		tier = leader_tier_legendary
@@ -475,10 +487,9 @@ uma_create_leader_curren = {
 			0 = leader_trait_uma_generic
 		}
 		effect = {
-
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_curren_chan
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_curren_chan
 			change_leader_portrait = 34c
 		}
@@ -498,7 +509,6 @@ uma_create_leader_zephyr = {
 		background_job = uma_researcher
 		custom_catch_phrase = uma_zephyr_catch_phrase
 		custom_description = uma_zephyr_backstory
-
 		skip_background_generation = yes
 		skill = 1
 		set_age = 15
@@ -512,7 +522,7 @@ uma_create_leader_zephyr = {
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_zephyr
-#			set_leader_flag = legendary_leader
+			#			set_leader_flag = legendary_leader
 			save_global_event_target_as = uma_is_leader_zephyr
 			change_leader_portrait = 84c
 		}
@@ -532,7 +542,6 @@ uma_create_leader_ale = {
 		background_job = commanding_officer
 		custom_catch_phrase = uma_ale_catch_phrase
 		custom_description = uma_ale_backstory
-
 		skip_background_generation = yes
 		skill = 1
 		set_age = 16
@@ -582,7 +591,6 @@ uma_create_leader_fairy = {
 
 
 ##Leader Compound
-
 uma_leader_cp_build_up_trait_official = {
 	optimize_memory
 	if = {
@@ -632,7 +640,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_governor_trait_sp_seiun_sky
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -644,7 +651,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_governor_trait_sp_teio_gov
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -657,7 +663,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -669,7 +674,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -681,7 +685,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -693,7 +696,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -712,7 +714,6 @@ uma_leader_cp_build_up_trait_official = {
 			}
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -731,7 +732,6 @@ uma_leader_cp_build_up_trait_official = {
 			}
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -750,7 +750,6 @@ uma_leader_cp_build_up_trait_official = {
 			}
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -762,7 +761,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -774,7 +772,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -786,7 +783,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -798,9 +794,7 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	##原生领袖
-
 	##变体
 	if = {
 		limit = {
@@ -845,7 +839,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_scientists_trait_sp_zf_empire_official
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -857,7 +850,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_scientists_trait_sp_zf_girl_official
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -870,7 +862,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -882,7 +873,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -894,7 +884,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -906,65 +895,62 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
-#	if = {
-#		limit = {
-#			Root = {
-#				has_country_flag = uma_leader_cp.9.kita.trait.1
-#			}
-#		}
-#		if = {
-#			limit = {
-#				event_target:uma_is_leader_kitasan_black = {
-#					has_trait = uma_scientist_trait_sp_kitasan_black
-#				}
-#			}
-#			add_trait = {
-#				trait = uma_governor_trait_sp_kitasan_black
-#				show_message = no
-#			}
-#		}
-#	}
-#
-#	if = {
-#		limit = {
-#			Root = {
-#				has_country_flag = uma_leader_cp.9.al.trait.1
-#			}
-#		}
-#		if = {
-#			limit = {
-#				event_target:uma_is_leader_al_condor_pasa = {
-#					has_trait = uma_scientist_trait_sp_al_condor_pasa
-#				}
-#			}
-#			add_trait = {
-#				trait = uma_governor_trait_sp_al_condor_pasa
-#				show_message = no
-#			}
-#		}
-#	}
-#
-#	if = {
-#		limit = {
-#			Root = {
-#				has_country_flag = uma_leader_cp.9.halo.trait.1
-#			}
-#		}
-#		if = {
-#			limit = {
-#				event_target:uma_is_leader_king_halo = {
-#					has_trait = uma_scientist_trait_sp_king_halo
-#				}
-#			}
-#			add_trait = {
-#				trait = uma_governor_trait_sp_king_halo
-#				show_message = no
-#			}
-#		}
-#	}
-
-
+	#	if = {
+	#		limit = {
+	#			Root = {
+	#				has_country_flag = uma_leader_cp.9.kita.trait.1
+	#			}
+	#		}
+	#		if = {
+	#			limit = {
+	#				event_target:uma_is_leader_kitasan_black = {
+	#					has_trait = uma_scientist_trait_sp_kitasan_black
+	#				}
+	#			}
+	#			add_trait = {
+	#				trait = uma_governor_trait_sp_kitasan_black
+	#				show_message = no
+	#			}
+	#		}
+	#	}
+	#
+	#	if = {
+	#		limit = {
+	#			Root = {
+	#				has_country_flag = uma_leader_cp.9.al.trait.1
+	#			}
+	#		}
+	#		if = {
+	#			limit = {
+	#				event_target:uma_is_leader_al_condor_pasa = {
+	#					has_trait = uma_scientist_trait_sp_al_condor_pasa
+	#				}
+	#			}
+	#			add_trait = {
+	#				trait = uma_governor_trait_sp_al_condor_pasa
+	#				show_message = no
+	#			}
+	#		}
+	#	}
+	#
+	#	if = {
+	#		limit = {
+	#			Root = {
+	#				has_country_flag = uma_leader_cp.9.halo.trait.1
+	#			}
+	#		}
+	#		if = {
+	#			limit = {
+	#				event_target:uma_is_leader_king_halo = {
+	#					has_trait = uma_scientist_trait_sp_king_halo
+	#				}
+	#			}
+	#			add_trait = {
+	#				trait = uma_governor_trait_sp_king_halo
+	#				show_message = no
+	#			}
+	#		}
+	#	}
 	if = {
 		limit = {
 			Root = {
@@ -976,7 +962,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -988,8 +973,6 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
-
 	if = {
 		limit = {
 			Root = {
@@ -1004,10 +987,7 @@ uma_leader_cp_build_up_trait_official = {
 			show_message = no
 		}
 	}
-
 	###
-
-
 	if = {
 		limit = {
 			Root = {
@@ -1051,7 +1031,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_governor_trait_sp_nice_nature
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1063,7 +1042,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_commander_trait_sp_dura_official
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1075,7 +1053,6 @@ uma_leader_cp_build_up_trait_official = {
 			trait = uma_commander_trait_sp_ale_official
 			show_message = no
 		}
-
 	}
 }
 
@@ -1124,7 +1101,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_scientists_trait_sp_zf_empire
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1136,7 +1112,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_scientists_trait_sp_zf_girl
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1149,7 +1124,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1161,7 +1135,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1173,7 +1146,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1185,49 +1157,39 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.kita.trait.1
 			}
 		}
-
-			add_trait = {
-				trait = uma_scientist_trait_sp_kitasan_black
-				show_message = no
-			}
-
+		add_trait = {
+			trait = uma_scientist_trait_sp_kitasan_black
+			show_message = no
+		}
 	}
-
 	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.al.trait.1
 			}
 		}
-			add_trait = {
-				trait = uma_scientist_trait_sp_al_condor_pasa
-				show_message = no
-			}
-
+		add_trait = {
+			trait = uma_scientist_trait_sp_al_condor_pasa
+			show_message = no
+		}
 	}
-
 	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.halo.trait.1
 			}
 		}
-
-			add_trait = {
-				trait = uma_scientist_trait_sp_king_halo
-				show_message = no
-			}
-
+		add_trait = {
+			trait = uma_scientist_trait_sp_king_halo
+			show_message = no
+		}
 	}
-
-
 	if = {
 		limit = {
 			Root = {
@@ -1239,7 +1201,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1251,8 +1212,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
-
 	if = {
 		limit = {
 			Root = {
@@ -1268,7 +1227,6 @@ uma_leader_cp_build_up_trait_scientist = {
 		}
 	}
 	##原生领袖
-
 	##
 	if = {
 		limit = {
@@ -1313,7 +1271,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_governor_trait_sp_seiun_sky_scientist
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1325,7 +1282,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_governor_trait_sp_teio_sci
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1338,7 +1294,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1350,7 +1305,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1362,7 +1316,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1374,47 +1327,43 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
-#	if = {
-#		limit = {
-#			Root = {
-#				has_country_flag = uma_leader_cp.9.kita.trait.1
-#			}
-#		}
-#		add_trait = {
-#			trait = uma_scientist_trait_sp_kitasan_black
-#			show_message = no
-#		}
-#	}
-#
-#	if = {
-#		limit = {
-#			Root = {
-#				has_country_flag = uma_leader_cp.9.al.trait.1
-#			}
-#		}
-#		add_trait = {
-#			trait = uma_scientist_trait_sp_al_condor_pasa
-#			show_message = no
-#		}
-#	}
-#
-#
-#	if = {
-#		limit = {
-#			Root = {
-#				has_country_flag = uma_leader_cp.9.halo.trait.1
-#			}
-#		}
-#
-#		add_trait = {
-#			trait = uma_scientist_trait_sp_king_halo
-#			show_message = no
-#		}
-#	}
-
-
-
+	#	if = {
+	#		limit = {
+	#			Root = {
+	#				has_country_flag = uma_leader_cp.9.kita.trait.1
+	#			}
+	#		}
+	#		add_trait = {
+	#			trait = uma_scientist_trait_sp_kitasan_black
+	#			show_message = no
+	#		}
+	#	}
+	#
+	#	if = {
+	#		limit = {
+	#			Root = {
+	#				has_country_flag = uma_leader_cp.9.al.trait.1
+	#			}
+	#		}
+	#		add_trait = {
+	#			trait = uma_scientist_trait_sp_al_condor_pasa
+	#			show_message = no
+	#		}
+	#	}
+	#
+	#
+	#	if = {
+	#		limit = {
+	#			Root = {
+	#				has_country_flag = uma_leader_cp.9.halo.trait.1
+	#			}
+	#		}
+	#
+	#		add_trait = {
+	#			trait = uma_scientist_trait_sp_king_halo
+	#			show_message = no
+	#		}
+	#	}
 	if = {
 		limit = {
 			Root = {
@@ -1426,7 +1375,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1438,7 +1386,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1450,7 +1397,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1462,9 +1408,7 @@ uma_leader_cp_build_up_trait_scientist = {
 			show_message = no
 		}
 	}
-
 	###
-
 	if = {
 		limit = {
 			Root = {
@@ -1508,7 +1452,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_scientist_trait_sp_nice_nature
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1520,7 +1463,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_commander_trait_sp_dura_scientist
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1532,7 +1474,6 @@ uma_leader_cp_build_up_trait_scientist = {
 			trait = uma_commander_trait_sp_ale_scientist
 			show_message = no
 		}
-
 	}
 }
 
@@ -1581,7 +1522,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_general_trait_sp_nice_nature
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1593,7 +1533,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_commander_trait_sp_dura
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1605,7 +1544,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_commander_trait_sp_ale
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1613,40 +1551,34 @@ uma_leader_cp_build_up_trait_commander = {
 				has_country_flag = uma_leader_cp.9.kita.trait.1
 			}
 		}
-			add_trait = {
-				trait = uma_general_trait_sp_kitasan_black
-				show_message = no
-			}
+		add_trait = {
+			trait = uma_general_trait_sp_kitasan_black
+			show_message = no
+		}
 	}
-
 	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.al.trait.1
 			}
 		}
-			add_trait = {
-				trait = uma_general_trait_sp_al_condor_pasa
-				show_message = no
-			}
-
+		add_trait = {
+			trait = uma_general_trait_sp_al_condor_pasa
+			show_message = no
+		}
 	}
-
 	if = {
 		limit = {
 			Root = {
 				has_country_flag = uma_leader_cp.9.halo.trait.1
 			}
 		}
-
 		add_trait = {
 			trait = uma_general_trait_sp_king_halo
 			show_message = no
 		}
-
 	}
 	##原生领袖
-
 	if = {
 		limit = {
 			Root = {
@@ -1690,7 +1622,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_commander_trait_sp_seiun_sky_1
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1702,7 +1633,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_governor_trait_sp_teio_adr
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1715,7 +1645,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1727,7 +1656,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1739,7 +1667,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1751,7 +1678,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1763,7 +1689,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1775,7 +1700,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1787,7 +1711,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1799,9 +1722,7 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	##
-
 	if = {
 		limit = {
 			Root = {
@@ -1845,7 +1766,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_scientists_trait_sp_zf_empire_commander
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1857,7 +1777,6 @@ uma_leader_cp_build_up_trait_commander = {
 			trait = uma_scientists_trait_sp_zf_girl_commander
 			show_message = no
 		}
-
 	}
 	if = {
 		limit = {
@@ -1870,7 +1789,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1882,7 +1800,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1894,7 +1811,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1906,8 +1822,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
-
 	if = {
 		limit = {
 			Root = {
@@ -1919,7 +1833,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
 	if = {
 		limit = {
 			Root = {
@@ -1931,8 +1844,6 @@ uma_leader_cp_build_up_trait_commander = {
 			show_message = no
 		}
 	}
-
-
 	if = {
 		limit = {
 			Root = {
@@ -1945,7 +1856,6 @@ uma_leader_cp_build_up_trait_commander = {
 		}
 	}
 }
-
 
 uma_leader_cp_build_up_portrait = {
 	optimize_memory
@@ -2135,7 +2045,6 @@ uma_leader_cp_build_up_portrait = {
 	}
 }
 
-
 uma_leader_cp_cleanup_all = {
 	optimize_memory
 	clear_global_event_target = uma_is_compound_temporary
@@ -2249,7 +2158,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 5
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2259,7 +2167,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 405
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2269,7 +2176,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 1505
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2279,7 +2185,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 3605
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2289,7 +2194,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 7005
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2299,7 +2203,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 12005
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2309,7 +2212,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 18905
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2319,7 +2221,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 28005
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2329,7 +2230,6 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 39605
 	}
-
 	else_if = {
 		limit = {
 			check_variable = {
@@ -2339,10 +2239,8 @@ uma_leader_cp_build_up_skill = {
 		}
 		add_experience = 54000
 	}
-
 	else = {
 		add_experience = 7005
-
 	}
 }
 
@@ -2351,140 +2249,116 @@ uma_leader_cp_build_up_write_information = {
 	event_target:uma_leader_cp_father = {
 		switch = {
 			trigger = has_leader_flag
-
-
 			uma_is_deep = {
 				Prev = {
 					set_leader_flag = uma_is_father_deep
 				}
 			}
-
 			uma_is_oguri_cap = {
 				Prev = {
 					set_leader_flag = uma_is_father_oguri_cap
 				}
 			}
-
 			uma_is_agnes_digital = {
 				Prev = {
 					set_leader_flag = uma_is_father_agnes_digital
 				}
 			}
-
 			uma_is_tachyon = {
 				Prev = {
 					set_leader_flag = uma_is_father_tachyon
 				}
 			}
-
 			uma_is_seiun_sky = {
 				Prev = {
 					set_leader_flag = uma_is_father_seiun_sky
 				}
 			}
-
 			uma_is_tokai_teio = {
 				Prev = {
 					set_leader_flag = uma_is_father_tokai_teio
 				}
 			}
-
 			uma_is_zf = {
 				Prev = {
 					set_leader_flag = uma_is_father_zf
 				}
 			}
-
 			uma_is_cheval_grand = {
 				Prev = {
 					set_leader_flag = uma_is_father_cheval_grand
 				}
 			}
-
 			uma_is_sweepy_tonson = {
 				Prev = {
 					set_leader_flag = uma_is_father_sweepy_tonson
 				}
 			}
-
 			uma_is_mejro_ardan = {
 				Prev = {
 					set_leader_flag = uma_is_father_mejro_ardan
 				}
 			}
-
 			uma_is_curren_chan = {
 				Prev = {
 					set_leader_flag = uma_is_father_curren_chan
 				}
 			}
-
 			uma_is_zephyr = {
 				Prev = {
 					set_leader_flag = uma_is_father_zephyr
 				}
 			}
-
 			uma_is_kitasan_black = {
 				Prev = {
 					set_leader_flag = uma_is_father_kitasan_black
 				}
 			}
-
 			uma_is_al_condor_pasa = {
 				Prev = {
 					set_leader_flag = uma_is_father_al_condor_pasa
 				}
 			}
-
 			uma_is_king_halo = {
 				Prev = {
 					set_leader_flag = uma_is_father_king_halo
 				}
 			}
-
 			uma_is_nice_nature = {
 				Prev = {
 					set_leader_flag = uma_is_father_nice_nature
 				}
 			}
-
 			uma_is_fine = {
 				Prev = {
 					set_leader_flag = uma_is_father_fine
 				}
 			}
-
 			uma_is_tama = {
 				Prev = {
 					set_leader_flag = uma_is_father_tama
 				}
 			}
-
 			uma_is_silent_suzuka = {
 				Prev = {
 					set_leader_flag = uma_is_father_silent_suzuka
 				}
 			}
-
 			uma_is_satono = {
 				Prev = {
 					set_leader_flag = uma_is_father_satono
 				}
 			}
-
 			uma_is_hishi_miracle = {
 				Prev = {
 					set_leader_flag = uma_is_father_hishi_miracle
 				}
 			}
-
 			uma_is_duramente = {
 				Prev = {
 					set_leader_flag = uma_is_father_duramente
 				}
 			}
-
 			uma_is_almondeye = {
 				Prev = {
 					set_leader_flag = uma_is_father_almondeye
@@ -2492,144 +2366,119 @@ uma_leader_cp_build_up_write_information = {
 			}
 		}
 	}
-
 	event_target:uma_leader_cp_mother = {
 		switch = {
 			trigger = has_leader_flag
-
-
 			uma_is_deep = {
 				Prev = {
 					set_leader_flag = uma_is_mother_deep
 				}
 			}
-
 			uma_is_oguri_cap = {
 				Prev = {
 					set_leader_flag = uma_is_mother_oguri_cap
 				}
 			}
-
 			uma_is_agnes_digital = {
 				Prev = {
 					set_leader_flag = uma_is_mother_agnes_digital
 				}
 			}
-
 			uma_is_tachyon = {
 				Prev = {
 					set_leader_flag = uma_is_mother_tachyon
 				}
 			}
-
 			uma_is_seiun_sky = {
 				Prev = {
 					set_leader_flag = uma_is_mother_seiun_sky
 				}
 			}
-
 			uma_is_tokai_teio = {
 				Prev = {
 					set_leader_flag = uma_is_mother_tokai_teio
 				}
 			}
-
 			uma_is_zf = {
 				Prev = {
 					set_leader_flag = uma_is_mother_zf
 				}
 			}
-
 			uma_is_cheval_grand = {
 				Prev = {
 					set_leader_flag = uma_is_mother_cheval_grand
 				}
 			}
-
 			uma_is_sweepy_tonson = {
 				Prev = {
 					set_leader_flag = uma_is_mother_sweepy_tonson
 				}
 			}
-
 			uma_is_mejro_ardan = {
 				Prev = {
 					set_leader_flag = uma_is_mother_mejro_ardan
 				}
 			}
-
 			uma_is_curren_chan = {
 				Prev = {
 					set_leader_flag = uma_is_mother_curren_chan
 				}
 			}
-
 			uma_is_zephyr = {
 				Prev = {
 					set_leader_flag = uma_is_mother_zephyr
 				}
 			}
-
 			uma_is_kitasan_black = {
 				Prev = {
 					set_leader_flag = uma_is_mother_kitasan_black
 				}
 			}
-
 			uma_is_al_condor_pasa = {
 				Prev = {
 					set_leader_flag = uma_is_mother_al_condor_pasa
 				}
 			}
-
 			uma_is_king_halo = {
 				Prev = {
 					set_leader_flag = uma_is_mother_king_halo
 				}
 			}
-
 			uma_is_nice_nature = {
 				Prev = {
 					set_leader_flag = uma_is_mother_nice_nature
 				}
 			}
-
 			uma_is_fine = {
 				Prev = {
 					set_leader_flag = uma_is_mother_fine
 				}
 			}
-
 			uma_is_tama = {
 				Prev = {
 					set_leader_flag = uma_is_mother_tama
 				}
 			}
-
 			uma_is_silent_suzuka = {
 				Prev = {
 					set_leader_flag = uma_is_mother_silent_suzuka
 				}
 			}
-
 			uma_is_satono = {
 				Prev = {
 					set_leader_flag = uma_is_mother_satono
 				}
 			}
-
 			uma_is_hishi_miracle = {
 				Prev = {
 					set_leader_flag = uma_is_mother_hishi_miracle
 				}
 			}
-
 			uma_is_duramente = {
 				Prev = {
 					set_leader_flag = uma_is_mother_duramente
 				}
 			}
-
 			uma_is_almondeye = {
 				Prev = {
 					set_leader_flag = uma_is_mother_almondeye
@@ -2637,143 +2486,119 @@ uma_leader_cp_build_up_write_information = {
 			}
 		}
 	}
-
-
 	Root = {
 		switch = {
 			trigger = has_country_flag
-
 			uma_leader_cp.10.deep.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.deep.portrait.1
+					set_leader_flag = uma_leader_cp.10.deep.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.ougri.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.ougri.portrait.1
+					set_leader_flag = uma_leader_cp.10.ougri.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.did.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.did.portrait.1
+					set_leader_flag = uma_leader_cp.10.did.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.agt.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.agt.portrait.1
+					set_leader_flag = uma_leader_cp.10.agt.portrait.1
 				}
 			}
 			uma_leader_cp.10.sky_gov.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.sky_gov.portrait.1
+					set_leader_flag = uma_leader_cp.10.sky_gov.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.teio_gov.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.teio_gov.portrait.1
+					set_leader_flag = uma_leader_cp.10.teio_gov.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.zf.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.zf.portrait.1
+					set_leader_flag = uma_leader_cp.10.zf.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.cheval.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.cheval.portrait.1
+					set_leader_flag = uma_leader_cp.10.cheval.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.sweepy.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.sweepy.portrait.1
+					set_leader_flag = uma_leader_cp.10.sweepy.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.ardan.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.ardan.portrait.1
+					set_leader_flag = uma_leader_cp.10.ardan.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.curren.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.curren.portrait.1
+					set_leader_flag = uma_leader_cp.10.curren.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.zephyr.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.zephyr.portrait.1
+					set_leader_flag = uma_leader_cp.10.zephyr.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.kita.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.kita.portrait.1
+					set_leader_flag = uma_leader_cp.10.kita.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.al.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.al.portrait.1
+					set_leader_flag = uma_leader_cp.10.al.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.halo.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.halo.portrait.1
+					set_leader_flag = uma_leader_cp.10.halo.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.nn_gov.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.nn_gov.portrait.1
+					set_leader_flag = uma_leader_cp.10.nn_gov.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.fine.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.fine.portrait.1
+					set_leader_flag = uma_leader_cp.10.fine.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.tama.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.tama.portrait.1
+					set_leader_flag = uma_leader_cp.10.tama.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.ayb.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.ayb.portrait.1
+					set_leader_flag = uma_leader_cp.10.ayb.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.satdia.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.satdia.portrait.1
+					set_leader_flag = uma_leader_cp.10.satdia.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.hishi.portrait.1 = {
 				Prev = {
-					set_leader_flag =uma_leader_cp.10.hishi.portrait.1
+					set_leader_flag = uma_leader_cp.10.hishi.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.dura.portrait.1 = {
 				Prev = {
 					set_leader_flag = uma_leader_cp.10.dura.portrait.1
 				}
 			}
-
 			uma_leader_cp.10.ale.portrait.1 = {
 				Prev = {
 					set_leader_flag = uma_leader_cp.10.ale.portrait.1
