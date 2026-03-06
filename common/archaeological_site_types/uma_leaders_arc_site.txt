@@ -793,13 +793,6 @@ uma_fairy_trail_arch = {
 		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
 	}
 }
-		from = {
-			standard_archaeological_site_on_roll_failed = {
-				RANDOM_EVENTS = all_random_events
-			}
-		}
-	}
-}
 
 #爱如往昔
 # Mega Dream公测 数据检测

@@ -765,6 +765,16 @@ country_event = {
 					set_name = FT
 				}
 			}
+			if = {
+				limit = {
+					exists = event_target:uma_still_in_love_admiral
+				}
+
+				event_target:uma_still_in_love_admiral = {
+					change_leader_portrait = 96c
+					set_name = SIL
+				}
+			}
 
 			###SUB
 			if = {
@@ -857,11 +867,6 @@ country_event = {
 			limit = {
 				OR = {
 					has_authority = auth_corporate
-					has_authority = auth_cyber_creed_corporate
-					has_authority = auth_cyber_corporate_collectivist
-					has_authority = auth_cyber_corporate_individualist
-					has_authority = auth_synth_corporate_physical
-					has_authority = auth_synth_corporate_virtual
 				}
 			}
 			save_global_event_target_as = uma_it_is_corp_and_we_can_make_it_pay_tax
