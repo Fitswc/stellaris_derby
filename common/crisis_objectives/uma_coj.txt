@@ -1,33 +1,51 @@
 
-crisobj_uma_research = {
+crisobj_uma_destroy_country = {
 	reward = {
-		base = 150000
-		divide = trigger:num_galaxy_systems 	#on huge, this is 150. On smallest, it is 750
-		complex_trigger_modifier = { 			#fewer worlds => more menace from taking one
-			trigger = check_galaxy_setup_value
-			parameters = { setting = habitable_worlds_scale }
-			mode = divide
+		base = 500
+		complex_trigger_modifier = { #subtract 25 for each playable country that exists
+			trigger = count_playable_country
+			mode = subtract
+			mult = 25
 		}
-		round_to = 50 								#we don't want 127.5 menace
-		min = 150									#just in case
+		round_to = 50 	#we want a solid number
+		min = 100 		#and we don't want less than 100
+	}
+}
+
+crisobj_uma_pugre = {
+	reward = {
+		base = 0.1
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = uma_alien_realm_crisispath
+			}
+		}
+		round = yes
 	}
 	recurring = yes
 }
 
 crisobj_uma_realm_power = {
 	reward = {
-		base = 0.1
-		complex_trigger_modifier = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job =
-			}
-		}
+		base = 10
 	}
-	recurring =
 }
 
-crisobj_uma_terraform_planet = {
+crisobj_uma_destroy_fleet = {
+	reward = {
+		base = 10
+	}
+	recurring = yes
+}
+
+crisobj_uma_build_building = {
+	reward = {
+		base = 10
+	}
+}
+
+crisobj_uma_build_megastructure = {
 	reward = {
 		base = 10
 	}

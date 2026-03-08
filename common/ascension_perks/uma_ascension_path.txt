@@ -204,8 +204,6 @@ ap_uma_become_the_crisis = {
 		NOR = {
 			is_player_crisis = yes
 			has_ascension_perk = ap_defender_of_the_galaxy
-			has_origin = origin_slavers
-			has_origin = origin_endbringers # No additional crisis for Endbringers
 		}
 		is_wilderness_empire = no
 	}
@@ -259,6 +257,14 @@ ap_uma_become_the_crisis = {
 				has_valid_civic = civic_hive_familiar_face
 			}
 		}
+
+		custom_tooltip = {
+			fail_text = "uma_become_the_crisis_must_had_ap1"
+			AND = {
+				has_ascension_perk = ap_uma_fly_me_to_the_star
+				has_ascension_perk = ap_uma_zenshizenren
+			}
+		}
 	}
 
 	on_enabled = {
@@ -266,7 +272,10 @@ ap_uma_become_the_crisis = {
 			set_ai_personality = became_the_crisis
 			country_event = { id = timeline.69 } # Timeline Become the crisis
 		}
-		activate_crisis_progression = uma_realm_break_to_realworld_path
+#		activate_crisis_progression = uma_realm_break_to_realworld_path
+		country_event = {
+			id =
+		}
 	}
 
 	ai_weight = {

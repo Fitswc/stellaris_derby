@@ -115,10 +115,55 @@ uma_crisis_level_4 = {
 
 	# REWARDS
 	perks = {
-		menp_uma_megastructure
 		menp_uma_star_eater
 		menp_uma_mobile_bulwark
 		menp_uma_paid_in_ambition
+	}
+
+	on_unlock = {
+		owner = {
+			if = {
+				limit = { has_federation = yes }
+				leave_alliance = { override_requirements = yes }
+			}
+			tooltip = {
+				if = {
+					limit = {
+						is_galactic_community_formed = yes
+						is_galactic_community_member = yes
+					}
+					remove_from_galactic_community = yes
+				}
+			}
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+
+uma_crisis_level_5 = {
+	# REQUIREMENTS
+	allow = {
+		custom_tooltip = {
+			success_text = crisis_level_5_req_clear_tooltip
+			fail_text =	crisis_level_5_req_tooltip
+			has_country_flag = crisis_special_project_4_complete
+		}
+		hidden_trigger = {
+			NOT = {
+				has_active_event = {
+					crisis.4135
+				}
+			}
+		}
+		is_subject = no
+	}
+	required_crisis_currency = 16000
+
+	# REWARDS
+	perks = {
+		menp_uma_megastructure
 	}
 
 	on_unlock = {

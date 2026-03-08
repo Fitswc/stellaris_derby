@@ -6,11 +6,15 @@ uma_realm_break_to_realworld_path = {
 		uma_crisis_level_2
 		uma_crisis_level_3
 		uma_crisis_level_4
+		uma_crisis_level_5
 	}
 
 	objectives = {
-		crisobj_destroy_empires
-		crisobj_uma_terraform_planet
+		crisobj_uma_destroy_country
+		crisobj_uma_build_building
+		crisobj_uma_destroy_fleet
+		crisobj_uma_pugre
 		crisobj_uma_realm_power
+		crisobj_uma_build_megastructure
 	}
 }

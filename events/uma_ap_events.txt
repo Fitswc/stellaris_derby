@@ -2180,3 +2180,68 @@ country_event = {
 		}
 	}
 }
+
+
+#####
+#Crisis Ascension Perk under 26.3.8
+#####
+
+country_event = {
+	id = uma_ap.300
+	title = uma_ap.300.title
+	desc = uma_ap.300.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.300.a
+		begin_event_chain = {
+			event_chain = uma_ap_bc_main_evt_chain
+			target = Root
+		}
+		enable_special_project = {
+			name = UMA_AP_BC_RESEARCH_REALM
+			owner = Root
+			location = Root.capital_scope
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.301
+	title = uma_ap.301.title
+	desc = uma_ap.301.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.301.a
+		enable_special_project = {
+			name = UMA_AP_BC_RESEARCH_REALM
+			owner = Root
+			location = Root.capital_scope
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
