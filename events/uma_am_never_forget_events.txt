@@ -146,6 +146,7 @@ country_event = {
             every_owned_leader = {
                 limit = {
                     has_leader_flag = uma_is_am
+                    not = { has_leader_flag = renowned_leader }
                 }
                 set_owner = event_target:uma_leader_am
             }
