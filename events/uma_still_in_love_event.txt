@@ -10,9 +10,14 @@ country_event = {
 		is_ai = no
 		has_technology = tech_uma_true_pasture
 		NOT = {
-			has_country_flag = uma_still_in_love_1_approved
+			has_country_flag = uma_still_in_love.1.happened
 		}
 	}
+
+	immediate = {
+		set_country_flag = uma_still_in_love.1.happened
+	}
+
 	# 选项1：批准。开启后续事件链
 	option = {
 		name = uma_still_in_love.1.a
