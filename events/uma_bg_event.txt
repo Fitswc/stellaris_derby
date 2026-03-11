@@ -1924,9 +1924,30 @@ country_event = {
 				}
 				is_species_class = umamusume
 			}
-			modify_species = {
-				species = This.owner_main_species
-				base = This.species
+			if = {
+				limit = {
+					owner_main_species = {
+						has_trait = trait_uma_new_bottle_but_old_wine
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+					remove_trait = trait_uma_new_bottle_but_old_wine
+				}
+			}
+			else_if = {
+				limit = {
+					owner_main_species = {
+						NOT = {
+							has_trait = trait_uma_new_bottle_but_old_wine
+						}
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+				}
 			}
 		}
 		every_owned_pop_group = {
@@ -1934,10 +1955,30 @@ country_event = {
 				has_trait = trait_uma_new_bottle_but_old_wine
 				is_species_class = umamusume
 			}
-			modify_species = {
-				species = This.owner_main_species
-				base = This.species
-				add_trait = trait_uma_new_bottle_but_old_wine
+			if = {
+				limit = {
+					owner_main_species = {
+						has_trait = trait_uma_new_bottle_but_old_wine
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+				}
+			}
+			else_if = {
+				limit = {
+					owner_main_species = {
+						NOT = {
+							has_trait = trait_uma_new_bottle_but_old_wine
+						}
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+					add_trait = trait_uma_new_bottle_but_old_wine
+				}
 			}
 		}
 	}
