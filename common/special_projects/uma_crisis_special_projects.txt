@@ -215,7 +215,9 @@ special_project = {
 	event_chain = uma_ap_bc_main_evt_chain
 
 	on_success = {
-
+		country_event = {
+			id = uma_ap.301
+		}
 	}
 
 	on_fail = {
@@ -232,7 +234,9 @@ special_project = {
 	event_chain = uma_ap_bc_main_evt_chain
 
 	on_success = {
-
+		country_event = {
+			id = uma_ap.302
+		}
 	}
 
 	on_fail = {

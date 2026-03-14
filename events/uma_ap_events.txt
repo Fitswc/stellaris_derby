@@ -2183,7 +2183,7 @@ country_event = {
 
 
 #####
-#Crisis Ascension Perk under 26.3.8
+#Crisis Ascension Perk 26.3.8
 #####
 
 country_event = {
@@ -2216,13 +2216,53 @@ country_event = {
 	option = {
 		name = uma_ap.301.a
 		enable_special_project = {
-			name = UMA_AP_BC_RESEARCH_REALM
+			name = UMA_AP_BC_RESEARCH_MEGASTRUCTURE
 			owner = Root
 			location = Root.capital_scope
 		}
 	}
 }
 
+country_event = {
+	id = uma_ap.302
+	title = uma_ap.302.title
+	desc = uma_ap.302.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.302.a
+		enable_special_project = {
+			name = UMA_AP_BC_BUILD_MEGASTRUCTURE
+			owner = Root
+			location = Root.capital_scope
+		}
+	}
+}
+
+#Build Mega structure
+country_event = {
+	id = uma_ap.303
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope.solar_system = {
+			spawn_megastructure = {
+				name = "NAME_uma_AP_BC_MEGAS"
+				type = "uma_crisis_path_orbital_ring"
+				orbit_angle = 0
+				orbit_distance = 50
+				owner = Root
+				graphical_culture = Root
+				planet = star
+			}
+		}
+		activate_crisis_progression = uma_realm_break_to_realworld_path
+	}
+}
+
+
+##Crisis_OBJ_REWARD
 
 
 
