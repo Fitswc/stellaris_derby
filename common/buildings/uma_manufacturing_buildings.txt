@@ -2841,60 +2841,18 @@ building_uma_tg_custom_goods_productor = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 100
+			minerals = 200
 			uma_crystal_carrot = 100
 		}
-		upkeep = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			energy = 0.5
-			food = 4
-			uma_crystal_carrot = 0.4
-			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			consumer_goods = 8
-			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
-		}
+	}
 
-		upkeep = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			energy = 0.06
-			food = 0.5
-			uma_crystal_carrot = 0.05
-			mult = value:uma_handling_capacity_for_tg
-#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
-			#Mark to add an adjustment of upkeep resource
-		}
+	triggered_planet_modifier = {
+		job_uma_tg_consumer_goods_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
 
-		produces = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			consumer_goods = 0.67
-#			multiplier = value:uma_tg_alloys_maker_Automatic_upkeep_sv
-			mult =value:uma_handling_capacity_for_tg
-#			mult = value:uma_tg_alloys_maker_Automatic_upkeep_sv
-		}
+	triggered_planet_modifier = {
+		job_uma_tg_consumer_goods_automated_automated_workforce_mult = 1
 	}
 
 	triggered_desc = {
@@ -2991,53 +2949,15 @@ building_uma_tg_custom_goods_productor_2 = {
 			minerals = 200
 			uma_crystal_carrot = 100
 		}
-		upkeep = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			energy = 0.6
-			food = 8
-			uma_crystal_carrot = 0.8
-			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			consumer_goods = 12
-			multiplier = value:uma_tg_custom_goods_productor_upkeep_and_produce_sv
-		}
+	}
 
-		upkeep = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			energy = 0.06
-			food = 0.5
-			uma_crystal_carrot = 0.05
-			multiplier = value:uma_handling_capacity_for_tg
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			trigger = {
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			consumer_goods = 1
-			multiplier = value:uma_handling_capacity_for_tg
-		}
+	triggered_planet_modifier = {
+		job_uma_tg_consumer_goods_automated_add = 20
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_consumer_goods_automated_automated_workforce_mult = 1
 	}
 
 	triggered_desc = {
@@ -3132,385 +3052,93 @@ building_uma_tg_industrial_complex = {
 			minerals = 300
 			uma_crystal_carrot = 300
 		}
-
-		##Alloy
-		upkeep = {
-			energy = 0.6
-			minerals = 6
-			uma_crystal_carrot = 0.5
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_alloy
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_alloys
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			alloys = 7
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_alloy
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_alloys
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		upkeep = {
-			energy = 0.08
-			minerals = 0.85
-			uma_crystal_carrot = 0.07
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_alloys
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			alloys = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_alloys
-				check_variable = {
-					which = uma_tgrd_alloys_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-		###
-
-		##Cunsumer Goods
-		upkeep = {
-			energy = 0.6
-			food = 6
-			uma_crystal_carrot = 0.5
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_goods
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_goods
-				check_variable = {
-					which = uma_tgrd_consumer_goods_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			consumer_goods = 7
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_goods
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_goods
-				check_variable = {
-					which = uma_tgrd_consumer_goods_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		upkeep = {
-			energy = 0.08
-			food = 0.85
-			uma_crystal_carrot = 0.07
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_goods
-				check_variable = {
-					which = uma_tgrd_consumer_goods_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			consumer_goods = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_goods
-				check_variable = {
-					which = uma_tgrd_consumer_goods_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-		###
-
-
-		##Volatile Motes
-		upkeep = {
-			energy = 0.6
-			minerals = 6
-			uma_crystal_carrot = 0.5
-			energy = 4
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_motes
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_molts
-				check_variable = {
-					which = uma_tgrd_motes_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			volatile_motes = 9
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_motes
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_molts
-				check_variable = {
-					which = uma_tgrd_motes_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		##Volatile Motes
-		upkeep = {
-			energy = 0.06
-			minerals = 0.6
-			uma_crystal_carrot = 0.05
-			energy = 0.4
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_molts
-				check_variable = {
-					which = uma_tgrd_motes_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			volatile_motes = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_molts
-				check_variable = {
-					which = uma_tgrd_motes_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-		###
-
-		##Exotic Gas
-		upkeep = {
-			minerals = 6
-			uma_crystal_carrot = 0.5
-			energy = 4
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_gas
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_gas
-				check_variable = {
-					which = uma_tgrd_gas_maxiume_produces
-					value < value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			exotic_gases = 9
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_gas
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_gas
-				check_variable = {
-					which = uma_tgrd_gas_maxiume_produces
-					value < value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-		upkeep = {
-			energy = 0.06
-			minerals = 0.6
-			uma_crystal_carrot = 0.05
-			energy = 0.4
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_gas
-				check_variable = {
-					which = uma_tgrd_gas_maxiume_produces
-					value >= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			exotic_gases = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_gas
-				check_variable = {
-					which = uma_tgrd_gas_maxiume_produces
-					value >= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		##Rare Crystal
-		upkeep = {
-			energy = 0.6
-			minerals = 6
-			uma_crystal_carrot = 0.5
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_r_crystal
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_crystal
-				check_variable = {
-					which = uma_tgrd_r_crystal_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			rare_crystals = 7
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_r_crystal
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_crystal
-				check_variable = {
-					which =uma_tgrd_r_crystal_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		upkeep = {
-			energy = 0.08
-			minerals = 0.85
-			uma_crystal_carrot = 0.07
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_crystal
-				check_variable = {
-					which = uma_tgrd_r_crystal_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			rare_crystals = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_crystal
-				check_variable = {
-					which = uma_tgrd_r_crystal_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		##Sr Living Metal
-		upkeep = {
-			energy = 0.6
-			alloys = 6
-			uma_crystal_carrot = 0.5
-			energy = 7
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_living_metal
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_livingmat
-				check_variable = {
-					which = uma_tgrd_living_metal_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			sr_living_metal = 8
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_living_metal
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_livingmat
-				check_variable = {
-					which = uma_tgrd_living_metal_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-		upkeep = {
-			energy = 0.075
-			alloys = 0.75
-			uma_crystal_carrot = 0.0625
-			energy = 0.875
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_livingmat
-				check_variable = {
-					which = uma_tgrd_living_metal_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			sr_living_metal = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_livingmat
-				check_variable = {
-					which = uma_tgrd_living_metal_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-
-		##Sr Dark Matter
-		upkeep = {
-			energy = 0.6
-			uma_crystal_carrot = 1
-			alloys = 6
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_darkm
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_darkm
-				check_variable = {
-					which = uma_tgrd_darkm_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			sr_dark_matter = 7
-			multiplier = value:uma_tg_TGAC_upkeep_and_produce_sv_darkm
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_darkm
-				check_variable = {
-					which = uma_tgrd_darkm_maxiume_produces
-					value <= value:uma_handling_capacity_for_tg
-				}
-			}
-		}
-		upkeep = {
-			energy = 0.08
-			uma_crystal_carrot = 0.07
-			alloys = 0.85
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_darkm
-				check_variable = {
-					which = uma_tgrd_darkm_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-			#Mark to add an adjustment of upkeep resource
-		}
-		produces = {
-			sr_dark_matter = 1
-			multiplier = value:uma_handling_capacity_for_tg
-			trigger = {
-				has_planet_flag = uma_TGAC_produce_darkm
-				check_variable = {
-					which = uma_tgrd_darkm_maxiume_produces
-					value > value:uma_handling_capacity_for_tg
-				}
-			}
-		}
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_alloys
+		}
+		job_uma_tg_alloy_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_alloy_automated_automated_workforce_mult = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_goods
+		}
+		job_uma_tg_consumer_goods_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_consumer_goods_automated_automated_workforce_mult = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_molts
+		}
+		job_uma_tg_molts_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_molts_automated_automated_workforce_mult = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_gas
+		}
+		job_uma_tg_gas_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_gas_automated_automated_workforce_mult = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_crystal
+		}
+		job_uma_tg_crystal_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_crystal_automated_automated_workforce_mult = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_livingmat
+		}
+		job_uma_tg_living_metal_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_living_metal_automated_automated_workforce_mult = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = uma_TGAC_produce_darkm
+		}
+		job_uma_tg_darkm_automated_add = 10
+		multiplier = value:uma_tg_Automatic_upkeep_sv
+	}
+
+	triggered_planet_modifier = {
+		job_uma_tg_darkm_automated_automated_workforce_mult = 1
+	}
+
+
 
 	triggered_desc = {
 		trigger = {

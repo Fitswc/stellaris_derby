@@ -42,7 +42,7 @@ uma_tg_Automatic_upkeep_sv = {
 		trigger = count_owned_pop_amount
 		parameters = {
 			limit = {
-				is_pop_category = civilian
+				is_species_class = umamusume
 			}
 		}
 		mode = add
@@ -55,5 +55,25 @@ uma_tg_Automatic_upkeep_sv = {
 	multiply = 0.5
 
 	round = yes
+
+}
+
+uma_tg_plantry_energy_extr_sv = {
+	base = 1
+
+	complex_trigger_modifier = {
+		trigger = planet_size
+		trigger_scope = planet
+
+		mode = set
+	}
+
+	multiply = 0.5
+	floor = yes
+
+	multiply = This.owner.uma_tgrd_energy_maxiume
+
+	divide = This.owner.uma_tgrd_energy_stockpile
+#	floor = yes
 
 }

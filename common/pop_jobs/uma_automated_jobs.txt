@@ -22,11 +22,11 @@ uma_tg_alloy_automated = {
 	resources = {
 		category = planet_uma_tg_alloy_automated
 		produces = {
-			alloys = 8
+			alloys = 10
 		}
 		upkeep = {
-			minerals = 4
-			uma_crystal_carrot = 0.5
+			minerals = 8
+			uma_crystal_carrot = 1
 		}
 	}
 
@@ -59,11 +59,196 @@ uma_tg_consumer_goods_automated = {
 	resources = {
 		category = planet_uma_tg_cg_automated
 		produces = {
-			consumer_goods = 8
+			consumer_goods = 10
 		}
 		upkeep = {
-			food = 4
-			uma_crystal_carrot = 0.5
+			food = 8
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}
+
+uma_tg_molts_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_molt_automated
+		produces = {
+			volatile_motes = 10
+		}
+		upkeep = {
+			minerals = 8
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}
+
+uma_tg_gas_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_gas_automated
+		produces = {
+			exotic_gases = 10
+		}
+		upkeep = {
+			minerals = 8
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}
+
+uma_tg_crystal_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_crystal_automated
+		produces = {
+			exotic_gases = 10
+		}
+		upkeep = {
+			energy = 8
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}
+
+uma_tg_living_metal_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_living_metal_automated
+		produces = {
+			sr_living_metal = 10
+		}
+		upkeep = {
+			alloys = 8
+			uma_crystal_carrot = 1
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}
+
+uma_tg_darkm_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_darkm_automated
+		produces = {
+			sr_dark_matter = 10
+		}
+		upkeep = {
+			energy = 8
+			uma_crystal_carrot = 1
 		}
 	}
 

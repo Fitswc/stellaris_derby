@@ -41,3 +41,48 @@ uma_threegodness_rd.103.back:0 "返回主界面"
 
 
 uma_threegodness_rd.100.f: "进入研究所界面"
+
+
+job_uma_tg_alloy_automated: "TG-$alloys$生产无人机"
+job_uma_tg_alloy_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_alloy_automated_plural: "$job_uma_tg_alloy_automated$"
+
+job_uma_tg_consumer_goods_automated: "TG-$consumer_goods$生产无人机"
+job_uma_tg_consumer_goods_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_consumer_goods_automated_plural: "$job_uma_tg_alloy_automated$"
+
+job_uma_tg_molts_automated: "TG-$volatile_motes$生产无人机"
+job_uma_tg_molts_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_molts_automated_plural: "$job_uma_tg_alloy_automated$"
+
+job_uma_tg_gas_automated: "TG-$exotic_gases$生产无人机"
+job_uma_tg_gas_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_gas_automated_plural: "$job_uma_tg_alloy_automated$"
+
+job_uma_tg_crystal_automated: "TG-$rare_crystals$生产无人机"
+job_uma_tg_crystal_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_crystal_automated_plural: "$job_uma_tg_alloy_automated$"
+
+job_uma_tg_living_metal_automated: "TG-$sr_living_metal$生产无人机"
+job_uma_tg_living_metal_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_living_metal_automated_plural: "$job_uma_tg_alloy_automated$"
+
+job_uma_tg_darkm_automated: "TG-$sr_dark_matter$生产无人机"
+job_uma_tg_darkm_automated_desc: "这些无人生产设备正在不眠不休的生产着产品"
+job_uma_tg_darkm_automated_plural: "$job_uma_tg_alloy_automated$"
+
+mod_job_uma_tg_alloy_automated_add: "$job_uma_tg_alloy_automated$岗位"
+mod_job_uma_tg_consumer_goods_automated_add: "$job_uma_tg_consumer_goods_automated$岗位"
+mod_job_uma_tg_molts_automated_add: "$job_uma_tg_molts_automated$岗位"
+mod_job_uma_tg_gas_automated_add: "$job_uma_tg_gas_automated$岗位"
+mod_job_uma_tg_crystal_automated_add: "$job_uma_tg_crystal_automated$岗位"
+mod_job_uma_tg_living_metal_automated_add: "$job_uma_tg_living_metal_automated$岗位"
+mod_job_uma_tg_darkm_automated_add: "$job_uma_tg_darkm_automated$岗位"
+
+mod_job_uma_tg_alloy_automated_automated_workforce_mult: "$job_uma_tg_alloy_automated$自动化岗位填充"
+mod_job_uma_tg_consumer_goods_automated_automated_workforce_mult: "$job_uma_tg_consumer_goods_automated$自动化岗位填充"
+mod_job_uma_tg_molts_automated_automated_workforce_mult: "$job_uma_tg_molts_automated$自动化岗位填充"
+mod_job_uma_tg_gas_automated_automated_workforce_mult: "$job_uma_tg_gas_automated$自动化岗位填充"
+mod_job_uma_tg_crystal_automated_automated_workforce_mult: "$job_uma_tg_crystal_automated$自动化岗位填充"
+mod_job_uma_tg_living_metal_automated_automated_workforce_mult: "$job_uma_tg_living_metal_automated$自动化岗位填充"
+mod_job_uma_tg_darkm_automated_automated_workforce_mult: "$job_uma_tg_darkm_automated$自动化岗位填充"

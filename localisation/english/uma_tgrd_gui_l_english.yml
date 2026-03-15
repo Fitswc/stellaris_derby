@@ -235,20 +235,21 @@
   
  ##Building 
  building_uma_tg_alloys_maker_Automatic: "TG-Automated Alloy Manufacturing Factory"  #NT!
- building_uma_tg_alloys_maker_Automatic_desc: "The alloy factory has been automated and can continuously produce a large amount of alloys by simply powering up.\n§RThe building have automatic disable: it will be automatically disabled when the required resource stockpile <= 400!§! ""  #NT!
-building_uma_tg_alloys_maker_Automatic_tt: "This building calculate produce by: Base requirement(8£alloys£)*(£alloys£Alloys' Maximum stockpile /£alloys£Alloys Stockpile) \n Building Approximate Maximum throughput:§G[Root.uma_tg_alloys_1_approximately_handling]§!, Produces exceeding the maximum throughput will not be counted as actual output.Maximum throughput is positive correlation to £job_civilian£" #NT!
+ building_uma_tg_alloys_maker_Automatic_desc: "The alloy factory has been automated and can continuously produce a large amount of alloys by simply powering up. ""  #NT!
+building_uma_tg_alloys_maker_Automatic_tt: "This building will create (£pop£Pop amount /100 + £job_uma_racing_umamusume£ $job_uma_racing_umamusume$ / 100)* 0.5 jobs, And fill to 100% by automated" #NT!
  building_uma_tg_alloys_maker_Automatic_2: "TG-Automated Alloy Manufacturing Factory GenⅡ"  #NT!
- building_uma_tg_alloys_maker_Automatic_2_desc:"The alloy factory has been automated and can continuously produce a large amount of alloys by simply powering up.\n§RThe building have automatic disable: it will be automatically disabled when the required resource stockpile <= 400!§! ""  #NT!
- building_uma_tg_alloys_maker_Automatic_2_tt: "This building calculate produce by: Base requirement(12£alloys£)*(£alloys£Alloys' Maximum stockpile / £alloys£Alloys Stockpile)\n Building Approximate Maximum throughput:§G[Root.uma_tg_alloys_2_approximately_handling]§!, Produces exceeding the maximum throughput will not be counted as actual output.Maximum throughput is positive correlation to £job_civilian£"  #NT!
+ building_uma_tg_alloys_maker_Automatic_2_desc:"The alloy factory has been automated and can continuously produce a large amount of alloys by simply powering up. ""  #NT!
+ building_uma_tg_alloys_maker_Automatic_2_tt: "This building will create (£pop£Pop amount /100 + £job_uma_racing_umamusume£ $job_uma_racing_umamusume$ / 100)* 0.5 jobs, And fill to 100% by automated"  #NT!
  building_uma_tg_custom_goods_productor: "TG-Automated Consumer Products Factory"  #NT!
- building_uma_tg_custom_goods_productor_desc: "The consumer goods factory has been automated and can continuously produce a large number of consumer goods\n§RThe building have automatic disable: it will be automatically disabled when the required resource stockpile <= 400!§! "  #NT!
- building_uma_tg_custom_goods_productor_tt: "This building calculate produce by: Base requirement(8£consumer_goods£)*(£consumer_goods£ Consumer Goods' Maximum stockpile / £consumer_goods£ Consumer Goods'  \nBuilding Approximate Maximum throughput:§G[Root.uma_tg_alloys_1_approximately_handling]§!, Produces exceeding the maximum throughput will not be counted as actual output.Maximum throughput is positive correlation to £job_civilian£" #NT!
+ building_uma_tg_custom_goods_productor_desc: "The consumer goods factory has been automated and can continuously produce a large number of consumer goods "  #NT!
+ building_uma_tg_custom_goods_productor_tt: "This building will create (£pop£Pop amount /100 + £job_uma_racing_umamusume£ $job_uma_racing_umamusume$ / 100)* 0.5 jobs, And fill to 100% by automated" #NT!
 
  building_uma_tg_custom_goods_productor_2: "TG-Automated Consumer Products Factory GenⅡ"  #NT!
- building_uma_tg_custom_goods_productor_2_desc: "The consumer goods factory has been automated and can continuously produce a large number of consumer goods\n§RThe building have automatic disable: it will be automatically disabled when the required resource stockpile <= 400!§! "  #NT!
- building_uma_tg_custom_goods_productor_2_tt: "This building calculate produce by: Base requirement(12£consumer_goods£)*(£consumer_goods£ Consumer Goods' Maximum stockpile / £consumer_goods£ Consumer Goods'  \nBuilding Approximate Maximum throughput:§G[Root.uma_tg_alloys_2_approximately_handling]§!, Produces exceeding the maximum throughput will not be counted as actual output.Maximum throughput is positive correlation to £job_civilian£" #NT!
- building_uma_tg_industrial_complex_desc: "This factory seems to be able to produce anything! \nIn fact, you can adjust the production formula in Planetary Resolution\n§RThe building have automatic disable: it will be automatically disabled when the required resource stockpile <= 400!§!"  #NT!
- building_uma_tg_industrial_complex_tt: ""
+ building_uma_tg_custom_goods_productor_2_desc: "The consumer goods factory has been automated and can continuously produce a large number of consumer goods "  #NT!
+ building_uma_tg_custom_goods_productor_2_tt: "This building will create (£pop£Pop amount /100 + £job_uma_racing_umamusume£ $job_uma_racing_umamusume$ / 100)* 0.5 jobs, And fill to 100% by automated" #NT!
+ building_uma_tg_industrial_complex: "TG-industrial complex"
+ building_uma_tg_industrial_complex_desc: "This factory seems to be able to produce anything! \nIn fact, you can adjust the production formula in Planetary Resolution"  #NT!
+ building_uma_tg_industrial_complex_tt: "This building will create (£pop£Pop amount /100 + £job_uma_racing_umamusume£ $job_uma_racing_umamusume$ / 100)* 0.5 jobs, And fill to 100% by automated"
  building_uma_tg_planet_energy_extractor: "TG-Planetary Energy Extractor"  #NT!
  building_uma_tg_planet_energy_extractor_desc: "This building can extract the energy of the planet's nucleus and produce a large amount of £energy£energy \nThe damage of the planet will increase when this building is enable"  #NT!
  building_uma_tg_planet_energy_extractor_tt: "This building will output :1 * planet size*0.5*(£energy£'s Maximum / £energy£ stockpile), Produces exceeding the maximum throughput will not be counted as actual output.Maximum throughput is positive correlation to £job_civilian£"
