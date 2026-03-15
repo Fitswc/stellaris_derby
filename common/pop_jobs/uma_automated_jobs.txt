@@ -1,0 +1,73 @@
+uma_tg_alloy_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_alloy_automated
+		produces = {
+			alloys = 8
+		}
+		upkeep = {
+			minerals = 4
+			uma_crystal_carrot = 0.5
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}
+
+uma_tg_consumer_goods_automated = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_uma_tg_alloys_maker_Automatic
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_uma_tg_cg_automated
+		produces = {
+			consumer_goods = 8
+		}
+		upkeep = {
+			food = 4
+			uma_crystal_carrot = 0.5
+		}
+	}
+
+	weight = {
+		weight = 0
+	}
+}

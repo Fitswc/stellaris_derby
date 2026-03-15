@@ -357,4 +357,30 @@ planet_uma_traders = {
 
 
 uma_trade_policy = {
+
+}
+
+
+planet_uma_tg_alloy_automated = {
+	parent = planet_metallurgists
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_uma_tg_cg_automated = {
+	parent = planet_metallurgists
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
 }
