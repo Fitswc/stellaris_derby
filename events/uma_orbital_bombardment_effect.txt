@@ -129,7 +129,7 @@ planet_event = {
 				limit = {
 					AND = {
 						NOT = {
-							is_same_species_class = Root.owner
+							is_same_species_class = From.owner
 							#							is_being_purged = yes
 							is_robot_pop_group = yes
 							#							is_enslaved = yes
@@ -137,10 +137,9 @@ planet_event = {
 					}
 				}
 				modify_species = {
-					species = Root.owner_main_species
-					#					add_trait = trait_uma_new_bottle_but_old_wine
+					species = From.owner_main_species
 					change_scoped_species = yes
-					portrait = Root.owner_main_species
+					portrait = From.owner_main_species
 					effect = {
 						##
 					}
@@ -153,7 +152,7 @@ planet_event = {
 				limit = {
 					AND = {
 						NOT = {
-							is_same_species_class = Root.owner
+							is_same_species_class = From.owner
 							#							is_being_purged = yes
 							is_robot_pop_group = yes
 							#							is_enslaved = yes
@@ -161,10 +160,10 @@ planet_event = {
 					}
 				}
 				modify_species = {
-					species = Root.owner_main_species
+					species = From.owner_main_species
 					add_trait = trait_uma_new_bottle_but_old_wine
 					change_scoped_species = yes
-					portrait = Root.owner_main_species
+					portrait = From.owner_main_species
 					effect = {
 						##
 					}
