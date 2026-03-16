@@ -112,10 +112,6 @@ planet_event = {
 	immediate = {
 		set_owner = From.owner
 
-		From.owner_main_species = {
-			save_event_target_as = uma_pb_tr_template_species
-		}
-
 		random_owned_pop_group = {
 			kill_pop_group = {
 				percentage = 0.5
@@ -123,29 +119,55 @@ planet_event = {
 			}
 		}
 
-		every_owned_pop_group = {
+		if = {
 			limit = {
-				NOT = {
-					is_species_class = umamusume
+				owner = {
+					has_tradition = uma_factor_star_picking
 				}
 			}
-
-			if = {
+			every_owned_pop_group = {
 				limit = {
-					From.owner = {
-						has_tradition = uma_factor_star_picking
+					AND = {
+						NOT = {
+							is_same_species_class = Root.owner
+							#							is_being_purged = yes
+							is_robot_pop_group = yes
+							#							is_enslaved = yes
+						}
 					}
 				}
 				modify_species = {
-					species = event_target:uma_pb_tr_template_species
-					base = This
+					species = Root.owner_main_species
+					#					add_trait = trait_uma_new_bottle_but_old_wine
+					change_scoped_species = yes
+					portrait = Root.owner_main_species
+					effect = {
+						##
+					}
 				}
 			}
-			else = {
+		}
+
+		else = {
+			every_owned_pop_group = {
+				limit = {
+					AND = {
+						NOT = {
+							is_same_species_class = Root.owner
+							#							is_being_purged = yes
+							is_robot_pop_group = yes
+							#							is_enslaved = yes
+						}
+					}
+				}
 				modify_species = {
-					species = event_target:uma_pb_tr_template_species
-					base = This
+					species = Root.owner_main_species
 					add_trait = trait_uma_new_bottle_but_old_wine
+					change_scoped_species = yes
+					portrait = Root.owner_main_species
+					effect = {
+						##
+					}
 				}
 			}
 		}
