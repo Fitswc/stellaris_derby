@@ -16,94 +16,45 @@ uma_handling_capacity_for_tg = {
 
 }
 
+uma_tg_umamusume_add = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger_scope = planet
+		trigger = num_assigned_jobs
+		parameters = {
+			job = uma_racing_umamusume
+		}
+		mode = add
+	}
 
-uma_tg_alloys_maker_Automatic_upkeep_sv = {
-	base = 1
-
-	multiply = This.owner.uma_tgrd_alloys_maxiume
-	divide = This.owner.uma_tgrd_alloys_stockpile
-
-}
-
-uma_tg_custom_goods_productor_upkeep_and_produce_sv = {
-	base = 1
-
-	multiply = This.owner.uma_tgrd_consumer_goods_maxiume
-
-	divide = This.owner.uma_tgrd_consumer_goods_stockpile
-#	floor = yes
-
-}
-
-uma_tg_TGAC_upkeep_and_produce_sv_alloy = {
-	base = 1
-
-
-	multiply = This.owner.uma_tgrd_alloys_maxiume
-	divide = This.owner.uma_tgrd_alloys_stockpile
-
-}
-
-uma_tg_TGAC_upkeep_and_produce_sv_goods = {
-	base = 1
-
-
-	multiply = This.owner.uma_tgrd_consumer_goods_maxiume
-	divide = This.owner.uma_tgrd_consumer_goods_stockpile
-}
-
-uma_tg_TGAC_upkeep_and_produce_sv_motes = {
-	base = 1
-
-
-	multiply = This.owner.uma_tgrd_motes_maxiume
-	divide = This.owner.uma_tgrd_motes_stockpile
-
-}
-
-uma_tg_TGAC_upkeep_and_produce_sv_gas = {
-	base = 1
-
-
-	multiply = This.owner.uma_tgrd_gas_maxiume
-	divide = This.owner.uma_tgrd_gas_stockpile
-
-}
-
-uma_tg_TGAC_upkeep_and_produce_sv_r_crystal = {
-	base = 1
-
-
-	multiply = This.owner.uma_tgrd_r_crystal_maxiume
-	divide = This.owner.uma_tgrd_r_crystal_stockpile
-
+	divide = 100
 }
 
 
-uma_tg_TGAC_upkeep_and_produce_sv_living_metal = {
-	base = 1
+uma_tg_Automatic_upkeep_sv = {
+	base = 0
 
+#	multiply = This.owner.uma_tgrd_alloys_maxiume
+#	divide = This.owner.uma_tgrd_alloys_stockpile
 
-	multiply = This.owner.uma_tgrd_living_metal_maxiume
-	divide = This.owner.uma_tgrd_living_metal_stockpile
+	complex_trigger_modifier = {
+		trigger_scope = planet
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = {
+				is_species_class = umamusume
+			}
+		}
+		mode = add
+	}
 
-}
+	divide = 100
 
-uma_tg_TGAC_upkeep_and_produce_sv_darkm = {
-	base = 1
+	add = value:uma_tg_umamusume_add
 
+	multiply = 0.5
 
-	multiply = This.owner.uma_tgrd_darkm_maxiume
-	divide = This.owner.uma_tgrd_darkm_stockpile
-
-}
-
-uma_tg_TGAC_upkeep_and_produce_sv_uma_crystal = {
-	base = 1
-
-
-	multiply = This.owner.uma_tgrd_uma_crystal_maxiume
-	divide = This.owner.uma_tgrd_uma_crystal_stockpile
+	round = yes
 
 }
 
@@ -126,4 +77,3 @@ uma_tg_plantry_energy_extr_sv = {
 #	floor = yes
 
 }
-

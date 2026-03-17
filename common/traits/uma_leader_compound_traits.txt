@@ -198,8 +198,12 @@ uma_scientists_trait_sp_fz_official = {
 		pop_bonus_workforce_mult =0.1
 		pop_demotion_time_mult = -0.4
 		pop_promotion_time_mult = -0.4
-		bonus_pop_growth = 0.2
 	}
+
+	triggered_planet_pop_group_modifier_for_all = {
+		bonus_pop_growth = 1.2
+	}
+
 	councilor_modifier = {
 		planet_pops_upkeep_mult = -0.05
 		pop_bonus_workforce_mult =0.05
@@ -384,6 +388,9 @@ uma_commander_trait_sp_ale_official = {
 	planet_modifier = {
 		planet_building_build_speed_mult = 0.25
 		planet_amenities_add = 100
+	}
+
+	triggered_planet_pop_group_modifier_for_all = {
 		bonus_pop_growth = 1
 	}
 
@@ -1083,8 +1090,12 @@ uma_trait_sp_curren_spark_soujio_commander = {
 		army_morale = 0.3
 		army_starting_experience_add = 1
 		planet_stability_mult = 0.2
-		bonus_pop_growth = 0.2
 	}
+
+	triggered_planet_pop_group_modifier_for_all = {
+		bonus_pop_growth = 1
+	}
+
 	army_modifier = {
 		army_morale = 0.3
 		army_collateral_damage_mult = 0.1

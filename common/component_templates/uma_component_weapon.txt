@@ -1148,9 +1148,9 @@ weapon_component_template = {
 		min = 60
 		max = 100
 	}
-	hull_damage = 1.0
+	hull_damage = 3.0
 	shield_damage = 2.0
-	# shield_penetration = 1.0
+#	shield_penetration = 1.0
 	armor_damage = 2.0
 	# armor_penetration = 1.0
 	windup = {
@@ -1158,11 +1158,11 @@ weapon_component_template = {
 		max = 9.0
 	}
 	range = 90
-	accuracy = 1.0
+	accuracy = 0.8
 	tracking = 0.5
 
 	missile_speed = 50
-	missile_evasion = 0.0
+	missile_evasion = 0.2
 	missile_shield = 0.0
 	missile_armor = 20.0
 	missile_health = 30.0
@@ -1207,14 +1207,14 @@ weapon_component_template = {
 		}
 	}
 
-	power = -22
+	power = -30
 	damage = {
 		min = 80
 		max = 120
 	}
-	hull_damage = 3.0
+	hull_damage = 2.0
 	shield_damage = 1.0
-	shield_penetration = 2.0
+#	shield_penetration = 2.0
 	armor_damage = 1.0
 	armor_penetration = 2.0
 	windup = {
@@ -1222,11 +1222,11 @@ weapon_component_template = {
 		max = 30.0
 	}
 	range = 100
-	accuracy = 2.0
+	accuracy = 1.5
 	tracking = 1.0
 
 	missile_speed = 50
-	missile_evasion = 1.0
+	missile_evasion = 0.8
 	missile_shield = 0.0
 	missile_armor = 20.0
 	missile_health = 30.0
@@ -1518,7 +1518,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON_BIG"
+	component_set = "UMA_TG_ARCH_WEAPON_TITAN"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1585,7 +1585,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon_2" }
-	component_set = "UMA_TG_ARCH_WEAPON"
+	component_set = "UMA_TG_ARCH_WEAPON_2"
 	projectile_gfx = "plasma_accelerator_s"
 	tags = { weapon_type_energy}
 	ai_tags = { weapon_role_anti_armor }
@@ -1607,11 +1607,11 @@ weapon_component_template = { #强等离子发射器
 
 	damage ={
 		min = 195
-		max = 233
+		max = 300
 	}
 	windup ={
-		min = 5
-		max = 16
+		min = 4
+		max = 14
 	}
 	total_fire_time = 45
 	hull_damage = 1.8
@@ -1651,7 +1651,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON"
+	component_set = "UMA_TG_ARCH_WEAPON_2"
 	projectile_gfx = "plasma_accelerator_m"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1676,8 +1676,8 @@ weapon_component_template = { #强等离子发射器
 		max = 385
 	}
 	windup ={
-		min = 5
-		max = 16
+		min = 4
+		max = 14
 	}
 	total_fire_time = 45
 	hull_damage = 1.8
@@ -1717,7 +1717,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON"
+	component_set = "UMA_TG_ARCH_WEAPON_2"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1738,12 +1738,12 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	damage ={
-		min = 410
-		max = 710
+		min = 500
+		max = 900
 	}
 	windup ={
-		min = 5
-		max = 16
+		min = 4
+		max = 14
 	}
 	total_fire_time = 45
 	hull_damage = 1.8
@@ -1782,7 +1782,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON_BIG"
+	component_set = "UMA_TG_ARCH_WEAPON_BIG_2"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }
@@ -1847,7 +1847,7 @@ weapon_component_template = { #强等离子发射器
 	}
 
 	prerequisites = { "tech_uma_arch_weapon" }
-	component_set = "UMA_TG_ARCH_WEAPON_BIG"
+	component_set = "UMA_TG_ARCH_WEAPON_TITAN_2"
 	projectile_gfx = "plasma_accelerator_l"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_armor }

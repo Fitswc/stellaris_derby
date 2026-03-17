@@ -172,8 +172,15 @@ country_event = {
 
 		event_target:uma_fallen_empire = {
 			remove_modifier = uma_fallen_empire_enhancement_modifier
-			set_country_type = uma_ec2_empire
-
+			if = {
+				limit = {
+					has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
+				}
+				set_country_type = uma_ec2_empire_ez
+			}
+			else = {
+				set_country_type = uma_ec2_empire
+			}
 			add_modifier = {
 				modifier = uma_fallen_empire_crisis_2_modifier_class_1_speed
 			}
@@ -235,9 +242,14 @@ country_event = {
 							has_global_flag = uma_global_game_setting_end_game_crisis_diff_easy
 						}
 
+						#2F
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 2
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 3
 						}
 
 					}
@@ -246,30 +258,12 @@ country_event = {
 							has_global_flag = uma_global_game_setting_end_game_crisis_diff_normal
 						}
 
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 2
-						}
-
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 3
-						}
-						fleet_event = {
-							id = uma_ec_2.7
-							days = 4
-						}
-					}
-					else_if = {
-						limit = {
-							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
-						}
+						#4F
 
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 2
 						}
-
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 3
@@ -281,6 +275,38 @@ country_event = {
 						fleet_event = {
 							id = uma_ec_2.7
 							days = 5
+						}
+					}
+					else_if = {
+						limit = {
+							has_global_flag = uma_global_game_setting_end_game_crisis_diff_hard
+						}
+
+						#6F
+
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 2
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 3
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 4
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 5
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 6
+						}
+						fleet_event = {
+							id = uma_ec_2.7
+							days = 7
 						}
 					}
 				}
@@ -295,7 +321,10 @@ country_event = {
 
 				starbase = {
 					owner = {
-						is_country_type = uma_ec2_empire
+						OR = {
+							is_country_type = uma_ec2_empire
+							is_country_type = uma_ec2_empire_ez
+						}
 					}
 				}
 			}
@@ -721,7 +750,7 @@ fleet_event = {
 		if = {
 			limit = {
 				event_target:uma_fallen_empire = {
-					fleet_power <= 30000000 #3M
+					fleet_power <= 3000000000 #30M
 				}
 			}
 
@@ -1535,5 +1564,52 @@ country_event = {
 		add_modifier = {
 			modifier = uma_fallen_empire_player_enhancement_modifier
 		}
+	}
+}
+
+
+country_event = {
+	id = uma_ec_2.10000
+	title = uma_ap_2.10000.title
+	desc = uma_ap_2.10000.desc
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_communications = event_target:uma_is_fe_office
+			}
+			remove_communications = event_target:uma_is_fe_office
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_event_chain = uma_research_chain
+				}
+				end_event_chain = uma_research_chain
+			}
+			if = {
+				limit = {
+					has_event_chain = uma_building_chain
+				}
+				end_event_chain = uma_building_chain
+			}
+			if = {
+				limit = {
+					has_event_chain = uma_ship_chain
+				}
+				end_event_chain = uma_ship_chain
+			}
+			if = {
+				limit = {
+					has_event_chain = uma_colonize_chain
+				}
+				end_event_chain = uma_colonize_chain
+			}
+		}
+	}
+
+	option = {
+		name = uma_ap_2.10000.a
 	}
 }

@@ -283,6 +283,32 @@ ship_event = {
 }
 
 country_event = {
+	id = uma_zephyr.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		has_country_flag = built_observation_post
+		any_system_within_border = {
+			any_system_colony = {
+				has_observation_outpost = yes
+			}
+		}
+		NOT = {
+			has_country_flag = uma_zephyr_events_observer_happened
+		}
+		has_country_flag = uma_zephyr_events_chain_begin
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_zephyr.11
+		}
+	}
+}
+
+country_event = {
 	id = uma_zephyr.11
 	title = uma_zephyr.11.title
 	desc = uma_zephyr.11.desc

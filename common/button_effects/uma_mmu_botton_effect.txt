@@ -2831,3 +2831,612 @@ uma_complet_uma_tgrd_gui_tech_tech_uma_army_enhance_treatment = {
 	}
 }
 
+
+
+##
+uma_mmu_vc_m85_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m85_effect_tt
+	}
+}
+uma_mmu_vc_m75_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m75_effect_tt
+	}
+}
+uma_mmu_vc_m65_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m65_effect_tt
+	}
+}
+uma_mmu_vc_m55_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m55_effect_tt
+	}
+}
+uma_mmu_vc_m45_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m45_effect_tt
+	}
+}
+uma_mmu_vc_m25_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_m25_effect_tt
+	}
+}
+uma_mmu_vc_mp0_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_m85
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_mp0_effect_tt
+	}
+}
+uma_mmu_vc_p150_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		hidden_trigger = {
+			NOT = {
+				has_country_flag = uma_game_setting_vc_sel_cost
+			}
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_mp85
+		remove_country_flag = uma_mmu_vc_p200
+		custom_tooltip = uma_mmu_vc_p150_effect_tt
+	}
+}
+uma_mmu_vc_p200_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+		hidden_trigger = {
+			NOT = {
+				has_country_flag = uma_game_setting_vc_sel_cost
+			}
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_p200
+		remove_country_flag = uma_mmu_vc_m75
+		remove_country_flag = uma_mmu_vc_m65
+		remove_country_flag = uma_mmu_vc_m55
+		remove_country_flag = uma_mmu_vc_m45
+		remove_country_flag = uma_mmu_vc_m25
+		remove_country_flag = uma_mmu_vc_mp0
+		remove_country_flag = uma_mmu_vc_p150
+		remove_country_flag = uma_mmu_vc_m85
+		custom_tooltip = uma_mmu_vc_p200_effect_tt
+	}
+}
+##
+uma_mmu_vc_m85_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m85
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m75_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m75
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m65_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m65
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m55_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m55
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m45_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m45
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m25_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m25
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_mp0_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_mp0
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p150_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_p150
+	}
+	allow = {
+		NOT = {
+			has_country_flag = uma_game_setting_vc_sel_cost
+		}
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p200_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_p200
+	}
+	allow = {
+		NOT = {
+			has_country_flag = uma_game_setting_vc_sel_cost
+		}
+	}
+	effect = {
+
+	}
+}
+
+##
+uma_mmu_vc_m85_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_m85_cost_effect_tt
+	}
+}
+uma_mmu_vc_m75_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_m75_cost_effect_tt
+	}
+}
+uma_mmu_vc_m65_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_m65_cost_effect_tt
+	}
+}
+uma_mmu_vc_m55_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_m55_cost_effect_tt
+	}
+}
+uma_mmu_vc_m45_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_m45_cost_effect_tt
+	}
+}
+uma_mmu_vc_m25_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_m25_cost_effect_tt
+	}
+}
+uma_mmu_vc_mp0_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = uma_tgrd_gui_scope_fail
+			is_scope_type = country
+		}
+	}
+	effect = {
+		set_country_flag = uma_mmu_vc_mp0_cost
+		remove_country_flag = uma_mmu_vc_m85_cost
+		remove_country_flag = uma_mmu_vc_m75_cost
+		remove_country_flag = uma_mmu_vc_m65_cost
+		remove_country_flag = uma_mmu_vc_m55_cost
+		remove_country_flag = uma_mmu_vc_m45_cost
+		remove_country_flag = uma_mmu_vc_m25_cost
+		remove_country_flag = uma_mmu_vc_p150_cost
+		remove_country_flag = uma_mmu_vc_p200_cost
+		custom_tooltip = uma_mmu_vc_mp0_cost_effect_tt
+	}
+}
+uma_mmu_vc_p150_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p200_cost_effect = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+
+	}
+}
+##
+uma_mmu_vc_m85_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m85_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m75_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m75_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m65_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m65_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m55_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m55_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m45_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m45_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_m25_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_m25_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_mp0_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_mp0_cost
+	}
+	allow = {
+		always = yes
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p150_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_p150_cost
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+
+	}
+}
+uma_mmu_vc_p200_cost_arrow_effect = {
+	potential = {
+		has_country_flag = uma_mmu_vc_p200_cost
+	}
+	allow = {
+		always = no
+	}
+	effect = {
+
+	}
+}

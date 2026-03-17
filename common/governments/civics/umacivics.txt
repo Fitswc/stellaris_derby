@@ -61,9 +61,9 @@ civic_umaagnestachyon = {
 	}
 
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.35
-		planet_jobs_physics_research_produces_mult = 0.35
-		planet_jobs_society_research_produces_mult = 0.35
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
 		planet_pops_consumer_goods_upkeep_mult = 0.15
 		planet_stability_add = -10
 
@@ -212,7 +212,7 @@ civic_umazennorobroy = {
 	planet_jobs_engineering_research_produces_mult = 0.1
 	planet_jobs_physics_research_produces_mult = 0.1
 	planet_jobs_society_research_produces_mult = 0.1
-	planet_jobs_uma_threegodness_knowledge_produces_mult = 0.2
+	planet_jobs_uma_threegodness_knowledge_produces_mult = 0.1
 	#ship_weapon_damage = 15
 	#ship_fire_rate_mult = 10
 	#ship_speed_mult = 2
@@ -256,7 +256,7 @@ civic_umaagnesdigital = {
 
 	modifier = {
 		pop_happiness = 0.10
-		planet_jobs_society_research_produces_mult = 0.1
+#		planet_jobs_society_research_produces_mult = 0.1
 		country_unity_produces_mult = 0.25
 		logistic_growth_mult = 0.1
 		bonus_pop_growth = 1

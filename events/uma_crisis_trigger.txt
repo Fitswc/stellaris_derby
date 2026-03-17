@@ -43,6 +43,16 @@ event = {
 				limit = {
 					is_country_type = global_event
 				}
+				every_playable_country = {
+					limit = {
+						is_uma_player_country = yes
+					}
+					country_event = {
+						id = uma_ec_2.10000
+						days = 100
+						random = 50
+					}
+				}
 				country_event = {
 					id = uma_ec_2.9999
 					days = 720

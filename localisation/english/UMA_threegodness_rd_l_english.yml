@@ -41,3 +41,50 @@
   
   
  uma_threegodness_rd.100.f: "Enter to Research UI"
+
+
+
+
+job_uma_tg_alloy_automated: "TG-$alloys$ Produce drone"
+job_uma_tg_alloy_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_alloy_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+job_uma_tg_consumer_goods_automated: "TG-$consumer_goods$ Produce drone"
+job_uma_tg_consumer_goods_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_consumer_goods_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+job_uma_tg_molts_automated: "TG-$volatile_motes$ Produce drone"
+job_uma_tg_molts_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_molts_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+job_uma_tg_gas_automated: "TG-$exotic_gases$ Produce drone"
+job_uma_tg_gas_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_gas_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+job_uma_tg_crystal_automated: "TG-$rare_crystals$ Produce drone"
+job_uma_tg_crystal_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_crystal_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+job_uma_tg_living_metal_automated: "TG-$sr_living_metal$ Produce drone"
+job_uma_tg_living_metal_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_living_metal_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+job_uma_tg_darkm_automated: "TG-$sr_dark_matter$ Produce drone"
+job_uma_tg_darkm_automated_desc: "These unmanned production equipment are working non-stop to manufacture products"
+job_uma_tg_darkm_automated_plural: "$job_uma_tg_alloy_automated$s"
+
+mod_job_uma_tg_alloy_automated_add: "$job_uma_tg_alloy_automated$ jobs add"
+mod_job_uma_tg_consumer_goods_automated_add: "$job_uma_tg_consumer_goods_automated$ jobs add"
+mod_job_uma_tg_molts_automated_add: "$job_uma_tg_molts_automated$ jobs add"
+mod_job_uma_tg_gas_automated_add: "$job_uma_tg_gas_automated$ jobs add"
+mod_job_uma_tg_crystal_automated_add: "$job_uma_tg_crystal_automated$ jobs add"
+mod_job_uma_tg_living_metal_automated_add: "$job_uma_tg_living_metal_automated$ jobs add"
+mod_job_uma_tg_darkm_automated_add: "$job_uma_tg_darkm_automated$ jobs add"
+
+mod_job_uma_tg_alloy_automated_automated_workforce_mult: "$job_uma_tg_alloy_automated$ automated filled"
+mod_job_uma_tg_consumer_goods_automated_automated_workforce_mult: "$job_uma_tg_consumer_goods_automated$ automated filled"
+mod_job_uma_tg_molts_automated_automated_workforce_mult: "$job_uma_tg_molts_automated$ automated filled"
+mod_job_uma_tg_gas_automated_automated_workforce_mult: "$job_uma_tg_gas_automated$ automated filled"
+mod_job_uma_tg_crystal_automated_automated_workforce_mult: "$job_uma_tg_crystal_automated$ automated filled"
+mod_job_uma_tg_living_metal_automated_automated_workforce_mult: "$job_uma_tg_living_metal_automated$ automated filled"
+mod_job_uma_tg_darkm_automated_automated_workforce_mult: "$job_uma_tg_darkm_automated$ automated filled"

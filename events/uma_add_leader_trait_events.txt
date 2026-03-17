@@ -479,34 +479,35 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				has_authority = auth_imperial
-			}
-			ruler = {
-
-				add_trait = {
-					trait = leader_trait_uma_generic
-					show_message = no
-				}
-			}
-			every_owned_leader = {
-				if = {
-					limit = {
-						NOT = {
-							has_trait = leader_trait_uma_generic
-						}
-						is_same_species_class = root.owner_main_species
-					}
-					uma_delete_vallian_trait = yes
-
-					add_trait = {
-						trait = leader_trait_uma_generic
-						show_message = no
-					}
-				}
-			}
-		}
+#		if = {
+#			limit = {
+#				has_authority = auth_imperial
+#				exists = leader
+#			}
+#			ruler = {
+#
+#				add_trait = {
+#					trait = leader_trait_uma_generic
+#					show_message = no
+#				}
+#			}
+#			every_owned_leader = {
+#				if = {
+#					limit = {
+#						NOT = {
+#							has_trait = leader_trait_uma_generic
+#						}
+#						is_same_species_class = root.owner_main_species
+#					}
+#					uma_delete_vallian_trait = yes
+#
+#					add_trait = {
+#						trait = leader_trait_uma_generic
+#						show_message = no
+#					}
+#				}
+#			}
+#		}
 		if = {
 			limit = {
 				has_authority = auth_trainingcenter

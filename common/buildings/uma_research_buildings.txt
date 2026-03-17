@@ -5,7 +5,7 @@
 
 #特雷森实验室
 building_uma_toresen_lab = {
-	base_buildtime = 200
+	base_buildtime = 240
 	category = research
 
 	building_sets = {
@@ -49,10 +49,10 @@ building_uma_toresen_lab = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 200
+			minerals = 360
 		}
 		upkeep = {
-			energy = 1
+			energy = 1.5
 		}
 	}
 	

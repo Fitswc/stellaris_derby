@@ -1,0 +1,108 @@
+﻿l_simp_chinese:
+
+uma_still_in_love.1.name: "推进全真模拟实验？"
+uma_still_in_love.1.desc: "基于VR训练设施的全真草场推广至全社会后，我们收获了大量相关数据。\n 科研部门近日提出了代号为「EVERLASTING BEATS」的大型科研项目， \n 旨在改进全真模拟系统「Mega Dream」，深入解析马娘感知，\n 并且借此辅助领域研究。"
+
+uma_still_in_love.1.a: "批准。"
+uma_still_in_love.1.a.tooltip: "开启后续事件链"
+
+uma_still_in_love.1.b: "我们要把精力放在经济上。"
+uma_still_in_love.1.b.tooltip: "获得150影响力"
+
+uma_still_in_love.2.name: "「Mega Dream」框架完成"
+uma_still_in_love.2.desc: "在领域研究上的进展启发了陷入瓶颈的全真模拟实验，我们的科学家总算搭建出了基本框架，接下来只需要完善就好。"
+uma_still_in_love.2.a: "很好。"
+uma_still_in_love.2.a.tooltip: "获得相关科技并解锁特殊项目"
+
+tech_uma_megadream_framework: "Mega Dream框架"
+tech_uma_megadream_framework_desc: "全真模拟实验的基本框架，在领域研究上的进展启发下搭建完成。"
+tech_uma_megadream_framework_custom_desc: "社会学点数产出+10%"
+tech_uma_megadream_framework_alter: "$tech_uma_megadream_framework$"
+tech_uma_megadream_framework_alter_desc: "$tech_uma_megadream_framework_desc$"
+
+UMA_MEGADREAM_MAIN_PROJECT: "完成Mega Dream主体部分"
+UMA_MEGADREAM_MAIN_PROJECT_DESC: "接下来只需要完善就好。"
+
+uma_still_in_love.3.name: "特殊项目完成：Mega Dream主体内容就绪"
+uma_still_in_love.3.desc: "我们的科学家已经完成Mega Dream的绝大部分内容并通过了内部测试，公众测试正如火如荼地准备中。\n作为全真模拟系统的升级，新的利用了部分领域的原理，取巧地模拟了马娘的感官，摆脱了需要用衣物上的电极刺激模拟感官的束缚。\n民间对这款最新设备的讨论度极高，但鉴于该项目较为前沿，尽管编译了大量保护性协议，但仍可能存在未知风险，公测将仅在首都的学院区域内进行。"
+uma_still_in_love.3.a: "太棒了！让我们看看效果如何。"
+uma_still_in_love.3.a.tooltip: "搜集测试反馈"
+
+uma_megadream_public_beta: "Mega Dream公测中"
+uma_megadream_public_beta_desc: "民间对这款最新设备的讨论度极高。"
+
+uma_still_in_love_capital_modifier: "爱如往昔的冲击"
+uma_still_in_love_capital_modifier_desc: "我们失去了爱如往昔的踪迹"
+
+uma_megadream_beta_relic: "Mega Dream公测 数据检测"
+uma_megadream_beta_relic_desc: "=== EVERLASTING BEATS PROJECT - PRIMARY SERVER LOG ====== \n 提取日期：（当前时间） | 提取上下文： OPEN BETA TEST - POST-INCIDENT ANALYSIS === \n [[当前时间] [[INFO] [[SYSTEM INIT] 主服务器阵列启动。正在加载核心框架：'EVERLASTING BEATS' v1.0。 \n [[当前时间] [[INFO] [[PHYSICAL LAYER] 神经信号中继器上线。因子记忆池连接已建立。状态：200 OK。 \n [[当前时间] [[INFO] [[ADMIN CONSOLE] 服务器时间已与项目零时同步。Mega Dream 上线。"
+
+uma_still_in_love.4.name: "Mega Dream公测 数据检测"
+uma_still_in_love.4.desc: "[[时间戳] [[INFO] [[USER ACCESS LAYER] 连接请求 #502 进入队列。 \n [[时间戳] [[INFO] [[AUTHENTICATION] 正在验证用户：StrawberryCake（登记名：Still In Love）… \n [[时间戳] [[WARN] [[CONSCIOUSNESS SCAN] 检测到异常意识拓扑结构。 \n >> [[ADMIN] 逻辑拓扑简直是一团乱麻，她是怎么正常生活的? \n [[时间戳] [[INFO] [[ADMIN]执行指针对齐。 \n [[时间戳] [[INFO] [[CONSCIOUSNESS LOAD] 正在为登记名 'Still In Love' 构建虚拟容器… \n [[时间戳] [[ERROR] [[CONSCIOUSNESS MAPPING] 容器构建失败。错误码：0xE110N（意识流未锚定）。隔离协议无效。 \n [[时间戳] [[SYSTEM NOTICE] \n *** 通知：检测到非标准意识实体。标记为 \n [[Unbound-Undefined] *** \n [[时间戳] [[WARN] [[USER MANAGEMENT] 主意识载入部分成功。 \n   > 用户：StrawberryCake（登记名：Still In Love）载入状态：503Service Unavailable（连接不稳定）。 \n   > 生成异常条目： \n     身份标签：[[ERROR: 0x571L_10V3] \n     登记名：[[ERROR: 0x571L_10V3] \n     实体代号：'SiLhouette'（系统分配）"
+uma_still_in_love.4.a: "为错误加载的游客创建自主修复沙盒"
+
+uma_still_in_love.5.name: "Mega Dream修复沙盒"
+uma_still_in_love.5.desc: "[[时间戳] [[INFO] [[MEETING_MINUTES] 会议记录已生成。决策摘要：否决操作类型 [[FORCED_REINTEGRATION]。批准操作类型 [[AUTONOMOUS_RECOVERY]。 \n [[时间戳] [[INFO] [[ADMIN:] 执行提交。命令流：\n   - COMMAND: CREATE_SAFE_MODE_PROFILE  - TARGET_UID: StrawberryCake \n   - PARAMS: {ISOLATION_LEVEL: HIGH, WORLD_ACCESS: \n SELF_AFFECTED_ZONES_ONLY, RECOVERY_TARGET: [[FRAGMENTS: ALL], INTERACTION_WHITELIST: [[ENTITY: Silhouette]} \n [[时间戳] [[INFO] [[USER_STATE_MGR] 用户状态更新完成。当前状态： \n   - UID: StrawberryCake \n   - 运行模式： SAFE_MODE (AUTONOMOUS_RECOVERY) \n   - 关联容器： SBX_Repair_StrawberryCake_0502 \n >> [[PROTOCOL: ANCESTOR] ：自主修复沙盒[[SBX_Repair_StrawberryCake_0502]初始化完毕。"
+uma_still_in_love.5.a: "很好。"
+
+uma_still_in_love.6.name: "Mega Dream修复沙盒"
+uma_still_in_love.6.desc: "汇报情况： \n 十二时许，一位游客在进入系统测试时，由于某种特殊情况，意识被分割成了两部分，而系统只对其中一部分进行了限制，另一部分直接变成了无限制的数据流，一开始我们还以为是病毒来着。 \n 目前我们已经将数据流的主体部分塞进了隔离区，但还有不少数据流碎片在外面乱窜，通常情况下，这些零散的碎片将在一段时间后被自检发现，但项目委员会要求我们在不对外说明的情况下尽快恢复运行，而这些数据流中的许多难以由管理员手动定位，因此我们必须派遣人员进入系统中搜索异常区。 \n 技术部认为，这名游客可能存在一定程度上的双重人格，并且其两个人格可能在同一身体中拥有不同的领域，这才导致系统错误地将其分离为两个独立个体。这对目前的领域理论产生了巨大的挑战，不知道会变成多少篇顶刊，那群家伙兴奋极了。"
+uma_still_in_love.6.a: "应当尽量保证她的意识完整性。"
+uma_still_in_love.6.b: "了解，通知宣传部门配合。"
+
+uma_still_in_love.7.name: "Mega Dream修复沙盒"
+uma_still_in_love.7.desc: "人员派遣是个棘手的问题，有别于常规搜索，这更类似于在游戏世界中进行什么任务之类的，我们的人员受到了各种各样的阻挠。与之相对的，不知情的游客反而更能有效地发现异常，毕竟找bug这项传统节目早在二十世纪第一款游戏发售时便存在了。 \n 因此我们调整了行动策略，将本次事件包装为某种测试活动，当游客们发现异常现象并聚集时管理员自然能注意到，只要再偷偷设置点条件和奖励，并在适当的时机将异常处理完毕，就能在进行测试的同时进行修复。"
+uma_still_in_love.7.a: "很好。"
+
+uma_still_in_love.8.name: "Mega Dream修复沙盒"
+uma_still_in_love.8.desc: "进展顺利，我们已经回收了大量碎片，异常也逐渐减少，游客那边也没有露馅，现在技术部甚至需要人为地制造一些'异常'来推进活动，她们似乎对我们颇有微词。\n 汇报最新进展，该遭遇事故的学生名为「爱如往昔」，是中央特雷森的优秀学生，根据其老师（并非担当训练员）描述，她日常一般处于'柔弱、低存在感'的状态中，受到刺激时转变为'斗争欲、极端爱意'的状态。\n 结合系统反馈，其'日常人格'目前正在沙盒中自修复，而'应激人格'（暂且这么称呼）则在被关进隔离区的途中产生了意识碎片，这些意识碎片形成的异常区确实与斗争和爱强相关。\n 她的训练员恳请我们救治好她，这当然是我们的目标，但意识层面的事情谁也不能做出保证。"
+uma_still_in_love.8.a: "很好。"
+
+
+uma_still_in_love.9.name: "Mega Dream修复沙盒"
+uma_still_in_love.9.desc: "我们正追踪一个特殊碎片，这应该是最后的收尾工作，相较于其他碎片，它似乎稳定跟随在一个游客旁，这名游客似乎并非特雷森的学生。相关部门的工作人员也对其身份资料的部分内容提出了怀疑，但暂且没有找到证据。\n 就在这时，那名马娘却在系统完全没有报告的情况下消失了，碎片乖乖地被收集起来，与'应激人格'回归一体。\n 我们认为这或许是那枚碎片的某种特殊性质，但既然已经回归，我们不可能进行进一步研究，至此全部碎片均已经回收，如果说还有什么事，那就是技术部门依然在不断地制造'异常区'来供游客游玩。"
+uma_still_in_love.9.a: "很好。"
+
+uma_still_in_love.10.name: "Mega Dream修复沙盒"
+uma_still_in_love.10.desc: "[[时间戳] [[INFO] [[SANDBOX_MONITOR] SBX_Repair_StrawberryCake_0502 状态报告：自我修复进度：100% \n [[时间戳] [[INFO] [[CONSCIOUSNESS_ENGINE]完成数据完整性校验。校验结果：无数据损坏或丢失。\n[[时间戳] [[INFO] [[NEURAL_TOPOLOGY] 重建与物理神经接口的映射。同步率：100%。\n[[时间戳] [[INFO] [[CONSCIOUSNESS_LOAD] 开始重载用户 UID:StrawberryCake... 重载完成。状态码：200 OK\n[[时间戳] [[INFO] [[USER_METRICS] 用户 UID:StrawberryCake 上线。\n[[时间戳] [[INFO] [[SYSTEM_STATUS] 所有服务运行正常。\n>>>  \n *通讯接入*"
+
+
+uma_still_in_love.10.a: "*通讯接入*"
+
+uma_still_in_love.11.name: "Mega Dream修复沙盒"
+uma_still_in_love.11.desc: ">[[时间戳] [[INFO] [[SANDBOX_MONITOR] SBX_Repair_StrawberryCake_0502 状态报告：自我修复进度：100%\n[[时间戳] [[INFO] [[CONSCIOUSNESS_ENGINE]完成数据完整性校验。校验结果：无数据损坏或丢失。\n[[时间戳] [[INFO] [[NEURAL_TOPOLOGY] 重建与物理神经接口的映射。同步率：100%。\n[[时间戳] [[INFO] [[CONSCIOUSNESS_LOAD] 开始重载用户 UID:StrawberryCake... 重载完成。状态码：200 OK\n[[时间戳] [[INFO] [[USER_METRICS] 用户 UID:StrawberryCake 上线。\n[[时间戳] [[INFO] [[SYSTEM_STATUS] 所有服务运行正常。\n>>>\n\n*通讯接入*\n您好，这里是Mega Dream项目组，因您的特殊体质，在连接设备过程中产生了错误。\n\n>>>……\n十分抱歉为您带来的不便，稍后将会有相关人员与您协商各项事宜。\n\n>>>我好像做了一个甜蜜的梦……\n您现在感觉如何？是否有异样感？\n\n>>>不，没有，我还好，但是小红的状态好像有些不一样。但是我能感觉到，并不是坏的一面。\n您可以先退出设备，返回学院内。\n\n>>>嗯，好的。\n如果您有其他需求，也可提出。\n\n>>>暂时没有。"
+
+uma_still_in_love.11.a: "好的"
+
+uma_still_in_love.16.name: "本能之爱"
+uma_still_in_love.16.desc: "爱如往昔恢复后似乎处于一种迷糊的状态里，工作人员没有过多打扰，简单检查后，将她从看护中心接回寝室。\n围绕其独特领域的研究也在开展，有些科学家认为，这种能力过于特殊，应当进行更加干涉性的研究。不过大部分领域研究者则不希望破坏其生活环境，因为领域本身就是与周遭环境息息相关的，她们认为应当待其毕业后再行接触。"
+uma_still_in_love.16.a: "只有限地与其沟通，提供些简单帮助，不要干涉生活。"
+uma_still_in_love.16.b: "这是我们深入了解领域的机会！"
+uma_still_in_love.16.b.tooltip: "§R将产生无法预测的后果！§R!"
+
+uma_still_in_love.17.name: "本能之旅"
+uma_still_in_love.17.desc: "名为'爱如往昔'的马娘毕业了，在将其招收前，我们或许要先汇报一下她近年的表现。在特雷森学习期间，她并没有选择担当训练员，而是要求我们派遣一名不干涉她生活的代理训练员。\n因此，她的生活、训练、赛事基本都由她自己抉择，这也许影响了她的赛事成绩，但不知为何，她的领域强度却一直处于剧烈的增长态势，甚至……测试人员都有点'惧怕'她，或许您需要亲自跟她聊聊。"
+uma_still_in_love.17.a: "有趣。"
+
+
+uma_still_in_love.18.name: "冲击！"
+uma_still_in_love.18.desc: "一股强大的领域洪流席卷了整个星球，整个星球的居民都变得“狂野”起来，乱做一图案，当我们做完应急措施时，爱如往昔却消失得无影无踪了。"
+uma_still_in_love.18.a: "天哪！"
+uma_still_in_love.18.a.tooltip: "§R首都获得+20%人口增长、-15稳定§!"
+
+uma_still_in_love.99.desc: "§Y玫瑰盛放在满月下，剪影幽舞于花丛间。————我是本能之红 \n 赤色的云雾好似新婚的红纱在月光下闪烁。她眼眸中的绯红比玫瑰更鲜艳，发梢间的芳香比蔷薇更迷醉，可那湿润的吐息分明来自噬人的野兽。§! \n “爱让我们于此重逢，直到时空的尽头。”\n§Y浮夸的表演落幕，吞噬一切的领域内敛，澄澈的月光落在她的身上，她显得有些不安和局促。§! \n “对，对不起，小红有些激动...”"
+uma_still_in_love.99.a: "小红？是你对自己另一个人格的称呼吗？"
+uma_still_in_love.99.a.resp: "是的，以前一不留神她就会跑出来，所以、其他人都害怕我。但是自从那次以后，我好像能渐渐控制了。只是太激动的时候还是.她看起来有些自责。"
+uma_still_in_love.99.b: "说你在学校期间很少报名比赛，这是为什么？"
+uma_still_in_love.99.b.resp: "因为我的领域强度太高，而且比赛时小红容易不受控制，我怕伤害到其他同学..总之、我会努力学习的。"
+uma_still_in_love.99.c: "你的领域强度有多高？"
+uma_still_in_love.99.c.resp: "“我已经很久没有全力使用领域了...而且相比之下，小红的领域更...” \n §Y*一抹虹光掠过，爱如往昔那有些黯淡的眼眸犹如被点燃的烛火一般闪亮起来——你确信现在在你面前的是“小红”，她炽热的眼神仿佛正准备吞噬你。§! \n §R如果想知道的话，你只需要按右下角的“招募”按钮。§!"
+uma_still_in_love.99.hire_tooltip: ""
+
+
+uma_commander_trait_sp_still_in_love: "§R独属于你的爱§!"
+uma_commander_trait_sp_still_in_love_desc: "§R她只爱着一个人，而那个人，就是你。§!"
+uma_commander_trait_sp_still_in_love_1: "§R清澈伶俐§!"
+uma_commander_trait_sp_still_in_love_1_desc: "§R小红……§!"
+uma_commander_trait_sp_still_in_love_2: "§R本能解放§!"
+uma_commander_trait_sp_still_in_love_2_desc: "§R看着我。§!"

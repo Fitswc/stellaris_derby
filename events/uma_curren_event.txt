@@ -1,6 +1,5 @@
 namespace = uma_curren
 
-#TODO:Test and Verification
 
 country_event = {
 	id = uma_curren.1
@@ -988,6 +987,7 @@ country_event = {
 				id = uma_curren.45
 				days = 3
 			}
+			set_country_flag = uma_curren.44.happened
 		}
 	}
 }
@@ -1124,9 +1124,38 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		This = {
-			has_authority = auth_trainingcenter
+	}
+
+	immediate = {
+
+	}
+	option = {
+		name = uma_curren.50.a
+		hidden_effect = {
+			country_event = {
+				id = uma_curren.51
+			}
 		}
+	}
+}
+
+country_event = {
+	id = uma_curren.500
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+#		OR = {
+#			This = {
+#				has_authority = auth_trainingcenter
+#			}
+#			This = {
+#				NOT = {
+#					has_authority = auth_trainingcenter
+#				}
+#				is_country_type = default
+#			}
+#		}
 		fromfromfrom = {
 			has_fleet_flag = uma_curren_hostile_fleet_cc
 		}
@@ -1136,12 +1165,31 @@ country_event = {
 		event_target:uma_curren_hostile_fleet = {
 			destroy_country = yes
 		}
-	}
-	option = {
-		name = uma_curren.50.a
-		hidden_effect = {
+		if = {
+			limit = {
+				This = {
+					is_uma_player_country = yes
+				}
+			}
 			country_event = {
-				id = uma_curren.51
+				id = uma_curren.50
+			}
+		}
+		else_if = {
+			limit = {
+				This = {
+					NOT = {
+						is_uma_player_country = yes
+					}
+				}
+			}
+			every_playable_country = {
+				limit = {
+					has_country_flag = uma_curren.44.happened
+				}
+				country_event = {
+					id = uma_curren.50
+				}
 			}
 		}
 	}
@@ -1243,6 +1291,42 @@ country_event = {
 		hidden_effect = {
 			event_target:uma_curren_capture3_leader_store_country = {
 				destroy_country = yes
+			}
+		}
+	}
+}
+
+
+#Debug Only
+country_event = {
+	id = uma_curren.600
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = event_target:uma_is_leader_curren_chan_inside
+			}
+			country_event = {
+				id = uma_curren.51
+			}
+		}
+		else = {
+			uma_create_leader_curren = yes
+			last_created_leader = {
+				uma_initialize_leader_yaruki_effect = yes
+				set_leader_flag = uma_is_special_leader
+				set_leader_flag = uma_is_curren_chan
+				#set_leader_flag = legendary_leader
+				save_global_event_target_as = uma_is_leader_curren_chan
+#				clear_global_event_target = uma_is_leader_curren_chan_inside
+				change_leader_portrait = 34c
+
+				add_trait = {
+					trait = uma_trait_sp_curren_spark_soujio
+					show_message = no
+				}
 			}
 		}
 	}

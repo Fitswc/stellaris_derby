@@ -4,6 +4,22 @@ spriteTypes = {
 		name = GFX_uma_colony_type_school
 		textureFile = "gfx/interface/planetview/uma_planet_colony_type_school.dds"
 	}
+	spriteType = {
+		name = GFX_uma_colony_type_school_industrial
+		textureFile = "gfx/interface/planetview/uma_planet_colony_type_school_industrial.dds"
+	}
+	spriteType = {
+		name = GFX_uma_colony_type_school_funny
+		textureFile = "gfx/interface/planetview/uma_planet_colony_type_school_funny.dds"
+	}
+	spriteType = {
+		name = GFX_uma_colony_type_school_research
+		textureFile = "gfx/interface/planetview/uma_planet_colony_type_school_research.dds"
+	}
+	spriteType = {
+		name = GFX_uma_colony_type_school_trade
+		textureFile = "gfx/interface/planetview/uma_planet_colony_type_school_trade.dds"
+	}
 
 	spriteType = {
 		name = GFX_uma_zone_type_racing
@@ -206,5 +222,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_planetview_uma_crystal_carrot_storm_modifier_frame"
 		textureFile = "gfx/interface/icons/planet_modifiers/pm_uma_crystal_carrot_storm.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_species_selected_background_trait_pc_uma_school_preference"
+		texturefile = "gfx/portraits/species_preview_backgrounds/species_preview_bg_uma_school.dds"
 	}
 }

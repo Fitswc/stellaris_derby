@@ -746,5 +746,26 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "GFX_evt_uma_f_arch_running"
+		textureFile = "gfx/event_pictures/uma_ft_running_place.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_f_arch_bed"
+		textureFile = "gfx/event_pictures/uma_ft_bed.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uma_f_arch_hall"
+		textureFile = "gfx/event_pictures/uma_ft_hall.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
 
 }

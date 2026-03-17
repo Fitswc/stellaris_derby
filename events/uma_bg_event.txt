@@ -3,19 +3,15 @@
 #
 #####和on_action，以及其它奇奇怪怪的机制匹配的后台事件，大多数是隐藏的###
 namespace = uma_bg
-
 planet_event = {
 	id = uma_bg.1
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		owner = {
 			has_authority = auth_trainingcenter
 		}
 	}
-
 	immediate = {
 		if = {
 			limit = {
@@ -46,36 +42,31 @@ planet_event = {
 			remove_planet_flag = uma_has_trader_exist
 			remove_modifier = uma_add_treater
 		}
-
 	}
 }
 
-
-
 country_event = {
-    id = uma_bg.10001
-    is_triggered_only = yes
-    hide_window = yes
-    trigger = {
-        from = {
-            species = {
-                is_archetype = UMA
-            }
-        }
-    }
-    immediate = {
-        from = {
-            set_gender = female
-        }
-    }
+	id = uma_bg.10001
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		from = {
+			species = {
+				is_archetype = UMA
+			}
+		}
+	}
+	immediate = {
+		from = {
+			set_gender = female
+		}
+	}
 }
-
 
 planet_event = {
 	id = uma_bg.2
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		This = {
 			has_branch_office = yes
@@ -84,13 +75,11 @@ planet_event = {
 			}
 		}
 	}
-
 	immediate = {
 		set_variable = {
 			which = uma_count_bad_corp_building_planet
 			value = 0
 		}
-
 		owner = {
 			if = {
 				limit = {
@@ -107,14 +96,147 @@ planet_event = {
 	}
 }
 
+#爱如往昔 技能切换 40-42
+country_event = {
+	id = uma_bg.40
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			THIS = {
+				is_ai = no
+				exists = event_target:uma_still_in_love_admiral
+			}
+			FROM = {
+				is_ai = no
+				exists = event_target:uma_still_in_love_admiral
+			}
+		}
+	}
+	immediate = {
+		FROMFROM = {
+			if = {
+				limit = {
+					leader = {
+						OR = {
+							has_trait = uma_commander_trait_sp_still_in_love_1
+							has_trait = uma_commander_trait_sp_still_in_love_2
+						}
+					}
+				}
+				owner = {
+					country_event = {
+						id = uma_bg.41
+					}
+				}
+			}
+		}
+		FROMFROMFROM = {
+			if = {
+				limit = {
+					leader = {
+						OR = {
+							has_trait = uma_commander_trait_sp_still_in_love_1
+							has_trait = uma_commander_trait_sp_still_in_love_2
+						}
+					}
+				}
+				owner = {
+					country_event = {
+						id = uma_bg.41
+					}
+				}
+			}
+		}
+	}
+}
 
+country_event = {
+	id = uma_bg.41
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		if = {
+			limit = {
+				exists = event_target:uma_still_in_love_admiral
+			}
+			event_target:uma_still_in_love_admiral = {
+				if = {
+					limit = {
+						AND = {
+							has_trait = uma_commander_trait_sp_still_in_love_1
+						}
+					}
+					remove_trait = uma_commander_trait_sp_still_in_love_1
+					add_trait = {
+						trait = uma_commander_trait_sp_still_in_love_2
+					}
+				}
+			}
+		}
+		else = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_is_compound_leader
+					has_trait = uma_commander_trait_sp_still_in_love_1
+				}
+				remove_trait = uma_commander_trait_sp_still_in_love_1
+				add_trait = {
+					trait = uma_commander_trait_sp_still_in_love_2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_bg.42
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = no
+		exists = event_target:uma_still_in_love_admiral
+	}
+	immediate = {
+		if = {
+			limit = {
+				exists = event_target:uma_still_in_love_admiral
+			}
+			event_target:uma_still_in_love_admiral = {
+				if = {
+					limit = {
+						has_trait = uma_commander_trait_sp_still_in_love_2
+					}
+					remove_trait = uma_commander_trait_sp_still_in_love_2
+					add_trait = {
+						trait = uma_commander_trait_sp_still_in_love_1
+					}
+				}
+			}
+		}
+		else = {
+			every_owned_leader = {
+				limit = {
+					has_leader_flag = uma_is_compound_leader
+					has_trait = uma_commander_trait_sp_still_in_love_2
+				}
+				remove_trait = uma_commander_trait_sp_still_in_love_2
+				add_trait = {
+					trait = uma_commander_trait_sp_still_in_love_1
+				}
+			}
+		}
+	}
+}
 
 #1~3 sky作为海军上将的特殊技能
 country_event = {
 	id = uma_bg.10
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		OR = {
 			THIS = {
@@ -127,7 +249,6 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		FROMFROM = {
 			if = {
@@ -140,7 +261,9 @@ country_event = {
 					}
 				}
 				owner = {
-					country_event = { id = uma_bg.12 }
+					country_event = {
+						id = uma_bg.12
+					}
 				}
 			}
 		}
@@ -155,23 +278,22 @@ country_event = {
 					}
 				}
 				owner = {
-					country_event = { id = uma_bg.12 }
+					country_event = {
+						id = uma_bg.12
+					}
 				}
 			}
 		}
 	}
 }
 
-
 country_event = {
 	id = uma_bg.12
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 	}
-
 	immediate = {
 		if = {
 			limit = {
@@ -191,7 +313,6 @@ country_event = {
 				}
 			}
 		}
-
 		else = {
 			every_owned_leader = {
 				limit = {
@@ -211,12 +332,10 @@ country_event = {
 	id = uma_bg.13
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		is_ai = no
 		exists = event_target:uma_seiun_sky_admiral
 	}
-
 	immediate = {
 		if = {
 			limit = {
@@ -224,7 +343,9 @@ country_event = {
 			}
 			event_target:uma_seiun_sky_admiral = {
 				if = {
-					limit = { has_trait = uma_commander_trait_sp_seiun_sky_2 }
+					limit = {
+						has_trait = uma_commander_trait_sp_seiun_sky_2
+					}
 					remove_trait = uma_commander_trait_sp_seiun_sky_2
 					add_trait = {
 						trait = uma_commander_trait_sp_seiun_sky_1
@@ -247,14 +368,11 @@ country_event = {
 	}
 }
 
-
-
 ####重整特殊领袖头像####
 country_event = {
 	id = uma_bg.14
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		OR = {
 			exists = event_target:uma_is_leader_seiun_sky
@@ -284,7 +402,6 @@ country_event = {
 			exists = event_target:uma_is_leader_Jantis
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -392,7 +509,6 @@ country_event = {
 					else = {
 						change_leader_portrait = "30c"
 					}
-
 					set_name = AGT
 				}
 			}
@@ -440,7 +556,6 @@ country_event = {
 					set_name = FINE
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_tama
@@ -450,7 +565,6 @@ country_event = {
 					set_name = TAMA
 				}
 			}
-
 			##咕噜
 			if = {
 				limit = {
@@ -545,7 +659,6 @@ country_event = {
 					set_name = HISHIM
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_cheval_grand
@@ -566,11 +679,9 @@ country_event = {
 					else = {
 						change_leader_portrait = 76c
 					}
-
 					set_name = CHEVAL
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_sweepy_tonson
@@ -580,7 +691,6 @@ country_event = {
 					set_name = SWEEPY
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_curren_chan
@@ -590,7 +700,6 @@ country_event = {
 					set_name = CURREN
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_mejro_ardan
@@ -600,7 +709,6 @@ country_event = {
 					set_name = ARDAN
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_zephyr
@@ -610,7 +718,6 @@ country_event = {
 					set_name = ZEPHYR
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_duramente
@@ -620,12 +727,10 @@ country_event = {
 					set_name = DURAMENTE
 				}
 			}
-
 			if = {
 				limit = {
 					exists = event_target:uma_is_leader_tokai_teio
 				}
-
 				event_target:uma_is_leader_tokai_teio = {
 					change_leader_portrait = TEIO_COMM
 					set_name = TET
@@ -635,10 +740,39 @@ country_event = {
 				limit = {
 					exists = event_target:uma_is_leader_zf
 				}
-
 				event_target:uma_is_leader_zf = {
 					change_leader_portrait = GLX_ZF
 					set_name = ZF
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_almondeye
+				}
+
+				event_target:uma_is_leader_zf = {
+					change_leader_portrait = 125c
+					set_name = ALEYE
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:uma_is_leader_fairy_trail
+				}
+
+				event_target:uma_is_leader_zf = {
+					change_leader_portrait = F_Trail
+					set_name = FT
+				}
+			}
+			if = {
+				limit = {
+					exists = event_target:uma_still_in_love_admiral
+				}
+
+				event_target:uma_still_in_love_admiral = {
+					change_leader_portrait = 96c
+					set_name = SIL
 				}
 			}
 
@@ -656,21 +790,25 @@ country_event = {
 	}
 }
 
-
-
 ###########5、6：科技效果，给殖民星球上buff#########
 planet_event = {
 	id = uma_bg.15
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		exists = owner
-		owner = { has_technology = tech_uma_explore_4 }
-		NOT = { owner = { has_technology = tech_uma_explore_5 } }
-		NOT = { has_planet_flag = uma_has_uesd_colony_buff }
+		owner = {
+			has_technology = tech_uma_explore_4
+		}
+		NOT = {
+			owner = {
+				has_technology = tech_uma_explore_5
+			}
+		}
+		NOT = {
+			has_planet_flag = uma_has_uesd_colony_buff
+		}
 	}
-
 	immediate = {
 		set_planet_flag = uma_has_uesd_colony_buff
 		add_modifier = {
@@ -684,13 +822,15 @@ planet_event = {
 	id = uma_bg.16
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		exists = owner
-		owner = { has_technology = tech_uma_explore_5 }
-		NOT = { has_planet_flag = uma_has_uesd_colony_buff }
+		owner = {
+			has_technology = tech_uma_explore_5
+		}
+		NOT = {
+			has_planet_flag = uma_has_uesd_colony_buff
+		}
 	}
-
 	immediate = {
 		set_planet_flag = uma_has_uesd_colony_buff
 		add_modifier = {
@@ -700,18 +840,15 @@ planet_event = {
 	}
 }
 
-
 ###7 刷新绿帽商城抽奖次数（年度脉冲）
 country_event = {
 	id = uma_bg.17
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_authority = auth_trainingcenter
 		is_ai = no
 	}
-
 	immediate = {
 		set_variable = {
 			which = uma_shop_gecha_times_allowed
@@ -720,25 +857,16 @@ country_event = {
 	}
 }
 
-
-
 #MAN开局设置
 country_event = {
 	id = uma_bg.18
 	hide_window = yes
 	is_triggered_only = yes
-
-
 	immediate = {
 		every_country = {
 			limit = {
 				OR = {
 					has_authority = auth_corporate
-					has_authority = auth_cyber_creed_corporate
-					has_authority = auth_cyber_corporate_collectivist
-					has_authority = auth_cyber_corporate_individualist
-					has_authority = auth_synth_corporate_physical
-					has_authority = auth_synth_corporate_virtual
 				}
 			}
 			save_global_event_target_as = uma_it_is_corp_and_we_can_make_it_pay_tax
@@ -751,20 +879,15 @@ country_event = {
 	}
 }
 
-
-
 planet_event = {
 	id = uma_bg.19
 	hide_window = yes
 	is_triggered_only = yes
-
-
 	immediate = {
 		add_building = building_capital
 		remove_building = building_colony_shelter
 	}
 }
-
 
 country_event = {
 	id = uma_bg.20
@@ -772,12 +895,10 @@ country_event = {
 	mean_time_to_happen = {
 		days = 5
 	}
-#	is_triggered_only = yes
-
+	#	is_triggered_only = yes
 	trigger = {
 		any_owned_planet = {
 			is_colony = yes
-
 			OR = {
 				has_active_building = building_uma_tg_alloys_maker_Automatic
 				has_active_building = building_uma_tg_alloys_maker_Automatic_2
@@ -785,7 +906,6 @@ country_event = {
 				has_active_building = building_uma_tg_custom_goods_productor_2
 				has_active_building = building_uma_tg_industrial_complex
 			}
-
 			OR = {
 				has_resource = {
 					type = minerals
@@ -806,7 +926,6 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		every_owned_planet = {
 			limit = {
@@ -826,9 +945,7 @@ country_event = {
 					}
 					has_planet_flag = uma_TGAC_produce_alloys
 				}
-
 				disable_building = building_uma_tg_industrial_complex
-
 				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
 			}
 			if = {
@@ -839,19 +956,16 @@ country_event = {
 				}
 				switch = {
 					trigger = has_active_building
-
 					building_uma_tg_alloys_maker_Automatic = {
 						disable_building = building_uma_tg_alloys_maker_Automatic
 						log = "UMA_DISABLE_AUTOMATIC_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
 					}
-
 					building_uma_tg_alloys_maker_Automatic_2 = {
 						disable_building = building_uma_tg_alloys_maker_Automatic_2
 						log = "UMA_DISABLE_AUTOMATIC_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
 					}
 				}
 			}
-
 			if = {
 				limit = {
 					owner = {
@@ -859,7 +973,6 @@ country_event = {
 					}
 					has_planet_flag = uma_TGAC_produce_goods
 				}
-
 				disable_building = building_uma_tg_industrial_complex
 				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
 			}
@@ -871,19 +984,16 @@ country_event = {
 				}
 				switch = {
 					trigger = has_active_building
-
 					building_uma_tg_custom_goods_productor = {
 						disable_building = building_uma_tg_custom_goods_productor
 						log = "UMA_DISABLE_AUTOMATIC_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
 					}
-
 					building_uma_tg_custom_goods_productor_2 = {
 						disable_building = building_uma_tg_custom_goods_productor_2
 						log = "UMA_DISABLE_AUTOMATIC_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
 					}
 				}
 			}
-
 			if = {
 				limit = {
 					OR = {
@@ -893,35 +1003,30 @@ country_event = {
 							}
 							has_planet_flag = uma_TGAC_produce_molts
 						}
-
 						AND = {
 							owner = {
 								uma_check_factory_gas_disable = yes
 							}
 							has_planet_flag = uma_TGAC_produce_gas
 						}
-
 						AND = {
 							owner = {
 								uma_check_factory_rare_crystal_disable = yes
 							}
 							has_planet_flag = uma_TGAC_produce_crystal
 						}
-
 						AND = {
 							owner = {
 								uma_check_factory_living_materal_disable = yes
 							}
 							has_planet_flag = uma_TGAC_produce_livingmat
 						}
-
 						AND = {
 							owner = {
 								uma_check_factory_dark_matter_disable = yes
 							}
 							has_planet_flag = uma_TGAC_produce_darkm
 						}
-
 						AND = {
 							owner = {
 								uma_check_factory_nanites_disable = yes
@@ -930,22 +1035,17 @@ country_event = {
 						}
 					}
 				}
-
 				disable_building = building_uma_tg_industrial_complex
 				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_OTHER_RESOURCES_AT [This.GetName] IN [GetYear]"
 			}
-
-
 		}
 	}
 }
-
 
 country_event = {
 	id = uma_bg.21
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		AND = {
 			days_passed <= 3600
@@ -966,7 +1066,6 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		add_modifier = {
 			modifier = uma_variation_early_war_buff
@@ -974,34 +1073,27 @@ country_event = {
 	}
 }
 
-
 country_event = {
 	id = uma_bg.22
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_civic = civic_uma_win_variation
-
 		has_modifier = uma_variation_early_war_buff
 	}
-
 	immediate = {
 		remove_modifier = uma_variation_early_war_buff
 	}
 }
 
-
 country_event = {
 	id = uma_bg.23
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_authority = auth_trainingcenter
 		has_country_flag = uma_duramente_not_join
 	}
-
 	immediate = {
 		add_modifier = {
 			modifier = uma_duramente_buff
@@ -1013,12 +1105,10 @@ country_event = {
 	id = uma_bg.24
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_authority = auth_trainingcenter
 		has_country_flag = uma_duramente_not_join
 	}
-
 	immediate = {
 		remove_modifier = uma_duramente_buff
 	}
@@ -1031,9 +1121,6 @@ country_event = {
 	desc = uma_bg.23.desc
 	is_triggered_only = yes
 	picture = GFX_evt_uma_satono_school
-
-
-
 	option = {
 		name = uma_bg.23.a
 		allow = {
@@ -1041,7 +1128,6 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_cheval
-
 			country_event = {
 				id = uma_bg.26
 			}
@@ -1054,29 +1140,27 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_agnes
-
 			country_event = {
 				id = uma_bg.26
 			}
 		}
 	}
 	option = {
-		allow = { exists = event_target:uma_is_leader_silent_suzuka }
+		allow = {
+			exists = event_target:uma_is_leader_silent_suzuka
+		}
 		name = uma_bg.23.d
 		hidden_effect = {
 			set_country_flag = uma_change_leader_portrait_ayb
-
 			country_event = {
 				id = uma_bg.26
 			}
 		}
 	}
-
 	option = {
 		name = uma_bg.23.e
 	}
 }
-
 
 country_event = {
 	id = uma_bg.26
@@ -1084,14 +1168,11 @@ country_event = {
 	desc = uma_bg.24.desc
 	is_triggered_only = yes
 	picture = GFX_evt_uma_satono_school
-
-
 	option = {
 		name = uma_bg.24.a
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_change_leader_portrait_cheval = {
 					event_target:uma_is_leader_cheval_grand = {
 						change_leader_portrait = 76c
@@ -1100,14 +1181,12 @@ country_event = {
 						remove_leader_flag = uma_portrait_bocz
 					}
 				}
-
 				uma_change_leader_portrait_ayb = {
 					event_target:uma_is_leader_silent_suzuka = {
 						change_leader_portrait = 31c
 						remove_leader_flag = uma_portrait_umastar
 					}
 				}
-
 				uma_change_leader_portrait_agnes = {
 					event_target:uma_is_leader_tachyon = {
 						change_leader_portrait = 30c
@@ -1127,14 +1206,12 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_change_leader_portrait_cheval = {
 					event_target:uma_is_leader_cheval_grand = {
 						change_leader_portrait = 76d
 						set_leader_flag = uma_portrait_bocz
 					}
 				}
-
 			}
 		}
 	}
@@ -1148,7 +1225,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_change_leader_portrait_cheval = {
 					event_target:uma_is_leader_cheval_grand = {
 						change_leader_portrait = 76f
@@ -1169,14 +1245,12 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_change_leader_portrait_ayb = {
 					event_target:uma_is_leader_silent_suzuka = {
 						change_leader_portrait = 31e
 						set_leader_flag = uma_portrait_umastar
 					}
 				}
-
 				uma_change_leader_portrait_agnes = {
 					event_target:uma_is_leader_tachyon = {
 						change_leader_portrait = 30e
@@ -1199,7 +1273,6 @@ country_event = {
 	desc = uma_bg.25.desc
 	is_triggered_only = yes
 	picture = GFX_evt_uma_satono_school
-
 	option = {
 		name = uma_bg.25.a
 		hidden_effect = {
@@ -1211,7 +1284,6 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = uma_direct_recruit_scientist
 		}
-
 	}
 	option = {
 		name = uma_bg.25.c
@@ -1219,7 +1291,6 @@ country_event = {
 			set_country_flag = uma_direct_recruit_commander
 		}
 	}
-
 	after = {
 		country_event = {
 			id = uma_bg.28
@@ -1227,31 +1298,26 @@ country_event = {
 	}
 }
 
-
 country_event = {
 	id = uma_bg.28
 	title = uma_bg.26.title
 	desc = uma_bg.26.desc
 	is_triggered_only = yes
 	picture = GFX_evt_uma_satono_school
-
 	option = {
 		name = uma_bg.26.a
 		custom_tooltip = uma_bg.26.a.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
 							leader_class = official
 						}
-
 						change_leader_portrait = 29d
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1260,7 +1326,6 @@ country_event = {
 						change_leader_portrait = 29d
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1272,14 +1337,12 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = uma_bg.26.b
 		custom_tooltip = uma_bg.26.b.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1288,7 +1351,6 @@ country_event = {
 						change_leader_portrait = 60d
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1297,7 +1359,6 @@ country_event = {
 						change_leader_portrait = 60d
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1308,16 +1369,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.c
 		custom_tooltip = uma_bg.26.c.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1326,7 +1384,6 @@ country_event = {
 						change_leader_portrait = 76d
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1335,7 +1392,6 @@ country_event = {
 						change_leader_portrait = 76d
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1346,16 +1402,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.d
 		custom_tooltip = uma_bg.26.d.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1364,7 +1417,6 @@ country_event = {
 						change_leader_portrait = 105d
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1373,7 +1425,6 @@ country_event = {
 						change_leader_portrait = 105d
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1384,16 +1435,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.e
 		custom_tooltip = uma_bg.26.e.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1402,7 +1450,6 @@ country_event = {
 						change_leader_portrait = 106d
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1411,7 +1458,6 @@ country_event = {
 						change_leader_portrait = 106d
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1422,16 +1468,14 @@ country_event = {
 				}
 			}
 		}
-
 	}
-###
+	###
 	option = {
 		name = uma_bg.26.f
 		custom_tooltip = uma_bg.26.f.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1440,7 +1484,6 @@ country_event = {
 						change_leader_portrait = 26e
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1449,7 +1492,6 @@ country_event = {
 						change_leader_portrait = 26e
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1460,16 +1502,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.g
 		custom_tooltip = uma_bg.26.g.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1478,7 +1517,6 @@ country_event = {
 						change_leader_portrait = 30e
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1487,7 +1525,6 @@ country_event = {
 						change_leader_portrait = 30e
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1498,16 +1535,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.h
 		custom_tooltip = uma_bg.26.h.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1516,7 +1550,6 @@ country_event = {
 						change_leader_portrait = 31e
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1525,7 +1558,6 @@ country_event = {
 						change_leader_portrait = 31e
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1536,16 +1568,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.i
 		custom_tooltip = uma_bg.26.i.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1554,7 +1583,6 @@ country_event = {
 						change_leader_portrait = 82e
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1563,7 +1591,6 @@ country_event = {
 						change_leader_portrait = 82e
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1574,16 +1601,13 @@ country_event = {
 				}
 			}
 		}
-
 	}
-
 	option = {
 		name = uma_bg.26.j
 		custom_tooltip = uma_bg.26.j.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1592,7 +1616,6 @@ country_event = {
 						change_leader_portrait = 87e
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1601,7 +1624,6 @@ country_event = {
 						change_leader_portrait = 87e
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1612,16 +1634,14 @@ country_event = {
 				}
 			}
 		}
-
 	}
-###
+	###
 	option = {
 		name = uma_bg.26.k
 		custom_tooltip = uma_bg.26.k.tt
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1630,7 +1650,6 @@ country_event = {
 						change_leader_portrait = 29f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1639,7 +1658,6 @@ country_event = {
 						change_leader_portrait = 29f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1650,7 +1668,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 	option = {
 		name = uma_bg.26.l
@@ -1658,7 +1675,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1667,7 +1683,6 @@ country_event = {
 						change_leader_portrait = 87f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1676,7 +1691,6 @@ country_event = {
 						change_leader_portrait = 87f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1687,7 +1701,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 	option = {
 		name = uma_bg.26.m
@@ -1695,7 +1708,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1704,7 +1716,6 @@ country_event = {
 						change_leader_portrait = 88f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1713,7 +1724,6 @@ country_event = {
 						change_leader_portrait = 88f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1724,7 +1734,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 	option = {
 		name = uma_bg.26.n
@@ -1732,7 +1741,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1741,7 +1749,6 @@ country_event = {
 						change_leader_portrait = 92f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1750,7 +1757,6 @@ country_event = {
 						change_leader_portrait = 92f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1761,7 +1767,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 	option = {
 		name = uma_bg.26.o
@@ -1769,7 +1774,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1778,7 +1782,6 @@ country_event = {
 						change_leader_portrait = 102f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1787,7 +1790,6 @@ country_event = {
 						change_leader_portrait = 102f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1798,7 +1800,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 	option = {
 		name = uma_bg.26.p
@@ -1806,7 +1807,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1815,7 +1815,6 @@ country_event = {
 						change_leader_portrait = 58f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1824,7 +1823,6 @@ country_event = {
 						change_leader_portrait = 58f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1835,7 +1833,6 @@ country_event = {
 				}
 			}
 		}
-
 	}
 	option = {
 		name = uma_bg.26.q
@@ -1843,7 +1840,6 @@ country_event = {
 		hidden_effect = {
 			switch = {
 				trigger = has_country_flag
-
 				uma_direct_recruit_official = {
 					random_pool_leader = {
 						limit = {
@@ -1852,7 +1848,6 @@ country_event = {
 						change_leader_portrait = 76f
 					}
 				}
-
 				uma_direct_recruit_scientist = {
 					random_pool_leader = {
 						limit = {
@@ -1861,7 +1856,6 @@ country_event = {
 						change_leader_portrait = 76f
 					}
 				}
-
 				uma_direct_recruit_commander = {
 					random_pool_leader = {
 						limit = {
@@ -1873,7 +1867,6 @@ country_event = {
 			}
 		}
 	}
-
 	after = {
 		remove_country_flag = uma_direct_recruit_official
 		remove_country_flag = uma_direct_recruit_scientist
@@ -1881,23 +1874,19 @@ country_event = {
 	}
 }
 
-
 planet_event = {
 	id = uma_bg.29
 	hide_window = yes
 	is_triggered_only = yes
-
 	pre_triggers = {
 		has_owner = yes
 	}
-
 	trigger = {
 		exists = leader
 		leader = {
 			has_trait = leader_trait_tianming2_general
 		}
 	}
-
 	immediate = {
 		export_trigger_value_to_variable = {
 			trigger = count_planet_army
@@ -1916,19 +1905,16 @@ planet_event = {
 	}
 }
 
-
 country_event = {
 	id = uma_bg.30
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_policy_flag = uma_auto_species_merge_on
 		NOT = {
 			has_policy_flag = uma_auto_species_merge_off
 		}
 	}
-
 	immediate = {
 		log = "UMA AUTO SUB-SPECIES MERGE TRIGGERED AT [GetDate]"
 		every_owned_pop_group = {
@@ -1938,10 +1924,30 @@ country_event = {
 				}
 				is_species_class = umamusume
 			}
-
-			modify_species = {
-				species = This.owner_main_species
-				base = This.species
+			if = {
+				limit = {
+					owner_main_species = {
+						has_trait = trait_uma_new_bottle_but_old_wine
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+					remove_trait = trait_uma_new_bottle_but_old_wine
+				}
+			}
+			else_if = {
+				limit = {
+					owner_main_species = {
+						NOT = {
+							has_trait = trait_uma_new_bottle_but_old_wine
+						}
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+				}
 			}
 		}
 		every_owned_pop_group = {
@@ -1949,11 +1955,30 @@ country_event = {
 				has_trait = trait_uma_new_bottle_but_old_wine
 				is_species_class = umamusume
 			}
-
-			modify_species = {
-				species = This.owner_main_species
-				base = This.species
-				add_trait = trait_uma_new_bottle_but_old_wine
+			if = {
+				limit = {
+					owner_main_species = {
+						has_trait = trait_uma_new_bottle_but_old_wine
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+				}
+			}
+			else_if = {
+				limit = {
+					owner_main_species = {
+						NOT = {
+							has_trait = trait_uma_new_bottle_but_old_wine
+						}
+					}
+				}
+				modify_species = {
+					species = This.owner_main_species
+					base = This.species
+					add_trait = trait_uma_new_bottle_but_old_wine
+				}
 			}
 		}
 	}
@@ -1964,11 +1989,9 @@ country_event = {
 	id = uma_bg.31
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		has_cosmic_storms_dlc = yes
 	}
-
 	immediate = {
 		random_system_within_border = {
 			create_cosmic_storm = {
@@ -1984,13 +2007,9 @@ country_event = {
 	id = uma_bg.32
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
-
 	}
-
 	immediate = {
-
 		every_owned_pop_group = {
 			limit = {
 				OR = {
@@ -1999,19 +2018,16 @@ country_event = {
 					has_trait = uma_trait_ap2_realm_power_3
 					has_trait = uma_trait_ap2_realm_power_4
 					has_trait = uma_trait_ap2_realm_power_5
-
 					has_trait = uma_trait_ap2_realm_speed_1
 					has_trait = uma_trait_ap2_realm_speed_2
 					has_trait = uma_trait_ap2_realm_speed_3
 					has_trait = uma_trait_ap2_realm_speed_4
 					has_trait = uma_trait_ap2_realm_speed_5
-
 					has_trait = uma_trait_ap2_realm_stamina_1
 					has_trait = uma_trait_ap2_realm_stamina_2
 					has_trait = uma_trait_ap2_realm_stamina_3
 					has_trait = uma_trait_ap2_realm_stamina_4
 					has_trait = uma_trait_ap2_realm_stamina_5
-
 					has_trait = uma_trait_ap2_realm_wisdom_1
 					has_trait = uma_trait_ap2_realm_wisdom_2
 					has_trait = uma_trait_ap2_realm_wisdom_3
@@ -2019,10 +2035,12 @@ country_event = {
 					has_trait = uma_trait_ap2_realm_wisdom_5
 				}
 			}
-
 			species = {
 				Root = {
-					change_dominant_species = { species = Prev change_all = yes }
+					change_dominant_species = {
+						species = Prev
+						change_all = yes
+					}
 				}
 			}
 		}
@@ -2035,7 +2053,6 @@ country_event = {
 	id = uma_bg.33
 	hide_window = yes
 	is_triggered_only = yes
-
 	trigger = {
 		FromFrom = {
 			any_owned_ship = {
@@ -2044,7 +2061,6 @@ country_event = {
 			is_in_combat = yes
 		}
 	}
-
 	immediate = {
 		random_list = {
 			6 = {
@@ -2057,17 +2073,14 @@ country_event = {
 						value = 0.6
 						which = uma_bg33_count_total_ship_num
 					}
-
 					while = {
 						count = uma_bg33_count_total_ship_num
-
 						random_owned_ship = {
-							reduce_shield = 100000 #All reduce
+							reduce_shield = 100000							#All reduce
 						}
 					}
 				}
 			}
-
 			4 = {
 				Root = {
 					add_resource = {
@@ -2077,15 +2090,213 @@ country_event = {
 			}
 		}
 	}
-
 	after = {
 		FromFromFrom = {
 			clear_variable = uma_bg33_count_total_ship_num
 		}
-
 		country_event = {
 			id = uma_bg.33
 			days = 20
+		}
+	}
+}
+
+country_event = {
+	id = uma_bg.34
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		switch = {
+			trigger = has_country_flag
+			uma_mmu_vc_m85 = {
+				add_modifier = {
+					modifier = uma_vc_m85_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m75 = {
+				add_modifier = {
+					modifier = uma_vc_m75_modifier
+				}
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m65 = {
+				add_modifier = {
+					modifier = uma_vc_m65_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m55 = {
+				add_modifier = {
+					modifier = uma_vc_m55_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m45 = {
+				add_modifier = {
+					modifier = uma_vc_m45_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_m25 = {
+				add_modifier = {
+					modifier = uma_vc_m25_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_p150 = {
+				add_modifier = {
+					modifier = uma_vc_p150_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_m85_modifier
+				remove_modifier = uma_vc_p200_modifier
+			}
+			uma_mmu_vc_p200 = {
+				add_modifier = {
+					modifier = uma_vc_p200_modifier
+				}
+				remove_modifier = uma_vc_m75_modifier
+				remove_modifier = uma_vc_m65_modifier
+				remove_modifier = uma_vc_m55_modifier
+				remove_modifier = uma_vc_m45_modifier
+				remove_modifier = uma_vc_m25_modifier
+				remove_modifier = uma_vc_p150_modifier
+				remove_modifier = uma_vc_m85_modifier
+			}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = uma_bg.35
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_bg.35
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_country_flag = uma_mmu_vc_m85_cost
+			has_country_flag = uma_mmu_vc_m75_cost
+			has_country_flag = uma_mmu_vc_m65_cost
+			has_country_flag = uma_mmu_vc_m55_cost
+			has_country_flag = uma_mmu_vc_m45_cost
+			has_country_flag = uma_mmu_vc_m25_cost
+			has_country_flag = uma_mmu_vc_mp0_cost
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_country_flag
+
+			uma_mmu_vc_m85_cost = {
+				add_modifier = {
+					modifier = uma_vc_m85_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m75_cost = {
+				add_modifier = {
+					modifier = uma_vc_m75_modifier_cost
+				}
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m65_cost = {
+				add_modifier = {
+					modifier = uma_vc_m65_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m55_cost = {
+				add_modifier = {
+					modifier = uma_vc_m55_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m45_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+
+			}
+			uma_mmu_vc_m45_cost = {
+				add_modifier = {
+					modifier = uma_vc_m45_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m85_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
+			uma_mmu_vc_m25_cost = {
+				add_modifier = {
+					modifier = uma_vc_m25_modifier_cost
+				}
+				remove_modifier = uma_vc_m75_modifier_cost
+				remove_modifier = uma_vc_m65_modifier_cost
+				remove_modifier = uma_vc_m55_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+				remove_modifier = uma_vc_m25_modifier_cost
+			}
 		}
 	}
 }

@@ -531,17 +531,14 @@ country_event = {
 country_event = {
 	id = uma_threegodness_rd.5
 	hide_window = yes
-#	is_triggered_only = yes
+	is_triggered_only = yes
 
 	trigger = {
 		any_planet_within_border = {
 			is_colony = yes
 			OR = {
-				has_building = building_uma_tg_alloys_maker_Automatic_2
-				has_building = building_uma_tg_alloys_maker_Automatic
-				has_building = building_uma_tg_custom_goods_productor
-				has_building = building_uma_tg_custom_goods_productor_2
-				has_building = building_uma_tg_industrial_complex
+				has_building = building_uma_tg_planet_energy_extractor
+				has_building = building_uma_tg_planet_energy_extractor_2
 			}
 		}
 	}
@@ -551,172 +548,24 @@ country_event = {
 			resource = energy
 			variable = uma_tgrd_energy_stockpile
 		}
-		export_resource_stockpile_to_variable = {
-			resource = minerals
-			variable = uma_tgrd_minerals_stockpile
-		}
-		export_resource_stockpile_to_variable = {
-			resource = food
-			variable = uma_tgrd_foods_stockpile
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = uma_crystal_carrot
-			variable = uma_tgrd_uma_crystal_carrot_stockpile
-		}
 
 		export_resource_maximum_to_variable = {
 			resource = energy
 			variable = uma_tgrd_energy_maxiume
 		}
 
-		export_resource_maximum_to_variable = {
-			resource = uma_crystal_carrot
-			variable = uma_tgrd_uma_crystal_carrot_maxiume
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = consumer_goods
-			variable = uma_tgrd_consumer_goods_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = consumer_goods
-			variable = uma_tgrd_consumer_goods_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = alloys
-			variable = uma_tgrd_alloys_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = alloys
-			variable = uma_tgrd_alloys_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = volatile_motes
-			variable = uma_tgrd_motes_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = volatile_motes
-			variable = uma_tgrd_motes_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = exotic_gases
-			variable = uma_tgrd_gas_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = exotic_gases
-			variable = uma_tgrd_gas_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = rare_crystals
-			variable = uma_tgrd_r_crystal_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = rare_crystals
-			variable = uma_tgrd_r_crystal_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = sr_living_metal
-			variable = uma_tgrd_living_metal_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = sr_living_metal
-			variable = uma_tgrd_living_metal_stockpile
-		}
-
-		export_resource_maximum_to_variable = {
-			resource = sr_dark_matter
-			variable = uma_tgrd_darkm_maxiume
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = sr_dark_matter
-			variable = uma_tgrd_darkm_stockpile
-		}
-
-
-		if = {
+		every_owned_planet = {
 			limit = {
+				is_colony = yes
 				OR = {
-					is_variable_set = uma_tgrd_alloys_stockpile
-					is_variable_set = uma_tgrd_consumer_goods_stockpile
-					is_variable_set = uma_tgrd_motes_stockpile
-					is_variable_set = uma_tgrd_gas_stockpile_stockpile
-					is_variable_set = uma_tgrd_r_crystal_stockpile
-					is_variable_set = uma_tgrd_living_metal_stockpile
-					is_variable_set = uma_tgrd_darkm_stockpile
+					has_building = building_uma_tg_planet_energy_extractor
+					has_building = building_uma_tg_planet_energy_extractor_2
 				}
 			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = alloys
-			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = consumer_goods
-			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = motes
-			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = gas
-			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = r_crystal
-			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = living_metal
-			}
-			uma_calculate_tg_produce_num = {
-				RESOURCE = darkm
-			}
-
-			every_owned_planet = {
-				limit = {
-					is_colony = yes
-					OR = {
-						has_building = building_uma_tg_alloys_maker_Automatic_2
-						has_building = building_uma_tg_alloys_maker_Automatic
-						has_building = building_uma_tg_custom_goods_productor
-						has_building = building_uma_tg_custom_goods_productor_2
-						has_building = building_uma_tg_industrial_complex
-					}
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = alloys
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = consumer_goods
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = motes
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = gas
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = r_crystal
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = living_metal
-				}
-				uma_trans_tg_produce_num_to_planet = {
-					RESOURCE = darkm
-				}
-
-				uma_tg_produce_handling_capacities_approximate = yes
+			uma_trans_tg_produce_num_to_planet = {
+				RESOURCE = energy
 			}
 		}
-
 	}
 }
 

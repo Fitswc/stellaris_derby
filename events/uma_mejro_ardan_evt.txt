@@ -44,6 +44,12 @@ astral_rift_event = {
 	picture =GFX_evt_astral_rift_crystal_3#placeholder
 	difficulty = @astral_rift_initial_difficulty
 
+	trigger = {
+		explorer = {
+			is_ai = no
+		}
+	}
+
 	option = {
 		name = uma_mejro_ardan.1.a
 		set_next_astral_rift_event = {

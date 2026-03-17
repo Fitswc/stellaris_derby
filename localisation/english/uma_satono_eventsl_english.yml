@@ -46,17 +46,18 @@
  uma_satono.10.desc: "After a few days of us pulling back and forth, the final result is:\nNeither side could agree, the Satono family was fed up with us because we disagreed, and Miss Diamond refused to contact us because we were biased in favor of her family."
  uma_satono.10.a: "It turns out sometimes it's not a good idea to reconcile the two sides"
  uma_satono.31.title: "Satono Diamond"
- uma_satono.31.desc1: "Huh? Is it from the student council, dropping off new ingredients?"
- uma_satono.31.desc2: "Lizard tail... It's the one that developed my food radar, huh? The first time I tried it?"
- uma_satono.31.desc3: "Little round seedling, what a lovely name."
- uma_satono.31.desc4: "A game company? What game company?"
- uma_satono.31.desc5: "Delicious!  but almost something... What else would you add?"
+ uma_satono.31.desc1: "Huh? Is it from the student council, dropping off new ingredients?\n\n§tNow, $uma_satono_af$ we have: [Root.uma_satono_af]§!"
+ uma_satono.31.desc2: "Lizard tail... It's the one that developed my food radar, huh? The first time I tried it?\n\n§tNow, $uma_satono_af$ we have: [Root.uma_satono_af]§!"
+ uma_satono.31.desc3: "Little round seedling, what a lovely name.\n\n§tNow, $uma_satono_af$ we have: [Root.uma_satono_af]§!"
+ uma_satono.31.desc4: "A game company? What game company?\n\n§tNow, $uma_satono_af$ we have: [Root.uma_satono_af]§!"
+ uma_satono.31.desc5: "Delicious!  but almost something... What else would you add?\n\n§tNow, $uma_satono_af$ we have: [Root.uma_satono_af]§!"
  uma_satono.31.b: "I want you to develop a new recipe"
  uma_top_food_d: "Top Food"
  uma_satono.31.c: "We'd like you to doing a show with our leader."
  uma_satono.40.desc: "Ah, it's a new ingredient. I'll start right away!"
  uma_satono_food_update: "Develop new dishes"
- uma_satono.32.desc: "All right. Who's that?"
+ #uma_satono.32.desc: "All right. Who's that?"
+ uma_satono.32.desc:0 "All right!"
  uma_satono.32.ogr: "Oguri Cap"
  uma_satono.32.sky: "Seiun Sky"
  uma_satono.32.dig: "Agnes Digital"
@@ -110,12 +111,14 @@
  situation_uma_top_food_type: "Researching"
  situation_uma_top_food_desc: "Satono Diamond is working on a new recipe using the shape ingredients we sent. I believe we will soon be able to offer these new dishes to our Umamusume friends"
   
- uma_satono_topfood_fail_one: "We don't have enough exploration points Now we have $uma_satono_af$, Need 3\nExploration point can get from colony or survey"
+ uma_satono_topfood_fail_one: "We don't have enough exploration points Now we have [Root.uma_satono_af], Need 2\nExploration point can get from colony or survey"
  uma_satono_topfood_fail_two: "Diamond is already working on new ingredients!"
-  
+
+ uma_satono_topfood_fail_three: "We don't have enough exploration points Now we have [Root.uma_satono_af], Need 4\nExploration point can get from colony or survey"
  mod_leaders_society_research_upkeep_mult: "Leader Social Research Points:"
   
-  
+  uma_satono_af: "Planet exploration value"
+  uma_satono.31.c.tt: "§YIt will add 1500 exp to all leaders§!, and consume 4 $uma_satono_af$"
   
   
   

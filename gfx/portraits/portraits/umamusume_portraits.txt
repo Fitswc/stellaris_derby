@@ -66,7 +66,7 @@ portraits = {
     65a = { texturefile = "gfx/models/portraits/umamusume/65a TT.DDS" }
     66a = { texturefile = "gfx/models/portraits/umamusume/66a SD.DDS" }
     67a = { texturefile = "gfx/models/portraits/umamusume/67a KB.DDS" }
-    68a = { texturefile = "gfx/models/portraits/umamusume/68b SS.DDS"}
+    68a = { texturefile = "gfx/models/portraits/umamusume/68a SS.DDS"}
     69a = { texturefile = "gfx/models/portraits/umamusume/69a YM.DDS" }
     71a = { texturefile = "gfx/models/portraits/umamusume/71a SR.DDS" }
     72a = { texturefile = "gfx/models/portraits/umamusume/72a NT.DDS" }
@@ -112,6 +112,14 @@ portraits = {
     116a = { textureFile = "gfx/models/portraits/umamusume/116a UK.DDS"}
     117a = {textureFile = "gfx/models/portraits/umamusume/117a BEL.DDS"}
     118a = {textureFile = "gfx/models/portraits/umamusume/118a DAC.DDS"}
+    119a = { textureFile = "gfx/models/portraits/umamusume/119a GA.DDS"}
+    120a = { textureFile = "gfx/models/portraits/umamusume/120a LOY.DDS"}
+    121a = { textureFile = "gfx/models/portraits/umamusume/121a CRG.DDS"}
+    122a = { textureFile = "gfx/models/portraits/umamusume/122a CBR.DDS"}
+    123a = { textureFile = "gfx/models/portraits/umamusume/123a LL.DDS"}
+
+    125a = { textureFile = "gfx/models/portraits/umamusume/125a ALE.DDS"}
+    126a = { textureFile = "gfx/models/portraits/umamusume/126a SCO.DDS"}
 
     01b = { texturefile = "gfx/models/portraits/umamusume/01b SW.DDS" }
     02b = { texturefile = "gfx/models/portraits/umamusume/02b SS.DDS" }
@@ -242,6 +250,13 @@ portraits = {
     127b = { textureFile = "gfx/models/portraits/umamusume/126b SCO.DDS"}
     128b = { textureFile = "gfx/models/portraits/umamusume/128b SGO.DDS"}
     129b = { textureFile = "gfx/models/portraits/umamusume/129b KIK.DDS"}
+    130b = { textureFile = "gfx/models/portraits/umamusume/130b FOY.DDS"}
+    131b = { textureFile = "gfx/models/portraits/umamusume/131b MLL.DDS"}
+    132b = { textureFile = "gfx/models/portraits/umamusume/132b EPHA.DDS"}
+    133b = { textureFile = "gfx/models/portraits/umamusume/133b LGT.DDS"}
+    134b = { textureFile = "gfx/models/portraits/umamusume/134b VD.DDS"}
+    135b = { textureFile = "gfx/models/portraits/umamusume/135b RKD.DDS"}
+    136b = { textureFile = "gfx/models/portraits/umamusume/136b RUS.DDS"}
 
     01c = { texturefile = "gfx/models/portraits/umamusume/01c SW.DDS" }
     02c = { texturefile = "gfx/models/portraits/umamusume/02c SS.DDS" }
@@ -360,10 +375,17 @@ portraits = {
     123c = { texturefile = "gfx/models/portraits/umamusume/123c LL.DDS"}
     124c = { texturefile = "gfx/models/portraits/umamusume/124c FNM.DDS"}
     125c = { texturefile = "gfx/models/portraits/umamusume/125c ALE.DDS"}
-
+    126c = { texturefile = "gfx/models/portraits/umamusume/126c SCO.DDS"}
     127c = { texturefile = "gfx/models/portraits/umamusume/127c RDE.DDS"}
     128c = { texturefile = "gfx/models/portraits/umamusume/128c SGO.DDS"}
     129c = { texturefile = "gfx/models/portraits/umamusume/129c KIK.DDS"}
+    130c = { textureFile = "gfx/models/portraits/umamusume/130c FOY.DDS"}
+    131c = { textureFile = "gfx/models/portraits/umamusume/131c MLL.DDS"}
+    132c = { textureFile = "gfx/models/portraits/umamusume/132c EPHA.DDS"}
+    133c = { textureFile = "gfx/models/portraits/umamusume/133c LGT.DDS"}
+    134c = { textureFile = "gfx/models/portraits/umamusume/134c VD.DDS"}
+    135c = { textureFile = "gfx/models/portraits/umamusume/135c RKD.DDS"}
+    136c = { textureFile = "gfx/models/portraits/umamusume/136c RUS.DDS"}
 
 
     #Boc'z
@@ -454,6 +476,7 @@ portraits = {
     BOURBON_COMM = { texturefile = "gfx/models/portraits/umamusume/K_glx.DDS" }
     BOURBON_HUM = { texturefile = "gfx/models/portraits/umamusume/K_glx_hum.DDS" }
     GLX_ZF = { texturefile = "gfx/models/portraits/umamusume/Glx_ZF.dds" }
+    F_Trail = { texturefile = "gfx/models/portraits/umamusume/F_trail.DDS" }
 }
 
 portrait_groups = {
@@ -570,7 +593,13 @@ portrait_groups = {
                     116a
                     117a
                     118a
-
+                    119a
+                    120a
+                    121a
+                    122a
+                    123a
+                    125a
+                    126a
 
                 }
             }
@@ -701,6 +730,13 @@ portrait_groups = {
                     127b
                     128b
                     129b
+                    130b
+                    131b
+                    132b
+                    133b
+                    134b
+                    135b
+                    136b
                 }
             }
         }
@@ -830,6 +866,13 @@ portrait_groups = {
                     127b
                     128b
                     129b
+                    130b
+                    131b
+                    132b
+                    133b
+                    134b
+                    135b
+                    136b
                 }
             }
         }
@@ -946,6 +989,13 @@ portrait_groups = {
                     116a
                     117a
                     118a
+                    119a
+                    120a
+                    121a
+                    122a
+                    123a
+                    125a
+                    126a
                 }
             }
         }
@@ -1061,6 +1111,13 @@ portrait_groups = {
                     116a
                     117a
                     118a
+                    119a
+                    120a
+                    121a
+                    122a
+                    123a
+                    125a
+                    126a
                 }
             }
         }
@@ -1189,9 +1246,36 @@ portrait_groups = {
                     123c
                     124c
                     125c
+                    126c
                     127c
                     128c
                     129c
+                    130c
+                    131c
+                    132c
+                    133c
+                    134c
+                    135c
+                    136c
+
+                    ##
+                    29d
+                    60d
+                    76d
+                    105d
+                    106d
+                    26e
+                    30e
+                    31e
+                    82e
+                    87e
+                    29f
+                    58f
+                    76f
+                    87f
+                    88f
+                    92f
+                    102f
                 }
             }
         }
@@ -1321,6 +1405,13 @@ portrait_groups = {
                     127b
                     128b
                     129b
+                    130b
+                    131b
+                    132b
+                    133b
+                    134b
+                    135b
+                    136b
                 }
             }
         }
@@ -1450,6 +1541,13 @@ portrait_groups = {
                     127b
                     128b
                     129b
+                    130b
+                    131b
+                    132b
+                    133b
+                    134b
+                    135b
+                    136b
                 }
             }
         }
@@ -1572,9 +1670,36 @@ portrait_groups = {
                     123c
                     124c
                     125c
+                    126c
                     127c
                     128c
                     129c
+                    130c
+                    131c
+                    132c
+                    133c
+                    134c
+                    135c
+                    136c
+
+                    ##
+                    29d
+                    60d
+                    76d
+                    105d
+                    106d
+                    26e
+                    30e
+                    31e
+                    82e
+                    87e
+                    29f
+                    58f
+                    76f
+                    87f
+                    88f
+                    92f
+                    102f
                 }
             }
         }
@@ -1696,9 +1821,36 @@ portrait_groups = {
                     123c
                     124c
                     125c
+                    126c
                     127c
                     128c
                     129c
+                    130c
+                    131c
+                    132c
+                    133c
+                    134c
+                    135c
+                    136c
+
+                    ##
+                    29d
+                    60d
+                    76d
+                    105d
+                    106d
+                    26e
+                    30e
+                    31e
+                    82e
+                    87e
+                    29f
+                    58f
+                    76f
+                    87f
+                    88f
+                    92f
+                    102f
                 }
             }
         }

@@ -46,6 +46,12 @@ astral_rift_event = {
 	picture = GFX_evt_uma_cheval_outher_world
 	difficulty = @astral_rift_initial_difficulty
 
+	trigger = {
+		explorer = {
+			is_ai = no
+		}
+	}
+
 	option = {
 		name = uma_cheval.2.a
 		set_next_astral_rift_event = {

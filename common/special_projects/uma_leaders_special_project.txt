@@ -1,22 +1,17 @@
 #开始找麻酱
-
 special_project = {
 	key = "FIND_WHAT_WE_LOST"
 	days_to_research = 7200
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_society_research
-
 	event_scope = country_event
-
 	requirements = {
 	}
-
 	on_success = {
 		country_event = {
 			id = uma_never_forget.6
 		}
 	}
-
 	on_fail = {
 	}
 }
@@ -28,22 +23,17 @@ special_project = {
 	tech_department = physics_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_society_research
-
 	event_scope = country_event
-
 	requirements = {
 	}
-
 	on_success = {
 		country_event = {
 			id = uma_never_forget.8
 		}
 	}
-
 	on_fail = {
 	}
 }
-
 
 ###收集花种
 special_project = {
@@ -56,31 +46,32 @@ special_project = {
 	picture = GFX_evt_society_research
 	event_chain = uma_sky_full
 	event_scope = planet_event
-
 	requirements = {
 	}
-
 	on_success = {
 		#capital_scope = {
 		#	owner = {
-			owner = {
-				if = {
-					limit = { has_country_flag = uma_appoint_seiun_sky_as_governer }
-					country_event = {
-						id = uma_special_leader.7
-					}
+		owner = {
+			if = {
+				limit = {
+					has_country_flag = uma_appoint_seiun_sky_as_governer
 				}
-				if = {
-					limit = { has_country_flag = uma_appoint_seiun_sky_as_admiral }
-					country_event = {
-						id = uma_special_leader.8
-					}
+				country_event = {
+					id = uma_special_leader.7
 				}
 			}
+			if = {
+				limit = {
+					has_country_flag = uma_appoint_seiun_sky_as_admiral
+				}
+				country_event = {
+					id = uma_special_leader.8
+				}
+			}
+		}
 		#	}
 		#}
 	}
-
 	on_fail = {
 	}
 }
@@ -89,18 +80,14 @@ special_project = {
 special_project = {
 	key = "TACHYON_COFFEE"
 	days_to_research = 60
-
 	tech_department = society_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_society_research
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
 	}
-
 	on_success = {
 		owner = {
 			owner = {
@@ -110,7 +97,6 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 	}
 }
@@ -118,18 +104,14 @@ special_project = {
 special_project = {
 	key = "TACHYON_COFFEE_PRE_CIVILS"
 	days_to_research = 60
-
 	tech_department = society_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_society_research
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
 	}
-
 	on_success = {
 		owner = {
 			owner = {
@@ -139,7 +121,6 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 	}
 }
@@ -151,9 +132,7 @@ special_project = {
 	event_chain = uma_glx_full
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_uma_ano_bour_forest
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_military = 15
 	}
@@ -164,7 +143,7 @@ special_project = {
 	}
 	on_success = {
 		destroy_fleet = event_target:uma_bou_fleet_will_destory
-#		destroy_ship = event_target:uma_bou_fleet_will_destory
+		#		destroy_ship = event_target:uma_bou_fleet_will_destory
 		event_target:uma_bourbon_arc_anomaly_here = {
 			change_pc = pc_nuked
 		}
@@ -183,9 +162,7 @@ special_project = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_decryption
 	event_chain = uma_glx_full
-
 	event_scope = planet_event
-
 	requirements = {
 	}
 	on_success = {
@@ -204,9 +181,7 @@ special_project = {
 	picture = GFX_evt_decryption
 	tech_department = society_technology
 	event_chain = uma_glx_full
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
@@ -218,6 +193,7 @@ special_project = {
 		}
 	}
 }
+
 ##米波炸球Part2
 special_project = {
 	key = "UMA_BOU_BOOM_PLANET_ARC"
@@ -225,19 +201,17 @@ special_project = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_sentry_guns
 	event_chain = uma_glx_full
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_military = 15
 	}
 	on_success = {
 		destroy_fleet = event_target:uma_bourbon_this_is_fleet
-#		destroy_ship = event_target:uma_bou_fleet_will_destory
+		#		destroy_ship = event_target:uma_bou_fleet_will_destory
 		event_target:uma_bourbon_arc_anomaly_here = {
 			change_pc = pc_nuked
 		}
-		destroy_archaeological_site = event_target:uma_bourbon_arc_site_here ##????
+		destroy_archaeological_site = event_target:uma_bourbon_arc_site_here		##????
 		owner = {
 			country_event = {
 				id = uma_bour_arc.5
@@ -253,7 +227,6 @@ special_project = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_intelligence_report
 	event_scope = country_event
-
 	requirements = {
 	}
 	on_success = {
@@ -270,9 +243,7 @@ special_project = {
 	picture = GFX_evt_engineering_research
 	event_chain = uma_glx_pt_full
 	event_scope = country_event
-
 	requirements = {
-
 	}
 	on_success = {
 		country_event = {
@@ -287,11 +258,8 @@ special_project = {
 	event_chain = uma_glx_pt_full
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_engineering_research
-
 	event_scope = country_event
-
 	requirements = {
-
 	}
 	on_success = {
 		country_event = {
@@ -303,17 +271,13 @@ special_project = {
 special_project = {
 	key = "UMA_LAND_IN_FR_UMA_SHIP"
 	days_to_research = 100
-
 	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
 	picture = GFX_evt_atmospheric_flight
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_transport >= 1
 		leader = commander
 	}
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -323,10 +287,9 @@ special_project = {
 	}
 }
 
-
 special_project = {
 	key = "UMA_FINE_RESEARH"
-#	days_to_research = 360
+	#	days_to_research = 360
 	icon = "gfx/interface/icons/situation_log/situation_log_combat.dds"
 	picture = GFX_evt_physics_research
 	event_chain = uma_fm_full
@@ -334,11 +297,7 @@ special_project = {
 	cost = {
 		base = 3000
 	}
-
 	event_scope = country_event
-
-
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -355,11 +314,7 @@ special_project = {
 	picture = GFX_evt_uma_satono_school
 	tech_department = society_technology
 	event_chain = uma_fm_full
-
 	event_scope = country_event
-
-
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -376,12 +331,7 @@ special_project = {
 	picture = GFX_evt_uma_satono_school
 	tech_department = society_technology
 	event_chain = uma_fm_full
-
-
 	event_scope = country_event
-
-
-
 	on_success = {
 		hidden_effect = {
 			owner = {
@@ -403,20 +353,15 @@ special_project = {
 
 special_project = {
 	key = "UMA_FINE_ANA"
-#	days_to_research = 240
+	#	days_to_research = 240
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_physics_research
 	tech_department = engineering_technology
 	event_chain = uma_fm_full
-
 	cost = {
 		base = 100
 	}
-
 	event_scope = country_event
-
-
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -426,24 +371,16 @@ special_project = {
 	}
 }
 
-
-
 special_project = {
 	key = "UMA_TRADOR_SOE_Millitry"
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_physics_research
-
-
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_transport >= 1
 		leader = commander
 	}
-
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -453,22 +390,16 @@ special_project = {
 	}
 }
 
-
 special_project = {
 	key = "UMA_TRADOR_SOE_scientist"
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_landing_ship_2
-
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
 	}
-
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -483,14 +414,11 @@ special_project = {
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
 	picture = GFX_evt_stellarites
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
 	}
-
 	on_success = {
 		ship_event = {
 			id = uma_leviathan.4
@@ -503,13 +431,10 @@ special_project = {
 	days_to_research = 60
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_astral_rift_crystal_3
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_constructor = 1
 	}
-
 	on_success = {
 		ship_event = {
 			id = uma_leviathan.14
@@ -522,15 +447,12 @@ special_project = {
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
 	picture = GFX_evt_uma_fz_double_island
-
-#	event_scope = planet_event
+	#	event_scope = planet_event
 	event_scope = country_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
 	}
-
 	on_success = {
 		country_event = {
 			id = uma_fz.3
@@ -539,19 +461,15 @@ special_project = {
 	}
 }
 
-
 special_project = {
 	key = "UMA_SAVE_THE_PIG_FROM_WATER"
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_ship.dds"
 	picture = GFX_evt_uma_fz_beach
-
 	event_scope = country_event
-
 	requirements = {
 		shipclass_military >= 1
 	}
-
 	on_success = {
 		country_event = {
 			id = uma_fz.5
@@ -560,21 +478,16 @@ special_project = {
 	}
 }
 
-
 special_project = {
 	key = "UMA_SWEEPY_HEAT_BUILDING"
 	days_to_research = 30
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_uma_fz_beach
 	event_chain = uma_sweepy_heat_building
-
 	event_scope = planet_event
-
 	requirements = {
 	}
-
 	on_success = {
-
 	}
 }
 
@@ -584,14 +497,10 @@ special_project = {
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_uma_fz_beach
 	event_chain = uma_sweepy_ice_from_sky
-
 	event_scope = planet_event
-
 	requirements = {
 	}
-
 	on_success = {
-
 	}
 }
 
@@ -601,14 +510,10 @@ special_project = {
 	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
 	picture = GFX_evt_uma_fz_beach
 	event_chain = uma_sweepy_strength_carrot
-
 	event_scope = planet_event
-
 	requirements = {
 	}
-
 	on_success = {
-
 	}
 }
 
@@ -637,11 +542,9 @@ special_project = {
 #	on_cancel = {
 #	}
 #}
-
-
 special_project = {
-	key = "UMA_SILENT_SUZUKA_TRANGLE_STAR" #观星
-#	days_to_research = 340
+	key = "UMA_SILENT_SUZUKA_TRANGLE_STAR"	#观星
+	#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -649,9 +552,7 @@ special_project = {
 	icon = gfx/interface/icons/situation_log/situation_log_planet.dds
 	#picture = #谢邀
 	event_chain = uma_ayb_full
-
 	event_scope = country_event
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -660,16 +561,14 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 		#空!
 	}
-
 }
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_ANA_CODE"
-#	days_to_research = 340
+	#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -677,9 +576,7 @@ special_project = {
 	icon = gfx/interface/icons/situation_log/situation_log_planet.dds
 	picture = GFX_evt_intelligence_report
 	event_chain = uma_ayb_full
-
 	event_scope = country_event
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -688,7 +585,6 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 		#空!
 	}
@@ -696,7 +592,7 @@ special_project = {
 
 special_project = {
 	key = "UMA_SILENT_SUZUKA_ANA_MACHINE"
-#	days_to_research = 340
+	#	days_to_research = 340
 	tech_department = engineering_technology
 	cost = {
 		base = 10000
@@ -705,7 +601,6 @@ special_project = {
 	picture = GFX_evt_ancient_databank
 	event_chain = uma_ayb_full
 	event_scope = country_event
-
 	on_success = {
 		owner = {
 			country_event = {
@@ -714,151 +609,138 @@ special_project = {
 			}
 		}
 	}
-
 	on_fail = {
 		#空!
 	}
-
-}
-
-
-
-special_project = {
-    key = "STUDY_SWEET"
-    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-    picture = GFX_evt_teio_hachimi
-    tech_department = society_technology
-    cost = 2000
-    event_scope = planet_event
-    event_chain = uma_tt_full
-    on_success = {
-        prev = {
-            country_event = {
-                id = uma_tokaiteio_event.4
-            }
-        }
-    }
 }
 
 special_project = {
-    key = "FOUND_WRONG_NUM"
-    tech_department = physics_technology
-    days_to_research = 360
-    event_scope = ship_event
-    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-    picture = GFX_evt_physics_research
-    event_chain = uma_tt_full
-    requirements = {
-        shipclass_science_ship = 1
-        leader = scientist
-        skill = 5
-    }
-    on_success = {
-        owner = {
-            country_event = {
-                id = uma_tokaiteio_event.1000
-            }
-        }
-    }
-}
-
-
-special_project = {
-    key = "thawing"
-    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-    picture = GFX_evt_engineering_research
-    tech_department = engineering_technology
-    cost = 20000
-    event_scope = country_event
-    event_chain = uma_tt_full
-    on_success = {
-        owner = {
-            country_event = {
-                id = uma_tokaiteio_event.100
-            }
-        }
-    }
+	key = "STUDY_SWEET"
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_teio_hachimi
+	tech_department = society_technology
+	cost = 2000
+	event_scope = planet_event
+	event_chain = uma_tt_full
+	on_success = {
+		prev = {
+			country_event = {
+				id = uma_tokaiteio_event.4
+			}
+		}
+	}
 }
 
 special_project = {
-    key = "UMA_MEJRO_ARDAN_SAVE_AD"
-    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-    picture = GFX_evt_engineering_research
-    tech_department = physics_technology
-    cost = 20000
-    event_scope = country_event
-    on_success = {
-        owner = {
-            country_event = {
-                id = uma_mejro_ardan.6
-            }
-        }
-    }
+	key = "FOUND_WRONG_NUM"
+	tech_department = physics_technology
+	days_to_research = 360
+	event_scope = ship_event
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_physics_research
+	event_chain = uma_tt_full
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_tokaiteio_event.1000
+			}
+		}
+	}
 }
 
 special_project = {
-    key = "uma_curren_whatislove"
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
-    picture = GFX_evt_engineering_research
-    tech_department = society_technology
+	key = "thawing"
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_engineering_research
+	tech_department = engineering_technology
+	cost = 20000
+	event_scope = country_event
+	event_chain = uma_tt_full
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_tokaiteio_event.100
+			}
+		}
+	}
+}
+
+special_project = {
+	key = "UMA_MEJRO_ARDAN_SAVE_AD"
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_engineering_research
+	tech_department = physics_technology
+	cost = 20000
+	event_scope = country_event
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_mejro_ardan.6
+			}
+		}
+	}
+}
+
+special_project = {
+	key = "uma_curren_whatislove"
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_engineering_research
+	tech_department = society_technology
 	cost = 6000
-
-    event_scope = country_event
-    on_success = {
-        owner = {
-            country_event = {
-                id = uma_curren.11
-            }
-        }
-    }
+	event_scope = country_event
+	on_success = {
+		owner = {
+			country_event = {
+				id = uma_curren.11
+			}
+		}
+	}
 }
 
 special_project = {
-    key = "uma_curren_build_research_dep"
-    icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
-    picture = GFX_evt_engineering_research
-    tech_department = society_technology
+	key = "uma_curren_build_research_dep"
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_engineering_research
+	tech_department = society_technology
 	cost = 0
 	days_to_research = 300
-
-    event_scope = country_event
-    on_success = {
-        owner = {
+	event_scope = country_event
+	on_success = {
+		owner = {
 			add_modifier = {
 				modifier = uma_curren_tech_ailens
 				days = -1
 			}
-
 			country_event = {
 				id = uma_curren.30
 				days = 360
 				random = 5
 			}
 		}
-    }
+	}
 }
 
 special_project = {
 	key = "uma_duramente_sp_everywhere"
 	days_to_research = 100
-
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_sabotaged_ship
-
 	event_scope = ship_event
-
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
 	}
-
 	on_success = {
 		ship_event = {
 			id = uma_duramente.3
 		}
 	}
-
 	on_fail = {
 	}
 }
@@ -866,10 +748,66 @@ special_project = {
 special_project = {
 	key = "UMA_ALE_SP_1"
 	days_to_research = 360
-
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_black_hole
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 4
+	}
+	on_success = {
+		ship_event = {
+			id = uma_ale.3
+		}
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "UMA_ALE_SP_2"
+	days_to_research = 360
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_hyper_relay
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill >= 6
+	}
+	on_success = {
+		ship_event = {
+			id = uma_ale.6
+		}
+	}
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = "UMA_MEGADREAM_MAIN_PROJECT"
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	tech_department = society_technology
+	picture = GFX_evt_uma_satono_school
+	days_to_research = 180
+	event_scope = country_event
+	on_success = {
+		country_event = {
+			id = uma_still_in_love.3
+		}
+	}
+}
+
+
+special_project = {
+	key = "UMA_FT_SP"
+	cost = 30000
+	tech_department = engineering_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_hidden_door
 
 	event_scope = ship_event
 
@@ -881,7 +819,8 @@ special_project = {
 
 	on_success = {
 		ship_event = {
-			id = uma_ale.3
+			id = uma_f_t.12
+			days = 10
 		}
 	}
 
@@ -891,24 +830,21 @@ special_project = {
 }
 
 special_project = {
-	key = "UMA_ALE_SP_2"
-	days_to_research = 360
-
+	key = "UMA_FT_SP_2"
+	cost = 30000
+	energy = 45000
 	tech_department = engineering_technology
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
-	picture = GFX_evt_sabotaged_ship
+	picture = GFX_evt_engineering_research
 
-	event_scope = ship_event
+	event_scope = country_event
 
 	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-		skill >= 6
 	}
 
 	on_success = {
-		ship_event = {
-			id = uma_ale.6
+		country_event = {
+			id = uma_f_t.13
 		}
 	}
 

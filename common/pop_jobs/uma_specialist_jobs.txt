@@ -38,7 +38,12 @@ uma_umaidol = {
 
 	planet_modifier = {
 		planet_amenities_add = 1000
-		bonus_pop_growth = 0.2
+	}
+	triggered_planet_pop_group_modifier_for_all = {
+		bonus_pop_growth = 0.5
+	}
+	triggered_planet_modifier = {
+		fake_pop_growth_mod = 0.5
 	}
 
 
@@ -204,13 +209,12 @@ uma_threegodness_knowledge_scholar = {
 	resources = {
 		category = planet_uma_threegodness_knowledge_scholar
 		produces = {
-			uma_threegodness_knowledge = 3
-			physics_research = 9
-			engineering_research = 9
-			society_research = 9
+			uma_threegodness_knowledge = 6
+#			physics_research = 9
+#			engineering_research = 9
+#			society_research = 9
 		}
 		upkeep = {
-			consumer_goods = 3
 			unity = 3
 		}
 	}
@@ -1399,7 +1403,6 @@ uma_translucer= {
 			physics_research = 9
 		}
 		upkeep = {
-
 			energy = 10
 			uma_crystal_carrot = 1
 		}

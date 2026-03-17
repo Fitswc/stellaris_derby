@@ -20,6 +20,9 @@ zone_uma_training = {
 		uma_teaching
 		urban
 		habitat_urban
+		uma_entertainment
+		entertainment
+		unity
 	}
 
 	convert_to = {
@@ -380,7 +383,7 @@ zone_uma_energy_venus = {
 	}
 
 	district_planet_modifier = {
-		pop_category_civilians_energy_produces_add = 10
+		planet_uma_racing_umamusume_energy_produces_add = 10
 	}
 
 	triggered_planet_modifier = {

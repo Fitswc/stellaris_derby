@@ -155,6 +155,7 @@ country_event = {
             country_event = {
                 id = uma_never_forget.5 days = 10
             }
+            set_country_flag = uma_never_forget.4.happened
         }
     }
 }
@@ -204,8 +205,22 @@ country_event = {
     hide_window = yes
 
     trigger = {
-        has_ascension_perk = ap_uma_zenshizenren_ap_2
-        is_ai = no
+        OR = {
+            AND = {
+                NOT = {
+                    has_civic = civic_uma_aston_machan
+                }
+                has_ascension_perk = ap_uma_zenshizenren_ap_2
+                is_ai = no
+            }
+
+            AND = {
+                has_civic = civic_uma_aston_machan
+                has_ascension_perk = ap_uma_zenshizenren_ap_2
+                is_ai = no
+                has_country_flag = uma_never_forget.4.happened
+            }
+        }
     }
     immediate = {
         country_event = {

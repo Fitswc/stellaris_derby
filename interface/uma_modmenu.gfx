@@ -115,11 +115,78 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_text_uma_donate_wechat"
-		textureFile = "gfx/interface/uma_modmenu/uma_wechat_reward.dds"
+		textureFile = "gfx/interface/uma_modmenu/uma_wechat_reward.DDS"
 	}
 
 	spriteType = {
 		name = "GFX_text_uma_donate_ko-fi"
 		textureFile = "gfx/interface/uma_modmenu/kofi.dds"
+	}
+
+######Slide
+	spriteType = {
+		name = GFX_uma_mmu_vc_slide_base
+		textureFile = "gfx/interface/uma_modmenu/uma_mmu_vc_base.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_vc_m85
+		textureFile = "gfx/interface/uma_modmenu/m85.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_m75
+		textureFile = "gfx/interface/uma_modmenu/m75.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_m65
+		textureFile = "gfx/interface/uma_modmenu/m65.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_m55
+		textureFile = "gfx/interface/uma_modmenu/m55.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_m45
+		textureFile = "gfx/interface/uma_modmenu/m45.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_m25
+		textureFile = "gfx/interface/uma_modmenu/m25.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_mp0
+		textureFile = "gfx/interface/uma_modmenu/mp0.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_p150
+		textureFile = "gfx/interface/uma_modmenu/p150.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_vc_p200
+		textureFile = "gfx/interface/uma_modmenu/p200.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_vc_arrow_under_num
+		textureFile = "gfx/interface/uma_modmenu/uma_arrow_under_num.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_pro
+		textureFile = "gfx/interface/uma_modmenu/pro.DDS"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_pro_disable
+		textureFile = "gfx/interface/uma_modmenu/pro_disable.DDS"
+	}
+
+	spriteType = {
+		name = GFX_uma_mmu_cost
+		textureFile = "gfx/interface/uma_modmenu/cost.DDS"
+		effectFile = "gfx/FX/buttonstate.shader"
+	}
+	spriteType = {
+		name = GFX_uma_mmu_cost_disable
+		textureFile = "gfx/interface/uma_modmenu/cost_disable.DDS"
 	}
 }

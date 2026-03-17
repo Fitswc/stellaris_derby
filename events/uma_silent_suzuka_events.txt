@@ -129,56 +129,19 @@ ship_event = {
 			add_resource = {
 				energy = -200
 			}
-			if = {
-				limit = {
-					has_global_flag = uma_global_game_setting_gamesystem_rs_vill
-				}
-				random_list = {
-					50 = {
-						country_event = {
-							id = uma_suzuka.5
-							days = 300
-							random = 30
-						}
-					}
-					50 = {
-						country_event = {
-							id = uma_suzuka.20
-							days = 300
-							random = 30
-						}
+			random_list = {
+				50 = {
+					country_event = {
+						id = uma_suzuka.5
+						days = 300
+						random = 30
 					}
 				}
-			}
-			if = {
-				limit = {
-					has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-				}
-				if = {
-					custom_tooltip = uma_crisis.7010.a.tp
-					limit = {
-						has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-					}
-					if = {
-						limit = {
-							has_country_flag = uma_rs_success
-						}
-						hidden_effect = {
-							country_event = {
-								id = uma_suzuka.5
-								days = 300
-								random = 30
-							}
-							uma_rs_cleanup = yes
-						}
-					}
-					else = {
-						country_event = {
-							id = uma_suzuka.20
-							days = 300
-							random = 30
-						}
-						uma_rs_cleanup = yes
+				50 = {
+					country_event = {
+						id = uma_suzuka.20
+						days = 300
+						random = 30
 					}
 				}
 			}
@@ -191,17 +154,7 @@ ship_event = {
 
 
 	after = {
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-			}
-			create_message = {
-				type = UMA_RANDOM_SYSTEM_RESULT
-				localization = UMA_RANDOM_SYSTEM_RESULT_DESC
-				days = 3
-				target = Root
-			}
-		}
+
 	}
 }
 
@@ -549,57 +502,20 @@ country_event = {
 
 	option = {
 		name = uma_suzuka.18.a
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_vill
-			}
-			random_list = {
-				50 = {
-					country_event = {
-						id = uma_suzuka.35
-						days = 30
-						random = 2
-					}
-				}
-
-				50 = {
-					country_event = {
-						id = uma_suzuka.36
-						days = 30
-						random = 2
-					}
+		random_list = {
+			50 = {
+				country_event = {
+					id = uma_suzuka.35
+					days = 30
+					random = 2
 				}
 			}
-		}
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-			}
-			if = {
-				custom_tooltip = uma_crisis.7010.a.tp
-				limit = {
-					has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-				}
-				if = {
-					limit = {
-						has_country_flag = uma_rs_fail
-					}
-					hidden_effect = {
-						country_event = {
-							id = uma_suzuka.36
-							days = 30
-							random = 2
-						}
 
-					}
-				}
-				else = {
-					country_event = {
-						id = uma_suzuka.35
-						days = 30
-						random = 2
-					}
-
+			50 = {
+				country_event = {
+					id = uma_suzuka.36
+					days = 30
+					random = 2
 				}
 			}
 		}
@@ -607,18 +523,7 @@ country_event = {
 
 
 	after = {
-		if = {
-			limit = {
-				has_global_flag = uma_global_game_setting_gamesystem_rs_dnd
-			}
-			create_message = {
-				type = UMA_RANDOM_SYSTEM_RESULT
-				localization = UMA_RANDOM_SYSTEM_RESULT_DESC
-				days = 3
-				target = Root
-			}
-			uma_rs_cleanup = yes
-		}
+
 	}
 }
 

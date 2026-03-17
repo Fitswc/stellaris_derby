@@ -778,3 +778,63 @@ uma_duramente_reilc_buff = {
 	weapon_type_energy_weapon_damage_mult = 0.05
 	ship_shield_add = 40
 }
+
+uma_vc_m85_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = -0.95
+}
+uma_vc_m75_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = -0.85
+}
+uma_vc_m65_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = -0.75
+}
+uma_vc_m55_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = -0.65
+}
+uma_vc_m45_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = -0.45
+}
+uma_vc_m25_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = -0.25
+}
+
+
+uma_vc_p150_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = 1.5
+}
+uma_vc_p200_modifier = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_produces_mult = 2
+}
+
+uma_vc_m85_modifier_cost = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_cost_mult = 1.25
+}
+uma_vc_m75_modifier_cost = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_cost_mult = 1
+}
+uma_vc_m65_modifier_cost = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_cost_mult = 0.85
+}
+uma_vc_m55_modifier_cost = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_cost_mult = 0.65
+}
+uma_vc_m45_modifier_cost = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_cost_mult = 0.45
+}
+uma_vc_m25_modifier_cost = {
+	icon = "gfx/interface/icons/modifiers/uma_vc_modifier.dds"
+	country_cost_mult = 0.25
+}

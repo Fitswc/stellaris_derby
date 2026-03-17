@@ -51,7 +51,7 @@ mod_job_uma_head_researcher_add:0 "£job_uma_head_researcher£ 马娘科学主�
 ###9.2 tom新增
 mod_planet_jobs_worker_uma_crystal_carrot_produces_mult:0 "£job£岗位产出£uma_crystal_carrot£水晶萝卜§G$VALUE$§!"
 mod_planet_jobs_worker_energy_produces_mult:0 "£job£岗位产出£energy£能量币§G$VALUE$§!"
-mod_planet_uma_research_related_produces_mult:0 "£uma_researcher£马娘科学家和£uma_head_researcher£科学主管岗位产出§G$VALUE$§!"
+mod_planet_uma_research_related_produces_mult:0 "£job_uma_researcher£马娘科学家和£job_uma_head_researcher£科学主管岗位产出§G$VALUE$§!"
 ###关于比赛buff的修正
 
 #星球的修正
@@ -282,3 +282,10 @@ mod_planet_uma_core_miner_exotic_gases_produces_add: "£job_uma_core_miner£$pla
 mod_planet_uma_core_miner_rare_crystals_produces_add: "£job_uma_core_miner£$planet_uma_core_miner$的£rare_crystals£$rare_crystals$产出"
 mod_planet_uma_racing_umamusume_trade_produces_add: "£job_uma_racing_umamusume£$planet_uma_racing_umamusume$的£trade£$trade$产出"
 mod_planet_uma_traders_trade_produces_mult: "£job_uma_trader£$job_uma_trader$产出的£trade£$trade$"
+
+mod_pop_cat_umamusume_bonus_workforce_mult: "$pop_cat_umamusume$人口阶层$MOD_POP_BONUS_WORKFORCE_MULT$"
+
+mod_pop_uma_umaidol_workforce_mult: "£job_uma_umaidol£$job_uma_umaidol$ $MOD_POP_BONUS_WORKFORCE_MULT$"
+mod_pop_uma_researcher_bonus_workforce_mult: "£job_uma_researcher£$job_uma_researcher$ $MOD_POP_BONUS_WORKFORCE_MULT$"
+
+mod_planet_jobs_uma_crystal_carrot_upkeep_mult: "£job£$planet_jobs$的£uma_crystal_carrot£$uma_crystal_carrot$$UPKEEP$"
