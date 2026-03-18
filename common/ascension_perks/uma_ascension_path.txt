@@ -212,62 +212,63 @@ ap_uma_become_the_crisis = {
 	}
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_independence"
-			is_subject = no
-		}
-		custom_tooltip = {
-			fail_text = "must_not_be_custodian"
-			is_galactic_custodian = no
-		}
-		custom_tooltip = {
-			fail_text = "must_not_be_emperor"
-			is_galactic_emperor = no
-		}
-		custom_tooltip = {
-			fail_text = "must_finish_shroud_forged_situation"
-			OR = {
-				NOT = { has_origin = origin_shroud_forged }
-				NOT = {
-					any_situation = {
-						is_situation_type = situation_shroud_forged
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "locked_by_shroud_forged_situation"
-			OR = {
-				NOT = { has_origin = origin_shroud_forged }
-				NOT = { has_country_flag = finish_shroud_forged_liberation_flag }
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					NOT = { has_origin = origin_shroud_forged }
-					NOT = { has_country_flag = shroud_forged_can_become_the_crisis }
-				}
-			}
-			custom_tooltip = {
-				fail_text = "requires_ascension_perks_3"
-				num_ascension_perks > 2
-			}
-			NOR = {
-				is_xenophile = yes
-				is_pacifist = yes
-				has_civic = civic_machine_servitor
-				has_valid_civic = civic_hive_familiar_face
-			}
-		}
-
-		custom_tooltip = {
-			fail_text = "uma_become_the_crisis_must_had_ap1"
-			AND = {
-				has_ascension_perk = ap_uma_fly_me_to_the_star
-				has_ascension_perk = ap_uma_zenshizenren
-			}
-		}
+		#Disable For Debug
+#		custom_tooltip = {
+#			fail_text = "requires_independence"
+#			is_subject = no
+#		}
+#		custom_tooltip = {
+#			fail_text = "must_not_be_custodian"
+#			is_galactic_custodian = no
+#		}
+#		custom_tooltip = {
+#			fail_text = "must_not_be_emperor"
+#			is_galactic_emperor = no
+#		}
+#		custom_tooltip = {
+#			fail_text = "must_finish_shroud_forged_situation"
+#			OR = {
+#				NOT = { has_origin = origin_shroud_forged }
+#				NOT = {
+#					any_situation = {
+#						is_situation_type = situation_shroud_forged
+#					}
+#				}
+#			}
+#		}
+#		custom_tooltip = {
+#			fail_text = "locked_by_shroud_forged_situation"
+#			OR = {
+#				NOT = { has_origin = origin_shroud_forged }
+#				NOT = { has_country_flag = finish_shroud_forged_liberation_flag }
+#			}
+#		}
+#		if = {
+#			limit = {
+#				OR = {
+#					NOT = { has_origin = origin_shroud_forged }
+#					NOT = { has_country_flag = shroud_forged_can_become_the_crisis }
+#				}
+#			}
+#			custom_tooltip = {
+#				fail_text = "requires_ascension_perks_3"
+#				num_ascension_perks > 2
+#			}
+#			NOR = {
+#				is_xenophile = yes
+#				is_pacifist = yes
+#				has_civic = civic_machine_servitor
+#				has_valid_civic = civic_hive_familiar_face
+#			}
+#		}
+#
+#		custom_tooltip = {
+#			fail_text = "uma_become_the_crisis_must_had_ap1"
+#			AND = {
+#				has_ascension_perk = ap_uma_fly_me_to_the_star
+#				has_ascension_perk = ap_uma_zenshizenren
+#			}
+#		}
 	}
 
 	on_enabled = {
@@ -277,7 +278,7 @@ ap_uma_become_the_crisis = {
 		}
 #		activate_crisis_progression = uma_realm_break_to_realworld_path
 		country_event = {
-			id =
+			id = uma_ap.300
 		}
 	}
 

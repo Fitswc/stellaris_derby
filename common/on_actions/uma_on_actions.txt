@@ -51,6 +51,22 @@ on_fleet_detected = {
 	}
 }
 
+#This = owner of fleet 1 (combatant)
+#From = owner of fleet 2 (destroyed)
+#FromFrom = fleet 1
+#FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		uma_ap.305
+	}
+}
+
+on_pop_purged = {
+	events = {
+		uma_ap.307
+	}
+}
+
 #scope:planet
 #初始化帝国的母星（包括玩家的）
 empire_init_capital_planet = {
@@ -102,6 +118,8 @@ on_monthly_pulse_country = {
 		uma_ale.30
 		uma_threegodness_rd.5
 		uma_zephyr.1000
+
+		uma_ap.306
 	}
 }
 
@@ -576,6 +594,8 @@ on_entering_system_fleet = {
 on_country_destroyed = {
 	events = {
 		uma_ec_3.8
+
+		uma_ap.304
 	}
 }
 

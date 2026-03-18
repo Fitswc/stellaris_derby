@@ -2258,14 +2258,110 @@ country_event = {
 			}
 		}
 		activate_crisis_progression = uma_realm_break_to_realworld_path
+		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
 	}
 }
 
 
 ##Crisis_OBJ_REWARD
+country_event = {
+	id = uma_ap.304
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From = {
+			is_uma_player_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		}
+	}
+
+	immediate = {
+		complete_crisis_objective = crisobj_uma_destroy_country
+	}
+}
 
 
+country_event = {
+	id = uma_ap.305
+	hide_window = yes
+	is_triggered_only = yes
 
+	trigger = {
+		From = {
+			is_country_type = default
+		}
+		is_uma_player_country = yes
+		has_ascension_perk = ap_uma_become_the_crisis
+		has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+	}
+
+	immediate = {
+		complete_crisis_objective = crisobj_uma_destroy_fleet
+	}
+}
+
+
+##Monthly_pulse
+country_event = {
+	id = uma_ap.306
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_uma_player_country = yes
+		has_ascension_perk = ap_uma_become_the_crisis
+		has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+	}
+
+	immediate = {
+		export_trigger_value_to_variable = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = uma_realm_umamusume
+			}
+			variable = uma_count_uma_realm_umamusume
+		}
+		divide_variable = {
+			which = uma_count_uma_realm_umamusume
+			value = 1000
+		}
+		round_variable = uma_count_uma_realm_umamusume
+
+		##
+		complete_crisis_objective = crisobj_uma_realm_power
+		set_variable = {
+			which = uma_count_uma_realm_umamusume
+			value = 1
+		}
+	}
+}
+
+planet_event = {
+	id = uma_ap.307
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FromFrom = {
+			has_purge_type = {
+				type = purge_types_uma_ap_bc
+			}
+		}
+		From = {
+			is_uma_player_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		}
+	}
+
+	immediate = {
+		From = {
+			complete_crisis_objective = crisobj_uma_pugre
+		}
+	}
+}
 
 
 

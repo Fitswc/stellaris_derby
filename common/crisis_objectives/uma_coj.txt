@@ -14,22 +14,17 @@ crisobj_uma_destroy_country = {
 
 crisobj_uma_pugre = {
 	reward = {
-		base = 0.1
-		complex_trigger_modifier = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job = uma_alien_realm_crisispath
-			}
-		}
-		round = yes
+		base = 10
 	}
 	recurring = yes
 }
 
 crisobj_uma_realm_power = {
 	reward = {
-		base = 10
+		base = 50
+		multiply = uma_count_uma_realm_umamusume
 	}
+	recurring = yes
 }
 
 crisobj_uma_destroy_fleet = {
