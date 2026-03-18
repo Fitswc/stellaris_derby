@@ -18,7 +18,7 @@ uma_trait_musume = {
 	}
 
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -31,7 +31,7 @@ uma_trait_musume = {
 		fake_uma_pop_housing_usage_mult_mod = -0.025
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -44,7 +44,7 @@ uma_trait_musume = {
 		fake_uma_pop_housing_usage_mult_mod = -0.05
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -56,7 +56,7 @@ uma_trait_musume = {
 		fake_uma_pop_housing_usage_mult_mod = -0.075
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -68,7 +68,7 @@ uma_trait_musume = {
 		fake_uma_pop_housing_usage_mult_mod = -0.1
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -80,7 +80,7 @@ uma_trait_musume = {
 		fake_uma_pop_housing_usage_mult_mod = -0.125
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -92,7 +92,7 @@ uma_trait_musume = {
 		fake_uma_planet_jobs_society_research_produces_mult_mod = 0.05
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -104,7 +104,7 @@ uma_trait_musume = {
 		fake_uma_planet_jobs_society_research_produces_mult_mod = 0.1
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -116,7 +116,7 @@ uma_trait_musume = {
 		fake_uma_planet_jobs_society_research_produces_mult_mod = 0.15
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -128,7 +128,7 @@ uma_trait_musume = {
 		fake_uma_planet_jobs_society_research_produces_mult_mod = 0.2
 	}
 
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -148,7 +148,7 @@ uma_trait_musume = {
 		}
 		fake_uma_pop_environment_tolerance_mod = 0.05
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -168,7 +168,7 @@ uma_trait_musume = {
 		}
 		pop_environment_tolerance = 0.1
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -188,7 +188,7 @@ uma_trait_musume = {
 		}
 		fake_uma_pop_environment_tolerance_mod = 0.15
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -208,7 +208,7 @@ uma_trait_musume = {
 		}
 		fake_uma_pop_environment_tolerance_mod = 0.2
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -228,7 +228,7 @@ uma_trait_musume = {
 		}
 		fake_uma_pop_environment_tolerance_mod = 0.25
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -497,7 +497,7 @@ uma_trait_naturelover={
 	opposites = { "uma_trait_urbancitizens"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_naturelover_tooltip
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -514,7 +514,7 @@ uma_trait_urbancitizens={
 	opposites = { "uma_trait_naturelover"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_urbancitizens_tooltip
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -534,7 +534,7 @@ uma_trait_communal={
 	opposites = { "uma_trait_tsundere"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_communal_tooltip
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount > 5000 }
@@ -552,7 +552,7 @@ uma_trait_tsundere={
 	opposites = { "uma_trait_communal"  }
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_tsundere_tooltip
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount > 5000 }
@@ -606,14 +606,14 @@ uma_trait_houseworkpro={
 	modifier={
 		pop_amenities_usage_mult = -0.05
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount < 3000 }
 		}
 		planet_pops_unity_produces_mult = 0.05
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount >= 3000 }
@@ -631,14 +631,14 @@ uma_trait_houseworkidiot={
 	modifier={
 		pop_amenities_usage_mult = 0.05
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount < 3000 }
 		}
 		planet_pops_unity_produces_mult = -0.05
 	}
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = { pop_amount >= 3000 }
@@ -663,7 +663,7 @@ uma_trait_desireforknowledge={
 	cost= 2
 	allowed_archetypes={UMA}
 	custom_tooltip_with_modifiers = uma_trait_desireforknowledge_tooltip
-	triggered_planet_pop_group_modifier_for_all = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			OR = {
