@@ -541,7 +541,8 @@ uma_trait_communal={
 
 		}
 		species_empire_size_mult = -0.05
-		planet_pops_produces_mult = 0.05
+#		planet_pops_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 #		planet_pops_unity_produces_mult = 0.1
 	}
 }
@@ -559,7 +560,8 @@ uma_trait_tsundere={
 
 		}
 		species_empire_size_mult = 0.05
-		planet_pops_produces_mult = -0.05
+#		planet_pops_produces_mult = -0.05
+		pop_bonus_workforce_mult = -0.05
 #		planet_jobs_unity_produces_mult = -0.1
 	}
 }
