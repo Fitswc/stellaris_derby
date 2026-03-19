@@ -2363,6 +2363,27 @@ planet_event = {
 	}
 }
 
+country_event = {
+	id = uma_ap.308
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_planet = {
+			is_colony = yes
+			NOT = {
+				has_building = building_uma_realm_transfer_center
+			}
+		}
+	}
+	immediate = {
+		complete_crisis_objective = crisobj_uma_realm_power_natural
+	}
+}
+
+##
+
+
 
 
 
