@@ -2316,25 +2316,26 @@ country_event = {
 	}
 
 	immediate = {
-		export_trigger_value_to_variable = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job = uma_realm_umamusume
-			}
-			variable = uma_count_uma_realm_umamusume
-		}
-		divide_variable = {
-			which = uma_count_uma_realm_umamusume
-			value = 1000
-		}
-		round_variable = uma_count_uma_realm_umamusume
+#		export_trigger_value_to_variable = {
+#			trigger = num_assigned_jobs
+#			parameters = {
+#				job = uma_realm_umamusume
+#			}
+#			variable = uma_count_uma_realm_umamusume
+#		}
+#		divide_variable = {
+#			which = uma_count_uma_realm_umamusume
+#			value = 1000
+#		}
+#		round_variable = uma_count_uma_realm_umamusume
 
 		##
 		complete_crisis_objective = crisobj_uma_realm_power
-		set_variable = {
-			which = uma_count_uma_realm_umamusume
-			value = 1
-		}
+
+#		set_variable = {
+#			which = uma_count_uma_realm_umamusume
+#			value = 1
+#		}
 	}
 }
 
@@ -2369,20 +2370,84 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		any_owned_planet = {
-			is_colony = yes
-			NOT = {
-				has_building = building_uma_realm_transfer_center
-			}
-		}
+
 	}
 	immediate = {
 		complete_crisis_objective = crisobj_uma_realm_power_natural
 	}
 }
 
-##
+planet_event = {
+	id = uma_ap.309
+	hide_window = yes
+	is_triggered_only = yes
 
+	trigger = {
+		exists = owner
+		This = {
+			num_buildings = {
+				type = building_uma_realm_transfer_center
+				value > 1
+			}
+		}
+		owner = {
+			NOT = {
+				has_country_flag = uma_ap.309_triggered
+			}
+
+			OR = {
+				AND = {
+					is_uma_player_country = yes
+					has_ascension_perk = ap_uma_become_the_crisis
+					has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+				}
+				AND = {
+					has_global_flag = uma_global_game_debug_on
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			complete_crisis_objective = crisobj_uma_build_building
+			set_country_flag = uma_ap.309_triggered
+		}
+	}
+}
+
+##
+country_event = {
+	id = uma_ap.400
+	title = "uma_ap.400.name"
+	desc = uma_ap.400.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.400.a
+		custom_tooltip = new_crisis_perks_tt
+	}
+}
+
+country_event = {
+	id = uma_ap.401
+	title = "uma_ap.401.name"
+	desc = uma_ap.401.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.401.a
+		custom_tooltip = new_crisis_perks_tt
+	}
+}
 
 
 

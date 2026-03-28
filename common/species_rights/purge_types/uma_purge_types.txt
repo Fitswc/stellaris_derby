@@ -99,9 +99,16 @@ purge_types_uma_ap_bc = { #等离子态
 	potential = {
 		exists = from
 		from = {
-			is_uma_player_country = yes
-			has_ascension_perk = ap_uma_become_the_crisis
-			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+			OR = {
+				AND = {
+					is_uma_player_country = yes
+					has_ascension_perk = ap_uma_become_the_crisis
+					has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+				}
+				AND = {
+					has_global_flag = uma_global_game_debug_on
+				}
+			}
 		}
 	}
 	ai_will_do = {

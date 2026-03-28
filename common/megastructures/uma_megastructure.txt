@@ -364,8 +364,7 @@ uma_ec1_dyson_sphere_ruined = {
 
 
 uma_crisis_path_orbital_ring = {
-	entity = ""
-	construction_entity = "orbital_ring_construction_entity"
+	entity = "mammalian_01_orbital_ring_hub_tier_03_entity"
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = yes
 	entity_offset = { x = 0 y = 0 }
@@ -407,3 +406,4 @@ uma_crisis_path_orbital_ring = {
 	custom_tooltip_requirements = "MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_ORBITAL_RING"
 
 	potential = { has_technology = tech_orbital_ring_tier_1 }
+}

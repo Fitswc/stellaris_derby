@@ -12,6 +12,11 @@ uma_crisis_level_1 = {
 	on_unlock = {
 		hidden_effect = {
 			owner = {
+				add_event_chain_counter = {
+					event_chain = "uma_ap_bc_main_evt_chain"
+					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
+					amount = 1
+				}
 			}
 		}
 	}
@@ -20,18 +25,7 @@ uma_crisis_level_1 = {
 uma_crisis_level_2 = {
 	# REQUIREMENTS
 	allow = {
-		custom_tooltip = {
-			success_text = crisis_level_2_req_clear_tooltip
-			fail_text =	crisis_level_2_req_tooltip
-			has_country_flag = crisis_special_project_1_complete
-		}
-		hidden_trigger = {
-			NOT = {
-				has_active_event = {
-					crisis.4120
-				}
-			}
-		}
+
 	}
 	required_crisis_currency = 1000
 
@@ -45,11 +39,11 @@ uma_crisis_level_2 = {
 		hidden_effect = {
 			owner = {
 				add_event_chain_counter = {
-					event_chain = "become_the_crisis_chain"
-					counter = "crisis_level_reached"
+					event_chain = "uma_ap_bc_main_evt_chain"
+					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
 					amount = 1
 				}
-				country_event = { id = crisis.4145 days = 3 }
+				country_event = { id = uma_ap.400 days = 3 }
 			}
 		}
 	}
@@ -58,18 +52,7 @@ uma_crisis_level_2 = {
 uma_crisis_level_3 = {
 	# REQUIREMENTS
 	allow = {
-		custom_tooltip = {
-			success_text = crisis_level_3_req_clear_tooltip
-			fail_text =	crisis_level_3_req_tooltip
-			has_country_flag = crisis_special_project_2_complete
-		}
-		hidden_trigger = {
-			NOT = {
-				has_active_event = {
-					crisis.4125
-				}
-			}
-		}
+
 	}
 	required_crisis_currency = 2000
 
@@ -84,11 +67,11 @@ uma_crisis_level_3 = {
 		hidden_effect = {
 			owner = {
 				add_event_chain_counter = {
-					event_chain = "become_the_crisis_chain"
-					counter = "crisis_level_reached"
+					event_chain = "uma_ap_bc_main_evt_chain"
+					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
 					amount = 1
 				}
-				country_event = { id = crisis.4150 days = 3 }
+				country_event = { id = uma_ap.400 days = 3 }
 			}
 		}
 	}
@@ -97,19 +80,7 @@ uma_crisis_level_3 = {
 uma_crisis_level_4 = {
 	# REQUIREMENTS
 	allow = {
-		custom_tooltip = {
-			success_text = crisis_level_5_req_clear_tooltip
-			fail_text =	crisis_level_5_req_tooltip
-			has_country_flag = crisis_special_project_4_complete
-		}
-		hidden_trigger = {
-			NOT = {
-				has_active_event = {
-					crisis.4135
-				}
-			}
-		}
-		is_subject = no
+
 	}
 	required_crisis_currency = 10000
 
