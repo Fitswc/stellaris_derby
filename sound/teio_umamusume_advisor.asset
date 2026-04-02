@@ -90,7 +90,7 @@ soundgroup =
 	soundoverride =
 	{
 		name = "advisor_notification_debris_analysed_01"
-		file = "vo/umamusume/Teio/advisor_notification_debris_analysed_01.wav"
+		file = "vo/umamusume/Teio/advisor_notification_debri_analysed_01.wav"
 	}
 	soundoverride =
 	{
@@ -275,7 +275,7 @@ soundgroup =
 	soundoverride =
 	{
 		name = "advisor_notification_spaceport_under_attack_01"
-		file = "vo/umamusume/Teio/advisor_notification_spaceport_under_attack_01.wav"
+		file = "vo/umamusume/Teio/advisor_notification_spaceport_lost_01.wav"
 	}
 	soundoverride =
 	{
@@ -290,7 +290,7 @@ soundgroup =
 	soundoverride =
 	{
 		name = "advisor_notification_station_under_attack_01"
-		file = "vo/umamusume/Teio/advisor_notification_station_under_attack_01.wav"
+		file = "vo/umamusume/Teio/advisor_notification_station_lost_01.wav"
 	}
 	soundoverride =
 	{
@@ -325,20 +325,20 @@ soundgroup =
 }
 
 soundeffect = {
-		name = advisor_generic_phrase
-		sounds = {
-			weighted_sound = { sound = advisor_sample_vo_01 weight = 1 }
-			weighted_sound = { sound = advisor_sample_vo_02 weight = 1 }
-			weighted_sound = { sound = advisor_sample_vo_03 weight = 1 }
-			weighted_sound = { sound = advisor_sample_vo_03 weight = 1 }
-		}
-		volume = 1.00
-		max_audible = 1
-		max_audible_behaviour = fail
+	name = uma_teio_advisor_generic_phrase
+	sounds = {
+		weighted_sound = { sound = advisor_sample_vo_01 weight = 1 }
+		weighted_sound = { sound = advisor_sample_vo_02 weight = 1 }
+		weighted_sound = { sound = advisor_sample_vo_03 weight = 1 }
+		weighted_sound = { sound = advisor_sample_vo_03 weight = 1 }
+	}
+	volume = 1.00
+	max_audible = 1
+	max_audible_behaviour = fail
 }
 
 soundeffect = {
-	name = advisor_notification_construction_complete
+	name = uma_teio_advisor_notification_construction_complete
 	sounds = {
 		weighted_sound = { sound = advisor_notification_construction_complete_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_construction_complete_02 weight = 1 }
@@ -349,7 +349,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = advisor_notification_federation_formed
+	name = uma_teio_advisor_notification_federation_formed
 	sounds = {
 		weighted_sound = { sound = advisor_notification_federation_formed_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_federation_formed_02 weight = 1 }
@@ -360,7 +360,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = advisor_notification_invasion_success
+	name = uma_teio_advisor_notification_invasion_success
 	sounds = {
 		weighted_sound = { sound = advisor_notification_invasion_success_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_invasion_success_02 weight = 1 }
@@ -371,7 +371,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = advisor_notification_player_declare_war
+	name = uma_teio_advisor_notification_player_declare_war
 	sounds = {
 		weighted_sound = { sound = advisor_notification_player_declare_war_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_player_declare_war_02 weight = 1 }
@@ -382,7 +382,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = advisor_notification_situation_log
+	name = uma_teio_advisor_notification_situation_log
 	sounds = {
 		weighted_sound = { sound = advisor_notification_situation_log_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_situation_log_02 weight = 1 }
@@ -393,7 +393,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = advisor_notification_system_survey_complete
+	name = uma_teio_advisor_notification_system_survey_complete
 	sounds = {
 		weighted_sound = { sound = advisor_notification_system_survey_complete_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_system_survey_complete_02 weight = 1 }
@@ -404,7 +404,7 @@ soundeffect = {
 }
 
 soundeffect = {
-	name = advisor_notification_tile_blocker_clear
+	name = uma_teio_advisor_notification_tile_blocker_clear
 	sounds = {
 		weighted_sound = { sound = advisor_notification_tile_blocker_clear_01 weight = 1 }
 		weighted_sound = { sound = advisor_notification_tile_blocker_clear_02 weight = 1 }

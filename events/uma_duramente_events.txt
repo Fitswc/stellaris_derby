@@ -15,6 +15,8 @@ country_event = {
 				uma_is_event_system = no
 			}
 
+			set_star_flag = uma_duramenta_system
+
 			random_system_planet = {
 				limit = {
 					is_star = no
@@ -26,7 +28,8 @@ country_event = {
 					}
 				}
 
-				save_event_target_as = uma_duramenta_planet
+				save_global_event_target_as = uma_duramenta_planet
+				set_planet_flag = uma_duramenta_planet_flag
 
 				enable_special_project = {
 					name = uma_duramente_sp_everywhere
@@ -69,10 +72,16 @@ ship_event = {
 	option = {
 		name = uma_duramente.3.a
 
-		log = "UMA_CREATED DURAMENTE ARCHAEOLOGICAL SITE AT [event_target:uma_duramenta_planet.GetName]"
-
-		event_target:uma_duramenta_planet = {
-			create_archaeological_site = uma_duramente_relic
+		random_system = {
+			limit = {
+				has_star_flag = uma_duramenta_system
+			}
+			random_system_planet = {
+				limit = {
+					has_planet_flag = uma_duramenta_planet_flag
+				}
+				create_archaeological_site = uma_duramente_site
+			}
 		}
 	}
 

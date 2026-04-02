@@ -323,9 +323,9 @@ ship_event = {
                 custom_catch_phrase = uma_am_catch_phrase
                 skip_background_generation = yes
                 traits = {
-                    0 = uma_governor_trait_flare
-                    1 = uma_governor_trait_never_forget
-                    2 = leader_trait_uma_generic
+                    trait = uma_governor_trait_flare
+                    trait = uma_governor_trait_never_forget
+                    trait = leader_trait_uma_generic
                 }
                 effect = {
                     change_leader_portrait = 74c
