@@ -17,18 +17,15 @@ uma_create_leader_deep = {
 		#background_ethic = ethic_pacifist
 		skip_background_generation = yes
 		traits = {
-			0 = uma_governor_trait_sp_deep
-			1 = uma_governor_trait_sp_deep_conlic
-			2 = leader_trait_uma_generic
+			trait = uma_governor_trait_sp_deep
+			trait = uma_governor_trait_sp_deep_conlic
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_deep
 			save_global_event_target_as = uma_is_leader_deep
 			change_leader_portrait = DEEP_COMMUNICATION
-			#			set_leader_flag = legendary_leader
-			#			exile_leader_as = uma_is_leader_deep
-			#			set_leader_flag = leader_death_events_blocked
 		}
 	}
 }
@@ -148,7 +145,7 @@ uma_create_leader_ty = {
 		tier = leader_tier_legendary
 		traits = {
 			0 = uma_scientist_trait_sp_tachyon
-			4 = leader_trait_uma_generic
+			1 = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
@@ -207,8 +204,8 @@ uma_create_leader_sky_governor = {
 		skill = 1
 		set_age = 18
 		traits = {
-			1 = uma_governor_trait_sp_seiun_sky
-			0 = leader_trait_uma_generic
+			0 = uma_governor_trait_sp_seiun_sky
+			1 = leader_trait_uma_generic
 		}
 		effect = {
 			change_leader_portrait = "20c"
@@ -242,9 +239,9 @@ uma_create_leader_teio_governor = {
 		tier = leader_tier_legendary
 		set_age = 17
 		traits = {
-			1 = uma_governor_trait_sp_teio_gov
-			2 = uma_governor_trait_sp_teio_hachimi
-			0 = leader_trait_uma_generic
+			trait = uma_governor_trait_sp_teio_gov
+			trait = uma_governor_trait_sp_teio_hachimi
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			save_global_event_target_as = uma_is_teio_governor
@@ -280,9 +277,9 @@ uma_create_leader_teio_admiral = {
 		set_age = 17
 		tier = leader_tier_legendary
 		traits = {
-			2 = uma_governor_trait_sp_teio_adr
-			1 = uma_governor_trait_sp_teio_heart_adr
-			0 = leader_trait_uma_generic
+			trait = uma_governor_trait_sp_teio_adr
+			trait = uma_governor_trait_sp_teio_heart_adr
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			save_global_event_target_as = uma_is_teio_admiral
@@ -318,9 +315,9 @@ uma_create_leader_teio_scientist = {
 		skill = 1
 		set_age = 17
 		traits = {
-			2 = uma_governor_trait_sp_teio_hint
-			1 = uma_governor_trait_sp_teio_sci
-			0 = leader_trait_uma_generic
+			trait = uma_governor_trait_sp_teio_hint
+			trait = uma_governor_trait_sp_teio_sci
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			save_global_event_target_as = uma_is_teio_scientist
@@ -355,19 +352,16 @@ uma_create_leader_zf = {
 		skip_background_generation = yes
 		tier = leader_tier_legendary
 		traits = {
-			1 = uma_scientists_trait_sp_zf_empire
-			2 = uma_scientists_trait_sp_zf_girl
-			3 = uma_scientists_trait_sp_zf_top
-			0 = leader_trait_uma_generic
+			trait = uma_scientists_trait_sp_zf_empire
+			trait = uma_scientists_trait_sp_zf_girl
+			trait = uma_scientists_trait_sp_zf_top
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
 			set_leader_flag = uma_is_zf
 			save_global_event_target_as = uma_is_leader_zf
 			change_leader_portrait = GLX_ZF
-			#			set_leader_flag = legendary_leader
-			#			exile_leader_as = uma_is_leader_deep
-			#			set_leader_flag = leader_death_events_blocked
 		}
 	}
 }
@@ -390,9 +384,9 @@ uma_create_leader_cheval = {
 		set_age = 16
 		tier = leader_tier_legendary
 		traits = {
-			2 = leader_trait_shekong_generic
-			1 = uma_governor_trait_sp_cheval
-			0 = leader_trait_uma_generic
+			trait = leader_trait_shekong_generic
+			trait = uma_governor_trait_sp_cheval
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
@@ -514,10 +508,10 @@ uma_create_leader_zephyr = {
 		set_age = 15
 		tier = leader_tier_legendary
 		traits = {
-			0 = uma_official_trait_sp_zephyr
-			1 = uma_governor_trait_charmleader
-			2 = leader_trait_cloud_generic
-			3 = leader_trait_uma_generic
+			trait = uma_official_trait_sp_zephyr
+			trait = uma_governor_trait_charmleader
+			trait = leader_trait_cloud_generic
+			trait = leader_trait_uma_generic
 		}
 		effect = {
 			set_leader_flag = uma_is_special_leader
