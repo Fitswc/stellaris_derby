@@ -750,7 +750,7 @@ country_event = {
 					exists = event_target:uma_is_leader_almondeye
 				}
 
-				event_target:uma_is_leader_zf = {
+				event_target:uma_is_leader_almondeye = {
 					change_leader_portrait = 125c
 					set_name = ALEYE
 				}
@@ -760,7 +760,7 @@ country_event = {
 					exists = event_target:uma_is_leader_fairy_trail
 				}
 
-				event_target:uma_is_leader_zf = {
+				event_target:uma_is_leader_fairy_trail = {
 					change_leader_portrait = F_Trail
 					set_name = FT
 				}
