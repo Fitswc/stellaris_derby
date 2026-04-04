@@ -4,6 +4,11 @@ uma_crisis_level_2: "§P偶发异常§!"
 uma_crisis_level_3: "§P严重影响§!"
 uma_crisis_level_4: "§P悍将迫近§!"
 uma_crisis_level_5: "§P剑拔弩张§!"
+uma_crisis_level_1_desc: "天灾等级1级"
+uma_crisis_level_2_desc: "天灾等级2级"
+uma_crisis_level_3_desc: "天灾等级3级"
+uma_crisis_level_4_desc: "天灾等级4级"
+uma_crisis_level_5_desc: "天灾等级5级"
 
 
 menp_uma_objectives: "目标"
@@ -37,6 +42,8 @@ crisobj_uma_pugre_name: "同化/净化异种"
 crisobj_uma_pugre_desc: "在我们需要大量领域能的情况下，人口数量变得十分重要，当然，把他们全都消灭也是一种不错的选择。\n\n以Transform来同化或是使用残躯化火净化方式处理其他物种的人口来获得进度奖励。"
 crisobj_uma_realm_power_natural_name: "自然领域能"
 crisobj_uma_realm_power_natural_desc: "除了通过领域传输建筑向巨构传输领域能外，他也能自然收集赛马娘们领域产生的能量。\n\n越多赛马娘产生的领域能越多。"
+crisobj_uma_destroy_fleet_name: "摧毁舰队"
+crisobj_uma_destroy_fleet_desc: "摧毁舰队可以提升我们处理异种领域能的效率。\n\n摧毁其他帝国的舰队来获得进度奖励。"
 
 ##Ascension Perk
 ap_uma_become_the_crisis: "破镜"
@@ -49,6 +56,16 @@ uma_ap_bc_main_evt_chain_crisis_level_reached: "天灾进度"
 
 ##Current
 uma_menace: "领域能"
+uma_menace_name: "领域能"
+
+menace_crisis_level_unlocked: "在$LEVEL$，你会获得一个特殊项目和以下奖励：\n"
+uma_menace_value: "£uma_menace£$VAL|0$"
+uma_menace_current_value: "当前值：§Y$VALUE|0$§!"
+uma_menace_gaining: "完成§H危机目标§!以获得更多 £uma_menace£ §Y$uma_menace$§!。"
+uma_menace_crisis_objective: "天灾目标"
+uma_menace_crisis_objective_gained: "获得$uma_menace$"
+uma_menace_crisis_objective_reward: "$REWARD$"
+uma_menace_crisis_objective_progress: "我们从此危机目标中获得了£uma_menace£ $AMOUNT$ 。"
 
 
 

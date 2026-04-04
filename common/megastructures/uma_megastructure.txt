@@ -364,11 +364,12 @@ uma_ec1_dyson_sphere_ruined = {
 
 
 uma_crisis_path_orbital_ring = {
-	entity = "mammalian_01_orbital_ring_hub_tier_03_entity"
+	entity = "dyson_sphere_phase_04_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
 	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = yes
+#	place_entity_on_planet_plane = yes
 	entity_offset = { x = 0 y = 0 }
-	scales_with_planet = yes
+	scales_with_planet = no
 	show_galactic_map_icon = no
 	show_in_outliner = no
 	build_time = 720

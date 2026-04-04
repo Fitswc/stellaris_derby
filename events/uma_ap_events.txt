@@ -2242,7 +2242,8 @@ country_event = {
 #Build Mega structure
 country_event = {
 	id = uma_ap.303
-	hide_window = yes
+	title = uma_ap.303.title
+	desc = uma_ap.303.desc
 	is_triggered_only = yes
 
 	immediate = {
@@ -2259,6 +2260,10 @@ country_event = {
 		}
 		activate_crisis_progression = uma_realm_break_to_realworld_path
 		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+	}
+
+	option = {
+		name = uma_ap.303.a
 	}
 }
 
@@ -2311,7 +2316,6 @@ country_event = {
 }
 
 
-
 country_event = {
 	id = uma_ap.308
 	hide_window = yes
@@ -2361,7 +2365,15 @@ country_event = {
 
 
 
+country_event = {
+	id = uma_ap.4000
+	hide_window = yes
+	is_triggered_only = yes
 
+	immediate = {
+		activate_crisis_progression = nemesis_path
+	}
+}
 
 
 

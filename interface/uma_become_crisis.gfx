@@ -1,0 +1,29 @@
+spriteTypes = {
+	progressbarType = {
+		name = "GFX_uma_realm_break_to_realworld_path_progressbar"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/crisis/Crisis_progressBar_Filled.dds"
+		textureFile2 = "gfx/interface/crisis/Crisis_progressBar_BG.dds"
+		size = { x = 10 y = 432 }
+		effectFile = "gfx/FX/progress.shader"
+		horizontal = no
+		flipdirection = yes
+	}
+
+	spriteType = {
+		name = "GFX_uma_realm_break_to_realworld_path_title_box"
+		texturefile = "gfx/interface/crisis/Crisis_Title2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_realm_break_to_realworld_path_levels_frame"
+		texturefile = "gfx/interface/crisis/Crisis_Levels_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_uma_realm_break_to_realworld_path_level_boxes"
+		texturefile = "gfx/interface/crisis/Crisis_LevelBoxes.dds"
+		noOfFrames = 2
+	}
+}
