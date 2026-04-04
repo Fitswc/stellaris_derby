@@ -627,3 +627,9 @@ on_uma_ale_extract_resource = {
 		uma_ale.90
 	}
 }
+
+on_monthly_pulse = {
+	events = {
+		uma_ec_1.2
+	}
+}
