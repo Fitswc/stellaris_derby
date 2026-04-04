@@ -743,59 +743,6 @@ building_uma_peace_monument = {
 	}
 }
 
-building_uma_realm_transfer_center = {
-	base_buildtime = @b3_time
-
-	empire_limit = 1
-
-	position_priority = 100
-	can_be_ruined = no
-	category = government
-	can_be_disabled = no
-
-	building_sets = {
-		government
-		urban
-		uma_urban
-	}
-
-	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				has_authority = auth_trainingcenter
-			}
-			has_ethic = ethic_fanatic_pacifist
-		}
-		is_capital = yes
-	}
-
-
-	allow = {
-		hidden_trigger = { owner = { is_ai = no } }
-	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = {
-			is_ai = yes
-			NOT = {
-				has_authority = auth_trainingcenter
-			}
-		}
-	}
-
-
-	resources = {
-		category = planet_buildings
-		cost = {
-
-		}
-		upkeep = {
-
-		}
-	}
-}
 
 
 

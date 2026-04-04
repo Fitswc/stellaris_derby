@@ -61,12 +61,6 @@ on_fleet_destroyed_perp = {
 	}
 }
 
-on_pop_purged = {
-	events = {
-		uma_ap.307
-	}
-}
-
 #scope:planet
 #初始化帝国的母星（包括玩家的）
 empire_init_capital_planet = {
@@ -119,7 +113,6 @@ on_monthly_pulse_country = {
 		uma_threegodness_rd.5
 		uma_zephyr.1000
 
-		uma_ap.306
 		uma_ap.308
 	}
 }

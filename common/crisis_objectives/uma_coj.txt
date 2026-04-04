@@ -19,23 +19,6 @@ crisobj_uma_pugre = {
 	recurring = yes
 }
 
-crisobj_uma_realm_power = {
-	reward = {
-		base = 50
-		complex_trigger_modifier = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job = uma_realm_umamusume
-			}
-			mode = add
-		}
-		divide = 1000
-		round = yes
-	}
-
-	recurring = yes
-}
-
 crisobj_uma_destroy_fleet = {
 	reward = {
 		base = 10
@@ -43,15 +26,20 @@ crisobj_uma_destroy_fleet = {
 	recurring = yes
 }
 
-crisobj_uma_build_building = {
-	reward = {
-		base = 10
-	}
-}
 
 crisobj_uma_realm_power_natural = {
 	reward = {
-		base = 20
+		base = 100
+
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = uma_racing_umamusume
+			}
+			mode = multiply
+		}
+
+		divide = 1000
 	}
 	recurring = yes
 }
