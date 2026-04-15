@@ -1,4 +1,14 @@
 
+crisobj_uma_realm_power_natural = { #Fire on Monthly?
+	reward = {
+		base = 0
+		add = uma_ap_bc_menace_produced
+		round = yes 							#we don't want 3.124 menace
+		min = 10								#just in case
+	}
+	recurring = yes
+}
+
 crisobj_uma_destroy_country = {
 	reward = {
 		base = 500
@@ -12,34 +22,50 @@ crisobj_uma_destroy_country = {
 	}
 }
 
-crisobj_uma_pugre = {
-	reward = {
-		base = 10
-	}
-	recurring = yes
-}
-
 crisobj_uma_destroy_fleet = {
 	reward = {
-		base = 10
+		base = 1000
+		divide = trigger:num_galaxy_systems 	#on huge, this is 3. On smallest, it is 15
+		round = yes 							#we don't want 3.124 menace
+		min = 3									#just in case
 	}
-	recurring = yes
 }
 
-
-crisobj_uma_realm_power_natural = {
+crisobj_uma_destroy_starbases = {
 	reward = {
-		base = 100
-
-		complex_trigger_modifier = {
-			trigger = num_assigned_jobs
-			parameters = {
-				job = uma_racing_umamusume
-			}
-			mode = multiply
-		}
-
-		divide = 1000
+		base = 1000
+		divide = trigger:num_galaxy_systems 	#on huge, this is 3. On smallest, it is 15
+		round = yes 							#we don't want 3.124 menace
+		min = 3									#just in case
 	}
-	recurring = yes
+}
+
+crisobj_uma_purge_pops = {
+	reward = {
+		base = 40000
+		max = 200
+		divide = trigger:num_galaxy_systems 	#on huge, this is 100. On smallest, it is 500
+		complex_trigger_modifier = { 			#fewer worlds => more menace from destroying one
+			trigger = check_galaxy_setup_value
+			parameters = { setting = habitable_worlds_scale }
+			mode = divide
+		}
+		round_to = 50 								#we don't want 127.5 menace
+		min = 150									#just in case
+	}
+}
+
+crisobj_uma_conquer_worlds = {
+	reward = {
+		base = 100000
+		max = 200
+		divide = trigger:num_galaxy_systems 	#on huge, this is 150. On smallest, it is 750
+		complex_trigger_modifier = { 			#fewer worlds => more menace from taking one
+			trigger = check_galaxy_setup_value
+			parameters = { setting = habitable_worlds_scale }
+			mode = divide
+		}
+		round_to = 50 								#we don't want 127.5 menace
+		min = 100									#just in case
+	}
 }

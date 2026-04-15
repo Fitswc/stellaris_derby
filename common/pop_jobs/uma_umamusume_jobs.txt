@@ -126,6 +126,16 @@ uma_racing_umamusume = {
 		upkeep = {
 			consumer_goods = 2
 		}
+
+		produces = {
+			trigger = {
+				owner = {
+					 has_ascension_perk = ap_uma_become_the_crisis
+					has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+				}
+			}
+			uma_menace = 0.1
+		}
 	}
 
 	planet_modifier = {

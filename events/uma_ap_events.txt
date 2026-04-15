@@ -2252,7 +2252,7 @@ country_event = {
 				name = "NAME_uma_AP_BC_MEGAS"
 				type = "uma_crisis_path_orbital_ring"
 				orbit_angle = 0
-				orbit_distance = 50
+				orbit_distance = 0
 				owner = Root
 				graphical_culture = Root
 				planet = star
@@ -2302,30 +2302,145 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		From = {
-			is_country_type = default
+		owner = {
+			is_uma_player_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
 		}
-		is_uma_player_country = yes
-		has_ascension_perk = ap_uma_become_the_crisis
-		has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+
+		# check to exclude starbase kills in the future;
+		# right now they're included and the starbase kill objective does nothing,
+		# as the menace reward is the same
+
+		fromfrom = {
+			OR = {
+				NOT = { is_ship_class = shipclass_starbase }
+				fleet = { is_mobile = yes } #juggernauts
+			}
+		}
 	}
 
 	immediate = {
-		complete_crisis_objective = crisobj_uma_destroy_fleet
+		owner = {
+			complete_crisis_objective = crisobj_uma_destroy_fleet
+		}
 	}
 }
 
+# Menace Objective - Destroy Starbases
+# Fired from on_action 'on_starbase_destroyed'
+starbase_event = {
+	id = uma_ap.306
+	hide_window = yes
+	is_triggered_only = yes
 
-country_event = {
+	# This = Starbase
+	# From = fleet that destroyed it
+
+	trigger = {
+		from = {
+			owner = {
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			owner = {
+				# Note: crisobj_destroy_enemy_ships would do the same thing, disabled for starbases in crisis.4025
+				complete_crisis_objective = crisobj_destroy_starbases
+			}
+		}
+	}
+}
+
+# Menace Objective - Conquer Worlds
+# Fired from on_action 'on_planet_conquer'
+planet_event = {
+	id = uma_ap.307
+	hide_window = yes
+	is_triggered_only = yes
+
+	# From = Country scope (new owner)
+	# This = Planet scope
+
+	trigger = {
+		from = {
+			is_uma_player_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		}
+		OR = {
+			is_colony = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			complete_crisis_objective = crisobj_uma_conquer_worlds
+		}
+	}
+}
+
+## Fired from on_action 'on_monthly_pulse'
+event = {
 	id = uma_ap.308
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-
+		any_playable_country = {
+			OR = {
+				AND = {
+					has_ascension_perk = ap_uma_become_the_crisis
+					has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+				}
+			}
+		}
 	}
 	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = uma_ap_bc_menace_produced }
+			}
+			set_variable = {
+				which = uma_ap_bc_menace_produced
+				value = 0
+			}
+		}
+		export_resource_income_to_variable = {
+			resource = uma_menace
+			variable = uma_ap_bc_menace_produced
+		}
+
 		complete_crisis_objective = crisobj_uma_realm_power_natural
+	}
+}
+
+planet_event = {
+	id = uma_ap.309
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From.owner = {
+			is_uma_player_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		}
+	}
+
+	immediate = {
+		From.owner = {
+			complete_crisis_objective = crisobj_uma_purge_pops
+		}
 	}
 }
 
@@ -2365,13 +2480,15 @@ country_event = {
 
 
 
+#Debug only
 country_event = {
 	id = uma_ap.4000
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		activate_crisis_progression = nemesis_path
+		add_ascension_perk = ap_uma_become_the_crisis
+		activate_crisis_progression = uma_realm_break_to_realworld_path
 	}
 }
 

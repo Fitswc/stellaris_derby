@@ -548,6 +548,19 @@ decision_uma_change_to_uma = {
 					}
 				}
 			}
+
+			if = {
+				limit = {
+					owner = {
+						is_uma_player_country = yes
+						has_ascension_perk = ap_uma_become_the_crisis
+						has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+					}
+				}
+				owner = {
+					complete_crisis_objective = crisobj_uma_purge_pops
+				}
+			}
 		}
 	}
 
