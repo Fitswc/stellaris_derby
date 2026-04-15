@@ -555,13 +555,13 @@ country_event = {
 
 
 ##On Win
-country_event = {
+event = {
 	id = uma_ec_1.2
 	hide_window = yes
-#	is_triggered_only = yes
-	mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
+#	mean_time_to_happen = {
+#		days = 10
+#	}
 #	fire_only_once = yes
 
 	trigger = {
@@ -570,12 +570,6 @@ country_event = {
 			has_global_flag = uma_ec_invasion_end
 			has_global_flag = uma_ec_invasion_ec1_end
 		}
-
-#		exists = From
-#
-#		From = {
-#			is_country_type = uma_ec1_empire
-#		}
 
 		any_system = {
 			has_star_flag = uma_ec1_main_system
@@ -637,6 +631,20 @@ country_event = {
 			country_event = {
 				id = uma_ec_1.17
 				days = 5
+			}
+		}
+
+		every_playable_country = {
+			limit = {
+				any_situation = {
+					has_situation_flag = uma_situation_uma_endcrisis_ec1_discount
+				}
+			}
+			every_situation = {
+				limit = {
+					has_situation_flag = uma_situation_uma_endcrisis_ec1_discount
+				}
+				destroy_situation = This
 			}
 		}
 	}

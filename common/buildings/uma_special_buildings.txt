@@ -221,7 +221,7 @@ building_realm_planetary_shield_generator = {
 building_uma_symbolize_memorize_sculpture = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -258,6 +258,9 @@ building_uma_symbolize_memorize_sculpture = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -285,7 +288,7 @@ building_uma_symbolize_memorize_sculpture = {
 building_uma_balance_sculpture = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -322,6 +325,9 @@ building_uma_balance_sculpture = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -350,7 +356,7 @@ building_uma_balance_sculpture = {
 building_uma_philoso_temple = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -387,6 +393,9 @@ building_uma_philoso_temple = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -415,7 +424,7 @@ building_uma_philoso_temple = {
 building_uma_wisdom_palace = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -452,6 +461,9 @@ building_uma_wisdom_palace = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -482,7 +494,7 @@ building_uma_wisdom_palace = {
 building_uma_diplomacy_place = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -519,6 +531,9 @@ building_uma_diplomacy_place = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -548,7 +563,7 @@ building_uma_diplomacy_place = {
 building_uma_slave_solving_place = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -585,6 +600,9 @@ building_uma_slave_solving_place = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -613,7 +631,7 @@ building_uma_slave_solving_place = {
 building_uma_military_school = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -650,6 +668,9 @@ building_uma_military_school = {
 				has_authority = auth_trainingcenter
 			}
 		}
+		NOT = {
+			is_capital = yes
+		}
 	}
 
 #	planet_modifier = {
@@ -678,7 +699,7 @@ building_uma_military_school = {
 building_uma_peace_monument = {
 	base_buildtime = @b3_time
 
-	planet_limit = {
+	empire_limit = {
 		base = 1
 	}
 	position_priority = 100
@@ -714,6 +735,9 @@ building_uma_peace_monument = {
 			NOT = {
 				has_authority = auth_trainingcenter
 			}
+		}
+		NOT = {
+			is_capital = yes
 		}
 	}
 
