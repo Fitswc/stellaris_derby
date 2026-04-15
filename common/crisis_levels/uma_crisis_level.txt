@@ -33,6 +33,7 @@ uma_crisis_level_2 = {
 	perks = {
 		menp_uma_base_breaker
 		menp_uma_relentless_aggression
+		menp_uma_death_from_above
 	}
 
 	on_unlock = {
@@ -59,8 +60,8 @@ uma_crisis_level_3 = {
 	# REWARDS
 	perks = {
 		menp_uma_easily_replaced
-		menp_uma_death_from_above
 		menp_uma_ship_chipper
+		menp_uma_paid_in_ambition
 	}
 
 	on_unlock = {
@@ -71,7 +72,7 @@ uma_crisis_level_3 = {
 					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
 					amount = 1
 				}
-				country_event = { id = uma_ap.400 days = 3 }
+				country_event = { id = uma_ap.401 days = 3 }
 			}
 		}
 	}
@@ -82,33 +83,24 @@ uma_crisis_level_4 = {
 	allow = {
 
 	}
-	required_crisis_currency = 10000
+	required_crisis_currency = 5000
 
 	# REWARDS
 	perks = {
 		menp_uma_star_eater
-		menp_uma_mobile_bulwark
-		menp_uma_paid_in_ambition
+
 	}
 
 	on_unlock = {
-		owner = {
-			if = {
-				limit = { has_federation = yes }
-				leave_alliance = { override_requirements = yes }
-			}
-			tooltip = {
-				if = {
-					limit = {
-						is_galactic_community_formed = yes
-						is_galactic_community_member = yes
-					}
-					remove_from_galactic_community = yes
-				}
-			}
-		}
 		hidden_effect = {
-
+			owner = {
+				add_event_chain_counter = {
+					event_chain = "uma_ap_bc_main_evt_chain"
+					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
+					amount = 1
+				}
+				country_event = { id = uma_ap.402 days = 3 }
+			}
 		}
 	}
 }
@@ -116,19 +108,19 @@ uma_crisis_level_4 = {
 uma_crisis_level_5 = {
 	# REQUIREMENTS
 	allow = {
-		custom_tooltip = {
-			success_text = crisis_level_5_req_clear_tooltip
-			fail_text =	crisis_level_5_req_tooltip
-			has_country_flag = crisis_special_project_4_complete
-		}
-		hidden_trigger = {
-			NOT = {
-				has_active_event = {
-					crisis.4135
-				}
-			}
-		}
-		is_subject = no
+#		custom_tooltip = {
+#			success_text = crisis_level_5_req_clear_tooltip
+#			fail_text =	crisis_level_5_req_tooltip
+#			has_country_flag = crisis_special_project_4_complete
+#		}
+#		hidden_trigger = {
+#			NOT = {
+#				has_active_event = {
+#					crisis.4135
+#				}
+#			}
+#		}
+#		is_subject = no
 	}
 	required_crisis_currency = 16000
 
@@ -138,34 +130,13 @@ uma_crisis_level_5 = {
 	}
 
 	on_unlock = {
-		owner = {
-			if = {
-				limit = { has_federation = yes }
-				leave_alliance = { override_requirements = yes }
-			}
-			tooltip = {
-				if = {
-					limit = {
-						is_galactic_community_formed = yes
-						is_galactic_community_member = yes
-					}
-					remove_from_galactic_community = yes
-				}
-			}
-		}
-		hidden_effect = {
-			# force Declare Crisis resolution through an appropriate party
-			declare_crisis_effect = yes
-
+			hidden_effect = {
 			owner = {
-				room_name_override = ""
 				add_event_chain_counter = {
-					event_chain = "become_the_crisis_chain"
-					counter = "crisis_level_reached"
+					event_chain = "uma_ap_bc_main_evt_chain"
+					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
 					amount = 1
 				}
-				end_event_chain = become_the_crisis_chain
-				country_event = { id = crisis.6000 days = 5 }
 			}
 		}
 	}

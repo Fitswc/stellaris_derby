@@ -2215,6 +2215,7 @@ country_event = {
 
 	option = {
 		name = uma_ap.301.a
+		custom_tooltip = uma_ap.301.tt
 		enable_special_project = {
 			name = UMA_AP_BC_RESEARCH_MEGASTRUCTURE
 			owner = Root
@@ -2478,6 +2479,22 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = uma_ap.402
+	title = "uma_ap.402.name"
+	desc = uma_ap.402.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.402.a
+		custom_tooltip = new_crisis_perks_tt
+	}
+}
+
 
 
 #Debug only
@@ -2489,6 +2506,30 @@ country_event = {
 	immediate = {
 		add_ascension_perk = ap_uma_become_the_crisis
 		activate_crisis_progression = uma_realm_break_to_realworld_path
+	}
+}
+
+country_event = {
+	id = uma_ap.4001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = {
+			uma_menace = -1000
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.4002
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = {
+			uma_menace = 1000
+		}
 	}
 }
 

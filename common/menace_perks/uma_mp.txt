@@ -12,7 +12,7 @@ menp_uma_undertaker = {
 	portrait = "GFX_crisis_icon_undertaker"
 
 	on_unlock = {
-		custom_tooltip = unlocks_purge
+		custom_tooltip = menp_uma_undertaker_tt
 	}
 }
 
@@ -29,7 +29,7 @@ menp_uma_relentless_aggression = {
 	portrait = "GFX_crisis_icon_relentlessaggression"
 
 	modifier = {
-		country_war_exhaustion_mult = -0.85
+		country_war_exhaustion_mult = -0.95
 	}
 }
 
@@ -45,11 +45,11 @@ menp_uma_death_from_above = {
 	portrait = "GFX_crisis_icon_deathfromabove"
 
 	modifier = {
-		ship_orbital_bombardment_mult = 0.4
+
 	}
 
 	on_unlock = {
-		custom_tooltip = unlocks_armageddon_bombardment
+		custom_tooltip = menp_uma_death_from_above_tt
 	}
 }
 
@@ -62,13 +62,6 @@ menp_uma_ship_chipper = {
 	}
 }
 
-menp_uma_mobile_bulwark = {
-	portrait = "GFX_crisis_icon_mobilebulwark"
-
-	modifier = {
-		shipclass_military_hull_mult = 0.15
-	}
-}
 
 menp_uma_paid_in_ambition = {
 	portrait = "GFX_crisis_icon_paidinambition"
@@ -82,7 +75,7 @@ menp_uma_star_eater = {
 	portrait = "GFX_crisis_icon_stareater"
 
 	on_unlock = {
-		custom_tooltip = unlocks_star_eater
+		custom_tooltip = menp_uma_star_eater_tt
 	}
 }
 
@@ -90,6 +83,6 @@ menp_uma_megastructure = {
 	portrait = "GFX_crisis_icon_megastructure"
 
 	on_unlock = {
-		custom_tooltip = unlocks_crisis_sphere
+		custom_tooltip = menp_uma_megastructure_tt
 	}
 }
