@@ -275,6 +275,12 @@ ap_uma_become_the_crisis = {
 		hidden_effect = {
 			set_ai_personality = became_the_crisis
 			country_event = { id = timeline.69 } # Timeline Become the crisis
+			hidden_effect = {
+				set_variable = {
+					which = uma_ap_bc_menace_produced
+					value = 0
+				}
+			}
 		}
 #		activate_crisis_progression = uma_realm_break_to_realworld_path
 		country_event = {

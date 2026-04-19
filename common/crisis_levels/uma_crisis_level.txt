@@ -27,7 +27,7 @@ uma_crisis_level_2 = {
 	allow = {
 
 	}
-	required_crisis_currency = 1000
+	required_crisis_currency = 5000
 
 	# REWARDS
 	perks = {
@@ -55,7 +55,7 @@ uma_crisis_level_3 = {
 	allow = {
 
 	}
-	required_crisis_currency = 2000
+	required_crisis_currency = 15000
 
 	# REWARDS
 	perks = {
@@ -83,12 +83,11 @@ uma_crisis_level_4 = {
 	allow = {
 
 	}
-	required_crisis_currency = 5000
+	required_crisis_currency = 40000
 
 	# REWARDS
 	perks = {
 		menp_uma_star_eater
-
 	}
 
 	on_unlock = {
@@ -122,7 +121,7 @@ uma_crisis_level_5 = {
 #		}
 #		is_subject = no
 	}
-	required_crisis_currency = 16000
+	required_crisis_currency = 68000
 
 	# REWARDS
 	perks = {

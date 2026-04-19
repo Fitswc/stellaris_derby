@@ -4,7 +4,7 @@ crisobj_uma_realm_power_natural = { #Fire on Monthly?
 		base = 0
 		add = uma_ap_bc_menace_produced
 		round = yes 							#we don't want 3.124 menace
-		min = 10								#just in case
+		min = 0								#just in case
 	}
 	recurring = yes
 }

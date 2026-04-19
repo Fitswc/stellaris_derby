@@ -2418,7 +2418,7 @@ event = {
 			}
 		}
 		export_resource_income_to_variable = {
-			resource = uma_menace
+			resource = uma_menace_middle
 			variable = uma_ap_bc_menace_produced
 		}
 
@@ -2506,6 +2506,7 @@ country_event = {
 
 	immediate = {
 		add_ascension_perk = ap_uma_become_the_crisis
+		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
 		activate_crisis_progression = uma_realm_break_to_realworld_path
 	}
 }
@@ -2534,6 +2535,32 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = uma_ap.4003
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_resource = {
+			resource = uma_menace
+			value = 69000
+		}
+	}
+}
+
+
+planet_event = {
+	id = uma_ap.4004
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_pop_group = {
+			species = Root.owner_main_species
+			size = 10000
+		}
+	}
+}
 
 
 

@@ -57,6 +57,31 @@ uma_crystal_carrot = {
 uma_menace = {
 	tradable = no
 	category = other
+	visibility_prerequisite = {
+		OR = {
+			is_uma_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		}
+	}
+	allow_deficit = no
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+uma_menace_middle = {
+	tradable = no
+	category = other
+	visibility_prerequisite = {
+		OR = {
+			is_uma_country = yes
+			has_ascension_perk = ap_uma_become_the_crisis
+			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		}
+	}
+	allow_deficit = no
 
 	ai_weight = {
 		weight = 1
