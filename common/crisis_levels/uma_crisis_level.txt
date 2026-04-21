@@ -136,6 +136,7 @@ uma_crisis_level_5 = {
 					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
 					amount = 1
 				}
+				country_event = { id = uma_ap.403 days = 3 }
 			}
 		}
 	}

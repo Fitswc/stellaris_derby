@@ -2286,9 +2286,7 @@ country_event = {
 			}
 		}
 		From = {
-			is_uma_player_country = yes
-			has_ascension_perk = ap_uma_become_the_crisis
-			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+			uma_is_uma_ap_bc_actived = yes
 		}
 	}
 
@@ -2305,9 +2303,7 @@ country_event = {
 
 	trigger = {
 		owner = {
-			is_uma_player_country = yes
-			has_ascension_perk = ap_uma_become_the_crisis
-			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+			uma_is_uma_ap_bc_actived = yes
 		}
 
 		# check to exclude starbase kills in the future;
@@ -2369,9 +2365,7 @@ planet_event = {
 
 	trigger = {
 		from = {
-			is_uma_player_country = yes
-			has_ascension_perk = ap_uma_become_the_crisis
-			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+			uma_is_uma_ap_bc_actived = yes
 		}
 		OR = {
 			is_colony = yes
@@ -2433,9 +2427,7 @@ planet_event = {
 
 	trigger = {
 		From.owner = {
-			is_uma_player_country = yes
-			has_ascension_perk = ap_uma_become_the_crisis
-			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+			uma_is_uma_ap_bc_actived = yes
 		}
 	}
 
@@ -2447,7 +2439,8 @@ planet_event = {
 }
 
 
-##
+###
+#2
 country_event = {
 	id = uma_ap.400
 	title = "uma_ap.400.name"
@@ -2464,6 +2457,7 @@ country_event = {
 	}
 }
 
+#3
 country_event = {
 	id = uma_ap.401
 	title = "uma_ap.401.name"
@@ -2480,6 +2474,7 @@ country_event = {
 	}
 }
 
+#4
 country_event = {
 	id = uma_ap.402
 	title = "uma_ap.402.name"
@@ -2495,6 +2490,76 @@ country_event = {
 		custom_tooltip = new_crisis_perks_tt
 	}
 }
+
+#5
+country_event = {
+	id = uma_ap.403
+	title = "uma_ap.403.name"
+	desc = uma_ap.403.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.403.a
+		custom_tooltip = uma_ap.403.a.tt
+		hidden_effect = {
+			set_country_flag = uma_ap.403.happened
+		}
+	}
+}
+###
+##After
+#########
+
+#This event will reduce the crisis currency per month.
+#Fired by on_monthly_pulse_country
+# 16000 (-800 per month) => 20 month to complete.
+country_event = {
+	id = uma_ap.404
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		uma_is_uma_ap_bc_actived = yes
+		has_country_flag = uma_ap.403.happened
+	}
+
+	immediate = {
+		add_resource = {
+			uma_menace = -800
+		}
+		export_resource_stockpile_to_variable = {
+			resource = uma_menace
+			variable = uma_ap.404.uma_menace.stock
+		}
+		multiply_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = -1
+		}
+		add_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = 16000
+		}
+		divide_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = 16000
+		}
+		reset_event_chain_counter = {
+			event_chain = uma_ap_bc_main_evt_chain
+			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
+		}
+		add_event_chain_counter = {
+			event_chain = uma_ap_bc_main_evt_chain
+			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
+			amount = uma_ap_404_uma_menace_stock
+		}
+
+	}
+}
+
 
 
 
@@ -2561,7 +2626,7 @@ planet_event = {
 		}
 	}
 }
-
+####
 
 
 

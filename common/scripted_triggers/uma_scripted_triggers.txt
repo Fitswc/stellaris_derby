@@ -785,3 +785,9 @@ uma_the_uma_endcrisis_happened = {
 		has_global_flag = uma_ec_invasion_end
 	}
 }
+
+uma_is_uma_ap_bc_actived = {
+	is_uma_player_country = yes
+	has_ascension_perk = ap_uma_become_the_crisis
+	has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+}
