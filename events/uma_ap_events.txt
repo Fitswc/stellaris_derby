@@ -2511,7 +2511,7 @@ country_event = {
 	}
 }
 ###
-##After
+##After L5
 #########
 
 #This event will reduce the crisis currency per month.
@@ -2556,11 +2556,228 @@ country_event = {
 			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
 			amount = uma_ap_404_uma_menace_stock
 		}
+	}
+}
 
+##Fired by crisis_level
+country_event = {
+	id = uma_ap.405
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = uma_ec_invasion_ec4_end
+			has_global_flag = uma_ec_invasion_end
+		}
+	}
+
+	immediate = {
+		endgame_telemetry = uma_end_crisis_4
+		set_global_flag = uma_ec_invasion_happened
+
+		log = "UMA ENDCRISIS_AP HAPPENED AT [GetDate]"
+
+		set_update_modifiers_batch = begin
+
+		export_trigger_value_to_variable = {
+			trigger = num_empires
+			variable = uma_num_of_regular_empire
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_fallen_empires
+			variable = uma_num_of_fallen_empire
+		}
+		change_variable = {
+			which = uma_num_of_regular_empire
+			value = uma_num_of_fallen_empire
+		}
+
+		export_trigger_value_to_variable = {
+			trigger = num_ai_empires_setting
+			variable = uma_num_of_regular_empire
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_fallen_empires_setting
+			variable = uma_num_of_fallen_empire
+		}
+		change_variable = {
+			which = uma_num_of_regular_empire
+			value = uma_num_of_fallen_empire
+		}
+		## Get the number of available empire in the area
+
+		every_country = {
+			limit = {
+				is_ai = yes
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = uma_fallen_empire
+				}
+			}
+			set_country_flag = uma_ap_bc_will_be_transform
+		}
+
+		while = {
+			limit = {
+				any_country = {
+					has_country_flag = uma_ap_bc_will_be_transform
+				}
+			}
+			random_country = {
+				limit = {
+					has_country_flag = uma_ap_bc_will_be_transform
+				}
+				country_event = {
+					id = uma_ap.406
+					days = 2
+				}
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				has_country_flag = uma_ap_bc_ec_country_tred
+			}
+			country_event = {
+				id = uma_ap.407
+				days = 20
+				random = 10
+			}
+		}
 	}
 }
 
 
+country_event = {
+	id = uma_ap.406
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_ap_bc_will_be_transform
+	}
+
+	immediate = {
+		set_country_type = uma_ec4_empire
+		set_name = UMA_EC4_EMPIRE_NAME
+		set_country_flag = uma_ap_bc_ec_country_tred
+		change_country_flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "flag_BG_39.dds"
+			}
+			colors = {
+				"blue"
+				"moss_green"
+				"null"
+				"null"
+			}
+		}
+
+
+		remove_country_flag = uma_ap_bc_will_be_transform
+	}
+}
+
+country_event = {
+	id = uma_ap.407
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		fleet_power <= 100000000 #100M
+	}
+
+	immediate = {
+		capital_star.solar_system = {
+			create_fleet = {
+				name = UMA_EC4_EMPIRE_FLEET_NAME
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = Root
+					set_fleet_flag = uma_ec4_strike_fleet
+					while = {
+						count = 30
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_FRONT_SQUARD_BB
+							graphical_culture = mammalian_01
+						}
+					}
+					assign_leader = last_created_leader
+
+					while = {
+						count = 60
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_FRONT_SQUARD_CV
+							graphical_culture = mammalian_01
+						}
+					}
+
+					while = {
+						count = 80
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_SOC_Corvette_2
+							graphical_culture = mammalian_01
+						}
+					}
+
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_SOC_Titan_2
+							graphical_culture = mammalian_01
+						}
+					}
+
+
+					set_location = {
+						target = Root.capital_star
+						distance = 20
+						angle = random
+					}
+
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 500
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+		last_created_fleet = {
+
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ap.408
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+}
 
 
 #Debug only
@@ -2626,7 +2843,7 @@ planet_event = {
 		}
 	}
 }
-####
+#### Debug Area end
 
 
 

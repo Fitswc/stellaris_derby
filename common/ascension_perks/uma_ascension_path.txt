@@ -212,6 +212,15 @@ ap_uma_become_the_crisis = {
 	}
 
 	possible = {
+		custom_tooltip = {
+			fail_text = default
+			is_multiplayer = yes
+			any_playable_country = {
+				is_ai = no
+				is_uma_country = yes
+				has_ascension_perk = ap_uma_become_the_crisis
+			}
+		}
 		#Disable For Debug
 #		custom_tooltip = {
 #			fail_text = "requires_independence"
