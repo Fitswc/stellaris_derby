@@ -1,0 +1,861 @@
+namespace = uma_ap
+
+#####
+#Crisis Ascension Perk 26.3.8
+#####
+
+country_event = {
+	id = uma_ap.300
+	title = uma_ap.300.title
+	desc = uma_ap.300.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.300.a
+		begin_event_chain = {
+			event_chain = uma_ap_bc_main_evt_chain
+			target = Root
+		}
+		enable_special_project = {
+			name = UMA_AP_BC_RESEARCH_REALM
+			owner = Root
+			location = Root.capital_scope
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.301
+	title = uma_ap.301.title
+	desc = uma_ap.301.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.301.a
+		custom_tooltip = uma_ap.301.tt
+		enable_special_project = {
+			name = UMA_AP_BC_RESEARCH_MEGASTRUCTURE
+			owner = Root
+			location = Root.capital_scope
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.302
+	title = uma_ap.302.title
+	desc = uma_ap.302.desc
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.302.a
+		custom_tooltip = uma_ap.302.tt
+		enable_special_project = {
+			name = UMA_AP_BC_BUILD_MEGASTRUCTURE
+			owner = Root
+			location = Root.capital_scope
+		}
+	}
+}
+
+#Build Mega structure
+country_event = {
+	id = uma_ap.303
+	title = uma_ap.303.title
+	desc = uma_ap.303.desc
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope.solar_system = {
+			spawn_megastructure = {
+				name = "NAME_uma_AP_BC_MEGAS"
+				type = "uma_crisis_path_orbital_ring"
+				orbit_angle = 0
+				orbit_distance = 0
+				owner = Root
+				graphical_culture = Root
+				planet = star
+				init_effect = {
+					set_megastructure_flag = uma_crisis_path_orbital_ring_built
+				}
+			}
+		}
+		activate_crisis_progression = uma_realm_break_to_realworld_path
+		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		save_global_event_target_as = uma_ap_bc_target_country
+	}
+
+	option = {
+		name = uma_ap.303.a
+	}
+}
+
+
+##Crisis_OBJ_REWARD
+country_event = {
+	id = uma_ap.304
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		This = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = uma_fallen_empire
+			}
+		}
+		From = {
+			uma_is_uma_ap_bc_actived = yes
+		}
+	}
+
+	immediate = {
+		complete_crisis_objective = crisobj_uma_destroy_country
+	}
+}
+
+
+country_event = {
+	id = uma_ap.305
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			uma_is_uma_ap_bc_actived = yes
+		}
+
+		# check to exclude starbase kills in the future;
+		# right now they're included and the starbase kill objective does nothing,
+		# as the menace reward is the same
+
+		fromfrom = {
+			OR = {
+				NOT = { is_ship_class = shipclass_starbase }
+				fleet = { is_mobile = yes } #juggernauts
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			complete_crisis_objective = crisobj_uma_destroy_fleet
+		}
+	}
+}
+
+# Menace Objective - Destroy Starbases
+# Fired from on_action 'on_starbase_destroyed'
+starbase_event = {
+	id = uma_ap.306
+	hide_window = yes
+	is_triggered_only = yes
+
+	# This = Starbase
+	# From = fleet that destroyed it
+
+	trigger = {
+		from = {
+			owner = {
+				has_ascension_perk = ap_become_the_crisis
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			owner = {
+				# Note: crisobj_destroy_enemy_ships would do the same thing, disabled for starbases in crisis.4025
+				complete_crisis_objective = crisobj_destroy_starbases
+			}
+		}
+	}
+}
+
+# Menace Objective - Conquer Worlds
+# Fired from on_action 'on_planet_conquer'
+planet_event = {
+	id = uma_ap.307
+	hide_window = yes
+	is_triggered_only = yes
+
+	# From = Country scope (new owner)
+	# This = Planet scope
+
+	trigger = {
+		from = {
+			uma_is_uma_ap_bc_actived = yes
+		}
+		OR = {
+			is_colony = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_primitive = yes
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			complete_crisis_objective = crisobj_uma_conquer_worlds
+		}
+	}
+}
+
+## Fired from on_action 'on_monthly_pulse'
+event = {
+	id = uma_ap.308
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			OR = {
+				AND = {
+					has_ascension_perk = ap_uma_become_the_crisis
+					has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = uma_ap_bc_menace_produced }
+			}
+			set_variable = {
+				which = uma_ap_bc_menace_produced
+				value = 0
+			}
+		}
+		export_resource_income_to_variable = {
+			resource = uma_menace_middle
+			variable = uma_ap_bc_menace_produced
+		}
+
+		complete_crisis_objective = crisobj_uma_realm_power_natural
+	}
+}
+
+planet_event = {
+	id = uma_ap.309
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From.owner = {
+			uma_is_uma_ap_bc_actived = yes
+		}
+	}
+
+	immediate = {
+		From.owner = {
+			complete_crisis_objective = crisobj_uma_purge_pops
+		}
+	}
+}
+
+
+###
+#2
+country_event = {
+	id = uma_ap.400
+	title = "uma_ap.400.name"
+	desc = uma_ap.400.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.400.a
+		custom_tooltip = new_crisis_perks_tt
+	}
+}
+
+#3
+country_event = {
+	id = uma_ap.401
+	title = "uma_ap.401.name"
+	desc = uma_ap.401.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.401.a
+		custom_tooltip = new_crisis_perks_tt
+	}
+}
+
+#4
+country_event = {
+	id = uma_ap.402
+	title = "uma_ap.402.name"
+	desc = uma_ap.402.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.402.a
+		custom_tooltip = new_crisis_perks_tt
+	}
+}
+
+#5
+country_event = {
+	id = uma_ap.403
+	title = "uma_ap.403.name"
+	desc = uma_ap.403.desc
+	picture = GFX_evt_victorious_army
+	show_sound = event_death_cult
+	event_chain = uma_ap_bc_main_evt_chain
+
+	is_triggered_only = yes
+
+	option = {
+		name = uma_ap.403.a
+		custom_tooltip = uma_ap.403.a.tt
+		hidden_effect = {
+			set_country_flag = uma_ap.403.happened
+		}
+	}
+}
+###
+##After L5
+#########
+
+#This event will reduce the crisis currency per month.
+#Fired by on_monthly_pulse_country
+# 16000 (-800 per month) => 20 month to complete.
+country_event = {
+	id = uma_ap.404
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		uma_is_uma_ap_bc_actived = yes
+		has_country_flag = uma_ap.403.happened
+	}
+
+	immediate = {
+		add_resource = {
+			uma_menace = -800
+		}
+		export_resource_stockpile_to_variable = {
+			resource = uma_menace
+			variable = uma_ap.404.uma_menace.stock
+		}
+		multiply_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = -1
+		}
+		add_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = 16000
+		}
+		divide_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = 16000
+		}
+		reset_event_chain_counter = {
+			event_chain = uma_ap_bc_main_evt_chain
+			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
+		}
+		add_event_chain_counter = {
+			event_chain = uma_ap_bc_main_evt_chain
+			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
+			amount = uma_ap_404_uma_menace_stock
+		}
+	}
+}
+
+##Fired by crisis_level
+country_event = {
+	id = uma_ap.405
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = uma_ec_invasion_ec4_end
+			has_global_flag = uma_ec_invasion_end
+		}
+	}
+
+	immediate = {
+		endgame_telemetry = uma_end_crisis_4
+		set_global_flag = uma_ec_invasion_happened
+
+		log = "UMA ENDCRISIS_AP HAPPENED AT [GetDate]"
+
+		set_update_modifiers_batch = begin
+
+		export_trigger_value_to_variable = {
+			trigger = num_empires
+			variable = uma_num_of_regular_empire
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_fallen_empires
+			variable = uma_num_of_fallen_empire
+		}
+		change_variable = {
+			which = uma_num_of_regular_empire
+			value = uma_num_of_fallen_empire
+		}
+
+		export_trigger_value_to_variable = {
+			trigger = num_ai_empires_setting
+			variable = uma_num_of_regular_empire
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_fallen_empires_setting
+			variable = uma_num_of_fallen_empire
+		}
+		change_variable = {
+			which = uma_num_of_regular_empire
+			value = uma_num_of_fallen_empire
+		}
+		## Get the number of available empire in the area
+
+		every_country = {
+			limit = {
+				is_ai = yes
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = uma_fallen_empire
+				}
+			}
+			set_country_flag = uma_ap_bc_will_be_transform
+		}
+
+		while = {
+			limit = {
+				any_country = {
+					has_country_flag = uma_ap_bc_will_be_transform
+				}
+			}
+			random_country = {
+				limit = {
+					has_country_flag = uma_ap_bc_will_be_transform
+				}
+				country_event = {
+					id = uma_ap.406
+					days = 2
+				}
+			}
+		}
+		set_update_modifiers_batch = end
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				has_country_flag = uma_ap_bc_ec_country_tred
+			}
+			country_event = {
+				id = uma_ap.407
+				days = 20
+				random = 10
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = uma_ap.406
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = uma_ap_bc_will_be_transform
+	}
+
+	immediate = {
+		set_country_type = uma_ec4_empire
+		set_name = UMA_EC4_EMPIRE_NAME
+		set_country_flag = uma_ap_bc_ec_country_tred
+		change_country_flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "flag_BG_39.dds"
+			}
+			colors = {
+				"blue"
+				"moss_green"
+				"null"
+				"null"
+			}
+		}
+
+
+		remove_country_flag = uma_ap_bc_will_be_transform
+	}
+}
+
+country_event = {
+	id = uma_ap.407
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		fleet_power <= 100000000 #100M
+	}
+
+	immediate = {
+		capital_star.solar_system = {
+			create_fleet = {
+				name = UMA_EC4_EMPIRE_FLEET_NAME
+				settings = {
+					can_upgrade = no
+					uses_naval_capacity = no
+					can_change_composition = no
+					can_disband = no
+					spawn_debris = no
+					ai_ignore_strength = yes
+				}
+				effect = {
+					set_owner = Root
+					set_fleet_flag = uma_ec4_strike_fleet
+					while = {
+						count = 30
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_FRONT_SQUARD_BB
+							graphical_culture = mammalian_01
+						}
+					}
+					assign_leader = last_created_leader
+
+					while = {
+						count = 60
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_FRONT_SQUARD_CV
+							graphical_culture = mammalian_01
+						}
+					}
+
+					while = {
+						count = 80
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_SOC_Corvette_2
+							graphical_culture = mammalian_01
+						}
+					}
+
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							design = NAME_UMA_EC3_SOC_Titan_2
+							graphical_culture = mammalian_01
+						}
+					}
+
+
+					set_location = {
+						target = Root.capital_star
+						distance = 20
+						angle = random
+					}
+
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 500
+					set_fleet_bombardment_stance = armageddon
+				}
+			}
+		}
+		last_created_fleet = {
+
+		}
+	}
+}
+
+fleet_event = {
+	id = uma_ap.408
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		queue_actions = {
+			repeat = {
+				find_closest_system = {
+					trigger = {
+						id = uma_ap.408.t1
+						OR = {
+							AND = {
+								exists = starbase
+								starbase = { owner = { is_hostile = root.owner } }
+							}
+
+							any_galaxy_fleet = {
+								owner = {
+									is_guardian_country = no
+								}
+							}
+						}
+
+						ROOT = { can_access_system = prev }
+
+						OR = {
+							AND = {
+								count_fleet_in_system = {
+									limit = {
+										owner = {
+											has_country_flag = uma_ap_bc_ec_country_tred
+										}
+									}
+									count <= 2
+								}
+								is_capital_system = no
+							}
+
+							AND = {
+								is_capital_system = yes
+							}
+						}
+					}
+					found_system = {
+						move_to = this
+
+						repeat = {
+							#if has colonies
+							while = {
+								id = uma_ap.408.t2
+
+								NOT = {
+									any_system_planet = {
+										is_colony = yes
+										is_under_colonization = no
+
+										is_owned_by = event_target:uma_ap_bc_target_country
+									}
+								}
+							}
+							find_closest_planet = {
+								trigger = {
+									id = uma_ap.408.t3
+
+									is_colony = yes
+									is_under_colonization = no
+
+									is_owned_by = event_target:uma_ap_bc_target_country
+								}
+								found_planet = {
+									orbit_planet = this
+									effect = {
+										id = uma_ap.408.e1
+
+										#Bombard the planet
+										Root = {
+											set_fleet_flag = uma_ap.408.bombingplanet
+										}
+
+										planet_event = {
+											id = uma_ap.409
+											days = 150
+											scopes = {
+												from = Root
+											}
+										}
+									}
+								}
+							}
+							move_to = this
+							wait = { duration = 10 random = 10 }
+						}
+						wait = { duration = 10 random = 10 }
+					}
+					failed = {
+						find_random_fleet = {
+							trigger = {
+								id = uma_ec_3.5.t4
+								owner = {
+									is_hostile = Root.owner
+								}
+							}
+							found_fleet = {
+								move_to = this
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Wipe out the colony
+planet_event = {
+	id = uma_ap.409
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = From
+		From = {
+			has_fleet_flag = uma_ap.408.bombingplanet
+		}
+	}
+
+	immediate = {
+		kill_all_pop = yes
+		destroy_colony = yes
+	}
+}
+
+# This = owner of fleet 1 (combatant)	#攻击舰队的所有者
+# From = owner of fleet 2 (destroyed)	#遇害舰队的所有者
+# FromFrom = fleet 1	#攻击舰队
+# FromFromFrom = fleet 2	#遇害舰队
+#Fire on on_fleet_destroyed_perp
+country_event = {
+	id = uma_ap.410
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FromFromFrom = {
+			has_fleet_flag = uma_ap.408.bombingplanet
+		}
+		From = {
+			has_country_flag = uma_ap_bc_ec_country_tred
+		}
+		This = {
+			NOT = {
+				is_country_type = default
+				has_country_flag = uma_ap_bc_ec_country_tred
+			}
+		}
+	}
+
+	immediate = {
+		FromFromFrom = {
+			remove_fleet_flag = uma_ap.408.bombingplanet
+		}
+	}
+}
+
+system_event = {
+	id = uma_ap.411
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_system_megastructure = { has_megastructure_flag = uma_crisis_path_orbital_ring_built }
+	}
+
+	immediate = {
+		every_system_megastructure = {
+			limit = {
+				has_megastructure_flag = uma_crisis_path_orbital_ring_built
+			}
+			remove_megastructure = This
+		}
+		create_ambient_object = {
+			use_3d_location = yes
+			location = This.star
+			entity_offset_height = -5
+			entity_offset_angle = { min = 0 max = 360 }
+		}
+
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				NOR = {
+					is_same_value = from
+					is_same_value = fromfrom
+				}
+			}
+			country_event = { id = crisis.6103 }
+		}
+	}
+}
+
+
+
+#Debug only
+country_event = {
+	id = uma_ap.4000
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_ascension_perk = ap_uma_become_the_crisis
+		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
+		activate_crisis_progression = uma_realm_break_to_realworld_path
+	}
+}
+
+country_event = {
+	id = uma_ap.4001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = {
+			uma_menace = -1000
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.4002
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = {
+			uma_menace = 1000
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.4003
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_resource = {
+			resource = uma_menace
+			value = 69000
+		}
+	}
+}
+
+
+planet_event = {
+	id = uma_ap.4004
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_pop_group = {
+			species = Root.owner_main_species
+			size = 10000
+		}
+	}
+}
+#### Debug Area end

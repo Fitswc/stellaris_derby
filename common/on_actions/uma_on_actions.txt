@@ -263,6 +263,16 @@ on_fleet_destroyed_perp = {
 		uma_crisis.6668
 		uma_curren.500
 		#		uma_ec_1.2
+		uma_ap.410
+	}
+}
+
+# THIS = System: system being occupied
+# FROM = Country: Conqueror of the system
+# FROMFROM = Country: Original owner of the system
+on_system_occupied = {
+	events = {
+		uma_ap.411
 	}
 }
 
