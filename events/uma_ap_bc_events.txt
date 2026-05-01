@@ -84,6 +84,7 @@ country_event = {
 		activate_crisis_progression = uma_realm_break_to_realworld_path
 		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
 		save_global_event_target_as = uma_ap_bc_target_country
+		save_global_event_target_as = crisis_country
 	}
 
 	option = {
@@ -347,6 +348,10 @@ country_event = {
 	trigger = {
 		uma_is_uma_ap_bc_actived = yes
 		has_country_flag = uma_ap.403.happened
+		resource_stockpile_compare = {
+			resource = uma_menace
+			value > 0
+		}
 	}
 
 	immediate = {
@@ -505,8 +510,15 @@ country_event = {
 			}
 		}
 
-
 		remove_country_flag = uma_ap_bc_will_be_transform
+	}
+
+	after = {
+		country_event = {
+			id = uma_ap.407
+			days = 50
+			random = 20
+		}
 	}
 }
 
@@ -520,73 +532,86 @@ country_event = {
 	}
 
 	immediate = {
-		capital_star.solar_system = {
-			create_fleet = {
-				name = UMA_EC4_EMPIRE_FLEET_NAME
-				settings = {
-					can_upgrade = no
-					uses_naval_capacity = no
-					can_change_composition = no
-					can_disband = no
-					spawn_debris = no
-					ai_ignore_strength = yes
+		random_system_within_border = {
+			solar_system = {
+				create_fleet = {
+					name = UMA_EC4_EMPIRE_FLEET_NAME
+					settings = {
+						can_upgrade = no
+						uses_naval_capacity = no
+						can_change_composition = no
+						can_disband = no
+						spawn_debris = no
+						ai_ignore_strength = yes
+					}
+					effect = {
+						set_owner = Root
+						set_fleet_flag = uma_ec4_strike_fleet
+						while = {
+							count = 30
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC3_FRONT_SQUARD_BB
+								graphical_culture = mammalian_01
+							}
+						}
+						assign_leader = last_created_leader
+
+						while = {
+							count = 60
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC3_FRONT_SQUARD_CV
+								graphical_culture = mammalian_01
+							}
+						}
+
+						while = {
+							count = 80
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC3_SOC_Corvette_2
+								graphical_culture = mammalian_01
+							}
+						}
+
+						while = {
+							count = 5
+							create_ship = {
+								name = random
+								design = NAME_UMA_EC3_SOC_Titan_2
+								graphical_culture = mammalian_01
+							}
+						}
+
+
+						set_location = {
+							target = Root.capital_star
+							distance = 20
+							angle = random
+						}
+
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 500
+						set_fleet_bombardment_stance = armageddon
+					}
 				}
-				effect = {
-					set_owner = Root
-					set_fleet_flag = uma_ec4_strike_fleet
-					while = {
-						count = 30
-						create_ship = {
-							name = random
-							design = NAME_UMA_EC3_FRONT_SQUARD_BB
-							graphical_culture = mammalian_01
-						}
-					}
-					assign_leader = last_created_leader
-
-					while = {
-						count = 60
-						create_ship = {
-							name = random
-							design = NAME_UMA_EC3_FRONT_SQUARD_CV
-							graphical_culture = mammalian_01
-						}
-					}
-
-					while = {
-						count = 80
-						create_ship = {
-							name = random
-							design = NAME_UMA_EC3_SOC_Corvette_2
-							graphical_culture = mammalian_01
-						}
-					}
-
-					while = {
-						count = 5
-						create_ship = {
-							name = random
-							design = NAME_UMA_EC3_SOC_Titan_2
-							graphical_culture = mammalian_01
-						}
-					}
-
-
-					set_location = {
-						target = Root.capital_star
-						distance = 20
-						angle = random
-					}
-
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 500
-					set_fleet_bombardment_stance = armageddon
+			}
+			last_created_fleet = {
+				fleet_event = {
+					id = uma_ap.408
+					days = 2
 				}
 			}
 		}
-		last_created_fleet = {
+	}
 
+	after = {
+		country_event = {
+			id = uma_ap.407
+			days = 200
+			random = 50
 		}
 	}
 }
@@ -756,6 +781,8 @@ country_event = {
 	}
 }
 
+##Failed
+#Fired by on_system_occupied
 system_event = {
 	id = uma_ap.411
 	hide_window = yes
@@ -774,6 +801,7 @@ system_event = {
 			remove_megastructure = This
 		}
 		create_ambient_object = {
+			type = large_debris_object
 			use_3d_location = yes
 			location = This.star
 			entity_offset_height = -5
@@ -783,12 +811,150 @@ system_event = {
 		every_playable_country = {
 			limit = {
 				is_ai = no
-				NOR = {
-					is_same_value = from
-					is_same_value = fromfrom
+				is_same_value = fromfrom
+				FromFrom = {
+					uma_is_uma_ap_bc_actived = yes
 				}
 			}
-			country_event = { id = crisis.6103 }
+			country_event = { id = uma_ap.416 }
+		}
+	}
+}
+
+##Win
+##Fire on on_monthly_pulse
+country_event = {
+	id = uma_ap.412
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		uma_is_uma_ap_bc_actived = yes
+		has_crisis_level = uma_crisis_level_5
+		has_country_flag = uma_ap.403.happened
+		resource_stockpile_compare = {
+			resource = uma_menace
+			value <= 0
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = uma_ap.413
+			days = 20
+			random = 10
+		}
+	}
+}
+
+# Ascension!
+country_event = {
+	id = uma_ap.413
+	title = "crisis.6050.name"
+	desc = uma_ap.413.desc
+	picture = GFX_evt_vortex
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_victory_score = {
+			source = destroyed_galaxy_score
+			score = 500000
+		}
+		hidden_effect = {
+			country_event = { id = timeline.34 } # Milestone Destroyed Galaxy
+		}
+	}
+
+	option = {
+		name = uma_ap.413.a
+		custom_tooltip = uma_ap.413.a.tooltip
+		hidden_effect = {
+			country_event = { id = uma_ap.414 days = 1 } # win delay to get cheevo
+		}
+		tooltip = { win = yes }
+	}
+}
+
+
+# Crisis Wins
+country_event = {
+	id = uma_ap.414
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				NOT = { is_same_value = root }
+			}
+			country_event = { id = uma_ap.415 }
+		}
+		set_update_modifiers_batch = begin
+		every_system = { destroy_star_system = yes }
+		set_update_modifiers_batch = end
+		every_country = {
+			limit = {
+				NOT = {
+					is_country_type = default
+				}
+			}
+			destroy_country = yes
+		}
+		win = yes
+	}
+}
+
+# Game Over
+country_event = {
+	id = uma_ap.415
+	title = "crisis.6051.name"
+	desc = "crisis.6051.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	option = {
+		name = crisis.6051.a
+	}
+}
+
+# Megastructure be Destroyed (Game Over)
+country_event = {
+	id = uma_ap.416
+	title = "uma_ap.416.name"
+	desc = "uma_ap.416.desc"
+	picture = GFX_evt_ruined_system
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = uma_ec_invasion_ec4_end
+		set_global_flag = uma_ec_invasion_end
+	}
+
+	option = {
+		name = uma_ap.416.a
+		custom_tooltip = uma_ap.416.a.tooltip
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_country_type = uma_ec4_empire
+				}
+				set_name = random
+				set_country_type = default
+			}
+			This = {
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
+			}
 		}
 	}
 }
