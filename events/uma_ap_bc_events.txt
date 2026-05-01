@@ -403,7 +403,7 @@ country_event = {
 		endgame_telemetry = uma_end_crisis_4
 		set_global_flag = uma_ec_invasion_happened
 
-		log = "UMA ENDCRISIS_AP HAPPENED AT [GetDate]"
+		log = "UMA ENDCRISIS_AP HAPPENED AT [GetDate] +10days"
 
 		set_update_modifiers_batch = begin
 
@@ -433,47 +433,17 @@ country_event = {
 			value = uma_num_of_fallen_empire
 		}
 		## Get the number of available empire in the area
-
-		every_country = {
-			limit = {
-				is_ai = yes
-				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = uma_fallen_empire
-				}
-			}
-			set_country_flag = uma_ap_bc_will_be_transform
-		}
-
-		while = {
-			limit = {
-				any_country = {
-					has_country_flag = uma_ap_bc_will_be_transform
-				}
-			}
-			random_country = {
-				limit = {
-					has_country_flag = uma_ap_bc_will_be_transform
-				}
-				country_event = {
-					id = uma_ap.406
-					days = 2
-				}
-			}
-		}
 		set_update_modifiers_batch = end
 	}
 
 	after = {
-		every_country = {
+		random_country = {
 			limit = {
-				has_country_flag = uma_ap_bc_ec_country_tred
+				is_country_type = global_event
 			}
 			country_event = {
-				id = uma_ap.407
-				days = 20
-				random = 10
+				id = uma_ap.406
+				days = 10
 			}
 		}
 	}
@@ -486,31 +456,13 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_country_flag = uma_ap_bc_will_be_transform
+
 	}
 
 	immediate = {
-		set_country_type = uma_ec4_empire
-		set_name = UMA_EC4_EMPIRE_NAME
-		set_country_flag = uma_ap_bc_ec_country_tred
-		change_country_flag = {
-			icon = {
-				category = "special"
-				file = "unknown.dds"
-			}
-			background = {
-				category = "backgrounds"
-				file = "flag_BG_39.dds"
-			}
-			colors = {
-				"blue"
-				"moss_green"
-				"null"
-				"null"
-			}
-		}
-
-		remove_country_flag = uma_ap_bc_will_be_transform
+		set_update_modifiers_batch = begin
+		uma_ec4_create_country_and_species = yes
+		set_update_modifiers_batch = end
 	}
 
 	after = {
@@ -1006,7 +958,7 @@ country_event = {
 	immediate = {
 		set_resource = {
 			resource = uma_menace
-			value = 69000
+			value = 70000
 		}
 	}
 }

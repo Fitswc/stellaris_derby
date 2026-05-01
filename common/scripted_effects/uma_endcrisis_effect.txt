@@ -649,3 +649,58 @@ uma_ec1_create_country_and_species = {
 		}
 	}
 }
+
+uma_ec4_create_country_and_species = {
+	create_species = {
+		name = "NAME_ec1_threegodness_species"
+		class = umamusume
+		namelist = UMAname
+		portrait = umamusume
+		traits = random
+		effect = { save_event_target_as = uma_ec4_species }
+	}
+
+	create_country = {
+		name = "UMA_EC4_EMPIRE_NAME"
+		type = uma_ec4_empire
+		species = event_target:uma_ec4_species
+		name_list = "UMAname"
+		flag = {
+			icon = {
+				category = "special"
+				file = "unknown.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "flag_BG_39.dds"
+			}
+			colors = {
+				"blue"
+				"moss_green"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			create_ship_design = { design = "NAME_Void_Shaper" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Unbidden_Anchor" }
+			add_ship_design = last_created_design
+			create_ship_design = { design = "NAME_Unbidden_Starbase" }
+			add_ship_design = last_created_design
+			save_global_event_target_as = uma_ec4_crisis_country
+			set_graphical_culture = extra_dimensional_03
+			set_country_flag = uma_ec4_crisis_country
+			set_country_flag = uma_ap_bc_ec_country_tred
+			add_resource = {
+				influence = 40000
+				alloys = 80000
+				minerals = 60000
+				uma_crystal_carrot = 10000
+			}
+			add_modifier = {
+				modifier = uma_crisis_modifier_building_o
+			}
+		}
+	}
+}
