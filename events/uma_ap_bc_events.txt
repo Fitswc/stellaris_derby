@@ -85,6 +85,8 @@ country_event = {
 		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
 		save_global_event_target_as = uma_ap_bc_target_country
 		save_global_event_target_as = crisis_country
+
+		remove_from_galactic_community = yes
 	}
 
 	option = {
@@ -437,14 +439,9 @@ country_event = {
 	}
 
 	after = {
-		random_country = {
-			limit = {
-				is_country_type = global_event
-			}
-			country_event = {
-				id = uma_ap.406
-				days = 10
-			}
+		country_event = {
+			id = uma_ap.406
+			days = 10
 		}
 	}
 }
@@ -462,14 +459,93 @@ country_event = {
 	immediate = {
 		set_update_modifiers_batch = begin
 		uma_ec4_create_country_and_species = yes
+		random_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+			}
+			declare_war = {
+				target = Root
+				attacker_war_goal = wg_uma_threegodness_power_agent
+				name = {
+					key = "NAME_Declared_Crisis_War"
+					variable_string = "\\[This.MainDefender.GetAdj\\]"
+				}
+				effect = {
+					save_event_target_as = uma_crisis_war
+				}
+			}
+			save_event_target_as = uma_crisis_war_leader
+		}
+
+		#Quit current war
+		if = {
+			limit = {
+				any_war = {
+					any_war_participant = {
+						is_same_value = Root
+					}
+				}
+			}
+			every_war = {
+				limit = {
+					any_war_participant = {
+						is_same_value = Root
+					}
+				}
+				remove_war_participant = Root
+			}
+		}
+
+		#Open boundary
+		every_playable_country = {
+			limit = {
+				is_galactic_community_member = yes
+				NOR = {
+					is_same_value = Root
+					is_in_federation_with = Root
+				}
+			}
+			set_closed_borders = {
+				who = prev
+				status = no
+			}
+		}
+
+		every_country = {
+			limit = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = uma_fallen_empire
+				is_ai = yes
+				NOT = {
+					is_same_value = Root
+					is_same_value = event_target:uma_crisis_war_leader
+				}
+			}
+			set_closed_borders = {
+				who = prev
+				status = no
+			}
+			join_war_on_side = {
+				war = event_target:uma_crisis_war
+				side = event_target:uma_crisis_war_leader
+			}
+		}
 		set_update_modifiers_batch = end
 	}
 
 	after = {
-		country_event = {
-			id = uma_ap.407
-			days = 50
-			random = 20
+		every_country = {
+			limit = {
+				is_war_participant = {
+					war = event_target:uma_crisis_war
+					side = event_target:uma_crisis_war_leader
+				}
+			}
+			country_event = {
+				id = uma_ap.407
+				days = 5
+			}
 		}
 	}
 }
@@ -547,6 +623,10 @@ country_event = {
 						set_aggro_range_measure_from = self
 						set_aggro_range = 500
 						set_fleet_bombardment_stance = armageddon
+
+						add_modifier = {
+							modifier = uma_ec4_ship_maintainence_reducer
+						}
 					}
 				}
 			}
