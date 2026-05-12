@@ -138,9 +138,9 @@ uma_crisis_level_5 = {
 				}
 				country_event = { id = uma_ap.403 days = 3 }
 
-				random_country = {
+				random_playable_country = {
 					limit = {
-						is_country_type = global_event
+						uma_is_uma_ap_bc_actived = yes
 					}
 					country_event = { id = uma_ap.405 days = 20 }
 				}

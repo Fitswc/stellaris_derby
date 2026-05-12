@@ -362,7 +362,7 @@ country_event = {
 		}
 		export_resource_stockpile_to_variable = {
 			resource = uma_menace
-			variable = uma_ap.404.uma_menace.stock
+			variable = uma_ap.404.uma_menace_stock
 		}
 		multiply_variable = {
 			which = uma_ap_404_uma_menace_stock
@@ -383,7 +383,7 @@ country_event = {
 		add_event_chain_counter = {
 			event_chain = uma_ap_bc_main_evt_chain
 			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
-			amount = uma_ap_404_uma_menace_stock
+			amount = Root.uma_ap_404_uma_menace_stock
 		}
 	}
 }
@@ -406,8 +406,6 @@ country_event = {
 		set_global_flag = uma_ec_invasion_happened
 
 		log = "UMA ENDCRISIS_AP HAPPENED AT [GetDate] +10days"
-
-		set_update_modifiers_batch = begin
 
 		export_trigger_value_to_variable = {
 			trigger = num_empires
@@ -435,7 +433,6 @@ country_event = {
 			value = uma_num_of_fallen_empire
 		}
 		## Get the number of available empire in the area
-		set_update_modifiers_batch = end
 	}
 
 	after = {
@@ -457,26 +454,6 @@ country_event = {
 	}
 
 	immediate = {
-		set_update_modifiers_batch = begin
-		uma_ec4_create_country_and_species = yes
-		random_playable_country = {
-			limit = {
-				is_galactic_community_member = yes
-			}
-			declare_war = {
-				target = Root
-				attacker_war_goal = wg_uma_threegodness_power_agent
-				name = {
-					key = "NAME_Declared_Crisis_War"
-					variable_string = "\\[This.MainDefender.GetAdj\\]"
-				}
-				effect = {
-					save_event_target_as = uma_crisis_war
-				}
-			}
-			save_event_target_as = uma_crisis_war_leader
-		}
-
 		#Quit current war
 		if = {
 			limit = {
@@ -499,7 +476,7 @@ country_event = {
 		#Open boundary
 		every_playable_country = {
 			limit = {
-				is_galactic_community_member = yes
+				#is_galactic_community_member = yes
 				NOR = {
 					is_same_value = Root
 					is_in_federation_with = Root
@@ -511,27 +488,57 @@ country_event = {
 			}
 		}
 
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			uma_ec4_create_country_and_species = yes
+		}
 		every_country = {
 			limit = {
-				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = uma_fallen_empire
 				is_ai = yes
-				NOT = {
-					is_same_value = Root
-					is_same_value = event_target:uma_crisis_war_leader
-				}
-			}
-			set_closed_borders = {
-				who = prev
-				status = no
-			}
-			join_war_on_side = {
-				war = event_target:uma_crisis_war
-				side = event_target:uma_crisis_war_leader
 			}
 		}
-		set_update_modifiers_batch = end
+		random_playable_country = {
+			limit = {
+				is_country_type = default
+				#is_galactic_community_member = yes
+			}
+			declare_war = {
+				target = Root
+				attacker_war_goal = wg_uma_threegodness_power_agent
+				name = {
+					key = "NAME_Declared_Crisis_War"
+					variable_string = "\\[This.MainDefender.GetAdj\\]"
+				}
+				effect = {
+					save_global_event_target_as = uma_crisis_war
+				}
+			}
+			save_global_event_target_as = uma_crisis_war_leader
+			every_country = {
+				limit = {
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = uma_fallen_empire
+					}
+					is_ai = yes
+					NOT = {
+						is_same_value = Root
+						is_same_value = event_target:uma_crisis_war_leader
+					}
+				}
+				set_closed_borders = {
+					who = prev
+					status = no
+				}
+				join_war_on_side = {
+					war = event_target:uma_crisis_war
+					side = event_target:uma_crisis_war_leader
+				}
+			}
+		}
 	}
 
 	after = {
@@ -573,7 +580,7 @@ country_event = {
 						ai_ignore_strength = yes
 					}
 					effect = {
-						set_owner = Root
+						set_owner = event_target:uma_ec4_crisis_country
 						set_fleet_flag = uma_ec4_strike_fleet
 						while = {
 							count = 30
