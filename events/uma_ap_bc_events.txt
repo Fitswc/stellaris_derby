@@ -498,6 +498,11 @@ country_event = {
 			limit = {
 				is_ai = yes
 			}
+			set_faction_hostility = {
+				target = event_target:uma_ec4_crisis_country
+				set_hostile = no
+				set_friendly = yes
+			}
 		}
 		random_playable_country = {
 			limit = {
@@ -509,7 +514,7 @@ country_event = {
 				attacker_war_goal = wg_uma_threegodness_power_agent
 				name = {
 					key = "NAME_Declared_Crisis_War"
-					variable_string = "\\[This.MainDefender.GetAdj\\]"
+					variable_string = "\\[This.MainDefender.GetAdj]\\"
 				}
 				effect = {
 					save_global_event_target_as = uma_crisis_war
@@ -527,6 +532,10 @@ country_event = {
 					NOT = {
 						is_same_value = Root
 						is_same_value = event_target:uma_crisis_war_leader
+						is_war_participant = {
+							war = event_target:uma_crisis_war
+					side = event_target:uma_crisis_war_leader
+						}
 					}
 				}
 				set_closed_borders = {
@@ -569,6 +578,16 @@ country_event = {
 	immediate = {
 		random_system_within_border = {
 			solar_system = {
+				event_target:uma_ec4_crisis_country = {
+					create_leader = {
+						class = commander
+						species = event_target:uma_ec4_species
+						name = random
+						skill = 9
+						randomize_traits = yes
+						hide_age = yes
+					}
+				}
 				create_fleet = {
 					name = UMA_EC4_EMPIRE_FLEET_NAME
 					settings = {
@@ -636,11 +655,11 @@ country_event = {
 						}
 					}
 				}
-			}
-			last_created_fleet = {
-				fleet_event = {
-					id = uma_ap.408
-					days = 2
+				last_created_fleet = {
+					fleet_event = {
+						id = uma_ap.408
+						days = 2
+					}
 				}
 			}
 		}
@@ -659,6 +678,10 @@ fleet_event = {
 	id = uma_ap.408
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = uma_ec4_strike_fleet
+	}
 
 	immediate = {
 		queue_actions = {
@@ -681,22 +704,11 @@ fleet_event = {
 
 						ROOT = { can_access_system = prev }
 
-						OR = {
-							AND = {
-								count_fleet_in_system = {
-									limit = {
-										owner = {
-											has_country_flag = uma_ap_bc_ec_country_tred
-										}
-									}
-									count <= 2
-								}
-								is_capital_system = no
+						count_fleet_in_system = {
+							limit = {
+								has_fleet_flag = uma_ec4_strike_fleet
 							}
-
-							AND = {
-								is_capital_system = yes
-							}
+							count <= 2
 						}
 					}
 					found_system = {
@@ -1010,6 +1022,9 @@ country_event = {
 		add_ascension_perk = ap_uma_become_the_crisis
 		set_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
 		activate_crisis_progression = uma_realm_break_to_realworld_path
+		country_event = {
+			id = uma_ap.303
+		}
 	}
 }
 
