@@ -419,19 +419,20 @@ country_event = {
 			which = uma_num_of_regular_empire
 			value = uma_num_of_fallen_empire
 		}
+		save_global_event_target_as = uma_ap_405_target
 
-		export_trigger_value_to_variable = {
-			trigger = num_ai_empires_setting
-			variable = uma_num_of_regular_empire
-		}
-		export_trigger_value_to_variable = {
-			trigger = num_fallen_empires_setting
-			variable = uma_num_of_fallen_empire
-		}
-		change_variable = {
-			which = uma_num_of_regular_empire
-			value = uma_num_of_fallen_empire
-		}
+#		export_trigger_value_to_variable = {
+#			trigger = num_ai_empires_setting
+#			variable = uma_num_of_regular_empire
+#		}
+#		export_trigger_value_to_variable = {
+#			trigger = num_fallen_empires_setting
+#			variable = uma_num_of_fallen_empire
+#		}
+#		change_variable = {
+#			which = uma_num_of_regular_empire
+#			value = uma_num_of_fallen_empire
+#		}
 		## Get the number of available empire in the area
 	}
 
@@ -488,6 +489,10 @@ country_event = {
 			}
 		}
 
+		##
+		awaken_guardians_of_the_galaxy = yes
+		##
+
 		random_country = {
 			limit = {
 				is_country_type = global_event
@@ -497,6 +502,9 @@ country_event = {
 		every_country = {
 			limit = {
 				is_ai = yes
+				NOT = {
+					is_same_value = event_target:uma_ec4_crisis_country
+				}
 			}
 			set_faction_hostility = {
 				target = event_target:uma_ec4_crisis_country
@@ -534,7 +542,7 @@ country_event = {
 						is_same_value = event_target:uma_crisis_war_leader
 						is_war_participant = {
 							war = event_target:uma_crisis_war
-					side = event_target:uma_crisis_war_leader
+							side = event_target:uma_crisis_war_leader
 						}
 					}
 				}
@@ -551,16 +559,40 @@ country_event = {
 	}
 
 	after = {
-		every_country = {
-			limit = {
-				is_war_participant = {
-					war = event_target:uma_crisis_war
-					side = event_target:uma_crisis_war_leader
-				}
+#		every_playable_country = {
+#			limit = {
+#				is_war_participant = {
+#					war = event_target:uma_crisis_war
+#					side = event_target:uma_crisis_war_leader
+#				}
+#			}
+#			country_event = {
+#				id = uma_ap.407
+#				days = 5
+#			}
+#		}
+		event_target:uma_ap_405_target = {
+			divide_variable = {
+				which = uma_num_of_regular_empire
+				value = 2
 			}
-			country_event = {
-				id = uma_ap.407
-				days = 5
+			round_variable = uma_num_of_regular_empire
+		}
+
+		while = {
+			count = event_target:uma_ap_405_target.uma_num_of_regular_empire
+			random_playable_country = {
+				limit = {
+					is_war_participant = {
+						war = event_target:uma_crisis_war
+						side = event_target:uma_crisis_war_leader
+					}
+				}
+				country_event = {
+					id = uma_ap.407
+					days = 5
+					random = 30
+				}
 			}
 		}
 	}
@@ -578,89 +610,7 @@ country_event = {
 	immediate = {
 		random_system_within_border = {
 			solar_system = {
-				event_target:uma_ec4_crisis_country = {
-					create_leader = {
-						class = commander
-						species = event_target:uma_ec4_species
-						name = random
-						skill = 9
-						randomize_traits = yes
-						hide_age = yes
-					}
-				}
-				create_fleet = {
-					name = UMA_EC4_EMPIRE_FLEET_NAME
-					settings = {
-						can_upgrade = no
-						uses_naval_capacity = no
-						can_change_composition = no
-						can_disband = no
-						spawn_debris = no
-						ai_ignore_strength = yes
-					}
-					effect = {
-						set_owner = event_target:uma_ec4_crisis_country
-						set_fleet_flag = uma_ec4_strike_fleet
-						while = {
-							count = 30
-							create_ship = {
-								name = random
-								design = NAME_UMA_EC3_FRONT_SQUARD_BB
-								graphical_culture = mammalian_01
-							}
-						}
-						assign_leader = last_created_leader
-
-						while = {
-							count = 60
-							create_ship = {
-								name = random
-								design = NAME_UMA_EC3_FRONT_SQUARD_CV
-								graphical_culture = mammalian_01
-							}
-						}
-
-						while = {
-							count = 80
-							create_ship = {
-								name = random
-								design = NAME_UMA_EC3_SOC_Corvette_2
-								graphical_culture = mammalian_01
-							}
-						}
-
-						while = {
-							count = 5
-							create_ship = {
-								name = random
-								design = NAME_UMA_EC3_SOC_Titan_2
-								graphical_culture = mammalian_01
-							}
-						}
-
-
-						set_location = {
-							target = Root.capital_star
-							distance = 20
-							angle = random
-						}
-
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = self
-						set_aggro_range = 500
-						set_fleet_bombardment_stance = armageddon
-
-						add_modifier = {
-							modifier = uma_ec4_ship_maintainence_reducer
-						}
-					}
-				}
-				last_created_fleet = {
-					fleet_event = {
-						id = uma_ap.408
-						days = 2
-					}
-				}
+				uma_ec4_create_strike_fleet = yes
 			}
 		}
 	}
@@ -689,14 +639,11 @@ fleet_event = {
 				find_closest_system = {
 					trigger = {
 						id = uma_ap.408.t1
-						OR = {
-							AND = {
-								exists = starbase
-								starbase = { owner = { is_hostile = root.owner } }
-							}
-
-							any_galaxy_fleet = {
+						AND = {
+							exists = starbase
+							starbase = {
 								owner = {
+									is_hostile = root.owner
 									is_guardian_country = no
 								}
 							}
@@ -704,12 +651,12 @@ fleet_event = {
 
 						ROOT = { can_access_system = prev }
 
-						count_fleet_in_system = {
-							limit = {
-								has_fleet_flag = uma_ec4_strike_fleet
-							}
-							count <= 2
-						}
+						#count_fleet_in_system = {
+						#	limit = {
+						#		has_fleet_flag = uma_ec4_strike_fleet
+						#	}
+						#	count <= 2
+						#}
 					}
 					found_system = {
 						move_to = this
@@ -735,7 +682,9 @@ fleet_event = {
 									is_colony = yes
 									is_under_colonization = no
 
-									is_owned_by = event_target:uma_ap_bc_target_country
+									owner = {
+										is_hostile = root.owner
+									}
 								}
 								found_planet = {
 									orbit_planet = this
@@ -834,36 +783,44 @@ country_event = {
 
 ##Failed
 #Fired by on_system_occupied
-system_event = {
+starbase_event = {
 	id = uma_ap.411
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	trigger = {
-		any_system_megastructure = { has_megastructure_flag = uma_crisis_path_orbital_ring_built }
+		This.owner = {
+			uma_is_uma_ap_bc_actived = yes
+		}
+		This.solar_system = {
+			any_system_megastructure = { has_megastructure_flag = uma_crisis_path_orbital_ring_built }
+		}
 	}
 
 	immediate = {
-		every_system_megastructure = {
-			limit = {
-				has_megastructure_flag = uma_crisis_path_orbital_ring_built
+		log = "Uma_ap.411.happened"
+		this.solar_system = {
+			every_system_megastructure = {
+				limit = {
+					has_megastructure_flag = uma_crisis_path_orbital_ring_built
+				}
+				remove_megastructure = This
 			}
-			remove_megastructure = This
-		}
-		create_ambient_object = {
-			type = large_debris_object
-			use_3d_location = yes
-			location = This.star
-			entity_offset_height = -5
-			entity_offset_angle = { min = 0 max = 360 }
+			create_ambient_object = {
+				type = large_debris_object
+				use_3d_location = yes
+				location = This.star
+				entity_offset_height = -5
+				entity_offset_angle = { min = 0 max = 360 }
+			}
 		}
 
 		every_playable_country = {
 			limit = {
 				is_ai = no
-				is_same_value = fromfrom
-				FromFrom = {
+				is_same_value = This.owner
+				This.owner = {
 					uma_is_uma_ap_bc_actived = yes
 				}
 			}

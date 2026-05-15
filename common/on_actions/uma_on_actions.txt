@@ -267,15 +267,6 @@ on_fleet_destroyed_perp = {
 	}
 }
 
-# THIS = System: system being occupied
-# FROM = Country: Conqueror of the system
-# FROMFROM = Country: Original owner of the system
-on_system_occupied = {
-	events = {
-		uma_ap.411
-	}
-}
-
 # This = owner of ship 1 (combatant)
 	# From = owner of ship 2 (destroyed)
 	# FromFrom = ship 1
@@ -617,6 +608,7 @@ on_starbase_destroyed = {
 		uma_ec_3.25
 		uma_ec_3.12
 		uma_ap.306
+		uma_ap.411
 	}
 }
 

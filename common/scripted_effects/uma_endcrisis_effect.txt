@@ -704,3 +704,89 @@ uma_ec4_create_country_and_species = {
 		}
 	}
 }
+
+uma_ec4_create_strike_fleet = {
+	optimize_memory
+	event_target:uma_ec4_crisis_country = {
+		create_leader = {
+			class = commander
+			species = event_target:uma_ec4_species
+			name = random
+			skill = 9
+			randomize_traits = yes
+			hide_age = yes
+		}
+	}
+	create_fleet = {
+		name = UMA_EC4_EMPIRE_FLEET_NAME
+		settings = {
+			can_upgrade = no
+			uses_naval_capacity = no
+			can_change_composition = no
+			can_disband = no
+			spawn_debris = no
+			ai_ignore_strength = yes
+		}
+		effect = {
+			set_owner = event_target:uma_ec4_crisis_country
+			set_fleet_flag = uma_ec4_strike_fleet
+			while = {
+				count = 30
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_FRONT_SQUARD_BB
+					graphical_culture = mammalian_01
+				}
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 60
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_FRONT_SQUARD_CV
+					graphical_culture = mammalian_01
+				}
+			}
+
+			while = {
+				count = 80
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_SOC_Corvette_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+			while = {
+				count = 5
+				create_ship = {
+					name = random
+					design = NAME_UMA_EC3_SOC_Titan_2
+					graphical_culture = mammalian_01
+				}
+			}
+
+
+			set_location = {
+				target = Root.capital_star
+				distance = 20
+				angle = random
+			}
+
+			set_fleet_stance = aggressive
+			set_aggro_range_measure_from = self
+			set_aggro_range = 500
+			set_fleet_bombardment_stance = armageddon
+
+			add_modifier = {
+				modifier = uma_ec4_ship_maintainence_reducer
+			}
+
+			fleet_event = {
+				id = uma_ap.408
+				days = 2
+			}
+		}
+	}
+}
