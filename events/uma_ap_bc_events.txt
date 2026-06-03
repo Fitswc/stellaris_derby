@@ -78,6 +78,7 @@ country_event = {
 				planet = star
 				init_effect = {
 					set_megastructure_flag = uma_crisis_path_orbital_ring_built
+					save_global_event_target_as = uma_crisis_path_orbital_ring_built_target
 				}
 			}
 		}
@@ -245,6 +246,24 @@ event = {
 	}
 }
 
+## Fired from on_action 'on_monthly_pulse'
+country_event = {
+	id = uma_ap.3080
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		resource_stockpile_compare = {
+			resource = uma_menace
+			value > 15000
+		}
+	}
+
+	immediate = {
+
+	}
+}
+
 planet_event = {
 	id = uma_ap.309
 	hide_window = yes
@@ -405,7 +424,7 @@ country_event = {
 		endgame_telemetry = uma_end_crisis_4
 		set_global_flag = uma_ec_invasion_happened
 
-		log = "UMA ENDCRISIS_AP HAPPENED AT [GetDate] +10days"
+		log = "UMA ENDCRISIS_AP ALL DECLARE WAR HAPPENED AT [GetDate] +10days => in CL3"
 
 		export_trigger_value_to_variable = {
 			trigger = num_empires
@@ -571,27 +590,20 @@ country_event = {
 #				days = 5
 #			}
 #		}
-		event_target:uma_ap_405_target = {
-			divide_variable = {
-				which = uma_num_of_regular_empire
-				value = 2
-			}
-			round_variable = uma_num_of_regular_empire
-		}
-
 		while = {
-			count = event_target:uma_ap_405_target.uma_num_of_regular_empire
+			count = 2
 			random_playable_country = {
 				limit = {
 					is_war_participant = {
 						war = event_target:uma_crisis_war
 						side = event_target:uma_crisis_war_leader
 					}
+					fleet_power <= 1200000
 				}
 				country_event = {
 					id = uma_ap.407
 					days = 5
-					random = 30
+					random = 10
 				}
 			}
 		}
@@ -616,10 +628,19 @@ country_event = {
 	}
 
 	after = {
-		country_event = {
-			id = uma_ap.407
-			days = 200
-			random = 50
+		random_playable_country = {
+			limit = {
+				is_war_participant = {
+					war = event_target:uma_crisis_war
+					side = event_target:uma_crisis_war_leader
+				}
+				fleet_power <= 120000
+			}
+			country_event = {
+				id = uma_ap.407
+				days = 200
+				random = 50
+			}
 		}
 	}
 }
@@ -782,7 +803,7 @@ country_event = {
 }
 
 ##Failed
-#Fired by on_system_occupied
+#Fired by on_starbase_destroy
 starbase_event = {
 	id = uma_ap.411
 	hide_window = yes
@@ -792,9 +813,16 @@ starbase_event = {
 	trigger = {
 		This.owner = {
 			uma_is_uma_ap_bc_actived = yes
+			Root.solar_system = {
+				is_capital_system = yes
+			}
 		}
 		This.solar_system = {
-			any_system_megastructure = { has_megastructure_flag = uma_crisis_path_orbital_ring_built }
+			OR = {
+				any_system_megastructure = { has_megastructure_flag = uma_crisis_path_orbital_ring_built }
+				any_system_megastructure = { exists = event_target:uma_crisis_path_orbital_ring_built_target }
+				has_megastructure = uma_crisis_path_orbital_ring
+			}
 		}
 	}
 
@@ -981,6 +1009,10 @@ country_event = {
 		activate_crisis_progression = uma_realm_break_to_realworld_path
 		country_event = {
 			id = uma_ap.303
+		}
+		begin_event_chain = {
+			event_chain = uma_ap_bc_main_evt_chain
+			target = Root
 		}
 	}
 }

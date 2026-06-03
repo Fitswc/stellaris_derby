@@ -73,6 +73,14 @@ uma_crisis_level_3 = {
 					amount = 1
 				}
 				country_event = { id = uma_ap.401 days = 3 }
+
+				##All declare the war.
+				random_playable_country = {
+					limit = {
+						uma_is_uma_ap_bc_actived = yes
+					}
+					country_event = { id = uma_ap.405 days = 20 }
+				}
 			}
 		}
 	}
@@ -137,13 +145,6 @@ uma_crisis_level_5 = {
 					amount = 1
 				}
 				country_event = { id = uma_ap.403 days = 3 }
-
-				random_playable_country = {
-					limit = {
-						uma_is_uma_ap_bc_actived = yes
-					}
-					country_event = { id = uma_ap.405 days = 20 }
-				}
 			}
 		}
 	}
