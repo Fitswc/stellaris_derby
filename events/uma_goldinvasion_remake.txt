@@ -71,6 +71,7 @@ country_event = {
 	immediate = {
 		log = "Uma-GoldShip Invasion's Prologue event happened"
 		set_country_flag = uma_starting_event
+		set_country_flag = uma_gold_ship_crisis_anchor_country
 		save_event_target_as = uma_owner_country
 		capital_scope = {
 			solar_system = {
@@ -1712,8 +1713,13 @@ country_event = {
 	}
 
 	immediate = {
-		country_event = {
-			id = uma_crisis.11200
+		every_playable_country = {
+			limit = {
+				has_country_flag = uma_gold_ship_crisis_anchor_country
+			}
+			country_event = {
+				id = uma_crisis.11200
+			}
 		}
 	}
 }

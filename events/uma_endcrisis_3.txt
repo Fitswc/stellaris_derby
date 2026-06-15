@@ -509,7 +509,7 @@ fleet_event = {
 									effect = {
 										id = uma_ec_3.5.e2
 
-										planet_event = {
+										carrier_event = {
 											id = uma_ec_3.6
 											days = 8
 										}
@@ -541,7 +541,7 @@ fleet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_ec_3.6
 	hide_window = yes
 	is_triggered_only = yes
@@ -564,7 +564,7 @@ planet_event = {
 			remove_star_flag = uma_ec_3.5.e1_our_fleet_has_localed_this_system
 		}
 #		change_pc = pc_black_hole
-		planet_event = {
+		carrier_event = {
 			id = uma_ec_3.1010
 			days = 400
 		}
@@ -623,7 +623,7 @@ country_event = {
 }
 
 #月检测
-planet_event = {
+carrier_event = {
 	id = uma_ec_3.9
 	hide_window = yes
 	is_triggered_only = yes
@@ -659,7 +659,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_ec_3.1010
 	hide_window = yes
 	is_triggered_only = yes
@@ -706,7 +706,7 @@ planet_event = {
 			}
 		}
 
-		planet_event = {
+		carrier_event = {
 			id = uma_ec_3.10
 			days = 2
 		}
@@ -714,7 +714,7 @@ planet_event = {
 }
 
 
-planet_event = {
+carrier_event = {
 	id = uma_ec_3.10
 	hide_window = yes
 	is_triggered_only = yes

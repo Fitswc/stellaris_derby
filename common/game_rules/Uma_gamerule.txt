@@ -16,9 +16,9 @@ can_build_branch_offices = {
 	}
 }
 
-# This = planet
+# This = colony
 # Root = country
-can_build_branch_office_on_planet = {
+can_build_branch_office_on_colony = {
 	custom_tooltip = {
 		fail_text = requires_recipient_not_fanatic_purifiers
 		exists = owner
@@ -174,7 +174,7 @@ can_build_branch_office_on_planet = {
 			root = { is_criminal_syndicate = no }
 			AND = {
 				root = { is_criminal_syndicate = yes }
-				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
+				NOT = { has_carrier_flag = criminal_branch_closed_cooldown_planet@root }
 			}
 		}
 	}
@@ -211,33 +211,5 @@ is_criminal_syndicate_rule = {
 		}
 
 		has_origin = origin_uma_business_MAN
-	}
-}
-
-
-# Root = country attempting to target system for movement
-# This = system being targeted
-can_enter_system_by_jump = {
-	custom_tooltip = {
-#		success_text = "debug: can jump"
-		fail_text = cannot_jump_to_system
-
-		# Sealed system
-		OR = {
-			NOT = { has_star_flag = sealed_system }
-			AND = {
-				root = { has_country_flag = entered_sealed_system }
-				has_star_flag = sealed_system
-			}
-		}
-
-		# L-Cluster
-		NOT = { has_star_flag = lcluster }
-
-		# Formless system
-		NOT = { has_star_flag = formless_system }
-
-		##UMA
-		NOT = {has_star_flag = uma_gold_invasion_system}
 	}
 }

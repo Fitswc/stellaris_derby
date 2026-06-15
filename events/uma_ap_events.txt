@@ -1516,7 +1516,7 @@ situation_event = {
 
 				every_planet_within_border = {
 					limit = {
-						is_under_colonization= yes
+						is_colony = yes
 						is_owned_by = Root.owner
 					}
 					add_planet_devastation = 99
@@ -1630,14 +1630,14 @@ country_event = {
 			random_planet_within_border = {
 				limit = {
 					NOT = {
-						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+						has_carrier_flag = uma_ap2_factor_this_planet_has_been_infected
 					}
 					is_colony = yes
 					is_under_colonization = no
 					is_owned_by = Root
 					is_capital = yes
 				}
-				planet_event = {
+				carrier_event = {
 					id = uma_ap.81
 				}
 			}
@@ -1647,14 +1647,14 @@ country_event = {
 			random_planet_within_border = {
 				limit = {
 					NOT = {
-						has_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+						has_carrier_flag = uma_ap2_factor_this_planet_has_been_infected
 					}
 					is_colony = yes
 					is_under_colonization = no
 					is_owned_by = Root
 					is_capital = yes
 				}
-				planet_event = {
+				carrier_event = {
 					id = uma_ap.81
 				}
 			}
@@ -1670,7 +1670,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_ap.81
 	title = uma_ap.81.title
 	desc = uma_ap.81.desc
@@ -1689,7 +1689,7 @@ planet_event = {
 				amount = 1
 			}
 		}
-		set_planet_flag = uma_ap2_factor_this_planet_has_been_infected
+		set_carrier_flag = uma_ap2_factor_this_planet_has_been_infected
 		while = {
 			count = 10
 			create_army = {

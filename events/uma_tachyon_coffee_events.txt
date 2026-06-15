@@ -1068,7 +1068,7 @@ country_event = {
 			random_owned_planet = {
 				limit = {
 					NOT = {
-						has_planet_flag = uma_is_special_planet
+						has_carrier_flag = uma_is_special_planet
 						uma_is_habitat = yes
 						uma_is_ringworld = yes
 					}

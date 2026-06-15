@@ -378,8 +378,9 @@ councilor_uma_matikanetannhauser_radio = {
 	}
 
 	modifier = {
-		pop_promotion_time_mult = -0.1
-		pop_demotion_time_mult = -0.1
+#		pop_promotion_time_mult = -0.1
+#		pop_demotion_time_mult = -0.1
+		pop_happiness = 0.1
 	}
 
 

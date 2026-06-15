@@ -587,7 +587,7 @@ country_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = uma_threegodness_rd.10086
 	title = uma_threegodness_rd.10086.title
 	desc = uma_threegodness_rd.10086.desc
@@ -599,7 +599,7 @@ planet_event = {
 		name = uma_threegodness_rd.10086.c
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_alloys
+			set_carrier_flag = uma_TGAC_produce_alloys
 		}
 	}
 
@@ -608,7 +608,7 @@ planet_event = {
 		name = uma_threegodness_rd.10086.e
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_goods
+			set_carrier_flag = uma_TGAC_produce_goods
 		}
 	}
 	#molts
@@ -621,7 +621,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_molts
+			set_carrier_flag = uma_TGAC_produce_molts
 		}
 	}
 	#gas
@@ -634,7 +634,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_gas
+			set_carrier_flag = uma_TGAC_produce_gas
 		}
 	}
 	#rare crystal
@@ -642,7 +642,7 @@ planet_event = {
 		name = uma_threegodness_rd.10086.h
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_crystal
+			set_carrier_flag = uma_TGAC_produce_crystal
 		}
 	}
 	#living metal
@@ -655,7 +655,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_livingmat
+			set_carrier_flag = uma_TGAC_produce_livingmat
 		}
 	}
 	#Dark matter (Lim)
@@ -668,7 +668,7 @@ planet_event = {
 		}
 		hidden_effect = {
 			uma_tgrd_clear_TGAC_flag = yes
-			set_planet_flag = uma_TGAC_produce_darkm
+			set_carrier_flag = uma_TGAC_produce_darkm
 		}
 	}
 #	#Nano bot
@@ -676,7 +676,7 @@ planet_event = {
 #		name = uma_threegodness_rd.10086.k
 #		hidden_effect = {
 #			uma_tgrd_clear_TGAC_flag = yes
-#			set_planet_flag = uma_TGAC_produce_nano
+#			set_carrier_flag = uma_TGAC_produce_nano
 #		}
 #	}
 	#Uma Crystal
@@ -684,13 +684,13 @@ planet_event = {
 #		name = uma_threegodness_rd.10086.l
 #		hidden_effect = {
 #			uma_tgrd_clear_TGAC_flag = yes
-#			set_planet_flag = uma_TGAC_produce_uma_crystal
+#			set_carrier_flag = uma_TGAC_produce_uma_crystal
 #		}
 #	}
 }
 
 
-planet_event = {
+carrier_event = {
 	id = uma_threegodness_rd.10087
 	hide_window = yes
 	is_triggered_only = yes
@@ -722,7 +722,7 @@ planet_event = {
 					has_active_building = building_uma_tg_industrial_complex
 				}
 			}
-			set_planet_flag = uma_TGAC_produce_alloys
+			set_carrier_flag = uma_TGAC_produce_alloys
 		}
 	}
 }
@@ -730,7 +730,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = uma_threegodness_rd.10088
 	hide_window = yes
 	is_triggered_only = yes

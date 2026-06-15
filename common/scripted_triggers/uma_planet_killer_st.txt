@@ -88,7 +88,7 @@ can_destroy_planet_with_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL = {
 	}
 	custom_tooltip = {
 		fail_text = fotd_cant_collossus
-		NOT = { has_planet_flag = fotd_seperatist_planet@from.owner }
+		NOT = { has_carrier_flag = fotd_seperatist_planet@from.owner }
 		exists = from.owner
 		from.owner = {
 			NOT = { has_country_flag = fotd_seperatist_country@from.owner }

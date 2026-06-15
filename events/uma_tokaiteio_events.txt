@@ -29,7 +29,7 @@ country_event = {
 				limit = {
 					is_planet_class = pc_gas_giant
 				}
-				set_planet_flag = tokaiteio_star
+				set_carrier_flag = tokaiteio_star
 				save_global_event_target_as = tokaiteio_star_target
 				add_anomaly = {
 					category = uma_tokaiteio_anomoly

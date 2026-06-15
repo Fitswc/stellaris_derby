@@ -3,7 +3,7 @@
 #
 #####和on_action，以及其它奇奇怪怪的机制匹配的后台事件，大多数是隐藏的###
 namespace = uma_bg
-planet_event = {
+carrier_event = {
 	id = uma_bg.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -20,10 +20,10 @@ planet_event = {
 					has_active_building = building_commercial_megaplex
 				}
 				NOT = {
-					has_planet_flag = uma_has_trader_exist
+					has_carrier_flag = uma_has_trader_exist
 				}
 			}
-			set_planet_flag = uma_has_trader_exist
+			set_carrier_flag = uma_has_trader_exist
 			add_modifier = {
 				modifier = uma_add_treater
 				clear_on_owner_change = yes
@@ -36,10 +36,10 @@ planet_event = {
 						has_active_building = building_commercial_zone
 						has_active_building = building_commercial_megaplex
 					}
-					has_planet_flag = uma_has_trader_exist
+					has_carrier_flag = uma_has_trader_exist
 				}
 			}
-			remove_planet_flag = uma_has_trader_exist
+			remove_carrier_flag = uma_has_trader_exist
 			remove_modifier = uma_add_treater
 		}
 	}
@@ -63,7 +63,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_bg.2
 	hide_window = yes
 	is_triggered_only = yes
@@ -791,7 +791,7 @@ country_event = {
 }
 
 ###########5、6：科技效果，给殖民星球上buff#########
-planet_event = {
+carrier_event = {
 	id = uma_bg.15
 	hide_window = yes
 	is_triggered_only = yes
@@ -806,11 +806,11 @@ planet_event = {
 			}
 		}
 		NOT = {
-			has_planet_flag = uma_has_uesd_colony_buff
+			has_carrier_flag = uma_has_uesd_colony_buff
 		}
 	}
 	immediate = {
-		set_planet_flag = uma_has_uesd_colony_buff
+		set_carrier_flag = uma_has_uesd_colony_buff
 		add_modifier = {
 			modifier = uma_prosperity_colony_1
 			days = 3650
@@ -818,7 +818,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_bg.16
 	hide_window = yes
 	is_triggered_only = yes
@@ -828,11 +828,11 @@ planet_event = {
 			has_technology = tech_uma_explore_5
 		}
 		NOT = {
-			has_planet_flag = uma_has_uesd_colony_buff
+			has_carrier_flag = uma_has_uesd_colony_buff
 		}
 	}
 	immediate = {
-		set_planet_flag = uma_has_uesd_colony_buff
+		set_carrier_flag = uma_has_uesd_colony_buff
 		add_modifier = {
 			modifier = uma_prosperity_colony_2
 			days = 7300
@@ -879,7 +879,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_bg.19
 	hide_window = yes
 	is_triggered_only = yes
@@ -943,7 +943,7 @@ country_event = {
 					owner = {
 						uma_check_factory_alloy_disable = yes
 					}
-					has_planet_flag = uma_TGAC_produce_alloys
+					has_carrier_flag = uma_TGAC_produce_alloys
 				}
 				disable_building = building_uma_tg_industrial_complex
 				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_ALLOY_AT [This.GetName] IN [GetYear]"
@@ -971,7 +971,7 @@ country_event = {
 					owner = {
 						uma_check_factory_custom_goods_disable = yes
 					}
-					has_planet_flag = uma_TGAC_produce_goods
+					has_carrier_flag = uma_TGAC_produce_goods
 				}
 				disable_building = building_uma_tg_industrial_complex
 				log = "UMA_DISABLE_AUTOMATIC_COMPLEX_BUILDING_GOODS_AT [This.GetName] IN [GetYear]"
@@ -1001,37 +1001,37 @@ country_event = {
 							owner = {
 								uma_check_factory_volatile_motes_disable = yes
 							}
-							has_planet_flag = uma_TGAC_produce_molts
+							has_carrier_flag = uma_TGAC_produce_molts
 						}
 						AND = {
 							owner = {
 								uma_check_factory_gas_disable = yes
 							}
-							has_planet_flag = uma_TGAC_produce_gas
+							has_carrier_flag = uma_TGAC_produce_gas
 						}
 						AND = {
 							owner = {
 								uma_check_factory_rare_crystal_disable = yes
 							}
-							has_planet_flag = uma_TGAC_produce_crystal
+							has_carrier_flag = uma_TGAC_produce_crystal
 						}
 						AND = {
 							owner = {
 								uma_check_factory_living_materal_disable = yes
 							}
-							has_planet_flag = uma_TGAC_produce_livingmat
+							has_carrier_flag = uma_TGAC_produce_livingmat
 						}
 						AND = {
 							owner = {
 								uma_check_factory_dark_matter_disable = yes
 							}
-							has_planet_flag = uma_TGAC_produce_darkm
+							has_carrier_flag = uma_TGAC_produce_darkm
 						}
 						AND = {
 							owner = {
 								uma_check_factory_nanites_disable = yes
 							}
-							has_planet_flag = uma_TGAC_produce_nano
+							has_carrier_flag = uma_TGAC_produce_nano
 						}
 					}
 				}
@@ -1874,7 +1874,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_bg.29
 	hide_window = yes
 	is_triggered_only = yes

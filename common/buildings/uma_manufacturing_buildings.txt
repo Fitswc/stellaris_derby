@@ -3056,7 +3056,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_alloys
+			has_carrier_flag = uma_TGAC_produce_alloys
 		}
 		job_uma_tg_alloy_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv
@@ -3068,7 +3068,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_goods
+			has_carrier_flag = uma_TGAC_produce_goods
 		}
 		job_uma_tg_consumer_goods_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv
@@ -3080,7 +3080,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_molts
+			has_carrier_flag = uma_TGAC_produce_molts
 		}
 		job_uma_tg_molts_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv
@@ -3092,7 +3092,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_gas
+			has_carrier_flag = uma_TGAC_produce_gas
 		}
 		job_uma_tg_gas_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv
@@ -3104,7 +3104,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_crystal
+			has_carrier_flag = uma_TGAC_produce_crystal
 		}
 		job_uma_tg_crystal_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv
@@ -3116,7 +3116,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_livingmat
+			has_carrier_flag = uma_TGAC_produce_livingmat
 		}
 		job_uma_tg_living_metal_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv
@@ -3128,7 +3128,7 @@ building_uma_tg_industrial_complex = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_planet_flag = uma_TGAC_produce_darkm
+			has_carrier_flag = uma_TGAC_produce_darkm
 		}
 		job_uma_tg_darkm_automated_add = 10
 		multiplier = value:uma_tg_Automatic_upkeep_sv

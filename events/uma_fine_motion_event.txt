@@ -1881,7 +1881,7 @@ country_event = {
 		hidden_effect = {
 			random_galaxy_planet = {
 				limit = {
-					has_planet_flag = uma_fine_planet_here
+					has_carrier_flag = uma_fine_planet_here
 				}
 				save_event_target_as = uma_fine_plane
 			}
@@ -1920,13 +1920,13 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_finemotion.888
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		has_planet_flag = uma_fine_planet_here
+		has_carrier_flag = uma_fine_planet_here
 		owner = {
 			has_country_flag = uma_finished_fine_finding_event
 		}

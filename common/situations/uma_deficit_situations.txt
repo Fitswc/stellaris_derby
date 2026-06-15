@@ -161,6 +161,7 @@ situation_uma_crystal_carrot_deficit = {
     complete_icon = GFX_situation_outcome_bankrupcy
     complete_icon_frame = GFX_situation_outcome_frame_red
     start_value = 15
+    situation_log_category = urgent_matters
     on_start = {
         set_situation_flag = deficit_situation
     }

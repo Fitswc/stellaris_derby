@@ -5,6 +5,7 @@ uma_threegodnessrelic_digsite = {
 	stages = 5
 	max_instances = 1
 	weight = 0
+	situation_log_category = situationlog_cat_uma
 	allow = {
 		is_ship_class = shipclass_science_ship
 		exists = leader

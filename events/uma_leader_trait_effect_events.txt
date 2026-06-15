@@ -137,7 +137,7 @@ ship_event = {
 				num_deposits = 0
 			}
 			NOT = {
-				has_planet_flag = prospected_by@root.owner
+				has_carrier_flag = prospected_by@root.owner
 			}
 		}
 	}
@@ -181,7 +181,7 @@ ship_event = {
 				num_deposits = 0
 			}
 			NOT = {
-				has_planet_flag = prospected_by@root.owner
+				has_carrier_flag = prospected_by@root.owner
 			}
 		}
 	}
@@ -223,7 +223,7 @@ ship_event = {
 				num_deposits = 0
 			}
 			NOT = {
-				has_planet_flag = prospected_by@root.owner
+				has_carrier_flag = prospected_by@root.owner
 			}
 		}
 	}
@@ -405,7 +405,7 @@ country_event = {
 		}
 	}
 }
-#planet_event = {
+#carrier_event = {
 #	id = uma_traits_leader.11
 #	hide_window = yes
 #	is_triggered_only = yes
@@ -413,21 +413,21 @@ country_event = {
 #	immediate = {
 #		if = {
 #			limit = { has_ground_combat = no }
-#			remove_planet_flag = checking_supreme_warrior
+#			remove_carrier_flag = checking_supreme_warrior
 #		}
 #		else = {
 #			# Handle both sides of the ground combat
 #
 #
 #			# Do the same check again in X days
-#			planet_event = { id = uma_traits_leader.11 days = 5 } # NOTE: Update custom loc for effect when changing days
+#			carrier_event = { id = uma_traits_leader.11 days = 5 } # NOTE: Update custom loc for effect when changing days
 #		}
 #	}
 #}
 
 
 
-planet_event = {
+carrier_event = {
 	id = uma_traits_leader.12
 	hide_window = yes
 	is_triggered_only = yes
@@ -471,7 +471,7 @@ planet_event = {
 	}
 
 	after = {
-#		planet_event = {
+#		carrier_event = {
 #			id = uma_traits_leader.11
 #			days = 10
 #		}

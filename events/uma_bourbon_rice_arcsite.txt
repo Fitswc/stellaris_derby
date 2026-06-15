@@ -153,7 +153,7 @@ country_event = {
 #}
 
 #创建船（30K（我感觉会有300K））
-planet_event = {
+carrier_event = {
 	id = uma_bour_arc.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -862,7 +862,7 @@ country_event = {
 		}
 		random_galaxy_planet = {
 			limit = {
-				has_planet_flag = uma_bourbon_firstap_story_here
+				has_carrier_flag = uma_bourbon_firstap_story_here
 			}
 			save_global_event_target_as = uma_bourbon_firstap_planet
 		}
@@ -940,7 +940,7 @@ fleet_event = {
 #		hidden_effect = {
 #			random_galaxy_planet = {
 #				limit = {
-#					has_planet_flag = uma_bourbon_firstap_story_here
+#					has_carrier_flag = uma_bourbon_firstap_story_here
 #				}
 #				add_anomaly = {
 #					category = uma_bourbon_anomaly_second

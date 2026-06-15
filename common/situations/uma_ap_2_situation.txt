@@ -5,6 +5,7 @@ situation_uma_ap_2_situation_system_factor = {
 	complete_icon_frame = GFX_situation_outcome_frame_blue
 	complete_icon = GFX_situation_outcome_ascension
 	start_value = 1
+	situation_log_category = empire_concerns
 	on_start = {
 		set_situation_flag = uma_ap2_factor_had_happened
 	}
@@ -215,6 +216,7 @@ situation_uma_ap_2_situation_system_realm = {
 	complete_icon_frame = GFX_situation_outcome_frame_blue
 	complete_icon = GFX_situation_outcome_ascension
 	start_value = 1
+	situation_log_category = empire_concerns
 	on_start = {
 
 	}
