@@ -39,10 +39,14 @@ uma_crisis_level_2 = {
 	on_unlock = {
 		hidden_effect = {
 			owner = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+				}
 				add_event_chain_counter = {
-					event_chain = "uma_ap_bc_main_evt_chain"
-					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
-					amount = 1
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+					amount = 2
 				}
 				country_event = { id = uma_ap.400 days = 3 }
 			}
@@ -67,20 +71,18 @@ uma_crisis_level_3 = {
 	on_unlock = {
 		hidden_effect = {
 			owner = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+				}
 				add_event_chain_counter = {
-					event_chain = "uma_ap_bc_main_evt_chain"
-					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
-					amount = 1
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+					amount = 3
 				}
 				country_event = { id = uma_ap.401 days = 3 }
 
-				##All declare the war.
-				random_playable_country = {
-					limit = {
-						uma_is_uma_ap_bc_actived = yes
-					}
-					country_event = { id = uma_ap.405 days = 20 }
-				}
+
 			}
 		}
 	}
@@ -101,10 +103,14 @@ uma_crisis_level_4 = {
 	on_unlock = {
 		hidden_effect = {
 			owner = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+				}
 				add_event_chain_counter = {
-					event_chain = "uma_ap_bc_main_evt_chain"
-					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
-					amount = 1
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+					amount = 4
 				}
 				country_event = { id = uma_ap.402 days = 3 }
 			}
@@ -139,12 +145,24 @@ uma_crisis_level_5 = {
 	on_unlock = {
 			hidden_effect = {
 			owner = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+				}
 				add_event_chain_counter = {
-					event_chain = "uma_ap_bc_main_evt_chain"
-					counter = "uma_ap_bc_main_evt_chain_crisis_level_reached"
-					amount = 1
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_level_reached
+					amount = 5
 				}
 				country_event = { id = uma_ap.403 days = 3 }
+
+				##All declare the war.
+				random_playable_country = {
+					limit = {
+						uma_is_uma_ap_bc_actived = yes
+					}
+					country_event = { id = uma_ap.405 days = 20 }
+				}
 			}
 		}
 	}

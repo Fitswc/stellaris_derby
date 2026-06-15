@@ -88,6 +88,8 @@ country_event = {
 		save_global_event_target_as = crisis_country
 
 		remove_from_galactic_community = yes
+
+		uma_ap_bc_beyond_l3_resource_control_counting_initial = yes
 	}
 
 	option = {
@@ -255,12 +257,78 @@ country_event = {
 	trigger = {
 		resource_stockpile_compare = {
 			resource = uma_menace
-			value > 15000
+			value >= 15000
 		}
 	}
 
 	immediate = {
+		uma_ap_bc_beyond_l3_resource_control_counting_monthly = yes
+		uma_ap_bc_beyond_l3_resource_control_counting_monthly_calculator = yes
+		uma_ap_bc_beyond_l3_resource_control_counting_monthly_calculator_penalty = yes
 
+		switch = {
+			trigger = has_country_flag
+
+			uma_ap_bc_ec_resource_penatly_P4 = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+				}
+				add_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+					amount = 4
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P3 = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+				}
+				add_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+					amount = 3
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P2 = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+				}
+				add_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+					amount = 2
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P1 = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+				}
+				add_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+					amount = 1
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P0 = {
+				reset_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+				}
+				add_event_chain_counter = {
+					event_chain = uma_ap_bc_main_evt_chain
+					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+					amount = 0
+				}
+			}
+		}
 	}
 }
 
@@ -360,7 +428,7 @@ country_event = {
 
 #This event will reduce the crisis currency per month.
 #Fired by on_monthly_pulse_country
-# 16000 (-800 per month) => 20 month to complete.
+# 68000 (-3400 per month) => 20 month to complete.
 country_event = {
 	id = uma_ap.404
 	hide_window = yes
@@ -377,11 +445,15 @@ country_event = {
 
 	immediate = {
 		add_resource = {
-			uma_menace = -800
+			uma_menace = -3400
 		}
 		export_resource_stockpile_to_variable = {
 			resource = uma_menace
-			variable = uma_ap.404.uma_menace_stock
+			variable = uma_ap_404_uma_menace_stock
+		}
+		divide_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = 68000
 		}
 		multiply_variable = {
 			which = uma_ap_404_uma_menace_stock
@@ -389,12 +461,9 @@ country_event = {
 		}
 		add_variable = {
 			which = uma_ap_404_uma_menace_stock
-			value = 16000
+			value = 1
 		}
-		divide_variable = {
-			which = uma_ap_404_uma_menace_stock
-			value = 16000
-		}
+
 		reset_event_chain_counter = {
 			event_chain = uma_ap_bc_main_evt_chain
 			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
@@ -424,7 +493,7 @@ country_event = {
 		endgame_telemetry = uma_end_crisis_4
 		set_global_flag = uma_ec_invasion_happened
 
-		log = "UMA ENDCRISIS_AP ALL DECLARE WAR HAPPENED AT [GetDate] +10days => in CL3"
+		log = "UMA ENDCRISIS_AP ALL DECLARE WAR HAPPENED AT [GetDate] +10days => in CL5"
 
 		export_trigger_value_to_variable = {
 			trigger = num_empires
@@ -1024,7 +1093,7 @@ country_event = {
 
 	immediate = {
 		add_resource = {
-			uma_menace = -1000
+			uma_menace = -10000000
 		}
 	}
 }

@@ -1595,3 +1595,291 @@ uma_ap2_realm_check_give_initial = {
 
 	}
 }
+
+uma_ap_bc_beyond_l3_resource_control_counting_initial = {
+	optimize_memory
+	export_trigger_value_to_variable = {
+		trigger = count_playable_country
+		parameters = {
+			limit = {
+				is_ai = yes
+				is_country_type = default
+				NOT = {
+					is_subject = yes
+					overlord = {
+						uma_is_uma_ap_bc_actived = yes
+					}
+				}
+			}
+		}
+		variable = uma_ap_bc_count_playable_country_initial
+	}
+}
+
+uma_ap_bc_beyond_l3_resource_control_counting_monthly = {
+	optimize_memory
+	export_trigger_value_to_variable = {
+		trigger = count_playable_country
+		parameters = {
+			limit = {
+				is_ai = yes
+				is_country_type = default
+				NOT = {
+					is_subject = yes
+					overlord = {
+						uma_is_uma_ap_bc_actived = yes
+					}
+				}
+			}
+		}
+		variable = uma_ap_bc_count_playable_country
+	}
+}
+
+uma_ap_bc_beyond_l3_resource_control_counting_monthly_calculator = {
+	optimize_memory
+	divide_variable = {
+		which = uma_ap_bc_count_playable_country
+		value = uma_ap_bc_count_playable_country_initial
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value >= 0.9
+			}
+		}
+		set_country_flag = uma_ap_bc_ec_resource_penatly_P4
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value >= 0.7
+			}
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value < 0.9
+			}
+		}
+		set_country_flag = uma_ap_bc_ec_resource_penatly_P3
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value >= 0.4
+			}
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value < 0.7
+			}
+		}
+		set_country_flag = uma_ap_bc_ec_resource_penatly_P2
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value >= 0.2
+			}
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value < 0.4
+			}
+		}
+		set_country_flag = uma_ap_bc_ec_resource_penatly_P1
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_ap_bc_count_playable_country
+				value < 0.2
+			}
+		}
+		set_country_flag = uma_ap_bc_ec_resource_penatly_P0
+	}
+}
+
+uma_ap_bc_beyond_l3_resource_control_counting_monthly_calculator_penalty = {
+	optimize_memory
+	if = {
+		limit = {
+			has_crisis_level = uma_crisis_level_3
+			NOT = {
+				has_crisis_level = uma_crisis_level_4
+				has_crisis_level = uma_crisis_level_5
+			}
+		}
+		switch = {
+			trigger = has_country_flag
+
+			uma_ap_bc_ec_resource_penatly_P1 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.1
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P2 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.2
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P3 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.3
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P4 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.4
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			resource_stockpile_compare = {
+				resource = uma_menace
+				value > 40000
+			}
+		}
+		switch = {
+			trigger = has_country_flag
+
+			uma_ap_bc_ec_resource_penatly_P1 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.1
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+			}
+
+			uma_ap_bc_ec_resource_penatly_P2 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.4
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+
+			}
+
+			uma_ap_bc_ec_resource_penatly_P3 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.5
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+
+			}
+
+			uma_ap_bc_ec_resource_penatly_P4 = {
+				set_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = uma_ap_bc_menace_produced
+				}
+
+				multiply_variable = {
+					which = uma_ap_bc_menace_penatly
+					value = 0.7
+				}
+
+				while = {
+					count = uma_ap_bc_menace_penatly
+					add_resource = {
+						uma_menace = -1
+					}
+				}
+			}
+		}
+	}
+}
+
