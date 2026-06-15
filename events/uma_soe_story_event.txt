@@ -36,7 +36,7 @@ country_event = {
 				add_anomaly = {
 					category = uma_soe_anolomy
 				}
-				set_planet_flag = seo_star
+				set_carrier_flag = seo_star
 				save_global_event_target_as =seo_star_target
 				log = SEO_ANOLOMY_GENERATED
 			}

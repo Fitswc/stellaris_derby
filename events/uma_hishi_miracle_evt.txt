@@ -30,7 +30,7 @@ country_event = {
 						is_planet_class = pc_ocean
 					}
 					save_global_event_target_as = uma_hishi_evt_will_happen_here
-					set_planet_flag = uma_hishi_evt_planet
+					set_carrier_flag = uma_hishi_evt_planet
 				}
 			}
 			else_if = {
@@ -52,21 +52,21 @@ country_event = {
 					}
 					change_pc = pc_ocean
 					save_global_event_target_as = uma_hishi_evt_will_happen_here
-					set_planet_flag = uma_hishi_evt_planet
+					set_carrier_flag = uma_hishi_evt_planet
 				}
 			}
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_fz.9998
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
 		Root = {
-			has_planet_flag = uma_hishi_evt_planet
+			has_carrier_flag = uma_hishi_evt_planet
 		}
 		FromFrom = {
 			owner = {

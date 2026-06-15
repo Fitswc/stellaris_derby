@@ -8,13 +8,14 @@ decision_uma_hold_planet_racing = {
 	enactment_time = 0
 	sound = event_administrative_work #当然，之后我们要用自己的声音
 	icon = decision_planet_derby_2
+	important = yes
 
 	resources = {
 		category = decisions
 		cost = {
 			trigger = {
 				NOT = {
-					has_planet_flag = uma_race_upkeep_less
+					has_carrier_flag = uma_race_upkeep_less
 				}
 			}
 			influence = 400
@@ -23,7 +24,7 @@ decision_uma_hold_planet_racing = {
 		}
 		cost = {
 			trigger = {
-				has_planet_flag = uma_race_upkeep_less
+				has_carrier_flag = uma_race_upkeep_less
 			}
 			influence = 200
 			food = 100
@@ -56,7 +57,7 @@ decision_uma_hold_planet_racing = {
 				days = 3750
 		}
 		hidden_effect = {
-			planet_event = {
+			carrier_event = {
 				id = uma_planet_racing.1 #触发“比赛开始！”事件
 				days = 30
 				random = 10
@@ -113,7 +114,7 @@ decision_uma_school_planet_transform = {
 		exists = owner
 		owner = { has_technology = tech_uma_toresen_planet_transform }
 		NOT = {
-			has_planet_flag = uma_has_change_pc_to_academic_planet
+			has_carrier_flag = uma_has_change_pc_to_academic_planet
 		}
 	}
 
@@ -137,7 +138,7 @@ decision_uma_school_planet_transform = {
 	effect = {
 		custom_tooltip = decision_uma_school_planet_changed
 		hidden_effect = {
-			set_planet_flag = uma_has_change_pc_to_academic_planet
+			set_carrier_flag = uma_has_change_pc_to_academic_planet
 			owner = {
 				if = {
 					limit = { is_ai = yes }
@@ -182,25 +183,25 @@ decision_uma_school_planet_transform = {
 			}
 			########特判：如果有菲尼学院有关遗址，保留之#######
 			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school_relic }
+			#				limit = { has_carrier_flag = uma_planet_flag_phoenix_school_relic }
 			#				add_deposit = d_phoenix_school_relic
 			#			}
 			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_school }
+			#				limit = { has_carrier_flag = uma_planet_flag_phoenix_school }
 			#				add_deposit = d_phoenix_school
 			#			}
 			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course_relic }
+			#				limit = { has_carrier_flag = uma_planet_flag_phoenix_racing_course_relic }
 			#				add_deposit = d_phoenix_racing_course_relic
 			#			}
 			#			if = {
-			#				limit = { has_planet_flag = uma_planet_flag_phoenix_racing_course }
+			#				limit = { has_carrier_flag = uma_planet_flag_phoenix_racing_course }
 			#				add_deposit = d_phoenix_racing_course
 			#			}
 
 
 
-			#			planet_event = {
+			#			carrier_event = {
 			#				id = uma_bg.19
 			#			}
 			#			remove_district = district_city
@@ -243,6 +244,7 @@ decision_uma_reconstrcut_phoenix_school = {
 	enactment_time = 3650
 	sound = event_administrative_work #当然，之后我们要用自己的声音
 	icon = default
+	important = yes
 
 	resources = {
 		category = decisions
@@ -272,8 +274,8 @@ decision_uma_reconstrcut_phoenix_school = {
 	effect = {
 		remove_deposit = d_phoenix_school_relic
 		add_deposit = d_phoenix_school
-		remove_planet_flag = uma_planet_flag_phoenix_school_relic
-		set_planet_flag = uma_planet_flag_phoenix_school
+		remove_carrier_flag = uma_planet_flag_phoenix_school_relic
+		set_carrier_flag = uma_planet_flag_phoenix_school
 	}
 
 	ai_weight = {
@@ -290,6 +292,7 @@ decision_uma_reconstrcut_phoenix_racing_course = {
 	enactment_time = 3650
 	sound = event_administrative_work #当然，之后我们要用自己的声音
 	icon = default
+	important = yes
 
 	resources = {
 		category = decisions
@@ -319,8 +322,8 @@ decision_uma_reconstrcut_phoenix_racing_course = {
 	effect = {
 		remove_deposit = d_phoenix_racing_course_relic
 		add_deposit = d_phoenix_racing_course
-		remove_planet_flag = uma_planet_flag_phoenix_racing_course_relic
-		set_planet_flag = uma_planet_flag_phoenix_racing_course
+		remove_carrier_flag = uma_planet_flag_phoenix_racing_course_relic
+		set_carrier_flag = uma_planet_flag_phoenix_racing_course
 	}
 
 	ai_weight = {
@@ -358,7 +361,7 @@ decision_uma_school_ring_transform = {
 		exists = owner
 		owner = { has_technology = tech_uma_ring_world }
 		NOT = {
-			has_planet_flag = uma_has_change_pc_to_academic_ring
+			has_carrier_flag = uma_has_change_pc_to_academic_ring
 		}
 	}
 
@@ -372,7 +375,7 @@ decision_uma_school_ring_transform = {
 	effect = {
 		custom_tooltip = decision_uma_school_planet_changed
 		hidden_effect = {
-			set_planet_flag = uma_has_change_pc_to_academic_ring
+			set_carrier_flag = uma_has_change_pc_to_academic_ring
 			change_pc = pc_uma_ringworld_habitable
 			remove_all_districts = yes
 
@@ -577,7 +580,7 @@ decision_uma_TGAC_produce = {
 
 	effect = {
 		hidden_effect = {
-			planet_event = {
+			carrier_event = {
 				id = uma_threegodness_rd.10086
 			}
 		}

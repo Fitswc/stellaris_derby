@@ -4006,15 +4006,15 @@ uma_random_specimen = {
 
 uma_tgrd_clear_TGAC_flag = {
 	optimize_memory
-	remove_planet_flag = uma_TGAC_produce_alloys
-	remove_planet_flag = uma_TGAC_produce_goods
-	remove_planet_flag = uma_TGAC_produce_molts
-	remove_planet_flag = uma_TGAC_produce_gas
-	remove_planet_flag = uma_TGAC_produce_crystal
-	remove_planet_flag = uma_TGAC_produce_livingmat
-	remove_planet_flag = uma_TGAC_produce_darkm
-	remove_planet_flag = uma_TGAC_produce_nano
-	remove_planet_flag = uma_TGAC_produce_uma_crystal
+	remove_carrier_flag = uma_TGAC_produce_alloys
+	remove_carrier_flag = uma_TGAC_produce_goods
+	remove_carrier_flag = uma_TGAC_produce_molts
+	remove_carrier_flag = uma_TGAC_produce_gas
+	remove_carrier_flag = uma_TGAC_produce_crystal
+	remove_carrier_flag = uma_TGAC_produce_livingmat
+	remove_carrier_flag = uma_TGAC_produce_darkm
+	remove_carrier_flag = uma_TGAC_produce_nano
+	remove_carrier_flag = uma_TGAC_produce_uma_crystal
 }
 
 
@@ -4092,7 +4092,7 @@ uma_crystal_carrot_storm_apply_deposits = {
 					limit = {
 						has_owner = yes
 					}
-					planet_event = { id = cstorms.8000 }
+					carrier_event = { id = cstorms.8000 }
 				}
 			}
 		}

@@ -51,9 +51,9 @@ on_fleet_detected = {
 	}
 }
 
-#scope:planet
+#scope:colony
 #初始化帝国的母星（包括玩家的）
-empire_init_capital_planet = {
+empire_init_capital_colony = {
 	events = {
 		uma_system_ini.1		#建立所有自建星系
 		uma_origin.3		#添加赛马场建筑（外加一个工业区划平衡消费品）
@@ -182,14 +182,14 @@ on_planet_surveyed = {
 	}
 }
 
-on_planet_attackers_win = {
+on_colony_attackers_win = {
 	events = {
 		uma_ap.83
 		uma_ap.855
 	}
 }
 
-on_planet_defenders_win = {
+on_colony_defenders_win = {
 	events = {
 		uma_ap.83
 	}
@@ -438,7 +438,7 @@ special_project_success = {
 }
 
 #星球入侵胜利时
-on_planet_attackers_win = {
+on_colony_attackers_win = {
 	events = {
 		uma_traits_leader.10
 	}
@@ -486,7 +486,7 @@ on_planet_bombarded = {
 	}
 }
 
-on_planet_zero_pops = {
+on_colony_zero_pops = {
 	events = {
 		probuma.2
 	}

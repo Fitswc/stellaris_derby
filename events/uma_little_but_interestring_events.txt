@@ -495,7 +495,7 @@ country_event = {
 		}
 		hidden_effect = {
 			event_target:uma_gambling_planet = {
-				planet_event = {
+				carrier_event = {
 					id = uma_little_event.21
 					days = 365
 				}
@@ -506,7 +506,7 @@ country_event = {
 }
 
 #根除竞猜活动
-planet_event = {
+carrier_event = {
 	id = uma_little_event.21
 	title = "uma_little_event.21.name"
 	desc = "uma_little_event.21.desc"
@@ -541,7 +541,7 @@ planet_event = {
 }
 
 #国立竞猜事业！
-planet_event = {
+carrier_event = {
 	id = uma_little_event.22
 	title = "uma_little_event.22.name"
 	desc = "uma_little_event.22.desc"

@@ -33,8 +33,8 @@ country_event = {
 				limit = {
 					has_deposit = d_uma_threegodness_relic
 				}
-#				planet_event = {id = umaarc.1000 days = 1800 random = 720}
-				planet_event = {id = umaarc.1000 days = 100 random = 500}
+#				carrier_event = {id = umaarc.1000 days = 1800 random = 720}
+				carrier_event = {id = umaarc.1000 days = 100 random = 500}
 			}
 		}
 	}
@@ -45,7 +45,7 @@ country_event = {
 }
 
 #发现事件
-planet_event = {
+carrier_event = {
 	id = umaarc.1000
 	title = umaarc.1000.name
 	desc = umaarc.1000.desc
@@ -215,7 +215,7 @@ fleet_event = {
 	immediate = {
 		from = { set_site_progress_locked = yes }
 		from.planet = {
-			planet_event = {id = umaarc.1006 days = 360  random = 100  }
+			carrier_event = {id = umaarc.1006 days = 360  random = 100  }
 		 }
 	}
 
@@ -249,7 +249,7 @@ fleet_event = {
 }
 
 # 后续
-planet_event = {
+carrier_event = {
 	id = umaarc.1006
 	title = umaarc.1006.name
 	desc = umaarc.1006.desc

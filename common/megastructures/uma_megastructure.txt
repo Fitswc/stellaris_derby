@@ -261,7 +261,7 @@ uma_school_planet_ring_world_3_intermediate = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		spawn_planet = {
@@ -278,7 +278,7 @@ uma_school_planet_ring_world_3_intermediate = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		spawn_planet = {
@@ -299,11 +299,11 @@ uma_school_planet_ring_world_3_intermediate = {
 				clear_blockers = yes
 				save_event_target_as = uma_ring_section
 				trigger_megastructure_icon = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		fromfrom.planet = {
-			set_planet_flag = has_megastructure
+			set_carrier_flag = has_megastructure
 		}
 		remove_megastructure = fromfrom
 		if = {

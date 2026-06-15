@@ -2,7 +2,7 @@ namespace = uma_system_ini
 
 
 #目前使用的星系生成事件，挂靠在母星初始化的onaction里
-planet_event = {
+carrier_event = {
     id = uma_system_ini.1
     hide_window = yes
     is_triggered_only = yes

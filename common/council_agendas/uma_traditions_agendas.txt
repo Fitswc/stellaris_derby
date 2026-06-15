@@ -16,9 +16,9 @@ agenda_uma_agenda_race = {
 	effect = {
 		every_owned_planet = {
 			limit = {
-				is_under_colonization = yes
+				is_colony = yes
 			}
-			set_timed_planet_flag = {
+			set_timed_carrier_flag = {
 				flag = uma_race_upkeep_less
 				days = 1800
 			}

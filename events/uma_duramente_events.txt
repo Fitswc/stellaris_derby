@@ -29,7 +29,7 @@ country_event = {
 				}
 
 				save_global_event_target_as = uma_duramenta_planet
-				set_planet_flag = uma_duramenta_planet_flag
+				set_carrier_flag = uma_duramenta_planet_flag
 
 				enable_special_project = {
 					name = uma_duramente_sp_everywhere
@@ -78,7 +78,7 @@ ship_event = {
 			}
 			random_system_planet = {
 				limit = {
-					has_planet_flag = uma_duramenta_planet_flag
+					has_carrier_flag = uma_duramenta_planet_flag
 				}
 				create_archaeological_site = uma_duramente_site
 			}

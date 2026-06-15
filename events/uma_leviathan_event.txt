@@ -84,7 +84,7 @@ country_event = {
 						}
 					}
 					change_pc = pc_barren
-					set_planet_flag = uma_leviathan_planet
+					set_carrier_flag = uma_leviathan_planet
 					save_global_event_target_as = uma_leviathan_planet_target
 				}
 			}
@@ -96,7 +96,7 @@ country_event = {
 							is_planet_class = pc_barren_cold
 						}
 					}
-					set_planet_flag = uma_leviathan_planet
+					set_carrier_flag = uma_leviathan_planet
 					save_global_event_target_as = uma_leviathan_planet_target
 				}
 

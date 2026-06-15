@@ -555,7 +555,7 @@ fleet_event = {
 									effect = {
 										id = uma_ec_2.2.e2
 
-										planet_event = {
+										carrier_event = {
 											id = uma_ec_2.3
 											days = 8
 										}
@@ -587,7 +587,7 @@ fleet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_ec_2.3
 	hide_window = yes
 	is_triggered_only = yes
@@ -603,7 +603,7 @@ planet_event = {
 				limit = {
 					is_colony = yes
 				}
-				planet_event = {
+				carrier_event = {
 					id = uma_ec_2.4
 					days = 20
 				}
@@ -621,7 +621,7 @@ planet_event = {
 }
 
 #Planet_destroy Actionss
-planet_event = {
+carrier_event = {
 	id = uma_ec_2.4
 	hide_window = yes
 	is_triggered_only = yes
@@ -1453,7 +1453,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = uma_ec_2.30
 	hide_window = yes
 	is_triggered_only = yes
@@ -1470,7 +1470,7 @@ planet_event = {
 		}
 		days_passed >= 1 # Prevents log errors upon game start
 		Root = {
-			has_planet_flag = uma_is_fallen_empire_school_star_2
+			has_carrier_flag = uma_is_fallen_empire_school_star_2
 		}
 	}
 

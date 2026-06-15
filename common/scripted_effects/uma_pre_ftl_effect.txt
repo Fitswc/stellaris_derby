@@ -15,7 +15,7 @@ uma_select_pre_ftl_origin = {
 	random_list = {
 		# Default pre-ftl origin
 		# All other origins require First Contact.(限制dlc)
-		100 = { set_planet_flag = pre_ftl_default }
+		100 = { set_carrier_flag = pre_ftl_default }
 
 		# Life-Seeded (requires Apocalypse)
 		5 = {
@@ -30,14 +30,14 @@ uma_select_pre_ftl_origin = {
 				OR = {
 					has_first_contact_dlc = no #没有这个dlc
 					any_galaxy_planet = {
-						has_planet_flag = pre_ftl_life_seeded
+						has_carrier_flag = pre_ftl_life_seeded
 					}
 					any_country = {
 						has_origin = origin_life_seeded
 					}
 				}
 			}
-			set_planet_flag = pre_ftl_life_seeded #生命之籽
+			set_carrier_flag = pre_ftl_life_seeded #生命之籽
 			change_pc = pc_gaia
 			create_life_seeded_planet = yes #很好的资源
 		}

@@ -2,7 +2,7 @@
 namespace = probuma
 
 # 方案一，不炸环，可以兼容所有mod
-#planet_event = {
+#carrier_event = {
 #	id = probuma.1
 #	hide_window = yes
 #	is_triggered_only = yes
@@ -16,26 +16,26 @@ namespace = probuma
 #	}
 #	immediate = {
 #
-#		set_planet_flag = cb_b
+#		set_carrier_flag = cb_b
 #	}
 #
 #}
 #
-#planet_event = {
+#carrier_event = {
 #	id = probuma.2
 #	hide_window = yes
 #	is_triggered_only = yes
 #	trigger = {
-#		has_planet_flag = cb_b
+#		has_carrier_flag = cb_b
 #	}
 #
 #	immediate = {
 #		change_pc = pc_shattered
-#		remove_planet_flag = cb_b
+#		remove_carrier_flag = cb_b
 #	}
 #}
 # 方案二，分别替换，但不兼容其他未在兼容列表里的mod
-planet_event = {
+carrier_event = {
 	id = probuma.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -48,53 +48,53 @@ planet_event = {
 			limit = {
 				uma_is_ringworld = yes
 			}
-			set_planet_flag = cb_b_r
+			set_carrier_flag = cb_b_r
 		}
 
 		else_if = {
 			limit = {
 				uma_is_habitat = yes
 			}
-			set_planet_flag = cb_b_h
+			set_carrier_flag = cb_b_h
 		}
 		else = {
-			set_planet_flag = cb_b
+			set_carrier_flag = cb_b
 		}
 
 	}
 
 }
 
-planet_event = {
+carrier_event = {
 	id = probuma.2
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
 		OR = {
-			has_planet_flag = cb_b
-			has_planet_flag = cb_b_h
-			has_planet_flag = cb_b_r
+			has_carrier_flag = cb_b
+			has_carrier_flag = cb_b_h
+			has_carrier_flag = cb_b_r
 		}
 	}
 
 	immediate = {
 		if = {
 			limit = {
-				has_planet_flag = cb_b_r
+				has_carrier_flag = cb_b_r
 			}
 			change_pc = pc_shattered_ring_habitable
-			remove_planet_flag = cb_b_r
+			remove_carrier_flag = cb_b_r
 		}
 		else_if = {
 			limit = {
-				has_planet_flag = cb_b_h
+				has_carrier_flag = cb_b_h
 			}
 			remove_planet = yes
-			remove_planet_flag = cb_b_h
+			remove_carrier_flag = cb_b_h
 		}
 		else = {
 			change_pc = pc_shattered
-			remove_planet_flag = cb_b
+			remove_carrier_flag = cb_b
 		}
 
 	}
@@ -103,7 +103,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = probuma.3
 	is_triggered_only = yes
 	hide_window = yes
@@ -175,7 +175,7 @@ planet_event = {
 
 
 
-planet_event = {
+carrier_event = {
 	id = probuma.5
 	is_triggered_only = yes
 	hide_window = yes
@@ -200,7 +200,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = probuma.6
 	is_triggered_only = yes
 	hide_window = yes
@@ -219,23 +219,23 @@ planet_event = {
 		if = {
 			limit = {
 				is_planet_class = pc_ai
-				NOT = { has_planet_flag = machine_lair }
+				NOT = { has_carrier_flag = machine_lair }
 			}
-			set_planet_flag = destroyed_by_colossus
-			set_planet_flag = planet_cracked
-			planet_event = { id = crisis.2040 }
+			set_carrier_flag = destroyed_by_colossus
+			set_carrier_flag = planet_cracked
+			carrier_event = { id = crisis.2040 }
 		}
 		# Contingency Final Machine World
 		if = {
 			limit = {
 				is_planet_class = pc_ai
-				has_planet_flag = machine_lair
+				has_carrier_flag = machine_lair
 			}
-			set_planet_flag = destroyed_by_colossus
-			set_planet_flag = planet_cracked
+			set_carrier_flag = destroyed_by_colossus
+			set_carrier_flag = planet_cracked
 			from.owner = { save_event_target_as = final_machine_world_destroyer }
 			stop_crisis_sound = yes
-			planet_event = { id = crisis.2046 }
+			carrier_event = { id = crisis.2046 }
 		}
 		# Swarm Situation Log counter
 		if = {

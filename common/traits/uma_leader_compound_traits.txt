@@ -190,14 +190,16 @@ uma_scientists_trait_sp_fz_official = {
 
 	sector_modifier = {
 		pop_bonus_workforce_mult = 0.05
-		pop_demotion_time_mult = -0.2
-		pop_promotion_time_mult = -0.2
+		pop_happiness = 0.1
+#		pop_demotion_time_mult = -0.2
+#		pop_promotion_time_mult = -0.2
 	}
 
 	planet_modifier = {
 		pop_bonus_workforce_mult =0.1
-		pop_demotion_time_mult = -0.4
-		pop_promotion_time_mult = -0.4
+		pop_happiness = 0.1
+#		pop_demotion_time_mult = -0.4
+#		pop_promotion_time_mult = -0.4
 	}
 
 	triggered_planet_pop_group_modifier_for_all = {

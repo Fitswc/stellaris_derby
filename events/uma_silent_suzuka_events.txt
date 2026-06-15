@@ -16,7 +16,7 @@ event = {
 	immediate = {
 		random_galaxy_planet = {
 			limit = {
-				has_planet_flag = uma_suzuka_loaded
+				has_carrier_flag = uma_suzuka_loaded
 			}
 			add_anomaly = {
 				category = uma_suzuka_anolomy
@@ -55,7 +55,7 @@ event = {
 #				}
 #				is_planet_class = pc_continental
 #			}
-#			set_planet_flag = uma_suzuka_here
+#			set_carrier_flag = uma_suzuka_here
 #			save_global_event_target_as = uma_suzuka_planet_here
 #			change_variable = {
 #				which = uma_num_of_suzuka
@@ -64,14 +64,14 @@ event = {
 #		}
 #		set_country_flag = uma_suzuka_found
 #		event_target:uma_suzuka_planet_here = {
-#			planet_event = {
+#			carrier_event = {
 #				id = uma_suzuka.2
 #			}
 #		}
 #	}
 #}
 
-#planet_event = {
+#carrier_event = {
 #	id = uma_suzuka.2
 #	title = uma_suzuka.2.title
 #	desc = uma_suzuka.2.desc
@@ -302,7 +302,7 @@ country_event = {
 		name = uma_suzuka.9.b #放着不管
 		hidden_effect = {
 			event_target:uma_suzuka_planet_here = {
-				planet_event = {
+				carrier_event = {
 					id = uma_suzuka.11
 					days = 1200
 					random = 5
@@ -330,7 +330,7 @@ country_event = {
 }
 
 #A9
-planet_event = {
+carrier_event = {
 	id =uma_suzuka.11
 	title = uma_suzuka.11.title
 	desc = uma_suzuka.11.desc

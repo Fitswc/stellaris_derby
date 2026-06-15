@@ -84,7 +84,7 @@ uma_grass_wonder_system_initializer = {
 		modifiers = none
 
 		init_effect = {
-			set_planet_flag = uma_suzuka_loaded
+			set_carrier_flag = uma_suzuka_loaded
 			prevent_anomaly = yes
 			clear_deposits = yes
 			add_deposit = d_ore_rich_caverns
