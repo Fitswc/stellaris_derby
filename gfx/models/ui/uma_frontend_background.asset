@@ -1,15 +1,15 @@
 entity = {
-	name = "frontend_background_entity"
+	name = "uma_frontend_root_entity"
 	
 	locator = { name = "loc" position = { 0.0 0.025 0.0 } }
 	
-	attach = { loc = "frontend_background_attached_entity" }
+	attach = { loc = "uma_frontend_background_attached_entity" }
 	
 }
 
 entity = {
-	name = "frontend_background_attached_entity"
-	pdxmesh = "frontend_background_mesh"
+	name = "uma_frontend_background_attached_entity"
+	pdxmesh = "uma_frontend_background_mesh"
 	
 	default_state = "idle"
 	state = {
