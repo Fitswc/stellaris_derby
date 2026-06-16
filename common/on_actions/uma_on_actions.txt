@@ -116,6 +116,7 @@ on_monthly_pulse_country = {
 		uma_ap.308
 		uma_ap.404
 		uma_ap.3080
+		uma_ap.412
 	}
 }
 
@@ -610,6 +611,15 @@ on_starbase_destroyed = {
 		uma_ec_3.12
 		uma_ap.306
 		uma_ap.411
+	}
+}
+
+#Fired when starbase is occupied and changes controller
+#This = New controller
+#From = Starbase being occupie
+on_starbase_occupied = {
+	events = {
+		uma_ap.4111
 	}
 }
 

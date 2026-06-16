@@ -210,7 +210,7 @@ special_project = {
 	key = "UMA_AP_BC_RESEARCH_REALM"
 	cost = 15000
 	tech_department = physics_technology
-	picture = GFX_evt_alien_propaganda
+	picture = GFX_evt_uma_data_tunnel
 	event_scope = country_event
 	event_chain = uma_ap_bc_main_evt_chain
 
@@ -229,7 +229,7 @@ special_project = {
 	key = "UMA_AP_BC_RESEARCH_MEGASTRUCTURE"
 	cost = 25000
 	tech_department = engineering_technology
-	picture = GFX_evt_alien_propaganda
+	picture = GFX_evt_uma_normal_school
 	event_scope = country_event
 	event_chain = uma_ap_bc_main_evt_chain
 
@@ -248,7 +248,7 @@ special_project = {
 	key = "UMA_AP_BC_BUILD_MEGASTRUCTURE"
 	cost = 30000
 	tech_department = engineering_technology
-	picture = GFX_evt_alien_propaganda
+	picture = GFX_evt_dyson_swarm
 	event_scope = planet_event
 	event_chain = uma_ap_bc_main_evt_chain
 

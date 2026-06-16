@@ -4,10 +4,37 @@ namespace = uma_ap
 #Crisis Ascension Perk 26.3.8
 #####
 
+# Become the crisis
+country_event = {
+	id = uma_ap.6999
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+	}
+
+	immediate = {
+		save_event_target_as = this_country
+
+		add_timeline_event = {
+			type = timeline_crisis
+			override_id = timeline_become_the_crisis
+			override_tooltip = "UMA_AP_BC_TIMELINE_EVENT_BECOME_THE_CRISIS_TOOLTIP"
+			override_types = { country }
+			override_text = { "text:UMA_AP_BC_TIMELINE_EVENT_BECOME_THE_CRISIS" }
+			override_texture = { "background:GFX_evt_crisis_declared" }
+			targets = { event_target:this_country }
+		}
+	}
+}
+
+
 country_event = {
 	id = uma_ap.300
 	title = uma_ap.300.title
 	desc = uma_ap.300.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	option = {
@@ -29,6 +56,7 @@ country_event = {
 	id = uma_ap.301
 	title = uma_ap.301.title
 	desc = uma_ap.301.desc
+	picture = GFX_evt_uma_satono_two
 	is_triggered_only = yes
 
 	option = {
@@ -46,6 +74,7 @@ country_event = {
 	id = uma_ap.302
 	title = uma_ap.302.title
 	desc = uma_ap.302.desc
+	picture = GFX_evt_uma_satono_school
 	is_triggered_only = yes
 
 	option = {
@@ -64,6 +93,7 @@ country_event = {
 	id = uma_ap.303
 	title = uma_ap.303.title
 	desc = uma_ap.303.desc
+	picture = GFX_evt_dyson_swarm
 	is_triggered_only = yes
 
 	immediate = {
@@ -357,7 +387,7 @@ country_event = {
 	id = uma_ap.400
 	title = "uma_ap.400.name"
 	desc = uma_ap.400.desc
-	picture = GFX_evt_victorious_army
+	picture = GFX_evt_dyson_swarm
 	show_sound = event_death_cult
 	event_chain = uma_ap_bc_main_evt_chain
 
@@ -374,7 +404,7 @@ country_event = {
 	id = uma_ap.401
 	title = "uma_ap.401.name"
 	desc = uma_ap.401.desc
-	picture = GFX_evt_victorious_army
+	picture = GFX_evt_uma_satono_school
 	show_sound = event_death_cult
 	event_chain = uma_ap_bc_main_evt_chain
 
@@ -408,7 +438,7 @@ country_event = {
 	id = uma_ap.403
 	title = "uma_ap.403.name"
 	desc = uma_ap.403.desc
-	picture = GFX_evt_victorious_army
+	picture = GFX_evt_uma_normal_school
 	show_sound = event_death_cult
 	event_chain = uma_ap_bc_main_evt_chain
 
@@ -428,7 +458,7 @@ country_event = {
 
 #This event will reduce the crisis currency per month.
 #Fired by on_monthly_pulse_country
-# 68000 (-3400 per month) => 20 month to complete.
+# 68000 (-944 per month) => 72 month to complete.
 country_event = {
 	id = uma_ap.404
 	hide_window = yes
@@ -445,7 +475,7 @@ country_event = {
 
 	immediate = {
 		add_resource = {
-			uma_menace = -3400
+			uma_menace = -1083
 		}
 		export_resource_stockpile_to_variable = {
 			resource = uma_menace
@@ -453,7 +483,7 @@ country_event = {
 		}
 		divide_variable = {
 			which = uma_ap_404_uma_menace_stock
-			value = 68000
+			value = 78000
 		}
 		multiply_variable = {
 			which = uma_ap_404_uma_menace_stock
@@ -463,6 +493,11 @@ country_event = {
 			which = uma_ap_404_uma_menace_stock
 			value = 1
 		}
+		multiply_variable = {
+			which = uma_ap_404_uma_menace_stock
+			value = 100
+		}
+		round_variable = uma_ap_404_uma_menace_stock
 
 		reset_event_chain_counter = {
 			event_chain = uma_ap_bc_main_evt_chain
@@ -471,7 +506,7 @@ country_event = {
 		add_event_chain_counter = {
 			event_chain = uma_ap_bc_main_evt_chain
 			counter = uma_ap_bc_main_evt_chain_crisis_level_reached_discounting
-			amount = Root.uma_ap_404_uma_menace_stock
+			amount = uma_ap_404_uma_menace_stock
 		}
 	}
 }
@@ -880,6 +915,9 @@ starbase_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		NOT = {
+			has_global_flag = uma_ap_413_happened_win
+		}
 		This.owner = {
 			uma_is_uma_ap_bc_actived = yes
 			Root.solar_system = {
@@ -926,6 +964,28 @@ starbase_event = {
 	}
 }
 
+country_event = {
+	id = uma_ap.4111
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = {
+			uma_is_uma_ap_bc_actived = yes
+			has_global_flag = uma_ap_413_happened_win
+		}
+	}
+
+	immediate = {
+		log = "Uma_ap.4111.happened"
+		From = {
+			starbase_event = {
+				id = uma_ap.411
+			}
+		}
+	}
+}
+
 ##Win
 ##Fire on on_monthly_pulse
 country_event = {
@@ -944,10 +1004,44 @@ country_event = {
 	}
 
 	immediate = {
-		country_event = {
-			id = uma_ap.413
-			days = 20
-			random = 10
+		if = {
+			limit = {
+				any_owned_leader = {
+					has_leader_flag = uma_is_fairy_trail
+				}
+			}
+			country_event = {
+				id = uma_ap.4122
+				days = 2
+			}
+		}
+		else = {
+			country_event = {
+				id = uma_ap.413
+				days = 2
+				random = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uma_ap.4122
+	title = FT
+	desc = uma_ap.4122.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		room = uma_traincenter_01_room
+		portrait = F_Trail
+	}
+
+	option = {
+		name = uma_ap.4122.a
+		hidden_effect = {
+			country_event = {
+				id = uma_ap.413
+			}
 		}
 	}
 }
@@ -970,15 +1064,27 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = timeline.34 } # Milestone Destroyed Galaxy
 		}
+		set_global_flag = uma_ap_413_happened_win
 	}
 
 	option = {
 		name = uma_ap.413.a
-		custom_tooltip = uma_ap.413.a.tt
+		tooltip = { win = yes }
 		hidden_effect = {
 			country_event = { id = uma_ap.414 days = 1 } # win delay to get cheevo
+			# Destroyed Galaxy
+			set_country_flag = destroyed_galaxy
+			save_event_target_as = this_country
+			add_timeline_event = {
+				type = timeline_milestone
+				override_id = timeline_destroyed_galaxy
+				override_tooltip = "UMA_AP_BC_TIMELINE_EVENT_DESTROYED_GALAXY_TOOLTIP"
+				override_types = { country }
+				override_text = { "text:TIMELINE_DESTROYED_GALAXY" }
+				override_texture = { "background:GFX_evt_vortex" }
+				targets = { event_target:this_country }
+			}
 		}
-		tooltip = { win = yes }
 	}
 }
 
@@ -1017,7 +1123,7 @@ country_event = {
 country_event = {
 	id = uma_ap.415
 	title = "crisis.6051.name"
-	desc = "crisis.6051.desc"
+	desc = "uma_ap.415.desc"
 	picture = GFX_evt_supernova
 	show_sound = event_default
 
@@ -1045,15 +1151,21 @@ country_event = {
 
 	option = {
 		name = uma_ap.416.a
-		custom_tooltip = uma_ap.416.a.tooltip
+		custom_tooltip = uma_ap.416.a.tt
 		hidden_effect = {
 			every_country = {
 				limit = {
-					is_country_type = uma_ec4_empire
+					OR = {
+						is_country_type = uma_ec4_empire
+						is_country_type = uma_ec4_empire_ez
+					}
 				}
-				set_name = random
-				set_country_type = default
+				every_owned_fleet = {
+					destroy_fleet = this
+				}
+				destroy_country = yes
 			}
+
 			This = {
 				every_owned_fleet = {
 					destroy_fleet = this

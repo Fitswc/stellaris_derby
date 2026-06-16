@@ -1017,7 +1017,7 @@ tech_uma_ring_world = {
 }
 
 
-tech_uma_pirate_section = { #马娘甜点产业
+tech_uma_pirate_section = {
     cost = 10000
     area = engineering
     tier = 4
@@ -1055,4 +1055,20 @@ tech_uma_pirate_section = { #马娘甜点产业
         factor = 0
     }
 
+}
+
+tech_uma_ap_bc_large_section = {
+    #马娘甜点产业
+    cost = 1
+    area = engineering
+    tier = 4
+    category = { industry }
+    weight = 0
+
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
 }

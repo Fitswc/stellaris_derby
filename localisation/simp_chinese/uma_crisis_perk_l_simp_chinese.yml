@@ -34,7 +34,7 @@ menp_uma_death_from_above_tt: "现在赛马娘产出的领域能将提升"
 menp_uma_ship_chipper_desc: "由于我们对武器和舰船的改良，现在他们能够携带的弹药的数量和弹药装药量得到了大大的提升。我们让我们的士兵认识到，我们的武器工厂一日能够产出数倍于以往的弹药。"
 menp_uma_paid_in_ambition_desc: "由于高强度的战争需求，我们抛弃了以往的繁文冗节的维修检查程序。虽然存在一定的风险，但我们维修的成本确是降低了不少。"
 menp_uma_star_eater_desc: "今天我们将重新回顾重火力和巨炮的浪漫。"
-menp_uma_star_eater_tt: "可以使用所有星球级兵器"
+menp_uma_star_eater_tt: "可以使用舰船的重炮区段"
 menp_uma_megastructure_desc: "经过长时间的领域能收集，现在我们终于能够启动这个存在我们星系内已久的装置。希望我们已经准备就绪了。"
 menp_uma_megastructure_tt: "启动天灾最后阶段。将消耗领域能激活装置。希望我们已经准备就绪了"
 
@@ -56,14 +56,14 @@ crisobj_uma_conquer_worlds_desc: "占领其他星球以便我们能够获得更�
 
 ##Ascension Perk
 ap_uma_become_the_crisis: "破镜"
-ap_uma_become_the_crisis_desc: "#PLACEHOLDER"
+ap_uma_become_the_crisis_desc: "以往领域引发的种种现象的背后隐藏着什么？今天，我们将通过自己的身体解开这个秘密。"
 
 #Evt Chain
-uma_ap_bc_main_evt_chain_title: "£uma_sd£星海德比灾飞:破镜"
-uma_ap_bc_main_evt_chain_desc: "£uma_sd£§g赛马娘：星海德比内容§!"
+uma_ap_bc_main_evt_chain_title: "£uma_sd£星海德比灾飞:万花镜"
+uma_ap_bc_main_evt_chain_desc: "£uma_sd£§g赛马娘：星海德比内容§!\n\n"
 uma_ap_bc_main_evt_chain_crisis_level_reached: "天灾进度"
 uma_ap_bc_main_evt_chain_crisis_level_reached_discounting: "巨构启动进度(%)"
-uma_ap_bc_main_evt_chain_crisis_resource_penatly: "外部国家干扰减益等级"
+uma_ap_bc_main_evt_chain_crisis_resource_penatly: "外部国家干扰减益等级(级)"
 UMA_AP_BC_RESEARCH_REALM: "研究领域"
 UMA_AP_BC_RESEARCH_REALM_DESC: "在无数的的实践和记载中我们发现，每当马娘们使用领域时似乎能够在一定程度上改变当前时空的一部分特征。最典型的就是莫名其妙出现的区域性金色雨滴。这是否意味着，如果很多马娘一起发动领域的话，会有一些特别的事情发生：比如出现另一个空间通道什么的。总感觉我们和领域的真相之间还隔着一层薄薄的白纱，这需要我们进行进一步的研究。"
 
@@ -87,11 +87,32 @@ uma_ap.303.title: "准备就绪"
 uma_ap.303.desc: "超级装置已经准备就绪，现在我们只需要专心收集领域能了。为了防御不可预见的后果，我们可能需要使用必要的武力和进行必要的军事力量储备"
 uma_ap.303.a: "了解"
 uma_ap.303.tt: "§g‘......准备应对的措施’§!"
+uma_ap.400.name: "Reach the Milestone"
+uma_ap.400.desc: "领域能开始从我们的马娘身上被收集，并通过恒星基地上的传输装置传输到领域空间篡改器中储存起来，等待最后的释放。我们的各个部门为这个过程付出巨大的努力，只为跨越那堵墙的那一天。"
+uma_ap.400.a: "前进"
+uma_ap.401.name: "$uma_ap.400.name$"
+uma_ap.401.desc: "我们的R&D部门想到了能使武器和战争机器变为像家用品一般廉价的方法。"
+uma_ap.401.a: "何乐而不为"
+uma_ap.402.name: "$uma_ap.400.name$"
+uma_ap.402.desc: "我们的领域能储能已经接近完成，为了效率，我们可以更频繁地发动战争。"
+uma_ap.402.a: "OK"
+uma_ap.403.name: "$uma_ap.400.name$"
+uma_ap.403.desc: "终于到达这一步了！现在开始我们将缓慢释放储存的领域能，使我们所在的空间撕开一道裂口。期间我们预计我们将会受到猛烈的攻击，只要§R首都不被敌舰所侵扰§!，一切都会正常运转\n\n§R切记：首都的恒星基地不能被占领/控制/摧毁，否则一切都会结束§!\n§R切记：首都的恒星基地不能被占领/控制/摧毁，否则一切都会结束§!\n§R切记：首都的恒星基地不能被占领/控制/摧毁，否则一切都会结束§!"
+uma_ap.403.a: "我们准备好了"
+uma_ap.403.a.tt: "你可以在情报日志追踪启动进度，约72个月完成启动"
 
-uma_ap.413.desc: ""
-uma_ap.413.a: ""
-uma_ap.413.a.tt: ""
+uma_ap.4122.desc: "......\n找你有点事......\n我...可能没办法跟你们一起出发去下一个位面了。因为我没有所谓的‘灵魂’哦，不像其他马娘，我只是个由机械驱动的空壳罢了。\n嗯.....怎么办呢，好苦恼，直接通过的话肯定会被瞬间蒸发。\n这样吧，我留在这里等你回来，你一定要回来找我哦，老地方见！"
+uma_ap.4122.a: "好的......"
 
+uma_ap.413.desc: "所有装置启动完毕，我们的种族已经逐步被提升到更高的位面，现在我们可以在这个人类主宰的地方尝试和他们共存。\n......\n讷，你都看到这了。为什么不转头看看呢？什么都没有是吧，当然啦，作为三维生物是不能直接看到低维度物体的哦。不过我们生活的地方其实离你很近很近。只要你想，我们就在你身边哦。"
+uma_ap.413.a: "......"
+
+uma_ap.415.desc: "一切都结束了。§H[From.GetName]§!完成了它们星系内庞大巨构的启动\n\n当他们前往一个我们根本想象不到的位面并成为那里的主宰的时候，整个空间开始自巨构起开始已难以置信的速度消融，就像把泡腾片放进水里一般，横扫了整个星系，摧毁了途径的一切。\n\n对于这片星系的住民来说，此时便是万物的终焉之时。"
+
+uma_ap.416.name: "游戏结束"
+uma_ap.416.desc: "我们的防线被摧毁了，所有领域传输被中断，但处于更高位面的三女神一定不会放过我们。没过多久，整个文明在一瞬间被抹去了\n\n§g‘遗憾的结局，当然，你可以试试回档重新试试，如果还是太难的话，相应的援助会给到你的手上’§!"
+uma_ap.416.a: "残念"
+uma_ap.416.a.tt: "游戏结束，你的文明将会被抹去"
 
 ##Current
 uma_menace: "领域能"
@@ -125,6 +146,22 @@ UMA_EC4_EMPIRE_FLEET_NAME: "三女神虚空舰队"
 
 war_goal_wg_end_threat_vs_uma_apbc: "$war_goal_wg_end_threat$"
 war_goal_wg_end_threat_vs_uma_apbc_desc: "$war_goal_wg_end_threat_desc$"
+wg_uma_threegodness_power_agent: "三女神代理战争"
+
+UMA_AP_BC_DESTROYER_BOW_L2_EX1: "重炮区段"
+UMA_AP_BC_BATTLESHIP_BOW_L1_EX2: "$UMA_AP_BC_DESTROYER_BOW_L2_EX1$"
+UMA_AP_BC_BATTLESHIP_MID_EX2: "$UMA_AP_BC_DESTROYER_BOW_L2_EX1$"
+UMA_AP_BC_BATTLESHIP_STERN_T: "$UMA_AP_BC_DESTROYER_BOW_L2_EX1$"
+UMA_AP_BC_CRUISER_MID_L2: "$UMA_AP_BC_DESTROYER_BOW_L2_EX1$"
+UMA_AP_BC_CORVETTE_MID_M2: "$UMA_AP_BC_DESTROYER_BOW_L2_EX1$"
+
+
+UMA_AP_BC_TIMELINE_EVENT_DESTROYED_GALAXY_TOOLTIP: "§H步入万花镜§!\n§Y里程碑§!\n\n§L[GetDate]§!，[EVENT_TARGET_0.GetName]摆脱了“这场游戏”的限制，步入另一个世界"
+UMA_AP_BC_TIMELINE_EVENT_BECOME_THE_CRISIS: "破镜飞升\n§L[GetDate]§!"
+UMA_AP_BC_TIMELINE_EVENT_BECOME_THE_CRISIS_TOOLTIP: "§H化身天灾§!\n§Y危机事件§!\n\n[EVENT_TARGET_0.GetName]努力研究它们自身的领域，它们正在秘密传递着一个神秘的计划，一旦这个计划完成，灾难将会降临银河系。"
+
+uma_become_the_crisis_must_had_ap1: "$TRIGGER_FAIL$一段飞升：['ascension_perk:ap_uma_fly_me_to_the_star']和['ascension_perk:ap_uma_zenshizenren']必须被选择"
+ap_uma_become_the_crisis_not_in_multiplayer: "$TRIGGER_FAIL$多人游戏中该飞升不可被多个国家选择"
 
 
 

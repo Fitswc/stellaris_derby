@@ -75,6 +75,11 @@ menp_uma_star_eater = {
 	portrait = "GFX_crisis_icon_stareater"
 
 	on_unlock = {
+		hidden_effect = {
+			give_technology = {
+				tech = tech_uma_ap_bc_large_section
+			}
+		}
 		custom_tooltip = menp_uma_star_eater_tt
 	}
 }

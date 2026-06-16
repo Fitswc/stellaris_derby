@@ -123,7 +123,8 @@ uma_ec_1_main_evt_chain = {
 
 uma_ap_bc_main_evt_chain = {
 	icon = gfx/interface/icons/situation_log/situation_log_main_quest.dds
-	picture = GFX_evt_crisis_declared
+	picture = GFX_evt_uma_ap2_star
+	situation_log_category = crises
 	counter = {
 		uma_ap_bc_main_evt_chain_crisis_level_reached = {
 
