@@ -49,7 +49,7 @@ councilor_umacurrenchan = {
 		}
 	}
 	modifier = {
-		country_trade_fee = -0.1
+		planet_jobs_specialist_trade_produces_mult = 0.01
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -129,7 +129,10 @@ councilor_umazennorobroy = {
 		}
 	}
 	modifier = {
-		planet_jobs_uma_threegodness_knowledge_produces_mult = 0.50
+#		planet_jobs_uma_threegodness_knowledge_produces_mult = 0.50
+		planet_jobs_engineering_research_produces_add = 0.1
+		planet_jobs_physics_research_produces_add = 0.1
+		planet_jobs_society_research_produces_add = 0.1
 	}
 	icon = "GFX_icon_councilor_research"
 }
@@ -260,7 +263,9 @@ councilor_umaairgroove = {
 		}
 	}
 	modifier = {
-		empire_size_pops_mult  = -0.03
+		planet_jobs_produces_mult = 0.01
+		planet_jobs_upkeep_mult = -0.01
+		tradition_cost_empire_size_mult = -0.02
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
