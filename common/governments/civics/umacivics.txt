@@ -503,9 +503,9 @@ civic_umamayanotopgun = {
 	}
 
 	modifier = {
-		logistic_growth_mult = 0.1
-		country_unity_produces_mult = 0.1
-		planet_stability_mult = -0.2
+		ship_fire_rate_mult = 0.15
+		ship_speed_mult = 0.15
+		country_naval_cap_mult = 0.25
 	}
 }
 
