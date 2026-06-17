@@ -67,15 +67,7 @@ uma_umaidol = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 ###风纪委员
@@ -169,15 +161,7 @@ uma_judgement = {
 			has_slavery_type = { type = slavery_indentured }
 		}
 	}
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 ###三女神知识研究者
@@ -250,15 +234,7 @@ uma_threegodness_knowledge_scholar = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -330,15 +306,7 @@ uma_crystal_carrot_engineer = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -425,15 +393,6 @@ uma_researcher = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 
@@ -534,15 +493,6 @@ uma_sweet_master = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 
@@ -598,15 +548,7 @@ uma_sweet_manager = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -685,15 +627,7 @@ uma_horseshoe_crafter = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -762,15 +696,7 @@ uma_live_clothes_crafter = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -868,15 +794,7 @@ uma_crystal_alloy_crafter = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -947,15 +865,7 @@ uma_crystal_consumer_goods_crafter = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -1038,15 +948,7 @@ uma_dormitory_administrator = {
 			has_slavery_type = { type = slavery_indentured }
 		}
 	}
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -1133,15 +1035,7 @@ uma_school_reseacher = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -1218,15 +1112,7 @@ uma_trader = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -1287,15 +1173,7 @@ uma_darkmatter_collector = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -1357,15 +1235,6 @@ uma_chemrist = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 
@@ -1427,15 +1296,6 @@ uma_translucer= {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 
@@ -1500,13 +1360,4 @@ uma_gas_collector = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }

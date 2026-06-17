@@ -325,19 +325,19 @@ country_event = {
 									minerals = 200
 									mult = FROMFROM.value:count_districts|TYPE|mining_uncapped|
 								}
-								add_resource = {
-									food = 200
-									mult = FROMFROM.value:count_districts|TYPE|farming_uncapped|
-								}
+								#add_resource = {
+								#	food = 200
+								#	mult = FROMFROM.value:count_districts|TYPE|farming_uncapped|
+								#}
 								# Advanced Resources - Regular Districts
-								add_resource = {
-									alloys = 100
-									mult = FROMFROM.value:count_districts|TYPE|industrial|
-								}
-								add_resource = {
-									consumer_goods = 100
-									mult = FROMFROM.value:count_districts|TYPE|industrial|
-								}
+								#add_resource = {
+								#	alloys = 100
+								#	mult = FROMFROM.value:count_districts|TYPE|industrial|
+								#}
+								#add_resource = {
+								#	consumer_goods = 100
+								#	mult = FROMFROM.value:count_districts|TYPE|industrial|
+								#}
 								# Basic Resources - Habitat Districts
 								add_resource = {
 									energy = 200
@@ -348,14 +348,14 @@ country_event = {
 									mult = FROMFROM.value:count_districts|TYPE|hab_mining|
 								}
 								# Advanced Resources - Habitat Districts
-								add_resource = {
-									alloys = 100
-									mult = FROMFROM.value:count_districts|TYPE|hab_industrial|
-								}
-								add_resource = {
-									consumer_goods = 100
-									mult = FROMFROM.value:count_districts|TYPE|hab_industrial|
-								}
+								#add_resource = {
+								#	alloys = 100
+								#	mult = FROMFROM.value:count_districts|TYPE|hab_industrial|
+								#}
+								#add_resource = {
+								#	consumer_goods = 100
+								#	mult = FROMFROM.value:count_districts|TYPE|hab_industrial|
+								#}
 								# Research - Habitat Districts
 								add_resource = {
 									physics_research = 50
@@ -382,10 +382,10 @@ country_event = {
 									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_farming|
 								}
 								# Advanced Resources - Ringworld Districts
-								add_resource = {
-									alloys = 100
-									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_industrial|
-								}
+								#add_resource = {
+								#	alloys = 100
+								#	mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_industrial|
+								#}
 								add_resource = {
 									consumer_goods = 100
 									mult = FROMFROM.value:count_ringworld_districts_equiv|TYPE|rw_industrial|

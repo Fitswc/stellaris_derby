@@ -410,6 +410,31 @@ d_eastern_ocean = {
 	}
 }
 
+d_lake_fexiloso_ark = {
+	is_for_colonizable = yes
+	category = deposit_cat_food
+	icon = d_lake_fexiloso
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_trainingcenter }
+		}
+		modifier = {
+			planet_buildings_uma_threegodness_knowledge_produces_mult = 0.1
+		}
+	}
+
+	planet_modifier = {
+		pop_happiness = 0.1
+	}
+
+	drop_weight = {
+		base = 0
+	}
+}
+
 d_coral_in_land = {
 	is_for_colonizable = yes
 	category = deposit_cat_minerals

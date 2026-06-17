@@ -70,15 +70,7 @@ uma_crystal_carrot_miner = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 ###第二版
@@ -182,15 +174,7 @@ uma_carrot_farmer = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -290,15 +274,7 @@ uma_bee_farmer = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 
@@ -392,15 +368,6 @@ uma_field_powering_technician = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
 }
 
@@ -491,15 +458,7 @@ uma_core_miner = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 

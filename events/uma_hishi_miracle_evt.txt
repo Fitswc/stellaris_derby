@@ -196,13 +196,7 @@ country_event = {
 		name = uma_fz.5.b
 		custom_tooltip = uma_fz.5.b.tt
 		hidden_effect = {
-			capital_scope = {
-				create_pop = {
-					species = Root.owner_main_species
-					ethos = Root
-					size = 1
-				}
-			}
+
 		}
 	}
 }

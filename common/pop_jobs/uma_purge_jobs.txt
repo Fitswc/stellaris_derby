@@ -8,15 +8,6 @@ uma_fuel_purge_small = {
 
 	tags = { }
 
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
 	ignores_sapience = yes
 
@@ -104,15 +95,6 @@ uma_fuel_purge_medium = {
 		is_being_purged = yes
 	}
 
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 	possible = {
 		owner = {
 			AND = {
@@ -201,15 +183,6 @@ uma_fuel_purge_big = {
 		}
 	}
 
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
 	ignores_sapience = yes
 
@@ -290,16 +263,6 @@ uma_alien_realm_crisispath = {
 			is_uma_player_country = yes
 			has_ascension_perk = ap_uma_become_the_crisis
 			has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
-		}
-	}
-
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
 		}
 	}
 

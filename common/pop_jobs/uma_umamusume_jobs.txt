@@ -78,15 +78,7 @@ uma_trainer = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = umamusume
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 ###赛马娘
@@ -174,15 +166,7 @@ uma_racing_umamusume = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = umamusume
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
+
 }
 
 

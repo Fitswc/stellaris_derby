@@ -3,7 +3,6 @@ uma_country = {
 #	key = "uma_toresen_republic" #和EMPIRE_DESIGN联合使用，本地化国家名称
 	adjective = "PRESCRIPTED_adjective_uma_toresen_republic"
 	spawn_enabled = no # yes / no / always
-	ignore_portrait_duplication = yes
 
 	ship_prefix = "PRESCRIPTED_ship_prefix_uma" #这个本地化后，就是在所有船只前面加的前缀.
 
@@ -25,7 +24,7 @@ uma_country = {
 	room = "traincenter_06_room" #背景房间
 
 	authority = "auth_trainingcenter" #政府制度
-	civics = { "civic_umaairgroove" "civic_umamayanotopgun" } #国家理念
+	civics = { "civic_umaairgroove" "civic_uma_ayb_star_watcher" } #国家理念
 	government = gov_uma_country #政府
 	origin = "origin_uma_below_threegodness" #起源
 	default = yes

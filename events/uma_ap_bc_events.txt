@@ -19,7 +19,7 @@ country_event = {
 
 		add_timeline_event = {
 			type = timeline_crisis
-			override_id = timeline_become_the_crisis
+			override_id = uma_timeline_become_the_crisis
 			override_tooltip = "UMA_AP_BC_TIMELINE_EVENT_BECOME_THE_CRISIS_TOOLTIP"
 			override_types = { country }
 			override_text = { "text:UMA_AP_BC_TIMELINE_EVENT_BECOME_THE_CRISIS" }
@@ -1076,7 +1076,7 @@ country_event = {
 			save_event_target_as = this_country
 			add_timeline_event = {
 				type = timeline_milestone
-				override_id = timeline_destroyed_galaxy
+				override_id = uma_timeline_destroyed_galaxy
 				override_tooltip = "UMA_AP_BC_TIMELINE_EVENT_DESTROYED_GALAXY_TOOLTIP"
 				override_types = { country }
 				override_text = { "text:TIMELINE_DESTROYED_GALAXY" }

@@ -54,12 +54,6 @@ event = {
 			}
 			save_global_event_target_as = uma_player_umamusume_empire
 		}
-#		random_system = {
-#			limit = {
-#				is_owned_by = event_target:uma_player_umamusume_empire
-#			}
-#			save_global_event_target_as = uma_player_umamusume_empire_system
-#		}
     }
 }
 
@@ -73,18 +67,196 @@ country_event = {
     immediate = {
 		if = {
 			limit = {
-				is_multiplayer = yes
+				is_nomadic = no
+			}
+			if = {
+				limit = {
+					is_multiplayer = yes
+				}
+				capital_scope = {
+					save_event_target_as = uma_is_the_first_capital
+					clear_deposits = yes
+					add_deposit = d_uma_crystal_carrot_mine_planet
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_uma_threegodness_museum
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_newlisa_church
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_paseaoen_pass
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_lake_fexiloso
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_river_tinos
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_channel_arsitla
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_eastern_ocean
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_coral_in_land
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_yinkate_place
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_pasaer_tg_racing_course
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_palai_plateau
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_blocker = {
+						type = d_city_ruins
+						blocked_deposit = random
+					}
+					add_blocker = {
+						type = d_failing_infrastructure
+						blocked_deposit = random
+					}
+				}
+				owner = {
+					add_tech_progress = { tech = tech_uma_threegodness_knowledge_first_known progress = 0.2 } # 解锁建立三女神知识研究所科技
+				}
+			}
+			else = {
+				capital_scope = {
+					clear_deposits = yes
+					save_event_target_as = uma_is_the_first_capital
+					add_deposit = d_uma_threegodness_relic
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_uma_crystal_carrot_mine_planet
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_newlisa_church
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_paseaoen_pass
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_lake_fexiloso
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_river_tinos
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_channel_arsitla
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_eastern_ocean
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_coral_in_land
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_yinkate_place
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_pasaer_tg_racing_course
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_deposit = d_palai_plateau
+					last_added_deposit = {
+						set_deposit_flag = uma_keep_deposit_on_terraform
+						set_deposit_flag = keep_deposit_on_terraform
+					}
+
+					add_blocker = {
+						type = d_city_ruins
+						blocked_deposit = random
+					}
+					add_blocker = {
+						type = d_failing_infrastructure
+						blocked_deposit = random
+					}
+				}
+
+				country_event = { id = umaarc.1008 days = 10 random = 30 }
+				#之后还要触发创造考古遗迹的事件
+			}
+		}
+		else_if = {
+			limit = {
+				is_nomadic = yes
 			}
 			capital_scope = {
 				save_event_target_as = uma_is_the_first_capital
-				clear_deposits = yes
-				add_deposit = d_uma_crystal_carrot_mine_planet
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_uma_threegodness_museum
 				last_added_deposit = {
 					set_deposit_flag = uma_keep_deposit_on_terraform
 					set_deposit_flag = keep_deposit_on_terraform
@@ -96,37 +268,7 @@ country_event = {
 					set_deposit_flag = keep_deposit_on_terraform
 				}
 
-				add_deposit = d_paseaoen_pass
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_lake_fexiloso
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_river_tinos
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_channel_arsitla
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_eastern_ocean
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_coral_in_land
+				add_deposit = d_lake_fexiloso_ark
 				last_added_deposit = {
 					set_deposit_flag = uma_keep_deposit_on_terraform
 					set_deposit_flag = keep_deposit_on_terraform
@@ -144,115 +286,13 @@ country_event = {
 					set_deposit_flag = keep_deposit_on_terraform
 				}
 
-				add_deposit = d_palai_plateau
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_blocker = {
-					type = d_city_ruins
-					blocked_deposit = random
-				}
 				add_blocker = {
 					type = d_failing_infrastructure
 					blocked_deposit = random
 				}
 			}
-			owner = {
-				add_tech_progress = { tech = tech_uma_threegodness_knowledge_first_known progress = 0.2 } # 解锁建立三女神知识研究所科技
-			}
+			add_tech_progress = { tech = tech_uma_threegodness_knowledge_first_known progress = 0.1 } # 解锁建立三女神知识研究所科技
 		}
-		else = {
-			capital_scope = {
-				clear_deposits = yes
-				save_event_target_as = uma_is_the_first_capital
-				add_deposit = d_uma_threegodness_relic
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_uma_crystal_carrot_mine_planet
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_newlisa_church
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_paseaoen_pass
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_lake_fexiloso
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_river_tinos
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_channel_arsitla
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_eastern_ocean
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_coral_in_land
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_yinkate_place
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_pasaer_tg_racing_course
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_deposit = d_palai_plateau
-				last_added_deposit = {
-					set_deposit_flag = uma_keep_deposit_on_terraform
-					set_deposit_flag = keep_deposit_on_terraform
-				}
-
-				add_blocker = {
-					type = d_city_ruins
-					blocked_deposit = random
-				}
-				add_blocker = {
-					type = d_failing_infrastructure
-					blocked_deposit = random
-				}
-			}
-
-			country_event = { id = umaarc.1008 days = 10 random = 30 }
-			#之后还要触发创造考古遗迹的事件
-		}
-
 	}
 	##Anolomy Generator
 	after = {
@@ -342,20 +382,6 @@ country_event = {
 				}
 			}
 
-#			random_neighbor_country = {
-#				limit = {
-#					is_country_type = default
-#					is_fallen_empire = no
-#					
-#				}
-#				Root = {
-#					add_intel = {
-#						who = from
-#						amount = 20
-#					}
-#				}
-#			}
-#
 		}
 	}
 
@@ -506,3 +532,4 @@ country_event = {
 		uma_spawn_system_gold_ship_crisis = yes
 	}
 }
+

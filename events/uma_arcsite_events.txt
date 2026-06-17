@@ -17,9 +17,6 @@ country_event = {
 		any_owned_planet = {
 			has_deposit = d_uma_threegodness_relic
 		}
-		
-
-		
 	}
 
 	option = {
@@ -33,7 +30,6 @@ country_event = {
 				limit = {
 					has_deposit = d_uma_threegodness_relic
 				}
-#				carrier_event = {id = umaarc.1000 days = 1800 random = 720}
 				carrier_event = {id = umaarc.1000 days = 100 random = 500}
 			}
 		}

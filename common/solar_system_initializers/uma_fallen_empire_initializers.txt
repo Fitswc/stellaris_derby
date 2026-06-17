@@ -454,14 +454,6 @@ uma_fallen_empire_system_initializer_2 = {
                 count = 10
                 add_district = district_uma_dormitory
             }
-			while = {
-                count = 5
-                add_district = district_uma_teaching_area
-            }
-			while = {
-                count = 5
-                add_district = district_uma_logistics_area
-            }
             while = {
                 count = 600
                 create_pop = {

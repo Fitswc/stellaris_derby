@@ -111,10 +111,13 @@ decision_uma_school_planet_transform = {
 			has_modifier = slave_colony
 		}
 		habitable_structure = no
-		exists = owner
-		owner = { has_technology = tech_uma_toresen_planet_transform }
+		owner? = { has_technology = tech_uma_toresen_planet_transform }
 		NOT = {
 			has_carrier_flag = uma_has_change_pc_to_academic_planet
+		}
+		owner = {
+			is_regular_empire = yes
+			is_nomadic = no
 		}
 	}
 

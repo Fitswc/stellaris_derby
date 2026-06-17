@@ -70,15 +70,6 @@ uma_satonomerchant = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 
@@ -149,13 +140,4 @@ uma_head_researcher = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
