@@ -214,7 +214,6 @@ ap_uma_become_the_crisis = {
 	possible = {
 		custom_tooltip = {
 			fail_text = ap_uma_become_the_crisis_not_in_multiplayer
-			is_multiplayer = yes
 			NOT = {
 				has_global_flag = uma_ap_uma_become_the_crisis_actived
 			}
