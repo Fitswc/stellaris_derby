@@ -6,3 +6,5 @@ common/technology/uma_override.txt -> 00_soc_tech.txt | tech_gene_tailoring
 events/zzz_uma_event_override.txt -> grand_archive_events.txt | grand_archive.9010
 
 policies/zzzzzz_uma_policy_override.txt -> 00_policies.txt | trade_policy
+
+01_uma_script_triggers_override.txt -> ~ is_organic_species && can_enter_system_by_jump_trigger
