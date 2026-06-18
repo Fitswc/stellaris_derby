@@ -12,113 +12,112 @@
 #Written by F
 
 #Scope back to country(Remember!)
-#uma_rs_generate_random_number = {
-#	optimize_memory
+uma_rs_generate_random_number = {
+	optimize_memory
+	switch = {
+		trigger = has_country_flag
+
+		uma_event_randomsys_diff_1 = {
+			#difficult 1
+			set_variable_to_random_value = {
+				which = uma_rs_goal_number
+				max = 9
+				min = 4
+				rounded = yes #四舍五入
+			}
+		}
+
+		uma_event_randomsys_diff_2 = {
+			#difficult 2
+			set_variable_to_random_value = {
+				which = uma_rs_goal_number
+				max = 14
+				min = 9
+				rounded = yes
+			}
+		}
+
+		uma_event_randomsys_diff_3 = {
+			#difficult 3
+			set_variable_to_random_value = {
+				which = uma_rs_goal_number
+				max = 20
+				min = 14
+				rounded = yes
+			}
+		}
+	}
+}
+
+uma_rs_1dr = {
+	optimize_memory
+	set_variable_to_random_value = {
+		which = uma_rs_result_number
+		max = 20
+		min	= 1
+		rounded = yes
+	}
+}
+
+#uma_rs_buff = {
 #	switch = {
-#		trigger = has_country_flag
 #
-#		uma_event_randomsys_diff_1 = {
-#			#difficult 1
-#			set_variable_to_random_value = {
-#				which = uma_rs_goal_number
-#				max = 9
-#				min = 4
-#				rounded = yes #四舍五入
-#			}
-#		}
-#
-#		uma_event_randomsys_diff_2 = {
-#			#difficult 2
-#			set_variable_to_random_value = {
-#				which = uma_rs_goal_number
-#				max = 14
-#				min = 9
-#				rounded = yes
-#			}
-#		}
-#
-#		uma_event_randomsys_diff_3 = {
-#			#difficult 3
-#			set_variable_to_random_value = {
-#				which = uma_rs_goal_number
-#				max = 20
-#				min = 14
-#				rounded = yes
-#			}
-#		}
 #	}
 #}
+
+
+
+uma_rs_judging = {
+	optimize_memory
+	if = {
+		limit = {
+			check_variable = {
+				which = uma_rs_result_number
+				value >= uma_rs_goal_number
+			}
+		}
+		set_country_flag = uma_rs_success
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_rs_result_number
+				value = 1
+			}
+		}
+		set_country_flag = uma_rs_fail
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = uma_rs_result_number
+				value = 20
+			}
+		}
+		set_country_flag = uma_rs_success
+	}
+	else = {
+		set_country_flag = uma_rs_fail
+	}
+}
+
+uma_rs_difficult_set_up = {
+	optimize_memory
+	set_country_flag = uma_event_randomsys_diff_$DIFFICULT_RATIO$
+}
 #
-#uma_rs_1dr = {
-#	optimize_memory
-#	set_variable_to_random_value = {
-#		which = uma_rs_result_number
-#		max = 20
-#		min	= 1
-#		rounded = yes
-#	}
-#}
-#
-##uma_rs_buff = {
-##	switch = {
-##
-##	}
-##}
-#
-#
-#
-#uma_rs_judging = {
-#	optimize_memory
-#	if = {
-#		limit = {
-#			check_variable = {
-#				which = uma_rs_result_number
-#				value >= uma_rs_goal_number
-#			}
-#		}
-#		set_country_flag = uma_rs_success
-#	}
-#	else_if = {
-#		limit = {
-#			check_variable = {
-#				which = uma_rs_result_number
-#				value = 1
-#			}
-#		}
-#		set_country_flag = uma_rs_fail
-#	}
-#	else_if = {
-#		limit = {
-#			check_variable = {
-#				which = uma_rs_result_number
-#				value = 20
-#			}
-#		}
-#		set_country_flag = uma_rs_success
-#	}
-#	else = {
-#		set_country_flag = uma_rs_fail
-#	}
-#}
-#
-#uma_rs_difficult_set_up = {
-#	optimize_memory
-#	set_country_flag = uma_event_randomsys_diff_$DIFFICULT_RATIO$
-#}
-#
-#uma_rs_cleanup = {
-#	optimize_memory
-#	remove_country_flag = uma_event_randomsys_diff_3
-#	remove_country_flag = uma_event_randomsys_diff_2
-#	remove_country_flag = uma_event_randomsys_diff_1
-#	remove_country_flag = uma_rs_fail
-#	remove_country_flag = uma_rs_success
-#}
-#
-#
-#
-#
-#
-#
-#
-#
+uma_rs_cleanup = {
+	optimize_memory
+	remove_country_flag = uma_event_randomsys_diff_3
+	remove_country_flag = uma_event_randomsys_diff_2
+	remove_country_flag = uma_event_randomsys_diff_1
+	remove_country_flag = uma_rs_fail
+	remove_country_flag = uma_rs_success
+}
+
+
+
+
+
+
+

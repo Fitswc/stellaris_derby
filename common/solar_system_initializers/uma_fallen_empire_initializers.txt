@@ -319,7 +319,7 @@ uma_fallen_empire_system_initializer_1 = {
             }
             while = {
                 count = 120
-                create_pop = {
+                create_pop_group = {
                     species = event_target:uma_fallen_empire_species
                 }
             }
@@ -456,7 +456,7 @@ uma_fallen_empire_system_initializer_2 = {
             }
             while = {
                 count = 600
-                create_pop = {
+                create_pop_group = {
                     species = owner_main_species
                 }
             }

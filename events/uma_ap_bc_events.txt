@@ -352,11 +352,11 @@ country_event = {
 					event_chain = uma_ap_bc_main_evt_chain
 					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
 				}
-				add_event_chain_counter = {
-					event_chain = uma_ap_bc_main_evt_chain
-					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
-					amount = 0
-				}
+#				add_event_chain_counter = {
+#					event_chain = uma_ap_bc_main_evt_chain
+#					counter = uma_ap_bc_main_evt_chain_crisis_resource_penatly
+#					amount = 0
+#				}
 			}
 		}
 	}

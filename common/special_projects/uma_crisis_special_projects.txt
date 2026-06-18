@@ -249,14 +249,12 @@ special_project = {
 	cost = 30000
 	tech_department = engineering_technology
 	picture = GFX_evt_dyson_swarm
-	event_scope = planet_event
+	event_scope = country_event
 	event_chain = uma_ap_bc_main_evt_chain
 
 	on_success = {
-		owner = {
-			country_event = {
-				id = uma_ap.303
-			}
+		country_event = {
+			id = uma_ap.303
 		}
 	}
 
