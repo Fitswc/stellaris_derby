@@ -39,7 +39,6 @@ uma_crystal_carrot_miner = {
 
 	weight = {
 		weight = @uma_worker_weight
-		mult = value:job_weights_modifier|JOB|uma_crystal_carrot_miner|RESOURCE|uma_crystal_carrot|
 		modifier = {
 			factor = 10
 			is_enslaved = yes
@@ -124,7 +123,6 @@ uma_carrot_farmer = {
 
 	weight = {
 		weight = @uma_worker_weight
-		mult = value:job_weights_modifier|JOB|uma_carrot_farmer|RESOURCE|food|
 		modifier = {
 			factor = 1.1
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -156,21 +154,6 @@ uma_carrot_farmer = {
 		modifier = {
 			factor = 0.25
 			can_take_servant_job = yes
-		}
-		# low income modifier
-		modifier = {
-			factor = 3
-			exists = planet
-			planet = {
-				has_available_jobs = uma_carrot_farmer
-			}
-			exists = owner
-			owner = {
-				has_monthly_income = {
-					resource = food
-					value < 10
-				}
-			}
 		}
 	}
 
@@ -224,7 +207,6 @@ uma_bee_farmer = {
 
 	weight = {
 		weight = @uma_worker_weight
-		mult = value:job_weights_modifier|JOB|uma_carrot_farmer|RESOURCE|food|
 		modifier = {
 			factor = 1.1
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -256,21 +238,6 @@ uma_bee_farmer = {
 		modifier = {
 			factor = 0.25
 			can_take_servant_job = yes
-		}
-		# low income modifier
-		modifier = {
-			factor = 3
-			exists = planet
-			planet = {
-				has_available_jobs = uma_carrot_farmer
-			}
-			exists = owner
-			owner = {
-				has_monthly_income = {
-					resource = food
-					value < 10
-				}
-			}
 		}
 	}
 
@@ -319,7 +286,6 @@ uma_field_powering_technician = {
 
 	weight = {
 		weight = @uma_worker_weight
-		mult = value:job_weights_modifier|JOB|uma_field_powering_technician|RESOURCE|energy|
 		modifier = {
 			factor = 100
 			OR = {
@@ -350,21 +316,6 @@ uma_field_powering_technician = {
 		modifier = {
 			factor = 0.25
 			can_take_servant_job = yes
-		}
-		# low income modifier
-		modifier = {
-			factor = 3
-			exists = planet
-			planet = {
-				has_available_jobs = uma_field_powering_technician
-			}
-			exists = owner
-			owner = {
-				has_monthly_income = {
-					resource = energy
-					value < 10
-				}
-			}
 		}
 	}
 
@@ -411,7 +362,6 @@ uma_core_miner = {
 
 	weight = {
 		weight = @worker_job_weight
-		mult = value:job_weights_modifier|JOB|uma_core_miner|RESOURCE|minerals|
 		modifier = {
 			factor = 10
 			is_enslaved = yes
@@ -440,24 +390,11 @@ uma_core_miner = {
 			factor = 0.25
 			can_take_servant_job = yes
 		}
-
-		# low income modifier
 		modifier = {
-			factor = 3
-			exists = planet
-			planet = {
-				has_available_jobs = uma_core_miner
-			}
-			exists = owner
-			owner = {
-				has_monthly_income = {
-					resource = minerals
-					value < 10
-				}
-			}
+			factor = 5
+			has_trait = trait_cyborg_creed_of_labor
 		}
 	}
-
 
 }
 

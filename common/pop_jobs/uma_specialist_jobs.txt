@@ -49,8 +49,6 @@ uma_umaidol = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_umaidol|RESOURCE|unity|
-		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 2
 			exists = owner
@@ -66,7 +64,6 @@ uma_umaidol = {
 			has_slavery_type = { type = slavery_indentured }
 		}
 	}
-
 
 }
 
@@ -280,30 +277,12 @@ uma_crystal_carrot_engineer = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_crystal_carrot_engineer|RESOURCE|uma_crystal_carrot|
-
 		modifier = {
 			factor = 2
 			is_enslaved = yes
 			can_take_servant_job = no
 		}
 
-		# low income modifier
-		modifier = {
-			factor = 1.4
-			exists = planet
-			planet = {
-				has_available_jobs = uma_crystal_carrot_engineer
-			}
-			exists = owner
-			owner = {
-				is_ai = yes
-				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value < 5
-				}
-			}
-		}
 	}
 
 
@@ -467,30 +446,12 @@ uma_sweet_master = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_sweet_master|RESOURCE|consumer_goods|
-
 		modifier = {
 			factor = 2
 			is_enslaved = yes
 			can_take_servant_job = no
 		}
 
-		# low income modifier
-		modifier = {
-			factor = 1.4
-			exists = planet
-			planet = {
-				has_available_jobs = uma_sweet_master
-			}
-			exists = owner
-			owner = {
-				is_ai = yes
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 5
-				}
-			}
-		}
 	}
 
 }
@@ -539,8 +500,6 @@ uma_sweet_manager = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_sweet_manager|RESOURCE|consumer_goods|
-
 		modifier = {
 			factor = 2
 			is_enslaved = yes
@@ -601,30 +560,12 @@ uma_horseshoe_crafter = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_horseshoe_crafter|RESOURCE|alloys|
-
 		modifier = {
 			factor = 2
 			is_enslaved = yes
 			can_take_servant_job = no
 		}
 
-		# low income modifier
-		modifier = {
-			factor = 1.4
-			exists = planet
-			planet = {
-				has_available_jobs = uma_horseshoe_crafter
-			}
-			exists = owner
-			owner = {
-				is_ai = yes
-				has_monthly_income = {
-					resource = alloys
-					value < 5
-				}
-			}
-		}
 	}
 
 
@@ -683,7 +624,6 @@ uma_live_clothes_crafter = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_live_clothes_crafter|RESOURCE|unity|
 
 		modifier = {
 			factor = 0.2
@@ -764,33 +704,11 @@ uma_crystal_alloy_crafter = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_crystal_alloy_crafter|RESOURCE|alloys|
 
 		modifier = {
 			factor = 2
 			is_enslaved = yes
 			can_take_servant_job = no
-		}
-
-		# low income modifier
-		modifier = {
-			factor = 1.4
-			exists = planet
-			planet = {
-				has_available_jobs = uma_crystal_alloy_crafter
-			}
-			exists = owner
-			owner = {
-				is_ai = yes
-				has_monthly_income = {
-					resource = alloys
-					value < 5
-				}
-				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value > 8
-				}
-			}
 		}
 	}
 
@@ -835,33 +753,11 @@ uma_crystal_consumer_goods_crafter = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_crystal_consumer_goods_crafter|RESOURCE|consumer_goods|
 
 		modifier = {
 			factor = 2
 			is_enslaved = yes
 			can_take_servant_job = no
-		}
-
-		# low income modifier
-		modifier = {
-			factor = 1.4
-			exists = planet
-			planet = {
-				has_available_jobs = uma_crystal_consumer_goods_crafter
-			}
-			exists = owner
-			owner = {
-				is_ai = yes
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 5
-				}
-				has_monthly_income = {
-					resource = uma_crystal_carrot
-					value > 8
-				}
-			}
 		}
 	}
 
@@ -1087,7 +983,6 @@ uma_trader = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_trader|RESOURCE|trade|
 
 		modifier = {
 			factor = 2
@@ -1156,7 +1051,6 @@ uma_darkmatter_collector = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_darkmatter_collector|RESOURCE|sr_dark_matter|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -1218,7 +1112,6 @@ uma_chemrist = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_chemrist|RESOURCE|volatile_motes|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -1279,7 +1172,6 @@ uma_translucer= {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_translucer|RESOURCE|rare_crystals|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -1343,7 +1235,6 @@ uma_gas_collector = {
 
 	weight = {
 		weight = @uma_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|uma_gas_collector|RESOURCE|exotic_gases|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
