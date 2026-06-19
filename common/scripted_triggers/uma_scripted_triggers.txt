@@ -1,5 +1,6 @@
 ###关于判定是否是马娘帝国（特雷森政体或者堕落政体）[scope:country]
 is_uma_country = {
+	optimize_memory
 	OR = {
 		has_authority = auth_trainingcenter
 		has_authority = auth_uma_fallen_empire
@@ -7,10 +8,12 @@ is_uma_country = {
 }
 
 is_uma_player_country = {
+	optimize_memory
 	has_authority = auth_trainingcenter
 }
 
 has_uma_country = {
+	optimize_memory
 	OR = {
 		has_authority = auth_trainingcenter
 	}
@@ -20,6 +23,7 @@ has_uma_country = {
 
 ###判断领袖内恰的个数（scope：country）
 uma_num_of_nature_equal_or_better_than_three = {
+	optimize_memory
 	# calc_true_if = {
 
 	# }
@@ -36,6 +40,7 @@ uma_num_of_nature_equal_or_better_than_three = {
 
 ####检测马娘领袖是否有干劲特质###
 uma_admiral_have_yaruki_trait = {
+	optimize_memory
 	OR = {
 		has_trait = uma_trait_yaruki_five
 	}
@@ -43,6 +48,7 @@ uma_admiral_have_yaruki_trait = {
 
 #####检测是否为最好干劲#####
 uma_not_has_highest_kanshi_trigger = {
+	optimize_memory
 	NOT = {
 		OR = {
 			has_trait = uma_trait_yaruki_five
@@ -52,6 +58,7 @@ uma_not_has_highest_kanshi_trigger = {
 
 #####检测是否为最差干劲#####
 uma_is_not_lowest_kanshi = {
+	optimize_memory
 	NOT = {
 		OR = {
 
@@ -63,6 +70,7 @@ uma_is_not_lowest_kanshi = {
 ####检测职业（统治者/总督）和特质####
 #蹄铁可用性
 uma_not_has_titie_trait = {
+	optimize_memory
 	OR = {
 		is_ruler = yes
 		leader_class = official
@@ -77,6 +85,7 @@ uma_not_has_titie_trait = {
 
 #护符可用性
 uma_not_has_amulet_trait = {
+	optimize_memory
 	OR = {
 		leader_class = commander
 	}
@@ -90,6 +99,7 @@ uma_not_has_amulet_trait = {
 
 #喇叭可用性
 uma_not_has_horn_trait = {
+	optimize_memory
 	NOT = {
 		OR = {
 #			has_trait = uma_ruler_trait_horn
@@ -103,6 +113,7 @@ uma_not_has_horn_trait = {
 
 #学者帽可用性
 uma_not_has_school_hat_trait = {
+	optimize_memory
 	OR = {
 		is_ruler = yes
 		leader_class = scientist
@@ -119,6 +130,7 @@ uma_not_has_school_hat_trait = {
 
 #训练手册可用性
 uma_not_has_training_book_trait = {
+	optimize_memory
 	NOT = {
 		OR = {
 #			has_trait = uma_ruler_trait_training_book
@@ -132,6 +144,7 @@ uma_not_has_training_book_trait = {
 
 #望远镜可用性
 uma_not_has_tomorrow_star_trait = {
+	optimize_memory
 	NOT = {
 		OR = {
 #			has_trait = uma_ruler_trait_tomorrow_star
@@ -145,6 +158,7 @@ uma_not_has_tomorrow_star_trait = {
 
 #小镜子可用性
 uma_not_has_lovely_trait = {
+	optimize_memory
 	OR = {
 		is_ruler = yes
 		leader_class = official
@@ -159,6 +173,7 @@ uma_not_has_lovely_trait = {
 
 #皇家青汁可用性
 uma_not_has_vegetable_drink_trait = {
+	optimize_memory
 	NOT = {
 		OR = {
 #			has_trait = uma_ruler_trait_vegetable_drink
@@ -171,6 +186,7 @@ uma_not_has_vegetable_drink_trait = {
 
 #体力65可用性
 uma_not_has_power_sf_trait = {
+	optimize_memory
 	NOT = {
 		OR = {
 #			has_trait = uma_ruler_trait_power_sf
@@ -183,16 +199,19 @@ uma_not_has_power_sf_trait = {
 
 
 uma_has_ap_two_realm = {
+	optimize_memory
 	has_ascension_perk = ap_uma_zenshizenren_ap_2
 }
 
 uma_has_ap_two_factor = {
+	optimize_memory
 	has_ascension_perk = ap_uma_fly_me_to_the_star_ap_two
 }
 
 
 
 uma_is_mild_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_continental
 		is_planet_class = pc_savannah
@@ -203,6 +222,7 @@ uma_is_mild_planet = {
 }
 
 uma_is_hot_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_desert
 		is_planet_class = pc_arid
@@ -211,6 +231,7 @@ uma_is_hot_planet = {
 }
 
 uma_is_cold_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = pc_tundra
 		is_planet_class = pc_arctic
@@ -220,6 +241,7 @@ uma_is_cold_planet = {
 
 ###关于判定是否是马娘堕落帝国[scope:country]
 is_uma_fallen_empire = {
+	optimize_memory
 	OR = {
 		has_authority = auth_uma_fallen_empire
 		#has_authority = auth_awaken_uma_fallen_empire
@@ -229,71 +251,72 @@ is_uma_fallen_empire = {
 
 ##快速判断是否为环，方便又快捷
 uma_is_ringworld = {
+	optimize_memory
 	OR = {
 		is_ringworld = yes
 		is_planet_class = pc_ringworld_habitable
-		# R
-		is_planet_class = pc_ringworld_habitable_uf
-		is_planet_class = pc_ringworld_habitable_sh
-		is_planet_class = pc_ringworld_habitable_wsg
-		is_planet_class = pc_ringworld_habitable_swim
-		is_planet_class = pc_dyson_ring
-		# gigastructure
-		is_planet_class = pc_ringworld_city
-		is_planet_class = pc_ringworld_machine
-		is_planet_class = pc_ringworld_hive
-		is_planet_class = pc_city_ringworld_habitable
-		is_planet_class = pc_gigaorbital_ring
-		is_planet_class = pc_giga_ringworld_habitable
-		# ascendancy_ringworlds
-		is_planet_class = pc_ringworld_eco_city
-		is_planet_class = pc_ringworld_energy_city
-		is_planet_class = pc_ringworld_shrouded_paradise
-		is_planet_class = pc_square_ringworld_city
-		is_planet_class = pc_square_ringworld_energy_city
-		is_planet_class = pc_square_ringworld_machine
-		is_planet_class = pc_square_ringworld_hive
-		is_planet_class = pc_ringworld_assimilated
-		is_planet_class = pc_ringworld_assimilated2
-		is_planet_class = pc_ringworld_assimilated3
-		is_planet_class = pc_ringworld_assimilated4
-		is_planet_class = pc_ringworld_machine_factory
-		is_planet_class = pc_ringworld_bioforge
-		is_planet_class = pc_ringworld_mining
-		is_planet_class = pc_ringworld_energy
-		is_planet_class = pc_ringworld_trade
-		is_planet_class = pc_ringworld_training
-		is_planet_class = pc_ringworld_training_shielded
-		is_planet_class = pc_ringworld_eco
-		is_planet_class = pc_ringworld_farming
-		is_planet_class = pc_ringworld_razed_city
-		is_planet_class = pc_ringworld_razed_energy
-		is_planet_class = pc_ringworld_razed_farming
-		is_planet_class = pc_ringworld_razed_mining
-		is_planet_class = pc_ringworld_razed_training
-		is_planet_class = pc_ringworld_razed_eco
-		# acot
-		is_planet_class = pc_omega_ringworld_seam
-		is_planet_class = pc_omega_ringworld_habitable
-		# AE
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_city
-		}
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_ocean
-		}
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_shrouded
-		}
-		AND = {
-			has_global_flag = has_ancient_empire_mod
-			is_planet_class = pc_ag_ringworld_machine
-		}
-		# 星舰少女
-		is_planet_class = pc_swgs_engineer_ringworld_habitable
+#		# R
+#		is_planet_class = pc_ringworld_habitable_uf
+#		is_planet_class = pc_ringworld_habitable_sh
+#		is_planet_class = pc_ringworld_habitable_wsg
+#		is_planet_class = pc_ringworld_habitable_swim
+#		is_planet_class = pc_dyson_ring
+#		# gigastructure
+#		is_planet_class = pc_ringworld_city
+#		is_planet_class = pc_ringworld_machine
+#		is_planet_class = pc_ringworld_hive
+#		is_planet_class = pc_city_ringworld_habitable
+#		is_planet_class = pc_gigaorbital_ring
+#		is_planet_class = pc_giga_ringworld_habitable
+#		# ascendancy_ringworlds
+#		is_planet_class = pc_ringworld_eco_city
+#		is_planet_class = pc_ringworld_energy_city
+#		is_planet_class = pc_ringworld_shrouded_paradise
+#		is_planet_class = pc_square_ringworld_city
+#		is_planet_class = pc_square_ringworld_energy_city
+#		is_planet_class = pc_square_ringworld_machine
+#		is_planet_class = pc_square_ringworld_hive
+#		is_planet_class = pc_ringworld_assimilated
+#		is_planet_class = pc_ringworld_assimilated2
+#		is_planet_class = pc_ringworld_assimilated3
+#		is_planet_class = pc_ringworld_assimilated4
+#		is_planet_class = pc_ringworld_machine_factory
+#		is_planet_class = pc_ringworld_bioforge
+#		is_planet_class = pc_ringworld_mining
+#		is_planet_class = pc_ringworld_energy
+#		is_planet_class = pc_ringworld_trade
+#		is_planet_class = pc_ringworld_training
+#		is_planet_class = pc_ringworld_training_shielded
+#		is_planet_class = pc_ringworld_eco
+#		is_planet_class = pc_ringworld_farming
+#		is_planet_class = pc_ringworld_razed_city
+#		is_planet_class = pc_ringworld_razed_energy
+#		is_planet_class = pc_ringworld_razed_farming
+#		is_planet_class = pc_ringworld_razed_mining
+#		is_planet_class = pc_ringworld_razed_training
+#		is_planet_class = pc_ringworld_razed_eco
+#		# acot
+#		is_planet_class = pc_omega_ringworld_seam
+#		is_planet_class = pc_omega_ringworld_habitable
+#		# AE
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_city
+#		}
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_ocean
+#		}
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_shrouded
+#		}
+#		AND = {
+#			has_global_flag = has_ancient_empire_mod
+#			is_planet_class = pc_ag_ringworld_machine
+#		}
+#		# 星舰少女
+#		is_planet_class = pc_swgs_engineer_ringworld_habitable
 	}
 }
 
@@ -301,30 +324,31 @@ uma_is_ringworld = {
 uma_is_habitat = {
 	OR = {
 		is_planet_class = pc_habitat
-		# gigastructure
-		is_planet_class = pc_flat_world
-		is_planet_class = pc_squareworld_habitable
-		is_planet_class = pc_interstellar_habitat
-		# Plentiful Traditions
-		is_planet_class = pc_mem_vazuran_habitat
-		is_planet_class = pc_habitat_robot
-		#PD - Planetary Habitats
-		is_planet_class = pc_gghab
-		is_planet_class = pc_tmhab
-		is_planet_class = pc_tmhab2
-		is_planet_class = pc_mmhab
-		is_planet_class = pc_mmhab2
-		is_planet_class = pc_bhab
-		is_planet_class = pc_bchab
-		is_planet_class = pc_mhab
-		is_planet_class = pc_fhab
-		is_planet_class = pc_fmhab
-		is_planet_class = pc_mehab
+#		# gigastructure
+#		is_planet_class = pc_flat_world
+#		is_planet_class = pc_squareworld_habitable
+#		is_planet_class = pc_interstellar_habitat
+#		# Plentiful Traditions
+#		is_planet_class = pc_mem_vazuran_habitat
+#		is_planet_class = pc_habitat_robot
+#		#PD - Planetary Habitats
+#		is_planet_class = pc_gghab
+#		is_planet_class = pc_tmhab
+#		is_planet_class = pc_tmhab2
+#		is_planet_class = pc_mmhab
+#		is_planet_class = pc_mmhab2
+#		is_planet_class = pc_bhab
+#		is_planet_class = pc_bchab
+#		is_planet_class = pc_mhab
+#		is_planet_class = pc_fhab
+#		is_planet_class = pc_fmhab
+#		is_planet_class = pc_mehab
 	}
 }
 
 ##PD适配
 uma_is_pd_habitat_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = "pc_sandsea"
 		is_planet_class = "pc_oasis"
@@ -392,6 +416,7 @@ uma_is_pd_habitat_planet = {
 }
 
 uma_is_normal_habitat_planet = {
+	optimize_memory
 	OR = {
 		is_planet_class = "pc_desert"
 		is_planet_class = "pc_tropical"
@@ -410,6 +435,7 @@ uma_is_normal_habitat_planet = {
 
 
 uma_we_passed_ap1 = {
+	optimize_memory
 	owner = {
 		has_ascension_perk = ap_uma_fly_me_to_the_star
 		has_ascension_perk = ap_uma_zenshizenren
@@ -417,11 +443,13 @@ uma_we_passed_ap1 = {
 }
 
 uma_is_event_planet = {
+	optimize_memory
 	has_carrier_flag = uma_is_special_planet
 	has_carrier_flag = tachyon_coffee_starbase
 }
 
 uma_is_event_system = {
+	optimize_memory
 	OR = {
 		has_star_flag = uma_bourbon_system
 		has_star_flag = uma_fallen_empire_system_initializer
@@ -476,6 +504,7 @@ can_artifact_analysis_give_uma_twinkle_maz = {
 
 
 uma_check_factor_rate = {
+	optimize_memory
 	check_variable = {
 		which = Root.uma_ap2_factor_$TYPE$_rate
 		value = $VAL$
@@ -483,6 +512,7 @@ uma_check_factor_rate = {
 }
 
 uma_ap2_factor_0_fault = {
+	optimize_memory
 	OR = {
 		OR = {
 			check_variable = {
@@ -514,17 +544,20 @@ uma_ap2_factor_0_fault = {
 }
 
 uma_check_realm_factor_rate_wisdom_1 = {
+	optimize_memory
 	has_country_flag = uma_kenshi_intelligence_level_1
 	has_country_flag = uma_kenshi_intelligence_level_2
 }
 
 uma_check_realm_factor_rate_wisdom_2 = {
+	optimize_memory
 	has_country_flag = uma_kenshi_intelligence_level_3
 	has_country_flag = uma_kenshi_intelligence_level_4
 	has_country_flag = uma_kenshi_intelligence_level_5
 }
 
 uma_check_realm_factor_rate_stamina_1 = {
+	optimize_memory
 	has_country_flag = uma_kenshi_will_level_1
 	has_country_flag = uma_kenshi_will_level_2
 	has_country_flag = uma_kenshi_will_level_3
@@ -533,12 +566,14 @@ uma_check_realm_factor_rate_stamina_1 = {
 }
 
 uma_check_realm_factor_rate_power_1 = {
+	optimize_memory
 
 	has_country_flag = uma_kenshi_strength_level_1
 	has_country_flag = uma_kenshi_strength_level_2
 }
 
 uma_check_realm_factor_rate_power_2 = {
+	optimize_memory
 
 	has_country_flag = uma_kenshi_strength_level_3
 	has_country_flag = uma_kenshi_strength_level_4
@@ -547,6 +582,7 @@ uma_check_realm_factor_rate_power_2 = {
 
 
 uma_check_factory_alloy_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -561,6 +597,7 @@ uma_check_factory_alloy_disable = {
 }
 
 uma_check_factory_custom_goods_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -575,6 +612,7 @@ uma_check_factory_custom_goods_disable = {
 }
 
 uma_check_factory_volatile_motes_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -593,6 +631,7 @@ uma_check_factory_volatile_motes_disable = {
 }
 
 uma_check_factory_gas_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -611,6 +650,7 @@ uma_check_factory_gas_disable = {
 }
 
 uma_check_factory_rare_crystal_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -625,6 +665,7 @@ uma_check_factory_rare_crystal_disable = {
 }
 
 uma_check_factory_living_materal_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -644,6 +685,7 @@ uma_check_factory_living_materal_disable = {
 
 
 uma_check_factory_dark_matter_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -658,6 +700,7 @@ uma_check_factory_dark_matter_disable = {
 }
 
 uma_check_factory_nanites_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -680,6 +723,7 @@ uma_check_factory_nanites_disable = {
 }
 
 uma_check_factory_uma_crystal_disable = {
+	optimize_memory
 
 	OR = {
 		has_resource = {
@@ -695,6 +739,7 @@ uma_check_factory_uma_crystal_disable = {
 
 
 uma_leader_cp_has_country_flag_portrait = {
+	optimize_memory
 	optimize_memory
 	OR = {
 		has_country_flag = uma_leader_cp.9.dura.portrait.1
@@ -728,6 +773,7 @@ uma_leader_cp_has_country_flag_portrait = {
 }
 
 uma_the_uma_endcrisis_happened = {
+	optimize_memory
 	has_global_flag = uma_ec_invasion_happened
 	NOT = {
 		has_global_flag = uma_ec_invasion_end
@@ -735,6 +781,7 @@ uma_the_uma_endcrisis_happened = {
 }
 
 uma_is_uma_ap_bc_actived = {
+	optimize_memory
 	is_uma_player_country = yes
 	has_ascension_perk = ap_uma_become_the_crisis
 	has_country_flag = uma_activate_crisis_progression_uma_realm_break_to_realworld_path
