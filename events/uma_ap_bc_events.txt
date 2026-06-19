@@ -196,7 +196,7 @@ starbase_event = {
 	trigger = {
 		from = {
 			owner = {
-				has_ascension_perk = ap_become_the_crisis
+				uma_is_uma_ap_bc_actived = yes
 			}
 		}
 	}
@@ -205,7 +205,7 @@ starbase_event = {
 		from = {
 			owner = {
 				# Note: crisobj_destroy_enemy_ships would do the same thing, disabled for starbases in crisis.4025
-				complete_crisis_objective = crisobj_destroy_starbases
+				complete_crisis_objective = crisobj_uma_destroy_starbases
 			}
 		}
 	}
