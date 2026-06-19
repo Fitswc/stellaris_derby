@@ -145,6 +145,9 @@ country_event = {
 		}
 		From = {
 			uma_is_uma_ap_bc_actived = yes
+			NOT = {
+				has_crisis_level = uma_crisis_level_5
+			}
 		}
 	}
 
@@ -162,6 +165,10 @@ country_event = {
 	trigger = {
 		owner = {
 			uma_is_uma_ap_bc_actived = yes
+
+			NOT = {
+				has_crisis_level = uma_crisis_level_5
+			}
 		}
 
 		# check to exclude starbase kills in the future;
@@ -197,6 +204,10 @@ starbase_event = {
 		from = {
 			owner = {
 				uma_is_uma_ap_bc_actived = yes
+
+				NOT = {
+					has_crisis_level = uma_crisis_level_5
+				}
 			}
 		}
 	}
