@@ -292,7 +292,7 @@ councilor_uma_aston_machan = {
 		}
 	}
 	modifier = {
-		planet_uma_traders_trade_produces_add = 0.1
+		empire_size_penalty_mult = -0.01
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -415,7 +415,7 @@ councilor_uma_kita = {
 	}
 
 	modifier = {
-
+		planet_building_build_speed_mult = 0.01
 	}
 
 
@@ -432,7 +432,7 @@ councilor_uma_huruwurara = {
 	}
 
 	modifier = {
-
+		pop_citizen_happiness = 0.01
 	}
 
 
