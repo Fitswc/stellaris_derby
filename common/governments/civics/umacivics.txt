@@ -231,6 +231,7 @@ civic_umamatikanefukukitaru = {
 		country_unity_produces_mult = 0.10
 		planet_stability_add = 5
 		pop_amenities_usage_mult = -0.10
+		logistic_growth_mult  = 0.05
 	}
 }
 
@@ -240,7 +241,6 @@ civic_umasmartfalcon = {
 	possible = {
 
 	}
-
 
 	random_weight = {
 		base = 10
@@ -297,7 +297,7 @@ civic_umahuruwurara = {
 
 	modifier= {
 		country_unity_produces_mult = 0.20
-		logistic_growth_mult  = 0.10
+		logistic_growth_mult  = 0.05
 		pop_citizen_happiness = 0.05
 		envoys_add = -1
 		intel_encryption_add = 1
@@ -434,6 +434,7 @@ civic_uma_kita  = {
 		pop_happiness = 0.5
 		starbase_shipyard_build_speed_mult = 0.1
 		planet_colony_development_speed_mult = 0.2
+		planet_building_capacity_add = 2
 	}
 }
 
@@ -561,6 +562,7 @@ civic_uma_aston_machan = {
 	modifier = {
 		country_unity_produces_mult = 0.10
 		planet_stability_add = 2
+		planet_colony_development_speed_mult = 0.05
 	}
 }
 
@@ -582,6 +584,24 @@ civic_uma_vivlos_shopping = {
 		planet_civilians_consumer_goods_upkeep_add = -0.1
 		country_trade_attractiveness = 0.1
 		country_trade_fee = -0.1
+		diplo_action_acceptance_add = 40
+	}
+}
+
+civic_uma_my_venus_park = {
+	icon = "gfx/interface/icons/governments/civics/zf.png"
+	modification = no
+	potential = { authority = { value = auth_trainingcenter } }
+	description = civic_uma_my_venus_park_effects
+	possible = {
+
+	}
+	random_weight = { base = 0 }
+
+
+	modifier = {
+		country_government_civic_points_add = 1
+		pop_happiness = 0.25
 		diplo_action_acceptance_add = 40
 	}
 }

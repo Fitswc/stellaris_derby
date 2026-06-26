@@ -49,7 +49,7 @@ councilor_umacurrenchan = {
 		}
 	}
 	modifier = {
-		planet_jobs_specialist_trade_produces_mult = 0.01
+		planet_jobs_trade_produces_mult = 0.01
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
@@ -402,4 +402,39 @@ councilor_uma_win_variation = {
 
 
 	icon = "GFX_icon_councilor_research"
+}
+
+councilor_uma_kita = {
+	leader_class = { official }
+	civic = civic_uma_kita
+
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+		}
+	}
+
+	modifier = {
+
+	}
+
+
+	icon = "GFX_icon_councilor_state"
+}
+
+councilor_uma_huruwurara = {
+	leader_class = { official }
+	civic = civic_umahuruwurara
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+		}
+	}
+
+	modifier = {
+
+	}
+
+
+	icon = "GFX_icon_councilor_state"
 }
