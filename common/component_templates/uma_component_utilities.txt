@@ -1815,6 +1815,10 @@ utility_component_template = {
 		ship_shield_add = 470
 		ship_shield_regen_add_static = 3.30 #Regeneration per day
 	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
+	}
 	prerequisites = { "tech_uma_energy_wall_shield" }
 	component_set = "UMA_TG_SHIELD"
 
@@ -1844,6 +1848,9 @@ utility_component_template = {
 		ship_shield_add = 1090
 		ship_shield_regen_add_static = 7.50 #Regeneration per day
 	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
+	}
 	prerequisites = { "tech_uma_energy_wall_shield" }
 	component_set = "UMA_TG_SHIELD"
 
@@ -1871,8 +1878,11 @@ utility_component_template = {
 		}
 	}
 	modifier = {
-		ship_shield_add = 2050
+		ship_shield_add = 2550
 		ship_shield_regen_add_static = 17.55 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
 	}
 	prerequisites = { "tech_uma_energy_wall_shield" }
 	component_set = "UMA_TG_SHIELD"
@@ -1894,6 +1904,10 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = 650
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
+
 
 	prerequisites = { "tech_uma_wall_armor" }
 	component_set = "UMA_TG_ARMOR"
@@ -1919,6 +1933,10 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = 960
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
+
 
 	prerequisites = { "tech_uma_wall_armor" }
 	component_set = "UMA_TG_ARMOR"
@@ -1945,8 +1963,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 2350
+		ship_armor_add = 2550
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
+
 
 	prerequisites = { "tech_uma_wall_armor" }
 	component_set = "UMA_TG_ARMOR"
