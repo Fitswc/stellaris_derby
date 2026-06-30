@@ -474,6 +474,15 @@ civic_umasatonodiamond = {
 	icon = "gfx/interface/icons/governments/civics/sd.png"
 	potential = { authority = { value = auth_trainingcenter } }
 	possible={ethics =  { value = ethic_authoritarian } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+	}
 
 
 	random_weight = {
@@ -493,7 +502,15 @@ civic_umasatonodiamond = {
 civic_umamayanotopgun = {
 	icon = "gfx/interface/icons/governments/civics/mtg.png"
 	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = { value = ethic_militarist }}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+		}
+	}
 
 
 	random_weight = {
@@ -513,7 +530,15 @@ civic_umamayanotopgun = {
 civic_uma_ayb_star_watcher = {
 	icon = "gfx/interface/icons/governments/civics/ayb.png"
 	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = {value = ethic_materialist } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+	}
 
 
 	random_weight = {
@@ -534,7 +559,15 @@ civic_uma_ayb_star_watcher = {
 civic_uma_matikanetannhauser_radio  = {
 	icon = "gfx/interface/icons/governments/civics/mt.png"
 	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = { value = ethic_pacifist }}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
 
 
 	random_weight = {
@@ -556,7 +589,15 @@ civic_uma_aston_machan = {
 	potential = {
 		authority = { value = auth_trainingcenter }
 	}
-	possible = {ethics = { value = ethic_spiritualist }}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
 	random_weight = { base = 0 }
 
 	modifier = {
@@ -569,7 +610,15 @@ civic_uma_aston_machan = {
 civic_uma_vivlos_shopping = {
 	icon = "gfx/interface/icons/governments/civics/vivl.png"
 	potential = { authority = { value = auth_trainingcenter } }
-	possible = { ethics = { value = ethic_xenophile } }
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+	}
 
 
 	random_weight = {
