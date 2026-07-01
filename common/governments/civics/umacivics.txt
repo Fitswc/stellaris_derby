@@ -368,7 +368,7 @@ civic_umafinemotion = {
 	}
 
 	modifier = {
-		country_leader_cap_add = 10
+		country_leader_cap_add = 2
 		species_leader_exp_gain = 0.2
 		empire_size_pops_mult = -0.1
 	}
@@ -473,7 +473,6 @@ civic_uma_win_variation  = {
 civic_umasatonodiamond = {
 	icon = "gfx/interface/icons/governments/civics/sd.png"
 	potential = { authority = { value = auth_trainingcenter } }
-	possible={ethics =  { value = ethic_authoritarian } }
 	possible = {
 		ethics = {
 			OR = {
