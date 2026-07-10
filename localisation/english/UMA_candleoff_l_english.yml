@@ -28,6 +28,7 @@
   
  #政策 
  policy_uma_fuel_convertion_mode: "Choice the method of Body to fire"
+ policy_uma_fuel_convertion_mode_desc: "Set the blaze"
  policy_uma_fuel_convertion_small: "§PSlow fire§!"
  policy_uma_fuel_convertion_small_name: "§PSlow fire§!"
  policy_uma_fuel_convertion_small_desc: "Gentle purification that provides a trace output bonus to the planet"
@@ -40,6 +41,15 @@
  policy_uma_fuel_convertion_stop: "Disable"
  policy_uma_fuel_convertion_stop_name: "Disable"
  policy_uma_fuel_convertion_stop_desc: "Stop using Burnt out embers exclusive purification method"
+
+ policy_uma_fuel_convertion_produce_mode: "Body-to-Fire Output"
+ policy_uma_fuel_convertion_produce_mode_desc: "Besides burning them, they can be slaughtered for food, used for research, and more..."
+ policy_uma_fuel_convertion_produce_unity: "Unity"
+ policy_uma_fuel_convertion_produce_food: "Food"
+ policy_uma_fuel_convertion_produce_tech: "Research"
+ policy_uma_fuel_convertion_produce_unity_desc: "Produces £unity£ Unity"
+ policy_uma_fuel_convertion_produce_food_desc: "Produces £food£ Food"
+ policy_uma_fuel_convertion_produce_tech_desc: "Produces £research£ Research"
   
  #净化岗位 
  job_uma_fuel_purge_small: "Slow fire Fuel"
