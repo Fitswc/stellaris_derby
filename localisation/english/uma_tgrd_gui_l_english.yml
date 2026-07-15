@@ -69,6 +69,7 @@
   
   
  uma_tgrd_gui_scope_fail: "§GWait a moments§!! I don’t seem to see your resources anymore. Does the background have §Y星球或者是舰队的界面§!? If so, turn it off quickly."  #NT!
+ uma_tgrd_gui__ap2_scope_fail: "§GWait a moment§!! I cannot see your choices. Is a §Yplanet or fleet interface§! open in the background? If so, close it first."
   
  uma_tgrd_gui_tech_carrot_ana_tt_trigger: "Require:\n -400 £uma_threegodness_knowledge£$uma_threegodness_knowledge$ \n -3000 £energy£$energy$"
  uma_tgrd_gui_tech_carrot_ana_tt_trigger_fail: "$uma_tgrd_gui_tech_carrot_ana_tt_trigger$ \n §INOT Enough Resources§!"  #NT!
@@ -142,6 +143,7 @@
  uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_tech: "§YThis Technology has been researched§!\n\n" #NT!
  uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger: "Require:\n -400 £uma_threegodness_knowledge£$uma_threegodness_knowledge$ \n -3000 £energy£$energy$"  #NT!
  uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger_fail: "$uma_tgrd_gui_tech_tech_uma_weapon_controler_tt_trigger$\n §INOT Enough Resources§!"   #NT!
+ uma_tgrd_gui_tech_tech_uma_weapon_controler_tt: "Purchase technology ['technology:tech_uma_weapon_controler']"
   
  uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger_tech: "§YThis Technology has been researched§!\n\n"  #NT!
  uma_tgrd_gui_tech_tech_uma_energy_raiser_b70_tt_trigger: "Require:\n -400 £uma_threegodness_knowledge£$uma_threegodness_knowledge$ \n -3000 £energy£$energy$"  #NT!
