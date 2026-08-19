@@ -291,7 +291,8 @@ country_event = {
 					blocked_deposit = random
 				}
 			}
-			add_tech_progress = { tech = tech_uma_threegodness_knowledge_first_known progress = 0.1 } # 解锁建立三女神知识研究所科技
+			country_event = { id = umaarc.1008 days = 10 random = 30 }
+			#之后还要触发创造考古遗迹的事件
 		}
 	}
 	##Anolomy Generator
@@ -458,19 +459,24 @@ country_event = {
 	}
 
 	immediate = {
-		if = {
+		if	= {
 			limit = {
-				is_multiplayer = yes
+				is_nomadic = no
 			}
-			capital_scope = {
-				save_event_target_as = uma_is_the_first_capital
-				add_deposit = d_uma_crystal_carrot_mine_planet
+			if = {
+				limit = {
+					is_multiplayer = yes
+				}
+				capital_scope = {
+					save_event_target_as = uma_is_the_first_capital
+					add_deposit = d_uma_crystal_carrot_mine_planet
+				}
 			}
-		}
-		else = {
-			capital_scope = {
-				save_event_target_as = uma_is_the_first_capital
-				add_deposit = d_uma_crystal_carrot_mine_planet
+			else = {
+				capital_scope = {
+					save_event_target_as = uma_is_the_first_capital
+					add_deposit = d_uma_crystal_carrot_mine_planet
+				}
 			}
 		}
 	}

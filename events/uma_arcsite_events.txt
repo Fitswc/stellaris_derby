@@ -4,7 +4,18 @@ namespace = umaarc
 country_event = {
 	id = umaarc.1008
 	title = umaarc.1008.name
-	desc = umaarc.1008.desc
+	desc = {
+		trigger = {
+			is_nomadic = yes
+		}
+		text = 	umaarc.1008.desc_nomad
+	}
+	desc = {
+		trigger = {
+			is_nomadic = no
+		}
+		text = umaarc.1008.desc
+	}
 	picture = GFX_evt_alien_ruins
 	location = root
 	show_sound = event_administrative_work #占位符
@@ -14,8 +25,17 @@ country_event = {
 
 	trigger = {
 		owner = { is_ai = no }
-		any_owned_planet = {
-			has_deposit = d_uma_threegodness_relic
+		OR = {
+			AND = {
+				is_nomadic = no
+				any_owned_planet = {
+					has_deposit = d_uma_threegodness_relic
+				}
+			}
+
+			AND = {
+				is_nomadic = yes
+			}
 		}
 	}
 
@@ -26,6 +46,46 @@ country_event = {
 
 	after = {
 		hidden_effect = {
+			if = {
+				limit = {
+					is_nomadic = yes
+				}
+				random_system = {
+					limit = {
+						any_fleet_in_system = {
+							is_arkship_fleet = yes
+							owner = {
+								is_same_value = Root
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_system_planet = {
+								has_planet_flag = planet_earth
+							}
+						}
+						random_system_planet = {
+							limit = {
+								has_planet_flag = planet_earth
+							}
+							carrier_event = { id = umaarc.1000 days = 100 random = 500 }
+						}
+					}
+					else = {
+						random_system_planet = {
+							limit = {
+								NOR = {
+									is_planet_class = pc_gas_giant
+									is_star = no
+								}
+							}
+							carrier_event = {id = umaarc.1000 days = 100 random = 500}
+						}
+					}
+				}
+			}
+			else = {
 			random_owned_planet = {
 				limit = {
 					has_deposit = d_uma_threegodness_relic
@@ -33,6 +93,7 @@ country_event = {
 				carrier_event = {id = umaarc.1000 days = 100 random = 500}
 			}
 		}
+			}
 	}
 		
 		
@@ -210,9 +271,27 @@ fleet_event = {
 
 	immediate = {
 		from = { set_site_progress_locked = yes }
-		from.planet = {
-			carrier_event = {id = umaarc.1006 days = 360  random = 100  }
-		 }
+		if = {
+			limit = {
+				owner = {
+					is_nomadic = yes
+				}
+			}
+			owner = {
+				capital_scope = {
+					carrier_event = {
+						id = umaarc.1007
+						days = 360
+						random = 100
+					}
+				}
+			}
+		}
+		else = {
+			from.planet = {
+				carrier_event = { id = umaarc.1006 days = 360 random = 100 }
+			}
+		}
 	}
 
 	after = {
@@ -293,6 +372,56 @@ carrier_event = {
 			}
 		}
 		##
+	}
+}
 
+# 后续
+carrier_event = {
+	id = umaarc.1007
+	title = umaarc.1006.name
+	desc = umaarc.1007.desc
+	picture = GFX_evt_generator_powerup
+	show_sound = event_administrative_work
+	location = root
+
+	is_triggered_only = yes
+
+
+    option = {
+		name = umaarc.1006.a
+		add_deposit = d_uma_threegodness_museum
+		last_added_deposit = {
+			set_deposit_flag = uma_keep_deposit_on_terraform
+			set_deposit_flag = keep_deposit_on_terraform
+		}
+		hidden_effect = {
+			planet_owner = {
+				country_event = {
+					id = uma_ayb_arc.1
+					days = 100
+				}
+
+				country_event = {
+					id = uma_duramente.1
+					days = 360
+					random = 720
+				}
+			}
+		}
+
+		##
+		hidden_effect = {
+			owner = {
+				random_list = {
+					50 = {
+						give_specimen = { key = uma_care_kit origin = uma_specimen_null }
+					}
+					50 = {
+
+					}
+				}
+			}
+		}
+		##
 	}
 }
