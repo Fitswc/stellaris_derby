@@ -45,8 +45,15 @@ building_uma_live_ground = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 400
+#		cost = {
+#			minerals = 400
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 400
+			NOMADIC_COST_MULT = 0.5
 		}
 		upkeep = {
 			energy = 3

@@ -45,9 +45,17 @@ building_uma_crystal_carrot_producing_lab = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 500
+#			minerals = 500
 			alloys = 100
 		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 500
+			NOMADIC_COST_MULT = 0.2
+		}
+
 		upkeep = {
 			energy = 3
 		}
@@ -143,8 +151,15 @@ building_uma_crystal_carrot_producing_center = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			alloys = 300
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 6
@@ -242,8 +257,15 @@ building_uma_crystal_carrot_producing_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 2000
+#			minerals = 2000
 			alloys = 700
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 2000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 15
@@ -347,8 +369,15 @@ building_uma_crystal_carrot_producing_realm_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			alloys = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 15
@@ -444,8 +473,15 @@ building_uma_sweet_shop = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -536,8 +572,15 @@ building_uma_chain_sweet_shop = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 720
+#		cost = {
+#			minerals = 720
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -640,8 +683,15 @@ building_uma_sport_goods_shop = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -746,8 +796,15 @@ building_uma_sport_goods_supermarket = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 800
+#		cost = {
+#			minerals = 800
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 800
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -854,8 +911,15 @@ building_uma_crystal_alloy_workhouse = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 360
+	#		minerals = 360
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -949,8 +1013,15 @@ building_uma_crystal_alloy_factory = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 720
+#			minerals = 720
 			uma_crystal_carrot = 250
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -1046,8 +1117,15 @@ building_uma_crystal_alloy_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1700
+#			minerals = 1700
 			uma_crystal_carrot = 500
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1700
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -1154,8 +1232,15 @@ building_uma_crystal_alloy_realm_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -1259,8 +1344,15 @@ building_uma_crystal_consumer_goods_workhouse = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 360
+#			minerals = 360
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -1354,8 +1446,15 @@ building_uma_crystal_consumer_goods_factory = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 720
+#			minerals = 720
 			uma_crystal_carrot = 250
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -1451,8 +1550,15 @@ building_uma_crystal_consumer_goods_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1700
+#			minerals = 1700
 			uma_crystal_carrot = 500
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1700
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -1553,8 +1659,15 @@ building_uma_crystal_consumer_goods_realm_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -1641,8 +1754,15 @@ building_uma_chemical_plant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 360
+#			minerals = 360
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -1738,8 +1858,15 @@ building_uma_chemical_plant_2 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 760
+#			minerals = 760
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 760
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -1838,8 +1965,15 @@ building_uma_chemical_plant_realm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -1926,8 +2060,15 @@ building_uma_crystal_plant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 360
+#			minerals = 360
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -2023,8 +2164,15 @@ building_uma_crystal_plant_2 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 720
+#			minerals = 720
 			uma_crystal_carrot = 250
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -2129,8 +2277,15 @@ building_uma_crystal_plant_realm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -2219,8 +2374,15 @@ building_uma_gas_plant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 360
+#			minerals = 360
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -2319,8 +2481,15 @@ building_uma_gas_plant_2 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 720
+#			minerals = 720
 			uma_crystal_carrot = 250
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -2431,8 +2600,15 @@ building_uma_gas_plant_realm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -2516,8 +2692,15 @@ building_uma_dark_matter_plant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 700
+#			minerals = 700
 			uma_crystal_carrot = 250
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 700
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -2638,8 +2821,15 @@ building_uma_tg_alloys_maker_Automatic = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 200
+#			minerals = 200
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 200
+			NOMADIC_COST_MULT = 0.2
 		}
 	}
 
@@ -2736,8 +2926,15 @@ building_uma_tg_alloys_maker_Automatic_2 = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 200
+#			minerals = 200
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 200
+			NOMADIC_COST_MULT = 0.2
 		}
 	}
 
@@ -2841,8 +3038,15 @@ building_uma_tg_custom_goods_productor = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 200
+	#		minerals = 200
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 200
+			NOMADIC_COST_MULT = 0.2
 		}
 	}
 
@@ -2946,8 +3150,15 @@ building_uma_tg_custom_goods_productor_2 = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 200
+#			minerals = 200
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 200
+			NOMADIC_COST_MULT = 0.2
 		}
 	}
 
@@ -3049,8 +3260,15 @@ building_uma_tg_industrial_complex = {
 		category = planet_buildings
 		cost = {
 			alloys = 400
-			minerals = 300
+#			minerals = 300
 			uma_crystal_carrot = 300
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 300
+			NOMADIC_COST_MULT = 0.2
 		}
 	}
 
@@ -3230,8 +3448,15 @@ building_uma_tg_planet_energy_extractor = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 100
+#			minerals = 100
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 100
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			alloys = 2
@@ -3349,8 +3574,15 @@ building_uma_tg_planet_energy_extractor_2 = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			minerals = 100
+#			minerals = 100
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 100
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			alloys = 10
@@ -3460,8 +3692,15 @@ building_uma_tg_resource_soil = {
 		category = planet_buildings
 		cost = {
 			alloys = 50
-			minerals = 100
+#			minerals = 100
 			uma_crystal_carrot = 50
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST =100
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
