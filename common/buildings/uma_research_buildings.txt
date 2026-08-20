@@ -48,8 +48,15 @@ building_uma_toresen_lab = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1.5
@@ -164,8 +171,15 @@ building_uma_toresen_lab_center = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 700
+#			minerals = 700
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 700
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -280,8 +294,15 @@ building_uma_toresen_lab_top = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1500
+#			minerals = 1500
 			uma_crystal_carrot = 300
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1500
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 10

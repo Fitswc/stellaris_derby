@@ -4019,6 +4019,7 @@ uma_tgrd_clear_TGAC_flag = {
 
 
 uma_season_give_random_season = {
+	optimize_memory
 	random_list = {
 		25 = {
 			add_deposit = d_uma_season_spring
@@ -4051,6 +4052,7 @@ uma_trans_tg_produce_num_to_planet = {
 
 
 uma_crystal_carrot_storm_add = {
+	optimize_memory
 	set_star_flag = storm_system
 	set_global_flag = cosmic_storm_has_occurred
 
@@ -4061,6 +4063,7 @@ uma_crystal_carrot_storm_add = {
 }
 
 uma_crystal_carrot_storm_remove = {
+	optimize_memory
 	remove_storm_visuals_effect = yes
 	remove_star_flag = storm_system
 	uma_crystal_carrot_storm_apply_aftermath_modifier = yes
@@ -4068,6 +4071,7 @@ uma_crystal_carrot_storm_remove = {
 }
 
 uma_crystal_carrot_storm_apply_deposits = {
+	optimize_memory
 	every_system_planet = {
 		limit = {
 			OR = {
@@ -4102,6 +4106,7 @@ uma_crystal_carrot_storm_apply_deposits = {
 #Aftermath Modifier Scripted Effects
 
 uma_crystal_carrot_storm_apply_aftermath_modifier = {
+	optimize_memory
 	every_system_planet = {
 		limit = {
 			OR = {
@@ -4177,29 +4182,23 @@ uma_crystal_carrot_storm_apply_aftermath_modifier = {
 }
 
 
-uma_marking_bugs_fix = {
-	set_global_flag = uma_ec_invasion_end
-	set_global_flag = uma_ec_invasion_ec3_end
-
-	event_target:uma_ec3_country = {
-		every_owned_fleet = {
-			destroy_fleet = this
-		}
-		destroy_country = yes
+uma_civic_umazennorobroy_effect = {
+	optimize_memory
+	export_trigger_value_to_variable = {
+		trigger = count_owned_pop_amount
+		variable = uma_bg_36_count_pop_group_num
+	}#4846
+	divide_variable = {
+		which = uma_bg_36_count_pop_group_num
+		value = 1000
 	}
-
-	every_playable_country = {
-		country_event = {
-			id = uma_ec_3.27
-		}
-	}
-
-	every_playable_country = {
-		every_situation = {
-			limit = {
-				has_situation_flag = uma_endcrisis_ec3_country_bomb_discount
-			}
-			destroy_situation = This
+	round_variable = uma_bg_36_count_pop_group_num #5
+	while = {
+		count = uma_bg_36_count_pop_group_num
+		add_resource = {
+			engineering_research = 1
+			physics_research = 1
+			society_research = 1
 		}
 	}
 }

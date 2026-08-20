@@ -52,7 +52,14 @@ building_uma_nice_nature_no_restaurant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 300
+#			minerals = 300
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 300
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 2
@@ -206,8 +213,15 @@ building_realm_planetary_shield_generator = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 300
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST =1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			uma_crystal_carrot = 10

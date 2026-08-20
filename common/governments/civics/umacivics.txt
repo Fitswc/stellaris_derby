@@ -130,14 +130,15 @@ civic_umazennorobroy = {
 	}
 
 	modifier= {
-		planet_jobs_engineering_research_produces_add = 1
-		planet_jobs_physics_research_produces_add = 1
-		planet_jobs_society_research_produces_add = 1
+#		planet_jobs_engineering_research_produces_add = 1
+#		planet_jobs_physics_research_produces_add = 1
+#		planet_jobs_society_research_produces_add = 1
 		planet_jobs_uma_threegodness_knowledge_produces_mult = 0.1
 		planet_jobs_food_upkeep_mult = 0.02
 		planet_jobs_consumer_goods_upkeep_mult = 0.02
 		num_tech_alternatives_add = 1
 	}
+	custom_tooltip_with_modifiers = civic_umazennorobroy_tt
 }
 
 civic_umaairgroove = {
@@ -349,7 +350,7 @@ civic_uma_cheval_civillian_workshop = {
 		branch_office_value_mult = 0.10
 		planet_traders_trade_produces_add = 1.5
 		planet_uma_traders_trade_produces_add = 1.5
-		planet_uma_racing_umamusume_trade_produces_add = 1
+		planet_uma_racing_umamusume_trade_produces_mult = 0.05
 	}
 }
 

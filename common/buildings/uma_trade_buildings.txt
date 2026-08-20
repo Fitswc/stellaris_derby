@@ -45,8 +45,15 @@ building_uma_commercial_zone = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
