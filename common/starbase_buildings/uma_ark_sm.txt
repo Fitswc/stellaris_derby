@@ -1,0 +1,113 @@
+arkship_aura_uma_heavy = {
+	icon = "GFX_arkship_aura_bombardment"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_juggernaut
+			has_technology = tech_uma_shige_halo
+		}
+		is_arkship_starbase = yes
+	}
+
+	# show_in_tech = "tech_juggernaut"	# Deliberately not shown in the tech
+										# see TECH_UNLOCK_ARKSHIP_JUGGERNAUT_AURAS_CONSTRUCTION_TITLE
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_500
+		}
+	}
+
+	equipped_component = UMA_SHIGE_HALO_ARK
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+arkship_aura_uma_furyo = {
+	icon = "GFX_arkship_aura_bombardment"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_juggernaut
+			has_technology = tech_uma_shige_halo
+		}
+		is_arkship_starbase = yes
+	}
+
+	# show_in_tech = "tech_juggernaut"	# Deliberately not shown in the tech
+										# see TECH_UNLOCK_ARKSHIP_JUGGERNAUT_AURAS_CONSTRUCTION_TITLE
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_500
+		}
+	}
+
+	equipped_component = UMA_FURYOU_HALO_ARK
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+arkship_aura_uma_ats = {
+	icon = "GFX_arkship_aura_bombardment"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_juggernaut
+			has_technology = tech_uma_ats_01
+		}
+		is_arkship_starbase = yes
+	}
+
+	# show_in_tech = "tech_juggernaut"	# Deliberately not shown in the tech
+										# see TECH_UNLOCK_ARKSHIP_JUGGERNAUT_AURAS_CONSTRUCTION_TITLE
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_500
+		}
+	}
+
+	equipped_component = UMA_ATS-01_ARK
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

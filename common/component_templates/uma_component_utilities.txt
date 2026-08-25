@@ -632,7 +632,7 @@ utility_component_template = { #“不良场”光环
 		}
 
 		modifier = {
-			ship_shield_mult = -0.1
+			ship_shield_mult = -0.05
 		}
 
 		graphics = {
@@ -680,6 +680,183 @@ utility_component_template = { #ATS-01“针灸”协同光环
 		modifier = {
 			ship_shield_damage_mult = 0.15
 			ship_shield_penetration_mult = 0.35
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+###ARK
+
+utility_component_template = { #“重场”光环
+	key = "UMA_SHIGE_HALO_ARK"
+	size = medium
+	icon = "GFX_ship_part_aura_shige_halo"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		ship_uses_juggernaut_components = yes
+		From = {
+			is_nomadic = yes
+			is_uma_country = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_uma_shige_halo"
+	}
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "UMA_SHIGE"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = hostile_shield_dampener
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_mult = -0.4
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+
+utility_component_template = { #“不良场”光环
+	key = "UMA_FURYOU_HALO_ARK"
+	size = medium
+	icon = "GFX_ship_part_aura_furyou_halo"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		ship_uses_juggernaut_components = yes
+		From = {
+			is_nomadic = yes
+			is_uma_country = yes
+		}
+	}
+
+	prerequisites = {
+		"tech_uma_shige_halo"
+	}
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "UMA_FURYOU_0"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = hostile_shield_dampener
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_mult = -0.6
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+
+	friendly_aura = {
+		name = "UMA_FURYOU_1"
+		radius = @shipAuraRange
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = hostile_shield_dampener
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_mult = -0.05
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+
+utility_component_template = { #ATS-01“针灸”协同光环
+	key = "UMA_ATS-01_ARK"
+	size = medium
+	icon = "GFX_ship_part_auro_ats_01"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		ship_uses_juggernaut_components = yes
+		From = {
+			is_nomadic = yes
+			is_uma_country = yes
+		}
+	}
+
+	prerequisites = {
+		tech_uma_ats_01
+	}
+	component_set = "ship_aura_components"
+
+	friendly_aura = {
+		name = "aura_shield_dampener"
+		system_wide = yes
+
+		stack_info = {
+			id = hostile_inhibitor_aura
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_damage_mult = 0.2
+			ship_shield_penetration_mult = 0.4
 		}
 
 		graphics = {
