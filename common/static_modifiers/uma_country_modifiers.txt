@@ -761,8 +761,10 @@ uma_curren_ship_modifier = {
 
 uma_variation_early_war_buff = {
 	bioship_growth_progress_mult = 0.8
-	country_claim_influence_cost_mult = -0.9
-	shipclass_military_build_cost_mult = -0.8
+	starbase_shipyard_build_cost_mult = -0.8
+	ship_hull_mult = 0.9
+	ship_hull_regen_add_perc = 0.8
+	ship_armor_regen_add_perc = 0.8
 }
 
 uma_duramente_buff = {

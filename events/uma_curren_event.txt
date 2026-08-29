@@ -1010,12 +1010,27 @@ country_event = {
 #			value = 5
 #		}
 
-		random_system_within_border = {
+		random_system = {
 			limit = {
-				distance_to_capital > 5
+				NOT = {
+					OR = {
+						is_capital_system = yes
+						any_fleet_in_system = {
+							is_arkship_fleet = yes
+						}
+					}
+				}
+
+				distance = {
+					source = Root.capital_star
+					use_bypasses = no
+					min_jumps = 2
+					max_jumps = 5
+
+				}
 			}
 			save_event_target_as = uma_curren_hostile_system
-
+			log = "Marked in [event_target:uma_curren_hostile_system.GetName]"
 
 			create_species = {
 				name = "NAME_goldship_species"
@@ -1030,6 +1045,7 @@ country_event = {
 				name = UNKNOWN
 				type = uma_curren
 				name_list = random
+				ignore_initial_colony_error = yes
 				flag = {
 					icon = {
 						category = "uiu_flags"
@@ -1056,49 +1072,54 @@ country_event = {
 					add_ship_design = last_created_design
 					create_ship_design = { design = "NAME_Unbidden_Starbase" }
 					add_ship_design = last_created_design
+					create_ship_design = { design = NAME_uma_GOLDSON }
+					add_ship_design = last_created_design
 				}
 			}
 
-			create_fleet = {
-				name = NAME_uma_curren_hostile_fleet_cc
-				effect = {
-					set_fleet_flag = uma_curren_hostile_fleet_cc
-					set_owner = event_target:uma_curren_hostile_fleet
-					save_global_event_target_as = uma_curren_hostile_fleet_cc
-					set_global_flag = uma_curren_hostile_fleet_cc_still_here
+			event_target:uma_curren_hostile_fleet = {
+				create_fleet = {
+					name = NAME_uma_curren_hostile_fleet_cc
+					effect = {
+						set_owner = event_target:uma_curren_hostile_fleet
+						set_fleet_flag = uma_curren_hostile_fleet_cc
+						save_global_event_target_as = uma_curren_hostile_fleet_cc
+						set_global_flag = uma_curren_hostile_fleet_cc_still_here
 
-					set_location = {
-						target = event_target:uma_curren_hostile_system.star
-						distance = 50
-						angle = random
-					}
-
-					while = {
-#						count = Root.uma_curren_num_ship_having
-						count = 5
-						create_ship = {
-							name = random
-							design = "NAME_uma_GOLDSON"
-							graphical_culture = "extra_dimensional_01"
+						while = {
+							#						count = Root.uma_curren_num_ship_having
+							count = 5
+							create_ship = {
+								name = UNKNOWN
+								design = "NAME_uma_GOLDSON"
+								graphical_culture = "extra_dimensional_01"
+							}
 						}
+
+						set_location = {
+							target = PrevPrev.star
+							distance = 50
+							angle = random
+						}
+
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 300
+
+
+						#					add_modifier = {
+						#						modifier = uma_curren_ship_modifier
+						#					}
 					}
-
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 300
-
-
-#					add_modifier = {
-#						modifier = uma_curren_ship_modifier
-#					}
-
+				}
+				last_created_fleet = {
 					queue_actions = {
 						#崩溃？
 						find_closest_system = {
 							trigger = {
 								id = uma_curren_trigger.1
-								owner = {
-									has_authority = auth_trainingcenter
+								owner? = {
+									is_uma_country = yes
 								}
 							}
 							found_system = {
@@ -1106,6 +1127,22 @@ country_event = {
 									duration = 50
 								}
 								move_to = This
+							}
+							failed = {
+								find_closest_fleet = {
+									trigger = {
+										id = uma_curren_trigger.2
+										owner? = {
+											has_authority = auth_trainingcenter
+										}
+									}
+									found_fleet = {
+										wait = {
+											duration = 50
+										}
+										move_to = This
+									}
+								}
 							}
 						}
 					}

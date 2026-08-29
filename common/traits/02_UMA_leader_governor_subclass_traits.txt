@@ -76,25 +76,25 @@ leader_trait_gonghui_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_gonghui_governor_3 = {
-#    leader_trait_type = veteran
-#    replace_traits = { "leader_trait_gonghui_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_gonghui_governor"
-#        RARITY = veteran
-#        COUNCIL = no
-#        TIER = 3
-#    }
-#    planet_modifier = {
-#        planet_jobs_worker_produces_mult = 0.45
-#    }
-#    sector_modifier = {
-#        planet_jobs_worker_produces_mult = 0.225
-#    }
-#    leader_class = { official }
-#}
+leader_trait_gonghui_governor_3 = {
+    leader_trait_type = veteran
+    replace_traits = { "leader_trait_gonghui_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_gonghui_governor"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 3
+    }
+    planet_modifier = {
+        planet_jobs_worker_produces_mult = 0.6
+    }
+    sector_modifier = {
+        planet_jobs_worker_produces_mult = 0.3
+    }
+    leader_class = { official }
+}
 
 ###先进
 leader_trait_xianjin_governor = {
@@ -144,25 +144,25 @@ leader_trait_xianjin_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_xianjin_governor_3 = {
-#    leader_trait_type = veteran
-#    replace_traits = { "leader_trait_xianjin_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_xianjin_governor"
-#        RARITY = veteran
-#        COUNCIL = no
-#        TIER = 3
-#    }
-#    planet_modifier = {
-#        planet_jobs_specialist_produces_mult = 0.45
-#    }
-#    sector_modifier = {
-#        planet_jobs_specialist_produces_mult = 0.225
-#    }
-#    leader_class = { official }
-#}
+leader_trait_xianjin_governor_3 = {
+    leader_trait_type = veteran
+    replace_traits = { "leader_trait_xianjin_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_xianjin_governor"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 3
+    }
+    planet_modifier = {
+        planet_jobs_specialist_produces_mult = 0.6
+    }
+    sector_modifier = {
+        planet_jobs_specialist_produces_mult = 0.3
+    }
+    leader_class = { official }
+}
 
 ###理想家
 leader_trait_lixiangjia_governor = {
@@ -233,35 +233,35 @@ leader_trait_lixiangjia_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_lixiangjia_governor_3 = {
-#    leader_trait_type = veteran
-#    replace_traits = { "leader_trait_lixiangjia_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_lixiangjia_governor"
-#        RARITY = veteran
-#        COUNCIL = no
-#        TIER = 3
-#    }
-#    planet_modifier = {
-#        planet_buildings_cost_mult = -0.3
-#        planet_building_build_speed_mult = 0.6
-#        deposit_blockers_cost_mult = -0.75
-#        planet_clear_blocker_speed_mult = 0.6
-#        planet_buildings_upkeep_mult = -0.3
-#        planet_districts_upkeep_mult = -0.3
-#    }
-#    sector_modifier = {
-#        planet_buildings_cost_mult = -0.15
-#        planet_building_build_speed_mult = 0.3
-#        deposit_blockers_cost_mult = -0.375
-#        planet_clear_blocker_speed_mult = 0.3
-#        planet_buildings_upkeep_mult = -0.15
-#        planet_districts_upkeep_mult = -0.15
-#    }
-#    leader_class = { official }
-#}
+leader_trait_lixiangjia_governor_3 = {
+    leader_trait_type = veteran
+    replace_traits = { "leader_trait_lixiangjia_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_lixiangjia_governor"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 3
+    }
+    planet_modifier = {
+        planet_buildings_cost_mult = -0.4
+        planet_building_build_speed_mult = 0.8
+        deposit_blockers_cost_mult = -0.85
+        planet_clear_blocker_speed_mult = 0.8
+        planet_buildings_upkeep_mult = -0.4
+        planet_districts_upkeep_mult = -0.4
+    }
+    sector_modifier = {
+        planet_buildings_cost_mult = -0.2
+        planet_building_build_speed_mult = 0.35
+        deposit_blockers_cost_mult = -0.5
+        planet_clear_blocker_speed_mult = 0.4
+        planet_buildings_upkeep_mult = -0.2
+        planet_districts_upkeep_mult = -0.2
+    }
+    leader_class = { official }
+}
 
 
 
@@ -375,30 +375,39 @@ leader_trait_maertiao_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_maertiao_governor_3 = {
-#    leader_trait_type = veteran
-#    replace_traits = { "leader_trait_maertiao_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_maertiao_governor"
-#        RARITY = veteran
-#        COUNCIL = no
-#        TIER = 3
-#    }
-#    leader_potential_add = {
-#        #判定范围
-#        from = { is_species_class = umamusume }
-#
-#    }
-#    planet_modifier = {
-#        logistic_growth_mult = 0.45
-#    }
-#    sector_modifier = {
-#        logistic_growth_mult = 0.225
-#    }
-#    leader_class = { official }
-#}
+leader_trait_maertiao_governor_3 = {
+    leader_trait_type = veteran
+    replace_traits = { "leader_trait_maertiao_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_maertiao_governor"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 3
+    }
+    leader_potential_add = {
+        #判定范围
+        from = { is_species_class = umamusume }
+
+    }
+    planet_modifier = {
+        logistic_growth_mult = 0.15
+    }
+
+    #    triggered_planet_pop_group_modifier_for_all = {
+    #        bonus_pop_growth = 4
+    #    }
+
+    #    triggered_planet_modifier = {
+    #        bonus_pop_growth = 1
+    #    }
+
+    sector_modifier = {
+        logistic_growth_mult = 0.15
+    }
+    leader_class = { official }
+}
 
 ###文采斐然
 leader_trait_wencaifeiran_governor = {
@@ -463,34 +472,34 @@ leader_trait_wencaifeiran_governor_2 = {
 }
 
 
-#leader_trait_wencaifeiran_governor_3 = {
-#    leader_trait_type = veteran
-#    replace_traits = { "leader_trait_wencaifeiran_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_wencaifeiran_governor"
-#        RARITY = veteran
-#        COUNCIL = no
-#        TIER = 3
-#    }
-#    leader_potential_add = {
-#        #判定范围
-#        from = { is_species_class = umamusume }
-#
-#    }
-#    planet_modifier = {
-#        planet_stability_add = 30
-#        pop_amenities_usage_mult = -0.3
-#        planet_jobs_unity_produces_mult = 0.6
-#    }
-#    sector_modifier = {
-#        planet_stability_add = 15
-#        pop_amenities_usage_mult = -0.15
-#        planet_jobs_unity_produces_mult = 0.3
-#    }
-#    leader_class = { official }
-#}
+leader_trait_wencaifeiran_governor_3 = {
+    leader_trait_type = veteran
+    replace_traits = { "leader_trait_wencaifeiran_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_wencaifeiran_governor"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 3
+    }
+    leader_potential_add = {
+        #判定范围
+        from = { is_species_class = umamusume }
+
+    }
+    planet_modifier = {
+        planet_stability_add = 40
+        pop_amenities_usage_mult = -0.4
+        planet_jobs_unity_produces_mult = 0.8
+    }
+    sector_modifier = {
+        planet_stability_add = 20
+        pop_amenities_usage_mult = -0.2
+        planet_jobs_unity_produces_mult = 0.4
+    }
+    leader_class = { official }
+}
 
 ###众志成城
 leader_trait_zhongzhichengcheng_governor = {
@@ -558,35 +567,35 @@ leader_trait_zhongzhichengcheng_governor_2 = {
 }
 
 
-#leader_trait_zhongzhichengcheng_governor_3 = {
-#    leader_trait_type = veteran
-#    replace_traits = { "leader_trait_zhongzhichengcheng_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_zhongzhichengcheng_governor"
-#        RARITY = veteran
-#        COUNCIL = no
-#        TIER = 3
-#    }
-#    leader_potential_add = {
-#        #判定范围
-#        from = { is_species_class = umamusume }
-#
-#    }
-#    planet_modifier = {
-#        logistic_growth_mult = 0.15
-#        planet_jobs_produces_mult = 0.15
-#    }
-#    sector_modifier = {
-#        logistic_growth_mult = 0.075
-#        planet_jobs_produces_mult = 0.075
-#    }
-#    modifier = {
-#        country_admin_cap_add = 30
-#    }
-#    leader_class = { official }
-#}
+leader_trait_zhongzhichengcheng_governor_3 = {
+    leader_trait_type = veteran
+    replace_traits = { "leader_trait_zhongzhichengcheng_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_zhongzhichengcheng_governor"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 3
+    }
+    leader_potential_add = {
+        #判定范围
+        from = { is_species_class = umamusume }
+
+    }
+    planet_modifier = {
+        logistic_growth_mult = 0.2
+        planet_jobs_produces_mult = 0.2
+    }
+    sector_modifier = {
+        logistic_growth_mult = 0.09
+        planet_jobs_produces_mult = 0.09
+    }
+    modifier = {
+        country_admin_cap_add = 40
+    }
+    leader_class = { official }
+}
 
 
 
@@ -690,35 +699,35 @@ leader_trait_diantang_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_diantang_governor_3 = {
-#    leader_trait_type = veteran
-#    #	councilor_trait = yes
-#    replace_traits = { "leader_trait_diantang_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_diantang_governor"
-#        RARITY = veteran
-#        COUNCIL = yes
-#        TIER = 3
-#    }
-#    inline_script = {
-#        script = paragon/leader_resource_produces
-#        RESOURCE = unity
-#        AMOUNT = 150
-#    }
-#    leader_potential_add = {
-#        #判定范围
-#        from = { is_species_class = umamusume }
-#
-#    }
-#    councilor_modifier = {
-#        planet_jobs_trade_produces_mult = 0.3
-#        country_councilor_influence_produces_add = 3.0
-#        species_leader_exp_gain = 0.3
-#    }
-#    leader_class = { official }
-#}
+leader_trait_diantang_governor_3 = {
+    leader_trait_type = veteran
+    #	councilor_trait = yes
+    replace_traits = { "leader_trait_diantang_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_diantang_governor"
+        RARITY = veteran
+        COUNCIL = yes
+        TIER = 3
+    }
+    inline_script = {
+        script = paragon/leader_resource_produces
+        RESOURCE = unity
+        AMOUNT = 150
+    }
+    leader_potential_add = {
+        #判定范围
+        from = { is_species_class = umamusume }
+
+    }
+    councilor_modifier = {
+        planet_jobs_trade_produces_mult = 0.4
+        country_councilor_influence_produces_add = 4.0
+        species_leader_exp_gain = 0.4
+    }
+    leader_class = { official }
+}
 ###全民
 leader_trait_quanmin_governor = {
     leader_trait_type = veteran
@@ -772,30 +781,30 @@ leader_trait_quanmin_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_quanmin_governor_3 = {
-#    leader_trait_type = veteran
-#    #	councilor_trait = yes
-#    replace_traits = { "leader_trait_quanmin_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_quanmin_governor"
-#        RARITY = veteran
-#        COUNCIL = yes
-#        TIER = 3
-#    }
-#    leader_potential_add = {
-#        #判定范围
-#        from = { is_species_class = umamusume }
-#
-#    }
-#    councilor_modifier = {
-#        edicts_upkeep_mult = -0.3
-#        country_edict_fund_add = 75
-#        planet_jobs_unity_produces_mult = 0.9
-#    }
-#    leader_class = { official }
-#}
+leader_trait_quanmin_governor_3 = {
+    leader_trait_type = veteran
+    #	councilor_trait = yes
+    replace_traits = { "leader_trait_quanmin_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_quanmin_governor"
+        RARITY = veteran
+        COUNCIL = yes
+        TIER = 3
+    }
+    leader_potential_add = {
+        #判定范围
+        from = { is_species_class = umamusume }
+
+    }
+    councilor_modifier = {
+        edicts_upkeep_mult = -0.4
+        country_edict_fund_add = 100
+        planet_jobs_unity_produces_mult = 0.9
+    }
+    leader_class = { official }
+}
 ###赛事商业化
 leader_trait_saishishangyehua_governor = {
     leader_trait_type = veteran
@@ -845,28 +854,28 @@ leader_trait_saishishangyehua_governor_2 = {
     leader_class = { official }
 }
 
-#leader_trait_saishishangyehua_governor_3 = {
-#    leader_trait_type = veteran
-#    #	councilor_trait = yes
-#    replace_traits = { "leader_trait_saishishangyehua_governor_2" }
-#    inline_script = {
-#        script = trait/icon
-#        CLASS = official
-#        ICON = "GFX_leader_trait_jijiankuangmo_governor"
-#        RARITY = veteran
-#        COUNCIL = yes
-#        TIER = 3
-#    }
-#    leader_potential_add = {
-#        #判定范围
-#        from = { is_species_class = umamusume }
-#
-#    }
-#    councilor_modifier = {
-#        planet_jobs_trade_produces_mult = 0.9
-#    }
-#    leader_class = { official }
-#}
+leader_trait_saishishangyehua_governor_3 = {
+    leader_trait_type = veteran
+    #	councilor_trait = yes
+    replace_traits = { "leader_trait_saishishangyehua_governor_2" }
+    inline_script = {
+        script = trait/icon
+        CLASS = official
+        ICON = "GFX_leader_trait_jijiankuangmo_governor"
+        RARITY = veteran
+        COUNCIL = yes
+        TIER = 3
+    }
+    leader_potential_add = {
+        #判定范围
+        from = { is_species_class = umamusume }
+
+    }
+    councilor_modifier = {
+        planet_jobs_trade_produces_mult = 1
+    }
+    leader_class = { official }
+}
 
 
 
