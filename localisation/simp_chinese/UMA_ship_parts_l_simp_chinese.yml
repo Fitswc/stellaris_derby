@@ -67,6 +67,7 @@ UMA_ATS-01_DESC:0 "从针灸技术中得到启发，我们将巨大的能量聚�
 UMA_SHIGE_HALO_ARK:0 "“重场”"
 UMA_FURYOU_HALO_ARK:0 "“不良场”"
 UMA_ATS-01_ARK:0 "“针灸”"
+UMA_TG_NN_HALO_ARK: "$UMA_TG_NN_HALO$"
 UMA_ATS-01_ARK_DESC:0 "从针灸技术中得到启发，我们将巨大的能量聚焦到一处，从而削弱敌人的护甲。"
 
 UMA_TWIN_TURBO_BOOSTER:0 "“双涡轮”反应堆增压器"
@@ -104,3 +105,6 @@ FLEETORDER_DESTROY_PLANET_WITH_UMA_PLANET_KILLER_TRANSFORM:0 "正在准备对$PL
 FLEETORDER_DESTROY_PLANET_WITH_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL:0 "正在准备对$PLANET|Y$进行§P结晶化§!"
 MESSAGE_DESC_FOR_UMA_PLANET_KILLER_TRANSFORM: "使星球上的人口不得不成为了马娘"
 MESSAGE_DESC_FOR_UMA_PLANET_KILLER_MAKR_PLANET_CRYSTAL: "变成了丰饶的水晶萝卜矿球"
+
+sm_arkship_uma_armor_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_L_UTILITY_SLOTS$\n$t$这些通用槽位将会装有§Y马娘装甲§!并自动升级到我们最新的科技水平。"
+sm_arkship_uma_shield_tt: "$ARKSHIP_COMPONENTS$\n$t$$ADDS_ARKSHIP_L_UTILITY_SLOTS$\n$t$这些专用槽位将会装有§Y马娘护盾§!并自动升级到我们最新的科技水平。"

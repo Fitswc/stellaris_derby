@@ -349,7 +349,7 @@ civic_uma_cheval_civillian_workshop = {
 	modifier = {
 		branch_office_value_mult = 0.10
 		planet_traders_trade_produces_add = 1.5
-		planet_uma_traders_trade_produces_add = 1.5
+		planet_uma_traders_trade_produces_mult = 0.05
 		planet_uma_racing_umamusume_trade_produces_mult = 0.05
 	}
 }

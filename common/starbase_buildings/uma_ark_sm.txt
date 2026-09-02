@@ -112,3 +112,315 @@ arkship_aura_uma_ats = {
 	}
 }
 
+arkship_aura_uma_nn = {
+	icon = "GFX_arkship_aura_bombardment"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_aura_cat
+
+	starbase_limit = {
+		base = 1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_juggernaut
+			has_technology = tech_uma_nice_nature_ring
+		}
+		is_arkship_starbase = yes
+	}
+
+	# show_in_tech = "tech_juggernaut"	# Deliberately not shown in the tech
+										# see TECH_UNLOCK_ARKSHIP_JUGGERNAUT_AURAS_CONSTRUCTION_TITLE
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_500
+		}
+	}
+
+	equipped_component = UMA_TG_NN_HALO_ARK
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+arkship_crystal_carrot_arrays = {
+	icon = "GFX_orbitalring_mineral_hub"
+	starbase_type = arkship
+	construction_days = 360
+	category = sm_colony_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		is_arkship_starbase = yes
+		owner? = {
+			has_technology = tech_uma_crysal_carrot_producing
+		}
+	}
+
+	show_in_tech = "tech_uma_crysal_carrot_producing"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_100
+			volatile_motes = @arkship_cost_strategic_100
+		}
+		upkeep = {
+			energy = @arkship_upkeep_energy_2
+			volatile_motes = @arkship_upkeep_strategic_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		job_uma_crystal_carrot_engineer_add = 200
+	}
+
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+arkship_tech_uma_tg_resource_soil = {
+	icon = "GFX_orbitalring_mineral_hub"
+	starbase_type = arkship
+	construction_days = 360
+	category = sm_economy_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		is_arkship_starbase = yes
+		owner? = {
+			has_technology = tech_uma_tg_resource_soil
+		}
+	}
+
+	show_in_tech = "tech_uma_tg_resource_soil"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_200
+			uma_crystal_carrot = 50
+		}
+		upkeep = {
+			energy = @arkship_upkeep_energy_2
+		}
+	}
+
+	triggered_country_modifier = {
+		country_resource_max_add = 80000
+	}
+
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+arkship_uma_armor = {
+	icon = "GFX_ship_part_uma_fermion_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_uma_ship_armor
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "tech_uma_ship_armor"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 30
+		}
+	}
+
+	equipped_component = UMA_ARMOR_L
+	equipped_component = UMA_ARMOR_L
+	equipped_component = UMA_ARMOR_L
+	show_component_tooltips = yes
+	custom_tooltip = sm_arkship_uma_armor_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+
+arkship_uma_shield = {
+	icon = "GFX_ship_part_uma_high_energy_light_particle_shield"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_uma_ship_shield
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "tech_uma_ship_shield"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 45
+			uma_crystal_carrot = 0.5
+		}
+	}
+
+	equipped_component = UMA_SHIELD_L
+	equipped_component = UMA_SHIELD_L
+	equipped_component = UMA_SHIELD_L
+	show_component_tooltips = yes
+	custom_tooltip = sm_arkship_uma_shield_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
+
+
+arkship_uma_tg_armor = {
+	icon = "GFX_ship_part_uma_tg_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_uma_wall_armor
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "tech_uma_wall_armor"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 40
+		}
+	}
+
+	equipped_component = UMA_ARMOR_L
+	equipped_component = UMA_ARMOR_L
+	equipped_component = UMA_ARMOR_L
+	show_component_tooltips = yes
+	custom_tooltip = sm_arkship_uma_armor_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+
+arkship_uma_tg_shield = {
+	icon = "GFX_ship_part_uma_tg_shield"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1		# Uncapped
+	}
+
+	potential = {
+		owner? = {
+			has_technology = tech_uma_energy_wall_shield
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "tech_uma_energy_wall_shield"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = 50
+			uma_crystal_carrot = 0.7
+		}
+	}
+
+	equipped_component = UMA_TG_SHIELD_L
+	equipped_component = UMA_TG_SHIELD_L
+	equipped_component = UMA_TG_SHIELD_L
+	show_component_tooltips = yes
+	custom_tooltip = sm_arkship_uma_shield_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
