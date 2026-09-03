@@ -168,7 +168,7 @@ building_realm_planetary_shield_generator = {
 		owner = {
 			OR = {
 				has_tradition = uma_realm_field_large_job_to_use
-				has_ascension_perk = ap_uma_mixture_ap_2
+#				has_ascension_perk = ap_uma_mixture_ap_2
 			}
 			OR = {
 				has_authority = auth_trainingcenter
