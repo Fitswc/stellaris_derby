@@ -19,10 +19,9 @@ planet_racing_related = { #包括训练员 解说员 赛马娘两类职业
 		produces
 		upkeep
 	}
-	#generate_add_modifiers = {
-	#	produces
-	#	upkeep
-	#}
+	generate_add_modifiers = {
+		produces
+	}
 }
 
 planet_uma_racing_umamusume = { #作为赛事相关职业中的小类别，只针对赛马娘职业本身的修正
@@ -34,7 +33,6 @@ planet_uma_racing_umamusume = { #作为赛事相关职业中的小类别，只�
 	}
 	generate_add_modifiers = {
 		produces
-		upkeep
 	}
 }
 

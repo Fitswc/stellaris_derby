@@ -42,8 +42,15 @@ building_uma_basic_racing_course = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -145,8 +152,15 @@ building_uma_modern_racing_course = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 720
+#		cost = {
+#			minerals = 720
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -278,8 +292,15 @@ building_uma_top_racing_course = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -408,8 +429,15 @@ building_uma_tree_holes = { #中庭的树洞
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 300
+#		cost = {
+#			minerals = 300
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 300
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 2

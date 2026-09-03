@@ -37,8 +37,15 @@ building_uma_field_powerplant = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 360
+#			minerals = 360
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1
@@ -128,8 +135,15 @@ building_uma_field_powering_complex = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 700
+#			minerals = 700
 			uma_crystal_carrot = 250
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 700
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -228,8 +242,15 @@ building_uma_field_powering_complex_realm = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1000
+#			minerals = 1000
 			uma_crystal_carrot = 100
+		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -317,8 +338,15 @@ building_uma_simple_carrot_farm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1.5
@@ -438,8 +466,15 @@ building_uma_modern_carrot_farm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 720
+#		cost = {
+#			minerals = 720
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -560,8 +595,15 @@ building_uma_advance_carrot_farm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 900
+#		cost = {
+#			minerals = 900
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 900
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -704,8 +746,15 @@ building_uma_modern_carrot_farm_realm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 1000
+#		cost = {
+#			minerals = 1000
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -844,8 +893,15 @@ building_uma_core_mining_complex_1 = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 360
+#		cost = {
+#			minerals = 360
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 360
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 1.5
@@ -938,8 +994,15 @@ building_uma_core_mining_complex_2 = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 720
+#		cost = {
+#			minerals = 720
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 720
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 3
@@ -1032,8 +1095,15 @@ building_uma_core_mining_complex_3 = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 900
+#		cost = {
+#			minerals = 900
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 900
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5
@@ -1130,8 +1200,15 @@ building_uma_core_mining_complex_realm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 1000
+#		cost = {
+#			minerals = 1000
+#		}
+		inline_script = {
+			script = buildings/nomadic_cost_switcher
+			REGULAR_RESOURCE = minerals
+			NOMADIC_RESOURCE = alloys
+			COST = 1000
+			NOMADIC_COST_MULT = 0.2
 		}
 		upkeep = {
 			energy = 5

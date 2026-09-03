@@ -1,0 +1,37 @@
+
+#zone_ark_reactor_uma_physics = {
+#	inline_script = {
+#		script = uma_zones/uma_ark_research_zone
+#	}
+#
+#	potential = { # planet scope
+#		hidden_trigger = {
+#			owner? = {
+#				has_technology = tech_uma_torensen_lab_building_2
+#			}
+#		}
+#	}
+#
+#	show_in_tech = tech_uma_torensen_lab_building_2
+#	show_tech_unlock_if = { is_nomadic = yes }
+#
+#	swap_type = district_ark_generator_physics
+#	swap_type_weight = 5
+#
+#	zone_sets = {
+#		ark_reactor
+#	}
+#
+#	included_building_sets = {
+#		generator
+#		fallen_empire_generator
+#		generator_automation
+#	}
+#
+#	ai_priority = 15
+#
+#	ai_weight_coefficient = 1.1
+#}
+
+
+

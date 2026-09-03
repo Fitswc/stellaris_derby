@@ -1,4 +1,3 @@
-###
 trade_policy = {
 	potential = {
 		NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -29,7 +28,7 @@ trade_policy = {
 			}
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -61,7 +60,7 @@ trade_policy = {
 
 		modifier = {}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1
 		}
 	}
@@ -88,7 +87,7 @@ trade_policy = {
 		on_enabled = {
 			set_trade_conversions = {
 				trade = 0.50
-				unity = 0.25
+				unity = 0.125
 			}
 		}
 
@@ -99,7 +98,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 0
 		}
 	}
@@ -115,7 +114,7 @@ trade_policy = {
 				trade = 0.50
 				energy = 0.15
 				consumer_goods = 0.15
-				unity = 0.15
+				unity = 0.075
 			}
 		}
 
@@ -126,7 +125,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1000
 		}
 	}
@@ -141,7 +140,7 @@ trade_policy = {
 		on_enabled = {
 			set_trade_conversions = {
 				trade = 0.50
-				unity = 0.375
+				unity = 0.1875
 			}
 		}
 
@@ -152,7 +151,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1000
 		}
 	}
@@ -169,7 +168,7 @@ trade_policy = {
 				energy = 0.20
 				minerals = 0.20
 				food = 0.20
-				unity = 0.15
+				unity = 0.075
 			}
 		}
 
@@ -180,7 +179,7 @@ trade_policy = {
 		modifier = {
 		}
 
-		AI_weight = {
+		ai_weight = {
 			factor = 1000
 		}
 	}
@@ -200,7 +199,7 @@ trade_policy = {
 #			}
 #		}
 #
-#		AI_weight = {
+#		ai_weight = {
 #			factor = 0
 #		}
 #	}

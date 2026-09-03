@@ -129,9 +129,9 @@ councilor_umazennorobroy = {
 		}
 	}
 	modifier = {
-		planet_jobs_engineering_research_produces_add = 0.1
-		planet_jobs_physics_research_produces_add = 0.1
-		planet_jobs_society_research_produces_add = 0.1
+		planet_uma_researcher_engineering_research_produces_mult = 0.01
+		planet_uma_researcher_physics_research_produces_mult = 0.01
+		planet_uma_researcher_society_research_produces_mult = 0.01
 	}
 	icon = "GFX_icon_councilor_research"
 }
@@ -229,7 +229,7 @@ councilor_umasatonodiamond = {
 		}
 	}
 	modifier = {
-		planet_uma_traders_trade_produces_add = 0.1
+		planet_uma_traders_trade_produces_mult = 0.01
 	}
 	icon = "GFX_icon_councilor_ruler"
 }
